@@ -47,7 +47,7 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 	
 	public Q00033_MakeAPairOfDressShoes()
 	{
-		super(33, Q00033_MakeAPairOfDressShoes.class.getSimpleName(), "Make a Pair of Dress Shoes");
+		super(33);
 		addStartNpc(WOODLEY);
 		addTalkId(WOODLEY, IAN, LEIKAR);
 	}

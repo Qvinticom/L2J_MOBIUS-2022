@@ -16,38 +16,38 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.JoinPledge;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
  * @author Sdw
  */
-public class RequestPledgeWaitingUserAccept extends L2GameClientPacket
+public class RequestPledgeWaitingUserAccept implements IClientIncomingPacket
 {
-	private static final String _C__D0_DB_REQUESTPLEDGEDWAITINGUSERACCEPT = "[C] D0;DB RequestPledgeWaitingUserAccept";
-	
 	private boolean _acceptRequest;
 	private int _playerId;
 	private int _clanId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_acceptRequest = readD() == 1;
-		_playerId = readD();
-		_clanId = readD();
+		_acceptRequest = packet.readD() == 1;
+		_playerId = packet.readD();
+		_clanId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || (activeChar.getClan() == null))
 		{
 			return;
@@ -73,11 +73,5 @@ public class RequestPledgeWaitingUserAccept extends L2GameClientPacket
 		{
 			ClanEntryManager.getInstance().removePlayerApplication(activeChar.getClanId(), _playerId);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_DB_REQUESTPLEDGEDWAITINGUSERACCEPT;
 	}
 }

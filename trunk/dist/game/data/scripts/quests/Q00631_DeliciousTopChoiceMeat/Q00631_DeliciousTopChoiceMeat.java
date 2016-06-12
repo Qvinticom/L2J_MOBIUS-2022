@@ -80,7 +80,7 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 	
 	public Q00631_DeliciousTopChoiceMeat()
 	{
-		super(631, Q00631_DeliciousTopChoiceMeat.class.getSimpleName(), "Delicious Top Choice Meat");
+		super(631);
 		addStartNpc(TUNATUN);
 		addTalkId(TUNATUN);
 		addKillId(MOBS_MEAT.keySet());

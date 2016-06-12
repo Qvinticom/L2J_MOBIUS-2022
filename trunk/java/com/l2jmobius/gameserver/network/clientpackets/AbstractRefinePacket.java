@@ -31,42 +31,20 @@ import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
+import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
-public abstract class AbstractRefinePacket extends L2GameClientPacket
+public abstract class AbstractRefinePacket implements IClientIncomingPacket
 {
 	public static final int GRADE_NONE = 0;
 	public static final int GRADE_MID = 1;
 	public static final int GRADE_HIGH = 2;
 	public static final int GRADE_TOP = 3;
 	public static final int GRADE_ACC = 4; // Accessory LS
-	public static final int GRADE_FORGOTTEN = 5; // Forgotten
 	
-	protected static final int[] GEMSTONE_D = new int[]
-	{
-		2130
-	};
-	protected static final int[] GEMSTONE_C = new int[]
-	{
-		2131,
-		36719
-	};
-	protected static final int[] GEMSTONE_B = new int[]
-	{
-		2132
-	};
-	protected static final int[] GEMSTONE_A = new int[]
-	{
-		2133
-	};
-	protected static final int[] GEMSTONE_S = new int[]
-	{
-		2134
-	};
-	protected static final int[] GEMSTONE_R = new int[]
-	{
-		19440
-	};
+	protected static final int GEMSTONE_D = 2130;
+	protected static final int GEMSTONE_C = 2131;
+	protected static final int GEMSTONE_B = 2132;
 	
 	private static final Map<Integer, LifeStone> _lifeStones = new HashMap<>();
 	
@@ -88,9 +66,7 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 			80,
 			82,
 			84,
-			85,
-			95,
-			99
+			85
 		};
 		private final int _grade;
 		private final int _level;
@@ -120,8 +96,6 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 	static
 	{
 		// itemId, (LS grade, LS level)
-		_lifeStones.put(36718, new LifeStone(GRADE_NONE, 0));
-		
 		_lifeStones.put(8723, new LifeStone(GRADE_NONE, 0));
 		_lifeStones.put(8724, new LifeStone(GRADE_NONE, 1));
 		_lifeStones.put(8725, new LifeStone(GRADE_NONE, 2));
@@ -221,39 +195,6 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		_lifeStones.put(16166, new LifeStone(GRADE_HIGH, 13));
 		_lifeStones.put(16167, new LifeStone(GRADE_TOP, 13));
 		_lifeStones.put(16178, new LifeStone(GRADE_ACC, 13));
-		
-		_lifeStones.put(18563, new LifeStone(GRADE_NONE, 13));
-		_lifeStones.put(18564, new LifeStone(GRADE_MID, 13));
-		_lifeStones.put(18565, new LifeStone(GRADE_HIGH, 13));
-		_lifeStones.put(18566, new LifeStone(GRADE_TOP, 13));
-		_lifeStones.put(18567, new LifeStone(GRADE_FORGOTTEN, 13));
-		_lifeStones.put(19166, new LifeStone(GRADE_ACC, 13));
-		
-		_lifeStones.put(18568, new LifeStone(GRADE_NONE, 14));
-		_lifeStones.put(18569, new LifeStone(GRADE_MID, 14));
-		_lifeStones.put(18570, new LifeStone(GRADE_HIGH, 14));
-		_lifeStones.put(18571, new LifeStone(GRADE_TOP, 14));
-		_lifeStones.put(18572, new LifeStone(GRADE_FORGOTTEN, 14));
-		_lifeStones.put(19167, new LifeStone(GRADE_ACC, 14));
-		
-		_lifeStones.put(18573, new LifeStone(GRADE_NONE, 15));
-		_lifeStones.put(18574, new LifeStone(GRADE_MID, 15));
-		_lifeStones.put(18575, new LifeStone(GRADE_HIGH, 15));
-		_lifeStones.put(18576, new LifeStone(GRADE_TOP, 15));
-		_lifeStones.put(18577, new LifeStone(GRADE_FORGOTTEN, 15));
-		_lifeStones.put(19168, new LifeStone(GRADE_ACC, 15));
-		
-		_lifeStones.put(36731, new LifeStone(GRADE_NONE, 13));
-		
-		_lifeStones.put(45929, new LifeStone(GRADE_NONE, 0));
-		_lifeStones.put(45930, new LifeStone(GRADE_MID, 13));
-		_lifeStones.put(45931, new LifeStone(GRADE_HIGH, 14));
-		_lifeStones.put(45932, new LifeStone(GRADE_TOP, 15));
-		
-		_lifeStones.put(45933, new LifeStone(GRADE_ACC, 0));
-		_lifeStones.put(45934, new LifeStone(GRADE_ACC, 13));
-		_lifeStones.put(45935, new LifeStone(GRADE_ACC, 14));
-		_lifeStones.put(45936, new LifeStone(GRADE_ACC, 15));
 	}
 	
 	protected static LifeStone getLifeStone(int itemId)
@@ -291,19 +232,10 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		final LifeStone ls = _lifeStones.get(refinerItem.getId());
 		
 		// Check for item id
-		boolean gemIdFinded = false;
-		for (int id : getGemStoneId(grade))
-		{
-			if (gemStones.getId() == id)
-			{
-				gemIdFinded = true;
-			}
-		}
-		if (!gemIdFinded)
+		if (getGemStoneId(grade) != gemStones.getId())
 		{
 			return false;
 		}
-		
 		// Count must be greater or equal of required number
 		if (getGemStoneCount(grade, ls.getGrade()) > gemStones.getCount())
 		{
@@ -418,13 +350,9 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		{
 			case INVENTORY:
 			case PAPERDOLL:
-			{
 				break;
-			}
 			default:
-			{
 				return false;
-			}
 		}
 		
 		if (item.getItem() instanceof L2Weapon)
@@ -433,13 +361,9 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 			{
 				case NONE:
 				case FISHINGROD:
-				{
 					return false;
-				}
 				default:
-				{
 					break;
-				}
 			}
 		}
 		else if (item.getItem() instanceof L2Armor)
@@ -450,13 +374,9 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 				case L2Item.SLOT_LR_FINGER:
 				case L2Item.SLOT_LR_EAR:
 				case L2Item.SLOT_NECK:
-				{
 					break;
-				}
 				default:
-				{
 					return false;
-				}
 			}
 		}
 		else
@@ -495,7 +415,7 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 			player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_DEAD);
 			return false;
 		}
-		if (player.isParalyzed())
+		if (player.hasBlockActions() && player.hasAbnormalType(AbnormalType.PARALYZE))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_PARALYZED);
 			return false;
@@ -526,35 +446,21 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 	 * @param itemGrade
 	 * @return GemStone itemId based on item grade
 	 */
-	protected static int[] getGemStoneId(CrystalType itemGrade)
+	protected static int getGemStoneId(CrystalType itemGrade)
 	{
 		switch (itemGrade)
 		{
 			case C:
 			case B:
+				return GEMSTONE_D;
 			case A:
 			case S:
+				return GEMSTONE_C;
 			case S80:
 			case S84:
-			{
 				return GEMSTONE_B;
-			}
-			case R:
-			{
-				return GEMSTONE_A;
-			}
-			case R95:
-			{
-				return GEMSTONE_S;
-			}
-			case R99:
-			{
-				return GEMSTONE_R;
-			}
 			default:
-			{
-				return null;
-			}
+				return 0;
 		}
 	}
 	
@@ -569,67 +475,40 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		switch (lifeStoneGrade)
 		{
 			case GRADE_ACC:
-			{
 				switch (itemGrade)
 				{
 					case C:
+						return 200;
 					case B:
+						return 300;
 					case A:
+						return 200;
 					case S:
+						return 250;
 					case S80:
+						return 360;
 					case S84:
-					{
-						return 125;
-					}
-					case R:
-					{
-						return 30;
-					}
-					case R95:
-					{
-						return 18;
-					}
-					case R99:
-					{
-						return 8;
-					}
+						return 480;
 					default:
-					{
 						return 0;
-					}
 				}
-			}
 			default:
-			{
 				switch (itemGrade)
 				{
 					case C:
+						return 20;
 					case B:
+						return 30;
 					case A:
+						return 20;
 					case S:
+						return 25;
 					case S80:
 					case S84:
-					{
-						return 25;
-					}
-					case R:
-					{
-						return 20;
-					}
-					case R95:
-					{
-						return 12;
-					}
-					case R99:
-					{
-						return 5;
-					}
+						return 36;
 					default:
-					{
 						return 0;
-					}
 				}
-			}
 		}
 	}
 }

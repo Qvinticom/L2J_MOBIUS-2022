@@ -16,34 +16,41 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.Stats;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Physical Attack HP Link effect implementation.
- * @author Adry_85
+ * Physical Attack HP Link effect implementation.<br>
+ * <b>Note</b>: Initial formula taken from PhysicalAttack.
+ * @author Adry_85, Nik
  */
 public final class PhysicalAttackHpLink extends AbstractEffect
 {
-	public PhysicalAttackHpLink(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	private final double _power;
+	private final double _criticalChance;
+	private final boolean _overHit;
+	
+	public PhysicalAttackHpLink(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
+		_power = params.getDouble("power", 0);
+		_criticalChance = params.getDouble("criticalChance", 0);
+		_overHit = params.getBoolean("overHit", false);
 	}
 	
 	@Override
-	public boolean calcSuccess(BuffInfo info)
+	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
-		return !Formulas.calcPhysicalSkillEvasion(info.getEffector(), info.getEffected(), info.getSkill());
+		return !Formulas.calcPhysicalSkillEvasion(effector, effected, skill);
 	}
 	
 	@Override
@@ -59,51 +66,72 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
-		final Skill skill = info.getSkill();
 		
-		if (activeChar.isAlikeDead())
+		if (effector.isAlikeDead())
 		{
 			return;
 		}
 		
-		if (activeChar.isMovementDisabled())
+		if (_overHit && effected.isAttackable())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
-			sm.addSkillName(skill);
-			activeChar.sendPacket(sm);
-			return;
+			((L2Attackable) effected).overhitEnabled(true);
 		}
 		
-		final byte shld = Formulas.calcShldUse(activeChar, target, skill);
-		// Physical damage critical rate is only affected by STR.
-		final boolean crit = (skill.getBaseCritRate() > 0) && Formulas.calcCrit(activeChar, target, skill);
-		int damage = 0;
-		final boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		damage = (int) Formulas.calcPhysDam(activeChar, target, skill, shld, false, ss);
+		final double attack = effector.getPAtk();
+		final double power = _power * (-((effected.getCurrentHp() * 2) / effected.getMaxHp()) + 2);
+		double defence = effected.getPDef();
 		
-		if (damage > 0)
+		switch (Formulas.calcShldUse(effector, effected))
 		{
-			// reduce damage if target has maxdamage buff
-			final double maxDamage = target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null);
-			if (maxDamage > 0)
+			case Formulas.SHIELD_DEFENSE_SUCCEED:
 			{
-				damage = (int) maxDamage;
+				defence += effected.getShldDef();
+				break;
 			}
-			
-			activeChar.sendDamageMessage(target, damage, false, crit, false);
-			target.reduceCurrentHp(damage, activeChar, skill);
-			target.notifyDamageReceived(damage, activeChar, skill, crit, false);
-			
-			// Check if damage should be reflected.
-			Formulas.calcDamageReflected(activeChar, target, skill, crit);
+			case Formulas.SHIELD_DEFENSE_PERFECT_BLOCK:
+			{
+				defence = -1;
+				break;
+			}
 		}
-		else
+		
+		double damage = 1;
+		final boolean critical = (_criticalChance > 0) && ((BaseStats.STR.calcBonus(effector) * _criticalChance) > (Rnd.nextDouble() * 100));
+		
+		if (defence != -1)
 		{
-			activeChar.sendPacket(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
+			// Trait, elements
+			final double weaponTraitMod = Formulas.calcWeaponTraitBonus(effector, effected);
+			final double generalTraitMod = Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), false);
+			final double attributeMod = Formulas.calcAttributeBonus(effector, effected, skill);
+			final double pvpPveMod = Formulas.calculatePvpPveBonus(effector, effected, skill, true);
+			final double randomMod = effector.getRandomDamageMultiplier();
+			
+			// Skill specific mods.
+			final double wpnMod = effector.getAttackType().isRanged() ? 70 : (70 * 1.10113);
+			final double rangedBonus = effector.getAttackType().isRanged() ? (attack + _power) : 0;
+			final double critMod = critical ? Formulas.calcCritDamage(effector, effected, skill) : 1;
+			final double ssmod = (skill.useSoulShot() && effector.isChargedShot(ShotType.SOULSHOTS)) ? effector.getStat().getValue(Stats.SHOTS_BONUS, 2) : 1; // 2.04 for dual weapon?
+			
+			// ...................____________Melee Damage_____________......................................___________________Ranged Damage____________________
+			// ATTACK CALCULATION 77 * ((pAtk * lvlMod) + power) / pdef            RANGED ATTACK CALCULATION 70 * ((pAtk * lvlMod) + power + patk + power) / pdef
+			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^``````````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+			final double baseMod = (wpnMod * ((attack * effector.getLevelMod()) + power + rangedBonus)) / defence;
+			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * attributeMod * pvpPveMod * randomMod;
+			damage = effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, damage);
 		}
+		
+		// Check if damage should be reflected.
+		Formulas.calcDamageReflected(effector, effected, skill, critical);
+		
+		final double damageCap = effected.getStat().getValue(Stats.DAMAGE_LIMIT);
+		if (damageCap > 0)
+		{
+			damage = Math.min(damage, damageCap);
+		}
+		effected.reduceCurrentHp(damage, effector, skill, false, false, critical, false);
+		effector.sendDamageMessage(effected, skill, (int) damage, critical, false);
 	}
 }

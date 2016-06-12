@@ -16,27 +16,29 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.enums.AttributeType;
+import com.l2jmobius.gameserver.enums.TaxType;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class SellList extends L2GameServerPacket
+public class SellList implements IClientOutgoingPacket
 {
 	private final L2PcInstance _activeChar;
 	private final L2MerchantInstance _lease;
 	private final long _money;
-	private final List<L2ItemInstance> _selllist = new ArrayList<>();
+	private final List<L2ItemInstance> _sellList;
 	
 	public SellList(L2PcInstance player)
 	{
-		_activeChar = player;
-		_lease = null;
-		_money = _activeChar.getAdena();
-		doLease();
+		this(player, null);
 	}
 	
 	public SellList(L2PcInstance player, L2MerchantInstance lease)
@@ -44,57 +46,66 @@ public class SellList extends L2GameServerPacket
 		_activeChar = player;
 		_lease = lease;
 		_money = _activeChar.getAdena();
-		doLease();
-	}
-	
-	private void doLease()
-	{
+		
 		if (_lease == null)
 		{
+			_sellList = new LinkedList<>();
 			final L2Summon pet = _activeChar.getPet();
 			for (L2ItemInstance item : _activeChar.getInventory().getItems())
 			{
 				if (!item.isEquipped() && item.isSellable() && ((pet == null) || (item.getObjectId() != pet.getControlObjectId()))) // Pet is summoned and not the item that summoned the pet
 				{
-					_selllist.add(item);
+					_sellList.add(item);
 				}
 			}
+		}
+		else
+		{
+			_sellList = Collections.emptyList();
 		}
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x06);
-		writeQ(_money);
-		writeD(_lease == null ? 0x00 : 1000000 + _lease.getTemplate().getId());
-		writeH(_selllist.size());
+		OutgoingPackets.SELL_LIST.writeId(packet);
 		
-		for (L2ItemInstance item : _selllist)
+		packet.writeQ(_money);
+		packet.writeD(_lease == null ? 0x00 : 1000000 + _lease.getTemplate().getId());
+		packet.writeH(_sellList.size());
+		
+		for (L2ItemInstance item : _sellList)
 		{
-			writeH(item.getItem().getType1());
-			writeD(item.getObjectId());
-			writeD(item.getDisplayId());
-			writeQ(item.getCount());
-			writeH(item.getItem().getType2());
-			writeH(item.isEquipped() ? 0x01 : 0x00);
-			writeD(item.getItem().getBodyPart());
-			writeH(item.getEnchantLevel());
-			writeH(0x00); // TODO: Verify me
-			writeH(item.getCustomType2());
-			writeQ(item.getItem().getReferencePrice() / 2);
-			// T1
-			writeH(item.getAttackElementType());
-			writeH(item.getAttackElementPower());
-			for (byte i = 0; i < 6; i++)
+			int price = item.getItem().getReferencePrice() / 2;
+			if (_lease != null)
 			{
-				writeH(item.getElementDefAttr(i));
+				price -= (price * _lease.getMpc().getTotalTaxRate(TaxType.SELL));
+			}
+			
+			packet.writeH(item.getItem().getType1());
+			packet.writeD(item.getObjectId());
+			packet.writeD(item.getDisplayId());
+			packet.writeQ(item.getCount());
+			packet.writeH(item.getItem().getType2());
+			packet.writeH(item.isEquipped() ? 0x01 : 0x00);
+			packet.writeD(item.getItem().getBodyPart());
+			packet.writeH(item.getEnchantLevel());
+			packet.writeH(0x00); // TODO: Verify me
+			packet.writeH(item.getCustomType2());
+			packet.writeQ(item.getItem().getReferencePrice() / 2);
+			// T1
+			packet.writeH(item.getAttackAttributeType().getClientId());
+			packet.writeH(item.getAttackAttributePower());
+			for (AttributeType type : AttributeType.ATTRIBUTE_TYPES)
+			{
+				packet.writeH(item.getDefenceAttribute(type));
 			}
 			// Enchant Effects
 			for (int op : item.getEnchantOptions())
 			{
-				writeH(op);
+				packet.writeH(op);
 			}
 		}
+		return true;
 	}
 }

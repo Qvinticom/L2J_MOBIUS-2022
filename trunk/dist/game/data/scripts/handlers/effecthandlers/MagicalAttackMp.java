@@ -19,10 +19,11 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -33,30 +34,42 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class MagicalAttackMp extends AbstractEffect
 {
-	public MagicalAttackMp(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	private final double _power;
+	private final boolean _critical;
+	private final double _criticalLimit;
+	
+	public MagicalAttackMp(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
+		_power = params.getDouble("power");
+		_critical = params.getBoolean("critical");
+		_criticalLimit = params.getDouble("criticalLimit");
 	}
 	
 	@Override
-	public boolean calcSuccess(BuffInfo info)
+	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isInvul())
+		if (effected.isMpBlocked())
 		{
 			return false;
 		}
-		if (!Formulas.calcMagicAffected(info.getEffector(), info.getEffected(), info.getSkill()))
+		
+		if (effector.isPlayer() && effected.isPlayer() && effected.isAffected(EffectFlag.FACEOFF) && (effected.getActingPlayer().getAttackerObjId() != effector.getObjectId()))
 		{
-			if (info.getEffector().isPlayer())
+			return false;
+		}
+		
+		if (!Formulas.calcMagicAffected(effector, effected, skill))
+		{
+			if (effector.isPlayer())
 			{
-				info.getEffector().sendPacket(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
+				effector.sendPacket(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
 			}
-			if (info.getEffected().isPlayer())
+			if (effected.isPlayer())
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_C2_S_MAGIC);
-				sm.addCharName(info.getEffected());
-				sm.addCharName(info.getEffector());
-				info.getEffected().sendPacket(sm);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_C2_S_DRAIN);
+				sm.addCharName(effected);
+				sm.addCharName(effector);
+				effected.sendPacket(sm);
 			}
 			return false;
 		}
@@ -66,7 +79,7 @@ public final class MagicalAttackMp extends AbstractEffect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.MAGICAL_ATTACK_MP;
+		return L2EffectType.MAGICAL_ATTACK;
 	}
 	
 	@Override
@@ -76,42 +89,39 @@ public final class MagicalAttackMp extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
-		
-		if (activeChar.isAlikeDead())
+		if (effector.isAlikeDead())
 		{
 			return;
 		}
 		
-		final boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-		final boolean bss = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
-		final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill()));
-		final double damage = Formulas.calcManaDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
-		final double mp = damage > target.getCurrentMp() ? target.getCurrentMp() : damage;
+		final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
+		final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		final byte shld = Formulas.calcShldUse(effector, effected);
+		final boolean mcrit = _critical ? Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill) : false;
+		final double damage = Formulas.calcManaDam(effector, effected, skill, _power, shld, sps, bss, mcrit, _criticalLimit);
+		final double mp = Math.min(effected.getCurrentMp(), damage);
 		
 		if (damage > 0)
 		{
-			target.stopEffectsOnDamage(true);
-			target.setCurrentMp(target.getCurrentMp() - mp);
+			effected.stopEffectsOnDamage();
+			effected.setCurrentMp(effected.getCurrentMp() - mp);
 		}
 		
-		if (target.isPlayer())
+		if (effected.isPlayer())
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S_MP_HAS_BEEN_DRAINED_BY_C1);
-			sm.addCharName(activeChar);
+			sm.addCharName(effector);
 			sm.addInt((int) mp);
-			target.sendPacket(sm);
+			effected.sendPacket(sm);
 		}
 		
-		if (activeChar.isPlayer())
+		if (effector.isPlayer())
 		{
 			final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENT_S_MP_WAS_REDUCED_BY_S1);
 			sm2.addInt((int) mp);
-			activeChar.sendPacket(sm2);
+			effector.sendPacket(sm2);
 		}
 	}
 }

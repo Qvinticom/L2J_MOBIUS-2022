@@ -16,10 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public final class Ride extends L2GameServerPacket
+public final class Ride implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final int _mounted;
@@ -37,15 +39,17 @@ public final class Ride extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x8C);
-		writeD(_objectId);
-		writeD(_mounted);
-		writeD(_rideType);
-		writeD(_rideNpcId);
-		writeD(_loc.getX());
-		writeD(_loc.getY());
-		writeD(_loc.getZ());
+		OutgoingPackets.RIDE.writeId(packet);
+		
+		packet.writeD(_objectId);
+		packet.writeD(_mounted);
+		packet.writeD(_rideType);
+		packet.writeD(_rideNpcId);
+		packet.writeD(_loc.getX());
+		packet.writeD(_loc.getY());
+		packet.writeD(_loc.getZ());
+		return true;
 	}
 }

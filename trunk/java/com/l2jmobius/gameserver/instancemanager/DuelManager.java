@@ -20,17 +20,21 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.l2jmobius.gameserver.enums.PrivateStoreType;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Duel;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 public final class DuelManager
 {
+	private static final int[] ARENAS =
+	{
+		147, // OlympiadGrassyArena.xml
+		148, // OlympiadThreeBridgesArena.xml
+		149, // OlympiadHerossVestigesArena.xml
+		150, // OlympiadOrbisArena.xml
+	};
 	private final Map<Integer, Duel> _duels = new ConcurrentHashMap<>();
 	private final AtomicInteger _currentDuelId = new AtomicInteger();
 	
@@ -43,7 +47,7 @@ public final class DuelManager
 		return _duels.get(duelId);
 	}
 	
-	public void addDuel(L2PcInstance playerA, L2PcInstance playerB, boolean partyDuel)
+	public void addDuel(L2PcInstance playerA, L2PcInstance playerB, int partyDuel)
 	{
 		if ((playerA == null) || (playerB == null))
 		{
@@ -52,7 +56,7 @@ public final class DuelManager
 		
 		// return if a player has PvPFlag
 		final String engagedInPvP = "The duel was canceled because a duelist engaged in PvP combat.";
-		if (partyDuel)
+		if (partyDuel == 1)
 		{
 			boolean playerInPvP = false;
 			for (L2PcInstance temp : playerA.getParty().getMembers())
@@ -88,11 +92,14 @@ public final class DuelManager
 				return;
 			}
 		}
-		else if ((playerA.getPvpFlag() != 0) || (playerB.getPvpFlag() != 0))
+		else
 		{
-			playerA.sendMessage(engagedInPvP);
-			playerB.sendMessage(engagedInPvP);
-			return;
+			if ((playerA.getPvpFlag() != 0) || (playerB.getPvpFlag() != 0))
+			{
+				playerA.sendMessage(engagedInPvP);
+				playerB.sendMessage(engagedInPvP);
+				return;
+			}
 		}
 		final int duelId = _currentDuelId.incrementAndGet();
 		_duels.put(duelId, new Duel(playerA, playerB, partyDuel, duelId));
@@ -109,7 +116,8 @@ public final class DuelManager
 		{
 			return;
 		}
-		getDuel(player.getDuelId()).doSurrender(player);
+		final Duel duel = getDuel(player.getDuelId());
+		duel.doSurrender(player);
 	}
 	
 	/**
@@ -148,92 +156,71 @@ public final class DuelManager
 	}
 	
 	/**
-	 * Broadcasts a packet to the team opposing the given player.
-	 * @param player
-	 * @param packet
+	 * Removes player from duel.
+	 * @param player - the removed player
 	 */
-	public void broadcastToOppositTeam(L2PcInstance player, L2GameServerPacket packet)
+	public void onRemoveFromParty(L2PcInstance player)
 	{
 		if ((player == null) || !player.isInDuel())
 		{
 			return;
 		}
 		final Duel duel = getDuel(player.getDuelId());
-		
-		if (duel == null)
+		if (duel != null)
 		{
-			return;
-		}
-		if (duel.getTeamA().contains(player))
-		{
-			duel.broadcastToTeam2(packet);
-		}
-		else
-		{
-			duel.broadcastToTeam1(packet);
+			duel.onRemoveFromParty(player);
 		}
 	}
 	
 	/**
-	 * Checks if this player might join / start a duel.<br>
+	 * Broadcasts a packet to the team opposing the given player.
 	 * @param player
-	 * @param target
-	 * @param partyDuel
-	 * @return true if the player might join/start a duel.
+	 * @param packet
 	 */
-	public static boolean canDuel(L2PcInstance player, L2PcInstance target, boolean partyDuel)
+	public void broadcastToOppositTeam(L2PcInstance player, IClientOutgoingPacket packet)
 	{
-		SystemMessageId reason = null;
-		if (target.isInCombat() || target.isJailed())
+		if ((player == null) || !player.isInDuel())
 		{
-			reason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
+			return;
 		}
-		else if (target.isTransformed())
+		final Duel duel = getDuel(player.getDuelId());
+		if (duel == null)
 		{
-			reason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_POLYMORPHED;
+			return;
 		}
-		else if (target.isDead() || target.isAlikeDead() || (target.getCurrentHp() < (target.getMaxHp() / 2)) || (target.getCurrentMp() < (target.getMaxMp() / 2)))
+		if ((duel.getPlayerA() == null) || (duel.getPlayerB() == null))
 		{
-			reason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_S_HP_OR_MP_IS_BELOW_50;
-		}
-		else if (target.isInDuel())
-		{
-			reason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_ALREADY_ENGAGED_IN_A_DUEL;
-		}
-		else if (target.isInOlympiadMode())
-		{
-			reason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_OR_THE_CEREMONY_OF_CHAOS;
-		}
-		else if (target.isCursedWeaponEquipped())
-		{
-			reason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_IN_A_CHAOTIC_OR_PURPLE_STATE;
-		}
-		else if (target.getPrivateStoreType() != PrivateStoreType.NONE)
-		{
-			reason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_A_PRIVATE_STORE_OR_MANUFACTURE;
-		}
-		else if (target.isMounted() || target.isInBoat())
-		{
-			reason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_RIDING_A_BOAT_FENRIR_OR_STRIDER;
-		}
-		else if (target.isFishing())
-		{
-			reason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_FISHING;
-		}
-		else if ((!partyDuel && target.isInsideZone(ZoneId.PEACE)) || target.isInsideZone(ZoneId.PVP) || target.isInsideZone(ZoneId.SIEGE))
-		{
-			reason = SystemMessageId.C1_CANNOT_MAKE_A_CHALLENGE_TO_A_DUEL_BECAUSE_C1_IS_CURRENTLY_IN_A_DUEL_PROHIBITED_AREA_PEACEFUL_ZONE_BATTLE_ZONE_NEAR_WATER_RESTART_PROHIBITED_AREA;
+			return;
 		}
 		
-		if (reason != null)
+		if (duel.getPlayerA() == player)
 		{
-			final SystemMessage msg = SystemMessage.getSystemMessage(reason);
-			msg.addString(target.getName());
-			player.sendPacket(msg);
-			return false;
+			duel.broadcastToTeam2(packet);
 		}
-		
-		return true;
+		else if (duel.getPlayerB() == player)
+		{
+			duel.broadcastToTeam1(packet);
+		}
+		else if (duel.isPartyDuel())
+		{
+			if ((duel.getPlayerA().getParty() != null) && duel.getPlayerA().getParty().getMembers().contains(player))
+			{
+				duel.broadcastToTeam2(packet);
+			}
+			else if ((duel.getPlayerB().getParty() != null) && duel.getPlayerB().getParty().getMembers().contains(player))
+			{
+				duel.broadcastToTeam1(packet);
+			}
+		}
+	}
+	
+	/**
+	 * Gets new a random Olympiad Stadium instance name.
+	 * @return an instance name
+	 */
+	public int getDuelArena()
+	{
+		return ARENAS[Rnd.get(ARENAS.length)];
 	}
 	
 	public static DuelManager getInstance()

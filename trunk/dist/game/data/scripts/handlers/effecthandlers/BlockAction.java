@@ -22,12 +22,13 @@ import java.util.Set;
 import com.l2jmobius.gameserver.datatables.BotReportTable;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Block Action effect implementation.
@@ -37,11 +38,10 @@ public final class BlockAction extends AbstractEffect
 {
 	private final Set<Integer> _blockedActions = new HashSet<>();
 	
-	public BlockAction(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public BlockAction(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
-		for (String action : params.getString("blockedActions").split(","))
+		final String[] actions = params.getString("blockedActions").split(",");
+		for (String action : actions)
 		{
 			_blockedActions.add(Integer.parseInt(action));
 		}
@@ -60,6 +60,20 @@ public final class BlockAction extends AbstractEffect
 	}
 	
 	@Override
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	{
+		if (_blockedActions.contains(BotReportTable.PARTY_ACTION_BLOCK_ID))
+		{
+			PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, effected.getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN, 0, "block action debuff", "system", true));
+		}
+		
+		if (_blockedActions.contains(BotReportTable.CHAT_BLOCK_ID))
+		{
+			PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, effected.getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, 0, "block action debuff", "system", true));
+		}
+	}
+	
+	@Override
 	public void onExit(BuffInfo info)
 	{
 		if (_blockedActions.contains(BotReportTable.PARTY_ACTION_BLOCK_ID))
@@ -69,20 +83,6 @@ public final class BlockAction extends AbstractEffect
 		if (_blockedActions.contains(BotReportTable.CHAT_BLOCK_ID))
 		{
 			PunishmentManager.getInstance().stopPunishment(info.getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN);
-		}
-	}
-	
-	@Override
-	public void onStart(BuffInfo info)
-	{
-		if (_blockedActions.contains(BotReportTable.PARTY_ACTION_BLOCK_ID))
-		{
-			PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, info.getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN, 0, "block action debuff", "system", true));
-		}
-		
-		if (_blockedActions.contains(BotReportTable.CHAT_BLOCK_ID))
-		{
-			PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, info.getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, 0, "block action debuff", "system", true));
 		}
 	}
 }

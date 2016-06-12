@@ -16,46 +16,40 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.MovieHolder;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * @author JIV
  */
-public final class EndScenePlayer extends L2GameClientPacket
+public final class EndScenePlayer implements IClientIncomingPacket
 {
-	private static final String _C__D0_5B_ENDSCENEPLAYER = "[C] D0:5B EndScenePlayer";
-	
 	private int _movieId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_movieId = readD();
+		_movieId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || (_movieId == 0))
 		{
 			return;
 		}
-		if (activeChar.getMovieId() != _movieId)
+		
+		final MovieHolder holder = activeChar.getMovieHolder();
+		if ((holder == null) || (holder.getMovie().getClientId() != _movieId))
 		{
-			_log.warning("Player " + getClient() + " sent EndScenePlayer with wrong movie id: " + _movieId);
+			_log.warning("Player " + client + " sent EndScenePlayer with wrong movie id: " + _movieId);
 			return;
 		}
-		activeChar.setMovieId(0);
-		activeChar.setIsTeleporting(true, false); // avoid to get player removed from L2World
-		activeChar.decayMe();
-		activeChar.spawnMe(activeChar.getX(), activeChar.getY(), activeChar.getZ());
-		activeChar.setIsTeleporting(false, false);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_5B_ENDSCENEPLAYER;
+		activeChar.stopMovie();
 	}
 }

@@ -16,12 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets.commission;
 
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * @author NosBit
  */
-public class ExShowCommission extends L2GameServerPacket
+public class ExShowCommission implements IClientOutgoingPacket
 {
 	public static final ExShowCommission STATIC_PACKET = new ExShowCommission();
 	
@@ -30,10 +32,11 @@ public class ExShowCommission extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xF2);
-		writeD(1);
+		OutgoingPackets.EX_SHOW_COMMISSION.writeId(packet);
+		
+		packet.writeD(0x01);
+		return true;
 	}
 }

@@ -16,28 +16,30 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2Clan.RankPrivs;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class PledgePowerGradeList extends L2GameServerPacket
+public class PledgePowerGradeList implements IClientOutgoingPacket
 {
-	private final L2Clan _clan;
+	private final RankPrivs[] _privs;
 	
-	public PledgePowerGradeList(L2Clan clan)
+	public PledgePowerGradeList(RankPrivs[] privs)
 	{
-		_clan = clan;
+		_privs = privs;
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x3D);
-		writeD(_clan.getAllRankPrivs().length);
-		for (RankPrivs temp : _clan.getAllRankPrivs())
+		OutgoingPackets.PLEDGE_POWER_GRADE_LIST.writeId(packet);
+		
+		packet.writeD(_privs.length);
+		for (RankPrivs temp : _privs)
 		{
-			writeD(temp.getRank());
-			writeD(_clan.getPowerGradeMemberCount(temp.getRank()));
+			packet.writeD(temp.getRank());
+			packet.writeD(temp.getParty());
 		}
+		return true;
 	}
 }

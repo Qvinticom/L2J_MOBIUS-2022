@@ -16,29 +16,30 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
-public class RequestGiveNickName extends L2GameClientPacket
+public class RequestGiveNickName implements IClientIncomingPacket
 {
-	private static final String _C__0B_REQUESTGIVENICKNAME = "[C] 0B RequestGiveNickName";
-	
 	private String _target;
 	private String _title;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_target = readS();
-		_title = readS();
+		_target = packet.readS();
+		_title = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -48,7 +49,7 @@ public class RequestGiveNickName extends L2GameClientPacket
 		if (activeChar.isNoble() && _target.equalsIgnoreCase(activeChar.getName()))
 		{
 			activeChar.setTitle(_title);
-			activeChar.sendPacket(SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED);
+			client.sendPacket(SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED);
 			activeChar.broadcastTitleInfo();
 		}
 		else
@@ -56,13 +57,13 @@ public class RequestGiveNickName extends L2GameClientPacket
 			// Can the player change/give a title?
 			if (!activeChar.hasClanPrivilege(ClanPrivilege.CL_GIVE_TITLE))
 			{
-				activeChar.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				client.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;
 			}
 			
 			if (activeChar.getClan().getLevel() < 3)
 			{
-				activeChar.sendPacket(SystemMessageId.A_PLAYER_CAN_ONLY_BE_GRANTED_A_TITLE_IF_THE_CLAN_IS_LEVEL_3_OR_ABOVE);
+				client.sendPacket(SystemMessageId.A_PLAYER_CAN_ONLY_BE_GRANTED_A_TITLE_IF_THE_CLAN_IS_LEVEL_3_OR_ABOVE);
 				return;
 			}
 			
@@ -79,19 +80,13 @@ public class RequestGiveNickName extends L2GameClientPacket
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
+					client.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 				}
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.THE_TARGET_MUST_BE_A_CLAN_MEMBER);
+				client.sendPacket(SystemMessageId.THE_TARGET_MUST_BE_A_CLAN_MEMBER);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__0B_REQUESTGIVENICKNAME;
 	}
 }

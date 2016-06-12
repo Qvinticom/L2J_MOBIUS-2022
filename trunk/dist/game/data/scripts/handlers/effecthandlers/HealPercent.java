@@ -18,10 +18,10 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -33,10 +33,8 @@ public final class HealPercent extends AbstractEffect
 {
 	private final int _power;
 	
-	public HealPercent(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public HealPercent(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_power = params.getInt("power", 0);
 	}
 	
@@ -53,36 +51,47 @@ public final class HealPercent extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character target = info.getEffected();
-		if ((target == null) || target.isDead() || target.isDoor())
+		if (effected.isDead() || effected.isDoor() || effected.isHpBlocked())
 		{
 			return;
 		}
 		
 		double amount = 0;
 		final double power = _power;
-		final boolean full = power == 100.0;
+		final boolean full = (power == 100.0);
 		
-		amount = full ? target.getMaxHp() : (target.getMaxHp() * power) / 100.0;
-		// Prevents overheal and negative amount
-		amount = Math.max(Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp()), 0);
-		if (amount != 0)
+		amount = full ? effected.getMaxHp() : (effected.getMaxHp() * power) / 100.0;
+		// Prevents overheal
+		amount = Math.min(amount, effected.getMaxRecoverableHp() - effected.getCurrentHp());
+		if (amount >= 0)
 		{
-			target.setCurrentHp(amount + target.getCurrentHp());
-		}
-		SystemMessage sm;
-		if (info.getEffector().getObjectId() != target.getObjectId())
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_C1);
-			sm.addCharName(info.getEffector());
+			if (amount != 0)
+			{
+				final double newHp = amount + effected.getCurrentHp();
+				effected.setCurrentHp(newHp, false);
+				effected.broadcastStatusUpdate(effector);
+			}
+			
+			SystemMessage sm;
+			if (effector.getObjectId() != effected.getObjectId())
+			{
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_C1);
+				sm.addCharName(effector);
+			}
+			else
+			{
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
+			}
+			sm.addInt((int) amount);
+			effected.sendPacket(sm);
 		}
 		else
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
+			final double damage = -amount;
+			effected.reduceCurrentHp(damage, effector, skill, false, false, false, false);
+			effector.sendDamageMessage(effected, skill, (int) damage, false, false);
 		}
-		sm.addInt((int) amount);
-		target.sendPacket(sm);
 	}
 }

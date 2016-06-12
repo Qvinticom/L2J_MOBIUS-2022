@@ -16,25 +16,25 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * Loads the category data with Class or NPC IDs.
  * @author NosBit, xban1x
  */
-public final class CategoryData implements IXmlReader
+public final class CategoryData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(CategoryData.class.getName());
 	
@@ -49,12 +49,12 @@ public final class CategoryData implements IXmlReader
 	public void load()
 	{
 		_categories.clear();
-		parseDatapackFile("CategoryData.xml");
+		parseDatapackFile("data/CategoryData.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _categories.size() + " Categories.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node node = doc.getFirstChild(); node != null; node = node.getNextSibling())
 		{
@@ -68,7 +68,7 @@ public final class CategoryData implements IXmlReader
 						final CategoryType categoryType = CategoryType.findByName(attrs.getNamedItem("name").getNodeValue());
 						if (categoryType == null)
 						{
-							LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Can't find category by name :" + attrs.getNamedItem("name").getNodeValue());
+							LOGGER.warning(getClass().getSimpleName() + ": Can't find category by name: " + attrs.getNamedItem("name").getNodeValue());
 							continue;
 						}
 						
@@ -98,7 +98,7 @@ public final class CategoryData implements IXmlReader
 		final Set<Integer> category = getCategoryByType(type);
 		if (category == null)
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Can't find category type :" + type);
+			LOGGER.warning(getClass().getSimpleName() + ": Can't find category type: " + type);
 			return false;
 		}
 		return category.contains(id);

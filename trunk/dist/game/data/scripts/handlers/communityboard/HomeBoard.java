@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.handler.IParseBoardHandler;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
@@ -83,7 +83,7 @@ public final class HomeBoard implements IParseBoardHandler
 			final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/" : "";
 			CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
 			
-			String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/" + customPath + "home.html");
+			String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/" + customPath + "home.html");
 			html = html.replaceAll("%fav_count%", Integer.toString(getFavoriteCount(activeChar)));
 			html = html.replaceAll("%region_count%", Integer.toString(getRegionCount(activeChar)));
 			html = html.replaceAll("%clan_count%", Integer.toString(ClanTable.getInstance().getClanCount()));
@@ -95,7 +95,7 @@ public final class HomeBoard implements IParseBoardHandler
 			final String path = command.replace("_bbstop;", "");
 			if ((path.length() > 0) && path.endsWith(".html"))
 			{
-				CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/" + customPath + path), activeChar);
+				CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/" + customPath + path), activeChar);
 			}
 		}
 		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_MULTISELLS && command.startsWith("_bbsmultisell"))
@@ -104,7 +104,7 @@ public final class HomeBoard implements IParseBoardHandler
 			final String[] buypassOptions = fullBypass.split(",");
 			final int multisellId = Integer.parseInt(buypassOptions[0]);
 			final String page = buypassOptions[1];
-			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/Custom/" + page + ".html");
+			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
 			CommunityBoardHandler.separateAndSend(html, activeChar);
 			MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, false);
 			return true;
@@ -112,7 +112,7 @@ public final class HomeBoard implements IParseBoardHandler
 		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_MULTISELLS && command.startsWith("_bbssell"))
 		{
 			final String page = command.replace("_bbssell;", "");
-			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/Custom/" + page + ".html");
+			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
 			CommunityBoardHandler.separateAndSend(html, activeChar);
 			activeChar.sendPacket(new BuyList(BuyListData.getInstance().getBuyList(423), activeChar.getAdena(), 0));
 			activeChar.sendPacket(new ExBuySellList(activeChar, false));
@@ -161,7 +161,7 @@ public final class HomeBoard implements IParseBoardHandler
 					SkillData.getInstance().getSkill(buffId, buffLevel).applyEffects(activeChar.getPet(), activeChar.getPet());
 				}
 			}
-			CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/Custom/" + page + ".html"), activeChar);
+			CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html"), activeChar);
 		}
 		return false;
 	}

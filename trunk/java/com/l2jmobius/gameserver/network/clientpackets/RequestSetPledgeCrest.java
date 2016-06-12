@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -23,40 +24,39 @@ import com.l2jmobius.gameserver.model.L2Crest;
 import com.l2jmobius.gameserver.model.L2Crest.CrestType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * Client packet for setting/deleting clan crest.
  */
-public final class RequestSetPledgeCrest extends L2GameClientPacket
+public final class RequestSetPledgeCrest implements IClientIncomingPacket
 {
-	private static final String _C__09_REQUESTSETPLEDGECREST = "[C] 09 RequestSetPledgeCrest";
-	
 	private int _length;
 	private byte[] _data = null;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_length = readD();
+		_length = packet.readD();
 		if (_length > 256)
 		{
-			return;
+			return false;
 		}
 		
-		_data = new byte[_length];
-		readB(_data);
+		_data = packet.readB(_length);
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		if (_length < 0)
+		if ((_length < 0))
 		{
 			activeChar.sendPacket(SystemMessageId.THE_SIZE_OF_THE_UPLOADED_SYMBOL_DOES_NOT_MEET_THE_STANDARD_REQUIREMENTS);
 			return;
@@ -111,9 +111,4 @@ public final class RequestSetPledgeCrest extends L2GameClientPacket
 		}
 	}
 	
-	@Override
-	public String getType()
-	{
-		return _C__09_REQUESTSETPLEDGECREST;
-	}
 }

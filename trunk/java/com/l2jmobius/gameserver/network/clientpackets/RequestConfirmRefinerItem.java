@@ -16,10 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutIntensiveResultForVariationMake;
 
 /**
@@ -28,22 +30,21 @@ import com.l2jmobius.gameserver.network.serverpackets.ExPutIntensiveResultForVar
  */
 public class RequestConfirmRefinerItem extends AbstractRefinePacket
 {
-	private static final String _C__D0_27_REQUESTCONFIRMREFINERITEM = "[C] D0:27 RequestConfirmRefinerItem";
-	
 	private int _targetItemObjId;
 	private int _refinerItemObjId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_targetItemObjId = readD();
-		_refinerItemObjId = readD();
+		_targetItemObjId = packet.readD();
+		_refinerItemObjId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -70,24 +71,9 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket
 		final int refinerItemId = refinerItem.getItem().getId();
 		final CrystalType grade = targetItem.getItem().getCrystalType();
 		final LifeStone ls = getLifeStone(refinerItemId);
-		int gemStoneId = 0;
-		if (getGemStoneId(grade) != null)
-		{
-			for (int id : getGemStoneId(grade))
-			{
-				if (activeChar.getInventory().getAllItemsByItemId(id) != null)
-				{
-					gemStoneId = id;
-					break;
-				}
-			}
-		}
-		activeChar.sendPacket(new ExPutIntensiveResultForVariationMake(_refinerItemObjId, refinerItemId, gemStoneId, getGemStoneCount(grade, ls.getGrade())));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_27_REQUESTCONFIRMREFINERITEM;
+		final int gemStoneId = getGemStoneId(grade);
+		final int gemStoneCount = getGemStoneCount(grade, ls.getGrade());
+		
+		activeChar.sendPacket(new ExPutIntensiveResultForVariationMake(_refinerItemObjId, refinerItemId, gemStoneId, gemStoneCount));
 	}
 }

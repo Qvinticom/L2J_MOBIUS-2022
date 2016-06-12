@@ -17,7 +17,6 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 
 /**
@@ -26,8 +25,7 @@ import com.l2jmobius.gameserver.model.effects.AbstractEffect;
  */
 public final class ChangeFishingMastery extends AbstractEffect
 {
-	public ChangeFishingMastery(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public ChangeFishingMastery(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 }

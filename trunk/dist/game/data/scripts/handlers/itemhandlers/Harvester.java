@@ -16,13 +16,16 @@
  */
 package handlers.itemhandlers;
 
+import java.util.List;
+
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -39,13 +42,13 @@ public final class Harvester implements IItemHandler
 		{
 			return false;
 		}
-		if (!playable.isPlayer())
+		else if (!playable.isPlayer())
 		{
 			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
-		final SkillHolder[] skills = item.getItem().getSkills();
+		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
 		if (skills == null)
 		{
 			_log.warning(getClass().getSimpleName() + ": is missing skills!");
@@ -61,10 +64,7 @@ public final class Harvester implements IItemHandler
 			return false;
 		}
 		
-		for (SkillHolder sk : skills)
-		{
-			activeChar.useMagic(sk.getSkill(), false, false);
-		}
+		skills.forEach(holder -> activeChar.useMagic(holder.getSkill(), item, false, false));
 		return true;
 	}
 }

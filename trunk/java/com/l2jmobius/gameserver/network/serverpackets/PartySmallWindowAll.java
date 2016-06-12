@@ -16,11 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public final class PartySmallWindowAll extends L2GameServerPacket
+public final class PartySmallWindowAll implements IClientOutgoingPacket
 {
 	private final L2Party _party;
 	private final L2PcInstance _exclude;
@@ -32,59 +34,61 @@ public final class PartySmallWindowAll extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x4E);
-		writeD(_party.getLeaderObjectId());
-		writeC(_party.getDistributionType().getId());
-		writeC(_party.getMemberCount() - 1);
+		OutgoingPackets.PARTY_SMALL_WINDOW_ALL.writeId(packet);
+		
+		packet.writeD(_party.getLeaderObjectId());
+		packet.writeC(_party.getDistributionType().getId());
+		packet.writeC(_party.getMemberCount() - 1);
 		
 		for (L2PcInstance member : _party.getMembers())
 		{
 			if ((member != null) && (member != _exclude))
 			{
-				writeD(member.getObjectId());
-				writeS(member.getName());
+				packet.writeD(member.getObjectId());
+				packet.writeS(member.getName());
 				
-				writeD((int) member.getCurrentCp()); // c4
-				writeD(member.getMaxCp()); // c4
+				packet.writeD((int) member.getCurrentCp()); // c4
+				packet.writeD(member.getMaxCp()); // c4
 				
-				writeD((int) member.getCurrentHp());
-				writeD(member.getMaxHp());
-				writeD((int) member.getCurrentMp());
-				writeD(member.getMaxMp());
-				writeD(member.getVitalityPoints());
-				writeC(member.getLevel());
-				writeH(member.getClassId().getId());
-				writeC(0x01); // Unk
-				writeH(member.getRace().ordinal());
+				packet.writeD((int) member.getCurrentHp());
+				packet.writeD(member.getMaxHp());
+				packet.writeD((int) member.getCurrentMp());
+				packet.writeD(member.getMaxMp());
+				packet.writeD(member.getVitalityPoints());
+				packet.writeC(member.getLevel());
+				packet.writeH(member.getClassId().getId());
+				packet.writeC(0x01); // Unk
+				packet.writeH(member.getRace().ordinal());
 				final L2Summon pet = member.getPet();
-				writeD(member.getServitors().size() + (pet != null ? 1 : 0)); // Summon size, one only atm
+				packet.writeD(member.getServitors().size() + (pet != null ? 1 : 0)); // Summon size, one only atm
 				if (pet != null)
 				{
-					writeD(pet.getObjectId());
-					writeD(pet.getId() + 1000000);
-					writeC(pet.getSummonType());
-					writeS(pet.getName());
-					writeD((int) pet.getCurrentHp());
-					writeD(pet.getMaxHp());
-					writeD((int) pet.getCurrentMp());
-					writeD(pet.getMaxMp());
-					writeC(pet.getLevel());
+					packet.writeD(pet.getObjectId());
+					packet.writeD(pet.getId() + 1000000);
+					packet.writeC(pet.getSummonType());
+					packet.writeS(pet.getName());
+					packet.writeD((int) pet.getCurrentHp());
+					packet.writeD(pet.getMaxHp());
+					packet.writeD((int) pet.getCurrentMp());
+					packet.writeD(pet.getMaxMp());
+					packet.writeC(pet.getLevel());
 				}
 				member.getServitors().values().forEach(s ->
 				{
-					writeD(s.getObjectId());
-					writeD(s.getId() + 1000000);
-					writeC(s.getSummonType());
-					writeS(s.getName());
-					writeD((int) s.getCurrentHp());
-					writeD(s.getMaxHp());
-					writeD((int) s.getCurrentMp());
-					writeD(s.getMaxMp());
-					writeC(s.getLevel());
+					packet.writeD(s.getObjectId());
+					packet.writeD(s.getId() + 1000000);
+					packet.writeC(s.getSummonType());
+					packet.writeS(s.getName());
+					packet.writeD((int) s.getCurrentHp());
+					packet.writeD(s.getMaxHp());
+					packet.writeD((int) s.getCurrentMp());
+					packet.writeD(s.getMaxMp());
+					packet.writeC(s.getLevel());
 				});
 			}
 		}
+		return true;
 	}
 }

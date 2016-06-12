@@ -16,39 +16,34 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExResponseBeautyList;
 
 /**
  * @author Sdw
  */
-public class RequestShowBeautyList extends L2GameClientPacket
+public class RequestShowBeautyList implements IClientIncomingPacket
 {
-	private static final String _C__D0_CA_REQUESTSHOWBEAUTYLIST = "[C] D0:CA RequestShowBeautyList";
-	
 	private int _type;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_type = readD();
+		_type = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		activeChar.sendPacket(new ExResponseBeautyList(activeChar, _type));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_CA_REQUESTSHOWBEAUTYLIST;
+		client.sendPacket(new ExResponseBeautyList(activeChar, _type));
 	}
 }

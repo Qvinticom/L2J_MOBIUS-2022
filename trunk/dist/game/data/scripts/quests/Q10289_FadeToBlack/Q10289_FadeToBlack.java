@@ -40,7 +40,7 @@ public class Q10289_FadeToBlack extends Quest
 	
 	public Q10289_FadeToBlack()
 	{
-		super(10289, Q10289_FadeToBlack.class.getSimpleName(), "Fade to Black");
+		super(10289);
 		addStartNpc(GREYMORE);
 		addTalkId(GREYMORE);
 		addKillId(ANAYS);

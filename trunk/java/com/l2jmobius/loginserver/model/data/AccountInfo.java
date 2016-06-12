@@ -18,7 +18,7 @@ package com.l2jmobius.loginserver.model.data;
 
 import java.util.Objects;
 
-//import com.warrenstrange.googleauth.GoogleAuthenticator;
+import com.warrenstrange.googleauth.GoogleAuthenticator;
 
 /**
  * @author HorridoJoho
@@ -31,7 +31,7 @@ public final class AccountInfo
 	private final int _lastServer;
 	private String _otpKey;
 	
-	public AccountInfo(final String login, final String passHash, final int accessLevel, final int lastServer)
+	public AccountInfo(String login, String passHash, int accessLevel, int lastServer)
 	{
 		Objects.requireNonNull(login, "login");
 		Objects.requireNonNull(passHash, "passHash");
@@ -64,12 +64,11 @@ public final class AccountInfo
 			return true;
 		}
 		
-		// final GoogleAuthenticator gAuth = new GoogleAuthenticator();
-		// return gAuth.authorize(_otpKey, otp);
-		return true;
+		final GoogleAuthenticator gAuth = new GoogleAuthenticator();
+		return gAuth.authorize(_otpKey, otp);
 	}
 	
-	public boolean checkPassHash(final String passHash)
+	public boolean checkPassHash(String passHash)
 	{
 		return _passHash.equals(passHash);
 	}

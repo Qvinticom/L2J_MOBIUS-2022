@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,17 +24,17 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.Sex;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.beautyshop.BeautyData;
 import com.l2jmobius.gameserver.model.beautyshop.BeautyItem;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * @author Sdw
  */
-public final class BeautyShopData implements IXmlReader
+public final class BeautyShopData implements IGameXmlReader
 {
 	private final Map<Race, Map<Sex, BeautyData>> _beautyList = new HashMap<>();
 	private final Map<Sex, BeautyData> _beautyData = new HashMap<>();
@@ -48,11 +49,11 @@ public final class BeautyShopData implements IXmlReader
 	{
 		_beautyList.clear();
 		_beautyData.clear();
-		parseDatapackFile("BeautyShop.xml");
+		parseDatapackFile("data/BeautyShop.xml");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		NamedNodeMap attrs;
 		StatsSet set;
@@ -124,7 +125,8 @@ public final class BeautyShopData implements IXmlReader
 											att = attrs.item(i);
 											set.set(att.getNodeName(), att.getNodeValue());
 										}
-										beautyData.addFace(new BeautyItem(set));
+										final BeautyItem face = new BeautyItem(set);
+										beautyData.addFace(face);
 									}
 								}
 								
@@ -145,7 +147,11 @@ public final class BeautyShopData implements IXmlReader
 	
 	public BeautyData getBeautyData(Race race, Sex sex)
 	{
-		return _beautyList.containsKey(race) ? _beautyList.get(race).get(sex) : null;
+		if (_beautyList.containsKey(race))
+		{
+			return _beautyList.get(race).get(sex);
+		}
+		return null;
 	}
 	
 	public static BeautyShopData getInstance()

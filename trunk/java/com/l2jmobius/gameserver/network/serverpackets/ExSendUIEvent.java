@@ -19,16 +19,20 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Arrays;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class ExSendUIEvent extends L2GameServerPacket
+public class ExSendUIEvent implements IClientOutgoingPacket
 {
 	private final int _objectId;
-	private final boolean _type;
-	private final boolean _countUp;
+	private final int _type;
+	private final int _countUp;
 	private final int _startTime;
+	private final int _startTime2;
 	private final int _endTime;
+	private final int _endTime2;
 	private final int _npcstringId;
 	private List<String> _params = null;
 	
@@ -42,7 +46,7 @@ public class ExSendUIEvent extends L2GameServerPacket
 	 */
 	public ExSendUIEvent(L2PcInstance player, boolean hide, boolean countUp, int startTime, int endTime, String text)
 	{
-		this(player, hide, countUp, startTime, endTime, -1, text);
+		this(player, hide ? 1 : 0, countUp ? 1 : 0, startTime / 60, startTime % 60, endTime / 60, endTime % 60, -1, text);
 	}
 	
 	/**
@@ -56,51 +60,55 @@ public class ExSendUIEvent extends L2GameServerPacket
 	 */
 	public ExSendUIEvent(L2PcInstance player, boolean hide, boolean countUp, int startTime, int endTime, NpcStringId npcString, String... params)
 	{
-		this(player, hide, countUp, startTime, endTime, npcString.getId(), params);
+		this(player, hide ? 1 : 0, countUp ? 1 : 0, startTime / 60, startTime % 60, endTime / 60, endTime % 60, npcString.getId(), params);
 	}
 	
 	/**
 	 * @param player
-	 * @param hide
+	 * @param type
 	 * @param countUp
 	 * @param startTime
+	 * @param startTime2
 	 * @param endTime
+	 * @param endTime2
 	 * @param npcstringId
 	 * @param params
 	 */
-	public ExSendUIEvent(L2PcInstance player, boolean hide, boolean countUp, int startTime, int endTime, int npcstringId, String... params)
+	public ExSendUIEvent(L2PcInstance player, int type, int countUp, int startTime, int startTime2, int endTime, int endTime2, int npcstringId, String... params)
 	{
 		_objectId = player.getObjectId();
-		_type = hide;
+		_type = type;
 		_countUp = countUp;
 		_startTime = startTime;
+		_startTime2 = startTime2;
 		_endTime = endTime;
+		_endTime2 = endTime2;
 		_npcstringId = npcstringId;
 		_params = Arrays.asList(params);
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x8F);
-		writeD(_objectId);
-		writeD(_type ? 1 : 0); // 0 = show, 1 = hide (there is 2 = pause and 3 = resume also but they don't work well you can only pause count down and you cannot resume it because resume hides the counter).
-		writeD(0); // unknown
-		writeD(0); // unknown
-		writeS(_countUp ? "1" : "0"); // 0 = count down, 1 = count up
-		// timer always disappears 10 seconds before end
-		writeS(String.valueOf(_startTime / 60));
-		writeS(String.valueOf(_startTime % 60));
-		writeS(String.valueOf(_endTime / 60));
-		writeS(String.valueOf(_endTime % 60));
-		writeD(_npcstringId);
+		OutgoingPackets.EX_SEND_UIEVENT.writeId(packet);
+		
+		packet.writeD(_objectId);
+		packet.writeD(_type); // 0 = show, 1 = hide (there is 2 = pause and 3 = resume also but they don't work well you can only pause count down and you cannot resume it because resume hides the counter).
+		packet.writeD(0); // unknown
+		packet.writeD(0); // unknown
+		packet.writeS(String.valueOf(_countUp)); // 0 = count down, 1 = count up timer always disappears 10 seconds before end
+		packet.writeS(String.valueOf(_startTime));
+		packet.writeS(String.valueOf(_startTime2));
+		packet.writeS(String.valueOf(_endTime));
+		packet.writeS(String.valueOf(_endTime2));
+		packet.writeD(_npcstringId);
 		if (_params != null)
 		{
 			for (String param : _params)
 			{
-				writeS(param);
+				packet.writeS(param);
 			}
 		}
+		return true;
 	}
 }

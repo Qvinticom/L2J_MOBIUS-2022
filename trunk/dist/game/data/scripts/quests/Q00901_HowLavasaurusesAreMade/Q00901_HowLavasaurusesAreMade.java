@@ -50,7 +50,7 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 	
 	public Q00901_HowLavasaurusesAreMade()
 	{
-		super(901, Q00901_HowLavasaurusesAreMade.class.getSimpleName(), "How Lavasauruses Are Made");
+		super(901);
 		addStartNpc(ROONEY);
 		addTalkId(ROONEY);
 		addKillId(LAVASAURUS_NEWBORN, LAVASAURUS_FLEDGIING, LAVASAURUS_ADULT, LAVASAURUS_ELDERLY);

@@ -50,4 +50,5 @@ public class OnCreatureZoneExit implements IBaseEvent
 	{
 		return EventType.ON_CREATURE_ZONE_EXIT;
 	}
+	
 }

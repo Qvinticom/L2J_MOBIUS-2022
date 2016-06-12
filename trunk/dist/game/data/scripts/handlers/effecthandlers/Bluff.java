@@ -18,9 +18,9 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.network.serverpackets.StartRotation;
 import com.l2jmobius.gameserver.network.serverpackets.StopRotation;
@@ -33,17 +33,15 @@ public final class Bluff extends AbstractEffect
 {
 	private final int _chance;
 	
-	public Bluff(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Bluff(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_chance = params.getInt("chance", 100);
 	}
 	
 	@Override
-	public boolean calcSuccess(BuffInfo info)
+	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
-		return Formulas.calcProbability(_chance, info.getEffector(), info.getEffected(), info.getSkill());
+		return Formulas.calcProbability(_chance, effector, effected, skill);
 	}
 	
 	@Override
@@ -53,16 +51,14 @@ public final class Bluff extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character effected = info.getEffected();
 		// Headquarters NPC should not rotate
 		if ((effected.getId() == 35062) || effected.isRaid() || effected.isRaidMinion())
 		{
 			return;
 		}
 		
-		final L2Character effector = info.getEffector();
 		effected.broadcastPacket(new StartRotation(effected.getObjectId(), effected.getHeading(), 1, 65535));
 		effected.broadcastPacket(new StopRotation(effected.getObjectId(), effector.getHeading(), 65535));
 		effected.setHeading(effector.getHeading());

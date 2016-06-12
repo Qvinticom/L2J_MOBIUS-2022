@@ -21,44 +21,53 @@ import java.sql.PreparedStatement;
 import java.util.logging.Level;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.network.serverpackets.friend.FriendList;
 import com.l2jmobius.gameserver.network.serverpackets.friend.FriendRemove;
 
 /**
  * This class ...
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestFriendDel extends L2GameClientPacket
+public final class RequestFriendDel implements IClientIncomingPacket
 {
-	private static final String _C__7A_REQUESTFRIENDDEL = "[C] 7A RequestFriendDel";
-	
 	private String _name;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_name = readS();
+		_name = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		SystemMessage sm;
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
 		final int id = CharNameTable.getInstance().getIdByName(_name);
-		if ((id == -1) || !activeChar.getFriendList().containsKey(id))
+		
+		if (id == -1)
+		{
+			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_NOT_ON_YOUR_FRIEND_LIST);
+			sm.addString(_name);
+			activeChar.sendPacket(sm);
+			return;
+		}
+		
+		if (!activeChar.getFriendList().contains(id))
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_NOT_ON_YOUR_FRIEND_LIST);
 			sm.addString(_name);
@@ -80,7 +89,7 @@ public final class RequestFriendDel extends L2GameClientPacket
 			sm.addString(_name);
 			activeChar.sendPacket(sm);
 			
-			activeChar.getFriendList().remove(id);
+			activeChar.getFriendList().remove(Integer.valueOf(id));
 			activeChar.sendPacket(new FriendRemove(_name, 1));
 			
 			final L2PcInstance player = L2World.getInstance().getPlayer(_name);
@@ -88,19 +97,11 @@ public final class RequestFriendDel extends L2GameClientPacket
 			{
 				player.getFriendList().remove(Integer.valueOf(activeChar.getObjectId()));
 				player.sendPacket(new FriendRemove(activeChar.getName(), 1));
-				player.sendPacket(new FriendList(player));
 			}
-			activeChar.sendPacket(new FriendList(activeChar));
 		}
 		catch (Exception e)
 		{
 			_log.log(Level.WARNING, "could not del friend objectid: ", e);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__7A_REQUESTFRIENDDEL;
 	}
 }

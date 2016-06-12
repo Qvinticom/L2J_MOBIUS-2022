@@ -22,20 +22,32 @@ import com.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.L2TeleportLocation;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
+/**
+ * This class ...
+ * @version $Revision$ $Date$
+ */
 public class L2DoormenInstance extends L2NpcInstance
 {
-	/**
-	 * Creates a doorman.
-	 * @param template the doorman NPC template
-	 */
 	public L2DoormenInstance(L2NpcTemplate template)
 	{
 		super(template);
 		setInstanceType(InstanceType.L2DoormenInstance);
+	}
+	
+	@Override
+	public boolean isAutoAttackable(L2Character attacker)
+	{
+		if (attacker.isMonster())
+		{
+			return true;
+		}
+		
+		return super.isAutoAttackable(attacker);
 	}
 	
 	@Override
@@ -46,7 +58,7 @@ public class L2DoormenInstance extends L2NpcInstance
 			showChatWindow(player);
 			return;
 		}
-		if (command.startsWith("open_doors"))
+		else if (command.startsWith("open_doors"))
 		{
 			if (isOwnerClan(player))
 			{
@@ -61,7 +73,7 @@ public class L2DoormenInstance extends L2NpcInstance
 			}
 			return;
 		}
-		if (command.startsWith("close_doors"))
+		else if (command.startsWith("close_doors"))
 		{
 			if (isOwnerClan(player))
 			{
@@ -76,7 +88,7 @@ public class L2DoormenInstance extends L2NpcInstance
 			}
 			return;
 		}
-		if (command.startsWith("tele"))
+		else if (command.startsWith("tele"))
 		{
 			if (isOwnerClan(player))
 			{
@@ -96,11 +108,11 @@ public class L2DoormenInstance extends L2NpcInstance
 		
 		if (!isOwnerClan(player))
 		{
-			html.setFile(player.getHtmlPrefix(), "html/doormen/" + getTemplate().getId() + "-no.htm");
+			html.setFile(player.getHtmlPrefix(), "data/html/doormen/" + getTemplate().getId() + "-no.htm");
 		}
 		else
 		{
-			html.setFile(player.getHtmlPrefix(), "html/doormen/" + getTemplate().getId() + ".htm");
+			html.setFile(player.getHtmlPrefix(), "data/html/doormen/" + getTemplate().getId() + ".htm");
 		}
 		
 		html.replace("%objectId%", String.valueOf(getObjectId()));
@@ -134,7 +146,7 @@ public class L2DoormenInstance extends L2NpcInstance
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		html.setFile(player.getHtmlPrefix(), "html/doormen/" + getTemplate().getId() + "-busy.htm");
+		html.setFile(player.getHtmlPrefix(), "data/html/doormen/" + getTemplate().getId() + "-busy.htm");
 		player.sendPacket(html);
 	}
 	
@@ -146,7 +158,7 @@ public class L2DoormenInstance extends L2NpcInstance
 		{
 			if (!player.isAlikeDead())
 			{
-				player.teleToLocation(list.getLocX(), list.getLocY(), list.getLocZ(), false);
+				player.teleToLocation(list.getLocX(), list.getLocY(), list.getLocZ());
 			}
 		}
 		else

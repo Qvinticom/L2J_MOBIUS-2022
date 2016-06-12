@@ -16,37 +16,29 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
-public class ExPCCafeRequestOpenWindowWithoutNPC extends L2GameClientPacket
+/**
+ * @author Mobius
+ */
+public class ExPCCafeRequestOpenWindowWithoutNPC implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
-		if ((_activeChar != null) && Config.PC_BANG_ENABLED)
-		{
-			getHtmlPage(_activeChar);
-		}
-	}
-	
-	public void getHtmlPage(L2PcInstance player)
-	{
-		final NpcHtmlMessage html = new NpcHtmlMessage();
-		html.setFile(player.getHtmlPrefix(), "html/pccafe.htm");
-		player.sendPacket(html);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getName();
+		// final L2PcInstance activeChar = client.getActiveChar();
+		// if ((activeChar != null) && Config.PC_BANG_ENABLED)
+		// {
+		// final NpcHtmlMessage html = new NpcHtmlMessage();
+		// html.setFile(activeChar.getHtmlPrefix(), "data/html/pccafe.htm");
+		// activeChar.sendPacket(html);
+		// }
 	}
 }

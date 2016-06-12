@@ -54,11 +54,14 @@ public enum CommonSkill
 	IMPRIT_OF_DARKNESS(19035, 1),
 	ABILITY_OF_LIGHT(19032, 1),
 	ABILITY_OF_DARKNESS(19033, 1),
-	HAIR_ACCESSORY_SET(17192, 1);
+	HAIR_ACCESSORY_SET(17192, 1),
+	ALCHEMY_CUBE(17943, 1),
+	ALCHEMY_CUBE_RANDOM_SUCCESS(17966, 1),
+	PET_SWITCH_STANCE(6054, 1);
 	
 	private final SkillHolder _holder;
 	
-	private CommonSkill(int id, int level)
+	CommonSkill(int id, int level)
 	{
 		_holder = new SkillHolder(id, level);
 	}

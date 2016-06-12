@@ -16,20 +16,24 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.Arrays;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.util.data.xml.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 
 /**
  * This class holds the Player Xp Percent Lost Data for each level for players.
  * @author Zealar
  */
-public final class PlayerXpPercentLostData implements IXmlReader
+public final class PlayerXpPercentLostData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(PlayerXpPercentLostData.class.getName());
+	
 	private final int _maxlevel = ExperienceData.getInstance().getMaxLevel();
 	private final double[] _playerXpPercentLost = new double[_maxlevel + 1];
 	
@@ -42,11 +46,11 @@ public final class PlayerXpPercentLostData implements IXmlReader
 	@Override
 	public void load()
 	{
-		parseDatapackFile("stats/chars/playerXpPercentLost.xml");
+		parseDatapackFile("data/stats/chars/playerXpPercentLost.xml");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
@@ -57,12 +61,7 @@ public final class PlayerXpPercentLostData implements IXmlReader
 					if ("xpLost".equalsIgnoreCase(d.getNodeName()))
 					{
 						final NamedNodeMap attrs = d.getAttributes();
-						final Integer level = parseInteger(attrs, "level");
-						if (level > _maxlevel)
-						{
-							break;
-						}
-						_playerXpPercentLost[level] = parseDouble(attrs, "val");
+						_playerXpPercentLost[parseInteger(attrs, "level")] = parseDouble(attrs, "val");
 					}
 				}
 			}
@@ -71,12 +70,12 @@ public final class PlayerXpPercentLostData implements IXmlReader
 	
 	public double getXpPercent(int level)
 	{
-		if (level <= _maxlevel)
+		if (level > _maxlevel)
 		{
-			return _playerXpPercentLost[level];
+			LOGGER.warning("Require to high level inside PlayerXpPercentLostData (" + level + ")");
+			return _playerXpPercentLost[_maxlevel];
 		}
-		LOGGER.warning("Require to high level inside PlayerXpPercentLostData (" + level + ")");
-		return _playerXpPercentLost[_maxlevel];
+		return _playerXpPercentLost[level];
 	}
 	
 	/**

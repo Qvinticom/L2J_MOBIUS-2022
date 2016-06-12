@@ -14,43 +14,37 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.entity.Castle;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.SiegeDefenderList;
 
 /**
  * This class ...
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestSiegeDefenderList extends L2GameClientPacket
+public final class RequestSiegeDefenderList implements IClientIncomingPacket
 {
-	private static final String _C__AC_REQUESTSIEGEDEFENDERLIST = "[C] AC RequestSiegeDefenderList";
-	
 	private int _castleId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_castleId = readD();
+		_castleId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		final Castle castle = CastleManager.getInstance().getCastleById(_castleId);
 		if (castle == null)
 		{
 			return;
 		}
-		sendPacket(new SiegeDefenderList(castle));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__AC_REQUESTSIEGEDEFENDERLIST;
+		client.sendPacket(new SiegeDefenderList(castle));
 	}
 }

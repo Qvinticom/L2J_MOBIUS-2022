@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class MonRaceInfo extends L2GameServerPacket
+public class MonRaceInfo implements IClientOutgoingPacket
 {
 	private final int _unknown1;
 	private final int _unknown2;
@@ -37,31 +39,39 @@ public class MonRaceInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xe3);
+		OutgoingPackets.MON_RACE_INFO.writeId(packet);
 		
-		writeD(_unknown1);
-		writeD(_unknown2);
-		writeD(0x08);
+		packet.writeD(_unknown1);
+		packet.writeD(_unknown2);
+		packet.writeD(0x08);
 		
 		for (int i = 0; i < 8; i++)
 		{
-			writeD(_monsters[i].getObjectId()); // npcObjectID
-			writeD(_monsters[i].getTemplate().getId() + 1000000); // npcID
-			writeD(14107); // origin X
-			writeD(181875 + (58 * (7 - i))); // origin Y
-			writeD(-3566); // origin Z
-			writeD(12080); // end X
-			writeD(181875 + (58 * (7 - i))); // end Y
-			writeD(-3566); // end Z
-			writeF(_monsters[i].getTemplate().getfCollisionHeight()); // coll. height
-			writeF(_monsters[i].getTemplate().getfCollisionRadius()); // coll. radius
-			writeD(120); // ?? unknown
+			packet.writeD(_monsters[i].getObjectId()); // npcObjectID
+			packet.writeD(_monsters[i].getTemplate().getId() + 1000000); // npcID
+			packet.writeD(14107); // origin X
+			packet.writeD(181875 + (58 * (7 - i))); // origin Y
+			packet.writeD(-3566); // origin Z
+			packet.writeD(12080); // end X
+			packet.writeD(181875 + (58 * (7 - i))); // end Y
+			packet.writeD(-3566); // end Z
+			packet.writeF(_monsters[i].getTemplate().getfCollisionHeight()); // coll. height
+			packet.writeF(_monsters[i].getTemplate().getfCollisionRadius()); // coll. radius
+			packet.writeD(120); // ?? unknown
 			for (int j = 0; j < 20; j++)
 			{
-				writeC(_unknown1 == 0 ? _speeds[i][j] : 0x00);
+				if (_unknown1 == 0)
+				{
+					packet.writeC(_speeds[i][j]);
+				}
+				else
+				{
+					packet.writeC(0x00);
+				}
 			}
 		}
+		return true;
 	}
 }

@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.model.actor.templates;
 
+import com.l2jmobius.gameserver.enums.DoorOpenType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 
 /**
@@ -51,10 +51,9 @@ public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable
 	private int _randomTime;
 	private final int _closeTime;
 	private final int _level;
-	private final int _openType;
+	private final DoorOpenType _openType;
 	private final boolean _checkCollision;
 	private final boolean _isAttackableDoor;
-	private final int _clanhallId;
 	private final boolean _stealth;
 	
 	public L2DoorTemplate(StatsSet set)
@@ -64,48 +63,47 @@ public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable
 		_name = set.getString("name");
 		
 		// position
-		final String[] pos = set.getString("pos").split(";");
-		_posX = Integer.parseInt(pos[0]);
-		_posY = Integer.parseInt(pos[1]);
-		_posZ = Integer.parseInt(pos[2]);
-		_height = set.getInt("height");
+		_posX = set.getInt("x");
+		_posY = set.getInt("y");
+		_posZ = set.getInt("z");
+		_height = set.getInt("height", 150);
 		_nodeZ = set.getInt("nodeZ");
+		
 		_nodeX = new int[4]; // 4 * x
 		_nodeY = new int[4]; // 4 * y
 		for (int i = 0; i < 4; i++)
 		{
-			final String split[] = set.getString("node" + (i + 1)).split(",");
-			_nodeX[i] = Integer.parseInt(split[0]);
-			_nodeY[i] = Integer.parseInt(split[1]);
+			_nodeX[i] = set.getInt("nodeX_" + i);
+			_nodeY[i] = set.getInt("nodeY_" + i);
 		}
 		
 		// optional
-		_emmiter = set.getInt("emitter_id", 0);
-		_showHp = set.getBoolean("hp_showable", true);
-		_isWall = set.getBoolean("is_wall", false);
+		_emmiter = set.getInt("emmiterId", 0);
+		_showHp = set.getBoolean("showHp", true);
+		_isWall = set.getBoolean("isWall", false);
 		_groupName = set.getString("group", null);
 		
-		_childDoorId = set.getInt("child_id_event", -1);
+		_childDoorId = set.getInt("childId", -1);
 		// true if door is opening
-		String masterevent = set.getString("master_close_event", "act_nothing");
+		String masterevent = set.getString("masterClose", "act_nothing");
 		_masterDoorClose = (byte) (masterevent.equals("act_open") ? 1 : masterevent.equals("act_close") ? -1 : 0);
 		
-		masterevent = set.getString("master_open_event", "act_nothing");
+		masterevent = set.getString("masterOpen", "act_nothing");
 		_masterDoorOpen = (byte) (masterevent.equals("act_open") ? 1 : masterevent.equals("act_close") ? -1 : 0);
 		
 		_isTargetable = set.getBoolean("targetable", true);
-		_default_status = set.getString("default_status", "close").equals("open");
-		_closeTime = set.getInt("close_time", -1);
+		_default_status = set.getString("default", "close").equals("open");
+		_closeTime = set.getInt("closeTime", -1);
 		_level = set.getInt("level", 0);
-		_openType = set.getInt("open_method", 0);
-		_checkCollision = set.getBoolean("check_collision", true);
-		if ((_openType & L2DoorInstance.OPEN_BY_TIME) == L2DoorInstance.OPEN_BY_TIME)
+		
+		_openType = set.getEnum("openMethod", DoorOpenType.class, DoorOpenType.NONE);
+		_checkCollision = set.getBoolean("isCheckCollision", true);
+		if (_openType == DoorOpenType.BY_TIME)
 		{
-			_openTime = set.getInt("open_time");
-			_randomTime = set.getInt("random_time", -1);
+			_openTime = set.getInt("openTime");
+			_randomTime = set.getInt("randomTime", -1);
 		}
-		_isAttackableDoor = set.getBoolean("is_attackable", false);
-		_clanhallId = set.getInt("clanhall_id", 0);
+		_isAttackableDoor = set.getBoolean("attackable", false);
 		_stealth = set.getBoolean("stealth", false);
 	}
 	
@@ -224,7 +222,7 @@ public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable
 		return _level;
 	}
 	
-	public int getOpenType()
+	public DoorOpenType getOpenType()
 	{
 		return _openType;
 	}
@@ -237,11 +235,6 @@ public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable
 	public boolean isAttackable()
 	{
 		return _isAttackableDoor;
-	}
-	
-	public int getClanHallId()
-	{
-		return _clanhallId;
 	}
 	
 	public boolean isStealth()

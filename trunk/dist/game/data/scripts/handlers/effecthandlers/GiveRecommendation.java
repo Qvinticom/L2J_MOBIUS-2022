@@ -17,10 +17,11 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -34,14 +35,12 @@ public final class GiveRecommendation extends AbstractEffect
 {
 	private final int _amount;
 	
-	public GiveRecommendation(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public GiveRecommendation(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_amount = params.getInt("amount", 0);
 		if (_amount == 0)
 		{
-			_log.warning(getClass().getSimpleName() + ": amount parameter is missing or set to 0. id:" + set.getInt("id", -1));
+			throw new IllegalArgumentException("amount parameter is missing or set to 0.");
 		}
 	}
 	
@@ -52,31 +51,34 @@ public final class GiveRecommendation extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2PcInstance target = info.getEffected() instanceof L2PcInstance ? (L2PcInstance) info.getEffected() : null;
-		if (target == null)
+		final L2PcInstance target = effected instanceof L2PcInstance ? (L2PcInstance) effected : null;
+		if (target != null)
 		{
-			return;
-		}
-		
-		final int recommendationsGiven = (target.getRecomHave() + _amount) >= 255 ? 255 - target.getRecomHave() : _amount;
-		if (recommendationsGiven > 0)
-		{
-			target.setRecomHave(target.getRecomHave() + recommendationsGiven);
-			
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_RECOMMENDATION_S);
-			sm.addInt(recommendationsGiven);
-			target.sendPacket(sm);
-			target.sendPacket(new UserInfo(target));
-			target.sendPacket(new ExVoteSystemInfo(target));
-		}
-		else
-		{
-			final L2PcInstance player = info.getEffector() instanceof L2PcInstance ? (L2PcInstance) info.getEffector() : null;
-			if (player != null)
+			int recommendationsGiven = _amount;
+			if ((target.getRecomHave() + _amount) >= 255)
 			{
-				player.sendPacket(SystemMessageId.NOTHING_HAPPENED);
+				recommendationsGiven = 255 - target.getRecomHave();
+			}
+			
+			if (recommendationsGiven > 0)
+			{
+				target.setRecomHave(target.getRecomHave() + recommendationsGiven);
+				
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_RECOMMENDATION_S);
+				sm.addInt(recommendationsGiven);
+				target.sendPacket(sm);
+				target.sendPacket(new UserInfo(target));
+				target.sendPacket(new ExVoteSystemInfo(target));
+			}
+			else
+			{
+				final L2PcInstance player = effector instanceof L2PcInstance ? (L2PcInstance) effector : null;
+				if (player != null)
+				{
+					player.sendPacket(SystemMessageId.NOTHING_HAPPENED);
+				}
 			}
 		}
 	}

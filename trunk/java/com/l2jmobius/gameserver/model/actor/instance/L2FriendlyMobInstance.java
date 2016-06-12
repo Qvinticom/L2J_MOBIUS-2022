@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.model.actor.instance;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.knownlist.FriendlyMobKnownList;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 
 /**
@@ -28,10 +27,6 @@ import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
  */
 public class L2FriendlyMobInstance extends L2Attackable
 {
-	/**
-	 * Creates a friendly monster.
-	 * @param template the friendly monster NPC template
-	 */
 	public L2FriendlyMobInstance(L2NpcTemplate template)
 	{
 		super(template);
@@ -39,21 +34,14 @@ public class L2FriendlyMobInstance extends L2Attackable
 	}
 	
 	@Override
-	public final FriendlyMobKnownList getKnownList()
-	{
-		return (FriendlyMobKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new FriendlyMobKnownList(this));
-	}
-	
-	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
-		return (attacker instanceof L2PcInstance) && (((L2PcInstance) attacker).getReputation() < 0);
+		if (attacker.isPlayer())
+		{
+			return ((L2PcInstance) attacker).getReputation() < 0;
+		}
+		
+		return super.isAutoAttackable(attacker);
 	}
 	
 	@Override

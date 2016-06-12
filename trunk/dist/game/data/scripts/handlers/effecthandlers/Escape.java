@@ -16,15 +16,14 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2GuardInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Escape effect implementation.
@@ -34,10 +33,8 @@ public final class Escape extends AbstractEffect
 {
 	private final TeleportWhereType _escapeType;
 	
-	public Escape(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Escape(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_escapeType = params.getEnum("escapeType", TeleportWhereType.class, null);
 	}
 	
@@ -54,22 +51,18 @@ public final class Escape extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public boolean canStart(BuffInfo info)
 	{
-		if (_escapeType == null)
+		// While affected by escape blocking effect you cannot use Blink or Scroll of Escape
+		return super.canStart(info) && !info.getEffected().cannotEscape();
+	}
+	
+	@Override
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	{
+		if (_escapeType != null)
 		{
-			return;
-		}
-		
-		if (info.getEffected() instanceof L2GuardInstance)
-		{
-			info.getEffected().teleToLocation(((L2Npc) info.getEffected()).getSpawn());
-			info.getEffected().setHeading(((L2Npc) info.getEffected()).getSpawn().getHeading());
-		}
-		else
-		{
-			info.getEffected().teleToLocation(MapRegionManager.getInstance().getTeleToLocation(info.getEffected(), _escapeType), true);
-			info.getEffected().setInstanceId(0);
+			effected.teleToLocation(_escapeType, null);
 		}
 	}
 }

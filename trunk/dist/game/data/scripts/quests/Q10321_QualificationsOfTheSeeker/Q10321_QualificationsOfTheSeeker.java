@@ -23,9 +23,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
-import com.l2jmobius.gameserver.util.Broadcast;
 
 import quests.Q10320_LetsGoToTheCentralSquare.Q10320_LetsGoToTheCentralSquare;
 
@@ -43,11 +41,11 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 	
 	public Q10321_QualificationsOfTheSeeker()
 	{
-		super(10321, Q10321_QualificationsOfTheSeeker.class.getSimpleName(), "Qualifications Of The Seeker");
+		super(10321);
 		addStartNpc(THEODORE);
 		addTalkId(THEODORE, SHANNON);
-		addCondMaxLevel(MAX_LEVEL, "32975-06.html");
-		addCondCompletedQuest(Q10320_LetsGoToTheCentralSquare.class.getSimpleName(), "32975-06.html");
+		addCondMaxLevel(MAX_LEVEL, "32975-01a.htm");
+		addCondCompletedQuest(Q10320_LetsGoToTheCentralSquare.class.getSimpleName(), "32975-01a.htm");
 	}
 	
 	@Override
@@ -65,8 +63,6 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 			case "32975-03.htm":
 			{
 				qs.startQuest();
-				qs.setCond(2); // show arrow hack
-				qs.setCond(1);
 				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_027_Quest_01.htm", TutorialShowHtml.LARGE_WINDOW));
 				htmltext = event;
 				break;
@@ -76,13 +72,16 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32974-02.html":
+			case "32974-02.htm":
 			{
-				giveAdena(player, 50, true);
-				addExpAndSp(player, 40, 5);
-				qs.exitQuest(false, true);
-				Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.HM_DON_T_JUST_GO_I_STILL_HAVE_TONS_TO_TEACH_YOU));
-				htmltext = event;
+				if (qs.isStarted())
+				{
+					giveAdena(player, 50, true);
+					addExpAndSp(player, 40, 5);
+					qs.exitQuest(false, true);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HM_DON_T_JUST_GO_I_STILL_HAVE_TONS_TO_TEACH_YOU);
+					htmltext = event;
+				}
 				break;
 			}
 		}
@@ -99,17 +98,17 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = npc.getId() == THEODORE ? "32975-01.htm" : "32974-04.html";
+				htmltext = npc.getId() == THEODORE ? "32975-01.htm" : "32974-04.htm";
 				break;
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == THEODORE ? "32975-04.html" : "32974-01.html";
+				htmltext = npc.getId() == THEODORE ? "32975-04.htm" : "32974-01.htm";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == THEODORE ? "32975-05.html" : "32974-03.html";
+				htmltext = npc.getId() == THEODORE ? "32975-05.htm" : "32974-03.htm";
 				break;
 			}
 		}

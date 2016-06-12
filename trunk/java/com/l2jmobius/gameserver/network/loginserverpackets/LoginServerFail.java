@@ -16,10 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.loginserverpackets;
 
-import com.l2jmobius.util.network.BaseRecievePacket;
+import com.l2jmobius.commons.util.network.BaseRecievePacket;
 
 public class LoginServerFail extends BaseRecievePacket
 {
+	
 	private static final String[] REASONS =
 	{
 		"None",
@@ -51,4 +52,5 @@ public class LoginServerFail extends BaseRecievePacket
 	{
 		return _reason;
 	}
+	
 }

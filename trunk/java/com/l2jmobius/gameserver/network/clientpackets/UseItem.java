@@ -16,40 +16,39 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
+import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.NextAction;
+import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.items.L2EtcItem;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.ArmorType;
-import com.l2jmobius.gameserver.model.items.type.WeaponType;
-import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExUseSharedGroupItem;
-import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class UseItem extends L2GameClientPacket
+public final class UseItem implements IClientIncomingPacket
 {
-	private static final String _C__19_USEITEM = "[C] 19 UseItem";
-	
 	private int _objectId;
 	private boolean _ctrlPressed;
 	private int _itemId;
@@ -57,8 +56,8 @@ public final class UseItem extends L2GameClientPacket
 	/** Weapon Equip Task */
 	private static class WeaponEquipTask implements Runnable
 	{
-		private final L2ItemInstance item;
-		private final L2PcInstance activeChar;
+		L2ItemInstance item;
+		L2PcInstance activeChar;
 		
 		protected WeaponEquipTask(L2ItemInstance it, L2PcInstance character)
 		{
@@ -69,34 +68,36 @@ public final class UseItem extends L2GameClientPacket
 		@Override
 		public void run()
 		{
+			// If character is still engaged in strike we should not change weapon
+			if (activeChar.isAttackingNow())
+			{
+				return;
+			}
+			
 			// Equip or unEquip
 			activeChar.useEquippableItem(item, false);
 		}
 	}
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_ctrlPressed = readD() != 0;
+		_objectId = packet.readD();
+		_ctrlPressed = packet.readD() != 0;
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		if (Config.DEBUG)
-		{
-			_log.log(Level.INFO, activeChar + ": use item " + _objectId);
-		}
-		
 		// Flood protect UseItem
-		if (!getClient().getFloodProtectors().getUseItem().tryPerformAction("use item"))
+		if (!client.getFloodProtectors().getUseItem().tryPerformAction("use item"))
 		{
 			return;
 		}
@@ -116,6 +117,15 @@ public final class UseItem extends L2GameClientPacket
 		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
 		if (item == null)
 		{
+			// gm can use other player item
+			if (activeChar.isGM())
+			{
+				final L2Object obj = L2World.getInstance().findObject(_objectId);
+				if (obj instanceof L2ItemInstance)
+				{
+					activeChar.useAdminCommand("admin_use_item " + _objectId);
+				}
+			}
 			return;
 		}
 		
@@ -126,15 +136,13 @@ public final class UseItem extends L2GameClientPacket
 		}
 		
 		// No UseItem is allowed while the player is in special conditions
-		if (activeChar.isStunned() || activeChar.isParalyzed() || activeChar.isSleeping() || activeChar.isAfraid() || activeChar.isAlikeDead())
+		if (activeChar.hasBlockActions() || activeChar.isControlBlocked() || activeChar.isAlikeDead())
 		{
 			return;
 		}
 		
-		_itemId = item.getId();
-		
 		// Char cannot use item when dead
-		if (activeChar.isDead() || !activeChar.getInventory().canManipulateWithItemId(_itemId))
+		if (activeChar.isDead() || !activeChar.getInventory().canManipulateWithItemId(item.getId()))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addItemName(item);
@@ -147,26 +155,20 @@ public final class UseItem extends L2GameClientPacket
 			return;
 		}
 		
+		_itemId = item.getId();
 		if (activeChar.isFishing() && ((_itemId < 6535) || (_itemId > 6540)))
 		{
 			// You cannot do anything else while fishing
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING);
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING3);
 			return;
 		}
 		
 		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (activeChar.getReputation() < 0))
 		{
-			final SkillHolder[] skills = item.getItem().getSkills();
-			if (skills != null)
+			final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
+			if ((skills != null) && skills.stream().anyMatch(holder -> holder.getSkill().hasEffectType(L2EffectType.TELEPORT)))
 			{
-				for (SkillHolder sHolder : skills)
-				{
-					final Skill skill = sHolder.getSkill();
-					if ((skill != null) && skill.hasEffectType(L2EffectType.TELEPORT))
-					{
-						return;
-					}
-				}
+				return;
 			}
 		}
 		
@@ -212,6 +214,12 @@ public final class UseItem extends L2GameClientPacket
 				return;
 			}
 			
+			if (activeChar.getInventory().isItemSlotBlocked(item.getItem().getBodyPart()))
+			{
+				activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+				return;
+			}
+			
 			switch (item.getItem().getBodyPart())
 			{
 				case L2Item.SLOT_LR_HAND:
@@ -241,17 +249,72 @@ public final class UseItem extends L2GameClientPacket
 					{
 						return;
 					}
+					
+					// Don't allow other Race to Wear Kamael exclusive Weapons.
+					if (!item.isEquipped() && item.isWeapon() && !activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS))
+					{
+						final L2Weapon wpn = (L2Weapon) item.getItem();
+						
+						switch (activeChar.getRace())
+						{
+							case KAMAEL:
+							{
+								switch (wpn.getItemType())
+								{
+									case NONE:
+										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+										return;
+								}
+								break;
+							}
+							case HUMAN:
+							case DWARF:
+							case ELF:
+							case DARK_ELF:
+							case ORC:
+							{
+								switch (wpn.getItemType())
+								{
+									case RAPIER:
+									case CROSSBOW:
+									case ANCIENTSWORD:
+										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+										return;
+								}
+								break;
+							}
+							case ERTHEIA:
+							{
+								switch (wpn.getItemType())
+								{
+									case SWORD:
+									case DAGGER:
+									case BOW:
+									case POLE:
+									case NONE:
+									case DUAL:
+									case RAPIER:
+									case ANCIENTSWORD:
+									case CROSSBOW:
+									case DUALDAGGER:
+										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+										return;
+								}
+								break;
+							}
+						}
+					}
 					break;
 				}
 				case L2Item.SLOT_CHEST:
+				case L2Item.SLOT_FULL_ARMOR:
 				case L2Item.SLOT_BACK:
 				case L2Item.SLOT_GLOVES:
 				case L2Item.SLOT_FEET:
 				case L2Item.SLOT_HEAD:
-				case L2Item.SLOT_FULL_ARMOR:
 				case L2Item.SLOT_LEGS:
 				{
-					if ((activeChar.getRace() == Race.ERTHEIA) && activeChar.isMageClass() && ((item.getItem().getItemType() == ArmorType.SHIELD) || (item.getItem().getItemType() == ArmorType.SIGIL)))
+					if ((activeChar.getRace() == Race.KAMAEL) && ((item.getItem().getItemType() == ArmorType.HEAVY) || (item.getItem().getItemType() == ArmorType.MAGIC)))
 					{
 						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 						return;
@@ -280,13 +343,14 @@ public final class UseItem extends L2GameClientPacket
 				}
 			}
 			
-			if (activeChar.isCastingNow() || activeChar.isCastingSimultaneouslyNow())
+			if (activeChar.isCastingNow())
 			{
+				// Create and Bind the next action to the AI
 				activeChar.getAI().setNextAction(new NextAction(CtrlEvent.EVT_FINISH_CASTING, CtrlIntention.AI_INTENTION_CAST, () -> activeChar.useEquippableItem(item, true)));
 			}
 			else if (activeChar.isAttackingNow())
 			{
-				ThreadPoolManager.getInstance().scheduleGeneral(new WeaponEquipTask(item, activeChar), TimeUnit.MILLISECONDS.convert(activeChar.getAttackEndTime() - System.nanoTime(), TimeUnit.NANOSECONDS));
+				ThreadPoolManager.getInstance().scheduleGeneral(new WeaponEquipTask(item, activeChar), activeChar.getAttackEndTime() - System.currentTimeMillis());
 			}
 			else
 			{
@@ -295,37 +359,28 @@ public final class UseItem extends L2GameClientPacket
 		}
 		else
 		{
-			final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
-			if ((weaponItem != null) && (weaponItem.getItemType() == WeaponType.FISHINGROD) && (((_itemId >= 6519) && (_itemId <= 6527)) || ((_itemId >= 7610) && (_itemId <= 7613)) || ((_itemId >= 7807) && (_itemId <= 7809)) || ((_itemId >= 8484) && (_itemId <= 8486)) || ((_itemId >= 8505) && (_itemId <= 8513))))
-			{
-				activeChar.getInventory().setPaperdollItem(Inventory.PAPERDOLL_LHAND, item);
-				activeChar.broadcastUserInfo();
-				// Send a Server->Client packet ItemList to this L2PcINstance to update left hand equipment.
-				sendPacket(new ItemList(activeChar, false));
-				return;
-			}
-			
 			final L2EtcItem etcItem = item.getEtcItem();
 			final IItemHandler handler = ItemHandler.getInstance().getHandler(etcItem);
 			if (handler == null)
 			{
 				if ((etcItem != null) && (etcItem.getHandlerName() != null))
 				{
-					_log.log(Level.WARNING, "Unmanaged Item handler: " + etcItem.getHandlerName() + " for Item Id: " + _itemId + "!");
+					_log.warning("Unmanaged Item handler: " + etcItem.getHandlerName() + " for Item Id: " + _itemId + "!");
 				}
 				else if (Config.DEBUG)
 				{
-					_log.log(Level.WARNING, "No Item handler registered for Item Id: " + _itemId + "!");
+					_log.warning("No Item handler registered for Item Id: " + _itemId + "!");
 				}
-				return;
 			}
-			
-			// Item reuse time should be added if the item is successfully used.
-			// Skill reuse delay is done at handlers.itemhandlers.ItemSkillsTemplate;
-			if (handler.useItem(activeChar, item, _ctrlPressed) && (reuseDelay > 0))
+			else if (handler.useItem(activeChar, item, _ctrlPressed))
 			{
-				activeChar.addTimeStampItem(item, reuseDelay);
-				sendSharedGroupUpdate(activeChar, sharedReuseGroup, reuseDelay, reuseDelay);
+				// Item reuse time should be added if the item is successfully used.
+				// Skill reuse delay is done at handlers.itemhandlers.ItemSkillsTemplate;
+				if (reuseDelay > 0)
+				{
+					activeChar.addTimeStampItem(item, reuseDelay);
+					sendSharedGroupUpdate(activeChar, sharedReuseGroup, reuseDelay, reuseDelay);
+				}
 			}
 		}
 	}
@@ -364,17 +419,5 @@ public final class UseItem extends L2GameClientPacket
 		{
 			activeChar.sendPacket(new ExUseSharedGroupItem(_itemId, group, remaining, reuse));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__19_USEITEM;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return !Config.SPAWN_PROTECTION_ALLOWED_ITEMS.contains(_itemId);
 	}
 }

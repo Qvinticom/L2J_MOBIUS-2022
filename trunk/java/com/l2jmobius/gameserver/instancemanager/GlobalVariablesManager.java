@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.model.variables.AbstractVariables;
  */
 public final class GlobalVariablesManager extends AbstractVariables
 {
-	private static final Logger _log = Logger.getLogger(GlobalVariablesManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(GlobalVariablesManager.class.getName());
 	
 	// SQL Queries.
 	private static final String SELECT_QUERY = "SELECT * FROM global_variables";
@@ -61,14 +61,14 @@ public final class GlobalVariablesManager extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't restore global variables");
+			LOGGER.warning(getClass().getSimpleName() + ": Couldn't restore global variables");
 			return false;
 		}
 		finally
 		{
 			compareAndSetChanges(true, false);
 		}
-		_log.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + getSet().size() + " variables.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + getSet().size() + " variables.");
 		return true;
 	}
 	
@@ -99,14 +99,14 @@ public final class GlobalVariablesManager extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't save global variables to database.", e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't save global variables to database.", e);
 			return false;
 		}
 		finally
 		{
 			compareAndSetChanges(true, false);
 		}
-		_log.log(Level.INFO, getClass().getSimpleName() + ": Stored " + getSet().size() + " variables.");
+		LOGGER.info(getClass().getSimpleName() + ": Stored " + getSet().size() + " variables.");
 		return true;
 	}
 	
@@ -120,7 +120,7 @@ public final class GlobalVariablesManager extends AbstractVariables
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete global variables to database.", e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete global variables to database.", e);
 			return false;
 		}
 		return true;

@@ -85,13 +85,10 @@ public class PcRefund extends ItemContainer
 	{
 		try
 		{
-			for (L2ItemInstance item : _items)
+			for (L2ItemInstance item : _items.values())
 			{
-				if (item != null)
-				{
-					ItemTable.getInstance().destroyItem("ClearRefund", item, getOwner(), null);
-					item.updateDatabase(true);
-				}
+				ItemTable.getInstance().destroyItem("ClearRefund", item, getOwner(), null);
+				item.updateDatabase(true);
 			}
 		}
 		catch (Exception e)

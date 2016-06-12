@@ -16,13 +16,17 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PartyDistributionType;
 import com.l2jmobius.gameserver.model.BlockList;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.request.PartyRequest;
+import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.AskJoinParty;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -31,24 +35,23 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * sample 29 42 00 00 10 01 00 00 00 format cdd
  * @version $Revision: 1.7.4.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestJoinParty extends L2GameClientPacket
+public final class RequestJoinParty implements IClientIncomingPacket
 {
-	private static final String _C__42_REQUESTJOINPARTY = "[C] 42 RequestJoinParty";
-	
 	private String _name;
 	private int _partyDistributionTypeId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_name = readS();
-		_partyDistributionTypeId = readD();
+		_name = packet.readS();
+		_partyDistributionTypeId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance requestor = getClient().getActiveChar();
+		final L2PcInstance requestor = client.getActiveChar();
 		final L2PcInstance target = L2World.getInstance().getPlayer(_name);
 		
 		if (requestor == null)
@@ -89,6 +92,12 @@ public final class RequestJoinParty extends L2GameClientPacket
 			return;
 		}
 		
+		if (requestor.isOnEvent(CeremonyOfChaosEvent.class))
+		{
+			client.sendPacket(SystemMessageId.YOU_CANNOT_INVITE_A_FRIEND_OR_PARTY_WHILE_PARTICIPATING_IN_THE_CEREMONY_OF_CHAOS);
+			return;
+		}
+		
 		SystemMessage sm;
 		if (target.isInParty())
 		{
@@ -124,10 +133,13 @@ public final class RequestJoinParty extends L2GameClientPacket
 			return;
 		}
 		
-		if ((target.isInOlympiadMode() || requestor.isInOlympiadMode()) && ((target.isInOlympiadMode() != requestor.isInOlympiadMode()) || (target.getOlympiadGameId() != requestor.getOlympiadGameId()) || (target.getOlympiadSide() != requestor.getOlympiadSide())))
+		if (target.isInOlympiadMode() || requestor.isInOlympiadMode())
 		{
-			requestor.sendPacket(SystemMessageId.A_USER_CURRENTLY_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_SEND_PARTY_AND_FRIEND_INVITATIONS);
-			return;
+			if ((target.isInOlympiadMode() != requestor.isInOlympiadMode()) || (target.getOlympiadGameId() != requestor.getOlympiadGameId()) || (target.getOlympiadSide() != requestor.getOlympiadSide()))
+			{
+				requestor.sendPacket(SystemMessageId.A_USER_CURRENTLY_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_SEND_PARTY_AND_FRIEND_INVITATIONS);
+				return;
+			}
 		}
 		
 		sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_INVITED_TO_THE_PARTY);
@@ -157,7 +169,7 @@ public final class RequestJoinParty extends L2GameClientPacket
 		{
 			requestor.sendPacket(SystemMessageId.ONLY_THE_LEADER_CAN_GIVE_OUT_INVITATIONS);
 		}
-		else if (party.getMemberCount() >= 7) // 7 members for GOD version
+		else if (party.getMemberCount() >= Config.ALT_PARTY_MAX_MEMBERS)
 		{
 			requestor.sendPacket(SystemMessageId.THE_PARTY_IS_FULL);
 		}
@@ -167,7 +179,7 @@ public final class RequestJoinParty extends L2GameClientPacket
 		}
 		else if (!target.hasRequest(PartyRequest.class))
 		{
-			final PartyRequest request = new PartyRequest(requestor, target);
+			final PartyRequest request = new PartyRequest(requestor, target, party);
 			request.scheduleTimeout(30 * 1000);
 			requestor.addRequest(request);
 			target.addRequest(request);
@@ -196,23 +208,17 @@ public final class RequestJoinParty extends L2GameClientPacket
 		
 		if (!target.hasRequest(PartyRequest.class))
 		{
-			final PartyRequest request = new PartyRequest(requestor, target);
+			final L2Party party = new L2Party(requestor, partyDistributionType);
+			party.setPendingInvitation(true);
+			final PartyRequest request = new PartyRequest(requestor, target, party);
 			request.scheduleTimeout(30 * 1000);
 			requestor.addRequest(request);
 			target.addRequest(request);
 			target.sendPacket(new AskJoinParty(requestor.getName(), partyDistributionType));
-			
-			requestor.setPartyDistributionType(partyDistributionType);
 		}
 		else
 		{
 			requestor.sendPacket(SystemMessageId.WAITING_FOR_ANOTHER_REPLY);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__42_REQUESTJOINPARTY;
 	}
 }

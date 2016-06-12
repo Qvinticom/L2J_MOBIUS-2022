@@ -16,103 +16,170 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.alchemy;
 
-import com.l2jmobius.gameserver.datatables.SkillData;
+import java.util.HashSet;
+import java.util.Set;
+
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.data.xml.impl.AlchemyData;
+import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.L2AlchemySkill;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.alchemy.AlchemyCraftData;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
-import com.l2jmobius.gameserver.network.serverpackets.ItemList;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.alchemy.ExAlchemyConversion;
-import com.l2jmobius.util.Rnd;
+import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
 /**
- * @author GenCloud, Mobius
+ * @author Sdw
  */
-public class RequestAlchemyConversion extends L2GameClientPacket
+public class RequestAlchemyConversion implements IClientIncomingPacket
 {
-	@SuppressWarnings("unused")
-	private int _unk;
-	
+	private int _craftTimes;
 	private int _skillId;
 	private int _skillLevel;
-	private int _skillUseCount;
-	private long _resultItemCount = 0;
-	private long _resultFailCount = 0;
+	
+	private final Set<ItemHolder> _ingredients = new HashSet<>();
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_skillUseCount = readD();
-		_unk = readH(); // Unk = 10;
-		_skillId = readD();
-		_skillLevel = readD();
-		readB(new byte[28]);
+		_craftTimes = packet.readD();
+		packet.readH(); // TODO: Find me
+		_skillId = packet.readD();
+		_skillLevel = packet.readD();
+		
+		final int ingredientsSize = packet.readD();
+		for (int i = 0; i < ingredientsSize; i++)
+		{
+			_ingredients.add(new ItemHolder(packet.readD(), packet.readQ()));
+		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLevel);
-		final L2AlchemySkill alchemySkill = skill.getAlchemySkill();
-		
-		if ((activeChar == null) || (activeChar.getRace() != Race.ERTHEIA) || (_skillUseCount < 0))
+		final L2PcInstance player = client.getActiveChar();
+		if ((player == null) || (player.getRace() != Race.ERTHEIA))
 		{
 			return;
 		}
 		
-		boolean hasIngidients = true;
-		for (ItemHolder item : alchemySkill.getIngridientItems())
+		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player))
 		{
-			if ((activeChar.getInventory().getInventoryItemCount(item.getId(), -1) * _skillUseCount) < (item.getCount() * _skillUseCount))
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_DURING_BATTLE);
+			return;
+		}
+		else if (player.isInStoreMode() || (player.getPrivateStoreType() != PrivateStoreType.NONE))
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_TRADING_OR_USING_A_PRIVATE_STORE_OR_SHOP);
+			return;
+		}
+		else if (player.isDead())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_DEAD);
+			return;
+		}
+		else if (player.isMovementDisabled())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_IMMOBILE);
+			return;
+		}
+		
+		final AlchemyCraftData data = AlchemyData.getInstance().getCraftData(_skillId, _skillLevel);
+		if (data == null)
+		{
+			_log.warning("Missing AlchemyData for skillId: " + _skillId + ", skillLevel: " + _skillLevel);
+			return;
+		}
+		
+		// TODO : Implement this
+		// if (!_ingredients.equals(data.getIngredients()))
+		// {
+		// LOGGER.warning("Client ingredients are not same as server ingredients for alchemy conversion player: "+ +"", player);
+		// return;
+		// }
+		
+		// TODO: Figure out the chance
+		final int baseChance;
+		switch (data.getGrade())
+		{
+			case 1: // Elementary
 			{
-				hasIngidients = false;
+				baseChance = 100;
+				break;
+			}
+			case 2: // Intermediate
+			{
+				baseChance = 80;
+				break;
+			}
+			case 3: // Advanced
+			{
+				baseChance = 60;
+				break;
+			}
+			default: // Master
+			{
+				baseChance = 50;
 				break;
 			}
 		}
-		if (!hasIngidients)
-		{
-			activeChar.sendPacket(SystemMessageId.PLEASE_ENTER_THE_COMBINATION_INGREDIENTS);
-			return;
-		}
 		
-		for (int i = 0; i < _skillUseCount; i++)
+		int successCount = 0;
+		int failureCount = 0;
+		
+		// Run _craftItems iteration of item craft
+		final InventoryUpdate ui = new InventoryUpdate();
+		CRAFTLOOP: for (int i = 0; i < _craftTimes; i++)
 		{
-			if (Rnd.get(1, 100) < 90) // 90% ?
+			// for each tries, check if player have enough items and destroy
+			for (ItemHolder ingredient : data.getIngredients())
 			{
-				_resultItemCount += alchemySkill.getTransmutedItem().getCount();
+				final L2ItemInstance item = player.getInventory().getItemByItemId(ingredient.getId());
+				if (item == null)
+				{
+					break CRAFTLOOP;
+				}
+				if (item.getCount() < ingredient.getCount())
+				{
+					break CRAFTLOOP;
+				}
+				
+				player.getInventory().destroyItem("Alchemy", item, ingredient.getCount(), player, null);
+				ui.addItem(item);
+			}
+			
+			if (Rnd.get(100) < baseChance)
+			{
+				successCount++;
 			}
 			else
 			{
-				_resultFailCount++;
+				failureCount++;
 			}
-			alchemySkill.getIngridientItems().forEach(holder -> activeChar.getInventory().destroyItemByItemId("Alchemy", holder.getId(), holder.getCount(), activeChar, null));
 		}
 		
-		if (_resultItemCount > 0)
+		if (successCount > 0)
 		{
-			activeChar.addItem("Alchemy", alchemySkill.getTransmutedItem(), activeChar, true);
-		}
-		if (_resultFailCount > 0)
-		{
-			for (ItemHolder item : alchemySkill.getIngridientItems())
-			{
-				activeChar.getInventory().destroyItemByItemId("Alchemy", item.getId(), _resultFailCount, activeChar, null);
-				break; // FIXME: Takes only 1st ingredient (client has specific item and quantity).
-			}
-			activeChar.sendPacket(SystemMessageId.FAILURE_TO_TRANSMUTE_WILL_DESTROY_SOME_INGREDIENTS);
+			final L2ItemInstance item = player.getInventory().addItem("Alchemy", data.getProductionSuccess().getId(), data.getProductionSuccess().getCount() * successCount, player, null);
+			ui.addItem(item);
 		}
 		
-		activeChar.sendPacket(new ExAlchemyConversion((int) _resultItemCount, (int) _resultFailCount));
-		activeChar.sendPacket(new ItemList(activeChar, false));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
+		if (failureCount > 0)
+		{
+			final L2ItemInstance item = player.getInventory().addItem("Alchemy", data.getProductionFailure().getId(), data.getProductionFailure().getCount() * failureCount, player, null);
+			ui.addItem(item);
+		}
+		
+		player.sendPacket(new ExAlchemyConversion(successCount, failureCount));
+		player.sendInventoryUpdate(ui);
+		
 	}
 }

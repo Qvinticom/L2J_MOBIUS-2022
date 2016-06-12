@@ -19,6 +19,7 @@ package quests.Q00642_APowerfulPrimevalCreature;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -56,7 +57,7 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 	
 	public Q00642_APowerfulPrimevalCreature()
 	{
-		super(642, Q00642_APowerfulPrimevalCreature.class.getSimpleName(), "A Powerful Primeval Creature");
+		super(642);
 		addStartNpc(DINN);
 		addTalkId(DINN);
 		addKillId(ANCIENT_EGG);
@@ -83,7 +84,7 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 			}
 			case "32105-06.htm":
 			{
-				qs.exitQuest(true);
+				qs.exitQuest(QuestType.REPEATABLE);
 				break;
 			}
 			case "32105-09.html":

@@ -281,90 +281,159 @@
 	</option>
 	<option id="16687" name="o_f_46_1g_acc_ring_1">
 		<!-- M. Def. + 2.1 -->
-		<for>
-			<add stat="mDef" val="2.1" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>2.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="16688" name="o_f_46_1g_acc_ring_2">
 		<!-- M. Def. + 1.1 Increase Max HP 10.5 -->
-		<for>
-			<add stat="mDef" val="1.1" />
-			<add stat="maxHp" val="10.5" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>10.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="16689" name="o_f_46_1g_acc_ring_3">
 		<!-- M. Def. + 1.1 Max MP + 6.5 -->
-		<for>
-			<add stat="mDef" val="1.1" />
-			<add stat="maxMp" val="6.5" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>6.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="16690" name="o_f_46_1g_acc_ring_4">
 		<!-- M. Def. + 1.1 Increase M. Atk. 1.25 -->
-		<for>
-			<add stat="mDef" val="1.1" />
-			<add stat="mAtk" val="1.25" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>1.25</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="16691" name="o_f_46_1g_acc_ring_5">
 		<!-- M. Def. + 1.1 HP Regeneration + 0.05 -->
-		<for>
-			<add stat="mDef" val="1.1" />
-			<add stat="regHp" val="0.05" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.05</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="16692" name="o_f_46_1g_acc_ring_6">
 		<!-- M. Def. + 1.1 MP Regeneration + 0.015 -->
-		<for>
-			<add stat="mDef" val="1.1" />
-			<add stat="regMp" val="0.015" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.015</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="16693" name="o_f_46_1g_acc_ring_7">
 		<!-- Increase Max HP 21.0 -->
-		<for>
-			<add stat="maxHp" val="21.0" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>21.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="16694" name="o_f_46_1g_acc_ring_8">
 		<!-- Increase Max HP 10.5 Max MP + 6.5 -->
-		<for>
-			<add stat="maxHp" val="10.5" />
-			<add stat="maxMp" val="6.5" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>10.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>6.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="16695" name="o_f_46_1g_acc_ring_9">
 		<!-- Increase Max HP 10.5 Increase M. Atk. 1.25 -->
-		<for>
-			<add stat="maxHp" val="10.5" />
-			<add stat="mAtk" val="1.25" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>10.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>1.25</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="16696" name="o_f_46_1g_acc_ring_10">
 		<!-- Increase Max HP 10.5 HP Regeneration + 0.05 -->
-		<for>
-			<add stat="maxHp" val="10.5" />
-			<add stat="regHp" val="0.05" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>10.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.05</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="16697" name="o_f_46_1g_acc_ring_11">
 		<!-- Increase Max HP 10.5 MP Regeneration + 0.015 -->
-		<for>
-			<add stat="maxHp" val="10.5" />
-			<add stat="regMp" val="0.015" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.015</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>10.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="16698" name="o_f_46_1g_acc_ring_12">
 		<!-- Max MP + 13.0 -->
-		<for>
-			<add stat="maxMp" val="13.0" />
-		</for>
+		<effects>
+			<effect name="MaxMp">
+				<amount>13.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="16699" name="o_f_46_1g_acc_ring_13">
 		<!-- Max MP + 6.5 Increase M. Atk. 1.25 -->
-		<for>
-			<add stat="maxMp" val="6.5" />
-			<add stat="mAtk" val="1.25" />
-		</for>
+		<effects>
+			<effect name="MaxMp">
+				<amount>6.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>1.25</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 </list>

@@ -16,12 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author chris_00
  */
-public class ExMPCCPartyInfoUpdate extends L2GameServerPacket
+public class ExMPCCPartyInfoUpdate implements IClientOutgoingPacket
 {
 	private final int _mode, _LeaderOID, _memberCount;
 	private final String _name;
@@ -39,13 +41,14 @@ public class ExMPCCPartyInfoUpdate extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x5C);
-		writeS(_name);
-		writeD(_LeaderOID);
-		writeD(_memberCount);
-		writeD(_mode); // mode 0 = Remove Party, 1 = AddParty, maybe more...
+		OutgoingPackets.EX_MPCCPARTY_INFO_UPDATE.writeId(packet);
+		
+		packet.writeS(_name);
+		packet.writeD(_LeaderOID);
+		packet.writeD(_memberCount);
+		packet.writeD(_mode); // mode 0 = Remove Party, 1 = AddParty, maybe more...
+		return true;
 	}
 }

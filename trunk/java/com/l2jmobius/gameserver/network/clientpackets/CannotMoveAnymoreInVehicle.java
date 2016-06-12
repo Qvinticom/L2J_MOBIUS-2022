@@ -16,17 +16,17 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.StopMoveInVehicle;
 
 /**
  * @author Maktakien
  */
-public final class CannotMoveAnymoreInVehicle extends L2GameClientPacket
+public final class CannotMoveAnymoreInVehicle implements IClientIncomingPacket
 {
-	private static final String _C__76_CANNOTMOVEANYMOREINVEHICLE = "[C] 76 CannotMoveAnymoreInVehicle";
-	
 	private int _x;
 	private int _y;
 	private int _z;
@@ -34,31 +34,33 @@ public final class CannotMoveAnymoreInVehicle extends L2GameClientPacket
 	private int _boatId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_boatId = readD();
-		_x = readD();
-		_y = readD();
-		_z = readD();
-		_heading = readD();
+		_boatId = packet.readD();
+		_x = packet.readD();
+		_y = packet.readD();
+		_z = packet.readD();
+		_heading = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
-		if ((player == null) || !player.isInBoat() || (player.getBoat().getObjectId() != _boatId))
+		final L2PcInstance player = client.getActiveChar();
+		if (player == null)
 		{
 			return;
 		}
-		player.setInVehiclePosition(new Location(_x, _y, _z));
-		player.setHeading(_heading);
-		player.broadcastPacket(new StopMoveInVehicle(player, _boatId));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__76_CANNOTMOVEANYMOREINVEHICLE;
+		if (player.isInBoat())
+		{
+			if (player.getBoat().getObjectId() == _boatId)
+			{
+				player.setInVehiclePosition(new Location(_x, _y, _z));
+				player.setHeading(_heading);
+				final StopMoveInVehicle msg = new StopMoveInVehicle(player, _boatId);
+				player.broadcastPacket(msg);
+			}
+		}
 	}
 }

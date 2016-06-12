@@ -16,11 +16,10 @@
  */
 package com.l2jmobius.gameserver.model.actor.status;
 
-import com.l2jmobius.gameserver.enums.DuelState;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.Duel;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -48,7 +47,7 @@ public class SummonStatus extends PlayableStatus
 		final L2PcInstance attackerPlayer = attacker.getActingPlayer();
 		if ((attackerPlayer != null) && ((getActiveChar().getOwner() == null) || (getActiveChar().getOwner().getDuelId() != attackerPlayer.getDuelId())))
 		{
-			attackerPlayer.setDuelState(DuelState.INTERRUPTED);
+			attackerPlayer.setDuelState(Duel.DUELSTATE_INTERRUPTED);
 		}
 		
 		final L2PcInstance caster = getActiveChar().getTransferingDamageTo();
@@ -56,8 +55,8 @@ public class SummonStatus extends PlayableStatus
 		{
 			if ((caster != null) && Util.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && getActiveChar().getParty().getMembers().contains(caster))
 			{
-				int transferDmg = Math.min((int) caster.getCurrentHp() - 1, ((int) value * (int) getActiveChar().getStat().calcStat(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100);
-				
+				int transferDmg = ((int) value * (int) getActiveChar().getStat().getValue(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0)) / 100;
+				transferDmg = Math.min((int) caster.getCurrentHp() - 1, transferDmg);
 				if (transferDmg > 0)
 				{
 					int membersInRange = 0;
@@ -68,7 +67,7 @@ public class SummonStatus extends PlayableStatus
 							membersInRange++;
 						}
 					}
-					if ((attacker instanceof L2Playable) && (caster.getCurrentCp() > 0))
+					if (attacker.isPlayable() && (caster.getCurrentCp() > 0))
 					{
 						if (caster.getCurrentCp() > transferDmg)
 						{
@@ -90,11 +89,11 @@ public class SummonStatus extends PlayableStatus
 		}
 		else if ((caster != null) && (caster == getActiveChar().getOwner()) && Util.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead()) // when no party, transfer only to owner (caster)
 		{
-			int transferDmg = Math.min((int) caster.getCurrentHp() - 1, ((int) value * (int) getActiveChar().getStat().calcStat(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100);
-			
+			int transferDmg = ((int) value * (int) getActiveChar().getStat().getValue(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0)) / 100;
+			transferDmg = Math.min((int) caster.getCurrentHp() - 1, transferDmg);
 			if (transferDmg > 0)
 			{
-				if ((attacker instanceof L2Playable) && (caster.getCurrentCp() > 0))
+				if (attacker.isPlayable() && (caster.getCurrentCp() > 0))
 				{
 					if (caster.getCurrentCp() > transferDmg)
 					{

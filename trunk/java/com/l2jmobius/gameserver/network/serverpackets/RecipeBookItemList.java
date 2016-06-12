@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2RecipeList;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class RecipeBookItemList extends L2GameServerPacket
+public class RecipeBookItemList implements IClientOutgoingPacket
 {
 	private L2RecipeList[] _recipes;
 	private final boolean _isDwarvenCraft;
@@ -36,24 +38,26 @@ public class RecipeBookItemList extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xdc);
-		writeD(_isDwarvenCraft ? 0x00 : 0x01); // 0 = Dwarven - 1 = Common
-		writeD(_maxMp);
+		OutgoingPackets.RECIPE_BOOK_ITEM_LIST.writeId(packet);
+		
+		packet.writeD(_isDwarvenCraft ? 0x00 : 0x01); // 0 = Dwarven - 1 = Common
+		packet.writeD(_maxMp);
 		
 		if (_recipes == null)
 		{
-			writeD(0);
+			packet.writeD(0);
 		}
 		else
 		{
-			writeD(_recipes.length); // number of items in recipe book
+			packet.writeD(_recipes.length); // number of items in recipe book
 			for (int i = 0; i < _recipes.length; i++)
 			{
-				writeD(_recipes[i].getId());
-				writeD(i + 1);
+				packet.writeD(_recipes[i].getId());
+				packet.writeD(i + 1);
 			}
 		}
+		return true;
 	}
 }

@@ -50,7 +50,7 @@ public class Q00645_GhostsOfBatur extends Quest
 	
 	public Q00645_GhostsOfBatur()
 	{
-		super(645, Q00645_GhostsOfBatur.class.getSimpleName(), "Ghosts of Batur");
+		super(645);
 		addStartNpc(KARUDA);
 		addTalkId(KARUDA);
 		addKillId(CONTAMINATED_MOREK_WARRIOR, CONTAMINATED_BATUR_WARRIOR, CONTAMINATED_BATUR_COMMANDER);

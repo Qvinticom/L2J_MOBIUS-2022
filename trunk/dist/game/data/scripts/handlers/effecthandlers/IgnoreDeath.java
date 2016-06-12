@@ -17,42 +17,21 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.effects.EffectFlag;
 
 /**
- * IgnoreDeath effect implementation
+ * @author Sdw
  */
-public final class IgnoreDeath extends AbstractEffect
+public class IgnoreDeath extends AbstractEffect
 {
-	/**
-	 * @param attachCond
-	 * @param applyCond
-	 * @param set
-	 * @param params
-	 */
-	public IgnoreDeath(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public IgnoreDeath(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public long getEffectFlags()
 	{
-		return L2EffectType.BUFF;
-	}
-	
-	@Override
-	public void onStart(BuffInfo info)
-	{
-		info.getEffected().setIsMortal(false);
-	}
-	
-	@Override
-	public void onExit(BuffInfo info)
-	{
-		info.getEffected().setIsMortal(true);
+		return EffectFlag.IGNORE_DEATH.getMask();
 	}
 }

@@ -17,30 +17,39 @@
 package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
+import java.util.function.Predicate;
 
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
+import com.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.html.PageBuilder;
+import com.l2jmobius.gameserver.model.html.PageResult;
+import com.l2jmobius.gameserver.model.html.formatters.BypassParserFormatter;
+import com.l2jmobius.gameserver.model.html.pagehandlers.NextPrevPageHandler;
+import com.l2jmobius.gameserver.model.html.styles.ButtonsStyle;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BypassBuilder;
+import com.l2jmobius.gameserver.util.BypassParser;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author NosBit
  */
 public class AdminScan implements IAdminCommandHandler
 {
+	private static final String SPACE = " ";
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_scan",
 		"admin_deleteNpcByObjectId"
 	};
 	
-	private static final int DEFAULT_RADIUS = 500;
+	private static final int DEFAULT_RADIUS = 1000;
 	
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
@@ -51,34 +60,25 @@ public class AdminScan implements IAdminCommandHandler
 		{
 			case "admin_scan":
 			{
-				int radius = DEFAULT_RADIUS;
-				if (st.hasMoreElements())
-				{
-					try
-					{
-						radius = Integer.parseInt(st.nextToken());
-					}
-					catch (NumberFormatException e)
-					{
-						activeChar.sendMessage("Usage: //scan [radius]");
-						return false;
-					}
-				}
-				
-				sendNpcList(activeChar, radius);
+				processBypass(activeChar, new BypassParser(command));
 				break;
 			}
 			case "admin_deletenpcbyobjectid":
 			{
 				if (!st.hasMoreElements())
 				{
-					activeChar.sendMessage("Usage: //deletenpcbyobjectid <object_id>");
+					activeChar.sendMessage("Usage: //deletenpcbyobjectid objectId=<object_id>");
 					return false;
 				}
 				
+				final BypassParser parser = new BypassParser(command);
 				try
 				{
-					final int objectId = Integer.parseInt(st.nextToken());
+					final int objectId = parser.getInt("objectId", 0);
+					if (objectId == 0)
+					{
+						activeChar.sendMessage("objectId is not set!");
+					}
 					
 					final L2Object target = L2World.getInstance().findObject(objectId);
 					final L2Npc npc = target instanceof L2Npc ? (L2Npc) target : null;
@@ -95,9 +95,9 @@ public class AdminScan implements IAdminCommandHandler
 					{
 						spawn.stopRespawn();
 						
-						if (RaidBossSpawnManager.getInstance().isDefined(spawn.getId()))
+						if (DBSpawnManager.getInstance().isDefined(spawn.getId()))
 						{
-							RaidBossSpawnManager.getInstance().deleteSpawn(spawn, true);
+							DBSpawnManager.getInstance().deleteSpawn(spawn, true);
 						}
 						else
 						{
@@ -113,32 +113,98 @@ public class AdminScan implements IAdminCommandHandler
 					return false;
 				}
 				
-				sendNpcList(activeChar, DEFAULT_RADIUS);
+				processBypass(activeChar, parser);
 				break;
 			}
 		}
 		return true;
 	}
 	
-	private void sendNpcList(L2PcInstance activeChar, int radius)
+	private void processBypass(L2PcInstance activeChar, BypassParser parser)
 	{
-		final NpcHtmlMessage html = new NpcHtmlMessage();
-		html.setFile(activeChar.getHtmlPrefix(), "html/admin/scan.htm");
-		final StringBuilder sb = new StringBuilder();
-		for (L2Character character : activeChar.getKnownList().getKnownCharactersInRadius(radius))
+		final int id = parser.getInt("id", 0);
+		final String name = parser.getString("name", null);
+		final int radius = parser.getInt("radius", parser.getInt("range", DEFAULT_RADIUS));
+		final int page = parser.getInt("page", 0);
+		
+		final Predicate<L2Npc> condition;
+		if (id > 0)
 		{
-			if (character instanceof L2Npc)
-			{
-				sb.append("<tr>");
-				sb.append("<td width=\"54\">" + character.getId() + "</td>");
-				sb.append("<td width=\"54\">" + character.getName() + "</td>");
-				sb.append("<td width=\"54\">" + Math.round(activeChar.calculateDistance(character, false, false)) + "</td>");
-				sb.append("<td width=\"54\"><a action=\"bypass -h admin_deleteNpcByObjectId " + character.getObjectId() + "\"><font color=\"LEVEL\">Delete</font></a></td>");
-				sb.append("<td width=\"54\"><a action=\"bypass -h admin_move_to " + character.getX() + " " + character.getY() + " " + character.getZ() + "\"><font color=\"LEVEL\">Go to</font></a></td>");
-				sb.append("</tr>");
-			}
+			condition = npc -> npc.getId() == id;
 		}
-		html.replace("%data%", sb.toString());
+		else if (name != null)
+		{
+			condition = npc -> npc.getName().toLowerCase().startsWith(name.toLowerCase());
+		}
+		else
+		{
+			condition = npc -> true;
+		}
+		
+		sendNpcList(activeChar, radius, page, condition, parser);
+	}
+	
+	private BypassBuilder createBypassBuilder(BypassParser parser, String bypass)
+	{
+		final int id = parser.getInt("id", 0);
+		final String name = parser.getString("name", null);
+		final int radius = parser.getInt("radius", parser.getInt("range", DEFAULT_RADIUS));
+		final BypassBuilder builder = new BypassBuilder(bypass);
+		
+		if (id > 0)
+		{
+			builder.addParam("id", id);
+		}
+		else if (name != null)
+		{
+			builder.addParam("name", name);
+		}
+		
+		if (radius > DEFAULT_RADIUS)
+		{
+			builder.addParam("radius", radius);
+		}
+		return builder;
+	}
+	
+	private void sendNpcList(L2PcInstance activeChar, int radius, int page, Predicate<L2Npc> condition, BypassParser parser)
+	{
+		final BypassBuilder bypassParser = createBypassBuilder(parser, "bypass -h admin_scan");
+		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
+		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/scan.htm");
+		
+		//@formatter:off
+		final PageResult result = PageBuilder.newBuilder(L2World.getInstance().getVisibleObjects(activeChar, L2Npc.class, radius, condition), 15, bypassParser.toString())
+			.currentPage(page)
+			.pageHandler(NextPrevPageHandler.INSTANCE)
+			.formatter(BypassParserFormatter.INSTANCE)
+			.style(ButtonsStyle.INSTANCE)
+			.bodyHandler((pages, character, sb) ->
+		{
+			final BypassBuilder builder = createBypassBuilder(parser, "bypass -h admin_deleteNpcByObjectId");
+			final String npcName = character.getName();
+			builder.addParam("page", page);
+			builder.addParam("objectId", character.getObjectId());
+			
+			sb.append("<tr>");
+			sb.append("<td width=\"45\">").append(character.getId()).append("</td>");
+			sb.append("<td><a action=\"bypass -h admin_move_to ").append(character.getX()).append(SPACE).append(character.getY()).append(SPACE).append(character.getZ()).append("\">").append(npcName.isEmpty() ? "No name NPC" : npcName).append("</a></td>");
+			sb.append("<td width=\"60\">").append(Util.formatAdena(Math.round(activeChar.calculateDistance(character, false, false)))).append("</td>");
+			sb.append("<td width=\"54\"><a action=\"").append(builder.toStringBuilder()).append("\"><font color=\"LEVEL\">Delete</font></a></td>");
+			sb.append("</tr>");
+		}).build();
+		//@formatter:on
+		
+		if (result.getPages() > 0)
+		{
+			html.replace("%pages%", "<center><table width=\"100%\" cellspacing=0><tr>" + result.getPagerTemplate() + "</tr></table></center>");
+		}
+		else
+		{
+			html.replace("%pages%", "");
+		}
+		
+		html.replace("%data%", result.getBodyTemplate().toString());
 		activeChar.sendPacket(html);
 	}
 	

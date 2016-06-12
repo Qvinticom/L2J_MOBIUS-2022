@@ -17,41 +17,42 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
  * This class ...
  * @version $Revision: 1.3.2.1.2.5 $ $Date: 2005/03/29 23:15:33 $
  */
-public final class RequestGiveItemToPet extends L2GameClientPacket
+public final class RequestGiveItemToPet implements IClientIncomingPacket
 {
-	private static final String _C__95_REQUESTCIVEITEMTOPET = "[C] 95 RequestGiveItemToPet";
-	
 	private int _objectId;
 	private long _amount;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_amount = readQ();
+		_objectId = packet.readD();
+		_amount = packet.readQ();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if ((_amount <= 0) || (player == null) || !player.hasPet())
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("giveitemtopet"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("giveitemtopet"))
 		{
 			player.sendMessage("You are giving items to pet too fast.");
 			return;
@@ -97,16 +98,22 @@ public final class RequestGiveItemToPet extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PetInstance pet = (L2PetInstance) player.getPet();
+		final L2PetInstance pet = player.getPet();
 		if (pet.isDead())
 		{
 			player.sendPacket(SystemMessageId.YOUR_PET_IS_DEAD_AND_ANY_ATTEMPT_YOU_MAKE_TO_GIVE_IT_SOMETHING_GOES_UNRECOGNIZED);
 			return;
 		}
 		
-		if (!pet.getInventory().validateCapacity(item) || !pet.getInventory().validateWeight(item, _amount))
+		if (!pet.getInventory().validateCapacity(item))
 		{
 			player.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_ANY_MORE_ITEMS);
+			return;
+		}
+		
+		if (!pet.getInventory().validateWeight(item, _amount))
+		{
+			player.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_ANY_MORE_ITEMS2);
 			return;
 		}
 		
@@ -114,11 +121,5 @@ public final class RequestGiveItemToPet extends L2GameClientPacket
 		{
 			_log.warning("Invalid item transfer request: " + pet.getName() + "(pet) --> " + player.getName());
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__95_REQUESTCIVEITEMTOPET;
 	}
 }

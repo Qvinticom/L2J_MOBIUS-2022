@@ -24,15 +24,15 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.data.xml.impl.EnchantItemBonusData;
+import com.l2jmobius.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import com.l2jmobius.gameserver.engines.DocumentEngine;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
@@ -58,53 +58,53 @@ public class ItemTable
 	private static Logger LOGGER = Logger.getLogger(ItemTable.class.getName());
 	private static Logger LOGGER_ITEMS = Logger.getLogger("item");
 	
-	public static final Map<String, Integer> SLOTS = new HashMap<>();
+	public static final Map<String, Integer> _slots = new HashMap<>();
 	
 	private L2Item[] _allTemplates;
-	private final Map<Integer, L2EtcItem> _etcItems = new HashMap<>();
-	private final Map<Integer, L2Armor> _armors = new HashMap<>();
-	private final Map<Integer, L2Weapon> _weapons = new HashMap<>();
+	private final Map<Integer, L2EtcItem> _etcItems;
+	private final Map<Integer, L2Armor> _armors;
+	private final Map<Integer, L2Weapon> _weapons;
 	
 	static
 	{
-		SLOTS.put("shirt", L2Item.SLOT_UNDERWEAR);
-		SLOTS.put("lbracelet", L2Item.SLOT_L_BRACELET);
-		SLOTS.put("rbracelet", L2Item.SLOT_R_BRACELET);
-		SLOTS.put("talisman", L2Item.SLOT_DECO);
-		SLOTS.put("chest", L2Item.SLOT_CHEST);
-		SLOTS.put("fullarmor", L2Item.SLOT_FULL_ARMOR);
-		SLOTS.put("head", L2Item.SLOT_HEAD);
-		SLOTS.put("hair", L2Item.SLOT_HAIR);
-		SLOTS.put("hairall", L2Item.SLOT_HAIRALL);
-		SLOTS.put("underwear", L2Item.SLOT_UNDERWEAR);
-		SLOTS.put("back", L2Item.SLOT_BACK);
-		SLOTS.put("neck", L2Item.SLOT_NECK);
-		SLOTS.put("legs", L2Item.SLOT_LEGS);
-		SLOTS.put("feet", L2Item.SLOT_FEET);
-		SLOTS.put("gloves", L2Item.SLOT_GLOVES);
-		SLOTS.put("chest,legs", L2Item.SLOT_CHEST | L2Item.SLOT_LEGS);
-		SLOTS.put("belt", L2Item.SLOT_BELT);
-		SLOTS.put("rhand", L2Item.SLOT_R_HAND);
-		SLOTS.put("lhand", L2Item.SLOT_L_HAND);
-		SLOTS.put("lrhand", L2Item.SLOT_LR_HAND);
-		SLOTS.put("rear;lear", L2Item.SLOT_R_EAR | L2Item.SLOT_L_EAR);
-		SLOTS.put("rfinger;lfinger", L2Item.SLOT_R_FINGER | L2Item.SLOT_L_FINGER);
-		SLOTS.put("wolf", L2Item.SLOT_WOLF);
-		SLOTS.put("greatwolf", L2Item.SLOT_GREATWOLF);
-		SLOTS.put("hatchling", L2Item.SLOT_HATCHLING);
-		SLOTS.put("strider", L2Item.SLOT_STRIDER);
-		SLOTS.put("babypet", L2Item.SLOT_BABYPET);
-		SLOTS.put("brooch", L2Item.SLOT_BROOCH);
-		SLOTS.put("brooch_jewel", L2Item.SLOT_BROOCH_JEWEL);
-		SLOTS.put("none", L2Item.SLOT_NONE);
+		_slots.put("shirt", L2Item.SLOT_UNDERWEAR);
+		_slots.put("lbracelet", L2Item.SLOT_L_BRACELET);
+		_slots.put("rbracelet", L2Item.SLOT_R_BRACELET);
+		_slots.put("talisman", L2Item.SLOT_DECO);
+		_slots.put("chest", L2Item.SLOT_CHEST);
+		_slots.put("fullarmor", L2Item.SLOT_FULL_ARMOR);
+		_slots.put("head", L2Item.SLOT_HEAD);
+		_slots.put("hair", L2Item.SLOT_HAIR);
+		_slots.put("hairall", L2Item.SLOT_HAIRALL);
+		_slots.put("underwear", L2Item.SLOT_UNDERWEAR);
+		_slots.put("back", L2Item.SLOT_BACK);
+		_slots.put("neck", L2Item.SLOT_NECK);
+		_slots.put("legs", L2Item.SLOT_LEGS);
+		_slots.put("feet", L2Item.SLOT_FEET);
+		_slots.put("gloves", L2Item.SLOT_GLOVES);
+		_slots.put("chest,legs", L2Item.SLOT_CHEST | L2Item.SLOT_LEGS);
+		_slots.put("belt", L2Item.SLOT_BELT);
+		_slots.put("rhand", L2Item.SLOT_R_HAND);
+		_slots.put("lhand", L2Item.SLOT_L_HAND);
+		_slots.put("lrhand", L2Item.SLOT_LR_HAND);
+		_slots.put("rear;lear", L2Item.SLOT_R_EAR | L2Item.SLOT_L_EAR);
+		_slots.put("rfinger;lfinger", L2Item.SLOT_R_FINGER | L2Item.SLOT_L_FINGER);
+		_slots.put("wolf", L2Item.SLOT_WOLF);
+		_slots.put("greatwolf", L2Item.SLOT_GREATWOLF);
+		_slots.put("hatchling", L2Item.SLOT_HATCHLING);
+		_slots.put("strider", L2Item.SLOT_STRIDER);
+		_slots.put("babypet", L2Item.SLOT_BABYPET);
+		_slots.put("brooch", L2Item.SLOT_BROOCH);
+		_slots.put("brooch_jewel", L2Item.SLOT_BROOCH_JEWEL);
+		_slots.put("none", L2Item.SLOT_NONE);
 		
 		// retail compatibility
-		SLOTS.put("onepiece", L2Item.SLOT_FULL_ARMOR);
-		SLOTS.put("hair2", L2Item.SLOT_HAIR2);
-		SLOTS.put("dhair", L2Item.SLOT_HAIRALL);
-		SLOTS.put("alldress", L2Item.SLOT_ALLDRESS);
-		SLOTS.put("deco1", L2Item.SLOT_DECO);
-		SLOTS.put("waist", L2Item.SLOT_BELT);
+		_slots.put("onepiece", L2Item.SLOT_FULL_ARMOR);
+		_slots.put("hair2", L2Item.SLOT_HAIR2);
+		_slots.put("dhair", L2Item.SLOT_HAIRALL);
+		_slots.put("alldress", L2Item.SLOT_ALLDRESS);
+		_slots.put("deco1", L2Item.SLOT_DECO);
+		_slots.put("waist", L2Item.SLOT_BELT);
 	}
 	
 	/**
@@ -117,6 +117,9 @@ public class ItemTable
 	
 	protected ItemTable()
 	{
+		_etcItems = new ConcurrentHashMap<>();
+		_armors = new ConcurrentHashMap<>();
+		_weapons = new ConcurrentHashMap<>();
 		load();
 	}
 	
@@ -146,10 +149,10 @@ public class ItemTable
 			}
 		}
 		buildFastLookupTable(highest);
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _etcItems.size() + " Etc Items");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _armors.size() + " Armor Items");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _weapons.size() + " Weapon Items");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + (_etcItems.size() + _armors.size() + _weapons.size()) + " Items in total.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _etcItems.size() + " Etc Items");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _armors.size() + " Armor Items");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _weapons.size() + " Weapon Items");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + (_etcItems.size() + _armors.size() + _weapons.size()) + " Items in total.");
 	}
 	
 	/**
@@ -159,7 +162,7 @@ public class ItemTable
 	private void buildFastLookupTable(int size)
 	{
 		// Create a FastLookUp Table called _allTemplates of size : value of the highest item ID
-		LOGGER.info(getClass().getSimpleName() + ": Highest item id used:" + size);
+		LOGGER.info(getClass().getSimpleName() + ": Highest item id used: " + size);
 		_allTemplates = new L2Item[size + 1];
 		
 		// Insert armor item in Fast Look Up Table
@@ -188,7 +191,12 @@ public class ItemTable
 	 */
 	public L2Item getTemplate(int id)
 	{
-		return (id >= _allTemplates.length) || (id < 0) ? null : _allTemplates[id];
+		if ((id >= _allTemplates.length) || (id < 0))
+		{
+			return null;
+		}
+		
+		return _allTemplates[id];
 	}
 	
 	/**
@@ -213,9 +221,11 @@ public class ItemTable
 			ScheduledFuture<?> itemLootShedule;
 			if ((reference instanceof L2Attackable) && ((L2Attackable) reference).isRaid()) // loot privilege for raids
 			{
-				if ((((L2Attackable) reference).getFirstCommandChannelAttacked() != null) && !Config.AUTO_LOOT_RAIDS)
+				final L2Attackable raid = (L2Attackable) reference;
+				// if in CommandChannel and was killing a World/RaidBoss
+				if ((raid.getFirstCommandChannelAttacked() != null) && !Config.AUTO_LOOT_RAIDS)
 				{
-					item.setOwnerId(((L2Attackable) reference).getFirstCommandChannelAttacked().getLeaderObjectId());
+					item.setOwnerId(raid.getFirstCommandChannelAttacked().getLeaderObjectId());
 					itemLootShedule = ThreadPoolManager.getInstance().scheduleGeneral(new ResetOwner(item), Config.LOOT_RAIDS_PRIVILEGE_INTERVAL);
 					item.setItemLootShedule(itemLootShedule);
 				}
@@ -230,7 +240,7 @@ public class ItemTable
 		
 		if (Config.DEBUG)
 		{
-			LOGGER.fine(getClass().getSimpleName() + ": Item created  oid:" + item.getObjectId() + " itemid:" + itemId);
+			LOGGER.finer(getClass().getSimpleName() + ": Item created: " + item);
 		}
 		
 		// Add the L2ItemInstance object to _allObjects of L2world
@@ -242,33 +252,39 @@ public class ItemTable
 			item.setCount(count);
 		}
 		
-		if (Config.LOG_ITEMS && !process.equals("Reset") && (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID)))))
+		if (Config.LOG_ITEMS && !process.equals("Reset"))
 		{
-			final LogRecord record = new LogRecord(Level.INFO, "CREATE:" + process);
-			record.setLoggerName("item");
-			record.setParameters(new Object[]
+			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID))))
 			{
-				item,
-				actor,
-				reference
-			});
-			LOGGER_ITEMS.log(record);
+				if (item.getEnchantLevel() > 0)
+				{
+					LOGGER_ITEMS.info("CREATE:" + process + ", item " + item.getObjectId() + ":+" + item.getEnchantLevel() + " " + item.getItem().getName() + "(" + item.getCount() + "), " + actor + ", " + reference);
+				}
+				else
+				{
+					LOGGER_ITEMS.info("CREATE:" + process + ", item " + item.getObjectId() + ":" + item.getItem().getName() + "(" + item.getCount() + "), " + actor + ", " + reference);
+				}
+			}
 		}
 		
-		if ((actor != null) && actor.isGM())
+		if (actor != null)
 		{
-			String referenceName = "no-reference";
-			if (reference instanceof L2Object)
+			if (actor.isGM())
 			{
-				referenceName = ((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name";
-			}
-			else if (reference instanceof String)
-			{
-				referenceName = (String) reference;
-			}
-			if (Config.GMAUDIT)
-			{
-				GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]", process + "(id: " + itemId + " count: " + count + " name: " + item.getItemName() + " objId: " + item.getObjectId() + ")", actor.getTarget() != null ? actor.getTarget().getName() : "no-target", "L2Object referencing this action is: " + referenceName);
+				String referenceName = "no-reference";
+				if (reference instanceof L2Object)
+				{
+					referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
+				}
+				else if (reference instanceof String)
+				{
+					referenceName = (String) reference;
+				}
+				final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
+				if (Config.GMAUDIT)
+				{
+					GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]", process + "(id: " + itemId + " count: " + count + " name: " + item.getItemName() + " objId: " + item.getObjectId() + ")", targetName, "L2Object referencing this action is: " + referenceName);
+				}
 			}
 		}
 		
@@ -308,34 +324,39 @@ public class ItemTable
 			L2World.getInstance().removeObject(item);
 			IdFactory.getInstance().releaseId(item.getObjectId());
 			
-			if (Config.LOG_ITEMS && (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID)))))
+			if (Config.LOG_ITEMS)
 			{
-				final LogRecord record = new LogRecord(Level.INFO, "DELETE:" + process);
-				record.setLoggerName("item");
-				record.setParameters(new Object[]
+				if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID))))
 				{
-					item,
-					"PrevCount(" + old + ")",
-					actor,
-					reference
-				});
-				LOGGER_ITEMS.log(record);
+					if (item.getEnchantLevel() > 0)
+					{
+						LOGGER_ITEMS.info("DELETE:" + process + ", item " + item.getObjectId() + ":+" + item.getEnchantLevel() + " " + item.getItem().getName() + "(" + item.getCount() + "), PrevCount(" + old + "), " + actor + ", " + reference);
+					}
+					else
+					{
+						LOGGER_ITEMS.info("DELETE:" + process + ", item " + item.getObjectId() + ":" + item.getItem().getName() + "(" + item.getCount() + "), PrevCount(" + old + "), " + actor + ", " + reference);
+					}
+				}
 			}
 			
-			if ((actor != null) && actor.isGM())
+			if (actor != null)
 			{
-				String referenceName = "no-reference";
-				if (reference instanceof L2Object)
+				if (actor.isGM())
 				{
-					referenceName = ((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name";
-				}
-				else if (reference instanceof String)
-				{
-					referenceName = (String) reference;
-				}
-				if (Config.GMAUDIT)
-				{
-					GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]", process + "(id: " + item.getId() + " count: " + item.getCount() + " itemObjId: " + item.getObjectId() + ")", actor.getTarget() != null ? actor.getTarget().getName() : "no-target", "L2Object referencing this action is: " + referenceName);
+					String referenceName = "no-reference";
+					if (reference instanceof L2Object)
+					{
+						referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
+					}
+					else if (reference instanceof String)
+					{
+						referenceName = (String) reference;
+					}
+					final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
+					if (Config.GMAUDIT)
+					{
+						GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]", process + "(id: " + item.getId() + " count: " + item.getCount() + " itemObjId: " + item.getObjectId() + ")", targetName, "L2Object referencing this action is: " + referenceName);
+					}
 				}
 			}
 			
@@ -351,7 +372,7 @@ public class ItemTable
 				}
 				catch (Exception e)
 				{
-					LOGGER.log(Level.WARNING, "could not delete pet objectid:", e);
+					LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not delete pet objectid:", e);
 				}
 			}
 		}
@@ -360,7 +381,7 @@ public class ItemTable
 	public void reload()
 	{
 		load();
-		EnchantItemBonusData.getInstance().load();
+		EnchantItemHPBonusData.getInstance().load();
 	}
 	
 	protected static class ResetOwner implements Runnable

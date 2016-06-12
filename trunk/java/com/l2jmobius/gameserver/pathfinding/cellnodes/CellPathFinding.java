@@ -17,8 +17,9 @@
 package com.l2jmobius.gameserver.pathfinding.cellnodes;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -26,12 +27,12 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.pathfinding.AbstractNode;
 import com.l2jmobius.gameserver.pathfinding.AbstractNodeLoc;
 import com.l2jmobius.gameserver.pathfinding.PathFinding;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * @author Sami, DS Credits to Diamond
@@ -90,7 +91,7 @@ public class CellPathFinding extends PathFinding
 	}
 	
 	@Override
-	public List<AbstractNodeLoc> findPath(int x, int y, int z, int tx, int ty, int tz, int instanceId, boolean playable)
+	public List<AbstractNodeLoc> findPath(int x, int y, int z, int tx, int ty, int tz, Instance instance, boolean playable)
 	{
 		final int gx = GeoData.getInstance().getGeoX(x);
 		final int gy = GeoData.getInstance().getGeoY(y);
@@ -124,6 +125,10 @@ public class CellPathFinding extends PathFinding
 			{
 				for (L2ItemInstance item : _debugItems)
 				{
+					if (item == null)
+					{
+						continue;
+					}
 					item.decayMe();
 				}
 				
@@ -183,6 +188,8 @@ public class CellPathFinding extends PathFinding
 			_postFilterPlayableUses++;
 		}
 		
+		int currentX, currentY, currentZ;
+		ListIterator<AbstractNodeLoc> middlePoint;
 		boolean remove;
 		int pass = 0;
 		do
@@ -191,20 +198,23 @@ public class CellPathFinding extends PathFinding
 			_postFilterPasses++;
 			
 			remove = false;
-			final Iterator<AbstractNodeLoc> endPoint = path.iterator();
-			endPoint.next();
-			int currentX = x;
-			int currentY = y;
-			int currentZ = z;
+			middlePoint = path.listIterator();
+			currentX = x;
+			currentY = y;
+			currentZ = z;
 			
-			int midPoint = 0;
-			while (endPoint.hasNext())
+			while (middlePoint.hasNext())
 			{
-				final AbstractNodeLoc locMiddle = path.get(midPoint);
-				final AbstractNodeLoc locEnd = endPoint.next();
-				if (GeoData.getInstance().canMove(currentX, currentY, currentZ, locEnd.getX(), locEnd.getY(), locEnd.getZ(), instanceId))
+				final AbstractNodeLoc locMiddle = middlePoint.next();
+				if (!middlePoint.hasNext())
 				{
-					path.remove(midPoint);
+					break;
+				}
+				
+				final AbstractNodeLoc locEnd = path.get(middlePoint.nextIndex());
+				if (GeoData.getInstance().canMove(currentX, currentY, currentZ, locEnd.getX(), locEnd.getY(), locEnd.getZ(), instance))
+				{
+					middlePoint.remove();
 					remove = true;
 					if (debug)
 					{
@@ -216,7 +226,6 @@ public class CellPathFinding extends PathFinding
 					currentX = locMiddle.getX();
 					currentY = locMiddle.getY();
 					currentZ = locMiddle.getZ();
-					midPoint++;
 				}
 			}
 		}
@@ -235,7 +244,7 @@ public class CellPathFinding extends PathFinding
 	
 	private List<AbstractNodeLoc> constructPath(AbstractNode<NodeLoc> node)
 	{
-		final List<AbstractNodeLoc> path = new CopyOnWriteArrayList<>();
+		final LinkedList<AbstractNodeLoc> path = new LinkedList<>();
 		int previousDirectionX = Integer.MIN_VALUE;
 		int previousDirectionY = Integer.MIN_VALUE;
 		int directionX, directionY;
@@ -269,16 +278,17 @@ public class CellPathFinding extends PathFinding
 				previousDirectionX = directionX;
 				previousDirectionY = directionY;
 				
-				path.add(0, node.getLoc());
+				path.addFirst(node.getLoc());
 				node.setLoc(null);
 			}
 			
 			node = node.getParent();
 		}
+		
 		return path;
 	}
 	
-	private final CellNodeBuffer alloc(int size, boolean playable)
+	private CellNodeBuffer alloc(int size, boolean playable)
 	{
 		CellNodeBuffer current = null;
 		for (BufferInfo i : _allBuffers)
@@ -330,7 +340,7 @@ public class CellPathFinding extends PathFinding
 		return current;
 	}
 	
-	private final void dropDebugItem(int itemId, int num, AbstractNodeLoc loc)
+	private void dropDebugItem(int itemId, int num, AbstractNodeLoc loc)
 	{
 		final L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), itemId);
 		item.setCount(num);
@@ -342,7 +352,7 @@ public class CellPathFinding extends PathFinding
 	{
 		final int mapSize;
 		final int count;
-		List<CellNodeBuffer> bufs;
+		ArrayList<CellNodeBuffer> bufs;
 		int uses = 0;
 		int playableUses = 0;
 		int overflows = 0;
@@ -359,16 +369,32 @@ public class CellPathFinding extends PathFinding
 		@Override
 		public String toString()
 		{
-			final StringBuilder stat = new StringBuilder(100);
-			StringUtil.append(stat, String.valueOf(mapSize), "x", String.valueOf(mapSize), " num:", String.valueOf(bufs.size()), "/", String.valueOf(count), " uses:", String.valueOf(uses), "/", String.valueOf(playableUses));
+			final StringBuilder sb = new StringBuilder(100);
+			sb.append(mapSize);
+			sb.append("x");
+			sb.append(mapSize);
+			sb.append(" num:");
+			sb.append(bufs.size());
+			sb.append("/");
+			sb.append(count);
+			sb.append(" uses:");
+			sb.append(uses);
+			sb.append("/");
+			sb.append(playableUses);
 			if (uses > 0)
 			{
-				StringUtil.append(stat, " total/avg(ms):", String.valueOf(elapsed), "/", String.format("%1.2f", (double) elapsed / uses));
+				sb.append(" total/avg(ms):");
+				sb.append(elapsed);
+				sb.append("/");
+				sb.append(String.format("%1.2f", (double) elapsed / uses));
 			}
 			
-			StringUtil.append(stat, " ovf:", String.valueOf(overflows), "/", String.valueOf(playableOverflows));
+			sb.append(" ovf:");
+			sb.append(overflows);
+			sb.append("/");
+			sb.append(playableOverflows);
 			
-			return stat.toString();
+			return sb.toString();
 		}
 	}
 	
@@ -381,14 +407,28 @@ public class CellPathFinding extends PathFinding
 			result[i] = _allBuffers[i].toString();
 		}
 		
-		final StringBuilder stat = new StringBuilder(100);
-		StringUtil.append(stat, "LOS postfilter uses:", String.valueOf(_postFilterUses), "/", String.valueOf(_postFilterPlayableUses));
+		final StringBuilder sb = new StringBuilder(128);
+		sb.append("LOS postfilter uses:");
+		sb.append(_postFilterUses);
+		sb.append("/");
+		sb.append(_postFilterPlayableUses);
 		if (_postFilterUses > 0)
 		{
-			StringUtil.append(stat, " total/avg(ms):", String.valueOf(_postFilterElapsed), "/", String.format("%1.2f", (double) _postFilterElapsed / _postFilterUses), " passes total/avg:", String.valueOf(_postFilterPasses), "/", String.format("%1.1f", (double) _postFilterPasses / _postFilterUses), Config.EOL);
+			sb.append(" total/avg(ms):");
+			sb.append(_postFilterElapsed);
+			sb.append("/");
+			sb.append(String.format("%1.2f", (double) _postFilterElapsed / _postFilterUses));
+			sb.append(" passes total/avg:");
+			sb.append(_postFilterPasses);
+			sb.append("/");
+			sb.append(String.format("%1.1f", (double) _postFilterPasses / _postFilterUses));
+			sb.append(Config.EOL);
 		}
-		StringUtil.append(stat, "Pathfind success/fail:", String.valueOf(_findSuccess), "/", String.valueOf(_findFails));
-		result[result.length - 1] = stat.toString();
+		sb.append("Pathfind success/fail:");
+		sb.append(_findSuccess);
+		sb.append("/");
+		sb.append(_findFails);
+		result[result.length - 1] = sb.toString();
 		
 		return result;
 	}

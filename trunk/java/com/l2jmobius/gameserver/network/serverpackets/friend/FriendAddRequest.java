@@ -16,24 +16,25 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets.friend;
 
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
-public class FriendAddRequest extends L2GameServerPacket
+public class FriendAddRequest implements IClientOutgoingPacket
 {
 	private final String _requestorName;
 	
-	/**
-	 * @param requestorName
-	 */
 	public FriendAddRequest(String requestorName)
 	{
 		_requestorName = requestorName;
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x83);
-		writeS(_requestorName);
+		OutgoingPackets.FRIEND_ADD_REQUEST.writeId(packet);
+		
+		packet.writeS(_requestorName);
+		return true;
 	}
 }

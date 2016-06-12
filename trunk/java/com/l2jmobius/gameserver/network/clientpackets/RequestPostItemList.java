@@ -17,33 +17,33 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExReplyPostItemList;
 
 /**
  * @author Migi, DS
  */
-public final class RequestPostItemList extends L2GameClientPacket
+public final class RequestPostItemList implements IClientIncomingPacket
 {
-	private static final String _C__D0_65_REQUESTPOSTITEMLIST = "[C] D0:65 RequestPostItemList";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger packet
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (!Config.ALLOW_MAIL || !Config.ALLOW_ATTACHMENTS)
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -51,22 +51,10 @@ public final class RequestPostItemList extends L2GameClientPacket
 		
 		if (!activeChar.isInsideZone(ZoneId.PEACE))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
+			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
 			return;
 		}
 		
-		activeChar.sendPacket(new ExReplyPostItemList(activeChar));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_65_REQUESTPOSTITEMLIST;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
+		client.sendPacket(new ExReplyPostItemList(activeChar));
 	}
 }

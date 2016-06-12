@@ -18,11 +18,12 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2ChestInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Open Chest effect implementation.
@@ -30,9 +31,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class OpenChest extends AbstractEffect
 {
-	public OpenChest(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public OpenChest(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -42,16 +42,16 @@ public final class OpenChest extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (!(info.getEffected() instanceof L2ChestInstance))
+		if (!(effected instanceof L2ChestInstance))
 		{
 			return;
 		}
 		
-		final L2PcInstance player = info.getEffector().getActingPlayer();
-		final L2ChestInstance chest = (L2ChestInstance) info.getEffected();
-		if (chest.isDead() || (player.getInstanceId() != chest.getInstanceId()))
+		final L2PcInstance player = effector.getActingPlayer();
+		final L2ChestInstance chest = (L2ChestInstance) effected;
+		if (chest.isDead() || (player.getInstanceWorld() != chest.getInstanceWorld()))
 		{
 			return;
 		}
@@ -61,7 +61,7 @@ public final class OpenChest extends AbstractEffect
 			player.broadcastSocialAction(3);
 			chest.setSpecialDrop();
 			chest.setMustRewardExpSp(false);
-			chest.reduceCurrentHp(chest.getMaxHp(), player, info.getSkill());
+			chest.reduceCurrentHp(chest.getMaxHp(), player, skill);
 		}
 		else
 		{

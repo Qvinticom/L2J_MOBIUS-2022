@@ -20,12 +20,14 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
@@ -33,7 +35,7 @@ import com.l2jmobius.gameserver.model.events.ListenersContainer;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureZoneEnter;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureZoneExit;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * Abstract base class for any zone type handles basic operations.
@@ -45,13 +47,11 @@ public abstract class L2ZoneType extends ListenersContainer
 	
 	private final int _id;
 	protected L2ZoneForm _zone;
-	protected Map<Integer, L2Character> _characterList;
+	protected Map<Integer, L2Character> _characterList = new ConcurrentHashMap<>();
 	
 	/** Parameters to affect specific characters */
 	private boolean _checkAffected = false;
 	private String _name = null;
-	private int _instanceId = -1;
-	private String _instanceTemplate = "";
 	private int _minLvl;
 	private int _maxLvl;
 	private int[] _race;
@@ -59,13 +59,12 @@ public abstract class L2ZoneType extends ListenersContainer
 	private char _classType;
 	private InstanceType _target = InstanceType.L2Character; // default all chars
 	private boolean _allowStore;
-	protected boolean _enabled;
+	private boolean _enabled;
 	private AbstractZoneSettings _settings;
 	
 	protected L2ZoneType(int id)
 	{
 		_id = id;
-		_characterList = new ConcurrentHashMap<>();
 		
 		_minLvl = 0;
 		_maxLvl = 0xFF;
@@ -99,15 +98,6 @@ public abstract class L2ZoneType extends ListenersContainer
 		if (name.equals("name"))
 		{
 			_name = value;
-		}
-		else if (name.equals("instanceId"))
-		{
-			_instanceId = Integer.parseInt(value);
-		}
-		else if (name.equals("instanceTemplate"))
-		{
-			_instanceTemplate = value;
-			_instanceId = InstanceManager.getInstance().createDynamicInstance(value);
 		}
 		// Minimum level
 		else if (name.equals("affectedLvlMin"))
@@ -203,7 +193,14 @@ public abstract class L2ZoneType extends ListenersContainer
 	 */
 	private boolean isAffected(L2Character character)
 	{
-		if ((character.getLevel() < _minLvl) || (character.getLevel() > _maxLvl) || !character.isInstanceTypes(_target))
+		// Check lvl
+		if ((character.getLevel() < _minLvl) || (character.getLevel() > _maxLvl))
+		{
+			return false;
+		}
+		
+		// check obj class
+		if (!character.isInstanceTypes(_target))
 		{
 			return false;
 		}
@@ -310,33 +307,6 @@ public abstract class L2ZoneType extends ListenersContainer
 	}
 	
 	/**
-	 * Set the zone instanceId.
-	 * @param instanceId
-	 */
-	public void setInstanceId(int instanceId)
-	{
-		_instanceId = instanceId;
-	}
-	
-	/**
-	 * Returns zone instanceId
-	 * @return
-	 */
-	public int getInstanceId()
-	{
-		return _instanceId;
-	}
-	
-	/**
-	 * Returns zone instanceTemplate
-	 * @return
-	 */
-	public String getInstanceTemplate()
-	{
-		return _instanceTemplate;
-	}
-	
-	/**
 	 * Checks if the given coordinates are within zone's plane
 	 * @param x
 	 * @param y
@@ -370,28 +340,13 @@ public abstract class L2ZoneType extends ListenersContainer
 	}
 	
 	/**
-	 * Checks if the given coordinates are within the zone and the instanceId used matched the zone's instanceId
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @param instanceId
-	 * @return
-	 */
-	public boolean isInsideZone(int x, int y, int z, int instanceId)
-	{
-		// It will check if coords are within the zone if the given instanceId or
-		// the zone's _instanceId are in the multiverse or they match
-		return ((_instanceId == -1) || (instanceId == -1) || (_instanceId == instanceId)) && _zone.isInsideZone(x, y, z);
-	}
-	
-	/**
 	 * Checks if the given object is inside the zone.
 	 * @param object
 	 * @return
 	 */
 	public boolean isInsideZone(L2Object object)
 	{
-		return isInsideZone(object.getX(), object.getY(), object.getZ(), object.getInstanceId());
+		return isInsideZone(object.getX(), object.getY(), object.getZ());
 	}
 	
 	public double getDistanceToZone(int x, int y)
@@ -407,9 +362,12 @@ public abstract class L2ZoneType extends ListenersContainer
 	public void revalidateInZone(L2Character character)
 	{
 		// If the character can't be affected by this zone return
-		if (_checkAffected && !isAffected(character))
+		if (_checkAffected)
 		{
-			return;
+			if (!isAffected(character))
+			{
+				return;
+			}
 		}
 		
 		// If the object is inside the zone...
@@ -526,7 +484,7 @@ public abstract class L2ZoneType extends ListenersContainer
 	 * Broadcasts packet to all players inside the zone
 	 * @param packet
 	 */
-	public void broadcastPacket(L2GameServerPacket packet)
+	public void broadcastPacket(IClientOutgoingPacket packet)
 	{
 		if (_characterList.isEmpty())
 		{
@@ -577,5 +535,40 @@ public abstract class L2ZoneType extends ListenersContainer
 	public boolean isEnabled()
 	{
 		return _enabled;
+	}
+	
+	public void oustAllPlayers()
+	{
+		//@formatter:off
+		_characterList.values().stream()
+			.filter(Objects::nonNull)
+			.filter(L2Object::isPlayer)
+			.map(L2Object::getActingPlayer)
+			.filter(L2PcInstance::isOnline)
+			.forEach(player -> player.teleToLocation(TeleportWhereType.TOWN));
+		//@formatter:off
+	}
+
+	/**
+	 * @param loc
+	 */
+	public void movePlayersTo(Location loc)
+	{
+		if (_characterList.isEmpty())
+		{
+			return;
+		}
+		
+		for (L2Character character : getCharactersInside())
+		{
+			if ((character != null) && character.isPlayer())
+			{
+				final L2PcInstance player = character.getActingPlayer();
+				if (player.isOnline())
+				{
+					player.teleToLocation(loc);
+				}
+			}
+		}
 	}
 }

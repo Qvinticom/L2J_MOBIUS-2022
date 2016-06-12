@@ -19,62 +19,63 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import static com.l2jmobius.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.ItemRequest;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.TradeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
  * This class ...
  * @version $Revision: 1.2.2.1.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestPrivateStoreSell extends L2GameClientPacket
+public final class RequestPrivateStoreSell implements IClientIncomingPacket
 {
-	private static final String _C__9F_REQUESTPRIVATESTORESELL = "[C] 9F RequestPrivateStoreSell";
-	
-	private static final int BATCH_LENGTH = 34; // length of the one item
+	private static final int BATCH_LENGTH = 32; // length of the one item
 	
 	private int _storePlayerId;
 	private ItemRequest[] _items = null;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_storePlayerId = readD();
-		final int count = readD();
-		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
+		_storePlayerId = packet.readD();
+		final int count = packet.readD();
+		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
-			return;
+			return false;
 		}
 		_items = new ItemRequest[count];
 		
 		for (int i = 0; i < count; i++)
 		{
-			final int objectId = readD();
-			final int itemId = readD();
-			readH(); // TODO analyse this
-			readH(); // TODO analyse this
-			final long cnt = readQ();
-			final long price = readQ();
-			readD(); // TODO analyse this
-			readH(); // TODO analyse this
+			final int objectId = packet.readD();
+			final int itemId = packet.readD();
+			packet.readH(); // TODO analyse this
+			packet.readH(); // TODO analyse this
+			final long cnt = packet.readQ();
+			final long price = packet.readQ();
 			
-			if ((itemId < 1) || (cnt < 1) || (price < 0))
+			if ((objectId < 1) || (itemId < 1) || (cnt < 1) || (price < 0))
 			{
 				_items = null;
-				return;
+				return false;
 			}
 			_items[i] = new ItemRequest(objectId, itemId, cnt, price);
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -82,39 +83,35 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 		
 		if (_items == null)
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("privatestoresell"))
+		// Cannot set private store in Ceremony of Chaos event.
+		if (player.isOnEvent(CeremonyOfChaosEvent.class))
+		{
+			client.sendPacket(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_OR_WORKSHOP_IN_THE_CEREMONY_OF_CHAOS);
+			return;
+		}
+		
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("privatestoresell"))
 		{
 			player.sendMessage("You are selling items too fast.");
 			return;
 		}
 		
-		final L2PcInstance object = L2World.getInstance().getPlayer(_storePlayerId);
-		if (object == null)
+		final L2PcInstance storePlayer = L2World.getInstance().getPlayer(_storePlayerId);
+		if ((storePlayer == null) || !player.isInsideRadius(storePlayer, INTERACTION_DISTANCE, true, false))
 		{
 			return;
 		}
 		
-		final L2PcInstance storePlayer = object;
-		if (!player.isInsideRadius(storePlayer, INTERACTION_DISTANCE, true, false))
+		if (player.getInstanceWorld() != storePlayer.getInstanceWorld())
 		{
 			return;
 		}
 		
-		if ((player.getInstanceId() != storePlayer.getInstanceId()) && (player.getInstanceId() != -1))
-		{
-			return;
-		}
-		
-		if (storePlayer.getPrivateStoreType() != PrivateStoreType.BUY)
-		{
-			return;
-		}
-		
-		if (player.isCursedWeaponEquipped())
+		if ((storePlayer.getPrivateStoreType() != PrivateStoreType.BUY) || player.isCursedWeaponEquipped())
 		{
 			return;
 		}
@@ -128,20 +125,14 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 		if (!player.getAccessLevel().allowTransaction())
 		{
 			player.sendMessage("Transactions are disabled for your Access Level.");
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (!storeList.privateStoreSell(player, _items))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			_log.warning("PrivateStore sell has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());
-			return;
-		}
-		
-		if (Config.FACTION_SYSTEM_ENABLED && ((storePlayer.isEvil() && player.isGood()) || (storePlayer.isGood() && player.isEvil())))
-		{
-			player.sendMessage("You cant sell on different faction members.");
 			return;
 		}
 		
@@ -156,17 +147,5 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 			storePlayer.setPrivateStoreType(PrivateStoreType.NONE);
 			storePlayer.broadcastUserInfo();
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__9F_REQUESTPRIVATESTORESELL;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

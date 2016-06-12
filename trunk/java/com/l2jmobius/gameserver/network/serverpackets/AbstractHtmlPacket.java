@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * @author HorridoJoho
  */
-public abstract class AbstractHtmlPacket extends L2GameServerPacket
+public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 {
 	public static final char VAR_PARAM_START_CHAR = '$';
 	
@@ -106,6 +106,11 @@ public abstract class AbstractHtmlPacket extends L2GameServerPacket
 		_html = _html.replaceAll(pattern, value.replaceAll("\\$", "\\\\\\$"));
 	}
 	
+	public final void replace(String pattern, CharSequence value)
+	{
+		replace(pattern, String.valueOf(value));
+	}
+	
 	public final void replace(String pattern, boolean val)
 	{
 		replace(pattern, String.valueOf(val));
@@ -127,22 +132,22 @@ public abstract class AbstractHtmlPacket extends L2GameServerPacket
 	}
 	
 	@Override
-	public final void runImpl()
+	public final void runImpl(L2PcInstance player)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player != null)
 		{
-			return;
+			player.clearHtmlActions(getScope());
 		}
-		
-		player.clearHtmlActions(getScope());
 		
 		if (_disabledValidation)
 		{
 			return;
 		}
 		
-		Util.buildHtmlActionCache(player, getScope(), _npcObjId, _html);
+		if (player != null)
+		{
+			Util.buildHtmlActionCache(player, getScope(), _npcObjId, _html);
+		}
 	}
 	
 	public final int getNpcObjId()

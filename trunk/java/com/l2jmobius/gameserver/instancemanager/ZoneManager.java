@@ -21,50 +21,71 @@ import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.OptionalInt;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
 import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
 import com.l2jmobius.gameserver.model.zone.L2ZoneRespawn;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneRegion;
 import com.l2jmobius.gameserver.model.zone.form.ZoneCuboid;
 import com.l2jmobius.gameserver.model.zone.form.ZoneCylinder;
 import com.l2jmobius.gameserver.model.zone.form.ZoneNPoly;
 import com.l2jmobius.gameserver.model.zone.type.L2ArenaZone;
 import com.l2jmobius.gameserver.model.zone.type.L2OlympiadStadiumZone;
 import com.l2jmobius.gameserver.model.zone.type.L2RespawnZone;
-import com.l2jmobius.gameserver.model.zone.type.NpcSpawnTerritory;
-import com.l2jmobius.util.data.xml.IXmlReader;
+import com.l2jmobius.gameserver.model.zone.type.L2SpawnTerritory;
 
 /**
  * This class manages the zones
  * @author durgus
  */
-public final class ZoneManager implements IXmlReader
+public final class ZoneManager implements IGameXmlReader
 {
-	private static final Map<String, AbstractZoneSettings> _settings = new HashMap<>();
+	private static final Logger LOGGER = Logger.getLogger(ZoneManager.class.getName());
+	
+	private static final Map<String, AbstractZoneSettings> SETTINGS = new HashMap<>();
+	
+	public static final int SHIFT_BY = 15;
+	public static final int OFFSET_X = Math.abs(L2World.MAP_MIN_X >> SHIFT_BY);
+	public static final int OFFSET_Y = Math.abs(L2World.MAP_MIN_Y >> SHIFT_BY);
 	
 	private final Map<Class<? extends L2ZoneType>, Map<Integer, ? extends L2ZoneType>> _classZones = new HashMap<>();
-	private final Map<String, NpcSpawnTerritory> _spawnTerritories = new HashMap<>();
+	private final Map<String, L2SpawnTerritory> _spawnTerritories = new HashMap<>();
 	private int _lastDynamicId = 300000;
 	private List<L2ItemInstance> _debugItems;
+	
+	private final ZoneRegion[][] _zoneRegions = new ZoneRegion[(L2World.MAP_MAX_X >> SHIFT_BY) + OFFSET_X + 1][(L2World.MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y + 1];
 	
 	/**
 	 * Instantiates a new zone manager.
 	 */
 	protected ZoneManager()
 	{
+		for (int x = 0; x < _zoneRegions.length; x++)
+		{
+			for (int y = 0; y < _zoneRegions[x].length; y++)
+			{
+				_zoneRegions[x][y] = new ZoneRegion(x, y);
+			}
+		}
+		LOGGER.info(getClass().getSimpleName() + " " + _zoneRegions.length + " by " + _zoneRegions[0].length + " Zone Region Grid set up.");
+		
 		load();
 	}
 	
@@ -75,7 +96,6 @@ public final class ZoneManager implements IXmlReader
 	{
 		// Get the world regions
 		int count = 0;
-		final L2WorldRegion[][] worldRegions = L2World.getInstance().getWorldRegions();
 		
 		// Backup old zone settings
 		for (Map<Integer, ? extends L2ZoneType> map : _classZones.values())
@@ -84,21 +104,20 @@ public final class ZoneManager implements IXmlReader
 			{
 				if (zone.getSettings() != null)
 				{
-					_settings.put(zone.getName(), zone.getSettings());
+					SETTINGS.put(zone.getName(), zone.getSettings());
 				}
 			}
 		}
 		
 		// Clear zones
-		for (L2WorldRegion[] worldRegion : worldRegions)
+		for (ZoneRegion[] zoneRegions : _zoneRegions)
 		{
-			for (L2WorldRegion element : worldRegion)
+			for (ZoneRegion zoneRegion : zoneRegions)
 			{
-				element.getZones().clear();
+				zoneRegion.getZones().clear();
 				count++;
 			}
 		}
-		GrandBossManager.getInstance().getZones().clear();
 		LOGGER.info(getClass().getSimpleName() + ": Removed zones in " + count + " regions.");
 		
 		// Load the zones
@@ -112,14 +131,13 @@ public final class ZoneManager implements IXmlReader
 				((L2Character) obj).revalidateZone(true);
 			}
 		}
-		_settings.clear();
+		
+		SETTINGS.clear();
 	}
 	
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		// Get the world regions
-		final L2WorldRegion[][] worldRegions = L2World.getInstance().getWorldRegions();
 		NamedNodeMap attrs;
 		Node attribute;
 		String zoneName;
@@ -232,7 +250,7 @@ public final class ZoneManager implements IXmlReader
 								}
 								else
 								{
-									LOGGER.warning(getClass().getSimpleName() + ": ZoneData: Missing cuboid vertex in sql data for zone: " + zoneId + " in file: " + f.getName());
+									LOGGER.warning(getClass().getSimpleName() + ": ZoneData: Missing cuboid vertex data for zone: " + zoneId + " in file: " + f.getName());
 									continue;
 								}
 							}
@@ -286,7 +304,7 @@ public final class ZoneManager implements IXmlReader
 						// No further parameters needed, if NpcSpawnTerritory is loading
 						if (zoneType.equalsIgnoreCase("NpcSpawnTerritory"))
 						{
-							_spawnTerritories.put(zoneName, new NpcSpawnTerritory(zoneName, zoneForm));
+							_spawnTerritories.put(zoneName, new L2SpawnTerritory(zoneName, zoneForm));
 							continue;
 						}
 						
@@ -338,7 +356,7 @@ public final class ZoneManager implements IXmlReader
 						}
 						if (checkId(zoneId))
 						{
-							LOGGER.config(getClass().getSimpleName() + ": Caution: Zone (" + zoneId + ") from file: " + f.getName() + " overrides previos definition.");
+							LOGGER.info(getClass().getSimpleName() + ": Caution: Zone (" + zoneId + ") from file: " + f.getName() + " overrides previos definition.");
 						}
 						
 						if ((zoneName != null) && !zoneName.isEmpty())
@@ -348,21 +366,22 @@ public final class ZoneManager implements IXmlReader
 						
 						addZone(zoneId, temp);
 						
-						// Register the zone into any world region it intersects with...
+						// Register the zone into any world region it
+						// intersects with...
 						// currently 11136 test for each zone :>
-						int ax, ay, bx, by;
-						for (int x = 0; x < worldRegions.length; x++)
+						for (int x = 0; x < _zoneRegions.length; x++)
 						{
-							for (int y = 0; y < worldRegions[x].length; y++)
+							for (int y = 0; y < _zoneRegions[x].length; y++)
 							{
-								ax = (x - L2World.OFFSET_X) << L2World.SHIFT_BY;
-								bx = ((x + 1) - L2World.OFFSET_X) << L2World.SHIFT_BY;
-								ay = (y - L2World.OFFSET_Y) << L2World.SHIFT_BY;
-								by = ((y + 1) - L2World.OFFSET_Y) << L2World.SHIFT_BY;
+								
+								final int ax = (x - OFFSET_X) << SHIFT_BY;
+								final int bx = ((x + 1) - OFFSET_X) << SHIFT_BY;
+								final int ay = (y - OFFSET_Y) << SHIFT_BY;
+								final int by = ((y + 1) - OFFSET_Y) << SHIFT_BY;
 								
 								if (temp.getZone().intersectsRectangle(ax, bx, ay, by))
 								{
-									worldRegions[x][y].addZone(temp);
+									_zoneRegions[x][y].getZones().put(temp.getId(), temp);
 								}
 							}
 						}
@@ -377,10 +396,12 @@ public final class ZoneManager implements IXmlReader
 	{
 		_classZones.clear();
 		_spawnTerritories.clear();
-		parseDatapackDirectory("zones", false);
-		parseDatapackDirectory("zones/npcSpawnTerritories", false);
+		parseDatapackDirectory("data/zones", false);
+		parseDatapackDirectory("data/zones/npcSpawnTerritories", false);
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _classZones.size() + " zone classes and " + getSize() + " zones.");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _spawnTerritories.size() + " NPC spawn territoriers.");
+		final OptionalInt maxId = _classZones.values().stream().flatMap(map -> map.keySet().stream()).mapToInt(Integer.class::cast).filter(value -> value < 300000).max();
+		LOGGER.info(getClass().getSimpleName() + ": Last static id: " + maxId.getAsInt());
 	}
 	
 	/**
@@ -437,22 +458,6 @@ public final class ZoneManager implements IXmlReader
 	}
 	
 	/**
-	 * Returns all zones registered with the ZoneManager. To minimize iteration processing retrieve zones from L2WorldRegion for a specific location instead.
-	 * @return zones
-	 * @see #getAllZones(Class)
-	 */
-	@Deprecated
-	public Collection<L2ZoneType> getAllZones()
-	{
-		final List<L2ZoneType> zones = new ArrayList<>();
-		for (Map<Integer, ? extends L2ZoneType> map : _classZones.values())
-		{
-			zones.addAll(map.values());
-		}
-		return zones;
-	}
-	
-	/**
 	 * Return all zones by class type.
 	 * @param <T> the generic type
 	 * @param zoneType Zone class
@@ -497,28 +502,28 @@ public final class ZoneManager implements IXmlReader
 	
 	/**
 	 * Returns all zones from where the object is located.
-	 * @param object the object
+	 * @param locational the locational
 	 * @return zones
 	 */
-	public List<L2ZoneType> getZones(L2Object object)
+	public List<L2ZoneType> getZones(ILocational locational)
 	{
-		return getZones(object.getX(), object.getY(), object.getZ());
+		return getZones(locational.getX(), locational.getY(), locational.getZ());
 	}
 	
 	/**
 	 * Gets the zone.
 	 * @param <T> the generic type
-	 * @param object the object
+	 * @param locational the locational
 	 * @param type the type
 	 * @return zone from where the object is located by type
 	 */
-	public <T extends L2ZoneType> T getZone(L2Object object, Class<T> type)
+	public <T extends L2ZoneType> T getZone(ILocational locational, Class<T> type)
 	{
-		if (object != null)
+		if (locational == null)
 		{
-			return getZone(object.getX(), object.getY(), object.getZ(), type);
+			return null;
 		}
-		return null;
+		return getZone(locational.getX(), locational.getY(), locational.getZ(), type);
 	}
 	
 	/**
@@ -529,9 +534,8 @@ public final class ZoneManager implements IXmlReader
 	 */
 	public List<L2ZoneType> getZones(int x, int y)
 	{
-		final L2WorldRegion region = L2World.getInstance().getRegion(x, y);
 		final List<L2ZoneType> temp = new ArrayList<>();
-		for (L2ZoneType zone : region.getZones())
+		for (L2ZoneType zone : getRegion(x, y).getZones().values())
 		{
 			if (zone.isInsideZone(x, y))
 			{
@@ -550,9 +554,8 @@ public final class ZoneManager implements IXmlReader
 	 */
 	public List<L2ZoneType> getZones(int x, int y, int z)
 	{
-		final L2WorldRegion region = L2World.getInstance().getRegion(x, y);
 		final List<L2ZoneType> temp = new ArrayList<>();
-		for (L2ZoneType zone : region.getZones())
+		for (L2ZoneType zone : getRegion(x, y).getZones().values())
 		{
 			if (zone.isInsideZone(x, y, z))
 			{
@@ -574,8 +577,7 @@ public final class ZoneManager implements IXmlReader
 	@SuppressWarnings("unchecked")
 	public <T extends L2ZoneType> T getZone(int x, int y, int z, Class<T> type)
 	{
-		final L2WorldRegion region = L2World.getInstance().getRegion(x, y);
-		for (L2ZoneType zone : region.getZones())
+		for (L2ZoneType zone : getRegion(x, y).getZones().values())
 		{
 			if (zone.isInsideZone(x, y, z) && type.isInstance(zone))
 			{
@@ -590,7 +592,7 @@ public final class ZoneManager implements IXmlReader
 	 * @param name name of territory to search
 	 * @return link to zone form
 	 */
-	public NpcSpawnTerritory getSpawnTerritory(String name)
+	public L2SpawnTerritory getSpawnTerritory(String name)
 	{
 		return _spawnTerritories.containsKey(name) ? _spawnTerritories.get(name) : null;
 	}
@@ -600,10 +602,10 @@ public final class ZoneManager implements IXmlReader
 	 * @param object
 	 * @return zones
 	 */
-	public List<NpcSpawnTerritory> getSpawnTerritories(L2Object object)
+	public List<L2SpawnTerritory> getSpawnTerritories(L2Object object)
 	{
-		final List<NpcSpawnTerritory> temp = new ArrayList<>();
-		for (NpcSpawnTerritory territory : _spawnTerritories.values())
+		final List<L2SpawnTerritory> temp = new ArrayList<>();
+		for (L2SpawnTerritory territory : _spawnTerritories.values())
 		{
 			if (territory.isInsideZone(object.getX(), object.getY(), object.getZ()))
 			{
@@ -630,7 +632,7 @@ public final class ZoneManager implements IXmlReader
 		{
 			if ((temp instanceof L2ArenaZone) && temp.isCharacterInZone(character))
 			{
-				return (L2ArenaZone) temp;
+				return ((L2ArenaZone) temp);
 			}
 		}
 		
@@ -653,7 +655,7 @@ public final class ZoneManager implements IXmlReader
 		{
 			if ((temp instanceof L2OlympiadStadiumZone) && temp.isCharacterInZone(character))
 			{
-				return (L2OlympiadStadiumZone) temp;
+				return ((L2OlympiadStadiumZone) temp);
 			}
 		}
 		return null;
@@ -706,15 +708,27 @@ public final class ZoneManager implements IXmlReader
 	{
 		if (_debugItems != null)
 		{
-			for (L2ItemInstance item : _debugItems)
+			final Iterator<L2ItemInstance> it = _debugItems.iterator();
+			while (it.hasNext())
 			{
+				final L2ItemInstance item = it.next();
 				if (item != null)
 				{
 					item.decayMe();
 				}
-				_debugItems.remove(item);
+				it.remove();
 			}
 		}
+	}
+	
+	public ZoneRegion getRegion(int x, int y)
+	{
+		return _zoneRegions[(x >> SHIFT_BY) + OFFSET_X][(y >> SHIFT_BY) + OFFSET_Y];
+	}
+	
+	public ZoneRegion getRegion(ILocational point)
+	{
+		return getRegion(point.getX(), point.getY());
 	}
 	
 	/**
@@ -724,7 +738,7 @@ public final class ZoneManager implements IXmlReader
 	 */
 	public static AbstractZoneSettings getSettings(String name)
 	{
-		return _settings.get(name);
+		return SETTINGS.get(name);
 	}
 	
 	/**

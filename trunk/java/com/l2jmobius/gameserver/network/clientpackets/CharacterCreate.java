@@ -17,17 +17,16 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.xml.impl.InitialEquipmentData;
 import com.l2jmobius.gameserver.data.xml.impl.InitialShortcutData;
 import com.l2jmobius.gameserver.data.xml.impl.PlayerTemplateData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
@@ -41,16 +40,15 @@ import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerCreate;
 import com.l2jmobius.gameserver.model.items.PcItemTemplate;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.CharCreateFail;
 import com.l2jmobius.gameserver.network.serverpackets.CharCreateOk;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
 import com.l2jmobius.gameserver.util.Util;
 
 @SuppressWarnings("unused")
-public final class CharacterCreate extends L2GameClientPacket
+public final class CharacterCreate implements IClientIncomingPacket
 {
-	private static final String _C__0C_CHARACTERCREATE = "[C] 0C CharacterCreate";
 	protected static final Logger _logAccounting = Logger.getLogger("accounting");
 	
 	// cSdddddddddddd
@@ -69,35 +67,36 @@ public final class CharacterCreate extends L2GameClientPacket
 	private byte _face;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_name = readS();
-		_race = readD();
-		_sex = (byte) readD();
-		_classId = readD();
-		_int = readD();
-		_str = readD();
-		_con = readD();
-		_men = readD();
-		_dex = readD();
-		_wit = readD();
-		_hairStyle = (byte) readD();
-		_hairColor = (byte) readD();
-		_face = (byte) readD();
+		_name = packet.readS();
+		_race = packet.readD();
+		_sex = (byte) packet.readD();
+		_classId = packet.readD();
+		_int = packet.readD();
+		_str = packet.readD();
+		_con = packet.readD();
+		_men = packet.readD();
+		_dex = packet.readD();
+		_wit = packet.readD();
+		_hairStyle = (byte) packet.readD();
+		_hairColor = (byte) packet.readD();
+		_face = (byte) packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		// Last Verified: May 30, 2009 - Gracia Final - Players are able to create characters with names consisting of as little as 1,2,3 letter/number combinations.
 		if ((_name.length() < 1) || (_name.length() > 16))
 		{
 			if (Config.DEBUG)
 			{
-				_log.fine("Character Creation Failure: Character name " + _name + " is invalid. Message generated: Your title cannot exceed 16 characters in length. Please try again.");
+				_log.finer("Character Creation Failure: Character name " + _name + " is invalid. Message generated: Your title cannot exceed 16 characters in length. Please try again.");
 			}
 			
-			sendPacket(new CharCreateFail(CharCreateFail.REASON_16_ENG_CHARS));
+			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_16_ENG_CHARS));
 			return;
 		}
 		
@@ -107,7 +106,7 @@ public final class CharacterCreate extends L2GameClientPacket
 			{
 				if (_name.toLowerCase().contains(st.toLowerCase()))
 				{
-					sendPacket(new CharCreateFail(CharCreateFail.REASON_INCORRECT_NAME));
+					client.sendPacket(new CharCreateFail(CharCreateFail.REASON_INCORRECT_NAME));
 					return;
 				}
 			}
@@ -118,34 +117,34 @@ public final class CharacterCreate extends L2GameClientPacket
 		{
 			if (Config.DEBUG)
 			{
-				_log.fine("Character Creation Failure: Character name " + _name + " is invalid. Message generated: Incorrect name. Please try again.");
+				_log.finer("Character Creation Failure: Character name " + _name + " is invalid. Message generated: Incorrect name. Please try again.");
 			}
 			
-			sendPacket(new CharCreateFail(CharCreateFail.REASON_INCORRECT_NAME));
+			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_INCORRECT_NAME));
 			return;
 		}
 		
 		if ((_face > 2) || (_face < 0))
 		{
-			_log.warning("Character Creation Failure: Character face " + _face + " is invalid. Possible client hack. " + getClient());
+			_log.warning("Character Creation Failure: Character face " + _face + " is invalid. Possible client hack. " + client);
 			
-			sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 			return;
 		}
 		
 		if ((_hairStyle < 0) || ((_sex == 0) && (_hairStyle > 4)) || ((_sex != 0) && (_hairStyle > 6)))
 		{
-			_log.warning("Character Creation Failure: Character hair style " + _hairStyle + " is invalid. Possible client hack. " + getClient());
+			_log.warning("Character Creation Failure: Character hair style " + _hairStyle + " is invalid. Possible client hack. " + client);
 			
-			sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 			return;
 		}
 		
 		if ((_hairColor > 3) || (_hairColor < 0))
 		{
-			_log.warning("Character Creation Failure: Character hair color " + _hairColor + " is invalid. Possible client hack. " + getClient());
+			_log.warning("Character Creation Failure: Character hair color " + _hairColor + " is invalid. Possible client hack. " + client);
 			
-			sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 			return;
 		}
 		
@@ -157,24 +156,24 @@ public final class CharacterCreate extends L2GameClientPacket
 		 */
 		synchronized (CharNameTable.getInstance())
 		{
-			if ((CharNameTable.getInstance().getAccountCharacterCount(getClient().getAccountName()) >= Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT) && (Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT != 0))
+			if ((CharNameTable.getInstance().getAccountCharacterCount(client.getAccountName()) >= Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT) && (Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT != 0))
 			{
 				if (Config.DEBUG)
 				{
-					_log.fine("Max number of characters reached. Creation failed.");
+					_log.finer("Max number of characters reached. Creation failed.");
 				}
 				
-				sendPacket(new CharCreateFail(CharCreateFail.REASON_TOO_MANY_CHARACTERS));
+				client.sendPacket(new CharCreateFail(CharCreateFail.REASON_TOO_MANY_CHARACTERS));
 				return;
 			}
-			if (CharNameTable.getInstance().doesCharNameExist(_name))
+			else if (CharNameTable.getInstance().doesCharNameExist(_name))
 			{
 				if (Config.DEBUG)
 				{
-					_log.fine("Character Creation Failure: Message generated: You cannot create another character. Please delete the existing character and try again.");
+					_log.finer("Character Creation Failure: Message generated: You cannot create another character. Please delete the existing character and try again.");
 				}
 				
-				sendPacket(new CharCreateFail(CharCreateFail.REASON_NAME_ALREADY_EXISTS));
+				client.sendPacket(new CharCreateFail(CharCreateFail.REASON_NAME_ALREADY_EXISTS));
 				return;
 			}
 			
@@ -183,10 +182,10 @@ public final class CharacterCreate extends L2GameClientPacket
 			{
 				if (Config.DEBUG)
 				{
-					_log.fine("Character Creation Failure: " + _name + " classId: " + _classId + " Template: " + template + " Message generated: Your character creation has failed.");
+					_log.finer("Character Creation Failure: " + _name + " classId: " + _classId + " Template: " + template + " Message generated: Your character creation has failed.");
 				}
 				
-				sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+				client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 				return;
 			}
 			
@@ -198,7 +197,7 @@ public final class CharacterCreate extends L2GameClientPacket
 				{
 					if (!Config.ALLOW_HUMAN)
 					{
-						sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 						return;
 					}
 					break;
@@ -207,7 +206,7 @@ public final class CharacterCreate extends L2GameClientPacket
 				{
 					if (!Config.ALLOW_ELF)
 					{
-						sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 						return;
 					}
 					break;
@@ -216,7 +215,7 @@ public final class CharacterCreate extends L2GameClientPacket
 				{
 					if (!Config.ALLOW_DARKELF)
 					{
-						sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 						return;
 					}
 					break;
@@ -225,7 +224,7 @@ public final class CharacterCreate extends L2GameClientPacket
 				{
 					if (!Config.ALLOW_ORC)
 					{
-						sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 						return;
 					}
 					break;
@@ -234,7 +233,7 @@ public final class CharacterCreate extends L2GameClientPacket
 				{
 					if (!Config.ALLOW_DWARF)
 					{
-						sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 						return;
 					}
 					break;
@@ -243,7 +242,7 @@ public final class CharacterCreate extends L2GameClientPacket
 				{
 					if (!Config.ALLOW_KAMAEL)
 					{
-						sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 						return;
 					}
 					break;
@@ -252,13 +251,13 @@ public final class CharacterCreate extends L2GameClientPacket
 				{
 					if (!Config.ALLOW_ERTHEIA)
 					{
-						sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 						return;
 					}
 					break;
 				}
 			}
-			newChar = L2PcInstance.create(template, getClient().getAccountName(), _name, new PcAppearance(_face, _hairColor, _hairStyle, _sex != 0));
+			newChar = L2PcInstance.create(template, client.getAccountName(), _name, new PcAppearance(_face, _hairColor, _hairStyle, _sex != 0));
 		}
 		
 		// HP and MP are at maximum and CP is zero by default.
@@ -266,17 +265,11 @@ public final class CharacterCreate extends L2GameClientPacket
 		newChar.setCurrentMp(newChar.getMaxMp());
 		// newChar.setMaxLoad(template.getBaseLoad());
 		
-		sendPacket(new CharCreateOk());
+		client.sendPacket(CharCreateOk.STATIC_PACKET);
 		
-		initNewChar(getClient(), newChar);
+		initNewChar(client, newChar);
 		
-		final LogRecord record = new LogRecord(Level.INFO, "Created new character");
-		record.setParameters(new Object[]
-		{
-			newChar,
-			getClient()
-		});
-		_logAccounting.log(record);
+		_logAccounting.info("Created new character, " + newChar + ", " + client);
 	}
 	
 	private static boolean isValidName(String text)
@@ -288,7 +281,7 @@ public final class CharacterCreate extends L2GameClientPacket
 	{
 		if (Config.DEBUG)
 		{
-			_log.fine("Character init start");
+			_log.finer("Character init start");
 		}
 		
 		L2World.getInstance().storeObject(newChar);
@@ -348,11 +341,16 @@ public final class CharacterCreate extends L2GameClientPacket
 			}
 		}
 		
+		for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(newChar.getRace()))
+		{
+			newChar.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
+		}
+		
 		for (L2SkillLearn skill : SkillTreesData.getInstance().getAvailableSkills(newChar, newChar.getClassId(), false, true))
 		{
 			if (Config.DEBUG)
 			{
-				_log.fine("Adding starter skill:" + skill.getSkillId() + " / " + skill.getSkillLevel());
+				_log.finer("Adding starter skill:" + skill.getSkillId() + " / " + skill.getSkillLevel());
 			}
 			
 			newChar.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
@@ -375,13 +373,7 @@ public final class CharacterCreate extends L2GameClientPacket
 		
 		if (Config.DEBUG)
 		{
-			_log.fine("Character init end");
+			_log.finer("Character init end");
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__0C_CHARACTERCREATE;
 	}
 }

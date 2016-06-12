@@ -16,49 +16,35 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.L2EnchantSkillGroup;
 import com.l2jmobius.gameserver.model.L2EnchantSkillGroup.EnchantSkillHolder;
 import com.l2jmobius.gameserver.model.L2EnchantSkillLearn;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * This class holds the Enchant Groups information.
  * @author Micr0
  */
-public class EnchantSkillGroupsData implements IXmlReader
+public class EnchantSkillGroupsData implements IGameXmlReader
 {
-	public static final int NORMAL_ENCHANT_COST_MULTIPLIER = Config.NORMAL_ENCHANT_COST_MULTIPLIER;
-	public static final int SAFE_ENCHANT_COST_MULTIPLIER = Config.SAFE_ENCHANT_COST_MULTIPLIER;
+	private static final Logger LOGGER = Logger.getLogger(EnchantSkillGroupsData.class.getName());
 	
-	public static final int NORMAL_ENCHANT_BOOK_OLD = 6622;
-	public static final int SAFE_ENCHANT_BOOK_OLD = 9627;
-	public static final int CHANGE_ENCHANT_BOOK_OLD = 9626;
-	public static final int UNTRAIN_ENCHANT_BOOK_OLD = 9625;
-	public static final int NORMAL_ENCHANT_BOOK = 30297;
-	public static final int SAFE_ENCHANT_BOOK = 30298;
-	public static final int CHANGE_ENCHANT_BOOK = 30299;
-	public static final int UNTRAIN_ENCHANT_BOOK = 30300;
-	public static final int IMMORTAL_SCROLL = 37044;
-	public static final int NORMAL_ENCHANT_BOOK_V2 = 46150;
-	public static final int SAFE_ENCHANT_BOOK_V2 = 46151;
-	public static final int CHANGE_ENCHANT_BOOK_V2 = 46152;
-	public static final int IMMORTAL_SCROLL_V2 = 46153;
-	public static final int NORMAL_ENCHANT_BOOK_V3 = 46154;
-	public static final int SAFE_ENCHANT_BOOK_V3 = 46155;
-	public static final int CHANGE_ENCHANT_BOOK_V3 = 46156;
-	public static final int IMMORTAL_SCROLL_V3 = 46157;
+	public static final int NORMAL_ENCHANT_BOOK = 6622;
+	public static final int SAFE_ENCHANT_BOOK = 9627;
+	public static final int CHANGE_ENCHANT_BOOK = 9626;
+	public static final int UNTRAIN_ENCHANT_BOOK = 9625;
 	
 	private final Map<Integer, L2EnchantSkillGroup> _enchantSkillGroups = new HashMap<>();
 	private final Map<Integer, L2EnchantSkillLearn> _enchantSkillTrees = new HashMap<>();
@@ -76,7 +62,7 @@ public class EnchantSkillGroupsData implements IXmlReader
 	{
 		_enchantSkillGroups.clear();
 		_enchantSkillTrees.clear();
-		parseDatapackFile("EnchantSkillGroups.xml");
+		parseDatapackFile("data/EnchantSkillGroups.xml");
 		int routes = 0;
 		for (L2EnchantSkillGroup group : _enchantSkillGroups.values())
 		{
@@ -86,8 +72,13 @@ public class EnchantSkillGroupsData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
+		NamedNodeMap attrs;
+		StatsSet set;
+		Node att;
+		int id = 0;
+		L2EnchantSkillGroup group;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -96,9 +87,10 @@ public class EnchantSkillGroupsData implements IXmlReader
 				{
 					if ("group".equalsIgnoreCase(d.getNodeName()))
 					{
-						NamedNodeMap attrs = d.getAttributes();
-						final int id = parseInteger(attrs, "id");
-						L2EnchantSkillGroup group = _enchantSkillGroups.get(id);
+						attrs = d.getAttributes();
+						id = parseInteger(attrs, "id");
+						
+						group = _enchantSkillGroups.get(id);
 						if (group == null)
 						{
 							group = new L2EnchantSkillGroup(id);
@@ -110,11 +102,11 @@ public class EnchantSkillGroupsData implements IXmlReader
 							if ("enchant".equalsIgnoreCase(b.getNodeName()))
 							{
 								attrs = b.getAttributes();
-								final StatsSet set = new StatsSet();
+								set = new StatsSet();
 								
 								for (int i = 0; i < attrs.getLength(); i++)
 								{
-									final Node att = attrs.item(i);
+									att = attrs.item(i);
 									set.set(att.getNodeName(), att.getNodeValue());
 								}
 								group.addEnchantDetail(new EnchantSkillHolder(set));
@@ -148,7 +140,7 @@ public class EnchantSkillGroupsData implements IXmlReader
 			
 			return _enchantSkillGroups.get(group).getEnchantGroupDetails().size();
 		}
-		LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error while loading generating enchant skill id: " + skillId + "; route: " + route + "; missing group: " + group);
+		LOGGER.severe(getClass().getSimpleName() + ": Error while loading generating enchant skill id: " + skillId + "; route: " + route + " missing group: " + group);
 		return 0;
 	}
 	
@@ -161,7 +153,11 @@ public class EnchantSkillGroupsData implements IXmlReader
 	{
 		// there is enchantment for this skill and we have the required level of it
 		final L2EnchantSkillLearn esl = getSkillEnchantmentBySkillId(skill.getId());
-		return (esl != null) && (skill.getLevel() >= esl.getBaseLevel()) ? esl : null;
+		if ((esl != null) && (skill.getLevel() >= esl.getBaseLevel()))
+		{
+			return esl;
+		}
+		return null;
 	}
 	
 	/**

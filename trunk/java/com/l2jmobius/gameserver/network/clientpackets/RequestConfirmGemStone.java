@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutCommissionResultForVariationMake;
 
 /**
@@ -27,25 +29,25 @@ import com.l2jmobius.gameserver.network.serverpackets.ExPutCommissionResultForVa
  */
 public final class RequestConfirmGemStone extends AbstractRefinePacket
 {
-	private static final String _C__D0_28_REQUESTCONFIRMGEMSTONE = "[C] D0:28 RequestConfirmGemStone";
 	private int _targetItemObjId;
 	private int _refinerItemObjId;
 	private int _gemstoneItemObjId;
 	private long _gemStoneCount;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_targetItemObjId = readD();
-		_refinerItemObjId = readD();
-		_gemstoneItemObjId = readD();
-		_gemStoneCount = readQ();
+		_targetItemObjId = packet.readD();
+		_refinerItemObjId = packet.readD();
+		_gemstoneItemObjId = packet.readD();
+		_gemStoneCount = packet.readQ();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -69,7 +71,7 @@ public final class RequestConfirmGemStone extends AbstractRefinePacket
 		// Make sure the item is a gemstone
 		if (!isValid(activeChar, targetItem, refinerItem, gemStoneItem))
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
+			client.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
 		
@@ -82,16 +84,10 @@ public final class RequestConfirmGemStone extends AbstractRefinePacket
 		
 		if (_gemStoneCount != getGemStoneCount(targetItem.getItem().getCrystalType(), ls.getGrade()))
 		{
-			activeChar.sendPacket(SystemMessageId.GEMSTONE_QUANTITY_IS_INCORRECT);
+			client.sendPacket(SystemMessageId.GEMSTONE_QUANTITY_IS_INCORRECT);
 			return;
 		}
 		
-		activeChar.sendPacket(new ExPutCommissionResultForVariationMake(_gemstoneItemObjId, _gemStoneCount, gemStoneItem.getId()));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_28_REQUESTCONFIRMGEMSTONE;
+		client.sendPacket(new ExPutCommissionResultForVariationMake(_gemstoneItemObjId, _gemStoneCount, gemStoneItem.getId()));
 	}
 }

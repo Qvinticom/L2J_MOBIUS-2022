@@ -41,6 +41,6 @@ public class ConditionTargetClassIdRestriction extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		return effected.isPlayer() && _classIds.contains(effected.getActingPlayer().getClassId().getId());
+		return effected.isPlayer() && (_classIds.contains(effected.getActingPlayer().getClassId().getId()));
 	}
 }

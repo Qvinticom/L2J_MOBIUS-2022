@@ -16,53 +16,44 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.handler.BypassHandler;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2ClassMasterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
-public class RequestTutorialLinkHtml extends L2GameClientPacket
+public class RequestTutorialLinkHtml implements IClientIncomingPacket
 {
-	private static final String _C__85_REQUESTTUTORIALLINKHTML = "[C] 85 RequestTutorialLinkHtml";
-	
 	private String _bypass;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_bypass = readS();
+		packet.readD();
+		_bypass = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final IBypassHandler handler = BypassHandler.getInstance().getHandler(_bypass);
-		if (handler != null)
+		if (_bypass.startsWith("admin_"))
 		{
-			handler.useBypass(_bypass, player, null);
+			player.useAdminCommand(_bypass);
 		}
 		else
 		{
-			L2ClassMasterInstance.onTutorialLink(player, _bypass);
-			
-			final QuestState qs = player.getQuestState("Q00255_Tutorial");
-			if (qs != null)
+			final IBypassHandler handler = BypassHandler.getInstance().getHandler(_bypass);
+			if (handler != null)
 			{
-				qs.getQuest().notifyEvent(_bypass, null, player);
+				handler.useBypass(_bypass, player, null);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__85_REQUESTTUTORIALLINKHTML;
 	}
 }

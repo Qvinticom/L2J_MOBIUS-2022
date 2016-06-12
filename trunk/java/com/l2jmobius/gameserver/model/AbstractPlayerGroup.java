@@ -20,13 +20,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.Rnd;
 
 /**
  * @author Battlecruiser
@@ -78,7 +78,7 @@ public abstract class AbstractPlayerGroup
 	 */
 	public boolean isLeader(L2PcInstance player)
 	{
-		return getLeaderObjectId() == player.getObjectId();
+		return (getLeaderObjectId() == player.getObjectId());
 	}
 	
 	/**
@@ -114,7 +114,7 @@ public abstract class AbstractPlayerGroup
 	 * Broadcast a packet to every member of this group.
 	 * @param packet the packet to broadcast
 	 */
-	public void broadcastPacket(L2GameServerPacket packet)
+	public void broadcastPacket(IClientOutgoingPacket packet)
 	{
 		forEachMember(m ->
 		{
@@ -190,5 +190,24 @@ public abstract class AbstractPlayerGroup
 			}
 		}
 		return true;
+	}
+	
+	@Override
+	public boolean equals(Object obj)
+	{
+		if (this == obj)
+		{
+			return true;
+		}
+		
+		if (obj instanceof AbstractPlayerGroup)
+		{
+			if (getLeaderObjectId() == ((AbstractPlayerGroup) obj).getLeaderObjectId())
+			{
+				return true;
+			}
+		}
+		
+		return false;
 	}
 }

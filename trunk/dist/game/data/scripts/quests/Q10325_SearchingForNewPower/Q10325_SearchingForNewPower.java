@@ -28,24 +28,18 @@ import quests.Q10324_FindingMagisterGallint.Q10324_FindingMagisterGallint;
 
 /**
  * Searching For New Power (10325)
- * @author Gladicek, Neanrakyr, gyo
+ * @author Gladicek, Neanrakyr
  */
-public class Q10325_SearchingForNewPower extends Quest
+public final class Q10325_SearchingForNewPower extends Quest
 {
 	// NPCs
 	private static final int GALLINT = 32980;
 	private static final int TALBOT = 32156;
-	private static final int CINDET = 32148;
+	private static final int CIDNET = 32148;
 	private static final int BLACK = 32161;
-	private static final int HERZ = 32151;
+	private static final int HERTZ = 32151;
 	private static final int KINCAID = 32159;
 	private static final int XONIA = 32144;
-	private static final String Talbot = "Talbot";
-	private static final String Cindet = "Cindet";
-	private static final String Black = "Black";
-	private static final String Herz = "Herz";
-	private static final String Kincaid = "Kincaid";
-	private static final String Xonia = "Xonia";
 	// Items
 	private static final ItemHolder SPIRITSHOTS = new ItemHolder(2509, 1000);
 	private static final ItemHolder SOULSHOTS = new ItemHolder(1835, 1000);
@@ -54,11 +48,11 @@ public class Q10325_SearchingForNewPower extends Quest
 	
 	public Q10325_SearchingForNewPower()
 	{
-		super(10325, Q10325_SearchingForNewPower.class.getSimpleName(), "Searching For New Power");
+		super(10325);
 		addStartNpc(GALLINT);
-		addTalkId(GALLINT, TALBOT, CINDET, BLACK, HERZ, KINCAID, XONIA);
-		addCondMaxLevel(MAX_LEVEL, "32980-07.htm");
-		addCondCompletedQuest(Q10324_FindingMagisterGallint.class.getSimpleName(), "32980-07.htm");
+		addTalkId(GALLINT, TALBOT, CIDNET, BLACK, HERTZ, KINCAID, XONIA);
+		addCondMaxLevel(MAX_LEVEL, "32980-12.htm");
+		addCondCompletedQuest(Q10324_FindingMagisterGallint.class.getSimpleName(), "32980-12.htm");
 	}
 	
 	@Override
@@ -74,44 +68,53 @@ public class Q10325_SearchingForNewPower extends Quest
 		
 		if (event.equals("check_race"))
 		{
-			qs.startQuest();
-			qs.setMemoState(1);
-			htmltext = getHtm(player.getHtmlPrefix(), "32980-06.html");
 			switch (player.getRace())
 			{
 				case HUMAN:
 				{
-					htmltext = htmltext.replace("%MASTER%", Talbot);
+					qs.startQuest();
+					qs.setMemoState(1);
+					htmltext = "32980-06.htm";
 					qs.setCond(2);
 					break;
 				}
 				case ELF:
 				{
-					htmltext = htmltext.replace("%MASTER%", Cindet);
+					qs.startQuest();
+					qs.setMemoState(1);
+					htmltext = "32980-07.htm";
 					qs.setCond(3);
 					break;
 				}
 				case DARK_ELF:
 				{
-					htmltext = htmltext.replace("%MASTER%", Black);
+					qs.startQuest();
+					qs.setMemoState(1);
+					htmltext = "32980-08.htm";
 					qs.setCond(4);
 					break;
 				}
 				case ORC:
 				{
-					htmltext = htmltext.replace("%MASTER%", Herz);
+					qs.startQuest();
+					qs.setMemoState(1);
+					htmltext = "32980-09.htm";
 					qs.setCond(5);
 					break;
 				}
 				case DWARF:
 				{
-					htmltext = htmltext.replace("%MASTER%", Kincaid);
+					qs.startQuest();
+					qs.setMemoState(1);
+					htmltext = "32980-10.htm";
 					qs.setCond(6);
 					break;
 				}
 				case KAMAEL:
 				{
-					htmltext = htmltext.replace("%MASTER%", Xonia);
+					qs.startQuest();
+					qs.setMemoState(1);
+					htmltext = "32980-11.htm";
 					qs.setCond(7);
 					break;
 				}
@@ -125,10 +128,10 @@ public class Q10325_SearchingForNewPower extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
+		String htmltext = null;
 		
 		switch (qs.getState())
 		{
@@ -142,30 +145,32 @@ public class Q10325_SearchingForNewPower extends Quest
 			}
 			case State.STARTED:
 			{
-				final int cond = qs.getCond();
 				switch (npc.getId())
 				{
 					case GALLINT:
 					{
 						if (qs.isCond(8))
 						{
-							if (player.isMageClass())
+							if (!isSimulated)
 							{
-								giveItems(player, SPIRITSHOTS);
+								if (player.isMageClass())
+								{
+									giveItems(player, SPIRITSHOTS);
+								}
+								else
+								{
+									giveItems(player, SOULSHOTS);
+								}
+								addExpAndSp(player, 4654, 5);
+								giveAdena(player, 120, true);
+								qs.exitQuest(false, true);
 							}
-							else
-							{
-								giveItems(player, SOULSHOTS);
-							}
-							addExpAndSp(player, 4654, 5);
-							giveAdena(player, 120, true);
-							htmltext = "32980-04.html";
-							qs.exitQuest(false, true);
+							htmltext = "32980-04.htm";
 							break;
 						}
 						else if (qs.isMemoState(1))
 						{
-							htmltext = "32980-03.html";
+							htmltext = "32980-03.htm";
 						}
 						break;
 					}
@@ -173,120 +178,114 @@ public class Q10325_SearchingForNewPower extends Quest
 					{
 						if (player.getRace() == Race.HUMAN)
 						{
-							if (qs.isCond(2))
+							if ((qs.isCond(2)))
 							{
-								htmltext = "32156-01.html";
-								qs.setCond(8);
+								if (!isSimulated)
+								{
+									qs.setCond(8);
+								}
+								htmltext = "32156-01.htm";
+								break;
 							}
-							else if (qs.isCond(8))
-							{
-								htmltext = "32156-02.html";
-							}
+							htmltext = "32156-02.htm";
+							break;
 						}
-						else if ((cond > 1) && (cond < 8))
-						{
-							htmltext = "32156-04.html";
-						}
+						htmltext = "32156-04.htm";
 						break;
 					}
-					case CINDET:
+					case CIDNET:
 					{
 						if (player.getRace() == Race.ELF)
 						{
-							if (qs.isCond(3))
+							if ((qs.isCond(3)))
 							{
-								htmltext = "32148-01.html";
-								qs.setCond(8);
+								if (!isSimulated)
+								{
+									qs.setCond(8);
+								}
+								htmltext = "32148-01.htm";
+								break;
 							}
-							else if (qs.isCond(8))
-							{
-								htmltext = "32148-02.html";
-							}
+							htmltext = "32148-02.htm";
+							break;
 						}
-						else if ((cond > 1) && (cond < 8))
-						{
-							htmltext = "32148-04.html";
-						}
+						htmltext = "32148-04.htm";
 						break;
 					}
 					case BLACK:
 					{
 						if (player.getRace() == Race.DARK_ELF)
 						{
-							if (qs.isCond(4))
+							if ((qs.isCond(4)))
 							{
-								htmltext = "32161-01.html";
-								qs.setCond(8);
+								if (!isSimulated)
+								{
+									qs.setCond(8);
+								}
+								htmltext = "32161-01.htm";
+								break;
 							}
-							else if (qs.isCond(8))
-							{
-								htmltext = "32161-02.html";
-							}
+							htmltext = "32161-02.htm";
+							break;
 						}
-						else if ((cond > 1) && (cond < 8))
-						{
-							htmltext = "32161-04.html";
-						}
+						htmltext = "32161-04.htm";
 						break;
 					}
-					case HERZ:
+					case HERTZ:
 					{
 						if (player.getRace() == Race.ORC)
 						{
-							if (qs.isCond(5))
+							if ((qs.isCond(5)))
 							{
-								htmltext = "32151-01.html";
-								qs.setCond(8);
+								if (!isSimulated)
+								{
+									qs.setCond(8);
+								}
+								htmltext = "32151-01.htm";
+								break;
 							}
-							else if (qs.isCond(8))
-							{
-								htmltext = "32151-02.html";
-							}
+							htmltext = "32151-02.htm";
+							break;
 						}
-						else if ((cond > 1) && (cond < 8))
-						{
-							htmltext = "32151-04.html";
-						}
+						htmltext = "32151-04.htm";
 						break;
 					}
 					case KINCAID:
 					{
 						if (player.getRace() == Race.DWARF)
 						{
-							if (qs.isCond(6))
+							if ((qs.isCond(6)))
 							{
-								htmltext = "32159-01.html";
-								qs.setCond(8);
+								if (!isSimulated)
+								{
+									qs.setCond(8);
+								}
+								htmltext = "32159-01.htm";
+								break;
 							}
-							else if (qs.isCond(8))
-							{
-								htmltext = "32159-02.html";
-							}
+							htmltext = "32159-02.htm";
+							break;
 						}
-						else if ((cond > 1) && (cond < 8))
-						{
-							htmltext = "32159-04.html";
-						}
+						htmltext = "32159-04.htm";
 						break;
 					}
 					case XONIA:
 					{
 						if (player.getRace() == Race.KAMAEL)
 						{
-							if (qs.isCond(7))
+							if ((qs.isCond(7)))
 							{
-								htmltext = "32144-01.html";
-								qs.setCond(8);
+								if (!isSimulated)
+								{
+									qs.setCond(8);
+								}
+								htmltext = "32144-01.htm";
+								break;
 							}
-							else if (qs.isCond(8))
-							{
-								htmltext = "32144-02.html";
-							}
+							htmltext = "32144-02.htm";
+							break;
 						}
-						else if ((cond > 1) && (cond < 8))
-						{
-							htmltext = "32144-04.html";
-						}
+						htmltext = "32144-04.htm";
 						break;
 					}
 				}
@@ -298,17 +297,17 @@ public class Q10325_SearchingForNewPower extends Quest
 				{
 					case GALLINT:
 					{
-						htmltext = "32980-05.html";
+						htmltext = "32980-05.htm";
 						break;
 					}
 					case TALBOT:
-					case CINDET:
+					case CIDNET:
 					case BLACK:
-					case HERZ:
+					case HERTZ:
 					case KINCAID:
 					case XONIA:
 					{
-						htmltext = npc.getId() + "-03.html";
+						htmltext = npc.getId() + "-03.htm";
 						break;
 					}
 				}

@@ -1,1039 +1,2193 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="9200" levels="1" name="Elixir: Lute Melody">
-		<set name="icon" val="icon.skill11518" />
-		<set name="isMagic" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="abnormalType" val="MELODY_LUTE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.34" />
-				<mul stat="mAtkSpd" val="1.31" />
-				<add stat="absorbDam" val="9" />
-			</effect>
-		</for>
+	<skill id="9200" toLevel="1" name="Elixir: Lute Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Also there is a chance of triggering a 9% Vampiric Rage effect during a normal attack. -->
+		<icon>icon.skill11518</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9201" levels="1" name="Elixir: Pipe Organ Melody">
-		<set name="icon" val="icon.skill11519" />
-		<set name="isMagic" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="abnormalType" val="MELODY_PIPE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.37" />
-				<mul stat="maxMp" val="1.37" />
-				<mul stat="maxCp" val="1.37" />
-				<mul stat="regMp" val="1.20" />
-			</effect>
-		</for>
+	<skill id="9201" toLevel="1" name="Elixir: Pipe Organ Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
+		<icon>icon.skill11519</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9202" levels="1" name="Elixir: Guitar Melody">
-		<set name="icon" val="icon.skill11520" />
-		<set name="isMagic" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="abnormalType" val="MELODY_GUITAR" />
-		<for>
-			<effect name="Buff">
-				<mul stat="critRate" val="1.32" />
-				<mul stat="critDmg" val="1.35" />
-				<add stat="mCritRate" val="20" />
-				<mul stat="magicalMpConsumeRate" val="0.9" />
-				<mul stat="physicalMpConsumeRate" val="0.8" />
-			</effect>
-		</for>
+	<skill id="9202" toLevel="1" name="Elixir: Guitar Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, increases P. Critical Rate by 32%, P. Critical Damage by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and buffs skill MP consumption for Iss Enchanters by 20%. -->
+		<icon>icon.skill11520</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9203" levels="1" name="Elixir: Harp Melody">
-		<set name="icon" val="icon.skill11520" />
-		<set name="isMagic" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="abnormalType" val="MELODY_HARP" />
-		<for>
-			<effect name="Buff">
-				<add stat="accCombat" val="5" />
-				<add stat="runSpd" val="34" />
-				<add stat="rEvas" val="5" />
-				<add stat="mEvas" val="5" />
-				<mul stat="defCritDamage" val="0.7" />
-			</effect>
-		</for>
+	<skill id="9203" toLevel="1" name="Elixir: Harp Melody">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 minutes, increases P. Accuracy by 5, P. Evasion and M. Evasion by 5, and Speed by 34. Decreases received critical damage by 30%. -->
+		<icon>icon.skill11521</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9204" levels="1" name="Kukuru">
+	<skill id="9204" toLevel="1" name="Kukuru">
 		<!-- Mounts a Kukuru. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="icon.skilltransform3" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="400" />
-		<set name="isMagic" val="1" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>icon.skilltransform3</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>900</effectRange>
+		<isMagic>1</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CannotUseInTransform" />
+			<condition name="CanTransform">
+				<transformId>137</transformId>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Transformation">
-				<param id="137" />
+				<transformationId>137</transformationId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="9205" levels="1" name="Sturdy Kukuru">
+	<skill id="9205" toLevel="1" name="Sturdy Kukuru">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Feels sturdy while riding a kukuru. -->
-		<set name="icon" val="icon.skill0169" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="45000" />
+		<icon>icon.skill0169</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>SPECIAL_RIDE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>58</abnormalTime>
+		<isMagic>2</isMagic>
+		<reuseDelay>45000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9206" levels="1" name="Fast Run">
+	<skill id="9206" toLevel="1" name="Fast Run">
 		<!-- For 30 seconds, Speed + 95. -->
-		<set name="icon" val="icon.skill9206" />
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="staticReuse" val="true" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="45000" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="95" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>SPECIAL_RIDE</abnormalType>
+		<icon>icon.skill9206</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<hitCancelTime>0</hitCancelTime>
+		<reuseDelay>45000</reuseDelay>
+		<withoutAction>true</withoutAction>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>95</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="9207" levels="1" name="Lucky Clover (R-grade)">
+	<skill id="9207" toLevel="1" name="Lucky Clover (R-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9208" levels="1" name="Lucky Clover (R-grade)">
+	<skill id="9208" toLevel="1" name="Lucky Clover (R-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9209" levels="1" name="Kukuru">
-		<set name="targetType" val="SELF" />
-		<set name="abnormalTime" val="60" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="hitTime" val="2500" />
-		<set name="reuseDelay" val="1000" />
-		<set name="blockedInOlympiad" val="true" />
-		<cond addName="1" msgId="113">
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="137" />
-				<mul stat="runSpd" val="1.71" />
-			</effect>
-		</for>
+	<skill id="9209" toLevel="1" name="Kukuru">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mounts a Kukuru. -->
+		<icon>icon.skilltransform3</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>13</transformId>
+			</condition>
+			<condition name="CheckLevel">
+				<minLevel>40</minLevel>
+				<maxLevel>99</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="9210" levels="1" name="Dismount">
+	<skill id="9210" toLevel="1" name="Dismount">
 		<!-- Dismounts from a ridable mount. -->
-		<set name="icon" val="icon.skill9210" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="2500" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canUntransform="true" />
-		</cond>
-		<for>
+		<icon>icon.skill9210</icon>
+		<operateType>A1</operateType>
+		<hitTime>2500</hitTime>
+		<operateType>A1</operateType>
+		<effectPoint>10</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="DispelBySlot">
-				<param dispel="TRANSFORM,-1" />
+				<dispel>TRANSFORM,-1</dispel>
 			</effect>
-			<effect name="DispelBySlotProbability">
-				<param dispel="SPEED_UP_SPECIAL" rate="100" />
-			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="9211" levels="1" name="Dismount">
+	<skill id="9211" toLevel="1" name="Dismount">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Dismounts from a kukuru. -->
-		<set name="icon" val="icon.skill0217" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0217</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="9212" levels="1" name="Kukuru Dismount">
+	<skill id="9212" toLevel="1" name="Kukuru Dismount">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Dismounts from a kukuru. -->
-		<set name="icon" val="icon.skilltransform2" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="2500" />
+		<icon>icon.skilltransform2</icon>
+		<operateType>A1</operateType>
+		<effectPoint>10</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<hitTime>2500</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9213" levels="1" name="Kukurin">
+	<skill id="9213" toLevel="1" name="Kukurin">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Mounts a Kukurin. -->
-		<set name="icon" val="icon.skilltransform3" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1000" />
+		<icon>icon.skilltransform3</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>138</transformId>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="9214" levels="1" name="Divine Inspiration">
+	<skill id="9214" toLevel="1" name="Divine Inspiration">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>1500</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>52</minLevel>
+				<maxLevel>99</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>1405</skillId>
+				<skillLevel>4</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="9215" levels="1" name="Divine Inspiration">
+	<skill id="9215" toLevel="1" name="Divine Inspiration">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>1500</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>61</minLevel>
+				<maxLevel>99</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>1405</skillId>
+				<skillLevel>1</skillLevel>
+				<hasLearned>true</hasLearned>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="9216" levels="1" name="Divine Inspiration">
+	<skill id="9216" toLevel="1" name="Divine Inspiration">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>1500</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>76</minLevel>
+				<maxLevel>99</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>1405</skillId>
+				<skillLevel>2</skillLevel>
+				<hasLearned>true</hasLearned>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="9217" levels="1" name="Divine Inspiration">
+	<skill id="9217" toLevel="1" name="Divine Inspiration">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>1500</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>76</minLevel>
+				<maxLevel>99</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>1405</skillId>
+				<skillLevel>3</skillLevel>
+				<hasLearned>true</hasLearned>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="9218" levels="1" name="Elixir of Blessing - Horn Melody">
+	<skill id="9218" toLevel="1" name="Elixir of Blessing - Horn Melody">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. -->
-		<set name="icon" val="icon.skill11517" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill11517</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9219" levels="1" name="Elixir of Blessing - Drum Melody">
+	<skill id="9219" toLevel="1" name="Elixir of Blessing - Drum Melody">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Rate + 20%, P. Atk. + 20%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, and Debuff Resistance + 10%. Received Critical Damage - 30% and Speed - 15%. Increases Critical Damage during a standard attack if you receive more than a certain amount of damage. -->
-		<set name="icon" val="icon.skill11522" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill11522</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9220" levels="1" name="Elixir of Blessing - Lute Melody">
+	<skill id="9220" toLevel="1" name="Elixir of Blessing - Lute Melody">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., Atk. Spd. + 34%, and Casting Spd. + 31%. Has a chance of applying 9% Vampiric Rage. -->
-		<set name="icon" val="icon.skill11518" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill11518</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9221" levels="1" name="Elixir of Blessing - Pipe Organ Melody">
+	<skill id="9221" toLevel="1" name="Elixir of Blessing - Pipe Organ Melody">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%. -->
-		<set name="icon" val="icon.skill11519" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill11519</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9222" levels="1" name="Elixir of Blessing - Guitar Melody">
+	<skill id="9222" toLevel="1" name="Elixir of Blessing - Guitar Melody">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanter's Enchant Skill MP Consumption - 20%. -->
-		<set name="icon" val="icon.skill11520" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill11520</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9223" levels="1" name="Elixir of Blessing - Harp Melody">
+	<skill id="9223" toLevel="1" name="Elixir of Blessing - Harp Melody">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., P. Accuracy + 5, P. Evasion/M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%. -->
-		<set name="icon" val="icon.skill11521" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill11521</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9224" levels="1" name="Scroll of Escape: Talking Island Village">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="20000" />
+	<skill id="9224" toLevel="1" name="Scroll of Escape: Talking Island Village">
+		<icon>icon.skill0000</icon>
+		<hitTime>20000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeId>32226</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-114558</x>
+				<y>253605</y>
+				<z>-1536</z>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9225" levels="1" name="Specter of Light">
+	<skill id="9225" toLevel="1" name="Specter of Light">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons the Specter of Light. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
-		<set name="reuseDelay" val="10000" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1500</hitTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>10000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+		</conditions>
 	</skill>
-	<skill id="9226" levels="1" name="Fragment of Light">
+	<skill id="9226" toLevel="1" name="Fragment of Light">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="200" />
-		<set name="reuseDelay" val="2000" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>200</castRange>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>300</effectRange>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>2000</reuseDelay>
+		<targetType>OTHERS</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpTargetNpc">
+				<npcIds>
+					<item>13342</item>
+					<item>13343</item>
+					<item>13344</item>
+					<item>13346</item>
+					<item>13347</item>
+				</npcIds>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="9227" levels="1" name="Mentor's Horn Melody">
+	<skill id="9227" toLevel="1" name="Mentor's Horn Melody">
+		<!-- Ertheia skill -->
 		<!-- Mentor's assistance. P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. Applied only when mentor is logged in. The buff lasts 5 minutes if your mentor logs out. -->
-		<set name="abnormalTime" val="-1" />
-		<set name="canBeDispeled" val="false" />
-		<set name="icon" val="icon.skill11517" />
-		<set name="abnormalType" val="MELODY_HORN" />
-		<set name="isMagic" val="1" />
-		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMentoring" val="true" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.17" />
-				<mul stat="pDef" val="1.15" />
-				<mul stat="mAtk" val="1.79" />
-				<mul stat="mDef" val="1.30" />
+		<abnormalTime>-1</abnormalTime>
+		<canBeDispelled>false</canBeDispelled>
+		<icon>icon.skill11517</icon>
+		<isMagic>1</isMagic>
+		<magicLvl>-2</magicLvl>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<abnormalLvl>5</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMentoring>true</isMentoring>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>17</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="DispelBySlotProbability">
-				<param dispel="PA_UP;PD_UP;MA_UP;MD_UP;IMPROVE_MA_MD_UP;IMPROVE_PA_PD_UP" rate="100" />
+			<effect name="MAtk">
+				<amount>79</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="BlockBuffSlot">
-				<param slot="PA_UP;PD_UP;MA_UP;MD_UP;IMPROVE_MA_MD_UP;IMPROVE_PA_PD_UP" />
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9228" levels="1" name="Mentor's Drum Melody">
+	<skill id="9228" toLevel="1" name="Mentor's Drum Melody">
+		<!-- Ertheia skill -->
 		<!-- Mentor's assistance. Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Damage + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, and Debuff Resistance + 10%. When hit with a critical attack, received damage - 30% and Speed - 15%. Increases Critical Damage during a standard attack for a member equipped with a melee weapon who receives more than a certain amount of damage. Applied only when mentor is logged in. The buff lasts 5 minutes if your mentor logs out. -->
-		<set name="abnormalTime" val="-1" />
-		<set name="canBeDispeled" val="false" />
-		<set name="icon" val="icon.skill11522" />
-		<set name="abnormalType" val="MELODY_DRUM" />
-		<set name="isMagic" val="1" />
-		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMentoring" val="true" />
-		<for>
-			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
-				<param minDamage="300" />
-				<param chance="25" />
-				<param skillId="11569" skillLevel="1" /> <!-- Critical Damage Increase -->
-				<param targetType="SELF" />
-				<param allowWeapons="ALL" />
+		<abnormalTime>-1</abnormalTime>
+		<canBeDispelled>false</canBeDispelled>
+		<icon>icon.skill11522</icon>
+		<isMagic>1</isMagic>
+		<magicLvl>-2</magicLvl>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<abnormalLvl>5</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMentoring>true</isMentoring>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>L2Character</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>99</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>80</chance>
+				<targetType>SELF</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>6059</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="Buff">
-				<mul stat="maxMp" val="1.2" />
-				<mul stat="regHp" val="1.2" />
-				<add stat="mCritRate" val="2" />
-				<mul stat="critRate" val="1.2" />
-				<mul stat="pAtk" val="1.1" />
-				<mul stat="pDef" val="1.2" />
-				<mul stat="pAtkSpd" val="1.2" />
-				<mul stat="mAtk" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<mul stat="mAtkSpd" val="1.2" />
-				<mul stat="debuffVuln" val="1.1" />
-				<mul stat="runSpd" val="0.85" />
-				<mul stat="defCritDamage" val="1.3" />
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="DispelBySlotProbability">
-				<param dispel="MAX_MP_UP;HP_REGEN_UP;MAGIC_CRITICAL_UP;PA_UP;PD_UP;ATTACK_TIME_DOWN;MA_UP;MD_UP;CASTING_TIME_DOWN;SPEED_UP;IMPROVE_MA_MD_UP;IMPROVE_PA_PD_UP;COUNTER_CRITICAL" rate="100" />
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="BlockBuffSlot">
-				<param slot="MAX_MP_UP;HP_REGEN_UP;MAGIC_CRITICAL_UP;PA_UP;PD_UP;ATTACK_TIME_DOWN;MA_UP;MD_UP;CASTING_TIME_DOWN;SPEED_UP;IMPROVE_MA_MD_UP;IMPROVE_PA_PD_UP;COUNTER_CRITICAL" />
+			<effect name="Speed">
+				<amount>-15</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9229" levels="1" name="Mentor's Lute Melody">
+	<skill id="9229" toLevel="1" name="Mentor's Lute Melody">
+		<!-- Ertheia skill -->
 		<!-- Mentor's assistance. Atk. Spd. + 34%, Casting Spd. + 31%, and has a chance of applying 9% Vampiric Rage effect. Applied only when mentor is logged in. The buff lasts 5 minutes if your mentor logs out. -->
-		<set name="abnormalTime" val="-1" />
-		<set name="canBeDispeled" val="false" />
-		<set name="icon" val="icon.skill11518" />
-		<set name="abnormalType" val="MELODY_LUTE" />
-		<set name="isMagic" val="1" />
-		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMentoring" val="true" />
-		<for>
-			<effect name="Buff">
-				<add stat="absorbDam" val="9" />
-				<mul stat="pAtkSpd" val="1.34" />
-				<mul stat="mAtkSpd" val="1.31" />
+		<abnormalTime>-1</abnormalTime>
+		<canBeDispelled>false</canBeDispelled>
+		<icon>icon.skill11518</icon>
+		<isMagic>1</isMagic>
+		<magicLvl>-2</magicLvl>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<abnormalLvl>5</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMentoring>true</isMentoring>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>80</chance>
 			</effect>
-			<effect name="DispelBySlotProbability">
-				<param dispel="ATTACK_TIME_DOWN;CASTING_TIME_DOWN;VAMPIRIC_ATTACK;IMPROVE_VAMPIRIC_HASTE" rate="100" />
+			<effect name="DispelBySlot">
+				<slot>IMPROVE_VAMPIRIC_HASTE,-1;ATTACK_TIME_DOWN,-1;VAMPIRIC_ATTACK,-1;CASTING_TIME_DOWN,-1</slot>
 			</effect>
-			<effect name="BlockBuffSlot">
-				<param dispel="ATTACK_TIME_DOWN;CASTING_TIME_DOWN;VAMPIRIC_ATTACK;IMPROVE_VAMPIRIC_HASTE" />
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</slot>
 			</effect>
-		</for>
+			<effect name="PhysicalAttackSpeed">
+				<amount>34</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>31</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9230" levels="1" name="Mentor's Pipe Organ Melody">
+	<skill id="9230" toLevel="1" name="Mentor's Pipe Organ Melody">
+		<!-- Ertheia skill -->
 		<!-- Mentor's assistance. Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%. The buff lasts 5 minutes if your mentor logs out. -->
-		<set name="abnormalTime" val="-1" />
-		<set name="canBeDispeled" val="false" />
-		<set name="icon" val="icon.skill11519" />
-		<set name="abnormalType" val="MELODY_PIPE" />
-		<set name="isMagic" val="1" />
-		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMentoring" val="true" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.37" />
-				<mul stat="maxMp" val="1.37" />
-				<mul stat="maxCp" val="1.37" />
-				<mul stat="regHp" val="1.2" />
+		<abnormalTime>-1</abnormalTime>
+		<canBeDispelled>false</canBeDispelled>
+		<icon>icon.skill11519</icon>
+		<isMagic>1</isMagic>
+		<magicLvl>-2</magicLvl>
+		<operateType>A2</operateType>
+		<skillType>BUFF</skillType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<abnormalLvl>5</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMentoring>true</isMentoring>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxCp">
+				<amount>37</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="DispelBySlotProbability">
-				<param dispel="MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP;IMPROVE_HP_MP_UP" rate="100" />
+			<effect name="MaxMp">
+				<amount>37</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="BlockBuffSlot">
-				<param slot="MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP;IMPROVE_HP_MP_UP" />
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MaxHp">
+				<amount>37</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9231" levels="1" name="Mentor's Guitar Melody">
+	<skill id="9231" toLevel="1" name="Mentor's Guitar Melody">
+		<!-- Ertheia skill -->
 		<!-- Mentor's assistance. P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanter's Enchant Skill MP Consumption - 20%. Applied only when mentor is logged in. The buff lasts 5 minutes if your mentor logs out. -->
-		<set name="abnormalTime" val="-1" />
-		<set name="canBeDispeled" val="false" />
-		<set name="icon" val="icon.skill11520" />
-		<set name="abnormalType" val="MELODY_GUITAR" />
-		<set name="isMagic" val="1" />
-		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMentoring" val="true" />
-		<for>
-			<effect name="Buff">
-				<mul stat="critRate" val="1.32" />
-				<mul stat="critDmg" val="1.35" />
-				<add stat="mCritRate" val="20" />
-				<mul stat="magicalMpConsumeRate" val="0.9" />
-				<mul stat="physicalMpConsumeRate" val="0.8" />
-				<mul stat="magicalMpConsumeRate" val="0.8">
-					<player class_id_restriction="171,172,173,174,175" />
-				</mul>
+		<abnormalTime>-1</abnormalTime>
+		<canBeDispelled>false</canBeDispelled>
+		<icon>icon.skill11520</icon>
+		<isMagic>1</isMagic>
+		<magicLvl>-2</magicLvl>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<abnormalLvl>5</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMentoring>true</isMentoring>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>35</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="DispelBySlotProbability">
-				<param dispel="CRITICAL_DMG_UP;CRITICAL_PROB_UP;MAGIC_CRITICAL_UP;CHEAP_MAGIC;IMPROVE_HIT_DEFENCE_CRT_RATE_UP;IMPROVE_CRT_RATE_DMG_UP" rate="100" />
+			<effect name="CriticalRate">
+				<amount>32</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="BlockBuffSlot">
-				<param slot="CRITICAL_DMG_UP;CRITICAL_PROB_UP;MAGIC_CRITICAL_UP;CHEAP_MAGIC;IMPROVE_HIT_DEFENCE_CRT_RATE_UP;IMPROVE_CRT_RATE_DMG_UP" />
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9232" levels="1" name="Mentor's Harp Melody">
+	<skill id="9232" toLevel="1" name="Mentor's Harp Melody">
+		<!-- Ertheia skill -->
 		<!-- Mentor's assistance. P. Accuracy + 5, P. Evasion/M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%. Applied only when mentor is logged in. The buff lasts 5 minutes if your mentor logs out. -->
-		<set name="abnormalTime" val="-1" />
-		<set name="canBeDispeled" val="false" />
-		<set name="icon" val="icon.skill11521" />
-		<set name="abnormalType" val="MELODY_HARP" />
-		<set name="isMagic" val="1" />
-		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMentoring" val="true" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="34" />
-				<add stat="rEvas" val="5" />
-				<add stat="mEvas" val="5" />
-				<add stat="accCombat" val="5" />
-				<mul stat="defCritDamage" val="1.3" />
+		<abnormalTime>-1</abnormalTime>
+		<canBeDispelled>false</canBeDispelled>
+		<icon>icon.skill11521</icon>
+		<isMagic>1</isMagic>
+		<magicLvl>-2</magicLvl>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<abnormalLvl>5</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMentoring>true</isMentoring>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>34</amount>
+				<mode>DIFF</mode>
 			</effect>
-			<effect name="DispelBySlotProbability">
-				<param dispel="AVOID_UP;HIT_UP;SPEED_UP;CRITICAL_DMG_DOWN;IMPROVE_SPEED_AVOID_UP;IMPROVE_VAMPIRIC_HASTE" rate="100" />
+			<effect name="PhysicalEvasion">
+				<amount>5</amount>
+				<mode>DIFF</mode>
 			</effect>
-			<effect name="BlockBuffSlot">
-				<param slot="AVOID_UP;HIT_UP;SPEED_UP;CRITICAL_DMG_DOWN;IMPROVE_SPEED_AVOID_UP;IMPROVE_VAMPIRIC_HASTE" />
+			<effect name="Accuracy">
+				<amount>5</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="MagicalEvasion">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9233" levels="1" name="Mentor's Guidance">
+	<skill id="9233" toLevel="1" name="Mentor's Guidance">
+		<!-- Ertheia skill -->
 		<!-- Mentor's assistance. Obtained XP/SP + 50%. Buff remains 5 min. after mentor logs out. -->
-		<set name="abnormalTime" val="-1" />
-		<set name="canBeDispeled" val="false" />
-		<set name="icon" val="br_cashtex.skill.br_cash_rune_of_exp_buff_1" />
-		<set name="isMagic" val="2" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMentoring" val="true" />
-		<for>
-			<effect name="Buff">
-				<mul stat="bonusExp" val="1.50" />
-				<mul stat="bonusSp" val="1.50" />
+		<abnormalTime>-1</abnormalTime>
+		<canBeDispelled>false</canBeDispelled>
+		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
+		<isMagic>3</isMagic>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>VP_MENTOR_RUNE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<isMentoring>true</isMentoring>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ExpModify">
+				<amount>50</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="SpModify">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9234" levels="1" name="Scroll: Enchant Hair Accessory">
+	<skill id="9234" toLevel="1" name="Scroll: Enchant Hair Accessory">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Enchants Hair Accessory. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9235" levels="1" name="Gift of Tersi's Light 1">
+	<skill id="9235" toLevel="1" name="Gift of Tersi's Light 1">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Give a gift. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="2700" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="-1000" />
-	</skill>
-	<skill id="9236" levels="1" name="Gift of Tersi's Light 2">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Give a gift. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="2700" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="-1000" />
-	</skill>
-	<skill id="9237" levels="1" name="Gift of Tersi's Light 3">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Give a gift. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="2700" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="-1000" />
-	</skill>
-	<skill id="9238" levels="1" name="Gift of Tersi's Light 4">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Give a gift. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="2700" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="-1000" />
-	</skill>
-	<skill id="9239" levels="1" name="Gift of Tersi's Light 5">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Give a gift. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="2700" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="-1000" />
-	</skill>
-	<skill id="9240" levels="2" name="XP Rune I (Lv. 1-85)">
-		<!-- Obtained XP/SP + 100%. -->
-		<table name="#icons"> br_cashtex.skill.br_cash_rune_of_exp_buff_3 br_cashtex.skill.br_cash_rune_of_exp_buff_5 </table>
-		<set name="icon" val="#icons" />
-		<table name="#bonusExp"> 100 200 </table>
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="bonusExp" val="#bonusExp" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>2700</hitTime>
+		<coolTime>1000</coolTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>-1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>33798</itemId>
+				<itemCount>1</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="9241" levels="1" name="Giant's Box">
+	<skill id="9236" toLevel="1" name="Gift of Tersi's Light 2">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<!-- Give a gift. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>2700</hitTime>
+		<coolTime>1000</coolTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>-1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>33798</itemId>
+				<itemCount>2</itemCount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9242" levels="1" name="Bound Box">
+	<skill id="9237" toLevel="1" name="Gift of Tersi's Light 3">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<!-- Give a gift. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>2700</hitTime>
+		<coolTime>1000</coolTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>-1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>33798</itemId>
+				<itemCount>4</itemCount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9243" levels="1" name="Box of Destruction">
+	<skill id="9238" toLevel="1" name="Gift of Tersi's Light 4">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<!-- Give a gift. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>2700</hitTime>
+		<coolTime>1000</coolTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>-1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>33798</itemId>
+				<itemCount>6</itemCount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9244" levels="1" name="Giant's Scroll: Enchant Weapon (D-grade)">
+	<skill id="9239" toLevel="1" name="Gift of Tersi's Light 5">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<!-- Give a gift. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>2700</hitTime>
+		<coolTime>1000</coolTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>-1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>33798</itemId>
+				<itemCount>12</itemCount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9245" levels="1" name="Giant's Scroll: Enchant Armor (D-grade)">
+	<skill id="9240" toLevel="2" name="XP Rune I (Lv. 1-85)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<!-- Obtained XP/SP + 100%. -->
+		<icon>
+			<value level="1">br_cashtex.skill.br_cash_rune_of_exp_buff_1</value>
+			<value level="2">br_cashtex.skill.br_cash_rune_of_exp_buff_2</value>
+		</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>1</minLevel>
+				<maxLevel>85</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
 	</skill>
-	<skill id="9246" levels="1" name="Giant's Scroll: Enchant Weapon (C-grade)">
+	<skill id="9241" toLevel="1" name="Giant's Box">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<itemConsumeId>34062</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="1.89">
+						<item id="33806" count="1" />
+					</item>
+					<item chance="1.78">
+						<item id="33807" count="1" />
+					</item>
+					<item chance="1.58">
+						<item id="33808" count="1" />
+					</item>
+					<item chance="0.57">
+						<item id="33809" count="1" />
+					</item>
+					<item chance="0.43">
+						<item id="33810" count="1" />
+					</item>
+					<item chance="9.6">
+						<item id="33811" count="1" />
+					</item>
+					<item chance="1.41">
+						<item id="33812" count="1" />
+					</item>
+					<item chance="0.83">
+						<item id="33813" count="1" />
+					</item>
+					<item chance="0.67">
+						<item id="33814" count="1" />
+					</item>
+					<item chance="0.43">
+						<item id="33815" count="1" />
+					</item>
+					<item chance="0.3">
+						<item id="33816" count="1" />
+					</item>
+					<item chance="15.04">
+						<item id="33817" count="1" />
+					</item>
+					<item chance="9.795">
+						<item id="34076" count="1" />
+					</item>
+					<item chance="42">
+						<item id="34077" count="1" />
+					</item>
+					<item chance="8.8">
+						<item id="33818" count="1" />
+					</item>
+					<item chance="4.875">
+						<item id="33819" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9247" levels="1" name="Giant's Scroll: Enchant Armor (C-grade)">
+	<skill id="9242" toLevel="1" name="Bound Box">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<itemConsumeId>34063</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="1.3">
+						<item id="33820" count="1" />
+					</item>
+					<item chance="1.15">
+						<item id="33821" count="1" />
+					</item>
+					<item chance="0.53">
+						<item id="33822" count="1" />
+					</item>
+					<item chance="0.2">
+						<item id="33823" count="1" />
+					</item>
+					<item chance="0.08">
+						<item id="33824" count="1" />
+					</item>
+					<item chance="0.04">
+						<item id="33825" count="1" />
+					</item>
+					<item chance="3.42">
+						<item id="33826" count="1" />
+					</item>
+					<item chance="1.14">
+						<item id="33827" count="1" />
+					</item>
+					<item chance="0.89">
+						<item id="33850" count="1" />
+					</item>
+					<item chance="0.6">
+						<item id="33851" count="1" />
+					</item>
+					<item chance="0.32">
+						<item id="33852" count="1" />
+					</item>
+					<item chance="0.14">
+						<item id="33853" count="1" />
+					</item>
+					<item chance="0.1">
+						<item id="33854" count="1" />
+					</item>
+					<item chance="1.5048">
+						<item id="33855" count="1" />
+					</item>
+					<item chance="1.39">
+						<item id="33856" count="1" />
+					</item>
+					<item chance="1.07">
+						<item id="33857" count="1" />
+					</item>
+					<item chance="1">
+						<item id="33858" count="1" />
+					</item>
+					<item chance="0.81">
+						<item id="33859" count="1" />
+					</item>
+					<item chance="0.43">
+						<item id="33860" count="1" />
+					</item>
+					<item chance="12.1125">
+						<item id="33861" count="1" />
+					</item>
+					<item chance="6.1407">
+						<item id="34076" count="1" />
+					</item>
+					<item chance="63">
+						<item id="34077" count="1" />
+					</item>
+					<item chance="2.632">
+						<item id="30297" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9248" levels="1" name="Giant's Scroll: Enchant Weapon (B-grade)">
+	<skill id="9243" toLevel="1" name="Box of Destruction">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<itemConsumeId>34064</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="0.59">
+						<item id="33828" count="1" />
+					</item>
+					<item chance="0.41">
+						<item id="33829" count="1" />
+					</item>
+					<item chance="0.32">
+						<item id="33830" count="1" />
+					</item>
+					<item chance="12.8">
+						<item id="33831" count="1" />
+					</item>
+					<item chance="9.6">
+						<item id="33832" count="1" />
+					</item>
+					<item chance="3">
+						<item id="33833" count="1" />
+					</item>
+					<item chance="3">
+						<item id="33834" count="1" />
+					</item>
+					<item chance="3">
+						<item id="33835" count="1" />
+					</item>
+					<item chance="3">
+						<item id="33836" count="1" />
+					</item>
+					<item chance="3">
+						<item id="33837" count="1" />
+					</item>
+					<item chance="5.71">
+						<item id="34076" count="1" />
+					</item>
+					<item chance="27">
+						<item id="34077" count="1" />
+					</item>
+					<item chance="1.31">
+						<item id="33838" count="1" />
+					</item>
+					<item chance="0.95">
+						<item id="33839" count="1" />
+					</item>
+					<item chance="0.86">
+						<item id="33840" count="1" />
+					</item>
+					<item chance="0.48">
+						<item id="33841" count="1" />
+					</item>
+					<item chance="0.36">
+						<item id="33842" count="1" />
+					</item>
+					<item chance="12.8">
+						<item id="33843" count="1" />
+					</item>
+					<item chance="2.16">
+						<item id="33844" count="1" />
+					</item>
+					<item chance="0.94">
+						<item id="33845" count="1" />
+					</item>
+					<item chance="0.81">
+						<item id="33846" count="1" />
+					</item>
+					<item chance="0.37">
+						<item id="33847" count="1" />
+					</item>
+					<item chance="0.33">
+						<item id="33848" count="1" />
+					</item>
+					<item chance="7.2">
+						<item id="33849" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9249" levels="1" name="Giant's Scroll: Enchant Armor (B-grade)">
+	<skill id="9244" toLevel="1" name="Giant's Scroll: Enchant Weapon (D-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9250" levels="1" name="Giant's Scroll: Enchant Weapon (A-grade)">
+	<skill id="9245" toLevel="1" name="Giant's Scroll: Enchant Armor (D-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9251" levels="1" name="Giant's Scroll: Enchant Armor (A-grade)">
+	<skill id="9246" toLevel="1" name="Giant's Scroll: Enchant Weapon (C-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9252" levels="1" name="Giant's Scroll: Enchant Weapon (S-grade)">
+	<skill id="9247" toLevel="1" name="Giant's Scroll: Enchant Armor (C-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9253" levels="1" name="Giant's Scroll: Enchant Armor (S-grade)">
+	<skill id="9248" toLevel="1" name="Giant's Scroll: Enchant Weapon (B-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9254" levels="1" name="Giant's Scroll: Enchant Weapon (R-grade)">
+	<skill id="9249" toLevel="1" name="Giant's Scroll: Enchant Armor (B-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9255" levels="1" name="Giant's Scroll: Enchant Armor (R-grade)">
+	<skill id="9250" toLevel="1" name="Giant's Scroll: Enchant Weapon (A-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9256" levels="3" name="Mentee's Appreciation">
+	<skill id="9251" toLevel="1" name="Giant's Scroll: Enchant Armor (A-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9252" toLevel="1" name="Giant's Scroll: Enchant Weapon (S-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9253" toLevel="1" name="Giant's Scroll: Enchant Armor (S-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9254" toLevel="1" name="Giant's Scroll: Enchant Weapon (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9255" toLevel="1" name="Giant's Scroll: Enchant Armor (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9256" toLevel="3" name="Mentee's Appreciation">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Mentee's appreciation. Obtained XP/SP + 5%. Applied only when mentee is logged in. -->
 		<table name="#isMagics"> 3 0 0 </table>
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
-		<set name="abnormalTime" val="-1" />
-		<set name="canBeDispeled" val="false" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMentoring" val="true" />
-		<set name="isMagic" val="#isMagics" />
-		<for>
-			<effect name="Buff">
-				<mul stat="bonusExp" val="1.05" />
-				<mul stat="bonusSp" val="1.05" />
+		<icon>br_cashtex.item.br_cash_rune_of_exp_i00</icon>
+		<abnormalTime>-1</abnormalTime>
+		<canBeDispelled>false</canBeDispelled>
+		<operateType>A2</operateType>
+		<isMentoring>true</isMentoring>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_MENTEE1</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ExpModify">
+				<amount>5</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="SpModify">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9257" levels="1" name="Mentor's Scroll: Enchant Weapon (D-grade)">
+	<skill id="9257" toLevel="1" name="Mentor's Scroll: Enchant Weapon (D-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9258" levels="1" name="Mentor's Scroll: Enchant Armor (D-grade)">
+	<skill id="9258" toLevel="1" name="Mentor's Scroll: Enchant Armor (D-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9259" levels="1" name="Mentor's Scroll: Enchant Weapon (C-grade)">
+	<skill id="9259" toLevel="1" name="Mentor's Scroll: Enchant Weapon (C-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9260" levels="1" name="Mentor's Scroll: Enchant Armor (C-grade)">
+	<skill id="9260" toLevel="1" name="Mentor's Scroll: Enchant Armor (C-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9261" levels="1" name="Mentor's Scroll: Enchant Weapon (B-grade)">
+	<skill id="9261" toLevel="1" name="Mentor's Scroll: Enchant Weapon (B-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9262" levels="1" name="Mentor's Scroll: Enchant Armor (B-grade)">
+	<skill id="9262" toLevel="1" name="Mentor's Scroll: Enchant Armor (B-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9263" levels="1" name="Mentor's Scroll: Enchant Weapon (A-grade)">
+	<skill id="9263" toLevel="1" name="Mentor's Scroll: Enchant Weapon (A-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9264" levels="1" name="Mentor's Scroll: Enchant Armor (A-grade)">
+	<skill id="9264" toLevel="1" name="Mentor's Scroll: Enchant Armor (A-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9265" levels="1" name="Mentor's Scroll: Enchant Weapon (S-grade)">
+	<skill id="9265" toLevel="1" name="Mentor's Scroll: Enchant Weapon (S-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9266" levels="1" name="Mentor's Scroll: Enchant Armor (S-grade)">
+	<skill id="9266" toLevel="1" name="Mentor's Scroll: Enchant Armor (S-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9267" levels="1" name="Mentor's Scroll: Enchant Weapon (R-grade)">
+	<skill id="9267" toLevel="1" name="Mentor's Scroll: Enchant Weapon (R-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9268" levels="1" name="Mentor's Scroll: Enchant Armor (R-grade)">
+	<skill id="9268" toLevel="1" name="Mentor's Scroll: Enchant Armor (R-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9269" levels="1" name="Improved Giant's Box">
+	<skill id="9269" toLevel="1" name="Improved Giant's Box">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<itemConsumeId>34078</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="0.21">
+						<item id="33811" count="1" />
+					</item>
+					<item chance="0.46">
+						<item id="33817" count="1" />
+					</item>
+					<item chance="6.76">
+						<item id="34076" count="1" />
+					</item>
+					<item chance="85.95">
+						<item id="34077" count="1" />
+					</item>
+					<item chance="4.36">
+						<item id="33818" count="1" />
+					</item>
+					<item chance="2.26">
+						<item id="33819" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9270" levels="1" name="Improved Bound Box">
+	<skill id="9270" toLevel="1" name="Improved Bound Box">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<itemConsumeId>34079</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="0.44">
+						<item id="33826" count="1" />
+					</item>
+					<item chance="0.2">
+						<item id="33827" count="1" />
+					</item>
+					<item chance="0.53">
+						<item id="33855" count="1" />
+					</item>
+					<item chance="2.39">
+						<item id="33861" count="1" />
+					</item>
+					<item chance="6.95">
+						<item id="34076" count="1" />
+					</item>
+					<item chance="88.26">
+						<item id="34077" count="1" />
+					</item>
+					<item chance="1.23">
+						<item id="30297" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9271" levels="1" name="Improved Box of Destruction">
+	<skill id="9271" toLevel="1" name="Improved Box of Destruction">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<itemConsumeId>34080</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="0.33">
+						<item id="33831" count="1" />
+					</item>
+					<item chance="0.27">
+						<item id="33832" count="1" />
+					</item>
+					<item chance="3.29">
+						<item id="33835" count="1" />
+					</item>
+					<item chance="3.25">
+						<item id="33836" count="1" />
+					</item>
+					<item chance="3.25">
+						<item id="33837" count="1" />
+					</item>
+					<item chance="6.5">
+						<item id="34076" count="1" />
+					</item>
+					<item chance="82.55">
+						<item id="34077" count="1" />
+					</item>
+					<item chance="0.16">
+						<item id="33843" count="1" />
+					</item>
+					<item chance="0.4">
+						<item id="33849" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9272" levels="1" name="Mentor's Surprise Box">
+	<skill id="9272" toLevel="1" name="Mentor's Surprise Box">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<itemConsumeId>34081</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="40.437">
+						<item id="34078" count="1" />
+					</item>
+					<item chance="39.193">
+						<item id="34079" count="1" />
+					</item>
+					<item chance="20.37">
+						<item id="34080" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="9273" levels="1" name="Player Commendation - Horn Melody">
+	<skill id="9273" toLevel="1" name="Player Commendation - Horn Melody">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 min., P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. PC Cafes only. -->
-		<set name="icon" val="icon.skill11517" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="900" />
-		<set name="reuseDelay" val="2000" />
+		<icon>icon.skill11517</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>22</isMagic>
+		<reuseDelay>2000</reuseDelay>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9274" levels="1" name="Player Commendation - Drum Melody">
+	<skill id="9274" toLevel="1" name="Player Commendation - Drum Melody">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 min., Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Rate + 20%, P. Atk. + 20%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, and Debuff Resistance + 10%. Received Critical Damage - 30% and Speed - 15%. Increases Critical Damage during a standard attack if you receive more than a certain amount of damage. PC Cafes only. -->
-		<set name="icon" val="icon.skill11522" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="900" />
-		<set name="reuseDelay" val="2000" />
+		<icon>icon.skill11522</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>22</isMagic>
+		<reuseDelay>2000</reuseDelay>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9275" levels="1" name="Player Commendation - Lute Melody">
+	<skill id="9275" toLevel="1" name="Player Commendation - Lute Melody">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 min., Atk. Spd. + 34%, and Casting Spd. + 31%. Has a chance of applying 9% Vampiric Rage. PC Cafes only. -->
-		<set name="icon" val="icon.skill11518" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="900" />
-		<set name="reuseDelay" val="2000" />
+		<icon>icon.skill11518</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>22</isMagic>
+		<reuseDelay>2000</reuseDelay>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9276" levels="1" name="Player Commendation - Pipe Organ Melody">
+	<skill id="9276" toLevel="1" name="Player Commendation - Pipe Organ Melody">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 min., Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%. PC Cafes only. -->
-		<set name="icon" val="icon.skill11519" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="900" />
-		<set name="reuseDelay" val="2000" />
+		<icon>icon.skill11519</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>22</isMagic>
+		<reuseDelay>2000</reuseDelay>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9277" levels="1" name="Player Commendation - Guitar Melody">
+	<skill id="9277" toLevel="1" name="Player Commendation - Guitar Melody">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 min., P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanter's Enchant Skill MP Consumption - 20%. PC Cafes only. -->
-		<set name="icon" val="icon.skill11520" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="900" />
-		<set name="reuseDelay" val="2000" />
+		<icon>icon.skill11520</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>22</isMagic>
+		<reuseDelay>2000</reuseDelay>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9278" levels="1" name="Player Commendation - Harp Melody">
+	<skill id="9278" toLevel="1" name="Player Commendation - Harp Melody">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 min., P. Accuracy + 5, P. Evasion/M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%. PC Cafes only. -->
-		<set name="icon" val="icon.skill11521" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="900" />
-		<set name="reuseDelay" val="2000" />
+		<icon>icon.skill11521</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<effectPoint>687</effectPoint>
+		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>22</isMagic>
+		<reuseDelay>2000</reuseDelay>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9279" levels="1" name="PC Progression Support">
+	<skill id="9279" toLevel="1" name="PC Progression Support">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Obtained XP/SP + 30%. Not for pets/servitors. PC Cafes only. -->
-		<set name="icon" val="icon.etc_pccafe_exp_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="3" />
+		<icon>icon.etc_pccafe_exp_i00</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_PCCAFE_EXP1</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<isMagic>3</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9280" levels="2" name="Horn Melody - Heavenly Cocktail">
-		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
-		<table name="#pAtk"> 1.17 1.19 </table>
-		<table name="#pDef"> 1.15 1.15 </table>
-		<table name="#mAtk"> 1.79 1.83 </table>
-		<table name="#mDef"> 1.30 1.30 </table>
-		<set name="isMagic" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="abnormalType" val="MELODY_HORN" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="#pAtk" />
-				<mul stat="pDef" val="#pDef" />
-				<mul stat="mAtk" val="#mAtk" />
-				<mul stat="mDef" val="#mDef" />
+	<skill id="9280" toLevel="2" name="Horn Melody - Heavenly Cocktail">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. Buff remains even after death, and cannot be forcefully deleted. -->
+		<icon>icon.etc_fruit_cocktail_i01</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>6</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9281" toLevel="2" name="Drum Melody - Heavenly Cocktail">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Rate + 20%, P. Atk. + 20%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, and Debuff Resistance + 10%. Received Critical Damage - 30% and Speed - 10%. Increases Critical Damage during a standard attack if you receive more than a certain amount of damage. Buff remains even after death, and cannot be forcefully deleted. -->
+		<icon>icon.etc_fruit_cocktail_i01</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>6</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9282" toLevel="2" name="Lute Melody - Heavenly Cocktail">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., Atk. Spd. + 34%, and Casting Spd. + 31%. Has a chance of applying 9% Vampiric Rage. Buff remains even after death, and cannot be forcefully deleted. -->
+		<icon>icon.etc_fruit_cocktail_i01</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>6</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9283" toLevel="2" name="Pipe Organ Melody - Heavenly Cocktail">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%. Buff remains even after death, and cannot be forcefully deleted. -->
+		<icon>icon.etc_fruit_cocktail_i01</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>6</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9284" toLevel="2" name="Guitar Melody - Heavenly Cocktail">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanter's Enchant Skill MP Consumption - 20%. Buff remains even after death, and cannot be forcefully deleted. -->
+		<icon>icon.etc_fruit_cocktail_i01</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>6</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9285" toLevel="2" name="Harp Melody - Heavenly Cocktail">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 min., P. Accuracy + 5, P. Evasion/M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%. Buff remains even after death, and cannot be forcefully deleted. -->
+		<icon>icon.etc_fruit_cocktail_i01</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>6</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9286" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (D-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9287" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (C-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9288" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (B-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9289" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (A-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9290" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (S-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9291" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="9292" toLevel="1" name="Player Commendation - Quick Healing Potion">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Hp">
+				<amount>435</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="9281" levels="2" name="Drum Melody - Heavenly Cocktail">
-		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
-		<table name="#maxMp"> 1.20 1.20 </table>
-		<table name="#regHp"> 1.20 1.20 </table>
-		<table name="#mCritRate"> 20 20 </table>
-		<table name="#cAtk"> 1.20 1.20 </table>
-		<table name="#pAtk"> 1.10 1.10 </table>
-		<table name="#pDef"> 1.20 1.20 </table>
-		<table name="#pAtkSpd"> 1.20 1.20 </table>
-		<table name="#mAtk"> 1.20 1.20 </table>
-		<table name="#mDef"> 1.20 1.20 </table>
-		<table name="#mAtkSpd"> 1.20 1.20 </table>
-		<table name="#debuffVuln"> 1.10 1.10 </table>
-		<table name="#defCritDamage"> 1.30 1.30 </table>
-		<table name="#runSpd"> 0.85 0.90 </table>
-		<set name="isMagic" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="abnormalType" val="MELODY_DRUM" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxMp" val="#maxMp" />
-				<mul stat="regHp" val="#regHp" />
-				<add stat="mCritRate" val="#mCritRate" />
-				<add stat="critDmg" val="#cAtk" />
-				<mul stat="pAtk" val="#pAtk" />
-				<mul stat="pDef" val="#pDef" />
-				<mul stat="pAtkSpd" val="#pAtkSpd" />
-				<mul stat="mAtk" val="#mAtk" />
-				<mul stat="mDef" val="#mDef" />
-				<mul stat="mAtkSpd" val="#mAtkSpd" />
-				<mul stat="runSpd" val="#runSpd" />
-				<mul stat="debuffVuln" val="#debuffVuln" />
-				<mul stat="defCritDamage" val="#defCritDamage" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="9282" levels="2" name="Lute Melody - Heavenly Cocktail">
-		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
-		<table name="#pAtkSpd"> 1.34 1.35 </table>
-		<table name="#mAtkSpd"> 1.31 1.32 </table>
-		<table name="#absorbDam"> 9 9 </table>
-		<set name="isMagic" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="abnormalType" val="MELODY_LUTE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="#pAtkSpd" />
-				<mul stat="mAtkSpd" val="#mAtkSpd" />
-				<add stat="absorbDam" val="#absorbDam" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="9283" levels="2" name="Pipe Organ Melody - Heavenly Cocktail">
-		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
-		<table name="#maxHp"> 1.37 1.39 </table>
-		<table name="#maxMp"> 1.37 1.39 </table>
-		<table name="#maxCp"> 1.37 1.39 </table>
-		<table name="#regHp"> 1.20 1.20 </table>
-		<set name="isMagic" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="abnormalType" val="MELODY_PIPE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="#maxHp" />
-				<mul stat="maxMp" val="#maxMp" />
-				<mul stat="maxCp" val="#maxCp" />
-				<mul stat="regHp" val="#regHp" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="9284" levels="2" name="Guitar Melody - Heavenly Cocktail">
-		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
-		<table name="#rCrit"> 1.32 1.34 </table>
-		<table name="#cAtk"> 1.35 1.35 </table>
-		<table name="#mCritRate"> 20 20 </table>
-		<table name="#MagicalMpConsumeRate"> 0.90 0.90 </table>
-		<table name="#PhysicalMpConsumeRate"> 0.80 0.80 </table>
-		<set name="isMagic" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="abnormalType" val="MELODY_GUITAR" />
-		<for>
-			<effect name="Buff">
-				<mul stat="critRate" val="#rCrit" />
-				<mul stat="critDmg" val="#cAtk" />
-				<add stat="mCritRate" val="#mCritRate" />
-				<mul stat="magicalMpConsumeRate" val="#MagicalMpConsumeRate" />
-				<mul stat="physicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="9285" levels="2" name="Harp Melody - Heavenly Cocktail">
-		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
-		<table name="#accCombat"> 5 6 </table>
-		<table name="#rEvas"> 5 6 </table>
-		<table name="#mEvas"> 5 6 </table>
-		<table name="#runSpd"> 34 35 </table>
-		<table name="#defCritDamage"> 1.30 1.30 </table>
-		<set name="isMagic" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="abnormalType" val="MELODY_HARP" />
-		<for>
-			<effect name="Buff">
-				<add stat="accCombat" val="#accCombat" />
-				<add stat="rEvas" val="#rEvas" />
-				<add stat="mEvas" val="#mEvas" />
-				<add stat="runSpd" val="#runSpd" />
-				<mul stat="defCritDamage" val="#defCritDamage" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="9286" levels="1" name="Player Commendation - Scroll: Enchant Weapon (D-grade)">
+	<skill id="9293" toLevel="1" name="Player Commendation - Soulshot (No-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9287" levels="1" name="Player Commendation - Scroll: Enchant Weapon (C-grade)">
+	<skill id="9294" toLevel="1" name="Player Commendation - Soulshot (D-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9288" levels="1" name="Player Commendation - Scroll: Enchant Weapon (B-grade)">
+	<skill id="9295" toLevel="1" name="Player Commendation - Soulshot (C-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9289" levels="1" name="Player Commendation - Scroll: Enchant Weapon (A-grade)">
+	<skill id="9296" toLevel="1" name="Player Commendation - Soulshot (B-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9290" levels="1" name="Player Commendation - Scroll: Enchant Weapon (S-grade)">
+	<skill id="9297" toLevel="1" name="Player Commendation - Soulshot (A-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9291" levels="1" name="Player Commendation - Scroll: Enchant Weapon (R-grade)">
+	<skill id="9298" toLevel="1" name="Player Commendation - Soulshot (S-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9292" levels="1" name="Player Commendation - Quick Healing Potion">
+	<skill id="9299" toLevel="1" name="Player Commendation - Soulshot (R-grade)">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<skill id="9293" levels="1" name="Player Commendation - Soulshot (No-grade)">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<skill id="9294" levels="1" name="Player Commendation - Soulshot (D-grade)">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<skill id="9295" levels="1" name="Player Commendation - Soulshot (C-grade)">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<skill id="9296" levels="1" name="Player Commendation - Soulshot (B-grade)">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<skill id="9297" levels="1" name="Player Commendation - Soulshot (A-grade)">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<skill id="9298" levels="1" name="Player Commendation - Soulshot (S-grade)">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<skill id="9299" levels="1" name="Player Commendation - Soulshot (R-grade)">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 </list>

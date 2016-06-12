@@ -21,9 +21,9 @@ import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.clanwh.OnPlayerClanWHItemAdd;
-import com.l2jmobius.gameserver.model.events.impl.character.player.clanwh.OnPlayerClanWHItemDestroy;
-import com.l2jmobius.gameserver.model.events.impl.character.player.clanwh.OnPlayerClanWHItemTransfer;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerClanWHItemAdd;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerClanWHItemDestroy;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerClanWHItemTransfer;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 
 public final class ClanWarehouse extends Warehouse
@@ -59,24 +59,10 @@ public final class ClanWarehouse extends Warehouse
 		return ItemLocation.CLANWH;
 	}
 	
-	public String getLocationId()
-	{
-		return "0";
-	}
-	
-	public int getLocationId(boolean dummy)
-	{
-		return 0;
-	}
-	
-	public void setLocationId(L2PcInstance dummy)
-	{
-	}
-	
 	@Override
 	public boolean validateCapacity(long slots)
 	{
-		return (_items.size() + slots) <= Config.WAREHOUSE_SLOTS_CLAN;
+		return ((_items.size() + slots) <= Config.WAREHOUSE_SLOTS_CLAN);
 	}
 	
 	@Override

@@ -22,9 +22,6 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-import com.l2jmobius.commons.mmocore.NioNetStringBuffer;
-import com.l2jmobius.gameserver.GameServer;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -32,7 +29,6 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
 import com.l2jmobius.gameserver.network.serverpackets.AdminForgePacket;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -67,12 +63,12 @@ public final class AdminPForge implements IAdminCommandHandler
 			opCodes.add(token);
 		}
 		
-		if (opCodes != null)
+		if (opCodes == null)
 		{
-			return opCodes.toArray(new String[opCodes.size()]);
+			return null;
 		}
 		
-		return null;
+		return opCodes.toArray(new String[opCodes.size()]);
 	}
 	
 	private boolean validateOpCodes(String[] opCodes)
@@ -88,11 +84,16 @@ public final class AdminPForge implements IAdminCommandHandler
 			long opCodeLong;
 			try
 			{
-				opCodeLong = Long.parseLong(opCode);
+				opCodeLong = Long.decode(opCode);
 			}
 			catch (Exception e)
 			{
-				return i > 0;
+				if (i > 0)
+				{
+					return true;
+				}
+				
+				return false;
 			}
 			
 			if (opCodeLong < 0)
@@ -127,50 +128,34 @@ public final class AdminPForge implements IAdminCommandHandler
 				case 'B':
 				case 'x':
 				case 'X':
-				{
 					// array
 					break;
-				}
 				case 'c':
 				case 'C':
-				{
 					// byte
 					break;
-				}
 				case 'h':
 				case 'H':
-				{
 					// word
 					break;
-				}
 				case 'd':
 				case 'D':
-				{
 					// dword
 					break;
-				}
 				case 'q':
 				case 'Q':
-				{
 					// qword
 					break;
-				}
 				case 'f':
 				case 'F':
-				{
 					// double
 					break;
-				}
 				case 's':
 				case 'S':
-				{
 					// string
 					break;
-				}
 				default:
-				{
 					return false;
-				}
 			}
 		}
 		
@@ -184,9 +169,7 @@ public final class AdminPForge implements IAdminCommandHandler
 			case "sc":
 			case "sb":
 			case "cs":
-			{
 				return true;
-			}
 		}
 		
 		return false;
@@ -201,13 +184,13 @@ public final class AdminPForge implements IAdminCommandHandler
 	private void showSendUsage(L2PcInstance activeChar, String[] opCodes, String format)
 	{
 		activeChar.sendMessage("Usage: //forge_send sc|sb|cs opcode1[;opcode2[;opcode3]][ format value1 ... valueN] ");
-		if (opCodes != null)
+		if (opCodes == null)
 		{
-			showValuesPage(activeChar, opCodes, format);
+			showMainPage(activeChar);
 		}
 		else
 		{
-			showMainPage(activeChar);
+			showValuesPage(activeChar, opCodes, format);
 		}
 	}
 	
@@ -219,7 +202,7 @@ public final class AdminPForge implements IAdminCommandHandler
 	private void showValuesPage(L2PcInstance activeChar, String[] opCodes, String format)
 	{
 		String sendBypass = null;
-		String valuesHtml = HtmCache.getInstance().getHtmForce(activeChar.getHtmlPrefix(), "html/admin/pforge/values.htm");
+		String valuesHtml = HtmCache.getInstance().getHtmForce(activeChar.getHtmlPrefix(), "data/html/admin/pforge/values.htm");
 		if (opCodes.length == 3)
 		{
 			valuesHtml = valuesHtml.replace("%opformat%", "chd");
@@ -250,7 +233,7 @@ public final class AdminPForge implements IAdminCommandHandler
 			valuesHtml = valuesHtml.replace("%format%", format);
 			sendBypass += " " + format;
 			
-			final String editorTemplate = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/pforge/inc/editor.htm");
+			final String editorTemplate = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/pforge/inc/editor.htm");
 			
 			if (editorTemplate != null)
 			{
@@ -273,7 +256,7 @@ public final class AdminPForge implements IAdminCommandHandler
 		
 		valuesHtml = valuesHtml.replace("%editors%", editorsHtml);
 		valuesHtml = valuesHtml.replace("%send_bypass%", sendBypass);
-		activeChar.sendPacket(new NpcHtmlMessage(valuesHtml));
+		activeChar.sendPacket(new NpcHtmlMessage(0, 1, valuesHtml));
 	}
 	
 	@Override
@@ -418,97 +401,121 @@ public final class AdminPForge implements IAdminCommandHandler
 						switch (value)
 						{
 							case "$oid":
-							{
 								value = String.valueOf(activeChar.getObjectId());
 								break;
-							}
 							case "$boid":
-							{
 								boat = activeChar.getBoat();
-								value = boat != null ? String.valueOf(boat.getObjectId()) : "0";
-								break;
-							}
-							case "$title":
-							{
-								value = activeChar.getTitle();
-								break;
-							}
-							case "$name":
-							{
-								value = activeChar.getName();
-								break;
-							}
-							case "$x":
-							{
-								value = String.valueOf(activeChar.getX());
-								break;
-							}
-							case "$y":
-							{
-								value = String.valueOf(activeChar.getY());
-								break;
-							}
-							case "$z":
-							{
-								value = String.valueOf(activeChar.getZ());
-								break;
-							}
-							case "$heading":
-							{
-								value = String.valueOf(activeChar.getHeading());
-								break;
-							}
-							case "$toid":
-							{
-								value = String.valueOf(activeChar.getTargetId());
-								break;
-							}
-							case "$tboid":
-							{
-								target = activeChar.getTarget();
-								if (target instanceof L2Playable)
+								if (boat != null)
 								{
-									boat = ((L2Playable) target).getActingPlayer().getBoat();
-									value = boat != null ? String.valueOf(boat.getObjectId()) : "0";
+									value = String.valueOf(boat.getObjectId());
+								}
+								else
+								{
+									value = "0";
 								}
 								break;
-							}
+							case "$title":
+								value = activeChar.getTitle();
+								break;
+							case "$name":
+								value = activeChar.getName();
+								break;
+							case "$x":
+								value = String.valueOf(activeChar.getX());
+								break;
+							case "$y":
+								value = String.valueOf(activeChar.getY());
+								break;
+							case "$z":
+								value = String.valueOf(activeChar.getZ());
+								break;
+							case "$heading":
+								value = String.valueOf(activeChar.getHeading());
+								break;
+							case "$toid":
+								value = String.valueOf(activeChar.getTargetId());
+								break;
+							case "$tboid":
+								target = activeChar.getTarget();
+								if ((target != null) && (target instanceof L2Playable))
+								{
+									boat = target.getActingPlayer().getBoat();
+									if (boat != null)
+									{
+										value = String.valueOf(boat.getObjectId());
+									}
+									else
+									{
+										value = "0";
+									}
+								}
+								break;
 							case "$ttitle":
-							{
 								target = activeChar.getTarget();
-								value = target instanceof L2Character ? String.valueOf(((L2Character) target).getTitle()) : "";
+								if ((target != null) && (target instanceof L2Character))
+								{
+									value = String.valueOf(((L2Character) target).getTitle());
+								}
+								else
+								{
+									value = "";
+								}
 								break;
-							}
 							case "$tname":
-							{
 								target = activeChar.getTarget();
-								value = target != null ? String.valueOf(target.getName()) : "";
+								if (target != null)
+								{
+									value = String.valueOf(target.getName());
+								}
+								else
+								{
+									value = "";
+								}
 								break;
-							}
 							case "$tx":
-							{
 								target = activeChar.getTarget();
-								value = target != null ? String.valueOf(target.getX()) : "0";
+								if (target != null)
+								{
+									value = String.valueOf(target.getX());
+								}
+								else
+								{
+									value = "0";
+								}
 								break;
-							}
 							case "$ty":
-							{
 								target = activeChar.getTarget();
-								value = target != null ? String.valueOf(target.getY()) : "0";
+								if (target != null)
+								{
+									value = String.valueOf(target.getY());
+								}
+								else
+								{
+									value = "0";
+								}
 								break;
-							}
 							case "$tz":
-							{
 								target = activeChar.getTarget();
-								value = target != null ? String.valueOf(target.getZ()) : "0";
+								if (target != null)
+								{
+									value = String.valueOf(target.getZ());
+								}
+								else
+								{
+									value = "0";
+								}
 								break;
-							}
 							case "$theading":
-							{
 								target = activeChar.getTarget();
-								value = target != null ? String.valueOf(target.getHeading()) : "0";
+								if (target != null)
+								{
+									value = String.valueOf(target.getHeading());
+								}
+								else
+								{
+									value = "0";
+								}
 								break;
-							}
 						}
 						
 						if (method.equals("sc") || method.equals("sb"))
@@ -535,8 +542,10 @@ public final class AdminPForge implements IAdminCommandHandler
 				}
 				else if (bb != null)
 				{
-					bb.flip();
-					final L2GameClientPacket p = (L2GameClientPacket) GameServer.gameServer.getL2GamePacketHandler().handlePacket(bb, activeChar.getClient());
+					// TODO: Implement me!
+					// @formatter:off
+					/*bb.flip();
+					L2GameClientPacket p = (L2GameClientPacket) GameServer.gameServer.getL2GamePacketHandler().handlePacket(bb, activeChar.getClient());
 					if (p != null)
 					{
 						p.setBuffers(bb, activeChar.getClient(), new NioNetStringBuffer(2000));
@@ -544,7 +553,9 @@ public final class AdminPForge implements IAdminCommandHandler
 						{
 							ThreadPoolManager.getInstance().executePacket(p);
 						}
-					}
+					}*/
+					// @formatter:on
+					throw new UnsupportedOperationException("Not implemented yet!");
 				}
 				
 				showValuesPage(activeChar, opCodes, format);

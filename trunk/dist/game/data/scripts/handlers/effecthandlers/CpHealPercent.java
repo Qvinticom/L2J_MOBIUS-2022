@@ -18,9 +18,9 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -32,10 +32,8 @@ public final class CpHealPercent extends AbstractEffect
 {
 	private final double _power;
 	
-	public CpHealPercent(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public CpHealPercent(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_power = params.getDouble("power", 0);
 	}
 	
@@ -46,28 +44,29 @@ public final class CpHealPercent extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character target = info.getEffected();
-		if ((target == null) || target.isDead() || target.isDoor())
+		if (effected.isDead() || effected.isDoor() || effected.isHpBlocked())
 		{
 			return;
 		}
 		
 		double amount = 0;
 		final double power = _power;
-		final boolean full = power == 100.0;
+		final boolean full = (power == 100.0);
 		
-		amount = full ? target.getMaxCp() : (target.getMaxCp() * power) / 100.0;
+		amount = full ? effected.getMaxCp() : (effected.getMaxCp() * power) / 100.0;
 		// Prevents overheal and negative amount
-		amount = Math.max(Math.min(amount, target.getMaxRecoverableCp() - target.getCurrentCp()), 0);
+		amount = Math.max(Math.min(amount, effected.getMaxRecoverableCp() - effected.getCurrentCp()), 0);
 		if (amount != 0)
 		{
-			target.setCurrentCp(amount + target.getCurrentCp());
+			final double newCp = amount + effected.getCurrentCp();
+			effected.setCurrentCp(newCp, false);
+			effected.broadcastStatusUpdate(effector);
 		}
 		
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED);
 		sm.addInt((int) amount);
-		target.sendPacket(sm);
+		effected.sendPacket(sm);
 	}
 }

@@ -16,31 +16,26 @@
  */
 package com.l2jmobius.gameserver.model.events.impl.character;
 
-import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
- * An instantly executed event when L2Character is attacked by L2Character.
- * @author UnAfraid
+ * Executed when the caster Creature tries to use a skill.
+ * @author UnAfraid, Nik
  */
 public class OnCreatureSkillUse implements IBaseEvent
 {
 	private final L2Character _caster;
 	private final Skill _skill;
 	private final boolean _simultaneously;
-	private final L2Character _target;
-	private final L2Object[] _targets;
 	
-	public OnCreatureSkillUse(L2Character caster, Skill skill, boolean simultaneously, L2Character target, L2Object[] targets)
+	public OnCreatureSkillUse(L2Character caster, Skill skill, boolean simultaneously)
 	{
 		_caster = caster;
 		_skill = skill;
 		_simultaneously = simultaneously;
-		_target = target;
-		_targets = targets;
 	}
 	
 	public final L2Character getCaster()
@@ -56,16 +51,6 @@ public class OnCreatureSkillUse implements IBaseEvent
 	public boolean isSimultaneously()
 	{
 		return _simultaneously;
-	}
-	
-	public final L2Character getTarget()
-	{
-		return _target;
-	}
-	
-	public L2Object[] getTargets()
-	{
-		return _targets;
 	}
 	
 	@Override

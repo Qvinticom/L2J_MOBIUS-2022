@@ -16,49 +16,32 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.model.entity.Fort;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowFortressSiegeInfo;
 
 /**
  * @author KenM
  */
-public class RequestFortressSiegeInfo extends L2GameClientPacket
+public class RequestFortressSiegeInfo implements IClientIncomingPacket
 {
-	private static final String _C__D0_3F_REQUESTFORTRESSSIEGEINFO = "[C] D0:3F RequestFortressSiegeInfo";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2GameClient client = getClient();
-		if (client != null)
+		for (Fort fort : FortManager.getInstance().getForts())
 		{
-			for (Fort fort : FortManager.getInstance().getForts())
+			if ((fort != null) && fort.getSiege().isInProgress())
 			{
-				if ((fort != null) && fort.getSiege().isInProgress())
-				{
-					client.sendPacket(new ExShowFortressSiegeInfo(fort));
-				}
+				client.sendPacket(new ExShowFortressSiegeInfo(fort));
 			}
 		}
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_3F_REQUESTFORTRESSSIEGEINFO;
 	}
 }

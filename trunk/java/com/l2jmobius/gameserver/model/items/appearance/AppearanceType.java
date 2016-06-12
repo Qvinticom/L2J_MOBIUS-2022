@@ -25,5 +25,5 @@ public enum AppearanceType
 	NORMAL,
 	BLESSED,
 	FIXED,
-	RESTORE;
+	RESTORE
 }

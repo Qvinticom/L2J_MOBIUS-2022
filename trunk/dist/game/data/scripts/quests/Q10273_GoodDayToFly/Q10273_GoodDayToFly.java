@@ -25,8 +25,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
 /**
- * Good Day to Fly (10273)<br>
- * Original Jython script by Kerberos v1.0 on 2009/04/25
+ * Good Day to Fly (10273)
  * @author nonom
  */
 public class Q10273_GoodDayToFly extends Quest
@@ -47,7 +46,7 @@ public class Q10273_GoodDayToFly extends Quest
 	
 	public Q10273_GoodDayToFly()
 	{
-		super(10273, Q10273_GoodDayToFly.class.getSimpleName(), "Good Day to Fly");
+		super(10273);
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
 		addKillId(MOBS);

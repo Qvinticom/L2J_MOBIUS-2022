@@ -16,19 +16,19 @@
  */
 package custom.events.Elpies;
 
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.datatables.SpawnTable;
+import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2EventMonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Event;
 import com.l2jmobius.gameserver.util.Broadcast;
 
-final class Elpies extends Event
+public final class Elpies extends Event
 {
 	// NPC
 	private static final int ELPY = 900100;
@@ -62,12 +62,11 @@ final class Elpies extends Event
 	// @formatter:on
 	// Non-final variables
 	private static boolean EVENT_ACTIVE = false;
+	private static int CURRENT_ELPY_COUNT = 0;
 	private ScheduledFuture<?> _eventTask = null;
-	private final Set<L2Npc> _elpies = ConcurrentHashMap.newKeySet(ELPY_AMOUNT);
 	
 	private Elpies()
 	{
-		super(Elpies.class.getSimpleName(), "custom/events");
 		addSpawnId(ELPY);
 		addKillId(ELPY);
 	}
@@ -99,11 +98,13 @@ final class Elpies extends Event
 		final EventLocation[] locations = EventLocation.values();
 		final EventLocation randomLoc = locations[getRandom(locations.length)];
 		
+		CURRENT_ELPY_COUNT = 0;
 		final long despawnDelay = EVENT_DURATION_MINUTES * 60000;
 		
 		for (int i = 0; i < ELPY_AMOUNT; i++)
 		{
-			_elpies.add(addSpawn(ELPY, randomLoc.getRandomX(), randomLoc.getRandomY(), randomLoc.getZ(), 0, true, despawnDelay));
+			addSpawn(ELPY, randomLoc.getRandomX(), randomLoc.getRandomY(), randomLoc.getZ(), 0, true, despawnDelay);
+			CURRENT_ELPY_COUNT++;
 		}
 		
 		Broadcast.toAllOnlinePlayers("*Squeak Squeak*");
@@ -135,11 +136,14 @@ final class Elpies extends Event
 			_eventTask = null;
 		}
 		
-		for (L2Npc npc : _elpies)
+		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(ELPY))
 		{
-			npc.deleteMe();
+			final L2Npc npc = spawn.getLastSpawn();
+			if (npc != null)
+			{
+				npc.deleteMe();
+			}
 		}
-		_elpies.clear();
 		
 		Broadcast.toAllOnlinePlayers("*Squeak Squeak*");
 		Broadcast.toAllOnlinePlayers("Elpy Event finished!");
@@ -151,12 +155,11 @@ final class Elpies extends Event
 	{
 		if (EVENT_ACTIVE)
 		{
-			_elpies.remove(npc);
-			
 			dropItem(npc, killer, DROPLIST_CONSUMABLES);
 			dropItem(npc, killer, DROPLIST_CRYSTALS);
+			CURRENT_ELPY_COUNT--;
 			
-			if (_elpies.isEmpty())
+			if (CURRENT_ELPY_COUNT <= 0)
 			{
 				Broadcast.toAllOnlinePlayers("All elpies have been killed!");
 				eventStop();
@@ -220,7 +223,7 @@ final class Elpies extends Event
 		}
 	}
 	
-	private static void dropItem(L2Npc mob, L2PcInstance player, int[][] droplist)
+	private static final void dropItem(L2Npc mob, L2PcInstance player, int[][] droplist)
 	{
 		final int chance = getRandom(100);
 		

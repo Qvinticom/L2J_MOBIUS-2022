@@ -10,6 +10,8 @@
 		<baseWIT>36</baseWIT>
 		<baseLUC>33</baseLUC>
 		<baseCHA>42</baseCHA>
+		<physicalAbnormalResist>10</physicalAbnormalResist>
+		<magicAbnormalResist>10</magicAbnormalResist>
 		<creationPoints>
 			<node x="-114628" y="259915" z="-1192" />
 			<node x="-114539" y="260101" z="-1192" />
@@ -51,15 +53,15 @@
 		<baseRndDam>10</baseRndDam>
 		<baseMoveSpd>
 			<walk>87</walk>
-			<run>122</run>
+			<run>140</run>
 			<slowSwim>50</slowSwim>
 			<fastSwim>50</fastSwim>
 		</baseMoveSpd>
 		<baseBreath>100</baseBreath>
 		<baseSafeFall>500</baseSafeFall>
 		<collisionMale>
-			<radius>8.0</radius>
-			<height>25.2</height>
+			<radius>7.0</radius>
+			<height>22.6</height>
 		</collisionMale>
 		<collisionFemale>
 			<radius>7.0</radius>
@@ -872,7 +874,7 @@
 			<mp>1164</mp>
 			<cp>1313</cp>
 			<hpRegen>11.5</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="102">
@@ -880,7 +882,7 @@
 			<mp>1179.28</mp>
 			<cp>1330.19</cp>
 			<hpRegen>11.6</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="103">
@@ -888,7 +890,7 @@
 			<mp>1194.64</mp>
 			<cp>1347.47</cp>
 			<hpRegen>11.7</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="104">
@@ -896,7 +898,7 @@
 			<mp>1210.08</mp>
 			<cp>1364.84</cp>
 			<hpRegen>11.8</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="105">
@@ -904,7 +906,7 @@
 			<mp>1225.6</mp>
 			<cp>1382.3</cp>
 			<hpRegen>11.9</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="106">
@@ -912,15 +914,7 @@
 			<mp>1241.2</mp>
 			<cp>1399.85</cp>
 			<hpRegen>12</hpRegen>
-			<mpRegen>3</mpRegen>
-			<cpRegen>8.5</cpRegen>
-		</level>
-		<level val="107">
-			<hp>2834.98</hp>
-			<mp>1256.88</mp>
-			<cp>1417.49</cp>
-			<hpRegen>12.1</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 	</lvlUpgainData>

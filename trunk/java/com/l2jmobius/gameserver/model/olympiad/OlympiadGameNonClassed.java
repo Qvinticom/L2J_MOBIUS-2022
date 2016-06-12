@@ -17,15 +17,17 @@
 package com.l2jmobius.gameserver.model.olympiad;
 
 import java.util.List;
+import java.util.Set;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
 
 /**
  * @author DS
  */
 public class OlympiadGameNonClassed extends OlympiadGameNormal
 {
-	private OlympiadGameNonClassed(int id, Participant[] opponents)
+	public OlympiadGameNonClassed(int id, Participant[] opponents)
 	{
 		super(id, opponents);
 	}
@@ -43,7 +45,7 @@ public class OlympiadGameNonClassed extends OlympiadGameNormal
 	}
 	
 	@Override
-	protected final int[][] getReward()
+	protected final List<ItemHolder> getReward()
 	{
 		return Config.ALT_OLY_NONCLASSED_REWARD;
 	}
@@ -54,9 +56,14 @@ public class OlympiadGameNonClassed extends OlympiadGameNormal
 		return COMP_DONE_WEEK_NON_CLASSED;
 	}
 	
-	protected static OlympiadGameNonClassed createGame(int id, List<Integer> list)
+	protected static OlympiadGameNonClassed createGame(int id, Set<Integer> list)
 	{
 		final Participant[] opponents = OlympiadGameNormal.createListOfParticipants(list);
-		return opponents == null ? null : new OlympiadGameNonClassed(id, opponents);
+		if (opponents == null)
+		{
+			return null;
+		}
+		
+		return new OlympiadGameNonClassed(id, opponents);
 	}
 }

@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.util.Rnd;
 
 /**
  * Abstract zone with spawn locations
@@ -50,24 +50,16 @@ public abstract class L2ZoneRespawn extends L2ZoneType
 			switch (type)
 			{
 				case "other":
-				{
 					addOtherSpawn(x, y, z);
 					break;
-				}
 				case "chaotic":
-				{
 					addChaoticSpawn(x, y, z);
 					break;
-				}
 				case "banish":
-				{
 					addBanishSpawn(x, y, z);
 					break;
-				}
 				default:
-				{
 					_log.warning(getClass().getSimpleName() + ": Unknown location type: " + type);
-				}
 			}
 		}
 	}
@@ -152,7 +144,7 @@ public abstract class L2ZoneRespawn extends L2ZoneType
 		return getSpawnLoc();
 	}
 	
-	public final Location getBanishSpawnLoc()
+	public Location getBanishSpawnLoc()
 	{
 		if (_banishSpawnLocs != null)
 		{

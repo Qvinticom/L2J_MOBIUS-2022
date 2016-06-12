@@ -16,43 +16,43 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * Format: (ch) dSdS
  * @author -Wooden-
  */
-public final class RequestPledgeReorganizeMember extends L2GameClientPacket
+public final class RequestPledgeReorganizeMember implements IClientIncomingPacket
 {
-	private static final String _C__D0_2C_REQUESTPLEDGEREORGANIZEMEMBER = "[C] D0:2C RequestPledgeReorganizeMember";
-	
 	private int _isMemberSelected;
 	private String _memberName;
 	private int _newPledgeType;
 	private String _selectedMember;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_isMemberSelected = readD();
-		_memberName = readS();
-		_newPledgeType = readD();
-		_selectedMember = readS();
+		_isMemberSelected = packet.readD();
+		_memberName = packet.readS();
+		_newPledgeType = packet.readD();
+		_selectedMember = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (_isMemberSelected == 0)
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -90,13 +90,6 @@ public final class RequestPledgeReorganizeMember extends L2GameClientPacket
 		member1.setPledgeType(_newPledgeType);
 		member2.setPledgeType(oldPledgeType);
 		clan.broadcastClanStatus();
-		activeChar.sendPacket(new PledgeSkillList(clan));
-		activeChar.broadcastUserInfo();
 	}
 	
-	@Override
-	public String getType()
-	{
-		return _C__D0_2C_REQUESTPLEDGEREORGANIZEMEMBER;
-	}
 }

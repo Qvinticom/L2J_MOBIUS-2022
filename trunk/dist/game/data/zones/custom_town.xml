@@ -65,13 +65,51 @@
 		<node X="13891" Y="13025" />
 		<node X="15542" Y="15230" />
 	</zone>
-	<zone name="Talking Island" id="11022" type="TownZone" shape="NPoly" minZ="-1100" maxZ="-1700">
+	<zone name="Talking Island" id="11022" type="TownZone" shape="NPoly" minZ="-3800" maxZ="-3700">
 		<stat name="townId" val="2" />
 		<stat name="taxById" val="1" />
-		<node X="-110711" Y="257870" />
-		<node X="-117310" Y="257714" />
-		<node X="-116972" Y="252254" />
-		<node X="-111850" Y="252314" />
+		<node X="-83739" Y="245733" />
+		<node X="-84049" Y="246087" />
+		<node X="-84289" Y="246258" />
+		<node X="-84556" Y="246243" />
+		<node X="-84984" Y="245820" />
+		<node X="-85336" Y="245426" />
+		<node X="-85684" Y="245099" />
+		<node X="-85969" Y="244770" />
+		<node X="-86400" Y="244292" />
+		<node X="-86664" Y="243997" />
+		<node X="-86940" Y="243631" />
+		<node X="-87517" Y="243034" />
+		<node X="-87650" Y="242799" />
+		<node X="-87613" Y="242572" />
+		<node X="-87348" Y="242246" />
+		<node X="-86956" Y="241942" />
+		<node X="-86656" Y="241684" />
+		<node X="-86343" Y="241365" />
+		<node X="-85829" Y="240966" />
+		<node X="-85544" Y="240765" />
+		<node X="-85193" Y="240440" />
+		<node X="-84865" Y="240185" />
+		<node X="-84594" Y="239866" />
+		<node X="-84284" Y="239666" />
+		<node X="-84002" Y="239734" />
+		<node X="-83822" Y="239922" />
+		<node X="-83640" Y="240190" />
+		<node X="-83295" Y="240492" />
+		<node X="-82990" Y="240878" />
+		<node X="-82635" Y="241208" />
+		<node X="-82234" Y="241698" />
+		<node X="-82027" Y="241985" />
+		<node X="-81684" Y="242328" />
+		<node X="-81421" Y="242741" />
+		<node X="-81113" Y="243073" />
+		<node X="-81011" Y="243228" />
+		<node X="-81029" Y="243496" />
+		<node X="-81340" Y="243797" />
+		<node X="-81691" Y="244028" />
+		<node X="-82292" Y="244585" />
+		<node X="-82787" Y="244999" />
+		<node X="-83726" Y="245721" />
 	</zone>
 	<zone name="Elven Village" id="11023" type="TownZone" shape="NPoly" minZ="-3600" maxZ="-2750">
 		<stat name="townId" val="3" />
@@ -596,22 +634,5 @@
 		<node X="32768" Y="229376" />
 		<node X="32768" Y="262143" />
 		<node X="-32768" Y="262143" />
-	</zone>
-	<zone name="Faeron Village" id="11042" type="TownZone" shape="NPoly" minZ="-3866" maxZ="-2866">
-		<node X="-82791" Y="248383" />
-		<node X="-81763" Y="247611" />
-		<node X="-79546" Y="246146" />
-		<node X="-78124" Y="246275" />
-		<node X="-76771" Y="247497" />
-		<node X="-76094" Y="248657" />
-		<node X="-77833" Y="252164" />
-		<node X="-79415" Y="253191" />
-		<node X="-81691" Y="255369" />
-		<node X="-84012" Y="254772" />
-		<node X="-84175" Y="254116" />
-		<node X="-83749" Y="251334" />
-	</zone>
-	<zone name="Arcan City" id="11043" type="TownZone" shape="Cylinder" minZ="-2000" maxZ="-200" rad="4500">
-		<node X="207096" Y="88696" />
 	</zone>
 </list>

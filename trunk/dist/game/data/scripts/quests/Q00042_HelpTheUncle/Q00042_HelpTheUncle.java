@@ -24,11 +24,10 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
 /**
- * Help The Uncle! (42)<br>
- * Original Jython script by zerghase.
+ * Help The Uncle! (42)
  * @author malyelfik
  */
-public class Q00042_HelpTheUncle extends Quest
+public final class Q00042_HelpTheUncle extends Quest
 {
 	// NPCs
 	private static final int WATERS = 30828;
@@ -41,21 +40,24 @@ public class Q00042_HelpTheUncle extends Quest
 	private static final int MAP_PIECE = 7548;
 	private static final int MAP = 7549;
 	private static final int PET_TICKET = 7583;
+	// Misc
+	private static final int MIN_LVL = 25;
 	
 	public Q00042_HelpTheUncle()
 	{
-		super(42, Q00042_HelpTheUncle.class.getSimpleName(), "Help The Uncle!");
+		super(42);
 		addStartNpc(WATERS);
 		addTalkId(WATERS, SOPHYA);
 		addKillId(MONSTER_EYE_DESTROYER, MONSTER_EYE_GAZER);
 		registerQuestItems(MAP, MAP_PIECE);
+		addCondMinLevel(MIN_LVL, "30828-00a.html");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -65,7 +67,7 @@ public class Q00042_HelpTheUncle extends Quest
 		{
 			case "30828-01.htm":
 			{
-				qs.startQuest();
+				st.startQuest();
 				break;
 			}
 			case "30828-03.html":
@@ -73,7 +75,7 @@ public class Q00042_HelpTheUncle extends Quest
 				if (hasQuestItems(player, TRIDENT))
 				{
 					takeItems(player, TRIDENT, 1);
-					qs.setCond(2, true);
+					st.setCond(2, true);
 				}
 				else
 				{
@@ -87,7 +89,7 @@ public class Q00042_HelpTheUncle extends Quest
 				{
 					takeItems(player, MAP_PIECE, -1);
 					giveItems(player, MAP, 1);
-					qs.setCond(4, true);
+					st.setCond(4, true);
 				}
 				else
 				{
@@ -100,7 +102,7 @@ public class Q00042_HelpTheUncle extends Quest
 				if (hasQuestItems(player, MAP))
 				{
 					takeItems(player, MAP, -1);
-					qs.setCond(5, true);
+					st.setCond(5, true);
 				}
 				else
 				{
@@ -110,8 +112,11 @@ public class Q00042_HelpTheUncle extends Quest
 			}
 			case "30828-09.html":
 			{
-				giveItems(player, PET_TICKET, 1);
-				qs.exitQuest(false, true);
+				if (st.isCond(5))
+				{
+					giveItems(player, PET_TICKET, 1);
+					st.exitQuest(false, true);
+				}
 				break;
 			}
 		}
@@ -121,14 +126,14 @@ public class Q00042_HelpTheUncle extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(player, false);
+		final QuestState st = getQuestState(player, false);
 		
-		if ((qs != null) && qs.isCond(2))
+		if ((st != null) && st.isCond(2))
 		{
 			giveItems(player, MAP_PIECE, 1);
 			if (getQuestItemsCount(player, MAP_PIECE) == 30)
 			{
-				qs.setCond(3, true);
+				st.setCond(3, true);
 			}
 			else
 			{
@@ -142,8 +147,8 @@ public class Q00042_HelpTheUncle extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
+		final QuestState st = getQuestState(player, true);
+		if (st == null)
 		{
 			return htmltext;
 		}
@@ -152,42 +157,32 @@ public class Q00042_HelpTheUncle extends Quest
 		{
 			case WATERS:
 			{
-				switch (qs.getState())
+				switch (st.getState())
 				{
 					case State.CREATED:
 					{
-						htmltext = (player.getLevel() >= 25) ? "30828-00.htm" : "30828-00a.html";
+						htmltext = "30828-00.htm";
 						break;
 					}
 					case State.STARTED:
 					{
-						switch (qs.getCond())
+						switch (st.getCond())
 						{
 							case 1:
-							{
-								htmltext = hasQuestItems(player, TRIDENT) ? "30828-02.html" : "30828-02a.html";
+								htmltext = (hasQuestItems(player, TRIDENT)) ? "30828-02.html" : "30828-02a.html";
 								break;
-							}
 							case 2:
-							{
 								htmltext = "30828-04.html";
 								break;
-							}
 							case 3:
-							{
 								htmltext = "30828-05.html";
 								break;
-							}
 							case 4:
-							{
 								htmltext = "30828-07.html";
 								break;
-							}
 							case 5:
-							{
 								htmltext = "30828-08.html";
 								break;
-							}
 						}
 						break;
 					}
@@ -201,20 +196,15 @@ public class Q00042_HelpTheUncle extends Quest
 			}
 			case SOPHYA:
 			{
-				if (qs.isStarted())
+				if (st.isStarted())
 				{
-					switch (qs.getCond())
+					if (st.isCond(4))
 					{
-						case 4:
-						{
-							htmltext = "30735-01.html";
-							break;
-						}
-						case 5:
-						{
-							htmltext = "30735-03.html";
-							break;
-						}
+						htmltext = "30735-01.html";
+					}
+					else if (st.isCond(5))
+					{
+						htmltext = "30735-03.html";
 					}
 				}
 				break;

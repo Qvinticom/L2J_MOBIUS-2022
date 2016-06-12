@@ -29,6 +29,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.CommonUtil;
+import com.l2jmobius.commons.util.crypt.NewCrypt;
+import com.l2jmobius.commons.util.network.BaseSendablePacket;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import com.l2jmobius.loginserver.network.L2JGameServerPacketHandler;
 import com.l2jmobius.loginserver.network.L2JGameServerPacketHandler.GameServerState;
@@ -37,9 +40,6 @@ import com.l2jmobius.loginserver.network.loginserverpackets.InitLS;
 import com.l2jmobius.loginserver.network.loginserverpackets.KickPlayer;
 import com.l2jmobius.loginserver.network.loginserverpackets.LoginServerFail;
 import com.l2jmobius.loginserver.network.loginserverpackets.RequestCharacters;
-import com.l2jmobius.util.Util;
-import com.l2jmobius.util.crypt.NewCrypt;
-import com.l2jmobius.util.network.BaseSendablePacket;
 
 /**
  * @author -Wooden-
@@ -127,7 +127,7 @@ public class GameServerThread extends Thread
 				
 				if (Config.DEBUG)
 				{
-					_log.warning("[C]" + Config.EOL + Util.printData(data));
+					_log.warning("[C]" + Config.EOL + CommonUtil.printData(data));
 				}
 				
 				L2JGameServerPacketHandler.handlePacket(data, this);
@@ -237,7 +237,7 @@ public class GameServerThread extends Thread
 			NewCrypt.appendChecksum(data);
 			if (Config.DEBUG)
 			{
-				_log.finest("[S] " + sl.getClass().getSimpleName() + ":" + Config.EOL + Util.printData(data));
+				_log.finest("[S] " + sl.getClass().getSimpleName() + ":" + Config.EOL + CommonUtil.printData(data));
 			}
 			_blowfish.crypt(data, 0, data.length);
 			
@@ -302,7 +302,11 @@ public class GameServerThread extends Thread
 	 */
 	public boolean isAuthed()
 	{
-		return (getGameServerInfo() != null) && getGameServerInfo().isAuthed();
+		if (getGameServerInfo() == null)
+		{
+			return false;
+		}
+		return getGameServerInfo().isAuthed();
 	}
 	
 	public void setGameServerInfo(GameServerInfo gsi)
@@ -325,7 +329,11 @@ public class GameServerThread extends Thread
 	
 	public int getServerId()
 	{
-		return getGameServerInfo() != null ? getGameServerInfo().getId() : -1;
+		if (getGameServerInfo() != null)
+		{
+			return getGameServerInfo().getId();
+		}
+		return -1;
 	}
 	
 	public RSAPrivateKey getPrivateKey()

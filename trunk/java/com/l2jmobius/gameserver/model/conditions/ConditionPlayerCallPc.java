@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.model.conditions;
 
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
@@ -55,16 +54,11 @@ public class ConditionPlayerCallPc extends Condition
 		{
 			canCallPlayer = false;
 		}
-		else if (!TvTEvent.onEscapeUse(player.getObjectId()))
-		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_SUMMONING_OR_TELEPORTING_IN_THIS_AREA);
-			canCallPlayer = false;
-		}
 		else if (player.isInsideZone(ZoneId.NO_SUMMON_FRIEND) || player.isInsideZone(ZoneId.JAIL) || player.isFlyingMounted())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_SUMMONING_OR_TELEPORTING_IN_THIS_AREA);
 			canCallPlayer = false;
 		}
-		return _val == canCallPlayer;
+		return (_val == canCallPlayer);
 	}
 }

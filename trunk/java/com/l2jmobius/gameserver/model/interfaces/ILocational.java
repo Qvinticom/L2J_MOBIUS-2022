@@ -47,12 +47,6 @@ public interface ILocational
 	int getHeading();
 	
 	/**
-	 * Gets the instance zone ID of this object.
-	 * @return the ID of the instance zone this object is currently in (0 - not in any instance)
-	 */
-	int getInstanceId();
-	
-	/**
 	 * Gets this object's location.
 	 * @return a {@link ILocational} object containing the current position of this object
 	 */

@@ -37,7 +37,6 @@ public enum InstanceType
 	// Summons, Pets, Decoys and Traps
 	L2ServitorInstance(L2Summon),
 	L2PetInstance(L2Summon),
-	L2BabyPetInstance(L2PetInstance),
 	L2DecoyInstance(L2Decoy),
 	L2TrapInstance(L2Npc),
 	// Attackable
@@ -52,10 +51,8 @@ public enum InstanceType
 	L2FriendlyMobInstance(L2Attackable),
 	L2RaidBossInstance(L2MonsterInstance),
 	L2GrandBossInstance(L2RaidBossInstance),
+	FriendlyNpcInstance(L2Attackable),
 	// FlyMobs
-	L2FlyNpcInstance(L2NpcInstance),
-	L2FlyMonsterInstance(L2MonsterInstance),
-	L2FlyRaidBossInstance(L2RaidBossInstance),
 	L2FlyTerrainObjectInstance(L2Npc),
 	// Sepulchers
 	L2SepulcherNpcInstance(L2NpcInstance),
@@ -78,22 +75,16 @@ public enum InstanceType
 	L2FortLogisticsInstance(L2MerchantInstance),
 	L2FortManagerInstance(L2MerchantInstance),
 	// City NPCs
-	L2AdventurerInstance(L2NpcInstance),
-	L2AuctioneerInstance(L2Npc),
-	L2ClanHallManagerInstance(L2MerchantInstance),
 	L2FishermanInstance(L2MerchantInstance),
 	L2ObservationInstance(L2Npc),
 	L2OlympiadManagerInstance(L2Npc),
 	L2PetManagerInstance(L2MerchantInstance),
 	L2RaceManagerInstance(L2Npc),
 	L2TeleporterInstance(L2Npc),
-	L2TrainerInstance(L2NpcInstance),
 	L2VillageMasterInstance(L2NpcInstance),
 	// Doormens
 	L2DoormenInstance(L2NpcInstance),
-	L2CastleDoormenInstance(L2DoormenInstance),
 	L2FortDoormenInstance(L2DoormenInstance),
-	L2ClanHallDoormenInstance(L2DoormenInstance),
 	// Custom
 	L2ClassMasterInstance(L2NpcInstance),
 	L2EventMobInstance(L2Npc);

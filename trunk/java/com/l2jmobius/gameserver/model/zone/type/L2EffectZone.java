@@ -20,24 +20,24 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.TaskZoneSettings;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
-import com.l2jmobius.util.Rnd;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * another type of damage zone with skills
  * @author kerberos
  */
-public class L2EffectZone extends L2ZoneType
+public final class L2EffectZone extends L2ZoneType
 {
 	private int _chance;
 	private int _initialDelay;
@@ -55,7 +55,12 @@ public class L2EffectZone extends L2ZoneType
 		setTargetType(InstanceType.L2Playable); // default only playabale
 		_bypassConditions = false;
 		_isShowDangerIcon = true;
-		setSettings(ZoneManager.getSettings(getName()) == null ? new TaskZoneSettings() : ZoneManager.getSettings(getName()));
+		AbstractZoneSettings settings = ZoneManager.getSettings(getName());
+		if (settings == null)
+		{
+			settings = new TaskZoneSettings();
+		}
+		setSettings(settings);
 	}
 	
 	@Override
@@ -67,84 +72,85 @@ public class L2EffectZone extends L2ZoneType
 	@Override
 	public void setParameter(String name, String value)
 	{
-		if (name.equals("chance"))
+		switch (name)
 		{
-			_chance = Integer.parseInt(value);
-		}
-		else if (name.equals("initialDelay"))
-		{
-			_initialDelay = Integer.parseInt(value);
-		}
-		else if (name.equals("reuse"))
-		{
-			_reuse = Integer.parseInt(value);
-		}
-		else if (name.equals("bypassSkillConditions"))
-		{
-			_bypassConditions = Boolean.parseBoolean(value);
-		}
-		else if (name.equals("maxDynamicSkillCount"))
-		{
-			_skills = new ConcurrentHashMap<>(Integer.parseInt(value));
-		}
-		else if (name.equals("skillIdLvl"))
-		{
-			final String[] propertySplit = value.split(";");
-			_skills = new ConcurrentHashMap<>(propertySplit.length);
-			for (String skill : propertySplit)
-			{
-				final String[] skillSplit = skill.split("-");
-				if (skillSplit.length != 2)
+			case "chance":
+				_chance = Integer.parseInt(value);
+				break;
+			case "initialDelay":
+				_initialDelay = Integer.parseInt(value);
+				break;
+			case "reuse":
+				_reuse = Integer.parseInt(value);
+				break;
+			case "bypassSkillConditions":
+				_bypassConditions = Boolean.parseBoolean(value);
+				break;
+			case "maxDynamicSkillCount":
+				_skills = new ConcurrentHashMap<>(Integer.parseInt(value));
+				break;
+			case "showDangerIcon":
+				_isShowDangerIcon = Boolean.parseBoolean(value);
+				break;
+			case "skillIdLvl":
+				final String[] propertySplit = value.split(";");
+				_skills = new ConcurrentHashMap<>(propertySplit.length);
+				for (String skill : propertySplit)
 				{
-					_log.warning(StringUtil.concat(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"", skill, "\""));
-				}
-				else
-				{
-					try
+					final String[] skillSplit = skill.split("-");
+					if (skillSplit.length != 2)
 					{
-						_skills.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
+						_log.warning(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"" + skill + "\"");
 					}
-					catch (NumberFormatException nfe)
+					else
 					{
-						if (!skill.isEmpty())
+						try
 						{
-							_log.warning(StringUtil.concat(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"", skillSplit[0], "\"", skillSplit[1]));
+							_skills.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
+						}
+						catch (NumberFormatException nfe)
+						{
+							if (!skill.isEmpty())
+							{
+								_log.warning(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"" + skillSplit[0] + "\"" + skillSplit[1]);
+							}
 						}
 					}
 				}
+				break;
+			default:
+			{
+				super.setParameter(name, value);
 			}
-		}
-		else if (name.equals("showDangerIcon"))
-		{
-			_isShowDangerIcon = Boolean.parseBoolean(value);
-		}
-		else
-		{
-			super.setParameter(name, value);
 		}
 	}
 	
 	@Override
 	protected void onEnter(L2Character character)
 	{
-		if ((_skills != null) && (getSettings().getTask() == null))
+		if (_skills != null)
 		{
-			synchronized (this)
+			if (getSettings().getTask() == null)
 			{
-				getSettings().setTask(ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ApplySkill(), _initialDelay, _reuse));
+				synchronized (this)
+				{
+					if (getSettings().getTask() == null)
+					{
+						getSettings().setTask(ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ApplySkill(), _initialDelay, _reuse));
+					}
+				}
 			}
 		}
-		if (!character.isPlayer())
+		
+		if (character.isPlayer())
 		{
-			return;
+			character.setInsideZone(ZoneId.ALTERED, true);
+			if (_isShowDangerIcon)
+			{
+				character.setInsideZone(ZoneId.DANGER_AREA, true);
+				character.sendPacket(new EtcStatusUpdate(character.getActingPlayer()));
+			}
 		}
-		character.setInsideZone(ZoneId.ALTERED, true);
-		if (!_isShowDangerIcon)
-		{
-			return;
-		}
-		character.setInsideZone(ZoneId.DANGER_AREA, true);
-		character.sendPacket(new EtcStatusUpdate(character.getActingPlayer()));
 	}
 	
 	@Override
@@ -162,15 +168,11 @@ public class L2EffectZone extends L2ZoneType
 				}
 			}
 		}
+		
 		if (_characterList.isEmpty() && (getSettings().getTask() != null))
 		{
 			getSettings().clear();
 		}
-	}
-	
-	protected Skill getSkill(int skillId, int skillLvl)
-	{
-		return SkillData.getInstance().getSkill(skillId, skillLvl);
 	}
 	
 	public int getChance()
@@ -190,7 +192,10 @@ public class L2EffectZone extends L2ZoneType
 		{
 			synchronized (this)
 			{
-				_skills = new ConcurrentHashMap<>(3);
+				if (_skills == null)
+				{
+					_skills = new ConcurrentHashMap<>(3);
+				}
 			}
 		}
 		_skills.put(skillId, skillLvL);
@@ -214,7 +219,11 @@ public class L2EffectZone extends L2ZoneType
 	
 	public int getSkillLevel(int skillId)
 	{
-		return (_skills == null) || !_skills.containsKey(skillId) ? 0 : _skills.get(skillId);
+		if ((_skills == null) || !_skills.containsKey(skillId))
+		{
+			return 0;
+		}
+		return _skills.get(skillId);
 	}
 	
 	private final class ApplySkill implements Runnable
@@ -232,20 +241,20 @@ public class L2EffectZone extends L2ZoneType
 		{
 			if (isEnabled())
 			{
-				for (L2Character temp : getCharactersInside())
+				getCharactersInside().forEach(character ->
 				{
-					if ((temp != null) && !temp.isDead() && (Rnd.get(100) < getChance()))
+					if ((character != null) && !character.isDead() && (Rnd.get(100) < getChance()))
 					{
 						for (Entry<Integer, Integer> e : _skills.entrySet())
 						{
-							final Skill skill = getSkill(e.getKey(), e.getValue());
-							if ((skill != null) && (_bypassConditions || skill.checkCondition(temp, temp, false)) && !temp.isAffectedBySkill(e.getKey()))
+							final Skill skill = SkillData.getInstance().getSkill(e.getKey(), e.getValue());
+							if ((skill != null) && (_bypassConditions || skill.checkCondition(character, character)))
 							{
-								skill.applyEffects(temp, temp);
+								skill.activateSkill(character, character);
 							}
 						}
 					}
-				}
+				});
 			}
 		}
 	}

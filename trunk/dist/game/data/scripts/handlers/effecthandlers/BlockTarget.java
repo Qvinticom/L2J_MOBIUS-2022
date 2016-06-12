@@ -16,42 +16,38 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
- * @author NviX
+ * @author UnAfraid
  */
-public final class BlockTarget extends AbstractEffect
+public class BlockTarget extends AbstractEffect
 {
-	public BlockTarget(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public BlockTarget(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isPlayable())
+		effected.setTargetable(false);
+		L2World.getInstance().forEachVisibleObject(effected, L2Character.class, target ->
 		{
-			info.getEffected().setTarget(null);
-			info.getEffected().abortAttack();
-			info.getEffected().abortCast();
-			info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, info.getEffected());
-			((L2Playable) info.getEffected()).setLockedTarget(info.getEffected());
-		}
+			if ((target.getTarget() == effected))
+			{
+				target.setTarget(null);
+			}
+		});
 	}
 	
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		if (info.getEffected().isPlayable())
-		{
-			((L2Playable) info.getEffected()).setLockedTarget(null);
-		}
+		info.getEffected().setTargetable(true);
 	}
 }

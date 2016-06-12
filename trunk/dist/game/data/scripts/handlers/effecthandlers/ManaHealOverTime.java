@@ -17,7 +17,6 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 
@@ -28,11 +27,10 @@ public final class ManaHealOverTime extends AbstractEffect
 {
 	private final double _power;
 	
-	public ManaHealOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public ManaHealOverTime(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_power = params.getDouble("power", 0);
+		setTicks(params.getInt("ticks"));
 	}
 	
 	@Override
@@ -54,7 +52,8 @@ public final class ManaHealOverTime extends AbstractEffect
 		
 		mp += _power * getTicksMultiplier();
 		mp = Math.min(mp, maxmp);
-		info.getEffected().setCurrentMp(mp);
+		info.getEffected().setCurrentMp(mp, false);
+		info.getEffected().broadcastStatusUpdate(info.getEffector());
 		return info.getSkill().isToggle();
 	}
 }

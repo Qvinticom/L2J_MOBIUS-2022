@@ -25,11 +25,11 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.data.xml.impl.TransformData;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import com.l2jmobius.gameserver.model.L2Party.messageType;
+import com.l2jmobius.gameserver.model.L2Party.MessageType;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -42,12 +42,10 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import com.l2jmobius.gameserver.network.serverpackets.ExRedSky;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.util.Broadcast;
-import com.l2jmobius.util.Rnd;
 
 public class CursedWeapon implements INamable
 {
@@ -124,11 +122,11 @@ public class CursedWeapon implements INamable
 						iu.addModifiedItem(removedItem);
 					}
 					
-					_player.sendPacket(iu);
+					_player.sendInventoryUpdate(iu);
 				}
 				else
 				{
-					_player.sendPacket(new ItemList(_player, true));
+					_player.sendItemList(false);
 				}
 				
 				_player.broadcastUserInfo();
@@ -140,7 +138,7 @@ public class CursedWeapon implements INamable
 				
 				try (Connection con = DatabaseFactory.getInstance().getConnection();
 					PreparedStatement del = con.prepareStatement("DELETE FROM items WHERE owner_id=? AND item_id=?");
-					PreparedStatement ps = con.prepareStatement("UPDATE characters SET karma=?, pkkills=? WHERE charId=?"))
+					PreparedStatement ps = con.prepareStatement("UPDATE characters SET reputation=?, pkkills=? WHERE charId=?"))
 				{
 					// Delete the item
 					del.setInt(1, _playerId);
@@ -150,7 +148,7 @@ public class CursedWeapon implements INamable
 						_log.warning("Error while deleting itemId " + _itemId + " from userId " + _playerId);
 					}
 					
-					// Restore the karma
+					// Restore the reputation
 					ps.setInt(1, _playerReputation);
 					ps.setInt(2, _playerPkKills);
 					ps.setInt(3, _playerId);
@@ -165,39 +163,42 @@ public class CursedWeapon implements INamable
 				}
 			}
 		}
-		// either this cursed weapon is in the inventory of someone who has another cursed weapon equipped,
-		// OR this cursed weapon is on the ground.
-		else if ((_player != null) && (_player.getInventory().getItemByItemId(_itemId) != null))
+		else
 		{
-			// Destroy
-			final L2ItemInstance removedItem = _player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
-			if (!Config.FORCE_INVENTORY_UPDATE)
+			// either this cursed weapon is in the inventory of someone who has another cursed weapon equipped,
+			// OR this cursed weapon is on the ground.
+			if ((_player != null) && (_player.getInventory().getItemByItemId(_itemId) != null))
 			{
-				final InventoryUpdate iu = new InventoryUpdate();
-				if (removedItem.getCount() == 0)
+				// Destroy
+				final L2ItemInstance removedItem = _player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
+				if (!Config.FORCE_INVENTORY_UPDATE)
 				{
-					iu.addRemovedItem(removedItem);
+					final InventoryUpdate iu = new InventoryUpdate();
+					if (removedItem.getCount() == 0)
+					{
+						iu.addRemovedItem(removedItem);
+					}
+					else
+					{
+						iu.addModifiedItem(removedItem);
+					}
+					
+					_player.sendInventoryUpdate(iu);
 				}
 				else
 				{
-					iu.addModifiedItem(removedItem);
+					_player.sendItemList(false);
 				}
 				
-				_player.sendPacket(iu);
+				_player.broadcastUserInfo();
 			}
-			else
+			// is dropped on the ground
+			else if (_item != null)
 			{
-				_player.sendPacket(new ItemList(_player, true));
+				_item.decayMe();
+				L2World.getInstance().removeObject(_item);
+				_log.info(_name + " item has been removed from World.");
 			}
-			
-			_player.broadcastUserInfo();
-		}
-		// is dropped on the ground
-		else if (_item != null)
-		{
-			_item.decayMe();
-			L2World.getInstance().removeObject(_item);
-			_log.info(_name + " item has been removed from World.");
 		}
 		
 		// Delete infos from table if any
@@ -330,9 +331,7 @@ public class CursedWeapon implements INamable
 		_player.addSkill(skill, false);
 		
 		// Void Burst, Void Flow
-		_player.addSkill(CommonSkill.VOID_BURST.getSkill(), false);
 		_player.addTransformSkill(CommonSkill.VOID_BURST.getSkill());
-		_player.addSkill(CommonSkill.VOID_FLOW.getSkill(), false);
 		_player.addTransformSkill(CommonSkill.VOID_FLOW.getSkill());
 		_player.sendSkillList();
 	}
@@ -348,23 +347,21 @@ public class CursedWeapon implements INamable
 			transformationId = 301;
 		}
 		
-		if (_player.isTransformed() || _player.isInStance())
+		if (_player.isTransformed())
 		{
 			_player.stopTransformation(true);
 			
-			ThreadPoolManager.getInstance().scheduleGeneral(() -> TransformData.getInstance().transformPlayer(transformationId, _player), 500);
+			ThreadPoolManager.getInstance().scheduleGeneral(() -> _player.transform(transformationId, true), 500);
 		}
 		else
 		{
-			TransformData.getInstance().transformPlayer(transformationId, _player);
+			_player.transform(transformationId, true);
 		}
 	}
 	
 	public void removeSkill()
 	{
 		_player.removeSkill(_skillId);
-		_player.removeSkill(CommonSkill.VOID_BURST.getSkill().getId());
-		_player.removeSkill(CommonSkill.VOID_FLOW.getSkill().getId());
 		_player.untransform();
 		_player.sendSkillList();
 	}
@@ -380,6 +377,7 @@ public class CursedWeapon implements INamable
 		{
 			_removeTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new RemoveTask(), _durationLost * 12000L, _durationLost * 12000L);
 		}
+		
 	}
 	
 	public boolean checkDrop(L2Attackable attackable, L2PcInstance player)
@@ -426,7 +424,7 @@ public class CursedWeapon implements INamable
 		_player.setPkKills(0);
 		if (_player.isInParty())
 		{
-			_player.getParty().removePartyMember(_player, messageType.Expelled);
+			_player.getParty().removePartyMember(_player, MessageType.EXPELLED);
 		}
 		
 		// Disable All Skills
@@ -452,12 +450,11 @@ public class CursedWeapon implements INamable
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addItem(_item);
-			// iu.addItems(Arrays.asList(items));
-			_player.sendPacket(iu);
+			_player.sendInventoryUpdate(iu);
 		}
 		else
 		{
-			_player.sendPacket(new ItemList(_player, false));
+			_player.sendItemList(false);
 		}
 		
 		// Refresh player stats
@@ -582,9 +579,9 @@ public class CursedWeapon implements INamable
 		_playerId = playerId;
 	}
 	
-	public void setPlayerKarma(int playerKarma)
+	public void setPlayerReputation(int playerReputation)
 	{
-		_playerReputation = playerKarma;
+		_playerReputation = playerReputation;
 	}
 	
 	public void setPlayerPkKills(int playerPkKills)
@@ -658,7 +655,7 @@ public class CursedWeapon implements INamable
 		return _player;
 	}
 	
-	public int getPlayerKarma()
+	public int getPlayerReputation()
 	{
 		return _playerReputation;
 	}
@@ -689,7 +686,7 @@ public class CursedWeapon implements INamable
 		{
 			return _skillMaxLevel;
 		}
-		return _nbKills / _stageKills;
+		return (_nbKills / _stageKills);
 	}
 	
 	public long getTimeLeft()

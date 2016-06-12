@@ -40,7 +40,12 @@ public class AdminLevel implements IAdminCommandHandler
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken(); // Get actual command
 		
-		final String val = st.countTokens() >= 1 ? st.nextToken() : "";
+		String val = "";
+		if (st.countTokens() >= 1)
+		{
+			val = st.nextToken();
+		}
+		
 		if (actualCommand.equalsIgnoreCase("admin_add_level"))
 		{
 			try
@@ -57,7 +62,6 @@ public class AdminLevel implements IAdminCommandHandler
 		}
 		else if (actualCommand.equalsIgnoreCase("admin_set_level"))
 		{
-			final int maxLevel = ExperienceData.getInstance().getMaxLevel();
 			try
 			{
 				if (!(targetChar instanceof L2PcInstance))
@@ -68,23 +72,29 @@ public class AdminLevel implements IAdminCommandHandler
 				final L2PcInstance targetPlayer = (L2PcInstance) targetChar;
 				
 				final byte lvl = Byte.parseByte(val);
-				if ((lvl >= 1) && (lvl <= maxLevel))
+				if ((lvl >= 1) && (lvl <= ExperienceData.getInstance().getMaxLevel()))
 				{
-					targetPlayer.setExp(ExperienceData.getInstance().getExpForLevel(lvl));
-					targetPlayer.getStat().setLevel(lvl);
-					targetPlayer.setCurrentHpMp(targetPlayer.getMaxHp(), targetPlayer.getMaxMp());
-					targetPlayer.setCurrentCp(targetPlayer.getMaxCp());
-					targetPlayer.broadcastUserInfo();
+					final long pXp = targetPlayer.getExp();
+					final long tXp = ExperienceData.getInstance().getExpForLevel(lvl);
+					
+					if (pXp > tXp)
+					{
+						targetPlayer.removeExpAndSp(pXp - tXp, 0);
+					}
+					else if (pXp < tXp)
+					{
+						targetPlayer.addExpAndSp(tXp - pXp, 0);
+					}
 				}
 				else
 				{
-					activeChar.sendMessage("You must specify level between 1 and " + maxLevel + ".");
+					activeChar.sendMessage("You must specify level between 1 and " + ExperienceData.getInstance().getMaxLevel() + ".");
 					return false;
 				}
 			}
 			catch (NumberFormatException e)
 			{
-				activeChar.sendMessage("You must specify level between 1 and " + maxLevel + ".");
+				activeChar.sendMessage("You must specify level between 1 and " + ExperienceData.getInstance().getMaxLevel() + ".");
 				return false;
 			}
 		}

@@ -16,90 +16,62 @@
  */
 package quests.Q10390_KekropusLetter;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.cache.HtmCache;
-import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.handler.BypassHandler;
-import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+
+import quests.Q10360_CertificationOfFate.Q10360_CertificationOfFate;
 
 /**
- * Kekropus Letter (10390)
- * @author Neanrakyr, spider
+ * Kekropus' Letter (10390)
+ * @author St3eT
  */
-public class Q10390_KekropusLetter extends Quest implements IBypassHandler
+public final class Q10390_KekropusLetter extends Quest
 {
 	// NPCs
 	private static final int RAYMOND = 30289;
 	private static final int RAINS = 30288;
-	private static final int ELLENIA = 30155;
-	private static final int ESRANDELL = 30158;
 	private static final int TOBIAS = 30297;
 	private static final int DRIKUS = 30505;
 	private static final int MENDIO = 30504;
 	private static final int GERSHWIN = 32196;
+	private static final int ESRANDELL = 30158;
+	private static final int ELLENIA = 30155;
 	private static final int BATHIS = 30332;
 	private static final int GOSTA = 30916;
 	private static final int ELI = 33858;
+	private static final int INVISIBLE_NPC = 19543;
 	// Items
-	private static final ItemHolder KEKROPUS_LETTER = new ItemHolder(36706, 1);
-	private static final ItemHolder SCROLL_OF_ESCAPE_HEINE = new ItemHolder(37112, 1);
-	private static final ItemHolder ENCHANT_WEAPON_C = new ItemHolder(951, 3);
-	private static final ItemHolder SCROLL_OF_ESCAPE_ALIGATOR_ISLAND = new ItemHolder(37025, 1);
-	private static final ItemHolder STEEL_DOOR_GUILD = new ItemHolder(37045, 21);
-	// Requirements
+	private static final int KEKROPUS_LETTER = 36706;
+	private static final int HAINE_SOE = 37112; // Scroll of Escape: Heine
+	private static final int ALLIGATOR_ISLAND_SOE = 37025; // Scroll of Escape: Alligator Island
+	private static final int EWC = 951; // Scroll: Enchant Weapon (C-grade)
+	// Misc
 	private static final int MIN_LEVEL = 40;
 	private static final int MAX_LEVEL = 45;
-	// Rewards
-	private static final int EXP_REWARD = 370440;
-	private static final int SP_REWARD = 88;
-	// Teleports
-	// Town masters locations to teleport should be same order as the Race enum
-	private static final Location[] TP_LOCS =
-	{
-		new Location(-13571, 122971, -3107), // human
-		new Location(-13561, 122657, -3105), // elf
-		new Location(-12829, 123163, -3102), // dark elf
-		new Location(-12712, 124902, -3133), // orc
-		new Location(-15236, 124713, -3115), // dwarf
-		new Location(-13520, 125522, -3128), // kamael
-	};
-	private static final String[] TP_COMMANDS =
-	{
-		"Q10390_Teleport"
-	};
 	
 	public Q10390_KekropusLetter()
 	{
-		super(10390, Q10390_KekropusLetter.class.getSimpleName(), "Kekropus' Letter");
-		addStartNpc(DRIKUS, RAYMOND, RAINS, ELLENIA, ESRANDELL, TOBIAS, MENDIO, GERSHWIN);
-		addTalkId(DRIKUS, BATHIS, GOSTA, ELI, RAYMOND, RAINS, ELLENIA, ESRANDELL, TOBIAS, MENDIO, GERSHWIN);
-		registerQuestItems(SCROLL_OF_ESCAPE_ALIGATOR_ISLAND.getId(), SCROLL_OF_ESCAPE_HEINE.getId(), KEKROPUS_LETTER.getId());
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "30505-noLevel.html");
-		BypassHandler.getInstance().registerHandler(this);
+		super(10390);
+		addStartNpc(RAYMOND, RAINS, TOBIAS, DRIKUS, MENDIO, GERSHWIN, ESRANDELL, ELLENIA);
+		addTalkId(RAYMOND, RAINS, TOBIAS, DRIKUS, MENDIO, GERSHWIN, ESRANDELL, ELLENIA, BATHIS, GOSTA, ELI);
+		addSeeCreatureId(INVISIBLE_NPC);
+		registerQuestItems(KEKROPUS_LETTER, HAINE_SOE, ALLIGATOR_ISLAND_SOE);
+		addCondCompletedQuest(Q10360_CertificationOfFate.class.getSimpleName(), "");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return null;
 		}
@@ -107,69 +79,83 @@ public class Q10390_KekropusLetter extends Quest implements IBypassHandler
 		String htmltext = null;
 		switch (event)
 		{
-			case "30505-03.html":
-			case "30297-03.html":
+			case "30289-03.htm":
+			case "30288-03.htm":
+			case "30297-03.htm":
+			case "30505-03.htm":
+			case "30504-03.htm":
+			case "32196-03.htm":
+			case "30158-03.htm":
+			case "30155-03.htm":
+			case "30916-02.html":
 			{
-				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "30332-02.html":
+			case "30289-04.htm":
+			case "30288-04.htm":
+			case "30297-04.htm":
+			case "30505-04.htm":
+			case "30504-04.htm":
+			case "32196-04.htm":
+			case "30158-04.htm":
+			case "30155-04.htm":
 			{
-				if (getQuestItemsCount(player, KEKROPUS_LETTER.getId()) < 1)
-				{
-					giveItems(player, KEKROPUS_LETTER);
-				}
+				st.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "30332-03.html":
+			case "30332-09.html":
 			{
-				if (qs.isCond(1))
+				if (st.isCond(1))
 				{
-					qs.setCond(2);
+					giveItems(player, KEKROPUS_LETTER, 1);
 					htmltext = event;
 				}
 				break;
 			}
-			case "30332-05.html":
+			case "popup-letter.html":
 			{
-				if (qs.isCond(2))
+				if (st.isCond(1))
 				{
-					qs.setCond(3);
-					giveItems(player, SCROLL_OF_ESCAPE_HEINE);
+					player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), event)));
+					player.sendPacket(new PlaySound(3, "Npcdialog1.kekrops_quest_1", 0, 0, 0, 0, 0));
+					st.setCond(2);
+				}
+				break;
+			}
+			case "30332-11.html":
+			{
+				if (st.isCond(2))
+				{
+					takeItems(player, KEKROPUS_LETTER, -1);
+					giveItems(player, HAINE_SOE, 1);
+					st.setCond(3);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30916-03.html":
 			{
-				if (qs.isCond(3))
+				if (st.isCond(3))
 				{
-					qs.setCond(4);
-					giveItems(player, SCROLL_OF_ESCAPE_ALIGATOR_ISLAND);
+					giveItems(player, ALLIGATOR_ISLAND_SOE, 1);
+					st.setCond(4);
 					htmltext = event;
 				}
 				break;
 			}
 			case "33858-02.html":
 			{
-				if (qs.isCond(4))
+				if (st.isCond(4))
 				{
-					giveItems(player, ENCHANT_WEAPON_C);
-					giveItems(player, STEEL_DOOR_GUILD);
-					addExpAndSp(player, EXP_REWARD, SP_REWARD);
-					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_KEKROPUS_AT_LV_46, ExShowScreenMessage.TOP_CENTER, 4500);
-					qs.exitQuest(false, true);
+					giveItems(player, EWC, 3);
+					giveStoryQuestReward(player, 21);
+					addExpAndSp(player, 370440, 88);
+					st.exitQuest(false, true);
+					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_KEKROPUS_AT_LV_46, ExShowScreenMessage.TOP_CENTER, 6000);
 					htmltext = event;
 				}
-				break;
-			}
-			case "30505-02.htm":
-			case "30297-02.htm":
-			case "30916-02.html":
-			{
-				htmltext = event;
 				break;
 			}
 		}
@@ -179,46 +165,32 @@ public class Q10390_KekropusLetter extends Quest implements IBypassHandler
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
+		final QuestState st = getQuestState(player, true);
 		
-		if (player.getRace() == Race.ERTHEIA)
-		{
-			return "30505-noErtheia.html";
-		}
-		
-		switch (qs.getState())
+		switch (st.getState())
 		{
 			case State.CREATED:
 			{
 				switch (npc.getId())
 				{
 					case RAYMOND:
+					case ESRANDELL:
 					case RAINS:
 					case ELLENIA:
-					case ESRANDELL:
-					case GERSHWIN:
-					case MENDIO:
-					case TOBIAS: // TODO: get all race specified texts
-					{
-						htmltext = "30297-01.htm";
-						break;
-					}
+					case TOBIAS:
 					case DRIKUS:
+					case MENDIO:
+					case GERSHWIN:
 					{
-						if (player.getRace() == Race.ORC)
+						if ((player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL))
 						{
-							htmltext = "30505-01.htm";
+							htmltext = npc.getId() + "-06.html";
 						}
 						else
 						{
-							htmltext = getNoQuestMsg(player);
+							htmltext = isRightMaster(npc, player) ? npc.getId() + "-02.htm" : npc.getId() + "-01.htm";
 						}
-						break;
-					}
-					default:
-					{
-						htmltext = getNoQuestMsg(player);
 						break;
 					}
 				}
@@ -229,50 +201,77 @@ public class Q10390_KekropusLetter extends Quest implements IBypassHandler
 				switch (npc.getId())
 				{
 					case RAYMOND:
+					case ESRANDELL:
 					case RAINS:
 					case ELLENIA:
-					case ESRANDELL:
-					case GERSHWIN:
-					case MENDIO:
-					case TOBIAS:// TODO: get all race specified texts
-					{
-						if (qs.isCond(1))
-						{
-							htmltext = "30297-03.html";
-						}
-						break;
-					}
+					case TOBIAS:
 					case DRIKUS:
+					case MENDIO:
+					case GERSHWIN:
 					{
-						if (qs.isCond(1))
+						if (st.isCond(1))
 						{
-							htmltext = "30505-03.html";
+							htmltext = npc.getId() + "-05.html";
 						}
 						break;
 					}
 					case BATHIS:
 					{
-						if (qs.isCond(1))
+						switch (st.getCond())
 						{
-							htmltext = "30332-01.html";
-						}
-						else if (qs.isCond(2))
-						{
-							htmltext = "30332-04.html";
+							case 1:
+							{
+								switch (player.getRace())
+								{
+									case HUMAN:
+										htmltext = player.isMageClass() ? "30332-01.html" : "30332-02.html";
+										break;
+									case DARK_ELF:
+										htmltext = "30332-03.html";
+										break;
+									case ORC:
+										htmltext = "30332-04.html";
+										break;
+									case DWARF:
+										htmltext = "30332-05.html";
+										break;
+									case KAMAEL:
+										htmltext = "30332-06.html";
+										break;
+									case ELF:
+										htmltext = player.isMageClass() ? "30332-08.html" : "30332-07.html";
+										break;
+								}
+								break;
+							}
+							case 2:
+							{
+								htmltext = "30332-10.html";
+								break;
+							}
+							case 3:
+							{
+								htmltext = "30332-11.html";
+								break;
+							}
 						}
 						break;
 					}
 					case GOSTA:
 					{
-						if (qs.isCond(3))
+						if (st.isCond(3))
 						{
 							htmltext = "30916-01.html";
+						}
+						else if (st.isCond(4))
+						{
+							htmltext = "30916-04.html";
 						}
 						break;
 					}
 					case ELI:
 					{
-						if (qs.isCond(4))
+						if (st.isCond(4))
 						{
 							htmltext = "33858-01.html";
 						}
@@ -281,77 +280,60 @@ public class Q10390_KekropusLetter extends Quest implements IBypassHandler
 				}
 				break;
 			}
-			case State.COMPLETED:
-			{
-				htmltext = getAlreadyCompletedMsg(player);
-				break;
-			}
 		}
 		return htmltext;
 	}
 	
-	@RegisterEvent(EventType.ON_PLAYER_LEVEL_CHANGED)
-	@RegisterType(ListenerRegisterType.GLOBAL)
-	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
+	@Override
+	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
 	{
-		if (Config.DISABLE_TUTORIAL)
+		if (creature.isPlayer())
 		{
-			return;
-		}
-		final L2PcInstance player = event.getActiveChar();
-		if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() != Race.ERTHEIA))
-		{
-			final QuestState qs = getQuestState(player, false);
-			if (qs == null)
+			final L2PcInstance player = creature.getActingPlayer();
+			final QuestState st = getQuestState(player, false);
+			
+			if ((st != null) && st.isCond(4))
 			{
-				final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
-				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10390_KekropusLetter/Announce_" + player.getRace().name() + ".html"));
-				player.sendPacket(html);
-				// todo: get proper announce html && handle it
+				showOnScreenMsg(player, NpcStringId.ALLIGATOR_ISLAND_IS_A_GOOD_HUNTING_ZONE_FOR_LV_40_OR_ABOVE, ExShowScreenMessage.TOP_CENTER, 6000);
 			}
 		}
+		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
-	@Override
-	public boolean useBypass(String command, L2PcInstance player, L2Character bypassOrigin)
+	private boolean isRightMaster(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) || (player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL) || (player.getRace() == Race.ERTHEIA))
+		switch (npc.getId())
 		{
-			return false;
+			case RAYMOND:
+			case ESRANDELL:
+			{
+				if ((npc.getRace() == player.getRace()) && player.isMageClass())
+				{
+					return true;
+				}
+				break;
+			}
+			case RAINS:
+			case ELLENIA:
+			{
+				if ((npc.getRace() == player.getRace()) && !player.isMageClass())
+				{
+					return true;
+				}
+				break;
+			}
+			case TOBIAS:
+			case DRIKUS:
+			case MENDIO:
+			case GERSHWIN:
+			{
+				if (npc.getRace() == player.getRace())
+				{
+					return true;
+				}
+				break;
+			}
 		}
-		
-		if (player.isInParty())
-		{
-			player.sendPacket(new ExShowScreenMessage("You cannot teleport when you are in party.", 5000));
-		}
-		else if (player.isInCombat())
-		{
-			player.sendPacket(new ExShowScreenMessage("You cannot teleport when you are in combat.", 5000));
-		}
-		else if (player.isInDuel())
-		{
-			player.sendPacket(new ExShowScreenMessage("You cannot teleport when you are in a duel.", 5000));
-		}
-		else if (player.isInOlympiadMode())
-		{
-			player.sendPacket(new ExShowScreenMessage("You cannot teleport when you are in Olympiad.", 5000));
-		}
-		else if (player.isInVehicle())
-		{
-			player.sendPacket(new ExShowScreenMessage("You cannot teleport when you are in any vehicle or mount.", 5000));
-		}
-		else
-		{
-			player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			player.teleToLocation(TP_LOCS[player.getRace().ordinal()]);
-		}
-		return true;
-	}
-	
-	@Override
-	public String[] getBypassList()
-	{
-		return TP_COMMANDS;
+		return false;
 	}
 }

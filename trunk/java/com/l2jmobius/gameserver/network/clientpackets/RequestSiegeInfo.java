@@ -16,29 +16,24 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+
 /**
  * Format: (c) (no data, trigger)
  * @author -Wooden-
  */
-public class RequestSiegeInfo extends L2GameClientPacket
+public class RequestSiegeInfo implements IClientIncomingPacket
 {
-	private static final String _C__58_REQUESTSIEGEINFO = "[C] 58 RequestSiegeInfo";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger
+		return false;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		// TODO this
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__58_REQUESTSIEGEINFO;
 	}
 }

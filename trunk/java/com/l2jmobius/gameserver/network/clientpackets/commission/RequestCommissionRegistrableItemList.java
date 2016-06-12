@@ -16,29 +16,29 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.commission;
 
-import java.util.ArrayList;
-
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CommissionManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.commission.ExCloseCommission;
 import com.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionItemList;
 
 /**
  * @author NosBit
  */
-public class RequestCommissionRegistrableItemList extends L2GameClientPacket
+public class RequestCommissionRegistrableItemList implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -46,26 +46,10 @@ public class RequestCommissionRegistrableItemList extends L2GameClientPacket
 		
 		if (!CommissionManager.isPlayerAllowedToInteract(player))
 		{
-			player.sendPacket(ExCloseCommission.STATIC_PACKET);
+			client.sendPacket(ExCloseCommission.STATIC_PACKET);
 			return;
 		}
 		
-		final ArrayList<L2ItemInstance> auctionableItemList = new ArrayList<>();
-		for (L2ItemInstance item : player.getInventory().getAvailableItems(false, false, false))
-		{
-			if (item.getItem().isAuctionable())
-			{
-				auctionableItemList.add(item);
-			}
-		}
-		
-		player.sendPacket(new ExResponseCommissionItemList(auctionableItemList));
+		client.sendPacket(new ExResponseCommissionItemList(player.getInventory().getAvailableItems(false, false, false)));
 	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
-	}
-	
 }

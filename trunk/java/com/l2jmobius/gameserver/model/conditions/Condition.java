@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.conditions;
 
+import com.l2jmobius.gameserver.model.OneDayRewardDataHolder;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -112,6 +113,11 @@ public abstract class Condition implements ConditionListener
 	public final boolean test(L2Character caster, L2Character target, L2Item item)
 	{
 		return test(caster, target, null, null);
+	}
+	
+	public final boolean test(L2Character caster, OneDayRewardDataHolder onewayreward)
+	{
+		return test(caster, null, null, null);
 	}
 	
 	public final boolean test(L2Character caster, L2Character target, Skill skill, L2Item item)

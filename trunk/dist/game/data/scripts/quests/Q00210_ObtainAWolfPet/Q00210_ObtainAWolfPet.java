@@ -23,44 +23,46 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
 /**
- * @author Stayway
+ * Obtain a Wolf Pet (210)
+ * @author Gladicek
  */
-public class Q00210_ObtainAWolfPet extends Quest
+public final class Q00210_ObtainAWolfPet extends Quest
 {
 	// NPCs
 	private static final int LUNDY = 30827;
 	private static final int BELLA = 30256;
-	private static final int BYNN = 30335;
+	private static final int BRYNN = 30335;
 	private static final int SYDNIA = 30321;
-	// Items
+	// Item
 	private static final int WOLF_COLLAR = 2375;
 	// Misc
 	private static final int MIN_LEVEL = 15;
 	
 	public Q00210_ObtainAWolfPet()
 	{
-		super(210, Q00210_ObtainAWolfPet.class.getSimpleName(), "Obtain a Wolf Pet");
+		super(210);
 		addStartNpc(LUNDY);
-		addTalkId(LUNDY, BELLA, BYNN, SYDNIA);
-		addCondMinLevel(MIN_LEVEL, "no_level.htm");
+		addTalkId(LUNDY, BELLA, BRYNN, SYDNIA);
+		addCondMinLevel(MIN_LEVEL, "30827-07.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return htmltext;
+			return null;
 		}
 		
+		String htmltext = null;
 		switch (event)
 		{
 			case "30827-02.htm":
-			case "30827-04.htm":
-			case "30256-02.html":
-			case "30256-03.html":
+			case "30256-02.htm":
+			case "30256-03.htm":
+			case "30335-02.htm":
+			case "30321-02.htm":
 			{
 				htmltext = event;
 				break;
@@ -71,29 +73,11 @@ public class Q00210_ObtainAWolfPet extends Quest
 				htmltext = event;
 				break;
 			}
-			case "30335-02.html":
-			{
-				if (qs.isCond(2))
-				{
-					qs.setCond(3);
-					htmltext = event;
-				}
-				break;
-			}
-			case "30321-02.html":
-			{
-				if (qs.isCond(3))
-				{
-					qs.setCond(4);
-					htmltext = event;
-				}
-				break;
-			}
-			case "30827-05.html":
+			case "30827-06.htm":
 			{
 				if (qs.isCond(4))
 				{
-					rewardItems(player, WOLF_COLLAR, 1);
+					giveItems(player, WOLF_COLLAR, 1);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -106,12 +90,8 @@ public class Q00210_ObtainAWolfPet extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
+		String htmltext = getNoQuestMsg(player);
 		
 		switch (qs.getState())
 		{
@@ -120,8 +100,8 @@ public class Q00210_ObtainAWolfPet extends Quest
 				if (npc.getId() == LUNDY)
 				{
 					htmltext = "30827-01.htm";
+					break;
 				}
-				break;
 			}
 			case State.STARTED:
 			{
@@ -131,15 +111,13 @@ public class Q00210_ObtainAWolfPet extends Quest
 					{
 						if (qs.isCond(1))
 						{
-							htmltext = "30827-07.html";
-						}
-						else if (qs.isCond(2))
-						{
-							htmltext = "30827-07.html";
+							htmltext = "30827-04.htm";
+							break;
 						}
 						else if (qs.isCond(4))
 						{
-							htmltext = "30827-04.html";
+							htmltext = "30827-05.htm";
+							break;
 						}
 						break;
 					}
@@ -147,16 +125,17 @@ public class Q00210_ObtainAWolfPet extends Quest
 					{
 						if (qs.isCond(1))
 						{
-							qs.setCond(2);
-							htmltext = "30256-01.html";
+							qs.setCond(2, true);
+							htmltext = "30256-01.htm";
 						}
 						break;
 					}
-					case BYNN:
+					case BRYNN:
 					{
 						if (qs.isCond(2))
 						{
-							htmltext = "30335-01.html";
+							qs.setCond(3, true);
+							htmltext = "30335-01.htm";
 						}
 						break;
 					}
@@ -164,7 +143,8 @@ public class Q00210_ObtainAWolfPet extends Quest
 					{
 						if (qs.isCond(3))
 						{
-							htmltext = "30321-01.html";
+							qs.setCond(4, true);
+							htmltext = "30321-01.htm";
 						}
 						break;
 					}
@@ -173,7 +153,11 @@ public class Q00210_ObtainAWolfPet extends Quest
 			}
 			case State.COMPLETED:
 			{
-				htmltext = getAlreadyCompletedMsg(player);
+				if (npc.getId() == LUNDY)
+				{
+					htmltext = getAlreadyCompletedMsg(player);
+					break;
+				}
 				break;
 			}
 		}

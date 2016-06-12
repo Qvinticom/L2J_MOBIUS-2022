@@ -22,7 +22,6 @@ import java.util.Map.Entry;
 
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.stat.CharStat;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.stats.TraitType;
@@ -35,10 +34,8 @@ public final class DefenceTrait extends AbstractEffect
 {
 	private final Map<TraitType, Float> _defenceTraits = new HashMap<>();
 	
-	public DefenceTrait(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public DefenceTrait(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		if (params.isEmpty())
 		{
 			_log.warning(getClass().getSimpleName() + ": must have parameters.");
@@ -63,7 +60,7 @@ public final class DefenceTrait extends AbstractEffect
 			}
 			catch (Exception e)
 			{
-				_log.warning(getClass().getSimpleName() + ": value of L2TraitType enum required but found: " + param.getValue());
+				_log.warning(getClass().getSimpleName() + ": value of L2TraitType enum required but found: " + param.getKey());
 			}
 		}
 	}

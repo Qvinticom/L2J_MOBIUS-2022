@@ -51,7 +51,7 @@ public class StackIDFactory extends IdFactory
 			{
 				_curOID = tmp_obj_ids[tmp_obj_ids.length - 1];
 			}
-			_log.info("Max Id = " + _curOID);
+			LOGGER.info("Max Id = " + _curOID);
 			
 			int N = tmp_obj_ids.length;
 			for (int idx = 0; idx < N; idx++)
@@ -60,12 +60,12 @@ public class StackIDFactory extends IdFactory
 			}
 			
 			_curOID++;
-			_log.info("IdFactory: Next usable Object ID is: " + _curOID);
+			LOGGER.info("IdFactory: Next usable Object ID is: " + _curOID);
 			_initialized = true;
 		}
 		catch (Exception e)
 		{
-			_log.severe(getClass().getSimpleName() + ": Could not be initialized properly:" + e.getMessage());
+			LOGGER.severe(getClass().getSimpleName() + ": Could not be initialized properly:" + e.getMessage());
 		}
 	}
 	
@@ -89,10 +89,10 @@ public class StackIDFactory extends IdFactory
 					ps.setInt(2, id);
 					try (ResultSet rs = ps.executeQuery())
 					{
-						while (rs.next())
+						if (rs.next())
 						{
 							final int badId = rs.getInt(1);
-							_log.severe("Bad ID " + badId + " in DB found by: " + check);
+							LOGGER.severe("Bad ID " + badId + " in DB found by: " + check);
 							throw new RuntimeException();
 						}
 					}

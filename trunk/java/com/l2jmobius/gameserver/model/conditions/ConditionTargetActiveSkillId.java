@@ -52,13 +52,12 @@ public class ConditionTargetActiveSkillId extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		for (Skill sk : effected.getAllSkills())
+		final Skill knownSkill = effected.getKnownSkill(_skillId);
+		if (knownSkill != null)
 		{
-			if ((sk != null) && (sk.getId() == _skillId) && ((_skillLevel == -1) || (_skillLevel <= sk.getLevel())))
-			{
-				return true;
-			}
+			return (_skillLevel == -1) || (_skillLevel <= knownSkill.getLevel());
 		}
+		
 		return false;
 	}
 }

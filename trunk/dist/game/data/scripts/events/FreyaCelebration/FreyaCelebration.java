@@ -16,24 +16,24 @@
  */
 package events.FreyaCelebration;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.event.LongTimeEvent;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Freya Celebration event AI.
  * @author Gnacik
  */
-final class FreyaCelebration extends LongTimeEvent
+public final class FreyaCelebration extends LongTimeEvent
 {
 	// NPC
 	private static final int FREYA = 13296;
@@ -65,7 +65,6 @@ final class FreyaCelebration extends LongTimeEvent
 	
 	private FreyaCelebration()
 	{
-		super(FreyaCelebration.class.getSimpleName(), "events");
 		addStartNpc(FREYA);
 		addFirstTalkId(FREYA);
 		addTalkId(FREYA);
@@ -81,7 +80,7 @@ final class FreyaCelebration extends LongTimeEvent
 			{
 				final long _curr_time = System.currentTimeMillis();
 				final String value = loadGlobalQuestVar(player.getAccountName());
-				final long _reuse_time = value.equals("") ? 0 : Long.parseLong(value);
+				final long _reuse_time = value == "" ? 0 : Long.parseLong(value);
 				
 				if (_curr_time > _reuse_time)
 				{
@@ -120,7 +119,7 @@ final class FreyaCelebration extends LongTimeEvent
 			return null;
 		}
 		
-		if ((npc.getId() == FREYA) && Util.contains(targets, npc) && Util.contains(SKILLS, skill.getId()))
+		if ((npc.getId() == FREYA) && CommonUtil.contains(targets, npc) && CommonUtil.contains(SKILLS, skill.getId()))
 		{
 			if (getRandom(100) < 5)
 			{
@@ -131,9 +130,12 @@ final class FreyaCelebration extends LongTimeEvent
 				
 				caster.addItem("FreyaCelebration", FREYA_GIFT, 1, npc, true);
 			}
-			else if (getRandom(10) < 2)
+			else
 			{
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), FREYA_TEXT[getRandom(FREYA_TEXT.length - 1)]));
+				if (getRandom(10) < 2)
+				{
+					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), FREYA_TEXT[getRandom(FREYA_TEXT.length - 1)]));
+				}
 			}
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);

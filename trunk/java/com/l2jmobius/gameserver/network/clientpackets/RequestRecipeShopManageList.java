@@ -16,25 +16,25 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
 
-public final class RequestRecipeShopManageList extends L2GameClientPacket
+public final class RequestRecipeShopManageList implements IClientIncomingPacket
 {
-	private static final String _C__B9_RequestRecipeShopManageList = "[C] B9 RequestRecipeShopManageList";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -43,7 +43,7 @@ public final class RequestRecipeShopManageList extends L2GameClientPacket
 		// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
 		if (player.isAlikeDead())
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
@@ -56,12 +56,6 @@ public final class RequestRecipeShopManageList extends L2GameClientPacket
 			}
 		}
 		
-		player.sendPacket(new RecipeShopManageList(player, true));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__B9_RequestRecipeShopManageList;
+		client.sendPacket(new RecipeShopManageList(player, true));
 	}
 }

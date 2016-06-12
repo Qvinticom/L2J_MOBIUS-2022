@@ -16,17 +16,20 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.Race;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2DefenderInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2FortCommanderInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Fear effect implementation.
@@ -34,29 +37,20 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class Fear extends AbstractEffect
 {
-	public Fear(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public static final int FEAR_RANGE = 500;
+	
+	public Fear(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
+		
 	}
 	
 	@Override
 	public boolean canStart(BuffInfo info)
 	{
-		return info.getEffected().isPlayer() || info.getEffected().isSummon() || (info.getEffected().isAttackable() && //
-			!((info.getEffected() instanceof L2DefenderInstance) || (info.getEffected() instanceof L2FortCommanderInstance) || //
-				(info.getEffected() instanceof L2SiegeFlagInstance) || (info.getEffected().getTemplate().getRace() == Race.SIEGE_WEAPON)));
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.FEAR.getMask();
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.FEAR;
+		final L2Character creature = info.getEffected();
+		return creature.isPlayer() || creature.isSummon() || (creature.isAttackable() && //
+			!((creature instanceof L2DefenderInstance) || (creature instanceof L2FortCommanderInstance) || //
+				(creature instanceof L2SiegeFlagInstance) || (creature.getTemplate().getRace() == Race.SIEGE_WEAPON)));
 	}
 	
 	@Override
@@ -68,18 +62,35 @@ public final class Fear extends AbstractEffect
 	@Override
 	public boolean onActionTime(BuffInfo info)
 	{
-		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_AFRAID, info.getEffector(), false);
+		fearAction(null, info.getEffected());
 		return false;
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isCastingNow() && info.getEffected().canAbortCast())
+		effected.getAI().notifyEvent(CtrlEvent.EVT_AFRAID);
+		fearAction(effector, effected);
+	}
+	
+	@Override
+	public void onExit(BuffInfo info)
+	{
+		if (!info.getEffected().isPlayer())
 		{
-			info.getEffected().abortCast();
+			info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}
+	}
+	
+	private void fearAction(L2Character effector, L2Character effected)
+	{
+		final double radians = Math.toRadians((effector != null) ? Util.calculateAngleFrom(effector, effected) : Util.convertHeadingToDegree(effected.getHeading()));
 		
-		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_AFRAID, info.getEffector(), true);
+		final int posX = (int) (effected.getX() + (FEAR_RANGE * Math.cos(radians)));
+		final int posY = (int) (effected.getY() + (FEAR_RANGE * Math.sin(radians)));
+		final int posZ = effected.getZ();
+		
+		final Location destination = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), posX, posY, posZ, effected.getInstanceWorld());
+		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 	}
 }

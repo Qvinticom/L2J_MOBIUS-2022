@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,14 +24,14 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.util.Rnd;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * @author Mathael
  */
-public class LuckyGameData implements IXmlReader
+public class LuckyGameData implements IGameXmlReader
 {
 	private static final List<ItemHolder> _fortuneReadingTicketRewards = new ArrayList<>();
 	private static final List<ItemHolder> _luxuryFortuneReadingTicketRewards = new ArrayList<>();
@@ -48,7 +49,7 @@ public class LuckyGameData implements IXmlReader
 		_luxuryFortuneReadingTicketRewards.clear();
 		_rareLuxuryFortuneReadingTicketRewards.clear();
 		
-		parseDatapackFile("LuckyGameData.xml");
+		parseDatapackFile("data/LuckyGameData.xml");
 		
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _fortuneReadingTicketRewards.size() + " Normal item rewards.");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _luxuryFortuneReadingTicketRewards.size() + " Luxury item rewards.");
@@ -56,7 +57,7 @@ public class LuckyGameData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{

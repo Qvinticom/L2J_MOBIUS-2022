@@ -19,14 +19,16 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * ExShowScreenMessage server packet implementation.
  * @author Kerberos
  */
-public class ExShowScreenMessage extends L2GameServerPacket
+public class ExShowScreenMessage implements IClientOutgoingPacket
 {
 	private final int _type;
 	private final int _sysMessageId;
@@ -62,37 +64,13 @@ public class ExShowScreenMessage extends L2GameServerPacket
 		_sysMessageId = -1;
 		_unk1 = 0;
 		_unk2 = 0;
-		_unk3 = 1;
+		_unk3 = 0;
 		_fade = false;
 		_position = TOP_CENTER;
 		_text = text;
 		_time = time;
 		_size = 0;
 		_effect = false;
-		_npcString = -1;
-	}
-	
-	/**
-	 * Display a String on the screen for a given time.
-	 * @param text the text to display
-	 * @param time the display time
-	 * @param position the position on the screen
-	 * @param showEffect upper effect (false - disabled, true - enabled) - _position must be 2 (center) otherwise no effect
-	 */
-	
-	public ExShowScreenMessage(String text, int time, boolean showEffect, int position)
-	{
-		_type = 2;
-		_sysMessageId = -1;
-		_unk1 = 0;
-		_unk2 = 0;
-		_unk3 = 1;
-		_fade = false;
-		_position = TOP_CENTER;
-		_text = text;
-		_time = time;
-		_size = 0;
-		_effect = showEffect;
 		_npcString = -1;
 	}
 	
@@ -105,11 +83,11 @@ public class ExShowScreenMessage extends L2GameServerPacket
 	 */
 	public ExShowScreenMessage(NpcStringId npcString, int position, int time, String... params)
 	{
-		_type = 1;
+		_type = 2;
 		_sysMessageId = -1;
 		_unk1 = 0x00;
 		_unk2 = 0x00;
-		_unk3 = 0x01;
+		_unk3 = 0x00;
 		_fade = false;
 		_position = position;
 		_text = null;
@@ -132,11 +110,11 @@ public class ExShowScreenMessage extends L2GameServerPacket
 	 */
 	public ExShowScreenMessage(SystemMessageId systemMsg, int position, int time, String... params)
 	{
-		_type = 0;
+		_type = 2;
 		_sysMessageId = systemMsg.getId();
 		_unk1 = 0x00;
 		_unk2 = 0x00;
-		_unk3 = 0x01;
+		_unk3 = 0x00;
 		_fade = false;
 		_position = position;
 		_text = null;
@@ -144,6 +122,34 @@ public class ExShowScreenMessage extends L2GameServerPacket
 		_size = 0x00;
 		_effect = false;
 		_npcString = -1;
+		if (params != null)
+		{
+			addStringParameter(params);
+		}
+	}
+	
+	/**
+	 * Display a NPC String on the screen for a given position and time.
+	 * @param npcString the NPC String Id
+	 * @param position the position on the screen
+	 * @param time the display time
+	 * @param showEffect upper effect
+	 * @param params the String parameters
+	 */
+	public ExShowScreenMessage(NpcStringId npcString, int position, int time, boolean showEffect, String... params)
+	{
+		_type = 2;
+		_sysMessageId = -1;
+		_unk1 = 0x00;
+		_unk2 = 0x00;
+		_unk3 = 0x00;
+		_fade = false;
+		_position = position;
+		_text = null;
+		_time = time;
+		_size = 0x00;
+		_effect = showEffect;
+		_npcString = npcString.getId();
 		if (params != null)
 		{
 			addStringParameter(params);
@@ -199,38 +205,35 @@ public class ExShowScreenMessage extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x39);
-		writeD(_type);
-		writeD(_sysMessageId);
-		writeD(_position);
-		writeD(_unk1);
-		writeD(_size);
-		writeD(_unk2);
-		writeD(_unk3);
-		writeD(_effect ? 0x01 : 0x00);
-		writeD(_time);
-		writeD(_fade ? 0x01 : 0x00);
-		writeD(_npcString);
-		int exsize = 5;
+		OutgoingPackets.EX_SHOW_SCREEN_MESSAGE.writeId(packet);
+		
+		packet.writeD(_type);
+		packet.writeD(_sysMessageId);
+		packet.writeD(_position);
+		packet.writeD(_unk1);
+		packet.writeD(_size);
+		packet.writeD(_unk2);
+		packet.writeD(_unk3);
+		packet.writeD(_effect ? 0x01 : 0x00);
+		packet.writeD(_time);
+		packet.writeD(_fade ? 0x01 : 0x00);
+		packet.writeD(_npcString);
 		if (_npcString == -1)
 		{
-			writeS(_text);
-			exsize--;
+			packet.writeS(_text);
 		}
-		else if (_parameters != null)
+		else
 		{
-			for (String s : _parameters)
+			if (_parameters != null)
 			{
-				writeS(s);
-				exsize--;
+				for (String s : _parameters)
+				{
+					packet.writeS(s);
+				}
 			}
 		}
-		for (int i = 1; i < exsize; i++)
-		{
-			writeS("");
-		}
+		return true;
 	}
 }

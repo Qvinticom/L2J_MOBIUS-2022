@@ -27,8 +27,6 @@ public abstract class AbstractNodeLoc
 	
 	public abstract int getZ();
 	
-	public abstract void setZ(short z);
-	
 	public abstract int getNodeX();
 	
 	public abstract int getNodeY();

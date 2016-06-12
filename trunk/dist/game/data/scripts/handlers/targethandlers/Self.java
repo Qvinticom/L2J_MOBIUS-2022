@@ -20,25 +20,35 @@ import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
+import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
- * @author UnAfraid
+ * Target yourself.
+ * @author Nik
  */
 public class Self implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public Enum<TargetType> getTargetType()
 	{
-		return new L2Character[]
-		{
-			activeChar
-		};
+		return TargetType.SELF;
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public L2Object getTarget(L2Character activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		return L2TargetType.SELF;
+		if (activeChar.isInsideZone(ZoneId.PEACE) && skill.isBad())
+		{
+			if (sendMessage)
+			{
+				activeChar.sendPacket(SystemMessageId.A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE);
+			}
+			
+			return null;
+		}
+		return activeChar;
 	}
+	
 }

@@ -17,9 +17,8 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
@@ -33,17 +32,16 @@ public final class FakeDeath extends AbstractEffect
 {
 	private final double _power;
 	
-	public FakeDeath(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public FakeDeath(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_power = params.getDouble("power", 0);
+		setTicks(params.getInt("ticks"));
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public long getEffectFlags()
 	{
-		return L2EffectType.FAKE_DEATH;
+		return EffectFlag.FAKE_DEATH.getMask();
 	}
 	
 	@Override
@@ -55,10 +53,13 @@ public final class FakeDeath extends AbstractEffect
 		}
 		
 		final double manaDam = _power * getTicksMultiplier();
-		if ((manaDam > info.getEffected().getCurrentMp()) && info.getSkill().isToggle())
+		if (manaDam > info.getEffected().getCurrentMp())
 		{
-			info.getEffected().sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
-			return false;
+			if (info.getSkill().isToggle())
+			{
+				info.getEffected().sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
+				return false;
+			}
 		}
 		
 		info.getEffected().reduceCurrentMp(manaDam);
@@ -71,7 +72,6 @@ public final class FakeDeath extends AbstractEffect
 	{
 		if (info.getEffected().isPlayer())
 		{
-			info.getEffected().getActingPlayer().setIsFakeDeath(false);
 			info.getEffected().getActingPlayer().setRecentFakeDeath(true);
 		}
 		

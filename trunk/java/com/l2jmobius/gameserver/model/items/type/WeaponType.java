@@ -24,23 +24,24 @@ import com.l2jmobius.gameserver.model.stats.TraitType;
  */
 public enum WeaponType implements ItemType
 {
+	NONE(TraitType.NONE),
 	SWORD(TraitType.SWORD),
 	BLUNT(TraitType.BLUNT),
 	DAGGER(TraitType.DAGGER),
-	BOW(TraitType.BOW),
 	POLE(TraitType.POLE),
-	NONE(TraitType.NONE),
-	DUAL(TraitType.DUAL),
-	ETC(TraitType.ETC),
-	FIST(TraitType.FIST),
 	DUALFIST(TraitType.DUALFIST),
+	BOW(TraitType.BOW),
+	ETC(TraitType.ETC),
+	DUAL(TraitType.DUAL),
+	FIST(TraitType.FIST), // 0 items with that type
 	FISHINGROD(TraitType.NONE),
 	RAPIER(TraitType.RAPIER),
-	ANCIENTSWORD(TraitType.ANCIENTSWORD),
 	CROSSBOW(TraitType.CROSSBOW),
-	FLAG(TraitType.NONE),
-	OWNTHING(TraitType.NONE),
+	ANCIENTSWORD(TraitType.ANCIENTSWORD),
+	FLAG(TraitType.NONE), // 0 items with that type
 	DUALDAGGER(TraitType.DUALDAGGER),
+	OWNTHING(TraitType.NONE), // 0 items with that type
+	TWOHANDCROSSBOW(TraitType.TWOHANDCROSSBOW),
 	DUALBLUNT(TraitType.DUALBLUNT);
 	
 	private final int _mask;
@@ -50,7 +51,7 @@ public enum WeaponType implements ItemType
 	 * Constructor of the L2WeaponType.
 	 * @param traitType
 	 */
-	private WeaponType(TraitType traitType)
+	WeaponType(TraitType traitType)
 	{
 		_mask = 1 << ordinal();
 		_traitType = traitType;
@@ -71,5 +72,20 @@ public enum WeaponType implements ItemType
 	public TraitType getTraitType()
 	{
 		return _traitType;
+	}
+	
+	public boolean isRanged()
+	{
+		return (this == BOW) || (this == CROSSBOW) || (this == TWOHANDCROSSBOW);
+	}
+	
+	public boolean isCrossbow()
+	{
+		return (this == CROSSBOW) || (this == TWOHANDCROSSBOW);
+	}
+	
+	public boolean isDual()
+	{
+		return (this == DUALFIST) || (this == DUAL) || (this == DUALDAGGER) || (this == DUALBLUNT);
 	}
 }

@@ -18,10 +18,10 @@ package custom.events.Rabbits;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -29,14 +29,13 @@ import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Event;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.Broadcast;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Rabbits event.<br>
  * Chests are hidden at Fantasy Isle and players must use the Rabbit transformation's skills to find and open them.
  * @author Gnacik, Zoey76
  */
-final class Rabbits extends Event
+public final class Rabbits extends Event
 {
 	// NPCs
 	private static final int NPC_MANAGER = 900101;
@@ -50,7 +49,7 @@ final class Rabbits extends Event
 	private static final int EVENT_TIME = 10;
 	private static final int TOTAL_CHEST_COUNT = 75;
 	private static final int TRANSFORMATION_ID = 105;
-	private final Set<L2Npc> _npcs = ConcurrentHashMap.newKeySet(TOTAL_CHEST_COUNT + 1);
+	private final List<L2Npc> _npcs = new CopyOnWriteArrayList<>();
 	private final List<L2PcInstance> _players = new ArrayList<>();
 	private boolean _isActive = false;
 	
@@ -76,7 +75,6 @@ final class Rabbits extends Event
 	
 	private Rabbits()
 	{
-		super(Rabbits.class.getSimpleName(), "custom/events");
 		addFirstTalkId(NPC_MANAGER, CHEST);
 		addTalkId(NPC_MANAGER);
 		addStartNpc(NPC_MANAGER);
@@ -116,7 +114,7 @@ final class Rabbits extends Event
 		// Announce event start
 		Broadcast.toAllOnlinePlayers("Rabbits Event: Chests spawned!");
 		Broadcast.toAllOnlinePlayers("Rabbits Event: Go to Fantasy Isle and grab some rewards!");
-		Broadcast.toAllOnlinePlayers("Rabbits Event: You have " + EVENT_TIME + " minutes!");
+		Broadcast.toAllOnlinePlayers("Rabbits Event: You have " + EVENT_TIME + " minuntes!");
 		Broadcast.toAllOnlinePlayers("Rabbits Event: After that time all chests will disappear...");
 		// Schedule event end
 		startQuestTimer("END_RABBITS_EVENT", EVENT_TIME * 60000, null, eventMaker);
@@ -141,13 +139,16 @@ final class Rabbits extends Event
 		// Despawn NPCs
 		for (L2Npc npc : _npcs)
 		{
-			npc.deleteMe();
+			if (npc != null)
+			{
+				npc.deleteMe();
+			}
 		}
 		_npcs.clear();
 		
 		for (L2PcInstance player : _players)
 		{
-			if (player.getTransformationId() == TRANSFORMATION_ID)
+			if ((player != null) && (player.getTransformationId() == TRANSFORMATION_ID))
 			{
 				player.untransform();
 			}
@@ -173,7 +174,7 @@ final class Rabbits extends Event
 			}
 			case "transform":
 			{
-				if (player.isTransformed() || player.isInStance())
+				if (player.isTransformed())
 				{
 					player.untransform();
 				}
@@ -203,13 +204,13 @@ final class Rabbits extends Event
 	{
 		if (skill.getId() == RABBIT_TORNADO.getSkillId())
 		{
-			if (!npc.isInvisible() && Util.contains(targets, npc))
+			if (!npc.isInvisible() && CommonUtil.contains(targets, npc))
 			{
 				dropItem(npc, caster, DROPLIST);
 				npc.deleteMe();
 				_npcs.remove(npc);
 				
-				if (_npcs.isEmpty())
+				if (_npcs.size() <= 1)
 				{
 					Broadcast.toAllOnlinePlayers("Rabbits Event: No more chests...");
 					eventStop();
@@ -249,7 +250,7 @@ final class Rabbits extends Event
 		}
 	}
 	
-	private static void recordSpawn(Set<L2Npc> npcs, int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
+	private static void recordSpawn(List<L2Npc> npcs, int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
 	{
 		final L2Npc npc = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
 		if (npc.getId() == CHEST)

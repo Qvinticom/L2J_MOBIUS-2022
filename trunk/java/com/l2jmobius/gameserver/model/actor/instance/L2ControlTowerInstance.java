@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 
 import com.l2jmobius.gameserver.enums.InstanceType;
@@ -31,12 +31,8 @@ import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
  */
 public class L2ControlTowerInstance extends L2Tower
 {
-	private volatile List<L2Spawn> _guards = new CopyOnWriteArrayList<>();
+	private volatile Set<L2Spawn> _guards;
 	
-	/**
-	 * Creates a control tower.
-	 * @param template the control tower NPC template
-	 */
 	public L2ControlTowerInstance(L2NpcTemplate template)
 	{
 		super(template);
@@ -50,19 +46,26 @@ public class L2ControlTowerInstance extends L2Tower
 		{
 			getCastle().getSiege().killedCT(this);
 			
-			for (L2Spawn spawn : _guards)
+			if ((_guards != null) && !_guards.isEmpty())
 			{
-				try
+				for (L2Spawn spawn : _guards)
 				{
-					spawn.stopRespawn();
-					// spawn.getLastSpawn().doDie(spawn.getLastSpawn());
+					if (spawn == null)
+					{
+						continue;
+					}
+					try
+					{
+						spawn.stopRespawn();
+						// spawn.getLastSpawn().doDie(spawn.getLastSpawn());
+					}
+					catch (Exception e)
+					{
+						_log.log(Level.WARNING, "Error at L2ControlTowerInstance", e);
+					}
 				}
-				catch (Exception e)
-				{
-					_log.log(Level.WARNING, "Error at L2ControlTowerInstance", e);
-				}
+				_guards.clear();
 			}
-			_guards.clear();
 		}
 		return super.doDie(killer);
 	}
@@ -72,8 +75,18 @@ public class L2ControlTowerInstance extends L2Tower
 		getGuards().add(guard);
 	}
 	
-	private final List<L2Spawn> getGuards()
+	private Set<L2Spawn> getGuards()
 	{
+		if (_guards == null)
+		{
+			synchronized (this)
+			{
+				if (_guards == null)
+				{
+					_guards = ConcurrentHashMap.newKeySet();
+				}
+			}
+		}
 		return _guards;
 	}
 }

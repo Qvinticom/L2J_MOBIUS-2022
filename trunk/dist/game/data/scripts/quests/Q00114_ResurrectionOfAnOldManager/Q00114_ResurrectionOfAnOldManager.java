@@ -31,8 +31,7 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import quests.Q00121_PavelTheGiant.Q00121_PavelTheGiant;
 
 /**
- * Resurrection of an Old Manager (114)<br>
- * Original Jython script by Kerberos
+ * Resurrection of an Old Manager (114)
  * @author malyelfik
  */
 public class Q00114_ResurrectionOfAnOldManager extends Quest
@@ -56,7 +55,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	
 	public Q00114_ResurrectionOfAnOldManager()
 	{
-		super(114, Q00114_ResurrectionOfAnOldManager.class.getSimpleName(), "Resurrection of an Old Manager");
+		super(114);
 		addStartNpc(YUMI);
 		addTalkId(YUMI, WENDY, BOX, STONES, NEWYEAR);
 		addKillId(GUARDIAN);

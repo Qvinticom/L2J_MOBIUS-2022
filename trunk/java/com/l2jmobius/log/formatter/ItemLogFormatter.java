@@ -22,8 +22,8 @@ import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.StringUtil;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * @author Advi

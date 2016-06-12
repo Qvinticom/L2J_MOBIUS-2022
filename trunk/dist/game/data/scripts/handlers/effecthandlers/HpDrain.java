@@ -19,10 +19,10 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 
 /**
@@ -32,12 +32,12 @@ import com.l2jmobius.gameserver.model.stats.Formulas;
 public final class HpDrain extends AbstractEffect
 {
 	private final double _power;
+	private final double _percentage;
 	
-	public HpDrain(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public HpDrain(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_power = params.getDouble("power", 0);
+		_percentage = params.getDouble("percentage", 0);
 	}
 	
 	@Override
@@ -53,26 +53,22 @@ public final class HpDrain extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
-		
 		// TODO: Unhardcode Cubic Skill to avoid double damage
-		if (activeChar.isAlikeDead() || (info.getSkill().getId() == 4050))
+		if (effector.isAlikeDead() || (skill.getId() == 4050))
 		{
 			return;
 		}
 		
-		final boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-		final boolean bss = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill()));
-		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
-		final int damage = (int) Formulas.calcMagicDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
+		final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
+		final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
+		final double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), _power, effected.getMDef(), sps, bss, mcrit);
 		
-		int drain = 0;
-		final int cp = (int) target.getCurrentCp();
-		final int hp = (int) target.getCurrentHp();
+		double drain = 0;
+		final int cp = (int) effected.getCurrentCp();
+		final int hp = (int) effected.getCurrentHp();
 		
 		if (cp > 0)
 		{
@@ -87,21 +83,20 @@ public final class HpDrain extends AbstractEffect
 			drain = damage;
 		}
 		
-		final double hpAdd = _power * drain;
-		final double hpFinal = (activeChar.getCurrentHp() + hpAdd) > activeChar.getMaxHp() ? activeChar.getMaxHp() : (activeChar.getCurrentHp() + hpAdd);
-		activeChar.setCurrentHp(hpFinal);
+		final double hpAdd = ((_percentage / 100) * drain);
+		final double hpFinal = ((effector.getCurrentHp() + hpAdd) > effector.getMaxHp() ? effector.getMaxHp() : (effector.getCurrentHp() + hpAdd));
+		effector.setCurrentHp(hpFinal);
 		
 		if (damage > 0)
 		{
 			// Manage attack or cast break of the target (calculating rate, sending message...)
-			if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
+			if (!effected.isRaid() && Formulas.calcAtkBreak(effected, damage))
 			{
-				target.breakAttack();
-				target.breakCast();
+				effected.breakAttack();
+				effected.breakCast();
 			}
-			activeChar.sendDamageMessage(target, damage, mcrit, false, false);
-			target.reduceCurrentHp(damage, activeChar, info.getSkill());
-			target.notifyDamageReceived(damage, activeChar, info.getSkill(), mcrit, false);
+			effected.reduceCurrentHp(damage, effector, skill, false, false, mcrit, false);
+			effector.sendDamageMessage(effected, skill, (int) damage, mcrit, false);
 		}
 	}
 }

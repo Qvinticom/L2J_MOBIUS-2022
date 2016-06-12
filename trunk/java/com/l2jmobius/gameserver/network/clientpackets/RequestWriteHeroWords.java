@@ -16,40 +16,40 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Hero;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * Format chS c (id) 0xD0 h (subid) 0x0C S the hero's words :)
  * @author -Wooden-
  */
-public final class RequestWriteHeroWords extends L2GameClientPacket
+public final class RequestWriteHeroWords implements IClientIncomingPacket
 {
-	private static final String _C__D0_05_REQUESTWRITEHEROWORDS = "[C] D0:05 RequestWriteHeroWords";
-	
 	private String _heroWords;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_heroWords = readS();
+		_heroWords = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
-		if ((player == null) || !player.isHero() || (_heroWords == null) || (_heroWords.length() > 300))
+		final L2PcInstance player = client.getActiveChar();
+		if ((player == null) || !player.isHero())
+		{
+			return;
+		}
+		
+		if ((_heroWords == null) || (_heroWords.length() > 300))
 		{
 			return;
 		}
 		
 		Hero.getInstance().setHeroMessage(player, _heroWords);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_05_REQUESTWRITEHEROWORDS;
 	}
 }

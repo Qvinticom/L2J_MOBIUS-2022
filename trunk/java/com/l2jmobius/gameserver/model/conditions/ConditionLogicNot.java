@@ -44,7 +44,14 @@ public class ConditionLogicNot extends Condition
 	@Override
 	void setListener(ConditionListener listener)
 	{
-		_condition.setListener(listener != null ? this : null);
+		if (listener != null)
+		{
+			_condition.setListener(this);
+		}
+		else
+		{
+			_condition.setListener(null);
+		}
 		super.setListener(listener);
 	}
 	

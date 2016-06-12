@@ -22,13 +22,15 @@ package com.l2jmobius.gameserver.enums;
 public enum PlayerAction
 {
 	ADMIN_COMMAND,
-	USER_ENGAGE;
+	ADMIN_POINT_PICKING,
+	ADMIN_SHOW_TERRITORY,
+	MERCENARY_CONFIRM;
 	
 	private final int _mask;
 	
 	private PlayerAction()
 	{
-		_mask = 1 << ordinal();
+		_mask = (1 << ordinal());
 	}
 	
 	public int getMask()

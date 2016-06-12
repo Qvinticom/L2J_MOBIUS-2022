@@ -16,11 +16,13 @@
  */
 package quests.Q10294_SevenSignsToTheMonasteryOfSilence;
 
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
 
 import quests.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom;
 
@@ -84,7 +86,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 	
 	public Q10294_SevenSignsToTheMonasteryOfSilence()
 	{
-		super(10294, Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName(), "Seven Signs, To the Monastery of Silence");
+		super(10294);
 		addFirstTalkId(ELCADIA_INSTANCE);
 		addStartNpc(ELCADIA, ODD_GLOBE, ELCADIA_INSTANCE, RELIC_GUARDIAN);
 		addTalkId(ELCADIA, ELCADIA_INSTANCE, ERIS_EVIL_THOUGHTS, RELIC_GUARDIAN, ODD_GLOBE, READING_DESK1, READING_DESK2, READING_DESK3, READING_DESK4, READING_DESK5, READING_DESK6, READING_DESK7, READING_DESK8, READING_DESK9, READING_DESK10, READING_DESK11, READING_DESK12, READING_DESK13, READING_DESK14, READING_DESK15, READING_DESK16, JUDE_VAN_ETINA, SOLINAS_EVIL_THOUGHTS, RELIC_WATCHER1, RELIC_WATCHER2, RELIC_WATCHER3, RELIC_WATCHER4);
@@ -193,14 +195,14 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 				{
 					for (SkillHolder skill : MAGE_BUFFS)
 					{
-						npc.doSimultaneousCast(skill.getSkill());
+						SkillCaster.triggerCast(npc, npc, skill.getSkill());
 					}
 				}
 				else
 				{
 					for (SkillHolder skill : WARRIOR_BUFFS)
 					{
-						npc.doSimultaneousCast(skill.getSkill());
+						SkillCaster.triggerCast(npc, npc, skill.getSkill());
 					}
 				}
 				break;
@@ -213,7 +215,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 				htmltext = "32821-02.html";
 				if (hasCheckedAllRightBooks(qs))
 				{
-					player.showQuestMovie(25);
+					playMovie(player, Movie.SSQ2_HOLY_BURIAL_GROUND_CLOSING);
 				}
 				break;
 			}
@@ -226,7 +228,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 				htmltext = "32821-02.html";
 				if (hasCheckedAllRightBooks(qs))
 				{
-					player.showQuestMovie(25);
+					playMovie(player, Movie.SSQ2_HOLY_BURIAL_GROUND_CLOSING);
 				}
 				break;
 			}
@@ -240,7 +242,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 				htmltext = "32821-02.html";
 				if (hasCheckedAllRightBooks(qs))
 				{
-					player.showQuestMovie(25);
+					playMovie(player, Movie.SSQ2_HOLY_BURIAL_GROUND_CLOSING);
 				}
 				break;
 			}
@@ -254,28 +256,28 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 				htmltext = "32821-02.html";
 				if (hasCheckedAllRightBooks(qs))
 				{
-					player.showQuestMovie(25);
+					playMovie(player, Movie.SSQ2_HOLY_BURIAL_GROUND_CLOSING);
 				}
 				break;
 			}
 			case "DONE1":
 			{
-				htmltext = (qs.getInt("good1") == 1) ? "32804-05.html" : "32804-03.html";
+				htmltext = ((qs.getInt("good1") == 1) ? "32804-05.html" : "32804-03.html");
 				break;
 			}
 			case "DONE2":
 			{
-				htmltext = (qs.getInt("good2") == 1) ? "32805-05.html" : "32805-03.html";
+				htmltext = ((qs.getInt("good2") == 1) ? "32805-05.html" : "32805-03.html");
 				break;
 			}
 			case "DONE3":
 			{
-				htmltext = (qs.getInt("good3") == 1) ? "32806-05.html" : "32806-03.html";
+				htmltext = ((qs.getInt("good3") == 1) ? "32806-05.html" : "32806-03.html");
 				break;
 			}
 			case "DONE4":
 			{
-				htmltext = (qs.getInt("good4") == 1) ? "32807-05.html" : "32807-03.html";
+				htmltext = ((qs.getInt("good4") == 1) ? "32807-05.html" : "32807-03.html");
 				break;
 			}
 			case "SPAWN_MOBS":
@@ -312,11 +314,14 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 				else if (qs.isCreated())
 				{
 					qs = player.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted()) ? "32784-01.htm" : "32784-07.htm";
+					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && (qs.isCompleted())) ? "32784-01.htm" : "32784-07.htm";
 				}
-				else if (qs.isStarted() && qs.isCond(1))
+				else if (qs.isStarted())
 				{
-					htmltext = "32784-06.html";
+					if (qs.isCond(1))
+					{
+						htmltext = "32784-06.html";
+					}
 				}
 				break;
 			}
@@ -336,7 +341,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 					}
 					case 3:
 					{
-						htmltext = player.isSubClassActive() ? "32792-09.html" : "32792-07.html";
+						htmltext = ((player.isSubClassActive()) ? "32792-09.html" : "32792-07.html");
 						break;
 					}
 				}
@@ -403,22 +408,22 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 			}
 			case READING_DESK1:
 			{
-				htmltext = (qs.getInt("good1") == 1) ? "32821-03.html" : "32821-01.html";
+				htmltext = ((qs.getInt("good1") == 1) ? "32821-03.html" : "32821-01.html");
 				break;
 			}
 			case READING_DESK5:
 			{
-				htmltext = (qs.getInt("good2") == 1) ? "32821-03.html" : "32825-01.html";
+				htmltext = ((qs.getInt("good2") == 1) ? "32821-03.html" : "32825-01.html");
 				break;
 			}
 			case READING_DESK9:
 			{
-				htmltext = (qs.getInt("good3") == 1) ? "32821-03.html" : "32829-01.html";
+				htmltext = ((qs.getInt("good3") == 1) ? "32821-03.html" : "32829-01.html");
 				break;
 			}
 			case READING_DESK13:
 			{
-				htmltext = (qs.getInt("good4") == 1) ? "32821-03.html" : "32833-01.html";
+				htmltext = ((qs.getInt("good4") == 1) ? "32821-03.html" : "32833-01.html");
 				break;
 			}
 			case SOLINAS_EVIL_THOUGHTS:
@@ -438,8 +443,8 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 		return htmltext;
 	}
 	
-	private boolean hasCheckedAllRightBooks(QuestState qs)
+	public boolean hasCheckedAllRightBooks(QuestState qs)
 	{
-		return (qs.getInt("good1") == 1) && (qs.getInt("good2") == 1) && (qs.getInt("good3") == 1) && (qs.getInt("good4") == 1);
+		return ((qs.getInt("good1") == 1) && (qs.getInt("good2") == 1) && (qs.getInt("good3") == 1) && (qs.getInt("good4") == 1));
 	}
 }

@@ -16,23 +16,24 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.util.data.xml.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 
 /**
- * Karma data.
  * @author UnAfraid
  */
-public class KarmaData implements IXmlReader
+public class KarmaData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(KarmaData.class.getName());
+	
 	private final Map<Integer, Double> _karmaTable = new HashMap<>();
 	
 	public KarmaData()
@@ -44,12 +45,12 @@ public class KarmaData implements IXmlReader
 	public synchronized void load()
 	{
 		_karmaTable.clear();
-		parseDatapackFile("stats/chars/pcKarmaIncrease.xml");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _karmaTable.size() + " karma modifiers.");
+		parseDatapackFile("data/stats/chars/pcKarmaIncrease.xml");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _karmaTable.size() + " karma modifiers.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
@@ -60,12 +61,7 @@ public class KarmaData implements IXmlReader
 					if ("increase".equalsIgnoreCase(d.getNodeName()))
 					{
 						final NamedNodeMap attrs = d.getAttributes();
-						final int level = parseInteger(attrs, "lvl");
-						if (level >= Config.PLAYER_MAXIMUM_LEVEL)
-						{
-							break;
-						}
-						_karmaTable.put(level, parseDouble(attrs, "val"));
+						_karmaTable.put(parseInteger(attrs, "lvl"), parseDouble(attrs, "val"));
 					}
 				}
 			}

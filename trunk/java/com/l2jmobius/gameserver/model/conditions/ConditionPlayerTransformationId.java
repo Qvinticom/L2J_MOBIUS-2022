@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.model.conditions;
 
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -42,7 +41,6 @@ public class ConditionPlayerTransformationId extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		final L2PcInstance player = effector.getActingPlayer();
-		return (player != null) && (_id == -1 ? player.isTransformed() : player.getTransformationId() == _id);
+		return _id == -1 ? effector.isTransformed() : effector.getTransformationId() == _id;
 	}
 }

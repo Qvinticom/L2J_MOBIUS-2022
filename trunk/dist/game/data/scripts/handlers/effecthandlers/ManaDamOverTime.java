@@ -17,7 +17,6 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -29,11 +28,10 @@ public final class ManaDamOverTime extends AbstractEffect
 {
 	private final double _power;
 	
-	public ManaDamOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public ManaDamOverTime(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_power = params.getDouble("power", 0);
+		setTicks(params.getInt("ticks"));
 	}
 	
 	@Override

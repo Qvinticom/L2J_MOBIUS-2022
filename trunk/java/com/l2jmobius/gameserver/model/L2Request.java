@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -34,7 +34,7 @@ public class L2Request
 	protected L2PcInstance _partner;
 	protected boolean _isRequestor;
 	protected boolean _isAnswerer;
-	protected L2GameClientPacket _requestPacket;
+	protected IClientIncomingPacket _requestPacket;
 	
 	public L2Request(L2PcInstance player)
 	{
@@ -70,7 +70,7 @@ public class L2Request
 	 * Set the packet incomed from requester.
 	 * @param packet
 	 */
-	private synchronized void setRequestPacket(L2GameClientPacket packet)
+	private synchronized void setRequestPacket(IClientIncomingPacket packet)
 	{
 		_requestPacket = packet;
 	}
@@ -79,7 +79,7 @@ public class L2Request
 	 * Return the packet originally incomed from requester.
 	 * @return
 	 */
-	public L2GameClientPacket getRequestPacket()
+	public IClientIncomingPacket getRequestPacket()
 	{
 		return _requestPacket;
 	}
@@ -90,7 +90,7 @@ public class L2Request
 	 * @param packet
 	 * @return
 	 */
-	public synchronized boolean setRequest(L2PcInstance partner, L2GameClientPacket packet)
+	public synchronized boolean setRequest(L2PcInstance partner, IClientIncomingPacket packet)
 	{
 		if (partner == null)
 		{

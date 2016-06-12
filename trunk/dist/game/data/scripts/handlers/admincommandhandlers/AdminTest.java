@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;

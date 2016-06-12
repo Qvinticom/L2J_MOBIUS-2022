@@ -16,41 +16,28 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * @version 1.4
  */
-public final class RequestSkillList extends L2GameClientPacket
+public final class RequestSkillList implements IClientIncomingPacket
 {
-	private static final String _C__50_REQUESTSKILLLIST = "[C] 50 RequestSkillList";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// Trigger skill.
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance cha = getClient().getActiveChar();
-		
+		final L2PcInstance cha = client.getActiveChar();
 		if (cha != null)
 		{
 			cha.sendSkillList();
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__50_REQUESTSKILLLIST;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

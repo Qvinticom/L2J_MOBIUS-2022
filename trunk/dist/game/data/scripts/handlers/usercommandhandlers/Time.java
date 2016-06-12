@@ -62,13 +62,15 @@ public class Time implements IUserCommandHandler
 		if (GameTimeController.getInstance().isNight())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CURRENT_TIME_IS_S1_S22);
+			sm.addString(h);
+			sm.addString(m);
 		}
 		else
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CURRENT_TIME_IS_S1_S2);
+			sm.addString(h);
+			sm.addString(m);
 		}
-		sm.addString(h);
-		sm.addString(m);
 		activeChar.sendPacket(sm);
 		if (Config.L2JMOD_DISPLAY_SERVER_TIME)
 		{

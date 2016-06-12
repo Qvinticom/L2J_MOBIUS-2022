@@ -41,13 +41,13 @@ import javax.crypto.Cipher;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.commons.util.crypt.ScrambledKeyPair;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import com.l2jmobius.loginserver.model.data.AccountInfo;
 import com.l2jmobius.loginserver.network.L2LoginClient;
 import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
-import com.l2jmobius.util.Rnd;
-import com.l2jmobius.util.crypt.ScrambledKeyPair;
 
 public class LoginController
 {
@@ -115,7 +115,9 @@ public class LoginController
 	 */
 	private void testCipher(RSAPrivateKey key) throws GeneralSecurityException
 	{
-		Cipher.getInstance("RSA/ECB/nopadding").init(Cipher.DECRYPT_MODE, key);
+		// avoid worst-case execution, KenM
+		final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
+		rsaCipher.init(Cipher.DECRYPT_MODE, key);
 	}
 	
 	private void generateBlowFishKeys()
@@ -176,13 +178,13 @@ public class LoginController
 		synchronized (_failedLoginAttemps)
 		{
 			failedLoginAttemps = _failedLoginAttemps.get(addr);
-			if (failedLoginAttemps != null)
+			if (failedLoginAttemps == null)
 			{
-				++failedLoginAttemps;
+				failedLoginAttemps = 1;
 			}
 			else
 			{
-				failedLoginAttemps = 1;
+				++failedLoginAttemps;
 			}
 			
 			_failedLoginAttemps.put(addr, failedLoginAttemps);
@@ -224,7 +226,7 @@ public class LoginController
 					{
 						if (Config.DEBUG)
 						{
-							_log.fine("Account '" + login + "' exists.");
+							_log.finer("Account '" + login + "' exists.");
 						}
 						
 						final AccountInfo info = new AccountInfo(rset.getString("login"), rset.getString("password"), rset.getInt("accessLevel"), rset.getInt("lastServer"));
@@ -334,28 +336,32 @@ public class LoginController
 		_bannedIps.putIfAbsent(address, System.currentTimeMillis() + duration);
 	}
 	
-	public boolean isBannedAddress(InetAddress address) throws UnknownHostException
+	public boolean isBannedAddress(InetAddress address)
 	{
 		final String[] parts = address.getHostAddress().split("\\.");
-		Long bi = _bannedIps.get(address) == null ? _bannedIps.get(InetAddress.getByName(parts[0] + "." + parts[1] + "." + parts[2] + ".0")) : _bannedIps.get(address);
+		Long bi = _bannedIps.get(address);
 		if (bi == null)
 		{
-			bi = _bannedIps.get(InetAddress.getByName(parts[0] + "." + parts[1] + ".0.0"));
+			bi = _bannedIps.get(parts[0] + "." + parts[1] + "." + parts[2] + ".0");
 		}
 		if (bi == null)
 		{
-			bi = _bannedIps.get(InetAddress.getByName(parts[0] + ".0.0.0"));
+			bi = _bannedIps.get(parts[0] + "." + parts[1] + ".0.0");
 		}
 		if (bi == null)
 		{
-			return false;
+			bi = _bannedIps.get(parts[0] + ".0.0.0");
 		}
-		if ((bi <= 0) || (bi >= System.currentTimeMillis()))
+		if (bi != null)
 		{
+			if ((bi > 0) && (bi < System.currentTimeMillis()))
+			{
+				_bannedIps.remove(address);
+				_log.info("Removed expired ip address ban " + address.getHostAddress() + ".");
+				return false;
+			}
 			return true;
 		}
-		_bannedIps.remove(address);
-		_log.info("Removed expired ip address ban " + address.getHostAddress() + ".");
 		return false;
 	}
 	
@@ -371,7 +377,7 @@ public class LoginController
 	 */
 	public boolean removeBanForAddress(InetAddress address)
 	{
-		return _bannedIps.remove(address) != null;
+		return _bannedIps.remove(address.getHostAddress()) != null;
 	}
 	
 	/**
@@ -394,7 +400,11 @@ public class LoginController
 	public SessionKey getKeyForAccount(String account)
 	{
 		final L2LoginClient client = _loginServerClients.get(account);
-		return client != null ? client.getSessionKey() : null;
+		if (client != null)
+		{
+			return client.getSessionKey();
+		}
+		return null;
 	}
 	
 	public boolean isAccountInAnyGameServer(String account)
@@ -445,28 +455,27 @@ public class LoginController
 	{
 		final GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(serverId);
 		final int access = client.getAccessLevel();
-		if ((gsi == null) || !gsi.isAuthed())
+		if ((gsi != null) && gsi.isAuthed())
 		{
-			return false;
-		}
-		
-		final boolean loginOk = ((gsi.getCurrentPlayerCount() < gsi.getMaxPlayers()) && (gsi.getStatus() != ServerStatus.STATUS_GM_ONLY)) || (access > 0);
-		
-		if (loginOk && (client.getLastServer() != serverId))
-		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement ps = con.prepareStatement(ACCOUNT_LAST_SERVER_UPDATE))
+			final boolean loginOk = ((gsi.getCurrentPlayerCount() < gsi.getMaxPlayers()) && (gsi.getStatus() != ServerStatus.STATUS_GM_ONLY)) || (access > 0);
+			
+			if (loginOk && (client.getLastServer() != serverId))
 			{
-				ps.setInt(1, serverId);
-				ps.setString(2, client.getAccount());
-				ps.executeUpdate();
+				try (Connection con = DatabaseFactory.getInstance().getConnection();
+					PreparedStatement ps = con.prepareStatement(ACCOUNT_LAST_SERVER_UPDATE))
+				{
+					ps.setInt(1, serverId);
+					ps.setString(2, client.getAccount());
+					ps.executeUpdate();
+				}
+				catch (Exception e)
+				{
+					_log.log(Level.WARNING, "Could not set lastServer: " + e.getMessage(), e);
+				}
 			}
-			catch (Exception e)
-			{
-				_log.log(Level.WARNING, "Could not set lastServer: " + e.getMessage(), e);
-			}
+			return loginOk;
 		}
-		return loginOk;
+		return false;
 	}
 	
 	public void setAccountAccessLevel(String account, int banLevel)
@@ -685,7 +694,7 @@ public class LoginController
 		}
 	}
 	
-	public static enum AuthLoginResult
+	public enum AuthLoginResult
 	{
 		INVALID_PASSWORD,
 		ACCOUNT_BANNED,

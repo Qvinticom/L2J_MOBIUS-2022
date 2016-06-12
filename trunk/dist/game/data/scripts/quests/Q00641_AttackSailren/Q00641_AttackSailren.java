@@ -49,7 +49,7 @@ public class Q00641_AttackSailren extends Quest
 	
 	public Q00641_AttackSailren()
 	{
-		super(641, Q00641_AttackSailren.class.getSimpleName(), "Attack Sailren!");
+		super(641);
 		addStartNpc(SHILENS_STONE_STATUE);
 		addTalkId(SHILENS_STONE_STATUE);
 		addKillId(MOBS);

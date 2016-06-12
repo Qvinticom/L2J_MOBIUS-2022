@@ -18,8 +18,9 @@ package events.GiftOfVitality;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.event.LongTimeEvent;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -27,7 +28,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Gift of Vitality event AI.
  * @author Gnacik, Adry_85
  */
-final class GiftOfVitality extends LongTimeEvent
+public final class GiftOfVitality extends LongTimeEvent
 {
 	// NPC
 	private static final int STEVE_SHYAGEL = 4306;
@@ -79,7 +80,6 @@ final class GiftOfVitality extends LongTimeEvent
 	
 	private GiftOfVitality()
 	{
-		super(GiftOfVitality.class.getSimpleName(), "events");
 		addStartNpc(STEVE_SHYAGEL);
 		addFirstTalkId(STEVE_SHYAGEL);
 		addTalkId(STEVE_SHYAGEL);
@@ -108,8 +108,8 @@ final class GiftOfVitality extends LongTimeEvent
 				}
 				else
 				{
-					player.doCast(GIFT_OF_VITALITY.getSkill());
-					player.doSimultaneousCast(JOY_OF_VITALITY.getSkill());
+					SkillCaster.triggerCast(player, player, GIFT_OF_VITALITY.getSkill());
+					SkillCaster.triggerCast(player, player, JOY_OF_VITALITY.getSkill());
 					player.getVariables().set(REUSE, System.currentTimeMillis() + (HOURS * 3600000));
 					htmltext = "4306-okvitality.htm";
 				}
@@ -123,7 +123,7 @@ final class GiftOfVitality extends LongTimeEvent
 				}
 				else
 				{
-					final SkillHolder[] skills = player.isMageClass() ? MAGE_SKILLS : FIGHTER_SKILLS;
+					final SkillHolder[] skills = (player.isMageClass()) ? MAGE_SKILLS : FIGHTER_SKILLS;
 					npc.setTarget(player);
 					for (SkillHolder sk : skills)
 					{

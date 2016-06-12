@@ -105,6 +105,12 @@
 		<node X="-237600" Y="221168" />
 		<node X="-253900" Y="204849" />
 	</zone>
+	<zone name="sod_tiat_video" id="60010" type="ScriptZone" shape="NPoly" minZ="-12000" maxZ="-11750">
+		<node Y="211566" X="-250954"/>
+		<node Y="211773" X="-250966"/>
+		<node Y="211779" X="-251142"/>
+		<node Y="211559" X="-251125"/>
+	</zone>
 	<!-- Custom zones for Tully Workshop 6th and 8th floors spawn control -->
 	<!-- Tully Workshop 6th floor room 1 -->
 	<zone name="tully_workshop_floor_6th_room_1" id="200012" type="ScriptZone" shape="NPoly" minZ="-13640" maxZ="-13440">
@@ -245,35 +251,323 @@
 		<node X="-114536" Y="257336" />
 		<node X="-114520" Y="257496" />
 	</zone>
-	<zone name="talking_island_dark_knight" id="33751" type="ScriptZone" shape="NPoly" minZ="-3755" maxZ="-3685">
-		<node X="209431" Y="15217" />
-		<node X="209336" Y="15536" />
-		<node X="210171" Y="16373" />
-		<node X="210005" Y="16484" />
-		<node X="207353" Y="13443" />
-		<node X="210664" Y="10363" />
-		<node X="212533" Y="12276" />
-		<node X="213840" Y="13987" />
-		<node X="210597" Y="16835" />
-		<node X="210049" Y="16529" />
-	</zone>
-	<zone name="ye_sagira_ruins_movie_zone" id="10361" type="ScriptZone" shape="NPoly" minZ="-1700" maxZ="-1637">
-		<node X="-115086" Y="230896" />
-		<node X="-115448" Y="230009" />
-		<node X="-113946" Y="229645" />
-		<node X="-114250" Y="230533" />
-	</zone>
-	<zone name="reliquary_of_the_giants_movie_zone" id="10472" type="ScriptZone" shape="NPoly" minZ="-2890" maxZ="-2867">
-		<node X="-115175" Y="226563" />
-		<node X="-114440" Y="226489" />
-		<node X="-114400" Y="227404" />
-		<node X="-115382" Y="227338" />
-	</zone>
 	<zone name="harnak_underground_ruins_room_2" id="200032" type="ScriptZone" shape="Cylinder" minZ="-11047" maxZ="-10697" rad="850">
 		<node X="-107926" Y="208860" />
 	</zone>
 	<zone name="harnak_underground_ruins_room_3" id="200033" type="ScriptZone" shape="Cylinder" minZ="-11047" maxZ="-10697" rad="850">
 		<node X="-107926" Y="211416" />
+	</zone>
+	<zone name="Valakas Boss" id="12010" type="ScriptZone" shape="NPoly" minZ="-2572" maxZ="5428">
+		<node X="196866" Y="-130845" />
+		<node X="229289" Y="-130860" />
+		<node X="229176" Y="-98508" />
+		<node X="196880" Y="-98498" />
+	</zone>
+	<zone name="Queen Ant Boss" id="12012" type="ScriptZone" shape="NPoly" minZ="-5947" maxZ="-5547"> <!-- Not Verified -->
+		<stat name="default_enabled" val="false" />
+		<node X="-21490" Y="178613" />
+		<node X="-22258" Y="178961" />
+		<node X="-22890" Y="182205" />
+		<node X="-22770" Y="183129" />
+		<node X="-21594" Y="183945" />
+		<node X="-20570" Y="183381" />
+		<node X="-20310" Y="182673" />
+		<node X="-20762" Y="179129" />
+	</zone>
+	<zone name="Orfen Boss" id="12013" type="ScriptZone" shape="NPoly" minZ="-5796" maxZ="-3796"> <!-- Not Verified -->
+		<stat name="default_enabled" val="false" />
+		<node X="43976" Y="24664" />
+		<node X="43284" Y="18952" />
+		<node X="42476" Y="18164" />
+		<node X="42480" Y="16448" />
+		<node X="43084" Y="15944" />
+		<node X="45140" Y="15816" />
+		<node X="48800" Y="15112" />
+		<node X="56556" Y="12040" />
+		<node X="59068" Y="14288" />
+		<node X="61064" Y="18492" />
+		<node X="60380" Y="23672" />
+		<node X="58724" Y="27412" />
+		<node X="55696" Y="28496" />
+		<node X="43976" Y="24664" />
+	</zone>
+    <zone name="Labyrinth of Belis" id="12014" type="ScriptZone" shape="NPoly" minZ="-8000" maxZ="-8700">
+        <node X="-117832" Y="214584 "/>
+        <node X="-117832" Y="215000 "/>
+        <node X="-118120" Y="215304 "/>
+        <node X="-118536" Y="215304 "/>
+        <node X="-118840" Y="215000 "/>
+        <node X="-118840" Y="214584 "/>
+        <node X="-118552" Y="214280 "/>
+        <node X="-118120" Y="214280 "/>
+    </zone>
+	<zone name="anghel_waterfall_magmeld_teleport" id="12015" type="ScriptZone" shape="NPoly" minZ="-2371" maxZ="-2171">
+		<node X="175319" Y="90413" />
+		<node X="174983" Y="90333" />
+		<node X="174933" Y="90872" />
+		<node X="175382" Y="90753" />
+	</zone>
+	<zone name="talking_island_q10332" id="12016" type="ScriptZone" shape="NPoly" minZ="-1400" maxZ="-1200">
+		<node X="-117583" Y="255700" />
+		<node X="-117538" Y="255779" />
+		<node X="-117618" Y="255809" />
+		<node X="-117663" Y="255733" />
+	</zone>
+	<zone name="hot_springs_noble_q_1" id="12017" type="ScriptZone" shape="NPoly" minZ="-1688" maxZ="-1488">
+		<node X="153077" Y="-113251" />
+		<node X="153218" Y="-113295" />
+		<node X="153452" Y="-113190" />
+		<node X="153537" Y="-113079" />
+		<node X="153587" Y="-112928" />
+		<node X="153575" Y="-112731" />
+		<node X="153570" Y="-112544" />
+		<node X="153456" Y="-112456" />
+		<node X="153299" Y="-112436" />
+		<node X="153141" Y="-112426" />
+		<node X="152987" Y="-112456" />
+		<node X="152869" Y="-112545" />
+		<node X="152786" Y="-112674" />
+		<node X="152767" Y="-112832" />
+		<node X="152794" Y="-113026" />
+		<node X="152928" Y="-113143" />
+	</zone>
+	<zone name="hot_springs_noble_q_2" id="12018" type="ScriptZone" shape="NPoly" minZ="-2780" maxZ="-2580">
+		<node X="155735" Y="-105980" />
+		<node X="155860" Y="-105972" />
+		<node X="155967" Y="-105957" />
+		<node X="156094" Y="-105919" />
+		<node X="156134" Y="-105776" />
+		<node X="156142" Y="-105601" />
+		<node X="156132" Y="-105440" />
+		<node X="156054" Y="-105265" />
+		<node X="155886" Y="-105264" />
+		<node X="155684" Y="-105290" />
+		<node X="155477" Y="-105286" />
+		<node X="155399" Y="-105429" />
+		<node X="155312" Y="-105594" />
+		<node X="155358" Y="-105757" />
+		<node X="155429" Y="-105909" />
+		<node X="155616" Y="-105925" />
+	</zone>
+	<zone name="hot_springs_noble_q_3" id="12019" type="ScriptZone" shape="NPoly" minZ="-3748" maxZ="-3548">
+		<node X="145300" Y="-104537" />
+		<node X="145484" Y="-104590" />
+		<node X="145627" Y="-104624" />
+		<node X="145674" Y="-104790" />
+		<node X="145724" Y="-104917" />
+		<node X="145731" Y="-105104" />
+		<node X="145662" Y="-105249" />
+		<node X="145512" Y="-105343" />
+		<node X="145328" Y="-105398" />
+		<node X="145147" Y="-105345" />
+		<node X="145002" Y="-105234" />
+		<node X="144914" Y="-105044" />
+		<node X="144932" Y="-104851" />
+		<node X="145018" Y="-104684" />
+		<node X="145107" Y="-104592" />
+		<node X="145195" Y="-104554" />
+	</zone>
+	<zone name="kartia_85_detect_1" id="12020" type="ScriptZone" shape="NPoly" minZ="-10662" maxZ="-10262">
+		<node X="-111247" Y="20538" />
+		<node X="-111979" Y="20532" />
+		<node X="-111930" Y="19993" />
+		<node X="-111304" Y="20003" />
+	</zone>
+	<zone name="kartia_85_detect_2" id="12021" type="ScriptZone" shape="NPoly" minZ="-10662" maxZ="-10262">
+		<node X="-111222" Y="18452" />
+		<node X="-111957" Y="18465" />
+		<node X="-111948" Y="17761" />
+		<node X="-111257" Y="17761" />
+	</zone>
+	<zone name="kartia_85_teleport_1" id="12022" type="ScriptZone" shape="NPoly" minZ="-10999" maxZ="-10599">
+		<node X="-110858" Y="22265" />
+		<node X="-111406" Y="22269" />
+		<node X="-111408" Y="21811" />
+		<node X="-110852" Y="21832" />
+	</zone>
+	<zone name="kartia_85_teleport_2" id="12023" type="ScriptZone" shape="NPoly" minZ="-10777" maxZ="-10377">
+		<node X="-111763" Y="21254" />
+		<node X="-111482" Y="21251" />
+		<node X="-111495" Y="21374" />
+		<node X="-111762" Y="21363" />
+	</zone>
+	<zone name="kartia_85_teleport_3" id="12024" type="ScriptZone" shape="NPoly" minZ="-10516" maxZ="-10116">
+		<node X="-111497" Y="18711" />
+		<node X="-111514" Y="18547" />
+		<node X="-111712" Y="18547" />
+		<node X="-111706" Y="18727" />
+	</zone>
+	<zone name="kartia_90_detect_1" id="12025" type="ScriptZone" shape="NPoly" minZ="-11673" maxZ="-11473">
+		<node X="-120613" Y="-11928" />
+		<node X="-121100" Y="-11915" />
+		<node X="-121073" Y="-12276" />
+		<node X="-120587" Y="-12292" />
+	</zone>
+	<zone name="kartia_90_detect_2" id="12026" type="ScriptZone" shape="NPoly" minZ="-11527" maxZ="-11327">
+		<node X="-120472" Y="-14025" />
+		<node X="-121274" Y="-14019" />
+		<node X="-121289" Y="-14742" />
+		<node X="-120445" Y="-14750" />
+	</zone>
+	<zone name="kartia_90_teleport_1" id="12027" type="ScriptZone" shape="NPoly" minZ="-12126" maxZ="-11726">
+		<node X="-120143" Y="-10224" />
+		<node X="-120126" Y="-10674" />
+		<node X="-120650" Y="-10679" />
+		<node X="-120652" Y="-10227" />
+	</zone>
+	<zone name="kartia_90_teleport_2" id="12028" type="ScriptZone" shape="NPoly" minZ="-11785" maxZ="-11585">
+		<node X="-121002" Y="-11240" />
+		<node X="-120726" Y="-11243" />
+		<node X="-120733" Y="-11117" />
+		<node X="-120994" Y="-11118" />
+	</zone>
+	<zone name="kartia_90_teleport_3" id="12029" type="ScriptZone" shape="NPoly" minZ="-11348" maxZ="-11548">
+		<node X="-120963" Y="-13953" />
+		<node X="-120760" Y="-13948" />
+		<node X="-120765" Y="-13845" />
+		<node X="-120962" Y="-13853" />
+	</zone>
+	<zone name="kartia_95_detect_1" type="ScriptZone" id="12030" shape="NPoly" minZ="-11627" maxZ="-11227">
+		<node X="-111058" Y="-11906" />
+		<node X="-111512" Y="-11889" />
+		<node X="-111488" Y="-12280" />
+		<node X="-111076" Y="-12257" />
+	</zone>
+	<zone name="kartia_95_detect_2" type="ScriptZone" id="12031" shape="NPoly" minZ="-11629" maxZ="-11229">
+		<node X="-110943" Y="-14040" />
+		<node X="-111658" Y="-14033" />
+		<node X="-111648" Y="-14720" />
+		<node X="-110919" Y="-14720" />
+	</zone>
+	<zone name="kartia_95_teleport_1" type="ScriptZone" id="12032" shape="NPoly" minZ="-12124" maxZ="-11724">
+		<node X="-110553" Y="-10224" />
+		<node X="-110555" Y="-10684" />
+		<node X="-111081" Y="-10679" />
+		<node X="-111083" Y="-10222" />
+	</zone>
+	<zone name="kartia_95_teleport_2" type="ScriptZone" id="12033" shape="NPoly" minZ="-11785" maxZ="-11585">
+		<node X="-111437" Y="-11239" />
+		<node X="-111156" Y="-11244" />
+		<node X="-111165" Y="-11125" />
+		<node X="-111431" Y="-11126" />
+	</zone>
+	<zone name="kartia_95_teleport_3" type="ScriptZone" id="12034" shape="NPoly" minZ="-11548" maxZ="-11348">
+		<node X="-111174" Y="-13934" />
+		<node X="-111399" Y="-13921" />
+		<node X="-111398" Y="-13833" />
+		<node X="-111169" Y="-13830" />
+	</zone>
+	<zone name="ti_zone" id="12035" type="ScriptZone" shape="NPoly" minZ="-3618" maxZ="-3818">
+   		<node X="208606" Y="11865" />
+    	<node X="207531" Y="12839" />
+   		<node X="207269" Y="13168" />
+    	<node X="207236" Y="13428" />
+    	<node X="207357" Y="13647" />
+    	<node X="207953" Y="14262" />
+   		<node X="208534" Y="15021" />
+   	 	<node X="208839" Y="15349" />
+   		<node X="210342" Y="16895" />
+    	<node X="210650" Y="16919" />
+    	<node X="212233" Y="15604" />
+    	<node X="212595" Y="15306" />
+    	<node X="213915" Y="14132" />
+    	<node X="213932" Y="13845" />
+    	<node X="212659" Y="12208" />
+    	<node X="212369" Y="11843" />
+    	<node X="210952" Y="10366" />
+    	<node X="210619" Y="10241" />
+   	</zone>
+	<zone name="orbis_e_f1" id="12036" type="ScriptZone" shape="NPoly" minZ="-554" maxZ="-154">
+		<node X="198034" Y="90685" />
+		<node X="198276" Y="90684" />
+		<node X="198285" Y="90491" />
+		<node X="198043" Y="90490" />
+	</zone>
+	<zone name="orbis_f1_e" id="12037" type="ScriptZone" shape="NPoly" minZ="-8177" maxZ="-7777">
+		<node X="214890" Y="53031" />
+		<node X="215313" Y="53024" />
+		<node X="215279" Y="52739" />
+		<node X="214922" Y="52736" />
+	</zone>
+	<zone name="orbis_f1_f2" id="12038" type="ScriptZone" shape="NPoly" minZ="-9009" maxZ="-8609">
+		<node X="215530" Y="52069" />
+		<node X="215967" Y="52088" />
+		<node X="215950" Y="52444" />
+		<node X="215530" Y="52460" />
+	</zone>
+	<zone name="orbis_f2_f1" id="12039" type="ScriptZone" shape="NPoly" minZ="-14383" maxZ="-13983">
+		<node X="214893" Y="53016" />
+		<node X="214923" Y="52736" />
+		<node X="215281" Y="52738" />
+		<node X="215315" Y="53016" />
+	</zone>
+	<zone name="orbis_f2_f3" id="12040" type="ScriptZone" shape="NPoly" minZ="-15530" maxZ="-14970">
+		<node X="210516" Y="48942" />
+		<node X="210093" Y="48929" />
+		<node X="210090" Y="48569" />
+		<node X="210518" Y="48554" />
+	</zone>
+	<zone name="orbis_f3_f2" id="12041" type="ScriptZone" shape="NPoly" minZ="-12700" maxZ="-12500">
+		<node X="211276" Y="115088" />
+		<node X="211310" Y="114656" />
+		<node X="211729" Y="114683" />
+		<node X="211763" Y="115079" />
+	</zone>
+	<zone name="octavis_area_tel" id="12042" type="ScriptZone" shape="NPoly" minZ="-10033" maxZ="-9833">
+		<node X="208821" Y="120497" />
+		<node X="209346" Y="120497" />
+		<node X="209346" Y="120389" />
+		<node X="210321" Y="120410" />
+		<node X="210315" Y="120815" />
+		<node X="209354" Y="120812" />
+		<node X="209354" Y="120659" />
+		<node X="208820" Y="120659" />
+	</zone>
+	<zone name="arcan_city_ceremony" id="23600" type="ScriptZone" shape="NPoly" minZ="-2500" maxZ="200">
+		<node X="201496" Y="85730" />
+		<node X="201750" Y="85528" />
+		<node X="205245" Y="80976" />
+		<node X="205506" Y="80800" />
+		<node X="205826" Y="80884" />
+		<node X="206011" Y="81195" />
+		<node X="205918" Y="81522" />
+		<node X="206146" Y="81881" />
+		<node X="210526" Y="82801" />
+		<node X="210973" Y="82488" />
+		<node X="210999" Y="82189" />
+		<node X="211216" Y="81963" />
+		<node X="211394" Y="81937" />
+		<node X="211626" Y="82018" />
+		<node X="211778" Y="82252" />
+		<node X="211725" Y="82634" />
+		<node X="211410" Y="82819" />
+		<node X="211076" Y="82702" />
+		<node X="210672" Y="82965" />
+		<node X="211425" Y="89207" />
+		<node X="211502" Y="89624" />
+		<node X="211304" Y="89893" />
+		<node X="210864" Y="89928" />
+		<node X="210656" Y="89774" />
+		<node X="208561" Y="90274" />
+		<node X="208007" Y="90651" />
+		<node X="207364" Y="90827" />
+		<node X="207084" Y="90818" />
+		<node X="207154" Y="91179" />
+		<node X="206771" Y="92661" />
+		<node X="206065" Y="92258" />
+		<node X="201369" Y="85882" />
+	</zone>
+	<zone name="14_22_maternity_room_enter1" id="23601" type="ScriptZone" shape="NPoly" minZ="2607" maxZ="2807">
+		<node X="-179731" Y="153236" />
+		<node X="-179531" Y="153236" />
+		<node X="-179531" Y="153436" />
+		<node X="-179731" Y="153436" />
+	</zone>
+	<zone name="14_22_maternity_room_enter2" id="23602" type="ScriptZone" shape="NPoly" minZ="2605" maxZ="2805">
+		<node X="-177386" Y="153237" />
+		<node X="-177186" Y="153237" />
+		<node X="-177186" Y="153437" />
+		<node X="-177386" Y="153437" />
 	</zone>
 	<!-- Pailaka Injured Dragon. No exit zones for mob walls -->
 	<zone name="Pailaka Injured Dragon 1" id="200001" type="ScriptZone" shape="NPoly" minZ="-3500" maxZ="-2000">
@@ -331,12 +625,6 @@
 		<node X="109835" Y="-39410" />
 		<node X="109830" Y="-39550" />
 		<node X="110457" Y="-39540" />
-	</zone>
-	<zone name="anghel_waterfall_to_arcan_teleport" id="200200" type="ScriptZone" shape="NPoly" minZ="-2300" maxZ="-2100">
-		<node X="175138" Y="90354" />
-		<node X="175190" Y="90797" />
-		<node X="175079" Y="90835" />
-		<node X="175037" Y="90334" />
 	</zone>
 	<zone name="orbis_temple_teleport_zone_1" id="200201" type="ScriptZone" shape="NPoly" minZ="-450" maxZ="-350">
 		<node X="198285" Y="90497" />

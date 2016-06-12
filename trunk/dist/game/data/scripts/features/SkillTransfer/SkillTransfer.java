@@ -23,6 +23,7 @@ import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.transform.Transform;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -34,7 +35,7 @@ import ai.AbstractNpcAI;
  * Skill Transfer feature.
  * @author Zoey76
  */
-final class SkillTransfer extends AbstractNpcAI
+public final class SkillTransfer extends AbstractNpcAI
 {
 	private static final String HOLY_POMANDER = "HOLY_POMANDER_";
 	private static final ItemHolder[] PORMANDERS =
@@ -49,7 +50,6 @@ final class SkillTransfer extends AbstractNpcAI
 	
 	private SkillTransfer()
 	{
-		super(SkillTransfer.class.getSimpleName(), "features");
 		setPlayerProfessionChangeId(this::onProfessionChange);
 		setOnEnterWorld(Config.SKILL_CHECK_ENABLE);
 	}
@@ -89,7 +89,7 @@ final class SkillTransfer extends AbstractNpcAI
 					if (s.getSkillId() == sk.getId())
 					{
 						// Holy Weapon allowed for Shilien Saint/Inquisitor stance
-						if ((sk.getId() == 1043) && (index == 2) && player.isInStance())
+						if ((sk.getId() == 1043) && (index == 2) && player.checkTransformed(Transform::isStance))
 						{
 							continue;
 						}

@@ -17,7 +17,6 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 
@@ -27,13 +26,12 @@ import com.l2jmobius.gameserver.model.effects.EffectFlag;
  */
 public final class BlockResurrection extends AbstractEffect
 {
-	public BlockResurrection(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public BlockResurrection(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public int getEffectFlags()
+	public long getEffectFlags()
 	{
 		return EffectFlag.BLOCK_RESURRECTION.getMask();
 	}

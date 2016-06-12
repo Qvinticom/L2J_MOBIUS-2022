@@ -21,7 +21,7 @@ package com.l2jmobius.loginserver.network.serverpackets;
  */
 public final class AccountKicked extends L2LoginServerPacket
 {
-	public static enum AccountKickedReason
+	public enum AccountKickedReason
 	{
 		REASON_DATA_STEALER(0x01),
 		REASON_GENERIC_VIOLATION(0x08),

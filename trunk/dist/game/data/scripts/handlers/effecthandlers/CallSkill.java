@@ -16,11 +16,15 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
 
 /**
  * Call Skill effect implementation.
@@ -29,12 +33,12 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
 public final class CallSkill extends AbstractEffect
 {
 	private final SkillHolder _skill;
+	private final int _skillLevelScaleTo;
 	
-	public CallSkill(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public CallSkill(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1));
+		_skillLevelScaleTo = params.getInt("skillLevelScaleTo", 0);
 	}
 	
 	@Override
@@ -44,8 +48,33 @@ public final class CallSkill extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		info.getEffector().makeTriggerCast(_skill.getSkill(), info.getEffected(), true);
+		final Skill triggerSkill;
+		if (_skillLevelScaleTo <= 0)
+		{
+			triggerSkill = _skill.getSkill();
+		}
+		else
+		{
+			final BuffInfo buffInfo = effected.getEffectList().getBuffInfoBySkillId(_skill.getSkillId());
+			if (buffInfo != null)
+			{
+				triggerSkill = SkillData.getInstance().getSkill(_skill.getSkillId(), Math.min(_skillLevelScaleTo, buffInfo.getSkill().getLevel() + 1));
+			}
+			else
+			{
+				triggerSkill = _skill.getSkill();
+			}
+		}
+		
+		if (triggerSkill != null)
+		{
+			SkillCaster.triggerCast(effector, effected, triggerSkill);
+		}
+		else
+		{
+			_log.warning("Skill not found effect called from " + skill);
+		}
 	}
 }

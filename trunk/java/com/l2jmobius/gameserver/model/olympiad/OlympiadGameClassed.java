@@ -17,9 +17,11 @@
 package com.l2jmobius.gameserver.model.olympiad;
 
 import java.util.List;
+import java.util.Set;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.util.Rnd;
+import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
 
 /**
  * @author DS
@@ -44,7 +46,7 @@ public class OlympiadGameClassed extends OlympiadGameNormal
 	}
 	
 	@Override
-	protected final int[][] getReward()
+	protected final List<ItemHolder> getReward()
 	{
 		return Config.ALT_OLY_CLASSED_REWARD;
 	}
@@ -55,14 +57,14 @@ public class OlympiadGameClassed extends OlympiadGameNormal
 		return COMP_DONE_WEEK_CLASSED;
 	}
 	
-	protected static OlympiadGameClassed createGame(int id, List<List<Integer>> classList)
+	protected static OlympiadGameClassed createGame(int id, List<Set<Integer>> classList)
 	{
 		if ((classList == null) || classList.isEmpty())
 		{
 			return null;
 		}
 		
-		List<Integer> list;
+		Set<Integer> list;
 		Participant[] opponents;
 		while (!classList.isEmpty())
 		{

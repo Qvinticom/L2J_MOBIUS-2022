@@ -22,12 +22,11 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class CombatFlag
 {
-	// private static final Logger _log = Logger.getLogger(CombatFlag.class.getName());
+	// private static final Logger LOGGER = Logger.getLogger(CombatFlag.class.getName());
 	
 	private L2PcInstance _player = null;
 	private int _playerId = 0;
@@ -89,11 +88,11 @@ public class CombatFlag
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addItem(_item);
-			_player.sendPacket(iu);
+			_player.sendInventoryUpdate(iu);
 		}
 		else
 		{
-			_player.sendPacket(new ItemList(_player, false));
+			_player.sendItemList(false);
 		}
 		// Refresh player stats
 		_player.broadcastUserInfo();

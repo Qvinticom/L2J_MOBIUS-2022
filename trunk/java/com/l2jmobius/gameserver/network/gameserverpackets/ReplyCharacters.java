@@ -18,13 +18,14 @@ package com.l2jmobius.gameserver.network.gameserverpackets;
 
 import java.util.List;
 
-import com.l2jmobius.util.network.BaseSendablePacket;
+import com.l2jmobius.commons.util.network.BaseSendablePacket;
 
 /**
  * @author mrTJO Thanks to mochitto
  */
 public class ReplyCharacters extends BaseSendablePacket
 {
+	
 	public ReplyCharacters(String account, int chars, List<Long> timeToDel)
 	{
 		writeC(0x08);
@@ -42,4 +43,5 @@ public class ReplyCharacters extends BaseSendablePacket
 	{
 		return getBytes();
 	}
+	
 }

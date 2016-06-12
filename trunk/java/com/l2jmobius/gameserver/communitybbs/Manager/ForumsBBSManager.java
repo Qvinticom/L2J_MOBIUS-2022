@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 public class ForumsBBSManager extends BaseBBSManager
 {
 	private static Logger _log = Logger.getLogger(ForumsBBSManager.class.getName());
-	private final List<Forum> _table = new CopyOnWriteArrayList<>();
+	private final List<Forum> _table;
 	private int _lastid = 1;
 	
 	/**
@@ -39,18 +39,21 @@ public class ForumsBBSManager extends BaseBBSManager
 	 */
 	protected ForumsBBSManager()
 	{
+		_table = new CopyOnWriteArrayList<>();
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT forum_id FROM forums WHERE forum_type = 0"))
 		{
 			while (rs.next())
 			{
-				addForum(new Forum(rs.getInt("forum_id"), null));
+				final int forumId = rs.getInt("forum_id");
+				final Forum f = new Forum(forumId, null);
+				addForum(f);
 			}
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Data error on Forum (root): " + e.getMessage(), e);
+			_log.log(Level.WARNING, getClass().getSimpleName() + ": Data error on Forum (root): " + e.getMessage(), e);
 		}
 	}
 	
@@ -59,8 +62,11 @@ public class ForumsBBSManager extends BaseBBSManager
 	 */
 	public void initRoot()
 	{
-		_table.forEach(f -> f.vload());
-		_log.info("Loaded " + _table.size() + " forums. Last forum id used: " + _lastid);
+		for (Forum f : _table)
+		{
+			f.vload();
+		}
+		_log.info(getClass().getSimpleName() + ": Loaded " + _table.size() + " forums. Last forum id used: " + _lastid);
 	}
 	
 	/**
@@ -94,7 +100,14 @@ public class ForumsBBSManager extends BaseBBSManager
 	 */
 	public Forum getForumByName(String name)
 	{
-		return _table.stream().filter(f -> f.getName().equals(name)).findFirst().orElse(null);
+		for (Forum f : _table)
+		{
+			if (f.getName().equals(name))
+			{
+				return f;
+			}
+		}
+		return null;
 	}
 	
 	/**
@@ -129,7 +142,14 @@ public class ForumsBBSManager extends BaseBBSManager
 	 */
 	public Forum getForumByID(int idf)
 	{
-		return _table.stream().filter(f -> f.getID() == idf).findFirst().orElse(null);
+		for (Forum f : _table)
+		{
+			if (f.getID() == idf)
+			{
+				return f;
+			}
+		}
+		return null;
 	}
 	
 	@Override

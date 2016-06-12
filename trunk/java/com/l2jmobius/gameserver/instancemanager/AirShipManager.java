@@ -38,7 +38,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExAirShipTeleportList;
 
 public class AirShipManager
 {
-	private static final Logger _log = Logger.getLogger(AirShipManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AirShipManager.class.getName());
 	
 	private static final String LOAD_DB = "SELECT * FROM airships";
 	private static final String ADD_DB = "INSERT INTO airships (owner_id,fuel) VALUES (?,?)";
@@ -56,14 +56,21 @@ public class AirShipManager
 		npcDat.set("level", 0);
 		npcDat.set("jClass", "boat");
 		
+		npcDat.set("baseSTR", 0);
+		npcDat.set("baseCON", 0);
+		npcDat.set("baseDEX", 0);
+		npcDat.set("baseINT", 0);
+		npcDat.set("baseWIT", 0);
+		npcDat.set("baseMEN", 0);
+		
 		npcDat.set("baseShldDef", 0);
 		npcDat.set("baseShldRate", 0);
 		npcDat.set("baseAccCombat", 38);
 		npcDat.set("baseEvasRate", 38);
 		npcDat.set("baseCritRate", 38);
 		
-		npcDat.set("collisionRadius", 0);
-		npcDat.set("collisionHeight", 0);
+		npcDat.set("collision_radius", 0);
+		npcDat.set("collision_height", 0);
 		npcDat.set("sex", "male");
 		npcDat.set("type", "");
 		npcDat.set("baseAtkRange", 0);
@@ -137,15 +144,14 @@ public class AirShipManager
 	
 	public void removeAirShip(L2AirShipInstance ship)
 	{
-		if (ship.getOwnerId() == 0)
+		if (ship.getOwnerId() != 0)
 		{
-			return;
-		}
-		storeInDb(ship.getOwnerId());
-		final StatsSet info = _airShipsInfo.get(ship.getOwnerId());
-		if (info != null)
-		{
-			info.set("fuel", ship.getFuel());
+			storeInDb(ship.getOwnerId());
+			final StatsSet info = _airShipsInfo.get(ship.getOwnerId());
+			if (info != null)
+			{
+				info.set("fuel", ship.getFuel());
+			}
 		}
 	}
 	
@@ -156,34 +162,40 @@ public class AirShipManager
 	
 	public void registerLicense(int ownerId)
 	{
-		if (_airShipsInfo.containsKey(ownerId))
+		if (!_airShipsInfo.containsKey(ownerId))
 		{
-			return;
-		}
-		final StatsSet info = new StatsSet();
-		info.set("fuel", 600);
-		_airShipsInfo.put(ownerId, info);
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement(ADD_DB))
-		{
-			ps.setInt(1, ownerId);
-			ps.setInt(2, info.getInt("fuel"));
-			ps.executeUpdate();
-		}
-		catch (SQLException e)
-		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not add new airship license: " + e.getMessage(), e);
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error while initializing: " + e.getMessage(), e);
+			final StatsSet info = new StatsSet();
+			info.set("fuel", 600);
+			
+			_airShipsInfo.put(ownerId, info);
+			
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
+				PreparedStatement ps = con.prepareStatement(ADD_DB))
+			{
+				ps.setInt(1, ownerId);
+				ps.setInt(2, info.getInt("fuel"));
+				ps.executeUpdate();
+			}
+			catch (SQLException e)
+			{
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not add new airship license: ", e);
+			}
+			catch (Exception e)
+			{
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while initializing: ", e);
+			}
 		}
 	}
 	
 	public boolean hasAirShip(int ownerId)
 	{
 		final L2AirShipInstance ship = _airShips.get(ownerId);
-		return (ship != null) && (ship.isVisible() || ship.isTeleporting());
+		if ((ship == null) || !(ship.isSpawned() || ship.isTeleporting()))
+		{
+			return false;
+		}
+		
+		return true;
 	}
 	
 	public void registerAirShipTeleportList(int dockId, int locationId, VehiclePathPoint[][] tp, int[] fuelConsumption)
@@ -222,13 +234,33 @@ public class AirShipManager
 	public VehiclePathPoint[] getTeleportDestination(int dockId, int index)
 	{
 		final AirShipTeleportList all = _teleports.get(dockId);
-		return (all == null) || (index < -1) || (index >= all.getRoute().length) ? null : all.getRoute()[index + 1];
+		if (all == null)
+		{
+			return null;
+		}
+		
+		if ((index < -1) || (index >= all.getRoute().length))
+		{
+			return null;
+		}
+		
+		return all.getRoute()[index + 1];
 	}
 	
 	public int getFuelConsumption(int dockId, int index)
 	{
 		final AirShipTeleportList all = _teleports.get(dockId);
-		return (all == null) || (index < -1) || (index >= all.getFuel().length) ? 0 : all.getFuel()[index + 1];
+		if (all == null)
+		{
+			return 0;
+		}
+		
+		if ((index < -1) || (index >= all.getFuel().length))
+		{
+			return 0;
+		}
+		
+		return all.getFuel()[index + 1];
 	}
 	
 	private void load()
@@ -247,13 +279,13 @@ public class AirShipManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not load airships table: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not load airships table: ", e);
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error while initializing: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while initializing: ", e);
 		}
-		_log.info(getClass().getSimpleName() + ": Loaded " + _airShipsInfo.size() + " private airships");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _airShipsInfo.size() + " private airships");
 	}
 	
 	private void storeInDb(int ownerId)
@@ -273,11 +305,11 @@ public class AirShipManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not update airships table: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not update airships table: ", e);
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error while save: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while save: ", e);
 		}
 	}
 	

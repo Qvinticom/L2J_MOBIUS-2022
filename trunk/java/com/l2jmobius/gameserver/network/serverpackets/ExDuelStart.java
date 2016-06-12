@@ -16,28 +16,30 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
- * Duel Start packet implementation.
- * @author KenM, Zoey76
+ * @author KenM
  */
-public class ExDuelStart extends L2GameServerPacket
+public class ExDuelStart implements IClientOutgoingPacket
 {
 	public static final ExDuelStart PLAYER_DUEL = new ExDuelStart(false);
 	public static final ExDuelStart PARTY_DUEL = new ExDuelStart(true);
 	
-	private final boolean _partyDuel;
+	private final int _partyDuel;
 	
-	public ExDuelStart(boolean partyDuel)
+	public ExDuelStart(boolean isPartyDuel)
 	{
-		_partyDuel = partyDuel;
+		_partyDuel = isPartyDuel ? 1 : 0;
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x4F);
+		OutgoingPackets.EX_DUEL_START.writeId(packet);
 		
-		writeD(_partyDuel ? 1 : 0);
+		packet.writeD(_partyDuel);
+		return true;
 	}
 }

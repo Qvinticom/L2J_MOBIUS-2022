@@ -16,16 +16,19 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Luca Baldi
  */
-public final class RelationChanged extends L2GameServerPacket
+public final class RelationChanged implements IClientOutgoingPacket
 {
+	// TODO: Enum
 	public static final int RELATION_PARTY1 = 0x00001; // party member
 	public static final int RELATION_PARTY2 = 0x00002; // party member
 	public static final int RELATION_PARTY3 = 0x00004; // party member
@@ -55,7 +58,7 @@ public final class RelationChanged extends L2GameServerPacket
 	}
 	
 	private Relation _singled;
-	private List<Relation> _multi;
+	private final List<Relation> _multi;
 	private byte _mask = (byte) 0x00;
 	
 	public RelationChanged(L2Playable activeChar, int relation, boolean autoattackable)
@@ -68,21 +71,20 @@ public final class RelationChanged extends L2GameServerPacket
 		_singled._autoAttackable = autoattackable ? 1 : 0;
 		_singled._reputation = activeChar.getReputation();
 		_singled._pvpFlag = activeChar.getPvpFlag();
-		setInvisible(activeChar.isInvisible());
+		_multi = null;
 	}
 	
 	public RelationChanged()
 	{
 		_mask |= SEND_MULTI;
-		_multi = new ArrayList<>();
+		_multi = new LinkedList<>();
 	}
 	
 	public void addRelation(L2Playable activeChar, int relation, boolean autoattackable)
 	{
 		if (activeChar.isInvisible())
 		{
-			// _log.severe("Cannot add invisible character to multi relation packet.");
-			return;
+			throw new IllegalArgumentException("Cannot add insivisble character to multi relation packet");
 		}
 		final Relation r = new Relation();
 		r._objId = activeChar.getObjectId();
@@ -94,34 +96,36 @@ public final class RelationChanged extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xCE);
-		writeC(_mask);
+		OutgoingPackets.RELATION_CHANGED.writeId(packet);
+		
+		packet.writeC(_mask);
 		if (_multi == null)
 		{
-			writeRelation(_singled);
+			writeRelation(packet, _singled);
 		}
 		else
 		{
-			writeH(_multi.size());
+			packet.writeH(_multi.size());
 			for (Relation r : _multi)
 			{
-				writeRelation(r);
+				writeRelation(packet, r);
 			}
 		}
+		return true;
 	}
 	
-	private void writeRelation(Relation relation)
+	private void writeRelation(PacketWriter packet, Relation relation)
 	{
-		writeD(relation._objId);
+		packet.writeD(relation._objId);
 		
 		if ((_mask & SEND_DEFAULT) == 0)
 		{
-			writeD(relation._relation);
-			writeC(relation._autoAttackable);
-			writeD(relation._reputation);
-			writeC(relation._pvpFlag);
+			packet.writeD(relation._relation);
+			packet.writeC(relation._autoAttackable);
+			packet.writeD(relation._reputation);
+			packet.writeC(relation._pvpFlag);
 		}
 	}
 }

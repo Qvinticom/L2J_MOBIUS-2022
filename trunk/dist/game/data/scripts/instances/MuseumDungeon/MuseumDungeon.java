@@ -18,16 +18,17 @@ package instances.MuseumDungeon;
 
 import java.util.List;
 
-import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2QuestGuardInstance;
-import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.events.EventType;
+import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import com.l2jmobius.gameserver.model.events.annotations.Id;
+import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -37,118 +38,126 @@ import instances.AbstractInstance;
 import quests.Q10327_IntruderWhoWantsTheBookOfGiants.Q10327_IntruderWhoWantsTheBookOfGiants;
 
 /**
- * @author Mobius
+ * Museum Dungeon Instance Zone.
+ * @author Gladicek
  */
 public final class MuseumDungeon extends AbstractInstance
 {
-	// NPCs
+	// NPC's
 	private static final int PANTHEON = 32972;
 	private static final int TOYRON = 33004;
 	private static final int DESK = 33126;
-	// Monster
 	private static final int THIEF = 23121;
-	// Item
+	// Items
 	private static final int THE_WAR_OF_GODS_AND_GIANTS = 17575;
-	// Others
+	// Misc
 	private static final int TEMPLATE_ID = 182;
-	private static final Location START_LOC = new Location(-114711, 243911, -7968);
-	private static final Location TOYRON_SPAWN_LOC = new Location(-114707, 245428, -7968);
 	
-	class MDWorld extends InstanceWorld
+	private static final NpcStringId[] THIEF_SHOUT =
 	{
-		L2QuestGuardInstance toyron = null;
-		List<L2Npc> deskSpawns = null;
-		List<L2Npc> thiefSpawns = null;
-		int randomDesk = 0;
-	}
+		NpcStringId.YOU_LL_NEVER_LEAVE_WITH_THAT_BOOK,
+		NpcStringId.FINALLY_I_THOUGHT_I_WAS_GOING_TO_DIE_WAITING
+	};
 	
 	public MuseumDungeon()
 	{
-		super(MuseumDungeon.class.getSimpleName());
 		addStartNpc(PANTHEON);
-		addTalkId(PANTHEON);
 		addFirstTalkId(DESK);
+		addTalkId(PANTHEON, TOYRON);
 		addAttackId(THIEF);
+	}
+	
+	@Override
+	protected void onEnter(L2PcInstance player, Instance instance, boolean firstEnter)
+	{
+		super.onEnter(player, instance, firstEnter);
+		
+		final L2Attackable toyron = (L2Attackable) instance.getNpc(TOYRON);
+		if (firstEnter)
+		{
+			// Set desk status
+			final List<L2Npc> desks = instance.getNpcs(DESK);
+			final L2Npc desk = desks.get(getRandom(desks.size()));
+			desk.getVariables().set("book", true);
+			
+			// Set Toyron
+			toyron.setIsRunning(true);
+			toyron.setCanReturnToSpawnPoint(false);
+		}
+		
+		final QuestState qs = player.getQuestState(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName());
+		if (qs != null)
+		{
+			if (qs.isCond(1))
+			{
+				showOnScreenMsg(player, NpcStringId.AMONG_THE_4_BOOKSHELVES_FIND_THE_ONE_CONTAINING_A_VOLUME_CALLED_THE_WAR_OF_GODS_AND_GIANTS, ExShowScreenMessage.TOP_CENTER, 4500);
+			}
+			else if (qs.isCond(2))
+			{
+				startQuestTimer("TOYRON_FOLLOW", 500, toyron, player);
+				if (instance.getNpcs(THIEF).isEmpty())
+				{
+					startQuestTimer("SPAWN_THIEFS_STAGE_2", 500, null, player);
+				}
+			}
+		}
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("assist_player"))
+		if (event.equals("enter_instance"))
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
-			if ((tmpworld == null) || !(tmpworld instanceof MDWorld))
-			{
-				return null;
-			}
-			final MDWorld world = (MDWorld) tmpworld;
-			
-			world.toyron.setIsRunning(true);
-			if (player.isInCombat() && (player.getTarget() != null) && player.getTarget().isMonster() && !((L2MonsterInstance) player.getTarget()).isAlikeDead())
-			{
-				if (world.toyron.calculateDistance(player.getTarget(), false, false) > 50)
-				{
-					world.toyron.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, player.getTarget().getLocation());
-					broadcastNpcSay(world.toyron, ChatType.NPC_GENERAL, NpcStringId.ENOUGH_OF_THIS_COME_AT_ME);
-				}
-				else if (world.toyron.getTarget() != player.getTarget())
-				{
-					world.toyron.addDamageHate((L2Character) player.getTarget(), 0, 1000);
-				}
-			}
-			else
-			{
-				world.toyron.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
-			}
-			
-			if (world.thiefSpawns.get(0).isDead() && world.thiefSpawns.get(1).isDead())
-			{
-				final QuestState qs = player.getQuestState(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName());
-				if ((qs != null) && qs.isCond(2))
-				{
-					qs.setCond(3, true);
-					showOnScreenMsg(player, NpcStringId.TALK_TO_TOYRON_TO_RETURN_TO_THE_MUSEUM_LOBBY, ExShowScreenMessage.TOP_CENTER, 5000);
-				}
-			}
-			else
-			{
-				startQuestTimer("assist_player", 1000, world.toyron, player);
-			}
+			enterInstance(player, npc, TEMPLATE_ID);
 		}
-		else if (event.equals("enter_instance"))
+		else
 		{
-			if (npc.getId() != PANTHEON)
+			final Instance world = player.getInstanceWorld();
+			if (world != null)
 			{
-				return null;
-			}
-			
-			InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
-			if ((tmpworld == null) || !(tmpworld instanceof MDWorld))
-			{
-				tmpworld = new MDWorld();
-			}
-			final MDWorld world = (MDWorld) tmpworld;
-			enterInstance(player, world, "MuseumDungeon.xml", TEMPLATE_ID);
-			
-			final QuestState qs = player.getQuestState(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName());
-			if (qs.isCond(1))
-			{
-				showOnScreenMsg(player, NpcStringId.AMONG_THE_4_BOOKSHELVES_FIND_THE_ONE_CONTAINING_A_VOLUME_CALLED_THE_WAR_OF_GODS_AND_GIANTS, ExShowScreenMessage.TOP_CENTER, 10000);
-			}
-			else if (qs.isCond(2))
-			{
-				if ((world.thiefSpawns != null) && (world.thiefSpawns.get(0) != null))
+				switch (event)
 				{
-					world.thiefSpawns.get(0).deleteMe();
+					case "TOYRON_FOLLOW":
+						npc.getAI().startFollow(player);
+						break;
+					case "SPAWN_THIEFS_STAGE_1":
+					{
+						final List<L2Npc> thiefs = world.spawnGroup("thiefs");
+						for (L2Npc thief : thiefs)
+						{
+							thief.setIsRunning(true);
+							addAttackPlayerDesire(thief, player);
+							thief.broadcastSay(ChatType.NPC_GENERAL, THIEF_SHOUT[getRandom(2)]);
+						}
+						final L2Npc toyron = world.getNpc(TOYRON);
+						toyron.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WHEN_DID_THEY_GET_IN_HERE);
+						startQuestTimer("TOYRON_MSG_1", 2500, toyron, player);
+						startQuestTimer("SKILL_MSG", 4500, toyron, player);
+						break;
+					}
+					case "SPAWN_THIEFS_STAGE_2":
+					{
+						final List<L2Npc> thiefs = world.spawnGroup("thiefs");
+						for (L2Npc thief : thiefs)
+						{
+							thief.setIsRunning(true);
+						}
+						break;
+					}
+					case "SKILL_MSG":
+						showOnScreenMsg(player, NpcStringId.USE_YOUR_SKILL_ATTACKS_AGAINST_THEM, ExShowScreenMessage.TOP_CENTER, 4500);
+						break;
+					case "TOYRON_MSG_1":
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOUR_NORMAL_ATTACKS_AREN_T_WORKING);
+						startQuestTimer("TOYRON_MSG_2", 2500, npc, player);
+						break;
+					case "TOYRON_MSG_2":
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.LOOKS_LIKE_ONLY_SKILL_BASED_ATTACKS_DAMAGE_THEM);
+						break;
+					case "KILL_THIEF":
+						npc.doDie(player);
+						break;
 				}
-				if ((world.thiefSpawns != null) && (world.thiefSpawns.get(1) != null))
-				{
-					world.thiefSpawns.get(1).deleteMe();
-				}
-				world.toyron.setIsRunning(true);
-				world.thiefSpawns = spawnGroup("thiefs", world.getInstanceId());
-				addAttackDesire(world.thiefSpawns.get(0), player);
-				startQuestTimer("assist_player", 2000, world.toyron, player);
 			}
 		}
 		return super.onAdvEvent(event, npc, player);
@@ -157,30 +166,35 @@ public final class MuseumDungeon extends AbstractInstance
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		final MDWorld world = (MDWorld) InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		final QuestState qs = player.getQuestState(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName());
-		String htmltext = null;
-		
-		if (qs.isCond(1))
+		final Instance world = npc.getInstanceWorld();
+		if (world == null)
 		{
-			if (world.deskSpawns.get(world.randomDesk) == npc)
+			return null;
+		}
+		
+		String htmltext = null;
+		final QuestState qs = player.getQuestState(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName());
+		if ((qs == null) || qs.isCond(2))
+		{
+			htmltext = "33126.html";
+		}
+		else if (qs.isCond(1))
+		{
+			if (npc.getVariables().getBoolean("book", false) && !hasQuestItems(player, THE_WAR_OF_GODS_AND_GIANTS))
 			{
 				qs.setCond(2);
 				giveItems(player, THE_WAR_OF_GODS_AND_GIANTS, 1);
-				world.thiefSpawns = spawnGroup("thiefs", world.getInstanceId());
-				addAttackDesire(world.thiefSpawns.get(0), player);
-				showOnScreenMsg(player, NpcStringId.WATCH_OUT_YOU_ARE_BEING_ATTACKED, ExShowScreenMessage.TOP_CENTER, 5000);
-				startQuestTimer("assist_player", 2000, world.toyron, player);
-				htmltext = "desk_correct.html";
+				showOnScreenMsg(player, NpcStringId.WATCH_OUT_YOU_ARE_BEING_ATTACKED, ExShowScreenMessage.TOP_CENTER, 4500);
+				htmltext = "33126-01.html";
+				
+				final L2Npc toyron = world.getNpc(TOYRON);
+				startQuestTimer("SPAWN_THIEFS_STAGE_1", 500, null, player);
+				startQuestTimer("TOYRON_FOLLOW", 500, toyron, player);
 			}
 			else
 			{
-				htmltext = "desk_wrong.html";
+				htmltext = "33126-02.html";
 			}
-		}
-		else
-		{
-			htmltext = "desk_normal.html";
 		}
 		return htmltext;
 	}
@@ -188,25 +202,44 @@ public final class MuseumDungeon extends AbstractInstance
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
-		if (skill == null)
+		final Instance instance = npc.getInstanceWorld();
+		if (instance != null)
 		{
-			((L2MonsterInstance) npc).setCurrentHp(npc.getCurrentHp() + damage);
-			showOnScreenMsg(attacker, NpcStringId.USE_YOUR_SKILL_ATTACKS_AGAINST_THEM, ExShowScreenMessage.TOP_CENTER, 5000);
+			final L2Npc toyron = instance.getNpc(TOYRON);
+			if (skill != null)
+			{
+				toyron.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ENOUGH_OF_THIS_COME_AT_ME);
+				toyron.reduceCurrentHp(1, npc, null); // TODO: Find better way for attack
+				npc.reduceCurrentHp(1, toyron, null);
+				startQuestTimer("KILL_THIEF", 2500, npc, attacker);
+				startQuestTimer("TOYRON_FOLLOW", 3000, toyron, attacker);
+			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon, skill);
 	}
 	
-	@Override
-	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
+	@RegisterEvent(EventType.ON_CREATURE_DEATH)
+	@RegisterType(ListenerRegisterType.NPC)
+	@Id(THIEF)
+	public void onCreatureKill(OnCreatureDeath event)
 	{
-		((MDWorld) world).toyron = (L2QuestGuardInstance) addSpawn(TOYRON, TOYRON_SPAWN_LOC, false, 0, false, world.getInstanceId());
-		((MDWorld) world).toyron.setSpawn(null);
-		if (firstEntrance)
+		final L2Npc npc = (L2Npc) event.getTarget();
+		
+		final Instance world = npc.getInstanceWorld();
+		if (world != null)
 		{
-			world.addAllowed(player.getObjectId());
-			((MDWorld) world).deskSpawns = spawnGroup("desks", world.getInstanceId());
-			((MDWorld) world).randomDesk = getRandom(3) + 1;
+			final L2PcInstance player = world.getFirstPlayer();
+			final QuestState qs = player.getQuestState(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName());
+			if ((qs != null) && qs.isCond(2) && world.getAliveNpcs(THIEF).isEmpty())
+			{
+				qs.setCond(3, true);
+				showOnScreenMsg(player, NpcStringId.TALK_TO_TOYRON_TO_RETURN_TO_THE_MUSEUM_LOBBY, ExShowScreenMessage.TOP_CENTER, 4500);
+			}
 		}
-		teleportPlayer(player, START_LOC, world.getInstanceId());
+	}
+	
+	public static void main(String[] args)
+	{
+		new MuseumDungeon();
 	}
 }

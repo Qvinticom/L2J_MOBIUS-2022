@@ -16,13 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * Special Camera server packet implementation.
  * @author Zoey76
  */
-public class SpecialCamera extends L2GameServerPacket
+public class SpecialCamera implements IClientOutgoingPacket
 {
 	private final int _id;
 	private final int _force;
@@ -105,19 +107,21 @@ public class SpecialCamera extends L2GameServerPacket
 	}
 	
 	@Override
-	public void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xD6);
-		writeD(_id);
-		writeD(_force);
-		writeD(_angle1);
-		writeD(_angle2);
-		writeD(_time);
-		writeD(_duration);
-		writeD(_relYaw);
-		writeD(_relPitch);
-		writeD(_isWide);
-		writeD(_relAngle);
-		writeD(_unk);
+		OutgoingPackets.SPECIAL_CAMERA.writeId(packet);
+		
+		packet.writeD(_id);
+		packet.writeD(_force);
+		packet.writeD(_angle1);
+		packet.writeD(_angle2);
+		packet.writeD(_time);
+		packet.writeD(_duration);
+		packet.writeD(_relYaw);
+		packet.writeD(_relPitch);
+		packet.writeD(_isWide);
+		packet.writeD(_relAngle);
+		packet.writeD(_unk);
+		return true;
 	}
 }

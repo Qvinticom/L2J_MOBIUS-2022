@@ -19,13 +19,15 @@ package com.l2jmobius.gameserver.network.clientpackets.primeshop;
 import java.util.Calendar;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import com.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
 import com.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRBuyProduct.ExBrProductReplyType;
 import com.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRGamePoint;
@@ -34,7 +36,7 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRBuyProduct extends L2GameClientPacket
+public final class RequestBRBuyProduct implements IClientIncomingPacket
 {
 	private static final int HERO_COINS = 23805;
 	
@@ -42,16 +44,17 @@ public final class RequestBRBuyProduct extends L2GameClientPacket
 	private int _count;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_brId = readD();
-		_count = readD();
+		_brId = packet.readD();
+		_count = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -68,7 +71,7 @@ public final class RequestBRBuyProduct extends L2GameClientPacket
 		final PrimeShopGroup item = PrimeShopData.getInstance().getItem(_brId);
 		if (validatePlayer(item, _count, activeChar))
 		{
-			final int price = item.getPrice() * _count;
+			final int price = (item.getPrice() * _count);
 			final int paymentId = validatePaymentId(activeChar, item, price);
 			
 			if (paymentId < 0)
@@ -76,7 +79,7 @@ public final class RequestBRBuyProduct extends L2GameClientPacket
 				activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
 				return;
 			}
-			if (paymentId > 0)
+			else if (paymentId > 0)
 			{
 				if (!activeChar.destroyItemByItemId("PrimeShop-" + item.getBrId(), paymentId, price, activeChar, true))
 				{
@@ -121,33 +124,43 @@ public final class RequestBRBuyProduct extends L2GameClientPacket
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid brId from Prime", Config.DEFAULT_PUNISH);
 			return false;
 		}
-		if ((count < 1) && (count > 99))
+		else if ((count < 1) && (count > 99))
 		{
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid itemcount [" + count + "] from Prime", Config.DEFAULT_PUNISH);
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
 			return false;
 		}
-		if (((item.getMinLevel() > 0) && (item.getMinLevel() > player.getLevel())) || ((item.getMaxLevel() > 0) && (item.getMaxLevel() < player.getLevel())))
+		else if ((item.getMinLevel() > 0) && (item.getMinLevel() > player.getLevel()))
 		{
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER));
 			return false;
 		}
-		if (((item.getMinBirthday() > 0) && (item.getMinBirthday() > player.getBirthdays())) || ((item.getMaxBirthday() > 0) && (item.getMaxBirthday() < player.getBirthdays())))
+		else if ((item.getMaxLevel() > 0) && (item.getMaxLevel() < player.getLevel()))
+		{
+			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER));
+			return false;
+		}
+		else if ((item.getMinBirthday() > 0) && (item.getMinBirthday() > player.getBirthdays()))
 		{
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
 			return false;
 		}
-		if ((Calendar.getInstance().get(Calendar.DAY_OF_WEEK) & item.getDaysOfWeek()) == 0)
+		else if ((item.getMaxBirthday() > 0) && (item.getMaxBirthday() < player.getBirthdays()))
+		{
+			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
+			return false;
+		}
+		else if ((Calendar.getInstance().get(Calendar.DAY_OF_WEEK) & item.getDaysOfWeek()) == 0)
 		{
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.NOT_DAY_OF_WEEK));
 			return false;
 		}
-		if ((item.getStartSale() > 1) && (item.getStartSale() > currentTime))
+		else if ((item.getStartSale() > 1) && (item.getStartSale() > currentTime))
 		{
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.BEFORE_SALE_DATE));
 			return false;
 		}
-		if ((item.getEndSale() > 1) && (item.getEndSale() < currentTime))
+		else if ((item.getEndSale() > 1) && (item.getEndSale() < currentTime))
 		{
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.AFTER_SALE_DATE));
 			return false;
@@ -156,7 +169,15 @@ public final class RequestBRBuyProduct extends L2GameClientPacket
 		final int weight = item.getWeight() * count;
 		final long slots = item.getCount() * count;
 		
-		if (!player.getInventory().validateWeight(weight) || !player.getInventory().validateCapacity(slots))
+		if (player.getInventory().validateWeight(weight))
+		{
+			if (!player.getInventory().validateCapacity(slots))
+			{
+				player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTROY_OVERFLOW));
+				return false;
+			}
+		}
+		else
 		{
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTROY_OVERFLOW));
 			return false;
@@ -184,11 +205,5 @@ public final class RequestBRBuyProduct extends L2GameClientPacket
 		}
 		
 		return -1;
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
 	}
 }

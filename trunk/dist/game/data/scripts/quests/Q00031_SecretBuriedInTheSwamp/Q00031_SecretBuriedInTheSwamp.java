@@ -47,19 +47,20 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 	
 	public Q00031_SecretBuriedInTheSwamp()
 	{
-		super(31, Q00031_SecretBuriedInTheSwamp.class.getSimpleName(), "Secret Buried in the Swamp");
+		super(31);
 		addStartNpc(ABERCROMBIE);
 		addTalkId(ABERCROMBIE, CORPSE_OF_DWARF);
 		addTalkId(MONUMENTS);
 		registerQuestItems(KRORINS_JOURNAL);
+		addCondMinLevel(MIN_LVL, "31555-03.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
+		final QuestState st = getQuestState(player, false);
 		String htmltext = null;
-		if (qs == null)
+		if (st == null)
 		{
 			return htmltext;
 		}
@@ -68,18 +69,15 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 		{
 			case "31555-02.html":
 			{
-				if (qs.isCreated())
-				{
-					qs.startQuest();
-					htmltext = event;
-				}
+				st.startQuest();
+				htmltext = event;
 				break;
 			}
 			case "31665-02.html":
 			{
-				if (qs.isCond(1))
+				if (st.isCond(1))
 				{
-					qs.setCond(2, true);
+					st.setCond(2, true);
 					giveItems(player, KRORINS_JOURNAL, 1);
 					htmltext = event;
 				}
@@ -87,10 +85,10 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 			}
 			case "31555-05.html":
 			{
-				if (qs.isCond(2) && hasQuestItems(player, KRORINS_JOURNAL))
+				if (st.isCond(2) && hasQuestItems(player, KRORINS_JOURNAL))
 				{
 					takeItems(player, KRORINS_JOURNAL, -1);
-					qs.setCond(3, true);
+					st.setCond(3, true);
 					htmltext = event;
 				}
 				break;
@@ -100,20 +98,23 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 			case "31663-02.html":
 			case "31664-02.html":
 			{
-				if (MONUMENTS.contains(npc.getId()) && qs.isCond(MONUMENTS.indexOf(npc.getId()) + 3))
+				if (MONUMENTS.contains(npc.getId()) && st.isCond(MONUMENTS.indexOf(npc.getId()) + 3))
 				{
-					qs.setCond(qs.getCond() + 1, true);
+					st.setCond(st.getCond() + 1, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "31555-08.html":
 			{
-				if (qs.isCond(7))
+				if (st.isCond(7))
 				{
-					addExpAndSp(player, 490000, 45880);
-					giveAdena(player, 120000, true);
-					qs.exitQuest(false, true);
+					giveAdena(player, 343430, true);
+					if (player.getLevel() >= MIN_LVL)
+					{
+						addExpAndSp(player, 1_650_970, 396);
+					}
+					st.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
@@ -125,26 +126,23 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, true);
+		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
+		
 		switch (npc.getId())
 		{
 			case ABERCROMBIE:
 			{
-				switch (qs.getState())
+				switch (st.getState())
 				{
 					case State.CREATED:
 					{
-						htmltext = (player.getLevel() >= MIN_LVL) ? "31555-01.htm" : "31555-03.htm";
+						htmltext = "31555-03.htm";
 						break;
 					}
 					case State.STARTED:
 					{
-						switch (qs.getCond())
+						switch (st.getCond())
 						{
 							case 1:
 							{
@@ -182,18 +180,13 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 			}
 			case CORPSE_OF_DWARF:
 			{
-				switch (qs.getCond())
+				if (st.isCond(1))
 				{
-					case 1:
-					{
-						htmltext = "31665-01.html";
-						break;
-					}
-					case 2:
-					{
-						htmltext = "31665-03.html";
-						break;
-					}
+					htmltext = "31665-01.html";
+				}
+				else if (st.isCond(2))
+				{
+					htmltext = "31665-03.html";
 				}
 				break;
 			}
@@ -203,11 +196,11 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 			case FORGOTTEN_MONUMENT_4:
 			{
 				final int loc = MONUMENTS.indexOf(npc.getId()) + 3;
-				if (qs.isCond(loc))
+				if (st.isCond(loc))
 				{
 					htmltext = npc.getId() + "-01.html";
 				}
-				else if (qs.isCond(loc + 1))
+				else if (st.isCond(loc + 1))
 				{
 					htmltext = npc.getId() + "-03.html";
 				}

@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.model.actor.instance;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
-import com.l2jmobius.gameserver.ai.L2FortSiegeGuardAI;
 import com.l2jmobius.gameserver.ai.L2SiegeGuardAI;
 import com.l2jmobius.gameserver.ai.L2SpecialSiegeGuardAI;
 import com.l2jmobius.gameserver.enums.InstanceType;
@@ -28,23 +27,16 @@ import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.knownlist.DefenderKnownList;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
-import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public class L2DefenderInstance extends L2Attackable
 {
 	private Castle _castle = null; // the castle which the instance should defend
 	private Fort _fort = null; // the fortress which the instance should defend
-	private SiegableHall _hall = null; // the siegable hall which the instance should defend
 	
-	/**
-	 * Creates a defender.
-	 * @param template the defender NPC template
-	 */
 	public L2DefenderInstance(L2NpcTemplate template)
 	{
 		super(template);
@@ -52,25 +44,9 @@ public class L2DefenderInstance extends L2Attackable
 	}
 	
 	@Override
-	public DefenderKnownList getKnownList()
-	{
-		return (DefenderKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new DefenderKnownList(this));
-	}
-	
-	@Override
 	protected L2CharacterAI initAI()
 	{
-		if ((getConquerableHall() == null) && (getCastle(10000) == null))
-		{
-			return new L2FortSiegeGuardAI(this);
-		}
-		else if (getCastle(10000) != null)
+		if (getCastle(10000) != null)
 		{
 			return new L2SiegeGuardAI(this);
 		}
@@ -93,12 +69,12 @@ public class L2DefenderInstance extends L2Attackable
 		final L2PcInstance player = attacker.getActingPlayer();
 		
 		// Check if siege is in progress
-		if (((_fort != null) && _fort.getZone().isActive()) || ((_castle != null) && _castle.getZone().isActive()) || ((_hall != null) && _hall.getSiegeZone().isActive()))
+		if (((_fort != null) && _fort.getZone().isActive()) || ((_castle != null) && _castle.getZone().isActive()))
 		{
-			final int activeSiegeId = _fort != null ? _fort.getResidenceId() : (_castle != null ? _castle.getResidenceId() : (_hall != null ? _hall.getId() : 0));
+			final int activeSiegeId = (_fort != null) ? _fort.getResidenceId() : _castle.getResidenceId();
 			
 			// Check if player is an enemy of this defender npc
-			if ((player != null) && (((player.getSiegeState() == 2) && !player.isRegisteredOnThisSiegeField(activeSiegeId)) || (player.getSiegeState() == 1) || (player.getSiegeState() == 0)))
+			if ((player != null) && (((player.getSiegeState() == 2) && !player.isRegisteredOnThisSiegeField(activeSiegeId)) || ((player.getSiegeState() == 1)) || (player.getSiegeState() == 0)))
 			{
 				return true;
 			}
@@ -118,19 +94,27 @@ public class L2DefenderInstance extends L2Attackable
 	@Override
 	public void returnHome()
 	{
-		if ((getWalkSpeed() <= 0) || (getSpawn() == null) || isInsideRadius(getSpawn(), 40, false, false))
+		if (getWalkSpeed() <= 0)
 		{
 			return;
 		}
-		if (Config.DEBUG)
+		if (getSpawn() == null)
 		{
-			_log.info(getObjectId() + ": moving home");
+			return;
 		}
-		setisReturningToSpawnPoint(true);
-		clearAggroList();
-		if (hasAI())
+		if (!isInsideRadius(getSpawn(), 40, false, false))
 		{
-			getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, getSpawn().getLocation());
+			if (Config.DEBUG)
+			{
+				_log.info(getObjectId() + ": moving home");
+			}
+			setisReturningToSpawnPoint(true);
+			clearAggroList();
+			
+			if (hasAI())
+			{
+				getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, getSpawn().getLocation());
+			}
 		}
 	}
 	
@@ -141,10 +125,10 @@ public class L2DefenderInstance extends L2Attackable
 		
 		_fort = FortManager.getInstance().getFort(getX(), getY(), getZ());
 		_castle = CastleManager.getInstance().getCastle(getX(), getY(), getZ());
-		_hall = getConquerableHall();
-		if ((_fort == null) && (_castle == null) && (_hall == null))
+		
+		if ((_fort == null) && (_castle == null))
 		{
-			_log.warning("L2DefenderInstance spawned outside of Fortress, Castle or Siegable hall Zone! NpcId: " + getId() + " x=" + getX() + " y=" + getY() + " z=" + getZ());
+			_log.warning("L2DefenderInstance spawned outside of Fortress or Castle zone!" + this);
 		}
 	}
 	
@@ -173,14 +157,20 @@ public class L2DefenderInstance extends L2Attackable
 		}
 		else if (interact)
 		{
-			if (isAutoAttackable(player) && !isAlikeDead() && (Math.abs(player.getZ() - getZ()) < 600)) // this max heigth difference might need some tweaking
+			if (isAutoAttackable(player) && !isAlikeDead())
 			{
-				player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
+				if (Math.abs(player.getZ() - getZ()) < 600) // this max heigth difference might need some tweaking
+				{
+					player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
+				}
 			}
-			if (!isAutoAttackable(player) && !canInteract(player))
+			if (!isAutoAttackable(player))
 			{
-				// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
-				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
+				if (!canInteract(player))
+				{
+					// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
+					player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
+				}
 			}
 		}
 		// Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
@@ -197,14 +187,14 @@ public class L2DefenderInstance extends L2Attackable
 		
 		if (!(attacker instanceof L2DefenderInstance))
 		{
-			if ((damage == 0) && (aggro <= 1) && (attacker instanceof L2Playable))
+			if ((damage == 0) && (aggro <= 1) && (attacker.isPlayable()))
 			{
 				final L2PcInstance player = attacker.getActingPlayer();
 				// Check if siege is in progress
-				if (((_fort != null) && _fort.getZone().isActive()) || ((_castle != null) && _castle.getZone().isActive()) || ((_hall != null) && _hall.getSiegeZone().isActive()))
+				if (((_fort != null) && _fort.getZone().isActive()) || ((_castle != null) && _castle.getZone().isActive()))
 				{
-					final int activeSiegeId = _fort != null ? _fort.getResidenceId() : (_castle != null ? _castle.getResidenceId() : (_hall != null ? _hall.getId() : 0));
-					if ((player != null) && (player.getSiegeState() == 2) && player.isRegisteredOnThisSiegeField(activeSiegeId))
+					final int activeSiegeId = (_fort != null) ? _fort.getResidenceId() : _castle.getResidenceId();
+					if ((player != null) && (((player.getSiegeState() == 2) && player.isRegisteredOnThisSiegeField(activeSiegeId)) || ((player.getSiegeState() == 1))))
 					{
 						return;
 					}

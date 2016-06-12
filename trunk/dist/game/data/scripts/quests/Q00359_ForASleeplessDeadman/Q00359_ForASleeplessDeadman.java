@@ -62,7 +62,7 @@ public final class Q00359_ForASleeplessDeadman extends Quest
 	
 	public Q00359_ForASleeplessDeadman()
 	{
-		super(359, Q00359_ForASleeplessDeadman.class.getSimpleName(), "For a Sleepless Deadman");
+		super(359);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "30857-06.html");
 		addStartNpc(ORVEN);
 		addTalkId(ORVEN);

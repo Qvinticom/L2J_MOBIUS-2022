@@ -20,16 +20,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.L2ExtractableProductItem;
-import com.l2jmobius.gameserver.model.L2ExtractableSkill;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.util.Rnd;
 
 /**
  * Restoration Random effect implementation.<br>
@@ -39,9 +39,19 @@ import com.l2jmobius.util.Rnd;
  */
 public final class RestorationRandom extends AbstractEffect
 {
-	public RestorationRandom(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	final List<L2ExtractableProductItem> _products = new ArrayList<>();
+	
+	public RestorationRandom(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
+		for (StatsSet group : params.getList("items", StatsSet.class))
+		{
+			final List<ItemHolder> items = new ArrayList<>();
+			for (StatsSet item : group.getList(".", StatsSet.class))
+			{
+				items.add(new ItemHolder(item.getInt(".id"), item.getInt(".count")));
+			}
+			_products.add(new L2ExtractableProductItem(items, group.getFloat(".chance")));
+		}
 	}
 	
 	@Override
@@ -51,25 +61,8 @@ public final class RestorationRandom extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isPlayer())
-		{
-			return;
-		}
-		
-		final L2ExtractableSkill exSkill = info.getSkill().getExtractableSkill();
-		if (exSkill == null)
-		{
-			return;
-		}
-		
-		if (exSkill.getProductItems().isEmpty())
-		{
-			_log.warning("Extractable Skill with no data, probably wrong/empty table in Skill Id: " + info.getSkill().getId());
-			return;
-		}
-		
 		final double rndNum = 100 * Rnd.nextDouble();
 		double chance = 0;
 		double chanceFrom = 0;
@@ -84,7 +77,7 @@ public final class RestorationRandom extends AbstractEffect
 		// If you get chance equal 45% you fall into the second zone 30-80.
 		// Meaning you get the second production list.
 		// Calculate extraction
-		for (L2ExtractableProductItem expi : exSkill.getProductItems())
+		for (L2ExtractableProductItem expi : _products)
 		{
 			chance = expi.getChance();
 			if ((rndNum >= chanceFrom) && (rndNum <= (chance + chanceFrom)))
@@ -95,20 +88,20 @@ public final class RestorationRandom extends AbstractEffect
 			chanceFrom += chance;
 		}
 		
-		final L2PcInstance player = info.getEffected().getActingPlayer();
+		final L2PcInstance player = effected.getActingPlayer();
 		if (creationList.isEmpty())
 		{
 			player.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
 			return;
 		}
 		
-		for (ItemHolder item : creationList)
+		for (ItemHolder createdItem : creationList)
 		{
-			if ((item.getId() <= 0) || (item.getCount() <= 0))
+			if ((createdItem.getId() <= 0) || (createdItem.getCount() <= 0))
 			{
 				continue;
 			}
-			player.addItem("Extract", item.getId(), (long) (item.getCount() * Config.RATE_EXTRACTABLE), info.getEffector(), true);
+			player.addItem("Extract", createdItem.getId(), (long) (createdItem.getCount() * Config.RATE_EXTRACTABLE), effector, true);
 		}
 	}
 }

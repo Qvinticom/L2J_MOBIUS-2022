@@ -17,18 +17,19 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.SubclassInfoType;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
 
 /**
  * @author Sdw
@@ -36,12 +37,10 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class ClassChange extends AbstractEffect
 {
 	private final int _index;
-	private static final int IDENTITY_CRISIS_SKILL_ID = 1570;
+	private final static int IDENTITY_CRISIS_SKILL_ID = 1570;
 	
-	public ClassChange(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public ClassChange(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_index = params.getInt("index", 0);
 	}
 	
@@ -52,12 +51,11 @@ public class ClassChange extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (info.getEffector().isPlayer())
+		if (effected.isPlayer())
 		{
-			final L2PcInstance player = info.getEffector().getActingPlayer();
-			
+			final L2PcInstance player = effected.getActingPlayer();
 			// TODO: FIX ME - Executing 1 second later otherwise interupted exception during storeCharBase()
 			ThreadPoolManager.getInstance().scheduleGeneral(() ->
 			{
@@ -65,7 +63,7 @@ public class ClassChange extends AbstractEffect
 				
 				if (!player.setActiveClass(_index))
 				{
-					player.sendMessage("You cannot switch your class right now!.");
+					player.sendMessage("You cannot switch your class right now!");
 					return;
 				}
 				
@@ -79,9 +77,11 @@ public class ClassChange extends AbstractEffect
 				msg.addClassId(activeClass);
 				msg.addClassId(player.getClassId().getId());
 				player.sendPacket(msg);
+				
 				player.broadcastUserInfo();
 				player.sendPacket(new AcquireSkillList(player));
 				player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
+				player.sendPacket(new ExAcquireAPSkillList(player));
 			}, 1000);
 		}
 	}

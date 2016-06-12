@@ -62,7 +62,8 @@ public class BeautyItem
 	
 	public void addColor(StatsSet set)
 	{
-		_colors.put(set.getInt("id"), new BeautyItem(set));
+		final BeautyItem color = new BeautyItem(set);
+		_colors.put(set.getInt("id"), color);
 	}
 	
 	public Map<Integer, BeautyItem> getColors()

@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.instancemanager.PetitionManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.PetitionVotePacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -98,7 +98,7 @@ public final class Petition
 		}
 		
 		PetitionManager.getInstance().getCompletedPetitions().put(getId(), this);
-		return PetitionManager.getInstance().getPendingPetitions().remove(getId()) != null;
+		return (PetitionManager.getInstance().getPendingPetitions().remove(getId()) != null);
 	}
 	
 	public String getContent()
@@ -136,7 +136,7 @@ public final class Petition
 		return _type.toString().replace("_", " ");
 	}
 	
-	public void sendPetitionerPacket(L2GameServerPacket responsePacket)
+	public void sendPetitionerPacket(IClientOutgoingPacket responsePacket)
 	{
 		if ((getPetitioner() == null) || !getPetitioner().isOnline())
 		{
@@ -150,7 +150,7 @@ public final class Petition
 		getPetitioner().sendPacket(responsePacket);
 	}
 	
-	public void sendResponderPacket(L2GameServerPacket responsePacket)
+	public void sendResponderPacket(IClientOutgoingPacket responsePacket)
 	{
 		if ((getResponder() == null) || !getResponder().isOnline())
 		{

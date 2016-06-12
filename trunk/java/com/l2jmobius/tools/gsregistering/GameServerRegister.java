@@ -37,7 +37,6 @@ public class GameServerRegister extends BaseGameServerRegister
 	
 	public GameServerRegister()
 	{
-		super();
 		load();
 		
 		if (GameServerTable.getInstance().getServerNames().size() == 0)
@@ -321,7 +320,7 @@ public class GameServerRegister extends BaseGameServerRegister
 	@Override
 	public void showError(String msg, Throwable t)
 	{
-		msg += Config.EOL + "Reason: " + t.getLocalizedMessage();
+		msg += Config.EOL + "Reason: " + t.getMessage();
 		System.out.println("Error: " + msg);
 	}
 }

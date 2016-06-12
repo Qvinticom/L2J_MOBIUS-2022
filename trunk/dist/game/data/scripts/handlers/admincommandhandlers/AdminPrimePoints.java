@@ -72,8 +72,8 @@ public final class AdminPrimePoints implements IAdminCommandHandler
 					case "set":
 					{
 						target.setPrimePoints(value);
-						target.sendMessage("Admin set your NCoin(s) to " + value + "!");
-						activeChar.sendMessage("You set " + value + " NCoin(s) to player " + target.getName());
+						target.sendMessage("Admin set your Prime Point(s) to " + value + "!");
+						activeChar.sendMessage("You set " + value + " Prime Point(s) to player " + target.getName());
 						break;
 					}
 					case "increase":
@@ -81,18 +81,18 @@ public final class AdminPrimePoints implements IAdminCommandHandler
 						if (target.getPrimePoints() == Integer.MAX_VALUE)
 						{
 							showMenuHtml(activeChar);
-							activeChar.sendMessage(target.getName() + " already have max count of NCoins!");
+							activeChar.sendMessage(target.getName() + " already have max count of Prime Points!");
 							return false;
 						}
 						
-						int primeCount = Math.min(target.getPrimePoints() + value, Integer.MAX_VALUE);
+						int primeCount = Math.min((target.getPrimePoints() + value), Integer.MAX_VALUE);
 						if (primeCount < 0)
 						{
 							primeCount = Integer.MAX_VALUE;
 						}
 						target.setPrimePoints(primeCount);
-						target.sendMessage("Admin increased your NCoin(s) by " + value + "!");
-						activeChar.sendMessage("You increased NCoin(s) of " + target.getName() + " by " + value);
+						target.sendMessage("Admin increase your Prime Point(s) by " + value + "!");
+						activeChar.sendMessage("You increased Prime Point(s) of " + target.getName() + " by " + value);
 						break;
 					}
 					case "decrease":
@@ -100,14 +100,14 @@ public final class AdminPrimePoints implements IAdminCommandHandler
 						if (target.getPrimePoints() == 0)
 						{
 							showMenuHtml(activeChar);
-							activeChar.sendMessage(target.getName() + " already have min count of NCoins!");
+							activeChar.sendMessage(target.getName() + " already have min count of Prime Points!");
 							return false;
 						}
 						
 						final int primeCount = Math.max(target.getPrimePoints() - value, 0);
 						target.setPrimePoints(primeCount);
-						target.sendMessage("Admin decreased your NCoin(s) by " + value + "!");
-						activeChar.sendMessage("You decreased NCoin(s) of " + target.getName() + " by " + value);
+						target.sendMessage("Admin decreased your Prime Point(s) by " + value + "!");
+						activeChar.sendMessage("You decreased Prime Point(s) of " + target.getName() + " by " + value);
 						break;
 					}
 					case "rewardOnline":
@@ -123,11 +123,13 @@ public final class AdminPrimePoints implements IAdminCommandHandler
 						
 						if (range <= 0)
 						{
-							activeChar.sendMessage("You increased NCoin(s) of all online players (" + increaseForAll(L2World.getInstance().getPlayers(), value) + ") by " + value + ".");
+							final int count = increaseForAll(L2World.getInstance().getPlayers(), value);
+							activeChar.sendMessage("You increased Prime Point(s) of all online players (" + count + ") by " + value + ".");
 						}
 						else if (range > 0)
 						{
-							activeChar.sendMessage("You increased NCoin(s) of all players (" + increaseForAll(activeChar.getKnownList().getKnownPlayers().values(), value) + ") in range " + range + " by " + value + ".");
+							final int count = increaseForAll(L2World.getInstance().getVisibleObjects(activeChar, L2PcInstance.class, range), value);
+							activeChar.sendMessage("You increased Prime Point(s) of all players (" + count + ") in range " + range + " by " + value + ".");
 						}
 						break;
 					}
@@ -150,13 +152,13 @@ public final class AdminPrimePoints implements IAdminCommandHandler
 					continue;
 				}
 				
-				int primeCount = Math.min(temp.getPrimePoints() + value, Integer.MAX_VALUE);
+				int primeCount = Math.min((temp.getPrimePoints() + value), Integer.MAX_VALUE);
 				if (primeCount < 0)
 				{
 					primeCount = Integer.MAX_VALUE;
 				}
 				temp.setPrimePoints(primeCount);
-				temp.sendMessage("Admin increased your NCoin(s) by " + value + "!");
+				temp.sendMessage("Admin increase your Prime Point(s) by " + value + "!");
 				counter++;
 			}
 		}
@@ -170,10 +172,10 @@ public final class AdminPrimePoints implements IAdminCommandHandler
 	
 	private void showMenuHtml(L2PcInstance activeChar)
 	{
-		final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
+		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		final L2PcInstance target = getTarget(activeChar);
 		final int points = target.getPrimePoints();
-		html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/primepoints.htm"));
+		html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/primepoints.htm"));
 		html.replace("%points%", Util.formatAdena(points));
 		html.replace("%targetName%", target.getName());
 		activeChar.sendPacket(html);

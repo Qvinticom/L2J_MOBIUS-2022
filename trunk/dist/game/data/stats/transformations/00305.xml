@@ -4,13 +4,13 @@
 		<Male>
 			<common>
 				<base range="20" attackSpeed="300" attackType="SWORD" critRate="5" mAtk="5" pAtk="5" randomDamage="10" />
-				<stats str="48" int="45" con="52" dex="30" wit="20" men="45" />
+				<stats str="101" int="81" con="96" dex="42" wit="65" men="84" />
 				<defense chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" />
 				<magicDefense rear="9" lear="9" rfinger="5" lfinger="5" neck="13" />
 				<collision radius="16" height="32" />
-				<moving walk="30" run="125" waterWalk="50" waterRun="50" flyWalk="0" flyRun="0" unknownWalk="0" unknownRun="0" />
+				<moving walk="30" run="147" waterWalk="50" waterRun="50" flyWalk="0" flyRun="0" unknownWalk="0" unknownRun="0" />
 			</common>
-			<actions>1 2 3 4 5 6 7 8 9 11 15 16 17 18 19 21 22 23 32 36 39 40 41 42 43 44 45 46 47 48 50 52 53 54 55 56 57 63 64 65 70 1000 1001 1003 1004 1005 1006 1007 1008 1009 1010 1011 1012 1013 1014 1015 1016 1017 1018 1019 1020 1021 1022 1023 1024 1025 1026 1027 1028 1029 1030 1031 1032 1033 1034 1035 1036 1037 1038 1039 1040 1041 1042 1043 1044 1045 1046 1047 1048 1049 1050 1051 1052 1053 1054 1055 1056 1057 1058 1059 1060 1061 1062 1063 1064 1065 1066 1067 1068 1069 1070 1071 1072 1073 1074 1075 1076 1077 1078 1079 1080 1081 1082 1083 1084 1089 1090 1091 1092 1093 1094 1095 1096 1097 1098</actions>
+			<actions>1 2 3 4 5 6 7 8 9 11 15 16 17 18 19 21 22 23 32 36 39 40 41 42 43 44 45 46 47 48 50 52 53 54 55 56 57 63 64 65 70 86 1000 1001 1003 1004 1005 1006 1007 1008 1009 1010 1011 1012 1013 1014 1015 1016 1017 1018 1019 1020 1021 1022 1023 1024 1025 1026 1027 1028 1029 1030 1031 1032 1033 1034 1035 1036 1037 1038 1039 1040 1041 1042 1043 1044 1045 1046 1047 1048 1049 1050 1051 1052 1053 1054 1055 1056 1057 1058 1059 1060 1061 1062 1063 1064 1065 1066 1067 1068 1069 1070 1071 1072 1073 1074 1075 1076 1077 1078 1079 1080 1081 1082 1083 1084 1089 1090 1091 1092 1093 1094 1095 1096 1097 1098 5000 5001 5002 5003 5004 5005 5006 5007 5008 5009 5010 5011 5012 5013 5014 5015 5016 1099 1100 1101 1102 1103 1104 1106 1107 1108 1109 1110 1111 1113 1114 1115 1116 1117 1118 1120 1121</actions>
 			<additionalSkills>
 				<skill id="715" level="2" minLevel="67" /> <!-- Zaken Energy Drain -->
 				<skill id="716" level="2" minLevel="67" /> <!-- Zaken Hold -->
@@ -31,7 +31,7 @@
 				<skill id="717" level="1" /> <!-- Zaken Concentrated Attack -->
 				<skill id="718" level="1" /> <!-- Zaken Dancing Sword -->
 				<skill id="719" level="1" /> <!-- Zaken Vampiric Rage -->
-				<skill id="619" level="1" /> <!-- Transform Dispel -->
+				<skill id="619" level="1" /> <!-- Dispel Transform -->
 				<skill id="5491" level="1" /> <!-- Decrease Bow/Crossbow Atk. Spd. -->
 			</skills>
 			<levels>
@@ -120,32 +120,32 @@
 				<level val="83" levelMod="1.72" hp="4761.264" mp="1599.66" cp="2380.632" hpRegen="9.7" mpRegen="3.0" cpRegen="8.5" />
 				<level val="84" levelMod="1.73" hp="4852.608" mp="1630.8" cp="2426.304" hpRegen="9.8" mpRegen="3.0" cpRegen="8.5" />
 				<level val="85" levelMod="1.74" hp="4944.48" mp="1662.12" cp="2472.24" hpRegen="9.9" mpRegen="3.0" cpRegen="8.5" />
-				<level val="86" levelMod="1.75" hp="5036.88" mp="1693.62" cp="2518.44" hpRegen="10.0" mpRegen="3.0" cpRegen="8.5" />
-				<level val="87" levelMod="1.76" hp="5129.808" mp="1725.3" cp="2564.904" hpRegen="10.1" mpRegen="3.0" cpRegen="8.5" />
-				<level val="88" levelMod="1.77" hp="5223.264" mp="1757.16" cp="2611.632" hpRegen="10.2" mpRegen="3.0" cpRegen="8.5" />
-				<level val="89" levelMod="1.78" hp="5317.248" mp="1789.2" cp="2658.624" hpRegen="10.3" mpRegen="3.0" cpRegen="8.5" />
-				<level val="90" levelMod="1.79" hp="5411.76" mp="1821.42" cp="2705.88" hpRegen="10.4" mpRegen="3.0" cpRegen="8.5" />
-				<level val="91" levelMod="1.8" hp="5506.8" mp="1853.82" cp="2753.4" hpRegen="10.5" mpRegen="3.0" cpRegen="8.5" />
-				<level val="92" levelMod="1.81" hp="5602.368" mp="1886.4" cp="2801.184" hpRegen="10.6" mpRegen="3.0" cpRegen="8.5" />
-				<level val="93" levelMod="1.82" hp="5698.464" mp="1919.16" cp="2849.232" hpRegen="10.7" mpRegen="3.0" cpRegen="8.5" />
-				<level val="94" levelMod="1.83" hp="5795.088" mp="1952.1" cp="2897.544" hpRegen="10.8" mpRegen="3.0" cpRegen="8.5" />
-				<level val="95" levelMod="1.84" hp="5892.24" mp="1985.22" cp="2946.12" hpRegen="10.9" mpRegen="3.0" cpRegen="8.5" />
-				<level val="96" levelMod="1.85" hp="5989.92" mp="2018.52" cp="2994.96" hpRegen="11.0" mpRegen="3.0" cpRegen="8.5" />
-				<level val="97" levelMod="1.86" hp="6088.128" mp="2052.0" cp="3044.064" hpRegen="11.1" mpRegen="3.0" cpRegen="8.5" />
-				<level val="98" levelMod="1.87" hp="6186.864" mp="2085.66" cp="3093.432" hpRegen="11.2" mpRegen="3.0" cpRegen="8.5" />
-				<level val="99" levelMod="1.88" hp="6286.128" mp="2119.5" cp="3143.064" hpRegen="11.3" mpRegen="3.0" cpRegen="8.5" />
+				<level val="86" levelMod="1.75" hp="5006.88" mp="1693.62" cp="2518.44" hpRegen="10.0" mpRegen="3.0" cpRegen="8.5" />
+				<level val="87" levelMod="1.76" hp="5029.808" mp="1725.3" cp="2564.904" hpRegen="10.1" mpRegen="3.0" cpRegen="8.5" />
+				<level val="88" levelMod="1.77" hp="5043.264" mp="1757.16" cp="2611.632" hpRegen="10.2" mpRegen="3.0" cpRegen="8.5" />
+				<level val="89" levelMod="1.78" hp="5067.248" mp="1789.2" cp="2658.624" hpRegen="10.3" mpRegen="3.0" cpRegen="8.5" />
+				<level val="90" levelMod="1.79" hp="5081.76" mp="1821.42" cp="2705.88" hpRegen="10.4" mpRegen="3.0" cpRegen="8.5" />
+				<level val="91" levelMod="1.8" hp="5106.8" mp="1853.82" cp="2753.4" hpRegen="10.5" mpRegen="3.0" cpRegen="8.5" />
+				<level val="92" levelMod="1.81" hp="5122.368" mp="1886.4" cp="2801.184" hpRegen="10.6" mpRegen="3.0" cpRegen="8.5" />
+				<level val="93" levelMod="1.82" hp="5148.464" mp="1919.16" cp="2849.232" hpRegen="10.7" mpRegen="3.0" cpRegen="8.5" />
+				<level val="94" levelMod="1.83" hp="5165.088" mp="1952.1" cp="2897.544" hpRegen="10.8" mpRegen="3.0" cpRegen="8.5" />
+				<level val="95" levelMod="1.84" hp="5182.24" mp="1985.22" cp="2946.12" hpRegen="10.9" mpRegen="3.0" cpRegen="8.5" />
+				<level val="96" levelMod="1.85" hp="5209.92" mp="2018.52" cp="2994.96" hpRegen="11.0" mpRegen="3.0" cpRegen="8.5" />
+				<level val="97" levelMod="1.86" hp="5228.128" mp="2052.0" cp="3044.064" hpRegen="11.1" mpRegen="3.0" cpRegen="8.5" />
+				<level val="98" levelMod="1.87" hp="5246.864" mp="2085.66" cp="3093.432" hpRegen="11.2" mpRegen="3.0" cpRegen="8.5" />
+				<level val="99" levelMod="1.88" hp="5266.128" mp="2119.5" cp="3143.064" hpRegen="11.3" mpRegen="3.0" cpRegen="8.5" />
 			</levels>
 		</Male>
 		<Female>
 			<common>
 				<base range="20" attackSpeed="300" attackType="SWORD" critRate="5" mAtk="5" pAtk="5" randomDamage="10" />
-				<stats str="48" int="45" con="52" dex="30" wit="20" men="45" />
+				<stats str="101" int="81" con="96" dex="42" wit="65" men="84" />
 				<defense chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" />
 				<magicDefense rear="9" lear="9" rfinger="5" lfinger="5" neck="13" />
 				<collision radius="16" height="32" />
-				<moving walk="30" run="125" waterWalk="50" waterRun="50" flyWalk="0" flyRun="0" unknownWalk="0" unknownRun="0" />
+				<moving walk="30" run="147" waterWalk="50" waterRun="50" flyWalk="0" flyRun="0" unknownWalk="0" unknownRun="0" />
 			</common>
-			<actions>1 2 3 4 5 6 7 8 9 11 15 16 17 18 19 21 22 23 32 36 39 40 41 42 43 44 45 46 47 48 50 52 53 54 55 56 57 63 64 65 70 1000 1001 1003 1004 1005 1006 1007 1008 1009 1010 1011 1012 1013 1014 1015 1016 1017 1018 1019 1020 1021 1022 1023 1024 1025 1026 1027 1028 1029 1030 1031 1032 1033 1034 1035 1036 1037 1038 1039 1040 1041 1042 1043 1044 1045 1046 1047 1048 1049 1050 1051 1052 1053 1054 1055 1056 1057 1058 1059 1060 1061 1062 1063 1064 1065 1066 1067 1068 1069 1070 1071 1072 1073 1074 1075 1076 1077 1078 1079 1080 1081 1082 1083 1084 1089 1090 1091 1092 1093 1094 1095 1096 1097 1098</actions>
+			<actions>1 2 3 4 5 6 7 8 9 11 15 16 17 18 19 21 22 23 32 36 39 40 41 42 43 44 45 46 47 48 50 52 53 54 55 56 57 63 64 65 70 86 1000 1001 1003 1004 1005 1006 1007 1008 1009 1010 1011 1012 1013 1014 1015 1016 1017 1018 1019 1020 1021 1022 1023 1024 1025 1026 1027 1028 1029 1030 1031 1032 1033 1034 1035 1036 1037 1038 1039 1040 1041 1042 1043 1044 1045 1046 1047 1048 1049 1050 1051 1052 1053 1054 1055 1056 1057 1058 1059 1060 1061 1062 1063 1064 1065 1066 1067 1068 1069 1070 1071 1072 1073 1074 1075 1076 1077 1078 1079 1080 1081 1082 1083 1084 1089 1090 1091 1092 1093 1094 1095 1096 1097 1098 5000 5001 5002 5003 5004 5005 5006 5007 5008 5009 5010 5011 5012 5013 5014 5015 5016 1099 1100 1101 1102 1103 1104 1106 1107 1108 1109 1110 1111 1113 1114 1115 1116 1117 1118 1120 1121</actions>
 			<additionalSkills>
 				<skill id="715" level="2" minLevel="67" /> <!-- Zaken Energy Drain -->
 				<skill id="716" level="2" minLevel="67" /> <!-- Zaken Hold -->
@@ -166,7 +166,7 @@
 				<skill id="717" level="1" /> <!-- Zaken Concentrated Attack -->
 				<skill id="718" level="1" /> <!-- Zaken Dancing Sword -->
 				<skill id="719" level="1" /> <!-- Zaken Vampiric Rage -->
-				<skill id="619" level="1" /> <!-- Transform Dispel -->
+				<skill id="619" level="1" /> <!-- Dispel Transform -->
 				<skill id="5491" level="1" /> <!-- Decrease Bow/Crossbow Atk. Spd. -->
 			</skills>
 			<levels>
@@ -255,20 +255,20 @@
 				<level val="83" levelMod="1.72" hp="4761.264" mp="1599.66" cp="2380.632" hpRegen="9.7" mpRegen="3.0" cpRegen="8.5" />
 				<level val="84" levelMod="1.73" hp="4852.608" mp="1630.8" cp="2426.304" hpRegen="9.8" mpRegen="3.0" cpRegen="8.5" />
 				<level val="85" levelMod="1.74" hp="4944.48" mp="1662.12" cp="2472.24" hpRegen="9.9" mpRegen="3.0" cpRegen="8.5" />
-				<level val="86" levelMod="1.75" hp="5036.88" mp="1693.62" cp="2518.44" hpRegen="10.0" mpRegen="3.0" cpRegen="8.5" />
-				<level val="87" levelMod="1.76" hp="5129.808" mp="1725.3" cp="2564.904" hpRegen="10.1" mpRegen="3.0" cpRegen="8.5" />
-				<level val="88" levelMod="1.77" hp="5223.264" mp="1757.16" cp="2611.632" hpRegen="10.2" mpRegen="3.0" cpRegen="8.5" />
-				<level val="89" levelMod="1.78" hp="5317.248" mp="1789.2" cp="2658.624" hpRegen="10.3" mpRegen="3.0" cpRegen="8.5" />
-				<level val="90" levelMod="1.79" hp="5411.76" mp="1821.42" cp="2705.88" hpRegen="10.4" mpRegen="3.0" cpRegen="8.5" />
-				<level val="91" levelMod="1.8" hp="5506.8" mp="1853.82" cp="2753.4" hpRegen="10.5" mpRegen="3.0" cpRegen="8.5" />
-				<level val="92" levelMod="1.81" hp="5602.368" mp="1886.4" cp="2801.184" hpRegen="10.6" mpRegen="3.0" cpRegen="8.5" />
-				<level val="93" levelMod="1.82" hp="5698.464" mp="1919.16" cp="2849.232" hpRegen="10.7" mpRegen="3.0" cpRegen="8.5" />
-				<level val="94" levelMod="1.83" hp="5795.088" mp="1952.1" cp="2897.544" hpRegen="10.8" mpRegen="3.0" cpRegen="8.5" />
-				<level val="95" levelMod="1.84" hp="5892.24" mp="1985.22" cp="2946.12" hpRegen="10.9" mpRegen="3.0" cpRegen="8.5" />
-				<level val="96" levelMod="1.85" hp="5989.92" mp="2018.52" cp="2994.96" hpRegen="11.0" mpRegen="3.0" cpRegen="8.5" />
-				<level val="97" levelMod="1.86" hp="6088.128" mp="2052.0" cp="3044.064" hpRegen="11.1" mpRegen="3.0" cpRegen="8.5" />
-				<level val="98" levelMod="1.87" hp="6186.864" mp="2085.66" cp="3093.432" hpRegen="11.2" mpRegen="3.0" cpRegen="8.5" />
-				<level val="99" levelMod="1.88" hp="6286.128" mp="2119.5" cp="3143.064" hpRegen="11.3" mpRegen="3.0" cpRegen="8.5" />
+				<level val="86" levelMod="1.75" hp="5006.88" mp="1693.62" cp="2518.44" hpRegen="10.0" mpRegen="3.0" cpRegen="8.5" />
+				<level val="87" levelMod="1.76" hp="5029.808" mp="1725.3" cp="2564.904" hpRegen="10.1" mpRegen="3.0" cpRegen="8.5" />
+				<level val="88" levelMod="1.77" hp="5043.264" mp="1757.16" cp="2611.632" hpRegen="10.2" mpRegen="3.0" cpRegen="8.5" />
+				<level val="89" levelMod="1.78" hp="5067.248" mp="1789.2" cp="2658.624" hpRegen="10.3" mpRegen="3.0" cpRegen="8.5" />
+				<level val="90" levelMod="1.79" hp="5081.76" mp="1821.42" cp="2705.88" hpRegen="10.4" mpRegen="3.0" cpRegen="8.5" />
+				<level val="91" levelMod="1.8" hp="5106.8" mp="1853.82" cp="2753.4" hpRegen="10.5" mpRegen="3.0" cpRegen="8.5" />
+				<level val="92" levelMod="1.81" hp="5122.368" mp="1886.4" cp="2801.184" hpRegen="10.6" mpRegen="3.0" cpRegen="8.5" />
+				<level val="93" levelMod="1.82" hp="5148.464" mp="1919.16" cp="2849.232" hpRegen="10.7" mpRegen="3.0" cpRegen="8.5" />
+				<level val="94" levelMod="1.83" hp="5165.088" mp="1952.1" cp="2897.544" hpRegen="10.8" mpRegen="3.0" cpRegen="8.5" />
+				<level val="95" levelMod="1.84" hp="5182.24" mp="1985.22" cp="2946.12" hpRegen="10.9" mpRegen="3.0" cpRegen="8.5" />
+				<level val="96" levelMod="1.85" hp="5209.92" mp="2018.52" cp="2994.96" hpRegen="11.0" mpRegen="3.0" cpRegen="8.5" />
+				<level val="97" levelMod="1.86" hp="5228.128" mp="2052.0" cp="3044.064" hpRegen="11.1" mpRegen="3.0" cpRegen="8.5" />
+				<level val="98" levelMod="1.87" hp="5246.864" mp="2085.66" cp="3093.432" hpRegen="11.2" mpRegen="3.0" cpRegen="8.5" />
+				<level val="99" levelMod="1.88" hp="5266.128" mp="2119.5" cp="3143.064" hpRegen="11.3" mpRegen="3.0" cpRegen="8.5" />
 			</levels>
 		</Female>
 	</transform>

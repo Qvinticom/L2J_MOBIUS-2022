@@ -16,16 +16,18 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.List;
+import java.util.Set;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author UnAfraid, mrTJO
  */
-public class ExShowContactList extends L2GameServerPacket
+public class ExShowContactList implements IClientOutgoingPacket
 {
-	private final List<String> _contacts;
+	private final Set<String> _contacts;
 	
 	public ExShowContactList(L2PcInstance player)
 	{
@@ -33,14 +35,12 @@ public class ExShowContactList extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xD4);
-		writeD(_contacts.size());
-		for (String name : _contacts)
-		{
-			writeS(name);
-		}
+		OutgoingPackets.EX_CONFIRM_ADDING_POST_FRIEND.writeId(packet);
+		
+		packet.writeD(_contacts.size());
+		_contacts.forEach(packet::writeS);
+		return true;
 	}
 }

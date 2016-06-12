@@ -31,10 +31,11 @@ public class L2WalkRoute
 	
 	public L2WalkRoute(String name, List<L2NpcWalkerNode> route, boolean repeat, boolean once, byte repeatType)
 	{
+		
 		_name = name;
 		_nodeList = route;
 		_repeatType = repeatType;
-		_repeatWalk = (_repeatType >= 0) && (_repeatType <= 2) && repeat;
+		_repeatWalk = ((_repeatType >= 0) && (_repeatType <= 2)) && repeat;
 	}
 	
 	public String getName()

@@ -16,29 +16,32 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets.alchemy;
 
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author Mobius
+ * @author Sdw
  */
-public class ExAlchemyConversion extends L2GameServerPacket
+public class ExAlchemyConversion implements IClientOutgoingPacket
 {
-	private final int _itemCount;
-	private final int _failCount;
+	private final int _successCount;
+	private final int _failureCount;
 	
-	public ExAlchemyConversion(int itemCount, int failCount)
+	public ExAlchemyConversion(int successCount, int failureCount)
 	{
-		_itemCount = itemCount;
-		_failCount = failCount;
+		_successCount = successCount;
+		_failureCount = failureCount;
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x176);
-		writeC(0x00);
-		writeD(_itemCount);
-		writeD(_failCount);
+		OutgoingPackets.EX_ALCHEMY_CONVERSION.writeId(packet);
+		
+		packet.writeC(0x00); // TODO: Find me
+		packet.writeD(_successCount);
+		packet.writeD(_failureCount);
+		return true;
 	}
 }

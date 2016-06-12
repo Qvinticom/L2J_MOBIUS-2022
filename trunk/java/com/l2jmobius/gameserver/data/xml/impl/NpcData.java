@@ -24,9 +24,11 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
@@ -34,8 +36,11 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.commons.util.CommonUtil;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.enums.AISkillScope;
+import com.l2jmobius.gameserver.enums.MpRewardAffectType;
+import com.l2jmobius.gameserver.enums.MpRewardType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.base.ClassId;
@@ -45,17 +50,16 @@ import com.l2jmobius.gameserver.model.drops.GroupedGeneralDropItem;
 import com.l2jmobius.gameserver.model.drops.IDropItem;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.holders.MinionHolder;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * NPC data parser.
  * @author NosBit
  */
-public class NpcData implements IXmlReader
+public class NpcData implements IGameXmlReader
 {
+	protected static final Logger LOGGER = Logger.getLogger(NpcData.class.getName());
+	
 	private final Map<Integer, L2NpcTemplate> _npcs = new ConcurrentHashMap<>();
 	private final Map<String, Integer> _clans = new ConcurrentHashMap<>();
 	private MinionData _minionData;
@@ -70,13 +74,13 @@ public class NpcData implements IXmlReader
 	{
 		_minionData = new MinionData();
 		
-		parseDatapackDirectory("stats/npcs", false);
+		parseDatapackDirectory("data/stats/npcs", false);
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _npcs.size() + " NPCs.");
 		
 		if (Config.CUSTOM_NPC_DATA)
 		{
 			final int npcCount = _npcs.size();
-			parseDatapackDirectory("stats/npcs/custom", true);
+			parseDatapackDirectory("data/stats/npcs/custom", true);
 			LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_npcs.size() - npcCount) + " Custom NPCs.");
 		}
 		
@@ -91,12 +95,12 @@ public class NpcData implements IXmlReader
 		{
 			if ("list".equalsIgnoreCase(node.getNodeName()))
 			{
-				for (Node listNode = node.getFirstChild(); listNode != null; listNode = listNode.getNextSibling())
+				for (Node list_node = node.getFirstChild(); list_node != null; list_node = list_node.getNextSibling())
 				{
-					if ("npc".equalsIgnoreCase(listNode.getNodeName()))
+					if ("npc".equalsIgnoreCase(list_node.getNodeName()))
 					{
-						NamedNodeMap attrs = listNode.getAttributes();
-						final StatsSet set = new StatsSet();
+						NamedNodeMap attrs = list_node.getAttributes();
+						final StatsSet set = new StatsSet(new HashMap<>());
 						final int npcId = parseInteger(attrs, "id");
 						Map<String, Object> parameters = null;
 						Map<Integer, Skill> skills = null;
@@ -111,10 +115,10 @@ public class NpcData implements IXmlReader
 						set.set("usingServerSideName", parseBoolean(attrs, "usingServerSideName"));
 						set.set("title", parseString(attrs, "title"));
 						set.set("usingServerSideTitle", parseBoolean(attrs, "usingServerSideTitle"));
-						for (Node npcNode = listNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling())
+						for (Node npc_node = list_node.getFirstChild(); npc_node != null; npc_node = npc_node.getNextSibling())
 						{
-							attrs = npcNode.getAttributes();
-							switch (npcNode.getNodeName().toLowerCase())
+							attrs = npc_node.getAttributes();
+							switch (npc_node.getNodeName().toLowerCase())
 							{
 								case "parameters":
 								{
@@ -122,51 +126,13 @@ public class NpcData implements IXmlReader
 									{
 										parameters = new HashMap<>();
 									}
-									
-									for (Node parametersNode = npcNode.getFirstChild(); parametersNode != null; parametersNode = parametersNode.getNextSibling())
-									{
-										attrs = parametersNode.getAttributes();
-										switch (parametersNode.getNodeName().toLowerCase())
-										{
-											case "param":
-											{
-												parameters.put(parseString(attrs, "name"), parseString(attrs, "value"));
-												break;
-											}
-											case "skill":
-											{
-												parameters.put(parseString(attrs, "name"), new SkillHolder(parseInteger(attrs, "id"), parseInteger(attrs, "level")));
-												break;
-											}
-											case "minions":
-											{
-												final List<MinionHolder> minions = new ArrayList<>(1);
-												for (Node minionsNode = parametersNode.getFirstChild(); minionsNode != null; minionsNode = minionsNode.getNextSibling())
-												{
-													if (minionsNode.getNodeName().equalsIgnoreCase("npc"))
-													{
-														attrs = minionsNode.getAttributes();
-														minions.add(new MinionHolder(parseInteger(attrs, "id"), parseInteger(attrs, "count"), parseInteger(attrs, "respawnTime"), parseInteger(attrs, "weightPoint")));
-													}
-												}
-												
-												if (!minions.isEmpty())
-												{
-													parameters.put(parseString(parametersNode.getAttributes(), "name"), minions);
-												}
-												
-												break;
-											}
-										}
-									}
+									parameters.putAll(parseParameters(npc_node));
 									break;
 								}
 								case "race":
 								case "sex":
-								{
-									set.set(npcNode.getNodeName(), npcNode.getTextContent().toUpperCase());
+									set.set(npc_node.getNodeName(), npc_node.getTextContent().toUpperCase());
 									break;
-								}
 								case "equipment":
 								{
 									set.set("chestId", parseInteger(attrs, "chest"));
@@ -182,12 +148,26 @@ public class NpcData implements IXmlReader
 									set.set("raidPoints", parseDouble(attrs, "raidPoints"));
 									break;
 								}
+								case "mpreward":
+								{
+									set.set("mpRewardValue", parseInteger(attrs, "value"));
+									set.set("mpRewardType", parseEnum(attrs, MpRewardType.class, "type"));
+									set.set("mpRewardTicks", parseInteger(attrs, "ticks"));
+									set.set("mpRewardAffectType", parseEnum(attrs, MpRewardAffectType.class, "affects"));
+									break;
+								}
 								case "stats":
 								{
-									for (Node statsNode = npcNode.getFirstChild(); statsNode != null; statsNode = statsNode.getNextSibling())
+									set.set("baseSTR", parseInteger(attrs, "str"));
+									set.set("baseINT", parseInteger(attrs, "int"));
+									set.set("baseDEX", parseInteger(attrs, "dex"));
+									set.set("baseWIT", parseInteger(attrs, "wit"));
+									set.set("baseCON", parseInteger(attrs, "con"));
+									set.set("baseMEN", parseInteger(attrs, "men"));
+									for (Node stats_node = npc_node.getFirstChild(); stats_node != null; stats_node = stats_node.getNextSibling())
 									{
-										attrs = statsNode.getAttributes();
-										switch (statsNode.getNodeName().toLowerCase())
+										attrs = stats_node.getAttributes();
+										switch (stats_node.getNodeName().toLowerCase())
 										{
 											case "vitals":
 											{
@@ -202,9 +182,9 @@ public class NpcData implements IXmlReader
 												set.set("basePAtk", parseDouble(attrs, "physical"));
 												set.set("baseMAtk", parseDouble(attrs, "magical"));
 												set.set("baseRndDam", parseInteger(attrs, "random"));
-												set.set("baseCritRate", parseInteger(attrs, "critical"));
-												set.set("accuracy", parseDouble(attrs, "accuracy")); // TODO: Implement me
-												set.set("basePAtkSpd", parseInteger(attrs, "attackSpeed"));
+												set.set("baseCritRate", parseDouble(attrs, "critical"));
+												set.set("accuracy", parseFloat(attrs, "accuracy")); // TODO: Implement me
+												set.set("basePAtkSpd", parseFloat(attrs, "attackSpeed"));
 												set.set("reuseDelay", parseInteger(attrs, "reuseDelay")); // TODO: Implement me
 												set.set("baseAtkType", parseString(attrs, "type"));
 												set.set("baseAtkRange", parseInteger(attrs, "range"));
@@ -221,12 +201,18 @@ public class NpcData implements IXmlReader
 												set.set("baseShldRate", parseInteger(attrs, "shieldRate"));
 												break;
 											}
+											case "abnormalresist":
+											{
+												set.set("physicalAbnormalResist", parseDouble(attrs, "physical"));
+												set.set("magicAbnormalResist", parseDouble(attrs, "magic"));
+												break;
+											}
 											case "attribute":
 											{
-												for (Node attributeNode = statsNode.getFirstChild(); attributeNode != null; attributeNode = attributeNode.getNextSibling())
+												for (Node attribute_node = stats_node.getFirstChild(); attribute_node != null; attribute_node = attribute_node.getNextSibling())
 												{
-													attrs = attributeNode.getAttributes();
-													switch (attributeNode.getNodeName().toLowerCase())
+													attrs = attribute_node.getAttributes();
+													switch (attribute_node.getNodeName().toLowerCase())
 													{
 														case "attack":
 														{
@@ -234,35 +220,23 @@ public class NpcData implements IXmlReader
 															switch (attackAttributeType.toUpperCase())
 															{
 																case "FIRE":
-																{
 																	set.set("baseFire", parseInteger(attrs, "value"));
 																	break;
-																}
 																case "WATER":
-																{
 																	set.set("baseWater", parseInteger(attrs, "value"));
 																	break;
-																}
 																case "WIND":
-																{
 																	set.set("baseWind", parseInteger(attrs, "value"));
 																	break;
-																}
 																case "EARTH":
-																{
 																	set.set("baseEarth", parseInteger(attrs, "value"));
 																	break;
-																}
 																case "DARK":
-																{
 																	set.set("baseDark", parseInteger(attrs, "value"));
 																	break;
-																}
 																case "HOLY":
-																{
 																	set.set("baseHoly", parseInteger(attrs, "value"));
 																	break;
-																}
 															}
 															break;
 														}
@@ -283,36 +257,32 @@ public class NpcData implements IXmlReader
 											}
 											case "speed":
 											{
+												for (Node speed_node = stats_node.getFirstChild(); speed_node != null; speed_node = speed_node.getNextSibling())
 												{
-													for (Node speedNode = statsNode.getFirstChild(); speedNode != null; speedNode = speedNode.getNextSibling())
+													attrs = speed_node.getAttributes();
+													switch (speed_node.getNodeName().toLowerCase())
 													{
-														attrs = speedNode.getAttributes();
-														switch (speedNode.getNodeName().toLowerCase())
+														case "walk":
 														{
-															case "walk":
-															{
-																set.set("baseWalkSpd", parseDouble(attrs, "ground"));
-																set.set("baseSwimWalkSpd", parseDouble(attrs, "swim"));
-																set.set("baseFlyWalkSpd", parseDouble(attrs, "fly"));
-																break;
-															}
-															case "run":
-															{
-																set.set("baseRunSpd", parseDouble(attrs, "ground"));
-																set.set("baseSwimRunSpd", parseDouble(attrs, "swim"));
-																set.set("baseFlyRunSpd", parseDouble(attrs, "fly"));
-																break;
-															}
+															set.set("baseWalkSpd", parseDouble(attrs, "ground"));
+															set.set("baseSwimWalkSpd", parseDouble(attrs, "swim"));
+															set.set("baseFlyWalkSpd", parseDouble(attrs, "fly"));
+															break;
+														}
+														case "run":
+														{
+															set.set("baseRunSpd", parseDouble(attrs, "ground"));
+															set.set("baseSwimRunSpd", parseDouble(attrs, "swim"));
+															set.set("baseFlyRunSpd", parseDouble(attrs, "fly"));
+															break;
 														}
 													}
-													break;
 												}
-											}
-											case "hitTime":
-											{
-												set.set("hitTime", npcNode.getTextContent()); // TODO: Implement me default 600 (value in ms)
 												break;
 											}
+											case "hit_time":
+												set.set("hit_time", npc_node.getTextContent()); // TODO: Implement me default 600 (value in ms)
+												break;
 										}
 									}
 									break;
@@ -325,6 +295,8 @@ public class NpcData implements IXmlReader
 									set.set("talkable", parseBoolean(attrs, "talkable"));
 									set.set("undying", parseBoolean(attrs, "undying"));
 									set.set("showName", parseBoolean(attrs, "showName"));
+									set.set("randomWalk", parseBoolean(attrs, "randomWalk"));
+									set.set("randomAnimation", parseBoolean(attrs, "randomAnimation"));
 									set.set("flying", parseBoolean(attrs, "flying"));
 									set.set("canMove", parseBoolean(attrs, "canMove"));
 									set.set("noSleepMode", parseBoolean(attrs, "noSleepMode"));
@@ -333,14 +305,14 @@ public class NpcData implements IXmlReader
 									set.set("canBeSown", parseBoolean(attrs, "canBeSown"));
 									break;
 								}
-								case "skilllist":
+								case "skill_list":
 								{
 									skills = new HashMap<>();
-									for (Node skillListNode = npcNode.getFirstChild(); skillListNode != null; skillListNode = skillListNode.getNextSibling())
+									for (Node skill_list_node = npc_node.getFirstChild(); skill_list_node != null; skill_list_node = skill_list_node.getNextSibling())
 									{
-										if ("skill".equalsIgnoreCase(skillListNode.getNodeName()))
+										if ("skill".equalsIgnoreCase(skill_list_node.getNodeName()))
 										{
-											attrs = skillListNode.getAttributes();
+											attrs = skill_list_node.getAttributes();
 											final int skillId = parseInteger(attrs, "id");
 											final int skillLevel = parseInteger(attrs, "level");
 											final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
@@ -350,7 +322,7 @@ public class NpcData implements IXmlReader
 											}
 											else
 											{
-												LOGGER.warning("[" + f.getName() + "] skill not found. NPC ID: " + npcId + " Skill ID:" + skillId + " Skill Level: " + skillLevel);
+												LOGGER.warning("[" + f.getName() + "] skill not found. NPC ID: " + npcId + " Skill ID: " + skillId + " Skill Level: " + skillLevel);
 											}
 										}
 									}
@@ -364,19 +336,19 @@ public class NpcData implements IXmlReader
 									set.set("spiritShotChance", parseInteger(attrs, "spiritChance"));
 									break;
 								}
-								case "corpsetime":
+								case "corpse_time":
 								{
-									set.set("corpseTime", npcNode.getTextContent());
+									set.set("corpseTime", npc_node.getTextContent());
 									break;
 								}
-								case "excrteffect":
+								case "ex_crt_effect":
 								{
-									set.set("exCrtEffect", npcNode.getTextContent()); // TODO: Implement me default ? type boolean
+									set.set("ex_crt_effect", npc_node.getTextContent()); // TODO: Implement me default ? type boolean
 									break;
 								}
-								case "snpcprophprate":
+								case "s_npc_prop_hp_rate":
 								{
-									set.set("sNpcPropHpRate", npcNode.getTextContent()); // TODO: Implement me default 1 type double
+									set.set("s_npc_prop_hp_rate", npc_node.getTextContent()); // TODO: Implement me default 1 type double
 									break;
 								}
 								case "ai":
@@ -387,10 +359,10 @@ public class NpcData implements IXmlReader
 									set.set("dodge", parseInteger(attrs, "dodge"));
 									set.set("isChaos", parseBoolean(attrs, "isChaos"));
 									set.set("isAggressive", parseBoolean(attrs, "isAggressive"));
-									for (Node aiNode = npcNode.getFirstChild(); aiNode != null; aiNode = aiNode.getNextSibling())
+									for (Node ai_node = npc_node.getFirstChild(); ai_node != null; ai_node = ai_node.getNextSibling())
 									{
-										attrs = aiNode.getAttributes();
-										switch (aiNode.getNodeName().toLowerCase())
+										attrs = ai_node.getAttributes();
+										switch (ai_node.getNodeName().toLowerCase())
 										{
 											case "skill":
 											{
@@ -403,12 +375,12 @@ public class NpcData implements IXmlReader
 												set.set("longRangeSkillChance", parseInteger(attrs, "longRangeChance"));
 												break;
 											}
-											case "clanList":
+											case "clan_list":
 											{
-												for (Node clanListNode = aiNode.getFirstChild(); clanListNode != null; clanListNode = clanListNode.getNextSibling())
+												for (Node clan_list_node = ai_node.getFirstChild(); clan_list_node != null; clan_list_node = clan_list_node.getNextSibling())
 												{
-													attrs = clanListNode.getAttributes();
-													switch (clanListNode.getNodeName().toLowerCase())
+													attrs = clan_list_node.getAttributes();
+													switch (clan_list_node.getNodeName().toLowerCase())
 													{
 														case "clan":
 														{
@@ -416,16 +388,16 @@ public class NpcData implements IXmlReader
 															{
 																clans = new HashSet<>(1);
 															}
-															clans.add(getOrCreateClanId(clanListNode.getTextContent()));
+															clans.add(getOrCreateClanId(clan_list_node.getTextContent()));
 															break;
 														}
-														case "ignoreNpcId":
+														case "ignore_npc_id":
 														{
 															if (ignoreClanNpcIds == null)
 															{
 																ignoreClanNpcIds = new HashSet<>(1);
 															}
-															ignoreClanNpcIds.add(Integer.parseInt(clanListNode.getTextContent()));
+															ignoreClanNpcIds.add(Integer.parseInt(clan_list_node.getTextContent()));
 															break;
 														}
 													}
@@ -436,15 +408,15 @@ public class NpcData implements IXmlReader
 									}
 									break;
 								}
-								case "droplists":
+								case "drop_lists":
 								{
-									for (Node dropListsNode = npcNode.getFirstChild(); dropListsNode != null; dropListsNode = dropListsNode.getNextSibling())
+									for (Node drop_lists_node = npc_node.getFirstChild(); drop_lists_node != null; drop_lists_node = drop_lists_node.getNextSibling())
 									{
 										DropListScope dropListScope = null;
 										
 										try
 										{
-											dropListScope = Enum.valueOf(DropListScope.class, dropListsNode.getNodeName().toUpperCase());
+											dropListScope = Enum.valueOf(DropListScope.class, drop_lists_node.getNodeName().toUpperCase());
 										}
 										catch (Exception e)
 										{
@@ -458,28 +430,38 @@ public class NpcData implements IXmlReader
 											}
 											
 											final List<IDropItem> dropList = new ArrayList<>();
-											parseDropList(f, dropListsNode, dropListScope, dropList);
+											parseDropList(f, drop_lists_node, dropListScope, dropList);
 											dropLists.put(dropListScope, Collections.unmodifiableList(dropList));
 										}
 									}
 									break;
 								}
+								case "extend_drop":
+								{
+									final List<Integer> extendDrop = new ArrayList<>();
+									forEach(npc_node, "id", idNode ->
+									{
+										extendDrop.add(Integer.parseInt(idNode.getTextContent()));
+									});
+									set.set("extend_drop", extendDrop);
+									break;
+								}
 								case "collision":
 								{
-									for (Node collisionNode = npcNode.getFirstChild(); collisionNode != null; collisionNode = collisionNode.getNextSibling())
+									for (Node collision_node = npc_node.getFirstChild(); collision_node != null; collision_node = collision_node.getNextSibling())
 									{
-										attrs = collisionNode.getAttributes();
-										switch (collisionNode.getNodeName().toLowerCase())
+										attrs = collision_node.getAttributes();
+										switch (collision_node.getNodeName().toLowerCase())
 										{
 											case "radius":
 											{
-												set.set("collisionRadius", parseDouble(attrs, "normal"));
+												set.set("collision_radius", parseDouble(attrs, "normal"));
 												set.set("collisionRadiusGrown", parseDouble(attrs, "grown"));
 												break;
 											}
 											case "height":
 											{
-												set.set("collisionHeight", parseDouble(attrs, "normal"));
+												set.set("collision_height", parseDouble(attrs, "normal"));
 												set.set("collisionHeightGrown", parseDouble(attrs, "grown"));
 												break;
 											}
@@ -510,104 +492,108 @@ public class NpcData implements IXmlReader
 							parameters.putIfAbsent("Privates", _minionData._tempMinions.get(npcId));
 						}
 						
-						template.setParameters(parameters != null ? new StatsSet(Collections.unmodifiableMap(parameters)) : StatsSet.EMPTY_STATSET);
+						if (parameters != null)
+						{
+							// Using unmodifiable map parameters of template are not meant to be changed at runtime.
+							template.setParameters(new StatsSet(Collections.unmodifiableMap(parameters)));
+						}
+						else
+						{
+							template.setParameters(StatsSet.EMPTY_STATSET);
+						}
 						
 						if (skills != null)
 						{
 							Map<AISkillScope, List<Skill>> aiSkillLists = null;
 							for (Skill skill : skills.values())
 							{
-								if (skill.isPassive())
+								if (!skill.isPassive())
 								{
-									continue;
-								}
-								
-								if (aiSkillLists == null)
-								{
-									aiSkillLists = new EnumMap<>(AISkillScope.class);
-								}
-								
-								final List<AISkillScope> aiSkillScopes = new ArrayList<>();
-								final AISkillScope shortOrLongRangeScope = skill.getCastRange() <= 150 ? AISkillScope.SHORT_RANGE : AISkillScope.LONG_RANGE;
-								if (skill.isSuicideAttack())
-								{
-									aiSkillScopes.add(AISkillScope.SUICIDE);
-								}
-								else
-								{
-									aiSkillScopes.add(AISkillScope.GENERAL);
+									if (aiSkillLists == null)
+									{
+										aiSkillLists = new EnumMap<>(AISkillScope.class);
+									}
 									
-									if (skill.isContinuous())
+									final List<AISkillScope> aiSkillScopes = new ArrayList<>();
+									final AISkillScope shortOrLongRangeScope = skill.getCastRange() <= 150 ? AISkillScope.SHORT_RANGE : AISkillScope.LONG_RANGE;
+									if (skill.isSuicideAttack())
 									{
-										if (!skill.isDebuff())
-										{
-											aiSkillScopes.add(AISkillScope.BUFF);
-										}
-										else
-										{
-											aiSkillScopes.add(AISkillScope.DEBUFF);
-											aiSkillScopes.add(AISkillScope.COT);
-											aiSkillScopes.add(shortOrLongRangeScope);
-										}
-									}
-									else if (skill.hasEffectType(L2EffectType.DISPEL, L2EffectType.DISPEL_BY_SLOT))
-									{
-										aiSkillScopes.add(AISkillScope.NEGATIVE);
-										aiSkillScopes.add(shortOrLongRangeScope);
-									}
-									else if (skill.hasEffectType(L2EffectType.HEAL))
-									{
-										aiSkillScopes.add(AISkillScope.HEAL);
-									}
-									else if (skill.hasEffectType(L2EffectType.PHYSICAL_ATTACK, L2EffectType.PHYSICAL_ATTACK_HP_LINK, L2EffectType.MAGICAL_ATTACK, L2EffectType.DEATH_LINK, L2EffectType.HP_DRAIN))
-									{
-										aiSkillScopes.add(AISkillScope.ATTACK);
-										aiSkillScopes.add(AISkillScope.UNIVERSAL);
-										aiSkillScopes.add(shortOrLongRangeScope);
-									}
-									else if (skill.hasEffectType(L2EffectType.SLEEP))
-									{
-										aiSkillScopes.add(AISkillScope.IMMOBILIZE);
-									}
-									else if (skill.hasEffectType(L2EffectType.STUN, L2EffectType.ROOT))
-									{
-										aiSkillScopes.add(AISkillScope.IMMOBILIZE);
-										aiSkillScopes.add(shortOrLongRangeScope);
-									}
-									else if (skill.hasEffectType(L2EffectType.MUTE, L2EffectType.FEAR))
-									{
-										aiSkillScopes.add(AISkillScope.COT);
-										aiSkillScopes.add(shortOrLongRangeScope);
-									}
-									else if (skill.hasEffectType(L2EffectType.PARALYZE))
-									{
-										aiSkillScopes.add(AISkillScope.IMMOBILIZE);
-										aiSkillScopes.add(shortOrLongRangeScope);
-									}
-									else if (skill.hasEffectType(L2EffectType.DMG_OVER_TIME, L2EffectType.DMG_OVER_TIME_PERCENT))
-									{
-										aiSkillScopes.add(shortOrLongRangeScope);
-									}
-									else if (skill.hasEffectType(L2EffectType.RESURRECTION))
-									{
-										aiSkillScopes.add(AISkillScope.RES);
+										aiSkillScopes.add(AISkillScope.SUICIDE);
 									}
 									else
 									{
-										aiSkillScopes.add(AISkillScope.UNIVERSAL);
-									}
-								}
-								
-								for (AISkillScope aiSkillScope : aiSkillScopes)
-								{
-									List<Skill> aiSkills = aiSkillLists.get(aiSkillScope);
-									if (aiSkills == null)
-									{
-										aiSkills = new ArrayList<>();
-										aiSkillLists.put(aiSkillScope, aiSkills);
+										aiSkillScopes.add(AISkillScope.GENERAL);
+										
+										if (skill.isContinuous())
+										{
+											if (!skill.isDebuff())
+											{
+												aiSkillScopes.add(AISkillScope.BUFF);
+											}
+											else
+											{
+												aiSkillScopes.add(AISkillScope.DEBUFF);
+												aiSkillScopes.add(AISkillScope.COT);
+												aiSkillScopes.add(shortOrLongRangeScope);
+											}
+										}
+										else
+										{
+											if (skill.hasEffectType(L2EffectType.DISPEL, L2EffectType.DISPEL_BY_SLOT))
+											{
+												aiSkillScopes.add(AISkillScope.NEGATIVE);
+												aiSkillScopes.add(shortOrLongRangeScope);
+											}
+											else if (skill.hasEffectType(L2EffectType.HEAL))
+											{
+												aiSkillScopes.add(AISkillScope.HEAL);
+											}
+											else if (skill.hasEffectType(L2EffectType.PHYSICAL_ATTACK, L2EffectType.PHYSICAL_ATTACK_HP_LINK, L2EffectType.MAGICAL_ATTACK, L2EffectType.DEATH_LINK, L2EffectType.HP_DRAIN))
+											{
+												aiSkillScopes.add(AISkillScope.ATTACK);
+												aiSkillScopes.add(AISkillScope.UNIVERSAL);
+												aiSkillScopes.add(shortOrLongRangeScope);
+											}
+											else if (skill.hasEffectType(L2EffectType.SLEEP))
+											{
+												aiSkillScopes.add(AISkillScope.IMMOBILIZE);
+											}
+											else if (skill.hasEffectType(L2EffectType.BLOCK_ACTIONS, L2EffectType.ROOT))
+											{
+												aiSkillScopes.add(AISkillScope.IMMOBILIZE);
+												aiSkillScopes.add(shortOrLongRangeScope);
+											}
+											else if (skill.hasEffectType(L2EffectType.MUTE, L2EffectType.BLOCK_CONTROL))
+											{
+												aiSkillScopes.add(AISkillScope.COT);
+												aiSkillScopes.add(shortOrLongRangeScope);
+											}
+											else if (skill.hasEffectType(L2EffectType.DMG_OVER_TIME, L2EffectType.DMG_OVER_TIME_PERCENT))
+											{
+												aiSkillScopes.add(shortOrLongRangeScope);
+											}
+											else if (skill.hasEffectType(L2EffectType.RESURRECTION))
+											{
+												aiSkillScopes.add(AISkillScope.RES);
+											}
+											else
+											{
+												aiSkillScopes.add(AISkillScope.UNIVERSAL);
+											}
+										}
 									}
 									
-									aiSkills.add(skill);
+									for (AISkillScope aiSkillScope : aiSkillScopes)
+									{
+										List<Skill> aiSkills = aiSkillLists.get(aiSkillScope);
+										if (aiSkills == null)
+										{
+											aiSkills = new ArrayList<>();
+											aiSkillLists.put(aiSkillScope, aiSkills);
+										}
+										
+										aiSkills.add(skill);
+									}
 								}
 							}
 							
@@ -630,19 +616,20 @@ public class NpcData implements IXmlReader
 		}
 	}
 	
-	private void parseDropList(File f, Node dropListNode, DropListScope dropListScope, List<IDropItem> drops)
+	private void parseDropList(File f, Node drop_list_node, DropListScope dropListScope, List<IDropItem> drops)
 	{
-		for (Node dropNode = dropListNode.getFirstChild(); dropNode != null; dropNode = dropNode.getNextSibling())
+		for (Node drop_node = drop_list_node.getFirstChild(); drop_node != null; drop_node = drop_node.getNextSibling())
 		{
-			switch (dropNode.getNodeName().toLowerCase())
+			final NamedNodeMap attrs = drop_node.getAttributes();
+			switch (drop_node.getNodeName().toLowerCase())
 			{
 				case "group":
 				{
-					final GroupedGeneralDropItem dropItem = dropListScope.newGroupedDropItem(parseDouble(dropNode.getAttributes(), "chance"));
+					final GroupedGeneralDropItem dropItem = dropListScope.newGroupedDropItem(parseDouble(attrs, "chance"));
 					final List<IDropItem> groupedDropList = new ArrayList<>(2);
-					for (Node groupNode = dropNode.getFirstChild(); groupNode != null; groupNode = groupNode.getNextSibling())
+					for (Node group_node = drop_node.getFirstChild(); group_node != null; group_node = group_node.getNextSibling())
 					{
-						parseDropListItem(groupNode, dropListScope, groupedDropList);
+						parseDropListItem(group_node, dropListScope, groupedDropList);
 					}
 					
 					final List<GeneralDropItem> items = new ArrayList<>(groupedDropList.size());
@@ -664,17 +651,17 @@ public class NpcData implements IXmlReader
 				}
 				default:
 				{
-					parseDropListItem(dropNode, dropListScope, drops);
+					parseDropListItem(drop_node, dropListScope, drops);
 					break;
 				}
 			}
 		}
 	}
 	
-	private void parseDropListItem(Node dropListItem, DropListScope dropListScope, List<IDropItem> drops)
+	private void parseDropListItem(Node drop_list_item, DropListScope dropListScope, List<IDropItem> drops)
 	{
-		final NamedNodeMap attrs = dropListItem.getAttributes();
-		switch (dropListItem.getNodeName().toLowerCase())
+		final NamedNodeMap attrs = drop_list_item.getAttributes();
+		switch (drop_list_item.getNodeName().toLowerCase())
 		{
 			case "item":
 			{
@@ -695,11 +682,11 @@ public class NpcData implements IXmlReader
 	 */
 	private int getOrCreateClanId(String clanName)
 	{
-		Integer id = _clans.get(clanName.toUpperCase());
+		Integer id = _clans.get(clanName);
 		if (id == null)
 		{
 			id = _clans.size();
-			_clans.put(clanName.toUpperCase(), id);
+			_clans.put(clanName, id);
 		}
 		return id;
 	}
@@ -711,8 +698,28 @@ public class NpcData implements IXmlReader
 	 */
 	public int getClanId(String clanName)
 	{
-		final Integer id = _clans.get(clanName.toUpperCase());
+		final Integer id = _clans.get(clanName);
 		return id != null ? id : -1;
+	}
+	
+	public Set<String> getClansByIds(Set<Integer> clanIds)
+	{
+		final Set<String> result = new HashSet<>();
+		if (clanIds == null)
+		{
+			return result;
+		}
+		for (Entry<String, Integer> record : _clans.entrySet())
+		{
+			for (int id : clanIds)
+			{
+				if (record.getValue() == id)
+				{
+					result.add(record.getKey());
+				}
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -763,7 +770,7 @@ public class NpcData implements IXmlReader
 	 */
 	public List<L2NpcTemplate> getAllOfLevel(int... lvls)
 	{
-		return getTemplates(template -> Util.contains(lvls, template.getLevel()));
+		return getTemplates(template -> CommonUtil.contains(lvls, template.getLevel()));
 	}
 	
 	/**
@@ -773,7 +780,7 @@ public class NpcData implements IXmlReader
 	 */
 	public List<L2NpcTemplate> getAllMonstersOfLevel(int... lvls)
 	{
-		return getTemplates(template -> Util.contains(lvls, template.getLevel()) && template.isType("L2Monster"));
+		return getTemplates(template -> CommonUtil.contains(lvls, template.getLevel()) && template.isType("L2Monster"));
 	}
 	
 	/**
@@ -793,7 +800,7 @@ public class NpcData implements IXmlReader
 	 */
 	public List<L2NpcTemplate> getAllNpcOfClassType(String... classTypes)
 	{
-		return getTemplates(template -> Util.contains(classTypes, template.getType(), true));
+		return getTemplates(template -> CommonUtil.contains(classTypes, template.getType(), true));
 	}
 	
 	public void loadNpcsSkillLearn()
@@ -813,8 +820,10 @@ public class NpcData implements IXmlReader
 	 * Once Spawn System gets reworked delete this class<br>
 	 * @author Zealar
 	 */
-	private final class MinionData implements IXmlReader
+	private static final class MinionData implements IGameXmlReader
 	{
+		private static final Logger MINION_LOGGER = Logger.getLogger(MinionData.class.getName());
+		
 		public final Map<Integer, List<MinionHolder>> _tempMinions = new HashMap<>();
 		
 		protected MinionData()
@@ -826,29 +835,29 @@ public class NpcData implements IXmlReader
 		public void load()
 		{
 			_tempMinions.clear();
-			parseDatapackFile("MinionData.xml");
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _tempMinions.size() + " minions data.");
+			parseDatapackFile("data/MinionData.xml");
+			MINION_LOGGER.info(getClass().getSimpleName() + ": Loaded " + _tempMinions.size() + " minions data.");
 		}
 		
 		@Override
-		public void parseDocument(Document doc)
+		public void parseDocument(Document doc, File f)
 		{
 			for (Node node = doc.getFirstChild(); node != null; node = node.getNextSibling())
 			{
 				if ("list".equals(node.getNodeName()))
 				{
-					for (Node listNode = node.getFirstChild(); listNode != null; listNode = listNode.getNextSibling())
+					for (Node list_node = node.getFirstChild(); list_node != null; list_node = list_node.getNextSibling())
 					{
-						if ("npc".equals(listNode.getNodeName()))
+						if ("npc".equals(list_node.getNodeName()))
 						{
 							final List<MinionHolder> minions = new ArrayList<>(1);
-							NamedNodeMap attrs = listNode.getAttributes();
+							NamedNodeMap attrs = list_node.getAttributes();
 							final int id = parseInteger(attrs, "id");
-							for (Node npcNode = listNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling())
+							for (Node npc_node = list_node.getFirstChild(); npc_node != null; npc_node = npc_node.getNextSibling())
 							{
-								if ("minion".equals(npcNode.getNodeName()))
+								if ("minion".equals(npc_node.getNodeName()))
 								{
-									attrs = npcNode.getAttributes();
+									attrs = npc_node.getAttributes();
 									minions.add(new MinionHolder(parseInteger(attrs, "id"), parseInteger(attrs, "count"), parseInteger(attrs, "respawnTime"), 0));
 								}
 							}

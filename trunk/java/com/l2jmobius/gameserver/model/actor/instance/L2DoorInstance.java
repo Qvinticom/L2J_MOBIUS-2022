@@ -16,37 +16,30 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Future;
-import java.util.logging.Level;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.ai.L2DoorAI;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
+import com.l2jmobius.gameserver.enums.DoorOpenType;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.knownlist.DoorKnownList;
 import com.l2jmobius.gameserver.model.actor.stat.DoorStat;
 import com.l2jmobius.gameserver.model.actor.status.DoorStatus;
 import com.l2jmobius.gameserver.model.actor.templates.L2DoorTemplate;
 import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.entity.Fort;
-import com.l2jmobius.gameserver.model.entity.Instance;
-import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -55,32 +48,14 @@ import com.l2jmobius.gameserver.network.serverpackets.DoorStatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 import com.l2jmobius.gameserver.network.serverpackets.StaticObject;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.Rnd;
 
-public class L2DoorInstance extends L2Character
+public final class L2DoorInstance extends L2Character
 {
-	public static final byte OPEN_BY_CLICK = 1;
-	public static final byte OPEN_BY_TIME = 2;
-	public static final byte OPEN_BY_ITEM = 4;
-	public static final byte OPEN_BY_SKILL = 8;
-	public static final byte OPEN_BY_CYCLE = 16;
-	
-	/** The castle index in the array of L2Castle this L2NpcInstance belongs to */
-	private int _castleIndex = -2;
-	/** The fort index in the array of L2Fort this L2NpcInstance belongs to */
-	private int _fortIndex = -2;
-	private ClanHall _clanHall;
 	private boolean _open = false;
 	private boolean _isAttackableDoor = false;
-	private boolean _isTargetable;
 	private int _meshindex = 1;
-	// used for autoclose on open
 	private Future<?> _autoCloseTask;
 	
-	/**
-	 * Creates a door.
-	 * @param template the door template
-	 */
 	public L2DoorInstance(L2DoorTemplate template)
 	{
 		super(template);
@@ -89,36 +64,38 @@ public class L2DoorInstance extends L2Character
 		setLethalable(false);
 		_open = template.isOpenByDefault();
 		_isAttackableDoor = template.isAttackable();
-		_isTargetable = template.isTargetable();
-		
-		if (getGroupName() != null)
-		{
-			DoorData.addDoorGroup(getGroupName(), getId());
-		}
+		super.setTargetable(template.isTargetable());
 		
 		if (isOpenableByTime())
 		{
 			startTimerOpen();
 		}
-		
-		final int clanhallId = template.getClanHallId();
-		if (clanhallId <= 0)
-		{
-			return;
-		}
-		final ClanHall hall = ClanHallManager.getAllClanHalls().get(clanhallId);
-		if (hall == null)
-		{
-			return;
-		}
-		setClanHall(hall);
-		hall.getDoors().add(this);
 	}
 	
 	@Override
 	protected L2CharacterAI initAI()
 	{
 		return new L2DoorAI(this);
+	}
+	
+	@Override
+	public void moveToLocation(int x, int y, int z, int offset)
+	{
+	}
+	
+	@Override
+	public void stopMove(Location loc)
+	{
+	}
+	
+	@Override
+	public void doAttack(L2Character target)
+	{
+	}
+	
+	@Override
+	public void doCast(Skill skill)
+	{
 	}
 	
 	private void startTimerOpen()
@@ -129,18 +106,6 @@ public class L2DoorInstance extends L2Character
 			delay += Rnd.get(getTemplate().getRandomTime());
 		}
 		ThreadPoolManager.getInstance().scheduleGeneral(new TimerOpen(), delay * 1000);
-	}
-	
-	@Override
-	public final DoorKnownList getKnownList()
-	{
-		return (DoorKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new DoorKnownList(this));
 	}
 	
 	@Override
@@ -178,7 +143,7 @@ public class L2DoorInstance extends L2Character
 	 */
 	public final boolean isOpenableBySkill()
 	{
-		return (getTemplate().getOpenType() & OPEN_BY_SKILL) == OPEN_BY_SKILL;
+		return (getTemplate().getOpenType()) == DoorOpenType.BY_SKILL;
 	}
 	
 	/**
@@ -186,7 +151,7 @@ public class L2DoorInstance extends L2Character
 	 */
 	public final boolean isOpenableByItem()
 	{
-		return (getTemplate().getOpenType() & OPEN_BY_ITEM) == OPEN_BY_ITEM;
+		return (getTemplate().getOpenType()) == DoorOpenType.BY_ITEM;
 	}
 	
 	/**
@@ -194,7 +159,7 @@ public class L2DoorInstance extends L2Character
 	 */
 	public final boolean isOpenableByClick()
 	{
-		return (getTemplate().getOpenType() & OPEN_BY_CLICK) == OPEN_BY_CLICK;
+		return (getTemplate().getOpenType()) == DoorOpenType.BY_CLICK;
 	}
 	
 	/**
@@ -202,7 +167,7 @@ public class L2DoorInstance extends L2Character
 	 */
 	public final boolean isOpenableByTime()
 	{
-		return (getTemplate().getOpenType() & OPEN_BY_TIME) == OPEN_BY_TIME;
+		return (getTemplate().getOpenType()) == DoorOpenType.BY_TIME;
 	}
 	
 	/**
@@ -210,7 +175,7 @@ public class L2DoorInstance extends L2Character
 	 */
 	public final boolean isOpenableByCycle()
 	{
-		return (getTemplate().getOpenType() & OPEN_BY_CYCLE) == OPEN_BY_CYCLE;
+		return (getTemplate().getOpenType()) == DoorOpenType.BY_CYCLE;
 	}
 	
 	@Override
@@ -232,7 +197,7 @@ public class L2DoorInstance extends L2Character
 	/**
 	 * @return Returns the open.
 	 */
-	public boolean getOpen()
+	public boolean isOpen()
 	{
 		return _open;
 	}
@@ -243,18 +208,17 @@ public class L2DoorInstance extends L2Character
 	public void setOpen(boolean open)
 	{
 		_open = open;
-		if (getChildId() <= 0)
+		if (getChildId() > 0)
 		{
-			return;
-		}
-		final L2DoorInstance sibling = getSiblingDoor(getChildId());
-		if (sibling != null)
-		{
-			sibling.notifyChildEvent(open);
-		}
-		else
-		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Cannot find child id: " + getChildId());
+			final L2DoorInstance sibling = getSiblingDoor(getChildId());
+			if (sibling != null)
+			{
+				sibling.notifyChildEvent(open);
+			}
+			else
+			{
+				_log.warning(getClass().getSimpleName() + ": cannot find child id: " + getChildId());
+			}
 		}
 	}
 	
@@ -287,71 +251,51 @@ public class L2DoorInstance extends L2Character
 		return dmg;
 	}
 	
-	// TODO: Replace index with the castle id itself.
 	public final Castle getCastle()
 	{
-		if (_castleIndex < 0)
-		{
-			_castleIndex = CastleManager.getInstance().getCastleIndex(this);
-		}
-		return _castleIndex < 0 ? null : CastleManager.getInstance().getCastles().get(_castleIndex);
+		return CastleManager.getInstance().getCastle(this);
 	}
 	
-	// TODO: Replace index with the fort id itself.
 	public final Fort getFort()
 	{
-		if (_fortIndex < 0)
-		{
-			_fortIndex = FortManager.getInstance().getFortIndex(this);
-		}
-		return _fortIndex < 0 ? null : FortManager.getInstance().getForts().get(_fortIndex);
-	}
-	
-	public void setClanHall(ClanHall clanhall)
-	{
-		_clanHall = clanhall;
-	}
-	
-	public ClanHall getClanHall()
-	{
-		return _clanHall;
+		return FortManager.getInstance().getFort(this);
 	}
 	
 	public boolean isEnemy()
 	{
-		return ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive() && getIsShowHp())//
-			|| ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive() && getIsShowHp())//
-			|| ((getClanHall() != null) && getClanHall().isSiegableHall() && ((SiegableHall) getClanHall()).getSiegeZone().isActive() && getIsShowHp());
+		if ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive() && getIsShowHp())
+		{
+			return true;
+		}
+		else if ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive() && getIsShowHp())
+		{
+			return true;
+		}
+		return false;
 	}
 	
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
 		// Doors can`t be attacked by NPCs
-		if (!(attacker instanceof L2Playable))
+		if (!attacker.isPlayable())
 		{
 			return false;
 		}
-		
-		if (getIsAttackableDoor())
+		else if (getIsAttackableDoor())
 		{
 			return true;
 		}
-		if (!getIsShowHp())
+		else if (!getIsShowHp())
 		{
 			return false;
 		}
 		
 		final L2PcInstance actingPlayer = attacker.getActingPlayer();
 		
-		if (getClanHall() != null)
-		{
-			final SiegableHall hall = (SiegableHall) getClanHall();
-			return hall.isSiegableHall() && hall.isInSiege() && hall.getSiege().doorIsAutoAttackable() && hall.getSiege().checkIsAttacker(actingPlayer.getClan());
-		}
 		// Attackable only during siege by everyone (not owner)
-		final boolean isCastle = (getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive();
-		final boolean isFort = (getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive();
+		final boolean isCastle = ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive());
+		final boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive());
 		
 		if (isFort)
 		{
@@ -369,7 +313,7 @@ public class L2DoorInstance extends L2Character
 				return false;
 			}
 		}
-		return isCastle || isFort;
+		return (isCastle || isFort);
 	}
 	
 	@Override
@@ -405,9 +349,9 @@ public class L2DoorInstance extends L2Character
 	}
 	
 	@Override
-	public void broadcastStatusUpdate()
+	public void broadcastStatusUpdate(L2Character caster)
 	{
-		final Collection<L2PcInstance> knownPlayers = getKnownList().getKnownPlayers().values();
+		final Collection<L2PcInstance> knownPlayers = L2World.getInstance().getVisibleObjects(this, L2PcInstance.class);
 		if ((knownPlayers == null) || knownPlayers.isEmpty())
 		{
 			return;
@@ -416,7 +360,12 @@ public class L2DoorInstance extends L2Character
 		final StaticObject su = new StaticObject(this, false);
 		final StaticObject targetableSu = new StaticObject(this, true);
 		final DoorStatusUpdate dsu = new DoorStatusUpdate(this);
-		final OnEventTrigger oe = getEmitter() > 0 ? new OnEventTrigger(getEmitter(), getOpen()) : null;
+		OnEventTrigger oe = null;
+		if (getEmitter() > 0)
+		{
+			oe = new OnEventTrigger(getEmitter(), isOpen());
+		}
+		
 		for (L2PcInstance player : knownPlayers)
 		{
 			if ((player == null) || !isVisibleFor(player))
@@ -424,7 +373,7 @@ public class L2DoorInstance extends L2Character
 				continue;
 			}
 			
-			if (player.isGM() || ((getCastle() != null) && (getCastle().getResidenceId() > 0)) || ((getFort() != null) && (getFort().getResidenceId() > 0)))
+			if (player.isGM() || (((getCastle() != null) && (getCastle().getResidenceId() > 0)) || ((getFort() != null) && (getFort().getResidenceId() > 0))))
 			{
 				player.sendPacket(targetableSu);
 			}
@@ -438,6 +387,18 @@ public class L2DoorInstance extends L2Character
 			{
 				player.sendPacket(oe);
 			}
+		}
+	}
+	
+	public final void openCloseMe(boolean open)
+	{
+		if (open)
+		{
+			openMe();
+		}
+		else
+		{
+			closeMe();
 		}
 	}
 	
@@ -473,7 +434,7 @@ public class L2DoorInstance extends L2Character
 	
 	private void manageGroupOpen(boolean open, String groupName)
 	{
-		final Set<Integer> set = DoorData.getDoorsByGroup(groupName);
+		final Set<Integer> set = DoorData.getInstance().getDoorsByGroup(groupName);
 		L2DoorInstance first = null;
 		for (Integer id : set)
 		{
@@ -483,7 +444,7 @@ public class L2DoorInstance extends L2Character
 				first = door;
 			}
 			
-			if (door.getOpen() != open)
+			if (door.isOpen() != open)
 			{
 				door.setOpen(open);
 				door.broadcastStatusUpdate();
@@ -502,12 +463,7 @@ public class L2DoorInstance extends L2Character
 	private void notifyChildEvent(boolean open)
 	{
 		final byte openThis = open ? getTemplate().getMasterDoorOpen() : getTemplate().getMasterDoorClose();
-		
-		if (openThis == 0)
-		{
-			return;
-		}
-		else if (openThis == 1)
+		if (openThis == 1)
 		{
 			openMe();
 		}
@@ -523,7 +479,8 @@ public class L2DoorInstance extends L2Character
 		return getClass().getSimpleName() + "[" + getTemplate().getId() + "](" + getObjectId() + ")";
 	}
 	
-	public String getDoorName()
+	@Override
+	public String getName()
 	{
 		return getTemplate().getName();
 	}
@@ -546,19 +503,6 @@ public class L2DoorInstance extends L2Character
 	public int getZMax()
 	{
 		return getTemplate().getNodeZ() + getTemplate().getHeight();
-	}
-	
-	public List<L2DefenderInstance> getKnownDefenders()
-	{
-		final List<L2DefenderInstance> result = new ArrayList<>();
-		for (L2Object obj : getKnownList().getKnownObjects().values())
-		{
-			if (obj instanceof L2DefenderInstance)
-			{
-				result.add((L2DefenderInstance) obj);
-			}
-		}
-		return result;
 	}
 	
 	public void setMeshIndex(int mesh)
@@ -592,19 +536,22 @@ public class L2DoorInstance extends L2Character
 	}
 	
 	@Override
-	public void reduceCurrentHp(double damage, L2Character attacker, boolean awake, boolean isDOT, Skill skill)
+	public void reduceCurrentHp(double value, L2Character attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect)
 	{
-		if (isWall() && (getInstanceId() == 0) && (!attacker.isServitor() || (((L2ServitorInstance) attacker).getTemplate().getRace() != Race.SIEGE_WEAPON)))
+		if (isWall() && !isInInstance())
 		{
-			return;
+			if (!attacker.isServitor())
+			{
+				return;
+			}
+			
+			final L2ServitorInstance servitor = (L2ServitorInstance) attacker;
+			if (servitor.getTemplate().getRace() != Race.SIEGE_WEAPON)
+			{
+				return;
+			}
 		}
-		super.reduceCurrentHp(damage, attacker, awake, isDOT, skill);
-	}
-	
-	@Override
-	public void reduceCurrentHpByDOT(double i, L2Character attacker, Skill skill)
-	{
-		// doors can't be damaged by DOTs
+		super.reduceCurrentHp(value, attacker, skill, isDOT, directlyToHp, critical, reflect);
 	}
 	
 	@Override
@@ -615,11 +562,10 @@ public class L2DoorInstance extends L2Character
 			return false;
 		}
 		
-		final boolean isFort = (getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress();
-		final boolean isCastle = (getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getSiege().isInProgress();
-		final boolean isHall = (getClanHall() != null) && getClanHall().isSiegableHall() && ((SiegableHall) getClanHall()).isInSiege();
+		final boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress());
+		final boolean isCastle = ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getSiege().isInProgress());
 		
-		if (isFort || isCastle || isHall)
+		if (isFort || isCastle)
 		{
 			broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CASTLE_GATE_HAS_BEEN_DESTROYED));
 		}
@@ -627,50 +573,23 @@ public class L2DoorInstance extends L2Character
 	}
 	
 	@Override
-	public void moveToLocation(int x, int y, int z, int offset)
-	{
-	}
-	
-	@Override
-	public void stopMove(Location loc)
-	{
-	}
-	
-	@Override
-	public void doAttack(L2Character target)
-	{
-	}
-	
-	@Override
-	public void doCast(Skill skill)
-	{
-	}
-	
-	@Override
 	public void sendInfo(L2PcInstance activeChar)
 	{
-		if (!isVisibleFor(activeChar))
+		if (isVisibleFor(activeChar))
 		{
-			return;
+			if (getEmitter() > 0)
+			{
+				activeChar.sendPacket(new OnEventTrigger(getEmitter(), isOpen()));
+			}
+			activeChar.sendPacket(new StaticObject(this, activeChar.isGM()));
 		}
-		if (getEmitter() > 0)
-		{
-			activeChar.sendPacket(new OnEventTrigger(getEmitter(), getOpen()));
-		}
-		activeChar.sendPacket(new StaticObject(this, activeChar.isGM()));
 	}
 	
 	@Override
-	public void setTargetable(boolean value)
+	public void setTargetable(boolean targetable)
 	{
-		_isTargetable = value;
+		super.setTargetable(targetable);
 		broadcastStatusUpdate();
-	}
-	
-	@Override
-	public boolean isTargetable()
-	{
-		return _isTargetable;
 	}
 	
 	public boolean checkCollision()
@@ -685,12 +604,8 @@ public class L2DoorInstance extends L2Character
 	 */
 	private L2DoorInstance getSiblingDoor(int doorId)
 	{
-		if (getInstanceId() == 0)
-		{
-			return DoorData.getInstance().getDoor(doorId);
-		}
-		final Instance inst = InstanceManager.getInstance().getInstance(getInstanceId());
-		return inst != null ? inst.getDoor(doorId) : null;
+		final Instance inst = getInstanceWorld();
+		return (inst != null) ? inst.getDoor(doorId) : DoorData.getInstance().getDoor(doorId);
 	}
 	
 	private void startAutoCloseTask()
@@ -699,6 +614,7 @@ public class L2DoorInstance extends L2Character
 		{
 			return;
 		}
+		
 		final Future<?> oldTask = _autoCloseTask;
 		if (oldTask != null)
 		{
@@ -713,7 +629,7 @@ public class L2DoorInstance extends L2Character
 		@Override
 		public void run()
 		{
-			if (getOpen())
+			if (isOpen())
 			{
 				closeMe();
 			}
@@ -725,7 +641,7 @@ public class L2DoorInstance extends L2Character
 		@Override
 		public void run()
 		{
-			final boolean open = getOpen();
+			final boolean open = isOpen();
 			if (open)
 			{
 				closeMe();

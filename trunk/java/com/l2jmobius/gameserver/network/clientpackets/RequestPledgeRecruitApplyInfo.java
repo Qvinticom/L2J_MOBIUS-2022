@@ -16,27 +16,28 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.ClanEntryStatus;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeRecruitApplyInfo;
 
 /**
  * @author Sdw
  */
-public class RequestPledgeRecruitApplyInfo extends L2GameClientPacket
+public class RequestPledgeRecruitApplyInfo implements IClientIncomingPacket
 {
-	private static final String _C__D0_DE_REQUESTPLEDGERECRUITAPPLYINFO = "[C] D0:DE RequestPledgeRecruitApplyInfo";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -48,7 +49,7 @@ public class RequestPledgeRecruitApplyInfo extends L2GameClientPacket
 		{
 			status = ClanEntryStatus.ORDERED;
 		}
-		else if ((activeChar.getClan() == null) && ClanEntryManager.getInstance().isPlayerRegistred(activeChar.getObjectId()))
+		else if ((activeChar.getClan() == null) && (ClanEntryManager.getInstance().isPlayerRegistred(activeChar.getObjectId())))
 		{
 			status = ClanEntryStatus.WAITING;
 		}
@@ -56,9 +57,4 @@ public class RequestPledgeRecruitApplyInfo extends L2GameClientPacket
 		activeChar.sendPacket(new ExPledgeRecruitApplyInfo(status));
 	}
 	
-	@Override
-	public String getType()
-	{
-		return _C__D0_DE_REQUESTPLEDGERECRUITAPPLYINFO;
-	}
 }

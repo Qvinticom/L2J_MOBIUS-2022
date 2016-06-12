@@ -20,16 +20,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.concurrent.ScheduledFuture;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
+import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.MailType;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
 import com.l2jmobius.gameserver.model.itemcontainer.Mail;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.util.Rnd;
 
 /**
  * @author Migi, DS
@@ -38,8 +36,6 @@ public class Message
 {
 	private static final int EXPIRATION = 360; // 15 days
 	private static final int COD_EXPIRATION = 12; // 12 hours
-	
-	private static final int UNLOAD_ATTACHMENTS_INTERVAL = 900000; // 15-30 mins
 	
 	// post state
 	public static final int DELETED = 0;
@@ -52,13 +48,12 @@ public class Message
 	private String _receiverName = null;
 	private final String _subject, _content;
 	private boolean _unread, _returned;
-	private MailType _messageType = MailType.REGULAR;
+	private final MailType _messageType;
 	private boolean _deletedBySender;
 	private boolean _deletedByReceiver;
 	private final long _reqAdena;
 	private boolean _hasAttachments;
 	private Mail _attachments = null;
-	private ScheduledFuture<?> _unloadTask = null;
 	
 	private int _itemId;
 	private int _enchantLvl;
@@ -85,14 +80,13 @@ public class Message
 		_itemId = rset.getInt("itemId");
 		_enchantLvl = rset.getInt("enchantLvl");
 		final String elemental = rset.getString("elementals");
-		if (elemental == null)
+		if (elemental != null)
 		{
-			return;
-		}
-		final String[] elemDef = elemental.split(";");
-		for (int i = 0; i < 6; i++)
-		{
-			_elementals[i] = Integer.parseInt(elemDef[i]);
+			final String[] elemDef = elemental.split(";");
+			for (int i = 0; i < 6; i++)
+			{
+				_elementals[i] = Integer.parseInt(elemDef[i]);
+			}
 		}
 	}
 	
@@ -106,12 +100,13 @@ public class Message
 		_receiverId = receiverId;
 		_subject = subject;
 		_content = text;
-		_expiration = isCod ? System.currentTimeMillis() + (COD_EXPIRATION * 3600000) : System.currentTimeMillis() + (EXPIRATION * 3600000);
+		_expiration = (isCod ? System.currentTimeMillis() + (COD_EXPIRATION * 3600000) : System.currentTimeMillis() + (EXPIRATION * 3600000));
 		_hasAttachments = false;
 		_unread = true;
 		_deletedBySender = false;
 		_deletedByReceiver = false;
 		_reqAdena = reqAdena;
+		_messageType = MailType.REGULAR;
 	}
 	
 	/*
@@ -174,7 +169,6 @@ public class Message
 		_attachments = msg.getAttachments();
 		msg.removeAttachments();
 		_attachments.setNewMessageId(_messageId);
-		_unloadTask = ThreadPoolManager.getInstance().scheduleGeneral(new AttachmentsUnloadTask(this), UNLOAD_ATTACHMENTS_INTERVAL + Rnd.get(UNLOAD_ATTACHMENTS_INTERVAL));
 	}
 	
 	public Message(int receiverId, L2ItemInstance item, MailType mailType)
@@ -198,19 +192,20 @@ public class Message
 			_enchantLvl = item.getEnchantLevel();
 			if (item.isArmor())
 			{
-				for (int i = 0; i < 6; i++)
+				for (AttributeType type : AttributeType.ATTRIBUTE_TYPES)
 				{
-					_elementals[i] = item.getElementDefAttr((byte) i);
+					_elementals[type.getClientId()] = item.getDefenceAttribute(type);
 				}
 			}
-			else if (item.isWeapon() && (item.getAttackElementType() >= 0))
+			else if (item.isWeapon() && (item.getAttackAttributeType() != AttributeType.NONE))
 			{
-				_elementals[item.getAttackElementType()] = item.getAttackElementPower();
+				_elementals[item.getAttackAttributeType().getClientId()] = item.getAttackAttributePower();
 			}
 		}
 		else if (mailType == MailType.COMMISSION_ITEM_RETURNED)
 		{
-			createAttachments().addItem("CommissionReturnItem", item, null, null);
+			final Mail attachement = createAttachments();
+			attachement.addItem("CommissionReturnItem", item, null, null);
 		}
 	}
 	
@@ -325,12 +320,11 @@ public class Message
 	
 	public final void markAsRead()
 	{
-		if (!_unread)
+		if (_unread)
 		{
-			return;
+			_unread = false;
+			MailManager.getInstance().markAsReadInDb(_messageId);
 		}
-		_unread = false;
-		MailManager.getInstance().markAsReadInDb(_messageId);
 	}
 	
 	public final boolean isDeletedBySender()
@@ -340,18 +334,17 @@ public class Message
 	
 	public final void setDeletedBySender()
 	{
-		if (_deletedBySender)
+		if (!_deletedBySender)
 		{
-			return;
-		}
-		_deletedBySender = true;
-		if (_deletedByReceiver)
-		{
-			MailManager.getInstance().deleteMessageInDb(_messageId);
-		}
-		else
-		{
-			MailManager.getInstance().markAsDeletedBySenderInDb(_messageId);
+			_deletedBySender = true;
+			if (_deletedByReceiver)
+			{
+				MailManager.getInstance().deleteMessageInDb(_messageId);
+			}
+			else
+			{
+				MailManager.getInstance().markAsDeletedBySenderInDb(_messageId);
+			}
 		}
 	}
 	
@@ -362,18 +355,17 @@ public class Message
 	
 	public final void setDeletedByReceiver()
 	{
-		if (_deletedByReceiver)
+		if (!_deletedByReceiver)
 		{
-			return;
-		}
-		_deletedByReceiver = true;
-		if (_deletedBySender)
-		{
-			MailManager.getInstance().deleteMessageInDb(_messageId);
-		}
-		else
-		{
-			MailManager.getInstance().markAsDeletedByReceiverInDb(_messageId);
+			_deletedByReceiver = true;
+			if (_deletedBySender)
+			{
+				MailManager.getInstance().deleteMessageInDb(_messageId);
+			}
+			else
+			{
+				MailManager.getInstance().markAsDeletedByReceiverInDb(_messageId);
+			}
 		}
 	}
 	
@@ -408,7 +400,6 @@ public class Message
 		{
 			_attachments = new Mail(_senderId, _messageId);
 			_attachments.restore();
-			_unloadTask = ThreadPoolManager.getInstance().scheduleGeneral(new AttachmentsUnloadTask(this), UNLOAD_ATTACHMENTS_INTERVAL + Rnd.get(UNLOAD_ATTACHMENTS_INTERVAL));
 		}
 		return _attachments;
 	}
@@ -435,16 +426,11 @@ public class Message
 	
 	public final synchronized void removeAttachments()
 	{
-		if (_attachments == null)
+		if (_attachments != null)
 		{
-			return;
-		}
-		_attachments = null;
-		_hasAttachments = false;
-		MailManager.getInstance().removeAttachmentsInDb(_messageId);
-		if (_unloadTask != null)
-		{
-			_unloadTask.cancel(false);
+			_attachments = null;
+			_hasAttachments = false;
+			MailManager.getInstance().removeAttachmentsInDb(_messageId);
 		}
 	}
 	
@@ -457,38 +443,16 @@ public class Message
 		
 		_attachments = new Mail(_senderId, _messageId);
 		_hasAttachments = true;
-		_unloadTask = ThreadPoolManager.getInstance().scheduleGeneral(new AttachmentsUnloadTask(this), UNLOAD_ATTACHMENTS_INTERVAL + Rnd.get(UNLOAD_ATTACHMENTS_INTERVAL));
 		return _attachments;
 	}
 	
 	protected final synchronized void unloadAttachments()
 	{
-		if (_attachments == null)
+		if (_attachments != null)
 		{
-			return;
-		}
-		_attachments.deleteMe();
-		_attachments = null;
-	}
-	
-	static class AttachmentsUnloadTask implements Runnable
-	{
-		private Message _msg;
-		
-		AttachmentsUnloadTask(Message msg)
-		{
-			_msg = msg;
-		}
-		
-		@Override
-		public void run()
-		{
-			if (_msg == null)
-			{
-				return;
-			}
-			_msg.unloadAttachments();
-			_msg = null;
+			_attachments.deleteMe();
+			MailManager.getInstance().removeAttachmentsInDb(_messageId);
+			_attachments = null;
 		}
 	}
 }

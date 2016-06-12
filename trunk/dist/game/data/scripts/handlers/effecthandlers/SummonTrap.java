@@ -18,12 +18,13 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Summon Trap effect implementation.
@@ -34,10 +35,8 @@ public final class SummonTrap extends AbstractEffect
 	private final int _despawnTime;
 	private final int _npcId;
 	
-	public SummonTrap(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public SummonTrap(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_despawnTime = params.getInt("despawnTime", 0);
 		_npcId = params.getInt("npcId", 0);
 	}
@@ -49,20 +48,20 @@ public final class SummonTrap extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if ((info.getEffected() == null) || !info.getEffected().isPlayer() || info.getEffected().isAlikeDead() || info.getEffected().getActingPlayer().inObserverMode())
+		if (!effected.isPlayer() || effected.isAlikeDead() || effected.getActingPlayer().inObserverMode())
 		{
 			return;
 		}
 		
 		if (_npcId <= 0)
 		{
-			_log.warning(SummonTrap.class.getSimpleName() + ": Invalid NPC ID:" + _npcId + " in skill ID: " + info.getSkill().getId());
+			_log.warning(SummonTrap.class.getSimpleName() + ": Invalid NPC ID:" + _npcId + " in skill ID: " + skill.getId());
 			return;
 		}
 		
-		final L2PcInstance player = info.getEffected().getActingPlayer();
+		final L2PcInstance player = effected.getActingPlayer();
 		if (player.inObserverMode() || player.isMounted())
 		{
 			return;
@@ -77,7 +76,7 @@ public final class SummonTrap extends AbstractEffect
 		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_npcId);
 		if (npcTemplate == null)
 		{
-			_log.warning(SummonTrap.class.getSimpleName() + ": Spawn of the non-existing Trap ID: " + _npcId + " in skill ID:" + info.getSkill().getId());
+			_log.warning(SummonTrap.class.getSimpleName() + ": Spawn of the non-existing Trap ID: " + _npcId + " in skill ID:" + skill.getId());
 			return;
 		}
 		
@@ -87,6 +86,6 @@ public final class SummonTrap extends AbstractEffect
 		trap.setIsInvul(true);
 		trap.setHeading(player.getHeading());
 		trap.spawnMe(player.getX(), player.getY(), player.getZ());
-		player.setTrap(trap);
+		player.addSummonedNpc(trap); // player.setTrap(trap);
 	}
 }

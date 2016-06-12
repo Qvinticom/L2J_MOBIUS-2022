@@ -3,9 +3,20 @@
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="npc">
+				<xs:element name="npc" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
+							<xs:element name="npcs" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="npc" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute type="xs:int" name="id" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
 							<xs:element name="teleport" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
@@ -16,6 +27,7 @@
 												<xs:attribute type="xs:int" name="x" use="required" />
 												<xs:attribute type="xs:int" name="y" use="required" />
 												<xs:attribute type="xs:short" name="z" use="required" />
+												<xs:attribute type="xs:int" name="questZoneId" use="optional" />
 												<xs:attribute type="xs:int" name="feeId" use="optional" />
 												<xs:attribute type="xs:int" name="feeCount" use="optional" />
 											</xs:complexType>
@@ -27,6 +39,7 @@
 												<xs:enumeration value="NORMAL" />
 												<xs:enumeration value="NOBLES_TOKEN" />
 												<xs:enumeration value="NOBLES_ADENA" />
+												<xs:enumeration value="OTHER" />
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>

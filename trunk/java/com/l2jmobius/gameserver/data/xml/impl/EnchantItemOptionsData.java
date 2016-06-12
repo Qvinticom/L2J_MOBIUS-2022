@@ -16,23 +16,26 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.options.EnchantOptions;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * @author UnAfraid
  */
-public class EnchantItemOptionsData implements IXmlReader
+public class EnchantItemOptionsData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(EnchantItemOptionsData.class.getName());
+	
 	private final Map<Integer, Map<Integer, EnchantOptions>> _data = new HashMap<>();
 	
 	protected EnchantItemOptionsData()
@@ -44,11 +47,11 @@ public class EnchantItemOptionsData implements IXmlReader
 	public synchronized void load()
 	{
 		_data.clear();
-		parseDatapackFile("EnchantItemOptions.xml");
+		parseDatapackFile("data/EnchantItemOptions.xml");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		int counter = 0;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
@@ -86,7 +89,7 @@ public class EnchantItemOptionsData implements IXmlReader
 				}
 			}
 		}
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _data.size() + " Items and " + counter + " Options.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _data.size() + " Items and " + counter + " Options.");
 	}
 	
 	/**
@@ -96,7 +99,11 @@ public class EnchantItemOptionsData implements IXmlReader
 	 */
 	public EnchantOptions getOptions(int itemId, int enchantLevel)
 	{
-		return !_data.containsKey(itemId) || !_data.get(itemId).containsKey(enchantLevel) ? null : _data.get(itemId).get(enchantLevel);
+		if (!_data.containsKey(itemId) || !_data.get(itemId).containsKey(enchantLevel))
+		{
+			return null;
+		}
+		return _data.get(itemId).get(enchantLevel);
 	}
 	
 	/**

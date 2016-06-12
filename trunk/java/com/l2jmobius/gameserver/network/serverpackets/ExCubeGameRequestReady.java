@@ -16,24 +16,28 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
- * Format: (chd)
+ * Show Confirm Dialog for 10 seconds
  * @author mrTJO
  */
-public class ExCubeGameRequestReady extends L2GameServerPacket
+public class ExCubeGameRequestReady implements IClientOutgoingPacket
 {
-	/**
-	 * Show Confirm Dialog for 10 seconds
-	 */
-	public ExCubeGameRequestReady()
+	public static final ExCubeGameRequestReady STATIC_PACKET = new ExCubeGameRequestReady();
+	
+	private ExCubeGameRequestReady()
 	{
+		
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x98);
-		writeD(0x04);
+		OutgoingPackets.EX_BLOCK_UP_SET_LIST.writeId(packet);
+		
+		packet.writeD(0x04);
+		return true;
 	}
 }

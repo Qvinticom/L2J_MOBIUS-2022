@@ -16,7 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import com.l2jmobius.gameserver.data.xml.impl.TransformData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -77,7 +76,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 				return false;
 			}
 			
-			if (player.isTransformed() || player.isInStance())
+			if (player.isTransformed())
 			{
 				if (!command.contains(" "))
 				{
@@ -108,7 +107,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 			}
 			
 			final int id = Integer.parseInt(parts[1]);
-			if (!TransformData.getInstance().transformPlayer(id, player))
+			if (!player.transform(id, true))
 			{
 				player.sendMessage("Unknown transformation ID: " + id);
 				return false;
@@ -164,7 +163,8 @@ public class AdminPolymorph implements IAdminCommandHandler
 				final L2Character Char = (L2Character) obj;
 				final MagicSkillUse msk = new MagicSkillUse(Char, 1008, 1, 4000, 0);
 				Char.broadcastPacket(msk);
-				Char.sendPacket(new SetupGauge(0, 4000));
+				final SetupGauge sg = new SetupGauge(activeChar.getObjectId(), 0, 4000);
+				Char.sendPacket(sg);
 			}
 			// end of animation
 			obj.decayMe();

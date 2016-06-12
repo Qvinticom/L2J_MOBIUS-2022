@@ -16,7 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.Collection;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
@@ -42,6 +41,7 @@ public class AdminHeal implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
+		
 		if (command.equals("admin_heal"))
 		{
 			handleHeal(activeChar);
@@ -50,7 +50,8 @@ public class AdminHeal implements IAdminCommandHandler
 		{
 			try
 			{
-				handleHeal(activeChar, command.substring(11));
+				final String healTarget = command.substring(11);
+				handleHeal(activeChar, healTarget);
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -77,6 +78,7 @@ public class AdminHeal implements IAdminCommandHandler
 	
 	private void handleHeal(L2PcInstance activeChar, String player)
 	{
+		
 		L2Object obj = activeChar.getTarget();
 		if (player != null)
 		{
@@ -91,19 +93,14 @@ public class AdminHeal implements IAdminCommandHandler
 				try
 				{
 					final int radius = Integer.parseInt(player);
-					final Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
-					for (L2Object object : objs)
+					L2World.getInstance().forEachVisibleObject(activeChar, L2Character.class, character ->
 					{
-						if (object instanceof L2Character)
+						character.setCurrentHpMp(character.getMaxHp(), character.getMaxMp());
+						if (character instanceof L2PcInstance)
 						{
-							final L2Character character = (L2Character) object;
-							character.setCurrentHpMp(character.getMaxHp(), character.getMaxMp());
-							if (object instanceof L2PcInstance)
-							{
-								character.setCurrentCp(character.getMaxCp());
-							}
+							character.setCurrentCp(character.getMaxCp());
 						}
-					}
+					});
 					
 					activeChar.sendMessage("Healed within " + radius + " unit radius.");
 					return;
@@ -127,7 +124,7 @@ public class AdminHeal implements IAdminCommandHandler
 			}
 			if (Config.DEBUG)
 			{
-				_log.fine("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") healed character " + target.getName());
+				_log.finer("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") healed character " + target.getName());
 			}
 		}
 		else

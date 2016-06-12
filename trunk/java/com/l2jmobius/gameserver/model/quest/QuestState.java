@@ -16,29 +16,21 @@
  */
 package com.l2jmobius.gameserver.model.quest;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.AbstractScript;
-import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.model.events.EventDispatcher;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerQuestComplete;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowQuestMark;
-import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.QuestList;
-import com.l2jmobius.gameserver.network.serverpackets.TutorialEnableClientEvent;
-import com.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -120,7 +112,7 @@ public final class QuestState
 	 */
 	public boolean isCreated()
 	{
-		return _state == State.CREATED;
+		return (_state == State.CREATED);
 	}
 	
 	/**
@@ -129,7 +121,7 @@ public final class QuestState
 	 */
 	public boolean isStarted()
 	{
-		return _state == State.STARTED;
+		return (_state == State.STARTED);
 	}
 	
 	/**
@@ -138,7 +130,7 @@ public final class QuestState
 	 */
 	public boolean isCompleted()
 	{
-		return _state == State.COMPLETED;
+		return (_state == State.COMPLETED);
 	}
 	
 	/**
@@ -179,7 +171,7 @@ public final class QuestState
 			}
 		}
 		
-		_player.sendPacket(new QuestList());
+		_player.sendPacket(new QuestList(_player));
 		return true;
 	}
 	
@@ -261,6 +253,7 @@ public final class QuestState
 					previousVal = 0;
 				}
 				setCond(Integer.parseInt(val), previousVal);
+				getQuest().sendNpcLogList(getPlayer());
 			}
 			catch (Exception e)
 			{
@@ -322,10 +315,10 @@ public final class QuestState
 				
 				// since no flag had been skipped until now, the least significant bits must all
 				// be set to 1, up until "old" number of bits.
-				completedStateFlags |= (1 << old) - 1;
+				completedStateFlags |= ((1 << old) - 1);
 				
 				// now, just set the bit corresponding to the passed cond to 1 (current step)
-				completedStateFlags |= 1 << (cond - 1);
+				completedStateFlags |= (1 << (cond - 1));
 				set("__compltdStateFlags", String.valueOf(completedStateFlags));
 			}
 		}
@@ -334,7 +327,7 @@ public final class QuestState
 		else if (cond < old)
 		{
 			// note, this also unsets the flag indicating that there exist skips
-			completedStateFlags &= (1 << cond) - 1;
+			completedStateFlags &= ((1 << cond) - 1);
 			
 			// now, check if this resulted in no steps being skipped any more
 			if (completedStateFlags == ((1 << cond) - 1))
@@ -354,12 +347,12 @@ public final class QuestState
 		// Just mark this state and we are done.
 		else
 		{
-			completedStateFlags |= 1 << (cond - 1);
+			completedStateFlags |= (1 << (cond - 1));
 			set("__compltdStateFlags", String.valueOf(completedStateFlags));
 		}
 		
 		// send a packet to the client to inform it of the quest progress (step change)
-		_player.sendPacket(new QuestList());
+		_player.sendPacket(new QuestList(_player));
 		
 		final Quest q = getQuest();
 		if (!q.isCustomQuest() && (cond > 0))
@@ -389,86 +382,17 @@ public final class QuestState
 	}
 	
 	/**
-	 * Insert (or update) in the database variables that need to stay persistent for this player after a reboot. This function is for storage of values that are not related to a specific quest but are global instead, i.e. can be used by any script.
-	 * @param var the name of the variable to save
-	 * @param value the value of the variable
-	 */
-	// TODO: these methods should not be here, they could be used by other classes to save some variables, but they can't because they require to create a QuestState first.
-	public final void saveGlobalQuestVar(String var, String value)
-	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("REPLACE INTO character_quest_global_data (charId, var, value) VALUES (?, ?, ?)"))
-		{
-			ps.setInt(1, _player.getObjectId());
-			ps.setString(2, var);
-			ps.setString(3, value);
-			ps.executeUpdate();
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, "Could not insert player's global quest variable: " + e.getMessage(), e);
-		}
-	}
-	
-	/**
-	 * Read from the database a previously saved variable for this quest.<br>
-	 * Due to performance considerations, this function should best be used only when the quest is first loaded.<br>
-	 * Subclasses of this class can define structures into which these loaded values can be saved.<br>
-	 * However, on-demand usage of this function throughout the script is not prohibited, only not recommended.<br>
-	 * Values read from this function were entered by calls to "saveGlobalQuestVar".
-	 * @param var the name of the variable whose value to get
-	 * @return the value of the variable or an empty string if the variable does not exist in the database
-	 */
-	// TODO: these methods should not be here, they could be used by other classes to save some variables, but they can't because they require to create a QuestState first.
-	public final String getGlobalQuestVar(String var)
-	{
-		String result = "";
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT value FROM character_quest_global_data WHERE charId = ? AND var = ?"))
-		{
-			ps.setInt(1, _player.getObjectId());
-			ps.setString(2, var);
-			try (ResultSet rs = ps.executeQuery())
-			{
-				if (rs.first())
-				{
-					result = rs.getString(1);
-				}
-			}
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, "Could not load player's global quest variable: " + e.getMessage(), e);
-		}
-		return result;
-	}
-	
-	/**
-	 * Permanently delete a global quest variable from the database.
-	 * @param var the name of the variable to delete
-	 */
-	public final void deleteGlobalQuestVar(String var)
-	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("DELETE FROM character_quest_global_data WHERE charId = ? AND var = ?"))
-		{
-			ps.setInt(1, _player.getObjectId());
-			ps.setString(2, var);
-			ps.executeUpdate();
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, "could not delete player's global quest variable; charId = " + _player.getObjectId() + ", variable name = " + var + ". Exception: " + e.getMessage(), e);
-		}
-	}
-	
-	/**
 	 * @param var the name of the variable to get
 	 * @return the value of the variable from the list of quest variables
 	 */
 	public String get(String var)
 	{
-		return _vars == null ? null : _vars.get(var);
+		if (_vars == null)
+		{
+			return null;
+		}
+		
+		return _vars.get(var);
 	}
 	
 	/**
@@ -509,7 +433,7 @@ public final class QuestState
 	 */
 	public boolean isCond(int condition)
 	{
-		return getInt("cond") == condition;
+		return (getInt("cond") == condition);
 	}
 	
 	/**
@@ -533,7 +457,11 @@ public final class QuestState
 	 */
 	public int getCond()
 	{
-		return isStarted() ? getInt("cond") : 0;
+		if (isStarted())
+		{
+			return getInt("cond");
+		}
+		return 0;
 	}
 	
 	/**
@@ -546,7 +474,7 @@ public final class QuestState
 	 */
 	public boolean isSet(String variable)
 	{
-		return get(variable) != null;
+		return (get(variable) != null);
 	}
 	
 	/**
@@ -583,12 +511,16 @@ public final class QuestState
 	 */
 	public int getMemoState()
 	{
-		return isStarted() ? getInt("memoState") : 0;
+		if (isStarted())
+		{
+			return getInt("memoState");
+		}
+		return 0;
 	}
 	
 	public boolean isMemoState(int memoState)
 	{
-		return getInt("memoState") == memoState;
+		return (getInt("memoState") == memoState);
 	}
 	
 	/**
@@ -598,7 +530,11 @@ public final class QuestState
 	 */
 	public int getMemoStateEx(int slot)
 	{
-		return isStarted() ? getInt("memoStateEx" + slot) : 0;
+		if (isStarted())
+		{
+			return getInt("memoStateEx" + slot);
+		}
+		return 0;
 	}
 	
 	/**
@@ -621,21 +557,22 @@ public final class QuestState
 	 */
 	public boolean isMemoStateEx(int slot, int memoStateEx)
 	{
-		return getMemoStateEx(slot) == memoStateEx;
+		return (getMemoStateEx(slot) == memoStateEx);
 	}
 	
-	/**
-	 * Add player to get notification of characters death
-	 * @param character the {@link L2Character} object of the character to get notification of death
-	 */
-	public void addNotifyOfDeath(L2Character character)
+	public void addRadar(int x, int y, int z)
 	{
-		if (!(character instanceof L2PcInstance))
-		{
-			return;
-		}
-		
-		((L2PcInstance) character).addNotifyQuestOfDeath(this);
+		_player.getRadar().addMarker(x, y, z);
+	}
+	
+	public void removeRadar(int x, int y, int z)
+	{
+		_player.getRadar().removeMarker(x, y, z);
+	}
+	
+	public void clearRadar()
+	{
+		_player.getRadar().removeAllMarkers();
 	}
 	
 	/**
@@ -655,224 +592,6 @@ public final class QuestState
 	}
 	
 	/**
-	 * Start a timed event for a quest.<br>
-	 * Will call an event in onEvent/onAdvEvent.
-	 * @param name the name of the timer/event
-	 * @param time time in milliseconds till the event is executed
-	 */
-	public void startQuestTimer(String name, long time)
-	{
-		getQuest().startQuestTimer(name, time, null, _player, false);
-	}
-	
-	/**
-	 * Start a timed event for a quest.<br>
-	 * Will call an event in onEvent/onAdvEvent.
-	 * @param name the name of the timer/event
-	 * @param time time in milliseconds till the event is executed
-	 * @param npc the L2Npc associated with this event
-	 */
-	public void startQuestTimer(String name, long time, L2Npc npc)
-	{
-		getQuest().startQuestTimer(name, time, npc, _player, false);
-	}
-	
-	/**
-	 * Start a repeating timed event for a quest.<br>
-	 * Will call an event in onEvent/onAdvEvent.
-	 * @param name the name of the timer/event
-	 * @param time time in milliseconds till the event is executed/repeated
-	 */
-	public void startRepeatingQuestTimer(String name, long time)
-	{
-		getQuest().startQuestTimer(name, time, null, _player, true);
-	}
-	
-	/**
-	 * Start a repeating timed event for a quest.<br>
-	 * Will call an event in onEvent/onAdvEvent.
-	 * @param name the name of the timer/event
-	 * @param time time in milliseconds till the event is executed/repeated
-	 * @param npc the L2Npc associated with this event
-	 */
-	public void startRepeatingQuestTimer(String name, long time, L2Npc npc)
-	{
-		getQuest().startQuestTimer(name, time, npc, _player, true);
-	}
-	
-	/**
-	 * @param name the name of the QuestTimer required
-	 * @return the {@link QuestTimer} object with the specified name or {@code null} if it doesn't exist
-	 */
-	public final QuestTimer getQuestTimer(String name)
-	{
-		return getQuest().getQuestTimer(name, null, _player);
-	}
-	
-	// --- Spawn methods ---
-	/**
-	 * Add a temporary spawn of the specified npc.<br>
-	 * Player's coordinates will be used for the spawn.
-	 * @param npcId the Id of the npc to spawn
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	 */
-	public L2Npc addSpawn(int npcId)
-	{
-		return addSpawn(npcId, _player.getX(), _player.getY(), _player.getZ(), 0, false, 0, false);
-	}
-	
-	/**
-	 * Add a temporary spawn of the specified npc.<br>
-	 * Player's coordinates will be used for the spawn.
-	 * @param npcId the Id of the npc to spawn
-	 * @param despawnDelay time in milliseconds till the npc is despawned (default: 0)
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	 */
-	public L2Npc addSpawn(int npcId, int despawnDelay)
-	{
-		return addSpawn(npcId, _player.getX(), _player.getY(), _player.getZ(), 0, false, despawnDelay, false);
-	}
-	
-	/**
-	 * Add a temporary spawn of the specified npc.
-	 * @param npcId the Id of the npc to spawn
-	 * @param x the X coordinate of the npc spawn location
-	 * @param y the Y coordinate of the npc spawn location
-	 * @param z the Z coordinate (height) of the npc spawn location
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	 */
-	public L2Npc addSpawn(int npcId, int x, int y, int z)
-	{
-		return addSpawn(npcId, x, y, z, 0, false, 0, false);
-	}
-	
-	/**
-	 * Add a temporary spawn of the specified npc.
-	 * @param npcId the Id of the npc to spawn
-	 * @param x the X coordinate of the npc spawn location
-	 * @param y the Y coordinate of the npc spawn location
-	 * @param z the Z coordinate (height) of the npc spawn location
-	 * @param despawnDelay time in milliseconds till the npc is despawned (default: 0)
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	 */
-	public L2Npc addSpawn(int npcId, int x, int y, int z, int despawnDelay)
-	{
-		return addSpawn(npcId, x, y, z, 0, false, despawnDelay, false);
-	}
-	
-	/**
-	 * Add a temporary spawn of the specified npc.
-	 * @param npcId the Id of the npc to spawn
-	 * @param cha the character whose coordinates will be used for the npc spawn
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	 */
-	public L2Npc addSpawn(int npcId, L2Character cha)
-	{
-		return addSpawn(npcId, cha.getX(), cha.getY(), cha.getZ(), cha.getHeading(), true, 0, false);
-	}
-	
-	/**
-	 * Add a temporary spawn of the specified npc.
-	 * @param npcId the Id of the npc to spawn
-	 * @param cha the character whose coordinates will be used for the npc spawn
-	 * @param despawnDelay time in milliseconds till the npc is despawned (default: 0)
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	 */
-	public L2Npc addSpawn(int npcId, L2Character cha, int despawnDelay)
-	{
-		return addSpawn(npcId, cha.getX(), cha.getY(), cha.getZ(), cha.getHeading(), true, despawnDelay, false);
-	}
-	
-	/**
-	 * Add a temporary spawn of the specified npc.
-	 * @param npcId the Id of the npc to spawn
-	 * @param cha the character whose coordinates will be used for the npc spawn
-	 * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
-	 * @param despawnDelay time in milliseconds till the npc is despawned (default: 0)
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	 */
-	public L2Npc addSpawn(int npcId, L2Character cha, boolean randomOffset, int despawnDelay)
-	{
-		return addSpawn(npcId, cha.getX(), cha.getY(), cha.getZ(), cha.getHeading(), randomOffset, despawnDelay, false);
-	}
-	
-	/**
-	 * Add a temporary spawn of the specified npc.
-	 * @param npcId the Id of the npc to spawn
-	 * @param x the X coordinate of the npc spawn location
-	 * @param y the Y coordinate of the npc spawn location
-	 * @param z the Z coordinate (height) of the npc spawn location
-	 * @param heading the heading of the npc
-	 * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
-	 * @param despawnDelay time in milliseconds till the npc is despawned (default: 0)
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int, int, int, int, int, boolean, int, boolean)
-	 */
-	public L2Npc addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
-	{
-		return addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay, false);
-	}
-	
-	/**
-	 * Add a temporary spawn of the specified npc.
-	 * @param npcId the Id of the npc to spawn
-	 * @param x the X coordinate of the npc spawn location
-	 * @param y the Y coordinate of the npc spawn location
-	 * @param z the Z coordinate (height) of the npc spawn location
-	 * @param heading the heading of the npc
-	 * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
-	 * @param despawnDelay time in milliseconds till the npc is despawned (default: 0)
-	 * @param isSummonSpawn if {@code true}, displays a summon animation on npc spawn (default: {@code false})
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int)
-	 * @see #addSpawn(int, int)
-	 * @see #addSpawn(int, L2Character)
-	 * @see #addSpawn(int, L2Character, int)
-	 * @see #addSpawn(int, int, int, int)
-	 * @see #addSpawn(int, L2Character, boolean, int)
-	 * @see #addSpawn(int, int, int, int, int)
-	 * @see #addSpawn(int, int, int, int, int, boolean, int)
-	 * @see #addSpawn(int, int, int, int, int, boolean, int, boolean)
-	 */
-	public L2Npc addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	{
-		return AbstractScript.addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay, isSummonSpawn);
-	}
-	
-	/**
-	 * Send an HTML file to the specified player.
-	 * @param filename the name of the HTML file to show
-	 * @return the contents of the HTML file that was sent to the player
-	 * @see #showHtmlFile(String, L2Npc)
-	 * @see Quest#showHtmlFile(L2PcInstance, String)
-	 * @see Quest#showHtmlFile(L2PcInstance, String, L2Npc)
-	 */
-	public String showHtmlFile(String filename)
-	{
-		return showHtmlFile(filename, null);
-	}
-	
-	/**
-	 * Send an HTML file to the specified player.
-	 * @param filename the name of the HTML file to show
-	 * @param npc the NPC that is showing the HTML file
-	 * @return the contents of the HTML file that was sent to the player
-	 * @see Quest#showHtmlFile(L2PcInstance, String)
-	 * @see Quest#showHtmlFile(L2PcInstance, String, L2Npc)
-	 */
-	public String showHtmlFile(String filename, L2Npc npc)
-	{
-		return getQuest().showHtmlFile(_player, filename, npc);
-	}
-	
-	/**
 	 * Set condition to 1, state to STARTED and play the "ItemSound.quest_accept".<br>
 	 * Works only if state is CREATED and the quest is not a custom quest.
 	 * @return the newly created {@code QuestState} object
@@ -883,7 +602,8 @@ public final class QuestState
 		{
 			set("cond", "1");
 			setState(State.STARTED);
-			AbstractScript.playSound(_player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
+			AbstractScript.playSound(getPlayer(), QuestSound.ITEMSOUND_QUEST_ACCEPT);
+			getQuest().sendNpcLogList(getPlayer());
 		}
 		return this;
 	}
@@ -915,6 +635,10 @@ public final class QuestState
 				break;
 			}
 		}
+		
+		// Notify to scripts
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerQuestComplete(_player, getQuest().getId(), type), _player);
+		
 		return this;
 	}
 	
@@ -933,7 +657,7 @@ public final class QuestState
 		exitQuest(type);
 		if (playExitQuest)
 		{
-			AbstractScript.playSound(_player, QuestSound.ITEMSOUND_QUEST_FINISH);
+			AbstractScript.playSound(getPlayer(), QuestSound.ITEMSOUND_QUEST_FINISH);
 		}
 		return this;
 	}
@@ -947,7 +671,7 @@ public final class QuestState
 	 * @see #exitQuest(QuestType type, boolean playExitQuest)
 	 * @see #exitQuest(boolean repeatable, boolean playExitQuest)
 	 */
-	public QuestState exitQuest(boolean repeatable)
+	private QuestState exitQuest(boolean repeatable)
 	{
 		_player.removeNotifyQuestOfDeath(this);
 		
@@ -963,7 +687,7 @@ public final class QuestState
 		if (repeatable)
 		{
 			_player.delQuestState(getQuestName());
-			_player.sendPacket(new QuestList());
+			_player.sendPacket(new QuestList(_player));
 		}
 		else
 		{
@@ -988,20 +712,12 @@ public final class QuestState
 		exitQuest(repeatable);
 		if (playExitQuest)
 		{
-			AbstractScript.playSound(_player, QuestSound.ITEMSOUND_QUEST_FINISH);
+			AbstractScript.playSound(getPlayer(), QuestSound.ITEMSOUND_QUEST_FINISH);
 		}
+		
+		// Notify to scripts
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerQuestComplete(_player, getQuest().getId(), repeatable ? QuestType.REPEATABLE : QuestType.ONE_TIME), _player);
 		return this;
-	}
-	
-	public void showQuestionMark(int number)
-	{
-		_player.sendPacket(new TutorialShowQuestionMark(number));
-	}
-	
-	// TODO make tutorial voices the same as quest sounds
-	public void playTutorialVoice(String voice)
-	{
-		_player.sendPacket(new PlaySound(2, voice, 0, 0, _player.getX(), _player.getY(), _player.getZ()));
 	}
 	
 	/**
@@ -1028,40 +744,6 @@ public final class QuestState
 	public boolean isNowAvailable()
 	{
 		final String val = get("restartTime");
-		return (val == null) || !Util.isDigit(val) || (Long.parseLong(val) <= System.currentTimeMillis());
-	}
-	
-	/**
-	 * @return returns {@link NpcStringId} that is will order all teleports along the way as first option for player when he is on a quest.
-	 */
-	public NpcStringId getQuestLocation()
-	{
-		return NpcStringId.getNpcStringIdOrDefault(getInt("LOCATION_ID"), null);
-	}
-	
-	/**
-	 * Sets {@link NpcStringId} that is will order all teleports along the way as first option for player when he is on a quest.
-	 * @param id
-	 */
-	public void setQuestLocation(NpcStringId id)
-	{
-		if (id == null)
-		{
-			throw new NullPointerException("Attempting to set null quest location string for quest: " + getQuestName());
-		}
-		set("LOCATION_ID", id.getId());
-	}
-	
-	/**
-	 * Removes the {@link NpcStringId} that is will order all teleports along the way as first option for player when he is on a quest.
-	 */
-	public void unsetQuestLocation()
-	{
-		unset("LOCATION_ID");
-	}
-	
-	public void onTutorialClientEvent(int number)
-	{
-		getPlayer().sendPacket(new TutorialEnableClientEvent(number));
+		return (val != null) && (!Util.isDigit(val) || (Long.parseLong(val) <= System.currentTimeMillis()));
 	}
 }

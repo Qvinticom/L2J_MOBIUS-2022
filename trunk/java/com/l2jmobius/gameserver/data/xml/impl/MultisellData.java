@@ -19,8 +19,10 @@ package com.l2jmobius.gameserver.data.xml.impl;
 import java.io.File;
 import java.io.FileFilter;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
@@ -28,6 +30,8 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.file.filter.NumericNameFilter;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -36,16 +40,15 @@ import com.l2jmobius.gameserver.model.multisell.Ingredient;
 import com.l2jmobius.gameserver.model.multisell.ListContainer;
 import com.l2jmobius.gameserver.model.multisell.PreparedListContainer;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExPCCafePointInfo;
 import com.l2jmobius.gameserver.network.serverpackets.MultiSellList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.data.xml.IXmlReader;
-import com.l2jmobius.util.file.filter.NumericNameFilter;
 
-public final class MultisellData implements IXmlReader
+public final class MultisellData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(MultisellData.class.getName());
+	
 	private final Map<Integer, ListContainer> _entries = new HashMap<>();
 	
 	public static final int PAGE_SIZE = 40;
@@ -53,7 +56,8 @@ public final class MultisellData implements IXmlReader
 	public static final int PC_BANG_POINTS = -100;
 	public static final int CLAN_REPUTATION = -200;
 	public static final int FAME = -300;
-	public static final int RAID_POINTS = -500;
+	public static final int FIELD_CYCLE_POINTS = -400;
+	public static final int RAIDBOSS_POINTS = -500;
 	// Misc
 	private static final FileFilter NUMERIC_FILTER = new NumericNameFilter();
 	
@@ -66,14 +70,14 @@ public final class MultisellData implements IXmlReader
 	public void load()
 	{
 		_entries.clear();
-		parseDatapackDirectory("multisell", false);
+		parseDatapackDirectory("data/multisell", false);
 		if (Config.CUSTOM_MULTISELL_LOAD)
 		{
-			parseDatapackDirectory("multisell/custom", false);
+			parseDatapackDirectory("data/multisell/custom", false);
 		}
 		
 		verify();
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _entries.size() + " multisell lists.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _entries.size() + " multisell lists.");
 	}
 	
 	@Override
@@ -128,15 +132,19 @@ public final class MultisellData implements IXmlReader
 					{
 						if ("item".equalsIgnoreCase(d.getNodeName()))
 						{
-							list.getEntries().add(parseEntry(d, entryId++, list));
+							final Entry e = parseEntry(d, entryId++, list);
+							list.getEntries().add(e);
 						}
 						else if ("npcs".equalsIgnoreCase(d.getNodeName()))
 						{
 							for (Node b = d.getFirstChild(); b != null; b = b.getNextSibling())
 							{
-								if ("npc".equalsIgnoreCase(b.getNodeName()) && Util.isDigit(b.getTextContent()))
+								if ("npc".equalsIgnoreCase(b.getNodeName()))
 								{
-									list.allowNpc(Integer.parseInt(b.getTextContent()));
+									if (Util.isDigit(b.getTextContent()))
+									{
+										list.allowNpc(Integer.parseInt(b.getTextContent()));
+									}
 								}
 							}
 						}
@@ -274,50 +282,42 @@ public final class MultisellData implements IXmlReader
 	{
 		switch (id)
 		{
-			case PC_BANG_POINTS:
-			{
-				if (player.getPcBangPoints() >= amount)
-				{
-					return true;
-				}
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_SHORT_OF_PC_POINTS));
-				break;
-			}
 			case CLAN_REPUTATION:
 			{
 				if (player.getClan() == null)
 				{
 					player.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION);
-					break;
+					return false;
 				}
-				if (!player.isClanLeader())
+				else if (!player.isClanLeader())
 				{
 					player.sendPacket(SystemMessageId.ONLY_THE_CLAN_LEADER_IS_ENABLED);
-					break;
+					return false;
 				}
-				if (player.getClan().getReputationScore() >= amount)
+				else if (player.getClan().getReputationScore() < amount)
 				{
-					return true;
+					player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
+					return false;
 				}
-				player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
-				break;
+				return true;
 			}
 			case FAME:
 			{
 				if (player.getFame() < amount)
 				{
 					player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_FAME_TO_DO_THAT);
-					break;
+					return false;
 				}
+				return true;
 			}
-			case RAID_POINTS:
+			case RAIDBOSS_POINTS:
 			{
-				if (player.getRaidPoints() >= amount)
+				if (player.getRaidbossPoints() < amount)
 				{
-					return true;
+					player.sendPacket(SystemMessageId.NOT_ENOUGH_RAID_POINTS);
+					return false;
 				}
-				player.sendPacket(SystemMessageId.NOT_ENOUGH_RAID_POINTS);
-				break;
+				return true;
 			}
 		}
 		return false;
@@ -327,16 +327,6 @@ public final class MultisellData implements IXmlReader
 	{
 		switch (id)
 		{
-			case PC_BANG_POINTS: // PcBang points
-			{
-				final int cost = player.getPcBangPoints() - (int) amount;
-				player.setPcBangPoints(cost);
-				final SystemMessage smsgpc = SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_USING_S1_POINT);
-				smsgpc.addLong((int) amount);
-				player.sendPacket(smsgpc);
-				player.sendPacket(new ExPCCafePointInfo(player.getPcBangPoints(), (int) amount, 1));
-				return true;
-			}
 			case CLAN_REPUTATION:
 			{
 				player.getClan().takeReputationScore((int) amount, true);
@@ -349,12 +339,14 @@ public final class MultisellData implements IXmlReader
 			{
 				player.setFame(player.getFame() - (int) amount);
 				player.sendPacket(new UserInfo(player));
+				// player.sendPacket(new ExBrExtraUserInfo(player));
 				return true;
 			}
-			case RAID_POINTS:
+			case RAIDBOSS_POINTS:
 			{
-				player.setRaidPoints(player.getRaidPoints() - (int) amount);
+				player.setRaidbossPoints(player.getRaidbossPoints() - (int) amount);
 				player.sendPacket(new UserInfo(player));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CONSUMED_S1_RAID_POINTS).addLong(amount));
 				return true;
 			}
 		}
@@ -374,11 +366,12 @@ public final class MultisellData implements IXmlReader
 			{
 				player.setFame((int) (player.getFame() + amount));
 				player.sendPacket(new UserInfo(player));
+				// player.sendPacket(new ExBrExtraUserInfo(player));
 				break;
 			}
-			case RAID_POINTS:
+			case RAIDBOSS_POINTS:
 			{
-				player.setRaidPoints((int) (player.getRaidPoints() + amount));
+				player.increaseRaidbossPoints((int) amount);
 				player.sendPacket(new UserInfo(player));
 				break;
 			}
@@ -387,8 +380,12 @@ public final class MultisellData implements IXmlReader
 	
 	private final void verify()
 	{
-		for (ListContainer list : _entries.values())
+		ListContainer list;
+		final Iterator<ListContainer> iter = _entries.values().iterator();
+		while (iter.hasNext())
 		{
+			list = iter.next();
+			
 			for (Entry ent : list.getEntries())
 			{
 				for (Ingredient ing : ent.getIngredients())
@@ -416,7 +413,7 @@ public final class MultisellData implements IXmlReader
 			case PC_BANG_POINTS:
 			case CLAN_REPUTATION:
 			case FAME:
-			case RAID_POINTS:
+			case RAIDBOSS_POINTS:
 			{
 				return true;
 			}

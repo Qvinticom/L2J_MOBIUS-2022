@@ -16,13 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.PartyMatchRoomList;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author KenM
  */
-public class ExAskJoinPartyRoom extends L2GameServerPacket
+public class ExAskJoinPartyRoom implements IClientOutgoingPacket
 {
 	private final String _charName;
 	private final String _roomName;
@@ -30,15 +31,16 @@ public class ExAskJoinPartyRoom extends L2GameServerPacket
 	public ExAskJoinPartyRoom(L2PcInstance player)
 	{
 		_charName = player.getName();
-		_roomName = PartyMatchRoomList.getInstance().getPlayerRoom(player).getTitle();
+		_roomName = player.getMatchingRoom().getTitle();
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x35);
-		writeS(_charName);
-		writeS(_roomName);
+		OutgoingPackets.EX_ASK_JOIN_PARTY_ROOM.writeId(packet);
+		
+		packet.writeS(_charName);
+		packet.writeS(_roomName);
+		return true;
 	}
 }

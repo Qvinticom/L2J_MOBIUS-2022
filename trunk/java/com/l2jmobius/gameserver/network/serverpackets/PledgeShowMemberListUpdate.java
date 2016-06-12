@@ -16,14 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author -Wooden-
  */
-public final class PledgeShowMemberListUpdate extends L2GameServerPacket
+public final class PledgeShowMemberListUpdate implements IClientOutgoingPacket
 {
 	private final int _pledgeType;
 	private int _hasSponsor;
@@ -31,28 +33,13 @@ public final class PledgeShowMemberListUpdate extends L2GameServerPacket
 	private final int _level;
 	private final int _classId;
 	private final int _objectId;
-	private final boolean _isOnline;
+	private final int _onlineStatus;
 	private final int _race;
 	private final int _sex;
 	
 	public PledgeShowMemberListUpdate(L2PcInstance player)
 	{
-		_pledgeType = player.getPledgeType();
-		if (_pledgeType == L2Clan.SUBUNIT_ACADEMY)
-		{
-			_hasSponsor = player.getSponsor() != 0 ? 1 : 0;
-		}
-		else
-		{
-			_hasSponsor = 0;
-		}
-		_name = player.getName();
-		_level = player.getLevel();
-		_classId = player.getClassId().getId();
-		_race = player.getRace().ordinal();
-		_sex = player.getAppearance().getSex() ? 1 : 0;
-		_objectId = player.getObjectId();
-		_isOnline = player.isOnline();
+		this(player.getClan().getClanMember(player.getObjectId()));
 	}
 	
 	public PledgeShowMemberListUpdate(L2ClanMember member)
@@ -61,10 +48,10 @@ public final class PledgeShowMemberListUpdate extends L2GameServerPacket
 		_level = member.getLevel();
 		_classId = member.getClassId();
 		_objectId = member.getObjectId();
-		_isOnline = member.isOnline();
 		_pledgeType = member.getPledgeType();
 		_race = member.getRaceOrdinal();
 		_sex = member.getSex() ? 1 : 0;
+		_onlineStatus = member.getOnlineStatus();
 		if (_pledgeType == L2Clan.SUBUNIT_ACADEMY)
 		{
 			_hasSponsor = member.getSponsor() != 0 ? 1 : 0;
@@ -76,26 +63,28 @@ public final class PledgeShowMemberListUpdate extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x5b);
-		writeS(_name);
-		writeD(_level);
-		writeD(_classId);
-		writeD(_sex);
-		writeD(_race);
-		if (_isOnline)
+		OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_UPDATE.writeId(packet);
+		
+		packet.writeS(_name);
+		packet.writeD(_level);
+		packet.writeD(_classId);
+		packet.writeD(_sex);
+		packet.writeD(_race);
+		if (_onlineStatus > 0)
 		{
-			writeD(_objectId);
-			writeD(_pledgeType);
+			packet.writeD(_objectId);
+			packet.writeD(_pledgeType);
 		}
 		else
 		{
 			// when going offline send as 0
-			writeD(0);
-			writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
 		}
-		writeD(_hasSponsor);
-		writeC(0);
+		packet.writeD(_hasSponsor);
+		packet.writeC(_onlineStatus);
+		return true;
 	}
 }

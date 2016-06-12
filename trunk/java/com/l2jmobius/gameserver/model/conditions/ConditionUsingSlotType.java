@@ -35,6 +35,12 @@ public class ConditionUsingSlotType extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		return (effector != null) && effector.isPlayer() && ((effector.getActiveWeaponItem().getBodyPart() & _mask) != 0);
+		if ((effector == null) || !effector.isPlayer())
+		{
+			return false;
+		}
+		
+		return (effector.getActiveWeaponItem().getBodyPart() & _mask) != 0;
 	}
+	
 }

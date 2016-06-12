@@ -16,40 +16,41 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.itemauction.ItemAuction;
 import com.l2jmobius.gameserver.model.itemauction.ItemAuctionInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * @author Forsaiken
  */
-public final class RequestBidItemAuction extends L2GameClientPacket
+public final class RequestBidItemAuction implements IClientIncomingPacket
 {
-	private static final String _C__D0_39_REQUESTBIDITEMAUCTION = "[C] D0:39 RequestBidItemAuction";
-	
 	private int _instanceId;
 	private long _bid;
 	
 	@Override
-	protected final void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_instanceId = super.readD();
-		_bid = super.readQ();
+		_instanceId = packet.readD();
+		_bid = packet.readQ();
+		return true;
 	}
 	
 	@Override
-	protected final void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = super.getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
 		// can't use auction fp here
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("auction"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("auction"))
 		{
 			activeChar.sendMessage("You are bidding too fast.");
 			return;
@@ -69,11 +70,5 @@ public final class RequestBidItemAuction extends L2GameClientPacket
 				auction.registerBid(activeChar, _bid);
 			}
 		}
-	}
-	
-	@Override
-	public final String getType()
-	{
-		return _C__D0_39_REQUESTBIDITEMAUCTION;
 	}
 }

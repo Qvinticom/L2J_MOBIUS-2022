@@ -16,12 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets.compound;
 
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * @author UnAfraid
  */
-public class ExEnchantTwoRemoveOK extends L2GameServerPacket
+public class ExEnchantTwoRemoveOK implements IClientOutgoingPacket
 {
 	public static final ExEnchantTwoRemoveOK STATIC_PACKET = new ExEnchantTwoRemoveOK();
 	
@@ -30,9 +32,9 @@ public class ExEnchantTwoRemoveOK extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x16E);
+		OutgoingPackets.EX_ENCHANT_TWO_REMOVE_OK.writeId(packet);
+		return true;
 	}
 }

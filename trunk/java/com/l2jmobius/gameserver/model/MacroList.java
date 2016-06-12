@@ -36,7 +36,6 @@ import com.l2jmobius.gameserver.enums.ShortcutType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.interfaces.IRestorable;
 import com.l2jmobius.gameserver.network.serverpackets.SendMacroList;
-import com.l2jmobius.util.StringUtil;
 
 public class MacroList implements IRestorable
 {
@@ -44,7 +43,7 @@ public class MacroList implements IRestorable
 	
 	private final L2PcInstance _owner;
 	private int _macroId;
-	private final Map<Integer, Macro> _macroses = Collections.synchronizedMap(new LinkedHashMap<Integer, Macro>());
+	private final Map<Integer, Macro> _macroses = Collections.synchronizedMap(new LinkedHashMap<>());
 	
 	public MacroList(L2PcInstance owner)
 	{
@@ -68,6 +67,7 @@ public class MacroList implements IRestorable
 				macro.setId(_macroId++);
 			}
 			_macroses.put(macro.getId(), macro);
+			registerMacroInDb(macro);
 		}
 		else
 		{
@@ -77,8 +77,8 @@ public class MacroList implements IRestorable
 			{
 				deleteMacroFromDb(old);
 			}
+			registerMacroInDb(macro);
 		}
-		registerMacroInDb(macro);
 		_owner.sendPacket(new SendMacroList(1, macro, updateType));
 	}
 	
@@ -136,10 +136,10 @@ public class MacroList implements IRestorable
 			final StringBuilder sb = new StringBuilder(300);
 			for (MacroCmd cmd : macro.getCommands())
 			{
-				StringUtil.append(sb, String.valueOf(cmd.getType().ordinal()), ",", String.valueOf(cmd.getD1()), ",", String.valueOf(cmd.getD2()));
+				sb.append(cmd.getType().ordinal() + "," + cmd.getD1() + "," + cmd.getD2());
 				if ((cmd.getCmd() != null) && (cmd.getCmd().length() > 0))
 				{
-					StringUtil.append(sb, ",", cmd.getCmd());
+					sb.append("," + cmd.getCmd());
 				}
 				sb.append(';');
 			}
@@ -199,7 +199,15 @@ public class MacroList implements IRestorable
 						{
 							continue;
 						}
-						commands.add(new MacroCmd(commands.size(), MacroType.values()[Integer.parseInt(st.nextToken())], Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), (st.hasMoreTokens() ? st.nextToken() : "")));
+						final MacroType type = MacroType.values()[Integer.parseInt(st.nextToken())];
+						final int d1 = Integer.parseInt(st.nextToken());
+						final int d2 = Integer.parseInt(st.nextToken());
+						String cmd = "";
+						if (st.hasMoreTokens())
+						{
+							cmd = st.nextToken();
+						}
+						commands.add(new MacroCmd(commands.size(), type, d1, d2, cmd));
 					}
 					_macroses.put(id, new Macro(id, icon, name, descr, acronym, commands));
 				}

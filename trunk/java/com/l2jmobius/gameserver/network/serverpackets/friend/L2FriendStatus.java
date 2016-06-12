@@ -16,15 +16,17 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets.friend;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * Support for "Chat with Friends" dialog. <br />
  * Inform player about friend online status change
  * @author JIV
  */
-public class L2FriendStatus extends L2GameServerPacket
+public class L2FriendStatus implements IClientOutgoingPacket
 {
 	public static final int MODE_OFFLINE = 0;
 	public static final int MODE_ONLINE = 1;
@@ -40,35 +42,37 @@ public class L2FriendStatus extends L2GameServerPacket
 	public L2FriendStatus(L2PcInstance player, int type)
 	{
 		_objectId = player.getObjectId();
-		_classId = player.getActiveClassId();
+		_classId = player.getActiveClass();
 		_level = player.getLevel();
 		_name = player.getName();
 		_type = type;
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x59);
-		writeD(_type);
-		writeS(_name);
+		OutgoingPackets.FRIEND_STATUS.writeId(packet);
+		
+		packet.writeD(_type);
+		packet.writeS(_name);
 		switch (_type)
 		{
 			case MODE_OFFLINE:
 			{
-				writeD(_objectId);
+				packet.writeD(_objectId);
 				break;
 			}
 			case MODE_LEVEL:
 			{
-				writeD(_level);
+				packet.writeD(_level);
 				break;
 			}
 			case MODE_CLASS:
 			{
-				writeD(_classId);
+				packet.writeD(_classId);
 				break;
 			}
 		}
+		return true;
 	}
 }

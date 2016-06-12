@@ -21,10 +21,10 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
@@ -36,9 +36,8 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class TeleportToTarget extends AbstractEffect
 {
-	public TeleportToTarget(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public TeleportToTarget(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -54,19 +53,13 @@ public final class TeleportToTarget extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character activeChar = info.getEffector();
-		final L2Character target = info.getEffected();
-		if (target == null)
-		{
-			return;
-		}
+		final int px = effected.getX();
+		final int py = effected.getY();
+		double ph = Util.convertHeadingToDegree(effected.getHeading());
 		
-		final int px = target.getX();
-		final int py = target.getY();
-		double ph = Util.convertHeadingToDegree(target.getHeading()) + 180;
-		
+		ph += 180;
 		if (ph > 360)
 		{
 			ph -= 360;
@@ -75,15 +68,16 @@ public final class TeleportToTarget extends AbstractEffect
 		ph = (Math.PI * ph) / 180;
 		final int x = (int) (px + (25 * Math.cos(ph)));
 		final int y = (int) (py + (25 * Math.sin(ph)));
-		final int z = target.getZ();
+		final int z = effected.getZ();
 		
-		final Location loc = GeoData.getInstance().moveCheck(activeChar.getX(), activeChar.getY(), activeChar.getZ(), x, y, z, activeChar.getInstanceId());
+		final Location loc = GeoData.getInstance().moveCheck(effector.getX(), effector.getY(), effector.getZ(), x, y, z, effector.getInstanceWorld());
 		
-		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		activeChar.broadcastPacket(new FlyToLocation(activeChar, loc.getX(), loc.getY(), loc.getZ(), FlyType.DUMMY));
-		activeChar.abortAttack();
-		activeChar.abortCast();
-		activeChar.setXYZ(loc);
-		activeChar.broadcastPacket(new ValidateLocation(activeChar));
+		effector.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+		effector.broadcastPacket(new FlyToLocation(effector, loc.getX(), loc.getY(), loc.getZ(), FlyType.DUMMY));
+		effector.abortAttack();
+		effector.abortCast();
+		effector.setXYZ(loc);
+		effector.broadcastPacket(new ValidateLocation(effector));
+		effected.revalidateZone(true);
 	}
 }

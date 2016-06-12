@@ -18,9 +18,7 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 
 /**
@@ -29,15 +27,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class ImmobilePetBuff extends AbstractEffect
 {
-	public ImmobilePetBuff(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public ImmobilePetBuff(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.BUFF;
 	}
 	
 	@Override

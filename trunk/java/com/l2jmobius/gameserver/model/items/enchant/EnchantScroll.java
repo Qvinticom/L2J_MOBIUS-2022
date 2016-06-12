@@ -18,18 +18,16 @@ package com.l2jmobius.gameserver.model.items.enchant;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.logging.Level;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemGroupsData;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.items.type.ItemType;
 import com.l2jmobius.gameserver.network.Debug;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.Rnd;
 
 /**
  * @author UnAfraid
@@ -39,8 +37,6 @@ public final class EnchantScroll extends AbstractEnchantItem
 	private final boolean _isWeapon;
 	private final boolean _isBlessed;
 	private final boolean _isSafe;
-	private final boolean _isGiant;
-	private final boolean _isHair;
 	private final int _scrollGroupId;
 	private Set<Integer> _items;
 	
@@ -50,11 +46,9 @@ public final class EnchantScroll extends AbstractEnchantItem
 		_scrollGroupId = set.getInt("scrollGroupId", 0);
 		
 		final ItemType type = getItem().getItemType();
-		_isWeapon = (type == EtcItemType.GIANT_SCRL_ENCHANT_WP) || (type == EtcItemType.ANCIENT_CRYSTAL_ENCHANT_WP) || (type == EtcItemType.BLESS_SCRL_ENCHANT_WP) || (type == EtcItemType.SCRL_ENCHANT_WP);
-		_isBlessed = (type == EtcItemType.BLESS_SCRL_ENCHANT_AM) || (type == EtcItemType.BLESS_SCRL_ENCHANT_WP);
-		_isSafe = (type == EtcItemType.ANCIENT_CRYSTAL_ENCHANT_AM) || (type == EtcItemType.ANCIENT_CRYSTAL_ENCHANT_WP);
-		_isGiant = (type == EtcItemType.GIANT_SCRL_ENCHANT_AM) || (type == EtcItemType.GIANT_SCRL_ENCHANT_WP);
-		_isHair = type == EtcItemType.SCRL_ENCHANT_HR;
+		_isWeapon = (type == EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP) || (type == EtcItemType.BLESS_ENCHT_WP) || (type == EtcItemType.ENCHT_WP);
+		_isBlessed = (type == EtcItemType.BLESS_ENCHT_AM) || (type == EtcItemType.BLESS_ENCHT_WP);
+		_isSafe = (type == EtcItemType.ENCHT_ATTR_CRYSTAL_ENCHANT_AM) || (type == EtcItemType.ENCHT_ATTR_CRYSTAL_ENCHANT_WP);
 	}
 	
 	@Override
@@ -77,22 +71,6 @@ public final class EnchantScroll extends AbstractEnchantItem
 	public boolean isSafe()
 	{
 		return _isSafe;
-	}
-	
-	/**
-	 * @return {@code true} for giant scrolls (enchant attempts has a chance of increasing the enchant value between +1 and +3 randomly), {@code false} otherwise
-	 */
-	public boolean isGiant()
-	{
-		return _isGiant;
-	}
-	
-	/**
-	 * @return {@code true} for hair enchant scrolls, {@code false} otherwise
-	 */
-	public boolean isHair()
-	{
-		return _isHair;
 	}
 	
 	/**
@@ -128,22 +106,9 @@ public final class EnchantScroll extends AbstractEnchantItem
 		{
 			return false;
 		}
-		else if (isHair() && (itemToEnchant.getItem().getBodyPart() != L2Item.SLOT_HAIR) && (itemToEnchant.getItem().getBodyPart() != L2Item.SLOT_HAIR2) && (itemToEnchant.getItem().getBodyPart() != L2Item.SLOT_HAIRALL))
+		else if ((supportItem != null))
 		{
-			_log.info("bodypart: " + itemToEnchant.getItem().getBodyPart());
-			return false;
-		}
-		else if (supportItem != null)
-		{
-			if (isBlessed() && (supportItem.getItem().getItemType() != EtcItemType.BLESS_SCRL_INC_ENCHANT_PROP_WP) && (supportItem.getItem().getItemType() != EtcItemType.BLESS_SCRL_INC_ENCHANT_PROP_AM) && (supportItem.getItem().getItemType() != EtcItemType.BLESS_DROP_SCRL_INC_ENCHANT_PROP_WP) && (supportItem.getItem().getItemType() != EtcItemType.BLESS_DROP_SCRL_INC_ENCHANT_PROP_AM))
-			{
-				return false;
-			}
-			else if (isGiant() && (supportItem.getItem().getItemType() != EtcItemType.GIANT_SCRL_INC_ENCHANT_PROP_WP) && (supportItem.getItem().getItemType() != EtcItemType.GIANT_SCRL_INC_ENCHANT_PROP_AM) && (supportItem.getItem().getItemType() != EtcItemType.GIANT_SCRL_BLESS_INC_ENCHANT_PROP_WP) && (supportItem.getItem().getItemType() != EtcItemType.GIANT_SCRL_BLESS_INC_ENCHANT_PROP_AM) && (supportItem.getItem().getItemType() != EtcItemType.GIANT2_SCRL_BLESS_INC_ENCHANT_PROP_AM) && (supportItem.getItem().getItemType() != EtcItemType.GIANT2_SCRL_BLESS_INC_ENCHANT_PROP_WP))
-			{
-				return false;
-			}
-			else if (!isBlessed() && !isGiant() && (supportItem.getItem().getItemType() != EtcItemType.SCRL_INC_ENCHANT_PROP_WP) && (supportItem.getItem().getItemType() != EtcItemType.SCRL_INC_ENCHANT_PROP_AM) && (supportItem.getItem().getItemType() != EtcItemType.SCRL_BLESS_INC_ENCHANT_PROP_WP) && (supportItem.getItem().getItemType() != EtcItemType.SCRL_BLESS_INC_ENCHANT_PROP_AM))
+			if (isBlessed())
 			{
 				return false;
 			}
@@ -168,14 +133,14 @@ public final class EnchantScroll extends AbstractEnchantItem
 	{
 		if (EnchantItemGroupsData.getInstance().getScrollGroup(_scrollGroupId) == null)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Unexistent enchant scroll group specified for enchant scroll: " + getId());
+			_log.warning(getClass().getSimpleName() + ": Unexistent enchant scroll group specified for enchant scroll: " + getId());
 			return -1;
 		}
 		
 		final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup(enchantItem.getItem(), _scrollGroupId);
 		if (group == null)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't find enchant item group for scroll: " + getId() + " requested by: " + player);
+			_log.warning(getClass().getSimpleName() + ": Couldn't find enchant item group for scroll: " + getId() + " requested by: " + player);
 			return -1;
 		}
 		return group.getChance(enchantItem.getEnchantLevel());
@@ -205,7 +170,7 @@ public final class EnchantScroll extends AbstractEnchantItem
 		final double finalChance = Math.min(chance + bonusRate + supportBonusRate, 100);
 		
 		final double random = 100 * Rnd.nextDouble();
-		final boolean success = random < finalChance;
+		final boolean success = (random < finalChance);
 		
 		if (player.isDebug())
 		{
@@ -218,14 +183,6 @@ public final class EnchantScroll extends AbstractEnchantItem
 			if (isSafe())
 			{
 				set.set("isSafe", isSafe());
-			}
-			if (isGiant())
-			{
-				set.set("isGiant", isGiant());
-			}
-			if (isHair())
-			{
-				set.set("isHair", isHair());
 			}
 			set.set("chance", Util.formatDouble(chance, "#.##"));
 			if (bonusRate > 0)

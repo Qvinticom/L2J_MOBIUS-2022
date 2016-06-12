@@ -16,7 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author -Wooden-
@@ -24,26 +29,30 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
  */
 public class PackageSendableList extends AbstractItemPacket
 {
-	private final L2ItemInstance[] _items;
-	private final int _playerObjId;
+	private final Collection<L2ItemInstance> _items;
+	private final int _objectId;
+	private final long _adena;
 	
-	public PackageSendableList(L2ItemInstance[] items, int playerObjId)
+	public PackageSendableList(L2PcInstance player, int objectId)
 	{
-		_items = items;
-		_playerObjId = playerObjId;
+		_items = player.getInventory().getAvailableItems(true, true, true);
+		_objectId = objectId;
+		_adena = player.getAdena();
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xD2);
-		writeD(_playerObjId);
-		writeQ(getClient().getActiveChar().getAdena());
-		writeD(_items.length);
+		OutgoingPackets.PACKAGE_SENDABLE_LIST.writeId(packet);
+		
+		packet.writeD(_objectId);
+		packet.writeQ(_adena);
+		packet.writeD(_items.size());
 		for (L2ItemInstance item : _items)
 		{
-			writeItem(item);
-			writeD(item.getObjectId());
+			writeItem(packet, item);
+			packet.writeD(item.getObjectId());
 		}
+		return true;
 	}
 }

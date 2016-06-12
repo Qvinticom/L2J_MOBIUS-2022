@@ -27,7 +27,6 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -40,6 +39,7 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.enums.ItemLocation;
@@ -50,11 +50,10 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.Rnd;
 
 public final class ItemAuctionInstance
 {
-	protected static final Logger _log = Logger.getLogger(ItemAuctionInstance.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(ItemAuctionInstance.class.getName());
 	private final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("HH:mm:ss dd.MM.yy");
 	
 	private static final long START_TIME_SPACE = TimeUnit.MILLISECONDS.convert(1, TimeUnit.MINUTES);
@@ -153,7 +152,7 @@ public final class ItemAuctionInstance
 			}
 			catch (IllegalArgumentException e)
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading auction item", e);
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading auction item", e);
 			}
 		}
 		
@@ -185,18 +184,18 @@ public final class ItemAuctionInstance
 					}
 					catch (SQLException e)
 					{
-						_log.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading auction: " + auctionId, e);
+						LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading auction: " + auctionId, e);
 					}
 				}
 			}
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Failed loading auctions.", e);
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Failed loading auctions.", e);
 			return;
 		}
 		
-		_log.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _items.size() + " item(s) and registered " + _auctions.size() + " auction(s) for instance " + _instanceId + ".");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _items.size() + " item(s) and registered " + _auctions.size() + " auction(s) for instance " + _instanceId);
 		checkAndSetCurrentAndNextAuction();
 	}
 	
@@ -212,13 +211,14 @@ public final class ItemAuctionInstance
 	
 	public final void shutdown()
 	{
-		if (_stateTask != null)
+		final ScheduledFuture<?> stateTask = _stateTask;
+		if (stateTask != null)
 		{
-			_stateTask.cancel(false);
+			stateTask.cancel(false);
 		}
 	}
 	
-	private final AuctionItem getAuctionItem(int auctionItemId)
+	private AuctionItem getAuctionItem(int auctionItemId)
 	{
 		for (int i = _items.size(); i-- > 0;)
 		{
@@ -245,6 +245,7 @@ public final class ItemAuctionInstance
 				nextAuction = createAuction(System.currentTimeMillis() + START_TIME_SPACE);
 				break;
 			}
+			
 			case 1:
 			{
 				switch (auctions[0].getAuctionState())
@@ -262,25 +263,27 @@ public final class ItemAuctionInstance
 						}
 						break;
 					}
+					
 					case STARTED:
 					{
 						currentAuction = auctions[0];
 						nextAuction = createAuction(Math.max(currentAuction.getEndingTime() + FINISH_TIME_SPACE, System.currentTimeMillis() + START_TIME_SPACE));
 						break;
 					}
+					
 					case FINISHED:
 					{
 						currentAuction = auctions[0];
 						nextAuction = createAuction(System.currentTimeMillis() + START_TIME_SPACE);
 						break;
 					}
+					
 					default:
-					{
 						throw new IllegalArgumentException();
-					}
 				}
 				break;
 			}
+			
 			default:
 			{
 				Arrays.sort(auctions, Comparator.comparingLong(ItemAuction::getStartingTime).reversed());
@@ -290,10 +293,15 @@ public final class ItemAuctionInstance
 				
 				for (ItemAuction auction : auctions)
 				{
-					if ((auction.getAuctionState() == ItemAuctionState.STARTED) || (auction.getStartingTime() <= currentTime))
+					if (auction.getAuctionState() == ItemAuctionState.STARTED)
 					{
 						currentAuction = auction;
 						break;
+					}
+					else if (auction.getStartingTime() <= currentTime)
+					{
+						currentAuction = auction;
+						break; // only first
 					}
 				}
 				
@@ -329,12 +337,12 @@ public final class ItemAuctionInstance
 			{
 				setStateTask(ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleAuctionTask(currentAuction), Math.max(currentAuction.getStartingTime() - System.currentTimeMillis(), 0L)));
 			}
-			_log.log(Level.INFO, getClass().getSimpleName() + ": Schedule current auction " + currentAuction.getAuctionId() + " for instance " + _instanceId);
+			LOGGER.info(getClass().getSimpleName() + ": Schedule current auction " + currentAuction.getAuctionId() + " for instance " + _instanceId);
 		}
 		else
 		{
 			setStateTask(ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleAuctionTask(nextAuction), Math.max(nextAuction.getStartingTime() - System.currentTimeMillis(), 0L)));
-			_log.log(Level.INFO, getClass().getSimpleName() + ": Schedule next auction " + nextAuction.getAuctionId() + " on " + DATE_FORMAT.format(new Date(nextAuction.getStartingTime())) + " for instance " + _instanceId);
+			LOGGER.info(getClass().getSimpleName() + ": Schedule next auction " + nextAuction.getAuctionId() + " on " + DATE_FORMAT.format(new Date(nextAuction.getStartingTime())) + " for instance " + _instanceId);
 		}
 	}
 	
@@ -349,9 +357,13 @@ public final class ItemAuctionInstance
 		final ArrayList<ItemAuction> stack = new ArrayList<>(auctions.size());
 		for (ItemAuction auction : getAuctions())
 		{
-			if ((auction.getAuctionState() != ItemAuctionState.CREATED) && (auction.getBidFor(bidderObjId) != null))
+			if (auction.getAuctionState() != ItemAuctionState.CREATED)
 			{
-				stack.add(auction);
+				final ItemAuctionBid bid = auction.getBidFor(bidderObjId);
+				if (bid != null)
+				{
+					stack.add(auction);
+				}
 			}
 		}
 		return stack.toArray(new ItemAuction[stack.size()]);
@@ -387,11 +399,11 @@ public final class ItemAuctionInstance
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, getClass().getSimpleName() + ": Failed scheduling auction " + _auction.getAuctionId(), e);
+				LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Failed scheduling auction " + _auction.getAuctionId(), e);
 			}
 		}
 		
-		private final void runImpl() throws Exception
+		private void runImpl() throws Exception
 		{
 			final ItemAuctionState state = _auction.getAuctionState();
 			switch (state)
@@ -403,10 +415,11 @@ public final class ItemAuctionInstance
 						throw new IllegalStateException("Could not set auction state: " + ItemAuctionState.STARTED.toString() + ", expected: " + state.toString());
 					}
 					
-					_log.log(Level.INFO, getClass().getSimpleName() + ": Auction " + _auction.getAuctionId() + " has started for instance " + _auction.getInstanceId());
+					LOGGER.info(getClass().getSimpleName() + ": Auction " + _auction.getAuctionId() + " has started for instance " + _auction.getInstanceId());
 					checkAndSetCurrentAndNextAuction();
 					break;
 				}
+				
 				case STARTED:
 				{
 					switch (_auction.getAuctionEndingExtendState())
@@ -421,6 +434,7 @@ public final class ItemAuctionInstance
 							}
 							break;
 						}
+						
 						case EXTEND_BY_3_MIN:
 						{
 							if (_auction.getScheduledAuctionEndingExtendState() != ItemAuctionExtendState.EXTEND_BY_3_MIN)
@@ -431,6 +445,7 @@ public final class ItemAuctionInstance
 							}
 							break;
 						}
+						
 						case EXTEND_BY_CONFIG_PHASE_A:
 						{
 							if (_auction.getScheduledAuctionEndingExtendState() != ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_B)
@@ -441,6 +456,7 @@ public final class ItemAuctionInstance
 							}
 							break;
 						}
+						
 						case EXTEND_BY_CONFIG_PHASE_B:
 						{
 							if (_auction.getScheduledAuctionEndingExtendState() != ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A)
@@ -461,10 +477,9 @@ public final class ItemAuctionInstance
 					checkAndSetCurrentAndNextAuction();
 					break;
 				}
+				
 				default:
-				{
 					throw new IllegalStateException("Invalid state: " + state);
-				}
 			}
 		}
 	}
@@ -483,7 +498,7 @@ public final class ItemAuctionInstance
 				player.getWarehouse().addItem("ItemAuction", item, null, null);
 				player.sendPacket(SystemMessageId.YOU_HAVE_BID_THE_HIGHEST_PRICE_AND_HAVE_WON_THE_ITEM_THE_ITEM_CAN_BE_FOUND_IN_YOUR_PERSONAL_WAREHOUSE);
 				
-				_log.log(Level.INFO, getClass().getSimpleName() + ": Auction " + auction.getAuctionId() + " has finished. Highest bid by " + player.getName() + " for instance " + _instanceId);
+				LOGGER.info(getClass().getSimpleName() + ": Auction " + auction.getAuctionId() + " has finished. Highest bid by " + player.getName() + " for instance " + _instanceId);
 			}
 			else
 			{
@@ -492,7 +507,7 @@ public final class ItemAuctionInstance
 				item.updateDatabase();
 				L2World.getInstance().removeObject(item);
 				
-				_log.log(Level.INFO, getClass().getSimpleName() + ": Auction " + auction.getAuctionId() + " has finished. Highest bid by " + CharNameTable.getInstance().getNameById(bid.getPlayerObjId()) + " for instance " + _instanceId);
+				LOGGER.info(getClass().getSimpleName() + ": Auction " + auction.getAuctionId() + " has finished. Highest bid by " + CharNameTable.getInstance().getNameById(bid.getPlayerObjId()) + " for instance " + _instanceId);
 			}
 			
 			// Clean all canceled bids
@@ -500,7 +515,7 @@ public final class ItemAuctionInstance
 		}
 		else
 		{
-			_log.log(Level.INFO, getClass().getSimpleName() + ": Auction " + auction.getAuctionId() + " has finished. There have not been any bid for instance " + _instanceId);
+			LOGGER.info(getClass().getSimpleName() + ": Auction " + auction.getAuctionId() + " has finished. There have not been any bid for instance " + _instanceId);
 		}
 	}
 	
@@ -515,7 +530,7 @@ public final class ItemAuctionInstance
 		_stateTask = future;
 	}
 	
-	private final ItemAuction createAuction(long after)
+	private ItemAuction createAuction(long after)
 	{
 		final AuctionItem auctionItem = _items.get(Rnd.get(_items.size()));
 		final long startingTime = _dateGenerator.nextDate(after);
@@ -525,7 +540,7 @@ public final class ItemAuctionInstance
 		return auction;
 	}
 	
-	private final ItemAuction loadAuction(int auctionId) throws SQLException
+	private ItemAuction loadAuction(int auctionId) throws SQLException
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
@@ -540,7 +555,7 @@ public final class ItemAuctionInstance
 				{
 					if (!rset.next())
 					{
-						_log.log(Level.WARNING, getClass().getSimpleName() + ": Auction data not found for auction: " + auctionId);
+						LOGGER.warning(getClass().getSimpleName() + ": Auction data not found for auction: " + auctionId);
 						return null;
 					}
 					auctionItemId = rset.getInt(1);
@@ -552,27 +567,27 @@ public final class ItemAuctionInstance
 			
 			if (startingTime >= endingTime)
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": Invalid starting/ending paramaters for auction: " + auctionId);
+				LOGGER.warning(getClass().getSimpleName() + ": Invalid starting/ending paramaters for auction: " + auctionId);
 				return null;
 			}
 			
 			final AuctionItem auctionItem = getAuctionItem(auctionItemId);
 			if (auctionItem == null)
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": AuctionItem: " + auctionItemId + ", not found for auction: " + auctionId);
+				LOGGER.warning(getClass().getSimpleName() + ": AuctionItem: " + auctionItemId + ", not found for auction: " + auctionId);
 				return null;
 			}
 			
 			final ItemAuctionState auctionState = ItemAuctionState.stateForStateId(auctionStateId);
 			if (auctionState == null)
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": Invalid auctionStateId: " + auctionStateId + ", for auction: " + auctionId);
+				LOGGER.warning(getClass().getSimpleName() + ": Invalid auctionStateId: " + auctionStateId + ", for auction: " + auctionId);
 				return null;
 			}
 			
 			if ((auctionState == ItemAuctionState.FINISHED) && (startingTime < (System.currentTimeMillis() - TimeUnit.MILLISECONDS.convert(Config.ALT_ITEM_AUCTION_EXPIRED_AFTER, TimeUnit.DAYS))))
 			{
-				_log.log(Level.INFO, getClass().getSimpleName() + ": Clearing expired auction: " + auctionId);
+				LOGGER.info(getClass().getSimpleName() + ": Clearing expired auction: " + auctionId);
 				try (PreparedStatement ps = con.prepareStatement(DELETE_AUCTION_INFO_BY_AUCTION_ID))
 				{
 					ps.setInt(1, auctionId);
@@ -587,7 +602,7 @@ public final class ItemAuctionInstance
 				return null;
 			}
 			
-			final List<ItemAuctionBid> auctionBids = new ArrayList<>();
+			final ArrayList<ItemAuctionBid> auctionBids = new ArrayList<>();
 			try (PreparedStatement ps = con.prepareStatement(SELECT_PLAYERS_ID_BY_AUCTION_ID))
 			{
 				ps.setInt(1, auctionId);
@@ -595,7 +610,10 @@ public final class ItemAuctionInstance
 				{
 					while (rs.next())
 					{
-						auctionBids.add(new ItemAuctionBid(rs.getInt(1), rs.getLong(2)));
+						final int playerObjId = rs.getInt(1);
+						final long playerBid = rs.getLong(2);
+						final ItemAuctionBid bid = new ItemAuctionBid(playerObjId, playerBid);
+						auctionBids.add(bid);
 					}
 				}
 			}

@@ -16,10 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Shortcut;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public final class ShortCutRegister extends L2GameServerPacket
+public final class ShortCutRegister implements IClientOutgoingPacket
 {
 	private final Shortcut _shortcut;
 	
@@ -33,43 +34,35 @@ public final class ShortCutRegister extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x44);
-		writeD(_shortcut.getType().ordinal());
-		writeD(_shortcut.getSlot() + (_shortcut.getPage() * 12)); // C4 Client
+		OutgoingPackets.SHORT_CUT_REGISTER.writeId(packet);
+		
+		packet.writeD(_shortcut.getType().ordinal());
+		packet.writeD(_shortcut.getSlot() + (_shortcut.getPage() * 12)); // C4 Client
 		switch (_shortcut.getType())
 		{
 			case ITEM:
 			{
-				writeD(_shortcut.getId());
-				writeD(_shortcut.getCharacterType());
-				writeD(_shortcut.getSharedReuseGroup());
-				writeD(0x00); // unknown
-				writeD(0x00); // unknown
-				writeD(0x00); // item augment id
-				writeD(0x00); // TODO: Find me, item visual id ?
-				writeD(0x00);
+				packet.writeD(_shortcut.getId());
+				packet.writeD(_shortcut.getCharacterType());
+				packet.writeD(_shortcut.getSharedReuseGroup());
+				packet.writeD(0x00); // unknown
+				packet.writeD(0x00); // unknown
+				packet.writeD(0x00); // item augment id
+				packet.writeD(0x00); // TODO: Find me, item visual id ?
 				break;
 			}
 			case SKILL:
 			{
-				writeD(_shortcut.getId());
-				if ((_shortcut.getLevel() < 100) || (_shortcut.getLevel() > 10000))
-				{
-					writeD(_shortcut.getLevel());
-				}
-				else
-				{
-					final int _maxLevel = SkillData.getInstance().getMaxLevel(_shortcut.getId());
-					writeH(_maxLevel);
-					writeH(_shortcut.getLevel());
-				}
-				writeD(_shortcut.getSharedReuseGroup());
-				writeC(0x00); // C5
-				writeD(_shortcut.getCharacterType());
-				writeD(0x00); // TODO: Find me
-				writeD(0x00); // TODO: Find me
+				packet.writeD(_shortcut.getId());
+				packet.writeH(_shortcut.getLevel());
+				packet.writeH(0x00); // Sub level
+				packet.writeD(_shortcut.getSharedReuseGroup());
+				packet.writeC(0x00); // C5
+				packet.writeD(_shortcut.getCharacterType());
+				packet.writeD(0x00); // TODO: Find me
+				packet.writeD(0x00); // TODO: Find me
 				break;
 			}
 			case ACTION:
@@ -77,9 +70,10 @@ public final class ShortCutRegister extends L2GameServerPacket
 			case RECIPE:
 			case BOOKMARK:
 			{
-				writeD(_shortcut.getId());
-				writeD(_shortcut.getCharacterType());
+				packet.writeD(_shortcut.getId());
+				packet.writeD(_shortcut.getCharacterType());
 			}
 		}
+		return true;
 	}
 }

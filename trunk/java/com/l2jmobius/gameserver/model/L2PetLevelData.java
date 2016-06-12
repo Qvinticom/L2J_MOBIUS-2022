@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model;
 
-import com.l2jmobius.gameserver.model.stats.MoveType;
+import com.l2jmobius.gameserver.model.stats.Stats;
 
 /**
  * Stats definition for each pet level.
@@ -192,37 +192,25 @@ public class L2PetLevelData
 	}
 	
 	/**
-	 * @param mt movement type
+	 * @param stat movement type
 	 * @return the base riding speed of given movement type.
 	 */
-	public double getSpeedOnRide(MoveType mt)
+	public double getSpeedOnRide(Stats stat)
 	{
-		switch (mt)
+		switch (stat)
 		{
-			case WALK:
-			{
+			case WALK_SPEED:
 				return _walkSpeedOnRide;
-			}
-			case RUN:
-			{
+			case RUN_SPEED:
 				return _runSpeedOnRide;
-			}
-			case SLOW_SWIM:
-			{
+			case SWIM_WALK_SPEED:
 				return _slowSwimSpeedOnRide;
-			}
-			case FAST_SWIM:
-			{
+			case SWIM_RUN_SPEED:
 				return _fastSwimSpeedOnRide;
-			}
-			case SLOW_FLY:
-			{
+			case FLY_RUN_SPEED:
 				return _slowFlySpeedOnRide;
-			}
-			case FAST_FLY:
-			{
+			case FLY_WALK_SPEED:
 				return _fastFlySpeedOnRide;
-			}
 		}
 		
 		return 0;

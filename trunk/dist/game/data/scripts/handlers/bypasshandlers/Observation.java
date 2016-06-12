@@ -27,7 +27,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2ObservationInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 
 public class Observation implements IBypassHandler
 {
@@ -155,13 +154,13 @@ public class Observation implements IBypassHandler
 		return false;
 	}
 	
-	private static void doObserve(L2PcInstance player, L2Npc npc, Location pos, long cost)
+	private static final void doObserve(L2PcInstance player, L2Npc npc, Location pos, long cost)
 	{
 		if (player.reduceAdena("Broadcast", cost, npc, true))
 		{
 			// enter mode
 			player.enterObserverMode(pos);
-			player.sendPacket(new ItemList(player, false));
+			player.sendItemList(false);
 		}
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}

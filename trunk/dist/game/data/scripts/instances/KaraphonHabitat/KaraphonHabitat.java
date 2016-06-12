@@ -16,82 +16,68 @@
  */
 package instances.KaraphonHabitat;
 
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
 import instances.AbstractInstance;
 import quests.Q10745_TheSecretIngredients.Q10745_TheSecretIngredients;
 
 /**
- * @author Neanrakyr
+ * Karaphon Habitat instance.
+ * @author Sdw
  */
-public class KaraphonHabitat extends AbstractInstance
+public final class KaraphonHabitat extends AbstractInstance
 {
 	// NPCs
 	private static final int DOLKIN = 33954;
 	private static final int DOLKIN_INSTANCE = 34002;
-	// Locations
-	private static final Location START_LOC = new Location(-82250, 246406, -14152);
-	private static final Location EXIT_LOC = new Location(-88240, 237450, -2880);
+	// Monsters
+	private static final int KARAPHON = 23459;
 	// Instance
 	private static final int TEMPLATE_ID = 253;
 	
-	class KHWorld extends InstanceWorld
-	{
-	}
-	
 	public KaraphonHabitat()
 	{
-		super(KaraphonHabitat.class.getSimpleName());
+		addStartNpc(DOLKIN);
 		addFirstTalkId(DOLKIN_INSTANCE);
-		addStartNpc(DOLKIN, DOLKIN_INSTANCE);
-		addTalkId(DOLKIN, DOLKIN_INSTANCE);
+		addTalkId(DOLKIN);
+		addKillId(KARAPHON);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = player.getQuestState(Q10745_TheSecretIngredients.class.getSimpleName());
-		if (qs == null)
+		if (qs != null)
 		{
-			return null;
-		}
-		
-		if (event.equals("enter_instance"))
-		{
-			enterInstance(player, new KHWorld(), "KaraphonHabitat.xml", TEMPLATE_ID);
-		}
-		else if (event.equals("exit_instance"))
-		{
-			final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-			if (!(world instanceof KHWorld))
+			switch (event)
 			{
-				return null;
+				case "enter_instance":
+					enterInstance(player, npc, TEMPLATE_ID);
+					break;
+				case "exit_instance":
+					finishInstance(player, 0);
+					break;
 			}
-			world.removeAllowed(player.getObjectId());
-			teleportPlayer(player, EXIT_LOC, 0);
 		}
-		
-		return super.onAdvEvent(event, npc, player);
+		return null;
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		return "34002.html";
-	}
-	
-	@Override
-	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
-	{
-		if (firstEntrance)
+		final Instance world = killer.getInstanceWorld();
+		if (world != null)
 		{
-			world.addAllowed(player.getObjectId());
+			world.setReenterTime();
 		}
-		teleportPlayer(player, START_LOC, world.getInstanceId());
+		return super.onKill(npc, killer, isSummon);
+	}
+	
+	public static void main(String[] args)
+	{
+		new KaraphonHabitat();
 	}
 }

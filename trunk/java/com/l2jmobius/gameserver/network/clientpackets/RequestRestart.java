@@ -16,17 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.enums.PrivateStoreType;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.L2GameClient.GameClientState;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.ConnectionState;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
 import com.l2jmobius.gameserver.network.serverpackets.RestartResponse;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
@@ -35,21 +33,20 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  * This class ...
  * @version $Revision: 1.11.2.1.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRestart extends L2GameClientPacket
+public final class RequestRestart implements IClientIncomingPacket
 {
-	private static final String _C__57_REQUESTRESTART = "[C] 57 RequestRestart";
 	protected static final Logger _logAccounting = Logger.getLogger("accounting");
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -57,76 +54,54 @@ public final class RequestRestart extends L2GameClientPacket
 		
 		if (player.hasItemRequest())
 		{
-			sendPacket(RestartResponse.valueOf(false));
+			client.sendPacket(RestartResponse.FALSE);
 			return;
 		}
 		
 		if (player.isLocked())
 		{
 			_log.warning("Player " + player.getName() + " tried to restart during class change.");
-			sendPacket(RestartResponse.valueOf(false));
+			client.sendPacket(RestartResponse.FALSE);
 			return;
 		}
 		
-		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
-		{
-			player.sendMessage("Cannot restart while trading");
-			sendPacket(RestartResponse.valueOf(false));
-			return;
-		}
-		
-		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) && (!player.isGM() || !Config.GM_RESTART_FIGHTING))
+		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) && !(player.isGM() && Config.GM_RESTART_FIGHTING))
 		{
 			if (Config.DEBUG)
 			{
-				_log.fine("Player " + player.getName() + " tried to logout while fighting.");
+				_log.finer("Player " + player.getName() + " tried to logout while fighting.");
 			}
 			
 			player.sendPacket(SystemMessageId.YOU_CANNOT_RESTART_WHILE_IN_COMBAT);
-			sendPacket(RestartResponse.valueOf(false));
+			client.sendPacket(RestartResponse.FALSE);
 			return;
 		}
 		
 		if (player.isBlockedFromExit())
 		{
-			sendPacket(RestartResponse.valueOf(false));
+			client.sendPacket(RestartResponse.FALSE);
 			return;
 		}
 		
-		// Remove player from Boss Zone
-		player.removeFromBossZone();
-		
-		final L2GameClient client = getClient();
-		
-		final LogRecord record = new LogRecord(Level.INFO, "Logged out");
-		record.setParameters(new Object[]
-		{
-			client
-		});
-		_logAccounting.log(record);
-		
-		// detach the client from the char so that the connection isnt closed in the deleteMe
-		player.setClient(null);
+		_logAccounting.info("Logged out, " + client);
 		
 		player.deleteMe();
 		
 		client.setActiveChar(null);
+		
+		// detach the client from the char so that the connection isnt closed in the deleteMe
+		player.setClient(null);
+		
 		AntiFeedManager.getInstance().onDisconnect(client);
 		
 		// return the client to the authed status
-		client.setState(GameClientState.AUTHED);
+		client.setConnectionState(ConnectionState.AUTHENTICATED);
 		
-		sendPacket(RestartResponse.valueOf(true));
+		client.sendPacket(RestartResponse.TRUE);
 		
 		// send char list
 		final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1);
-		sendPacket(cl);
+		client.sendPacket(cl);
 		client.setCharSelection(cl.getCharInfo());
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__57_REQUESTRESTART;
 	}
 }

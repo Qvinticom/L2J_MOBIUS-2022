@@ -16,13 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.loginserverpackets;
 
-import com.l2jmobius.util.network.BaseRecievePacket;
+import com.l2jmobius.commons.util.network.BaseRecievePacket;
 
 /**
  * @author -Wooden-
  */
 public class AuthResponse extends BaseRecievePacket
 {
+	
 	private final int _serverId;
 	private final String _serverName;
 	
@@ -51,4 +52,5 @@ public class AuthResponse extends BaseRecievePacket
 	{
 		return _serverName;
 	}
+	
 }

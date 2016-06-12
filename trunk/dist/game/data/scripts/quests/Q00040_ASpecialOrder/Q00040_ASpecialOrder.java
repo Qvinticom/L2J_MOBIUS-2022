@@ -16,7 +16,6 @@
  */
 package quests.Q00040_ASpecialOrder;
 
-import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -25,102 +24,80 @@ import com.l2jmobius.gameserver.model.quest.State;
 
 /**
  * A Special Order (40)
- * @author janiko
+ * @author St3eT
  */
 public final class Q00040_ASpecialOrder extends Quest
 {
 	// NPCs
 	private static final int HELVETIA = 30081;
-	private static final int OFULLE = 31572;
+	private static final int O_FULLE = 31572;
 	private static final int GESTO = 30511;
 	// Items
-	private static final int ORANGE_SWIFT_FISH = 6450;
-	private static final int ORANGE_UGLY_FISH = 6451;
-	private static final int ORANGE_WIDE_FISH = 6452;
-	private static final int GOLDEN_COBOL = 5079;
-	private static final int BUR_COBOL = 5082;
-	private static final int GREAT_COBOL = 5084;
-	private static final int WONDROUS_CUBIC = 10632;
-	private static final int BOX_OF_FISH = 12764;
-	private static final int BOX_OF_SEED = 12765;
+	private static final int FISH_CHEST = 12764;
+	private static final int SEED_JAR = 12765;
+	private static final int ELCYUM_CRYSTAL = 36514;
+	private static final int WONDEROUS_CUBIC = 10632;
 	// Misc
-	private static final int MIN_LVL = 40;
+	private static final int MIN_LEVEL = 40;
 	
 	public Q00040_ASpecialOrder()
 	{
-		super(40, Q00040_ASpecialOrder.class.getSimpleName(), "A Special Order");
+		super(40);
 		addStartNpc(HELVETIA);
-		addTalkId(HELVETIA, OFULLE, GESTO);
-		registerQuestItems(BOX_OF_FISH, BOX_OF_SEED);
+		addTalkId(HELVETIA, O_FULLE, GESTO);
+		registerQuestItems(FISH_CHEST, SEED_JAR);
+		addCondMinLevel(MIN_LEVEL, "30081-10.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return null;
 		}
+		
 		String htmltext = null;
 		switch (event)
 		{
-			case "accept":
-			{
-				qs.setState(State.STARTED);
-				playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
-				if (getRandomBoolean())
-				{
-					qs.setCond(2);
-					htmltext = "30081-03.html";
-				}
-				else
-				{
-					qs.setCond(5);
-					htmltext = "30081-04.html";
-				}
-				break;
-			}
-			case "30081-07.html":
-			{
-				if (qs.isCond(4) && hasQuestItems(player, BOX_OF_FISH))
-				{
-					rewardItems(player, WONDROUS_CUBIC, 1);
-					qs.exitQuest(false, true);
-					htmltext = event;
-				}
-				break;
-			}
-			case "30081-10.html":
-			{
-				if (qs.isCond(7) && hasQuestItems(player, BOX_OF_SEED))
-				{
-					rewardItems(player, WONDROUS_CUBIC, 1);
-					qs.exitQuest(false, true);
-					htmltext = event;
-				}
-				break;
-			}
-			case "31572-02.html":
-			case "30511-02.html":
+			case "30081-05.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "31572-03.html":
+			case "30081-02.htm":
 			{
-				if (qs.isCond(2))
+				st.startQuest();
+				htmltext = event;
+				break;
+			}
+			case "31572-02.html":
+			{
+				if (st.isCond(1))
 				{
-					qs.setCond(3, true);
+					st.setCond(2, true);
+					giveItems(player, FISH_CHEST, 1);
 					htmltext = event;
 				}
 				break;
 			}
-			case "30511-03.html":
+			case "30511-02.html":
 			{
-				if (qs.isCond(5))
+				if (st.isCond(2))
 				{
-					qs.setCond(6, true);
+					st.setCond(3, true);
+					giveItems(player, SEED_JAR, 1);
+					htmltext = event;
+				}
+				break;
+			}
+			case "30081-06.html":
+			{
+				if (st.isCond(3))
+				{
+					st.setCond(4, true);
+					takeItems(player, -1, FISH_CHEST, SEED_JAR);
 					htmltext = event;
 				}
 				break;
@@ -130,129 +107,94 @@ public final class Q00040_ASpecialOrder extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
-		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
+		final QuestState st = getQuestState(player, true);
+		
+		switch (st.getState())
 		{
-			return htmltext;
-		}
-		switch (npc.getId())
-		{
-			case HELVETIA:
+			case State.CREATED:
 			{
-				switch (qs.getState())
+				if (npc.getId() == HELVETIA)
 				{
-					case State.CREATED:
-					{
-						htmltext = (player.getLevel() >= MIN_LVL) ? "30081-01.htm" : "30081-02.htm";
-						break;
-					}
-					case State.STARTED:
-					{
-						switch (qs.getCond())
-						{
-							case 2:
-							case 3:
-							{
-								htmltext = "30081-05.html";
-								break;
-							}
-							case 4:
-							{
-								if (hasQuestItems(player, BOX_OF_FISH))
-								{
-									htmltext = "30081-06.html";
-								}
-								break;
-							}
-							case 5:
-							case 6:
-							{
-								htmltext = "30081-08.html";
-								break;
-							}
-							case 7:
-							{
-								if (hasQuestItems(player, BOX_OF_SEED))
-								{
-									htmltext = "30081-09.html";
-								}
-								break;
-							}
-						}
-						break;
-					}
-					case State.COMPLETED:
-					{
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-					}
+					htmltext = "30081-01.htm";
 				}
 				break;
 			}
-			case OFULLE:
+			case State.STARTED:
 			{
-				switch (qs.getCond())
+				switch (st.getCond())
 				{
+					case 1:
+					{
+						if (npc.getId() == HELVETIA)
+						{
+							htmltext = "30081-03.html";
+						}
+						else if (npc.getId() == O_FULLE)
+						{
+							htmltext = "31572-01.html";
+						}
+						break;
+					}
 					case 2:
 					{
-						htmltext = "31572-01.html";
+						switch (npc.getId())
+						{
+							case HELVETIA:
+								htmltext = "30081-03.html";
+								break;
+							case O_FULLE:
+								htmltext = "31572-03.html";
+								break;
+							case GESTO:
+								htmltext = "30511-01.html";
+								break;
+						}
 						break;
 					}
 					case 3:
 					{
-						if ((getQuestItemsCount(player, ORANGE_SWIFT_FISH) >= 10) && (getQuestItemsCount(player, ORANGE_UGLY_FISH) >= 10) && (getQuestItemsCount(player, ORANGE_WIDE_FISH) >= 10))
+						if (npc.getId() == HELVETIA)
 						{
-							qs.setCond(4, true);
-							giveItems(player, BOX_OF_FISH, 1);
-							takeItems(player, 10, ORANGE_SWIFT_FISH, ORANGE_UGLY_FISH, ORANGE_WIDE_FISH);
-							htmltext = "31572-05.html";
+							htmltext = "30081-04.html";
 						}
-						else
+						else if (npc.getId() == GESTO)
 						{
-							htmltext = "31572-04.html";
+							htmltext = "30511-03.html";
 						}
 						break;
 					}
 					case 4:
 					{
-						htmltext = "31572-06.html";
+						if (npc.getId() == HELVETIA)
+						{
+							if (hasQuestItems(player, ELCYUM_CRYSTAL))
+							{
+								if (!isSimulated)
+								{
+									takeItems(player, ELCYUM_CRYSTAL, 1);
+									giveItems(player, WONDEROUS_CUBIC, 1);
+									st.exitQuest(false, true);
+								}
+								htmltext = "30081-08.html";
+							}
+							else
+							{
+								htmltext = "30081-07.html";
+							}
+						}
 						break;
 					}
 				}
 				break;
 			}
-			case GESTO:
+			case State.COMPLETED:
 			{
-				switch (qs.getCond())
+				if (npc.getId() == HELVETIA)
 				{
-					case 5:
-					{
-						htmltext = "30511-01.html";
-						break;
-					}
-					case 6:
-					{
-						if ((getQuestItemsCount(player, GOLDEN_COBOL) >= 40) && (getQuestItemsCount(player, BUR_COBOL) >= 40) && (getQuestItemsCount(player, GREAT_COBOL) >= 40))
-						{
-							qs.setCond(7, true);
-							giveItems(player, BOX_OF_SEED, 1);
-							takeItems(player, 40, GOLDEN_COBOL, BUR_COBOL, GREAT_COBOL);
-							htmltext = "30511-05.html";
-						}
-						else
-						{
-							htmltext = "30511-04.html";
-						}
-						break;
-					}
-					case 7:
-					{
-						htmltext = "30511-06.html";
-						break;
-					}
+					htmltext = getAlreadyCompletedMsg(player);
 				}
 				break;
 			}

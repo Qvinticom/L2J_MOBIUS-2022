@@ -17,63 +17,77 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2PremiumItem;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExGetPremiumItemList;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author Gnacik
  */
-public final class RequestWithDrawPremiumItem extends L2GameClientPacket
+public final class RequestWithDrawPremiumItem implements IClientIncomingPacket
 {
-	private static final String _C__D0_52_REQUESTWITHDRAWPREMIUMITEM = "[C] D0:52 RequestWithDrawPremiumItem";
-	
 	private int _itemNum;
-	// private int _charId;
+	private int _charId;
 	private long _itemCount;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_itemNum = (int) readQ();
-		// _charId = readD();
-		_itemCount = readQ();
+		_itemNum = packet.readD();
+		_charId = packet.readD();
+		_itemCount = packet.readQ();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if ((activeChar == null) || (_itemCount <= 0))
+		final L2PcInstance activeChar = client.getActiveChar();
+		
+		if (activeChar == null)
 		{
 			return;
 		}
-		
-		if (activeChar.getPremiumItemList().isEmpty())
+		else if (_itemCount <= 0)
+		{
+			return;
+		}
+		else if (activeChar.getObjectId() != _charId)
+		{
+			Util.handleIllegalPlayerAction(activeChar, "[RequestWithDrawPremiumItem] Incorrect owner, Player: " + activeChar.getName(), Config.DEFAULT_PUNISH);
+			return;
+		}
+		else if (activeChar.getPremiumItemList().isEmpty())
 		{
 			Util.handleIllegalPlayerAction(activeChar, "[RequestWithDrawPremiumItem] Player: " + activeChar.getName() + " try to get item with empty list!", Config.DEFAULT_PUNISH);
 			return;
 		}
-		if ((activeChar.getWeightPenalty() >= 3) || !activeChar.isInventoryUnder90(false))
+		else if ((activeChar.getWeightPenalty() >= 3) || !activeChar.isInventoryUnder90(false))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_THE_DIMENSIONAL_ITEM_BECAUSE_YOU_HAVE_EXCEED_YOUR_INVENTORY_WEIGHT_QUANTITY_LIMIT);
+			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_THE_DIMENSIONAL_ITEM_BECAUSE_YOU_HAVE_EXCEED_YOUR_INVENTORY_WEIGHT_QUANTITY_LIMIT);
 			return;
 		}
-		if (activeChar.isProcessingTransaction())
+		else if (activeChar.isProcessingTransaction())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_A_DIMENSIONAL_ITEM_DURING_AN_EXCHANGE);
+			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_A_DIMENSIONAL_ITEM_DURING_AN_EXCHANGE);
 			return;
 		}
 		
 		final L2PremiumItem _item = activeChar.getPremiumItemList().get(_itemNum);
-		if ((_item == null) || (_item.getCount() < _itemCount))
+		if (_item == null)
+		{
+			return;
+		}
+		else if (_item.getCount() < _itemCount)
 		{
 			return;
 		}
 		
-		final long itemsLeft = _item.getCount() - _itemCount;
+		final long itemsLeft = (_item.getCount() - _itemCount);
 		
 		activeChar.addItem("PremiumItem", _item.getItemId(), _itemCount, activeChar.getTarget(), true);
 		
@@ -90,17 +104,11 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 		
 		if (activeChar.getPremiumItemList().isEmpty())
 		{
-			activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_MORE_DIMENSIONAL_ITEMS_TO_BE_FOUND);
+			client.sendPacket(SystemMessageId.THERE_ARE_NO_MORE_DIMENSIONAL_ITEMS_TO_BE_FOUND);
 		}
 		else
 		{
-			activeChar.sendPacket(new ExGetPremiumItemList(activeChar));
+			client.sendPacket(new ExGetPremiumItemList(activeChar));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_52_REQUESTWITHDRAWPREMIUMITEM;
 	}
 }

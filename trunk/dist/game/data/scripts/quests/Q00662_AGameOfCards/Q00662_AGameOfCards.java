@@ -21,13 +21,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.Rnd;
 
 /**
  * A Game of Cards (662)
@@ -89,7 +90,7 @@ public final class Q00662_AGameOfCards extends Quest
 	
 	public Q00662_AGameOfCards()
 	{
-		super(662, Q00662_AGameOfCards.class.getSimpleName(), "A Game of Cards");
+		super(662);
 		addStartNpc(KLUMP);
 		addTalkId(KLUMP);
 		addKillId(MONSTERS.keySet());
@@ -98,9 +99,9 @@ public final class Q00662_AGameOfCards extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
+		final QuestState st = getQuestState(player, false);
 		String htmltext = null;
-		if (qs == null)
+		if (st == null)
 		{
 			return htmltext;
 		}
@@ -111,10 +112,7 @@ public final class Q00662_AGameOfCards extends Quest
 			{
 				if (player.getLevel() >= MIN_LEVEL)
 				{
-					if (qs.isCreated())
-					{
-						qs.startQuest();
-					}
+					st.startQuest();
 					htmltext = event;
 				}
 				break;
@@ -131,7 +129,7 @@ public final class Q00662_AGameOfCards extends Quest
 			}
 			case "30845-07.html":
 			{
-				qs.exitQuest(true, true);
+				st.exitQuest(true, true);
 				htmltext = event;
 				break;
 			}
@@ -237,8 +235,9 @@ public final class Q00662_AGameOfCards extends Quest
 					{
 						i5 = i5 - 14;
 					}
-					qs.set("v1", (i4 * 1000000) + (i3 * 10000) + (i2 * 100) + i1);
-					qs.set("ExMemoState", i5);
+					
+					st.setCond((i4 * 1000000) + (i3 * 10000) + (i2 * 100) + i1);
+					st.set("ex", i5);
 					takeItems(player, RED_GEM, REQUIRED_CHIP_COUNT);
 					htmltext = event;
 				}
@@ -250,8 +249,8 @@ public final class Q00662_AGameOfCards extends Quest
 			case "turncard4":
 			case "turncard5":
 			{
-				final int cond = qs.getInt("v1");
-				int i1 = qs.getInt("ExMemoState");
+				final int cond = st.getCond();
+				int i1 = st.getInt("ex");
 				final int i5 = i1 % 100;
 				int i9 = i1 / 100;
 				i1 = cond % 100;
@@ -268,7 +267,7 @@ public final class Q00662_AGameOfCards extends Quest
 						}
 						if ((i9 % 32) < 31)
 						{
-							qs.set("ExMemoState", (i9 * 100) + i5);
+							st.set("ex", (i9 * 100) + i5);
 						}
 						break;
 					}
@@ -280,7 +279,7 @@ public final class Q00662_AGameOfCards extends Quest
 						}
 						if ((i9 % 32) < 31)
 						{
-							qs.set("ExMemoState", (i9 * 100) + i5);
+							st.set("ex", (i9 * 100) + i5);
 						}
 						break;
 					}
@@ -292,7 +291,7 @@ public final class Q00662_AGameOfCards extends Quest
 						}
 						if ((i9 % 32) < 31)
 						{
-							qs.set("ExMemoState", (i9 * 100) + i5);
+							st.set("ex", (i9 * 100) + i5);
 						}
 						break;
 					}
@@ -304,7 +303,7 @@ public final class Q00662_AGameOfCards extends Quest
 						}
 						if ((i9 % 32) < 31)
 						{
-							qs.set("ExMemoState", (i9 * 100) + i5);
+							st.set("ex", (i9 * 100) + i5);
 						}
 						break;
 					}
@@ -316,7 +315,7 @@ public final class Q00662_AGameOfCards extends Quest
 						}
 						if ((i9 % 32) < 31)
 						{
-							qs.set("ExMemoState", (i9 * 100) + i5);
+							st.set("ex", (i9 * 100) + i5);
 						}
 						break;
 					}
@@ -356,136 +355,187 @@ public final class Q00662_AGameOfCards extends Quest
 						{
 							if ((i8 % 16) < 8)
 							{
-								if (((i8 % 8) < 4) && (i2 == i3))
+								if ((i8 % 8) < 4)
 								{
-									i6 = i6 + 10;
-									i8 = i8 + 4;
+									if (i2 == i3)
+									{
+										i6 = i6 + 10;
+										i8 = i8 + 4;
+									}
 								}
-								if (((i8 % 4) < 2) && (i2 == i4))
+								if ((i8 % 4) < 2)
 								{
-									i6 = i6 + 10;
-									i8 = i8 + 2;
+									if (i2 == i4)
+									{
+										i6 = i6 + 10;
+										i8 = i8 + 2;
+									}
 								}
-								if (((i8 % 2) < 1) && (i2 == i5))
+								if ((i8 % 2) < 1)
 								{
-									i6 = i6 + 10;
-									i8 = i8 + 1;
+									if (i2 == i5)
+									{
+										i6 = i6 + 10;
+										i8 = i8 + 1;
+									}
 								}
 							}
 						}
-						else if (((i6 % 10) == 0) && ((i8 % 16) < 8))
+						else if ((i6 % 10) == 0)
 						{
-							if (((i8 % 8) < 4) && (i2 == i3))
+							if ((i8 % 16) < 8)
 							{
-								i6 = i6 + 1;
-								i8 = i8 + 4;
-							}
-							if (((i8 % 4) < 2) && (i2 == i4))
-							{
-								i6 = i6 + 1;
-								i8 = i8 + 2;
-							}
-							if (((i8 % 2) < 1) && (i2 == i5))
-							{
-								i6 = i6 + 1;
-								i8 = i8 + 1;
+								if ((i8 % 8) < 4)
+								{
+									if (i2 == i3)
+									{
+										i6 = i6 + 1;
+										i8 = i8 + 4;
+									}
+								}
+								if ((i8 % 4) < 2)
+								{
+									if (i2 == i4)
+									{
+										i6 = i6 + 1;
+										i8 = i8 + 2;
+									}
+								}
+								if ((i8 % 2) < 1)
+								{
+									if (i2 == i5)
+									{
+										i6 = i6 + 1;
+										i8 = i8 + 1;
+									}
+								}
 							}
 						}
 						if ((i6 % 100) < 10)
 						{
 							if ((i8 % 8) < 4)
 							{
-								if (((i8 % 4) < 2) && (i3 == i4))
+								if ((i8 % 4) < 2)
 								{
-									i6 = i6 + 10;
-									i8 = i8 + 2;
+									if (i3 == i4)
+									{
+										i6 = i6 + 10;
+										i8 = i8 + 2;
+									}
 								}
-								if (((i8 % 2) < 1) && (i3 == i5))
+								if ((i8 % 2) < 1)
 								{
-									i6 = i6 + 10;
-									i8 = i8 + 1;
+									if (i3 == i5)
+									{
+										i6 = i6 + 10;
+										i8 = i8 + 1;
+									}
 								}
 							}
 						}
-						else if (((i6 % 10) == 0) && ((i8 % 8) < 4))
+						else if ((i6 % 10) == 0)
 						{
-							if (((i8 % 4) < 2) && (i3 == i4))
+							if ((i8 % 8) < 4)
 							{
-								i6 = i6 + 1;
-								i8 = i8 + 2;
-							}
-							if (((i8 % 2) < 1) && (i3 == i5))
-							{
-								i6 = i6 + 1;
-								i8 = i8 + 1;
+								if ((i8 % 4) < 2)
+								{
+									if (i3 == i4)
+									{
+										i6 = i6 + 1;
+										i8 = i8 + 2;
+									}
+								}
+								if ((i8 % 2) < 1)
+								{
+									if (i3 == i5)
+									{
+										i6 = i6 + 1;
+										i8 = i8 + 1;
+									}
+								}
 							}
 						}
 						if ((i6 % 100) < 10)
 						{
-							if (((i8 % 4) < 2) && ((i8 % 2) < 1) && (i4 == i5))
+							if ((i8 % 4) < 2)
 							{
-								i6 = i6 + 10;
-								i8 = i8 + 1;
+								if ((i8 % 2) < 1)
+								{
+									if (i4 == i5)
+									{
+										i6 = i6 + 10;
+										i8 = i8 + 1;
+									}
+								}
 							}
 						}
-						else if (((i6 % 10) == 0) && ((i8 % 4) < 2) && ((i8 % 2) < 1) && (i4 == i5))
+						else if ((i6 % 10) == 0)
 						{
-							i6 = i6 + 1;
-							i8 = i8 + 1;
+							if ((i8 % 4) < 2)
+							{
+								if ((i8 % 2) < 1)
+								{
+									if (i4 == i5)
+									{
+										i6 = i6 + 1;
+										i8 = i8 + 1;
+									}
+								}
+							}
 						}
 					}
 					
 					if (i6 == 40)
 					{
-						rewardItems(player, ZIGGOS_GEMSTONE, 43);
-						rewardItems(player, 959, 3);
-						rewardItems(player, 729, 1);
-						qs.set("ExMemoState", 0);
-						qs.set("v1", 0);
+						giveItems(player, ZIGGOS_GEMSTONE, 43);
+						giveItems(player, 959, 3);
+						giveItems(player, 729, 1);
+						st.set("ex", 0);
+						st.setCond(0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-13.html");
 					}
 					else if (i6 == 30)
 					{
-						rewardItems(player, 959, 2);
-						rewardItems(player, 951, 2);
-						qs.set("ExMemoState", 0);
-						qs.set("v1", 0);
+						giveItems(player, 959, 2);
+						giveItems(player, 951, 2);
+						st.set("ex", 0);
+						st.setCond(0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-14.html");
 					}
 					else if ((i6 == 21) || (i6 == 12))
 					{
-						rewardItems(player, 729, 1);
-						rewardItems(player, 947, 2);
-						rewardItems(player, 955, 1);
-						qs.set("ExMemoState", 0);
-						qs.set("v1", 0);
+						giveItems(player, 729, 1);
+						giveItems(player, 947, 2);
+						giveItems(player, 955, 1);
+						st.set("ex", 0);
+						st.setCond(0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-15.html");
 					}
 					else if (i6 == 20)
 					{
-						rewardItems(player, 951, 2);
-						qs.set("ExMemoState", 0);
-						qs.set("v1", 0);
+						giveItems(player, 951, 2);
+						st.set("ex", 0);
+						st.setCond(0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-16.html");
 					}
 					else if (i6 == 11)
 					{
-						rewardItems(player, 951, 1);
-						qs.set("ExMemoState", 0);
-						qs.set("v1", 0);
+						giveItems(player, 951, 1);
+						st.set("ex", 0);
+						st.setCond(0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-17.html");
 					}
 					else if (i6 == 10)
 					{
-						rewardItems(player, 956, 2);
-						qs.set("ExMemoState", 0);
-						qs.set("v1", 0);
+						giveItems(player, 956, 2);
+						st.set("ex", 0);
+						st.setCond(0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-18.html");
 					}
 					else if (i6 == 0)
 					{
-						qs.set("ExMemoState", 0);
-						qs.set("v1", 0);
+						st.set("ex", 0);
+						st.setCond(0);
 						htmltext = getHtm(player.getHtmlPrefix(), "30845-19.html");
 					}
 				}
@@ -557,14 +607,14 @@ public final class Q00662_AGameOfCards extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, true);
+		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
+		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		switch (qs.getState())
+		switch (st.getState())
 		{
 			case State.CREATED:
 			{
@@ -573,14 +623,14 @@ public final class Q00662_AGameOfCards extends Quest
 			}
 			case State.STARTED:
 			{
-				if (qs.isCond(1))
+				if (st.isCond(0))
 				{
-					htmltext = getQuestItemsCount(player, RED_GEM) < REQUIRED_CHIP_COUNT ? "30845-04.html" : "30845-05.html";
+					htmltext = "30845-04.html";
 				}
-				else if (qs.getInt("ExMemoState") != 0)
+				else if (st.getInt("ex") != 0)
 				{
-					final int i0 = qs.getInt("v1");
-					int i1 = qs.getInt("ExMemoState");
+					final int i0 = st.getCond();
+					int i1 = st.getInt("ex");
 					final int i5 = i1 % 100;
 					final int i9 = i1 / 100;
 					i1 = i0 % 100;
@@ -672,12 +722,16 @@ public final class Q00662_AGameOfCards extends Quest
 		}
 		
 		final L2PcInstance player = players.get(Rnd.get(players.size()));
-		if ((player != null) && Util.checkIfInRange(1500, npc, player, false) && (MONSTERS.get(npc.getId()) < getRandom(1000)))
+		if ((player != null) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			final QuestState qs = getQuestState(player, false);
-			if (qs != null)
+			if (MONSTERS.get(npc.getId()) < getRandom(1000))
 			{
-				giveItemRandomly(qs.getPlayer(), npc, RED_GEM, 1, 0, MONSTERS.get(npc.getId()), true);
+				final QuestState st = getQuestState(player, false);
+				if (st != null)
+				{
+					giveItems(player, RED_GEM, 1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

@@ -18,10 +18,11 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -31,9 +32,8 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class TakeCastleStart extends AbstractEffect
 {
-	public TakeCastleStart(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public TakeCastleStart(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -43,17 +43,17 @@ public final class TakeCastleStart extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (!info.getEffector().isPlayer())
+		if (!effector.isPlayer())
 		{
 			return;
 		}
 		
-		final Castle castle = CastleManager.getInstance().getCastle(info.getEffected());
+		final Castle castle = CastleManager.getInstance().getCastle(effected);
 		if ((castle != null) && castle.getSiege().isInProgress())
 		{
-			castle.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.THE_OPPOSING_CLAN_HAS_STARTED_S1).addSkillName(info.getSkill().getId()), false);
+			castle.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.THE_OPPOSING_CLAN_HAS_STARTED_S1).addSkillName(skill.getId()), false);
 		}
 	}
 }

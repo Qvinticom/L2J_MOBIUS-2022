@@ -28,64 +28,63 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.itemauction.ItemAuctionInstance;
 
 /**
  * @author Forsaiken
  */
-public final class ItemAuctionManager
+public final class ItemAuctionManager implements IGameXmlReader
 {
-	private static final Logger _log = Logger.getLogger(ItemAuctionManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ItemAuctionManager.class.getName());
 	
 	private final Map<Integer, ItemAuctionInstance> _managerInstances = new HashMap<>();
-	private final AtomicInteger _auctionIds;
+	private final AtomicInteger _auctionIds = new AtomicInteger(1);
 	
 	protected ItemAuctionManager()
 	{
-		_auctionIds = new AtomicInteger(1);
-		
 		if (!Config.ALT_ITEM_AUCTION_ENABLED)
 		{
-			_log.log(Level.INFO, getClass().getSimpleName() + ": Disabled by config.");
+			LOGGER.info("Disabled by config.");
 			return;
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			Statement s = con.createStatement();
-			ResultSet rs = s.executeQuery("SELECT auctionId FROM item_auction ORDER BY auctionId DESC LIMIT 0, 1"))
+			Statement statement = con.createStatement();
+			ResultSet rset = statement.executeQuery("SELECT auctionId FROM item_auction ORDER BY auctionId DESC LIMIT 0, 1"))
 		{
-			if (rs.next())
+			if (rset.next())
 			{
-				_auctionIds.set(rs.getInt(1) + 1);
+				_auctionIds.set(rset.getInt(1) + 1);
 			}
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Failed loading auctions.", e);
+			LOGGER.log(Level.SEVERE, "Failed loading auctions.", e);
 		}
 		
-		final File file = new File(Config.DATAPACK_ROOT + "/ItemAuctions.xml");
-		if (!file.exists())
-		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Missing ItemAuctions.xml!");
-			return;
-		}
-		
-		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		factory.setValidating(false);
-		factory.setIgnoringComments(true);
-		
+		load();
+	}
+	
+	@Override
+	public void load()
+	{
+		_managerInstances.clear();
+		parseDatapackFile("data/ItemAuctions.xml");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _managerInstances.size() + " instance(s).");
+	}
+	
+	@Override
+	public void parseDocument(Document doc, File f)
+	{
 		try
 		{
-			final Document doc = factory.newDocumentBuilder().parse(file);
 			for (Node na = doc.getFirstChild(); na != null; na = na.getNextSibling())
 			{
 				if ("list".equalsIgnoreCase(na.getNodeName()))
@@ -102,16 +101,16 @@ public final class ItemAuctionManager
 								throw new Exception("Dublicated instanceId " + instanceId);
 							}
 							
-							_managerInstances.put(instanceId, new ItemAuctionInstance(instanceId, _auctionIds, nb));
+							final ItemAuctionInstance instance = new ItemAuctionInstance(instanceId, _auctionIds, nb);
+							_managerInstances.put(instanceId, instance);
 						}
 					}
 				}
 			}
-			_log.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _managerInstances.size() + " instance(s).");
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Failed loading auctions from xml.", e);
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Failed loading auctions from xml.", e);
 		}
 	}
 	
@@ -137,21 +136,21 @@ public final class ItemAuctionManager
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
-			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_auction WHERE auctionId=?"))
+			try (PreparedStatement statement = con.prepareStatement("DELETE FROM item_auction WHERE auctionId=?"))
 			{
-				ps.setInt(1, auctionId);
-				ps.execute();
+				statement.setInt(1, auctionId);
+				statement.execute();
 			}
 			
-			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_auction_bid WHERE auctionId=?"))
+			try (PreparedStatement statement = con.prepareStatement("DELETE FROM item_auction_bid WHERE auctionId=?"))
 			{
-				ps.setInt(1, auctionId);
-				ps.execute();
+				statement.setInt(1, auctionId);
+				statement.execute();
 			}
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.SEVERE, "L2ItemAuctionManagerInstance: Failed deleting auction: " + auctionId, e);
+			LOGGER.log(Level.SEVERE, "L2ItemAuctionManagerInstance: Failed deleting auction: " + auctionId, e);
 		}
 	}
 	

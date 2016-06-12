@@ -16,15 +16,15 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.model.Elementals;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.L2Weapon;
+import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -35,9 +35,8 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class ConvertItem extends AbstractEffect
 {
-	public ConvertItem(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public ConvertItem(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -47,14 +46,14 @@ public final class ConvertItem extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if ((info.getEffector() == null) || (info.getEffected() == null) || info.getEffected().isAlikeDead() || !info.getEffected().isPlayer())
+		if (effected.isAlikeDead() || !effected.isPlayer())
 		{
 			return;
 		}
 		
-		final L2PcInstance player = info.getEffected().getActingPlayer();
+		final L2PcInstance player = effected.getActingPlayer();
 		if (player.hasItemRequest())
 		{
 			return;
@@ -84,23 +83,23 @@ public final class ConvertItem extends AbstractEffect
 		}
 		
 		final int enchantLevel = wpn.getEnchantLevel();
-		final Elementals elementals = wpn.getElementals() == null ? null : wpn.getElementals()[0];
+		final AttributeHolder elementals = wpn.getAttributes() == null ? null : wpn.getAttackAttribute();
 		final L2ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
 		final InventoryUpdate iu = new InventoryUpdate();
-		for (L2ItemInstance item : unequiped)
+		for (L2ItemInstance unequippedItem : unequiped)
 		{
-			iu.addModifiedItem(item);
+			iu.addModifiedItem(unequippedItem);
 		}
-		player.sendPacket(iu);
+		player.sendInventoryUpdate(iu);
 		
 		if (unequiped.length <= 0)
 		{
 			return;
 		}
 		byte count = 0;
-		for (L2ItemInstance item : unequiped)
+		for (L2ItemInstance unequippedItem : unequiped)
 		{
-			if (!(item.getItem() instanceof L2Weapon))
+			if (!(unequippedItem.getItem() instanceof L2Weapon))
 			{
 				count++;
 				continue;
@@ -111,12 +110,13 @@ public final class ConvertItem extends AbstractEffect
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 				sm.addInt(item.getEnchantLevel());
+				sm.addItemName(unequippedItem);
 			}
 			else
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
+				sm.addItemName(unequippedItem);
 			}
-			sm.addItemName(item);
 			player.sendPacket(sm);
 		}
 		
@@ -137,9 +137,9 @@ public final class ConvertItem extends AbstractEffect
 			return;
 		}
 		
-		if ((elementals != null) && (elementals.getElement() != -1) && (elementals.getValue() != -1))
+		if (elementals != null)
 		{
-			newItem.setElementAttr(elementals.getElement(), elementals.getValue());
+			newItem.setAttribute(elementals);
 		}
 		newItem.setEnchantLevel(enchantLevel);
 		player.getInventory().equipItem(newItem);
@@ -149,18 +149,19 @@ public final class ConvertItem extends AbstractEffect
 		{
 			msg = SystemMessage.getSystemMessage(SystemMessageId.EQUIPPED_S1_S2);
 			msg.addInt(newItem.getEnchantLevel());
+			msg.addItemName(newItem);
 		}
 		else
 		{
 			msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
+			msg.addItemName(newItem);
 		}
-		msg.addItemName(newItem);
 		player.sendPacket(msg);
 		
 		final InventoryUpdate u = new InventoryUpdate();
 		u.addRemovedItem(destroyItem);
 		u.addItem(newItem);
-		player.sendPacket(u);
+		player.sendInventoryUpdate(u);
 		
 		player.broadcastUserInfo();
 	}

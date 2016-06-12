@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
@@ -27,38 +28,36 @@ import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExChangePostState;
-import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author Migi, DS
  */
-public final class RequestCancelPostAttachment extends L2GameClientPacket
+public final class RequestCancelPostAttachment implements IClientIncomingPacket
 {
-	private static final String _C__D0_6F_REQUESTCANCELPOSTATTACHMENT = "[C] D0:6F RequestCancelPostAttachment";
-	
 	private int _msgId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_msgId = readD();
+		_msgId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || !Config.ALLOW_MAIL || !Config.ALLOW_ATTACHMENTS)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("cancelpost"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("cancelpost"))
 		{
 			return;
 		}
@@ -200,15 +199,12 @@ public final class RequestCancelPostAttachment extends L2GameClientPacket
 		// Send updated item list to the player
 		if (playerIU != null)
 		{
-			activeChar.sendPacket(playerIU);
+			activeChar.sendInventoryUpdate(playerIU);
 		}
 		else
 		{
-			activeChar.sendPacket(new ItemList(activeChar, false));
+			activeChar.sendItemList(false);
 		}
-		
-		// Update current load status on player
-		activeChar.sendPacket(new ExUserInfoInvenWeight(activeChar));
 		
 		final L2PcInstance receiver = L2World.getInstance().getPlayer(msg.getReceiverId());
 		if (receiver != null)
@@ -223,17 +219,5 @@ public final class RequestCancelPostAttachment extends L2GameClientPacket
 		
 		activeChar.sendPacket(new ExChangePostState(false, _msgId, Message.DELETED));
 		activeChar.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_CANCELLED);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_6F_REQUESTCANCELPOSTATTACHMENT;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

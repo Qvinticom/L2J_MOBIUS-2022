@@ -16,10 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.shuttle;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.shuttle.ExMoveToLocationInShuttle;
 import com.l2jmobius.gameserver.network.serverpackets.shuttle.ExStopMoveInShuttle;
@@ -27,10 +29,8 @@ import com.l2jmobius.gameserver.network.serverpackets.shuttle.ExStopMoveInShuttl
 /**
  * @author UnAfraid
  */
-public final class MoveToLocationInShuttle extends L2GameClientPacket
+public final class MoveToLocationInShuttle implements IClientIncomingPacket
 {
-	private static final String _C__75_MOVETOLOCATIONINVEHICLE = "[C] 81 MoveToLocationInVehicle";
-	
 	private int _boatId;
 	private int _targetX;
 	private int _targetY;
@@ -40,21 +40,22 @@ public final class MoveToLocationInShuttle extends L2GameClientPacket
 	private int _originZ;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_boatId = readD(); // objectId of boat
-		_targetX = readD();
-		_targetY = readD();
-		_targetZ = readD();
-		_originX = readD();
-		_originY = readD();
-		_originZ = readD();
+		_boatId = packet.readD(); // objectId of boat
+		_targetX = packet.readD();
+		_targetY = packet.readD();
+		_targetZ = packet.readD();
+		_originX = packet.readD();
+		_originY = packet.readD();
+		_originZ = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -80,11 +81,5 @@ public final class MoveToLocationInShuttle extends L2GameClientPacket
 		
 		activeChar.setInVehiclePosition(new Location(_targetX, _targetY, _targetZ));
 		activeChar.broadcastPacket(new ExMoveToLocationInShuttle(activeChar, _originX, _originY, _originZ));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__75_MOVETOLOCATIONINVEHICLE;
 	}
 }

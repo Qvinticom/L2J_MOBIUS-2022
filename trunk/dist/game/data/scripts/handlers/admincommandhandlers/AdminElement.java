@@ -16,11 +16,12 @@
  */
 package handlers.admincommandhandlers;
 
+import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.Elementals;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -82,15 +83,15 @@ public class AdminElement implements IAdminCommandHandler
 			{
 				final String[] args = command.split(" ");
 				
-				final byte element = Elementals.getElementId(args[1]);
+				final AttributeType type = AttributeType.findByName(args[1]);
 				final int value = Integer.parseInt(args[2]);
-				if ((element < -1) || (element > 5) || (value < 0) || (value > 450))
+				if ((type == null) || (value < 0) || (value > 450))
 				{
 					activeChar.sendMessage("Usage: //setlh/setlc/setlg/setlb/setll/setlw/setls <element> <value>[0-450]");
 					return false;
 				}
 				
-				setElement(activeChar, element, value, armorType);
+				setElement(activeChar, type, value, armorType);
 			}
 			catch (Exception e)
 			{
@@ -108,7 +109,7 @@ public class AdminElement implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void setElement(L2PcInstance activeChar, byte type, int value, int armorType)
+	private void setElement(L2PcInstance activeChar, AttributeType type, int value, int armorType)
 	{
 		// get the target
 		L2Object target = activeChar.getTarget();
@@ -139,41 +140,45 @@ public class AdminElement implements IAdminCommandHandler
 		if (itemInstance != null)
 		{
 			String old, current;
-			final Elementals element = itemInstance.getElemental(type);
-			if (element != null)
+			final AttributeHolder element = itemInstance.getAttribute(type);
+			if (element == null)
 			{
-				old = element.toString();
+				old = "None";
 			}
 			else
 			{
-				old = "None";
+				old = element.toString();
 			}
 			
 			// set enchant value
 			player.getInventory().unEquipItemInSlot(armorType);
-			if (type == -1)
+			if (type == AttributeType.NONE)
 			{
-				itemInstance.clearElementAttr(type);
+				itemInstance.clearAllAttributes();
+			}
+			else if (value < 1)
+			{
+				itemInstance.clearAttribute(type);
 			}
 			else
 			{
-				itemInstance.setElementAttr(type, value);
+				itemInstance.setAttribute(new AttributeHolder(type, value));
 			}
 			player.getInventory().equipItem(itemInstance);
 			
-			if (itemInstance.getElementals() != null)
+			if (itemInstance.getAttributes() == null)
 			{
-				current = itemInstance.getElemental(type).toString();
+				current = "None";
 			}
 			else
 			{
-				current = "None";
+				current = itemInstance.getAttribute(type).toString();
 			}
 			
 			// send packets
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(itemInstance);
-			player.sendPacket(iu);
+			player.sendInventoryUpdate(iu);
 			
 			// informations
 			activeChar.sendMessage("Changed elemental power of " + player.getName() + "'s " + itemInstance.getItem().getName() + " from " + old + " to " + current + ".");

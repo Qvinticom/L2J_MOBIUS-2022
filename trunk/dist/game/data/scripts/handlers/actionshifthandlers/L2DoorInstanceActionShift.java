@@ -16,42 +16,55 @@
  */
 package handlers.actionshifthandlers;
 
+import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.handler.IActionShiftHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.Castle;
+import com.l2jmobius.gameserver.model.entity.ClanHall;
+import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.StaticObject;
+import com.l2jmobius.gameserver.util.HtmlUtil;
 
+/**
+ * This class manage shift + click on {@link L2DoorInstance}.
+ * @author St3eT
+ */
 public class L2DoorInstanceActionShift implements IActionShiftHandler
 {
 	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
-		if (activeChar.getAccessLevel().isGm())
+		if (activeChar.isGM())
 		{
 			activeChar.setTarget(target);
 			final L2DoorInstance door = (L2DoorInstance) target;
+			final ClanHall clanHall = ClanHallData.getInstance().getClanHallByDoorId(door.getId());
+			final Fort fort = door.getFort();
+			final Castle castle = door.getCastle();
 			activeChar.sendPacket(new StaticObject(door, activeChar.isGM()));
-			
-			final NpcHtmlMessage html = new NpcHtmlMessage();
-			html.setFile(activeChar.getHtmlPrefix(), "html/admin/doorinfo.htm");
-			html.replace("%class%", target.getClass().getSimpleName());
-			html.replace("%hp%", String.valueOf((int) door.getCurrentHp()));
-			html.replace("%hpmax%", String.valueOf(door.getMaxHp()));
-			html.replace("%objid%", String.valueOf(target.getObjectId()));
-			html.replace("%doorid%", String.valueOf(door.getId()));
-			
-			html.replace("%minx%", String.valueOf(door.getX(0)));
-			html.replace("%miny%", String.valueOf(door.getY(0)));
-			html.replace("%minz%", String.valueOf(door.getZMin()));
-			
-			html.replace("%maxx%", String.valueOf(door.getX(2)));
-			html.replace("%maxy%", String.valueOf(door.getY(2)));
-			html.replace("%maxz%", String.valueOf(door.getZMax()));
-			html.replace("%unlock%", door.isOpenableBySkill() ? "<font color=00FF00>YES<font>" : "<font color=FF0000>NO</font>");
-			
+			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
+			html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/doorinfo.htm");
+			// Hp / MP
+			html.replace("%hpGauge%", HtmlUtil.getHpGauge(250, (long) door.getCurrentHp(), door.getMaxHp(), false));
+			html.replace("%mpGauge%", HtmlUtil.getMpGauge(250, (long) door.getCurrentMp(), door.getMaxMp(), false));
+			// Basic info
+			html.replace("%doorName%", door.getName());
+			html.replace("%objId%", String.valueOf(door.getObjectId()));
+			html.replace("%doorId%", String.valueOf(door.getId()));
+			// Position info
+			html.replace("%position%", door.getX() + ", " + door.getY() + ", " + door.getZ());
+			html.replace("%node1%", door.getX(0) + ", " + door.getY(0) + ", " + door.getZMin());
+			html.replace("%node2%", door.getX(1) + ", " + door.getY(1) + ", " + door.getZMin());
+			html.replace("%node3%", door.getX(2) + ", " + door.getY(2) + ", " + door.getZMax());
+			html.replace("%node4%", door.getX(3) + ", " + door.getY(3) + ", " + door.getZMax());
+			// Residence info
+			html.replace("%fortress%", fort != null ? fort.getName() : "None");
+			html.replace("%clanHall%", clanHall != null ? clanHall.getName() : "None");
+			html.replace("%castle%", castle != null ? castle.getName() + " Castle" : "None");
 			activeChar.sendPacket(html);
 		}
 		return true;

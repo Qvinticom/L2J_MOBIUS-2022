@@ -19,36 +19,38 @@ package com.l2jmobius.gameserver.network.serverpackets.luckygame;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.LuckyGameData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.Rnd;
 
 /**
  * @author Mobius
  */
-public class ExBettingLuckyGameResult extends L2GameServerPacket
+public class ExBettingLuckyGameResult implements IClientOutgoingPacket
 {
 	private static final int FORTUNE_READING_TICKET = 23767;
 	private static final int LUXURY_FORTUNE_READING_TICKET = 23768;
 	private int _count = 0;
 	private int _type = 0;
+	private final L2PcInstance _activeChar;
 	
-	public ExBettingLuckyGameResult(int type, int count)
+	public ExBettingLuckyGameResult(L2PcInstance activeChar, int type, int count)
 	{
 		_count = count;
 		_type = type;
+		_activeChar = activeChar;
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
-		
 		// Calculate rewards
 		final List<ItemHolder> rewards = new ArrayList<>();
 		int totalWeight = 0;
@@ -80,35 +82,34 @@ public class ExBettingLuckyGameResult extends L2GameServerPacket
 		// Check inventory capacity
 		if ((rewards.size() > 0) && (!_activeChar.getInventory().validateCapacity(rewards.size()) || !_activeChar.getInventory().validateWeight(totalWeight)))
 		{
-			_activeChar.sendPacket(new ExStartLuckyGame(_type));
+			_activeChar.sendPacket(new ExStartLuckyGame(_activeChar, _type));
 			_activeChar.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_EITHER_FULL_OR_OVERWEIGHT);
-			return;
+			return false;
 		}
 		
 		if (_activeChar.getInventory().getInventoryItemCount(_type == 2 ? LUXURY_FORTUNE_READING_TICKET : FORTUNE_READING_TICKET, -1) < _count)
 		{
-			_activeChar.sendPacket(new ExStartLuckyGame(_type));
+			_activeChar.sendPacket(new ExStartLuckyGame(_activeChar, _type));
 			_activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_TICKETS);
-			return;
+			return false;
 		}
 		
 		// Remove tickets
 		_activeChar.getInventory().destroyItemByItemId("FortuneTelling", _type == 2 ? LUXURY_FORTUNE_READING_TICKET : FORTUNE_READING_TICKET, _count, _activeChar, "FortuneTelling");
 		
-		writeC(0xFE);
-		writeH(0x161);
-		writeD(0x01); // 0 disabled, 1 enabled
-		writeD(0x01); // ?
-		writeD((int) _activeChar.getInventory().getInventoryItemCount(_type == 2 ? LUXURY_FORTUNE_READING_TICKET : FORTUNE_READING_TICKET, -1)); // Count remaining tickets
+		OutgoingPackets.EX_BETTING_LUCKY_GAME_RESULT.writeId(packet);
+		packet.writeD(0x01); // 0 disabled, 1 enabled
+		packet.writeD(0x01); // ?
+		packet.writeD((int) _activeChar.getInventory().getInventoryItemCount(_type == 2 ? LUXURY_FORTUNE_READING_TICKET : FORTUNE_READING_TICKET, -1)); // Count remaining tickets
 		
 		if (rewards.size() > 0)
 		{
-			writeD(rewards.size());
+			packet.writeD(rewards.size());
 			for (ItemHolder reward : rewards)
 			{
-				writeD(0x02); // normal = 1, rare = 2 (forcing 2)
-				writeD(reward.getId());
-				writeD((int) reward.getCount());
+				packet.writeD(0x02); // normal = 1, rare = 2 (forcing 2)
+				packet.writeD(reward.getId());
+				packet.writeD((int) reward.getCount());
 				final SystemMessage sm;
 				if (_type == 2)
 				{
@@ -128,7 +129,8 @@ public class ExBettingLuckyGameResult extends L2GameServerPacket
 		}
 		else
 		{
-			writeD(0x00);
+			packet.writeD(0x00);
 		}
+		return true;
 	}
 }

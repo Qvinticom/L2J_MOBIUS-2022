@@ -49,11 +49,11 @@ public class ConditionPlayerCanUntransform extends Condition
 		{
 			canUntransform = false;
 		}
-		else if ((player.isTransformed() || player.isInStance()) && player.isFlyingMounted() && !player.isInsideZone(ZoneId.LANDING))
+		else if (player.isFlyingMounted() && !player.isInsideZone(ZoneId.LANDING))
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_TOO_HIGH_TO_PERFORM_THIS_ACTION_PLEASE_LOWER_YOUR_ALTITUDE_AND_TRY_AGAIN); // TODO: check if message is retail like.
 			canUntransform = false;
 		}
-		return _val == canUntransform;
+		return (_val == canUntransform);
 	}
 }

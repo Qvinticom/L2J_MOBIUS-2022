@@ -19,20 +19,50 @@ package com.l2jmobius.gameserver.network;
 import java.util.Map.Entry;
 
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.Elementals;
+import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author UnAfraid
  */
 public class Debug
 {
+	public static void sendStatsDebug(L2Character creature, Stats stat, StatsSet set)
+	{
+		if (!creature.isPlayer())
+		{
+			return;
+		}
+		
+		final StringBuilder sb = new StringBuilder();
+		final L2ItemInstance weapon = creature.getActiveWeaponInstance();
+		for (Entry<String, Object> entry : set.getSet().entrySet())
+		{
+			sb.append("<tr><td>" + entry.getKey() + "</td><td><font color=\"LEVEL\">" + parseValue(entry.getValue()) + "</font></td></tr>");
+		}
+		
+		final NpcHtmlMessage msg = new NpcHtmlMessage();
+		msg.setFile(creature.getActingPlayer().getHtmlPrefix(), "data/html/admin/statsdebug.htm");
+		msg.replace("%stat%", String.valueOf(stat));
+		msg.replace("%mulValue%", Util.formatDouble(creature.getStat().getMul(stat), "#.##"));
+		msg.replace("%addValue%", creature.getStat().getAdd(stat));
+		msg.replace("%templateValue%", Util.formatDouble(creature.getTemplate().getBaseValue(stat, 0), "#.##"));
+		if (weapon != null)
+		{
+			msg.replace("%weaponBaseValue%", Util.formatDouble(weapon.getItem().getStats(stat, 0), "#.##"));
+		}
+		msg.replace("%details%", sb.toString());
+		creature.sendPacket(new TutorialShowHtml(msg.getHtml()));
+	}
+	
 	public static void sendSkillDebug(L2Character attacker, L2Character target, Skill skill, StatsSet set)
 	{
 		if (!attacker.isPlayer())
@@ -43,18 +73,18 @@ public class Debug
 		final StringBuilder sb = new StringBuilder();
 		for (Entry<String, Object> entry : set.getSet().entrySet())
 		{
-			sb.append("<tr><td>" + entry.getKey() + "</td><td><font color=\"LEVEL\">" + entry.getValue() + "</font></td></tr>");
+			sb.append("<tr><td>" + entry.getKey() + "</td><td><font color=\"LEVEL\">" + parseValue(entry.getValue()) + "</font></td></tr>");
 		}
 		
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
-		msg.setFile(attacker.getActingPlayer().getHtmlPrefix(), "html/admin/skilldebug.htm");
-		msg.replace("%patk%", target.getPAtk(target));
-		msg.replace("%matk%", target.getMAtk(target, skill));
-		msg.replace("%pdef%", target.getPDef(target));
-		msg.replace("%mdef%", target.getMDef(target, skill));
+		msg.setFile(attacker.getActingPlayer().getHtmlPrefix(), "data/html/admin/skilldebug.htm");
+		msg.replace("%patk%", target.getPAtk());
+		msg.replace("%matk%", target.getMAtk());
+		msg.replace("%pdef%", target.getPDef());
+		msg.replace("%mdef%", target.getMDef());
 		msg.replace("%acc%", target.getAccuracy());
-		msg.replace("%evas%", target.getEvasionRate(target));
-		msg.replace("%crit%", target.getCriticalHit(target, skill));
+		msg.replace("%evas%", target.getEvasionRate());
+		msg.replace("%crit%", target.getCriticalHit());
 		msg.replace("%speed%", target.getRunSpeed());
 		msg.replace("%pAtkSpd%", target.getPAtkSpd());
 		msg.replace("%mAtkSpd%", target.getMAtkSpd());
@@ -64,15 +94,15 @@ public class Debug
 		msg.replace("%int%", target.getINT());
 		msg.replace("%wit%", target.getWIT());
 		msg.replace("%men%", target.getMEN());
-		msg.replace("%atkElemType%", Elementals.getElementName(target.getAttackElement()));
+		msg.replace("%atkElemType%", target.getAttackElement().name());
 		msg.replace("%atkElemVal%", target.getAttackElementValue(target.getAttackElement()));
-		msg.replace("%fireDef%", target.getDefenseElementValue((byte) 0));
-		msg.replace("%waterDef%", target.getDefenseElementValue((byte) 1));
-		msg.replace("%windDef%", target.getDefenseElementValue((byte) 2));
-		msg.replace("%earthDef%", target.getDefenseElementValue((byte) 3));
-		msg.replace("%holyDef%", target.getDefenseElementValue((byte) 4));
-		msg.replace("%darkDef%", target.getDefenseElementValue((byte) 5));
-		msg.replace("%skill%", skill.toString());
+		msg.replace("%fireDef%", target.getDefenseElementValue(AttributeType.FIRE));
+		msg.replace("%waterDef%", target.getDefenseElementValue(AttributeType.WATER));
+		msg.replace("%windDef%", target.getDefenseElementValue(AttributeType.WIND));
+		msg.replace("%earthDef%", target.getDefenseElementValue(AttributeType.EARTH));
+		msg.replace("%holyDef%", target.getDefenseElementValue(AttributeType.HOLY));
+		msg.replace("%darkDef%", target.getDefenseElementValue(AttributeType.DARK));
+		msg.replace("%skill%", String.valueOf(skill));
 		msg.replace("%details%", sb.toString());
 		attacker.sendPacket(new TutorialShowHtml(msg.getHtml()));
 	}
@@ -82,11 +112,11 @@ public class Debug
 		final StringBuilder sb = new StringBuilder();
 		for (Entry<String, Object> entry : set.getSet().entrySet())
 		{
-			sb.append("<tr><td>" + entry.getKey() + "</td><td><font color=\"LEVEL\">" + entry.getValue() + "</font></td></tr>");
+			sb.append("<tr><td>" + entry.getKey() + "</td><td><font color=\"LEVEL\">" + parseValue(entry.getValue()) + "</font></td></tr>");
 		}
 		
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
-		msg.setFile(player.getHtmlPrefix(), "html/admin/itemdebug.htm");
+		msg.setFile(player.getHtmlPrefix(), "data/html/admin/itemdebug.htm");
 		msg.replace("%itemName%", item.getName());
 		msg.replace("%itemSlot%", getBodyPart(item.getItem().getBodyPart()));
 		msg.replace("%itemType%", item.isArmor() ? "Armor" : item.isWeapon() ? "Weapon" : "Etc");
@@ -97,9 +127,18 @@ public class Debug
 		player.sendPacket(new TutorialShowHtml(msg.getHtml()));
 	}
 	
+	private static String parseValue(Object value)
+	{
+		if (value instanceof Double)
+		{
+			return Util.formatDouble((double) value, "#.##");
+		}
+		return String.valueOf(value);
+	}
+	
 	private static String getBodyPart(int bodyPart)
 	{
-		for (Entry<String, Integer> entry : ItemTable.SLOTS.entrySet())
+		for (Entry<String, Integer> entry : ItemTable._slots.entrySet())
 		{
 			if ((entry.getValue() & bodyPart) == bodyPart)
 			{

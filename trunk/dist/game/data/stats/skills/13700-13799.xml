@@ -1,876 +1,1495 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<!-- For $s1, Damage Reflect Resistance + $s2. --> 
-	<skill id="13700" levels="1" name="Item Skill: Damage Reflect Resistance">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, the enemy cannot target you. --> 
-	<skill id="13701" levels="1" name="Item Skill: Disable Target">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Becomes invincible for $s1. --> 
-	<skill id="13702" levels="1" name="Item Skill: Invincibility">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Attacks nearby enemies with $s1 Power added to P. Atk. --> 
-	<skill id="13703" levels="1" name="Item Skill: Power Eruption">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk. --> 
-	<skill id="13704" levels="1" name="Item Skill: Power Multi Shot">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Attacks target with $s1 Power added to P. Atk. --> 
-	<skill id="13705" levels="1" name="Item Skill: Power Shot">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk. --> 
-	<skill id="13706" levels="1" name="Item Skill: Power Storm">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Attacks target with $s1 Power added to P. Atk. --> 
-	<skill id="13707" levels="1" name="Item Skill: Power Strike">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, inflicts Aerial Yoke on target and nearby enemies. --> 
-	<skill id="13708" levels="1" name="Item Skill: Aerial Yoke">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, inflicts Fear on target and nearby enemies. --> 
-	<skill id="13709" levels="1" name="Item Skill: Fear">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, inflicts Hold on target and nearby enemies. --> 
-	<skill id="13710" levels="1" name="Item Skill: Hold">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, inflicts Knock Down on target and nearby enemies. --> 
-	<skill id="13711" levels="1" name="Item Skill: Knock Down">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, inflicts Paralysis on target and nearby enemies. --> 
-	<skill id="13712" levels="1" name="Item Skill: Paralyze">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, inflicts Silence on target and nearby enemies. --> 
-	<skill id="13713" levels="1" name="Item Skill: Silence">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, inflicts Sleep on target and nearby enemies. --> 
-	<skill id="13714" levels="1" name="Item Skill: Sleep">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, decreases the Speed of target and nearby enemies by $s2. --> 
-	<skill id="13715" levels="1" name="Item Skill: Slow">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, inflicts Stun on target and nearby enemies. --> 
-	<skill id="13716" levels="1" name="Item Skill: Stun">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Cancels target of nearby enemies. --> 
-	<skill id="13717" levels="1" name="Item Skill: Cancel Target">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, inflicts Aerial Yoke on target. --> 
-	<skill id="13718" levels="1" name="Item Skill: Aerial Yoke">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, inflicts Fear on target. --> 
-	<skill id="13719" levels="1" name="Item Skill: Fear">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, inflicts Silence on target. --> 
-	<skill id="13720" levels="1" name="Item Skill: Silence">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, inflicts Sleep on target. --> 
-	<skill id="13721" levels="1" name="Item Skill: Sleep">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, decreases the Speed of target by $s2. --> 
-	<skill id="13722" levels="1" name="Item Skill: Slow">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, inflicts Stun on target. --> 
-	<skill id="13723" levels="1" name="Item Skill: Stun">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, inflicts Hold on target. --> 
-	<skill id="13724" levels="1" name="Item Skill: Hold">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, inflicts Knock Down on target. --> 
-	<skill id="13725" levels="1" name="Item Skill: Knock Down">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- For $s1, inflicts Paralysis on target. --> 
-	<skill id="13726" levels="1" name="Item Skill: Paralyze">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Cancels enemy's target. --> 
-	<skill id="13727" levels="1" name="Item Skill: Trick">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Attacks nearby enemies with $s1 Power added to M. Atk. --> 
-	<skill id="13728" levels="1" name="Item Skill: Wind Circle">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Attacks target with $s1 Power added to M. Atk. --> 
-	<skill id="13729" levels="1" name="Item Skill: Wind Flare">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Attacks target and nearby enemies with $s1 Power added to M. Atk. --> 
-	<skill id="13730" levels="1" name="Item Skill: Wind Flash">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Attacks target and nearby enemies with $s1 Power added to M. Atk. --> 
-	<skill id="13731" levels="1" name="Item Skill: Wind Storm">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Attacks target with $s1 Power added to M. Atk. --> 
-	<skill id="13732" levels="1" name="Item Skill: Wind Strike">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Atk. Spd. by $s1 when equipped. --> 
-	<skill id="13733" levels="1" name="Item Skill: Atk. Spd. Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Max CP by $s1 when equipped. --> 
-	<skill id="13734" levels="1" name="Item Skill: Max CP Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Reflects $s1 of Received Damage when equipped. --> 
-	<skill id="13735" levels="1" name="Item Skill: Damage Reflect">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases XP Gain by $s1 when equipped. --> 
-	<skill id="13736" levels="1" name="Item Skill: XP Bonus">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Max HP by $s1 when equipped. --> 
-	<skill id="13737" levels="1" name="Item Skill: Max XP Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Decreases M. Skill MP Consumption by $s1 when equipped. --> 
-	<skill id="13738" levels="1" name="Item Skill: MP Consumption Decrease">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases M. Atk. by $s1 when equipped. --> 
-	<skill id="13739" levels="1" name="Item Skill: M. Atk. Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases M. Def. by $s1 when equipped. --> 
-	<skill id="13740" levels="1" name="Item Skill: M. Def. Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Max MP by $s1 when equipped. --> 
-	<skill id="13741" levels="1" name="Item Skill: Max MP Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Casting Spd. by $s1 when equipped. --> 
-	<skill id="13742" levels="1" name="Item Skill: Casting Spd. Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Decreases P. Skill MP Consumption by $s1 when equipped. --> 
-	<skill id="13743" levels="1" name="Item Skill: MP Consumption Decrease">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases P. Atk. by $s1 when equipped. --> 
-	<skill id="13744" levels="1" name="Item Skill: P. Atk. Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases P. Def. by $s1 when equipped. --> 
-	<skill id="13745" levels="1" name="Item Skill: P. Def. Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Decreases received PvE Damage by $s1 when equipped. --> 
-	<skill id="13746" levels="1" name="Item Skill: PvE Damage Decrease">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases PvE Damage by $s1 when equipped. --> 
-	<skill id="13747" levels="1" name="Item Skill: PvE Damage Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Decreases received PvP Damage by $s1 when equipped. --> 
-	<skill id="13748" levels="1" name="Item Skill: PvP Damage Decrease">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases PvP Damage by $s1 when equipped. --> 
-	<skill id="13749" levels="1" name="Item Skill: PvP Damage Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases SP Gain by $s1 when equipped. --> 
-	<skill id="13750" levels="1" name="Item Skill: SP Bonus">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Spd. by $s1 when equipped. --> 
-	<skill id="13751" levels="1" name="Item Skill: Spd. Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Recovers $s1 of Damage as HP with a certain probability. --> 
-	<skill id="13752" levels="1" name="Item Skill: Vampiric Rage">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Attack Attribute Bonus by $s1 when equipped. --> 
-	<skill id="13753" levels="1" name="Item Skill: Attack Attribute Bonus">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Aerial Yoke, Petrification Resistance by $s1 when equipped. --> 
-	<skill id="13754" levels="1" name="Item Skill: Aerial Yoke, Petrification Resistance">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Pull, Petrification Resistance by $s1 when equipped. --> 
-	<skill id="13755" levels="1" name="Item Skill: Pull, Petrification Resistance">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Knock Back/Knock Down, Petrification Resistance by $s1 when equipped. --> 
-	<skill id="13756" levels="1" name="Item Skill: Knock Back/Knock Down, Petrification Resistance">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Poison, Petrification Resistance by $s1 when equipped. --> 
-	<skill id="13757" levels="1" name="Item Skill: Poison, Petrification Resistance">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases M. Skill Critical Damage by $s1 when equipped. --> 
-	<skill id="13758" levels="1" name="Item Skill: M. Skill Critical Damage Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases M. Skill Critical Rate by $s1 when equipped. --> 
-	<skill id="13759" levels="1" name="Item Skill: M. Skill Critical Rate Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases M. Evasion by $s1 when equipped. --> 
-	<skill id="13760" levels="1" name="Item Skill: M. Evasion">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Paralysis, Petrification Resistance by $s1 when equipped. --> 
-	<skill id="13761" levels="1" name="Item Skill: Paralysis, Petrification Resistance">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases P. Skill Critical Rate by $s1 when equipped. --> 
-	<skill id="13762" levels="1" name="Item Skill: P. Skill Critical Rate Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Petrification Resistance by $s1 when equipped. --> 
-	<skill id="13763" levels="1" name="Item Skill: Petrification Resistance">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Petrification Success Rate by $s1 when equipped. --> 
-	<skill id="13764" levels="1" name="Item Skill: Petrification Success Rate Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Stun, Petrification Resistance by $s1 when equipped. --> 
-	<skill id="13765" levels="1" name="Item Skill: Stun, Petrification Resistance">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Sleep, Petrification Resistance by $s1 when equipped. --> 
-	<skill id="13766" levels="1" name="Item Skill: Sleep, Petrification Resistance">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Mental Attack, Petrification Resistance by $s1 when equipped. --> 
-	<skill id="13767" levels="1" name="Item Skill: Mental Attack, Petrification Resistance">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Bleed, Petrification Resistance by $s1 when equipped. --> 
-	<skill id="13768" levels="1" name="Item Skill: Bleed, Petrification Resistance">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Hold, Petrification Resistance by $s1 when equipped. --> 
-	<skill id="13769" levels="1" name="Item Skill: Hold, Petrification Resistance">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Attack Attribute Bonus by 50. --> 
-	<skill id="13770" levels="1" name="Exalted Tiara">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- STR/DEX/CON/INT/WIT/MEN/LUC/CHA + 1. --> 
-	<skill id="13771" levels="1" name="Exalted Cloak">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="STR" val="1" />
-				<add stat="DEX" val="1" />
-				<add stat="CON" val="1" />
-				<add stat="INT" val="1" />
-				<add stat="WIT" val="1" />
-				<add stat="MEN" val="1" />
-				<add stat="LUC" val="1" />
-				<add stat="CHA" val="1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Attack Attribute Bonus by 30. --> 
-	<skill id="13772" levels="1" name="Replica Tiara">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13773" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13774" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13775" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13776" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13777" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13778" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13779" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13780" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13781" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13782" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13783" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13784" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13785" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13786" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13787" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13788" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13789" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13790" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13791" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13792" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13793" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13794" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13795" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13796" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13797" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13798" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
-	</skill>
-	<!-- Increases Max HP/MP/CP by 10%% --> 
-	<skill id="13799" levels="1" name="Additional Ability Health">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxCp" val="1.1" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="maxMp" val="1.1" />
-			</effect>
-		</for>
+	<skill id="13700" toLevel="12" name="Item Skill: Damage Reflect Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 min., Damage Reflect Resistance + 3%. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>100</effectPoint>
+		<abnormalTime>1800</abnormalTime>
+		<reuseDelay>15000</reuseDelay>
+	</skill>
+	<skill id="13701" toLevel="12" name="Item Skill: Disable Target">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., the enemy cannot target you. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<hitTime>1000</hitTime>
+		<effectPoint>100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">4</value>
+			<value level="8">5</value>
+			<value level="9">6</value>
+			<value level="10">4</value>
+			<value level="11">5</value>
+			<value level="12">6</value>
+		</abnormalTime>
+		<reuseDelay>600000</reuseDelay>
+	</skill>
+	<skill id="13702" toLevel="12" name="Item Skill: Invincibility">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Becomes invincible for 3 sec. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<hitTime>1000</hitTime>
+		<effectPoint>100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">4</value>
+			<value level="8">5</value>
+			<value level="9">6</value>
+			<value level="10">4</value>
+			<value level="11">5</value>
+			<value level="12">6</value>
+		</abnormalTime>
+		<reuseDelay>600000</reuseDelay>
+	</skill>
+	<skill id="13703" toLevel="12" name="Item Skill: Power Eruption">
+		<table name="#power"> 4250 4724 5250 13478 14976 16641 18864 20961 23291 21019 23355 25951 </table>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks nearby enemies with 4250 Power added to P. Atk. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>15000</reuseDelay>
+	</skill>
+	<skill id="13704" toLevel="12" name="Item Skill: Power Multi Shot">
+		<table name="#power"> 4250 4724 5250 13478 14976 16641 18864 20961 23291 21019 23355 25951 </table>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target and nearby enemies with 4250 Power added to P. Atk. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>1100</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>15000</reuseDelay>
+	</skill>
+	<skill id="13705" toLevel="12" name="Item Skill: Power Shot">
+		<table name="#power"> 5466 6074 6750 17329 19255 21395 24255 26950 29945 27025 30028 33365 </table>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 5466 Power added to P. Atk. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>1100</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>15000</reuseDelay>
+	</skill>
+	<skill id="13706" toLevel="12" name="Item Skill: Power Storm">
+		<table name="#power"> 4250 4724 5250 13478 14976 16641 18864 20961 23291 21019 23355 25951 </table>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target and nearby enemies with 4250 Power added to P. Atk. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>15000</reuseDelay>
+	</skill>
+	<skill id="13707" toLevel="12" name="Item Skill: Power Strike">
+		<table name="#power"> 6074 6750 7500 19255 21395 23773 26950 29945 33273 30028 33365 37073 </table>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 6074 Power added to P. Atk. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>15000</reuseDelay>
+	</skill>
+	<skill id="13708" toLevel="12" name="Item Skill: Aerial Yoke">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., inflicts Aerial Yoke on target and nearby enemies. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">3</value>
+			<value level="11">4</value>
+			<value level="12">5</value>
+		</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13709" toLevel="12" name="Item Skill: Fear">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., inflicts Fear on target and nearby enemies. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">3</value>
+			<value level="11">4</value>
+			<value level="12">5</value>
+		</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13710" toLevel="12" name="Item Skill: Hold">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., inflicts Hold on target and nearby enemies. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">3</value>
+			<value level="11">4</value>
+			<value level="12">5</value>
+		</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13711" toLevel="12" name="Item Skill: Knock Down">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., inflicts Knock Down on target and nearby enemies. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">3</value>
+			<value level="11">4</value>
+			<value level="12">5</value>
+		</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13712" toLevel="12" name="Item Skill: Paralyze">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., inflicts Paralysis on target and nearby enemies. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">3</value>
+			<value level="11">4</value>
+			<value level="12">5</value>
+		</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13713" toLevel="12" name="Item Skill: Silence">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., inflicts Silence on target and nearby enemies. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">3</value>
+			<value level="11">4</value>
+			<value level="12">5</value>
+		</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13714" toLevel="12" name="Item Skill: Sleep">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., inflicts Sleep on target and nearby enemies. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">3</value>
+			<value level="11">4</value>
+			<value level="12">5</value>
+		</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13715" toLevel="12" name="Item Skill: Slow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec., decreases the Speed of target and nearby enemies by 30. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>10</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13716" toLevel="12" name="Item Skill: Stun">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., inflicts Stun on target and nearby enemies. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">3</value>
+			<value level="11">4</value>
+			<value level="12">5</value>
+		</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13717" toLevel="4" name="Item Skill: Cancel Target">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cancels target of nearby enemies. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">60</value>
+			<value level="3">60</value>
+			<value level="4">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>30000</reuseDelay>
+	</skill>
+	<skill id="13718" toLevel="12" name="Item Skill: Aerial Yoke">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., inflicts Aerial Yoke on target. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>20000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">3</value>
+			<value level="11">4</value>
+			<value level="12">5</value>
+		</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13719" toLevel="12" name="Item Skill: Fear">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., inflicts Fear on target. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>20000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">3</value>
+			<value level="11">4</value>
+			<value level="12">5</value>
+		</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13720" toLevel="12" name="Item Skill: Silence">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., inflicts Silence on target. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>20000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">3</value>
+			<value level="11">4</value>
+			<value level="12">5</value>
+		</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13721" toLevel="12" name="Item Skill: Sleep">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., inflicts Sleep on target. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>20000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">3</value>
+			<value level="11">4</value>
+			<value level="12">5</value>
+		</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13722" toLevel="12" name="Item Skill: Slow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 10 sec., decreases the Speed of target by 30. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>20000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>10</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13723" toLevel="12" name="Item Skill: Stun">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., inflicts Stun on target. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>20000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">3</value>
+			<value level="11">4</value>
+			<value level="12">5</value>
+		</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13724" toLevel="12" name="Item Skill: Hold">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., inflicts Hold on target. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>20000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">3</value>
+			<value level="11">4</value>
+			<value level="12">5</value>
+		</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13725" toLevel="12" name="Item Skill: Knock Down">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., inflicts Knock Down on target. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>20000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">3</value>
+			<value level="11">4</value>
+			<value level="12">5</value>
+		</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13726" toLevel="12" name="Item Skill: Paralyze">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 3 sec., inflicts Paralysis on target. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">50</value>
+			<value level="3">50</value>
+			<value level="4">60</value>
+			<value level="5">60</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">60</value>
+			<value level="12">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>20000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">3</value>
+			<value level="5">4</value>
+			<value level="6">5</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">3</value>
+			<value level="11">4</value>
+			<value level="12">5</value>
+		</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="13727" toLevel="4" name="Item Skill: Trick">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cancels enemy's target. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">60</value>
+			<value level="3">60</value>
+			<value level="4">60</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>20000</reuseDelay>
+	</skill>
+	<skill id="13728" toLevel="12" name="Item Skill: Wind Circle">
+		<table name="#power"> 62 69 77 98 109 122 122 136 152 132 147 164 </table>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks nearby enemies with 62 Power added to M. Atk. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">60</value>
+			<value level="2">60</value>
+			<value level="3">60</value>
+			<value level="4">80</value>
+			<value level="5">80</value>
+			<value level="6">80</value>
+			<value level="7">80</value>
+			<value level="8">80</value>
+			<value level="9">80</value>
+			<value level="10">80</value>
+			<value level="11">80</value>
+			<value level="12">80</value>
+		</mpConsume>
+		<hitTime>4000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="13729" toLevel="12" name="Item Skill: Wind Flare">
+		<table name="#power"> 89 99 111 141 157 175 173 193 215 186 207 231 </table>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 89 Power added to M. Atk. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">60</value>
+			<value level="2">60</value>
+			<value level="3">60</value>
+			<value level="4">80</value>
+			<value level="5">80</value>
+			<value level="6">80</value>
+			<value level="7">80</value>
+			<value level="8">80</value>
+			<value level="9">80</value>
+			<value level="10">80</value>
+			<value level="11">80</value>
+			<value level="12">80</value>
+		</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>4000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="13730" toLevel="12" name="Item Skill: Wind Flash">
+		<table name="#power"> 62 69 77 98 109 122 122 136 152 132 147 164 </table>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target and nearby enemies with 62 Power added to M. Atk. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">60</value>
+			<value level="2">60</value>
+			<value level="3">60</value>
+			<value level="4">80</value>
+			<value level="5">80</value>
+			<value level="6">80</value>
+			<value level="7">80</value>
+			<value level="8">80</value>
+			<value level="9">80</value>
+			<value level="10">80</value>
+			<value level="11">80</value>
+			<value level="12">80</value>
+		</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>4000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="13731" toLevel="12" name="Item Skill: Wind Storm">
+		<table name="#power"> 62 69 77 98 109 122 122 136 152 132 147 164 </table>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target and nearby enemies with 62 Power added to M. Atk. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">60</value>
+			<value level="2">60</value>
+			<value level="3">60</value>
+			<value level="4">80</value>
+			<value level="5">80</value>
+			<value level="6">80</value>
+			<value level="7">80</value>
+			<value level="8">80</value>
+			<value level="9">80</value>
+			<value level="10">80</value>
+			<value level="11">80</value>
+			<value level="12">80</value>
+		</mpConsume>
+		<castRange>1100</castRange>
+		<hitTime>4000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="13732" toLevel="12" name="Item Skill: Wind Strike">
+		<table name="#power"> 80 89 99 126 141 157 159 177 197 171 191 213 </table>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attacks target with 80 Power added to M. Atk. -->
+		<icon>icon.skill3123</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">60</value>
+			<value level="2">60</value>
+			<value level="3">60</value>
+			<value level="4">80</value>
+			<value level="5">80</value>
+			<value level="6">80</value>
+			<value level="7">80</value>
+			<value level="8">80</value>
+			<value level="9">80</value>
+			<value level="10">80</value>
+			<value level="11">80</value>
+			<value level="12">80</value>
+		</mpConsume>
+		<castRange>1100</castRange>
+		<hitTime>4000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="13733" toLevel="12" name="Item Skill: Atk. Spd. Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Atk. Spd. by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13734" toLevel="12" name="Item Skill: Max CP Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max CP by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13735" toLevel="12" name="Item Skill: Damage Reflect">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Reflects 3% of Received Damage when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13736" toLevel="9" name="Item Skill: XP Bonus">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases XP Gain by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13737" toLevel="12" name="Item Skill: Max XP Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13738" toLevel="12" name="Item Skill: MP Consumption Decrease">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases M. Skill MP Consumption by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13739" toLevel="12" name="Item Skill: M. Atk. Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases M. Atk. by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13740" toLevel="12" name="Item Skill: M. Def. Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases M. Def. by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13741" toLevel="12" name="Item Skill: Max MP Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max MP by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13742" toLevel="12" name="Item Skill: Casting Spd. Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Casting Spd. by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13743" toLevel="12" name="Item Skill: MP Consumption Decrease">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases P. Skill MP Consumption by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13744" toLevel="12" name="Item Skill: P. Atk. Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Atk. by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13745" toLevel="12" name="Item Skill: P. Def. Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Def. by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13746" toLevel="9" name="Item Skill: PvE Damage Decrease">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases received PvE Damage by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13747" toLevel="9" name="Item Skill: PvE Damage Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases PvE Damage by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13748" toLevel="9" name="Item Skill: PvP Damage Decrease">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases received PvP Damage by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13749" toLevel="9" name="Item Skill: PvP Damage Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases PvP Damage by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13750" toLevel="9" name="Item Skill: SP Bonus">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases SP Gain by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13751" toLevel="12" name="Item Skill: Spd. Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Spd. by 8 when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13752" toLevel="12" name="Item Skill: Vampiric Rage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Recovers 3% of Damage as HP with a certain probability. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13753" toLevel="40" name="Item Skill: Attack Attribute Bonus">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Attack Attribute Bonus by 5 when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13754" toLevel="6" name="Item Skill: Aerial Yoke, Petrification Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Aerial Yoke, Petrification Resistance by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13755" toLevel="6" name="Item Skill: Pull, Petrification Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Pull, Petrification Resistance by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13756" toLevel="6" name="Item Skill: Knock Back/Knock Down, Petrification Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Knock Back/Knock Down, Petrification Resistance by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13757" toLevel="6" name="Item Skill: Poison, Petrification Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Poison, Petrification Resistance by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13758" toLevel="40" name="Item Skill: M. Skill Critical Damage Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases M. Skill Critical Damage by 1% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13759" toLevel="40" name="Item Skill: M. Skill Critical Rate Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases M. Skill Critical Rate by 1% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13760" toLevel="11" name="Item Skill: M. Evasion">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases M. Evasion by 1 when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13761" toLevel="6" name="Item Skill: Paralysis, Petrification Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Paralysis, Petrification Resistance by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13762" toLevel="40" name="Item Skill: P. Skill Critical Rate Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Skill Critical Rate by 0.55% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13763" toLevel="12" name="Item Skill: Petrification Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Petrification Resistance by 1% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13764" toLevel="34" name="Item Skill: Petrification Success Rate Increase">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Petrification Success Rate by 1% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13765" toLevel="6" name="Item Skill: Stun, Petrification Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Stun, Petrification Resistance by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13766" toLevel="6" name="Item Skill: Sleep, Petrification Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Sleep, Petrification Resistance by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13767" toLevel="6" name="Item Skill: Mental Attack, Petrification Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Mental Attack, Petrification Resistance by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13768" toLevel="6" name="Item Skill: Bleed, Petrification Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Bleed, Petrification Resistance by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13769" toLevel="6" name="Item Skill: Hold, Petrification Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Hold, Petrification Resistance by 3% when equipped. -->
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13770" toLevel="1" name="Exalted Tiara">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Attack Attribute Bonus by 50. -->
+		<icon>icon.accessory_noblesse2_tiara_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13771" toLevel="1" name="Exalted Cloak">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR/DEX/CON/INT/WIT/MEN/LUC/CHA + 1. -->
+		<icon>icon.cloak_noblesse2_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13772" toLevel="1" name="Replica Tiara">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Attack Attribute Bonus by 30. -->
+		<icon>icon.accessory_noblesse2_tiara_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13773" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_dagger_pvp_i10</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13774" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_onehand_sword_pvp_i10</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13775" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_twohand_sword_pvp_i10</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13776" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_onehand_blunt_pvp_i10</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13777" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_fist_pvp_i10</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13778" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_spear_pvp_i10</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13779" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_bow_pvp_i10</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13780" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_crossbow_pvp_i10</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13781" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_onehand_magic_sword_pvp_i10</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13782" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_onehand_magic_blunt_pvp_i10</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13783" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_twohand_magic_blunt_pvp_i10</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13784" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_dual_sword_pvp_i10</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13785" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_dual_dagger_pvp_i10</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13786" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_dual_blunt_pvp_i10</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13787" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_dagger_pve_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13788" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_onehand_sword_pve_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13789" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_twohand_sword_pve_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13790" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_onehand_blunt_pve_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13791" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_fist_pve_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13792" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_spear_pve_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13793" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_bow_pve_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13794" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_crossbow_pve_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13795" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_onehand_magic_sword_pve_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13796" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_onehand_magic_blunt_pve_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13797" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_twohand_magic_blunt_pve_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13798" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_dual_sword_pve_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="13799" toLevel="1" name="Additional Ability Health">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases Max HP/MP/CP by 10% -->
+		<icon>icon.weapon_R99_dual_dagger_pve_i00</icon>
+		<operateType>P</operateType>
 	</skill>
 </list>

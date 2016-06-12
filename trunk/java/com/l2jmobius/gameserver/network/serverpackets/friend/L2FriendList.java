@@ -16,51 +16,84 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets.friend;
 
-import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.Friend;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author Erlandys
+ * Support for "Chat with Friends" dialog. <br />
+ * This packet is sent only at login.
+ * @author Tempy
  */
-public class L2FriendList extends L2GameServerPacket
+public class L2FriendList implements IClientOutgoingPacket
 {
-	private final Collection<Friend> _friends;
+	private final List<FriendInfo> _info = new LinkedList<>();
+	
+	private static class FriendInfo
+	{
+		int _objId;
+		String _name;
+		int _level;
+		int _classId;
+		boolean _online;
+		
+		public FriendInfo(int objId, String name, boolean online, int level, int classId)
+		{
+			_objId = objId;
+			_name = name;
+			_online = online;
+			_level = level;
+			_classId = classId;
+		}
+	}
 	
 	public L2FriendList(L2PcInstance player)
 	{
-		_friends = player.getFriendList().values();
-	}
-	
-	@Override
-	protected final void writeImpl()
-	{
-		writeC(0x75);
-		writeD(_friends.size());
-		for (Friend friend : _friends)
+		for (int objId : player.getFriendList())
 		{
-			final L2PcInstance player = friend.getFriend();
-			if (player != null)
+			final String name = CharNameTable.getInstance().getNameById(objId);
+			final L2PcInstance player1 = L2World.getInstance().getPlayer(objId);
+			boolean online = false;
+			int level = 0;
+			int classId = 0;
+			
+			if (player1 != null)
 			{
-				writeD(player.getObjectId());
-				writeS(player.getName());
-				writeD(0x01);
-				writeD(player.getObjectId());
-				writeD(player.getLevel());
-				writeD(player.getClassId().getId());
+				online = true;
+				level = player1.getLevel();
+				classId = player1.getClassId().getId();
 			}
 			else
 			{
-				writeD(friend.getFriendOID());
-				writeS(friend.getName());
-				writeD(0x00);
-				writeD(0x00);
-				writeD(friend.getLevel());
-				writeD(friend.getClassId());
+				level = CharNameTable.getInstance().getLevelById(objId);
+				classId = CharNameTable.getInstance().getClassIdById(objId);
 			}
-			writeH(0x00);
+			_info.add(new FriendInfo(objId, name, online, level, classId));
 		}
+	}
+	
+	@Override
+	public boolean write(PacketWriter packet)
+	{
+		OutgoingPackets.L2_FRIEND_LIST.writeId(packet);
+		
+		packet.writeD(_info.size());
+		for (FriendInfo info : _info)
+		{
+			packet.writeD(info._objId); // character id
+			packet.writeS(info._name);
+			packet.writeD(info._online ? 0x01 : 0x00); // online
+			packet.writeD(info._online ? info._objId : 0x00); // object id if online
+			packet.writeD(info._level);
+			packet.writeD(info._classId);
+			packet.writeH(0x00);
+		}
+		return true;
 	}
 }

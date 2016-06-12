@@ -26,6 +26,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerInvSize extends Condition
 {
+	
 	private final int _size;
 	
 	/**
@@ -40,6 +41,10 @@ public class ConditionPlayerInvSize extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		return (effector.getActingPlayer() == null) || (effector.getActingPlayer().getInventory().getSize(false) <= (effector.getActingPlayer().getInventoryLimit() - _size));
+		if (effector.getActingPlayer() != null)
+		{
+			return effector.getActingPlayer().getInventory().getSize(i -> !i.isQuestItem()) <= (effector.getActingPlayer().getInventoryLimit() - _size);
+		}
+		return true;
 	}
 }

@@ -72,7 +72,7 @@ public enum CommissionTreeType
 	private final int _clientId;
 	private final Set<CommissionItemType> _commissionItemTypes;
 	
-	private CommissionTreeType(int clientId, CommissionItemType... commissionItemTypes)
+	CommissionTreeType(int clientId, CommissionItemType... commissionItemTypes)
 	{
 		_clientId = clientId;
 		_commissionItemTypes = Collections.unmodifiableSet(new HashSet<>(Arrays.asList(commissionItemTypes)));

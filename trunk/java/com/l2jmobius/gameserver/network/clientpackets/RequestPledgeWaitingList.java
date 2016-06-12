@@ -16,40 +16,34 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeWaitingList;
 
 /**
  * @author Sdw
  */
-public class RequestPledgeWaitingList extends L2GameClientPacket
+public class RequestPledgeWaitingList implements IClientIncomingPacket
 {
-	private static final String _C__D0_D9_REQUESTPLEDGEDWAITINGLIST = "[C] D0;D9 RequestPledgeWaitingList";
-	
 	private int _clanId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_clanId = readD();
+		_clanId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || (activeChar.getClanId() != _clanId))
 		{
 			return;
 		}
 		
-		activeChar.sendPacket(new ExPledgeWaitingList(_clanId));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_D9_REQUESTPLEDGEDWAITINGLIST;
+		client.sendPacket(new ExPledgeWaitingList(_clanId));
 	}
 }

@@ -16,28 +16,30 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
- * Duel Ready packet implementation.
- * @author KenM, Zoey76
+ * @author KenM
  */
-public class ExDuelReady extends L2GameServerPacket
+public class ExDuelReady implements IClientOutgoingPacket
 {
 	public static final ExDuelReady PLAYER_DUEL = new ExDuelReady(false);
 	public static final ExDuelReady PARTY_DUEL = new ExDuelReady(true);
 	
-	private final boolean _partyDuel;
+	private final int _partyDuel;
 	
-	public ExDuelReady(boolean partyDuel)
+	public ExDuelReady(boolean isPartyDuel)
 	{
-		_partyDuel = partyDuel;
+		_partyDuel = isPartyDuel ? 1 : 0;
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x4E);
+		OutgoingPackets.EX_DUEL_READY.writeId(packet);
 		
-		writeD(_partyDuel ? 1 : 0);
+		packet.writeD(_partyDuel);
+		return true;
 	}
 }

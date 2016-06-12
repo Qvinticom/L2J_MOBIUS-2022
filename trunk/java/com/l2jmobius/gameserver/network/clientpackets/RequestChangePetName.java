@@ -16,31 +16,32 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.PetNameTable;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * This class ...
  * @version $Revision: 1.3.4.4 $ $Date: 2005/04/06 16:13:48 $
  */
-public final class RequestChangePetName extends L2GameClientPacket
+public final class RequestChangePetName implements IClientIncomingPacket
 {
-	private static final String _C__93_REQUESTCHANGEPETNAME = "[C] 93 RequestChangePetName";
-	
 	private String _name;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_name = readS();
+		_name = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -85,11 +86,5 @@ public final class RequestChangePetName extends L2GameClientPacket
 		
 		pet.setName(_name);
 		pet.updateAndBroadcastStatus(1);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__93_REQUESTCHANGEPETNAME;
 	}
 }

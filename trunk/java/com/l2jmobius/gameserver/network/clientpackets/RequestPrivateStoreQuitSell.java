@@ -16,27 +16,27 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * This class ...
  * @version $Revision: 1.2.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestPrivateStoreQuitSell extends L2GameClientPacket
+public final class RequestPrivateStoreQuitSell implements IClientIncomingPacket
 {
-	private static final String _C__96_REQUESTPRIVATESTOREQUITSELL = "[C] 96 RequestPrivateStoreQuitSell";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -45,17 +45,5 @@ public final class RequestPrivateStoreQuitSell extends L2GameClientPacket
 		player.setPrivateStoreType(PrivateStoreType.NONE);
 		player.standUp();
 		player.broadcastUserInfo();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__96_REQUESTPRIVATESTOREQUITSELL;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

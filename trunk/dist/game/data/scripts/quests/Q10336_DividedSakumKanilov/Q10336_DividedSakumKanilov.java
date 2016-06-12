@@ -16,130 +16,128 @@
  */
 package quests.Q10336_DividedSakumKanilov;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.util.Util;
+
+import quests.Q10335_RequestToFindSakum.Q10335_RequestToFindSakum;
 
 /**
  * Divided Sakum, Kanilov (10336)
- * @author spider
+ * @author St3eT
  */
-public class Q10336_DividedSakumKanilov extends Quest
+public final class Q10336_DividedSakumKanilov extends Quest
 {
 	// NPCs
 	private static final int ZENATH = 33509;
-	private static final int ADV_GUILDSMAN = 31795;
-	// Monster
+	private static final int ADVENTURE_GUILDSMAN = 31795;
 	private static final int KANILOV = 27451;
 	// Items
-	private static final int SAKUMS_SKETCH_A = 17584;
+	private static final int SAKUM_SKETCH = 17584;
+	private static final int EWD = 955; // Scroll: Enchant Weapon (D-grade)
+	// Misc
 	private static final int MIN_LEVEL = 27;
 	private static final int MAX_LEVEL = 40;
-	// Rewards
-	private static final int ADENA_REWARD = 1000;
-	private static final int EXP_REWARD = 500000;
-	private static final int SP_REWARD = 120;
-	private static final ItemHolder SCROLL_EW_D = new ItemHolder(955, 3); // 3 scrolls on retail server
 	
 	public Q10336_DividedSakumKanilov()
 	{
-		super(10336, Q10336_DividedSakumKanilov.class.getSimpleName(), "Divided Sakum, Kanilov");
+		super(10336);
 		addStartNpc(ZENATH);
-		addTalkId(ZENATH, ADV_GUILDSMAN);
+		addTalkId(ZENATH, ADVENTURE_GUILDSMAN);
 		addKillId(KANILOV);
-		registerQuestItems(SAKUMS_SKETCH_A);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.htm");
+		registerQuestItems(SAKUM_SKETCH);
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33509-08.htm");
+		addCondCompletedQuest(Q10335_RequestToFindSakum.class.getSimpleName(), "33509-08.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return null;
 		}
 		
-		String texthtml = null;
+		String htmltext = null;
 		switch (event)
 		{
 			case "33509-02.htm":
+			case "31795-05.htm":
 			{
-				texthtml = event;
+				htmltext = event;
 				break;
 			}
-			case "33509-03.htm": // start the quest
+			case "33509-03.htm":
 			{
-				qs.startQuest();
-				texthtml = event;
+				st.startQuest();
+				htmltext = event;
 				break;
 			}
-			case "31795-02.html":
+			case "31795-06.htm":
 			{
-				texthtml = event;
-				break;
-			}
-			case "31795-03.html": // end quest, take sketch, give rewards
-			{
-				giveAdena(player, ADENA_REWARD, true);
-				addExpAndSp(player, EXP_REWARD, SP_REWARD);
-				rewardItems(player, SCROLL_EW_D);
-				qs.exitQuest(false, true);
-				texthtml = event;
+				if (st.isCond(3))
+				{
+					giveAdena(player, 1000, true);
+					giveItems(player, EWD, 3);
+					addExpAndSp(player, 500000, 120);
+					st.exitQuest(false, true);
+					htmltext = event;
+				}
 				break;
 			}
 		}
-		return texthtml;
+		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
-		final QuestState qs = getQuestState(player, true);
-		String texthtml = null;
-		switch (qs.getState())
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = getQuestState(player, true);
+		
+		switch (st.getState())
 		{
 			case State.CREATED:
 			{
-				texthtml = npc.getId() == ZENATH ? "33509-01.htm" : getNoQuestMsg(player);
+				htmltext = npc.getId() == ZENATH ? "33509-01.htm" : "31795-02.htm";
 				break;
 			}
 			case State.STARTED:
 			{
-				switch (npc.getId())
+				switch (st.getCond())
 				{
-					case ZENATH:
+					case 1:
 					{
-						if (qs.isCond(1))
+						htmltext = npc.getId() == ZENATH ? "33509-04.htm" : "31795-01.htm";
+						break;
+					}
+					case 2:
+					{
+						if (npc.getId() == ZENATH)
 						{
-							texthtml = "33509-03.htm";
-						}
-						else if (qs.isCond(2)) // report defeated kanilov, get the sketch
-						{
-							giveItems(player, SAKUMS_SKETCH_A, 1);
-							qs.setCond(3);
-							texthtml = "33509-05.html";
+							if (!isSimulated)
+							{
+								st.setCond(3);
+								giveItems(player, SAKUM_SKETCH, 1);
+							}
+							htmltext = "33509-05.htm";
 						}
 						else
 						{
-							texthtml = "33509-06.html";
+							htmltext = "31795-03.htm";
 						}
 						break;
 					}
-					case ADV_GUILDSMAN:
+					case 3:
 					{
-						if (qs.isCond(3)) // start end quest dialogs
-						{
-							texthtml = "31795-01.html";
-						}
-						else
-						{
-							texthtml = getNoQuestMsg(player);
-						}
+						htmltext = npc.getId() == ZENATH ? "33509-06.htm" : "31795-04.htm";
 						break;
 					}
 				}
@@ -147,21 +145,36 @@ public class Q10336_DividedSakumKanilov extends Quest
 			}
 			case State.COMPLETED:
 			{
-				texthtml = npc.getId() == ADV_GUILDSMAN ? "31795-04.html" : getAlreadyCompletedMsg(player);
+				htmltext = npc.getId() == ZENATH ? "33509-07.htm" : "31795-07.htm";
 				break;
 			}
 		}
-		return texthtml;
+		return htmltext;
 	}
 	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(killer, false); // kill counts independent on party/no party
-		if ((qs != null) && qs.isStarted() && qs.isCond(1) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
+		final QuestState st = getQuestState(killer, false);
+		
+		if ((st != null) && st.isStarted() && st.isCond(1))
 		{
-			qs.setCond(2);
+			st.set("killed_" + KANILOV, 1);
+			st.setCond(2);
 		}
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
+	{
+		final QuestState st = getQuestState(activeChar, false);
+		if ((st != null) && st.isStarted() && st.isCond(1))
+		{
+			final Set<NpcLogListHolder> npcLogList = new HashSet<>(1);
+			npcLogList.add(new NpcLogListHolder(KANILOV, false, st.getInt("killed_" + KANILOV)));
+			return npcLogList;
+		}
+		return super.getNpcLogList(activeChar);
 	}
 }

@@ -19,20 +19,21 @@ package com.l2jmobius.gameserver.data.xml.impl;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.holders.RangeAbilityPointsHolder;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * @author UnAfraid
  */
-public final class AbilityPointsData implements IXmlReader
+public final class AbilityPointsData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(AbilityPointsData.class.getName());
 	private final List<RangeAbilityPointsHolder> _points = new ArrayList<>();
 	
 	protected AbilityPointsData()
@@ -44,12 +45,12 @@ public final class AbilityPointsData implements IXmlReader
 	public synchronized void load()
 	{
 		_points.clear();
-		parseFile(new File("config/AbilityPoints.xml"));
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _points.size() + " range fees.");
+		parseDatapackFile("config/AbilityPoints.xml");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _points.size() + " range fees.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
@@ -60,7 +61,10 @@ public final class AbilityPointsData implements IXmlReader
 					if ("points".equalsIgnoreCase(d.getNodeName()))
 					{
 						final NamedNodeMap attrs = d.getAttributes();
-						_points.add(new RangeAbilityPointsHolder(parseInteger(attrs, "from"), parseInteger(attrs, "to"), parseInteger(attrs, "costs")));
+						final int from = parseInteger(attrs, "from");
+						final int to = parseInteger(attrs, "to");
+						final int costs = parseInteger(attrs, "costs");
+						_points.add(new RangeAbilityPointsHolder(from, to, costs));
 					}
 				}
 			}
@@ -83,12 +87,18 @@ public final class AbilityPointsData implements IXmlReader
 	{
 		points++; // for next point
 		final RangeAbilityPointsHolder holder = getHolder(points);
-		if (holder != null)
+		if (holder == null)
 		{
-			return holder.getSP();
+			final RangeAbilityPointsHolder prevHolder = getHolder(points - 1);
+			if (prevHolder != null)
+			{
+				return prevHolder.getSP();
+			}
+			
+			// No data found
+			return points >= 13 ? 1_000_000_000 : points >= 9 ? 750_000_000 : points >= 5 ? 500_000_000 : 250_000_000;
 		}
-		final RangeAbilityPointsHolder prevHolder = getHolder(points - 1);
-		return prevHolder != null ? prevHolder.getSP() : points >= 13 ? 1_000_000_000 : points >= 9 ? 750_000_000 : points >= 5 ? 500_000_000 : 250_000_000;
+		return holder.getSP();
 	}
 	
 	public static AbilityPointsData getInstance()

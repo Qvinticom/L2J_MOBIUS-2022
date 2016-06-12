@@ -16,31 +16,33 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.mentoring;
 
-import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.mentoring.ExMentorAdd;
 
 /**
  * @author Gnacik, UnAfraid
  */
-public class RequestMenteeAdd extends L2GameClientPacket
+public class RequestMenteeAdd implements IClientIncomingPacket
 {
 	private String _target;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_target = readS();
+		_target = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance mentor = getClient().getActiveChar();
+		final L2PcInstance mentor = client.getActiveChar();
 		if (mentor == null)
 		{
 			return;
@@ -52,22 +54,10 @@ public class RequestMenteeAdd extends L2GameClientPacket
 			return;
 		}
 		
-		if (Config.FACTION_SYSTEM_ENABLED && ((mentor.isEvil() && mentee.isGood()) || (mentor.isGood() && mentee.isEvil())))
-		{
-			mentor.sendMessage("You cannot mentor a member of the opposing faction.");
-			return;
-		}
-		
 		if (ConfirmMenteeAdd.validate(mentor, mentee))
 		{
 			mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OFFERED_TO_BECOME_S1_S_MENTOR).addCharName(mentee));
 			mentee.sendPacket(new ExMentorAdd(mentor));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
 	}
 }

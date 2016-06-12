@@ -14,16 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
 
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class GMViewSkillInfo extends L2GameServerPacket
+public class GMViewSkillInfo implements IClientOutgoingPacket
 {
 	private final L2PcInstance _activeChar;
 	private final Collection<Skill> _skills;
@@ -31,35 +32,29 @@ public class GMViewSkillInfo extends L2GameServerPacket
 	public GMViewSkillInfo(L2PcInstance cha)
 	{
 		_activeChar = cha;
-		_skills = _activeChar.getAllSkills();
+		_skills = _activeChar.getSkillList();
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x97);
-		writeS(_activeChar.getName());
-		writeD(_skills.size());
+		OutgoingPackets.GM_VIEW_SKILL_INFO.writeId(packet);
+		
+		packet.writeS(_activeChar.getName());
+		packet.writeD(_skills.size());
 		
 		final boolean isDisabled = (_activeChar.getClan() != null) && (_activeChar.getClan().getReputationScore() < 0);
 		
 		for (Skill skill : _skills)
 		{
-			writeD(skill.isPassive() ? 1 : 0);
-			if (skill.getDisplayLevel() < 100)
-			{
-				writeD(skill.getDisplayLevel());
-			}
-			else
-			{
-				final int maxLevel = SkillData.getInstance().getMaxLevel(skill.getDisplayLevel());
-				writeH(maxLevel);
-				writeH(skill.getDisplayLevel());
-			}
-			writeD(skill.getDisplayId());
-			writeD(0x00);
-			writeC(isDisabled && skill.isClanSkill() ? 1 : 0);
-			writeC(SkillData.getInstance().isEnchantable(skill.getDisplayId()) ? 1 : 0);
+			packet.writeD(skill.isPassive() ? 1 : 0);
+			packet.writeH(skill.getDisplayLevel());
+			packet.writeH(0x00); // Sub level
+			packet.writeD(skill.getDisplayId());
+			packet.writeD(0x00);
+			packet.writeC(isDisabled && skill.isClanSkill() ? 1 : 0);
+			packet.writeC(SkillData.getInstance().isEnchantable(skill.getDisplayId()) ? 1 : 0);
 		}
+		return true;
 	}
 }

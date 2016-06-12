@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.instancemanager;
 
+import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.L2World;
@@ -26,11 +26,11 @@ import com.l2jmobius.gameserver.model.VehiclePathPoint;
 import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 public class BoatManager
 {
-	private final Map<Integer, L2BoatInstance> _boats = new ConcurrentHashMap<>();
+	private final Map<Integer, L2BoatInstance> _boats = new HashMap<>();
 	private final boolean[] _docksBusy = new boolean[3];
 	
 	public static final int TALKING_ISLAND = 1;
@@ -62,6 +62,13 @@ public class BoatManager
 		npcDat.set("level", 0);
 		npcDat.set("jClass", "boat");
 		
+		npcDat.set("baseSTR", 0);
+		npcDat.set("baseCON", 0);
+		npcDat.set("baseDEX", 0);
+		npcDat.set("baseINT", 0);
+		npcDat.set("baseWIT", 0);
+		npcDat.set("baseMEN", 0);
+		
 		npcDat.set("baseShldDef", 0);
 		npcDat.set("baseShldRate", 0);
 		npcDat.set("baseAccCombat", 38);
@@ -69,8 +76,8 @@ public class BoatManager
 		npcDat.set("baseCritRate", 38);
 		
 		// npcDat.set("name", "");
-		npcDat.set("collisionRadius", 0);
-		npcDat.set("collisionHeight", 0);
+		npcDat.set("collision_radius", 0);
+		npcDat.set("collision_height", 0);
 		npcDat.set("sex", "male");
 		npcDat.set("type", "");
 		npcDat.set("baseAtkRange", 0);
@@ -93,13 +100,12 @@ public class BoatManager
 		npcDat.set("baseMpReg", 3.e-3f);
 		npcDat.set("basePDef", 100);
 		npcDat.set("baseMDef", 100);
-		
-		final L2BoatInstance boat = new L2BoatInstance(new L2CharTemplate(npcDat));
+		final L2CharTemplate template = new L2CharTemplate(npcDat);
+		final L2BoatInstance boat = new L2BoatInstance(template);
+		_boats.put(boat.getObjectId(), boat);
 		boat.setHeading(heading);
 		boat.setXYZInvisible(x, y, z);
 		boat.spawnMe();
-		
-		_boats.put(boat.getObjectId(), boat);
 		return boat;
 	}
 	
@@ -151,7 +157,7 @@ public class BoatManager
 	 * @param point2
 	 * @param packet
 	 */
-	public void broadcastPacket(VehiclePathPoint point1, VehiclePathPoint point2, L2GameServerPacket packet)
+	public void broadcastPacket(VehiclePathPoint point1, VehiclePathPoint point2, IClientOutgoingPacket packet)
 	{
 		broadcastPacketsToPlayers(point1, point2, packet);
 	}
@@ -162,12 +168,12 @@ public class BoatManager
 	 * @param point2
 	 * @param packets
 	 */
-	public void broadcastPackets(VehiclePathPoint point1, VehiclePathPoint point2, L2GameServerPacket... packets)
+	public void broadcastPackets(VehiclePathPoint point1, VehiclePathPoint point2, IClientOutgoingPacket... packets)
 	{
 		broadcastPacketsToPlayers(point1, point2, packets);
 	}
 	
-	private void broadcastPacketsToPlayers(VehiclePathPoint point1, VehiclePathPoint point2, L2GameServerPacket... packets)
+	private void broadcastPacketsToPlayers(VehiclePathPoint point1, VehiclePathPoint point2, IClientOutgoingPacket... packets)
 	{
 		for (L2PcInstance player : L2World.getInstance().getPlayers())
 		{
@@ -175,7 +181,7 @@ public class BoatManager
 			double dy = (double) player.getY() - point1.getY();
 			if (Math.sqrt((dx * dx) + (dy * dy)) < Config.BOAT_BROADCAST_RADIUS)
 			{
-				for (L2GameServerPacket p : packets)
+				for (IClientOutgoingPacket p : packets)
 				{
 					player.sendPacket(p);
 				}
@@ -186,7 +192,7 @@ public class BoatManager
 				dy = (double) player.getY() - point2.getY();
 				if (Math.sqrt((dx * dx) + (dy * dy)) < Config.BOAT_BROADCAST_RADIUS)
 				{
-					for (L2GameServerPacket p : packets)
+					for (IClientOutgoingPacket p : packets)
 					{
 						player.sendPacket(p);
 					}

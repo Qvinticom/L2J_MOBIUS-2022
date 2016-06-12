@@ -16,33 +16,36 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.L2AccessLevel;
 import com.l2jmobius.gameserver.model.L2AdminCommandAccessRight;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * Loads administrator access levels and commands.
  * @author UnAfraid
  */
-public final class AdminData implements IXmlReader
+public final class AdminData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(AdminData.class.getName());
+	
 	private final Map<Integer, L2AccessLevel> _accessLevels = new HashMap<>();
 	private final Map<String, L2AdminCommandAccessRight> _adminCommandAccessRights = new HashMap<>();
 	private final Map<L2PcInstance, Boolean> _gmList = new ConcurrentHashMap<>();
@@ -58,18 +61,20 @@ public final class AdminData implements IXmlReader
 	{
 		_accessLevels.clear();
 		_adminCommandAccessRights.clear();
-		parseDatapackFile("../config/AccessLevels.xml");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _accessLevels.size() + " Access Levels.");
-		parseDatapackFile("../config/AdminCommands.xml");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _adminCommandAccessRights.size() + " Access Commands.");
+		parseDatapackFile("config/AccessLevels.xml");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _accessLevels.size() + " Access Levels.");
+		parseDatapackFile("config/AdminCommands.xml");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _adminCommandAccessRights.size() + " Access Commands.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		NamedNodeMap attrs;
 		Node attr;
 		StatsSet set;
+		L2AccessLevel level;
+		L2AdminCommandAccessRight command;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -85,7 +90,7 @@ public final class AdminData implements IXmlReader
 							attr = attrs.item(i);
 							set.set(attr.getNodeName(), attr.getNodeValue());
 						}
-						final L2AccessLevel level = new L2AccessLevel(set);
+						level = new L2AccessLevel(set);
 						if (level.getLevel() > _highestLevel)
 						{
 							_highestLevel = level.getLevel();
@@ -101,7 +106,7 @@ public final class AdminData implements IXmlReader
 							attr = attrs.item(i);
 							set.set(attr.getNodeName(), attr.getNodeValue());
 						}
-						final L2AdminCommandAccessRight command = new L2AdminCommandAccessRight(set);
+						command = new L2AdminCommandAccessRight(set);
 						_adminCommandAccessRights.put(command.getAdminCommand(), command);
 					}
 				}
@@ -119,10 +124,6 @@ public final class AdminData implements IXmlReader
 		if (accessLevelNum < 0)
 		{
 			return _accessLevels.get(-1);
-		}
-		if (!_accessLevels.containsKey(accessLevelNum))
-		{
-			_accessLevels.put(accessLevelNum, new L2AccessLevel());
 		}
 		return _accessLevels.get(accessLevelNum);
 	}
@@ -316,7 +317,7 @@ public final class AdminData implements IXmlReader
 	 * Broadcast to GMs.
 	 * @param packet the packet
 	 */
-	public void broadcastToGMs(L2GameServerPacket packet)
+	public void broadcastToGMs(IClientOutgoingPacket packet)
 	{
 		for (L2PcInstance gm : getAllGms(true))
 		{
@@ -327,13 +328,15 @@ public final class AdminData implements IXmlReader
 	/**
 	 * Broadcast message to GMs.
 	 * @param message the message
+	 * @return the message that was broadcasted
 	 */
-	public void broadcastMessageToGMs(String message)
+	public String broadcastMessageToGMs(String message)
 	{
 		for (L2PcInstance gm : getAllGms(true))
 		{
 			gm.sendMessage(message);
 		}
+		return message;
 	}
 	
 	/**

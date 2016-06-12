@@ -16,13 +16,14 @@
  */
 package custom.events.Race;
 
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -37,14 +38,14 @@ import com.l2jmobius.gameserver.util.Broadcast;
 /**
  * @author Gnacik
  */
-final class Race extends Event
+public final class Race extends Event
 {
 	// Event NPC's list
-	private final Set<L2Npc> _npcs = ConcurrentHashMap.newKeySet();
+	private List<L2Npc> _npclist;
 	// Npc
 	private L2Npc _npc;
 	// Player list
-	private final Set<L2PcInstance> _players = ConcurrentHashMap.newKeySet();
+	private List<L2PcInstance> _players;
 	// Event Task
 	ScheduledFuture<?> _eventTask = null;
 	// Event state
@@ -101,7 +102,6 @@ final class Race extends Event
 	
 	private Race()
 	{
-		super(Race.class.getSimpleName(), "custom/events");
 		addStartNpc(_start_npc);
 		addFirstTalkId(_start_npc);
 		addTalkId(_start_npc);
@@ -118,7 +118,6 @@ final class Race extends Event
 		{
 			return false;
 		}
-		
 		// Check Custom Table - we use custom NPC's
 		if (!Config.CUSTOM_NPC_DATA)
 		{
@@ -126,7 +125,9 @@ final class Race extends Event
 			eventMaker.sendMessage("Event " + getName() + " can't be started because custom NPC table is disabled!");
 			return false;
 		}
-		
+		// Initialize list
+		_npclist = new ArrayList<>();
+		_players = new CopyOnWriteArrayList<>();
 		// Set Event active
 		_isactive = true;
 		// Spawn Manager
@@ -140,9 +141,10 @@ final class Race extends Event
 		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(() -> StartRace(), _time_register * 60 * 1000);
 		
 		return true;
+		
 	}
 	
-	private void StartRace()
+	protected void StartRace()
 	{
 		// Abort race if no players signup
 		if (_players.isEmpty())
@@ -163,7 +165,7 @@ final class Race extends Event
 		// Transform players and send message
 		for (L2PcInstance player : _players)
 		{
-			if (player.isOnline())
+			if ((player != null) && player.isOnline())
 			{
 				if (player.isInsideRadius(_npc, 500, false, false))
 				{
@@ -205,19 +207,22 @@ final class Race extends Event
 		// Teleport to event start point
 		for (L2PcInstance player : _players)
 		{
-			if (player.isOnline())
+			if ((player != null) && player.isOnline())
 			{
 				player.untransform();
-				player.teleToLocation(_npc.getX(), _npc.getY(), _npc.getZ(), true);
+				player.teleToLocation(_npc, true);
 			}
 		}
-		_players.clear();
 		// Despawn NPCs
-		for (L2Npc _npc : _npcs)
+		for (L2Npc _npc : _npclist)
 		{
-			_npc.deleteMe();
+			if (_npc != null)
+			{
+				_npc.deleteMe();
+			}
 		}
-		_npcs.clear();
+		_npclist.clear();
+		_players.clear();
 		// Announce event end
 		Broadcast.toAllOnlinePlayers("* Race Event finished *");
 		
@@ -248,6 +253,7 @@ final class Race extends Event
 					activeChar.sendMessage("Error while changing transform skill");
 				}
 			}
+			
 		}
 		else if (bypass.startsWith("tele"))
 		{
@@ -268,8 +274,8 @@ final class Race extends Event
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final String htmltext = event;
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return null;
 		}
@@ -347,13 +353,16 @@ final class Race extends Event
 	private L2Npc recordSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
 	{
 		final L2Npc npc = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
-		_npcs.add(npc);
+		if (npc != null)
+		{
+			_npclist.add(npc);
+		}
 		return npc;
 	}
 	
 	private void transformPlayer(L2PcInstance player)
 	{
-		if (player.isTransformed() || player.isInStance())
+		if (player.isTransformed())
 		{
 			player.untransform();
 		}
@@ -381,7 +390,7 @@ final class Race extends Event
 		activeChar.sendPacket(html);
 	}
 	
-	private void timeUp()
+	protected void timeUp()
 	{
 		Broadcast.toAllOnlinePlayers("Time up, nobody wins!");
 		eventStop();

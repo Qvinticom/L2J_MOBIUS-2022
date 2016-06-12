@@ -24,7 +24,8 @@ public enum PunishmentType
 	BAN,
 	CHAT_BAN,
 	PARTY_BAN,
-	JAIL;
+	JAIL,
+	COC_BAN;
 	
 	public static PunishmentType getByName(String name)
 	{

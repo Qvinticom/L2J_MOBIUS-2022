@@ -16,16 +16,14 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.entity.Instance;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.util.Rnd;
 
 /**
  * Open Door effect implementation.
@@ -36,10 +34,8 @@ public final class OpenDoor extends AbstractEffect
 	private final int _chance;
 	private final boolean _isItem;
 	
-	public OpenDoor(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public OpenDoor(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_chance = params.getInt("chance", 0);
 		_isItem = params.getBoolean("isItem", false);
 	}
@@ -51,46 +47,21 @@ public final class OpenDoor extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (!info.getEffected().isDoor())
+		if (!effected.isDoor() || (effector.getInstanceWorld() != effected.getInstanceWorld()))
 		{
 			return;
 		}
 		
-		final L2Character effector = info.getEffector();
-		L2DoorInstance door = (L2DoorInstance) info.getEffected();
-		// Check if door in the different instance
-		if (effector.getInstanceId() != door.getInstanceId())
-		{
-			// Search for the instance
-			final Instance inst = InstanceManager.getInstance().getInstance(effector.getInstanceId());
-			if (inst == null)
-			{
-				// Instance not found
-				return;
-			}
-			final L2DoorInstance instanceDoor = inst.getDoor(door.getId());
-			if (instanceDoor != null)
-			{
-				// Door found
-				door = instanceDoor;
-			}
-			
-			// Checking instance again
-			if (effector.getInstanceId() != door.getInstanceId())
-			{
-				return;
-			}
-		}
-		
+		final L2DoorInstance door = (L2DoorInstance) effected;
 		if ((!door.isOpenableBySkill() && !_isItem) || (door.getFort() != null))
 		{
 			effector.sendPacket(SystemMessageId.THIS_DOOR_CANNOT_BE_UNLOCKED);
 			return;
 		}
 		
-		if ((Rnd.get(100) < _chance) && !door.getOpen())
+		if ((Rnd.get(100) < _chance) && !door.isOpen())
 		{
 			door.openMe();
 		}

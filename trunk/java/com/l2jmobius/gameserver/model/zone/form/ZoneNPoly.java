@@ -18,10 +18,11 @@ package com.l2jmobius.gameserver.model.zone.form;
 
 import java.awt.Polygon;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
-import com.l2jmobius.util.Rnd;
 
 /**
  * A not so primitive npoly zone
@@ -50,13 +51,13 @@ public class ZoneNPoly extends L2ZoneForm
 	@Override
 	public boolean isInsideZone(int x, int y, int z)
 	{
-		return _p.contains(x, y) && (z >= _z1) && (z <= _z2);
+		return (_p.contains(x, y) && (z >= _z1) && (z <= _z2));
 	}
 	
 	@Override
 	public boolean intersectsRectangle(int ax1, int ax2, int ay1, int ay2)
 	{
-		return _p.intersects(Math.min(ax1, ax2), Math.min(ay1, ay2), Math.abs(ax2 - ax1), Math.abs(ay2 - ay1));
+		return (_p.intersects(Math.min(ax1, ax2), Math.min(ay1, ay2), Math.abs(ax2 - ax1), Math.abs(ay2 - ay1)));
 	}
 	
 	@Override
@@ -94,21 +95,31 @@ public class ZoneNPoly extends L2ZoneForm
 	@Override
 	public void visualizeZone(int z)
 	{
+		final int[] _x = _p.xpoints;
+		final int[] _y = _p.ypoints;
+		
 		for (int i = 0; i < _p.npoints; i++)
 		{
-			final int nextIndex = (i + 1) == _p.xpoints.length ? 0 : i + 1;
-			final int vx = _p.xpoints[nextIndex] - _p.xpoints[i];
-			final int vy = _p.ypoints[nextIndex] - _p.ypoints[i];
-			final float lenght = (float) Math.sqrt((vx * vx) + (vy * vy)) / STEP;
+			int nextIndex = i + 1;
+			// ending point to first one
+			if (nextIndex == _x.length)
+			{
+				nextIndex = 0;
+			}
+			final int vx = _x[nextIndex] - _x[i];
+			final int vy = _y[nextIndex] - _y[i];
+			float lenght = (float) Math.sqrt((vx * vx) + (vy * vy));
+			lenght /= STEP;
 			for (int o = 1; o <= lenght; o++)
 			{
-				dropDebugItem(Inventory.ADENA_ID, 1, (int) (_p.xpoints[i] + ((o / lenght) * vx)), (int) (_p.ypoints[i] + ((o / lenght) * vy)), z);
+				final float k = o / lenght;
+				dropDebugItem(Inventory.ADENA_ID, 1, (int) (_x[i] + (k * vx)), (int) (_y[i] + (k * vy)), z);
 			}
 		}
 	}
 	
 	@Override
-	public int[] getRandomPoint()
+	public Location getRandomPoint()
 	{
 		int x, y;
 		
@@ -127,11 +138,16 @@ public class ZoneNPoly extends L2ZoneForm
 			y = Rnd.get(_minY, _maxY);
 		}
 		
-		return new int[]
-		{
-			x,
-			y,
-			GeoData.getInstance().getHeight(x, y, _z1)
-		};
+		return new Location(x, y, GeoData.getInstance().getHeight(x, y, _z1));
+	}
+	
+	public int[] getX()
+	{
+		return _p.xpoints;
+	}
+	
+	public int[] getY()
+	{
+		return _p.ypoints;
 	}
 }

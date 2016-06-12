@@ -17,26 +17,30 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Grow effect implementation.
  */
 public final class Grow extends AbstractEffect
 {
-	public Grow(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Grow(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		return L2EffectType.BUFF;
+		if (effected.isNpc())
+		{
+			final L2Npc npc = (L2Npc) effected;
+			npc.setCollisionHeight(npc.getTemplate().getCollisionHeightGrown());
+			npc.setCollisionRadius(npc.getTemplate().getCollisionRadiusGrown());
+		}
 	}
 	
 	@Override
@@ -45,17 +49,8 @@ public final class Grow extends AbstractEffect
 		if (info.getEffected().isNpc())
 		{
 			final L2Npc npc = (L2Npc) info.getEffected();
+			npc.setCollisionHeight(npc.getTemplate().getCollisionHeight());
 			npc.setCollisionRadius(npc.getTemplate().getfCollisionRadius());
-		}
-	}
-	
-	@Override
-	public void onStart(BuffInfo info)
-	{
-		if (info.getEffected().isNpc())
-		{
-			final L2Npc npc = (L2Npc) info.getEffected();
-			npc.setCollisionRadius(npc.getTemplate().getCollisionRadiusGrown());
 		}
 	}
 }

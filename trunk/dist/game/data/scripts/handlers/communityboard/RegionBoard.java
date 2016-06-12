@@ -16,8 +16,6 @@
  */
 package handlers.communityboard;
 
-import java.util.List;
-
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
@@ -56,28 +54,30 @@ public class RegionBoard implements IWriteBoardHandler
 		{
 			CommunityBoardHandler.getInstance().addBypass(activeChar, "Region", command);
 			
-			final String list = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/region_list.html");
+			final String list = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/region_list.html");
 			final StringBuilder sb = new StringBuilder();
-			final List<Castle> castles = CastleManager.getInstance().getCastles();
 			for (int i = 0; i < REGIONS.length; i++)
 			{
-				final Castle castle = castles.get(i);
+				final Castle castle = CastleManager.getInstance().getCastleById(i + 1);
 				final L2Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
 				String link = list.replaceAll("%region_id%", String.valueOf(i));
 				link = link.replace("%region_name%", String.valueOf(REGIONS[i]));
-				link = link.replace("%region_owning_clan%", clan != null ? clan.getName() : "NPC");
-				link = link.replace("%region_owning_clan_alliance%", (clan != null) && (clan.getAllyName() != null) ? clan.getAllyName() : "");
+				link = link.replace("%region_owning_clan%", (clan != null ? clan.getName() : "NPC"));
+				link = link.replace("%region_owning_clan_alliance%", ((clan != null) && (clan.getAllyName() != null) ? clan.getAllyName() : ""));
 				link = link.replace("%region_tax_rate%", String.valueOf(castle.getTaxRate() * 100) + "%");
 				sb.append(link);
 			}
 			
-			CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/region.html").replace("%region_list%", sb.toString()), activeChar);
+			String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/region.html");
+			html = html.replace("%region_list%", sb.toString());
+			CommunityBoardHandler.separateAndSend(html, activeChar);
 		}
 		else if (command.startsWith("_bbsloc;"))
 		{
 			CommunityBoardHandler.getInstance().addBypass(activeChar, "Region>", command);
 			
-			if (!Util.isDigit(command.replace("_bbsloc;", "")))
+			final String id = command.replace("_bbsloc;", "");
+			if (!Util.isDigit(id))
 			{
 				LOG.warning(RegionBoard.class.getSimpleName() + ": Player " + activeChar + " sent and invalid region bypass " + command + "!");
 				return false;

@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
  * @author -Wooden-
  */
-public class ExRestartClient extends L2GameServerPacket
+public class ExRestartClient implements IClientOutgoingPacket
 {
 	public static final ExRestartClient STATIC_PACKET = new ExRestartClient();
 	
@@ -28,9 +31,10 @@ public class ExRestartClient extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x49);
+		OutgoingPackets.EX_RESTART_CLIENT.writeId(packet);
+		
+		return true;
 	}
 }

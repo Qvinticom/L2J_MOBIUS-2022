@@ -20,95 +20,99 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.interfaces.IPositionable;
+import com.l2jmobius.gameserver.model.skills.SkillCastingType;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * MagicSkillUse server packet implementation.
  * @author UnAfraid, NosBit
  */
-public final class MagicSkillUse extends L2GameServerPacket
+public final class MagicSkillUse implements IClientOutgoingPacket
 {
 	private final int _skillId;
 	private final int _skillLevel;
-	private final int _maxLevel;
 	private final int _hitTime;
+	private final int _reuseGroup;
 	private final int _reuseDelay;
+	private final int _actionId; // If skill is called from RequestActionUse, use that ID.
+	private final SkillCastingType _castingType; // Defines which client bar is going to use.
 	private final L2Character _activeChar;
-	private final L2Character _target;
-	private List<Integer> _unknown = Collections.emptyList();
+	private final L2Object _target;
+	private final List<Integer> _unknown = Collections.emptyList();
 	private final List<Location> _groundLocations;
 	
-	public MagicSkillUse(L2Character cha, L2Character target, int skillId, int skillLevel, int hitTime, int reuseDelay)
+	public MagicSkillUse(L2Character cha, L2Object target, int skillId, int skillLevel, int hitTime, int reuseDelay, int reuseGroup, int actionId, SkillCastingType castingType)
 	{
 		_activeChar = cha;
 		_target = target;
 		_skillId = skillId;
 		_skillLevel = skillLevel;
-		_maxLevel = SkillData.getInstance().getMaxLevel(_skillId);
 		_hitTime = hitTime;
+		_reuseGroup = reuseGroup;
 		_reuseDelay = reuseDelay;
-		_groundLocations = cha.isPlayer() && (cha.getActingPlayer().getCurrentSkillWorldPosition() != null) ? Arrays.asList(cha.getActingPlayer().getCurrentSkillWorldPosition()) : Collections.<Location> emptyList();
+		_actionId = actionId;
+		_castingType = castingType;
+		Location skillWorldPos = null;
+		if (cha.isPlayer())
+		{
+			final L2PcInstance player = cha.getActingPlayer();
+			if (player.getCurrentSkillWorldPosition() != null)
+			{
+				skillWorldPos = player.getCurrentSkillWorldPosition();
+			}
+		}
+		_groundLocations = skillWorldPos != null ? Arrays.asList(skillWorldPos) : Collections.emptyList();
+	}
+	
+	public MagicSkillUse(L2Character cha, L2Object target, int skillId, int skillLevel, int hitTime, int reuseDelay)
+	{
+		this(cha, target, skillId, skillLevel, hitTime, reuseDelay, -1, -1, SkillCastingType.NORMAL);
 	}
 	
 	public MagicSkillUse(L2Character cha, int skillId, int skillLevel, int hitTime, int reuseDelay)
 	{
-		this(cha, cha, skillId, skillLevel, hitTime, reuseDelay);
-	}
-	
-	/**
-	 * @param l2Character
-	 * @param target
-	 * @param displayId
-	 * @param displayLevel
-	 * @param skillTime
-	 * @param reuseDelay
-	 * @param blowSuccess
-	 */
-	public MagicSkillUse(L2Character l2Character, L2Character target, int displayId, int displayLevel, int skillTime, int reuseDelay, boolean blowSuccess)
-	{
-		this(l2Character, target, displayId, displayLevel, skillTime, reuseDelay);
-		if (blowSuccess)
-		{
-			_unknown = Arrays.asList(0);
-		}
+		this(cha, cha, skillId, skillLevel, hitTime, reuseDelay, -1, -1, SkillCastingType.NORMAL);
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x48);
-		writeD(0x00); // TODO: Find me!
-		writeD(_activeChar.getObjectId());
-		writeD(_target.getObjectId());
-		writeD(_skillId);
-		if (_skillLevel < 100)
-		{
-			writeD(_skillLevel);
-		}
-		else
-		{
-			writeH(_maxLevel);
-			writeH(_skillLevel);
-		}
-		writeD(_hitTime);
-		writeD(-1); // TODO: Find me!
-		writeD(_reuseDelay);
-		writeLoc(_activeChar);
-		writeH(_unknown.size()); // TODO: Implement me!
+		OutgoingPackets.MAGIC_SKILL_USE.writeId(packet);
+		
+		packet.writeD(_castingType.getClientBarId()); // Casting bar type: 0 - default, 1 - default up, 2 - blue, 3 - green, 4 - red.
+		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_target.getObjectId());
+		packet.writeD(_skillId);
+		packet.writeD(_skillLevel);
+		packet.writeD(_hitTime);
+		packet.writeD(_reuseGroup);
+		packet.writeD(_reuseDelay);
+		packet.writeD(_activeChar.getX());
+		packet.writeD(_activeChar.getY());
+		packet.writeD(_activeChar.getZ());
+		packet.writeH(_unknown.size()); // TODO: Implement me!
 		for (int unknown : _unknown)
 		{
-			writeH(unknown);
+			packet.writeH(unknown);
 		}
-		writeH(_groundLocations.size());
+		packet.writeH(_groundLocations.size());
 		for (IPositionable target : _groundLocations)
 		{
-			writeLoc(target);
+			packet.writeD(target.getX());
+			packet.writeD(target.getY());
+			packet.writeD(target.getZ());
 		}
-		writeLoc(_target);
-		writeD(0x00); // TODO: Find me!
-		writeD(0x00); // TODO: Find me!
+		packet.writeD(_target.getX());
+		packet.writeD(_target.getY());
+		packet.writeD(_target.getZ());
+		packet.writeD(_actionId >= 0 ? 0x01 : 0x00); // 1 when ID from RequestActionUse is used
+		packet.writeD(_actionId >= 0 ? _actionId : 0); // ID from RequestActionUse. Used to set cooldown on summon skills.
+		return true;
 	}
 }

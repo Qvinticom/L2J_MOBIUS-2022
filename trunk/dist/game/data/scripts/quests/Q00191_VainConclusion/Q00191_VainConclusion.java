@@ -42,7 +42,7 @@ public final class Q00191_VainConclusion extends Quest
 	
 	public Q00191_VainConclusion()
 	{
-		super(191, Q00191_VainConclusion.class.getSimpleName(), "Vain Conclusion");
+		super(191);
 		addStartNpc(DOROTHY_LOCKSMITH);
 		addTalkId(DOROTHY_LOCKSMITH, HEAD_BLACKSMITH_KUSTO, RESEARCHER_LORAIN, SHEGFIELD);
 		registerQuestItems(REPAIRED_METALLOGRAPH);
@@ -207,9 +207,12 @@ public final class Q00191_VainConclusion extends Quest
 				}
 			}
 		}
-		else if (qs.isCompleted() && (npc.getId() == DOROTHY_LOCKSMITH))
+		else if (qs.isCompleted())
 		{
-			htmltext = getAlreadyCompletedMsg(player);
+			if (npc.getId() == DOROTHY_LOCKSMITH)
+			{
+				htmltext = getAlreadyCompletedMsg(player);
+			}
 		}
 		return htmltext;
 	}

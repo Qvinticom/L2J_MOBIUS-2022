@@ -10,6 +10,8 @@
 		<baseWIT>37</baseWIT>
 		<baseLUC>35</baseLUC>
 		<baseCHA>40</baseCHA>
+		<physicalAbnormalResist>15</physicalAbnormalResist>
+		<magicAbnormalResist>10</magicAbnormalResist>
 		<creationPoints>
 			<node x="-114628" y="259915" z="-1192" />
 			<node x="-114539" y="260101" z="-1192" />
@@ -51,7 +53,7 @@
 		<baseRndDam>10</baseRndDam>
 		<baseMoveSpd>
 			<walk>80</walk>
-			<run>115</run>
+			<run>131</run>
 			<slowSwim>50</slowSwim>
 			<fastSwim>50</fastSwim>
 		</baseMoveSpd>
@@ -870,57 +872,49 @@
 		<level val="101">
 			<hp>4234</hp>
 			<mp>1237.5</mp>
-			<cp>2963.8</cp>
+			<cp>2963.79</cp>
 			<hpRegen>11.5</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="102">
 			<hp>4295.12</hp>
 			<mp>1254.69</mp>
-			<cp>3006.584</cp>
+			<cp>3006.56</cp>
 			<hpRegen>11.6</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="103">
 			<hp>4356.56</hp>
 			<mp>1271.97</mp>
-			<cp>3049.592</cp>
+			<cp>3049.55</cp>
 			<hpRegen>11.7</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="104">
 			<hp>4418.32</hp>
 			<mp>1289.34</mp>
-			<cp>3092.824</cp>
+			<cp>3092.76</cp>
 			<hpRegen>11.8</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="105">
 			<hp>4480.4</hp>
 			<mp>1306.8</mp>
-			<cp>3136.28</cp>
+			<cp>3136.2</cp>
 			<hpRegen>11.9</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="106">
 			<hp>4542.8</hp>
 			<mp>1324.35</mp>
-			<cp>3179.96</cp>
+			<cp>3179.85</cp>
 			<hpRegen>12</hpRegen>
-			<mpRegen>3</mpRegen>
-			<cpRegen>8.5</cpRegen>
-		</level>
-		<level val="107">
-			<hp>4605.52</hp>
-			<mp>1341.99</mp>
-			<cp>3223.864</cp>
-			<hpRegen>12.1</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 	</lvlUpgainData>

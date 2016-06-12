@@ -16,37 +16,34 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.appearance;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.request.ShapeShiftingItemRequest;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.appearance.ExShapeShiftingResult;
 
 /**
  * @author UnAfraid
  */
-public class RequestExCancelShape_Shifting_Item extends L2GameClientPacket
+public class RequestExCancelShape_Shifting_Item implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
 		player.removeRequest(ShapeShiftingItemRequest.class);
-		player.sendPacket(ExShapeShiftingResult.FAILED);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
+		client.sendPacket(ExShapeShiftingResult.FAILED);
 	}
 }

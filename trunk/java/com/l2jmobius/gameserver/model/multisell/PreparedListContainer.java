@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.model.multisell;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedList;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -31,24 +32,19 @@ public class PreparedListContainer extends ListContainer
 	
 	public PreparedListContainer(ListContainer template, boolean inventoryOnly, L2PcInstance player, L2Npc npc)
 	{
-		super(template.getListId());
+		super(template);
+		
 		setMaintainEnchantment(template.getMaintainEnchantment());
 		setApplyTaxes(false);
 		double taxRate = 0;
 		if (npc != null)
 		{
 			_npcObjectId = npc.getObjectId();
-			if (template.getApplyTaxes() && npc.getIsInTown() && (npc.getCastle().getOwnerId() > 0))
+			if (template.getApplyTaxes() && npc.isInTown() && (npc.getCastle().getOwnerId() > 0))
 			{
 				setApplyTaxes(true);
 				taxRate = npc.getCastle().getTaxRate();
 			}
-		}
-		
-		setNewMultisell(false);
-		if (template.isNewMultisell())
-		{
-			setNewMultisell(true);
 		}
 		
 		if (inventoryOnly)
@@ -58,7 +54,7 @@ public class PreparedListContainer extends ListContainer
 				return;
 			}
 			
-			final L2ItemInstance[] items;
+			final Collection<L2ItemInstance> items;
 			if (getMaintainEnchantment())
 			{
 				items = player.getInventory().getUniqueItemsByEnchantLevel(false, false, false);

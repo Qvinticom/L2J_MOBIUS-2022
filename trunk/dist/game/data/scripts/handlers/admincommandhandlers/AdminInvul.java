@@ -21,6 +21,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
@@ -33,23 +34,40 @@ public class AdminInvul implements IAdminCommandHandler
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_invul",
-		"admin_setinvul"
+		"admin_setinvul",
+		"admin_undying",
+		"admin_setundying"
 	};
 	
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
+		
 		if (command.equals("admin_invul"))
 		{
 			handleInvul(activeChar);
 			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
-		if (command.equals("admin_setinvul"))
+		else if (command.equals("admin_undying"))
+		{
+			handleUndying(activeChar);
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
+		}
+		
+		else if (command.equals("admin_setinvul"))
 		{
 			final L2Object target = activeChar.getTarget();
 			if (target instanceof L2PcInstance)
 			{
 				handleInvul((L2PcInstance) target);
+			}
+		}
+		else if (command.equals("admin_setundying"))
+		{
+			final L2Object target = activeChar.getTarget();
+			if (target instanceof L2Character)
+			{
+				handleUndying((L2Character) target);
 			}
 		}
 		return true;
@@ -70,7 +88,7 @@ public class AdminInvul implements IAdminCommandHandler
 			text = activeChar.getName() + " is now mortal";
 			if (Config.DEBUG)
 			{
-				_log.fine("GM: Gm removed invul mode from character " + activeChar.getName() + "(" + activeChar.getObjectId() + ")");
+				_log.finer("GM: Gm removed invul mode from character " + activeChar.getName() + "(" + activeChar.getObjectId() + ")");
 			}
 		}
 		else
@@ -79,7 +97,31 @@ public class AdminInvul implements IAdminCommandHandler
 			text = activeChar.getName() + " is now invulnerable";
 			if (Config.DEBUG)
 			{
-				_log.fine("GM: Gm activated invul mode for character " + activeChar.getName() + "(" + activeChar.getObjectId() + ")");
+				_log.finer("GM: Gm activated invul mode for character " + activeChar.getName() + "(" + activeChar.getObjectId() + ")");
+			}
+		}
+		activeChar.sendMessage(text);
+	}
+	
+	private void handleUndying(L2Character activeChar)
+	{
+		String text;
+		if (activeChar.isUndying())
+		{
+			activeChar.setUndying(false);
+			text = activeChar.getName() + " is now mortal";
+			if (Config.DEBUG)
+			{
+				_log.finer("GM: Gm removed undying mode from character " + activeChar.getName() + "(" + activeChar.getObjectId() + ")");
+			}
+		}
+		else
+		{
+			activeChar.setUndying(true);
+			text = activeChar.getName() + " is now undying";
+			if (Config.DEBUG)
+			{
+				_log.finer("GM: Gm activated undying mode for character " + activeChar.getName() + "(" + activeChar.getObjectId() + ")");
 			}
 		}
 		activeChar.sendMessage(text);

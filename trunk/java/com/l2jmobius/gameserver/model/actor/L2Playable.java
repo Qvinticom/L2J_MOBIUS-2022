@@ -18,19 +18,19 @@ package com.l2jmobius.gameserver.model.actor;
 
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.knownlist.PlayableKnownList;
 import com.l2jmobius.gameserver.model.actor.stat.PlayableStat;
 import com.l2jmobius.gameserver.model.actor.status.PlayableStatus;
 import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.entity.Instance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureKill;
+import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
@@ -49,9 +49,13 @@ public abstract class L2Playable extends L2Character
 	private L2PcInstance transferDmgTo = null;
 	
 	/**
-	 * Creates an abstract playable creature.
-	 * @param objectId the playable object ID
-	 * @param template the creature template
+	 * Constructor of L2Playable.<br>
+	 * <B><U> Actions</U> :</B>
+	 * <ul>
+	 * <li>Call the L2Character constructor to create an empty _skills slot and link copy basic Calculator set to this L2Playable</li>
+	 * </ul>
+	 * @param objectId the object id
+	 * @param template The L2CharTemplate to apply to the L2Playable
 	 */
 	public L2Playable(int objectId, L2CharTemplate template)
 	{
@@ -65,18 +69,6 @@ public abstract class L2Playable extends L2Character
 		super(template);
 		setInstanceType(InstanceType.L2Playable);
 		setIsInvul(false);
-	}
-	
-	@Override
-	public PlayableKnownList getKnownList()
-	{
-		return (PlayableKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new PlayableKnownList(this));
 	}
 	
 	@Override
@@ -106,7 +98,7 @@ public abstract class L2Playable extends L2Character
 	@Override
 	public boolean doDie(L2Character killer)
 	{
-		final TerminateReturn returnBack = EventDispatcher.getInstance().notifyEvent(new OnCreatureKill(killer, this), this, TerminateReturn.class);
+		final TerminateReturn returnBack = EventDispatcher.getInstance().notifyEvent(new OnCreatureDeath(killer, this), this, TerminateReturn.class);
 		if ((returnBack != null) && returnBack.terminate())
 		{
 			return false;
@@ -124,6 +116,9 @@ public abstract class L2Playable extends L2Character
 			setIsDead(true);
 		}
 		
+		abortAttack();
+		abortCast();
+		
 		// Set target to null and cancel Attack or Cast
 		setTarget(null);
 		
@@ -137,12 +132,12 @@ public abstract class L2Playable extends L2Character
 		
 		if (isNoblesseBlessedAffected())
 		{
-			stopEffects(L2EffectType.NOBLESSE_BLESSING);
+			stopEffects(EffectFlag.NOBLESS_BLESSING);
 			deleteBuffs = false;
 		}
 		if (isResurrectSpecialAffected())
 		{
-			stopEffects(L2EffectType.RESURRECTION_SPECIAL);
+			stopEffects(EffectFlag.RESURRECTION_SPECIAL);
 			deleteBuffs = false;
 		}
 		if (isPlayer())
@@ -168,10 +163,7 @@ public abstract class L2Playable extends L2Character
 		// Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform
 		broadcastStatusUpdate();
 		
-		if (getWorldRegion() != null)
-		{
-			getWorldRegion().onDeath(this);
-		}
+		ZoneManager.getInstance().getRegion(this).onDeath(this);
 		
 		// Notify Quest of L2Playable's death
 		final L2PcInstance actingPlayer = getActingPlayer();
@@ -180,95 +172,64 @@ public abstract class L2Playable extends L2Character
 		{
 			for (QuestState qs : actingPlayer.getNotifyQuestOfDeath())
 			{
-				qs.getQuest().notifyDeath(killer == null ? this : killer, this, qs);
+				qs.getQuest().notifyDeath((killer == null ? this : killer), this, qs);
 			}
 		}
 		// Notify instance
-		if (getInstanceId() > 0)
+		if (isPlayer())
 		{
-			final Instance instance = InstanceManager.getInstance().getInstance(getInstanceId());
+			final Instance instance = getInstanceWorld();
 			if (instance != null)
 			{
-				instance.notifyDeath(killer, this);
+				instance.onDeath(getActingPlayer());
 			}
 		}
 		
 		if (killer != null)
 		{
-			final L2PcInstance player = killer.getActingPlayer();
-			
-			if (player != null)
+			final L2PcInstance killerPlayer = killer.getActingPlayer();
+			if ((killerPlayer != null) && isPlayable())
 			{
-				player.onKillUpdatePvPKarma(this);
+				killerPlayer.onPlayerKill(this);
 			}
 		}
 		
 		// Notify L2Character AI
 		getAI().notifyEvent(CtrlEvent.EVT_DEAD);
-		updateEffectIcons();
+		super.updateEffectIcons();
 		return true;
 	}
 	
-	public boolean checkIfPvP(L2Character target)
+	public boolean checkIfPvP(L2PcInstance target)
 	{
-		if (target == null)
-		{
-			return false; // Target is null
-		}
-		if (target == this)
-		{
-			return false; // Target is self
-		}
-		if (!target.isPlayable())
-		{
-			return false; // Target is not a L2Playable
-		}
-		
 		final L2PcInstance player = getActingPlayer();
-		if (player == null)
+		
+		if ((player == null) || (target == null) || (player == target))
 		{
-			return false; // Active player is null
+			return true;
 		}
 		
-		if (player.getReputation() < 0)
+		if (target.isOnDarkSide())
 		{
-			return false; // Active player has karma
+			return true;
+		}
+		else if (target.getReputation() < 0)
+		{
+			return true;
+		}
+		else if ((player.getPvpFlag() > 0) && (target.getPvpFlag() > 0))
+		{
+			return true;
 		}
 		
-		final L2PcInstance targetPlayer = target.getActingPlayer();
-		if (targetPlayer == null)
-		{
-			return false; // Target player is null
-		}
+		final L2Clan playerClan = player.getClan();
+		final L2Clan targetClan = target.getClan();
 		
-		if (targetPlayer == this)
+		if ((playerClan != null) && (targetClan != null) && playerClan.isAtWarWith(targetClan) && targetClan.isAtWarWith(playerClan))
 		{
-			return false; // Target player is self
+			return (player.getPledgeType() != L2Clan.SUBUNIT_ACADEMY) && (target.getPledgeType() != L2Clan.SUBUNIT_ACADEMY);
 		}
-		if (targetPlayer.getReputation() < 0)
-		{
-			return false; // Target player has karma
-		}
-		if (targetPlayer.getPvpFlag() == 0)
-		{
-			return false;
-		}
-		
-		return true;
-		// Even at war, there should be PvP flag
-		// if(
-		// player.getClan() == null ||
-		// targetPlayer.getClan() == null ||
-		// (
-		// !targetPlayer.getClan().isAtWarWith(player.getClanId()) &&
-		// targetPlayer.getWantsPeace() == 0 &&
-		// player.getWantsPeace() == 0
-		// )
-		// )
-		// {
-		// return true;
-		// }
-		// return false;
+		return false;
 	}
 	
 	/**
@@ -346,9 +307,7 @@ public abstract class L2Playable extends L2Character
 	
 	public abstract int getReputation();
 	
-	public abstract byte getPvpFlag();
-	
-	public abstract boolean useMagic(Skill skill, boolean forceUse, boolean dontMove);
+	public abstract boolean useMagic(Skill skill, L2ItemInstance item, boolean forceUse, boolean dontMove);
 	
 	public abstract void storeMe();
 	

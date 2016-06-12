@@ -19,11 +19,11 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.entity.Fort;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -33,9 +33,8 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class TakeFortStart extends AbstractEffect
 {
-	public TakeFortStart(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public TakeFortStart(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -45,13 +44,12 @@ public final class TakeFortStart extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (info.getEffector().isPlayer())
+		if (effector.isPlayer())
 		{
-			final L2PcInstance player = info.getEffector().getActingPlayer();
-			final Fort fort = FortManager.getInstance().getFort(player);
-			final L2Clan clan = player.getClan();
+			final Fort fort = FortManager.getInstance().getFort(effector);
+			final L2Clan clan = effector.getClan();
 			if ((fort != null) && (clan != null))
 			{
 				fort.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.S1_CLAN_IS_TRYING_TO_DISPLAY_A_FLAG), clan.getName());

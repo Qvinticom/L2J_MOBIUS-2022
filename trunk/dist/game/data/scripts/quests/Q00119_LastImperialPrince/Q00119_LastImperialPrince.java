@@ -38,7 +38,7 @@ public class Q00119_LastImperialPrince extends Quest
 	
 	public Q00119_LastImperialPrince()
 	{
-		super(119, Q00119_LastImperialPrince.class.getSimpleName(), "Last Imperial Prince");
+		super(119);
 		addStartNpc(NAMELESS_SPIRIT);
 		addTalkId(NAMELESS_SPIRIT, DEVORIN);
 	}
@@ -135,7 +135,7 @@ public class Q00119_LastImperialPrince extends Quest
 						else
 						{
 							htmltext = "31453-08.html";
-							qs.exitQuest(true);
+							qs.exitQuest(false, true);
 						}
 					}
 					else if (qs.isCond(2))

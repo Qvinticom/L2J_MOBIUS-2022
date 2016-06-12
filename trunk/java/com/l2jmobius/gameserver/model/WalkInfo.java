@@ -18,19 +18,20 @@ package com.l2jmobius.gameserver.model;
 
 import java.util.concurrent.ScheduledFuture;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMoveRouteFinished;
-import com.l2jmobius.util.Rnd;
 
 /**
- * Holds info about current walk progress.
+ * Holds info about current walk progress
  * @author GKR, UnAfraid
  */
 public class WalkInfo
 {
 	private final String _routeName;
+	
 	private ScheduledFuture<?> _walkCheckTask;
 	private boolean _blocked = false;
 	private boolean _suspended = false;
@@ -63,8 +64,9 @@ public class WalkInfo
 	/**
 	 * Calculate next node for this WalkInfo and send debug message from given npc
 	 * @param npc NPC to debug message to be sent from
+	 * @return
 	 */
-	public synchronized void calculateNextNode(L2Npc npc)
+	public boolean calculateNextNode(L2Npc npc)
 	{
 		// Check this first, within the bounds of random moving, we have no conception of "first" or "last" node
 		if (getRoute().getRepeatType() == WalkingManager.REPEAT_RANDOM)
@@ -99,7 +101,7 @@ public class WalkInfo
 				if (!getRoute().repeatWalk())
 				{
 					WalkingManager.getInstance().cancelMoving(npc);
-					return;
+					return false;
 				}
 				
 				switch (getRoute().getRepeatType())
@@ -123,12 +125,14 @@ public class WalkInfo
 					}
 				}
 			}
-			else if (_currentNode == WalkingManager.NO_REPEAT) // First node arrived, when direction is first <-- last
+			
+			else if (_currentNode == -1) // First node arrived, when direction is first <-- last
 			{
 				_currentNode = 1;
 				_forward = true;
 			}
 		}
+		return true;
 	}
 	
 	/**
@@ -217,11 +221,5 @@ public class WalkInfo
 	public void setWalkCheckTask(ScheduledFuture<?> val)
 	{
 		_walkCheckTask = val;
-	}
-	
-	@Override
-	public String toString()
-	{
-		return "WalkInfo [_routeName=" + _routeName + ", _walkCheckTask=" + _walkCheckTask + ", _blocked=" + _blocked + ", _suspended=" + _suspended + ", _stoppedByAttack=" + _stoppedByAttack + ", _currentNode=" + _currentNode + ", _forward=" + _forward + ", _lastActionTime=" + _lastActionTime + "]";
 	}
 }

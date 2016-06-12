@@ -17,10 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -30,15 +30,33 @@ public final class DamOverTime extends AbstractEffect
 {
 	private final boolean _canKill;
 	private final double _power;
-	private final int _charge;
 	
-	public DamOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public DamOverTime(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_canKill = params.getBoolean("canKill", false);
-		_power = params.getDouble("power", 0);
-		_charge = params.getInt("charge", 0);
+		_power = params.getDouble("power");
+		setTicks(params.getInt("ticks"));
+	}
+	
+	@Override
+	public void onStart(BuffInfo info)
+	{
+		if (!info.getSkill().isToggle() && info.getSkill().isMagic())
+		{
+			// TODO: M.Crit can occur even if this skill is resisted. Only then m.crit damage is applied and not debuff
+			final boolean mcrit = Formulas.calcCrit(info.getSkill().getMagicCriticalRate(), info.getEffector(), info.getEffected(), info.getSkill());
+			if (mcrit)
+			{
+				double damage = _power * 10; // Tests show that 10 times HP DOT is taken during magic critical.
+				
+				if (!_canKill && (damage >= (info.getEffected().getCurrentHp() - 1)))
+				{
+					damage = info.getEffected().getCurrentHp() - 1;
+				}
+				
+				info.getEffected().reduceCurrentHp(damage, info.getEffector(), info.getSkill(), true, false, true, false);
+			}
+		}
 	}
 	
 	@Override
@@ -76,18 +94,7 @@ public final class DamOverTime extends AbstractEffect
 			}
 		}
 		
-		if ((_charge != 0) && (info.getEffected().getActingPlayer().getCharges() >= _charge))
-		{
-			info.getEffected().sendPacket(SystemMessageId.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY);
-			return false;
-		}
-		if (_charge != 0)
-		{
-			info.getEffected().getActingPlayer().increaseCharges(1, _charge);
-		}
-		
-		info.getEffected().reduceCurrentHpByDOT(damage, info.getEffector(), info.getSkill());
-		info.getEffected().notifyDamageReceived(damage, info.getEffector(), info.getSkill(), false, true);
+		info.getEffected().reduceCurrentHp(damage, info.getEffector(), info.getSkill(), true, false, false, false);
 		return info.getSkill().isToggle();
 	}
 }

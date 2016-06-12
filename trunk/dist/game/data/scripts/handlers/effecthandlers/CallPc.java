@@ -16,16 +16,15 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.holders.SummonRequestHolder;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
@@ -40,10 +39,8 @@ public final class CallPc extends AbstractEffect
 	private final int _itemId;
 	private final int _itemCount;
 	
-	public CallPc(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public CallPc(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_itemId = params.getInt("itemId", 0);
 		_itemCount = params.getInt("itemCount", 0);
 	}
@@ -55,15 +52,15 @@ public final class CallPc extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (info.getEffected() == info.getEffector())
+		if (effector == effected)
 		{
 			return;
 		}
 		
-		final L2PcInstance target = info.getEffected().getActingPlayer();
-		final L2PcInstance activeChar = info.getEffector().getActingPlayer();
+		final L2PcInstance target = effected.getActingPlayer();
+		final L2PcInstance activeChar = effector.getActingPlayer();
 		if (checkSummonTargetStatus(target, activeChar))
 		{
 			if ((_itemId != 0) && (_itemCount != 0))
@@ -81,7 +78,7 @@ public final class CallPc extends AbstractEffect
 				target.sendPacket(sm);
 			}
 			
-			target.addScript(new SummonRequestHolder(activeChar, info.getSkill()));
+			target.addScript(new SummonRequestHolder(activeChar, skill));
 			final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
 			confirm.addCharName(activeChar);
 			confirm.addZoneName(activeChar.getX(), activeChar.getY(), activeChar.getZ());
@@ -91,7 +88,7 @@ public final class CallPc extends AbstractEffect
 		}
 	}
 	
-	public static boolean checkSummonTargetStatus(L2PcInstance target, L2PcInstance activeChar)
+	public static boolean checkSummonTargetStatus(L2PcInstance target, L2Character activeChar)
 	{
 		if (target == activeChar)
 		{
@@ -122,21 +119,21 @@ public final class CallPc extends AbstractEffect
 			return false;
 		}
 		
-		if (target.isInOlympiadMode() || OlympiadManager.getInstance().isRegisteredInComp(target))
+		if (target.isInOlympiadMode())
 		{
 			activeChar.sendPacket(SystemMessageId.A_USER_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_USE_SUMMONING_OR_TELEPORTING);
 			return false;
 		}
 		
-		if (target.isFlyingMounted() || target.isCombatFlagEquipped() || !TvTEvent.onEscapeUse(target.getObjectId()))
+		if (target.isFlyingMounted() || target.isCombatFlagEquipped())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_SUMMONING_OR_TELEPORTING_IN_THIS_AREA);
 			return false;
 		}
 		
-		if (target.inObserverMode())
+		if (target.inObserverMode() || OlympiadManager.getInstance().isRegisteredInComp(target))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING2);
 			sm.addCharName(target);
 			activeChar.sendPacket(sm);
 			return false;
@@ -150,7 +147,8 @@ public final class CallPc extends AbstractEffect
 			return false;
 		}
 		
-		if ((activeChar.getInstanceId() > 0) && (!Config.ALLOW_SUMMON_IN_INSTANCE || !InstanceManager.getInstance().getInstance(activeChar.getInstanceId()).isSummonAllowed()))
+		final Instance instance = activeChar.getInstanceWorld();
+		if ((instance != null) && !instance.isPlayerSummonAllowed())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION);
 			return false;

@@ -16,48 +16,33 @@
  */
 package quests.Q10361_RolesOfTheSeeker;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerCreate;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
 /**
  * Roles of the Seeker (10361)
- * @author spider
+ * @author Gladicek
  */
-public class Q10361_RolesOfTheSeeker extends Quest
+public final class Q10361_RolesOfTheSeeker extends Quest
 {
 	// NPCs
 	private static final int LAKCIS = 32977;
 	private static final int CHESHA = 33449;
-	// Rewards
-	private static final int ADENA_REWARD = 34000;
-	private static final int EXP_REWARD = 35000;
-	private static final int SP_REWARD = 5;
-	// Others
-	private static final int YE_SAGIRA_RUINS_PRESENTATION_MOVIE_ZONE = 10361;
-	private static final String MOVIE_VAR = "Ye_Sagira_Ruins_movie";
-	private static final int SI_ILLUSION_03_QUE = 103; // movie id
+	// Misc
 	private static final int MIN_LEVEL = 10;
 	private static final int MAX_LEVEL = 20;
 	
 	public Q10361_RolesOfTheSeeker()
 	{
-		super(10361, Q10361_RolesOfTheSeeker.class.getSimpleName(), "Roles of the Seeker");
+		super(10361);
 		addStartNpc(LAKCIS);
 		addTalkId(LAKCIS, CHESHA);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "32977-06.htm");
-		addEnterZoneId(YE_SAGIRA_RUINS_PRESENTATION_MOVIE_ZONE);
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "32977-05.htm");
 	}
 	
 	@Override
@@ -73,6 +58,7 @@ public class Q10361_RolesOfTheSeeker extends Quest
 		switch (event)
 		{
 			case "32977-02.htm":
+			case "33449-02.htm":
 			{
 				htmltext = event;
 				break;
@@ -80,24 +66,20 @@ public class Q10361_RolesOfTheSeeker extends Quest
 			case "32977-03.htm":
 			{
 				qs.startQuest();
-				showOnScreenMsg(player, NpcStringId.ENTER_THE_RUINS_OF_YE_SAGIRA_THROUGH_THE_YE_SAGIRA_TELEPORT_DEVICE, ExShowScreenMessage.TOP_CENTER, 10000);
+				showOnScreenMsg(player, NpcStringId.ENTER_THE_RUINS_OF_YE_SAGIRA_THROUGH_THE_YE_SAGIRA_TELEPORT_DEVICE, ExShowScreenMessage.TOP_CENTER, 4500);
 				htmltext = event;
 				break;
 			}
-			case "33449-02.html":
+			case "33449-03.htm":
 			{
-				htmltext = event;
-				break;
-			}
-			case "33449-03.html":
-			{
-				if (qs.isCond(1))
+				if (qs.isStarted())
 				{
-					giveAdena(player, ADENA_REWARD, true);
-					addExpAndSp(player, EXP_REWARD, SP_REWARD);
+					giveAdena(player, 340, true);
+					addExpAndSp(player, 35000, 5);
 					qs.exitQuest(false, true);
+					htmltext = event;
 				}
-				htmltext = event;
+				break;
 			}
 		}
 		return htmltext;
@@ -108,54 +90,28 @@ public class Q10361_RolesOfTheSeeker extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
+		
 		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
-				htmltext = npc.getId() == LAKCIS ? "32977-01.htm" : "33449-05.html";
+				if (npc.getId() == LAKCIS)
+				{
+					htmltext = "32977-01.htm";
+				}
 				break;
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == LAKCIS ? "32977-04.html" : "33449-01.html";
+				htmltext = npc.getId() == LAKCIS ? "32977-04.htm" : "33449-01.htm";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == LAKCIS ? "32977-05.htm" : "33449-04.html";
+				htmltext = npc.getId() == LAKCIS ? "32977-06.htm" : "33449-04.htm";
 				break;
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
-	{
-		if (character.isPlayer())
-		{
-			final L2PcInstance player = character.getActingPlayer();
-			
-			if (player.getVariables().getBoolean(MOVIE_VAR, false))
-			{
-				if (player.getLevel() <= MAX_LEVEL)
-				{
-					final QuestState qs = getQuestState(player, false);
-					if ((qs != null) && qs.isStarted())
-					{
-						player.showQuestMovie(SI_ILLUSION_03_QUE);
-					}
-				}
-				player.getVariables().remove(MOVIE_VAR);
-			}
-		}
-		return super.onEnterZone(character, zone);
-	}
-	
-	@RegisterEvent(EventType.ON_PLAYER_CREATE)
-	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerCreate(OnPlayerCreate event)
-	{
-		event.getActiveChar().getVariables().set(MOVIE_VAR, true);
 	}
 }

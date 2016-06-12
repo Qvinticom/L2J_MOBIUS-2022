@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerWeight extends Condition
 {
+	
 	private final int _weight;
 	
 	/**
@@ -44,7 +45,7 @@ public class ConditionPlayerWeight extends Condition
 		final L2PcInstance player = effector.getActingPlayer();
 		if ((player != null) && (player.getMaxLoad() > 0))
 		{
-			final int weightproc = ((player.getCurrentLoad() - player.getBonusWeightPenalty()) * 100) / player.getMaxLoad();
+			final int weightproc = (((player.getCurrentLoad() - player.getBonusWeightPenalty()) * 100) / player.getMaxLoad());
 			return (weightproc < _weight) || player.getDietMode();
 		}
 		return true;

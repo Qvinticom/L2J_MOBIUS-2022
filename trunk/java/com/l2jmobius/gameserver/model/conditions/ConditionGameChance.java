@@ -16,10 +16,10 @@
  */
 package com.l2jmobius.gameserver.model.conditions;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.util.Rnd;
 
 /**
  * The Class ConditionGameChance.

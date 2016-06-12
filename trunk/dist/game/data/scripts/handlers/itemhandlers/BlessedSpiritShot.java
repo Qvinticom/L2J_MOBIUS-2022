@@ -16,13 +16,14 @@
  */
 package handlers.itemhandlers;
 
-import java.util.logging.Level;
+import java.util.List;
 
+import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.ActionType;
@@ -44,13 +45,13 @@ public class BlessedSpiritShot implements IItemHandler
 		final L2PcInstance activeChar = (L2PcInstance) playable;
 		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 		final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
-		final SkillHolder[] skills = item.getItem().getSkills();
+		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
 		
 		final int itemId = item.getId();
 		
 		if (skills == null)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
+			_log.warning(getClass().getSimpleName() + ": is missing skills!");
 			return false;
 		}
 		
@@ -96,23 +97,8 @@ public class BlessedSpiritShot implements IItemHandler
 		// Send message to client
 		activeChar.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_HAS_BEEN_ENABLED);
 		activeChar.setChargedShot(ShotType.BLESSED_SPIRITSHOTS, true);
-		// Visual effect change if player has equipped Sapphire lvl 3 or higher
-		if ((activeChar.getInventory().getItemByItemId(38931) != null) && activeChar.getInventory().getItemByItemId(38931).isEquipped())
-		{
-			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, 17821, 2, 0, 0), 600);
-		}
-		else if ((activeChar.getInventory().getItemByItemId(38930) != null) && activeChar.getInventory().getItemByItemId(38930).isEquipped())
-		{
-			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, 17820, 2, 0, 0), 600);
-		}
-		else if ((activeChar.getInventory().getItemByItemId(38929) != null) && activeChar.getInventory().getItemByItemId(38929).isEquipped())
-		{
-			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, 17819, 2, 0, 0), 600);
-		}
-		else
-		{
-			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
-		}
+		
+		skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, holder.getSkillId(), holder.getSkillLvl(), 0, 0), 600));
 		return true;
 	}
 }

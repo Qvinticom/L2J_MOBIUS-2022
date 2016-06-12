@@ -17,10 +17,11 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Dispel All effect implementation.
@@ -28,9 +29,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class DispelAll extends AbstractEffect
 {
-	public DispelAll(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public DispelAll(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -46,8 +46,8 @@ public final class DispelAll extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		info.getEffected().stopAllEffects();
+		effected.stopAllEffects();
 	}
 }

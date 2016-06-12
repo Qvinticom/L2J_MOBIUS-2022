@@ -18,15 +18,15 @@ package events.ThePowerOfLove;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.event.LongTimeEvent;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 
 /**
  * The Power Of Love
  * @URL http://www.lineage2.com/en/news/events/02102016-the-power-of-love-part-iii.php
  * @author hlwrave
  */
-final class ThePowerOfLove extends LongTimeEvent
+public final class ThePowerOfLove extends LongTimeEvent
 {
 	// NPC
 	private static final int COCO = 33893;
@@ -45,7 +45,6 @@ final class ThePowerOfLove extends LongTimeEvent
 	
 	private ThePowerOfLove()
 	{
-		super(ThePowerOfLove.class.getSimpleName(), "events");
 		addStartNpc(COCO);
 		addFirstTalkId(COCO);
 		addTalkId(COCO);

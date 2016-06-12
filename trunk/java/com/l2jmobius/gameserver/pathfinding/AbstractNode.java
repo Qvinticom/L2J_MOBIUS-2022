@@ -16,32 +16,32 @@
  */
 package com.l2jmobius.gameserver.pathfinding;
 
-public abstract class AbstractNode<Loc extends AbstractNodeLoc>
+public abstract class AbstractNode<T extends AbstractNodeLoc>
 {
-	private Loc _loc;
-	private AbstractNode<Loc> _parent;
+	private T _loc;
+	private AbstractNode<T> _parent;
 	
-	public AbstractNode(Loc loc)
+	public AbstractNode(T loc)
 	{
 		_loc = loc;
 	}
 	
-	public void setParent(AbstractNode<Loc> p)
+	public void setParent(AbstractNode<T> p)
 	{
 		_parent = p;
 	}
 	
-	public AbstractNode<Loc> getParent()
+	public AbstractNode<T> getParent()
 	{
 		return _parent;
 	}
 	
-	public Loc getLoc()
+	public T getLoc()
 	{
 		return _loc;
 	}
 	
-	public void setLoc(Loc l)
+	public void setLoc(T l)
 	{
 		_loc = l;
 	}
@@ -49,7 +49,10 @@ public abstract class AbstractNode<Loc extends AbstractNodeLoc>
 	@Override
 	public int hashCode()
 	{
-		return (31 * 1) + ((_loc == null) ? 0 : _loc.hashCode());
+		final int prime = 31;
+		int result = 1;
+		result = (prime * result) + ((_loc == null) ? 0 : _loc.hashCode());
+		return result;
 	}
 	
 	@Override

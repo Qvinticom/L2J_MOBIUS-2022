@@ -16,12 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Sdw
  */
-public class ExPledgeRecruitBoardDetail extends L2GameServerPacket
+public class ExPledgeRecruitBoardDetail implements IClientOutgoingPacket
 {
 	final PledgeRecruitInfo _pledgeRecruitInfo;
 	
@@ -31,14 +33,14 @@ public class ExPledgeRecruitBoardDetail extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x142);
+		OutgoingPackets.EX_PLEDGE_RECRUIT_BOARD_DETAIL.writeId(packet);
 		
-		writeD(_pledgeRecruitInfo.getClanId());
-		writeD(_pledgeRecruitInfo.getKarma());
-		writeS(_pledgeRecruitInfo.getInformation());
-		writeS(_pledgeRecruitInfo.getDetailedInformation());
+		packet.writeD(_pledgeRecruitInfo.getClanId());
+		packet.writeD(_pledgeRecruitInfo.getKarma());
+		packet.writeS(_pledgeRecruitInfo.getInformation());
+		packet.writeS(_pledgeRecruitInfo.getDetailedInformation());
+		return true;
 	}
 }

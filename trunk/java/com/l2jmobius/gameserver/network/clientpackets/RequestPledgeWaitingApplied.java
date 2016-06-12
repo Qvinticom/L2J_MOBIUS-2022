@@ -18,44 +18,36 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.OptionalInt;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeWaitingListApplied;
 
 /**
  * @author Sdw
  */
-public class RequestPledgeWaitingApplied extends L2GameClientPacket
+public class RequestPledgeWaitingApplied implements IClientIncomingPacket
 {
-	private static final String _C__D0_D8_REQUESTPLEDGEWAITINGAPPLIED = "[C] D0;D8 RequestPledgeWaitingApplied";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// Nothing to read
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || (activeChar.getClan() == null))
 		{
 			return;
 		}
 		
 		final OptionalInt clanId = ClanEntryManager.getInstance().getClanIdForPlayerApplication(activeChar.getObjectId());
-		
 		if (clanId.isPresent())
 		{
 			activeChar.sendPacket(new ExPledgeWaitingListApplied(clanId.getAsInt(), activeChar.getObjectId()));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_D8_REQUESTPLEDGEWAITINGAPPLIED;
 	}
 }

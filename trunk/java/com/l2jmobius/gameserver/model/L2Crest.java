@@ -36,7 +36,7 @@ public final class L2Crest implements IIdentifiable
 		
 		private final int _id;
 		
-		private CrestType(int id)
+		CrestType(int id)
 		{
 			_id = id;
 		}
@@ -98,7 +98,7 @@ public final class L2Crest implements IIdentifiable
 		{
 			case PLEDGE:
 			{
-				activeChar.sendPacket(new PledgeCrest(getId()));
+				activeChar.sendPacket(new PledgeCrest(getId(), getData()));
 				path = "Crest.crest_" + Config.SERVER_ID + "_" + getId();
 				break;
 			}
@@ -112,13 +112,13 @@ public final class L2Crest implements IIdentifiable
 						if (i < 4)
 						{
 							final byte[] fullChunk = new byte[14336];
-							System.arraycopy(data, 14336 * i, fullChunk, 0, 14336);
+							System.arraycopy(data, (14336 * i), fullChunk, 0, 14336);
 							activeChar.sendPacket(new ExPledgeEmblem(getId(), fullChunk, 0, i));
 						}
 						else
 						{
 							final byte[] lastChunk = new byte[8320];
-							System.arraycopy(data, 14336 * i, lastChunk, 0, 8320);
+							System.arraycopy(data, (14336 * i), lastChunk, 0, 8320);
 							activeChar.sendPacket(new ExPledgeEmblem(getId(), lastChunk, 0, i));
 						}
 					}
@@ -128,7 +128,7 @@ public final class L2Crest implements IIdentifiable
 			}
 			case ALLY:
 			{
-				activeChar.sendPacket(new AllyCrest(getId()));
+				activeChar.sendPacket(new AllyCrest(getId(), getData()));
 				path = "Crest.crest_" + Config.SERVER_ID + "_" + getId();
 				break;
 			}

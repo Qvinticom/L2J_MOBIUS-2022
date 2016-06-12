@@ -16,26 +16,29 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.SiegeScheduleDate;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
- * Siege Schedule data.
  * @author UnAfraid
  */
-public class SiegeScheduleData implements IXmlReader
+public class SiegeScheduleData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(SiegeScheduleData.class.getName());
+	
 	private final List<SiegeScheduleDate> _scheduleData = new ArrayList<>();
 	
 	protected SiegeScheduleData()
@@ -47,18 +50,17 @@ public class SiegeScheduleData implements IXmlReader
 	public synchronized void load()
 	{
 		_scheduleData.clear();
-		parseDatapackFile("../config/SiegeSchedule.xml");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _scheduleData.size() + " siege schedulers.");
-		if (!_scheduleData.isEmpty())
+		parseDatapackFile("config/SiegeSchedule.xml");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _scheduleData.size() + " siege schedulers.");
+		if (_scheduleData.isEmpty())
 		{
-			return;
+			_scheduleData.add(new SiegeScheduleDate(new StatsSet()));
+			LOGGER.info(getClass().getSimpleName() + ": Emergency Loaded: " + _scheduleData.size() + " default siege schedulers.");
 		}
-		_scheduleData.add(new SiegeScheduleDate(new StatsSet()));
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Emergency Loaded: " + _scheduleData.size() + " default siege schedulers.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
@@ -77,9 +79,12 @@ public class SiegeScheduleData implements IXmlReader
 								final Node node = attrs.item(i);
 								final String key = node.getNodeName();
 								String val = node.getNodeValue();
-								if ("day".equals(key) && !Util.isDigit(val))
+								if ("day".equals(key))
 								{
-									val = Integer.toString(getValueForField(val));
+									if (!Util.isDigit(val))
+									{
+										val = Integer.toString(getValueForField(val));
+									}
 								}
 								set.set(key, val);
 							}
@@ -96,7 +101,7 @@ public class SiegeScheduleData implements IXmlReader
 	{
 		try
 		{
-			return Calendar.class.getField(field).getInt(Calendar.class);
+			return Calendar.class.getField(field).getInt(Calendar.class.getName());
 		}
 		catch (Exception e)
 		{
@@ -110,7 +115,7 @@ public class SiegeScheduleData implements IXmlReader
 		return _scheduleData;
 	}
 	
-	public static SiegeScheduleData getInstance()
+	public static final SiegeScheduleData getInstance()
 	{
 		return SingletonHolder._instance;
 	}
@@ -119,4 +124,5 @@ public class SiegeScheduleData implements IXmlReader
 	{
 		protected static final SiegeScheduleData _instance = new SiegeScheduleData();
 	}
+	
 }

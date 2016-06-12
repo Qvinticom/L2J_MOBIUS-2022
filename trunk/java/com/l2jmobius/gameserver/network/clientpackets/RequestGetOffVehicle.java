@@ -16,8 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.GetOffVehicle;
 import com.l2jmobius.gameserver.network.serverpackets.StopMoveInVehicle;
@@ -25,48 +27,41 @@ import com.l2jmobius.gameserver.network.serverpackets.StopMoveInVehicle;
 /**
  * @author Maktakien
  */
-public final class RequestGetOffVehicle extends L2GameClientPacket
+public final class RequestGetOffVehicle implements IClientIncomingPacket
 {
-	private static final String _C__54_GETOFFVEHICLE = "[S] 54 GetOffVehicle";
-	
 	private int _boatId, _x, _y, _z;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_boatId = readD();
-		_x = readD();
-		_y = readD();
-		_z = readD();
+		_boatId = packet.readD();
+		_x = packet.readD();
+		_y = packet.readD();
+		_z = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		if (!activeChar.isInBoat() || (activeChar.getBoat().getObjectId() != _boatId) || activeChar.getBoat().isMoving() || !activeChar.isInsideRadius(_x, _y, _z, 1000, true, false))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		activeChar.broadcastPacket(new StopMoveInVehicle(activeChar, _boatId));
 		activeChar.setVehicle(null);
 		activeChar.setInVehiclePosition(null);
-		sendPacket(ActionFailed.STATIC_PACKET);
+		client.sendPacket(ActionFailed.STATIC_PACKET);
 		activeChar.broadcastPacket(new GetOffVehicle(activeChar.getObjectId(), _boatId, _x, _y, _z));
 		activeChar.setXYZ(_x, _y, _z);
 		activeChar.setInsideZone(ZoneId.PEACE, false);
 		activeChar.revalidateZone(true);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__54_GETOFFVEHICLE;
 	}
 }

@@ -39,11 +39,11 @@ public final class Q10324_FindingMagisterGallint extends Quest
 	
 	public Q10324_FindingMagisterGallint()
 	{
-		super(10324, Q10324_FindingMagisterGallint.class.getSimpleName(), "Finding Magister Gallint");
+		super(10324);
 		addStartNpc(SHANNON);
 		addTalkId(SHANNON, GALLINT);
-		addCondMaxLevel(MAX_LEVEL, "32974-06.html");
-		addCondCompletedQuest(Q10323_TrainLikeItsReal.class.getSimpleName(), "32974-06.html");
+		addCondMaxLevel(MAX_LEVEL, "32974-01a.htm");
+		addCondCompletedQuest(Q10323_TrainLikeItsReal.class.getSimpleName(), "32974-01a.htm");
 	}
 	
 	@Override
@@ -69,13 +69,16 @@ public final class Q10324_FindingMagisterGallint extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32980-02.html":
+			case "32980-02.htm":
 			{
-				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_004_skill_01.htm", TutorialShowHtml.LARGE_WINDOW));
-				giveAdena(player, 110, true);
-				addExpAndSp(player, 3100, 5);
-				qs.exitQuest(false, true);
-				htmltext = event;
+				if (qs.isStarted())
+				{
+					player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_004_skill_01.htm", TutorialShowHtml.LARGE_WINDOW));
+					giveAdena(player, 110, true);
+					addExpAndSp(player, 3100, 5);
+					qs.exitQuest(false, true);
+					htmltext = event;
+				}
 				break;
 			}
 		}
@@ -92,42 +95,18 @@ public final class Q10324_FindingMagisterGallint extends Quest
 		{
 			case State.CREATED:
 			{
-				if (npc.getId() == SHANNON)
-				{
-					htmltext = "32974-01.htm";
-					break;
-				}
-				else if (npc.getId() == GALLINT)
-				{
-					htmltext = "32980-04.html";
-					break;
-				}
+				htmltext = npc.getId() == SHANNON ? "32974-01.htm" : "32980-04.htm";
+				break;
 			}
 			case State.STARTED:
 			{
-				if (npc.getId() == SHANNON)
-				{
-					htmltext = "32974-04.html";
-					break;
-				}
-				else if (npc.getId() == GALLINT)
-				{
-					htmltext = "32980-01.html";
-					break;
-				}
+				htmltext = npc.getId() == SHANNON ? "32974-04.htm" : "32980-01.htm";
+				break;
 			}
 			case State.COMPLETED:
 			{
-				if (npc.getId() == SHANNON)
-				{
-					htmltext = "32974-05.html";
-					break;
-				}
-				else if (npc.getId() == GALLINT)
-				{
-					htmltext = "32980-03.html";
-					break;
-				}
+				htmltext = npc.getId() == SHANNON ? "32974-05.htm" : "32980-03.htm";
+				break;
 			}
 		}
 		return htmltext;

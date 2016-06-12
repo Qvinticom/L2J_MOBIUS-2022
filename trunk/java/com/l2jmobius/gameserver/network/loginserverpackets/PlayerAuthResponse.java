@@ -16,13 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.loginserverpackets;
 
-import com.l2jmobius.util.network.BaseRecievePacket;
+import com.l2jmobius.commons.util.network.BaseRecievePacket;
 
 /**
  * @author -Wooden-
  */
 public class PlayerAuthResponse extends BaseRecievePacket
 {
+	
 	private final String _account;
 	private final boolean _authed;
 	
@@ -34,7 +35,7 @@ public class PlayerAuthResponse extends BaseRecievePacket
 		super(decrypt);
 		
 		_account = readS();
-		_authed = readC() != 0;
+		_authed = (readC() != 0);
 	}
 	
 	/**
@@ -52,4 +53,5 @@ public class PlayerAuthResponse extends BaseRecievePacket
 	{
 		return _authed;
 	}
+	
 }

@@ -19,10 +19,10 @@ package com.l2jmobius.gameserver.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -30,22 +30,25 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.BlockListPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.network.serverpackets.friend.BlockListPacket;
 
+/**
+ * This class ...
+ * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
+ */
 public class BlockList
 {
 	private static Logger _log = Logger.getLogger(BlockList.class.getName());
-	private static Map<Integer, HashMap<Integer, String>> OFFLINE_LIST = new HashMap<>();
+	private static Map<Integer, List<Integer>> _offlineList = new ConcurrentHashMap<>();
 	
 	private final L2PcInstance _owner;
-	private HashMap<Integer, String> _blockList;
-	private final ArrayList<Integer> _updateMemos = new ArrayList<>();
+	private List<Integer> _blockList;
 	
 	public BlockList(L2PcInstance owner)
 	{
 		_owner = owner;
-		_blockList = OFFLINE_LIST.get(owner.getObjectId());
+		_blockList = _offlineList.get(owner.getObjectId());
 		if (_blockList == null)
 		{
 			_blockList = loadList(_owner.getObjectId());
@@ -54,75 +57,39 @@ public class BlockList
 	
 	private void addToBlockList(int target)
 	{
-		_blockList.put(target, "");
-		persistInDB(target);
+		_blockList.add(target);
+		updateInDB(target, true);
 	}
 	
 	private void removeFromBlockList(int target)
 	{
 		_blockList.remove(Integer.valueOf(target));
-		if (_updateMemos.contains(target))
-		{
-			_updateMemos.remove(Integer.valueOf(target));
-		}
-		removeFromDB(target);
-	}
-	
-	public void setBlockMemo(int target, String memo)
-	{
-		if (_blockList.containsKey(target))
-		{
-			_blockList.put(target, memo);
-			_updateMemos.add(target);
-		}
-	}
-	
-	public void updateBlockMemos()
-	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
-		{
-			for (int target : _updateMemos)
-			{
-				try (PreparedStatement ps = con.prepareStatement("UPDATE character_friends SET memo=? WHERE charId=? AND friendId=? AND relation=1"))
-				{
-					ps.setString(1, _blockList.get(target));
-					ps.setInt(2, _owner.getObjectId());
-					ps.setInt(3, target);
-					ps.execute();
-				}
-			}
-		}
-		catch (SQLException e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		_blockList.clear();
+		updateInDB(target, false);
 	}
 	
 	public void playerLogout()
 	{
-		OFFLINE_LIST.put(_owner.getObjectId(), _blockList);
+		_offlineList.put(_owner.getObjectId(), _blockList);
 	}
 	
-	private static HashMap<Integer, String> loadList(int ObjId)
+	private static List<Integer> loadList(int ObjId)
 	{
-		final HashMap<Integer, String> list = new HashMap<>();
+		final List<Integer> list = new ArrayList<>();
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT friendId, memo FROM character_friends WHERE charId=? AND relation=1"))
+			PreparedStatement statement = con.prepareStatement("SELECT friendId FROM character_friends WHERE charId=? AND relation=1"))
 		{
-			ps.setInt(1, ObjId);
-			try (ResultSet rs = ps.executeQuery())
+			statement.setInt(1, ObjId);
+			try (ResultSet rset = statement.executeQuery())
 			{
 				int friendId;
-				while (rs.next())
+				while (rset.next())
 				{
-					friendId = rs.getInt("friendId");
+					friendId = rset.getInt("friendId");
 					if (friendId == ObjId)
 					{
 						continue;
 					}
-					list.put(friendId, rs.getString("memo"));
+					list.add(friendId);
 				}
 			}
 		}
@@ -133,44 +100,44 @@ public class BlockList
 		return list;
 	}
 	
-	private void removeFromDB(int targetId)
+	private void updateInDB(int targetId, boolean state)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("DELETE FROM character_friends WHERE charId=? AND friendId=? AND relation=1"))
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
-			ps.setInt(1, _owner.getObjectId());
-			ps.setInt(2, targetId);
-			ps.execute();
+			if (state) // add
+			{
+				try (PreparedStatement statement = con.prepareStatement("INSERT INTO character_friends (charId, friendId, relation) VALUES (?, ?, 1)"))
+				{
+					statement.setInt(1, _owner.getObjectId());
+					statement.setInt(2, targetId);
+					statement.execute();
+				}
+			}
+			else
+			// remove
+			{
+				try (PreparedStatement statement = con.prepareStatement("DELETE FROM character_friends WHERE charId=? AND friendId=? AND relation=1"))
+				{
+					statement.setInt(1, _owner.getObjectId());
+					statement.setInt(2, targetId);
+					statement.execute();
+				}
+			}
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not remove blocked player: " + e.getMessage(), e);
-		}
-	}
-	
-	private void persistInDB(int targetId)
-	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("INSERT INTO character_friends (charId, friendId, relation) VALUES (?, ?, 1)"))
-		{
-			ps.setInt(1, _owner.getObjectId());
-			ps.setInt(2, targetId);
-			ps.execute();
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, "Could not add blocked player: " + e.getMessage(), e);
+			_log.log(Level.WARNING, "Could not add block player: " + e.getMessage(), e);
 		}
 	}
 	
 	public boolean isInBlockList(L2PcInstance target)
 	{
-		return _blockList.containsKey(target.getObjectId());
+		return _blockList.contains(target.getObjectId());
 	}
 	
 	public boolean isInBlockList(int targetId)
 	{
-		return _blockList.containsKey(targetId);
+		return _blockList.contains(targetId);
 	}
 	
 	public boolean isBlockAll()
@@ -195,7 +162,7 @@ public class BlockList
 		_owner.setMessageRefusal(state);
 	}
 	
-	public HashMap<Integer, String> getBlockList()
+	private List<Integer> getBlockList()
 	{
 		return _blockList;
 	}
@@ -209,7 +176,7 @@ public class BlockList
 		
 		final String charName = CharNameTable.getInstance().getNameById(targetId);
 		
-		if (listOwner.getFriendList().containsKey(targetId))
+		if (listOwner.getFriendList().contains(targetId))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST);
 			sm.addString(charName);
@@ -217,7 +184,7 @@ public class BlockList
 			return;
 		}
 		
-		if (listOwner.getBlockList().getBlockList().containsKey(targetId))
+		if (listOwner.getBlockList().getBlockList().contains(targetId))
 		{
 			listOwner.sendMessage("Already in ignore list.");
 			return;
@@ -250,7 +217,7 @@ public class BlockList
 		
 		final String charName = CharNameTable.getInstance().getNameById(targetId);
 		
-		if (!listOwner.getBlockList().getBlockList().containsKey(targetId))
+		if (!listOwner.getBlockList().getBlockList().contains(targetId))
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			listOwner.sendPacket(sm);
@@ -281,7 +248,7 @@ public class BlockList
 	
 	public static void sendListToOwner(L2PcInstance listOwner)
 	{
-		listOwner.sendPacket(new BlockListPacket(listOwner));
+		listOwner.sendPacket(new BlockListPacket(listOwner.getBlockList().getBlockList()));
 	}
 	
 	/**
@@ -296,10 +263,10 @@ public class BlockList
 		{
 			return BlockList.isBlocked(player, targetId);
 		}
-		if (!OFFLINE_LIST.containsKey(ownerId))
+		if (!_offlineList.containsKey(ownerId))
 		{
-			OFFLINE_LIST.put(ownerId, loadList(ownerId));
+			_offlineList.put(ownerId, loadList(ownerId));
 		}
-		return OFFLINE_LIST.get(ownerId).containsKey(targetId);
+		return _offlineList.get(ownerId).contains(targetId);
 	}
 }

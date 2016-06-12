@@ -16,30 +16,32 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.crystalization;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 
 /**
  * @author UnAfraid
  */
-public class RequestCrystallizeItemCancel extends L2GameClientPacket
+public class RequestCrystallizeItemCancel implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// Nothing to read
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("crystallize"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("crystallize"))
 		{
 			activeChar.sendMessage("You are crystallizing too fast.");
 			return;
@@ -49,11 +51,5 @@ public class RequestCrystallizeItemCancel extends L2GameClientPacket
 		{
 			activeChar.setInCrystallize(false);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
 	}
 }

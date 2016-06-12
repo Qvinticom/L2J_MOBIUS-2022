@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
+import java.util.Iterator;
 import java.util.List;
 
 import com.l2jmobius.gameserver.ai.L2ShuttleAI;
@@ -40,12 +41,7 @@ public class L2ShuttleInstance extends L2Vehicle
 	{
 		super(template);
 		setInstanceType(InstanceType.L2ShuttleInstance);
-	}
-	
-	@Override
-	public L2ShuttleAI initAI()
-	{
-		return new L2ShuttleAI(this);
+		setAI(new L2ShuttleAI(this));
 	}
 	
 	public List<L2ShuttleStop> getStops()
@@ -94,7 +90,6 @@ public class L2ShuttleInstance extends L2Vehicle
 		player.setVehicle(this);
 		player.setInVehiclePosition(new Location(0, 0, 0));
 		player.broadcastPacket(new ExShuttleGetOn(player, this));
-		player.getKnownList().removeAllKnownObjects();
 		player.setXYZ(getX(), getY(), getZ());
 		player.revalidateZone(true);
 		return true;
@@ -106,7 +101,6 @@ public class L2ShuttleInstance extends L2Vehicle
 		if (player.isOnline())
 		{
 			player.broadcastPacket(new ExShuttleGetOff(player, this, x, y, z));
-			player.getKnownList().removeAllKnownObjects();
 			player.setXYZ(x, y, z);
 			player.revalidateZone(true);
 		}
@@ -119,13 +113,18 @@ public class L2ShuttleInstance extends L2Vehicle
 	@Override
 	public void oustPlayers()
 	{
-		for (L2PcInstance player : _passengers)
+		L2PcInstance player;
+		
+		// Use iterator because oustPlayer will try to remove player from _passengers
+		final Iterator<L2PcInstance> iter = _passengers.iterator();
+		while (iter.hasNext())
 		{
+			player = iter.next();
+			iter.remove();
 			if (player != null)
 			{
 				oustPlayer(player);
 			}
-			_passengers.remove(player);
 		}
 	}
 	

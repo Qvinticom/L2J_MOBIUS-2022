@@ -16,9 +16,11 @@
  */
 package handlers.itemhandlers;
 
+import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2BlockInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -46,19 +48,13 @@ public class EventItem implements IItemHandler
 		switch (itemId)
 		{
 			case 13787: // Handy's Block Checker Bond
-			{
 				used = useBlockCheckerItem(activeChar, item);
 				break;
-			}
 			case 13788: // Handy's Block Checker Land Mine
-			{
 				used = useBlockCheckerItem(activeChar, item);
 				break;
-			}
 			default:
-			{
 				_log.warning("EventItemHandler: Item with id: " + itemId + " is not handled");
-			}
 		}
 		return used;
 	}
@@ -74,7 +70,7 @@ public class EventItem implements IItemHandler
 			return false;
 		}
 		
-		final Skill sk = item.getEtcItem().getSkills()[0].getSkill();
+		final Skill sk = item.getEtcItem().getSkills(ItemSkillType.NORMAL).get(0).getSkill();
 		if (sk == null)
 		{
 			return false;
@@ -91,14 +87,14 @@ public class EventItem implements IItemHandler
 		if (holder != null)
 		{
 			final int team = holder.getPlayerTeam(castor);
-			for (L2PcInstance pc : block.getKnownList().getKnownPlayersInRadius(sk.getEffectRange()))
+			L2World.getInstance().forEachVisibleObjectInRange(block, L2PcInstance.class, sk.getEffectRange(), pc ->
 			{
 				final int enemyTeam = holder.getPlayerTeam(pc);
 				if ((enemyTeam != -1) && (enemyTeam != team))
 				{
 					sk.applyEffects(castor, pc);
 				}
-			}
+			});
 			return true;
 		}
 		_log.warning("Char: " + castor.getName() + "[" + castor.getObjectId() + "] has unknown block checker arena");

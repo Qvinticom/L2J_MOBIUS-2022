@@ -1,779 +1,1145 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="21300" levels="1" name="Release Agathion's Seal - Velarin">
+	<skill id="21300" toLevel="1" name="Release Agathion's Seal - Velarin">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Agathion's Seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21301" levels="1" name="Release Agathion's Seal - Dulcinel">
+	<skill id="21301" toLevel="1" name="Release Agathion's Seal - Dulcinel">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Agathion's Seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21302" levels="1" name="Release Agathion's Seal - Chimeros">
+	<skill id="21302" toLevel="1" name="Release Agathion's Seal - Chimeros">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Agathion's Seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21303" levels="1" name="Release Agathion's Seal - Niveri">
+	<skill id="21303" toLevel="1" name="Release Agathion's Seal - Niveri">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Agathion's Seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21304" levels="1" name="Release Agathion's Seal - Hamell">
+	<skill id="21304" toLevel="1" name="Release Agathion's Seal - Hamell">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Agathion's Seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21305" levels="1" name="Release Agathion's Seal - Joriya">
+	<skill id="21305" toLevel="1" name="Release Agathion's Seal - Joriya">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Agathion's Seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21306" levels="1" name="Release Agathion's Seal - Ralmak">
+	<skill id="21306" toLevel="1" name="Release Agathion's Seal - Ralmak">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Agathion's Seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21307" levels="1" name="Release Agathion's Seal - Goras">
+	<skill id="21307" toLevel="1" name="Release Agathion's Seal - Goras">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Agathion's Seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21308" levels="1" name="Release Agathion's Seal - Vensar">
+	<skill id="21308" toLevel="1" name="Release Agathion's Seal - Vensar">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Agathion's Seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21309" levels="1" name="Release Agathion's Seal - Kiela">
+	<skill id="21309" toLevel="1" name="Release Agathion's Seal - Kiela">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Agathion's Seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21310" levels="1" name="Soul's Shield">
+	<skill id="21310" toLevel="1" name="Soul's Shield">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 20 sec., P. / M. Def. + 30%. 500 Energy consumed. Cooldown is 20 min. -->
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_active_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1000" />
-		<set name="reuseDelay" val="1200000" />
+		<icon>BranchSys2.icon.br_soulavatar_active_i00</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<abnormalType>SOUL_SHIELD</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<staticReuse>true</staticReuse>
+		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
+		<reuseDelay>1200000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>500</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21311" levels="1" name="Reinforced Authority">
+	<skill id="21311" toLevel="1" name="Reinforced Authority">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- All stats + 1, Max HP/MP/CP + 300, HP/MP Recovery Rate + 10%, all attribute resistance 10. 4 Energy consumed every sec. -->
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_stat_i00" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>4</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21312" levels="1" name="Indomitable Spirit">
+	<skill id="21312" toLevel="1" name="Indomitable Spirit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 5%. 2 Energy consumed per sec. -->
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21313" levels="1" name="Soul Shroud">
+	<skill id="21313" toLevel="1" name="Soul Shroud">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. + 5%, and Max HP + 5%. 2 Energy consumed per sec. -->
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21314" levels="1" name="Soul Seduction">
+	<skill id="21314" toLevel="1" name="Soul Seduction">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. + 5%. 2 Energy consumed per sec. -->
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21315" levels="1" name="Soul Protection">
+	<skill id="21315" toLevel="1" name="Soul Protection">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 5%, and Max HP + 5%. 2 Energy consumed per sec. -->
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21316" levels="1" name="Intelligent Soul">
+	<skill id="21316" toLevel="1" name="Intelligent Soul">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Skill Cooldown - 3%, and MP Consumption - 3%. 2 Energy consumed per sec. -->
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21317" levels="1" name="Sagacious Soul">
+	<skill id="21317" toLevel="1" name="Sagacious Soul">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Casting Spd. + 5%. 2 Energy consumed. -->
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21320" levels="1" name="Desperate Exorcism">
+	<skill id="21320" toLevel="1" name="Desperate Exorcism">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Use Exorcism on Zombified adventurers to Stun them for 6 sec. and have a 50% chance of removing the curse. -->
-		<set name="icon" val="icon.skill1551" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="250" />
-		<set name="hitTime" val="2500" />
-		<set name="coolTime" val="800" />
-		<set name="reuseDelay" val="30000" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill1551</icon>
+		<operateType>A2</operateType>
+		<castRange>250</castRange>
+		<hitTime>2500</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>1000</effectPoint>
+		<abnormalType>STUN</abnormalType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>250</effectRange>
+		<lvlBonusRate>1</lvlBonusRate>
+		<activateRate>100</activateRate>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<trait>SHOCK</trait>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<targetType>OTHERS</targetType>
+		<affectScope>SINGLE</affectScope>
+		<targetConditions>
+			<condition name="OpCheckAbnormal">
+				<type>TRANSFORM</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+			</condition>
+		</targetConditions>
 	</skill>
-	<skill id="21321" levels="1" name="Desperate Exorcism - Trigger">
+	<skill id="21321" toLevel="1" name="Desperate Exorcism - Trigger">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Has a 30% of removing the curse. -->
-		<set name="icon" val="icon.skill1551" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill1551</icon>
+		<operateType>P</operateType>
+		<effectPoint>1000</effectPoint>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
 	</skill>
-	<skill id="21322" levels="1" name="Cancel Transformation">
+	<skill id="21322" toLevel="1" name="Cancel Transformation">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Undo the transformation. -->
-		<set name="icon" val="icon.skilltransform2" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="100" />
+		<icon>icon.skilltransform2</icon>
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<effectPoint>1000</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>600</effectRange>
+		<magicLvl>99</magicLvl>
+		<hitTime>100</hitTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanUntransform" />
+		</conditions>
 	</skill>
-	<skill id="21323" levels="1" name="Restore the Crystal of Protection">
+	<skill id="21323" toLevel="1" name="Restore the Crystal of Protection">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restore a small portion of the Crystal of Protection's HP. -->
-		<set name="icon" val="icon.skill1425" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="350" />
-		<set name="hitTime" val="5000" />
-		<set name="reuseDelay" val="30000" />
+		<icon>icon.skill1425</icon>
+		<operateType>A1</operateType>
+		<castRange>350</castRange>
+		<hitTime>5000</hitTime>
+		<effectPoint>1000</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>30000</reuseDelay>
+		<targetType>OTHERS</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpTargetNpc">
+				<npcIds>
+					<item>8462</item>
+				</npcIds>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="21324" levels="1" name="Einhasad's Authority">
+	<skill id="21324" toLevel="1" name="Einhasad's Authority">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Use Einhasad's authority to create a large ring of light around yourself for a chance to eliminate zombies. Normal persons and yourself are not affected. -->
-		<set name="icon" val="icon.skill6288" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
-		<set name="coolTime" val="720" />
-		<set name="reuseDelay" val="45000" />
+		<icon>icon.skill6288</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<coolTime>720</coolTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>250</effectRange>
+		<magicLvl>1</magicLvl>
+		<affectRange>300</affectRange>
+		<isMagic>2</isMagic>
+		<reuseDelay>45000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
 	</skill>
-	<skill id="21325" levels="1" name="Release Agathion's Seal - Uthanka">
+	<skill id="21325" toLevel="1" name="Release Agathion's Seal - Uthanka">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Agathion's Seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21326" levels="1" name="Basic Effect: Elemental Shirt">
+	<skill id="21326" toLevel="1" name="Basic Effect: Elemental Shirt">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 8. -->
-		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i01" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys2.icon.etc_scroll_of_enchant_shirt_i01</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="21327" levels="10" name="Enchant Effect: Elemental Shirt">
+	<skill id="21327" toLevel="10" name="Enchant Effect: Elemental Shirt">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 9. -->
-		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys2.icon.etc_scroll_of_enchant_shirt_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="21328" levels="1" name="Adenian Underwear: Speed">
+	<skill id="21328" toLevel="1" name="Adenian Underwear: Speed">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Speed + 7. -->
-		<set name="icon" val="BranchSys3.icon1.g_co_military_undwrwear" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_co_military_undwrwear</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="21329" levels="1" name="Adenian Underwear: Speed">
+	<skill id="21329" toLevel="1" name="Adenian Underwear: Speed">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Speed + 7. -->
-		<set name="icon" val="BranchSys3.icon1.g_co_premium_underwear" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_co_premium_underwear</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="21330" levels="1" name="Adenian Underwear: Speed">
+	<skill id="21330" toLevel="1" name="Adenian Underwear: Speed">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Speed + 7. -->
-		<set name="icon" val="BranchSys3.icon1.g_co_sexy_underwear" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_co_sexy_underwear</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="21331" levels="1" name="Adenian Underwear: Speed">
+	<skill id="21331" toLevel="1" name="Adenian Underwear: Speed">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Speed + 7. -->
-		<set name="icon" val="BranchSys3.icon1.g_co_sf_underwear_01" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_co_sf_underwear_01</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="21332" levels="1" name="Adenian Underwear: Speed">
+	<skill id="21332" toLevel="1" name="Adenian Underwear: Speed">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Speed + 7. -->
-		<set name="icon" val="BranchSys3.icon1.g_co_maid_underwear_f01" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_co_maid_underwear_f01</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="21333" levels="2" name="Adenia's Vampiric Rage">
+	<skill id="21333" toLevel="2" name="Adenia's Vampiric Rage">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Passive: Has a chance of absorbing 3% of damage inflicted on enemy as HP when equipped. -->
-		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">67</value>
+			<value level="2">85</value>
+		</magicLvl>
 	</skill>
-	<skill id="21334" levels="2" name="Adenia's Vampiric Rage">
+	<skill id="21334" toLevel="2" name="Adenia's Vampiric Rage">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Active: For 30 min., has a chance of absorbing 4% of damage inflicted on enemy as HP when used. -->
-		<set name="icon" val="icon.skill3123" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="7200000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<reuseDelay>7200000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>44</magicLvl>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>
+			<value level="1">1800</value>
+			<value level="2">3600</value>
+		</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21335" levels="2" name="Adenia's Damage Reflect">
+	<skill id="21335" toLevel="2" name="Adenia's Damage Reflect">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Passive: Reflects 3% of received damage back to enemy. -->
-		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<effectPoint>379</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">46</value>
+			<value level="2">64</value>
+		</magicLvl>
+		<isMagic>1</isMagic>
 	</skill>
-	<skill id="21336" levels="2" name="Adenia's Damage Reflect">
+	<skill id="21336" toLevel="2" name="Adenia's Damage Reflect">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Active: For 5 min., reflects 7% of received damage back to enemy. -->
-		<set name="icon" val="icon.skill3123" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="25" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="600000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>25</mpConsume>
+		<hitTime>4000</hitTime>
+		<reuseDelay>600000</reuseDelay>
+		<effectPoint>379</effectPoint>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">46</value>
+			<value level="2">64</value>
+		</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21337" levels="1" name="Adenia's Duel Might">
+	<skill id="21337" toLevel="1" name="Adenia's Duel Might">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Chance: For some time, increases P. Atk. In PvP when attacked. -->
-		<set name="icon" val="icon.skill3238" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>46</magicLvl>
 	</skill>
-	<skill id="21338" levels="1" name="Adenia's Duel Might">
+	<skill id="21338" toLevel="1" name="Adenia's Duel Might">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Passive: Increases P. Atk. In PvP when equipped. -->
-		<set name="icon" val="icon.skill3238" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>46</magicLvl>
 	</skill>
-	<skill id="21339" levels="1" name="Adenia's Doom">
+	<skill id="21339" toLevel="1" name="Adenia's Doom">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Chance: Momentarily blocks all of target's P./M. Skills when attacked. -->
-		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill3080</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>61</magicLvl>
 	</skill>
-	<skill id="21340" levels="2" name="Adenia's Instant Recovery">
+	<skill id="21340" toLevel="2" name="Adenia's Instant Recovery">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Active: Recovers 15% HP, 15% MP, and 20% CP. Usable in the Olympiad. -->
-		<set name="icon" val="icon.skill3123" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="1800000" />
+		<icon>icon.skill3123</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<effectPoint>10</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">46</value>
+			<value level="2">61</value>
+		</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>1800000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21341" levels="1" name="Adenia's Shield">
+	<skill id="21341" toLevel="1" name="Adenia's Shield">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Active: For some time, P. Def. + 10%. -->
-		<set name="icon" val="icon.skill3123" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="48" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="300000" />
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>48</mpConsume>
+		<hitTime>4000</hitTime>
+		<effectPoint>440</effectPoint>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>46</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<isMagic>2</isMagic>
+		<reuseDelay>300000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21342" levels="1" name="Adenia's Magic Barrier">
+	<skill id="21342" toLevel="1" name="Adenia's Magic Barrier">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Active: For some time, M. Def. + 10%. -->
-		<set name="icon" val="icon.skill3123" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="48" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="300000" />
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>48</mpConsume>
+		<hitTime>4000</hitTime>
+		<effectPoint>440</effectPoint>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>46</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<isMagic>2</isMagic>
+		<reuseDelay>300000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21343" levels="1" name="Adenia's Barrier">
+	<skill id="21343" toLevel="1" name="Adenia's Barrier">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Active: For some time, P. Def./ M. Def. + 10%. -->
-		<set name="icon" val="icon.skill3123" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="48" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="300000" />
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<mpConsume>48</mpConsume>
+		<hitTime>4000</hitTime>
+		<effectPoint>440</effectPoint>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>61</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<isMagic>2</isMagic>
+		<reuseDelay>300000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21344" levels="2" name="Adenia's Invincibility">
+	<skill id="21344" toLevel="2" name="Adenia's Invincibility">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Active: Removes all abnormal states and grants invincibility for 3 sec. Cannot use when rendered immobile. Usable in the Olympiad. -->
-		<table name="#reuseDelays"> 7200000 3600000 </table>
-		<set name="icon" val="icon.skill3123" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="#reuseDelays" />
+		<icon>icon.skill3123</icon>
+		<operateType>A2</operateType>
+		<hitTime>500</hitTime>
+		<abnormalType>SIGNAL_C</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">46</value>
+			<value level="2">61</value>
+		</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">7</value>
+		</abnormalTime>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<isMagic>2</isMagic>
+		<reuseDelay>
+			<value level="1">7200000</value>
+			<value level="2">3600000</value>
+		</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21345" levels="2" name="Adenia's Return">
+	<skill id="21345" toLevel="2" name="Adenia's Return">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Active: Teleport to town. Unusable in special places such as GM Consultation Room. -->
-		<table name="#isMagics"> 0 1 </table>
-		<table name="#mpConsumes"> 110 214 </table>
-		<set name="icon" val="icon.skill3123" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="hitTime" val="20000" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="isMagic" val="#isMagics" />
+		<icon>icon.skill3123</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">110</value>
+			<value level="2">214</value>
+		</mpConsume>
+		<hitTime>20000</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">48</value>
+		</magicLvl>
+		<affectRange>1000</affectRange>
+		<isMagic>
+			<value level="1">2</value>
+			<value level="2">1</value>
+		</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>
+			<value level="1">SINGLE</value>
+			<value level="2">PARTY</value>
+		</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
 	</skill>
-	<skill id="21346" levels="1" name="Adenia's Weight Limit">
+	<skill id="21346" toLevel="1" name="Adenia's Weight Limit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Passive: Weight gauge x 2 when equipped. -->
-		<set name="icon" val="icon.skill3238" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill3238</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>46</magicLvl>
 	</skill>
-	<skill id="21347" levels="1" name="Release Agathion's Seal - Griffin">
+	<skill id="21347" toLevel="1" name="Release Agathion's Seal - Griffin">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Agathion's Seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21348" levels="1" name="Summon Friend">
+	<skill id="21348" toLevel="1" name="Summon Friend">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons your friend. The target to be summoned must be equipped with a Mysterious Friend Summon Bracelet and be a party member. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="-2" />
-		<set name="hitTime" val="10000" />
-		<set name="reuseDelay" val="3600000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<castRange>-2</castRange>
+		<hitTime>10000</hitTime>
+		<effectPoint>1000</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>400</effectRange>
+		<magicLvl>1</magicLvl>
+		<affectRange>300</affectRange>
+		<isMagic>4</isMagic>
+		<reuseDelay>3600000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
 	</skill>
-	<skill id="21349" levels="1" name="Memory Shot">
+	<skill id="21349" toLevel="1" name="Memory Shot">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- You can take pictures using the camera given by the Fantasy Isle Festival Emissary. -->
-		<set name="icon" val="BranchSys.icon.br_firecracker_white_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="5000" />
-		<set name="reuseDelay" val="30000" />
+		<icon>BranchSys.icon.br_firecracker_white_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>5000</hitTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>300</effectRange>
+		<magicLvl>1</magicLvl>
+		<affectRange>350</affectRange>
+		<isMagic>2</isMagic>
+		<reuseDelay>30000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
 	</skill>
-	<skill id="21350" levels="5" name="Modified Set Effect Test">
+	<skill id="21350" toLevel="5" name="Modified Set Effect Test">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For testing the modified set effects. STR + 2. -->
-		<set name="icon" val="BranchSys3.icon1.g_co_sf_b" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_co_sf_b</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>50</magicLvl>
 	</skill>
-	<skill id="21351" levels="2" name="Modified Set Effect Test">
+	<skill id="21351" toLevel="2" name="Modified Set Effect Test">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For testing the modified set effects. Skill: Teleport to town. -->
-		<set name="icon" val="BranchSys3.Icon.g_beam_sword" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="110" />
-		<set name="hitTime" val="20000" />
-		<set name="reuseDelay" val="3600000" />
+		<icon>BranchSys3.Icon.g_beam_sword</icon>
+		<operateType>A1</operateType>
+		<mpConsume>110</mpConsume>
+		<hitTime>20000</hitTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>50</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>3600000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
 	</skill>
-	<skill id="21352" levels="1" name="Release Agathion's Seal - Hussar">
+	<skill id="21352" toLevel="1" name="Release Agathion's Seal - Hussar">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Agathion's Seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>65</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21353" levels="1" name="Vitality Recovery">
+	<skill id="21353" toLevel="1" name="Vitality Recovery">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 min., restores Vitality with XP gain. Cooldown is 1 hr. -->
-		<set name="icon" val="BranchSys.icon.br_black_gem_mask_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="isMagic" val="4" />
+		<icon>BranchSys.icon.br_black_gem_mask_i00</icon>
+		<operateType>A2</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<abnormalType>VP_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<activateRate>0</activateRate>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<trait>ETC</trait>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21354" levels="1" name="Vitality Recovery">
+	<skill id="21354" toLevel="1" name="Vitality Recovery">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 min., restores Vitality with XP gain. Cooldown is 1 hr. -->
-		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="isMagic" val="4" />
+		<icon>icon.accessory_dwarf_goggle_i00</icon>
+		<operateType>A2</operateType>
+		<hitTime>3000</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<abnormalType>VP_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<activateRate>0</activateRate>
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<trait>ETC</trait>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21355" levels="1" name="Erupting Vitality XP Potion">
+	<skill id="21355" toLevel="1" name="Erupting Vitality XP Potion">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 hr., Vitality XP Bonus + 100%. Cooldown is 1 hr. -->
-		<set name="icon" val="icon.etc_potion_red_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="isMagic" val="4" />
+		<icon>icon.etc_potion_red_i00</icon>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>4</isMagic>
 	</skill>
-	<skill id="21356" levels="1" name="Erupting Vitality Replenishing Potion">
+	<skill id="21356" toLevel="1" name="Erupting Vitality Replenishing Potion">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 hr., Vitality Recovery + 100%. Cooldown is 1 hr. -->
-		<set name="icon" val="icon.etc_potion_blue_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="isMagic" val="4" />
+		<icon>icon.etc_potion_blue_i00</icon>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>4</isMagic>
 	</skill>
-	<skill id="21357" levels="1" name="Erupting Vitality Conservation Potion">
+	<skill id="21357" toLevel="1" name="Erupting Vitality Conservation Potion">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 hr., Vitality consumption - 50%. Cooldown is 1 hr. -->
-		<set name="icon" val="icon.etc_potion_yellow_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="isMagic" val="4" />
+		<icon>icon.etc_potion_yellow_i00</icon>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>4</isMagic>
 	</skill>
-	<skill id="21358" levels="1" name="Wondrous Human Dye">
+	<skill id="21358" toLevel="1" name="Wondrous Human Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Elemental Stats + 10, Debuff Resistance + 1%. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_human" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_human</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21359" levels="1" name="Wondrous Elf Dye">
+	<skill id="21359" toLevel="1" name="Wondrous Elf Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Water Resistance * 20, P. Critical Rate + 10, M. Critical Rate + 10. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_elf" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_elf</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21360" levels="1" name="Wondrous Dark Elf Dye">
+	<skill id="21360" toLevel="1" name="Wondrous Dark Elf Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Wind Resistance + 20, P. Critical Damage and M. Critical Damage + 1%. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_darkelf" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_darkelf</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21361" levels="1" name="Wondrous Orc Dye">
+	<skill id="21361" toLevel="1" name="Wondrous Orc Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Fire Resistance + 20, HP, MP, and CP + 1%. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_orc" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_orc</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21362" levels="1" name="Wondrous Dwarf Dye">
+	<skill id="21362" toLevel="1" name="Wondrous Dwarf Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Earth Resistance + 20, Skill Cooldown - 1%. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_dwarf" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_dwarf</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21363" levels="1" name="Wondrous Kamael Dye">
+	<skill id="21363" toLevel="1" name="Wondrous Kamael Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Dark Resistance + 20, PvP Damage + 1%. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_kamael" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_kamael</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21364" levels="1" name="Talisman - Abundance">
+	<skill id="21364" toLevel="1" name="Talisman - Abundance (High-grade) - Lv. 4">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 154, M. Atk. + 181, P./ M. Evasion + 4. -->
-		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys2.icon.g_giant_gem</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21365" levels="5" name="Talisman - Hunter">
+	<skill id="21365" toLevel="5" name="Talisman - Hunter">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The Talisman's effect has increased. -->
-		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic>
 	</skill>
-	<skill id="21366" levels="1" name="Wondrous Hunt Dye">
+	<skill id="21366" toLevel="1" name="Wondrous Hunt Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- When HP is 90% or above, P. Def. + 20% and Speed + 33 in the Olympiad and the Ceremony of Chaos. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_etc_defence" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_etc_defence</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21367" levels="1" name="Wondrous Slaughter Dye">
+	<skill id="21367" toLevel="1" name="Wondrous Slaughter Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- In a battlefield, Received Damage - 2% and Damage Reflect Resistance + 2. Skill Lv. up with each PC kill. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_etc_slaughter" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_etc_slaughter</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21368" levels="5" name="Wondrous Slaughter Dye">
+	<skill id="21368" toLevel="5" name="Wondrous Slaughter Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Received Damage - 5% and Damage Reflect Resistance + 5. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_etc_slaughter" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<icon>BranchSys3.icon1.g_premium_hena_etc_slaughter</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic>
 	</skill>
-	<skill id="21369" levels="1" name="Cancel Wondrous Dye Effect">
+	<skill id="21369" toLevel="1" name="Cancel Wondrous Dye Effect">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_etc_slaughter" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_etc_slaughter</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="21370" levels="5" name="Talisman - Slaughterer">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- The Talisman's effect has increased. -->
-		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="21371" levels="5" name="Talisman - Conquerer">
+	<skill id="21370" toLevel="5" name="Talisman - Slaughterer">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The Talisman's effect has increased. -->
-		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic>
 	</skill>
-	<skill id="21372" levels="5" name="Talisman - Outlaw">
+	<skill id="21371" toLevel="5" name="Talisman - Conquerer">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The Talisman's effect has increased. -->
-		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic>
 	</skill>
-	<skill id="21373" levels="1" name="Unequip Talisman - Hunter">
+	<skill id="21372" toLevel="5" name="Talisman - Outlaw">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- The Talisman's effect has increased. -->
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="21373" toLevel="1" name="Unequip Talisman - Hunter">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The Talisman's power fades. -->
-		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="21374" levels="1" name="Unequip Talisman - Slaughterer">
+	<skill id="21374" toLevel="1" name="Unequip Talisman - Slaughterer">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The Talisman's power fades. -->
-		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="21375" levels="1" name="Unequip Talisman - Conquerer">
+	<skill id="21375" toLevel="1" name="Unequip Talisman - Conquerer">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The Talisman's power fades. -->
-		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="21376" levels="1" name="Unequip Talisman - Outlaw">
+	<skill id="21376" toLevel="1" name="Unequip Talisman - Outlaw">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The Talisman's power fades. -->
-		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="21377" levels="3" name="Adenian Tattoo: Protection">
+	<skill id="21377" toLevel="3" name="Adenian Tattoo: Protection">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Active Skill: P./ M. Def. + 5%, Max HP/CP + 200. Lasts 1 min. Cooldown is 1 hr. Can be used in the Olympiad. -->
-		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i01" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="3600000" />
+		<icon>BranchSys3.icon1.g_co_tatu_i01</icon>
+		<operateType>A2</operateType>
+		<hitTime>500</hitTime>
+		<effectPoint>10</effectPoint>
+		<abnormalTime>60</abnormalTime>
+		<reuseDelay>3600000</reuseDelay>
 	</skill>
-	<skill id="21378" levels="3" name="Adenian Tattoo: Valor">
+	<skill id="21378" toLevel="3" name="Adenian Tattoo: Valor">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Active Skill: P. Atk. + 5%, M. Atk. + 10% . Lasts 1 min. Cooldown is 1 hr. Can be used in the Olympiad. -->
-		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i02" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="3600000" />
+		<icon>BranchSys3.icon1.g_co_tatu_i02</icon>
+		<operateType>A2</operateType>
+		<hitTime>500</hitTime>
+		<effectPoint>10</effectPoint>
+		<abnormalTime>60</abnormalTime>
+		<reuseDelay>3600000</reuseDelay>
 	</skill>
-	<skill id="21379" levels="3" name="Adenian Tattoo: Deviance">
+	<skill id="21379" toLevel="3" name="Adenian Tattoo: Deviance">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Active Skill: P./ M. Def. + 3%, P. Atk. + 3%, M. Atk. + 5% . Lasts 1 min. Cooldown is 1 hr. Can be used in the Olympiad. -->
-		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i03" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="3600000" />
+		<icon>BranchSys3.icon1.g_co_tatu_i03</icon>
+		<operateType>A2</operateType>
+		<hitTime>500</hitTime>
+		<effectPoint>10</effectPoint>
+		<abnormalTime>60</abnormalTime>
+		<reuseDelay>3600000</reuseDelay>
 	</skill>
-	<skill id="21380" levels="1" name="Adenian Tattoo: Speed">
+	<skill id="21380" toLevel="1" name="Adenian Tattoo: Speed">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Speed + 7. -->
-		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i01" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_co_tatu_i01</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21381" levels="1" name="Adenian Tattoo: Speed">
+	<skill id="21381" toLevel="1" name="Adenian Tattoo: Speed">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Speed + 7. -->
-		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i02" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_co_tatu_i02</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21382" levels="1" name="Adenian Tattoo: Speed">
+	<skill id="21382" toLevel="1" name="Adenian Tattoo: Speed">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Speed + 7. -->
-		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i03" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_co_tatu_i03</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21383" levels="1" name="Transform: Uthanka">
+	<skill id="21383" toLevel="1" name="Transform: Uthanka">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Pirate Captain Uthanka. -->
-		<set name="icon" val="icon.skilltransform3" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skilltransform3</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="21384" levels="1" name="Cancel Transformation">
+	<skill id="21384" toLevel="1" name="Cancel Transformation">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Cancels Transformation. -->
-		<set name="icon" val="icon.skilltransform2" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="2500" />
+		<icon>icon.skilltransform2</icon>
+		<operateType>A1</operateType>
+		<effectPoint>10</effectPoint>
+		<hitTime>2500</hitTime>
 	</skill>
-	<skill id="21385" levels="1" name="Cancel Dye Effect">
+	<skill id="21385" toLevel="1" name="Cancel Dye Effect">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="21386" levels="1" name="Parade Firecracker">
+	<skill id="21386" toLevel="1" name="Parade Firecracker">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Skill showing the brilliant performance of the delegation members to commemorate the Fantasy Isle festival. -->
-		<set name="icon" val="icon.etc_small_ultra_bomb_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="75" />
-		<set name="reuseDelay" val="1000" />
-		<set name="isMagic" val="4" />
+		<icon>icon.etc_small_ultra_bomb_i00</icon>
+		<operateType>A1</operateType>
+		<castRange>75</castRange>
+		<reuseDelay>1000</reuseDelay>
+		<isMagic>4</isMagic>
 	</skill>
-	<skill id="21387" levels="1" name="Release Agathion's Seal - Van Halter's Memory">
+	<skill id="21387" toLevel="1" name="Release Agathion's Seal - Van Halter's Memory">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Agathion's Seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="21388" levels="1" name="Release Agathion's Seal - Anakim">
+	<skill id="21388" toLevel="1" name="Release Agathion's Seal - Anakim">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Removes the Agathion's seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="21389" levels="1" name="Mysterious Dark Resistance Dye">
+	<skill id="21389" toLevel="1" name="Mysterious Dark Resistance Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Dark Resistance + 120 when fighting normal monsters. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_attribute_unholy" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_attribute_unholy</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21390" levels="1" name="Mysterious Holy Resistance Dye">
+	<skill id="21390" toLevel="1" name="Mysterious Holy Resistance Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Holy Resistance + 120 when fighting normal monsters. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_attribute_holy" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_attribute_holy</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21391" levels="1" name="Mysterious Fire Resistance Dye">
+	<skill id="21391" toLevel="1" name="Mysterious Fire Resistance Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Fire Resistance + 120 when fighting normal monsters. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_attribute_fire" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_attribute_fire</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21392" levels="1" name="Mysterious Water Resistance Dye">
+	<skill id="21392" toLevel="1" name="Mysterious Water Resistance Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Water Resistance + 120 when fighting normal monsters. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_attribute_water" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_attribute_water</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21393" levels="1" name="Mysterious Wind Resistance Dye">
+	<skill id="21393" toLevel="1" name="Mysterious Wind Resistance Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Wind Resistance + 120 when fighting normal monsters. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_attribute_wind" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_attribute_wind</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21394" levels="1" name="Mysterious Earth Resistance Dye">
+	<skill id="21394" toLevel="1" name="Mysterious Earth Resistance Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Earth Resistance + 120 when fighting normal monsters. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_attribute_earth" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_attribute_earth</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21395" levels="1" name="Mysterious Abnormal State Resistance Dye">
+	<skill id="21395" toLevel="1" name="Mysterious Abnormal State Resistance Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Hold, Sleep, Paralysis, Mental, Poison, Bleed, and Stun Resistance + 20. Buff Cancellation Resistance + 20. Has a 5% chance of reflecting physical and magical abnormal states. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_etc_debuff" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_etc_debuff</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21396" levels="1" name="Mysterious Invincibility Boost Dye">
+	<skill id="21396" toLevel="1" name="Mysterious Invincibility Boost Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Duration for Invincibility against normal hits and skills increases by 50%. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_etc_buff" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_etc_buff</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21397" levels="1" name="Mysterious World Boss Defense Dye">
+	<skill id="21397" toLevel="1" name="Mysterious World Boss Defense Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. and M. Def. + 15% when fighting Antharas, Valakas, or Lindvior. -->
-		<set name="icon" val="BranchSys3.iconitem.g_premium_hena_dragon_boss" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.iconitem.g_premium_hena_dragon_boss</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21398" levels="1" name="Mysterious Antharas Defense Dye">
+	<skill id="21398" toLevel="1" name="Mysterious Antharas Defense Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. and M. Def. + 20% when fighting Antharas. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_boss_antaras" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_boss_antaras</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="21399" levels="1" name="Mysterious Valakas Defense Dye">
+	<skill id="21399" toLevel="1" name="Mysterious Valakas Defense Dye">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. and M. Def. + 20% when fighting Valakas. -->
-		<set name="icon" val="BranchSys3.icon1.g_premium_hena_boss_valakas" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys3.icon1.g_premium_hena_boss_valakas</icon>
+		<operateType>P</operateType>
 	</skill>
 </list>

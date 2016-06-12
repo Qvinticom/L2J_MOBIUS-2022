@@ -16,50 +16,56 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.PartyMatchRoom;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.concurrent.TimeUnit;
+
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.enums.MatchingMemberType;
+import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.matching.PartyMatchingRoom;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Gnacik
  */
-public class ExPartyRoomMember extends L2GameServerPacket
+public class ExPartyRoomMember implements IClientOutgoingPacket
 {
-	private final PartyMatchRoom _room;
-	private final int _mode;
+	private final PartyMatchingRoom _room;
+	private final MatchingMemberType _type;
 	
-	public ExPartyRoomMember(L2PcInstance player, PartyMatchRoom room, int mode)
+	public ExPartyRoomMember(L2PcInstance player, PartyMatchingRoom room)
 	{
 		_room = room;
-		_mode = mode;
+		_type = room.getMemberType(player);
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x08);
-		writeD(_mode);
-		writeD(_room.getMembers());
-		for (L2PcInstance member : _room.getPartyMembers())
+		OutgoingPackets.EX_PARTY_ROOM_MEMBER.writeId(packet);
+		
+		packet.writeD(_type.ordinal());
+		packet.writeD(_room.getMembersCount());
+		for (L2PcInstance member : _room.getMembers())
 		{
-			writeD(member.getObjectId());
-			writeS(member.getName());
-			writeD(member.getActiveClassId());
-			writeD(member.getLevel());
-			writeD(_room.getLocation());
-			if (_room.getOwner().equals(member))
+			packet.writeD(member.getObjectId());
+			packet.writeS(member.getName());
+			packet.writeD(member.getActiveClass());
+			packet.writeD(member.getLevel());
+			packet.writeD(MapRegionManager.getInstance().getBBs(member.getLocation()));
+			packet.writeD(_room.getMemberType(member).ordinal());
+			final Map<Integer, Long> _instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(member);
+			packet.writeD(_instanceTimes.size());
+			for (Entry<Integer, Long> entry : _instanceTimes.entrySet())
 			{
-				writeD(0x01);
+				final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
+				packet.writeD(entry.getKey());
+				packet.writeD((int) instanceTime);
 			}
-			else if (_room.getOwner().isInParty() && member.isInParty() && (_room.getOwner().getParty().getLeaderObjectId() == member.getParty().getLeaderObjectId()))
-			{
-				writeD(0x02);
-			}
-			else
-			{
-				writeD(0x00);
-			}
-			writeD(0x00); // TODO: Instance datas there is more if that is not 0!
 		}
+		return true;
 	}
 }

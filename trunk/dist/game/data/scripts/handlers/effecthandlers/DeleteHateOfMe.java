@@ -19,10 +19,11 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 
 /**
@@ -33,17 +34,15 @@ public final class DeleteHateOfMe extends AbstractEffect
 {
 	private final int _chance;
 	
-	public DeleteHateOfMe(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public DeleteHateOfMe(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_chance = params.getInt("chance", 100);
 	}
 	
 	@Override
-	public boolean calcSuccess(BuffInfo info)
+	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
-		return Formulas.calcProbability(_chance, info.getEffector(), info.getEffected(), info.getSkill());
+		return Formulas.calcProbability(_chance, effector, effected, skill);
 	}
 	
 	@Override
@@ -59,15 +58,15 @@ public final class DeleteHateOfMe extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (!info.getEffected().isAttackable())
+		if (!effected.isAttackable())
 		{
 			return;
 		}
 		
-		final L2Attackable target = (L2Attackable) info.getEffected();
-		target.stopHating(info.getEffector());
+		final L2Attackable target = (L2Attackable) effected;
+		target.stopHating(effector);
 		target.setWalking();
 		target.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 	}

@@ -17,10 +17,13 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Disarm effect implementation.
@@ -28,9 +31,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class Disarm extends AbstractEffect
 {
-	public Disarm(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Disarm(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -40,14 +42,18 @@ public final class Disarm extends AbstractEffect
 	}
 	
 	@Override
-	public int getEffectFlags()
+	public long getEffectFlags()
 	{
 		return EffectFlag.DISARMED.getMask();
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void continuousInstant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		info.getEffected().getActingPlayer().disarmWeapons();
+		final L2PcInstance player = effected.getActingPlayer();
+		if (player != null)
+		{
+			player.disarmWeapons();
+		}
 	}
 }

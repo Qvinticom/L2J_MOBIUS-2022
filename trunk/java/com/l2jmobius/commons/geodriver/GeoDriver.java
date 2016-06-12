@@ -36,6 +36,8 @@ public final class GeoDriver
 	private static final int WORLD_MAX_X = 393215;
 	private static final int WORLD_MIN_Y = -589824;
 	private static final int WORLD_MAX_Y = 458751;
+	private static final int WORLD_MIN_Z = -16384;
+	private static final int WORLD_MAX_Z = 16384;
 	
 	/** Regions in the world on the x axis */
 	public static final int GEO_REGIONS_X = 32;
@@ -55,6 +57,8 @@ public final class GeoDriver
 	public static final int GEO_CELLS_X = GEO_BLOCKS_X * IBlock.BLOCK_CELLS_X;
 	/** Cells in the world in the y axis */
 	public static final int GEO_CELLS_Y = GEO_BLOCKS_Y * IBlock.BLOCK_CELLS_Y;
+	/** Cells in the world in the z axis */
+	public static final int GEO_CELLS_Z = (Math.abs(WORLD_MIN_Z) + Math.abs(WORLD_MAX_Z)) / 16;
 	
 	/** The regions array */
 	private final AtomicReferenceArray<IRegion> _regions = new AtomicReferenceArray<>(GEO_REGIONS);
@@ -83,6 +87,14 @@ public final class GeoDriver
 		}
 	}
 	
+	private void checkGeoZ(int geoZ)
+	{
+		if ((geoZ < 0) || (geoZ >= GEO_CELLS_Z))
+		{
+			throw new IllegalArgumentException();
+		}
+	}
+	
 	private IRegion getRegion(int geoX, int geoY)
 	{
 		checkGeoX(geoX);
@@ -96,7 +108,7 @@ public final class GeoDriver
 		
 		try (RandomAccessFile raf = new RandomAccessFile(filePath.toFile(), "r"))
 		{
-			_regions.set(regionOffset, new Region(raf.getChannel().map(MapMode.READ_ONLY, 0, raf.length()).order(ByteOrder.LITTLE_ENDIAN)));
+			_regions.set(regionOffset, new Region(raf.getChannel().map(MapMode.READ_ONLY, 0, raf.length()).load().order(ByteOrder.LITTLE_ENDIAN)));
 		}
 	}
 	
@@ -148,6 +160,15 @@ public final class GeoDriver
 		return (worldY - WORLD_MIN_Y) / 16;
 	}
 	
+	public int getGeoZ(int worldZ)
+	{
+		if ((worldZ < WORLD_MIN_Z) || (worldZ > WORLD_MAX_Z))
+		{
+			throw new IllegalArgumentException();
+		}
+		return (worldZ - WORLD_MIN_Z) / 16;
+	}
+	
 	public int getWorldX(int geoX)
 	{
 		checkGeoX(geoX);
@@ -158,5 +179,11 @@ public final class GeoDriver
 	{
 		checkGeoY(geoY);
 		return (geoY * 16) + WORLD_MIN_Y + 8;
+	}
+	
+	public int getWorldZ(int geoZ)
+	{
+		checkGeoZ(geoZ);
+		return (geoZ * 16) + WORLD_MIN_Z + 8;
 	}
 }

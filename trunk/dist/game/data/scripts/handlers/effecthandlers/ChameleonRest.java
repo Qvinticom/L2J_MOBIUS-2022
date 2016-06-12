@@ -18,11 +18,12 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -32,17 +33,16 @@ public final class ChameleonRest extends AbstractEffect
 {
 	private final double _power;
 	
-	public ChameleonRest(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public ChameleonRest(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_power = params.getDouble("power", 0);
+		setTicks(params.getInt("ticks"));
 	}
 	
 	@Override
-	public int getEffectFlags()
+	public long getEffectFlags()
 	{
-		return EffectFlag.SILENT_MOVE.getMask() | EffectFlag.RELAXING.getMask();
+		return (EffectFlag.SILENT_MOVE.getMask() | EffectFlag.RELAXING.getMask());
 	}
 	
 	@Override
@@ -54,9 +54,17 @@ public final class ChameleonRest extends AbstractEffect
 	@Override
 	public boolean onActionTime(BuffInfo info)
 	{
-		if (info.getEffected().isDead() || (info.getEffected().isPlayer() && !info.getEffected().getActingPlayer().isSitting()))
+		if (info.getEffected().isDead())
 		{
 			return false;
+		}
+		
+		if (info.getEffected().isPlayer())
+		{
+			if (!info.getEffected().getActingPlayer().isSitting())
+			{
+				return false;
+			}
 		}
 		
 		final double manaDam = _power * getTicksMultiplier();
@@ -71,15 +79,15 @@ public final class ChameleonRest extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isPlayer())
+		if (effected.isPlayer())
 		{
-			info.getEffected().getActingPlayer().sitDown(false);
+			effected.getActingPlayer().sitDown(false);
 		}
 		else
 		{
-			info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
+			effected.getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
 		}
 	}
 }

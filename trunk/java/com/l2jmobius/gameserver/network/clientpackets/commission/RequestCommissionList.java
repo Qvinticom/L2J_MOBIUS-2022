@@ -18,19 +18,21 @@ package com.l2jmobius.gameserver.network.clientpackets.commission;
 
 import java.util.function.Predicate;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CommissionManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.commission.CommissionItemType;
 import com.l2jmobius.gameserver.model.commission.CommissionTreeType;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.commission.ExCloseCommission;
 
 /**
  * @author NosBit
  */
-public class RequestCommissionList extends L2GameClientPacket
+public class RequestCommissionList implements IClientIncomingPacket
 {
 	private int _treeViewDepth;
 	private int _itemType;
@@ -39,19 +41,20 @@ public class RequestCommissionList extends L2GameClientPacket
 	private String _query;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_treeViewDepth = readD();
-		_itemType = readD();
-		_type = readD();
-		_grade = readD();
-		_query = readS();
+		_treeViewDepth = packet.readD();
+		_itemType = packet.readD();
+		_type = packet.readD();
+		_grade = packet.readD();
+		_query = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -59,7 +62,7 @@ public class RequestCommissionList extends L2GameClientPacket
 		
 		if (!CommissionManager.isPlayerAllowedToInteract(player))
 		{
-			player.sendPacket(ExCloseCommission.STATIC_PACKET);
+			client.sendPacket(ExCloseCommission.STATIC_PACKET);
 			return;
 		}
 		
@@ -67,101 +70,67 @@ public class RequestCommissionList extends L2GameClientPacket
 		switch (_treeViewDepth)
 		{
 			case 1:
-			{
 				final CommissionTreeType commissionTreeType = CommissionTreeType.findByClientId(_itemType);
 				if (commissionTreeType != null)
 				{
 					filter = filter.and(i -> commissionTreeType.getCommissionItemTypes().contains(i.getCommissionItemType()));
 				}
 				break;
-			}
 			case 2:
-			{
 				final CommissionItemType commissionItemType = CommissionItemType.findByClientId(_itemType);
 				if (commissionItemType != null)
 				{
 					filter = filter.and(i -> i.getCommissionItemType() == commissionItemType);
 				}
 				break;
-			}
 		}
 		
 		switch (_type)
 		{
 			case 0: // General
-			{
 				filter = filter.and(i -> true); // TODO: condition
 				break;
-			}
 			case 1: // Rare
-			{
 				filter = filter.and(i -> true); // TODO: condition
 				break;
-			}
 		}
 		
 		switch (_grade)
 		{
 			case 0:
-			{
 				filter = filter.and(i -> i.getCrystalType() == CrystalType.NONE);
 				break;
-			}
 			case 1:
-			{
 				filter = filter.and(i -> i.getCrystalType() == CrystalType.D);
 				break;
-			}
 			case 2:
-			{
 				filter = filter.and(i -> i.getCrystalType() == CrystalType.C);
 				break;
-			}
 			case 3:
-			{
 				filter = filter.and(i -> i.getCrystalType() == CrystalType.B);
 				break;
-			}
 			case 4:
-			{
 				filter = filter.and(i -> i.getCrystalType() == CrystalType.A);
 				break;
-			}
 			case 5:
-			{
 				filter = filter.and(i -> i.getCrystalType() == CrystalType.S);
 				break;
-			}
 			case 6:
-			{
 				filter = filter.and(i -> i.getCrystalType() == CrystalType.S80);
 				break;
-			}
 			case 7:
-			{
 				filter = filter.and(i -> i.getCrystalType() == CrystalType.R);
 				break;
-			}
 			case 8:
-			{
 				filter = filter.and(i -> i.getCrystalType() == CrystalType.R95);
 				break;
-			}
 			case 9:
-			{
 				filter = filter.and(i -> i.getCrystalType() == CrystalType.R99);
 				break;
-			}
 		}
 		
 		filter = filter.and(i -> _query.isEmpty() || i.getName().toLowerCase().contains(_query.toLowerCase()));
 		
 		CommissionManager.getInstance().showAuctions(player, filter);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
 	}
 }

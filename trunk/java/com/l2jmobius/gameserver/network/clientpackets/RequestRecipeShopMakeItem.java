@@ -16,48 +16,54 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.RecipeController;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author Administrator
  */
-public final class RequestRecipeShopMakeItem extends L2GameClientPacket
+public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 {
-	private static final String _C__BF_REQUESTRECIPESHOPMAKEITEM = "[C] BF RequestRecipeShopMakeItem";
-	
 	private int _id;
 	private int _recipeId;
 	@SuppressWarnings("unused")
 	private long _unknown;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_id = readD();
-		_recipeId = readD();
-		_unknown = readQ();
+		_id = packet.readD();
+		_recipeId = packet.readD();
+		_unknown = packet.readQ();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getManufacture().tryPerformAction("RecipeShopMake"))
+		if (!client.getFloodProtectors().getManufacture().tryPerformAction("RecipeShopMake"))
 		{
 			return;
 		}
 		
 		final L2PcInstance manufacturer = L2World.getInstance().getPlayer(_id);
-		if ((manufacturer == null) || ((manufacturer.getInstanceId() != activeChar.getInstanceId()) && (activeChar.getInstanceId() != -1)))
+		if (manufacturer == null)
+		{
+			return;
+		}
+		
+		if (manufacturer.getInstanceWorld() != activeChar.getInstanceWorld())
 		{
 			return;
 		}
@@ -82,11 +88,5 @@ public final class RequestRecipeShopMakeItem extends L2GameClientPacket
 		{
 			RecipeController.getInstance().requestManufactureItem(manufacturer, _recipeId, activeChar);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__BF_REQUESTRECIPESHOPMAKEITEM;
 	}
 }

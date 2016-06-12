@@ -127,7 +127,7 @@ public class MentorManager
 		return _menteeData;
 	}
 	
-	public void cancelMentoringBuffs(L2PcInstance player)
+	public void cancelAllMentoringBuffs(L2PcInstance player)
 	{
 		if (player == null)
 		{
@@ -146,13 +146,15 @@ public class MentorManager
 	public void setPenalty(int mentorId, long penalty)
 	{
 		final L2PcInstance player = L2World.getInstance().getPlayer(mentorId);
-		(player != null ? player.getVariables() : new PlayerVariables(mentorId)).set("Mentor-Penalty-" + mentorId, String.valueOf(System.currentTimeMillis() + penalty));
+		final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
+		vars.set("Mentor-Penalty-" + mentorId, String.valueOf(System.currentTimeMillis() + penalty));
 	}
 	
 	public long getMentorPenalty(int mentorId)
 	{
 		final L2PcInstance player = L2World.getInstance().getPlayer(mentorId);
-		return (player != null ? player.getVariables() : new PlayerVariables(mentorId)).getLong("Mentor-Penalty-" + mentorId, 0);
+		final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
+		return vars.getLong("Mentor-Penalty-" + mentorId, 0);
 	}
 	
 	/**
@@ -161,14 +163,14 @@ public class MentorManager
 	 */
 	public void addMentor(int mentorId, int menteeId)
 	{
-		_menteeData.computeIfAbsent(mentorId, map -> new ConcurrentHashMap<>());
-		if (_menteeData.get(mentorId).containsKey(menteeId))
+		final Map<Integer, L2Mentee> mentees = _menteeData.computeIfAbsent(mentorId, map -> new ConcurrentHashMap<>());
+		if (mentees.containsKey(menteeId))
 		{
-			_menteeData.get(mentorId).get(menteeId).load(); // Just reloading data if is already there
+			mentees.get(menteeId).load(); // Just reloading data if is already there
 		}
 		else
 		{
-			_menteeData.get(mentorId).put(menteeId, new L2Mentee(menteeId));
+			mentees.put(menteeId, new L2Mentee(menteeId));
 		}
 	}
 	
@@ -211,7 +213,11 @@ public class MentorManager
 	
 	public Collection<L2Mentee> getMentees(int mentorId)
 	{
-		return _menteeData.containsKey(mentorId) ? _menteeData.get(mentorId).values() : Collections.emptyList();
+		if (_menteeData.containsKey(mentorId))
+		{
+			return _menteeData.get(mentorId).values();
+		}
+		return Collections.emptyList();
 	}
 	
 	/**
@@ -221,7 +227,11 @@ public class MentorManager
 	 */
 	public L2Mentee getMentee(int mentorId, int menteeId)
 	{
-		return _menteeData.containsKey(mentorId) ? _menteeData.get(mentorId).get(menteeId) : null;
+		if (_menteeData.containsKey(mentorId))
+		{
+			return _menteeData.get(mentorId).get(menteeId);
+		}
+		return null;
 	}
 	
 	public boolean isAllMenteesOffline(int menteorId, int menteeId)
@@ -229,10 +239,13 @@ public class MentorManager
 		boolean isAllMenteesOffline = true;
 		for (L2Mentee men : getMentees(menteorId))
 		{
-			if (men.isOnline() && (men.getObjectId() != menteeId) && isAllMenteesOffline)
+			if (men.isOnline() && (men.getObjectId() != menteeId))
 			{
-				isAllMenteesOffline = false;
-				break;
+				if (isAllMenteesOffline)
+				{
+					isAllMenteesOffline = false;
+					break;
+				}
 			}
 		}
 		return isAllMenteesOffline;

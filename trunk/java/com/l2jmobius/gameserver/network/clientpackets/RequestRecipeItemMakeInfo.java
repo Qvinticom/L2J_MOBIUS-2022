@@ -16,36 +16,31 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeItemMakeInfo;
 
-public final class RequestRecipeItemMakeInfo extends L2GameClientPacket
+public final class RequestRecipeItemMakeInfo implements IClientIncomingPacket
 {
-	private static final String _C__B7_REQUESTRECIPEITEMMAKEINFO = "[C] B7 RequestRecipeItemMakeInfo";
-	
 	private int _id;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_id = readD();
+		_id = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
-		sendPacket(new RecipeItemMakeInfo(_id, player));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__B7_REQUESTRECIPEITEMMAKEINFO;
+		client.sendPacket(new RecipeItemMakeInfo(_id, player));
 	}
 }

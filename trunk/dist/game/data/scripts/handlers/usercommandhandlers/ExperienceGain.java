@@ -20,7 +20,7 @@ import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.playable.OnPlayableExpChanged;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayableExpChanged;
 import com.l2jmobius.gameserver.model.events.listeners.FunctionEventListener;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 

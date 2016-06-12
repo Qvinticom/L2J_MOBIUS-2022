@@ -18,13 +18,15 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.base.AcquireSkillType;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author UnAfraid
  */
-public class ExAcquirableSkillListByClass extends L2GameServerPacket
+public class ExAcquirableSkillListByClass implements IClientOutgoingPacket
 {
 	final List<L2SkillLearn> _learnable;
 	final AcquireSkillType _type;
@@ -36,24 +38,25 @@ public class ExAcquirableSkillListByClass extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xFA);
-		writeH(_type.getId());
-		writeH(_learnable.size());
+		OutgoingPackets.EX_ACQUIRABLE_SKILL_LIST_BY_CLASS.writeId(packet);
+		
+		packet.writeH(_type.getId());
+		packet.writeH(_learnable.size());
 		for (L2SkillLearn skill : _learnable)
 		{
-			writeD(skill.getSkillId());
-			writeH(skill.getSkillLevel());
-			writeH(skill.getSkillLevel());
-			writeC(skill.getGetLevel());
-			writeQ(skill.getLevelUpSp());
-			writeC(skill.getRequiredItems().size());
+			packet.writeD(skill.getSkillId());
+			packet.writeH(skill.getSkillLevel());
+			packet.writeH(skill.getSkillLevel());
+			packet.writeC(skill.getGetLevel());
+			packet.writeQ(skill.getLevelUpSp());
+			packet.writeC(skill.getRequiredItems().size());
 			if (_type == AcquireSkillType.SUBPLEDGE)
 			{
-				writeH(0x00);
+				packet.writeH(0x00);
 			}
 		}
+		return true;
 	}
 }

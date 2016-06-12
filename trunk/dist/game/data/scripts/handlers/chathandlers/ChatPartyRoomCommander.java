@@ -37,16 +37,18 @@ public final class ChatPartyRoomCommander implements IChatHandler
 	@Override
 	public void handleChat(ChatType type, L2PcInstance activeChar, String target, String text)
 	{
-		if (!activeChar.isInParty() || !activeChar.getParty().isInCommandChannel() || !activeChar.getParty().getCommandChannel().getLeader().equals(activeChar))
+		if (activeChar.isInParty())
 		{
-			return;
+			if (activeChar.getParty().isInCommandChannel() && activeChar.getParty().getCommandChannel().getLeader().equals(activeChar))
+			{
+				if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
+				{
+					activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
+					return;
+				}
+				activeChar.getParty().getCommandChannel().broadcastCreatureSay(new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text), activeChar);
+			}
 		}
-		if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
-		{
-			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
-			return;
-		}
-		activeChar.getParty().getCommandChannel().broadcastCreatureSay(new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text), activeChar);
 	}
 	
 	@Override

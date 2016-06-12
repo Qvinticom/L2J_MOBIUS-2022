@@ -17,9 +17,12 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
+import com.l2jmobius.gameserver.model.L2Crest;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class AllyCrest extends L2GameServerPacket
+public class AllyCrest implements IClientOutgoingPacket
 {
 	private final int _crestId;
 	private final byte[] _data;
@@ -27,23 +30,32 @@ public class AllyCrest extends L2GameServerPacket
 	public AllyCrest(int crestId)
 	{
 		_crestId = crestId;
-		_data = CrestTable.getInstance().getCrest(crestId).getData();
+		final L2Crest crest = CrestTable.getInstance().getCrest(crestId);
+		_data = crest != null ? crest.getData() : null;
+	}
+	
+	public AllyCrest(int crestId, byte[] data)
+	{
+		_crestId = crestId;
+		_data = data;
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xAF);
-		writeD(Config.SERVER_ID);
-		writeD(_crestId);
+		OutgoingPackets.ALLIANCE_CREST.writeId(packet);
+		
+		packet.writeD(Config.SERVER_ID);
+		packet.writeD(_crestId);
 		if (_data != null)
 		{
-			writeD(_data.length);
-			writeB(_data);
+			packet.writeD(_data.length);
+			packet.writeB(_data);
 		}
 		else
 		{
-			writeD(0);
+			packet.writeD(0);
 		}
+		return true;
 	}
 }

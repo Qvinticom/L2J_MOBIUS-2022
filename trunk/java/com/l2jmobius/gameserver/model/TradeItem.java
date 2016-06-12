@@ -16,13 +16,16 @@
  */
 package com.l2jmobius.gameserver.model;
 
+import java.util.Collection;
+import java.util.Collections;
+
+import com.l2jmobius.gameserver.enums.AttributeType;
+import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.clientpackets.ensoul.SoulCrystalOption;
 
 public class TradeItem
 {
-	private L2ItemInstance _itemInstance;
 	private int _objectId;
 	private final L2Item _item;
 	private final int _location;
@@ -44,19 +47,13 @@ public class TradeItem
 		0
 	};
 	private final int[] _enchantOptions;
-	private final boolean _isAugmented;
-	private final L2Augmentation _augmentation;
-	private final int _mana;
-	private final boolean _isTimeLimited;
-	private final int _time;
-	private final int _visualId;
-	private final long _visualExpiration;
-	private SoulCrystalOption[] _commonSoulCrystalOptions;
-	private SoulCrystalOption _specialSoulCrystalOption;
+	private final Collection<EnsoulOption> _soulCrystalOptions;
+	private final Collection<EnsoulOption> _soulCrystalSpecialOptions;
+	private int _visualId;
+	private int _augmentId;
 	
 	public TradeItem(L2ItemInstance item, long count, long price)
 	{
-		_itemInstance = item;
 		_objectId = item.getObjectId();
 		_item = item.getItem();
 		_location = item.getLocationSlot();
@@ -65,27 +62,21 @@ public class TradeItem
 		_type2 = item.getCustomType2();
 		_count = count;
 		_price = price;
-		_elemAtkType = item.getAttackElementType();
-		_elemAtkPower = item.getAttackElementPower();
-		for (byte i = 0; i < 6; i++)
+		_elemAtkType = item.getAttackAttributeType().getClientId();
+		_elemAtkPower = item.getAttackAttributePower();
+		for (AttributeType type : AttributeType.ATTRIBUTE_TYPES)
 		{
-			_elemDefAttr[i] = item.getElementDefAttr(i);
+			_elemDefAttr[type.getClientId()] = item.getDefenceAttribute(type);
 		}
 		_enchantOptions = item.getEnchantOptions();
-		_isAugmented = item.isAugmented();
-		_augmentation = item.getAugmentation();
-		_mana = item.getMana();
-		_isTimeLimited = item.isTimeLimitedItem();
-		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
+		_soulCrystalOptions = item.getSpecialAbilities();
+		_soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
 		_visualId = item.getVisualId();
-		_visualExpiration = item.getTime();
-		_commonSoulCrystalOptions = item.getCommonSoulCrystalOptions();
-		_specialSoulCrystalOption = item.getSpecialSoulCrystalOption();
+		_augmentId = item.isAugmented() ? item.getAugmentation().getId() : 0;
 	}
 	
-	public TradeItem(L2Item item, long count, long price, int enchantLevel, int attackAttribute, int attackAttributeValue, int defenseAttributes[], int appearanceId)
+	public TradeItem(L2Item item, long count, long price)
 	{
-		_itemInstance = null;
 		_objectId = 0;
 		_item = item;
 		_location = 0;
@@ -95,27 +86,15 @@ public class TradeItem
 		_count = count;
 		_storeCount = count;
 		_price = price;
-		_elemAtkType = (byte) attackAttribute;
-		_elemAtkPower = attackAttributeValue;
-		for (byte i = 0; i < 6; i++)
-		{
-			_elemDefAttr[i] = defenseAttributes[i];
-		}
+		_elemAtkType = Elementals.NONE;
+		_elemAtkPower = 0;
 		_enchantOptions = L2ItemInstance.DEFAULT_ENCHANT_OPTIONS;
-		_isAugmented = false;
-		_augmentation = null;
-		_mana = -1;
-		_isTimeLimited = false;
-		_time = -9999;
-		_visualId = appearanceId;
-		_visualExpiration = -1;
-		_commonSoulCrystalOptions = new SoulCrystalOption[2];
-		_specialSoulCrystalOption = null;
+		_soulCrystalOptions = Collections.emptyList();
+		_soulCrystalSpecialOptions = Collections.emptyList();
 	}
 	
-	public TradeItem(TradeItem item, long count, long price, int enchantLevel, int attackAttribute, int attackAttributeValue, int defenseAttributes[], int appearanceId)
+	public TradeItem(TradeItem item, long count, long price)
 	{
-		_itemInstance = item.getItemInstance();
 		_objectId = item.getObjectId();
 		_item = item.getItem();
 		_location = item.getLocationSlot();
@@ -132,25 +111,9 @@ public class TradeItem
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_enchantOptions = item.getEnchantOptions();
-		_isAugmented = item.isAugmented();
-		_augmentation = item.getAugmentation();
-		_mana = item.getMana();
-		_isTimeLimited = item.isTimeLimitedItem();
-		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
+		_soulCrystalOptions = item.getSoulCrystalOptions();
+		_soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
 		_visualId = item.getVisualId();
-		_visualExpiration = item.getVisualExpiration();
-		_commonSoulCrystalOptions = item.getCommonSoulCrystalOptions();
-		_specialSoulCrystalOption = item.getSpecialSoulCrystalOption();
-	}
-	
-	public L2ItemInstance getItemInstance()
-	{
-		return _itemInstance;
-	}
-	
-	public void setItemInstance(L2ItemInstance it)
-	{
-		_itemInstance = it;
 	}
 	
 	public void setObjectId(int objectId)
@@ -238,58 +201,23 @@ public class TradeItem
 		return _enchantOptions;
 	}
 	
-	public boolean isAugmented()
+	public Collection<EnsoulOption> getSoulCrystalOptions()
 	{
-		return _isAugmented;
+		return _soulCrystalOptions;
 	}
 	
-	public L2Augmentation getAugmentation()
+	public Collection<EnsoulOption> getSoulCrystalSpecialOptions()
 	{
-		return _augmentation;
+		return _soulCrystalSpecialOptions;
 	}
 	
-	public int getMana()
+	public int getAugmentId()
 	{
-		return _mana;
-	}
-	
-	public boolean isTimeLimitedItem()
-	{
-		return _isTimeLimited;
+		return _augmentId;
 	}
 	
 	public int getVisualId()
 	{
 		return _visualId;
-	}
-	
-	public long getVisualExpiration()
-	{
-		return _visualExpiration;
-	}
-	
-	public int getRemainingTime()
-	{
-		return _time;
-	}
-	
-	public SoulCrystalOption[] getCommonSoulCrystalOptions()
-	{
-		return _commonSoulCrystalOptions;
-	}
-	
-	public void setSoulCrystalOptions(SoulCrystalOption[] options)
-	{
-		_commonSoulCrystalOptions = options;
-	}
-	
-	public SoulCrystalOption getSpecialSoulCrystalOption()
-	{
-		return _specialSoulCrystalOption;
-	}
-	
-	public void setSpecialSoulCrystalOption(SoulCrystalOption option)
-	{
-		_specialSoulCrystalOption = option;
 	}
 }

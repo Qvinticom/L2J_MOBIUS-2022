@@ -16,14 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets.shuttle;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2ShuttleInstance;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * @author UnAfraid
  */
-public class ExShuttleGetOff extends L2GameServerPacket
+public class ExShuttleGetOff implements IClientOutgoingPacket
 {
 	private final int _playerObjectId;
 	private final int _shuttleObjectId;
@@ -41,14 +43,15 @@ public class ExShuttleGetOff extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xCD);
-		writeD(_playerObjectId);
-		writeD(_shuttleObjectId);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
+		OutgoingPackets.EX_SUTTLE_GET_OFF.writeId(packet);
+		
+		packet.writeD(_playerObjectId);
+		packet.writeD(_shuttleObjectId);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		return true;
 	}
 }

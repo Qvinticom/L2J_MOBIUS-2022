@@ -60,16 +60,16 @@ public class AuthGameGuard extends L2LoginClientPacket
 	@Override
 	protected boolean readImpl()
 	{
-		if (super._buf.remaining() < 20)
+		if (super._buf.remaining() >= 20)
 		{
-			return false;
+			_sessionId = readD();
+			_data1 = readD();
+			_data2 = readD();
+			_data3 = readD();
+			_data4 = readD();
+			return true;
 		}
-		_sessionId = readD();
-		_data1 = readD();
-		_data2 = readD();
-		_data3 = readD();
-		_data4 = readD();
-		return true;
+		return false;
 	}
 	
 	@Override

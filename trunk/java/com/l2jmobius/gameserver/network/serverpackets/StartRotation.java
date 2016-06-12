@@ -16,7 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public final class StartRotation extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
+public final class StartRotation implements IClientOutgoingPacket
 {
 	private final int _charObjId, _degree, _side, _speed;
 	
@@ -29,12 +32,14 @@ public final class StartRotation extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x7a);
-		writeD(_charObjId);
-		writeD(_degree);
-		writeD(_side);
-		writeD(_speed);
+		OutgoingPackets.START_ROTATING.writeId(packet);
+		
+		packet.writeD(_charObjId);
+		packet.writeD(_degree);
+		packet.writeD(_side);
+		packet.writeD(_speed);
+		return true;
 	}
 }

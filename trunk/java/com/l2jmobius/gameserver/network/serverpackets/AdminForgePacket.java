@@ -20,11 +20,13 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
+
 /**
  * This class is made to create packets with any format
  * @author Maktakien
  */
-public class AdminForgePacket extends L2GameServerPacket
+public class AdminForgePacket implements IClientOutgoingPacket
 {
 	private final List<Part> _parts = new ArrayList<>();
 	
@@ -42,57 +44,60 @@ public class AdminForgePacket extends L2GameServerPacket
 	
 	public AdminForgePacket()
 	{
+		
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		for (Part p : _parts)
 		{
-			generate(p.b, p.str);
+			generate(packet, p.b, p.str);
 		}
+		return true;
 	}
 	
 	/**
-	 * @param b
-	 * @param string
+	 * @param packet
+	 * @param type
+	 * @param value
 	 * @return
 	 */
-	public boolean generate(byte b, String string)
+	public boolean generate(PacketWriter packet, byte type, String value)
 	{
-		if ((b == 'C') || (b == 'c'))
+		if ((type == 'C') || (type == 'c'))
 		{
-			writeC(Integer.decode(string));
+			packet.writeC(Integer.decode(value));
 			return true;
 		}
-		else if ((b == 'D') || (b == 'd'))
+		else if ((type == 'D') || (type == 'd'))
 		{
-			writeD(Integer.decode(string));
+			packet.writeD(Integer.decode(value));
 			return true;
 		}
-		else if ((b == 'H') || (b == 'h'))
+		else if ((type == 'H') || (type == 'h'))
 		{
-			writeH(Integer.decode(string));
+			packet.writeH(Integer.decode(value));
 			return true;
 		}
-		else if ((b == 'F') || (b == 'f'))
+		else if ((type == 'F') || (type == 'f'))
 		{
-			writeF(Double.parseDouble(string));
+			packet.writeF(Double.parseDouble(value));
 			return true;
 		}
-		else if ((b == 'S') || (b == 's'))
+		else if ((type == 'S') || (type == 's'))
 		{
-			writeS(string);
+			packet.writeS(value);
 			return true;
 		}
-		else if ((b == 'B') || (b == 'b') || (b == 'X') || (b == 'x'))
+		else if ((type == 'B') || (type == 'b') || (type == 'X') || (type == 'x'))
 		{
-			writeB(new BigInteger(string).toByteArray());
+			packet.writeB(new BigInteger(value).toByteArray());
 			return true;
 		}
-		else if ((b == 'Q') || (b == 'q'))
+		else if ((type == 'Q') || (type == 'q'))
 		{
-			writeQ(Long.decode(string));
+			packet.writeQ(Long.decode(value));
 			return true;
 		}
 		return false;

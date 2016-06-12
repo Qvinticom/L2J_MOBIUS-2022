@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 
 /**
@@ -41,19 +41,16 @@ public class GameGuardCheckTask implements Runnable
 	@Override
 	public void run()
 	{
-		if (_player == null)
+		if ((_player != null))
 		{
-			return;
+			final L2GameClient client = _player.getClient();
+			if ((client != null) && !client.isAuthedGG() && _player.isOnline())
+			{
+				AdminData.getInstance().broadcastMessageToGMs("Client " + client + " failed to reply GameGuard query and is being kicked!");
+				_log.info("Client " + client + " failed to reply GameGuard query and is being kicked!");
+				
+				client.close(LeaveWorld.STATIC_PACKET);
+			}
 		}
-		
-		final L2GameClient client = _player.getClient();
-		if ((client == null) || client.isAuthedGG() || !_player.isOnline())
-		{
-			return;
-		}
-		
-		AdminData.getInstance().broadcastMessageToGMs("Client " + client + " failed to reply GameGuard query and is being kicked!");
-		_log.info("Client " + client + " failed to reply GameGuard query and is being kicked!");
-		client.close(LeaveWorld.STATIC_PACKET);
 	}
 }

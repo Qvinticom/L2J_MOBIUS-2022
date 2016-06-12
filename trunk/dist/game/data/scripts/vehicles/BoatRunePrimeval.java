@@ -16,7 +16,6 @@
  */
 package vehicles;
 
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.ThreadPoolManager;
@@ -31,7 +30,7 @@ import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 /**
  * @author DS
  */
-final class BoatRunePrimeval implements Runnable
+public class BoatRunePrimeval implements Runnable
 {
 	private static final Logger _log = Logger.getLogger(BoatRunePrimeval.class.getName());
 	
@@ -111,28 +110,21 @@ final class BoatRunePrimeval implements Runnable
 			switch (_cycle)
 			{
 				case 0:
-				{
 					BoatManager.getInstance().dockShip(BoatManager.RUNE_HARBOR, false);
 					BoatManager.getInstance().broadcastPackets(RUNE_DOCK[0], PRIMEVAL_DOCK, LEAVING_RUNE, RUNE_SOUND);
 					_boat.payForRide(8925, 1, 34513, -38009, -3640);
 					_boat.executePath(RUNE_TO_PRIMEVAL);
 					break;
-				}
 				case 1:
-				{
 					BoatManager.getInstance().broadcastPackets(PRIMEVAL_DOCK, RUNE_DOCK[0], ARRIVED_AT_PRIMEVAL, ARRIVED_AT_PRIMEVAL_2, PRIMEVAL_SOUND);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 180000);
 					break;
-				}
 				case 2:
-				{
 					BoatManager.getInstance().broadcastPackets(PRIMEVAL_DOCK, RUNE_DOCK[0], LEAVING_PRIMEVAL, PRIMEVAL_SOUND);
 					_boat.payForRide(8924, 1, 10447, -24982, -3664);
 					_boat.executePath(PRIMEVAL_TO_RUNE);
 					break;
-				}
 				case 3:
-				{
 					if (BoatManager.getInstance().dockBusy(BoatManager.RUNE_HARBOR))
 					{
 						if (_shoutCount == 0)
@@ -151,14 +143,11 @@ final class BoatRunePrimeval implements Runnable
 					}
 					_boat.executePath(RUNE_DOCK);
 					break;
-				}
 				case 4:
-				{
 					BoatManager.getInstance().dockShip(BoatManager.RUNE_HARBOR, true);
 					BoatManager.getInstance().broadcastPackets(RUNE_DOCK[0], PRIMEVAL_DOCK, ARRIVED_AT_RUNE, ARRIVED_AT_RUNE_2, RUNE_SOUND);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 180000);
 					break;
-				}
 			}
 			_shoutCount = 0;
 			_cycle++;
@@ -169,7 +158,7 @@ final class BoatRunePrimeval implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage());
+			_log.warning(e.getMessage());
 		}
 	}
 	

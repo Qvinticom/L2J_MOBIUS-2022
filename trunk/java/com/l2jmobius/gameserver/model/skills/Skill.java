@@ -21,61 +21,56 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.Consumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.enums.AttributeType;
+import com.l2jmobius.gameserver.enums.BasicProperty;
 import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.enums.ShotType;
+import com.l2jmobius.gameserver.handler.AffectScopeHandler;
+import com.l2jmobius.gameserver.handler.IAffectScopeHandler;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.handler.TargetHandler;
 import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
-import com.l2jmobius.gameserver.model.L2AlchemySkill;
-import com.l2jmobius.gameserver.model.L2ExtractableProductItem;
-import com.l2jmobius.gameserver.model.L2ExtractableSkill;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2BlockInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2GuardInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.cubic.CubicInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.entity.TvTEvent;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.AlterSkillHolder;
+import com.l2jmobius.gameserver.model.holders.AttachSkillHolder;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
-import com.l2jmobius.gameserver.model.stats.BaseStats;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.targets.AffectObject;
+import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
+import com.l2jmobius.gameserver.model.stats.BasicPropertyResist;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.TraitType;
-import com.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
-import com.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.Rnd;
 
 public final class Skill implements IIdentifiable
 {
 	private static final Logger _log = Logger.getLogger(Skill.class.getName());
-	
-	private static final L2Object[] EMPTY_TARGET_LIST = new L2Object[0];
 	
 	/** Skill ID. */
 	private final int _id;
@@ -120,38 +115,34 @@ public final class Skill implements IIdentifiable
 	private Set<AbnormalVisualEffect> _abnormalVisualEffects;
 	/** If {@code true} this skill's effect should stay after death. */
 	private final boolean _stayAfterDeath;
-	/** If {@code true} this skill's effect should stay after class-subclass change. */
-	private final boolean _stayOnSubclassChange;
 	/** If {@code true} this skill's effect recovery HP/MP or CP from herb. */
 	private final boolean _isRecoveryHerb;
 	
-	private int _refId;
+	private final int _refId;
 	// all times in milliseconds
 	private final int _hitTime;
 	// private final int _skillInterruptTime;
 	private final int _coolTime;
 	private final int _reuseHashCode;
 	private final int _reuseDelay;
+	private final int _reuseDelayGroup;
 	
-	/** Target type of the skill : SELF, PARTY, CLAN, PET... */
-	private final L2TargetType _targetType;
-	private final int _feed;
-	// base success chance
-	private final double _power;
-	private final double _pvpPower;
-	private final double _pvePower;
 	private final int _magicLevel;
 	private final int _lvlBonusRate;
 	private final int _activateRate;
 	private final int _minChance;
 	private final int _maxChance;
-	private final int _blowChance;
 	
 	// Effecting area of the skill, in radius.
 	// The radius center varies according to the _targetType:
 	// "caster" if targetType = AURA/PARTY/CLAN or "target" if targetType = AREA
+	private final TargetType _targetType;
+	private final AffectScope _affectScope;
+	private final AffectObject _affectObject;
 	private final int _affectRange;
-	private final int[] _affectLimit = new int[2];
+	private final int[] _fanRange = new int[4]; // unk;startDegree;fanAffectRange;fanAffectAngle
+	private final int[] _affectLimit = new int[3]; // TODO: Third value is unknown... find it out!
+	private final int[] _affectHeight = new int[2];
 	
 	private final boolean _nextActionIsAttack;
 	
@@ -160,55 +151,32 @@ public final class Skill implements IIdentifiable
 	
 	private final boolean _blockedInOlympiad;
 	
-	private final byte _element;
-	private final int _elementPower;
+	private final AttributeType _attributeType;
+	private final int _attributeValue;
 	
-	private final BaseStats _basicProperty;
-	
-	private final boolean _overhit;
+	private final BasicProperty _basicProperty;
 	
 	private final int _minPledgeClass;
-	private final int _chargeConsume;
 	private final int _soulMaxConsume;
 	
-	private final boolean _isHeroSkill; // If true the skill is a Hero Skill
-	private final boolean _isGMSkill; // True if skill is GM skill
-	private final boolean _isSevenSigns;
-	
-	private final int _baseCritRate; // percent of success for skill critical hit (especially for PhysicalAttack & Blow - they're not affected by rCrit values or buffs).
-	private final boolean _directHpDmg; // If true then damage is being make directly
 	private final boolean _isTriggeredSkill; // If true the skill will take activation buff slot instead of a normal buff slot
 	private final int _effectPoint;
-	// Condition lists
-	private List<Condition> _preCondition;
-	private List<Condition> _itemPreCondition;
 	private Set<MountType> _rideState;
-	// Function lists
-	private List<FuncTemplate> _funcTemplates;
 	
+	private final Map<SkillConditionScope, List<ISkillCondition>> _conditionLists = new EnumMap<>(SkillConditionScope.class);
 	private final Map<EffectScope, List<AbstractEffect>> _effectLists = new EnumMap<>(EffectScope.class);
 	
 	// Flying support
 	private final FlyType _flyType;
 	private final int _flyRadius;
-	private final float _flyCourse;
 	
 	private final boolean _isDebuff;
 	
-	private final String _attribute;
-	
-	private final boolean _ignoreShield;
-	private final int _ignorePhysDefPercent;
-	
 	private final boolean _isSuicideAttack;
-	private final boolean _canBeDispeled;
+	private final boolean _canBeDispelled;
 	
-	private final boolean _isClanSkill;
 	private final boolean _excludedFromCheck;
-	private final boolean _simultaneousCast;
-	
-	private L2ExtractableSkill _extractableItems = null;
-	private L2AlchemySkill _transmutedItems = null;
+	private final boolean _withoutAction;
 	
 	private final String _icon;
 	
@@ -222,13 +190,33 @@ public final class Skill implements IIdentifiable
 	// Mentoring
 	private final boolean _isMentoring;
 	
+	// Stance skill IDs
+	private final int _doubleCastSkill;
+	
+	private final boolean _canDoubleCast;
+	private final boolean _canCastWhileDisabled;
+	private final boolean _isSharedWithSummon;
+	private final boolean _isNecessaryToggle;
+	private final boolean _deleteAbnormalOnLeave;
+	private final boolean _irreplacableBuff; // Stays after death, on subclass change, cant be canceled.
+	private final boolean _blockActionUseSkill; // Blocks the use skill client action and is not showed on skill list.
+	
+	private final int _toggleGroupId;
+	private final int _attachToggleGroupId;
+	private final List<AlterSkillHolder> _alterSkills;
+	private final List<AttachSkillHolder> _attachSkills;
+	private final Set<AbnormalType> _abnormalResists;
+	
+	private final double _magicCriticalRate;
+	
 	public Skill(StatsSet set)
 	{
-		_id = set.getInt("skill_id");
-		_level = set.getInt("level");
-		_displayId = set.getInt("displayId", _id);
-		_displayLevel = set.getInt("displayLevel", _level);
-		_name = set.getString("name", "");
+		_id = set.getInt(".id");
+		_level = set.getInt(".level");
+		_refId = set.getInt(".referenceId", 0);
+		_displayId = set.getInt(".displayId", _id);
+		_displayLevel = set.getInt(".displayLevel", _level);
+		_name = set.getString(".name", "");
 		_operateType = set.getEnum("operateType", SkillOperateType.class);
 		_magic = set.getInt("isMagic", 0);
 		_traitType = set.getEnum("trait", TraitType.class, TraitType.NONE);
@@ -262,17 +250,12 @@ public final class Skill implements IIdentifiable
 		_isAbnormalInstant = set.getBoolean("abnormalInstant", false);
 		parseAbnormalVisualEffect(set.getString("abnormalVisualEffect", null));
 		
-		_attribute = set.getString("attribute", "");
-		
 		_stayAfterDeath = set.getBoolean("stayAfterDeath", false);
-		_stayOnSubclassChange = set.getBoolean("stayOnSubclassChange", true);
 		
 		_hitTime = set.getInt("hitTime", 0);
 		_coolTime = set.getInt("coolTime", 0);
 		_isDebuff = set.getBoolean("isDebuff", false);
 		_isRecoveryHerb = set.getBoolean("isRecoveryHerb", false);
-		_feed = set.getInt("feed", 0);
-		_reuseHashCode = SkillData.getSkillHashCode(_id, _level);
 		
 		if (Config.ENABLE_MODIFY_SKILL_REUSE && Config.SKILL_REUSE_LIST.containsKey(_id))
 		{
@@ -287,6 +270,12 @@ public final class Skill implements IIdentifiable
 			_reuseDelay = set.getInt("reuseDelay", 0);
 		}
 		
+		_reuseDelayGroup = set.getInt("reuseDelayGroup", -1);
+		_reuseHashCode = SkillData.getSkillHashCode(_reuseDelayGroup > 0 ? _reuseDelayGroup : _id, _level);
+		
+		_targetType = set.getEnum("targetType", TargetType.class, TargetType.SELF);
+		_affectScope = set.getEnum("affectScope", AffectScope.class, AffectScope.SINGLE);
+		_affectObject = set.getEnum("affectObject", AffectObject.class, AffectObject.ALL);
 		_affectRange = set.getInt("affectRange", 0);
 		
 		final String rideState = set.getString("rideState", null);
@@ -304,11 +293,28 @@ public final class Skill implements IIdentifiable
 					}
 					catch (Exception e)
 					{
-						_log.warning("Bad data in rideState for skill " + this + " !\n" + e);
+						_log.log(Level.WARNING, "Bad data in rideState for skill " + this + "!", e);
 					}
 				}
 			}
 		}
+		final String fanRange = set.getString("fanRange", null);
+		if (fanRange != null)
+		{
+			try
+			{
+				final String[] valuesSplit = fanRange.split(";");
+				_fanRange[0] = Integer.parseInt(valuesSplit[0]);
+				_fanRange[1] = Integer.parseInt(valuesSplit[1]);
+				_fanRange[2] = Integer.parseInt(valuesSplit[2]);
+				_fanRange[3] = Integer.parseInt(valuesSplit[3]);
+			}
+			catch (Exception e)
+			{
+				throw new IllegalArgumentException("SkillId: " + _id + " invalid fanRange value: " + fanRange + ", \"unk;startDegree;fanAffectRange;fanAffectAngle\" required");
+			}
+		}
+		
 		final String affectLimit = set.getString("affectLimit", null);
 		if (affectLimit != null)
 		{
@@ -317,90 +323,126 @@ public final class Skill implements IIdentifiable
 				final String[] valuesSplit = affectLimit.split("-");
 				_affectLimit[0] = Integer.parseInt(valuesSplit[0]);
 				_affectLimit[1] = Integer.parseInt(valuesSplit[1]);
+				if (valuesSplit.length > 2)
+				{
+					_affectLimit[2] = Integer.parseInt(valuesSplit[2]);
+				}
 			}
 			catch (Exception e)
 			{
-				throw new IllegalArgumentException("SkillId: " + _id + " invalid affectLimit value: " + affectLimit + ", \"percent-percent\" required");
+				throw new IllegalArgumentException("SkillId: " + _id + " invalid affectLimit value: " + affectLimit + ", \"minAffected-additionalRandom\" required");
 			}
 		}
 		
-		_targetType = set.getEnum("targetType", L2TargetType.class, L2TargetType.SELF);
-		_power = set.getFloat("power", 0.f);
-		_pvpPower = set.getFloat("pvpPower", (float) getPower());
-		_pvePower = set.getFloat("pvePower", (float) getPower());
+		final String affectHeight = set.getString("affectHeight", null);
+		if (affectHeight != null)
+		{
+			try
+			{
+				final String[] valuesSplit = affectHeight.split(";");
+				_affectHeight[0] = Integer.parseInt(valuesSplit[0]);
+				_affectHeight[1] = Integer.parseInt(valuesSplit[1]);
+			}
+			catch (Exception e)
+			{
+				throw new IllegalArgumentException("SkillId: " + _id + " invalid affectHeight value: " + affectHeight + ", \"minHeight-maxHeight\" required");
+			}
+			
+			if (_affectHeight[0] > _affectHeight[1])
+			{
+				throw new IllegalArgumentException("SkillId: " + _id + " invalid affectHeight value: " + affectHeight + ", \"minHeight-maxHeight\" required, minHeight is higher than maxHeight!");
+			}
+		}
+		
 		_magicLevel = set.getInt("magicLvl", 0);
 		_lvlBonusRate = set.getInt("lvlBonusRate", 0);
 		_activateRate = set.getInt("activateRate", -1);
 		_minChance = set.getInt("minChance", Config.MIN_ABNORMAL_STATE_SUCCESS_RATE);
 		_maxChance = set.getInt("maxChance", Config.MAX_ABNORMAL_STATE_SUCCESS_RATE);
-		_ignoreShield = set.getBoolean("ignoreShld", false);
-		_ignorePhysDefPercent = set.getInt("ignorePhysDefPercent", 0);
 		
 		_nextActionIsAttack = set.getBoolean("nextActionAttack", false);
 		
-		_removedOnAnyActionExceptMove = (_abnormalType == AbnormalType.INVINCIBILITY) || (_abnormalType == AbnormalType.HIDE);
-		_removedOnDamage = (_abnormalType == AbnormalType.SLEEP) || (_abnormalType == AbnormalType.FORCE_MEDITATION) || (_abnormalType == AbnormalType.HIDE);
+		_removedOnAnyActionExceptMove = set.getBoolean("removedOnAnyActionExceptMove", false);
+		_removedOnDamage = set.getBoolean("removedOnDamage", false);
 		
 		_blockedInOlympiad = set.getBoolean("blockedInOlympiad", false);
 		
-		_element = set.getByte("element", (byte) -1);
-		_elementPower = set.getInt("elementPower", 0);
+		_attributeType = set.getEnum("attributeType", AttributeType.class, AttributeType.NONE);
+		_attributeValue = set.getInt("attributeValue", 0);
 		
-		_basicProperty = set.getEnum("basicProperty", BaseStats.class, BaseStats.NONE);
+		_basicProperty = set.getEnum("basicProperty", BasicProperty.class, BasicProperty.NONE);
 		
-		_overhit = set.getBoolean("overHit", false);
 		_isSuicideAttack = set.getBoolean("isSuicideAttack", false);
 		
 		_minPledgeClass = set.getInt("minPledgeClass", 0);
-		_chargeConsume = set.getInt("chargeConsume", 0);
 		
 		_soulMaxConsume = set.getInt("soulMaxConsumeCount", 0);
-		_blowChance = set.getInt("blowChance", 0);
 		
-		_isHeroSkill = SkillTreesData.getInstance().isHeroSkill(_id, _level);
-		_isGMSkill = SkillTreesData.getInstance().isGMSkill(_id, _level);
-		_isSevenSigns = (_id > 4360) && (_id < 4367);
-		_isClanSkill = SkillTreesData.getInstance().isClanSkill(_id, _level);
-		
-		_baseCritRate = set.getInt("baseCritRate", 0);
-		_directHpDmg = set.getBoolean("dmgDirectlyToHp", false);
 		_isTriggeredSkill = set.getBoolean("isTriggeredSkill", false);
 		_effectPoint = set.getInt("effectPoint", 0);
 		
 		_flyType = set.getEnum("flyType", FlyType.class, null);
 		_flyRadius = set.getInt("flyRadius", 0);
-		_flyCourse = set.getFloat("flyCourse", 0);
 		
-		_canBeDispeled = set.getBoolean("canBeDispeled", true);
+		_canBeDispelled = set.getBoolean("canBeDispelled", true);
 		
 		_excludedFromCheck = set.getBoolean("excludedFromCheck", false);
-		_simultaneousCast = set.getBoolean("simultaneousCast", false);
-		
-		final String capsuled_items = set.getString("capsuled_items_skill", null);
-		if (capsuled_items != null)
-		{
-			if (capsuled_items.isEmpty())
-			{
-				_log.warning("Empty Extractable Item Skill data in Skill Id: " + _id);
-			}
-			
-			_extractableItems = parseExtractableSkill(_id, _level, capsuled_items);
-		}
-		
-		final String alchemyTransmuteIngredients = set.getString("alchemyTransmuteIngredients", null);
-		final String alchemyTransmuteProducts = set.getString("alchemyTransmuteProduction", null);
-		if ((alchemyTransmuteIngredients != null) && (alchemyTransmuteProducts != null))
-		{
-			_transmutedItems = parseAlchemySkill(_id, _level, alchemyTransmuteIngredients, alchemyTransmuteProducts);
-		}
+		_withoutAction = set.getBoolean("withoutAction", false);
 		
 		_icon = set.getString("icon", "icon.skill0000");
 		
 		_channelingSkillId = set.getInt("channelingSkillId", 0);
-		_channelingTickInterval = set.getInt("channelingTickInterval", 2) * 1000;
-		_channelingTickInitialDelay = set.getInt("channelingTickInitialDelay", _channelingTickInterval / 1000) * 1000;
+		_channelingTickInterval = set.getInt("channelingTickInterval", 2000);
+		_channelingTickInitialDelay = set.getInt("channelingTickInitialDelay", _channelingTickInterval);
 		
 		_isMentoring = set.getBoolean("isMentoring", false);
+		
+		_doubleCastSkill = set.getInt("doubleCastSkill", 0);
+		
+		_canDoubleCast = set.getBoolean("canDoubleCast", false);
+		_canCastWhileDisabled = set.getBoolean("canCastWhileDisabled", false);
+		_isSharedWithSummon = set.getBoolean("isSharedWithSummon", true);
+		
+		_isNecessaryToggle = set.getBoolean("isNecessaryToggle", false);
+		_deleteAbnormalOnLeave = set.getBoolean("deleteAbnormalOnLeave", false);
+		_irreplacableBuff = set.getBoolean("irreplacableBuff", false);
+		_blockActionUseSkill = set.getBoolean("blockActionUseSkill", false);
+		
+		_toggleGroupId = set.getInt("toggleGroupId", -1);
+		_attachToggleGroupId = set.getInt("attachToggleGroupId", -1);
+		_alterSkills = set.getList("alterSkill", StatsSet.class, Collections.emptyList()).stream().map(AlterSkillHolder::fromStatsSet).collect(Collectors.toList());
+		_attachSkills = set.getList("attachSkillList", StatsSet.class, Collections.emptyList()).stream().map(AttachSkillHolder::fromStatsSet).collect(Collectors.toList());
+		
+		final String abnormalResist = set.getString("abnormalResists", null);
+		if (abnormalResist != null)
+		{
+			final String[] abnormalResistStrings = abnormalResist.split(";");
+			if (abnormalResistStrings.length > 0)
+			{
+				_abnormalResists = new HashSet<>(abnormalResistStrings.length);
+				for (String s : abnormalResistStrings)
+				{
+					try
+					{
+						_abnormalResists.add(AbnormalType.valueOf(s));
+					}
+					catch (Exception e)
+					{
+						_log.log(Level.WARNING, "Skill ID[" + _id + "] Expected AbnormalType for abnormalResists but found " + s, e);
+					}
+				}
+			}
+			else
+			{
+				_abnormalResists = Collections.emptySet();
+			}
+		}
+		else
+		{
+			_abnormalResists = Collections.emptySet();
+		}
+		
+		_magicCriticalRate = set.getDouble("magicCriticalRate", 0);
 	}
 	
 	public TraitType getTraitType()
@@ -408,35 +450,27 @@ public final class Skill implements IIdentifiable
 		return _traitType;
 	}
 	
-	public byte getElement()
+	public AttributeType getAttributeType()
 	{
-		return _element;
+		return _attributeType;
 	}
 	
-	public int getElementPower()
+	public int getAttributeValue()
 	{
-		return _elementPower;
-	}
-	
-	/**
-	 * Return the target type of the skill : SELF, PARTY, CLAN, PET...
-	 * @return
-	 */
-	public L2TargetType getTargetType()
-	{
-		return _targetType;
+		return _attributeValue;
 	}
 	
 	public boolean isAOE()
 	{
-		switch (_targetType)
+		switch (_affectScope)
 		{
-			case AREA:
-			case AURA:
-			case BEHIND_AREA:
-			case BEHIND_AURA:
-			case FRONT_AREA:
-			case FRONT_AURA:
+			case FAN:
+			case FAN_PB:
+			case POINT_BLANK:
+			case RANGE:
+			case RING_RANGE:
+			case SQUARE:
+			case SQUARE_PB:
 			{
 				return true;
 			}
@@ -449,51 +483,14 @@ public final class Skill implements IIdentifiable
 		return hasEffectType(L2EffectType.MAGICAL_ATTACK, L2EffectType.HP_DRAIN, L2EffectType.PHYSICAL_ATTACK, L2EffectType.PHYSICAL_ATTACK_HP_LINK);
 	}
 	
-	public boolean isOverhit()
-	{
-		return _overhit;
-	}
-	
 	public boolean isSuicideAttack()
 	{
 		return _isSuicideAttack;
 	}
 	
-	/**
-	 * Return the power of the skill.
-	 * @param activeChar
-	 * @param target
-	 * @param isPvP
-	 * @param isPvE
-	 * @return
-	 */
-	public double getPower(L2Character activeChar, L2Character target, boolean isPvP, boolean isPvE)
+	public boolean allowOnTransform()
 	{
-		if (activeChar == null)
-		{
-			return getPower(isPvP, isPvE);
-		}
-		
-		if (hasEffectType(L2EffectType.DEATH_LINK))
-		{
-			return getPower(isPvP, isPvE) * (-((activeChar.getCurrentHp() * 2) / activeChar.getMaxHp()) + 2);
-		}
-		
-		if (hasEffectType(L2EffectType.PHYSICAL_ATTACK_HP_LINK))
-		{
-			return getPower(isPvP, isPvE) * (-((target.getCurrentHp() * 2) / target.getMaxHp()) + 2);
-		}
-		return getPower(isPvP, isPvE);
-	}
-	
-	public double getPower()
-	{
-		return _power;
-	}
-	
-	public double getPower(boolean isPvP, boolean isPvE)
-	{
-		return isPvE ? _pvePower : isPvP ? _pvpPower : _power;
+		return isPassive();
 	}
 	
 	/**
@@ -695,10 +692,10 @@ public final class Skill implements IIdentifiable
 	}
 	
 	/**
-	 * Return skill basicProperty base stat (STR, INT ...).
+	 * Return skill basic property type.
 	 * @return
 	 */
-	public BaseStats getBasicProperty()
+	public BasicProperty getBasicProperty()
 	{
 		return _basicProperty;
 	}
@@ -725,6 +722,14 @@ public final class Skill implements IIdentifiable
 	public int getLevel()
 	{
 		return _level;
+	}
+	
+	/**
+	 * @return isMagic integer value from the XML.
+	 */
+	public int getMagicType()
+	{
+		return _magic;
 	}
 	
 	/**
@@ -807,6 +812,14 @@ public final class Skill implements IIdentifiable
 		return _reuseDelay;
 	}
 	
+	/**
+	 * @return the skill ID from which the reuse delay should be taken.
+	 */
+	public int getReuseDelayGroup()
+	{
+		return _reuseDelayGroup;
+	}
+	
 	public int getReuseHashCode()
 	{
 		return _reuseHashCode;
@@ -825,49 +838,122 @@ public final class Skill implements IIdentifiable
 		return _coolTime;
 	}
 	
+	/**
+	 * @return the target type of the skill : SELF, TARGET, SUMMON, GROUND...
+	 */
+	public TargetType getTargetType()
+	{
+		return _targetType;
+	}
+	
+	/**
+	 * @return the affect scope of the skill : SINGLE, FAN, SQUARE, PARTY, PLEDGE...
+	 */
+	public AffectScope getAffectScope()
+	{
+		return _affectScope;
+	}
+	
+	/**
+	 * @return the affect object of the skill : All, Clan, Friend, NotFriend, Invisible...
+	 */
+	public AffectObject getAffectObject()
+	{
+		return _affectObject;
+	}
+	
+	/**
+	 * @return the AOE range of the skill.
+	 */
 	public int getAffectRange()
 	{
 		return _affectRange;
 	}
 	
+	/**
+	 * @return the AOE fan range of the skill.
+	 */
+	public int[] getFanRange()
+	{
+		return _fanRange;
+	}
+	
+	/**
+	 * @return the maximum amount of targets the skill can affect or 0 if unlimited.
+	 */
 	public int getAffectLimit()
 	{
-		return _affectLimit[0] + Rnd.get(_affectLimit[1]);
+		if ((_affectLimit[0] > 0) || (_affectLimit[1] > 0))
+		{
+			return (_affectLimit[0] + Rnd.get(_affectLimit[1]));
+		}
+		
+		return 0;
+	}
+	
+	public int getAffectHeightMin()
+	{
+		return _affectHeight[0];
+	}
+	
+	public int getAffectHeightMax()
+	{
+		return _affectHeight[1];
 	}
 	
 	public boolean isActive()
 	{
-		return (_operateType != null) && _operateType.isActive();
+		return _operateType.isActive();
 	}
 	
 	public boolean isPassive()
 	{
-		return (_operateType != null) && _operateType.isPassive();
+		return _operateType.isPassive();
 	}
 	
 	public boolean isToggle()
 	{
-		return (_operateType != null) && _operateType.isToggle();
+		return _operateType.isToggle();
+	}
+	
+	public boolean isAura()
+	{
+		return _operateType.isAura();
+	}
+	
+	public boolean isHidingMesseges()
+	{
+		return _operateType.isHidingMesseges();
+	}
+	
+	public boolean isNotBroadcastable()
+	{
+		return _operateType.isNotBroadcastable();
 	}
 	
 	public boolean isContinuous()
 	{
-		return ((_operateType != null) && _operateType.isContinuous()) || isSelfContinuous();
+		return _operateType.isContinuous() || isSelfContinuous();
 	}
 	
 	public boolean isSelfContinuous()
 	{
-		return (_operateType != null) && _operateType.isSelfContinuous();
+		return _operateType.isSelfContinuous();
 	}
 	
 	public boolean isChanneling()
 	{
-		return (_operateType != null) && _operateType.isChanneling();
+		return _operateType.isChanneling();
 	}
 	
 	public boolean isTriggeredSkill()
 	{
 		return _isTriggeredSkill;
+	}
+	
+	public boolean isSynergySkill()
+	{
+		return _operateType.isSynergy();
 	}
 	
 	/**
@@ -906,17 +992,17 @@ public final class Skill implements IIdentifiable
 	
 	public boolean isHeroSkill()
 	{
-		return _isHeroSkill;
+		return SkillTreesData.getInstance().isHeroSkill(_id, _level);
 	}
 	
 	public boolean isGMSkill()
 	{
-		return _isGMSkill;
+		return SkillTreesData.getInstance().isGMSkill(_id, _level);
 	}
 	
 	public boolean is7Signs()
 	{
-		return _isSevenSigns;
+		return (_id > 4360) && (_id < 4367);
 	}
 	
 	/**
@@ -928,24 +1014,9 @@ public final class Skill implements IIdentifiable
 		return getAbnormalType() == AbnormalType.HP_RECOVER;
 	}
 	
-	public int getChargeConsume()
-	{
-		return _chargeConsume;
-	}
-	
 	public int getMaxSoulConsumeCount()
 	{
 		return _soulMaxConsume;
-	}
-	
-	public int getBaseCritRate()
-	{
-		return _baseCritRate;
-	}
-	
-	public boolean getDmgDirectlyToHP()
-	{
-		return _directHpDmg;
 	}
 	
 	public FlyType getFlyType()
@@ -958,27 +1029,17 @@ public final class Skill implements IIdentifiable
 		return _flyRadius;
 	}
 	
-	public float getFlyCourse()
-	{
-		return _flyCourse;
-	}
-	
 	public boolean isStayAfterDeath()
 	{
-		return _stayAfterDeath;
-	}
-	
-	public boolean isStayOnSubclassChange()
-	{
-		return _stayOnSubclassChange;
+		return _stayAfterDeath || isIrreplacableBuff() || isNecessaryToggle();
 	}
 	
 	public boolean isBad()
 	{
-		return (_effectPoint < 0) && (_targetType != L2TargetType.SELF);
+		return _effectPoint < 0;
 	}
 	
-	public boolean checkCondition(L2Character activeChar, L2Object object, boolean itemOrWeapon)
+	public boolean checkCondition(L2Character activeChar, L2Object object)
 	{
 		if (activeChar.canOverrideCond(PcCondOverride.SKILL_CONDITIONS) && !Config.GM_SKILL_RESTRICTION)
 		{
@@ -993,36 +1054,7 @@ public final class Skill implements IIdentifiable
 			return false;
 		}
 		
-		final List<Condition> preCondition = itemOrWeapon ? _itemPreCondition : _preCondition;
-		if ((preCondition == null) || preCondition.isEmpty())
-		{
-			return true;
-		}
-		
-		final L2Character target = (object instanceof L2Character) ? (L2Character) object : null;
-		for (Condition cond : preCondition)
-		{
-			if (!cond.test(activeChar, target, this))
-			{
-				final String msg = cond.getMessage();
-				final int msgId = cond.getMessageId();
-				if (msgId != 0)
-				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(msgId);
-					if (cond.isAddName())
-					{
-						sm.addSkillName(_id);
-					}
-					activeChar.sendPacket(sm);
-				}
-				else if (msg != null)
-				{
-					activeChar.sendMessage(msg);
-				}
-				return false;
-			}
-		}
-		return true;
+		return checkConditions(SkillConditionScope.GENERAL, activeChar, object);
 	}
 	
 	/**
@@ -1035,226 +1067,112 @@ public final class Skill implements IIdentifiable
 		return (_rideState == null) || _rideState.contains(player.getMountType());
 	}
 	
-	public L2Object[] getTargetList(L2Character activeChar, boolean onlyFirst)
+	/**
+	 * @param activeChar the character that requests getting the skill target.
+	 * @param forceUse if character pressed ctrl (force pick target)
+	 * @param dontMove if character pressed shift (dont move and pick target only if in range)
+	 * @param sendMessage send SystemMessageId packet if target is incorrect.
+	 * @return {@code WorldObject} this skill can be used on, or {@code null} if there is no such.
+	 */
+	public L2Object getTarget(L2Character activeChar, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		// Init to null the target of the skill
-		L2Character target = null;
-		
-		// Get the L2Objcet targeted by the user of the skill at this moment
-		final L2Object objTarget = activeChar.getTarget();
-		// If the L2Object targeted is a L2Character, it becomes the L2Character target
-		if (objTarget instanceof L2Character)
-		{
-			target = (L2Character) objTarget;
-		}
-		
-		return getTargetList(activeChar, onlyFirst, target);
+		return getTarget(activeChar, activeChar.getTarget(), forceUse, dontMove, sendMessage);
 	}
 	
 	/**
-	 * Return all targets of the skill in a table in function a the skill type.<br>
-	 * <B><U>Values of skill type</U>:</B>
-	 * <ul>
-	 * <li>ONE : The skill can only be used on the L2PcInstance targeted, or on the caster if it's a L2PcInstance and no L2PcInstance targeted</li>
-	 * <li>SELF</li>
-	 * <li>HOLY, UNDEAD</li>
-	 * <li>PET</li>
-	 * <li>AURA, AURA_CLOSE</li>
-	 * <li>AREA</li>
-	 * <li>MULTIFACE</li>
-	 * <li>PARTY, CLAN</li>
-	 * <li>CORPSE_PLAYER, CORPSE_MOB, CORPSE_CLAN</li>
-	 * <li>UNLOCKABLE</li>
-	 * <li>ITEM</li>
-	 * <ul>
-	 * @param activeChar The L2Character who use the skill
-	 * @param onlyFirst
-	 * @param target
-	 * @return
+	 * @param activeChar the character that requests getting the skill target.
+	 * @param seletedTarget the target that has been selected by this character to be checked.
+	 * @param forceUse if character pressed ctrl (force pick target)
+	 * @param dontMove if character pressed shift (dont move and pick target only if in range)
+	 * @param sendMessage send SystemMessageId packet if target is incorrect.
+	 * @return the selected {@code WorldObject} this skill can be used on, or {@code null} if there is no such.
 	 */
-	public L2Object[] getTargetList(L2Character activeChar, boolean onlyFirst, L2Character target)
+	public L2Object getTarget(L2Character activeChar, L2Object seletedTarget, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
 		final ITargetTypeHandler handler = TargetHandler.getInstance().getHandler(getTargetType());
 		if (handler != null)
 		{
 			try
 			{
-				return handler.getTargetList(this, activeChar, onlyFirst, target);
+				return handler.getTarget(activeChar, seletedTarget, this, forceUse, dontMove, sendMessage);
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Exception in L2Skill.getTargetList(): " + e.getMessage(), e);
+				_log.log(Level.WARNING, "Exception in Skill.getTarget(): " + e.getMessage(), e);
 			}
 		}
-		activeChar.sendMessage("Target type of skill is not currently handled.");
-		return EMPTY_TARGET_LIST;
-	}
-	
-	public L2Object[] getTargetList(L2Character activeChar)
-	{
-		return getTargetList(activeChar, false);
-	}
-	
-	public L2Object getFirstOfTargetList(L2Character activeChar)
-	{
-		final L2Object[] targets = getTargetList(activeChar, true);
-		return targets.length == 0 ? null : targets[0];
+		activeChar.sendMessage("Target type of skill " + this + " is not currently handled.");
+		return null;
 	}
 	
 	/**
-	 * Check if should be target added to the target list false if target is dead, target same as caster,<br>
-	 * target inside peace zone, target in the same party with caster, caster can see target Additional checks if not in PvP zones (arena, siege):<br>
-	 * target in not the same clan and alliance with caster, and usual skill PvP check. If TvT event is active - performing additional checks. Caution: distance is not checked.
-	 * @param caster
-	 * @param target
-	 * @param skill
-	 * @param sourceInArena
-	 * @return
+	 * @param activeChar the character that needs to gather targets.
+	 * @param target the initial target activeChar is focusing upon.
+	 * @return list containing objects gathered in a specific geometric way that are valid to be affected by this skill.
 	 */
-	public static boolean checkForAreaOffensiveSkills(L2Character caster, L2Character target, Skill skill, boolean sourceInArena)
+	public List<L2Object> getTargetsAffected(L2Character activeChar, L2Object target)
 	{
-		if ((target == null) || target.isDead() || (target == caster))
+		if (target == null)
 		{
-			return false;
+			return null;
 		}
-		
-		final L2PcInstance player = caster.getActingPlayer();
-		final L2PcInstance targetPlayer = target.getActingPlayer();
-		if (player != null)
+		activeChar.sendDebugMessage("-> " + this + "\n      TT: " + getTargetType() + "\n      AS: " + getAffectScope() + "\n      AO: " + getAffectObject());
+		final IAffectScopeHandler handler = AffectScopeHandler.getInstance().getHandler(getAffectScope());
+		if (handler != null)
 		{
-			if (targetPlayer != null)
+			try
 			{
-				if ((targetPlayer == caster) || (targetPlayer == player))
-				{
-					return false;
-				}
-				
-				if (targetPlayer.inObserverMode())
-				{
-					return false;
-				}
-				
-				if (skill.isBad() && (player.getSiegeState() > 0) && player.isInsideZone(ZoneId.SIEGE) && (player.getSiegeState() == targetPlayer.getSiegeState()) && (player.getSiegeSide() == targetPlayer.getSiegeSide()))
-				{
-					return false;
-				}
-				
-				if (skill.isBad() && target.isInsideZone(ZoneId.PEACE))
-				{
-					return false;
-				}
-				
-				if (player.isInParty() && targetPlayer.isInParty())
-				{
-					// Same party
-					if (player.getParty().getLeaderObjectId() == targetPlayer.getParty().getLeaderObjectId())
-					{
-						return false;
-					}
-					
-					// Same command channel
-					if (player.getParty().isInCommandChannel() && (player.getParty().getCommandChannel() == targetPlayer.getParty().getCommandChannel()))
-					{
-						return false;
-					}
-				}
-				
-				if (!TvTEvent.checkForTvTSkill(player, targetPlayer, skill))
-				{
-					return false;
-				}
-				
-				if (!sourceInArena && (!targetPlayer.isInsideZone(ZoneId.PVP) || targetPlayer.isInsideZone(ZoneId.SIEGE)))
-				{
-					if ((player.getAllyId() != 0) && (player.getAllyId() == targetPlayer.getAllyId()))
-					{
-						return false;
-					}
-					
-					if ((player.getClanId() != 0) && (player.getClanId() == targetPlayer.getClanId()))
-					{
-						return false;
-					}
-					
-					if (!player.checkPvpSkill(targetPlayer, skill))
-					{
-						return false;
-					}
-				}
-				
-				if (Config.FACTION_SYSTEM_ENABLED && target.isPlayer() && ((player.isGood() && targetPlayer.isGood()) || (player.isEvil() && targetPlayer.isEvil())))
-				{
-					return false;
-				}
-				
-				if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && (target instanceof L2GuardInstance))
-				{
-					if (player.isGood() && ((L2Npc) target).getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME))
-					{
-						return false;
-					}
-					if (player.isEvil() && ((L2Npc) target).getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME))
-					{
-						return false;
-					}
-				}
+				final List<L2Object> result = new LinkedList<>();
+				handler.forEachAffected(activeChar, target, this, o -> result.add(o));
+				return result;
+			}
+			catch (Exception e)
+			{
+				_log.log(Level.WARNING, "Exception in Skill.getTargetsAffected(): " + e.getMessage(), e);
 			}
 		}
-		// target is mob
-		else if ((targetPlayer == null) && (target instanceof L2Attackable) && (caster instanceof L2Attackable))
-		{
-			return false;
-		}
-		
-		if (!GeoData.getInstance().canSeeTarget(caster, target))
-		{
-			return false;
-		}
-		return true;
+		activeChar.sendMessage("Target affect scope of skill " + this + " is not currently handled.");
+		return null;
 	}
 	
-	public static boolean addPet(L2Character caster, L2PcInstance owner, int radius, boolean isDead)
+	/**
+	 * @param activeChar the character that needs to gather targets.
+	 * @param target the initial target activeChar is focusing upon.
+	 * @param action for each affected target.
+	 */
+	public void forEachTargetAffected(L2Character activeChar, L2Object target, Consumer<? super L2Object> action)
 	{
-		final L2Summon pet = owner.getPet();
-		return (pet != null) && addCharacter(caster, pet, radius, isDead);
-	}
-	
-	public static boolean addCharacter(L2Character caster, L2Character target, int radius, boolean isDead)
-	{
-		if (isDead != target.isDead())
+		if (target == null)
 		{
-			return false;
+			return;
 		}
 		
-		if ((radius > 0) && !Util.checkIfInRange(radius, caster, target, true))
+		final IAffectScopeHandler handler = AffectScopeHandler.getInstance().getHandler(getAffectScope());
+		if (handler != null)
 		{
-			return false;
-		}
-		return true;
-	}
-	
-	public List<AbstractFunction> getStatFuncs(AbstractEffect effect, L2Character player)
-	{
-		if (_funcTemplates == null)
-		{
-			return Collections.<AbstractFunction> emptyList();
-		}
-		
-		if (!(player instanceof L2Playable) && !(player instanceof L2Attackable))
-		{
-			return Collections.<AbstractFunction> emptyList();
-		}
-		
-		final List<AbstractFunction> funcs = new ArrayList<>(_funcTemplates.size());
-		for (FuncTemplate t : _funcTemplates)
-		{
-			final AbstractFunction f = t.getFunc(player, null, this, this); // skill is owner
-			if (f != null)
+			try
 			{
-				funcs.add(f);
+				handler.forEachAffected(activeChar, target, this, action);
+			}
+			catch (Exception e)
+			{
+				_log.log(Level.WARNING, "Exception in Skill.forEachTargetAffected(): " + e.getMessage(), e);
 			}
 		}
-		return funcs;
+		else
+		{
+			activeChar.sendMessage("Target affect scope of skill " + this + " is not currently handled.");
+		}
+	}
+	
+	/**
+	 * Adds an effect to the effect list for the given effect scope.
+	 * @param effectScope the effect scope
+	 * @param effect the effect
+	 */
+	public void addEffect(EffectScope effectScope, AbstractEffect effect)
+	{
+		_effectLists.computeIfAbsent(effectScope, k -> new ArrayList<>()).add(effect);
 	}
 	
 	/**
@@ -1291,16 +1209,21 @@ public final class Skill implements IIdentifiable
 		{
 			for (AbstractEffect effect : getEffects(effectScope))
 			{
-				if (effect != null)
+				if (effect.isInstant())
 				{
-					if (effect.isInstant())
+					if (applyInstantEffects && effect.calcSuccess(info.getEffector(), info.getEffected(), info.getSkill()))
 					{
-						if (applyInstantEffects && (getBlowChance() > 0 ? BlowSuccess.getInstance().get(info.getEffector(), info.getSkill()) : effect.calcSuccess(info)))
-						{
-							effect.onStart(info);
-						}
+						effect.instant(info.getEffector(), info.getEffected(), info.getSkill(), info.getItem());
 					}
-					else if (addContinuousEffects && effect.canStart(info))
+				}
+				else if (addContinuousEffects)
+				{
+					if (applyInstantEffects)
+					{
+						effect.continuousInstant(info.getEffector(), info.getEffected(), info.getSkill(), info.getItem());
+					}
+					
+					if (effect.canStart(info))
 					{
 						info.addEffect(effect);
 					}
@@ -1310,18 +1233,30 @@ public final class Skill implements IIdentifiable
 	}
 	
 	/**
-	 * Method overload for {@link Skill#applyEffects(L2Character, L2Character, boolean, boolean, boolean, int)}.<br>
+	 * Method overload for {@link Skill#applyEffects(L2Character, L2Character, boolean, boolean, boolean, int, L2ItemInstance)}.<br>
 	 * Simplify the calls.
 	 * @param effector the caster of the skill
 	 * @param effected the target of the effect
 	 */
 	public void applyEffects(L2Character effector, L2Character effected)
 	{
-		applyEffects(effector, effected, false, false, true, 0);
+		applyEffects(effector, effected, false, false, true, 0, null);
 	}
 	
 	/**
-	 * Method overload for {@link Skill#applyEffects(L2Character, L2Character, boolean, boolean, boolean, int)}.<br>
+	 * Method overload for {@link Skill#applyEffects(L2Character, L2Character, boolean, boolean, boolean, int, L2ItemInstance)}.<br>
+	 * Simplify the calls.
+	 * @param effector the caster of the skill
+	 * @param effected the target of the effect
+	 * @param item
+	 */
+	public void applyEffects(L2Character effector, L2Character effected, L2ItemInstance item)
+	{
+		applyEffects(effector, effected, false, false, true, 0, item);
+	}
+	
+	/**
+	 * Method overload for {@link Skill#applyEffects(L2Character, L2Character, boolean, boolean, boolean, int, L2ItemInstance)}.<br>
 	 * Simplify the calls, allowing abnormal time time customization.
 	 * @param effector the caster of the skill
 	 * @param effected the target of the effect
@@ -1330,7 +1265,7 @@ public final class Skill implements IIdentifiable
 	 */
 	public void applyEffects(L2Character effector, L2Character effected, boolean instant, int abnormalTime)
 	{
-		applyEffects(effector, effected, false, false, instant, abnormalTime);
+		applyEffects(effector, effected, false, false, instant, abnormalTime, null);
 	}
 	
 	/**
@@ -1341,8 +1276,9 @@ public final class Skill implements IIdentifiable
 	 * @param passive if {@code true} passive effects will be applied to the effector
 	 * @param instant if {@code true} instant effects will be applied to the effected
 	 * @param abnormalTime custom abnormal time, if equal or lesser than zero will be ignored
+	 * @param item
 	 */
-	public void applyEffects(L2Character effector, L2Character effected, boolean self, boolean passive, boolean instant, int abnormalTime)
+	public void applyEffects(L2Character effector, L2Character effected, boolean self, boolean passive, boolean instant, int abnormalTime, L2ItemInstance item)
 	{
 		// null targets cannot receive any effects.
 		if (effected == null)
@@ -1350,34 +1286,16 @@ public final class Skill implements IIdentifiable
 			return;
 		}
 		
-		// Check bad skills against target.
-		if ((effector != effected) && isBad() && ((effected.isInvul() && !effected.isVulnerableFor(effector)) || (effector.isGM() && !effector.getAccessLevel().canGiveDamage())))
+		if (effected.isIgnoringSkillEffects(getId(), getLevel()))
 		{
-			return;
-		}
-		
-		if (isDebuff())
-		{
-			if (effected.isDebuffBlocked())
-			{
-				return;
-			}
-		}
-		else if (effected.isBuffBlocked() && !isBad())
-		{
-			return;
-		}
-		
-		if (effected.isInvulAgainst(getId(), getLevel()))
-		{
-			effected.sendDebugMessage("Skill " + toString() + " has been ignored (invul against)");
+			effected.sendDebugMessage("Skill " + toString() + " has been ignored (ignoring skill effects)");
 			return;
 		}
 		
 		boolean addContinuousEffects = !passive && (_operateType.isToggle() || (_operateType.isContinuous() && Formulas.calcEffectSuccess(effector, effected, this)));
 		if (!self && !passive)
 		{
-			final BuffInfo info = new BuffInfo(effector, effected, this);
+			final BuffInfo info = new BuffInfo(effector, effected, this, !instant, item, null);
 			if (addContinuousEffects && (abnormalTime > 0))
 			{
 				info.setAbnormalTime(abnormalTime);
@@ -1393,23 +1311,31 @@ public final class Skill implements IIdentifiable
 			if (addContinuousEffects)
 			{
 				effected.getEffectList().add(info);
+				
+				// Check for mesmerizing debuffs and increase resist level.
+				if (isDebuff() && (getBasicProperty() != BasicProperty.NONE) && effected.hasBasicPropertyResist())
+				{
+					final BasicPropertyResist resist = effected.getBasicPropertyResist(getBasicProperty());
+					resist.increaseResistLevel();
+					effected.sendDebugMessage(toString() + " has increased your " + getBasicProperty() + " debuff resistance to " + resist.getResistLevel() + " level for " + resist.getRemainTime().toMillis() + " milliseconds.");
+				}
 			}
 			
 			// Support for buff sharing feature including healing herbs.
-			if (effected.isPlayer() && effected.hasServitors() && !isTransformation() && (getAbnormalType() != AbnormalType.SUMMON_CONDITION) && ((addContinuousEffects && isContinuous() && !isDebuff()) || isRecoveryHerb()))
+			if (isSharedWithSummon() && effected.isPlayer() && effected.hasServitors() && !isTransformation())
 			{
-				effected.getServitors().values().forEach(s ->
+				if ((addContinuousEffects && isContinuous() && !isDebuff()) || isRecoveryHerb())
 				{
-					applyEffects(effector, s, isRecoveryHerb(), 0);
-				});
+					effected.getServitors().values().forEach(s -> applyEffects(effector, s, isRecoveryHerb(), 0));
+				}
 			}
 		}
 		
 		if (self)
 		{
-			addContinuousEffects = !passive && (_operateType.isToggle() || ((_operateType.isContinuous() || _operateType.isSelfContinuous()) && Formulas.calcEffectSuccess(effector, effector, this)));
+			addContinuousEffects = !passive && (_operateType.isToggle() || (_operateType.isSelfContinuous() && Formulas.calcEffectSuccess(effector, effector, this)));
 			
-			final BuffInfo info = new BuffInfo(effector, effector, this);
+			final BuffInfo info = new BuffInfo(effector, effector, this, !instant, item, null);
 			if (addContinuousEffects && (abnormalTime > 0))
 			{
 				info.setAbnormalTime(abnormalTime);
@@ -1417,27 +1343,23 @@ public final class Skill implements IIdentifiable
 			
 			applyEffectScope(EffectScope.SELF, info, instant, addContinuousEffects);
 			
-			// TODO : Need to be done better after skill rework
-			if (addContinuousEffects && hasEffectType(L2EffectType.BUFF))
+			if (addContinuousEffects)
 			{
 				info.getEffector().getEffectList().add(info);
 			}
 			
 			// Support for buff sharing feature.
 			// Avoiding Servitor Share since it's implementation already "shares" the effect.
-			if (addContinuousEffects && info.getEffected().isPlayer() && info.getEffected().hasServitors() && isContinuous() && !isDebuff() && (getId() != CommonSkill.SERVITOR_SHARE.getId()))
+			if (addContinuousEffects && isSharedWithSummon() && info.getEffected().isPlayer() && isContinuous() && !isDebuff() && info.getEffected().hasServitors())
 			{
-				info.getEffected().getServitors().values().forEach(s ->
-				{
-					applyEffects(effector, s, false, 0);
-				});
+				info.getEffected().getServitors().values().forEach(s -> applyEffects(effector, s, false, 0));
 			}
 		}
 		
 		if (passive)
 		{
-			final BuffInfo info = new BuffInfo(effector, effector, this);
-			applyEffectScope(EffectScope.PASSIVE, info, false, true);
+			final BuffInfo info = new BuffInfo(effector, effector, this, true, item, null);
+			applyEffectScope(EffectScope.GENERAL, info, false, true);
 			effector.getEffectList().add(info);
 		}
 	}
@@ -1453,26 +1375,38 @@ public final class Skill implements IIdentifiable
 	}
 	
 	/**
+	 * Activates a skill for the given creature and targets.
+	 * @param caster the caster
+	 * @param item
+	 * @param targets the targets
+	 */
+	public void activateSkill(L2Character caster, L2ItemInstance item, L2Object... targets)
+	{
+		activateSkill(caster, null, item, targets);
+	}
+	
+	/**
 	 * Activates a skill for the given cubic and targets.
 	 * @param cubic the cubic
 	 * @param targets the targets
 	 */
-	public void activateSkill(L2CubicInstance cubic, L2Object... targets)
+	public void activateSkill(CubicInstance cubic, L2Object... targets)
 	{
-		activateSkill(cubic.getOwner(), cubic, targets);
+		activateSkill(cubic.getOwner(), cubic, null, targets);
 	}
 	
 	/**
 	 * Activates the skill to the targets.
 	 * @param caster the caster
-	 * @param cubic the cubic, can be {@code null}
+	 * @param cubic the cubic that cast the skill, can be {@code null}
+	 * @param item
 	 * @param targets the targets
 	 */
-	private void activateSkill(L2Character caster, L2CubicInstance cubic, L2Object... targets)
+	public final void activateSkill(L2Character caster, CubicInstance cubic, L2ItemInstance item, L2Object... targets)
 	{
+		// TODO: replace with AI
 		switch (getId())
 		{
-			// TODO: replace with AI
 			case 5852:
 			case 5853:
 			{
@@ -1507,16 +1441,21 @@ public final class Skill implements IIdentifiable
 			}
 			default:
 			{
-				for (L2Object obj : targets)
+				for (L2Object targetObject : targets)
 				{
-					final L2Character target = (L2Character) obj;
+					if (!targetObject.isCharacter())
+					{
+						continue;
+					}
+					
+					final L2Character target = (L2Character) targetObject;
 					if (Formulas.calcBuffDebuffReflection(target, this))
 					{
 						// if skill is reflected instant effects should be casted on target
 						// and continuous effects on caster
 						applyEffects(target, caster, false, 0);
 						
-						final BuffInfo info = new BuffInfo(caster, target, this);
+						final BuffInfo info = new BuffInfo(caster, target, this, false, item, null);
 						applyEffectScope(EffectScope.GENERAL, info, true, false);
 						
 						final EffectScope pvpOrPveEffectScope = caster.isPlayable() && target.isAttackable() ? EffectScope.PVE : caster.isPlayable() && target.isPlayable() ? EffectScope.PVP : null;
@@ -1526,7 +1465,7 @@ public final class Skill implements IIdentifiable
 					}
 					else
 					{
-						applyEffects(caster, target);
+						applyEffects(caster, target, item);
 					}
 				}
 				break;
@@ -1540,7 +1479,7 @@ public final class Skill implements IIdentifiable
 			{
 				caster.stopSkillEffects(true, getId());
 			}
-			applyEffects(caster, caster, true, false, true, 0);
+			applyEffects(caster, caster, true, false, true, 0, item);
 		}
 		
 		if (cubic == null)
@@ -1561,63 +1500,32 @@ public final class Skill implements IIdentifiable
 		}
 	}
 	
-	public void attach(FuncTemplate f)
+	/**
+	 * Adds a condition to the condition list for the given condition scope.
+	 * @param skillConditionScope the condition scope
+	 * @param skillCondition the condition
+	 */
+	public void addCondition(SkillConditionScope skillConditionScope, ISkillCondition skillCondition)
 	{
-		if (_funcTemplates == null)
-		{
-			_funcTemplates = new ArrayList<>(1);
-		}
-		_funcTemplates.add(f);
+		_conditionLists.computeIfAbsent(skillConditionScope, k -> new ArrayList<>()).add(skillCondition);
 	}
 	
 	/**
-	 * Adds an effect to the effect list for the give effect scope.
-	 * @param effectScope the effect scope
-	 * @param effect the effect to add
+	 * Checks the conditions of this skills for the given condition scope.
+	 * @param skillConditionScope the condition scope
+	 * @param caster the caster
+	 * @param target the target
+	 * @return {@code false} if at least one condition returns false, {@code true} otherwise
 	 */
-	public void addEffect(EffectScope effectScope, AbstractEffect effect)
+	public boolean checkConditions(SkillConditionScope skillConditionScope, L2Character caster, L2Object target)
 	{
-		List<AbstractEffect> effects = _effectLists.get(effectScope);
-		if (effects == null)
-		{
-			effects = new ArrayList<>(1);
-			_effectLists.put(effectScope, effects);
-		}
-		effects.add(effect);
-	}
-	
-	public void attach(Condition c, boolean itemOrWeapon)
-	{
-		if (itemOrWeapon)
-		{
-			if (_itemPreCondition == null)
-			{
-				_itemPreCondition = new ArrayList<>();
-			}
-			_itemPreCondition.add(c);
-		}
-		else
-		{
-			if (_preCondition == null)
-			{
-				_preCondition = new ArrayList<>();
-			}
-			_preCondition.add(c);
-		}
+		return _conditionLists.getOrDefault(skillConditionScope, Collections.emptyList()).stream().allMatch(c -> c.canUse(caster, this, target));
 	}
 	
 	@Override
 	public String toString()
 	{
 		return "Skill " + _name + "(" + _id + "," + _level + ")";
-	}
-	
-	/**
-	 * @return pet food
-	 */
-	public int getFeed()
-	{
-		return _feed;
 	}
 	
 	/**
@@ -1629,40 +1537,9 @@ public final class Skill implements IIdentifiable
 		return _refId;
 	}
 	
-	public void setReferenceItemId(int val)
+	public boolean canBeDispelled()
 	{
-		_refId = val;
-	}
-	
-	public String getAttributeName()
-	{
-		return _attribute;
-	}
-	
-	/**
-	 * @return the _blowChance
-	 */
-	public int getBlowChance()
-	{
-		return _blowChance;
-	}
-	
-	public boolean ignoreShield()
-	{
-		return _ignoreShield;
-	}
-	
-	/**
-	 * @return the percent of ignore defense of this skill
-	 */
-	public int getIgnorePhysDefPercent()
-	{
-		return _ignorePhysDefPercent;
-	}
-	
-	public boolean canBeDispeled()
-	{
-		return _canBeDispeled;
+		return _canBeDispelled;
 	}
 	
 	/**
@@ -1671,12 +1548,12 @@ public final class Skill implements IIdentifiable
 	 */
 	public boolean canBeStolen()
 	{
-		return !isPassive() && !isToggle() && !isDebuff() && !isHeroSkill() && !isGMSkill() && (!isStatic() || (getId() == CommonSkill.CARAVANS_SECRET_MEDICINE.getId())) && canBeDispeled() && (getId() != CommonSkill.SERVITOR_SHARE.getId());
+		return !isPassive() && !isToggle() && !isDebuff() && !isHeroSkill() && !isGMSkill() && !(isStatic() && (getId() != CommonSkill.CARAVANS_SECRET_MEDICINE.getId())) && canBeDispelled() && (getId() != CommonSkill.SERVITOR_SHARE.getId());
 	}
 	
 	public boolean isClanSkill()
 	{
-		return _isClanSkill;
+		return SkillTreesData.getInstance().isClanSkill(_id, _level);
 	}
 	
 	public boolean isExcludedFromCheck()
@@ -1684,101 +1561,9 @@ public final class Skill implements IIdentifiable
 		return _excludedFromCheck;
 	}
 	
-	public boolean isSimultaneousCast()
+	public boolean isWithoutAction()
 	{
-		return _simultaneousCast;
-	}
-	
-	/**
-	 * Parse an extractable skill.
-	 * @param skillId the skill Id
-	 * @param skillLvl the skill level
-	 * @param values the values to parse
-	 * @return the parsed extractable skill
-	 * @author Zoey76
-	 */
-	private L2ExtractableSkill parseExtractableSkill(int skillId, int skillLvl, String values)
-	{
-		final String[] prodLists = values.split(";");
-		final List<L2ExtractableProductItem> products = new ArrayList<>();
-		String[] prodData;
-		for (String prodList : prodLists)
-		{
-			prodData = prodList.split(",");
-			if (prodData.length < 3)
-			{
-				_log.warning("Extractable skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " -> wrong seperator!");
-			}
-			List<ItemHolder> items = null;
-			double chance = 0;
-			final int length = prodData.length - 1;
-			try
-			{
-				items = new ArrayList<>(length / 2);
-				for (int j = 0; j < length; j += 2)
-				{
-					final int prodId = Integer.parseInt(prodData[j]);
-					final int quantity = Integer.parseInt(prodData[j + 1]);
-					if ((prodId <= 0) || (quantity <= 0))
-					{
-						_log.warning("Extractable skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " wrong production Id: " + prodId + " or wrond quantity: " + quantity + "!");
-					}
-					items.add(new ItemHolder(prodId, quantity));
-				}
-				chance = Double.parseDouble(prodData[length]);
-			}
-			catch (Exception e)
-			{
-				_log.warning("Extractable skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " -> incomplete/invalid production data or wrong seperator!");
-			}
-			products.add(new L2ExtractableProductItem(items, chance));
-		}
-		
-		if (products.isEmpty())
-		{
-			_log.warning("Extractable skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " -> There are no production items!");
-		}
-		return new L2ExtractableSkill(SkillData.getSkillHashCode(skillId, skillLvl), products);
-	}
-	
-	/**
-	 * Parse an Alchemy transmute skill.
-	 * @param skillId the skill Id
-	 * @param skillLvl the skill level
-	 * @param alchemyTransmuteIngredients the values to parse
-	 * @param alchemyTransmuteProducts the values to parse
-	 * @return the parsed transmute skill
-	 */
-	private L2AlchemySkill parseAlchemySkill(int skillId, int skillLvl, String alchemyTransmuteIngredients, String alchemyTransmuteProducts)
-	{
-		final String[] ingrLists = alchemyTransmuteIngredients.split(";");
-		final String[] prodLists = alchemyTransmuteProducts.split(";");
-		final List<ItemHolder> ingridients = new ArrayList<>();
-		ItemHolder product = null;
-		
-		String[] ingrData;
-		for (String ingrList : ingrLists)
-		{
-			ingrData = ingrList.split(",");
-			if (ingrData.length < 2)
-			{
-				_log.warning("Alchemy skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " -> wrong seperator!");
-			}
-			ingridients.add(new ItemHolder(Integer.parseInt(ingrData[0]), Integer.parseInt(ingrData[1])));
-		}
-		
-		String[] prodData;
-		for (String prodList : prodLists)
-		{
-			prodData = prodList.split(",");
-			if (prodData.length < 2)
-			{
-				_log.warning("Alchemy skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " -> wrong seperator!");
-			}
-			product = new ItemHolder(Integer.parseInt(prodData[0]), Integer.parseInt(prodData[1]));
-		}
-		
-		return new L2AlchemySkill(ingridients, product);
+		return _withoutAction;
 	}
 	
 	/**
@@ -1787,40 +1572,28 @@ public final class Skill implements IIdentifiable
 	 */
 	private void parseAbnormalVisualEffect(String abnormalVisualEffects)
 	{
-		if (abnormalVisualEffects == null)
+		if (abnormalVisualEffects != null)
 		{
-			return;
-		}
-		
-		final String[] data = abnormalVisualEffects.split(";");
-		final Set<AbnormalVisualEffect> aves = new HashSet<>(1);
-		for (String aveString : data)
-		{
-			final AbnormalVisualEffect ave = AbnormalVisualEffect.findByName(aveString);
-			if (ave != null)
+			final String[] data = abnormalVisualEffects.split(";");
+			final Set<AbnormalVisualEffect> aves = new HashSet<>(1);
+			for (String aveString : data)
 			{
-				aves.add(ave);
+				final AbnormalVisualEffect ave = AbnormalVisualEffect.findByName(aveString);
+				if (ave != null)
+				{
+					aves.add(ave);
+				}
+				else
+				{
+					_log.warning("Invalid AbnormalVisualEffect(" + this + ") found for Skill(" + aveString + ")");
+				}
 			}
-			else
+			
+			if (!aves.isEmpty())
 			{
-				_log.warning("Invalid AbnormalVisualEffect(" + aveString + ") found for Skill(" + this + ")");
+				_abnormalVisualEffects = aves;
 			}
 		}
-		
-		if (!aves.isEmpty())
-		{
-			_abnormalVisualEffects = aves;
-		}
-	}
-	
-	public L2ExtractableSkill getExtractableSkill()
-	{
-		return _extractableItems;
-	}
-	
-	public L2AlchemySkill getAlchemySkill()
-	{
-		return _transmutedItems;
 	}
 	
 	/**
@@ -1834,25 +1607,24 @@ public final class Skill implements IIdentifiable
 		{
 			synchronized (this)
 			{
-				final Set<Byte> effectTypesSet = new HashSet<>();
-				for (List<AbstractEffect> effectList : _effectLists.values())
+				if (_effectTypes == null)
 				{
-					if (effectList != null)
+					final Set<Byte> effectTypesSet = new HashSet<>();
+					for (List<AbstractEffect> effectList : _effectLists.values())
 					{
-						for (AbstractEffect effect : effectList)
+						if (effectList != null)
 						{
-							if (effect == null)
+							for (AbstractEffect effect : effectList)
 							{
-								continue;
+								effectTypesSet.add((byte) effect.getEffectType().ordinal());
 							}
-							effectTypesSet.add((byte) effect.getEffectType().ordinal());
 						}
 					}
+					
+					final Byte[] effectTypesArray = effectTypesSet.toArray(new Byte[effectTypesSet.size()]);
+					Arrays.sort(effectTypesArray);
+					_effectTypes = effectTypesArray;
 				}
-				
-				final Byte[] effectTypesArray = effectTypesSet.toArray(new Byte[effectTypesSet.size()]);
-				Arrays.sort(effectTypesArray);
-				_effectTypes = effectTypesArray;
 			}
 		}
 		
@@ -1868,6 +1640,38 @@ public final class Skill implements IIdentifiable
 				return true;
 			}
 		}
+		return false;
+	}
+	
+	/**
+	 * @param effectScope Effect Scope to look inside for the specific effect type.
+	 * @param effectType Effect type to check if its present on this skill effects.
+	 * @param effectTypes Effect types to check if are present on this skill effects.
+	 * @return {@code true} if at least one of specified {@link L2EffectType} types is present on this skill effects, {@code false} otherwise.
+	 */
+	public boolean hasEffectType(EffectScope effectScope, L2EffectType effectType, L2EffectType... effectTypes)
+	{
+		if (hasEffects(effectScope))
+		{
+			return false;
+		}
+		
+		for (AbstractEffect effect : _effectLists.get(effectScope))
+		{
+			if (effectType == effect.getEffectType())
+			{
+				return true;
+			}
+			
+			for (L2EffectType type : effectTypes)
+			{
+				if (type == effect.getEffectType())
+				{
+					return true;
+				}
+			}
+		}
+		
 		return false;
 	}
 	
@@ -1897,5 +1701,120 @@ public final class Skill implements IIdentifiable
 	public boolean isMentoring()
 	{
 		return _isMentoring;
+	}
+	
+	/**
+	 * @param activeChar
+	 * @return alternative skill that has been attached due to the effect of toggle skills on the player (e.g Fire Stance, Water Stance).
+	 */
+	public Skill getAttachedSkill(L2Character activeChar)
+	{
+		// If character is double casting, return double cast skill.
+		if ((getDoubleCastSkill() > 0) && activeChar.isAffected(EffectFlag.DOUBLE_CAST))
+		{
+			return SkillData.getInstance().getSkill(getDoubleCastSkill(), getLevel());
+		}
+		
+		// Default toggle group ID, assume nothing attached.
+		if ((getAttachToggleGroupId() <= 0) || (getAttachSkills() == null))
+		{
+			return null;
+		}
+		
+		//@formatter:off
+		final int toggleSkillId = activeChar.getEffectList().getToggles().stream()
+		.filter(info -> info.getSkill().getToggleGroupId() == getAttachToggleGroupId())
+		.mapToInt(info -> info.getSkill().getId())
+		.findAny().orElse(0);
+		//@formatter:on
+		
+		// No active toggles with this toggle group ID found.
+		if (toggleSkillId == 0)
+		{
+			return null;
+		}
+		
+		final AttachSkillHolder attachedSkill = getAttachSkills().stream().filter(ash -> ash.getRequiredSkillId() == toggleSkillId).findAny().orElse(null);
+		
+		// No attached skills for this toggle found.
+		if (attachedSkill == null)
+		{
+			return null;
+		}
+		
+		return SkillData.getInstance().getSkill(attachedSkill.getSkillId(), getLevel());
+	}
+	
+	public boolean canDoubleCast()
+	{
+		return _canDoubleCast;
+	}
+	
+	public int getDoubleCastSkill()
+	{
+		return _doubleCastSkill;
+	}
+	
+	public boolean canCastWhileDisabled()
+	{
+		return _canCastWhileDisabled;
+	}
+	
+	public boolean isSharedWithSummon()
+	{
+		return _isSharedWithSummon;
+	}
+	
+	public boolean isNecessaryToggle()
+	{
+		return _isNecessaryToggle;
+	}
+	
+	public boolean isDeleteAbnormalOnLeave()
+	{
+		return _deleteAbnormalOnLeave;
+	}
+	
+	public boolean isIrreplacableBuff()
+	{
+		return _irreplacableBuff;
+	}
+	
+	/**
+	 * @return if skill could not be requested for use by players.
+	 */
+	public boolean isBlockActionUseSkill()
+	{
+		return _blockActionUseSkill;
+	}
+	
+	public int getToggleGroupId()
+	{
+		return _toggleGroupId;
+	}
+	
+	public int getAttachToggleGroupId()
+	{
+		return _attachToggleGroupId;
+	}
+	
+	public List<AlterSkillHolder> getAlterSkills()
+	{
+		return _alterSkills;
+	}
+	
+	public List<AttachSkillHolder> getAttachSkills()
+	{
+		return _attachSkills;
+	}
+	
+	public Set<AbnormalType> getAbnormalResists()
+	{
+		return _abnormalResists;
+	}
+	
+	public double getMagicCriticalRate()
+	{
+		return _magicCriticalRate;
 	}
 }

@@ -16,23 +16,35 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
  * @author Sdw
  */
-public class ExShowUsm extends L2GameServerPacket
+public class ExShowUsm implements IClientOutgoingPacket
 {
+	public static final ExShowUsm GOD_INTRO = new ExShowUsm(2);
+	public static final ExShowUsm SECOND_TRANSFER_QUEST = new ExShowUsm(4);
+	public static final ExShowUsm OCTAVIS_INSTANCE_END = new ExShowUsm(6);
+	public static final ExShowUsm AWAKENING_END = new ExShowUsm(10);
+	public static final ExShowUsm ERTHEIA_FIRST_QUEST = new ExShowUsm(14);
+	public static final ExShowUsm ERTHEIA_INTRO_FOR_ERTHEIA = new ExShowUsm(147);
+	public static final ExShowUsm ERTHEIA_INTRO_FOR_OTHERS = new ExShowUsm(148);
+	
 	private final int _videoId;
 	
-	public ExShowUsm(int videoId)
+	private ExShowUsm(int videoId)
 	{
 		_videoId = videoId;
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x109);
-		writeD(_videoId);
+		OutgoingPackets.EX_SHOW_USM.writeId(packet);
+		
+		packet.writeD(_videoId);
+		return true;
 	}
 }

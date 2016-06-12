@@ -17,18 +17,17 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.LoginServerThread.SessionKey;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * This class ...
  * @version $Revision: 1.9.2.3.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class AuthLogin extends L2GameClientPacket
+public final class AuthLogin implements IClientIncomingPacket
 {
-	private static final String _C__2B_AUTHLOGIN = "[C] 2B AuthLogin";
 	
 	// loginName + keys must match what the loginserver used.
 	private String _loginName;
@@ -41,24 +40,25 @@ public final class AuthLogin extends L2GameClientPacket
 	private int _loginKey2;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_loginName = readS().toLowerCase();
-		_playKey2 = readD();
-		_playKey1 = readD();
-		_loginKey1 = readD();
-		_loginKey2 = readD();
+		_loginName = packet.readS().toLowerCase();
+		_playKey2 = packet.readD();
+		_playKey1 = packet.readD();
+		_loginKey1 = packet.readD();
+		_loginKey2 = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2GameClient client = getClient();
 		if (_loginName.isEmpty() || !client.isProtocolOk())
 		{
-			client.close((L2GameServerPacket) null);
+			client.close(null);
 			return;
 		}
+		
 		final SessionKey key = new SessionKey(_loginKey1, _loginKey2, _playKey1, _playKey2);
 		if (Config.DEBUG)
 		{
@@ -77,14 +77,8 @@ public final class AuthLogin extends L2GameClientPacket
 			}
 			else
 			{
-				client.close((L2GameServerPacket) null);
+				client.close(null);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__2B_AUTHLOGIN;
 	}
 }

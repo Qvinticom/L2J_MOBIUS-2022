@@ -44,7 +44,7 @@ public final class AggroInfo
 	
 	public int checkHate(L2Character owner)
 	{
-		if (_attacker.isAlikeDead() || !_attacker.isVisible() || !owner.getKnownList().knowsObject(_attacker))
+		if (_attacker.isAlikeDead() || !_attacker.isSpawned() || !owner.isInSurroundingRegion(_attacker))
 		{
 			_hate = 0;
 		}
@@ -92,11 +92,5 @@ public final class AggroInfo
 	public final int hashCode()
 	{
 		return _attacker.getObjectId();
-	}
-	
-	@Override
-	public String toString()
-	{
-		return "AggroInfo [attacker=" + _attacker + ", hate=" + _hate + ", damage=" + _damage + "]";
 	}
 }

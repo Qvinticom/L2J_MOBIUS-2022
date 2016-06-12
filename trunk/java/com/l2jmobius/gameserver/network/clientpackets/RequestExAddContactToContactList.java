@@ -17,44 +17,46 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExConfirmAddingContact;
 
 /**
  * Format: (ch)S S: Character Name
  * @author UnAfraid & mrTJO
  */
-public class RequestExAddContactToContactList extends L2GameClientPacket
+public class RequestExAddContactToContactList implements IClientIncomingPacket
 {
-	private static final String _C__D0_84_REQUESTEXADDCONTACTTOCONTACTLIST = "[C] D0:84 RequestExAddContactToContactList";
 	private String _name;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_name = readS();
+		_name = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		if (!Config.ALLOW_MAIL || (_name == null))
+		if (!Config.ALLOW_MAIL)
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		if (_name == null)
+		{
+			return;
+		}
+		
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		activeChar.sendPacket(new ExConfirmAddingContact(_name, activeChar.getContactList().add(_name)));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_84_REQUESTEXADDCONTACTTOCONTACTLIST;
+		final boolean charAdded = activeChar.getContactList().add(_name);
+		activeChar.sendPacket(new ExConfirmAddingContact(_name, charAdded));
 	}
 }

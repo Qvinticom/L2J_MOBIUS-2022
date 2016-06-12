@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.model.actor.instance;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -41,14 +40,7 @@ public class L2SiegeFlagInstance extends L2Npc
 	private final boolean _isAdvanced;
 	private boolean _canTalk;
 	
-	/**
-	 * Creates a siege flag.
-	 * @param player
-	 * @param template
-	 * @param advanced
-	 * @param outPost
-	 */
-	public L2SiegeFlagInstance(L2PcInstance player, L2NpcTemplate template, boolean advanced, boolean outPost)
+	public L2SiegeFlagInstance(L2PcInstance player, L2NpcTemplate template, boolean advanced)
 	{
 		super(template);
 		setInstanceType(InstanceType.L2SiegeFlagInstance);
@@ -59,10 +51,6 @@ public class L2SiegeFlagInstance extends L2Npc
 		if (_siege == null)
 		{
 			_siege = FortSiegeManager.getInstance().getSiege(player.getX(), player.getY(), player.getZ());
-		}
-		if (_siege == null)
-		{
-			_siege = CHSiegeManager.getInstance().getSiege(player);
 		}
 		if ((_clan == null) || (_siege == null))
 		{
@@ -84,13 +72,13 @@ public class L2SiegeFlagInstance extends L2Npc
 	@Override
 	public boolean canBeAttacked()
 	{
-		return !isInvul() && !isHpBlocked();
+		return !isInvul();
 	}
 	
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
-		return !isInvul() && !isHpBlocked();
+		return !isInvul();
 	}
 	
 	@Override
@@ -166,18 +154,24 @@ public class L2SiegeFlagInstance extends L2Npc
 	public void reduceCurrentHp(double damage, L2Character attacker, Skill skill)
 	{
 		super.reduceCurrentHp(damage, attacker, skill);
-		if (!canTalk() || (((getCastle() == null) || !getCastle().getSiege().isInProgress()) && ((getFort() == null) || !getFort().getSiege().isInProgress()) && ((getConquerableHall() == null) || !getConquerableHall().isInSiege())) || (_clan == null))
+		if (canTalk())
 		{
-			return;
+			if (((getCastle() != null) && getCastle().getSiege().isInProgress()) || ((getFort() != null) && getFort().getSiege().isInProgress()))
+			{
+				if (_clan != null)
+				{
+					// send warning to owners of headquarters that theirs base is under attack
+					_clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.YOUR_BASE_IS_BEING_ATTACKED));
+					setCanTalk(false);
+					ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleTalkTask(), 20000);
+				}
+			}
 		}
-		
-		_clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.YOUR_BASE_IS_BEING_ATTACKED));
-		setCanTalk(false);
-		ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleTalkTask(), 20000);
 	}
 	
 	private class ScheduleTalkTask implements Runnable
 	{
+		
 		public ScheduleTalkTask()
 		{
 		}

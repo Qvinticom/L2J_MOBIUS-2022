@@ -29,8 +29,7 @@ import com.l2jmobius.gameserver.model.quest.State;
 import quests.Q00240_ImTheOnlyOneYouCanTrust.Q00240_ImTheOnlyOneYouCanTrust;
 
 /**
- * Only What Remains (310)<br>
- * Original Jython script by Gnacik
+ * Only What Remains (310)
  * @author malyelfik
  */
 public class Q00310_OnlyWhatRemains extends Quest
@@ -66,7 +65,7 @@ public class Q00310_OnlyWhatRemains extends Quest
 	
 	public Q00310_OnlyWhatRemains()
 	{
-		super(310, Q00310_OnlyWhatRemains.class.getSimpleName(), "Only What Remains");
+		super(310);
 		addStartNpc(KINTAIJIN);
 		addTalkId(KINTAIJIN);
 		addKillId(MOBS.keySet());

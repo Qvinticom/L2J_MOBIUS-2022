@@ -17,14 +17,16 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExIsCharNameCreatable;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author UnAfraid
  */
-public class RequestCharacterNameCreatable extends L2GameClientPacket
+public class RequestCharacterNameCreatable implements IClientIncomingPacket
 {
 	private String _name;
 	private int result;
@@ -36,13 +38,14 @@ public class RequestCharacterNameCreatable extends L2GameClientPacket
 	public static int CANNOT_CREATE_SERVER = 5;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_name = readS();
+		_name = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		final int charId = CharNameTable.getInstance().getIdByName(_name);
 		
@@ -63,13 +66,7 @@ public class RequestCharacterNameCreatable extends L2GameClientPacket
 			result = -1;
 		}
 		
-		sendPacket(new ExIsCharNameCreatable(result));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return "[C] D0:B0 RequestCharacterNameCreatable";
+		client.sendPacket(new ExIsCharNameCreatable(result));
 	}
 	
 	private boolean isValidName(String text)

@@ -21,10 +21,10 @@ import java.net.UnknownHostException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.StringTokenizer;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
@@ -77,21 +77,22 @@ public class AdminPunishment implements IAdminCommandHandler
 			{
 				if (!st.hasMoreTokens())
 				{
-					String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/punishment.htm");
+					String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/punishment.htm");
 					if (content != null)
 					{
-						content = content.replaceAll("%punishments%", Util.implode(PunishmentType.values(), ";"));
-						content = content.replaceAll("%affects%", Util.implode(PunishmentAffect.values(), ";"));
+						content = content.replaceAll("%punishments%", CommonUtil.implode(PunishmentType.values(), ";"));
+						content = content.replaceAll("%affects%", CommonUtil.implode(PunishmentAffect.values(), ";"));
 						activeChar.sendPacket(new NpcHtmlMessage(0, 1, content));
 					}
 					else
 					{
-						_log.log(Level.WARNING, getClass().getSimpleName() + ": html/admin/punishment.htm is missing");
+						_log.warning(getClass().getSimpleName() + ": data/html/admin/punishment.htm is missing");
 					}
 				}
 				else
 				{
-					switch (st.nextToken())
+					final String subcmd = st.nextToken();
+					switch (subcmd)
 					{
 						case "info":
 						{
@@ -117,7 +118,7 @@ public class AdminPunishment implements IAdminCommandHandler
 								key = findCharId(key);
 							}
 							
-							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/punishment-info.htm");
+							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/punishment-info.htm");
 							if (content != null)
 							{
 								final StringBuilder sb = new StringBuilder();
@@ -142,13 +143,13 @@ public class AdminPunishment implements IAdminCommandHandler
 								
 								content = content.replaceAll("%player_name%", name);
 								content = content.replaceAll("%punishments%", sb.toString());
-								content = content.replaceAll("%affects%", Util.implode(PunishmentAffect.values(), ";"));
+								content = content.replaceAll("%affects%", CommonUtil.implode(PunishmentAffect.values(), ";"));
 								content = content.replaceAll("%affect_type%", affect.name());
 								activeChar.sendPacket(new NpcHtmlMessage(0, 1, content));
 							}
 							else
 							{
-								_log.log(Level.WARNING, getClass().getSimpleName() + ": html/admin/punishment-info.htm is missing");
+								_log.warning(getClass().getSimpleName() + ": data/html/admin/punishment-info.htm is missing");
 							}
 							break;
 						}
@@ -173,11 +174,11 @@ public class AdminPunishment implements IAdminCommandHandler
 							{
 								target = activeChar.getTarget().getActingPlayer();
 							}
-							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/punishment-player.htm");
+							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/punishment-player.htm");
 							if (content != null)
 							{
 								content = content.replaceAll("%player_name%", target.getName());
-								content = content.replaceAll("%punishments%", Util.implode(PunishmentType.values(), ";"));
+								content = content.replaceAll("%punishments%", CommonUtil.implode(PunishmentType.values(), ";"));
 								content = content.replaceAll("%acc%", target.getAccountName());
 								content = content.replaceAll("%char%", target.getName());
 								content = content.replaceAll("%ip%", target.getIPAddress());
@@ -185,7 +186,7 @@ public class AdminPunishment implements IAdminCommandHandler
 							}
 							else
 							{
-								_log.log(Level.WARNING, getClass().getSimpleName() + ": html/admin/punishment-player.htm is missing");
+								_log.warning(getClass().getSimpleName() + ": data/html/admin/punishment-player.htm is missing");
 							}
 							break;
 						}
@@ -384,10 +385,14 @@ public class AdminPunishment implements IAdminCommandHandler
 		return true;
 	}
 	
-	private static String findCharId(String key)
+	private static final String findCharId(String key)
 	{
 		final int charId = CharNameTable.getInstance().getIdByName(key);
-		return charId > 0 ? Integer.toString(charId) : key;
+		if (charId > 0) // Yeah its a char name!
+		{
+			return Integer.toString(charId);
+		}
+		return key;
 	}
 	
 	@Override

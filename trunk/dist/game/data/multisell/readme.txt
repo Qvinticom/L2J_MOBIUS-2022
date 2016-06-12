@@ -5,7 +5,6 @@ of this directory a little bit.
 001.xml  -> Non-grade items exchange, just for education
 002.xml  -> Teleporter scrolls
 003.xml  -> Newbie exchange
-009.xml  -> Proof of Catching a Fish
 
 102.xml  -> Olympiad: Equipment Rewards
 103.xml  -> Olympiad: Misc. Rewards

@@ -17,10 +17,11 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.ExRegenMax;
 
 /**
@@ -30,11 +31,10 @@ public final class HealOverTime extends AbstractEffect
 {
 	private final double _power;
 	
-	public HealOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public HealOverTime(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_power = params.getDouble("power", 0);
+		setTicks(params.getInt("ticks"));
 	}
 	
 	@Override
@@ -56,16 +56,19 @@ public final class HealOverTime extends AbstractEffect
 		
 		hp += _power * getTicksMultiplier();
 		hp = Math.min(hp, maxhp);
-		info.getEffected().setCurrentHp(hp);
+		info.getEffected().setCurrentHp(hp, false);
+		info.getEffected().broadcastStatusUpdate(info.getEffector());
 		return info.getSkill().isToggle();
 	}
 	
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if (info.getEffected().isPlayer() && (getTicks() > 0) && (info.getSkill().getAbnormalType() == AbnormalType.HP_RECOVER))
+		final L2Character effected = info.getEffected();
+		final Skill skill = info.getSkill();
+		if (effected.isPlayer() && (getTicks() > 0) && (skill.getAbnormalType() == AbnormalType.HP_RECOVER))
 		{
-			info.getEffected().sendPacket(new ExRegenMax(info.getAbnormalTime(), getTicks(), _power));
+			effected.sendPacket(new ExRegenMax(info.getAbnormalTime(), getTicks(), _power));
 		}
 	}
 }

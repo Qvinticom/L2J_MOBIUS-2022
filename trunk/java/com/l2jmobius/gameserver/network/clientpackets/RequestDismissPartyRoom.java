@@ -16,51 +16,41 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.PartyMatchRoom;
-import com.l2jmobius.gameserver.model.PartyMatchRoomList;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.enums.MatchingRoomType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.matching.MatchingRoom;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * @author Gnacik
  */
-public class RequestDismissPartyRoom extends L2GameClientPacket
+public class RequestDismissPartyRoom implements IClientIncomingPacket
 {
-	private static final String _C__D0_0A_REQUESTDISMISSPARTYROOM = "[C] D0:0A RequestDismissPartyRoom";
-	
 	private int _roomid;
-	@SuppressWarnings("unused")
-	private int _data2;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_roomid = readD();
-		_data2 = readD();
+		_roomid = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
-		
-		if (_activeChar == null)
+		final L2PcInstance player = client.getActiveChar();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
-		
-		if (_room == null)
+		final MatchingRoom room = player.getMatchingRoom();
+		if ((room == null) || (room.getId() != _roomid) || (room.getRoomType() != MatchingRoomType.PARTY) || (room.getLeader() != player))
 		{
 			return;
 		}
 		
-		PartyMatchRoomList.getInstance().deleteRoom(_roomid);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_0A_REQUESTDISMISSPARTYROOM;
+		room.disbandRoom();
 	}
 }

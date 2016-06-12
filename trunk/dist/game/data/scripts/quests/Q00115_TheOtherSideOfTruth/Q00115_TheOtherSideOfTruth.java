@@ -47,7 +47,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 	
 	public Q00115_TheOtherSideOfTruth()
 	{
-		super(115, Q00115_TheOtherSideOfTruth.class.getSimpleName(), "The Other Side of Truth");
+		super(115);
 		addStartNpc(RAFFORTY);
 		addTalkId(RAFFORTY, MISA, KIER, ICE_SCULPTURE1, ICE_SCULPTURE2, ICE_SCULPTURE3, ICE_SCULPTURE4);
 		registerQuestItems(MISAS_LETTER, RAFFORTYS_LETTER, PIECE_OF_TABLET, REPORT_PIECE);

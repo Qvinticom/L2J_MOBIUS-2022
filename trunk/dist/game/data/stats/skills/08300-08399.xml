@@ -1,1558 +1,2454 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="8300" levels="1" name="Dynasty Sigil">
-		<set name="icon" val="icon.dynasty_sigil_i01" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxMp" val="1.05" />
+	<skill id="8300" toLevel="1" name="Dynasty Sigil">
+		<icon>icon.dynasty_sigil_i01</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>5</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8301" levels="1" name="Vesper Heavy Armor Set - PvP">
+	<skill id="8301" toLevel="1" name="Vesper Heavy Armor Set - PvP">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t94_u_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>icon.armor_t94_u_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
-				<param minDamage="50" />
-				<param chance="10" />
-				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
-				<param targetType="ONE" />
+				<!-- PvP Armor - Speed Down -->
+				<attackerType>L2Playable</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<minDamage>50</minDamage>
+				<skillId>5693</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="DefenceTrait">
-				<param HOLD="70" />
-				<param SLEEP="70" />
-				<mul stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
-				<mul stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
-				<add stat="maxHp" val="531" /> <!-- Max HP +531 -->
-				<mul stat="pvpMagicalDef" val="1.05" />
-				<mul stat="pvpPhysSkillsDef" val="1.05" />
-				<mul stat="pvpPhysDef" val="1.05" />
+				<!-- P. Atk. +5.57% -->
+				<!-- P. Def. +5.57% -->
+				<!-- Max HP +531 -->
+				<SLEEP>70</SLEEP>
+				<HOLD>70</HOLD>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>5.57</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>5.57</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>531</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8302" levels="1" name="Vesper Noble Heavy Armor Set - PvP">
+	<skill id="8302" toLevel="1" name="Vesper Noble Heavy Armor Set - PvP">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<set name="icon" val="icon.armor_t94_u_i01" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>icon.armor_t94_u_i01</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
-				<param minDamage="50" />
-				<param chance="10" />
-				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
-				<param targetType="ONE" />
+				<!-- PvP Armor - Speed Down -->
+				<attackerType>L2Playable</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<minDamage>50</minDamage>
+				<skillId>5693</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="DefenceTrait">
-				<param HOLD="70" />
-				<param SLEEP="70" />
-				<mul stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
-				<mul stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
-				<add stat="maxHp" val="540" /> <!-- Max HP +540 -->
-				<add stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
-				<add stat="runSpd" val="5" /> <!-- Increases Speed by 5 -->
-				<mul stat="magicSuccRes" val="1.01" /> <!-- Resistance to magic damage by 1% -->
-				<mul stat="pvpMagicalDef" val="1.05" />
-				<mul stat="pvpPhysSkillsDef" val="1.05" />
-				<mul stat="pvpPhysDef" val="1.05" />
+				<!-- P. Atk. +5.57% -->
+				<!-- P. Def. +5.57% -->
+				<!-- Max HP +540 -->
+				<!-- Increases Accuracy by 4 -->
+				<!-- Increases Speed by 5 -->
+				<!-- Resistance to magic damage by 1% -->
+				<SLEEP>70</SLEEP>
+				<HOLD>70</HOLD>
 			</effect>
 			<effect name="EnableCloak" />
-		</for>
+			<effect name="PAtk">
+				<amount>5.57</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>5.57</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistDDMagic">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>540</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8303" levels="1" name="Vesper Light Armor Set - PvP">
+	<skill id="8303" toLevel="1" name="Vesper Light Armor Set - PvP">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t95_u_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
-				<mul stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
-				<mul stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5% -->
-				<add stat="maxMp" val="347" /> <!-- Max MP by 347 -->
-				<mul stat="pvpMagicalDef" val="1.05" />
-				<mul stat="pvpPhysSkillsDef" val="1.05" />
-				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>
+		<icon>icon.armor_t95_u_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
-				<param minDamage="50" />
-				<param chance="25" />
-				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
-				<param targetType="ONE" />
+				<!-- PvP Armor - Mirage -->
+				<attackerType>L2Playable</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<chance>25</chance>
+				<targetType>ENEMY</targetType>
+				<minDamage>50</minDamage>
+				<skillId>5694</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>5.57</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>347</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8304" levels="1" name="Vesper Noble Light Armor Set - PvP">
+	<skill id="8304" toLevel="1" name="Vesper Noble Light Armor Set - PvP">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<set name="icon" val="icon.armor_t95_u_i01" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
-				<mul stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
-				<mul stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5.57% -->
-				<add stat="maxMp" val="354" /> <!-- Max MP by 354 -->
-				<add stat="rEvas" val="3" /> <!-- Increases Evasion by 3 -->
-				<add stat="critDmgAdd" val="172" /> <!-- Increases Critical Damage by 172 -->
-				<mul stat="pvpMagicalDef" val="1.05" />
-				<mul stat="pvpPhysSkillsDef" val="1.05" />
-				<mul stat="pvpPhysDef" val="1.05" />
-			</effect>
+		<icon>icon.armor_t95_u_i01</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
-				<param minDamage="50" />
-				<param chance="25" />
-				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
-				<param targetType="ONE" />
+				<!-- PvP Armor - Mirage -->
+				<attackerType>L2Playable</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<chance>25</chance>
+				<targetType>ENEMY</targetType>
+				<minDamage>50</minDamage>
+				<skillId>5694</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="EnableCloak" />
-		</for>
+			<effect name="PAtk">
+				<amount>5.57</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>3</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>354</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>172</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8305" levels="1" name="Vesper Robe Set - PvP">
+	<skill id="8305" toLevel="1" name="Vesper Robe Set - PvP">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t96_u_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>icon.armor_t96_u_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
-				<param minDamage="50" />
-				<param chance="25" />
-				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
-				<param targetType="SELF" />
+				<!-- PvP Armor - Critical Down -->
+				<attackerType>L2Playable</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<chance>25</chance>
+				<targetType>SELF</targetType>
+				<minDamage>50</minDamage>
+				<skillId>5691</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="DefenceTrait">
-				<param SHOCK="50" />
-				<mul stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
-				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
-				<mul stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
-				<sub stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
-				<mul stat="pvpMagicalDef" val="1.05" />
-				<mul stat="pvpPhysSkillsDef" val="1.05" />
-				<mul stat="pvpPhysDef" val="1.05" />
+				<!-- M. Atk. 8.47% -->
+				<!-- Casting Speed 15% -->
+				<!-- MP Recovery Rate by 5.57% -->
+				<!-- decreases the damage to be cancelled by magic by 30 -->
+				<SHOCK>50</SHOCK>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>8.47</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>5.57</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReduceCancel">
+				<amount>-30</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8306" levels="1" name="Vesper Noble Robe Set - PvP">
+	<skill id="8306" toLevel="1" name="Vesper Noble Robe Set - PvP">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<set name="icon" val="icon.armor_t96_u_i01" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>icon.armor_t96_u_i01</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
-				<param minDamage="50" />
-				<param chance="25" />
-				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
-				<param targetType="SELF" />
+				<!-- PvP Armor - Critical Down -->
+				<attackerType>L2Playable</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<chance>25</chance>
+				<targetType>SELF</targetType>
+				<minDamage>50</minDamage>
+				<skillId>5691</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="DefenceTrait">
-				<param SHOCK="50" />
-				<mul stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
-				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
-				<mul stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
-				<sub stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
-				<add stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-				<mul stat="magicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
-				<mul stat="pvpMagicalDef" val="1.05" />
-				<mul stat="pvpPhysSkillsDef" val="1.05" />
-				<mul stat="pvpPhysDef" val="1.05" />
+				<SHOCK>50</SHOCK>
 			</effect>
 			<effect name="EnableCloak" />
-		</for>
+			<effect name="MAtk">
+				<amount>8.47</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>5.57</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReduceCancel">
+				<amount>-30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8307" levels="1" name="Boing Hammer's Effect of Doubt">
+	<skill id="8307" toLevel="1" name="Boing Hammer's Effect of Doubt">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.weapon_bbyong_hammer_a_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<for>
+		<icon>icon.weapon_bbyong_hammer_a_i00</icon>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<operateType>P</operateType>
+		<effects>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="99" />
-				<param isCritical="false" />
-				<param minDamage="1" chance="33" />
-				<param skillId="5994" skillLevel="1" /> <!-- Effect of Doubt -->
-				<param targetType="ONE" />
-				<param allowWeapons="ALL" />
+				<!-- Effect of Doubt -->
+				<attackerType>L2Playable</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>99</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>33</chance>
+				<targetType>TARGET</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>5994</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8308" levels="1" name="Red Talisman - Territory Guardian">
+	<skill id="8308" toLevel="1" name="Red Talisman - Territory Guardian">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="effectPoint" val="532" />
-		<set name="hitTime" val="1200" />
-		<set name="icon" val="icon.etc_talisman_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="360000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxCp" val="1200" />
-			</effect>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<effectPoint>532</effectPoint>
+		<hitTime>1200</hitTime>
+		<icon>icon.etc_talisman_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>360000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="CpHeal">
-				<param power="1200" />
+				<power>1200</power>
 			</effect>
-		</for>
+			<effect name="MaxCp">
+				<amount>1200</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8309" levels="1" name="Red Talisman - Territory Escort">
+	<skill id="8309" toLevel="1" name="Red Talisman - Territory Escort">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="effectPoint" val="532" />
-		<set name="hitTime" val="1200" />
-		<set name="icon" val="icon.etc_talisman_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="360000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxCp" val="800" />
-			</effect>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<effectPoint>532</effectPoint>
+		<hitTime>1200</hitTime>
+		<icon>icon.etc_talisman_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>360000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="CpHeal">
-				<param power="800" />
+				<power>800</power>
 			</effect>
-		</for>
-	</skill>
-	<skill id="8310" levels="1" name="Arcana Sigil">
-		<set name="icon" val="icon.arcana_sigil_i00" />
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="magicSuccRes" val="1.02" />
-				<sub stat="cancel" val="13" />
+			<effect name="MaxCp">
+				<amount>800</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8311" levels="1" name="Dynasty Sigil">
-		<set name="icon" val="icon.dynasty_sigil_i00" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="magicSuccRes" val="1.02" />
-				<add stat="darkRes" val="2" />
+	<skill id="8310" toLevel="1" name="Arcana Sigil">
+		<icon>icon.arcana_sigil_i00</icon>
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ResistDDMagic">
+				<amount>2</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="ReduceCancel">
+				<amount>-13</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8312" levels="2" name="Special Ability: Cheap Shot">
-		<table name="#magicLvl"> 80 84 </table>
+	<skill id="8311" toLevel="1" name="Dynasty Sigil">
+		<icon>icon.dynasty_sigil_i00</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ResistDDMagic">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>2</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="8312" toLevel="2" name="Special Ability: Cheap Shot">
 		<table name="#MpConsumeRate"> 0.96 0.92 </table>
-		<set name="icon" val="icon.skill0198" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="magicalMpConsumeRate" val="#MpConsumeRate" />
-				<mul stat="physicalMpConsumeRate" val="#MpConsumeRate" />
+		<icon>icon.skill0198</icon>
+		<magicLvl>
+			<value level="1">80</value>
+			<value level="2">84</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-4</value>
+					<value level="2">-8</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
 			</effect>
-		</for>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-4</value>
+					<value level="2">-8</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8314" levels="1" name="Release Agathion's Seal - Neolithica">
+	<skill id="8314" toLevel="1" name="Release Agathion's Seal - Neolithica">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="16063" />
+				<npcId>16063</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8315" levels="1" name="Santa Claus' Blessed Weapon">
+	<skill id="8315" toLevel="1" name="Santa Claus' Blessed Weapon">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="magicLvl" val="10" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player levelRange="1;19" />
-		</cond>
-		<for>
-			<effect name="Buff">
-				<add stat="pAtk" val="10" />
+		<icon>icon.etc_x_mas_tree_i00</icon>
+		<magicLvl>10</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>1</minLevel>
+				<maxLevel>19</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8316" levels="1" name="Santa Claus' Blessed Weapon">
+	<skill id="8316" toLevel="1" name="Santa Claus' Blessed Weapon">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="magicLvl" val="20" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player levelRange="20;39" />
-		</cond>
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.9" />
-				<add stat="pAtk" val="150" />
-				<mul stat="mAtk" val="3" />
-				<add stat="mAtk" val="100" />
+		<icon>icon.etc_x_mas_tree_i00</icon>
+		<magicLvl>20</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>20</minLevel>
+				<maxLevel>39</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>90</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8317" levels="1" name="Santa Claus' Blessed Weapon">
+	<skill id="8317" toLevel="1" name="Santa Claus' Blessed Weapon">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="magicLvl" val="30" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player levelRange="40;51" />
-		</cond>
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="3" />
-				<add stat="pAtk" val="300" />
-				<mul stat="mAtk" val="5" />
-				<add stat="mAtk" val="200" />
+		<icon>icon.etc_x_mas_tree_i00</icon>
+		<magicLvl>30</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>40</minLevel>
+				<maxLevel>51</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>200</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>400</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8318" levels="1" name="Santa Claus' Blessed Weapon">
+	<skill id="8318" toLevel="1" name="Santa Claus' Blessed Weapon">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="magicLvl" val="40" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player levelRange="52;60" />
-		</cond>
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="4" />
-				<add stat="pAtk" val="400" />
-				<mul stat="mAtk" val="7" />
-				<add stat="mAtk" val="300" />
+		<icon>icon.etc_x_mas_tree_i00</icon>
+		<magicLvl>40</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>52</minLevel>
+				<maxLevel>60</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>300</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>600</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>400</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8319" levels="1" name="Santa Claus' Blessed Weapon">
+	<skill id="8319" toLevel="1" name="Santa Claus' Blessed Weapon">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="magicLvl" val="50" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player levelRange="61;74" />
-		</cond>
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="5" />
-				<add stat="pAtk" val="450" />
-				<mul stat="mAtk" val="9" />
-				<add stat="mAtk" val="450" />
+		<icon>icon.etc_x_mas_tree_i00</icon>
+		<magicLvl>50</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>61</minLevel>
+				<maxLevel>74</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>400</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>800</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>450</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>450</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8320" levels="1" name="Santa Claus' Blessed Weapon">
+	<skill id="8320" toLevel="1" name="Santa Claus' Blessed Weapon">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="magicLvl" val="60" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player levelRange="75;79" />
-		</cond>
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="6" />
-				<add stat="pAtk" val="500" />
-				<mul stat="mAtk" val="11" />
-				<add stat="mAtk" val="500" />
+		<icon>icon.etc_x_mas_tree_i00</icon>
+		<magicLvl>60</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>75</minLevel>
+				<maxLevel>79</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>500</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>1000</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8321" levels="1" name="Santa Claus' Blessed Weapon">
+	<skill id="8321" toLevel="1" name="Santa Claus' Blessed Weapon">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="magicLvl" val="70" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player levelRange="80;81" />
-		</cond>
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="6" />
-				<add stat="pAtk" val="650" />
-				<mul stat="mAtk" val="13" />
-				<add stat="mAtk" val="1000" />
+		<icon>icon.etc_x_mas_tree_i00</icon>
+		<magicLvl>70</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>80</minLevel>
+				<maxLevel>81</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>500</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>1200</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>650</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>1000</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8322" levels="1" name="Santa Claus' Blessed Weapon">
+	<skill id="8322" toLevel="1" name="Santa Claus' Blessed Weapon">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player levelRange="82;85" />
-		</cond>
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="6" />
-				<add stat="pAtk" val="750" />
-				<mul stat="mAtk" val="13" />
-				<add stat="mAtk" val="1000" />
+		<icon>icon.etc_x_mas_tree_i00</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>82</minLevel>
+				<maxLevel>85</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>500</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="8323" levels="1" name="Notifier">
-		<set name="icon" val="icon.skill5239" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="15000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
-	</skill>
-	<skill id="8324" levels="1" name="Warrior's Shirt">
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxCp" val="672" />
+			<effect name="MAtk">
+				<amount>1200</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>750</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>1000</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8325" levels="1" name="Wild Rose Pig Candy">
-		<set name="abnormalLvl" val="0" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="BIG_HEAD" />
-		<set name="abnormalVisualEffect" val="BIG_HEAD" />
-		<set name="activateRate" val="0" />
-		<set name="icon" val="icon.etc_pig_candy_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="20000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
-		<set name="trait" val="ETC" />
+	<skill id="8323" toLevel="1" name="Notifier">
+		<icon>icon.skill5239</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>15000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8326" levels="1" name="Wild Rose Pig Candy">
-		<set name="icon" val="icon.etc_pig_candy_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+	<skill id="8324" toLevel="1" name="Warrior's Shirt">
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>672</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8327" levels="1" name="Release Agathion's Seal - Juju">
+	<skill id="8325" toLevel="1" name="Wild Rose Pig Candy">
+		<abnormalLvl>0</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>BIG_HEAD</abnormalType>
+		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
+		<activateRate>0</activateRate>
+		<icon>icon.etc_pig_candy_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>20000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<trait>ETC</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="8326" toLevel="1" name="Wild Rose Pig Candy">
+		<icon>icon.etc_pig_candy_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+	</skill>
+	<skill id="8327" toLevel="1" name="Release Agathion's Seal - Juju">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="16064" />
+				<npcId>16064</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8328" levels="1" name="Release Agathion's Seal - Oink oink">
+	<skill id="8328" toLevel="1" name="Release Agathion's Seal - Oink oink">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="16065" />
+				<npcId>16065</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8329" levels="1" name="Summon Friend">
-		<set name="effectPoint" val="1000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
-		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
-		</cond>
+	<skill id="8329" toLevel="1" name="Summon Friend">
+		<effectPoint>1000</effectPoint>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>-2</effectRange>
+		<hitTime>10000</hitTime>
+		<targetType>OTHERS</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCallPc" />
+			<condition name="TargetMyParty">
+				<includeMe>false</includeMe>
+			</condition>
+			<condition name="OpEquipItem">
+				<itemId>15208</itemId>
+				<affectType>BOTH</affectType>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="8330" levels="1" name="Release Agathion's Seal - Dawn">
+	<skill id="8330" toLevel="1" name="Release Agathion's Seal - Dawn">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="16066" />
+				<npcId>16066</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8331" levels="1" name="Blue Talisman - Buff Cancel">
+	<skill id="8331" toLevel="1" name="Blue Talisman - Buff Cancel">
 		<!-- Confirmed CT2.5 -->
-		<set name="affectLimit" val="5-5" />
-		<set name="affectRange" val="150" />
-		<set name="effectPoint" val="-532" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.etc_talisman_i01" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="360000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
-		<for>
+		<affectLimit>5-5</affectLimit>
+		<affectRange>150</affectRange>
+		<effectPoint>-532</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_talisman_i01</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>360000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
 			<effect name="DispelByCategory">
-				<param slot="buff" rate="25" max="5" />
+				<slot>BUFF</slot>
+				<rate>25</rate>
+				<max>5</max>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8332" levels="1" name="Blue Talisman - Buff Steal">
+	<skill id="8332" toLevel="1" name="Blue Talisman - Buff Steal">
 		<!-- Confirmed CT2.5 -->
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-532" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.etc_talisman_i01" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="360000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
+		<castRange>600</castRange>
+		<effectPoint>-532</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_talisman_i01</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>360000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="StealAbnormal">
-				<param slot="buff" rate="25" max="3" />
+				<slot>BUFF</slot>
+				<rate>25</rate>
+				<max>3</max>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8333" levels="1" name="Red Talisman - Territory Royal Guard">
+	<skill id="8333" toLevel="1" name="Red Talisman - Territory Royal Guard">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="effectPoint" val="532" />
-		<set name="hitTime" val="1200" />
-		<set name="icon" val="icon.etc_talisman_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="300000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxCp" val="1500" />
-			</effect>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<effectPoint>532</effectPoint>
+		<hitTime>1200</hitTime>
+		<icon>icon.etc_talisman_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="CpHeal">
-				<param power="1500" />
+				<power>1500</power>
 			</effect>
-		</for>
+			<effect name="MaxCp">
+				<amount>1500</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8334" levels="1" name="Blue Talisman - Lord's Divine Protection">
+	<skill id="8334" toLevel="1" name="Blue Talisman - Lord's Divine Protection">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="effectPoint" val="532" />
-		<set name="hitTime" val="1200" />
-		<set name="icon" val="icon.etc_talisman_i01" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="360000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pvpMagicalDef" val="1.75" />
-				<mul stat="pvpPhysDef" val="1.75" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<effectPoint>532</effectPoint>
+		<hitTime>1200</hitTime>
+		<icon>icon.etc_talisman_i01</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>360000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>75</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>75</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8335" levels="1" name="White Talisman - Attribute Resistance">
+	<skill id="8335" toLevel="1" name="White Talisman - Attribute Resistance">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="effectPoint" val="532" />
-		<set name="hitTime" val="1200" />
-		<set name="icon" val="icon.etc_talisman_i06" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="360000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="earthRes" val="15" />
-				<add stat="waterRes" val="15" />
-				<add stat="windRes" val="15" />
-				<add stat="fireRes" val="15" />
-				<add stat="holyRes" val="15" />
-				<add stat="darkRes" val="15" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<effectPoint>532</effectPoint>
+		<hitTime>1200</hitTime>
+		<icon>icon.etc_talisman_i06</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>360000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>15</amount>
+				<attribute>FIRE</attribute>
 			</effect>
-		</for>
+			<effect name="DefenceAttribute">
+				<amount>15</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>15</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>15</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>15</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>15</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8336" levels="1" name="Guardian's Strider Mount">
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform3" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
+	<skill id="8336" toLevel="1" name="Guardian's Strider Mount">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skilltransform3</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>123</transformId>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="8337" levels="1" name="Weight Up">
+	<skill id="8337" toLevel="1" name="Weight Up">
 		<!-- Increases the weight limit by 5000. -->
-		<set name="icon" val="icon.skill3238" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="weightLimit" val="5000" />
+		<icon>icon.skill3238</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="WeightPenalty">
+				<amount>5000</amount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8338" levels="4" name="Low-grade Magic Rune Clip Iron Belt">
+	<skill id="8338" toLevel="4" name="Low-grade Magic Rune Clip Iron Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#hp"> 0.4 1 1.4 2 </table>
 		<table name="#hpsit"> 0.3 0.75 1.05 1.5 </table>
-		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="regHp" val="#hp" />
-				<add stat="regHp" val="#hpsit">
-					<player resting="true" />
-				</add>
+		<icon>icon.skill0332</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>SITTING</type>
+				<value>
+					<value level="1">0.3</value>
+					<value level="2">0.75</value>
+					<value level="3">1.05</value>
+					<value level="4">1.5</value>
+				</value>
 			</effect>
-		</for>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">0.4</value>
+					<value level="2">1</value>
+					<value level="3">1.4</value>
+					<value level="4">2</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8339" levels="4" name="Low-grade Magic Rune Clip Mithril Belt">
+	<skill id="8339" toLevel="4" name="Low-grade Magic Rune Clip Mithril Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#hp"> 0.78 1.95 2.73 3.9 </table>
 		<table name="#hpsit"> 0.6 1.5 2.1 3 </table>
-		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="regHp" val="#hp" />
-				<add stat="regHp" val="#hpsit">
-					<player resting="true" />
-				</add>
+		<icon>icon.skill0332</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>
+					<value level="1">0.6</value>
+					<value level="2">1.5</value>
+					<value level="3">2.1</value>
+					<value level="4">3</value>
+				</value>
 			</effect>
-		</for>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">0.78</value>
+					<value level="2">1.95</value>
+					<value level="3">2.73</value>
+					<value level="4">3.9</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8340" levels="4" name="Low-grade Magic Rune Clip Iron Belt">
+	<skill id="8340" toLevel="4" name="Low-grade Magic Rune Clip Iron Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#mp"> 0.14 0.35 0.49 0.7 </table>
 		<table name="#mpsit"> 0.16 0.4 0.56 0.8 </table>
-		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="regMp" val="#mp" />
-				<add stat="regMp" val="#mpsit">
-					<player resting="true" />
-				</add>
+		<icon>icon.skill0332</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>SITTING</type>
+				<value>
+					<value level="1">0.16</value>
+					<value level="2">0.4</value>
+					<value level="3">0.56</value>
+					<value level="4">0.8</value>
+				</value>
 			</effect>
-		</for>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">0.14</value>
+					<value level="2">0.35</value>
+					<value level="3">0.49</value>
+					<value level="4">0.7</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8341" levels="4" name="Low-grade Magic Rune Clip Mithril Belt">
+	<skill id="8341" toLevel="4" name="Low-grade Magic Rune Clip Mithril Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 0.3 0.75 1.05 1.5 </table>
-		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="regMp" val="#amount" />
-				<add stat="regMp" val="#amount">
-					<player resting="true" />
-				</add>
+		<icon>icon.skill0332</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>SITTING</type>
+				<value>
+					<value level="1">0.3</value>
+					<value level="2">0.75</value>
+					<value level="3">1.05</value>
+					<value level="4">1.5</value>
+				</value>
 			</effect>
-		</for>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">0.3</value>
+					<value level="2">0.75</value>
+					<value level="3">1.05</value>
+					<value level="4">1.5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8342" levels="4" name="Low-grade Magic Ornament Iron Belt">
+	<skill id="8342" toLevel="4" name="Low-grade Magic Ornament Iron Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
-		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pvpPhysDmg" val="#pvp" />
+		<icon>icon.skill0332</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">0.59999999999999</value>
+					<value level="2">1.5</value>
+					<value level="3">2.1</value>
+					<value level="4">3</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8343" levels="4" name="Low-grade Magic Ornament Iron Belt">
+	<skill id="8343" toLevel="4" name="Low-grade Magic Ornament Iron Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
-		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+		<icon>icon.skill0332</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">0.59999999999999</value>
+					<value level="2">1.5</value>
+					<value level="3">2.1</value>
+					<value level="4">3</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">0.59999999999999</value>
+					<value level="2">1.5</value>
+					<value level="3">2.1</value>
+					<value level="4">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8344" levels="4" name="Low-grade Magic Ornament Iron Belt">
+	<skill id="8344" toLevel="4" name="Low-grade Magic Ornament Iron Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
-		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pvpPhysDef" val="#pvp" />
-				<mul stat="pvpMagicalDef" val="#pvp" />
-				<mul stat="pvpPhysSkillsDef" val="#pvp" />
+		<icon>icon.skill0332</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">0.59999999999999</value>
+					<value level="2">1.5</value>
+					<value level="3">2.1</value>
+					<value level="4">3</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">0.59999999999999</value>
+					<value level="2">1.5</value>
+					<value level="3">2.1</value>
+					<value level="4">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">0.59999999999999</value>
+					<value level="2">1.5</value>
+					<value level="3">2.1</value>
+					<value level="4">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8345" levels="4" name="Low-grade Magic Ornament Mithril Belt">
+	<skill id="8345" toLevel="4" name="Low-grade Magic Ornament Mithril Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.01 1.025 1.035 1.05 </table>
-		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pvpPhysDmg" val="#pvp" />
+		<icon>icon.skill0332</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2.5</value>
+					<value level="3">3.5</value>
+					<value level="4">5</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8346" levels="4" name="Low-grade Magic Ornament Mithril Belt">
+	<skill id="8346" toLevel="4" name="Low-grade Magic Ornament Mithril Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.01 1.025 1.035 1.05 </table>
-		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pvpPhysSkillsDmg" val="#pvp" />
-				<mul stat="pvpMagicalDmg" val="#pvp" />
+		<icon>icon.skill0332</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2.5</value>
+					<value level="3">3.5</value>
+					<value level="4">5</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2.5</value>
+					<value level="3">3.5</value>
+					<value level="4">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8347" levels="4" name="Low-grade Magic Ornament Mithril Belt">
+	<skill id="8347" toLevel="4" name="Low-grade Magic Ornament Mithril Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.012 1.03 1.042 1.06 </table>
-		<set name="icon" val="icon.skill0332" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pvpPhysDef" val="#pvp" />
-				<mul stat="pvpMagicalDef" val="#pvp" />
-				<mul stat="pvpPhysSkillsDef" val="#pvp" />
+		<icon>icon.skill0332</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">1.2</value>
+					<value level="2">3</value>
+					<value level="3">4.2</value>
+					<value level="4">6</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1.2</value>
+					<value level="2">3</value>
+					<value level="3">4.2</value>
+					<value level="4">6</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1.2</value>
+					<value level="2">3</value>
+					<value level="3">4.2</value>
+					<value level="4">6</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8348" levels="2" name="Resistance Earring - Gludio">
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
+	<skill id="8348" toLevel="2" name="Resistance Earring - Gludio">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>
+			<value level="1">icon.accessary_inferno_earing_i00</value>
+			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="AttackTrait">
-				<param SHOCK="15" />
-				<mul stat="maxCp" val="#maxCp" />
+				<SHOCK>15</SHOCK>
 			</effect>
 			<effect name="DefenceTrait">
-				<param BLEED="15" />
+				<BLEED>15</BLEED>
 			</effect>
-		</for>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8349" levels="2" name="Resistance Earring - Dion">
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
+	<skill id="8349" toLevel="2" name="Resistance Earring - Dion">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>
+			<value level="1">icon.accessary_inferno_earing_i00</value>
+			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="AttackTrait">
-				<param HOLD="15" />
-				<mul stat="maxCp" val="#maxCp" />
+				<HOLD>15</HOLD>
 			</effect>
 			<effect name="DefenceTrait">
-				<param POISON="15" />
+				<POISON>15</POISON>
 			</effect>
-		</for>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8350" levels="2" name="Resistance Earring - Giran">
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
+	<skill id="8350" toLevel="2" name="Resistance Earring - Giran">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>
+			<value level="1">icon.accessary_inferno_earing_i00</value>
+			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="AttackTrait">
-				<param BLEED="15" />
-				<mul stat="maxCp" val="#maxCp" />
+				<BLEED>15</BLEED>
 			</effect>
 			<effect name="DefenceTrait">
-				<param PARALYZE="15" />
+				<PARALYZE>15</PARALYZE>
 			</effect>
-		</for>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8351" levels="2" name="Resistance Earring - Oren">
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
+	<skill id="8351" toLevel="2" name="Resistance Earring - Oren">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>
+			<value level="1">icon.accessary_inferno_earing_i00</value>
+			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="AttackTrait">
-				<param PARALYZE="15" />
-				<mul stat="maxCp" val="#maxCp" />
+				<PARALYZE>15</PARALYZE>
 			</effect>
 			<effect name="DefenceTrait">
-				<param HOLD="15" />
+				<HOLD>15</HOLD>
 			</effect>
-		</for>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8352" levels="2" name="Resistance Earring - Aden">
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
+	<skill id="8352" toLevel="2" name="Resistance Earring - Aden">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>
+			<value level="1">icon.accessary_inferno_earing_i00</value>
+			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="AttackTrait">
-				<param DERANGEMENT="15" />
-				<mul stat="maxCp" val="#maxCp" />
+				<DERANGEMENT>15</DERANGEMENT>
 			</effect>
 			<effect name="DefenceTrait">
-				<param SHOCK="15" />
+				<SHOCK>15</SHOCK>
 			</effect>
-		</for>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8353" levels="2" name="Resistance Earring - Innadril">
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
+	<skill id="8353" toLevel="2" name="Resistance Earring - Innadril">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>
+			<value level="1">icon.accessary_inferno_earing_i00</value>
+			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="AttackTrait">
-				<param SLEEP="15" />
-				<mul stat="maxCp" val="#maxCp" />
+				<SLEEP>15</SLEEP>
 			</effect>
 			<effect name="DefenceTrait">
-				<param SHOCK="15" />
+				<SHOCK>15</SHOCK>
 			</effect>
-		</for>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8354" levels="2" name="Resistance Earring - Goddard">
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
+	<skill id="8354" toLevel="2" name="Resistance Earring - Goddard">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>
+			<value level="1">icon.accessary_inferno_earing_i00</value>
+			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="AttackTrait">
-				<param SHOCK="15" />
-				<mul stat="maxCp" val="#maxCp" />
+				<SHOCK>15</SHOCK>
 			</effect>
 			<effect name="DefenceTrait">
-				<param SLEEP="15" />
+				<SLEEP>15</SLEEP>
 			</effect>
-		</for>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8355" levels="2" name="Resistance Earring - Rune">
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
+	<skill id="8355" toLevel="2" name="Resistance Earring - Rune">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>
+			<value level="1">icon.accessary_inferno_earing_i00</value>
+			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="AttackTrait">
-				<param POISON="15" />
-				<mul stat="maxCp" val="#maxCp" />
+				<POISON>15</POISON>
 			</effect>
 			<effect name="DefenceTrait">
-				<param HOLD="15" />
+				<HOLD>15</HOLD>
 			</effect>
-		</for>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8356" levels="2" name="Resistance Earring - Schuttgart">
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
+	<skill id="8356" toLevel="2" name="Resistance Earring - Schuttgart">
 		<table name="#maxCp"> 1 1.05 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>
+			<value level="1">icon.accessary_inferno_earing_i00</value>
+			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="AttackTrait">
-				<param HOLD="15" />
-				<mul stat="maxCp" val="#maxCp" />
+				<HOLD>15</HOLD>
 			</effect>
 			<effect name="DefenceTrait">
-				<param DERANGEMENT="15" />
+				<DERANGEMENT>15</DERANGEMENT>
 			</effect>
-		</for>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8357" levels="1" name="Einhasad's Strike">
+	<skill id="8357" toLevel="1" name="Einhasad's Strike">
 		<!-- Confirmed CT2.5 -->
-		<set name="affectLimit" val="5-15" />
-		<set name="affectRange" val="300" />
-		<set name="castRange" val="200" />
-		<set name="coolTime" val="700" />
-		<set name="effectPoint" val="-10000" />
-		<set name="effectRange" val="400" />
-		<set name="fanRange" val="0,0,300,900" />
-		<set name="hitTime" val="1300" />
-		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="4000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="FRONT_AREA" />
-		<for>
-			<effect name="StaticDamage">
-				<param power="10000" />
+		<affectLimit>5-15</affectLimit>
+		<affectRange>300</affectRange>
+		<castRange>200</castRange>
+		<coolTime>700</coolTime>
+		<effectPoint>-10000</effectPoint>
+		<effectRange>400</effectRange>
+		<fanRange>0;0;300;90</fanRange>
+		<hitTime>1300</hitTime>
+		<icon>icon.weapon_the_sword_of_hero_i00</icon>
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>4000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="OpInstantzone">
+				<instanceId>112</instanceId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RealDamage">
+				<power>10000</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8358" levels="1" name="Release Agathion's Seal - Towbat">
+	<skill id="8358" toLevel="1" name="Release Agathion's Seal - Towbat">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="16070" />
+				<npcId>16070</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8359" levels="1" name="Notifier">
-		<set name="icon" val="icon.skill5239" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="15000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+	<skill id="8359" toLevel="1" name="Notifier">
+		<icon>icon.skill5239</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>15000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8360" levels="1" name="Vitality Maintenance Effect">
+	<skill id="8360" toLevel="1" name="Vitality Maintenance Effect">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="VP_UP" />
-		<set name="abnormalVisualEffect" val="VP_UP" />
-		<set name="effectPoint" val="100" />
-		<set name="icon" val="icon.event_energy_belt_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="82800000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="vitalityConsumeRate" val="0" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>VP_KEEP</abnormalType>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
+		<effectPoint>100</effectPoint>
+		<icon>icon.event_energy_belt_i00</icon>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>82800000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8361" levels="1" name="6th Anniversary Party Earring">
+	<skill id="8361" toLevel="1" name="6th Anniversary Party Earring">
 		<!-- TODO: Implement me! -->
 		<!-- Increases resistance to shock/mind attack by 20% and shock/mind attack bonus by 20%. Recovers 4% of the damage to the enemy as your HP. Excludes damage caused by skills and long-range attack. -->
-		<set name="icon" val="icon.event_six_party_earing_i00" />
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
-		<for>
+		<icon>icon.event_six_party_earing_i00</icon>
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="AttackTrait">
-				<param SHOCK="20" />
-				<param DERANGEMENT="20" />
+				<SHOCK>20</SHOCK>
+				<DERANGEMENT>20</DERANGEMENT>
 			</effect>
 			<effect name="DefenceTrait">
-				<param SHOCK="20" />
-				<param DERANGEMENT="20" />
+				<SHOCK>20</SHOCK>
+				<DERANGEMENT>20</DERANGEMENT>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8362" levels="1" name="Beast Training - Release">
+	<skill id="8362" toLevel="1" name="Beast Training - Release">
 		<!-- Confirmed CT2.5 -->
-		<set name="castRange" val="900" />
-		<set name="effectRange" val="1200" />
-		<set name="icon" val="icon.skill8362" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="1000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<castRange>900</castRange>
+		<effectRange>1200</effectRange>
+		<icon>icon.skill8362</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<conditions>
+			<condition name="OpTargetNpc">
+				<npcIds>
+					<item>18869</item>
+					<item>18870</item>
+					<item>18871</item>
+					<item>18872</item>
+				</npcIds>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="8363" levels="1" name="Beast Training - Accompany">
+	<skill id="8363" toLevel="1" name="Beast Training - Accompany">
 		<!-- Confirmed CT2.5 -->
-		<set name="affectRange" val="1000" />
-		<set name="icon" val="icon.skill8363" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="1000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<affectRange>1000</affectRange>
+		<icon>icon.skill8363</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>FRIEND</affectObject>
 	</skill>
-	<skill id="8364" levels="1" name="Beast Training - Use Special Ability">
+	<skill id="8364" toLevel="1" name="Beast Training - Use Special Ability">
 		<!-- Confirmed CT2.5 -->
-		<set name="affectRange" val="1000" />
-		<set name="icon" val="icon.skill8364" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="1000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<affectRange>1000</affectRange>
+		<icon>icon.skill8364</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>FRIEND</affectObject>
 	</skill>
-	<skill id="8365" levels="1" name="Dynasty Tunic">
-		<set name="icon" val="icon.armor_t93_ue_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+	<skill id="8365" toLevel="1" name="Dynasty Tunic">
+		<icon>icon.armor_t93_ue_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="8366" levels="1" name="Dynasty Jewel Leather Armor">
-		<set name="icon" val="icon.armor_t91_uw_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+	<skill id="8366" toLevel="1" name="Dynasty Jewel Leather Armor">
+		<icon>icon.armor_t91_uw_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="8367" levels="1" name="Dynasty Jewel Leather Armor">
-		<set name="icon" val="icon.armor_t91_uf_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+	<skill id="8367" toLevel="1" name="Dynasty Jewel Leather Armor">
+		<icon>icon.armor_t91_uf_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="8368" levels="1" name="Dynasty Jewel Leather Armor">
-		<set name="icon" val="icon.armor_t93_ue_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+	<skill id="8368" toLevel="1" name="Dynasty Jewel Leather Armor">
+		<icon>icon.armor_t93_ue_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="8369" levels="1" name="Halloween Pumpkin Card">
-		<set name="effectPoint" val="-100" />
-		<set name="icon" val="icon.ev_jack_ghost_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="3000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+	<skill id="8369" toLevel="1" name="Halloween Pumpkin Card">
+		<effectPoint>-100</effectPoint>
+		<icon>icon.ev_jack_ghost_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>400</effectRange>
+		<castRange>150</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8370" levels="1" name="Rotten Pumpkin Card">
-		<set name="effectPoint" val="-100" />
-		<set name="icon" val="icon.ev_rotten_jack_ghost_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="3000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+	<skill id="8370" toLevel="1" name="Rotten Pumpkin Card">
+		<effectPoint>-100</effectPoint>
+		<icon>icon.ev_rotten_jack_ghost_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>400</effectRange>
+		<castRange>150</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8371" levels="1" name="Transform Halloween Pumpkin">
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform3" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
+	<skill id="8371" toLevel="1" name="Transform Halloween Pumpkin">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skilltransform3</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>108</transformId>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="8372" levels="1" name="Super Strong Giant's Mask">
+	<skill id="8372" toLevel="1" name="Super Strong Giant's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, P. Atk. by 5%, and earth tolerance by 5. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="SIGNAL_D" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.ev_frankenstein_mask_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="7200000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SIGNAL_D</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.ev_frankenstein_mask_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>7200000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitTime>4000</hitTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8373" levels="1" name="Silent Scream's Mask">
+	<skill id="8373" toLevel="1" name="Silent Scream's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, Critical rate by 5%, and wind tolerance by 5. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="SIGNAL_D" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.ev_scream_mask_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="7200000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SIGNAL_D</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.ev_scream_mask_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>7200000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitTime>4000</hitTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8374" levels="1" name="Wrathful Spirit's Mask">
+	<skill id="8374" toLevel="1" name="Wrathful Spirit's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, moving speed by 5%, and fire tolerance by 5. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="SIGNAL_D" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.ev_doccabi_mask_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="7200000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SIGNAL_D</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.ev_doccabi_mask_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>7200000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitTime>4000</hitTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8375" levels="1" name="Unrotten Corpse's Mask">
+	<skill id="8375" toLevel="1" name="Unrotten Corpse's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, skill's MP consumption by 5%, and darkness tolerance by 5. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="SIGNAL_D" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.ev_mummy_mask_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="7200000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SIGNAL_D</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.ev_mummy_mask_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>7200000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitTime>4000</hitTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8376" levels="1" name="Planet X235 Alien Mask's Effect">
+	<skill id="8376" toLevel="1" name="Planet X235 Alien Mask's Effect">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, damage magic's Prominent Damage occurrence by 2, and water tolerance by 5. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="SIGNAL_D" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.ev_alien_mask_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="7200000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SIGNAL_D</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.ev_alien_mask_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>7200000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitTime>4000</hitTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8377" levels="1" name="Golden Jack O'Lantern Mask's Effect">
+	<skill id="8377" toLevel="1" name="Golden Jack O'Lantern Mask's Effect">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 20%, moving speed by 10%, and resistance to debuffs by 10%. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="SIGNAL_D" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.ev_golden_jack0_mask_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="82800000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SIGNAL_D</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.ev_golden_jack0_mask_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>82800000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitTime>4000</hitTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8378" levels="1" name="Beast Training - Release All">
+	<skill id="8378" toLevel="1" name="Beast Training - Release All">
 		<!-- Confirmed CT2.5 -->
-		<set name="affectRange" val="1000" />
-		<set name="icon" val="icon.skill8378" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="1000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<affectRange>1000</affectRange>
+		<icon>icon.skill8378</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>FRIEND</affectObject>
 	</skill>
-	<skill id="8379" levels="2" name="Protection Ring - Gludio">
+	<skill id="8379" toLevel="2" name="Protection Ring - Gludio">
 		<table name="#earthRes"> 12 15 </table>
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="earthRes" val="#earthRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_ring_i00</value>
+			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">12</value>
+					<value level="2">15</value>
+				</amount>
+				<attribute>EARTH</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8380" levels="2" name="Protection Ring - Dion">
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+	<skill id="8380" toLevel="2" name="Protection Ring - Dion">
 		<table name="#waterRes"> 12 15 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="waterRes" val="#waterRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_ring_i00</value>
+			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">12</value>
+					<value level="2">15</value>
+				</amount>
+				<attribute>WATER</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8381" levels="2" name="Protection Ring - Giran">
+	<skill id="8381" toLevel="2" name="Protection Ring - Giran">
 		<table name="#fireRes"> 12 15 </table>
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="fireRes" val="#fireRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_ring_i00</value>
+			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">12</value>
+					<value level="2">15</value>
+				</amount>
+				<attribute>FIRE</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8382" levels="2" name="Protection Ring - Oren">
+	<skill id="8382" toLevel="2" name="Protection Ring - Oren">
 		<table name="#earthRes"> 12 15 </table>
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="earthRes" val="#earthRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_ring_i00</value>
+			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">12</value>
+					<value level="2">15</value>
+				</amount>
+				<attribute>EARTH</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8383" levels="2" name="Protection Ring - Aden">
+	<skill id="8383" toLevel="2" name="Protection Ring - Aden">
 		<table name="#holyRes"> 12 15 </table>
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="holyRes" val="#holyRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_ring_i00</value>
+			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">12</value>
+					<value level="2">15</value>
+				</amount>
+				<attribute>HOLY</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8384" levels="2" name="Protection Ring - Innadril">
+	<skill id="8384" toLevel="2" name="Protection Ring - Innadril">
 		<table name="#holyRes"> 12 15 </table>
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="holyRes" val="#holyRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_ring_i00</value>
+			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">12</value>
+					<value level="2">15</value>
+				</amount>
+				<attribute>HOLY</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8385" levels="2" name="Protection Ring - Goddard">
+	<skill id="8385" toLevel="2" name="Protection Ring - Goddard">
 		<table name="#darkRes"> 12 15 </table>
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="darkRes" val="#darkRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_ring_i00</value>
+			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">12</value>
+					<value level="2">15</value>
+				</amount>
+				<attribute>DARK</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8386" levels="2" name="Protection Ring - Rune">
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+	<skill id="8386" toLevel="2" name="Protection Ring - Rune">
 		<table name="#windRes"> 12 15 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="windRes" val="#windRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_ring_i00</value>
+			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">12</value>
+					<value level="2">15</value>
+				</amount>
+				<attribute>WIND</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8387" levels="2" name="Protection Ring - Schuttgart">
+	<skill id="8387" toLevel="2" name="Protection Ring - Schuttgart">
 		<table name="#darkRes"> 12 15 </table>
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="darkRes" val="#darkRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_ring_i00</value>
+			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">12</value>
+					<value level="2">15</value>
+				</amount>
+				<attribute>DARK</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8388" levels="2" name="Protection Necklace - Gludio">
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+	<skill id="8388" toLevel="2" name="Protection Necklace - Gludio">
 		<table name="#waterRes"> 26 30 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="waterRes" val="#waterRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_necklace_i00</value>
+			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">26</value>
+					<value level="2">30</value>
+				</amount>
+				<attribute>WATER</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8389" levels="2" name="Protection Necklace - Dion">
+	<skill id="8389" toLevel="2" name="Protection Necklace - Dion">
 		<table name="#holyRes"> 26 30 </table>
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="holyRes" val="#holyRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_necklace_i00</value>
+			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">26</value>
+					<value level="2">30</value>
+				</amount>
+				<attribute>HOLY</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8390" levels="2" name="Protection Necklace - Giran">
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+	<skill id="8390" toLevel="2" name="Protection Necklace - Giran">
 		<table name="#windRes"> 26 30 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="windRes" val="#windRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_necklace_i00</value>
+			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">26</value>
+					<value level="2">30</value>
+				</amount>
+				<attribute>WIND</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8391" levels="2" name="Protection Necklace - Oren">
+	<skill id="8391" toLevel="2" name="Protection Necklace - Oren">
 		<table name="#darkRes"> 26 30 </table>
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="darkRes" val="#darkRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_necklace_i00</value>
+			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">26</value>
+					<value level="2">30</value>
+				</amount>
+				<attribute>DARK</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8392" levels="2" name="Protection Necklace - Aden">
+	<skill id="8392" toLevel="2" name="Protection Necklace - Aden">
 		<table name="#earthRes"> 26 30 </table>
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="earthRes" val="#earthRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_necklace_i00</value>
+			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">26</value>
+					<value level="2">30</value>
+				</amount>
+				<attribute>EARTH</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8393" levels="2" name="Protection Necklace - Innadril">
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+	<skill id="8393" toLevel="2" name="Protection Necklace - Innadril">
 		<table name="#waterRes"> 26 30 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="waterRes" val="#waterRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_necklace_i00</value>
+			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">26</value>
+					<value level="2">30</value>
+				</amount>
+				<attribute>WATER</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8394" levels="2" name="Protection Necklace - Goddard">
+	<skill id="8394" toLevel="2" name="Protection Necklace - Goddard">
 		<table name="#fireRes"> 26 30 </table>
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="fireRes" val="#fireRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_necklace_i00</value>
+			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">26</value>
+					<value level="2">30</value>
+				</amount>
+				<attribute>FIRE</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8395" levels="2" name="Protection Necklace - Rune">
+	<skill id="8395" toLevel="2" name="Protection Necklace - Rune">
 		<table name="#fireRes"> 26 30 </table>
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="fireRes" val="#fireRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_necklace_i00</value>
+			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">26</value>
+					<value level="2">30</value>
+				</amount>
+				<attribute>FIRE</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8396" levels="2" name="Protection Necklace - Schuttgart">
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+	<skill id="8396" toLevel="2" name="Protection Necklace - Schuttgart">
 		<table name="#windRes"> 26 30 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="windRes" val="#windRes" />
+		<icon>
+			<value level="1">icon.accessary_inferno_necklace_i00</value>
+			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
+		</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">26</value>
+					<value level="2">30</value>
+				</amount>
+				<attribute>WIND</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="8397" levels="1" name="Moirai Heavy Armor Set">
+	<skill id="8397" toLevel="1" name="Moirai Heavy Armor Set">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t100_u_i00" />
-		<set name="magicLvl" val="82" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>icon.armor_t100_u_i00</icon>
+		<magicLvl>82</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="50" />
-				<mul stat="pAtk" val="1.0426" /> <!-- Atk Power +4.26% -->
-				<mul stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
-				<mul stat="magicSuccRes" val="1.02" /> <!-- Resistance to Damage Magic +2% -->
-				<add stat="fireRes" val="3" /> <!-- resistance to fire attributes +3 -->
-				<add stat="waterRes" val="3" /> <!-- resistance to water attributes +3 -->
-				<add stat="windRes" val="3" /> <!-- resistance to wind attributes +3 -->
-				<add stat="earthRes" val="3" /> <!-- resistance to earth attributes +3 -->
+				<!-- Atk Power +4.26% -->
+				<!-- Atk. Spd. +4% -->
+				<!-- Resistance to Damage Magic +2% -->
+				<!-- resistance to fire attributes +3 -->
+				<!-- resistance to water attributes +3 -->
+				<!-- resistance to wind attributes +3 -->
+				<!-- resistance to earth attributes +3 -->
+				<SHOCK>50</SHOCK>
 			</effect>
 			<effect name="EnableCloak" />
-		</for>
+			<effect name="PAtk">
+				<amount>4.26</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistDDMagic">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>3</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>3</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>3</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>3</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8398" levels="1" name="Moirai Light Armor Set">
+	<skill id="8398" toLevel="1" name="Moirai Light Armor Set">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t101_u_i00" />
-		<set name="magicLvl" val="82" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>icon.armor_t101_u_i00</icon>
+		<magicLvl>82</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param HOLD="50" />
-				<mul stat="pAtk" val="1.0426" /> <!-- P. Atk. +4.26% -->
-				<mul stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
-				<mul stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
-				<add stat="fireRes" val="3" /> <!-- resistance to fire attributes +3 -->
-				<add stat="waterRes" val="3" /> <!-- resistance to water attributes +3 -->
-				<add stat="windRes" val="3" /> <!-- resistance to wind attributes +3 -->
-				<add stat="earthRes" val="3" /> <!-- resistance to earth attributes +3 -->
+				<!-- P. Atk. +4.26% -->
+				<!-- Atk. Spd. +4% -->
+				<!-- Moving Spd. +3% -->
+				<!-- resistance to fire attributes +3 -->
+				<!-- resistance to water attributes +3 -->
+				<!-- resistance to wind attributes +3 -->
+				<!-- resistance to earth attributes +3 -->
+				<HOLD>50</HOLD>
 			</effect>
 			<effect name="EnableCloak" />
-		</for>
+			<effect name="PAtk">
+				<amount>4.26</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>3</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>3</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>3</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>3</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="8399" levels="1" name="Moirai Robe Set">
+	<skill id="8399" toLevel="1" name="Moirai Robe Set">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t102_u_i00" />
-		<set name="magicLvl" val="82" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>icon.armor_t102_u_i00</icon>
+		<magicLvl>82</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="50" />
-				<mul stat="mAtk" val="1.0811" /> <!-- M. Power +8.11% -->
-				<mul stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
-				<add stat="fireRes" val="5" /> <!-- resistance to fire attributes +5 -->
-				<add stat="waterRes" val="5" /> <!-- resistance to water attributes +5 -->
-				<add stat="windRes" val="5" /> <!-- resistance to wind attributes +5 -->
-				<add stat="earthRes" val="5" /> <!-- resistance to earth attributes +5 -->
+				<!-- M. Power +8.11% -->
+				<!-- M. Spd. +15% -->
+				<!-- resistance to fire attributes +5 -->
+				<!-- resistance to water attributes +5 -->
+				<!-- resistance to wind attributes +5 -->
+				<!-- resistance to earth attributes +5 -->
+				<PARALYZE>50</PARALYZE>
 			</effect>
 			<effect name="EnableCloak" />
-		</for>
+			<effect name="MAtk">
+				<amount>8.11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>5</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>5</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>5</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>5</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
 	</skill>
 </list>

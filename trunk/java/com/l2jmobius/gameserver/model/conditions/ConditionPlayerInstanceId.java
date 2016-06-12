@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.model.conditions;
 
 import java.util.ArrayList;
 
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -43,18 +43,13 @@ public class ConditionPlayerInstanceId extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		if (effector.getActingPlayer() == null)
+		final L2PcInstance player = effector.getActingPlayer();
+		if (player == null)
 		{
 			return false;
 		}
 		
-		final int instanceId = effector.getInstanceId();
-		if (instanceId <= 0)
-		{
-			return false; // player not in instance
-		}
-		
-		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(effector.getActingPlayer());
-		return (world != null) && (world.getInstanceId() == instanceId) && _instanceIds.contains(world.getTemplateId());
+		final Instance instance = player.getInstanceWorld();
+		return (instance == null) ? false : _instanceIds.contains(instance.getTemplateId());
 	}
 }

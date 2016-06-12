@@ -44,7 +44,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	
 	public Q10283_RequestOfIceMerchant()
 	{
-		super(10283, Q10283_RequestOfIceMerchant.class.getSimpleName(), "Request of Ice Merchant");
+		super(10283);
 		addStartNpc(RAFFORTY);
 		addTalkId(RAFFORTY, KIER, JINIA);
 		addFirstTalkId(JINIA);
@@ -54,8 +54,8 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return htmltext;
 		}
@@ -64,11 +64,11 @@ public class Q10283_RequestOfIceMerchant extends Quest
 		{
 			if (event.equalsIgnoreCase("32020-03.htm"))
 			{
-				qs.startQuest();
+				st.startQuest();
 			}
 			else if (event.equalsIgnoreCase("32020-07.htm"))
 			{
-				qs.setCond(2, true);
+				st.setCond(2, true);
 			}
 		}
 		else if ((npc.getId() == KIER) && event.equalsIgnoreCase("spawn"))
@@ -94,7 +94,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 		{
 			giveAdena(player, 190000, true);
 			addExpAndSp(player, 627000, 50300);
-			qs.exitQuest(false, true);
+			st.exitQuest(false, true);
 			npc.setRunning();
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_END);
 			npc.decayMe();
@@ -105,13 +105,13 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (npc.getInstanceId() > 0)
+		if (npc.isInInstance())
 		{
 			return "32760-10.html";
 		}
 		
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCond(2))
+		final QuestState st = getQuestState(player, false);
+		if ((st != null) && st.isCond(2))
 		{
 			return "32760-01.html";
 		}
@@ -122,8 +122,8 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
+		final QuestState st = getQuestState(player, true);
+		if (st == null)
 		{
 			return htmltext;
 		}
@@ -131,51 +131,39 @@ public class Q10283_RequestOfIceMerchant extends Quest
 		switch (npc.getId())
 		{
 			case RAFFORTY:
-			{
-				switch (qs.getState())
+				switch (st.getState())
 				{
 					case State.CREATED:
-					{
 						final QuestState _prev = player.getQuestState(Q00115_TheOtherSideOfTruth.class.getSimpleName());
 						htmltext = ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82)) ? "32020-01.htm" : "32020-00.htm";
 						break;
-					}
 					case State.STARTED:
-					{
-						if (qs.isCond(1))
+						if (st.isCond(1))
 						{
 							htmltext = "32020-04.htm";
 						}
-						else if (qs.isCond(2))
+						else if (st.isCond(2))
 						{
 							htmltext = "32020-08.htm";
 						}
 						break;
-					}
 					case State.COMPLETED:
-					{
 						htmltext = "32020-09.htm";
 						break;
-					}
 				}
 				break;
-			}
 			case KIER:
-			{
-				if (qs.isCond(2))
+				if (st.isCond(2))
 				{
 					htmltext = "32022-01.html";
 				}
 				break;
-			}
 			case JINIA:
-			{
-				if (qs.isCond(2))
+				if (st.isCond(2))
 				{
 					htmltext = "32760-02.html";
 				}
 				break;
-			}
 		}
 		return htmltext;
 	}

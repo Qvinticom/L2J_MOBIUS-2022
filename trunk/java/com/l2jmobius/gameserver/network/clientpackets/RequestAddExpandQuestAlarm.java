@@ -16,45 +16,39 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * @author Sdw
  */
-public class RequestAddExpandQuestAlarm extends L2GameClientPacket
+public class RequestAddExpandQuestAlarm implements IClientIncomingPacket
 {
-	private static final String _C__D0_7A_REQUESTADDEXPANDQUESTALARM = "[C] D0;7A RequestAddExpandQuestAlarm";
-	
 	private int _questId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_questId = readD();
+		_questId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
 		final Quest quest = QuestManager.getInstance().getQuest(_questId);
-		
 		if (quest != null)
 		{
 			quest.sendNpcLogList(activeChar);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_7A_REQUESTADDEXPANDQUESTALARM;
 	}
 }

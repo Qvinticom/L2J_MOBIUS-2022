@@ -23,16 +23,19 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.gameserver.enums.ClanRewardType;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.variables.PlayerVariables;
 
 /**
  * This class holds the clan members data.
  */
 public class L2ClanMember
 {
-	private static final Logger _log = Logger.getLogger(L2ClanMember.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(L2ClanMember.class.getName());
 	
 	private final L2Clan _clan;
 	private int _objectId;
@@ -47,6 +50,7 @@ public class L2ClanMember
 	private int _pledgeType;
 	private int _apprentice;
 	private int _sponsor;
+	private long _onlineTime;
 	
 	/**
 	 * Used to restore a clan member from the database.
@@ -147,12 +151,20 @@ public class L2ClanMember
 	}
 	
 	/**
-	 * Verifies if the clan member is online.
-	 * @return {@code true} if is online
+	 * Checks if is online.
+	 * @return true, if is online
 	 */
 	public boolean isOnline()
 	{
-		return (_player != null) && _player.isOnline() && !_player.isInOfflineMode();
+		if ((_player == null) || !_player.isOnline())
+		{
+			return false;
+		}
+		if ((_player.getClient() == null) || _player.getClient().isDetached())
+		{
+			return false;
+		}
+		return true;
 	}
 	
 	/**
@@ -241,7 +253,7 @@ public class L2ClanMember
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not update pledge type: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not update pledge type: " + e.getMessage(), e);
 		}
 	}
 	
@@ -251,7 +263,11 @@ public class L2ClanMember
 	 */
 	public int getPowerGrade()
 	{
-		return _player != null ? _player.getPowerGrade() : _powerGrade;
+		if (_player != null)
+		{
+			return _player.getPowerGrade();
+		}
+		return _powerGrade;
 	}
 	
 	/**
@@ -286,7 +302,7 @@ public class L2ClanMember
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not update power _grade: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not update power _grade: " + e.getMessage(), e);
 		}
 	}
 	
@@ -307,7 +323,11 @@ public class L2ClanMember
 	 */
 	public int getRaceOrdinal()
 	{
-		return _player != null ? _player.getRace().ordinal() : _raceOrdinal;
+		if (_player != null)
+		{
+			return _player.getRace().ordinal();
+		}
+		return _raceOrdinal;
 	}
 	
 	/**
@@ -316,7 +336,11 @@ public class L2ClanMember
 	 */
 	public boolean getSex()
 	{
-		return _player != null ? _player.getAppearance().getSex() : _sex;
+		if (_player != null)
+		{
+			return _player.getAppearance().getSex();
+		}
+		return _sex;
 	}
 	
 	/**
@@ -325,7 +349,11 @@ public class L2ClanMember
 	 */
 	public int getSponsor()
 	{
-		return _player != null ? _player.getSponsor() : _sponsor;
+		if (_player != null)
+		{
+			return _player.getSponsor();
+		}
+		return _sponsor;
 	}
 	
 	/**
@@ -334,7 +362,11 @@ public class L2ClanMember
 	 */
 	public int getApprentice()
 	{
-		return _player != null ? _player.getApprentice() : _apprentice;
+		if (_player != null)
+		{
+			return _player.getApprentice();
+		}
+		return _apprentice;
 	}
 	
 	/**
@@ -398,15 +430,12 @@ public class L2ClanMember
 			switch (clan.getLevel())
 			{
 				case 4:
-				{
 					if (player.isClanLeader())
 					{
 						pledgeClass = 3;
 					}
 					break;
-				}
 				case 5:
-				{
 					if (player.isClanLeader())
 					{
 						pledgeClass = 4;
@@ -416,24 +445,17 @@ public class L2ClanMember
 						pledgeClass = 2;
 					}
 					break;
-				}
 				case 6:
-				{
 					switch (player.getPledgeType())
 					{
 						case -1:
-						{
 							pledgeClass = 1;
 							break;
-						}
 						case 100:
 						case 200:
-						{
 							pledgeClass = 2;
 							break;
-						}
 						case 0:
-						{
 							if (player.isClanLeader())
 							{
 								pledgeClass = 5;
@@ -444,48 +466,34 @@ public class L2ClanMember
 								{
 									case 100:
 									case 200:
-									{
 										pledgeClass = 4;
 										break;
-									}
 									case -1:
 									default:
-									{
 										pledgeClass = 3;
 										break;
-									}
 								}
 							}
 							break;
-						}
 					}
 					break;
-				}
 				case 7:
-				{
 					switch (player.getPledgeType())
 					{
 						case -1:
-						{
 							pledgeClass = 1;
 							break;
-						}
 						case 100:
 						case 200:
-						{
 							pledgeClass = 3;
 							break;
-						}
 						case 1001:
 						case 1002:
 						case 2001:
 						case 2002:
-						{
 							pledgeClass = 2;
 							break;
-						}
 						case 0:
-						{
 							if (player.isClanLeader())
 							{
 								pledgeClass = 7;
@@ -496,56 +504,40 @@ public class L2ClanMember
 								{
 									case 100:
 									case 200:
-									{
 										pledgeClass = 6;
 										break;
-									}
 									case 1001:
 									case 1002:
 									case 2001:
 									case 2002:
-									{
 										pledgeClass = 5;
 										break;
-									}
 									case -1:
 									default:
-									{
 										pledgeClass = 4;
 										break;
-									}
 								}
 							}
 							break;
-						}
 					}
 					break;
-				}
 				case 8:
-				{
 					switch (player.getPledgeType())
 					{
 						case -1:
-						{
 							pledgeClass = 1;
 							break;
-						}
 						case 100:
 						case 200:
-						{
 							pledgeClass = 4;
 							break;
-						}
 						case 1001:
 						case 1002:
 						case 2001:
 						case 2002:
-						{
 							pledgeClass = 3;
 							break;
-						}
 						case 0:
-						{
 							if (player.isClanLeader())
 							{
 								pledgeClass = 8;
@@ -556,56 +548,40 @@ public class L2ClanMember
 								{
 									case 100:
 									case 200:
-									{
 										pledgeClass = 7;
 										break;
-									}
 									case 1001:
 									case 1002:
 									case 2001:
 									case 2002:
-									{
 										pledgeClass = 6;
 										break;
-									}
 									case -1:
 									default:
-									{
 										pledgeClass = 5;
 										break;
-									}
 								}
 							}
 							break;
-						}
 					}
 					break;
-				}
 				case 9:
-				{
 					switch (player.getPledgeType())
 					{
 						case -1:
-						{
 							pledgeClass = 1;
 							break;
-						}
 						case 100:
 						case 200:
-						{
 							pledgeClass = 5;
 							break;
-						}
 						case 1001:
 						case 1002:
 						case 2001:
 						case 2002:
-						{
 							pledgeClass = 4;
 							break;
-						}
 						case 0:
-						{
 							if (player.isClanLeader())
 							{
 								pledgeClass = 9;
@@ -616,56 +592,40 @@ public class L2ClanMember
 								{
 									case 100:
 									case 200:
-									{
 										pledgeClass = 8;
 										break;
-									}
 									case 1001:
 									case 1002:
 									case 2001:
 									case 2002:
-									{
 										pledgeClass = 7;
 										break;
-									}
 									case -1:
 									default:
-									{
 										pledgeClass = 6;
 										break;
-									}
 								}
 							}
 							break;
-						}
 					}
 					break;
-				}
 				case 10:
-				{
 					switch (player.getPledgeType())
 					{
 						case -1:
-						{
 							pledgeClass = 1;
 							break;
-						}
 						case 100:
 						case 200:
-						{
 							pledgeClass = 6;
 							break;
-						}
 						case 1001:
 						case 1002:
 						case 2001:
 						case 2002:
-						{
 							pledgeClass = 5;
 							break;
-						}
 						case 0:
-						{
 							if (player.isClanLeader())
 							{
 								pledgeClass = 10;
@@ -676,56 +636,40 @@ public class L2ClanMember
 								{
 									case 100:
 									case 200:
-									{
 										pledgeClass = 9;
 										break;
-									}
 									case 1001:
 									case 1002:
 									case 2001:
 									case 2002:
-									{
 										pledgeClass = 8;
 										break;
-									}
 									case -1:
 									default:
-									{
 										pledgeClass = 7;
 										break;
-									}
 								}
 							}
 							break;
-						}
 					}
 					break;
-				}
 				case 11:
-				{
 					switch (player.getPledgeType())
 					{
 						case -1:
-						{
 							pledgeClass = 1;
 							break;
-						}
 						case 100:
 						case 200:
-						{
 							pledgeClass = 7;
 							break;
-						}
 						case 1001:
 						case 1002:
 						case 2001:
 						case 2002:
-						{
 							pledgeClass = 6;
 							break;
-						}
 						case 0:
-						{
 							if (player.isClanLeader())
 							{
 								pledgeClass = 11;
@@ -736,36 +680,26 @@ public class L2ClanMember
 								{
 									case 100:
 									case 200:
-									{
 										pledgeClass = 10;
 										break;
-									}
 									case 1001:
 									case 1002:
 									case 2001:
 									case 2002:
-									{
 										pledgeClass = 9;
 										break;
-									}
 									case -1:
 									default:
-									{
 										pledgeClass = 8;
 										break;
-									}
 								}
 							}
 							break;
-						}
 					}
 					break;
-				}
 				default:
-				{
 					pledgeClass = 1;
 					break;
-				}
 			}
 		}
 		
@@ -798,7 +732,52 @@ public class L2ClanMember
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, "Could not save apprentice/sponsor: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not save apprentice/sponsor: " + e.getMessage(), e);
 		}
+	}
+	
+	public long getOnlineTime()
+	{
+		return _onlineTime;
+	}
+	
+	public void setOnlineTime(long onlineTime)
+	{
+		_onlineTime = onlineTime;
+	}
+	
+	public void resetBonus()
+	{
+		_onlineTime = 0;
+		final PlayerVariables vars = getVariables();
+		vars.set("CLAIMED_CLAN_REWARDS", 0);
+		vars.storeMe();
+	}
+	
+	public int getOnlineStatus()
+	{
+		return !isOnline() ? 0 : _onlineTime >= (Config.ALT_CLAN_MEMBERS_TIME_FOR_BONUS) ? 2 : 1;
+	}
+	
+	public boolean isRewardClaimed(ClanRewardType type)
+	{
+		final PlayerVariables vars = getVariables();
+		final int claimedRewards = vars.getInt("CLAIMED_CLAN_REWARDS", ClanRewardType.getDefaultMask());
+		return (claimedRewards & type.getMask()) == type.getMask();
+	}
+	
+	public void setRewardClaimed(ClanRewardType type)
+	{
+		final PlayerVariables vars = getVariables();
+		int claimedRewards = vars.getInt("CLAIMED_CLAN_REWARDS", ClanRewardType.getDefaultMask());
+		claimedRewards |= type.getMask();
+		vars.set("CLAIMED_CLAN_REWARDS", claimedRewards);
+		vars.storeMe();
+	}
+	
+	private PlayerVariables getVariables()
+	{
+		final L2PcInstance player = getPlayerInstance();
+		return player != null ? player.getVariables() : new PlayerVariables(_objectId);
 	}
 }

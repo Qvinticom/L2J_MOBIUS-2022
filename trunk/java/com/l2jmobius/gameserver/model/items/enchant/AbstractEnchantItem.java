@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.model.items.enchant;
 
 import java.util.logging.Logger;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.items.L2Item;
@@ -25,7 +26,6 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.items.type.ItemType;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author UnAfraid
@@ -36,37 +36,19 @@ public abstract class AbstractEnchantItem
 	
 	private static final ItemType[] ENCHANT_TYPES = new ItemType[]
 	{
-		EtcItemType.ANCIENT_CRYSTAL_ENCHANT_AM,
-		EtcItemType.ANCIENT_CRYSTAL_ENCHANT_WP,
-		EtcItemType.BLESS_SCRL_ENCHANT_AM,
-		EtcItemType.BLESS_SCRL_ENCHANT_WP,
-		EtcItemType.SCRL_ENCHANT_AM,
-		EtcItemType.SCRL_ENCHANT_WP,
-		EtcItemType.SCRL_INC_ENCHANT_PROP_AM,
-		EtcItemType.SCRL_INC_ENCHANT_PROP_WP,
-		EtcItemType.BLESS_SCRL_INC_ENCHANT_PROP_AM,
-		EtcItemType.BLESS_SCRL_INC_ENCHANT_PROP_WP,
-		EtcItemType.GIANT_SCRL_ENCHANT_AM,
-		EtcItemType.GIANT_SCRL_ENCHANT_WP,
-		EtcItemType.GIANT_SCRL_INC_ENCHANT_PROP_AM,
-		EtcItemType.GIANT_SCRL_INC_ENCHANT_PROP_WP,
-		EtcItemType.GIANT_SCRL_BLESS_INC_ENCHANT_PROP_AM,
-		EtcItemType.GIANT_SCRL_BLESS_INC_ENCHANT_PROP_WP,
-		EtcItemType.SCRL_BLESS_INC_ENCHANT_PROP_AM,
-		EtcItemType.SCRL_BLESS_INC_ENCHANT_PROP_WP,
-		EtcItemType.BLESS_DROP_SCRL_INC_ENCHANT_PROP_AM,
-		EtcItemType.BLESS_DROP_SCRL_INC_ENCHANT_PROP_WP,
-		EtcItemType.GIANT2_SCRL_BLESS_INC_ENCHANT_PROP_AM,
-		EtcItemType.GIANT2_SCRL_BLESS_INC_ENCHANT_PROP_WP,
-		EtcItemType.SCRL_ENCHANT_HR
+		EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM,
+		EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP,
+		EtcItemType.BLESS_ENCHT_AM,
+		EtcItemType.BLESS_ENCHT_WP,
+		EtcItemType.ENCHT_AM,
+		EtcItemType.ENCHT_WP,
+		EtcItemType.ENCHT_ATTR_INC_PROP_ENCHT_AM,
+		EtcItemType.ENCHT_ATTR_INC_PROP_ENCHT_WP,
 	};
 	
 	private final int _id;
 	private final CrystalType _grade;
-	private final int _minEnchantLevel;
 	private final int _maxEnchantLevel;
-	private final int _maxEnchantLevelFighter;
-	private final int _maxEnchantLevelMagic;
 	private final double _bonusRate;
 	
 	public AbstractEnchantItem(StatsSet set)
@@ -76,15 +58,12 @@ public abstract class AbstractEnchantItem
 		{
 			throw new NullPointerException();
 		}
-		if (!Util.contains(ENCHANT_TYPES, getItem().getItemType()))
+		else if (!CommonUtil.contains(ENCHANT_TYPES, getItem().getItemType()))
 		{
 			throw new IllegalAccessError();
 		}
 		_grade = set.getEnum("targetGrade", CrystalType.class, CrystalType.NONE);
-		_minEnchantLevel = set.getInt("minEnchant", 0);
 		_maxEnchantLevel = set.getInt("maxEnchant", 127);
-		_maxEnchantLevelFighter = set.getInt("maxEnchantFighter", 127);
-		_maxEnchantLevelMagic = set.getInt("maxEnchantMagic", 127);
 		_bonusRate = set.getDouble("bonusRate", 0);
 	}
 	
@@ -126,35 +105,11 @@ public abstract class AbstractEnchantItem
 	public abstract boolean isWeapon();
 	
 	/**
-	 * @return the minimum enchant level that this scroll/item can be used with
-	 */
-	public int getMinEnchantLevel()
-	{
-		return _minEnchantLevel;
-	}
-	
-	/**
 	 * @return the maximum enchant level that this scroll/item can be used with
 	 */
 	public int getMaxEnchantLevel()
 	{
 		return _maxEnchantLevel;
-	}
-	
-	/**
-	 * @return the maximum enchant level that fighter weapon can be enchanted with this scroll
-	 */
-	public int getMaxEnchantLevelFighter()
-	{
-		return _maxEnchantLevelFighter;
-	}
-	
-	/**
-	 * @return the maximum enchant level that magic weapon can be enchanted with this scroll
-	 */
-	public int getMaxEnchantLevelMagic()
-	{
-		return _maxEnchantLevelMagic;
 	}
 	
 	/**
@@ -176,19 +131,7 @@ public abstract class AbstractEnchantItem
 		{
 			return false;
 		}
-		else if ((_minEnchantLevel != 0) && (itemToEnchant.getEnchantLevel() < _minEnchantLevel))
-		{
-			return false;
-		}
 		else if ((_maxEnchantLevel != 0) && (itemToEnchant.getEnchantLevel() >= _maxEnchantLevel))
-		{
-			return false;
-		}
-		else if ((_maxEnchantLevelFighter != 0) && !itemToEnchant.getItem().isMagicWeapon() && (itemToEnchant.getEnchantLevel() >= _maxEnchantLevelFighter))
-		{
-			return false;
-		}
-		else if ((_maxEnchantLevelMagic != 0) && itemToEnchant.getItem().isMagicWeapon() && (itemToEnchant.getEnchantLevel() >= _maxEnchantLevelMagic))
 		{
 			return false;
 		}
@@ -203,8 +146,16 @@ public abstract class AbstractEnchantItem
 	 * @param type2
 	 * @return {@code true} if current type2 is valid to be enchanted, {@code false} otherwise
 	 */
-	private final boolean isValidItemType(int type2)
+	private boolean isValidItemType(int type2)
 	{
-		return type2 == L2Item.TYPE2_WEAPON ? isWeapon() : ((type2 == L2Item.TYPE2_SHIELD_ARMOR) || (type2 == L2Item.TYPE2_ACCESSORY)) && !isWeapon();
+		if (type2 == L2Item.TYPE2_WEAPON)
+		{
+			return isWeapon();
+		}
+		else if ((type2 == L2Item.TYPE2_SHIELD_ARMOR) || (type2 == L2Item.TYPE2_ACCESSORY))
+		{
+			return !isWeapon();
+		}
+		return false;
 	}
 }

@@ -20,9 +20,9 @@ import java.util.StringTokenizer;
 
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
@@ -69,12 +69,12 @@ public class AdminClan implements IAdminCommandHandler
 				}
 				
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-				html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/claninfo.htm"));
+				html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/claninfo.htm"));
 				html.replace("%clan_name%", clan.getName());
 				html.replace("%clan_leader%", clan.getLeaderName());
 				html.replace("%clan_level%", String.valueOf(clan.getLevel()));
 				html.replace("%clan_has_castle%", clan.getCastleId() > 0 ? CastleManager.getInstance().getCastleById(clan.getCastleId()).getName() : "No");
-				html.replace("%clan_has_clanhall%", clan.getHideoutId() > 0 ? ClanHallManager.getInstance().getClanHallById(clan.getHideoutId()).getName() : "No");
+				html.replace("%clan_has_clanhall%", clan.getHideoutId() > 0 ? ClanHallData.getInstance().getClanHallById(clan.getHideoutId()).getName() : "No");
 				html.replace("%clan_has_fortress%", clan.getFortId() > 0 ? FortManager.getInstance().getFortById(clan.getFortId()).getName() : "No");
 				html.replace("%clan_points%", String.valueOf(clan.getReputationScore()));
 				html.replace("%clan_players_count%", String.valueOf(clan.getMembersCount()));
@@ -116,7 +116,7 @@ public class AdminClan implements IAdminCommandHandler
 			case "admin_clan_show_pending":
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-				html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/clanchanges.htm"));
+				html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/clanchanges.htm"));
 				final StringBuilder sb = new StringBuilder();
 				for (L2Clan clan : ClanTable.getInstance().getClans())
 				{

@@ -17,39 +17,15 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
-import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.stats.Stats;
 
 /**
- * Focus Energy effect implementation.
- * @author DS
+ * @author Sdw
  */
-public final class FocusEnergy extends AbstractEffect
+public class FocusEnergy extends AbstractStatAddEffect
 {
-	private final int _charge;
-	
-	public FocusEnergy(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public FocusEnergy(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
-		_charge = params.getInt("charge", 0);
-	}
-	
-	@Override
-	public boolean isInstant()
-	{
-		return true;
-	}
-	
-	@Override
-	public void onStart(BuffInfo info)
-	{
-		if (!info.getEffected().isPlayer())
-		{
-			return;
-		}
-		
-		info.getEffected().getActingPlayer().increaseCharges(1, _charge);
+		super(params, Stats.MAX_MOMENTUM);
 	}
 }

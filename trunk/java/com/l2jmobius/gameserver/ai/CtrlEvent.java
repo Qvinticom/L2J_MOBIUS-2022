@@ -34,11 +34,7 @@ public enum CtrlEvent
 	/** Increase/decrease aggression towards a target, or reduce global aggression if target is null */
 	EVT_AGGRESSION,
 	/** Actor is in stun state */
-	EVT_STUNNED,
-	/** Actor is paralyzed or petrified */
-	EVT_PARALYZED,
-	/** Actor starts/stops sleeping */
-	EVT_SLEEPING,
+	EVT_ACTION_BLOCKED,
 	/** Actor is in rooted state (cannot move) */
 	EVT_ROOTED,
 	/** Actor evaded hit **/
@@ -47,10 +43,6 @@ public enum CtrlEvent
 	 * An event that previous action was completed. The action may be an attempt to physically/magically hit an enemy, or an action that discarded attack attempt has finished.
 	 */
 	EVT_READY_TO_ACT,
-	/**
-	 * User's command, like using a combat magic or changing weapon, etc. The command is not intended to change final goal
-	 */
-	EVT_USER_CMD,
 	/**
 	 * The actor arrived to assigned location, or it's a time to modify movement destination (follow, interact, random move and others intentions).
 	 */

@@ -16,11 +16,11 @@
  */
 package com.l2jmobius.gameserver.model;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
-import com.l2jmobius.util.Rnd;
+import com.l2jmobius.commons.util.Rnd;
 
 /**
  * @version 0.1, 2005-03-12
@@ -44,7 +44,7 @@ public class L2Territory
 		}
 	}
 	
-	private final List<Point> _points = new CopyOnWriteArrayList<>();
+	private final List<Point> _points = new ArrayList<>();
 	private final int _terr;
 	private int _xMin;
 	private int _xMax;
@@ -96,6 +96,14 @@ public class L2Territory
 		_procMax += proc;
 	}
 	
+	public void print()
+	{
+		for (Point p : _points)
+		{
+			_log.info("(" + p._x + "," + p._y + ")");
+		}
+	}
+	
 	public boolean isIntersect(int x, int y, Point p1, Point p2)
 	{
 		final double dy1 = p1._y - y;
@@ -107,7 +115,21 @@ public class L2Territory
 		}
 		
 		final double dx1 = p1._x - x;
-		return ((dx1 >= 0) && ((p2._x - x) >= 0)) || (((dx1 >= 0) || ((p2._x - x) >= 0)) && (((dy1 * (p1._x - p2._x)) / (p1._y - p2._y)) <= dx1));
+		final double dx2 = p2._x - x;
+		
+		if ((dx1 >= 0) && (dx2 >= 0))
+		{
+			return true;
+		}
+		
+		if ((dx1 < 0) && (dx2 < 0))
+		{
+			return false;
+		}
+		
+		final double dx0 = (dy1 * (p1._x - p2._x)) / (p1._y - p2._y);
+		
+		return dx0 <= dx1;
 	}
 	
 	public boolean isInside(int x, int y)
@@ -115,7 +137,10 @@ public class L2Territory
 		int intersect_count = 0;
 		for (int i = 0; i < _points.size(); i++)
 		{
-			if (isIntersect(x, y, _points.get(i > 0 ? i - 1 : _points.size() - 1), _points.get(i)))
+			final Point p1 = _points.get(i > 0 ? i - 1 : _points.size() - 1);
+			final Point p2 = _points.get(i);
+			
+			if (isIntersect(x, y, p1, p2))
 			{
 				intersect_count++;
 			}
@@ -138,6 +163,7 @@ public class L2Territory
 					return new Location(p1._x, p1._y, Rnd.get(p1._zmin, p1._zmax));
 				}
 			}
+			
 		}
 		for (int i = 0; i < 100; i++)
 		{

@@ -16,8 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.logging.Logger;
-
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -28,7 +26,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class AdminGm implements IAdminCommandHandler
 {
-	private static Logger _log = Logger.getLogger(AdminGm.class.getName());
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_gm"
@@ -40,9 +37,8 @@ public class AdminGm implements IAdminCommandHandler
 		if (command.equals("admin_gm") && activeChar.isGM())
 		{
 			AdminData.getInstance().deleteGm(activeChar);
-			activeChar.setAccessLevel(0, true);
-			activeChar.sendMessage("You no longer have GM status.");
-			_log.info("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") turned his GM status off");
+			activeChar.setAccessLevel(0, true, false);
+			activeChar.sendMessage("You deactivated your GM access for this session, if you login again you will be GM again, in order to remove your access completely please shift yourself and set your accesslevel to 0.");
 		}
 		return true;
 	}

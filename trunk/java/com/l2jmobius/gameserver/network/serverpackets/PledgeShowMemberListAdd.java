@@ -16,10 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public final class PledgeShowMemberListAdd extends L2GameServerPacket
+public final class PledgeShowMemberListAdd implements IClientOutgoingPacket
 {
 	private final String _name;
 	private final int _lvl;
@@ -32,7 +34,7 @@ public final class PledgeShowMemberListAdd extends L2GameServerPacket
 		_name = player.getName();
 		_lvl = player.getLevel();
 		_classId = player.getClassId().getId();
-		_isOnline = player.isOnline() ? player.getObjectId() : 0;
+		_isOnline = (player.isOnline() ? player.getObjectId() : 0);
 		_pledgeType = player.getPledgeType();
 	}
 	
@@ -41,20 +43,22 @@ public final class PledgeShowMemberListAdd extends L2GameServerPacket
 		_name = cm.getName();
 		_lvl = cm.getLevel();
 		_classId = cm.getClassId();
-		_isOnline = cm.isOnline() ? cm.getObjectId() : 0;
+		_isOnline = (cm.isOnline() ? cm.getObjectId() : 0);
 		_pledgeType = cm.getPledgeType();
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x5c);
-		writeS(_name);
-		writeD(_lvl);
-		writeD(_classId);
-		writeD(0x00);
-		writeD(0x01);
-		writeD(_isOnline); // 1 = online 0 = offline
-		writeD(_pledgeType);
+		OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ADD.writeId(packet);
+		
+		packet.writeS(_name);
+		packet.writeD(_lvl);
+		packet.writeD(_classId);
+		packet.writeD(0x00);
+		packet.writeD(0x01);
+		packet.writeD(_isOnline); // 1 = online 0 = offline
+		packet.writeD(_pledgeType);
+		return true;
 	}
 }

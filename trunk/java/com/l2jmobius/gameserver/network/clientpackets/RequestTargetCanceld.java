@@ -16,30 +16,31 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.TargetUnselected;
 
 /**
  * This class ...
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestTargetCanceld extends L2GameClientPacket
+public final class RequestTargetCanceld implements IClientIncomingPacket
 {
-	private static final String _C__48_REQUESTTARGETCANCELD = "[C] 48 RequestTargetCanceld";
-	
 	private int _unselect;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_unselect = readH();
+		_unselect = packet.readH();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -53,11 +54,9 @@ public final class RequestTargetCanceld extends L2GameClientPacket
 		
 		if (_unselect == 0)
 		{
-			if (activeChar.isCastingNow() && activeChar.canAbortCast())
-			{
-				activeChar.abortCast();
-			}
-			else if (activeChar.getTarget() != null)
+			// Try to abort cast, if that fails, then cancel target.
+			final boolean castAborted = activeChar.abortCast();
+			if (!castAborted && (activeChar.getTarget() != null))
 			{
 				activeChar.setTarget(null);
 			}
@@ -70,11 +69,5 @@ public final class RequestTargetCanceld extends L2GameClientPacket
 		{
 			activeChar.broadcastPacket(new TargetUnselected(activeChar));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__48_REQUESTTARGETCANCELD;
 	}
 }

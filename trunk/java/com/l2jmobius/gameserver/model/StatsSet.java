@@ -19,16 +19,20 @@ package com.l2jmobius.gameserver.model;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
+import com.l2jmobius.commons.util.TimeUtil;
 import com.l2jmobius.gameserver.model.holders.MinionHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.interfaces.IParserAdvUtils;
-import com.l2jmobius.util.TimeUtil;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * This class is meant to hold a set of (key,value) pairs.<br>
@@ -37,15 +41,20 @@ import com.l2jmobius.util.TimeUtil;
  */
 public class StatsSet implements IParserAdvUtils
 {
-	private static final Logger _log = Logger.getLogger(StatsSet.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(StatsSet.class.getName());
 	/** Static empty immutable map, used to avoid multiple null checks over the source. */
-	public static final StatsSet EMPTY_STATSET = new StatsSet(Collections.<String, Object> emptyMap());
+	public static final StatsSet EMPTY_STATSET = new StatsSet(Collections.emptyMap());
 	
 	private final Map<String, Object> _set;
 	
 	public StatsSet()
 	{
-		this(new LinkedHashMap<>());
+		this(ConcurrentHashMap::new);
+	}
+	
+	public StatsSet(Supplier<Map<String, Object>> mapFactory)
+	{
+		this(mapFactory.get());
 	}
 	
 	public StatsSet(Map<String, Object> map)
@@ -66,7 +75,7 @@ public class StatsSet implements IParserAdvUtils
 	 * Add a set of couple values in the current set
 	 * @param newSet : StatsSet pointing out the list of couples to add in the current set
 	 */
-	public void add(StatsSet newSet)
+	public void merge(StatsSet newSet)
 	{
 		_set.putAll(newSet.getSet());
 	}
@@ -89,6 +98,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public boolean getBoolean(String key)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -117,6 +127,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public boolean getBoolean(String key, boolean defaultValue)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -139,6 +150,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public byte getByte(String key)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -161,6 +173,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public byte getByte(String key, byte defaultValue)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -180,8 +193,24 @@ public class StatsSet implements IParserAdvUtils
 		}
 	}
 	
+	public short increaseByte(String key, byte increaseWith)
+	{
+		final byte newValue = (byte) (getByte(key) + increaseWith);
+		set(key, newValue);
+		return newValue;
+	}
+	
+	public short increaseByte(String key, byte defaultValue, byte increaseWith)
+	{
+		final byte newValue = (byte) (getByte(key, defaultValue) + increaseWith);
+		set(key, newValue);
+		return newValue;
+	}
+	
 	public byte[] getByteArray(String key, String splitOn)
 	{
+		Objects.requireNonNull(key);
+		Objects.requireNonNull(splitOn);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -189,11 +218,10 @@ public class StatsSet implements IParserAdvUtils
 		}
 		if (val instanceof Number)
 		{
-			final byte[] result =
+			return new byte[]
 			{
 				((Number) val).byteValue()
 			};
-			return result;
 		}
 		int c = 0;
 		final String[] vals = ((String) val).split(splitOn);
@@ -214,6 +242,8 @@ public class StatsSet implements IParserAdvUtils
 	
 	public List<Byte> getByteList(String key, String splitOn)
 	{
+		Objects.requireNonNull(key);
+		Objects.requireNonNull(splitOn);
 		final List<Byte> result = new ArrayList<>();
 		for (Byte i : getByteArray(key, splitOn))
 		{
@@ -225,6 +255,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public short getShort(String key)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -247,6 +278,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public short getShort(String key, short defaultValue)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -266,9 +298,24 @@ public class StatsSet implements IParserAdvUtils
 		}
 	}
 	
+	public short increaseShort(String key, short increaseWith)
+	{
+		final short newValue = (short) (getShort(key) + increaseWith);
+		set(key, newValue);
+		return newValue;
+	}
+	
+	public short increaseShort(String key, short defaultValue, short increaseWith)
+	{
+		final short newValue = (short) (getShort(key, defaultValue) + increaseWith);
+		set(key, newValue);
+		return newValue;
+	}
+	
 	@Override
 	public int getInt(String key)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -293,6 +340,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public int getInt(String key, int defaultValue)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -312,8 +360,24 @@ public class StatsSet implements IParserAdvUtils
 		}
 	}
 	
+	public int increaseInt(String key, int increaseWith)
+	{
+		final int newValue = getInt(key) + increaseWith;
+		set(key, newValue);
+		return newValue;
+	}
+	
+	public int increaseInt(String key, int defaultValue, int increaseWith)
+	{
+		final int newValue = getInt(key, defaultValue) + increaseWith;
+		set(key, newValue);
+		return newValue;
+	}
+	
 	public int[] getIntArray(String key, String splitOn)
 	{
+		Objects.requireNonNull(key);
+		Objects.requireNonNull(splitOn);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -321,11 +385,10 @@ public class StatsSet implements IParserAdvUtils
 		}
 		if (val instanceof Number)
 		{
-			final int[] result =
+			return new int[]
 			{
 				((Number) val).intValue()
 			};
-			return result;
 		}
 		int c = 0;
 		final String[] vals = ((String) val).split(splitOn);
@@ -346,6 +409,8 @@ public class StatsSet implements IParserAdvUtils
 	
 	public List<Integer> getIntegerList(String key, String splitOn)
 	{
+		Objects.requireNonNull(key);
+		Objects.requireNonNull(splitOn);
 		final List<Integer> result = new ArrayList<>();
 		for (int i : getIntArray(key, splitOn))
 		{
@@ -357,6 +422,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public long getLong(String key)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -379,6 +445,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public long getLong(String key, long defaultValue)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -398,9 +465,24 @@ public class StatsSet implements IParserAdvUtils
 		}
 	}
 	
+	public long increaseLong(String key, long increaseWith)
+	{
+		final long newValue = getLong(key) + increaseWith;
+		set(key, newValue);
+		return newValue;
+	}
+	
+	public long increaseLong(String key, long defaultValue, long increaseWith)
+	{
+		final long newValue = getLong(key, defaultValue) + increaseWith;
+		set(key, newValue);
+		return newValue;
+	}
+	
 	@Override
 	public float getFloat(String key)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -423,6 +505,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public float getFloat(String key, float defaultValue)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -442,9 +525,24 @@ public class StatsSet implements IParserAdvUtils
 		}
 	}
 	
+	public float increaseFloat(String key, float increaseWith)
+	{
+		final float newValue = getFloat(key) + increaseWith;
+		set(key, newValue);
+		return newValue;
+	}
+	
+	public float increaseFloat(String key, float defaultValue, float increaseWith)
+	{
+		final float newValue = getFloat(key, defaultValue) + increaseWith;
+		set(key, newValue);
+		return newValue;
+	}
+	
 	@Override
 	public double getDouble(String key)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -467,6 +565,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public double getDouble(String key, double defaultValue)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -486,9 +585,24 @@ public class StatsSet implements IParserAdvUtils
 		}
 	}
 	
+	public double increaseDouble(String key, double increaseWith)
+	{
+		final double newValue = getDouble(key) + increaseWith;
+		set(key, newValue);
+		return newValue;
+	}
+	
+	public double increaseDouble(String key, double defaultValue, double increaseWith)
+	{
+		final double newValue = getDouble(key, defaultValue) + increaseWith;
+		set(key, newValue);
+		return newValue;
+	}
+	
 	@Override
 	public String getString(String key)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -500,13 +614,19 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public String getString(String key, String defaultValue)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
-		return val == null ? defaultValue : String.valueOf(val);
+		if (val == null)
+		{
+			return defaultValue;
+		}
+		return String.valueOf(val);
 	}
 	
 	@Override
 	public Duration getDuration(String key)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -518,14 +638,21 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public Duration getDuration(String key, Duration defaultValue)
 	{
+		Objects.requireNonNull(key);
 		final Object val = _set.get(key);
-		return val == null ? defaultValue : TimeUtil.parseDuration(String.valueOf(val));
+		if (val == null)
+		{
+			return defaultValue;
+		}
+		return TimeUtil.parseDuration(String.valueOf(val));
 	}
 	
 	@Override
 	@SuppressWarnings("unchecked")
 	public <T extends Enum<T>> T getEnum(String key, Class<T> enumClass)
 	{
+		Objects.requireNonNull(key);
+		Objects.requireNonNull(enumClass);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -549,6 +676,8 @@ public class StatsSet implements IParserAdvUtils
 	@SuppressWarnings("unchecked")
 	public <T extends Enum<T>> T getEnum(String key, Class<T> enumClass, T defaultValue)
 	{
+		Objects.requireNonNull(key);
+		Objects.requireNonNull(enumClass);
 		final Object val = _set.get(key);
 		if (val == null)
 		{
@@ -571,81 +700,258 @@ public class StatsSet implements IParserAdvUtils
 	@SuppressWarnings("unchecked")
 	public final <A> A getObject(String name, Class<A> type)
 	{
+		Objects.requireNonNull(name);
+		Objects.requireNonNull(type);
 		final Object obj = _set.get(name);
-		return (obj == null) || !type.isAssignableFrom(obj.getClass()) ? null : (A) obj;
+		if ((obj == null) || !type.isAssignableFrom(obj.getClass()))
+		{
+			return null;
+		}
+		
+		return (A) obj;
 	}
 	
 	public SkillHolder getSkillHolder(String key)
 	{
+		Objects.requireNonNull(key);
 		final Object obj = _set.get(key);
-		return (obj == null) || !(obj instanceof SkillHolder) ? null : (SkillHolder) obj;
+		if ((obj == null) || !(obj instanceof SkillHolder))
+		{
+			return null;
+		}
+		
+		return (SkillHolder) obj;
+	}
+	
+	public Location getLocation(String key)
+	{
+		Objects.requireNonNull(key);
+		final Object obj = _set.get(key);
+		if ((obj == null) || !(obj instanceof Location))
+		{
+			return null;
+		}
+		return (Location) obj;
 	}
 	
 	@SuppressWarnings("unchecked")
 	public List<MinionHolder> getMinionList(String key)
 	{
+		Objects.requireNonNull(key);
 		final Object obj = _set.get(key);
-		return (obj == null) || !(obj instanceof List<?>) ? Collections.emptyList() : (List<MinionHolder>) obj;
-	}
-	
-	public void set(String name, Object value)
-	{
-		_set.put(name, value);
-	}
-	
-	public void set(String key, boolean value)
-	{
-		_set.put(key, value);
-	}
-	
-	public void set(String key, byte value)
-	{
-		_set.put(key, value);
-	}
-	
-	public void set(String key, short value)
-	{
-		_set.put(key, value);
-	}
-	
-	public void set(String key, int value)
-	{
-		_set.put(key, value);
-	}
-	
-	public void set(String key, long value)
-	{
-		_set.put(key, value);
-	}
-	
-	public void set(String key, float value)
-	{
-		_set.put(key, value);
-	}
-	
-	public void set(String key, double value)
-	{
-		_set.put(key, value);
-	}
-	
-	public void set(String key, String value)
-	{
-		_set.put(key, value);
-	}
-	
-	public void set(String key, Enum<?> value)
-	{
-		_set.put(key, value);
-	}
-	
-	public void safeSet(String key, int value, int min, int max, String reference)
-	{
-		assert ((min > max) || ((value >= min) && (value < max)));
-		if ((min <= max) && ((value < min) || (value >= max)))
+		if ((obj == null) || !(obj instanceof List<?>))
 		{
-			_log.log(Level.SEVERE, "Incorrect value: " + value + "for: " + key + "Ref: " + reference);
+			return Collections.emptyList();
 		}
 		
-		set(key, value);
+		return (List<MinionHolder>) obj;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public <T> List<T> getList(String key, Class<T> clazz)
+	{
+		Objects.requireNonNull(key);
+		Objects.requireNonNull(clazz);
+		final Object obj = _set.get(key);
+		if ((obj == null) || !(obj instanceof List<?>))
+		{
+			return null;
+		}
+		
+		final List<Object> originalList = (List<Object>) obj;
+		if (!originalList.isEmpty() && !originalList.stream().allMatch(clazz::isInstance))
+		{
+			if (clazz.getSuperclass() == Enum.class)
+			{
+				throw new IllegalAccessError("Please use getEnumList if you want to get list of Enums!");
+			}
+			
+			// Attempt to convert the list
+			final List<T> convertedList = convertList(originalList, clazz);
+			if (convertedList == null)
+			{
+				LOGGER.log(Level.WARNING, "getList(\"" + key + "\", " + clazz.getSimpleName() + ") requested with wrong generic type: " + obj.getClass().getGenericInterfaces()[0] + "!", new ClassNotFoundException());
+				return null;
+			}
+			
+			// Overwrite the existing list with proper generic type
+			_set.put(key, convertedList);
+			return convertedList;
+		}
+		return (List<T>) obj;
+	}
+	
+	public <T> List<T> getList(String key, Class<T> clazz, List<T> defaultValue)
+	{
+		final List<T> list = getList(key, clazz);
+		return list == null ? defaultValue : list;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public <T extends Enum<T>> List<T> getEnumList(String key, Class<T> clazz)
+	{
+		final Object obj = _set.get(key);
+		if ((obj == null) || !(obj instanceof List<?>))
+		{
+			return null;
+		}
+		
+		final List<Object> originalList = (List<Object>) obj;
+		if (!originalList.isEmpty() && (obj.getClass().getGenericInterfaces()[0] != clazz) && originalList.stream().allMatch(name -> Util.isEnum(name.toString(), clazz)))
+		{
+			final List<T> convertedList = originalList.stream().map(Object::toString).map(name -> Enum.valueOf(clazz, name)).map(clazz::cast).collect(Collectors.toList());
+			
+			// Overwrite the existing list with proper generic type
+			_set.put(key, convertedList);
+			return convertedList;
+		}
+		return (List<T>) obj;
+	}
+	
+	/**
+	 * @param <T>
+	 * @param originalList
+	 * @param clazz
+	 * @return
+	 */
+	private <T> List<T> convertList(List<Object> originalList, Class<T> clazz)
+	{
+		if (clazz == Integer.class)
+		{
+			if (originalList.stream().map(Object::toString).allMatch(Util::isInteger))
+			{
+				return originalList.stream().map(Object::toString).map(Integer::valueOf).map(clazz::cast).collect(Collectors.toList());
+			}
+		}
+		else if (clazz == Float.class)
+		{
+			if (originalList.stream().map(Object::toString).allMatch(Util::isFloat))
+			{
+				return originalList.stream().map(Object::toString).map(Float::valueOf).map(clazz::cast).collect(Collectors.toList());
+			}
+		}
+		else if (clazz == Double.class)
+		{
+			if (originalList.stream().map(Object::toString).allMatch(Util::isDouble))
+			{
+				return originalList.stream().map(Object::toString).map(Double::valueOf).map(clazz::cast).collect(Collectors.toList());
+			}
+		}
+		return null;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public <K, V> Map<K, V> getMap(String key, Class<K> keyClass, Class<V> valueClass)
+	{
+		final Object obj = _set.get(key);
+		if ((obj == null) || !(obj instanceof Map<?, ?>))
+		{
+			return null;
+		}
+		
+		final Map<?, ?> originalList = (Map<?, ?>) obj;
+		if (!originalList.isEmpty())
+		{
+			if ((!originalList.keySet().stream().allMatch(keyClass::isInstance)) || (!originalList.values().stream().allMatch(valueClass::isInstance)))
+			{
+				LOGGER.log(Level.WARNING, "getMap(\"" + key + "\", " + keyClass.getSimpleName() + ", " + valueClass.getSimpleName() + ") requested with wrong generic type: " + obj.getClass().getGenericInterfaces()[0] + "!", new ClassNotFoundException());
+			}
+		}
+		return (Map<K, V>) obj;
+	}
+	
+	public StatsSet set(String name, Object value)
+	{
+		if (value == null)
+		{
+			return this;
+		}
+		_set.put(name, value);
+		return this;
+	}
+	
+	public StatsSet set(String key, boolean value)
+	{
+		_set.put(key, value);
+		return this;
+	}
+	
+	public StatsSet set(String key, byte value)
+	{
+		_set.put(key, value);
+		return this;
+	}
+	
+	public StatsSet set(String key, short value)
+	{
+		_set.put(key, value);
+		return this;
+	}
+	
+	public StatsSet set(String key, int value)
+	{
+		_set.put(key, value);
+		return this;
+	}
+	
+	public StatsSet set(String key, long value)
+	{
+		_set.put(key, value);
+		return this;
+	}
+	
+	public StatsSet set(String key, float value)
+	{
+		_set.put(key, value);
+		return this;
+	}
+	
+	public StatsSet set(String key, double value)
+	{
+		_set.put(key, value);
+		return this;
+	}
+	
+	public StatsSet set(String key, String value)
+	{
+		if (value == null)
+		{
+			return this;
+		}
+		_set.put(key, value);
+		return this;
+	}
+	
+	public StatsSet set(String key, Enum<?> value)
+	{
+		if (value == null)
+		{
+			return this;
+		}
+		_set.put(key, value);
+		return this;
+	}
+	
+	public static StatsSet valueOf(String key, Object value)
+	{
+		final StatsSet set = new StatsSet();
+		set.set(key, value);
+		return set;
+	}
+	
+	public void remove(String key)
+	{
+		_set.remove(key);
+	}
+	
+	public boolean contains(String name)
+	{
+		return _set.containsKey(name);
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "StatsSet{_set=" + _set + '}';
 	}
 }

@@ -16,16 +16,17 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.transform.Transform;
 import com.l2jmobius.gameserver.model.actor.transform.TransformLevelData;
 import com.l2jmobius.gameserver.model.actor.transform.TransformTemplate;
@@ -33,14 +34,15 @@ import com.l2jmobius.gameserver.model.holders.AdditionalItemHolder;
 import com.l2jmobius.gameserver.model.holders.AdditionalSkillHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * Transformation data.
  * @author UnAfraid
  */
-public final class TransformData implements IXmlReader
+public final class TransformData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(TransformData.class.getName());
+	
 	private final Map<Integer, Transform> _transformData = new HashMap<>();
 	
 	protected TransformData()
@@ -52,12 +54,12 @@ public final class TransformData implements IXmlReader
 	public synchronized void load()
 	{
 		_transformData.clear();
-		parseDatapackDirectory("stats/transformations", false);
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _transformData.size() + " transform templates.");
+		parseDatapackDirectory("data/stats/transformations", false);
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _transformData.size() + " transform templates.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
@@ -124,7 +126,9 @@ public final class TransformData implements IXmlReader
 												if ("skill".equals(s.getNodeName()))
 												{
 													attrs = s.getAttributes();
-													templateData.addSkill(new SkillHolder(parseInteger(attrs, "id"), parseInteger(attrs, "level")));
+													final int skillId = parseInteger(attrs, "id");
+													final int skillLevel = parseInteger(attrs, "level");
+													templateData.addSkill(new SkillHolder(skillId, skillLevel));
 												}
 											}
 											break;
@@ -153,7 +157,10 @@ public final class TransformData implements IXmlReader
 												if ("skill".equals(s.getNodeName()))
 												{
 													attrs = s.getAttributes();
-													templateData.addAdditionalSkill(new AdditionalSkillHolder(parseInteger(attrs, "id"), parseInteger(attrs, "level"), parseInteger(attrs, "minLevel")));
+													final int skillId = parseInteger(attrs, "id");
+													final int skillLevel = parseInteger(attrs, "level");
+													final int minLevel = parseInteger(attrs, "minLevel");
+													templateData.addAdditionalSkill(new AdditionalSkillHolder(skillId, skillLevel, minLevel));
 												}
 											}
 											break;
@@ -170,7 +177,9 @@ public final class TransformData implements IXmlReader
 												if ("item".equals(s.getNodeName()))
 												{
 													attrs = s.getAttributes();
-													templateData.addAdditionalItem(new AdditionalItemHolder(parseInteger(attrs, "id"), parseBoolean(attrs, "allowed")));
+													final int itemId = parseInteger(attrs, "id");
+													final boolean allowed = parseBoolean(attrs, "allowed");
+													templateData.addAdditionalItem(new AdditionalItemHolder(itemId, allowed));
 												}
 											}
 											break;
@@ -213,16 +222,6 @@ public final class TransformData implements IXmlReader
 	public Transform getTransform(int id)
 	{
 		return _transformData.get(id);
-	}
-	
-	public boolean transformPlayer(int id, L2PcInstance player)
-	{
-		final Transform transform = getTransform(id);
-		if (transform != null)
-		{
-			player.transform(transform);
-		}
-		return transform != null;
 	}
 	
 	public static TransformData getInstance()

@@ -21,7 +21,6 @@
 												<xs:enumeration value="default_enabled" />
 												<xs:enumeration value="domainId" />
 												<xs:enumeration value="enterMsgId" />
-												<xs:enumeration value="eventId" />
 												<xs:enumeration value="fortId" />
 												<xs:enumeration value="HpRegenBonus" />
 												<xs:enumeration value="initialDelay" />
@@ -55,7 +54,7 @@
 												<xs:enumeration value="taxById" />
 												<xs:enumeration value="territoryId" />
 												<xs:enumeration value="townId" />
-												<xs:enumeration value="trackId" />
+												<xs:enumeration value="mapId" />
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
@@ -128,7 +127,6 @@
 									<xs:enumeration value="FortZone" />
 									<xs:enumeration value="HqZone" />
 									<xs:enumeration value="JailZone" />
-									<xs:enumeration value="JumpZone" />
 									<xs:enumeration value="LandingZone" />
 									<xs:enumeration value="MotherTreeZone" />
 									<xs:enumeration value="NoDropItemZone" />
@@ -150,6 +148,7 @@
 									<xs:enumeration value="TerritoryWarZone" />
 									<xs:enumeration value="TownZone" />
 									<xs:enumeration value="WaterZone" />
+									<xs:enumeration value="SayuneZone" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>

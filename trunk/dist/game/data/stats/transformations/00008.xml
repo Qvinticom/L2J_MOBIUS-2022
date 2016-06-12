@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/transformations.xsd">
-	<transform id="8" type="FLYING" can_swim="0" spawn_height="300" normal_attackable="0">
+	<transform id="8" type="FLYING" can_swim="1" spawn_height="300" normal_attackable="0">
 		<Male>
 			<common>
 				<base range="20" attackSpeed="300" attackType="SWORD" critRate="5" mAtk="5" pAtk="5" randomDamage="10" />
-				<stats str="41" int="29" con="31" dex="33" wit="11" men="25" />
+				<stats str="88" int="43" con="80" dex="57" wit="36" men="37" />
 				<defense chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" />
 				<magicDefense rear="9" lear="9" rfinger="5" lfinger="5" neck="13" />
 				<collision radius="38" height="14.25" />
@@ -75,7 +75,7 @@
 				<skill id="886" level="1" /> <!-- Air Shock Bomb -->
 				<skill id="888" level="1" /> <!-- Energy Storm -->
 				<skill id="891" level="1" /> <!-- Energy Shot -->
-				<skill id="619" level="1" /> <!-- Transform Dispel -->
+				<skill id="619" level="1" /> <!-- Dispel Transform -->
 				<skill id="911" level="1" /> <!-- Energy Burst -->
 			</skills>
 			<levels>
@@ -183,7 +183,7 @@
 		<Female>
 			<common>
 				<base range="20" attackSpeed="300" attackType="SWORD" critRate="5" mAtk="5" pAtk="5" randomDamage="10" />
-				<stats str="41" int="29" con="31" dex="33" wit="11" men="25" />
+				<stats str="88" int="43" con="80" dex="57" wit="36" men="37" />
 				<defense chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" />
 				<magicDefense rear="9" lear="9" rfinger="5" lfinger="5" neck="13" />
 				<collision radius="38" height="14.25" />
@@ -254,7 +254,7 @@
 				<skill id="886" level="1" /> <!-- Air Shock Bomb -->
 				<skill id="888" level="1" /> <!-- Energy Storm -->
 				<skill id="891" level="1" /> <!-- Energy Shot -->
-				<skill id="619" level="1" /> <!-- Transform Dispel -->
+				<skill id="619" level="1" /> <!-- Dispel Transform -->
 				<skill id="911" level="1" /> <!-- Energy Burst -->
 			</skills>
 			<levels>

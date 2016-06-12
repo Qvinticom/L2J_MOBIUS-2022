@@ -89,6 +89,7 @@ public class L2AirShipInstance extends L2Vehicle
 	
 	public void setFuel(int f)
 	{
+		
 	}
 	
 	public int getMaxFuel()
@@ -98,6 +99,7 @@ public class L2AirShipInstance extends L2Vehicle
 	
 	public void setMaxFuel(int mf)
 	{
+		
 	}
 	
 	@Override
@@ -129,7 +131,6 @@ public class L2AirShipInstance extends L2Vehicle
 		player.setVehicle(this);
 		player.setInVehiclePosition(new Location(0, 0, 0));
 		player.broadcastPacket(new ExGetOnAirShip(player, this));
-		player.getKnownList().removeAllKnownObjects();
 		player.setXYZ(getX(), getY(), getZ());
 		player.revalidateZone(true);
 		return true;
@@ -143,7 +144,6 @@ public class L2AirShipInstance extends L2Vehicle
 		if (player.isOnline())
 		{
 			player.broadcastPacket(new ExGetOffAirShip(player, this, loc.getX(), loc.getY(), loc.getZ()));
-			player.getKnownList().removeAllKnownObjects();
 			player.setXYZ(loc.getX(), loc.getY(), loc.getZ());
 			player.revalidateZone(true);
 		}
@@ -166,9 +166,9 @@ public class L2AirShipInstance extends L2Vehicle
 	}
 	
 	@Override
-	public void stopMove(Location loc, boolean updateKnownObjects)
+	public void stopMove(Location loc)
 	{
-		super.stopMove(loc, updateKnownObjects);
+		super.stopMove(loc);
 		
 		broadcastPacket(new ExStopMoveAirShip(this));
 	}

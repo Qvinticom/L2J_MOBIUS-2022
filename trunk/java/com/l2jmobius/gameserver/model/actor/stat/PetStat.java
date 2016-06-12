@@ -18,13 +18,9 @@ package com.l2jmobius.gameserver.model.actor.stat;
 
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
-import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class PetStat extends SummonStat
@@ -72,14 +68,7 @@ public class PetStat extends SummonStat
 		
 		final boolean levelIncreased = super.addLevel(value);
 		
-		// Sync up exp with current level
-		// if (getExp() > getExpForLevel(getLevel() + 1) || getExp() < getExpForLevel(getLevel())) setExp(Experience.LEVEL[getLevel()]);
-		
-		final StatusUpdate su = new StatusUpdate(getActiveChar());
-		su.addAttribute(StatusUpdate.LEVEL, getLevel());
-		su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
-		su.addAttribute(StatusUpdate.MAX_MP, getMaxMp());
-		getActiveChar().broadcastPacket(su);
+		getActiveChar().broadcastStatusUpdate();
 		if (levelIncreased)
 		{
 			getActiveChar().broadcastPacket(new SocialAction(getActiveChar().getObjectId(), SocialAction.LEVEL_UP));
@@ -153,51 +142,25 @@ public class PetStat extends SummonStat
 	}
 	
 	@Override
-	public int getMaxHp()
+	public int getPAtkSpd()
 	{
-		return (int) calcStat(Stats.MAX_HP, getActiveChar().getPetLevelData().getPetMaxHP(), null, null);
-	}
-	
-	@Override
-	public int getMaxMp()
-	{
-		return (int) calcStat(Stats.MAX_MP, getActiveChar().getPetLevelData().getPetMaxMP(), null, null);
-	}
-	
-	@Override
-	public double getMAtk(L2Character target, Skill skill)
-	{
-		return calcStat(Stats.MAGIC_ATTACK, getActiveChar().getPetLevelData().getPetMAtk(), target, skill);
-	}
-	
-	@Override
-	public double getMDef(L2Character target, Skill skill)
-	{
-		return calcStat(Stats.MAGIC_DEFENCE, getActiveChar().getPetLevelData().getPetMDef(), target, skill);
-	}
-	
-	@Override
-	public double getPAtk(L2Character target)
-	{
-		return calcStat(Stats.POWER_ATTACK, getActiveChar().getPetLevelData().getPetPAtk(), target, null);
-	}
-	
-	@Override
-	public double getPDef(L2Character target)
-	{
-		return calcStat(Stats.POWER_DEFENCE, getActiveChar().getPetLevelData().getPetPDef(), target, null);
-	}
-	
-	@Override
-	public double getPAtkSpd()
-	{
-		return getActiveChar().isHungry() ? super.getPAtkSpd() / 2 : super.getPAtkSpd();
+		int val = super.getPAtkSpd();
+		if (getActiveChar().isHungry())
+		{
+			val /= 2;
+		}
+		return val;
 	}
 	
 	@Override
 	public int getMAtkSpd()
 	{
-		return getActiveChar().isHungry() ? super.getMAtkSpd() / 2 : super.getMAtkSpd();
+		int val = super.getMAtkSpd();
+		if (getActiveChar().isHungry())
+		{
+			val /= 2;
+		}
+		return val;
 	}
 	
 	@Override

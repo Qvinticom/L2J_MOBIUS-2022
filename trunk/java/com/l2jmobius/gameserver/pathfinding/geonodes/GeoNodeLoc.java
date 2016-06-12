@@ -54,12 +54,6 @@ public class GeoNodeLoc extends AbstractNodeLoc
 	}
 	
 	@Override
-	public void setZ(short z)
-	{
-		//
-	}
-	
-	@Override
 	public int getNodeX()
 	{
 		return _x;
@@ -98,6 +92,18 @@ public class GeoNodeLoc extends AbstractNodeLoc
 			return false;
 		}
 		final GeoNodeLoc other = (GeoNodeLoc) obj;
-		return (_x == other._x) && (_y == other._y) && (_z == other._z);
+		if (_x != other._x)
+		{
+			return false;
+		}
+		if (_y != other._y)
+		{
+			return false;
+		}
+		if (_z != other._z)
+		{
+			return false;
+		}
+		return true;
 	}
 }

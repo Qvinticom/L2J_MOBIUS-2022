@@ -33,7 +33,7 @@ public class Q00254_LegendaryTales extends Quest
 	private static final int GILMORE = 30754;
 	
 	// Monsters
-	private enum Bosses
+	public enum Bosses
 	{
 		EMERALD_HORN(25718),
 		DUST_RIDER(25719),
@@ -92,7 +92,7 @@ public class Q00254_LegendaryTales extends Quest
 	
 	public Q00254_LegendaryTales()
 	{
-		super(254, Q00254_LegendaryTales.class.getSimpleName(), "Legendary Tales");
+		super(254);
 		addStartNpc(GILMORE);
 		addTalkId(GILMORE);
 		addKillId(MONSTERS);
@@ -100,18 +100,53 @@ public class Q00254_LegendaryTales extends Quest
 	}
 	
 	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
+	{
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = getQuestState(player, true);
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
+				htmltext = (player.getLevel() < MIN_LEVEL) ? "30754-00.htm" : "30754-01.htm";
+				break;
+			case State.STARTED:
+				final long count = getQuestItemsCount(player, LARGE_DRAGON_SKULL);
+				if (st.isCond(1))
+				{
+					htmltext = ((count > 0) ? "30754-14.htm" : "30754-06.html");
+				}
+				else if (st.isCond(2))
+				{
+					htmltext = ((count < 7) ? "30754-12.htm" : "30754-07.html");
+				}
+				break;
+			case State.COMPLETED:
+				htmltext = "30754-29.html";
+				break;
+		}
+		return htmltext;
+	}
+	
+	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, false);
+		final QuestState st = getQuestState(player, false);
 		
-		if (qs == null)
+		if (st == null)
 		{
 			return htmltext;
 		}
 		
 		switch (event)
 		{
+			case "30754-05.html":
+				st.startQuest();
 			case "30754-02.html":
 			case "30754-03.html":
 			case "30754-04.htm":
@@ -119,49 +154,29 @@ public class Q00254_LegendaryTales extends Quest
 			case "30754-15.html":
 			case "30754-20.html":
 			case "30754-21.html":
-			{
 				htmltext = event;
 				break;
-			}
-			case "30754-05.html":
-			{
-				qs.startQuest();
-			}
 			case "25718": // Emerald Horn
-			{
-				htmltext = checkMask(qs, Bosses.EMERALD_HORN) ? "30754-22.html" : "30754-16.html";
+				htmltext = (checkMask(st, Bosses.EMERALD_HORN) ? "30754-22.html" : "30754-16.html");
 				break;
-			}
 			case "25719": // Dust Rider
-			{
-				htmltext = checkMask(qs, Bosses.DUST_RIDER) ? "30754-23.html" : "30754-17.html";
+				htmltext = (checkMask(st, Bosses.DUST_RIDER) ? "30754-23.html" : "30754-17.html");
 				break;
-			}
 			case "25720": // Bleeding Fly
-			{
-				htmltext = checkMask(qs, Bosses.BLEEDING_FLY) ? "30754-24.html" : "30754-18.html";
+				htmltext = (checkMask(st, Bosses.BLEEDING_FLY) ? "30754-24.html" : "30754-18.html");
 				break;
-			}
 			case "25721": // Black Dagger Wing
-			{
-				htmltext = checkMask(qs, Bosses.BLACK_DAGGER) ? "30754-25.html" : "30754-19.html";
+				htmltext = (checkMask(st, Bosses.BLACK_DAGGER) ? "30754-25.html" : "30754-19.html");
 				break;
-			}
 			case "25722": // Shadow Summoner
-			{
-				htmltext = checkMask(qs, Bosses.SHADOW_SUMMONER) ? "30754-26.html" : "30754-16.html";
+				htmltext = (checkMask(st, Bosses.SHADOW_SUMMONER) ? "30754-26.html" : "30754-16.html");
 				break;
-			}
 			case "25723": // Spike Slasher
-			{
-				htmltext = checkMask(qs, Bosses.SPIKE_SLASHER) ? "30754-27.html" : "30754-17.html";
+				htmltext = (checkMask(st, Bosses.SPIKE_SLASHER) ? "30754-27.html" : "30754-17.html");
 				break;
-			}
 			case "25724": // Muscle Bomber
-			{
-				htmltext = checkMask(qs, Bosses.MUSCLE_BOMBER) ? "30754-28.html" : "30754-18.html";
+				htmltext = (checkMask(st, Bosses.MUSCLE_BOMBER) ? "30754-28.html" : "30754-18.html");
 				break;
-			}
 			case "13467": // Vesper Thrower
 			case "13466": // Vesper Singer
 			case "13465": // Vesper Caster
@@ -173,54 +188,13 @@ public class Q00254_LegendaryTales extends Quest
 			case "13460": // Vesper Sharper
 			case "13461": // Vesper Fighter
 			case "13462": // Vesper Stormer
-			{
-				if (qs.isCond(2) && (getQuestItemsCount(player, LARGE_DRAGON_SKULL) >= 7))
+				if (st.isCond(2) && (getQuestItemsCount(player, LARGE_DRAGON_SKULL) >= 7))
 				{
 					htmltext = "30754-09.html";
 					rewardItems(player, Integer.parseInt(event), 1);
-					qs.exitQuest(false, true);
+					st.exitQuest(false, true);
 				}
 				break;
-			}
-		}
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
-		
-		switch (qs.getState())
-		{
-			case State.CREATED:
-			{
-				htmltext = (player.getLevel() < MIN_LEVEL) ? "30754-00.htm" : "30754-01.htm";
-				break;
-			}
-			case State.STARTED:
-			{
-				final long count = getQuestItemsCount(player, LARGE_DRAGON_SKULL);
-				if (qs.isCond(1))
-				{
-					htmltext = (count > 0) ? "30754-14.htm" : "30754-06.html";
-				}
-				else if (qs.isCond(2))
-				{
-					htmltext = (count < 7) ? "30754-12.htm" : "30754-07.html";
-				}
-				break;
-			}
-			case State.COMPLETED:
-			{
-				htmltext = "30754-29.html";
-				break;
-			}
 		}
 		return htmltext;
 	}
@@ -245,16 +219,16 @@ public class Q00254_LegendaryTales extends Quest
 	@Override
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
-		final QuestState qs = player.getQuestState(Q00254_LegendaryTales.class.getSimpleName());
+		final QuestState st = player.getQuestState(Q00254_LegendaryTales.class.getSimpleName());
 		
-		if ((qs != null) && qs.isCond(1))
+		if ((st != null) && st.isCond(1))
 		{
-			final int raids = qs.getInt("raids");
+			final int raids = st.getInt("raids");
 			final Bosses boss = Bosses.valueOf(npc.getId());
 			
-			if (!checkMask(qs, boss))
+			if (!checkMask(st, boss))
 			{
-				qs.set("raids", raids | boss.getMask());
+				st.set("raids", raids | boss.getMask());
 				giveItems(player, LARGE_DRAGON_SKULL, 1);
 				
 				if (getQuestItemsCount(player, LARGE_DRAGON_SKULL) < 7)
@@ -263,7 +237,7 @@ public class Q00254_LegendaryTales extends Quest
 				}
 				else
 				{
-					qs.setCond(2, true);
+					st.setCond(2, true);
 				}
 			}
 		}
@@ -272,6 +246,6 @@ public class Q00254_LegendaryTales extends Quest
 	private static boolean checkMask(QuestState qs, Bosses boss)
 	{
 		final int pos = boss.getMask();
-		return (qs.getInt("raids") & pos) == pos;
+		return ((qs.getInt("raids") & pos) == pos);
 	}
 }

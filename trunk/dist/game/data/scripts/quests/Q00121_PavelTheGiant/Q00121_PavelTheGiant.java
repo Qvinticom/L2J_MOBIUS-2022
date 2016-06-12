@@ -23,8 +23,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
 /**
- * Pavel the Giants (121)<br>
- * Original Jython script by Ethernaly.
+ * Pavel the Giants (121)
  * @author malyelfik
  */
 public class Q00121_PavelTheGiant extends Quest
@@ -35,7 +34,7 @@ public class Q00121_PavelTheGiant extends Quest
 	
 	public Q00121_PavelTheGiant()
 	{
-		super(121, Q00121_PavelTheGiant.class.getSimpleName(), "Pavel the Giant");
+		super(121);
 		addStartNpc(NEWYEAR);
 		addTalkId(NEWYEAR, YUMI);
 	}

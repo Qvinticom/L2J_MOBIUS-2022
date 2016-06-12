@@ -38,19 +38,21 @@ public class Bypass implements IItemHandler
 		final L2PcInstance activeChar = (L2PcInstance) playable;
 		final int itemId = item.getId();
 		
-		final String filename = "html/item/" + itemId + ".htm";
+		final String filename = "data/html/item/" + itemId + ".htm";
 		final String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), filename);
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, item.getId());
 		if (content == null)
 		{
 			html.setHtml("<html><body>My Text is missing:<br>" + filename + "</body></html>");
+			activeChar.sendPacket(html);
 		}
 		else
 		{
 			html.setHtml(content);
 			html.replace("%itemId%", String.valueOf(item.getObjectId()));
+			activeChar.sendPacket(html);
 		}
-		activeChar.sendPacket(html);
 		return true;
 	}
+	
 }

@@ -16,7 +16,10 @@
  */
 package cron;
 
-final class example
+import com.l2jmobius.gameserver.scripting.annotations.Disabled;
+
+@Disabled
+public class Example
 {
 	public static void main(String[] args)
 	{

@@ -51,7 +51,7 @@ public class PledgeWaitingInfo
 	
 	public int getPlayerClassId()
 	{
-		if (isOnline() && (getPlayerInstance().getBaseClassId() != _playerClassId))
+		if (isOnline() && (getPlayerInstance().getBaseClass() != _playerClassId))
 		{
 			_playerClassId = getPlayerInstance().getClassId().getId();
 		}

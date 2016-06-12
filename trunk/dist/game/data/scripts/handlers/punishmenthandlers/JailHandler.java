@@ -23,7 +23,6 @@ import com.l2jmobius.gameserver.handler.IPunishmentHandler;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.tasks.player.TeleportTask;
-import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
@@ -33,7 +32,7 @@ import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.model.zone.type.L2JailZone;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -48,7 +47,7 @@ public class JailHandler implements IPunishmentHandler
 		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_LOGIN, (OnPlayerLogin event) -> onPlayerLogin(event), this));
 	}
 	
-	private void onPlayerLogin(OnPlayerLogin event)
+	public void onPlayerLogin(OnPlayerLogin event)
 	{
 		final L2PcInstance activeChar = event.getActiveChar();
 		if (activeChar.isJailed() && !activeChar.isInsideZone(ZoneId.JAIL))
@@ -156,12 +155,7 @@ public class JailHandler implements IPunishmentHandler
 	 */
 	private static void applyToPlayer(PunishmentTask task, L2PcInstance player)
 	{
-		player.setInstanceId(0);
-		
-		if (!TvTEvent.isInactive() && TvTEvent.isPlayerParticipant(player.getObjectId()))
-		{
-			TvTEvent.removeParticipant(player.getObjectId());
-		}
+		player.setInstance(null);
 		
 		if (OlympiadManager.getInstance().isRegisteredInComp(player))
 		{
@@ -172,7 +166,7 @@ public class JailHandler implements IPunishmentHandler
 		
 		// Open a Html message to inform the player
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
-		String content = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/jail_in.htm");
+		String content = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/jail_in.htm");
 		if (content != null)
 		{
 			content = content.replaceAll("%reason%", task != null ? task.getReason() : "");
@@ -186,7 +180,7 @@ public class JailHandler implements IPunishmentHandler
 		player.sendPacket(msg);
 		if (task != null)
 		{
-			final long delay = (task.getExpirationTime() - System.currentTimeMillis()) / 1000;
+			final long delay = ((task.getExpirationTime() - System.currentTimeMillis()) / 1000);
 			if (delay > 0)
 			{
 				player.sendMessage("You've been jailed for " + (delay > 60 ? ((delay / 60) + " minutes.") : delay + " seconds."));
@@ -208,7 +202,7 @@ public class JailHandler implements IPunishmentHandler
 		
 		// Open a Html message to inform the player
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
-		final String content = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/jail_out.htm");
+		final String content = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/jail_out.htm");
 		if (content != null)
 		{
 			msg.setHtml(content);

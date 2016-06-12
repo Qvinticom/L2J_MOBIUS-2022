@@ -45,46 +45,43 @@ public class ConditionPlayerState extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		final L2Character character = effector;
 		final L2PcInstance player = effector.getActingPlayer();
 		switch (_check)
 		{
 			case RESTING:
-			{
-				return player != null ? player.isSitting() == _required : !_required;
-			}
+				if (player != null)
+				{
+					return (player.isSitting() == _required);
+				}
+				return !_required;
 			case MOVING:
-			{
-				return character.isMoving() == _required;
-			}
+				return effector.isMoving() == _required;
 			case RUNNING:
-			{
-				return character.isRunning() == _required;
-			}
+				return effector.isRunning() == _required;
 			case STANDING:
-			{
-				return player != null ? _required != (player.isSitting() || player.isMoving()) : _required != character.isMoving();
-			}
+				if (player != null)
+				{
+					return (_required != (player.isSitting() || player.isMoving()));
+				}
+				return (_required != effector.isMoving());
 			case FLYING:
-			{
-				return character.isFlying() == _required;
-			}
+				return (effector.isFlying() == _required);
 			case BEHIND:
-			{
-				return character.isBehindTarget() == _required;
-			}
+				return (effector.isBehindTarget() == _required);
 			case FRONT:
-			{
-				return character.isInFrontOfTarget() == _required;
-			}
+				return (effector.isInFrontOfTarget() == _required);
 			case CHAOTIC:
-			{
-				return player != null ? (player.getReputation() < 0) == _required : !_required;
-			}
+				if (player != null)
+				{
+					return ((player.getReputation() < 0) == _required);
+				}
+				return !_required;
 			case OLYMPIAD:
-			{
-				return player != null ? player.isInOlympiadMode() == _required : !_required;
-			}
+				if (player != null)
+				{
+					return (player.isInOlympiadMode() == _required);
+				}
+				return !_required;
 		}
 		return !_required;
 	}

@@ -16,65 +16,44 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Party.messageType;
-import com.l2jmobius.gameserver.model.PartyMatchRoom;
-import com.l2jmobius.gameserver.model.PartyMatchRoomList;
+import com.l2jmobius.gameserver.model.L2Party.MessageType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
-import com.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
-import com.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
+import com.l2jmobius.gameserver.model.matching.MatchingRoom;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * This class ...
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestWithDrawalParty extends L2GameClientPacket
+public final class RequestWithDrawalParty implements IClientIncomingPacket
 {
-	private static final String _C__44_REQUESTWITHDRAWALPARTY = "[C] 44 RequestWithDrawalParty";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
 		final L2Party party = player.getParty();
-		if (party == null)
+		if (party != null)
 		{
-			return;
+			party.removePartyMember(player, MessageType.LEFT);
+			
+			final MatchingRoom room = player.getMatchingRoom();
+			if (room != null)
+			{
+				room.deleteMember(player, false);
+			}
 		}
-		
-		party.removePartyMember(player, messageType.Left);
-		if (!player.isInPartyMatchRoom())
-		{
-			return;
-		}
-		
-		final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getPlayerRoom(player);
-		if (_room != null)
-		{
-			player.sendPacket(new PartyMatchDetail(player, _room));
-			player.sendPacket(new ExPartyRoomMember(player, _room, 0));
-			player.sendPacket(new ExClosePartyRoom());
-			_room.deleteMember(player);
-		}
-		player.setPartyRoom(0);
-		player.broadcastUserInfo();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__44_REQUESTWITHDRAWALPARTY;
 	}
 }

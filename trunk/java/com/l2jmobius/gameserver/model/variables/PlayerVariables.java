@@ -20,6 +20,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,6 +30,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author UnAfraid
@@ -39,6 +43,18 @@ public class PlayerVariables extends AbstractVariables
 	private static final String SELECT_QUERY = "SELECT * FROM character_variables WHERE charId = ?";
 	private static final String DELETE_QUERY = "DELETE FROM character_variables WHERE charId = ?";
 	private static final String INSERT_QUERY = "INSERT INTO character_variables (charId, var, val) VALUES (?, ?, ?)";
+	
+	// Public variable names
+	public static final String HAIR_ACCESSORY_VARIABLE_NAME = "HAIR_ACCESSORY_ENABLED";
+	public static final String WORLD_CHAT_VARIABLE_NAME = "WORLD_CHAT_POINTS";
+	public static final String VITALITY_ITEMS_USED_VARIABLE_NAME = "VITALITY_ITEMS_USED";
+	private static final String ONE_DAY_REWARDS = "ONE_DAY_REWARDS";
+	public static final String CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES = "CEREMONY_OF_CHAOS_PENALTIES";
+	public static final String ABILITY_POINTS_MAIN_CLASS = "ABILITY_POINTS";
+	public static final String ABILITY_POINTS_DUAL_CLASS = "ABILITY_POINTS_DUAL_CLASS";
+	public static final String ABILITY_POINTS_USED_MAIN_CLASS = "ABILITY_POINTS_USED";
+	public static final String ABILITY_POINTS_USED_DUAL_CLASS = "ABILITY_POINTS_DUAL_CLASS_USED";
+	public static final String EXTEND_DROP = "EXTEND_DROP";
 	
 	private final int _objectId;
 	
@@ -53,10 +69,10 @@ public class PlayerVariables extends AbstractVariables
 	{
 		// Restore previous variables.
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement(SELECT_QUERY))
+			PreparedStatement st = con.prepareStatement(SELECT_QUERY))
 		{
-			ps.setInt(1, _objectId);
-			try (ResultSet rset = ps.executeQuery())
+			st.setInt(1, _objectId);
+			try (ResultSet rset = st.executeQuery())
 			{
 				while (rset.next())
 				{
@@ -145,5 +161,123 @@ public class PlayerVariables extends AbstractVariables
 	public L2PcInstance getPlayer()
 	{
 		return L2World.getInstance().getPlayer(_objectId);
+	}
+	
+	public void addOneDayReward(int rewardId)
+	{
+		String result = getString(ONE_DAY_REWARDS, "");
+		if (result.isEmpty())
+		{
+			result = Integer.toString(rewardId);
+		}
+		else
+		{
+			result += "," + rewardId;
+		}
+		set(ONE_DAY_REWARDS, result);
+	}
+	
+	public void removeOneDayReward(int rewardId)
+	{
+		String result = "";
+		final String data = getString(ONE_DAY_REWARDS, "");
+		for (String s : data.split(","))
+		{
+			if (s.equals(Integer.toString(rewardId)))
+			{
+				continue;
+			}
+			else if (result.isEmpty())
+			{
+				result = s;
+			}
+			else
+			{
+				result += "," + s;
+			}
+		}
+		set(ONE_DAY_REWARDS, result);
+	}
+	
+	public boolean hasOneDayReward(int rewardId)
+	{
+		final String data = getString(ONE_DAY_REWARDS, "");
+		for (String s : data.split(","))
+		{
+			if (s.equals(Integer.toString(rewardId)))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public List<Integer> getOneDayRewards()
+	{
+		List<Integer> rewards = null;
+		final String data = getString(ONE_DAY_REWARDS, "");
+		if (!data.isEmpty())
+		{
+			for (String s : getString(ONE_DAY_REWARDS, "").split(","))
+			{
+				if (Util.isDigit(s))
+				{
+					final int rewardId = Integer.parseInt(s);
+					if (rewards == null)
+					{
+						rewards = new ArrayList<>();
+					}
+					rewards.add(rewardId);
+				}
+			}
+		}
+		return rewards != null ? rewards : Collections.emptyList();
+	}
+	
+	public void updateExtendDrop(int id, long count)
+	{
+		String result = "";
+		final String data = getString(EXTEND_DROP, "");
+		if (data.isEmpty())
+		{
+			result = Integer.toString(id) + "," + Long.toString(count);
+		}
+		else
+		{
+			if (data.contains(";"))
+			{
+				for (String s : data.split(";"))
+				{
+					final String[] drop = s.split(",");
+					if (drop[0].equals(Integer.toString(id)))
+					{
+						s += ";" + drop[0] + "," + Long.toString(count);
+						continue;
+					}
+					
+					result += ";" + s;
+				}
+				result = result.substring(1);
+			}
+			else
+			{
+				result = Integer.toString(id) + "," + Long.toString(count);
+			}
+		}
+		set(EXTEND_DROP, result);
+	}
+	
+	public long getExtendDropCount(int id)
+	{
+		final String data = getString(EXTEND_DROP, "");
+		for (String s : data.split(";"))
+		{
+			final String[] drop = s.split(",");
+			if (drop[0].equals(Integer.toString(id)))
+			{
+				return Long.parseLong(drop[1]);
+			}
+		}
+		return 0;
 	}
 }

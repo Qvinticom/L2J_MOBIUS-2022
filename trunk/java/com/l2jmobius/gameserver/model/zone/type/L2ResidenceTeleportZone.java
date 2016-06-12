@@ -59,6 +59,7 @@ public class L2ResidenceTeleportZone extends L2ZoneRespawn
 		character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false); // FIXME: Custom ?
 	}
 	
+	@Override
 	public void oustAllPlayers()
 	{
 		for (L2PcInstance player : getPlayersInside())

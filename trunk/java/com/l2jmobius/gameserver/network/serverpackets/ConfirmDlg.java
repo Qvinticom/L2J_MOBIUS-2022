@@ -16,7 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * ConfirmDlg server packet implementation.
@@ -56,24 +58,26 @@ public class ConfirmDlg extends AbstractMessagePacket<ConfirmDlg>
 	}
 	
 	@Override
-	protected void writeParamsSize(int size)
+	protected void writeParamsSize(PacketWriter packet, int size)
 	{
-		writeD(size);
+		packet.writeD(size);
 	}
 	
 	@Override
-	protected void writeParamType(int type)
+	protected void writeParamType(PacketWriter packet, int type)
 	{
-		writeD(type);
+		packet.writeD(type);
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xF3);
-		writeD(getId());
-		writeMe();
-		writeD(_time);
-		writeD(_requesterId);
+		OutgoingPackets.CONFIRM_DLG.writeId(packet);
+		
+		packet.writeD(getId());
+		writeMe(packet);
+		packet.writeD(_time);
+		packet.writeD(_requesterId);
+		return true;
 	}
 }

@@ -16,54 +16,41 @@
  */
 package com.l2jmobius.gameserver.handler;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Function;
 
+import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.scripting.L2ScriptEngineManager;
+import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
 
 /**
  * @author BiggBoss, UnAfraid
  */
-public final class EffectHandler implements IHandler<Class<? extends AbstractEffect>, String>
+public final class EffectHandler
 {
-	private final Map<String, Class<? extends AbstractEffect>> _handlers;
+	private final Map<String, Function<StatsSet, AbstractEffect>> _effectHandlerFactories = new HashMap<>();
 	
-	protected EffectHandler()
+	public void registerHandler(String name, Function<StatsSet, AbstractEffect> handlerFactory)
 	{
-		_handlers = new HashMap<>();
+		_effectHandlerFactories.put(name, handlerFactory);
 	}
 	
-	@Override
-	public void registerHandler(Class<? extends AbstractEffect> handler)
+	public Function<StatsSet, AbstractEffect> getHandlerFactory(String name)
 	{
-		_handlers.put(handler.getSimpleName(), handler);
+		return _effectHandlerFactories.get(name);
 	}
 	
-	@Override
-	public synchronized void removeHandler(Class<? extends AbstractEffect> handler)
-	{
-		_handlers.remove(handler.getSimpleName());
-	}
-	
-	@Override
-	public Class<? extends AbstractEffect> getHandler(String name)
-	{
-		return _handlers.get(name);
-	}
-	
-	@Override
 	public int size()
 	{
-		return _handlers.size();
+		return _effectHandlerFactories.size();
 	}
 	
 	public void executeScript()
 	{
 		try
 		{
-			L2ScriptEngineManager.getInstance().executeScript(new File(L2ScriptEngineManager.SCRIPT_FOLDER, "handlers/EffectMasterHandler.java"));
+			ScriptEngineManager.getInstance().executeEffectMasterHandler();
 		}
 		catch (Exception e)
 		{

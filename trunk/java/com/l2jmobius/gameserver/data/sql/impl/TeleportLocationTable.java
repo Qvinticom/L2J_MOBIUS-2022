@@ -68,39 +68,37 @@ public class TeleportLocationTable
 			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error loading Teleport Table.", e);
 		}
 		
-		if (!Config.CUSTOM_TELEPORT_TABLE)
+		if (Config.CUSTOM_TELEPORT_TABLE)
 		{
-			return;
-		}
-		
-		int _cTeleCount = _teleports.size();
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			Statement s = con.createStatement();
-			ResultSet rs = s.executeQuery("SELECT id, loc_x, loc_y, loc_z, price, fornoble, itemId FROM custom_teleport"))
-		{
-			L2TeleportLocation teleport;
-			while (rs.next())
+			int cTeleCount = _teleports.size();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
+				Statement s = con.createStatement();
+				ResultSet rs = s.executeQuery("SELECT id, loc_x, loc_y, loc_z, price, fornoble, itemId FROM custom_teleport"))
 			{
-				teleport = new L2TeleportLocation();
-				teleport.setTeleId(rs.getInt("id"));
-				teleport.setLocX(rs.getInt("loc_x"));
-				teleport.setLocY(rs.getInt("loc_y"));
-				teleport.setLocZ(rs.getInt("loc_z"));
-				teleport.setPrice(rs.getInt("price"));
-				teleport.setIsForNoble(rs.getInt("fornoble") == 1);
-				teleport.setItemId(rs.getInt("itemId"));
-				
-				_teleports.put(teleport.getTeleId(), teleport);
+				L2TeleportLocation teleport;
+				while (rs.next())
+				{
+					teleport = new L2TeleportLocation();
+					teleport.setTeleId(rs.getInt("id"));
+					teleport.setLocX(rs.getInt("loc_x"));
+					teleport.setLocY(rs.getInt("loc_y"));
+					teleport.setLocZ(rs.getInt("loc_z"));
+					teleport.setPrice(rs.getInt("price"));
+					teleport.setIsForNoble(rs.getInt("fornoble") == 1);
+					teleport.setItemId(rs.getInt("itemId"));
+					
+					_teleports.put(teleport.getTeleId(), teleport);
+				}
+				cTeleCount = _teleports.size() - cTeleCount;
+				if (cTeleCount > 0)
+				{
+					LOGGER.info(getClass().getSimpleName() + ": Loaded " + cTeleCount + " Custom Teleport Location Templates.");
+				}
 			}
-			_cTeleCount = _teleports.size() - _cTeleCount;
-			if (_cTeleCount > 0)
+			catch (Exception e)
 			{
-				LOGGER.info(getClass().getSimpleName() + ": Loaded " + _cTeleCount + " Custom Teleport Location Templates.");
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while creating custom teleport table " + e.getMessage(), e);
 			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while creating custom teleport table " + e.getMessage(), e);
 		}
 	}
 	

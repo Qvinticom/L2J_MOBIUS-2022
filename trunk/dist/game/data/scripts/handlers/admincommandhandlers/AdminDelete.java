@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
+import com.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -65,9 +65,9 @@ public class AdminDelete implements IAdminCommandHandler
 			{
 				spawn.stopRespawn();
 				
-				if (RaidBossSpawnManager.getInstance().isDefined(spawn.getId()))
+				if (DBSpawnManager.getInstance().isDefined(spawn.getId()))
 				{
-					RaidBossSpawnManager.getInstance().deleteSpawn(spawn, true);
+					DBSpawnManager.getInstance().deleteSpawn(spawn, true);
 				}
 				else
 				{

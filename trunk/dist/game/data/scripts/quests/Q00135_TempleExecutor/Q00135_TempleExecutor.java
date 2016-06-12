@@ -62,7 +62,7 @@ public class Q00135_TempleExecutor extends Quest
 	
 	public Q00135_TempleExecutor()
 	{
-		super(135, Q00135_TempleExecutor.class.getSimpleName(), "Temple Executor");
+		super(135);
 		addStartNpc(SHEGFIELD);
 		addTalkId(SHEGFIELD, ALEX, SONIN, PANO);
 		addKillId(MOBS.keySet());

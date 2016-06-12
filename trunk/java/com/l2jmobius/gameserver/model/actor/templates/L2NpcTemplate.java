@@ -28,6 +28,8 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.enums.AISkillScope;
 import com.l2jmobius.gameserver.enums.AIType;
+import com.l2jmobius.gameserver.enums.MpRewardAffectType;
+import com.l2jmobius.gameserver.enums.MpRewardType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.Sex;
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -68,12 +70,15 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	private boolean _talkable;
 	private boolean _undying;
 	private boolean _showName;
+	private boolean _randomWalk;
+	private boolean _randomAnimation;
 	private boolean _flying;
 	private boolean _canMove;
 	private boolean _noSleepMode;
 	private boolean _passableDoor;
 	private boolean _hasSummoner;
 	private boolean _canBeSown;
+	private boolean _canBeCrt;
 	private int _corpseTime;
 	private AIType _aiType;
 	private int _aggroRange;
@@ -94,8 +99,14 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	private Map<DropListScope, List<IDropItem>> _dropLists;
 	private double _collisionRadiusGrown;
 	private double _collisionHeightGrown;
+	private int _mpRewardValue;
+	private MpRewardType _mpRewardType;
+	private int _mpRewardTicks;
+	private MpRewardAffectType _mpRewardAffectType;
 	
 	private final List<ClassId> _teachInfo = new ArrayList<>();
+	
+	private List<Integer> _extendDrop;
 	
 	/**
 	 * Constructor of L2Character.
@@ -136,12 +147,15 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		_talkable = set.getBoolean("talkable", true);
 		_undying = set.getBoolean("undying", true);
 		_showName = set.getBoolean("showName", true);
+		_randomWalk = set.getBoolean("randomWalk", true);
+		_randomAnimation = set.getBoolean("randomAnimation", true);
 		_flying = set.getBoolean("flying", false);
 		_canMove = set.getBoolean("canMove", true);
 		_noSleepMode = set.getBoolean("noSleepMode", false);
 		_passableDoor = set.getBoolean("passableDoor", false);
 		_hasSummoner = set.getBoolean("hasSummoner", false);
 		_canBeSown = set.getBoolean("canBeSown", false);
+		_canBeCrt = set.getBoolean("ex_crt_effect", true);
 		
 		_corpseTime = set.getInt("corpseTime", Config.DEFAULT_CORPSE_TIME);
 		
@@ -150,7 +164,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		_clanHelpRange = set.getInt("clanHelpRange", 0);
 		_dodge = set.getInt("dodge", 0);
 		_isChaos = set.getBoolean("isChaos", false);
-		_isAggressive = set.getBoolean("isAggressive", true);
+		_isAggressive = set.getBoolean("isAggressive", false);
 		
 		_soulShot = set.getInt("soulShot", 0);
 		_spiritShot = set.getInt("spiritShot", 0);
@@ -162,6 +176,13 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		
 		_collisionRadiusGrown = set.getDouble("collisionRadiusGrown", 0);
 		_collisionHeightGrown = set.getDouble("collisionHeightGrown", 0);
+		
+		_mpRewardValue = set.getInt("mpRewardValue", 0);
+		_mpRewardType = set.getEnum("mpRewardType", MpRewardType.class, MpRewardType.DIFF);
+		_mpRewardTicks = set.getInt("mpRewardTicks", 0);
+		_mpRewardAffectType = set.getEnum("mpRewardAffectType", MpRewardAffectType.class, MpRewardAffectType.SOLO);
+		
+		_extendDrop = set.getList("extend_drop", Integer.class);
 	}
 	
 	@Override
@@ -290,6 +311,16 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		return _showName;
 	}
 	
+	public boolean isRandomWalkEnabled()
+	{
+		return _randomWalk;
+	}
+	
+	public boolean isRandomAnimationEnabled()
+	{
+		return _randomAnimation;
+	}
+	
 	public boolean isFlying()
 	{
 		return _flying;
@@ -318,6 +349,11 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	public boolean canBeSown()
 	{
 		return _canBeSown;
+	}
+	
+	public boolean canBeCrt()
+	{
+		return _canBeCrt;
 	}
 	
 	public int getCorpseTime()
@@ -409,6 +445,26 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	public Set<Integer> getClans()
 	{
 		return _clans;
+	}
+	
+	public int getMpRewardValue()
+	{
+		return _mpRewardValue;
+	}
+	
+	public MpRewardType getMpRewardType()
+	{
+		return _mpRewardType;
+	}
+	
+	public int getMpRewardTicks()
+	{
+		return _mpRewardTicks;
+	}
+	
+	public MpRewardAffectType getMpRewardAffectType()
+	{
+		return _mpRewardAffectType;
 	}
 	
 	/**
@@ -613,5 +669,10 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	public void addTeachInfo(List<ClassId> teachInfo)
 	{
 		_teachInfo.addAll(teachInfo);
+	}
+	
+	public List<Integer> getExtendDrop()
+	{
+		return _extendDrop == null ? Collections.emptyList() : _extendDrop;
 	}
 }

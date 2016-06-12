@@ -16,37 +16,32 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExNeedToChangeName;
 
 /**
  * Reply for {@link ExNeedToChangeName}
  * @author JIV
  */
-public class RequestExChangeName extends L2GameClientPacket
+public class RequestExChangeName implements IClientIncomingPacket
 {
-	private static final String _C__D0_3B_REQUESTEXCHANGENAME = "[C] D0:3B RequestExChangeName";
-	
 	private String _newName;
 	private int _type;
 	private int _charSlot;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_type = readD();
-		_newName = readS();
-		_charSlot = readD();
+		_type = packet.readD();
+		_newName = packet.readS();
+		_charSlot = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		_log.info("Recieved " + getType() + " name: " + _newName + " type: " + _type + " CharSlot: " + _charSlot);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_3B_REQUESTEXCHANGENAME;
+		_log.info("Recieved " + getClass().getSimpleName() + " name: " + _newName + " type: " + _type + " CharSlot: " + _charSlot);
 	}
 }

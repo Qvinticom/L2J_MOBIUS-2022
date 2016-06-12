@@ -17,11 +17,14 @@
 package com.l2jmobius.gameserver.model.items;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.stats.BaseStats;
+import com.l2jmobius.gameserver.model.stats.Stats;
 
 /**
  * Class for the Henna object.
@@ -32,40 +35,31 @@ public class L2Henna
 	private final int _dyeId;
 	private final String _dyeName;
 	private final int _dyeItemId;
-	private final int _str;
-	private final int _con;
-	private final int _dex;
-	private final int _int;
-	private final int _men;
-	private final int _wit;
-	private final int _luc;
-	private final int _cha;
+	private final Map<BaseStats, Integer> _baseStats = new HashMap<>();
 	private final int _wear_fee;
 	private final int _wear_count;
 	private final int _cancel_fee;
 	private final int _cancel_count;
 	private final List<ClassId> _wear_class;
-	private final List<SkillHolder> _skills;
 	
 	public L2Henna(StatsSet set)
 	{
 		_dyeId = set.getInt("dyeId");
 		_dyeName = set.getString("dyeName");
 		_dyeItemId = set.getInt("dyeItemId");
-		_str = set.getInt("str", 0);
-		_con = set.getInt("con", 0);
-		_dex = set.getInt("dex", 0);
-		_int = set.getInt("int", 0);
-		_men = set.getInt("men", 0);
-		_wit = set.getInt("wit", 0);
-		_luc = set.getInt("luc", 0);
-		_cha = set.getInt("cha", 0);
+		_baseStats.put(BaseStats.STR, set.getInt("str", 0));
+		_baseStats.put(BaseStats.CON, set.getInt("con", 0));
+		_baseStats.put(BaseStats.DEX, set.getInt("dex", 0));
+		_baseStats.put(BaseStats.INT, set.getInt("int", 0));
+		_baseStats.put(BaseStats.MEN, set.getInt("men", 0));
+		_baseStats.put(BaseStats.WIT, set.getInt("wit", 0));
+		_baseStats.put(BaseStats.LUC, set.getInt("luc", 0));
+		_baseStats.put(BaseStats.CHA, set.getInt("cha", 0));
 		_wear_fee = set.getInt("wear_fee");
 		_wear_count = set.getInt("wear_count");
 		_cancel_fee = set.getInt("cancel_fee");
 		_cancel_count = set.getInt("cancel_count");
 		_wear_class = new ArrayList<>();
-		_skills = new ArrayList<>();
 	}
 	
 	/**
@@ -92,68 +86,14 @@ public class L2Henna
 		return _dyeItemId;
 	}
 	
-	/**
-	 * @return the STR stat.
-	 */
-	public int getStatSTR()
+	public int getBaseStats(Stats stat)
 	{
-		return _str;
+		return _baseStats.getOrDefault(stat, 0);
 	}
 	
-	/**
-	 * @return the CON stat.
-	 */
-	public int getStatCON()
+	public Map<BaseStats, Integer> getBaseStats()
 	{
-		return _con;
-	}
-	
-	/**
-	 * @return the DEX stat.
-	 */
-	public int getStatDEX()
-	{
-		return _dex;
-	}
-	
-	/**
-	 * @return the INT stat.
-	 */
-	public int getStatINT()
-	{
-		return _int;
-	}
-	
-	/**
-	 * @return the MEN stat.
-	 */
-	public int getStatMEN()
-	{
-		return _men;
-	}
-	
-	/**
-	 * @return the WIT stat.
-	 */
-	public int getStatWIT()
-	{
-		return _wit;
-	}
-	
-	/**
-	 * @return the LUC stat.
-	 */
-	public int getStatLUC()
-	{
-		return _luc;
-	}
-	
-	/**
-	 * @return the CHA stat.
-	 */
-	public int getStatCHA()
-	{
-		return _cha;
+		return _baseStats;
 	}
 	
 	/**
@@ -211,15 +151,5 @@ public class L2Henna
 	public void setWearClassIds(List<ClassId> wearClassIds)
 	{
 		_wear_class.addAll(wearClassIds);
-	}
-	
-	public List<SkillHolder> getSkills()
-	{
-		return _skills;
-	}
-	
-	public void setSkills(List<SkillHolder> skills)
-	{
-		_skills.addAll(skills);
 	}
 }

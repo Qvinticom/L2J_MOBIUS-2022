@@ -16,11 +16,8 @@
  */
 package com.l2jmobius.gameserver.model.conditions;
 
-import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -46,15 +43,11 @@ public class ConditionPlayerCanEscape extends Condition
 		{
 			canTeleport = false;
 		}
-		else if (!TvTEvent.onEscapeUse(player.getObjectId()))
-		{
-			canTeleport = false;
-		}
 		else if (player.isInDuel())
 		{
 			canTeleport = false;
 		}
-		else if (player.isAfraid())
+		else if (player.isControlBlocked())
 		{
 			canTeleport = false;
 		}
@@ -70,10 +63,6 @@ public class ConditionPlayerCanEscape extends Condition
 		{
 			canTeleport = false;
 		}
-		else if ((GrandBossManager.getInstance().getZone(player) != null) && !player.canOverrideCond(PcCondOverride.SKILL_CONDITIONS))
-		{
-			canTeleport = false;
-		}
-		return _val == canTeleport;
+		return (_val == canTeleport);
 	}
 }

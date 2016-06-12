@@ -25,17 +25,17 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.geodriver.Cell;
 import com.l2jmobius.commons.geodriver.GeoDriver;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
-import com.l2jmobius.gameserver.data.xml.impl.WallData;
+import com.l2jmobius.gameserver.instancemanager.WarpedSpaceManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.util.GeoUtils;
 import com.l2jmobius.gameserver.util.LinePointIterator;
 import com.l2jmobius.gameserver.util.LinePointIterator3D;
 
 /**
- * Geodata.
  * @author -Nemesiss-, HorridoJoho
  */
 public class GeoData
@@ -158,6 +158,11 @@ public class GeoData
 		return _driver.getGeoY(worldY);
 	}
 	
+	public int getGeoZ(int worldZ)
+	{
+		return _driver.getGeoZ(worldZ);
+	}
+	
 	public int getWorldX(int geoX)
 	{
 		return _driver.getWorldX(geoX);
@@ -166,6 +171,11 @@ public class GeoData
 	public int getWorldY(int geoY)
 	{
 		return _driver.getWorldY(geoY);
+	}
+	
+	public int getWorldZ(int geoZ)
+	{
+		return _driver.getWorldZ(geoZ);
 	}
 	
 	// ///////////////////
@@ -199,7 +209,7 @@ public class GeoData
 			return z;
 		}
 		
-		final int nextLowerZ = getNextLowerZ(geoX, geoY, z + 20);
+		final int nextLowerZ = getNextLowerZ(geoX, geoY, z + 100);
 		return Math.abs(nextLowerZ - z) <= SPAWN_Z_DELTA_LIMIT ? nextLowerZ : z;
 	}
 	
@@ -221,7 +231,13 @@ public class GeoData
 	 */
 	public boolean canSeeTarget(L2Object cha, L2Object target)
 	{
-		return (target != null) && (target.isDoor() || canSeeTarget(cha.getX(), cha.getY(), cha.getZ(), cha.getInstanceId(), target.getX(), target.getY(), target.getZ(), target.getInstanceId()));
+		if (target.isDoor())
+		{
+			// can always see doors :o
+			return true;
+		}
+		
+		return canSeeTarget(cha.getX(), cha.getY(), cha.getZ(), cha.getInstanceWorld(), target.getX(), target.getY(), target.getZ(), target.getInstanceWorld());
 	}
 	
 	/**
@@ -232,7 +248,7 @@ public class GeoData
 	 */
 	public boolean canSeeTarget(L2Object cha, ILocational worldPosition)
 	{
-		return canSeeTarget(cha.getX(), cha.getY(), cha.getZ(), cha.getInstanceId(), worldPosition.getX(), worldPosition.getY(), worldPosition.getZ());
+		return canSeeTarget(cha.getX(), cha.getY(), cha.getZ(), cha.getInstanceWorld(), worldPosition.getX(), worldPosition.getY(), worldPosition.getZ());
 	}
 	
 	/**
@@ -240,16 +256,16 @@ public class GeoData
 	 * @param x the x coordinate
 	 * @param y the y coordinate
 	 * @param z the z coordinate
-	 * @param instanceId
+	 * @param world
 	 * @param tx the target's x coordinate
 	 * @param ty the target's y coordinate
 	 * @param tz the target's z coordinate
-	 * @param tInstanceId the target's instanceId
+	 * @param tworld the target's instanceId
 	 * @return
 	 */
-	public boolean canSeeTarget(int x, int y, int z, int instanceId, int tx, int ty, int tz, int tInstanceId)
+	public boolean canSeeTarget(int x, int y, int z, Instance world, int tx, int ty, int tz, Instance tworld)
 	{
-		return (instanceId == tInstanceId) && canSeeTarget(x, y, z, instanceId, tx, ty, tz);
+		return (world != tworld) ? false : canSeeTarget(x, y, z, world, tx, ty, tz);
 	}
 	
 	/**
@@ -257,15 +273,19 @@ public class GeoData
 	 * @param x the x coordinate
 	 * @param y the y coordinate
 	 * @param z the z coordinate
-	 * @param instanceId
+	 * @param instance
 	 * @param tx the target's x coordinate
 	 * @param ty the target's y coordinate
 	 * @param tz the target's z coordinate
 	 * @return {@code true} if there is line of sight between the given coordinate sets, {@code false} otherwise
 	 */
-	public boolean canSeeTarget(int x, int y, int z, int instanceId, int tx, int ty, int tz)
+	public boolean canSeeTarget(int x, int y, int z, Instance instance, int tx, int ty, int tz)
 	{
-		return !DoorData.getInstance().checkIfDoorsBetween(x, y, z, tx, ty, tz, instanceId, true) && !WallData.getInstance().checkIfWallsBetween(x, y, z, tx, ty, tz) && canSeeTarget(x, y, z, tx, ty, tz);
+		if (DoorData.getInstance().checkIfDoorsBetween(x, y, z, tx, ty, tz, instance, true))
+		{
+			return false;
+		}
+		return canSeeTarget(x, y, z, tx, ty, tz);
 	}
 	
 	private int getLosGeoZ(int prevX, int prevY, int prevGeoZ, int curX, int curY, int nswe)
@@ -274,7 +294,12 @@ public class GeoData
 		{
 			throw new RuntimeException("Multiple directions!");
 		}
-		return checkNearestNsweAntiCornerCut(prevX, prevY, prevGeoZ, nswe) ? getNearestZ(curX, curY, prevGeoZ) : getNextHigherZ(curX, curY, prevGeoZ);
+		
+		if (checkNearestNsweAntiCornerCut(prevX, prevY, prevGeoZ, nswe))
+		{
+			return getNearestZ(curX, curY, prevGeoZ);
+		}
+		return getNextHigherZ(curX, curY, prevGeoZ);
 	}
 	
 	/**
@@ -300,7 +325,12 @@ public class GeoData
 		// fastpath
 		if ((geoX == tGeoX) && (geoY == tGeoY))
 		{
-			return !hasGeoPos(tGeoX, tGeoY) || (z == tz);
+			if (hasGeoPos(tGeoX, tGeoY))
+			{
+				return z == tz;
+			}
+			
+			return true;
 		}
 		
 		if (tz > z)
@@ -350,11 +380,21 @@ public class GeoData
 			// check if the position has geodata
 			if (hasGeoPos(curX, curY))
 			{
-				final int nswe = GeoUtils.computeNswe(prevX, prevY, curX, curY);
+				final int beeCurGeoZ = getNearestZ(curX, curY, beeCurZ);
+				final int nswe = GeoUtils.computeNswe(prevX, prevY, curX, curY); // .computeDirection(prevX, prevY, curX, curY);
 				curGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, curX, curY, nswe);
-				final int maxHeight = ptIndex < ELEVATED_SEE_OVER_DISTANCE ? z + MAX_SEE_OVER_HEIGHT : beeCurZ + MAX_SEE_OVER_HEIGHT;
+				int maxHeight;
+				if (ptIndex < ELEVATED_SEE_OVER_DISTANCE)
+				{
+					maxHeight = z + MAX_SEE_OVER_HEIGHT;
+				}
+				else
+				{
+					maxHeight = beeCurZ + MAX_SEE_OVER_HEIGHT;
+				}
+				
 				boolean canSeeThrough = false;
-				if (curGeoZ <= maxHeight)
+				if ((curGeoZ <= maxHeight) && (curGeoZ <= beeCurGeoZ))
 				{
 					if ((nswe & Cell.NSWE_NORTH_EAST) == Cell.NSWE_NORTH_EAST)
 					{
@@ -402,17 +442,6 @@ public class GeoData
 	}
 	
 	/**
-	 * Verifies if the is a path between origin's location and destination, if not returns the closest location.
-	 * @param origin the origin
-	 * @param destination the destination
-	 * @return the destination if there is a path or the closes location
-	 */
-	public Location moveCheck(ILocational origin, ILocational destination)
-	{
-		return moveCheck(origin.getX(), origin.getY(), origin.getZ(), destination.getX(), destination.getY(), destination.getZ(), origin.getInstanceId());
-	}
-	
-	/**
 	 * Move check.
 	 * @param x the x coordinate
 	 * @param y the y coordinate
@@ -420,10 +449,10 @@ public class GeoData
 	 * @param tx the target's x coordinate
 	 * @param ty the target's y coordinate
 	 * @param tz the target's z coordinate
-	 * @param instanceId the instance id
+	 * @param instance the instance
 	 * @return the last Location (x,y,z) where player can walk - just before wall
 	 */
-	public Location moveCheck(int x, int y, int z, int tx, int ty, int tz, int instanceId)
+	public Location moveCheck(int x, int y, int z, int tx, int ty, int tz, Instance instance)
 	{
 		final int geoX = getGeoX(x);
 		final int geoY = getGeoY(y);
@@ -432,8 +461,14 @@ public class GeoData
 		final int tGeoY = getGeoY(ty);
 		tz = getNearestZ(tGeoX, tGeoY, tz);
 		
-		if (DoorData.getInstance().checkIfDoorsBetween(x, y, z, tx, ty, tz, instanceId, false) || WallData.getInstance().checkIfWallsBetween(x, y, z, tx, ty, tz))
+		if (DoorData.getInstance().checkIfDoorsBetween(x, y, z, tx, ty, tz, instance, false))
 		{
+			return new Location(x, y, getHeight(x, y, z));
+		}
+		
+		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(new Location(x, y, z), new Location(tx, ty, tz), instance))
+		{
+			System.out.println("there is a warp space in path !");
 			return new Location(x, y, getHeight(x, y, z));
 		}
 		
@@ -449,16 +484,34 @@ public class GeoData
 			final int curX = pointIter.x();
 			final int curY = pointIter.y();
 			final int curZ = getNearestZ(curX, curY, prevZ);
-			if (hasGeoPos(prevX, prevY) && !checkNearestNsweAntiCornerCut(prevX, prevY, prevZ, GeoUtils.computeNswe(prevX, prevY, curX, curY)))
+			
+			if (hasGeoPos(prevX, prevY))
 			{
-				// can't move, return previous location
-				return new Location(getWorldX(prevX), getWorldY(prevY), prevZ);
+				final int nswe = GeoUtils.computeNswe(prevX, prevY, curX, curY);
+				if (!checkNearestNsweAntiCornerCut(prevX, prevY, prevZ, nswe))
+				{
+					// can't move, return previous location
+					return new Location(getWorldX(prevX), getWorldY(prevY), prevZ);
+				}
 			}
+			
 			prevX = curX;
 			prevY = curY;
 			prevZ = curZ;
 		}
-		return hasGeoPos(prevX, prevY) && (prevZ != tz) ? new Location(x, y, z) : new Location(tx, ty, tz);
+		
+		if (hasGeoPos(prevX, prevY) && (prevZ != tz))
+		{
+			// different floors, return start location
+			return new Location(x, y, z);
+		}
+		
+		return new Location(tx, ty, tz);
+	}
+	
+	public Location moveCheck(Location startLoc, Location endLoc, Instance instance)
+	{
+		return moveCheck(startLoc.getX(), startLoc.getY(), startLoc.getZ(), endLoc.getX(), endLoc.getY(), endLoc.getZ(), instance);
 	}
 	
 	/**
@@ -469,10 +522,10 @@ public class GeoData
 	 * @param toX the X coordinate to end checking at
 	 * @param toY the Y coordinate to end checking at
 	 * @param toZ the Z coordinate to end checking at
-	 * @param instanceId the instance ID
+	 * @param instance the instance
 	 * @return {@code true} if the character at start coordinates can move to end coordinates, {@code false} otherwise
 	 */
-	public boolean canMove(int fromX, int fromY, int fromZ, int toX, int toY, int toZ, int instanceId)
+	public boolean canMove(int fromX, int fromY, int fromZ, int toX, int toY, int toZ, Instance instance)
 	{
 		final int geoX = getGeoX(fromX);
 		final int geoY = getGeoY(fromY);
@@ -481,7 +534,12 @@ public class GeoData
 		final int tGeoY = getGeoY(toY);
 		toZ = getNearestZ(tGeoX, tGeoY, toZ);
 		
-		if (DoorData.getInstance().checkIfDoorsBetween(fromX, fromY, fromZ, toX, toY, toZ, instanceId, false) || WallData.getInstance().checkIfWallsBetween(fromX, fromY, fromZ, toX, toY, toZ))
+		if (DoorData.getInstance().checkIfDoorsBetween(fromX, fromY, fromZ, toX, toY, toZ, instance, false))
+		{
+			return false;
+		}
+		
+		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(new Location(fromX, fromY, fromZ), new Location(toX, toY, toZ), instance))
 		{
 			return false;
 		}
@@ -498,60 +556,50 @@ public class GeoData
 			final int curX = pointIter.x();
 			final int curY = pointIter.y();
 			final int curZ = getNearestZ(curX, curY, prevZ);
-			if (hasGeoPos(prevX, prevY) && !checkNearestNsweAntiCornerCut(prevX, prevY, prevZ, GeoUtils.computeNswe(prevX, prevY, curX, curY)))
+			
+			if (hasGeoPos(prevX, prevY))
 			{
+				final int nswe = GeoUtils.computeNswe(prevX, prevY, curX, curY);
+				if (!checkNearestNsweAntiCornerCut(prevX, prevY, prevZ, nswe))
 				{
 					return false;
 				}
 			}
+			
 			prevX = curX;
 			prevY = curY;
 			prevZ = curZ;
 		}
-		return !hasGeoPos(prevX, prevY) || (prevZ == toZ);
-	}
-	
-	public int traceTerrainZ(int x, int y, int z, int tx, int ty)
-	{
-		final int geoX = getGeoX(x);
-		final int geoY = getGeoY(y);
-		z = getNearestZ(geoX, geoY, z);
-		final int tGeoX = getGeoX(tx);
-		final int tGeoY = getGeoY(ty);
 		
-		final LinePointIterator pointIter = new LinePointIterator(geoX, geoY, tGeoX, tGeoY);
-		// first point is guaranteed to be available
-		pointIter.next();
-		int prevZ = z;
-		
-		while (pointIter.next())
+		if (hasGeoPos(prevX, prevY) && (prevZ != toZ))
 		{
-			prevZ = getNearestZ(pointIter.x(), pointIter.y(), prevZ);
+			// different floors
+			return false;
 		}
 		
-		return prevZ;
+		return true;
 	}
 	
 	/**
 	 * Checks if its possible to move from one location to another.
-	 * @param from the {@code ILocational} to start checking from
+	 * @param from the {@code WorldObject} to start checking from
 	 * @param toX the X coordinate to end checking at
 	 * @param toY the Y coordinate to end checking at
 	 * @param toZ the Z coordinate to end checking at
 	 * @return {@code true} if the character at start coordinates can move to end coordinates, {@code false} otherwise
 	 */
-	public boolean canMove(ILocational from, int toX, int toY, int toZ)
+	public boolean canMove(L2Object from, int toX, int toY, int toZ)
 	{
-		return canMove(from.getX(), from.getY(), from.getZ(), toX, toY, toZ, from.getInstanceId());
+		return canMove(from.getX(), from.getY(), from.getZ(), toX, toY, toZ, from.getInstanceWorld());
 	}
 	
 	/**
 	 * Checks if its possible to move from one location to another.
-	 * @param from the {@code ILocational} to start checking from
-	 * @param to the {@code ILocational} to end checking at
+	 * @param from the {@code WorldObject} to start checking from
+	 * @param to the {@code WorldObject} to end checking at
 	 * @return {@code true} if the character at start coordinates can move to end coordinates, {@code false} otherwise
 	 */
-	public boolean canMove(ILocational from, ILocational to)
+	public boolean canMove(L2Object from, L2Object to)
 	{
 		return canMove(from, to.getX(), to.getY(), to.getZ());
 	}
@@ -574,6 +622,6 @@ public class GeoData
 	
 	private static class SingletonHolder
 	{
-		protected static final GeoData _instance = new GeoData();
+		protected final static GeoData _instance = new GeoData();
 	}
 }

@@ -16,32 +16,34 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.PackageSendableList;
 
 /**
  * @author -Wooden-
  * @author UnAfraid Thanks mrTJO
  */
-public class RequestPackageSendableItemList extends L2GameClientPacket
+public class RequestPackageSendableItemList implements IClientIncomingPacket
 {
-	private static final String _C_A7_REQUESTPACKAGESENDABLEITEMLIST = "[C] A7 RequestPackageSendableItemList";
-	private int _objectID;
+	private int _objectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectID = readD();
+		_objectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
-		sendPacket(new PackageSendableList(getClient().getActiveChar().getInventory().getAvailableItems(true, true, true), _objectID));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C_A7_REQUESTPACKAGESENDABLEITEMLIST;
+		final L2PcInstance activeChar = client.getActiveChar();
+		if (activeChar == null)
+		{
+			return;
+		}
+		client.sendPacket(new PackageSendableList(activeChar, _objectId));
 	}
 }

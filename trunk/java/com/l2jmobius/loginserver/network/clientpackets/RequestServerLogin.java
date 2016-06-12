@@ -64,14 +64,14 @@ public class RequestServerLogin extends L2LoginClientPacket
 	@Override
 	public boolean readImpl()
 	{
-		if (super._buf.remaining() < 9)
+		if (super._buf.remaining() >= 9)
 		{
-			return false;
+			_skey1 = readD();
+			_skey2 = readD();
+			_serverId = readC();
+			return true;
 		}
-		_skey1 = readD();
-		_skey2 = readD();
-		_serverId = readC();
-		return true;
+		return false;
 	}
 	
 	@Override

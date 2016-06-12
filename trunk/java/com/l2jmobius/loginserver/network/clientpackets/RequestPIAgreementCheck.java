@@ -30,9 +30,9 @@ public class RequestPIAgreementCheck extends L2LoginClientPacket
 	protected boolean readImpl()
 	{
 		_accountId = readD();
-		byte[] padding0 = new byte[3];
-		byte[] checksum = new byte[4];
-		byte[] padding1 = new byte[12];
+		final byte[] padding0 = new byte[3];
+		final byte[] checksum = new byte[4];
+		final byte[] padding1 = new byte[12];
 		readB(padding0);
 		readB(checksum);
 		readB(padding1);

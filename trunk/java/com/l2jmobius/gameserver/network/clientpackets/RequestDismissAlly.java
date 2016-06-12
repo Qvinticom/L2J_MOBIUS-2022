@@ -16,42 +16,36 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * This class ...
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestDismissAlly extends L2GameClientPacket
+public final class RequestDismissAlly implements IClientIncomingPacket
 {
-	private static final String _C__90_REQUESTDISMISSALLY = "[C] 90 RequestDismissAlly";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger packet
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		if (!activeChar.isClanLeader())
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
+			client.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
 			return;
 		}
 		activeChar.getClan().dissolveAlly(activeChar);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__90_REQUESTDISMISSALLY;
 	}
 }

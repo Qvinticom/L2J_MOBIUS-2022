@@ -51,26 +51,29 @@ public class L2StaticObjectInstanceAction implements IActionHandler
 				// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
 				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, staticObject);
 			}
-			else if (staticObject.getType() == 2)
+			else
 			{
-				final String filename = (staticObject.getId() == 24230101) ? "html/signboards/tomb_of_crystalgolem.htm" : "html/signboards/pvp_signboard.htm";
-				final String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), filename);
-				final NpcHtmlMessage html = new NpcHtmlMessage(staticObject.getObjectId());
-				
-				if (content != null)
+				if (staticObject.getType() == 2)
 				{
-					html.setHtml(content);
+					final String filename = (staticObject.getId() == 24230101) ? "data/html/signboards/tomb_of_crystalgolem.htm" : "data/html/signboards/pvp_signboard.htm";
+					final String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), filename);
+					final NpcHtmlMessage html = new NpcHtmlMessage(staticObject.getObjectId());
+					
+					if (content == null)
+					{
+						html.setHtml("<html><body>Signboard is missing:<br>" + filename + "</body></html>");
+					}
+					else
+					{
+						html.setHtml(content);
+					}
+					
+					activeChar.sendPacket(html);
 				}
-				else
+				else if (staticObject.getType() == 0)
 				{
-					html.setHtml("<html><body>Signboard is missing:<br>" + filename + "</body></html>");
+					activeChar.sendPacket(staticObject.getMap());
 				}
-				
-				activeChar.sendPacket(html);
-			}
-			else if (staticObject.getType() == 0)
-			{
-				activeChar.sendPacket(staticObject.getMap());
 			}
 		}
 		return true;

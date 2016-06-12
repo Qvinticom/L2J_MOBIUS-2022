@@ -20,6 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
+import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -27,6 +28,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
 import quests.Q00140_ShadowFoxPart2.Q00140_ShadowFoxPart2;
+import quests.Q00998_FallenAngelSelect.Q00998_FallenAngelSelect;
 
 /**
  * Shadow Fox - 3 (141)
@@ -38,6 +40,7 @@ public class Q00141_ShadowFoxPart3 extends Quest
 	private static final int NATOOLS = 30894;
 	// Monsters
 	private static final Map<Integer, Integer> MOBS = new HashMap<>();
+	
 	static
 	{
 		MOBS.put(20135, 53); // Alligator
@@ -54,7 +57,7 @@ public class Q00141_ShadowFoxPart3 extends Quest
 	
 	public Q00141_ShadowFoxPart3()
 	{
-		super(141, Q00141_ShadowFoxPart3.class.getSimpleName(), "Shadow Fox - 3");
+		super(141);
 		addStartNpc(NATOOLS);
 		addTalkId(NATOOLS);
 		addKillId(MOBS.keySet());
@@ -64,8 +67,8 @@ public class Q00141_ShadowFoxPart3 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return null;
 		}
@@ -83,52 +86,37 @@ public class Q00141_ShadowFoxPart3 extends Quest
 			case "30894-17.html":
 			case "30894-19.html":
 			case "30894-20.html":
-			{
 				break;
-			}
 			case "30894-03.htm":
-			{
-				qs.startQuest();
+				st.startQuest();
 				break;
-			}
 			case "30894-06.html":
-			{
-				qs.setCond(2, true);
+				st.setCond(2, true);
 				break;
-			}
 			case "30894-15.html":
-			{
-				qs.set("talk", "2");
+				st.set("talk", "2");
 				break;
-			}
 			case "30894-18.html":
-			{
-				qs.setCond(4, true);
-				qs.unset("talk");
+				st.setCond(4, true);
+				st.unset("talk");
 				break;
-			}
 			case "30894-21.html":
-			{
 				giveAdena(player, 88888, true);
 				if (player.getLevel() <= MAX_REWARD_LEVEL)
 				{
 					addExpAndSp(player, 278005, 17058);
 				}
-				qs.exitQuest(false, true);
+				st.exitQuest(false, true);
 				
-				// TODO: Check for new quests.
-				// final Quest q = QuestManager.getInstance().getQuest(Q00998_FallenAngelSelect.class.getSimpleName());
-				// if (q != null)
-				// {
-				// q.newQuestState(player).setState(State.STARTED);
-				// }
+				final Quest q = QuestManager.getInstance().getQuest(Q00998_FallenAngelSelect.class.getSimpleName());
+				if (q != null)
+				{
+					q.newQuestState(player).setState(State.STARTED);
+				}
 				break;
-			}
 			default:
-			{
 				htmltext = null;
 				break;
-			}
 		}
 		return htmltext;
 	}
@@ -141,17 +129,17 @@ public class Q00141_ShadowFoxPart3 extends Quest
 		{
 			return super.onKill(npc, player, isSummon);
 		}
-		final QuestState qs = getQuestState(member, false);
-		if (getRandom(100) < MOBS.get(npc.getId()))
+		final QuestState st = getQuestState(member, false);
+		if ((getRandom(100) < MOBS.get(npc.getId())))
 		{
-			giveItems(member, PREDECESSORS_REPORT, 1);
-			if (getQuestItemsCount(member, PREDECESSORS_REPORT) >= REPORT_COUNT)
+			giveItems(player, PREDECESSORS_REPORT, 1);
+			if (getQuestItemsCount(player, PREDECESSORS_REPORT) >= REPORT_COUNT)
 			{
-				qs.setCond(3, true);
+				st.setCond(3, true);
 			}
 			else
 			{
-				playSound(member, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, player, isSummon);
@@ -161,41 +149,33 @@ public class Q00141_ShadowFoxPart3 extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
+		final QuestState st = getQuestState(player, true);
+		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		switch (qs.getState())
+		switch (st.getState())
 		{
 			case State.CREATED:
-			{
-				final QuestState qst = player.getQuestState(Q00140_ShadowFoxPart2.class.getSimpleName());
-				htmltext = (player.getLevel() >= MIN_LEVEL) ? ((qst != null) && qst.isCompleted()) ? "30894-01.htm" : "30894-00.html" : "30894-02.htm";
+				final QuestState qs = player.getQuestState(Q00140_ShadowFoxPart2.class.getSimpleName());
+				htmltext = (player.getLevel() >= MIN_LEVEL) ? ((qs != null) && qs.isCompleted()) ? "30894-01.htm" : "30894-00.html" : "30894-02.htm";
 				break;
-			}
 			case State.STARTED:
-			{
-				switch (qs.getCond())
+				switch (st.getCond())
 				{
 					case 1:
-					{
 						htmltext = "30894-04.html";
 						break;
-					}
 					case 2:
-					{
 						htmltext = "30894-07.html";
 						break;
-					}
 					case 3:
-					{
-						if (qs.getInt("talk") == 1)
+						if (st.getInt("talk") == 1)
 						{
 							htmltext = "30894-09.html";
 						}
-						else if (qs.getInt("talk") == 2)
+						else if (st.getInt("talk") == 2)
 						{
 							htmltext = "30894-16.html";
 						}
@@ -203,23 +183,17 @@ public class Q00141_ShadowFoxPart3 extends Quest
 						{
 							htmltext = "30894-08.html";
 							takeItems(player, PREDECESSORS_REPORT, -1);
-							qs.set("talk", "1");
+							st.set("talk", "1");
 						}
 						break;
-					}
 					case 4:
-					{
 						htmltext = "30894-19.html";
 						break;
-					}
 				}
 				break;
-			}
 			case State.COMPLETED:
-			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
-			}
 		}
 		return htmltext;
 	}

@@ -17,28 +17,28 @@
 package com.l2jmobius.gameserver.engines;
 
 import java.io.File;
-import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.commons.util.file.filter.XMLFilter;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.engines.items.DocumentItem;
-import com.l2jmobius.gameserver.engines.skills.DocumentSkill;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.util.file.filter.XMLFilter;
 
 /**
  * @author mkizub
  */
 public class DocumentEngine
 {
-	private static final Logger _log = Logger.getLogger(DocumentEngine.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(DocumentEngine.class.getName());
 	
-	private final List<File> _itemFiles = new ArrayList<>();
-	private final List<File> _skillFiles = new ArrayList<>();
+	private final List<File> _itemFiles = new LinkedList<>();
+	private final List<File> _skillFiles = new LinkedList<>();
 	
 	public static DocumentEngine getInstance()
 	{
@@ -47,15 +47,15 @@ public class DocumentEngine
 	
 	protected DocumentEngine()
 	{
-		hashFiles("stats/items", _itemFiles);
+		hashFiles("data/stats/items", _itemFiles);
 		if (Config.CUSTOM_ITEMS_LOAD)
 		{
-			hashFiles("stats/items/custom", _itemFiles);
+			hashFiles("data/stats/items/custom", _itemFiles);
 		}
-		hashFiles("stats/skills", _skillFiles);
+		hashFiles("data/stats/skills", _skillFiles);
 		if (Config.CUSTOM_SKILLS_LOAD)
 		{
-			hashFiles("stats/skills/custom", _skillFiles);
+			hashFiles("data/stats/skills/custom", _skillFiles);
 		}
 	}
 	
@@ -64,17 +64,13 @@ public class DocumentEngine
 		final File dir = new File(Config.DATAPACK_ROOT, dirname);
 		if (!dir.exists())
 		{
-			_log.warning("Dir " + dir.getAbsolutePath() + " not exists");
+			LOGGER.warning("Dir " + dir.getAbsolutePath() + " not exists");
 			return;
 		}
-		
 		final File[] files = dir.listFiles(new XMLFilter());
-		if (files != null)
+		for (File f : files)
 		{
-			for (File f : files)
-			{
-				hash.add(f);
-			}
+			hash.add(f);
 		}
 	}
 	
@@ -82,12 +78,10 @@ public class DocumentEngine
 	{
 		if (file == null)
 		{
-			_log.warning("Skill file not found.");
+			LOGGER.warning("Skill file not found.");
 			return null;
 		}
-		final DocumentSkill doc = new DocumentSkill(file);
-		doc.parse();
-		return doc.getSkills();
+		return Collections.emptyList();
 	}
 	
 	public void loadAllSkills(Map<Integer, Skill> allSkills)
@@ -106,7 +100,7 @@ public class DocumentEngine
 				count++;
 			}
 		}
-		_log.info(getClass().getSimpleName() + ": Loaded " + count + " Skill templates from XML files.");
+		LOGGER.info("Loaded " + count + " Skill templates from XML files.");
 	}
 	
 	/**
@@ -115,7 +109,7 @@ public class DocumentEngine
 	 */
 	public List<L2Item> loadItems()
 	{
-		final List<L2Item> list = new ArrayList<>();
+		final List<L2Item> list = new LinkedList<>();
 		for (File f : _itemFiles)
 		{
 			final DocumentItem document = new DocumentItem(f);

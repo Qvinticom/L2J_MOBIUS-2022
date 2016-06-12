@@ -31,13 +31,9 @@ public class L2EventMonsterInstance extends L2MonsterInstance
 	
 	// Event mobs should drop items to ground
 	// but item pickup must be protected to killer
-	// TODO: Some mobs need protect drop for spawner
+	// Todo: Some mobs need protect drop for spawner
 	public boolean drop_on_ground = false;
 	
-	/**
-	 * Creates an event monster.
-	 * @param template the event monster NPC template
-	 */
 	public L2EventMonsterInstance(L2NpcTemplate template)
 	{
 		super(template);

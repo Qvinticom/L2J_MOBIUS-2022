@@ -16,23 +16,24 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.handler.ChatHandler;
 import com.l2jmobius.gameserver.handler.IChatHandler;
-import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
+import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerChat;
 import com.l2jmobius.gameserver.model.events.returns.ChatFilterReturn;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -40,9 +41,8 @@ import com.l2jmobius.gameserver.util.Util;
  * This class ...
  * @version $Revision: 1.16.2.12.2.7 $ $Date: 2005/04/11 10:06:11 $
  */
-public final class Say2 extends L2GameClientPacket
+public final class Say2 implements IClientIncomingPacket
 {
-	private static final String _C__49_SAY2 = "[C] 49 Say2";
 	private static Logger _logChat = Logger.getLogger("chat");
 	
 	private static final String[] WALKER_COMMAND_LIST =
@@ -89,22 +89,23 @@ public final class Say2 extends L2GameClientPacket
 	private String _target;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_text = readS();
-		_type = readD();
-		_target = (_type == ChatType.WHISPER.getClientId()) ? readS() : null;
+		_text = packet.readS();
+		_type = packet.readD();
+		_target = (_type == ChatType.WHISPER.getClientId()) ? packet.readS() : null;
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (Config.DEBUG)
 		{
 			_log.info("Say2: Msg Type = '" + _type + "' Text = '" + _text + "'.");
 		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -150,21 +151,39 @@ public final class Say2 extends L2GameClientPacket
 		
 		if (activeChar.isChatBanned() && (_text.charAt(0) != '.'))
 		{
-			if (activeChar.getEffectList().getFirstEffect(L2EffectType.CHAT_BLOCK) != null)
+			if (activeChar.isAffected(EffectFlag.CHAT_BLOCK))
 			{
 				activeChar.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_CHATTING_IS_NOT_ALLOWED);
 			}
-			else if (Config.BAN_CHAT_CHANNELS.contains(chatType))
+			else
 			{
-				activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
+				if (Config.BAN_CHAT_CHANNELS.contains(chatType))
+				{
+					activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
+				}
 			}
 			return;
 		}
 		
-		if (activeChar.isJailed() && Config.JAIL_DISABLE_CHAT && ((chatType == ChatType.WHISPER) || (chatType == ChatType.SHOUT) || (chatType == ChatType.TRADE) || (chatType == ChatType.HERO_VOICE)))
+		if (activeChar.isInOlympiadMode() || OlympiadManager.getInstance().isRegistered(activeChar))
 		{
-			activeChar.sendMessage("You can not chat with players outside of the jail.");
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_CHAT_WHILE_PARTICIPATING_IN_THE_OLYMPIAD);
 			return;
+		}
+		
+		if (activeChar.isOnEvent(CeremonyOfChaosEvent.class))
+		{
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_CHAT_IN_THE_CEREMONY_OF_CHAOS);
+			return;
+		}
+		
+		if (activeChar.isJailed() && Config.JAIL_DISABLE_CHAT)
+		{
+			if ((chatType == ChatType.WHISPER) || (chatType == ChatType.SHOUT) || (chatType == ChatType.TRADE) || (chatType == ChatType.HERO_VOICE))
+			{
+				activeChar.sendMessage("You can not chat with players outside of the jail.");
+				return;
+			}
 		}
 		
 		if ((chatType == ChatType.PETITION_PLAYER) && activeChar.isGM())
@@ -174,38 +193,30 @@ public final class Say2 extends L2GameClientPacket
 		
 		if (Config.LOG_CHAT)
 		{
-			final LogRecord record = new LogRecord(Level.INFO, _text);
-			record.setLoggerName("chat");
-			
 			if (chatType == ChatType.WHISPER)
 			{
-				record.setParameters(new Object[]
-				{
-					chatType.name(),
-					"[" + activeChar.getName() + " to " + _target + "]"
-				});
+				_logChat.info(chatType.name() + " [" + activeChar + " to " + _target + "] " + _text);
 			}
 			else
 			{
-				record.setParameters(new Object[]
-				{
-					chatType.name(),
-					"[" + activeChar.getName() + "]"
-				});
+				_logChat.info(chatType.name() + " [" + activeChar + "] " + _text);
 			}
 			
-			_logChat.log(record);
 		}
 		
-		if ((_text.indexOf(8) >= 0) && !parseAndPublishItem(activeChar))
+		if (_text.indexOf(8) >= 0)
 		{
-			return;
+			if (!parseAndPublishItem(client, activeChar))
+			{
+				return;
+			}
 		}
 		
-		final ChatFilterReturn filter = EventDispatcher.getInstance().notifyEvent(new OnPlayerChat(activeChar, L2World.getInstance().getPlayer(_target), _text, chatType), ChatFilterReturn.class);
+		final ChatFilterReturn filter = EventDispatcher.getInstance().notifyEvent(new OnPlayerChat(activeChar, L2World.getInstance().getPlayer(_target), _text, chatType), activeChar, ChatFilterReturn.class);
 		if (filter != null)
 		{
 			_text = filter.getFilteredText();
+			chatType = filter.getChatType();
 		}
 		
 		// Say Filter implementation
@@ -221,7 +232,7 @@ public final class Say2 extends L2GameClientPacket
 		}
 		else
 		{
-			_log.info("No handler registered for ChatType: " + _type + " Player: " + getClient());
+			_log.info("No handler registered for ChatType: " + _type + " Player: " + client);
 		}
 	}
 	
@@ -247,7 +258,7 @@ public final class Say2 extends L2GameClientPacket
 		_text = filteredText;
 	}
 	
-	private boolean parseAndPublishItem(L2PcInstance owner)
+	private boolean parseAndPublishItem(L2GameClient client, L2PcInstance owner)
 	{
 		int pos1 = -1;
 		while ((pos1 = _text.indexOf(8, pos1)) > -1)
@@ -264,40 +275,22 @@ public final class Say2 extends L2GameClientPacket
 				result.append(_text.charAt(pos++));
 			}
 			final int id = Integer.parseInt(result.toString());
-			final L2Object item = L2World.getInstance().findObject(id);
-			if (item.isItem())
+			final L2ItemInstance item = owner.getInventory().getItemByObjectId(id);
+			
+			if (item == null)
 			{
-				if (owner.getInventory().getItemByObjectId(id) == null)
-				{
-					_log.info(getClient() + " trying publish item which doesnt own! ID:" + id);
-					return false;
-				}
-				((L2ItemInstance) item).publish();
-			}
-			else
-			{
-				_log.info(getClient() + " trying publish object which is not item! Object:" + item);
+				_log.info(client + " trying publish item which doesnt own! ID:" + id);
 				return false;
 			}
+			item.publish();
+			
 			pos1 = _text.indexOf(8, pos) + 1;
 			if (pos1 == 0) // missing ending tag
 			{
-				_log.info(getClient() + " sent invalid publish item msg! ID:" + id);
+				_log.info(client + " sent invalid publish item msg! ID:" + id);
 				return false;
 			}
 		}
 		return true;
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__49_SAY2;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

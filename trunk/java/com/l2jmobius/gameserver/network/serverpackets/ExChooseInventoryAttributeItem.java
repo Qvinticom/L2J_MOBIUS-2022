@@ -19,18 +19,21 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.model.Elementals;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Kerberos
  */
-public class ExChooseInventoryAttributeItem extends L2GameServerPacket
+public class ExChooseInventoryAttributeItem implements IClientOutgoingPacket
 {
 	private final int _itemId;
 	private final long _count;
-	private final byte _atribute;
+	private final AttributeType _atribute;
 	private final int _level;
 	private final Set<Integer> _items = new HashSet<>();
 	
@@ -38,8 +41,8 @@ public class ExChooseInventoryAttributeItem extends L2GameServerPacket
 	{
 		_itemId = stone.getDisplayId();
 		_count = stone.getCount();
-		_atribute = Elementals.getItemElement(_itemId);
-		if (_atribute == Elementals.NONE)
+		_atribute = AttributeType.findByClientId(Elementals.getItemElement(_itemId));
+		if ((_atribute == AttributeType.NONE) || (_atribute == AttributeType.NONE_ARMOR))
 		{
 			throw new IllegalArgumentException("Undefined Atribute item: " + stone);
 		}
@@ -56,20 +59,21 @@ public class ExChooseInventoryAttributeItem extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x63);
-		writeD(_itemId);
-		writeQ(_count);
-		writeD(_atribute == Elementals.FIRE ? 1 : 0); // Fire
-		writeD(_atribute == Elementals.WATER ? 1 : 0); // Water
-		writeD(_atribute == Elementals.WIND ? 1 : 0); // Wind
-		writeD(_atribute == Elementals.EARTH ? 1 : 0); // Earth
-		writeD(_atribute == Elementals.HOLY ? 1 : 0); // Holy
-		writeD(_atribute == Elementals.DARK ? 1 : 0); // Unholy
-		writeD(_level); // Item max attribute level
-		writeD(_items.size());
-		_items.forEach(this::writeD);
+		OutgoingPackets.EX_CHOOSE_INVENTORY_ATTRIBUTE_ITEM.writeId(packet);
+		
+		packet.writeD(_itemId);
+		packet.writeQ(_count);
+		packet.writeD(_atribute == AttributeType.FIRE ? 1 : 0); // Fire
+		packet.writeD(_atribute == AttributeType.WATER ? 1 : 0); // Water
+		packet.writeD(_atribute == AttributeType.WIND ? 1 : 0); // Wind
+		packet.writeD(_atribute == AttributeType.EARTH ? 1 : 0); // Earth
+		packet.writeD(_atribute == AttributeType.HOLY ? 1 : 0); // Holy
+		packet.writeD(_atribute == AttributeType.DARK ? 1 : 0); // Unholy
+		packet.writeD(_level); // Item max attribute level
+		packet.writeD(_items.size());
+		_items.forEach(packet::writeD);
+		return true;
 	}
 }

@@ -27,8 +27,7 @@ import quests.Q00237_WindsOfChange.Q00237_WindsOfChange;
 import quests.Q00238_SuccessFailureOfBusiness.Q00238_SuccessFailureOfBusiness;
 
 /**
- * Won't You Join Us (239)<br>
- * Original Jython script by Bloodshed.
+ * Won't You Join Us (239)
  * @author Joxit
  */
 public class Q00239_WontYouJoinUs extends Quest
@@ -51,7 +50,7 @@ public class Q00239_WontYouJoinUs extends Quest
 	
 	public Q00239_WontYouJoinUs()
 	{
-		super(239, Q00239_WontYouJoinUs.class.getSimpleName(), "Won't You Join Us?");
+		super(239);
 		addStartNpc(ATHENIA);
 		addTalkId(ATHENIA);
 		addKillId(WASTE_LANDFILL_MACHINE, SUPPRESSOR, EXTERMINATOR);

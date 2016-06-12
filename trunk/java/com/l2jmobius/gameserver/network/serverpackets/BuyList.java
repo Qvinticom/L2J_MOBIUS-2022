@@ -19,8 +19,10 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.buylist.L2BuyList;
 import com.l2jmobius.gameserver.model.buylist.Product;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 public final class BuyList extends AbstractItemPacket
 {
@@ -38,31 +40,32 @@ public final class BuyList extends AbstractItemPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xB8);
-		writeD(0x00);
-		writeQ(_money); // current money
-		writeD(_listId);
-		writeD(0x00); // TODO: Find me
-		writeH(_list.size());
+		OutgoingPackets.EX_BUY_SELL_LIST.writeId(packet);
+		
+		packet.writeD(0x00); // Type BUY
+		packet.writeQ(_money); // current money
+		packet.writeD(_listId);
+		packet.writeD(0x00); // TODO: inventory count
+		packet.writeH(_list.size());
 		
 		for (Product product : _list)
 		{
 			if ((product.getCount() > 0) || !product.hasLimitedStock())
 			{
-				writeItem(product);
+				writeItem(packet, product);
 				
 				if ((product.getItemId() >= 3960) && (product.getItemId() <= 4026))
 				{
-					writeQ((long) (product.getPrice() * Config.RATE_SIEGE_GUARDS_PRICE * (1 + _taxRate)));
+					packet.writeQ((long) (product.getPrice() * Config.RATE_SIEGE_GUARDS_PRICE * (1 + _taxRate)));
 				}
 				else
 				{
-					writeQ((long) (product.getPrice() * (1 + _taxRate)));
+					packet.writeQ((long) (product.getPrice() * (1 + _taxRate)));
 				}
 			}
 		}
+		return true;
 	}
 }

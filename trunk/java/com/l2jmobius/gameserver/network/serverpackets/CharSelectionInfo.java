@@ -19,26 +19,42 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class CharSelectionInfo extends L2GameServerPacket
+public class CharSelectionInfo implements IClientOutgoingPacket
 {
 	private static Logger _log = Logger.getLogger(CharSelectionInfo.class.getName());
 	private final String _loginName;
 	private final int _sessionId;
-	private final List<CharSelectInfoPackage> _characterPackages;
+	private int _activeId;
+	private final CharSelectInfoPackage[] _characterPackages;
+	
+	private static final int[] PAPERDOLL_ORDER_VISUAL_ID = new int[]
+	{
+		Inventory.PAPERDOLL_RHAND,
+		Inventory.PAPERDOLL_LHAND,
+		Inventory.PAPERDOLL_GLOVES,
+		Inventory.PAPERDOLL_CHEST,
+		Inventory.PAPERDOLL_LEGS,
+		Inventory.PAPERDOLL_FEET,
+		Inventory.PAPERDOLL_HAIR,
+		Inventory.PAPERDOLL_HAIR2,
+	};
 	
 	/**
 	 * Constructor for CharSelectionInfo.
@@ -50,137 +66,159 @@ public class CharSelectionInfo extends L2GameServerPacket
 		_sessionId = sessionId;
 		_loginName = loginName;
 		_characterPackages = loadCharacterSelectInfo(_loginName);
+		_activeId = -1;
 	}
 	
-	public List<CharSelectInfoPackage> getCharInfo()
+	public CharSelectionInfo(String loginName, int sessionId, int activeId)
+	{
+		_sessionId = sessionId;
+		_loginName = loginName;
+		_characterPackages = loadCharacterSelectInfo(_loginName);
+		_activeId = activeId;
+	}
+	
+	public CharSelectInfoPackage[] getCharInfo()
 	{
 		return _characterPackages;
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x09); // packet id
-		final int size = _characterPackages.size();
-		writeD(size); // How many char there is on this account
+		OutgoingPackets.CHARACTER_SELECTION_INFO.writeId(packet);
+		
+		final int size = _characterPackages.length;
+		packet.writeD(size); // How many char there is on this account
 		
 		// Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
-		writeD(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT);
-		writeC(size == Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT ? 0x01 : 0x00); // if 1 can't create new char
-		writeC(0x01); // play mode, if 1 can create only 2 char in regular lobby
-		writeC(0x02); // play mode, if 1 can create only 2 char in regular lobby
-		writeD(0x00); // if 1, korean client
+		packet.writeD(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT);
+		packet.writeC(size == Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT ? 0x01 : 0x00); // if 1 can't create new char
+		packet.writeC(0x01); // play mode, if 1 can create only 2 char in regular lobby
+		packet.writeD(0x02); // if 1, korean client
+		packet.writeC(0x00); // if 1 suggest premium account
 		
-		int charId = 0;
-		if (!_characterPackages.isEmpty())
+		long lastAccess = 0L;
+		if (_activeId == -1)
 		{
-			long lastAccess = -1L;
-			charId = _characterPackages.get(0).getObjectId();
-			
-			for (CharSelectInfoPackage info : _characterPackages)
+			for (int i = 0; i < size; i++)
 			{
-				if (info.isAvailable() && (lastAccess < info.getLastAccess()))
+				if (lastAccess < _characterPackages[i].getLastAccess())
 				{
-					lastAccess = info.getLastAccess();
-					charId = info.getObjectId();
+					lastAccess = _characterPackages[i].getLastAccess();
+					_activeId = i;
 				}
 			}
 		}
 		
-		for (CharSelectInfoPackage charInfoPackage : _characterPackages)
+		for (int i = 0; i < size; i++)
 		{
-			writeS(charInfoPackage.getName());
-			writeD(charInfoPackage.getObjectId());
-			writeS(_loginName);
-			writeD(_sessionId);
-			writeD(charInfoPackage.getClanId());
-			writeD(0x00);
-			writeD(charInfoPackage.getSex());
-			writeD(charInfoPackage.getRace());
-			writeD(charInfoPackage.getBaseClassId());
-			writeD(Config.SERVER_ID);
-			writeD(charInfoPackage.getX());
-			writeD(charInfoPackage.getY());
-			writeD(charInfoPackage.getZ());
-			writeF(charInfoPackage.getCurrentHp());
-			writeF(charInfoPackage.getCurrentMp());
+			final CharSelectInfoPackage charInfoPackage = _characterPackages[i];
 			
-			writeQ(charInfoPackage.getSp());
-			writeQ(charInfoPackage.getExp());
-			writeF((float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))); // High Five
-			writeD(charInfoPackage.getLevel());
+			packet.writeS(charInfoPackage.getName()); // char name
+			packet.writeD(charInfoPackage.getObjectId()); // char id
+			packet.writeS(_loginName); // login
+			packet.writeD(_sessionId); // session id
+			packet.writeD(0x00); // ??
+			packet.writeD(0x00); // ??
 			
-			writeD(charInfoPackage.getReputation());
-			writeD(charInfoPackage.getPkKills());
-			writeD(charInfoPackage.getPvPKills());
+			packet.writeD(charInfoPackage.getSex()); // sex
+			packet.writeD(charInfoPackage.getRace()); // race
 			
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			
-			writeD(0x00); // Ertheia
-			writeD(0x00); // Ertheia
-			
-			for (int slot : Inventory.PAPERDOLL_ORDER_ALL)
+			if (charInfoPackage.getClassId() == charInfoPackage.getBaseClassId())
 			{
-				writeD(charInfoPackage.getPaperdollItemId(slot));
+				packet.writeD(charInfoPackage.getClassId());
+			}
+			else
+			{
+				packet.writeD(charInfoPackage.getBaseClassId());
 			}
 			
-			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_RHAND));
-			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_LHAND));
-			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_GLOVES));
-			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_CHEST));
-			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_LEGS));
-			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_FEET));
-			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_LRHAND));
-			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_HAIR));
-			writeD(charInfoPackage.getPaperdollItemVisualId(Inventory.PAPERDOLL_DHAIR));
+			packet.writeD(0x01); // server id ??
 			
-			writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_CHEST));
-			writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_LEGS));
-			writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_HEAD));
-			writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_GLOVES));
-			writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_FEET));
+			packet.writeD(charInfoPackage.getX());
+			packet.writeD(charInfoPackage.getY());
+			packet.writeD(charInfoPackage.getZ());
+			packet.writeF(charInfoPackage.getCurrentHp());
+			packet.writeF(charInfoPackage.getCurrentMp());
 			
-			writeD(charInfoPackage.getHairStyle());
-			writeD(charInfoPackage.getHairColor());
-			writeD(charInfoPackage.getFace());
+			packet.writeQ(charInfoPackage.getSp());
+			packet.writeQ(charInfoPackage.getExp());
+			packet.writeF((float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))); // High
+																																																																									// Five
+			packet.writeD(charInfoPackage.getLevel());
 			
-			writeF(charInfoPackage.getMaxHp());
-			writeF(charInfoPackage.getMaxMp());
+			packet.writeD(charInfoPackage.getReputation());
+			packet.writeD(charInfoPackage.getPkKills());
+			packet.writeD(charInfoPackage.getPvPKills());
 			
-			writeD(charInfoPackage.getDeleteTimer() > 0 ? (int) ((charInfoPackage.getDeleteTimer() - System.currentTimeMillis()) / 1000) : 0);
-			writeD(charInfoPackage.getClassId());
-			writeD(charId == charInfoPackage.getObjectId() ? 0x01 : 0x00);
-			writeC(charInfoPackage.getWeaponEnchantEffect());
-			writeD(charInfoPackage.get1stAugmentationId());
-			writeD(charInfoPackage.get2ndAugmentationId());
-			writeD(charInfoPackage.getTransformationId());
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
 			
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
+			packet.writeD(0x00); // Ertheia
+			packet.writeD(0x00); // Ertheia
 			
-			writeF(0x00);
-			writeF(0x00);
-			writeD(charInfoPackage.getVitalityPoints());
-			writeD(charInfoPackage.getVitalityPercent());
-			writeD(charInfoPackage.getVitalityItemCount());
-			writeD(charInfoPackage.isAvailable());
-			writeC(0x00);
-			writeC(charInfoPackage.isHero()); // hero glow
-			writeC(charInfoPackage.isHairAccessoryEnabled() ? 0x01 : 0x00); // show hair accessory if enabled
+			for (int slot : getPaperdollOrder())
+			{
+				packet.writeD(charInfoPackage.getPaperdollItemId(slot));
+			}
+			
+			for (int slot : getPaperdollOrderVisualId())
+			{
+				packet.writeD(charInfoPackage.getPaperdollItemVisualId(slot));
+			}
+			
+			packet.writeD(0x00); // ??
+			packet.writeD(0x00); // ??
+			packet.writeD(0x00); // ??
+			packet.writeC(0x00); // Armor Enchant
+			packet.writeC(0x00); // Weapon Enchant
+			
+			packet.writeD(charInfoPackage.getHairStyle());
+			packet.writeD(charInfoPackage.getHairColor());
+			packet.writeD(charInfoPackage.getFace());
+			
+			packet.writeF(charInfoPackage.getMaxHp()); // hp max
+			packet.writeF(charInfoPackage.getMaxMp()); // mp max
+			
+			packet.writeD(charInfoPackage.getDeleteTimer() > 0 ? (int) ((charInfoPackage.getDeleteTimer() - System.currentTimeMillis()) / 1000) : 0);
+			packet.writeD(charInfoPackage.getClassId());
+			packet.writeD(i == _activeId ? 1 : 0);
+			
+			packet.writeC(charInfoPackage.getEnchantEffect() > 127 ? 127 : charInfoPackage.getEnchantEffect());
+			packet.writeQ(charInfoPackage.getAugmentationId());
+			
+			// packet.writeD(charInfoPackage.getTransformId()); // Used to display Transformations
+			packet.writeD(0x00); // Currently on retail when you are on character select you don't see your transformation.
+			
+			// Freya by Vistall:
+			packet.writeD(0x00); // npdid - 16024 Tame Tiny Baby Kookaburra A9E89C
+			packet.writeD(0x00); // level
+			packet.writeD(0x00); // ?
+			packet.writeD(0x00); // food? - 1200
+			packet.writeF(0x00); // max Hp
+			packet.writeF(0x00); // cur Hp
+			
+			packet.writeD(charInfoPackage.getVitalityPoints()); // H5 Vitality
+			packet.writeD((int) Config.RATE_VITALITY_EXP_MULTIPLIER * 100); // Vitality Exp Bonus
+			packet.writeD(charInfoPackage.getVitalityItemsUsed()); // Vitality items used, such as potion
+			packet.writeD(charInfoPackage.getAccessLevel() == -100 ? 0x00 : 0x01); // Char is active or not
+			packet.writeC(charInfoPackage.isNoble() ? 0x01 : 0x00);
+			packet.writeC(Hero.getInstance().isHero(charInfoPackage.getObjectId()) ? 0x01 : 0x00); // hero glow
+			packet.writeC(charInfoPackage.isHairAccessoryEnabled() ? 0x01 : 0x00); // show hair accessory if enabled
 		}
+		return true;
 	}
 	
-	private static List<CharSelectInfoPackage> loadCharacterSelectInfo(String loginName)
+	private static CharSelectInfoPackage[] loadCharacterSelectInfo(String loginName)
 	{
-		final List<CharSelectInfoPackage> characterList = new ArrayList<>();
+		CharSelectInfoPackage charInfopackage;
+		final List<CharSelectInfoPackage> characterList = new LinkedList<>();
+		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM characters WHERE account_name=? ORDER BY createDate"))
 		{
@@ -189,19 +227,20 @@ public class CharSelectionInfo extends L2GameServerPacket
 			{
 				while (charList.next())// fills the package
 				{
-					final CharSelectInfoPackage charInfopackage = restoreChar(charList);
+					charInfopackage = restoreChar(charList);
 					if (charInfopackage != null)
 					{
 						characterList.add(charInfopackage);
 					}
 				}
 			}
+			return characterList.toArray(new CharSelectInfoPackage[characterList.size()]);
 		}
 		catch (Exception e)
 		{
 			_log.log(Level.WARNING, "Could not restore char info: " + e.getMessage(), e);
 		}
-		return characterList;
+		return new CharSelectInfoPackage[0];
 	}
 	
 	private static void loadCharacterSubclassInfo(CharSelectInfoPackage charInfopackage, int ObjectId, int activeClassId)
@@ -235,15 +274,19 @@ public class CharSelectionInfo extends L2GameServerPacket
 		
 		// See if the char must be deleted
 		final long deletetime = chardata.getLong("deletetime");
-		if ((deletetime > 0) && (System.currentTimeMillis() > deletetime))
+		if (deletetime > 0)
 		{
-			final L2Clan clan = ClanTable.getInstance().getClan(chardata.getInt("clanid"));
-			if (clan != null)
+			if (System.currentTimeMillis() > deletetime)
 			{
-				clan.removeClanMember(objectId, 0);
+				final L2Clan clan = ClanTable.getInstance().getClan(chardata.getInt("clanid"));
+				if (clan != null)
+				{
+					clan.removeClanMember(objectId, 0);
+				}
+				
+				L2GameClient.deleteCharByObjId(objectId);
+				return null;
 			}
-			L2GameClient.deleteCharByObjId(objectId);
-			return null;
 		}
 		
 		final CharSelectInfoPackage charInfopackage = new CharSelectInfoPackage(objectId, name);
@@ -292,7 +335,7 @@ public class CharSelectionInfo extends L2GameServerPacket
 			{
 				lang = Config.L2JMOD_MULTILANG_DEFAULT;
 			}
-			charInfopackage.setHtmlPrefix("lang/" + lang + "/");
+			charInfopackage.setHtmlPrefix("data/lang/" + lang + "/");
 		}
 		
 		// if is in subclass, load subclass exp, sp, lvl info
@@ -343,6 +386,13 @@ public class CharSelectionInfo extends L2GameServerPacket
 		
 		charInfopackage.setDeleteTimer(deletetime);
 		charInfopackage.setLastAccess(chardata.getLong("lastAccess"));
+		charInfopackage.setNoble(chardata.getInt("nobless") == 1);
 		return charInfopackage;
+	}
+	
+	@Override
+	public int[] getPaperdollOrderVisualId()
+	{
+		return PAPERDOLL_ORDER_VISUAL_ID;
 	}
 }

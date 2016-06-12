@@ -16,40 +16,27 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.network.serverpackets.ItemList;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * This class ...
  * @version $Revision: 1.3.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestItemList extends L2GameClientPacket
+public final class RequestItemList implements IClientIncomingPacket
 {
-	private static final String _C__14_REQUESTITEMLIST = "[C] 14 RequestItemList";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		if ((getClient() != null) && (getClient().getActiveChar() != null) && !getClient().getActiveChar().isInventoryDisabled())
+		if ((client != null) && (client.getActiveChar() != null) && !client.getActiveChar().isInventoryDisabled())
 		{
-			sendPacket(new ItemList(getClient().getActiveChar(), true));
+			client.getActiveChar().sendItemList(true);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__14_REQUESTITEMLIST;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

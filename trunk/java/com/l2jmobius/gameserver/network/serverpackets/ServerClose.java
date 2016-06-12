@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
  * @author devScarlet, mrTJO
  */
-public class ServerClose extends L2GameServerPacket
+public class ServerClose implements IClientOutgoingPacket
 {
 	public static final ServerClose STATIC_PACKET = new ServerClose();
 	
@@ -28,8 +31,9 @@ public class ServerClose extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x20);
+		OutgoingPackets.SEVER_CLOSE.writeId(packet);
+		return true;
 	}
 }

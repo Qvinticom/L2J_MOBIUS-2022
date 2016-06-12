@@ -21,6 +21,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
@@ -28,6 +29,7 @@ import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.AggroInfo;
 import com.l2jmobius.gameserver.model.L2CommandChannel;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2Item;
@@ -35,7 +37,6 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -134,7 +135,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 	
 	public Q00456_DontKnowDontCare()
 	{
-		super(456, Q00456_DontKnowDontCare.class.getSimpleName(), "Don't Know, Don't Care");
+		super(456);
 		addStartNpc(SEPARATED_SOUL);
 		addTalkId(SEPARATED_SOUL);
 		addFirstTalkId(DRAKE_LORD_CORPSE, BEHEMOTH_LEADER_CORPSE, DRAGON_BEAST_CORPSE);
@@ -190,7 +191,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 			return htmltext;
 		}
 		
-		if (Util.contains(SEPARATED_SOUL, npc.getId()))
+		if (CommonUtil.contains(SEPARATED_SOUL, npc.getId()))
 		{
 			switch (qs.getState())
 			{
@@ -203,14 +204,14 @@ public final class Q00456_DontKnowDontCare extends Quest
 					qs.setState(State.CREATED);
 					// intentional fall-through
 				case State.CREATED:
-					htmltext = (player.getLevel() >= MIN_LEVEL) ? "32864-01.htm" : "32864-03.html";
+					htmltext = ((player.getLevel() >= MIN_LEVEL) ? "32864-01.htm" : "32864-03.html");
 					break;
 				case State.STARTED:
 					switch (qs.getCond())
 					{
 						case 1:
 						{
-							htmltext = hasAtLeastOneQuestItem(player, getRegisteredItemIds()) ? "32864-09.html" : "32864-08.html";
+							htmltext = (hasAtLeastOneQuestItem(player, getRegisteredItemIds()) ? "32864-09.html" : "32864-08.html");
 							break;
 						}
 						case 2:
@@ -278,9 +279,10 @@ public final class Q00456_DontKnowDontCare extends Quest
 			return super.onKill(npc, killer, isSummon);
 		}
 		
+		final Map<L2Character, AggroInfo> playerList = ((L2Attackable) npc).getAggroList();
 		final Set<Integer> allowedPlayers = new HashSet<>();
 		
-		for (AggroInfo aggro : ((L2Attackable) npc).getAggroList().values())
+		for (AggroInfo aggro : playerList.values())
 		{
 			if ((aggro.getAttacker() == null) || !aggro.getAttacker().isPlayer())
 			{
@@ -351,9 +353,6 @@ public final class Q00456_DontKnowDontCare extends Quest
 		
 		giveItems(player, reward, count);
 		final L2Item item = ItemTable.getInstance().getTemplate(reward);
-		final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.S1_RECEIVED_A_S2_ITEM_AS_A_REWARD_FROM_THE_SEPARATED_SOUL);
-		packet.addStringParameter(player.getName());
-		packet.addStringParameter(item.getName());
-		npc.broadcastPacket(packet);
+		npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.S1_RECEIVED_A_S2_ITEM_AS_A_REWARD_FROM_THE_SEPARATED_SOUL, player.getName(), item.getName());
 	}
 }

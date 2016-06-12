@@ -16,10 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.TradeDone;
@@ -28,22 +29,21 @@ import com.l2jmobius.gameserver.network.serverpackets.TradeDone;
  * This class ...
  * @version $Revision: 1.5.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class AnswerTradeRequest extends L2GameClientPacket
+public final class AnswerTradeRequest implements IClientIncomingPacket
 {
-	private static final String _C__55_ANSWERTRADEREQUEST = "[C] 55 AnswerTradeRequest";
-	
 	private int _response;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_response = readD();
+		_response = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -52,12 +52,12 @@ public final class AnswerTradeRequest extends L2GameClientPacket
 		if (!player.getAccessLevel().allowTransaction())
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		final L2PcInstance partner = player.getActiveRequester();
-		if ((partner == null) || (L2World.getInstance().getPlayer(partner.getObjectId()) == null))
+		if (partner == null)
 		{
 			// Trade partner not found, cancel trade
 			player.sendPacket(new TradeDone(0));
@@ -65,11 +65,11 @@ public final class AnswerTradeRequest extends L2GameClientPacket
 			player.setActiveRequester(null);
 			return;
 		}
-		
-		if (Config.FACTION_SYSTEM_ENABLED && ((player.isEvil() && partner.isGood()) || (player.isGood() && partner.isEvil())))
+		else if (L2World.getInstance().getPlayer(partner.getObjectId()) == null)
 		{
+			// Trade partner not found, cancel trade
 			player.sendPacket(new TradeDone(0));
-			player.sendMessage("You cannot trade with different team members.");
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
 			player.setActiveRequester(null);
 			return;
 		}
@@ -88,11 +88,5 @@ public final class AnswerTradeRequest extends L2GameClientPacket
 		// Clears requesting status
 		player.setActiveRequester(null);
 		partner.onTransactionResponse();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__55_ANSWERTRADEREQUEST;
 	}
 }

@@ -17,11 +17,12 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Detection effect implementation.
@@ -29,9 +30,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class Detection extends AbstractEffect
 {
-	public Detection(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Detection(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -41,19 +41,36 @@ public final class Detection extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (!info.getEffector().isPlayer() || !info.getEffected().isPlayer())
+		if (!effector.isPlayer() || !effected.isPlayer())
 		{
 			return;
 		}
-		final L2PcInstance player = info.getEffector().getActingPlayer();
-		final L2PcInstance target = info.getEffected().getActingPlayer();
-		if (!target.isInvisible() || player.isInPartyWith(target) || player.isInClanWith(target) || player.isInAllyWith(target))
+		
+		final L2PcInstance player = effector.getActingPlayer();
+		final L2PcInstance target = effected.getActingPlayer();
+		final boolean hasParty = player.isInParty();
+		final boolean hasClan = player.getClanId() > 0;
+		final boolean hasAlly = player.getAllyId() > 0;
+		
+		if (target.isInvisible())
 		{
-			return;
+			if (hasParty && (target.isInParty()) && (player.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId()))
+			{
+				return;
+			}
+			else if (hasClan && (player.getClanId() == target.getClanId()))
+			{
+				return;
+			}
+			else if (hasAlly && (player.getAllyId() == target.getAllyId()))
+			{
+				return;
+			}
+			
+			// Remove Hide.
+			target.getEffectList().stopSkillEffects(true, AbnormalType.HIDE);
 		}
-		// Remove Hide.
-		target.getEffectList().stopSkillEffects(true, AbnormalType.HIDE);
 	}
 }

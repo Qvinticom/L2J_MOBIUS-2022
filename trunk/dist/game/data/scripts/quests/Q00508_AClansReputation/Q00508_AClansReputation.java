@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
+import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -34,8 +35,7 @@ import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * A Clan's Reputation (508)<br>
- * Original Jython script by chris_00, @katmai and DrLecter.
+ * A Clan's Reputation (508)
  * @author Adry_85
  */
 public class Q00508_AClansReputation extends Quest
@@ -66,7 +66,7 @@ public class Q00508_AClansReputation extends Quest
 	
 	public Q00508_AClansReputation()
 	{
-		super(508, Q00508_AClansReputation.class.getSimpleName(), "A Clan's Reputation");
+		super(508);
 		addStartNpc(SIR_ERIC_RODEMAI);
 		addTalkId(SIR_ERIC_RODEMAI);
 		addKillId(RAID_BOSS);
@@ -189,7 +189,7 @@ public class Q00508_AClansReputation extends Quest
 			{
 				if ((clan == null) || !player.isClanLeader())
 				{
-					qs.exitQuest(true);
+					qs.exitQuest(QuestType.REPEATABLE);
 					return "30868-8.html";
 				}
 				

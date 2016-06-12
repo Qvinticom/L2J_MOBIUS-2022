@@ -16,34 +16,34 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.PledgeReceiveMemberInfo;
-import com.l2jmobius.gameserver.network.serverpackets.PledgeReceiveUpdatePower;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * Format: (ch) Sd
  * @author -Wooden-
  */
-public final class RequestPledgeSetMemberPowerGrade extends L2GameClientPacket
+public final class RequestPledgeSetMemberPowerGrade implements IClientIncomingPacket
 {
-	private static final String _C__D0_15_REQUESTPLEDGESETMEMBERPOWERGRADE = "[C] D0:15 RequestPledgeSetMemberPowerGrade";
 	private String _member;
 	private int _powerGrade;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_member = readS();
-		_powerGrade = readD();
+		_member = packet.readS();
+		_powerGrade = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -79,17 +79,7 @@ public final class RequestPledgeSetMemberPowerGrade extends L2GameClientPacket
 		}
 		
 		member.setPowerGrade(_powerGrade);
-		final L2PcInstance player = member.getPlayerInstance();
-		if (player != null)
-		{
-			player.sendPacket(new PledgeReceiveUpdatePower(member.getClan().getRankPrivs(_powerGrade).getBitmask()));
-		}
-		clan.broadcastToOnlineMembers(new PledgeReceiveMemberInfo(member));
+		clan.broadcastClanStatus();
 	}
 	
-	@Override
-	public String getType()
-	{
-		return _C__D0_15_REQUESTPLEDGESETMEMBERPOWERGRADE;
-	}
 }

@@ -17,6 +17,7 @@
 package handlers.actionhandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.handler.IActionHandler;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -24,7 +25,7 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
+import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.holders.DoorRequestHolder;
 import com.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 
@@ -41,6 +42,7 @@ public class L2DoorInstanceAction implements IActionHandler
 		else if (interact)
 		{
 			final L2DoorInstance door = (L2DoorInstance) target;
+			final ClanHall clanHall = ClanHallData.getInstance().getClanHallByDoorId(door.getId());
 			// MyTargetSelected my = new MyTargetSelected(getObjectId(), activeChar.getLevel());
 			// activeChar.sendPacket(my);
 			if (target.isAutoAttackable(activeChar))
@@ -50,16 +52,16 @@ public class L2DoorInstanceAction implements IActionHandler
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 				}
 			}
-			else if ((activeChar.getClan() != null) && (door.getClanHall() != null) && (activeChar.getClanId() == door.getClanHall().getOwnerId()))
+			else if ((activeChar.getClan() != null) && (clanHall != null) && (activeChar.getClanId() == clanHall.getOwnerId()))
 			{
 				if (!door.isInsideRadius(activeChar, L2Npc.INTERACTION_DISTANCE, false, false))
 				{
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 				}
-				else if (!door.getClanHall().isSiegableHall() || !((SiegableHall) door.getClanHall()).isInSiege())
+				else
 				{
 					activeChar.addScript(new DoorRequestHolder(door));
-					if (!door.getOpen())
+					if (!door.isOpen())
 					{
 						activeChar.sendPacket(new ConfirmDlg(1140));
 					}
@@ -78,7 +80,7 @@ public class L2DoorInstanceAction implements IActionHandler
 				else
 				{
 					activeChar.addScript(new DoorRequestHolder((L2DoorInstance) target));
-					if (!((L2DoorInstance) target).getOpen())
+					if (!((L2DoorInstance) target).isOpen())
 					{
 						activeChar.sendPacket(new ConfirmDlg(1140));
 					}

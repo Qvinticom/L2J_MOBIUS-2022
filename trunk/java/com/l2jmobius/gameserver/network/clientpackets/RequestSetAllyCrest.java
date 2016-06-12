@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -23,34 +24,33 @@ import com.l2jmobius.gameserver.model.L2Crest;
 import com.l2jmobius.gameserver.model.L2Crest.CrestType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * Client packet for setting ally crest.
  */
-public final class RequestSetAllyCrest extends L2GameClientPacket
+public final class RequestSetAllyCrest implements IClientIncomingPacket
 {
-	private static final String _C__91_REQUESTSETALLYCREST = "[C] 91 RequestSetAllyCrest";
-	
 	private int _length;
 	private byte[] _data = null;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_length = readD();
+		_length = packet.readD();
 		if (_length > 192)
 		{
-			return;
+			return false;
 		}
 		
-		_data = new byte[_length];
-		readB(_data);
+		_data = packet.readB(_length);
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -98,11 +98,5 @@ public final class RequestSetAllyCrest extends L2GameClientPacket
 				activeChar.sendPacket(SystemMessageId.THE_CREST_WAS_SUCCESSFULLY_REGISTERED);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__91_REQUESTSETALLYCREST;
 	}
 }

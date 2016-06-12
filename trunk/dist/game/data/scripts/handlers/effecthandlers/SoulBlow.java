@@ -18,12 +18,15 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
+import com.l2jmobius.gameserver.model.stats.Stats;
 
 /**
  * Soul Blow effect implementation.
@@ -31,18 +34,27 @@ import com.l2jmobius.gameserver.model.stats.Formulas;
  */
 public final class SoulBlow extends AbstractEffect
 {
-	public SoulBlow(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	private final double _power;
+	private final double _chance;
+	private final boolean _overHit;
+	
+	public SoulBlow(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
+		_power = params.getDouble("power", 0);
+		_chance = params.getDouble("chance", 0);
+		_overHit = params.getBoolean("overHit", false);
 	}
 	
 	/**
 	 * If is not evaded and blow lands.
+	 * @param effector
+	 * @param effected
+	 * @param skill
 	 */
 	@Override
-	public boolean calcSuccess(BuffInfo info)
+	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
-		return !Formulas.calcPhysicalSkillEvasion(info.getEffector(), info.getEffected(), info.getSkill()) && Formulas.calcBlowSuccess(info.getEffector(), info.getEffected(), info.getSkill());
+		return !Formulas.calcPhysicalSkillEvasion(effector, effected, skill) && Formulas.calcBlowSuccess(effector, effected, skill, _chance);
 	}
 	
 	@Override
@@ -58,40 +70,50 @@ public final class SoulBlow extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
-		
-		if (activeChar.isAlikeDead())
+		if (effector.isAlikeDead())
 		{
 			return;
 		}
 		
-		final boolean ss = info.getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
-		double damage = Formulas.calcBlowDamage(activeChar, target, info.getSkill(), shld, ss);
-		if ((info.getSkill().getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
+		if (_overHit && effected.isAttackable())
+		{
+			((L2Attackable) effected).overhitEnabled(true);
+		}
+		
+		final boolean ss = skill.useSoulShot() && effector.isChargedShot(ShotType.SOULSHOTS);
+		final byte shld = Formulas.calcShldUse(effector, effected);
+		double damage = Formulas.calcBlowDamage(effector, effected, skill, false, _power, shld, ss);
+		if ((skill.getMaxSoulConsumeCount() > 0) && effector.isPlayer())
 		{
 			// Souls Formula (each soul increase +4%)
-			damage *= 1 + (((activeChar.getActingPlayer().getChargedSouls() <= info.getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : info.getSkill().getMaxSoulConsumeCount()) * 0.04);
+			final int chargedSouls = (effector.getActingPlayer().getChargedSouls() <= skill.getMaxSoulConsumeCount()) ? effector.getActingPlayer().getChargedSouls() : skill.getMaxSoulConsumeCount();
+			damage *= 1 + (chargedSouls * 0.04);
 		}
 		
-		target.reduceCurrentHp(damage, activeChar, info.getSkill());
-		target.notifyDamageReceived(damage, activeChar, info.getSkill(), false, false);
+		// Check if damage should be reflected
+		Formulas.calcDamageReflected(effector, effected, skill, true);
+		
+		final double damageCap = effected.getStat().getValue(Stats.DAMAGE_LIMIT);
+		if (damageCap > 0)
+		{
+			damage = Math.min(damage, damageCap);
+		}
+		
+		effected.reduceCurrentHp(damage, effector, skill, false, false, true, false);
 		
 		// Manage attack or cast break of the target (calculating rate, sending message...)
-		if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
+		if (!effected.isRaid() && Formulas.calcAtkBreak(effected, damage))
 		{
-			target.breakAttack();
-			target.breakCast();
+			effected.breakAttack();
+			effected.breakCast();
 		}
 		
-		if (activeChar.isPlayer())
+		if (effector.isPlayer())
 		{
-			activeChar.getActingPlayer().sendDamageMessage(target, (int) damage, false, true, false);
+			final L2PcInstance activePlayer = effector.getActingPlayer();
+			activePlayer.sendDamageMessage(effected, skill, (int) damage, true, false);
 		}
-		// Check if damage should be reflected
-		Formulas.calcDamageReflected(activeChar, target, info.getSkill(), true);
 	}
 }

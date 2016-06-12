@@ -16,7 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import com.l2jmobius.gameserver.data.xml.impl.TransformData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -32,15 +31,16 @@ public class AdminRide implements IAdminCommandHandler
 		"admin_ride_bike",
 		"admin_ride_wyvern",
 		"admin_ride_strider",
-		"admin_ride_guardian",
-		"admin_ride_lion",
-		"admin_ride_wolf",
+		"admin_unride_wyvern",
+		"admin_unride_strider",
 		"admin_unride",
+		"admin_ride_wolf",
+		"admin_unride_wolf",
 	};
 	private int _petRideId;
 	
 	private static final int PURPLE_MANED_HORSE_TRANSFORMATION_ID = 106;
-	private static final int LION_TRANSFORMATION_ID = 109;
+	
 	private static final int JET_BIKE_TRANSFORMATION_ID = 20001;
 	
 	@Override
@@ -71,45 +71,28 @@ public class AdminRide implements IAdminCommandHandler
 			{
 				_petRideId = 16041;
 			}
-			else if (command.startsWith("admin_ride_guardian"))
-			{
-				_petRideId = 16068;
-			}
 			else if (command.startsWith("admin_ride_horse")) // handled using transformation
 			{
-				if (player.isTransformed() || player.isInStance())
+				if (player.isTransformed())
 				{
 					activeChar.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 				}
 				else
 				{
-					TransformData.getInstance().transformPlayer(PURPLE_MANED_HORSE_TRANSFORMATION_ID, player);
-				}
-				
-				return true;
-			}
-			else if (command.startsWith("admin_ride_lion")) // handled using transformation
-			{
-				if (player.isTransformed() || player.isInStance())
-				{
-					activeChar.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
-				}
-				else
-				{
-					TransformData.getInstance().transformPlayer(LION_TRANSFORMATION_ID, player);
+					player.transform(PURPLE_MANED_HORSE_TRANSFORMATION_ID, true);
 				}
 				
 				return true;
 			}
 			else if (command.startsWith("admin_ride_bike")) // handled using transformation
 			{
-				if (player.isTransformed() || player.isInStance())
+				if (player.isTransformed())
 				{
 					activeChar.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 				}
 				else
 				{
-					TransformData.getInstance().transformPlayer(JET_BIKE_TRANSFORMATION_ID, player);
+					player.transform(JET_BIKE_TRANSFORMATION_ID, true);
 				}
 				
 				return true;
@@ -130,11 +113,8 @@ public class AdminRide implements IAdminCommandHandler
 			{
 				player.untransform();
 			}
-			else if (player.getTransformationId() == LION_TRANSFORMATION_ID)
-			{
-				player.untransform();
-			}
-			else if (player.getTransformationId() == JET_BIKE_TRANSFORMATION_ID)
+			
+			if (player.getTransformationId() == JET_BIKE_TRANSFORMATION_ID)
 			{
 				player.untransform();
 			}
@@ -167,4 +147,5 @@ public class AdminRide implements IAdminCommandHandler
 	{
 		return ADMIN_COMMANDS;
 	}
+	
 }

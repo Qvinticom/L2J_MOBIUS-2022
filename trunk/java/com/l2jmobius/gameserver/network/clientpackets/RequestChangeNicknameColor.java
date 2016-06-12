@@ -16,16 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * @author KenM, Gnacik
  */
-public class RequestChangeNicknameColor extends L2GameClientPacket
+public class RequestChangeNicknameColor implements IClientIncomingPacket
 {
-	private static final String _C__D0_4F_REQUESTCHANGENICKNAMECOLOR = "[C] D0:4F RequestChangeNicknameColor";
-	
 	private static final int COLORS[] =
 	{
 		0x9393FF, // Pink
@@ -37,25 +37,25 @@ public class RequestChangeNicknameColor extends L2GameClientPacket
 		0xA0A601, // Peacock Green
 		0x7898AF, // Yellow Ochre
 		0x486295, // Chocolate
-		0x999999
-		// Silver
+		0x999999, // Silver
 	};
 	
 	private int _colorNum, _itemObjectId;
 	private String _title;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_colorNum = readD();
-		_title = readS();
-		_itemObjectId = readD();
+		_colorNum = packet.readD();
+		_title = packet.readS();
+		_itemObjectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -78,11 +78,5 @@ public class RequestChangeNicknameColor extends L2GameClientPacket
 			activeChar.getAppearance().setTitleColor(COLORS[_colorNum]);
 			activeChar.broadcastUserInfo();
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_4F_REQUESTCHANGENICKNAMECOLOR;
 	}
 }

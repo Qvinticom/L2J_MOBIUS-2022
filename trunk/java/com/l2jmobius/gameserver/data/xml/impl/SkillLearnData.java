@@ -16,23 +16,27 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
- * Holds all skill learn data for all NPCs.
+ * Holds all skill learn data for all npcs.
  * @author xban1x
  */
-public final class SkillLearnData implements IXmlReader
+public final class SkillLearnData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(SkillLearnData.class.getName());
+	
 	private final Map<Integer, List<ClassId>> _skillLearn = new HashMap<>();
 	
 	protected SkillLearnData()
@@ -44,12 +48,12 @@ public final class SkillLearnData implements IXmlReader
 	public synchronized void load()
 	{
 		_skillLearn.clear();
-		parseDatapackFile("SkillLearn.xml");
+		parseDatapackFile("data/SkillLearn.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _skillLearn.size() + " Skill Learn data.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node node = doc.getFirstChild(); node != null; node = node.getNextSibling())
 		{

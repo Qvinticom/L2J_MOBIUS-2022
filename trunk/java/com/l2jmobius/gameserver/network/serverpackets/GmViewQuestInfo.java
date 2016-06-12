@@ -18,53 +18,42 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Tempy
  */
-public class GmViewQuestInfo extends L2GameServerPacket
+public class GmViewQuestInfo implements IClientOutgoingPacket
 {
 	private final L2PcInstance _activeChar;
+	private final List<Quest> _questList;
 	
 	public GmViewQuestInfo(L2PcInstance cha)
 	{
 		_activeChar = cha;
+		_questList = cha.getAllActiveQuests();
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x99);
-		writeS(_activeChar.getName());
+		OutgoingPackets.GM_VIEW_QUEST_INFO.writeId(packet);
+		packet.writeS(_activeChar.getName());
+		packet.writeH(_questList.size()); // quest count
 		
-		final List<Quest> questList = _activeChar.getAllActiveQuests();
-		
-		if (questList.size() == 0)
+		for (Quest quest : _questList)
 		{
-			writeC(0);
-			writeH(0);
-			writeH(0);
-			return;
+			final QuestState qs = _activeChar.getQuestState(quest.getName());
+			
+			packet.writeD(quest.getId());
+			packet.writeD(qs == null ? 0 : qs.getCond());
 		}
-		
-		writeH(questList.size()); // quest count
-		
-		for (Quest q : questList)
-		{
-			writeD(q.getId());
-			
-			final QuestState qs = _activeChar.getQuestState(q.getName());
-			
-			if (qs == null)
-			{
-				writeD(0);
-				continue;
-			}
-			
-			writeD(qs.getInt("cond")); // stage of quest progress
-		}
+		packet.writeH(0x00); // some size
+		// for size; ddQQ
+		return true;
 	}
 }

@@ -16,20 +16,21 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.items.L2Henna;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * This class holds the henna related information.<br>
@@ -38,8 +39,10 @@ import com.l2jmobius.util.data.xml.IXmlReader;
  * Allowed classes to wear each henna.
  * @author Zoey76
  */
-public final class HennaData implements IXmlReader
+public final class HennaData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(HennaData.class.getName());
+	
 	private final Map<Integer, L2Henna> _hennaList = new HashMap<>();
 	
 	/**
@@ -54,12 +57,12 @@ public final class HennaData implements IXmlReader
 	public void load()
 	{
 		_hennaList.clear();
-		parseDatapackFile("stats/hennaList.xml");
+		parseDatapackFile("data/stats/hennaList.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _hennaList.size() + " Henna data.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
@@ -84,7 +87,6 @@ public final class HennaData implements IXmlReader
 	{
 		final StatsSet set = new StatsSet();
 		final List<ClassId> wearClassIds = new ArrayList<>();
-		final List<SkillHolder> skills = new ArrayList<>();
 		NamedNodeMap attrs = d.getAttributes();
 		Node attr;
 		for (int i = 0; i < attrs.getLength(); i++)
@@ -124,17 +126,6 @@ public final class HennaData implements IXmlReader
 					set.set("cancel_fee", attr.getNodeValue());
 					break;
 				}
-				case "skills":
-				{
-					for (Node i = c.getFirstChild(); i != null; i = i.getNextSibling())
-					{
-						if ("skill".equals(i.getNodeName()))
-						{
-							skills.add(new SkillHolder(Integer.parseInt(i.getAttributes().getNamedItem("id").getNodeValue()), Integer.parseInt(i.getAttributes().getNamedItem("level").getNodeValue())));
-						}
-					}
-					break;
-				}
 				case "classId":
 				{
 					wearClassIds.add(ClassId.getClassId(Integer.parseInt(c.getTextContent())));
@@ -144,7 +135,6 @@ public final class HennaData implements IXmlReader
 		}
 		final L2Henna henna = new L2Henna(set);
 		henna.setWearClassIds(wearClassIds);
-		henna.setSkills(skills);
 		_hennaList.put(henna.getDyeId(), henna);
 	}
 	

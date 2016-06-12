@@ -19,12 +19,13 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class ExAbnormalStatusUpdateFromTarget extends L2GameServerPacket
+public class ExAbnormalStatusUpdateFromTarget implements IClientOutgoingPacket
 {
 	private final L2Character _character;
 	private List<Effect> _effects = new ArrayList<>();
@@ -33,7 +34,8 @@ public class ExAbnormalStatusUpdateFromTarget extends L2GameServerPacket
 	{
 		protected int _skillId;
 		protected int _level;
-		protected int _maxlevel;
+		protected int _subLevel;
+		protected int _abnormalType;
 		protected int _duration;
 		protected int _caster;
 		
@@ -49,8 +51,8 @@ public class ExAbnormalStatusUpdateFromTarget extends L2GameServerPacket
 			
 			_skillId = skill.getDisplayId();
 			_level = skill.getDisplayLevel();
-			_maxlevel = SkillData.getInstance().getMaxLevel(_skillId);
-			_duration = info.getTime();
+			_abnormalType = skill.getAbnormalType().getClientId();
+			_duration = skill.isAura() ? -1 : info.getTime();
 			_caster = casterId;
 		}
 	}
@@ -76,30 +78,22 @@ public class ExAbnormalStatusUpdateFromTarget extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xE6);
+		OutgoingPackets.EX_ABNORMAL_STATUS_UPDATE_FROM_TARGET.writeId(packet);
 		
-		writeD(_character.getObjectId());
-		writeH(_effects.size());
+		packet.writeD(_character.getObjectId());
+		packet.writeH(_effects.size());
 		
 		for (Effect info : _effects)
 		{
-			writeD(info._skillId);
-			if (info._level < 100)
-			{
-				writeH(info._level);
-				writeH(0x00);
-			}
-			else
-			{
-				writeH(info._maxlevel);
-				writeH(info._level);
-			}
-			writeH(0x00); // Combo abnormal ?
-			writeH(info._duration);
-			writeD(info._caster);
+			packet.writeD(info._skillId);
+			packet.writeH(info._level);
+			packet.writeH(info._subLevel);
+			packet.writeH(info._abnormalType);
+			writeOptionalD(packet, info._duration);
+			packet.writeD(info._caster);
 		}
+		return true;
 	}
 }

@@ -18,15 +18,17 @@ package com.l2jmobius.gameserver.network.serverpackets.primeshop;
 
 import java.util.Collection;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import com.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * @author UnAfraid
  */
-public class ExBRProductList extends L2GameServerPacket
+public class ExBRProductList implements IClientOutgoingPacket
 {
 	private final L2PcInstance _activeChar;
 	private final int _type;
@@ -40,46 +42,47 @@ public class ExBRProductList extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xD7);
-		writeQ(_activeChar.getAdena()); // Adena
-		writeQ(0x00); // Hero coins
-		writeC(_type); // Type 0 - Home, 1 - History, 2 - Favorites
-		writeD(_primeList.size());
+		OutgoingPackets.EX_BR_PRODUCT_LIST.writeId(packet);
+		
+		packet.writeQ(_activeChar.getAdena()); // Adena
+		packet.writeQ(0x00); // Hero coins
+		packet.writeC(_type); // Type 0 - Home, 1 - History, 2 - Favorites
+		packet.writeD(_primeList.size());
 		for (PrimeShopGroup brItem : _primeList)
 		{
-			writeD(brItem.getBrId());
-			writeC(brItem.getCat());
-			writeC(brItem.getPaymentType()); // Payment Type: 0 - Prime Points, 1 - Adena, 2 - Hero Coins
-			writeD(brItem.getPrice());
-			writeC(brItem.getPanelType()); // Item Panel Type: 0 - None, 1 - Event, 2 - Sale, 3 - New, 4 - Best
-			writeD(brItem.getRecommended()); // Recommended: (bit flags) 1 - Top, 2 - Left, 4 - Right
-			writeD(brItem.getStartSale());
-			writeD(brItem.getEndSale());
-			writeC(brItem.getDaysOfWeek());
-			writeC(brItem.getStartHour());
-			writeC(brItem.getStartMinute());
-			writeC(brItem.getStopHour());
-			writeC(brItem.getStopMinute());
-			writeD(brItem.getStock());
-			writeD(brItem.getTotal());
-			writeC(brItem.getSalePercent());
-			writeC(brItem.getMinLevel());
-			writeC(brItem.getMaxLevel());
-			writeD(brItem.getMinBirthday());
-			writeD(brItem.getMaxBirthday());
-			writeD(brItem.getRestrictionDay());
-			writeD(brItem.getAvailableCount());
-			writeC(brItem.getItems().size());
+			packet.writeD(brItem.getBrId());
+			packet.writeC(brItem.getCat());
+			packet.writeC(brItem.getPaymentType()); // Payment Type: 0 - Prime Points, 1 - Adena, 2 - Hero Coins
+			packet.writeD(brItem.getPrice());
+			packet.writeC(brItem.getPanelType()); // Item Panel Type: 0 - None, 1 - Event, 2 - Sale, 3 - New, 4 - Best
+			packet.writeD(brItem.getRecommended()); // Recommended: (bit flags) 1 - Top, 2 - Left, 4 - Right
+			packet.writeD(brItem.getStartSale());
+			packet.writeD(brItem.getEndSale());
+			packet.writeC(brItem.getDaysOfWeek());
+			packet.writeC(brItem.getStartHour());
+			packet.writeC(brItem.getStartMinute());
+			packet.writeC(brItem.getStopHour());
+			packet.writeC(brItem.getStopMinute());
+			packet.writeD(brItem.getStock());
+			packet.writeD(brItem.getTotal());
+			packet.writeC(brItem.getSalePercent());
+			packet.writeC(brItem.getMinLevel());
+			packet.writeC(brItem.getMaxLevel());
+			packet.writeD(brItem.getMinBirthday());
+			packet.writeD(brItem.getMaxBirthday());
+			packet.writeD(brItem.getRestrictionDay());
+			packet.writeD(brItem.getAvailableCount());
+			packet.writeC(brItem.getItems().size());
 			for (PrimeShopItem item : brItem.getItems())
 			{
-				writeD(item.getId());
-				writeD((int) item.getCount());
-				writeD(item.getWeight());
-				writeD(item.isTradable());
+				packet.writeD(item.getId());
+				packet.writeD((int) item.getCount());
+				packet.writeD(item.getWeight());
+				packet.writeD(item.isTradable());
 			}
 		}
+		return true;
 	}
 }

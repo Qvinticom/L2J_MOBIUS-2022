@@ -16,31 +16,25 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.DuelManager;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * Format:(ch) just a trigger
  * @author -Wooden-
  */
-public final class RequestDuelSurrender extends L2GameClientPacket
+public final class RequestDuelSurrender implements IClientIncomingPacket
 {
-	private static final String _C__D0_45_REQUESTDUELSURRENDER = "[C] D0:45 RequestDuelSurrender";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		DuelManager.getInstance().doSurrender(getClient().getActiveChar());
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_45_REQUESTDUELSURRENDER;
+		DuelManager.getInstance().doSurrender(client.getActiveChar());
 	}
 }

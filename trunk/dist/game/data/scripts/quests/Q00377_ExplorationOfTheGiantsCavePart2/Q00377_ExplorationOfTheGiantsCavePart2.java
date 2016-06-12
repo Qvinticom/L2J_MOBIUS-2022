@@ -25,8 +25,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
 /**
- * Exploration of the Giants' Cave Part 2 (377)<br>
- * Original Jython script by Gnacik.
+ * Exploration of the Giants' Cave Part 2 (377)
  * @author nonom
  */
 public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
@@ -59,7 +58,7 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 	
 	public Q00377_ExplorationOfTheGiantsCavePart2()
 	{
-		super(377, Q00377_ExplorationOfTheGiantsCavePart2.class.getSimpleName(), "Exploration of the Giants' Cave - Part 2");
+		super(377);
 		addStartNpc(SOBLING);
 		addTalkId(SOBLING);
 		addKillId(MOBS1.keySet());

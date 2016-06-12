@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.model.items;
 
+import java.util.Collection;
+
+import com.l2jmobius.gameserver.enums.AttributeType;
+import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.items.type.ItemType;
-import com.l2jmobius.gameserver.network.clientpackets.ensoul.SoulCrystalOption;
 
 /**
  * This class contains L2ItemInstance<BR>
@@ -46,7 +49,7 @@ public class L2WarehouseItem
 	private final int _customType2;
 	private final int _mana;
 	
-	private int _elemAtkType = -2;
+	private byte _elemAtkType = -2;
 	private int _elemAtkPower = 0;
 	
 	private final int[] _elemDefAttr =
@@ -60,11 +63,10 @@ public class L2WarehouseItem
 	};
 	
 	private final int[] _enchantOptions;
+	private final Collection<EnsoulOption> _soulCrystalOptions;
+	private final Collection<EnsoulOption> _soulCrystalSpecialOptions;
 	
 	private final int _time;
-	
-	private SoulCrystalOption[] _commonSoulCrystalOptions;
-	private SoulCrystalOption _specialSoulCrystalOption;
 	
 	public L2WarehouseItem(L2ItemInstance item)
 	{
@@ -80,7 +82,7 @@ public class L2WarehouseItem
 		if (item.isAugmented())
 		{
 			_isAugmented = true;
-			_augmentationId = item.getAugmentation().getAugmentationId();
+			_augmentationId = item.getAugmentation().getId();
 		}
 		else
 		{
@@ -89,16 +91,15 @@ public class L2WarehouseItem
 		_mana = item.getMana();
 		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -1;
 		
-		_elemAtkType = item.getAttackElementType();
-		_elemAtkPower = item.getAttackElementPower();
-		for (byte i = 0; i < 6; i++)
+		_elemAtkType = item.getAttackAttributeType().getClientId();
+		_elemAtkPower = item.getAttackAttributePower();
+		for (AttributeType type : AttributeType.ATTRIBUTE_TYPES)
 		{
-			_elemDefAttr[i] = item.getElementDefAttr(i);
+			_elemDefAttr[type.getClientId()] = item.getDefenceAttribute(type);
 		}
 		_enchantOptions = item.getEnchantOptions();
-		
-		_commonSoulCrystalOptions = item.getCommonSoulCrystalOptions();
-		_specialSoulCrystalOption = item.getSpecialSoulCrystalOption();
+		_soulCrystalOptions = item.getSpecialAbilities();
+		_soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
 	}
 	
 	/**
@@ -202,7 +203,7 @@ public class L2WarehouseItem
 	 */
 	public final boolean isWeapon()
 	{
-		return _item instanceof L2Weapon;
+		return (_item instanceof L2Weapon);
 	}
 	
 	/**
@@ -210,7 +211,7 @@ public class L2WarehouseItem
 	 */
 	public final boolean isArmor()
 	{
-		return _item instanceof L2Armor;
+		return (_item instanceof L2Armor);
 	}
 	
 	/**
@@ -218,7 +219,7 @@ public class L2WarehouseItem
 	 */
 	public final boolean isEtcItem()
 	{
-		return _item instanceof L2EtcItem;
+		return (_item instanceof L2EtcItem);
 	}
 	
 	/**
@@ -268,7 +269,7 @@ public class L2WarehouseItem
 		return _mana;
 	}
 	
-	public int getAttackElementType()
+	public byte getAttackElementType()
 	{
 		return _elemAtkType;
 	}
@@ -288,29 +289,19 @@ public class L2WarehouseItem
 		return _enchantOptions;
 	}
 	
+	public Collection<EnsoulOption> getSoulCrystalOptions()
+	{
+		return _soulCrystalOptions;
+	}
+	
+	public Collection<EnsoulOption> getSoulCrystalSpecialOptions()
+	{
+		return _soulCrystalSpecialOptions;
+	}
+	
 	public int getTime()
 	{
 		return _time;
-	}
-	
-	public SoulCrystalOption[] getCommonSoulCrystalOptions()
-	{
-		return _commonSoulCrystalOptions;
-	}
-	
-	public void setSoulCrystalOptions(SoulCrystalOption[] options)
-	{
-		_commonSoulCrystalOptions = options;
-	}
-	
-	public SoulCrystalOption getSpecialSoulCrystalOption()
-	{
-		return _specialSoulCrystalOption;
-	}
-	
-	public void setSpecialSoulCrystalOption(SoulCrystalOption option)
-	{
-		_specialSoulCrystalOption = option;
 	}
 	
 	/**

@@ -39,7 +39,7 @@ public class Book implements IItemHandler
 		final L2PcInstance activeChar = (L2PcInstance) playable;
 		final int itemId = item.getId();
 		
-		final String filename = "html/help/" + itemId + ".htm";
+		final String filename = "data/html/help/" + itemId + ".htm";
 		final String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), filename);
 		
 		if (content == null)
@@ -50,7 +50,7 @@ public class Book implements IItemHandler
 		}
 		else
 		{
-			final NpcHtmlMessage itemReply = new NpcHtmlMessage();
+			final NpcHtmlMessage itemReply = new NpcHtmlMessage(0, item.getId());
 			itemReply.setHtml(content);
 			activeChar.sendPacket(itemReply);
 		}

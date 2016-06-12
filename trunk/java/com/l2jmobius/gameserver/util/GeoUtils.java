@@ -43,7 +43,10 @@ public final class GeoUtils
 		
 		while (iter.next())
 		{
-			prim.addPoint(Color.RED, GeoData.getInstance().getWorldX(iter.x()), GeoData.getInstance().getWorldY(iter.y()), z);
+			final int wx = GeoData.getInstance().getWorldX(iter.x());
+			final int wy = GeoData.getInstance().getWorldY(iter.y());
+			
+			prim.addPoint(Color.RED, wx, wy, z);
 		}
 		player.sendPacket(prim);
 	}
@@ -90,13 +93,18 @@ public final class GeoUtils
 	
 	private static Color getDirectionColor(int x, int y, int z, int nswe)
 	{
-		return GeoData.getInstance().checkNearestNswe(x, y, z, nswe) ? Color.GREEN : Color.RED;
+		if (GeoData.getInstance().checkNearestNswe(x, y, z, nswe))
+		{
+			return Color.GREEN;
+		}
+		return Color.RED;
 	}
 	
 	public static void debugGrid(L2PcInstance player)
 	{
-		final int geoRadius = 10;
-		final int blocksPerPacket = 49;
+		final int geoRadius = 20;
+		final int blocksPerPacket = 40;
+		
 		int iBlock = blocksPerPacket;
 		int iPacket = 0;
 		
@@ -206,17 +214,21 @@ public final class GeoUtils
 				return Cell.NSWE_WEST; // Direction.WEST;
 			}
 		}
-		else if (y > lastY)
-		{
-			return Cell.NSWE_SOUTH; // Direction.SOUTH;
-		}
-		else if (y < lastY)
-		{
-			return Cell.NSWE_NORTH; // Direction.NORTH;
-		}
 		else
+		// unchanged x
 		{
-			throw new RuntimeException();
+			if (y > lastY)
+			{
+				return Cell.NSWE_SOUTH; // Direction.SOUTH;
+			}
+			else if (y < lastY)
+			{
+				return Cell.NSWE_NORTH; // Direction.NORTH;
+			}
+			else
+			{
+				throw new RuntimeException();
+			}
 		}
 	}
 }

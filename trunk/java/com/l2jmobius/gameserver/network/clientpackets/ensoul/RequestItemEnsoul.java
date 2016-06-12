@@ -16,238 +16,285 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.ensoul;
 
-import com.l2jmobius.gameserver.data.xml.impl.SoulCrystalOptionsData;
+import java.util.logging.Logger;
+
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.data.xml.impl.EnsoulData;
+import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
+import com.l2jmobius.gameserver.model.ensoul.EnsoulStone;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.items.type.CrystalType;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
-import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
+import com.l2jmobius.gameserver.model.skills.AbnormalType;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ensoul.ExEnsoulResult;
+import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
 /**
- * @author Mathael
+ * @author UnAfraid
  */
-public class RequestItemEnsoul extends L2GameClientPacket
+public class RequestItemEnsoul implements IClientIncomingPacket
 {
-	private static final String _C__D0_107_REQUESTITEMENSOUL = "[C] D0:107 RequestItemEnsoul";
-	
-	private static final int GEMSTONE_C = 2131;
-	private static final int GEMSTONE_B = 2132;
-	private static final int GEMSTONE_A = 2133;
-	private static final int GEMSTONE_S = 2134;
-	private static final int GEMSTONE_R = 19440;
-	
-	private int _objectId;
-	private final SoulCrystalOption[] _common = new SoulCrystalOption[2]; // client can accept more.
-	private SoulCrystalOption _special; // client can accept more.
+	private static final Logger LOGGER = Logger.getLogger(IClientIncomingPacket.class.getName());
+	private int _itemObjectId;
+	private EnsoulItemOption[] _options;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD(); // weapon object id
-		final int changeCnt = readC();
-		
-		for (int i = 0; i < changeCnt; i++)
+		_itemObjectId = packet.readD();
+		final int options = packet.readC();
+		if ((options > 0) && (options <= 3))
 		{
-			final boolean special = readC() == 2; // Ensoul Type 1 = Common Soul Crystal ; 2 = Special Soul Crystal
-			final int slot = readC(); // [1,2] => Common slots ; [1] => Special slots
-			final int SCObjectId = readD(); // Soul Crystal objectId
-			final int effectId = readD(); // EffectId
-			
-			final SoulCrystalOption sco = SoulCrystalOptionsData.getInstance().getByEffectId(effectId);
-			sco.setSoulCrystalObjectId(SCObjectId);
-			sco.setSpecial(special);
-			sco.setSlot(slot);
-			
-			if (sco.isSpecial())
+			_options = new EnsoulItemOption[options];
+			for (int i = 0; i < options; i++)
 			{
-				_special = sco;
+				final int type = packet.readC();
+				final int position = packet.readC();
+				final int soulCrystalObjectId = packet.readD();
+				final int soulCrystalOption = packet.readD();
+				if ((position > 0) && (position <= 3) && ((type == 1) || (type == 2)))
+				{
+					_options[i] = new EnsoulItemOption(type, position, soulCrystalObjectId, soulCrystalOption);
+				}
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	@Override
+	public void run(L2GameClient client)
+	{
+		final L2PcInstance player = client.getActiveChar();
+		if (player == null)
+		{
+			return;
+		}
+		
+		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
+		{
+			player.sendPacket(SystemMessageId.CANNOT_USE_THE_SOUL_CRYSTAL_SYSTEM_WHILE_USING_THE_PRIVATE_STORE_WORKSHOP);
+			return;
+		}
+		else if (player.hasAbnormalType(AbnormalType.FREEZING))
+		{
+			player.sendPacket(SystemMessageId.CANNOT_USE_THE_SOUL_CRYSTAL_SYSTEM_WHILE_FROZEN);
+		}
+		else if (player.isDead())
+		{
+			player.sendPacket(SystemMessageId.CANNOT_USE_THE_SOUL_CRYSTAL_SYSTEM_WHILE_DEAD);
+			return;
+		}
+		else if ((player.getActiveTradeList() != null) || player.hasItemRequest())
+		{
+			player.sendPacket(SystemMessageId.CANNOT_USE_THE_SOUL_CRYSTAL_SYSTEM_WHILE_TRADING);
+			return;
+		}
+		else if (player.hasAbnormalType(AbnormalType.PARALYZE))
+		{
+			player.sendPacket(SystemMessageId.CANNOT_USE_THE_SOUL_CRYSTAL_SYSTEM_WHILE_PETRIFIED);
+			return;
+		}
+		else if (player.isFishing())
+		{
+			player.sendPacket(SystemMessageId.CANNOT_USE_THE_SOUL_CRYSTAL_SYSTEM_WHILE_FISHING);
+			return;
+		}
+		else if (player.isSitting())
+		{
+			player.sendPacket(SystemMessageId.CANNOT_USE_THE_SOUL_CRYSTAL_SYSTEM_WHILE_SEATED);
+			return;
+		}
+		else if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player))
+		{
+			player.sendPacket(SystemMessageId.CANNOT_USE_THE_SOUL_CRYSTAL_SYSTEM_WHILE_IN_BATTLE);
+			return;
+		}
+		
+		final L2ItemInstance item = player.getInventory().getItemByObjectId(_itemObjectId);
+		if (item == null)
+		{
+			LOGGER.warning("Player: " + player + " attempting to ensoul item without having it!");
+			return;
+		}
+		else if (!item.isEquipable())
+		{
+			LOGGER.warning("Player: " + player + " attempting to ensoul non equippable item: " + item + "!");
+			return;
+		}
+		else if (!item.isWeapon())
+		{
+			LOGGER.warning("Player: " + player + " attempting to ensoul item that's not a weapon: " + item + "!");
+			return;
+		}
+		else if (item.isCommonItem())
+		{
+			LOGGER.warning("Player: " + player + " attempting to ensoul common item: " + item + "!");
+			return;
+		}
+		else if (item.isShadowItem())
+		{
+			LOGGER.warning("Player: " + player + " attempting to ensoul shadow item: " + item + "!");
+			return;
+		}
+		else if (item.isHeroItem())
+		{
+			LOGGER.warning("Player: " + player + " attempting to ensoul hero item: " + item + "!");
+			return;
+		}
+		
+		if ((_options == null) || (_options.length == 0))
+		{
+			LOGGER.warning("Player: " + player + " attempting to ensoul item without any special ability declared!");
+			return;
+		}
+		
+		int success = 0;
+		final InventoryUpdate iu = new InventoryUpdate();
+		for (EnsoulItemOption itemOption : _options)
+		{
+			final int position = itemOption.getPosition() - 1;
+			final L2ItemInstance soulCrystal = player.getInventory().getItemByObjectId(itemOption.getSoulCrystalObjectId());
+			if (soulCrystal == null)
+			{
+				player.sendPacket(SystemMessageId.INVALID_SOUL_CRYSTAL);
+				continue;
+			}
+			
+			final EnsoulStone stone = EnsoulData.getInstance().getStone(soulCrystal.getId());
+			if (stone == null)
+			{
+				continue;
+			}
+			
+			if (!stone.getOptions().contains(itemOption.getSoulCrystalOption()))
+			{
+				LOGGER.warning("Player: " + player + " attempting to ensoul item option that stone doesn't contains!");
+				continue;
+			}
+			
+			final EnsoulOption option = EnsoulData.getInstance().getOption(itemOption.getSoulCrystalOption());
+			if (option == null)
+			{
+				LOGGER.warning("Player: " + player + " attempting to ensoul item option that doesn't exists!");
+				continue;
+			}
+			
+			final ItemHolder fee;
+			if (itemOption.getType() == 1)
+			{
+				fee = EnsoulData.getInstance().getEnsoulFee(item.getItem().getCrystalType(), position);
+				if ((itemOption.getPosition() == 1) || (itemOption.getPosition() == 2))
+				{
+					if (item.getSpecialAbility(position) != null)
+					{
+						LOGGER.warning("Player: " + player + " attempting to ensoul item option add but he's actually trying to replace!");
+						continue;
+					}
+				}
+				else if (itemOption.getPosition() == 3)
+				{
+					if (item.getAdditionalSpecialAbility(position) != null)
+					{
+						LOGGER.warning("Player: " + player + " attempting to ensoul special item option add but he's actually trying to replace!");
+						continue;
+					}
+				}
+			}
+			else if (itemOption.getType() == 2)
+			{
+				fee = EnsoulData.getInstance().getResoulFee(item.getItem().getCrystalType(), position);
+				if ((itemOption.getPosition() == 1) || (itemOption.getPosition() == 2))
+				{
+					if (item.getSpecialAbility(position) == null)
+					{
+						LOGGER.warning("Player: " + player + " attempting to ensoul item option replace but he's actually trying to add!");
+						continue;
+					}
+				}
+				else if (itemOption.getPosition() == 3)
+				{
+					if (item.getAdditionalSpecialAbility(position) == null)
+					{
+						LOGGER.warning("Player: " + player + " attempting to ensoul special item option replace but he's actually trying to add!");
+						continue;
+					}
+				}
 			}
 			else
 			{
-				_common[sco.getSlot() - 1] = sco;
-			}
-		}
-	}
-	
-	@Override
-	protected void runImpl()
-	{
-		// You can add a Soul Crystal effect to weapon via any Blacksmith in any township.
-		// There's no limit for Soul Crystal levels depending on your weapon grade.
-		// To weapon grade C-S80 you can apply 1 common Soul Crystal and 1 special Soul Crystal.
-		// To weapon grade R-R99 you can apply 2 common Soul Crystals and 1 special Soul Crystal.
-		// Source: https://l2wiki.com/Special_Abilities#Special_Abilities
-		
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		
-		final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_objectId);
-		if (targetItem == null)
-		{
-			activeChar.sendPacket(ExEnsoulResult.FAILED);
-			return;
-		}
-		
-		for (SoulCrystalOption sco : _common)
-		{
-			if (sco != null)
-			{
-				final L2ItemInstance soulcrystal = activeChar.getInventory().getItemByObjectId(sco.getSoulCrystalObjectId());
-				final boolean changing = targetItem.getCommonSoulCrystalOptions()[sco.getSlot() - 1] != null;
-				
-				if (!checkAndConsume(activeChar, soulcrystal, targetItem, changing, false))
-				{
-					activeChar.sendPacket(ExEnsoulResult.FAILED);
-					return;
-				}
-				
-				targetItem.addSoulCrystalOption(sco);
-			}
-		}
-		
-		if (_special != null)
-		{
-			final L2ItemInstance specialsoulcrystal = activeChar.getInventory().getItemByObjectId(_special.getSoulCrystalObjectId());
-			final boolean changing = targetItem.getSpecialSoulCrystalOption() != null;
-			if (!checkAndConsume(activeChar, specialsoulcrystal, targetItem, changing, true))
-			{
-				activeChar.sendPacket(ExEnsoulResult.FAILED);
-				return;
+				LOGGER.warning("Player: " + player + " attempting to ensoul item option with unhandled type: " + itemOption.getType() + "!");
+				continue;
 			}
 			
-			targetItem.addSoulCrystalOption(_special);
+			if (fee == null)
+			{
+				LOGGER.warning("Player: " + player + " attempting to ensoul item option that doesn't exists!");
+				continue;
+			}
+			
+			final L2ItemInstance gemStones = player.getInventory().getItemByItemId(fee.getId());
+			if ((gemStones == null) || (gemStones.getCount() < fee.getCount()))
+			{
+				continue;
+			}
+			
+			if (player.destroyItem("EnsoulOption", soulCrystal, 1, player, true) && player.destroyItem("EnsoulOption", gemStones, fee.getCount(), player, true))
+			{
+				item.addSpecialAbility(option, position, stone.getSlotType(), true);
+				success = 1;
+			}
+			
+			iu.addModifiedItem(soulCrystal);
+			iu.addModifiedItem(gemStones);
+			iu.addModifiedItem(item);
 		}
-		
-		activeChar.sendPacket(new ExEnsoulResult(1, targetItem.getCommonSoulCrystalOptions(), targetItem.getSpecialSoulCrystalOption()));
-		
-		final InventoryUpdate iu = new InventoryUpdate();
-		iu.addModifiedItem(targetItem);
-		activeChar.sendPacket(iu);
-		
-		activeChar.sendPacket(new ExUserInfoInvenWeight(activeChar));
+		player.sendInventoryUpdate(iu);
+		if (item.isEquipped())
+		{
+			item.applySpecialAbilities();
+		}
+		player.sendPacket(new ExEnsoulResult(success, item));
 	}
 	
-	private static boolean checkAndConsume(L2PcInstance activeChar, L2ItemInstance soulcrystal, L2ItemInstance targetItem, boolean changing, boolean special)
+	static class EnsoulItemOption
 	{
-		final CrystalType targetItemGrade = targetItem.getItem().getCrystalType();
-		final int gemstoneId = getGemStoneId(targetItemGrade);
-		final long count = getGemstoneCount(targetItemGrade, targetItem.getCurrentCommonSAOptions() == 2, changing, special);
+		private final int _type;
+		private final int _position;
+		private final int _soulCrystalObjectId;
+		private final int _soulCrystalOption;
 		
-		if ((gemstoneId == 0) || (count == 0))
+		EnsoulItemOption(int type, int position, int soulCrystalObjectId, int soulCrystalOption)
 		{
-			return false;
-		}
-		
-		if ((soulcrystal == null) || (activeChar.getInventory().getInventoryItemCount(soulcrystal.getId(), -1) < 1))
-		{
-			return false;
-		}
-		
-		if (activeChar.getInventory().getInventoryItemCount(gemstoneId, -1) < count)
-		{
-			return false;
+			_type = type;
+			_position = position;
+			_soulCrystalObjectId = soulCrystalObjectId;
+			_soulCrystalOption = soulCrystalOption;
 		}
 		
-		if (!activeChar.destroyItem("RequestItemEnsoul", soulcrystal, 1, activeChar, true))
+		public int getType()
 		{
-			return false;
+			return _type;
 		}
 		
-		if (!activeChar.destroyItemByItemId("RequestItemEnsoul", gemstoneId, count, activeChar, true))
+		public int getPosition()
 		{
-			return false;
+			return _position;
 		}
 		
-		return true;
-	}
-	
-	private static long getGemstoneCount(CrystalType itemGrade, boolean price2x, boolean changing, boolean special)
-	{
-		switch (itemGrade)
+		public int getSoulCrystalObjectId()
 		{
-			case C:
-			{
-				return changing ? special ? 30 : 89 : special ? 60 : 177;
-			}
-			case B:
-			{
-				return changing ? special ? 19 : 56 : special ? 38 : 112;
-			}
-			case A:
-			{
-				return changing ? special ? 4 : 12 : special ? 8 : 24;
-			}
-			case S:
-			{
-				return changing ? special ? 4 : 10 : special ? 7 : 19;
-			}
-			case S80:
-			case S84:
-			{
-				return changing ? special ? 8 : 24 : special ? 16 : 48;
-			}
-			case R:
-			{
-				return changing ? special ? 4 : 10 : special ? 7 : price2x ? 40 : 20;
-			}
-			case R95:
-			{
-				return changing ? special ? 6 : 65 : special ? 11 : price2x ? 1249 : 129;
-			}
-			case R99:
-			{
-				return changing ? special ? 8 : 168 : special ? 16 : price2x ? 5266 : 335;
-			}
-			default:
-			{
-				return 0;
-			}
+			return _soulCrystalObjectId;
 		}
-	}
-	
-	private static int getGemStoneId(CrystalType itemGrade)
-	{
-		switch (itemGrade)
+		
+		public int getSoulCrystalOption()
 		{
-			case C:
-			{
-				return GEMSTONE_C;
-			}
-			case B:
-			{
-				return GEMSTONE_B;
-			}
-			case A:
-			{
-				return GEMSTONE_A;
-			}
-			case S:
-			case S80:
-			case S84:
-			{
-				return GEMSTONE_S;
-			}
-			case R:
-			case R95:
-			case R99:
-			{
-				return GEMSTONE_R;
-			}
-			default:
-			{
-				return 0;
-			}
+			return _soulCrystalOption;
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_107_REQUESTITEMENSOUL;
 	}
 }

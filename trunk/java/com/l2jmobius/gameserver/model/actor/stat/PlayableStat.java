@@ -22,15 +22,13 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.playable.OnPlayableExpChanged;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayableExpChanged;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.model.zone.type.L2SwampZone;
+import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
 
 public class PlayableStat extends CharStat
@@ -64,7 +62,7 @@ public class PlayableStat extends CharStat
 		setExp(getExp() + value);
 		
 		byte minimumLevel = 1;
-		if (getActiveChar() instanceof L2PetInstance)
+		if (getActiveChar().isPet())
 		{
 			// get minimum level from L2NpcTemplate
 			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((L2PetInstance) getActiveChar()).getTemplate().getId());
@@ -114,7 +112,7 @@ public class PlayableStat extends CharStat
 		setExp(getExp() - value);
 		
 		byte minimumLevel = 1;
-		if (getActiveChar() instanceof L2PetInstance)
+		if (getActiveChar().isPet())
 		{
 			// get minimum level from L2NpcTemplate
 			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((L2PetInstance) getActiveChar()).getTemplate().getId());
@@ -201,14 +199,14 @@ public class PlayableStat extends CharStat
 			return false;
 		}
 		final long currentSp = getSp();
-		if (currentSp == Long.MAX_VALUE)
+		if (currentSp >= Config.MAX_SP)
 		{
 			return false;
 		}
 		
-		if (currentSp > (Long.MAX_VALUE - value))
+		if (currentSp > (Config.MAX_SP - value))
 		{
-			value = Long.MAX_VALUE - currentSp;
+			value = Config.MAX_SP - currentSp;
 		}
 		
 		setSp(currentSp + value);
@@ -232,34 +230,6 @@ public class PlayableStat extends CharStat
 	}
 	
 	@Override
-	public double getRunSpeed()
-	{
-		if (getActiveChar().isInsideZone(ZoneId.SWAMP))
-		{
-			final L2SwampZone zone = ZoneManager.getInstance().getZone(getActiveChar(), L2SwampZone.class);
-			if (zone != null)
-			{
-				return super.getRunSpeed() * zone.getMoveBonus();
-			}
-		}
-		return super.getRunSpeed();
-	}
-	
-	@Override
-	public double getWalkSpeed()
-	{
-		if (getActiveChar().isInsideZone(ZoneId.SWAMP))
-		{
-			final L2SwampZone zone = ZoneManager.getInstance().getZone(getActiveChar(), L2SwampZone.class);
-			if (zone != null)
-			{
-				return super.getWalkSpeed() * zone.getMoveBonus();
-			}
-		}
-		return super.getWalkSpeed();
-	}
-	
-	@Override
 	public L2Playable getActiveChar()
 	{
 		return (L2Playable) super.getActiveChar();
@@ -268,5 +238,19 @@ public class PlayableStat extends CharStat
 	public int getMaxLevel()
 	{
 		return ExperienceData.getInstance().getMaxLevel();
+	}
+	
+	@Override
+	public int getPhysicalAttackRadius()
+	{
+		final L2Weapon weapon = getActiveChar().getActiveWeaponItem();
+		return weapon != null ? weapon.getBaseAttackRadius() : super.getPhysicalAttackRadius();
+	}
+	
+	@Override
+	public int getPhysicalAttackAngle()
+	{
+		final L2Weapon weapon = getActiveChar().getActiveWeaponItem();
+		return weapon != null ? weapon.getBaseAttackAngle() : super.getPhysicalAttackAngle();
 	}
 }

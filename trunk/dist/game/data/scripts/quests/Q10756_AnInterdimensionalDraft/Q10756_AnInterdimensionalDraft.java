@@ -19,22 +19,20 @@ package quests.Q10756_AnInterdimensionalDraft;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
 
 /**
- * @author Neanrakyr
+ * An Interdimensional Draft (10756)
+ * @author malyelfik
  */
-public class Q10756_AnInterdimensionalDraft extends Quest
+public final class Q10756_AnInterdimensionalDraft extends Quest
 {
-	// NPCs
+	// NPC
 	private static final int PIO = 33963;
-	// Items
-	private static final int UNWORLDLY_WIND = 39493; // Unworldly Wind
-	private static final ItemHolder STEEL_DOOR_GUILD_COIN = new ItemHolder(37045, 8); // Steel Door Guild Coin
-	// Mobs
-	private static final int[] MOBS =
+	// Monsters
+	private static final int[] MONSTERS =
 	{
 		20078, // Whispering Wind
 		21023, // Sobbing Wind
@@ -45,19 +43,22 @@ public class Q10756_AnInterdimensionalDraft extends Quest
 		23415, // Windima Feri
 		23416, // Windima Resh
 	};
+	// Items
+	private static final int UNWORLDLY_WIND = 39493;
 	// Misc
 	private static final int MIN_LEVEL = 20;
-	private static final int MAX_LEVEL = 107;
+	private static final double DROP_RATE = 0.7d;
 	
 	public Q10756_AnInterdimensionalDraft()
 	{
-		super(10756, Q10756_AnInterdimensionalDraft.class.getSimpleName(), "An Interdimensional Draft");
+		super(10756);
 		addStartNpc(PIO);
 		addTalkId(PIO);
+		addKillId(MONSTERS);
+		
+		addCondRace(Race.ERTHEIA, "33963-00.htm");
+		addCondMinLevel(MIN_LEVEL, "33963-00.htm");
 		registerQuestItems(UNWORLDLY_WIND);
-		addKillId(MOBS);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33963-08.html");
-		addCondRace(Race.ERTHEIA, "33963-08.html");
 	}
 	
 	@Override
@@ -69,23 +70,31 @@ public class Q10756_AnInterdimensionalDraft extends Quest
 			return null;
 		}
 		
-		String htmltext = null;
+		String htmltext = event;
 		switch (event)
 		{
-			case "33963-05.htm":
-			{
-				qs.startQuest();
-				htmltext = event;
-				break;
-			}
+			case "33963-01.htm":
 			case "33963-02.htm":
 			case "33963-03.htm":
 			case "33963-04.htm":
-			case "33963-06.html":
+				break;
+			case "33963-05.htm":
 			{
-				htmltext = event;
+				qs.startQuest();
 				break;
 			}
+			case "33963-08.html":
+			{
+				if (qs.isCond(2))
+				{
+					giveStoryQuestReward(player, 8);
+					addExpAndSp(player, 174222, 41);
+					qs.exitQuest(false, true);
+				}
+				break;
+			}
+			default:
+				htmltext = null;
 		}
 		return htmltext;
 	}
@@ -94,36 +103,20 @@ public class Q10756_AnInterdimensionalDraft extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = qs.isCompleted() ? getAlreadyCompletedMsg(player) : getNoQuestMsg(player);
+		String htmltext = getNoQuestMsg(player);
 		
-		if (qs.isCreated())
+		switch (qs.getState())
 		{
-			htmltext = "33963-01.htm";
+			case State.CREATED:
+				htmltext = "33963-01.htm";
+				break;
+			case State.STARTED:
+				htmltext = (qs.isCond(1)) ? "33963-06.html" : "33963-07.html";
+				break;
+			case State.COMPLETED:
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
 		}
-		else if (qs.isStarted())
-		{
-			switch (qs.getCond())
-			{
-				case 1:
-				{
-					htmltext = "33963-05.htm";
-					break;
-				}
-				case 2:
-				{
-					if (qs.isCond(2) && (getQuestItemsCount(player, UNWORLDLY_WIND) >= 30))
-					{
-						takeItems(player, UNWORLDLY_WIND, 30);
-						giveItems(player, STEEL_DOOR_GUILD_COIN);
-						addExpAndSp(player, 174222, 41);
-						qs.exitQuest(false, true);
-						htmltext = "33963-07.html";
-					}
-					break;
-				}
-			}
-		}
-		
 		return htmltext;
 	}
 	
@@ -131,9 +124,9 @@ public class Q10756_AnInterdimensionalDraft extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, npc, UNWORLDLY_WIND, 1, 30, 1.0, true))
+		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, UNWORLDLY_WIND, 1, 30, DROP_RATE, true))
 		{
-			qs.setCond(2);
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

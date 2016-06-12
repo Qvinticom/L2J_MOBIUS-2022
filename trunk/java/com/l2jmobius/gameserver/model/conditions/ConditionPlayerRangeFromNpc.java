@@ -16,10 +16,12 @@
  */
 package com.l2jmobius.gameserver.model.conditions;
 
+import com.l2jmobius.commons.util.CommonUtil;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Exist NPC condition.
@@ -47,9 +49,9 @@ public class ConditionPlayerRangeFromNpc extends Condition
 		boolean existNpc = false;
 		if ((_npcIds != null) && (_npcIds.length > 0) && (_radius > 0))
 		{
-			for (L2Character target : effector.getKnownList().getKnownCharactersInRadius(_radius))
+			for (L2Npc target : L2World.getInstance().getVisibleObjects(effector, L2Npc.class, _radius))
 			{
-				if (target.isNpc() && Util.contains(_npcIds, target.getId()))
+				if (CommonUtil.contains(_npcIds, target.getId()))
 				{
 					existNpc = true;
 					break;

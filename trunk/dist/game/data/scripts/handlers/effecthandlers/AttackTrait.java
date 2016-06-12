@@ -21,10 +21,11 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.stat.CharStat;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.TraitType;
 
 /**
@@ -35,10 +36,8 @@ public final class AttackTrait extends AbstractEffect
 {
 	private final Map<TraitType, Float> _attackTraits = new HashMap<>();
 	
-	public AttackTrait(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public AttackTrait(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		if (params.isEmpty())
 		{
 			_log.warning(getClass().getSimpleName() + ": this effect must have parameters!");
@@ -66,9 +65,9 @@ public final class AttackTrait extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		final CharStat charStat = info.getEffected().getStat();
+		final CharStat charStat = effected.getStat();
 		synchronized (charStat.getAttackTraits())
 		{
 			for (Entry<TraitType, Float> trait : _attackTraits.entrySet())

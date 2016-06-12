@@ -16,18 +16,19 @@
  */
 package com.l2jmobius.gameserver.model.entity;
 
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.NpcData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
@@ -37,6 +38,7 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2BlockInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -50,7 +52,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameEnd;
 import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameExtendedChangePoints;
 import com.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.Rnd;
 
 /**
  * @author BiggBoss
@@ -69,7 +70,7 @@ public final class BlockCheckerEngine
 	// Current used arena
 	protected int _arena = -1;
 	// All blocks
-	protected List<L2Spawn> _spawns = new CopyOnWriteArrayList<>();
+	protected Set<L2Spawn> _spawns = ConcurrentHashMap.newKeySet();
 	// Sets if the red team won the event at the end of this (used for packets)
 	protected boolean _isRedWinner;
 	// Time when the event starts. Used on packet sending
@@ -118,7 +119,7 @@ public final class BlockCheckerEngine
 	// Common z coordinate
 	private static final int _zCoord = -2405;
 	// List of dropped items in event (for later deletion)
-	protected List<L2ItemInstance> _drops = new CopyOnWriteArrayList<>();
+	protected Set<L2ItemInstance> _drops = ConcurrentHashMap.newKeySet();
 	// Default arena
 	private static final byte DEFAULT_ARENA = -1;
 	// Event is started
@@ -309,7 +310,7 @@ public final class BlockCheckerEngine
 				
 				if (Config.DEBUG)
 				{
-					_log.config("Handys Block Checker Event at arena " + _arena + " ended due lack of players!");
+					_log.info("Handys Block Checker Event at arena " + _arena + " ended due lack of players!");
 				}
 			}
 		}
@@ -327,7 +328,7 @@ public final class BlockCheckerEngine
 		// In event used skills
 		private final Skill _freeze, _transformationRed, _transformationBlue;
 		// Common and unparametizer packet
-		private final ExCubeGameCloseUI _closeUserInterface = new ExCubeGameCloseUI();
+		private final ExCubeGameCloseUI _closeUserInterface = ExCubeGameCloseUI.STATIC_PACKET;
 		
 		public StartEvent()
 		{
@@ -460,32 +461,31 @@ public final class BlockCheckerEngine
 			
 			switch (_round)
 			{
-				case 1: // Schedule second spawn round
-				{
+				case 1:
+					// Schedule second spawn round
 					_task = ThreadPoolManager.getInstance().scheduleGeneral(new SpawnRound(20, 2), 60000);
 					break;
-				}
-				case 2: // Schedule third spawn round
-				{
+				case 2:
+					// Schedule third spawn round
 					_task = ThreadPoolManager.getInstance().scheduleGeneral(new SpawnRound(14, 3), 60000);
 					break;
-				}
-				case 3: // Schedule Event End Count Down
-				{
+				case 3:
+					// Schedule Event End Count Down
 					_task = ThreadPoolManager.getInstance().scheduleGeneral(new EndEvent(), 180000);
 					break;
-				}
 			}
 			// random % 2, if == 0 will spawn a red block
 			// if != 0, will spawn a blue block
 			byte random = 2;
+			// common template
+			final L2NpcTemplate template = NpcData.getInstance().getTemplate(18672);
 			// Spawn blocks
 			try
 			{
 				// Creates 50 new blocks
 				for (int i = 0; i < _numOfBoxes; i++)
 				{
-					final L2Spawn spawn = new L2Spawn(18672);
+					final L2Spawn spawn = new L2Spawn(template);
 					spawn.setX(_arenaCoordinates[_arena][4] + Rnd.get(-400, 400));
 					spawn.setY(_arenaCoordinates[_arena][5] + Rnd.get(-400, 400));
 					spawn.setZ(_zCoord);
@@ -496,7 +496,14 @@ public final class BlockCheckerEngine
 					spawn.init();
 					final L2BlockInstance block = (L2BlockInstance) spawn.getLastSpawn();
 					// switch color
-					block.setRed((random % 2) == 0);
+					if ((random % 2) == 0)
+					{
+						block.setRed(true);
+					}
+					else
+					{
+						block.setRed(false);
+					}
 					
 					block.disableCoreAI(true);
 					_spawns.add(spawn);
@@ -535,7 +542,9 @@ public final class BlockCheckerEngine
 			_redPoints += _numOfBoxes / 2;
 			_bluePoints += _numOfBoxes / 2;
 			
-			getHolder().broadCastPacketToTeam(new ExCubeGameChangePoints((int) ((getStarterTime() - System.currentTimeMillis()) / 1000), getBluePoints(), getRedPoints()));
+			final int timeLeft = (int) ((getStarterTime() - System.currentTimeMillis()) / 1000);
+			final ExCubeGameChangePoints changePoints = new ExCubeGameChangePoints(timeLeft, getBluePoints(), getRedPoints());
+			getHolder().broadCastPacketToTeam(changePoints);
 		}
 	}
 	
@@ -564,7 +573,7 @@ public final class BlockCheckerEngine
 	
 	/*
 	 * private class CountDown implements Runnable {
-	 * @Override public void run() { _holder.broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.BLOCK_CHECKER_ENDS_5)); ThreadPoolManager.getInstance().scheduleGeneral(new EndEvent(), 5000); } }
+	 * @Override public void run() { _holder.broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.BLOCK_CHECKER_WILL_END_IN_5_SECONDS)); ThreadPoolManager.getInstance().scheduleGeneral(new EndEvent(), 5000); } }
 	 */
 	
 	/**
@@ -591,8 +600,14 @@ public final class BlockCheckerEngine
 			
 			for (L2ItemInstance item : _drops)
 			{
+				// npe
+				if (item == null)
+				{
+					continue;
+				}
+				
 				// a player has it, it will be deleted later
-				if (!item.isVisible() || (item.getOwnerId() != 0))
+				if (!item.isSpawned() || (item.getOwnerId() != 0))
 				{
 					continue;
 				}
@@ -639,7 +654,7 @@ public final class BlockCheckerEngine
 		}
 		
 		/**
-		 * Reward the specified team as a winner team 1) Higher score - 8 extra 2) Higher score - 5 extra
+		 * Reward the speicifed team as a winner team 1) Higher score - 8 extra 2) Higher score - 5 extra
 		 * @param isRed
 		 */
 		private void rewardAsWinner(boolean isRed)
@@ -701,7 +716,8 @@ public final class BlockCheckerEngine
 		 */
 		private void rewardAsLooser(boolean isRed)
 		{
-			for (Entry<L2PcInstance, Integer> entry : (isRed ? _redTeamPoints : _blueTeamPoints).entrySet())
+			final Map<L2PcInstance, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
+			for (Entry<L2PcInstance, Integer> entry : tempPoints.entrySet())
 			{
 				final L2PcInstance player = entry.getKey();
 				if ((player != null) && (entry.getValue() >= 10))
@@ -712,7 +728,7 @@ public final class BlockCheckerEngine
 		}
 		
 		/**
-		 * Teleport players back, give status back and send final packet
+		 * Telport players back, give status back and send final packet
 		 */
 		private void setPlayersBack()
 		{
@@ -734,11 +750,13 @@ public final class BlockCheckerEngine
 				final PcInventory inv = player.getInventory();
 				if (inv.getItemByItemId(13787) != null)
 				{
-					inv.destroyItemByItemId("Handys Block Checker", 13787, inv.getInventoryItemCount(13787, 0), player, player);
+					final long count = inv.getInventoryItemCount(13787, 0);
+					inv.destroyItemByItemId("Handys Block Checker", 13787, count, player, player);
 				}
 				if (inv.getItemByItemId(13788) != null)
 				{
-					inv.destroyItemByItemId("Handys Block Checker", 13788, inv.getInventoryItemCount(13788, 0), player, player);
+					final long count = inv.getInventoryItemCount(13788, 0);
+					inv.destroyItemByItemId("Handys Block Checker", 13788, count, player, player);
 				}
 				broadcastRelationChanged(player);
 				// Teleport Back

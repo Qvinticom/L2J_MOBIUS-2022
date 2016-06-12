@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExRotation;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.util.Util;
 
 import quests.Q10325_SearchingForNewPower.Q10325_SearchingForNewPower;
@@ -34,16 +33,15 @@ import quests.Q10325_SearchingForNewPower.Q10325_SearchingForNewPower;
  * Respect Your Elders (10326)
  * @author Gladicek, St3eT, Neanrakyr
  */
-public class Q10326_RespectYourElders extends Quest
+public final class Q10326_RespectYourElders extends Quest
 {
-	// Npcs
+	// NPCs
 	private static final int GALLINT = 32980;
 	private static final int PANTHEON = 32972;
 	private static final int HANDERMONKEY = 32971;
-	// Misc
-	private static final int MAX_LEVEL = 20;
+	// Locations
 	private static final Location HANDERMONKEY_SPAWN = new Location(-116617, 255497, -1432);
-	private static final Location[] HANDERMONKEY_LOC =
+	private final static Location[] HANDERMONKEY_LOC =
 	{
 		new Location(-116560, 255951, -1457),
 		new Location(-116688, 256597, -1472),
@@ -55,16 +53,18 @@ public class Q10326_RespectYourElders extends Quest
 		new Location(-114637, 257349, -1142),
 		new Location(-114414, 257318, -1136),
 	};
+	// Misc
+	private static final int MAX_LEVEL = 20;
 	
 	public Q10326_RespectYourElders()
 	{
-		super(10326, Q10326_RespectYourElders.class.getSimpleName(), "Respect Your Elders");
+		super(10326);
 		addStartNpc(GALLINT);
 		addTalkId(GALLINT, PANTHEON);
 		addSpawnId(HANDERMONKEY);
 		addMoveFinishedId(HANDERMONKEY);
-		addCondMaxLevel(MAX_LEVEL, "32980-05.html");
-		addCondCompletedQuest(Q10325_SearchingForNewPower.class.getSimpleName(), "32980-06.htm");
+		addCondMaxLevel(MAX_LEVEL, "32980-04.htm");
+		addCondCompletedQuest(Q10325_SearchingForNewPower.class.getSimpleName(), "32980-05.htm");
 	}
 	
 	@Override
@@ -87,7 +87,7 @@ public class Q10326_RespectYourElders extends Quest
 				startQuestTimer("MOVE_DELAY", 500, handerMonkey, player);
 				break;
 			}
-			case "32972-02.html":
+			case "32972-02.htm":
 			{
 				if (qs.isStarted())
 				{
@@ -116,7 +116,7 @@ public class Q10326_RespectYourElders extends Quest
 						{
 							if (loc_index == 9)
 							{
-								npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.GO_GO_GO_CREEK));
+								npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.GO_GO_GO_CREEK);
 								startQuestTimer("DELETE_NPC", 2000, npc, owner);
 								break;
 							}
@@ -139,7 +139,7 @@ public class Q10326_RespectYourElders extends Quest
 						
 						if (getRandom(100) < 10)
 						{
-							npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.COME_ON_CREEK));
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.COME_ON_CREEK);
 						}
 					}
 				}
@@ -171,7 +171,7 @@ public class Q10326_RespectYourElders extends Quest
 	@Override
 	public void onMoveFinished(L2Npc npc)
 	{
-		npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.COME_ON_CREEK));
+		npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.COME_ON_CREEK);
 		final L2PcInstance owner = npc.getVariables().getObject("OWNER", L2PcInstance.class);
 		
 		if (owner != null)
@@ -192,17 +192,21 @@ public class Q10326_RespectYourElders extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = npc.getId() == GALLINT ? "32980-01.htm" : getNoQuestMsg(player);
+				if (npc.getId() == GALLINT)
+				{
+					htmltext = "32980-01.htm";
+					break;
+				}
 				break;
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == GALLINT ? "32980-04.html" : "32972-01.html";
+				htmltext = npc.getId() == GALLINT ? "32980-03.htm" : "32972-01.htm";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == GALLINT ? "32980-05.html" : "32972-03.html";
+				htmltext = npc.getId() == GALLINT ? "32980-04.htm" : "32972-03.htm";
 				break;
 			}
 		}

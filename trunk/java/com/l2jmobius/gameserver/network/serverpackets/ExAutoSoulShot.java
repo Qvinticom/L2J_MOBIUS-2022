@@ -16,34 +16,35 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-/**
- * @author Mobius
- */
-public class ExAutoSoulShot extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
+public class ExAutoSoulShot implements IClientOutgoingPacket
 {
 	private final int _itemId;
-	private final int _enabled;
-	private final int _type; // 0 SS, 1 SPS, 2 Beast SS, 3 Beast SPS
+	private final boolean _enable;
+	private final int _type;
 	
 	/**
 	 * @param itemId
-	 * @param enabled
+	 * @param enable
 	 * @param type
 	 */
-	public ExAutoSoulShot(int itemId, int enabled, int type)
+	public ExAutoSoulShot(int itemId, boolean enable, int type)
 	{
 		_itemId = itemId;
-		_enabled = enabled;
+		_enable = enable;
 		_type = type;
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x0C);
-		writeD(_itemId);
-		writeD(_enabled);
-		writeD(_type);
+		OutgoingPackets.EX_AUTO_SOUL_SHOT.writeId(packet);
+		
+		packet.writeD(_itemId);
+		packet.writeD(_enable ? 0x01 : 0x00);
+		packet.writeD(_type);
+		return true;
 	}
 }

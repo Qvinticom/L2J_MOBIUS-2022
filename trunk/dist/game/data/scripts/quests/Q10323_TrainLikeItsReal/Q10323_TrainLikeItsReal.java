@@ -20,7 +20,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -35,31 +34,30 @@ import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 import quests.Q10322_SearchingForTheMysteriousPower.Q10322_SearchingForTheMysteriousPower;
 
 /**
- * @author Sdw, Gladicek, gyo
+ * Train Like Its Real (10323)
+ * @author Sdw, Gladicek
  */
-public class Q10323_TrainLikeItsReal extends Quest
+public final class Q10323_TrainLikeItsReal extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int EVAIN = 33464;
 	private static final int HOLDEN = 33194;
 	private static final int SHANNON = 32974;
-	// Mobs
 	private static final int TRAINING_GOLEM = 27532;
-	// Misc
-	private static final int TRAINING_GOLEM_REQUIRED = 1;
-	private static final int MAX_LEVEL = 20;
 	// Items
 	private static final ItemHolder SPIRITSHOTS = new ItemHolder(2509, 500);
 	private static final ItemHolder SOULSHOTS = new ItemHolder(1835, 500);
+	// Misc
+	private static final int MAX_LEVEL = 20;
 	
 	public Q10323_TrainLikeItsReal()
 	{
-		super(10323, Q10323_TrainLikeItsReal.class.getSimpleName(), "Train Like It's Real");
+		super(10323);
 		addStartNpc(EVAIN);
-		addTalkId(EVAIN, HOLDEN, SHANNON);
+		addTalkId(HOLDEN, EVAIN, SHANNON);
 		addKillId(TRAINING_GOLEM);
-		addCondMaxLevel(MAX_LEVEL, "33464-07.html");
-		addCondCompletedQuest(Q10322_SearchingForTheMysteriousPower.class.getSimpleName(), "33464-07.html");
+		addCondMaxLevel(MAX_LEVEL, "33464-05.htm");
+		addCondCompletedQuest(Q10322_SearchingForTheMysteriousPower.class.getSimpleName(), "33464-05.htm");
 	}
 	
 	@Override
@@ -76,19 +74,9 @@ public class Q10323_TrainLikeItsReal extends Quest
 		switch (event)
 		{
 			case "33464-02.htm":
-			case "33194-02.html":
+			case "33194-02.htm":
 			{
 				htmltext = event;
-				break;
-			}
-			case "showscreen_spiritshot":
-			{
-				showOnScreenMsg(player, NpcStringId.AUTOMATE_SPIRITSHOT_AS_SHOWN_IN_THE_TUTORIAL, ExShowScreenMessage.TOP_CENTER, 4500);
-				break;
-			}
-			case "showscreen_soulshot":
-			{
-				showOnScreenMsg(player, NpcStringId.AUTOMATE_SOULSHOT_AS_SHOWN_IN_THE_TUTORIAL, ExShowScreenMessage.TOP_CENTER, 4500);
 				break;
 			}
 			case "33464-03.htm":
@@ -97,46 +85,40 @@ public class Q10323_TrainLikeItsReal extends Quest
 				htmltext = event;
 				break;
 			}
-			case "33194-03.html":
+			case "33194-03.htm":
 			{
 				if (qs.isCond(1))
 				{
-					// show NpcLog dialog trick
-					qs.setCond(3);
 					qs.setCond(2, true);
 					htmltext = event;
 				}
 				break;
 			}
-			case "33194-07.html":
+			case "33194-05.htm":
 			{
 				if (qs.isCond(3))
 				{
 					qs.setMemoState(0);
-					giveItems(player, SOULSHOTS);
-					showOnScreenMsg(player, NpcStringId.SOULSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
-					startQuestTimer("showscreen_soulshot", 4500, npc, player);
 					player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_003_bullet_01.htm", TutorialShowHtml.LARGE_WINDOW));
-					qs.setCond(4, true);
+					if (player.isMageClass())
+					{
+						giveItems(player, SPIRITSHOTS);
+						showOnScreenMsg(player, NpcStringId.SPIRITSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
+						getTimers().addTimer("SHOW_SCREENMSG", 4500, evnt -> showOnScreenMsg(player, NpcStringId.AUTOMATE_SPIRITSHOT_AS_SHOWN_IN_THE_TUTORIAL, ExShowScreenMessage.TOP_CENTER, 4500));
+						qs.setCond(5, true);
+					}
+					else
+					{
+						giveItems(player, SOULSHOTS);
+						showOnScreenMsg(player, NpcStringId.SOULSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
+						getTimers().addTimer("SHOW_SCREENMSG", 4500, evnt -> showOnScreenMsg(player, NpcStringId.AUTOMATE_SOULSHOT_AS_SHOWN_IN_THE_TUTORIAL, ExShowScreenMessage.TOP_CENTER, 4500));
+						qs.setCond(4, true);
+					}
 					htmltext = event;
 				}
 				break;
 			}
-			case "33194-08.html":
-			{
-				if (qs.isCond(3))
-				{
-					qs.setMemoState(0);
-					giveItems(player, SPIRITSHOTS);
-					showOnScreenMsg(player, NpcStringId.SPIRITSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
-					startQuestTimer("showscreen_spiritshot", 4500, npc, player);
-					player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_003_bullet_01.htm", TutorialShowHtml.LARGE_WINDOW));
-					qs.setCond(5, true);
-					htmltext = event;
-				}
-				break;
-			}
-			case "33194-14.html":
+			case "33194-08.htm":
 			{
 				if (qs.isCond(8))
 				{
@@ -145,7 +127,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 				}
 				break;
 			}
-			case "32974-02.html":
+			case "32974-02.htm":
 			{
 				if (qs.isCond(9))
 				{
@@ -157,12 +139,11 @@ public class Q10323_TrainLikeItsReal extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
@@ -171,23 +152,13 @@ public class Q10323_TrainLikeItsReal extends Quest
 		{
 			case State.CREATED:
 			{
-				switch (npc.getId())
+				if (npc.getId() == EVAIN)
 				{
-					case EVAIN:
-					{
-						htmltext = "33464-01.htm";
-						break;
-					}
-					case SHANNON:
-					{
-						htmltext = "32974-03.html";
-						break;
-					}
-					case HOLDEN:
-					{
-						htmltext = getNoQuestMsg(player);
-						break;
-					}
+					htmltext = "33464-01.htm";
+				}
+				else if (npc.getId() == SHANNON)
+				{
+					htmltext = "32974-03.htm";
 				}
 				break;
 			}
@@ -195,25 +166,7 @@ public class Q10323_TrainLikeItsReal extends Quest
 			{
 				if (npc.getId() == EVAIN)
 				{
-					switch (qs.getCond())
-					{
-						case 1:
-						{
-							htmltext = "33464-04.html";
-							break;
-						}
-						case 9:
-						{
-							htmltext = "33464-05.html";
-							break;
-						}
-						default:
-						{
-							htmltext = getNoQuestMsg(player);
-							break;
-						}
-					}
-					break;
+					htmltext = "33464-03.htm";
 				}
 				else if (npc.getId() == HOLDEN)
 				{
@@ -221,91 +174,54 @@ public class Q10323_TrainLikeItsReal extends Quest
 					{
 						case 1:
 						{
-							htmltext = "33194-01.html";
-							break;
-						}
-						case 2:
-						{
-							htmltext = "33194-04.html";
+							htmltext = "33194-01.htm";
 							break;
 						}
 						case 3:
 						{
-							// Orc Mystic will get Soulshots
-							if (!player.isMageClass() || (player.getRace() == Race.ORC))
-							{
-								htmltext = "33194-05.html";
-							}
-							else
-							{
-								htmltext = "33194-06.html";
-							}
+							htmltext = "33194-04.htm";
 							break;
 						}
 						case 4:
 						{
-							htmltext = "33194-09.html";
-							qs.setCond(6, true);
+							if (!isSimulated)
+							{
+								qs.setCond(6, true);
+							}
+							htmltext = "33194-06.htm";
 							break;
 						}
 						case 5:
 						{
-							htmltext = "33194-10.html";
-							qs.setCond(7, true);
-							break;
-						}
-						case 6:
-						{
-							htmltext = "33194-11.html";
-							break;
-						}
-						case 7:
-						{
-							// same text as 33194-10.html
-							htmltext = "33194-12.html";
+							if (!isSimulated)
+							{
+								qs.setCond(7, true);
+							}
+							htmltext = "33194-06.htm";
 							break;
 						}
 						case 8:
 						{
-							htmltext = "33194-13.html";
-							break;
-						}
-						case 9:
-						{
-							htmltext = "33194-15.html";
+							htmltext = "33194-07.htm";
 							break;
 						}
 					}
-					break;
 				}
-				else if (npc.getId() == SHANNON)
+				else if ((npc.getId() == SHANNON) && qs.isCond(9))
 				{
-					if (qs.isCond(9))
-					{
-						htmltext = "32974-01.html";
-					}
-					break;
+					htmltext = "32974-01.htm";
 				}
+				break;
 			}
 			case State.COMPLETED:
 			{
-				switch (npc.getId())
+				if (npc.getId() == EVAIN)
 				{
-					case EVAIN:
-					{
-						htmltext = "33464-06.html";
-						break;
-					}
-					case SHANNON:
-					{
-						htmltext = "32974-05.html";
-						break;
-					}
-					case HOLDEN:
-					{
-						htmltext = getNoQuestMsg(player);
-						break;
-					}
+					htmltext = "33464-04.htm";
+				}
+				else if (npc.getId() == SHANNON)
+				{
+					htmltext = "32974-05.htm";
 				}
 				break;
 			}
@@ -320,37 +236,17 @@ public class Q10323_TrainLikeItsReal extends Quest
 		
 		if ((qs != null) && qs.isStarted())
 		{
-			int killedGolem = qs.getMemoState();
-			
 			if (qs.isCond(2))
 			{
-				killedGolem++;
-				sendNpcLogList(killer);
-				
-				if (killedGolem >= TRAINING_GOLEM_REQUIRED)
-				{
-					qs.setCond(3, true);
-				}
-				else
-				{
-					qs.setMemoState(killedGolem);
-					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
+				qs.setMemoState(1);
+				qs.setCond(3, true);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			else if (qs.isCond(6) || qs.isCond(7))
 			{
-				killedGolem++;
-				sendNpcLogList(killer);
-				
-				if (killedGolem >= TRAINING_GOLEM_REQUIRED)
-				{
-					qs.setCond(8, true);
-				}
-				else
-				{
-					qs.setMemoState(killedGolem);
-					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
+				qs.setMemoState(1);
+				qs.setCond(8, true);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -360,16 +256,17 @@ public class Q10323_TrainLikeItsReal extends Quest
 	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
 	{
 		final QuestState qs = getQuestState(activeChar, false);
-		final Set<NpcLogListHolder> npcLogList = new HashSet<>(1);
-		
-		if ((qs != null) && qs.isCond(2))
+		if (qs != null)
 		{
-			npcLogList.add(new NpcLogListHolder(NpcStringId.ELIMINATE_THE_TRAINING_GOLEM, qs.getMemoState()));
-			return npcLogList;
-		}
-		else if ((qs != null) && (qs.isCond(6) || qs.isCond(7)))
-		{
-			npcLogList.add(new NpcLogListHolder(NpcStringId.ELIMINATE_THE_TRAINING_GOLEM2, qs.getMemoState()));
+			final Set<NpcLogListHolder> npcLogList = new HashSet<>(1);
+			if (qs.isCond(2))
+			{
+				npcLogList.add(new NpcLogListHolder(NpcStringId.ELIMINATE_THE_TRAINING_GOLEM, qs.getMemoState()));
+			}
+			else if (qs.isCond(6) || qs.isCond(7))
+			{
+				npcLogList.add(new NpcLogListHolder(NpcStringId.ELIMINATE_THE_TRAINING_GOLEM2, qs.getMemoState()));
+			}
 			return npcLogList;
 		}
 		return super.getNpcLogList(activeChar);

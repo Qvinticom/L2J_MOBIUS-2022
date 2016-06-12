@@ -16,36 +16,33 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.primeshop;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRProductInfo extends L2GameClientPacket
+public final class RequestBRProductInfo implements IClientIncomingPacket
 {
 	private int _brId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_brId = readD();
+		_brId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player != null)
 		{
 			PrimeShopData.getInstance().showProductInfo(player, _brId);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
 	}
 }

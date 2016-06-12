@@ -16,47 +16,48 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * Format: chdd d: Arena d: Team
  * @author mrTJO
  */
-public final class RequestExCubeGameChangeTeam extends L2GameClientPacket
+public final class RequestExCubeGameChangeTeam implements IClientIncomingPacket
 {
-	private static final String _C__D0_5A_REQUESTEXCUBEGAMECHANGETEAM = "[C] D0:5A RequestExCubeGameChangeTeam";
-	
 	private int _arena;
 	private int _team;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		// client sends -1,0,1,2 for arena parameter
-		_arena = readD() + 1;
-		_team = readD();
+		_arena = packet.readD() + 1;
+		_team = packet.readD();
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
 		// do not remove players after start
 		if (HandysBlockCheckerManager.getInstance().arenaIsBeingUsed(_arena))
 		{
 			return;
 		}
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		
 		switch (_team)
 		{
 			case 0:
-			case 1: // Change Player Team
-			{
+			case 1:
+				// Change Player Team
 				HandysBlockCheckerManager.getInstance().changePlayerToTeam(player, _arena, _team);
 				break;
-			}
-			case -1: // Remove Player (me)
+			case -1:
+			// Remove Player (me)
 			{
 				final int team = HandysBlockCheckerManager.getInstance().getHolder(_arena).getPlayerTeam(player);
 				// client sends two times this packet if click on exit
@@ -68,16 +69,8 @@ public final class RequestExCubeGameChangeTeam extends L2GameClientPacket
 				break;
 			}
 			default:
-			{
 				_log.warning("Wrong Cube Game Team ID: " + _team);
 				break;
-			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_5A_REQUESTEXCUBEGAMECHANGETEAM;
 	}
 }

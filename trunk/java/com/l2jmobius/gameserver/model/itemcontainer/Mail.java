@@ -23,7 +23,6 @@ import java.util.logging.Level;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.enums.ItemLocation;
-import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
@@ -68,13 +67,8 @@ public class Mail extends ItemContainer
 	public void setNewMessageId(int messageId)
 	{
 		_messageId = messageId;
-		for (L2ItemInstance item : _items)
+		for (L2ItemInstance item : _items.values())
 		{
-			if (item == null)
-			{
-				continue;
-			}
-			
 			item.setItemLocation(getBaseLocation(), messageId);
 		}
 		
@@ -83,19 +77,15 @@ public class Mail extends ItemContainer
 	
 	public void returnToWh(ItemContainer wh)
 	{
-		for (L2ItemInstance item : _items)
+		for (L2ItemInstance item : _items.values())
 		{
-			if (item == null)
+			if (wh == null)
 			{
-				continue;
-			}
-			if (wh != null)
-			{
-				transferItem("Expire", item.getObjectId(), item.getCount(), wh, null, null);
+				item.setItemLocation(ItemLocation.WAREHOUSE);
 			}
 			else
 			{
-				item.setItemLocation(ItemLocation.WAREHOUSE);
+				transferItem("Expire", item.getObjectId(), item.getCount(), wh, null, null);
 			}
 		}
 	}
@@ -107,32 +97,32 @@ public class Mail extends ItemContainer
 		item.setItemLocation(getBaseLocation(), _messageId);
 	}
 	
+	/*
+	 * Allow saving of the items without owner
+	 */
 	@Override
 	public void updateDatabase()
 	{
-		_items.forEach(i -> i.updateDatabase(true));
+		for (L2ItemInstance item : _items.values())
+		{
+			item.updateDatabase(true);
+		}
 	}
 	
 	@Override
 	public void restore()
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time FROM items WHERE owner_id=? AND loc=? AND loc_data=?"))
+			PreparedStatement statement = con.prepareStatement("SELECT * FROM items WHERE owner_id=? AND loc=? AND loc_data=?"))
 		{
-			ps.setInt(1, getOwnerId());
-			ps.setString(2, getBaseLocation().name());
-			ps.setInt(3, getMessageId());
-			try (ResultSet inv = ps.executeQuery())
+			statement.setInt(1, getOwnerId());
+			statement.setString(2, getBaseLocation().name());
+			statement.setInt(3, getMessageId());
+			try (ResultSet inv = statement.executeQuery())
 			{
-				L2ItemInstance item;
 				while (inv.next())
 				{
-					item = L2ItemInstance.restoreFromDb(getOwnerId(), inv);
-					if (item == null)
-					{
-						continue;
-					}
-					
+					final L2ItemInstance item = new L2ItemInstance(inv);
 					L2World.getInstance().storeObject(item);
 					
 					// If stackable item is found just add to current quantity
@@ -154,21 +144,21 @@ public class Mail extends ItemContainer
 	}
 	
 	@Override
-	public int getOwnerId()
+	public void deleteMe()
 	{
-		return _ownerId;
+		for (L2ItemInstance item : _items.values())
+		{
+			item.updateDatabase(true);
+			item.deleteMe();
+			L2World.getInstance().removeObject(item);
+		}
+		
+		_items.clear();
 	}
 	
 	@Override
-	public void deleteMe()
+	public int getOwnerId()
 	{
-		_items.forEach(i ->
-		{
-			i.updateDatabase(true);
-			i.deleteMe();
-			L2World.getInstance().removeObject(i);
-			IdFactory.getInstance().releaseId(i.getObjectId());
-		});
-		_items.clear();
+		return _ownerId;
 	}
 }

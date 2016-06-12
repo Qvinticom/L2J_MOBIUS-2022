@@ -16,11 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
  * Trigger packet
  * @author KenM
  */
-public class ExRequestHackShield extends L2GameServerPacket
+public class ExRequestHackShield implements IClientOutgoingPacket
 {
 	public static final ExRequestHackShield STATIC_PACKET = new ExRequestHackShield();
 	
@@ -29,9 +32,10 @@ public class ExRequestHackShield extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x4A);
+		OutgoingPackets.EX_REQUEST_HACK_SHIELD.writeId(packet);
+		
+		return true;
 	}
 }

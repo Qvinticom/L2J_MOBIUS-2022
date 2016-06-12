@@ -16,10 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public abstract class AbstractNpcInfo extends L2GameServerPacket
+public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 {
 	protected int _x, _y, _z, _heading;
 	protected int _idTemplate;
@@ -43,7 +45,7 @@ public abstract class AbstractNpcInfo extends L2GameServerPacket
 		_z = cha.getZ();
 		_heading = cha.getHeading();
 		_mAtkSpd = cha.getMAtkSpd();
-		_pAtkSpd = (int) cha.getPAtkSpd();
+		_pAtkSpd = cha.getPAtkSpd();
 		_moveMultiplier = cha.getMovementSpeedMultiplier();
 		_runSpd = (int) Math.round(cha.getRunSpeed() / _moveMultiplier);
 		_walkSpd = (int) Math.round(cha.getWalkSpeed() / _moveMultiplier);
@@ -76,66 +78,68 @@ public abstract class AbstractNpcInfo extends L2GameServerPacket
 		}
 		
 		@Override
-		protected void writeImpl()
+		public boolean write(PacketWriter packet)
 		{
-			writeC(0x0c);
-			writeD(_trap.getObjectId());
-			writeD(_idTemplate + 1000000); // npctype id
-			writeD(_isAttackable ? 1 : 0);
-			writeD(_x);
-			writeD(_y);
-			writeD(_z);
-			writeD(_heading);
-			writeD(0x00);
-			writeD(_mAtkSpd);
-			writeD(_pAtkSpd);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeD(_swimRunSpd);
-			writeD(_swimWalkSpd);
-			writeD(_flyRunSpd);
-			writeD(_flyWalkSpd);
-			writeD(_flyRunSpd);
-			writeD(_flyWalkSpd);
-			writeF(_moveMultiplier);
-			writeF(_trap.getAttackSpeedMultiplier());
-			writeF(_collisionRadius);
-			writeF(_collisionHeight);
-			writeD(_rhand); // right hand weapon
-			writeD(_chest);
-			writeD(_lhand); // left hand weapon
-			writeC(1); // name above char 1=true ... ??
-			writeC(1);
-			writeC(_trap.isInCombat() ? 1 : 0);
-			writeC(_trap.isAlikeDead() ? 1 : 0);
-			writeC(_isSummoned ? 2 : 0); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
-			writeD(-1); // High Five NPCString ID
-			writeS(_name);
-			writeD(-1); // High Five NPCString ID
-			writeS(_title);
-			writeD(0x00); // title color 0 = client default
+			OutgoingPackets.NPC_INFO.writeId(packet);
 			
-			writeD(_trap.getPvpFlag());
-			writeD(_trap.getReputation());
+			packet.writeD(_trap.getObjectId());
+			packet.writeD(_idTemplate + 1000000); // npctype id
+			packet.writeD(_isAttackable ? 1 : 0);
+			packet.writeD(_x);
+			packet.writeD(_y);
+			packet.writeD(_z);
+			packet.writeD(_heading);
+			packet.writeD(0x00);
+			packet.writeD(_mAtkSpd);
+			packet.writeD(_pAtkSpd);
+			packet.writeD(_runSpd);
+			packet.writeD(_walkSpd);
+			packet.writeD(_swimRunSpd);
+			packet.writeD(_swimWalkSpd);
+			packet.writeD(_flyRunSpd);
+			packet.writeD(_flyWalkSpd);
+			packet.writeD(_flyRunSpd);
+			packet.writeD(_flyWalkSpd);
+			packet.writeF(_moveMultiplier);
+			packet.writeF(_trap.getAttackSpeedMultiplier());
+			packet.writeF(_collisionRadius);
+			packet.writeF(_collisionHeight);
+			packet.writeD(_rhand); // right hand weapon
+			packet.writeD(_chest);
+			packet.writeD(_lhand); // left hand weapon
+			packet.writeC(1); // name above char 1=true ... ??
+			packet.writeC(1);
+			packet.writeC(_trap.isInCombat() ? 1 : 0);
+			packet.writeC(_trap.isAlikeDead() ? 1 : 0);
+			packet.writeC(_isSummoned ? 2 : 0); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
+			packet.writeD(-1); // High Five NPCString ID
+			packet.writeS(_name);
+			packet.writeD(-1); // High Five NPCString ID
+			packet.writeS(_title);
+			packet.writeD(0x00); // title color 0 = client default
 			
-			writeD(0); // was AVE and was adding stealth
-			writeD(0x00); // clan id
-			writeD(0x00); // crest id
-			writeD(0000); // C2
-			writeD(0000); // C2
-			writeC(0000); // C2
+			packet.writeD(_trap.getPvpFlag());
+			packet.writeD(_trap.getReputation());
 			
-			writeC(_trap.getTeam().getId());
+			packet.writeD(0); // was AVE and was adding stealth
+			packet.writeD(0x00); // clan id
+			packet.writeD(0x00); // crest id
+			packet.writeD(0000); // C2
+			packet.writeD(0000); // C2
+			packet.writeC(0000); // C2
 			
-			writeF(_collisionRadius);
-			writeF(_collisionHeight);
-			writeD(0x00); // C4
-			writeD(0x00); // C6
-			writeD(0x00);
-			writeD(0); // CT1.5 Pet form and skills
-			writeC(0x01);
-			writeC(0x01);
-			writeD(0x00);
+			packet.writeC(_trap.getTeam().getId());
+			
+			packet.writeF(_collisionRadius);
+			packet.writeF(_collisionHeight);
+			packet.writeD(0x00); // C4
+			packet.writeD(0x00); // C6
+			packet.writeD(0x00);
+			packet.writeD(0); // CT1.5 Pet form and skills
+			packet.writeC(0x01);
+			packet.writeC(0x01);
+			packet.writeD(0x00);
+			return true;
 		}
 	}
 }

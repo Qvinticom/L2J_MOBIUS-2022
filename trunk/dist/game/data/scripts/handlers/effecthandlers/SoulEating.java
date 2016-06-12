@@ -17,15 +17,16 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.playable.OnPlayableExpChanged;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayableExpChanged;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExSpawnEmitter;
@@ -37,11 +38,21 @@ import com.l2jmobius.gameserver.network.serverpackets.ExSpawnEmitter;
 public final class SoulEating extends AbstractEffect
 {
 	private final int _expNeeded;
+	private final int _maxSouls;
 	
-	public SoulEating(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public SoulEating(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 		_expNeeded = params.getInt("expNeeded");
+		_maxSouls = params.getInt("maxSouls");
+	}
+	
+	@Override
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	{
+		if (effected.isPlayer())
+		{
+			effected.addListener(new ConsumerEventListener(effected, EventType.ON_PLAYABLE_EXP_CHANGED, (OnPlayableExpChanged event) -> onExperienceReceived(event.getActiveChar(), (event.getNewExp() - event.getOldExp())), this));
+		}
 	}
 	
 	@Override
@@ -53,36 +64,32 @@ public final class SoulEating extends AbstractEffect
 		}
 	}
 	
-	private void onExperienceReceived(L2Playable playable, long exp)
+	@Override
+	public void pump(L2Character effected, Skill skill)
 	{
-		// TODO: Verify logic.
-		if (!playable.isPlayer() || (exp < _expNeeded))
-		{
-			return;
-		}
-		
-		final L2PcInstance player = playable.getActingPlayer();
-		final int maxSouls = (int) player.calcStat(Stats.MAX_SOULS, 0, null, null);
-		if (player.getChargedSouls() >= maxSouls)
-		{
-			playable.sendPacket(SystemMessageId.SOUL_CANNOT_BE_ABSORBED_ANYMORE);
-			return;
-		}
-		
-		player.increaseSouls(1);
-		
-		if ((player.getTarget() != null) && player.getTarget().isNpc())
-		{
-			player.broadcastPacket(new ExSpawnEmitter(player, (L2Npc) playable.getTarget()), 500);
-		}
+		effected.getStat().mergeAdd(Stats.MAX_SOULS, _maxSouls);
 	}
 	
-	@Override
-	public void onStart(BuffInfo info)
+	public void onExperienceReceived(L2Playable playable, long exp)
 	{
-		if (info.getEffected().isPlayer())
+		// TODO: Verify logic.
+		if (playable.isPlayer() && (exp >= _expNeeded))
 		{
-			info.getEffected().addListener(new ConsumerEventListener(info.getEffected(), EventType.ON_PLAYABLE_EXP_CHANGED, (OnPlayableExpChanged event) -> onExperienceReceived(event.getActiveChar(), (event.getNewExp() - event.getOldExp())), this));
+			final L2PcInstance player = playable.getActingPlayer();
+			final int maxSouls = (int) player.getStat().getValue(Stats.MAX_SOULS, 0);
+			if (player.getChargedSouls() >= maxSouls)
+			{
+				playable.sendPacket(SystemMessageId.SOUL_CANNOT_BE_ABSORBED_ANYMORE);
+				return;
+			}
+			
+			player.increaseSouls(1);
+			
+			if ((player.getTarget() != null) && player.getTarget().isNpc())
+			{
+				final L2Npc npc = (L2Npc) playable.getTarget();
+				player.broadcastPacket(new ExSpawnEmitter(player, npc), 500);
+			}
 		}
 	}
 }

@@ -59,7 +59,7 @@ public class FavoriteBoard implements IParseBoardHandler
 		if (command.startsWith("_bbsgetfav"))
 		{
 			// Load Favorite links
-			final String list = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/favorite_list.html");
+			final String list = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/favorite_list.html");
 			final StringBuilder sb = new StringBuilder();
 			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(SELECT_FAVORITES))
@@ -69,14 +69,17 @@ public class FavoriteBoard implements IParseBoardHandler
 				{
 					while (rs.next())
 					{
-						String link = list.replaceAll("%fav_bypass%", String.valueOf(rs.getString("favBypass"))).replaceAll("%fav_title%", rs.getString("favTitle"));
+						String link = list.replaceAll("%fav_bypass%", String.valueOf(rs.getString("favBypass")));
+						link = link.replaceAll("%fav_title%", rs.getString("favTitle"));
 						final SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 						link = link.replaceAll("%fav_add_date%", date.format(rs.getTimestamp("favAddDate")));
 						link = link.replaceAll("%fav_id%", String.valueOf(rs.getInt("favId")));
 						sb.append(link);
 					}
 				}
-				CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/favorite.html").replaceAll("%fav_list%", sb.toString()), activeChar);
+				String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/favorite.html");
+				html = html.replaceAll("%fav_list%", sb.toString());
+				CommunityBoardHandler.separateAndSend(html, activeChar);
 			}
 			catch (Exception e)
 			{

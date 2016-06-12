@@ -16,13 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
  * Dialog with input field<br>
  * type 0 = char name (Selection screen)<br>
  * type 1 = clan name
  * @author JIV
  */
-public class ExNeedToChangeName extends L2GameServerPacket
+public class ExNeedToChangeName implements IClientOutgoingPacket
 {
 	private final int _type, _subType;
 	private final String _name;
@@ -36,12 +39,13 @@ public class ExNeedToChangeName extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x6A);
-		writeD(_type);
-		writeD(_subType);
-		writeS(_name);
+		OutgoingPackets.EX_NEED_TO_CHANGE_NAME.writeId(packet);
+		
+		packet.writeD(_type);
+		packet.writeD(_subType);
+		packet.writeS(_name);
+		return true;
 	}
 }

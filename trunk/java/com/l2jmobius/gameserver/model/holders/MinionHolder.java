@@ -16,6 +16,9 @@
  */
 package com.l2jmobius.gameserver.model.holders;
 
+import java.time.Duration;
+
+import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 
 /**
@@ -28,6 +31,14 @@ public class MinionHolder implements IIdentifiable
 	private final int _count;
 	private final long _respawnTime;
 	private final int _weightPoint;
+	
+	public MinionHolder(StatsSet set)
+	{
+		_id = set.getInt("id");
+		_count = set.getInt("count", 1);
+		_respawnTime = set.getDuration("respawnTime", Duration.ofSeconds(0)).getSeconds() * 1000;
+		_weightPoint = set.getInt("weightPoint", 0);
+	}
 	
 	/**
 	 * Constructs a minion holder.

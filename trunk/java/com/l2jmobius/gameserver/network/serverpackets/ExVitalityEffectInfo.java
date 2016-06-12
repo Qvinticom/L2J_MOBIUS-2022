@@ -17,38 +17,36 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.stat.PcStat;
-import com.l2jmobius.gameserver.model.variables.AccountVariables;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Sdw
  */
-public class ExVitalityEffectInfo extends L2GameServerPacket
+public class ExVitalityEffectInfo implements IClientOutgoingPacket
 {
+	private final int _vitalityBonus;
+	private final int _vitalityItemsRemaining;
 	private final int _points;
 	
 	public ExVitalityEffectInfo(L2PcInstance cha)
 	{
 		_points = cha.getVitalityPoints();
-	}
-	
-	public ExVitalityEffectInfo(L2GameClient client)
-	{
-		_points = (new AccountVariables(client.getAccountName())).getInt(PcStat.VITALITY_VARIABLE, Config.STARTING_VITALITY_POINTS);
+		_vitalityBonus = (int) cha.getStat().getVitalityExpBonus() * 100;
+		_vitalityItemsRemaining = cha.getVitalityItemsUsed() - Config.VITALITY_MAX_ITEMS_ALLOWED;
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x118);
+		OutgoingPackets.EX_VITALITY_EFFECT_INFO.writeId(packet);
 		
-		writeD(_points);
-		writeD((int) (Config.RATE_VITALITY_EXP_MULTIPLIER * 100)); // Vitality Bonus
-		writeH(0x00);
-		writeH(0x05); // How much vitality items remaining for use
-		writeH(0x05); // Max number of items for use
+		packet.writeD(_points);
+		packet.writeD(_vitalityBonus); // Vitality Bonus
+		packet.writeH(0x00); // Vitality additional bonus in %
+		packet.writeH(_vitalityItemsRemaining); // How much vitality items remaining for use
+		packet.writeH(Config.VITALITY_MAX_ITEMS_ALLOWED); // Max number of items for use
+		return true;
 	}
 }

@@ -21,8 +21,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -31,6 +31,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.enums.MailType;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.tasks.MessageDeletionTask;
 import com.l2jmobius.gameserver.model.L2World;
@@ -44,7 +45,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExUnReadMailCount;
  */
 public final class MailManager
 {
-	private static final Logger _log = Logger.getLogger(MailManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(MailManager.class.getName());
 	
 	private final Map<Integer, Message> _messages = new ConcurrentHashMap<>();
 	
@@ -83,9 +84,9 @@ public final class MailManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error loading from database:" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error loading from database:", e);
 		}
-		_log.info(getClass().getSimpleName() + ": Successfully loaded " + count + " messages.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + count + " messages.");
 	}
 	
 	public final Message getMessage(int msgId)
@@ -139,7 +140,7 @@ public final class MailManager
 	
 	public final List<Message> getInbox(int objectId)
 	{
-		final List<Message> inbox = new ArrayList<>();
+		final List<Message> inbox = new LinkedList<>();
 		for (Message msg : getMessages())
 		{
 			if ((msg != null) && (msg.getReceiverId() == objectId) && !msg.isDeletedByReceiver())
@@ -155,9 +156,29 @@ public final class MailManager
 		return getInbox(player.getObjectId()).stream().filter(Message::isUnread).count();
 	}
 	
+	public int getMailsInProgress(int objectId)
+	{
+		int count = 0;
+		for (Message msg : getMessages())
+		{
+			if ((msg != null) && (msg.getMailType() == MailType.REGULAR))
+			{
+				if ((msg.getReceiverId() == objectId) && !msg.isDeletedByReceiver() && !msg.isReturned() && msg.hasAttachments())
+				{
+					count++;
+				}
+				else if ((msg.getSenderId() == objectId) && !msg.isDeletedBySender() && !msg.isReturned() && msg.hasAttachments())
+				{
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+	
 	public final List<Message> getOutbox(int objectId)
 	{
-		final List<Message> outbox = new ArrayList<>();
+		final List<Message> outbox = new LinkedList<>();
 		for (Message msg : getMessages())
 		{
 			if ((msg != null) && (msg.getSenderId() == objectId) && !msg.isDeletedBySender())
@@ -178,7 +199,7 @@ public final class MailManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error saving message:" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error saving message:", e);
 		}
 		
 		final L2PcInstance receiver = L2World.getInstance().getPlayer(msg.getReceiverId());
@@ -201,7 +222,7 @@ public final class MailManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error marking as read message:" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error marking as read message:", e);
 		}
 	}
 	
@@ -215,7 +236,7 @@ public final class MailManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error marking as deleted by sender message:" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error marking as deleted by sender message:", e);
 		}
 	}
 	
@@ -229,7 +250,7 @@ public final class MailManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error marking as deleted by receiver message:" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error marking as deleted by receiver message:", e);
 		}
 	}
 	
@@ -243,7 +264,7 @@ public final class MailManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error removing attachments in message:" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error removing attachments in message:", e);
 		}
 	}
 	
@@ -257,7 +278,7 @@ public final class MailManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error deleting message:" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error deleting message:", e);
 		}
 		
 		_messages.remove(msgId);

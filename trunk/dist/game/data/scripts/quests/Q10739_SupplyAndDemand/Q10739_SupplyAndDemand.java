@@ -22,15 +22,17 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
 import quests.Q10738_AnInnerBeauty.Q10738_AnInnerBeauty;
 
 /**
+ * Supply And Demand (10739)
  * @author Sdw
  */
-public class Q10739_SupplyAndDemand extends Quest
+public final class Q10739_SupplyAndDemand extends Quest
 {
 	// NPC's
 	private static final int EVNA = 33935;
@@ -53,13 +55,14 @@ public class Q10739_SupplyAndDemand extends Quest
 	
 	public Q10739_SupplyAndDemand()
 	{
-		super(10739, Q10739_SupplyAndDemand.class.getSimpleName(), "Supply And Demand");
+		super(10739);
 		addStartNpc(EVNA);
 		addTalkId(EVNA, DENYA, PELU, CERI, SIVANTHE);
+		
+		addCondRace(Race.ERTHEIA, "");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33935-05.htm");
+		addCondCompletedQuest(Q10738_AnInnerBeauty.class.getSimpleName(), "33935-05.htm");
 		registerQuestItems(WEAPON_SUPPLY_BOX.getId(), ARMOR_SUPPLY_BOX.getId(), GROCERY_SUPPLY_BOX.getId(), ACCESSORY_SUPPLY_BOX.getId());
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33935-05.html");
-		addCondRace(Race.ERTHEIA, "33935-05.html");
-		addCondCompletedQuest(Q10738_AnInnerBeauty.class.getSimpleName(), "33935-05.html");
 	}
 	
 	@Override
@@ -71,14 +74,15 @@ public class Q10739_SupplyAndDemand extends Quest
 			return null;
 		}
 		
-		String htmltext = null;
+		String htmltext = event;
 		switch (event)
 		{
-			case "33935-03.html":
+			case "33935-02.htm":
+				break;
+			case "33935-03.htm":
 			{
 				qs.startQuest();
 				giveItems(player, WEAPON_SUPPLY_BOX);
-				htmltext = event;
 				break;
 			}
 			case "33934-02.html":
@@ -87,7 +91,6 @@ public class Q10739_SupplyAndDemand extends Quest
 				{
 					qs.setCond(2, true);
 					giveItems(player, ARMOR_SUPPLY_BOX);
-					htmltext = event;
 				}
 				break;
 			}
@@ -97,7 +100,6 @@ public class Q10739_SupplyAndDemand extends Quest
 				{
 					qs.setCond(3, true);
 					giveItems(player, GROCERY_SUPPLY_BOX);
-					htmltext = event;
 				}
 				break;
 			}
@@ -107,88 +109,107 @@ public class Q10739_SupplyAndDemand extends Quest
 				{
 					qs.setCond(4, true);
 					giveItems(player, ACCESSORY_SUPPLY_BOX);
-					htmltext = event;
 				}
 				break;
 			}
-			case "33935-02.htm":
-			{
-				htmltext = event;
-				break;
-			}
+			default:
+				htmltext = null;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = qs.isCompleted() ? getAlreadyCompletedMsg(player) : getNoQuestMsg(player);
+		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case EVNA:
-				if (qs.isCreated())
+			{
+				switch (qs.getState())
 				{
-					htmltext = "33935-01.htm";
-				}
-				else if (qs.isStarted())
-				{
-					htmltext = "33935-04.html";
+					case State.CREATED:
+						htmltext = "33935-01.htm";
+						break;
+					case State.STARTED:
+						htmltext = "33935-04.html";
+						break;
+					case State.COMPLETED:
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
 				}
 				break;
-			
+			}
 			case DENYA:
-				if (qs.isCond(1))
+			{
+				if (qs.isStarted())
 				{
-					htmltext = "33934-01.html";
-				}
-				else if (qs.isCond(2))
-				{
-					htmltext = "33934-03.html";
+					if (qs.isCond(1))
+					{
+						htmltext = "33934-01.html";
+					}
+					else if (qs.isCond(2))
+					{
+						htmltext = "33934-03.html";
+					}
 				}
 				break;
-			
+			}
 			case PELU:
-				if (qs.isCond(2))
+			{
+				if (qs.isStarted())
 				{
-					htmltext = "33936-01.html";
-				}
-				else if (qs.isCond(3))
-				{
-					htmltext = "33936-03.html";
+					if (qs.isCond(2))
+					{
+						htmltext = "33936-01.html";
+					}
+					else if (qs.isCond(3))
+					{
+						htmltext = "33936-03.html";
+					}
 				}
 				break;
-			
+			}
 			case CERI:
-				if (qs.isCond(3))
+			{
+				if (qs.isStarted())
 				{
-					htmltext = "33937-01.html";
-				}
-				else if (qs.isCond(4))
-				{
-					htmltext = "33937-03.html";
+					if (qs.isCond(3))
+					{
+						htmltext = "33937-01.html";
+					}
+					else if (qs.isCond(4))
+					{
+						htmltext = "33937-03.html";
+					}
 				}
 				break;
-			
+			}
 			case SIVANTHE:
-				if (qs.isCond(4))
+				if (qs.isStarted() && qs.isCond(4))
 				{
-					giveItems(player, LEATHER_SHIRT);
-					giveItems(player, LEATHER_PANTS);
-					giveItems(player, APPRENTICE_EARRING);
-					giveItems(player, NECKLACE_OF_KNOWNLEDGE);
-					giveAdena(player, 1400, true);
-					addExpAndSp(player, 8136, 0);
-					qs.exitQuest(false, true);
-					showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
+					if (!isSimulated)
+					{
+						giveItems(player, LEATHER_SHIRT);
+						giveItems(player, LEATHER_PANTS);
+						giveItems(player, APPRENTICE_EARRING);
+						giveItems(player, NECKLACE_OF_KNOWNLEDGE);
+						giveAdena(player, 1400, true);
+						addExpAndSp(player, 8136, 0);
+						showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
+						qs.exitQuest(false, true);
+					}
 					htmltext = "33951-01.html";
+				}
+				else if (qs.isCompleted())
+				{
+					htmltext = getAlreadyCompletedMsg(player);
 				}
 				break;
 		}
-		
 		return htmltext;
 	}
 }

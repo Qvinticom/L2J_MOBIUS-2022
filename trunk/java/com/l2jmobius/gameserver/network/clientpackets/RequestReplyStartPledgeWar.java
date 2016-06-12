@@ -16,32 +16,35 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import com.l2jmobius.gameserver.model.ClanWar;
+import com.l2jmobius.gameserver.model.ClanWar.ClanWarState;
+import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * This class ...
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestReplyStartPledgeWar extends L2GameClientPacket
+public final class RequestReplyStartPledgeWar implements IClientIncomingPacket
 {
-	private static final String _C__04_REQUESTREPLYSTARTPLEDGEWAR = "[C] 04 RequestReplyStartPledgeWar";
-	
 	private int _answer;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		@SuppressWarnings("unused")
-		final String _reqName = readS();
-		_answer = readD();
+		packet.readS();
+		_answer = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -54,19 +57,23 @@ public final class RequestReplyStartPledgeWar extends L2GameClientPacket
 		
 		if (_answer == 1)
 		{
-			ClanTable.getInstance().storeclanswars(requestor.getClanId(), activeChar.getClanId());
+			final L2Clan attacked = activeChar.getClan();
+			final L2Clan attacker = requestor.getClan();
+			if ((attacked != null) && (attacker != null))
+			{
+				final ClanWar clanWar = attacker.getWarWith(attacked.getId());
+				if (clanWar.getState() == ClanWarState.BLOOD_DECLARATION)
+				{
+					clanWar.mutualClanWarAccepted(attacker, attacked);
+					ClanTable.getInstance().storeclanswars(clanWar);
+				}
+			}
 		}
 		else
 		{
-			requestor.sendPacket(SystemMessageId.THE_S1_CLAN_DID_NOT_RESPOND_WAR_PROCLAMATION_HAS_BEEN_REFUSED);
+			requestor.sendPacket(SystemMessageId.THE_S1_CLAN_DID_NOT_RESPOND_WAR_PROCLAMATION_HAS_BEEN_REFUSED2);
 		}
 		activeChar.setActiveRequester(null);
 		requestor.onTransactionResponse();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__04_REQUESTREPLYSTARTPLEDGEWAR;
 	}
 }

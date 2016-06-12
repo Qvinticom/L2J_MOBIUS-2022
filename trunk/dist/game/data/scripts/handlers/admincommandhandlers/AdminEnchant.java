@@ -20,14 +20,11 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
  * This class handles following admin commands: - enchant_armor
@@ -166,31 +163,22 @@ public class AdminEnchant implements IAdminCommandHandler
 			// show the enchant menu after an action
 			showMainPage(activeChar);
 		}
-		
 		return true;
 	}
 	
 	private void setEnchant(L2PcInstance activeChar, int ench, int armorType)
 	{
 		// get the target
-		L2Object target = activeChar.getTarget();
-		if (target == null)
-		{
-			target = activeChar;
-		}
-		L2PcInstance player = null;
-		if (target instanceof L2PcInstance)
-		{
-			player = (L2PcInstance) target;
-		}
-		else
+		
+		final L2PcInstance player = activeChar.getTarget() != null ? activeChar.getTarget().getActingPlayer() : activeChar;
+		
+		if (player == null)
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
 		// now we need to find the equipped weapon of the targeted character...
-		int curEnchant = 0; // display purposes only
 		L2ItemInstance itemInstance = null;
 		
 		// only attempt to enchant if there is a weapon equipped
@@ -202,7 +190,7 @@ public class AdminEnchant implements IAdminCommandHandler
 		
 		if (itemInstance != null)
 		{
-			curEnchant = itemInstance.getEnchantLevel();
+			final int curEnchant = itemInstance.getEnchantLevel();
 			
 			// set enchant value
 			player.getInventory().unEquipItemInSlot(armorType);
@@ -212,9 +200,8 @@ public class AdminEnchant implements IAdminCommandHandler
 			// send packets
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(itemInstance);
-			player.sendPacket(iu);
-			player.broadcastPacket(new CharInfo(player));
-			player.sendPacket(new UserInfo(player));
+			player.sendInventoryUpdate(iu);
+			player.broadcastUserInfo();
 			
 			// informations
 			activeChar.sendMessage("Changed enchantment of " + player.getName() + "'s " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");

@@ -23,7 +23,7 @@ import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.BlockCheckerEngine;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -56,7 +56,8 @@ public final class ArenaParticipantsHolder
 	
 	public List<L2PcInstance> getAllPlayers()
 	{
-		final List<L2PcInstance> all = new ArrayList<>(_redPlayers);
+		final List<L2PcInstance> all = new ArrayList<>(12);
+		all.addAll(_redPlayers);
 		all.addAll(_bluePlayers);
 		return all;
 	}
@@ -111,7 +112,7 @@ public final class ArenaParticipantsHolder
 		return _bluePlayers.size();
 	}
 	
-	public void broadCastPacketToTeam(L2GameServerPacket packet)
+	public void broadCastPacketToTeam(IClientOutgoingPacket packet)
 	{
 		for (L2PcInstance p : _redPlayers)
 		{
@@ -146,7 +147,8 @@ public final class ArenaParticipantsHolder
 		if (redSize > (blueSize + 1))
 		{
 			broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.TEAM_MEMBERS_WERE_MODIFIED_BECAUSE_THE_TEAMS_WERE_UNBALANCED));
-			for (int i = 0; i < ((redSize - (blueSize + 1)) + 1); i++)
+			final int needed = redSize - (blueSize + 1);
+			for (int i = 0; i < (needed + 1); i++)
 			{
 				final L2PcInstance plr = _redPlayers.get(i);
 				if (plr == null)
@@ -159,7 +161,8 @@ public final class ArenaParticipantsHolder
 		else if (blueSize > (redSize + 1))
 		{
 			broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.TEAM_MEMBERS_WERE_MODIFIED_BECAUSE_THE_TEAMS_WERE_UNBALANCED));
-			for (int i = 0; i < ((blueSize - (redSize + 1)) + 1); i++)
+			final int needed = blueSize - (redSize + 1);
+			for (int i = 0; i < (needed + 1); i++)
 			{
 				final L2PcInstance plr = _bluePlayers.get(i);
 				if (plr == null)

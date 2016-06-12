@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.util;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * Collection of flood protectors for single player.

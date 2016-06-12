@@ -32,6 +32,7 @@
 						<xs:attribute name="repeatStyle" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:token">
+									<xs:enumeration value="none" />
 									<xs:enumeration value="back" />
 									<xs:enumeration value="cycle" />
 									<xs:enumeration value="conveyor" />

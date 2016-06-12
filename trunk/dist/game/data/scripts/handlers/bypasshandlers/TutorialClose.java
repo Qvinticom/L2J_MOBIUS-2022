@@ -16,6 +16,7 @@
  */
 package handlers.bypasshandlers;
 
+import com.l2jmobius.gameserver.enums.HtmlActionScope;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -35,6 +36,7 @@ public class TutorialClose implements IBypassHandler
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		activeChar.sendPacket(TutorialCloseHtml.STATIC_PACKET);
+		activeChar.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
 		return false;
 	}
 	

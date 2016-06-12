@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2AirShipInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class ExAirShipInfo extends L2GameServerPacket
+public class ExAirShipInfo implements IClientOutgoingPacket
 {
 	// store some parameters, because they can be changed during broadcast
 	private final L2AirShipInstance _ship;
@@ -38,42 +40,42 @@ public class ExAirShipInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x61);
+		OutgoingPackets.EX_AIR_SHIP_INFO.writeId(packet);
 		
-		writeD(_ship.getObjectId());
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
-		writeD(_heading);
+		packet.writeD(_ship.getObjectId());
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		packet.writeD(_heading);
 		
-		writeD(_captain);
-		writeD(_moveSpeed);
-		writeD(_rotationSpeed);
-		writeD(_helm);
+		packet.writeD(_captain);
+		packet.writeD(_moveSpeed);
+		packet.writeD(_rotationSpeed);
+		packet.writeD(_helm);
 		if (_helm != 0)
 		{
 			// TODO: unhardcode these!
-			writeD(0x16e); // Controller X
-			writeD(0x00); // Controller Y
-			writeD(0x6b); // Controller Z
-			writeD(0x15c); // Captain X
-			writeD(0x00); // Captain Y
-			writeD(0x69); // Captain Z
+			packet.writeD(0x16e); // Controller X
+			packet.writeD(0x00); // Controller Y
+			packet.writeD(0x6b); // Controller Z
+			packet.writeD(0x15c); // Captain X
+			packet.writeD(0x00); // Captain Y
+			packet.writeD(0x69); // Captain Z
 		}
 		else
 		{
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
 		}
 		
-		writeD(_ship.getFuel());
-		writeD(_ship.getMaxFuel());
+		packet.writeD(_ship.getFuel());
+		packet.writeD(_ship.getMaxFuel());
+		return true;
 	}
 }

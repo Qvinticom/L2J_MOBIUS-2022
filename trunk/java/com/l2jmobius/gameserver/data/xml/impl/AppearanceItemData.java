@@ -16,27 +16,30 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
 import com.l2jmobius.gameserver.model.items.appearance.AppearanceTargetType;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * @author UnAfraid
  */
-public class AppearanceItemData implements IXmlReader
+public class AppearanceItemData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(AppearanceItemData.class.getName());
+	
 	private final Map<Integer, AppearanceStone> _stones = new HashMap<>();
 	
 	protected AppearanceItemData()
@@ -47,8 +50,8 @@ public class AppearanceItemData implements IXmlReader
 	@Override
 	public void load()
 	{
-		parseDatapackFile("AppearanceStones.xml");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _stones.size() + " Stones");
+		parseDatapackFile("data/AppearanceStones.xml");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _stones.size() + " Stones");
 		
 		//@formatter:off
 		/*
@@ -70,8 +73,11 @@ public class AppearanceItemData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
+		StatsSet set;
+		Node att;
+		NamedNodeMap attrs;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -80,11 +86,11 @@ public class AppearanceItemData implements IXmlReader
 				{
 					if ("appearance_stone".equalsIgnoreCase(d.getNodeName()))
 					{
-						final NamedNodeMap attrs = d.getAttributes();
-						final StatsSet set = new StatsSet();
+						attrs = d.getAttributes();
+						set = new StatsSet();
 						for (int i = 0; i < attrs.getLength(); i++)
 						{
-							final Node att = attrs.item(i);
+							att = attrs.item(i);
 							set.set(att.getNodeName(), att.getNodeValue());
 						}
 						
@@ -107,7 +113,7 @@ public class AppearanceItemData implements IXmlReader
 								}
 								case "bodyPart":
 								{
-									final int part = ItemTable.SLOTS.get(c.getTextContent());
+									final int part = ItemTable._slots.get(c.getTextContent());
 									stone.addBodyPart(part);
 									break;
 								}

@@ -22,8 +22,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.events.EventDispatcher;
+import com.l2jmobius.gameserver.model.events.impl.OnDayNightChange;
 
 /**
  * Game Time controller class.
@@ -31,7 +32,7 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
  */
 public final class GameTimeController extends Thread
 {
-	private static final Logger _log = Logger.getLogger(GameTimeController.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(GameTimeController.class.getName());
 	
 	public static final int TICKS_PER_SECOND = 10; // not able to change this without checking through code
 	public static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
@@ -122,7 +123,7 @@ public final class GameTimeController extends Thread
 	 * <li>Create a task to update the _knownObject and _knowPlayers of each L2Character that finished its movement and of their already known L2Object then notify AI with EVT_ARRIVED</li>
 	 * </ul>
 	 */
-	private final void moveObjects()
+	private void moveObjects()
 	{
 		_movingObjects.removeIf(L2Character::updatePosition);
 	}
@@ -130,21 +131,18 @@ public final class GameTimeController extends Thread
 	public final void stopTimer()
 	{
 		super.interrupt();
-		_log.log(Level.INFO, "Stopping " + getClass().getSimpleName());
+		LOGGER.info(getClass().getSimpleName() + ": Stopped.");
 	}
 	
 	@Override
 	public final void run()
 	{
-		_log.log(Level.CONFIG, getClass().getSimpleName() + ": Started.");
+		LOGGER.info(getClass().getSimpleName() + ": Started.");
 		
 		long nextTickTime, sleepTime;
 		boolean isNight = isNight();
 		
-		if (isNight)
-		{
-			ThreadPoolManager.getInstance().executeAi(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
-		}
+		EventDispatcher.getInstance().notifyEventAsync(new OnDayNightChange(isNight));
 		
 		while (true)
 		{
@@ -156,7 +154,7 @@ public final class GameTimeController extends Thread
 			}
 			catch (Throwable e)
 			{
-				_log.log(Level.WARNING, "", e);
+				LOGGER.log(Level.WARNING, getClass().getSimpleName(), e);
 			}
 			
 			sleepTime = nextTickTime - System.currentTimeMillis();
@@ -175,7 +173,7 @@ public final class GameTimeController extends Thread
 			{
 				isNight = !isNight;
 				
-				ThreadPoolManager.getInstance().executeAi(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
+				EventDispatcher.getInstance().notifyEventAsync(new OnDayNightChange(isNight));
 			}
 		}
 	}

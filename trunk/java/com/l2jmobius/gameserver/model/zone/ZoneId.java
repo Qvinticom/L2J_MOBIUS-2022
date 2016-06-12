@@ -30,7 +30,6 @@ public enum ZoneId
 	LANDING,
 	NO_LANDING,
 	WATER,
-	FISHING,
 	JAIL,
 	MONSTER_TRACK,
 	CASTLE,
@@ -46,7 +45,8 @@ public enum ZoneId
 	NO_BOOKMARK,
 	NO_ITEM_DROP,
 	NO_RESTART,
-	JUMP;
+	SAYUNE,
+	FISHING;
 	
 	public static int getZoneCount()
 	{

@@ -40,6 +40,10 @@ public final class ConditionUsingSkill extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		return (skill != null) && (skill.getId() == _skillId);
+		if (skill == null)
+		{
+			return false;
+		}
+		return skill.getId() == _skillId;
 	}
 }

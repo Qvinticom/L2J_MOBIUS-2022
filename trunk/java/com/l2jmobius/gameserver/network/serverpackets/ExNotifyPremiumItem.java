@@ -16,17 +16,21 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
  * @author Gnacik
  */
-public class ExNotifyPremiumItem extends L2GameServerPacket
+public class ExNotifyPremiumItem implements IClientOutgoingPacket
 {
 	public static final ExNotifyPremiumItem STATIC_PACKET = new ExNotifyPremiumItem();
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x86);
+		OutgoingPackets.EX_NOTIFY_PREMIUM_ITEM.writeId(packet);
+		
+		return true;
 	}
 }

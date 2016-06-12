@@ -18,14 +18,14 @@ package events.LetterCollector;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.event.LongTimeEvent;
+import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 
 /**
  * Event: Letter Collector
  * @URL http://www.lineage2.com/en/news/events/letter-collector-event-05112016.php
  * @author Gigi
  */
-final class LetterCollector extends LongTimeEvent
+public final class LetterCollector extends LongTimeEvent
 {
 	// NPC
 	private static final int ANGEL_CAT = 33873;
@@ -115,7 +115,6 @@ final class LetterCollector extends LongTimeEvent
 	
 	private LetterCollector()
 	{
-		super(LetterCollector.class.getSimpleName(), "events");
 		addStartNpc(ANGEL_CAT);
 		addFirstTalkId(ANGEL_CAT);
 		addTalkId(ANGEL_CAT);

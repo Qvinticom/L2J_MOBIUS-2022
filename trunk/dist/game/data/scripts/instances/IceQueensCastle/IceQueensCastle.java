@@ -18,18 +18,18 @@ package instances.IceQueensCastle;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.enums.Movie;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.SystemMessageId;
 
 import instances.AbstractInstance;
 import quests.Q10285_MeetingSirra.Q10285_MeetingSirra;
@@ -48,24 +48,14 @@ public final class IceQueensCastle extends AbstractInstance
 	private static final int ARCHERY_KNIGHT = 22767;
 	private static final int JINIA = 32781;
 	// Locations
-	private static final Location START_LOC = new Location(114000, -112357, -11200, 0, 0);
-	private static final Location EXIT_LOC = new Location(113883, -108777, -848, 0, 0);
-	private static final Location FREYA_LOC = new Location(114730, -114805, -11200, 50, 0);
+	private static final Location FREYA_LOC = new Location(114730, -114805, -11200, 50);
 	// Skill
 	private static SkillHolder ETHERNAL_BLIZZARD = new SkillHolder(6276, 1);
 	// Misc
 	private static final int TEMPLATE_ID = 137;
-	private static final int ICE_QUEEN_DOOR = 23140101;
-	private static final int MIN_LV = 82;
-	
-	class IQCWorld extends InstanceWorld
-	{
-		L2PcInstance player = null;
-	}
 	
 	public IceQueensCastle()
 	{
-		super(IceQueensCastle.class.getSimpleName());
 		addStartNpc(JINIA);
 		addTalkId(JINIA);
 		addSeeCreatureId(BATTALION_LEADER, LEGIONNAIRE, MERCENARY_ARCHER);
@@ -80,13 +70,15 @@ public final class IceQueensCastle extends AbstractInstance
 		{
 			case "ATTACK_KNIGHT":
 			{
-				for (L2Character character : npc.getKnownList().getKnownCharacters())
+				L2World.getInstance().forEachVisibleObject(npc, L2Npc.class, mob ->
 				{
-					if ((character.getId() == ARCHERY_KNIGHT) && !character.isDead() && !((L2Attackable) character).isDecayed())
+					if ((mob.getId() == ARCHERY_KNIGHT) && !mob.isDead() && !mob.isDecayed())
 					{
-						addAttackDesire(npc, character, 99999);
+						npc.setIsRunning(true);
+						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, mob);
+						((L2Attackable) npc).addDamageHate(mob, 0, 999999);
 					}
-				}
+				});
 				startQuestTimer("ATTACK_KNIGHT", 3000, npc, null);
 				break;
 			}
@@ -100,7 +92,7 @@ public final class IceQueensCastle extends AbstractInstance
 			}
 			case "TIMER_BLIZZARD":
 			{
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.I_CAN_NO_LONGER_STAND_BY);
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_CAN_NO_LONGER_STAND_BY);
 				npc.stopMove(null);
 				npc.setTarget(player);
 				npc.doCast(ETHERNAL_BLIZZARD.getSkill());
@@ -110,7 +102,7 @@ public final class IceQueensCastle extends AbstractInstance
 			{
 				if (npc != null)
 				{
-					player.showQuestMovie(21);
+					playMovie(player, Movie.SC_BOSS_FREYA_FORCED_DEFEAT);
 					npc.deleteMe();
 					startQuestTimer("TIMER_PC_LEAVE", 24000, npc, player);
 				}
@@ -123,10 +115,7 @@ public final class IceQueensCastle extends AbstractInstance
 				{
 					qs.setMemoState(3);
 					qs.setCond(10, true);
-					final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-					world.removeAllowed(player.getObjectId());
-					player.setInstanceId(0);
-					player.teleToLocation(EXIT_LOC, 0);
+					finishInstance(player, 0);
 				}
 				break;
 			}
@@ -135,22 +124,10 @@ public final class IceQueensCastle extends AbstractInstance
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		if (creature.isPlayer() && npc.isScriptValue(0))
-		{
-			for (L2Character character : npc.getKnownList().getKnownCharacters())
-			{
-				if ((character.getId() == ARCHERY_KNIGHT) && !character.isDead() && !((L2Attackable) character).isDecayed())
-				{
-					addAttackDesire(npc, character, 99999);
-					npc.setScriptValue(1);
-					startQuestTimer("ATTACK_KNIGHT", 5000, npc, null);
-				}
-			}
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.S1_MAY_THE_PROTECTION_OF_THE_GODS_BE_UPON_YOU, creature.getName());
-		}
-		return super.onSeeCreature(npc, creature, isSummon);
+		enterInstance(talker, npc, TEMPLATE_ID);
+		return super.onTalk(npc, talker);
 	}
 	
 	@Override
@@ -162,43 +139,44 @@ public final class IceQueensCastle extends AbstractInstance
 	}
 	
 	@Override
+	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	{
+		if (creature.isPlayer() && npc.isScriptValue(0))
+		{
+			npc.setScriptValue(1);
+			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.S1_MAY_THE_PROTECTION_OF_THE_GODS_BE_UPON_YOU, creature.getName());
+			
+			L2World.getInstance().forEachVisibleObject(npc, L2Npc.class, mob ->
+			{
+				if ((mob.getId() == ARCHERY_KNIGHT) && !mob.isDead() && !mob.isDecayed())
+				{
+					npc.setIsRunning(true);
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, mob);
+					((L2Attackable) npc).addDamageHate(mob, 0, 999999);
+				}
+			});
+			startQuestTimer("ATTACK_KNIGHT", 5000, npc, null);
+		}
+		return super.onSeeCreature(npc, creature, isSummon);
+	}
+	
+	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		if ((tmpworld instanceof IQCWorld) && (skill == ETHERNAL_BLIZZARD.getSkill()) && (((IQCWorld) tmpworld).player != null))
+		final Instance world = npc.getInstanceWorld();
+		if ((world != null) && (skill == ETHERNAL_BLIZZARD.getSkill()))
 		{
-			startQuestTimer("TIMER_SCENE_21", 1000, npc, ((IQCWorld) tmpworld).player);
+			final L2PcInstance playerInside = world.getFirstPlayer();
+			if (playerInside != null)
+			{
+				startQuestTimer("TIMER_SCENE_21", 1000, npc, playerInside);
+			}
 		}
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public static void main(String[] args)
 	{
-		enterInstance(talker, new IQCWorld(), "IceQueensCastle.xml", TEMPLATE_ID);
-		return super.onTalk(npc, talker);
-	}
-	
-	@Override
-	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
-	{
-		if (firstEntrance)
-		{
-			world.addAllowed(player.getObjectId());
-			((IQCWorld) world).player = player;
-			openDoor(ICE_QUEEN_DOOR, world.getInstanceId());
-		}
-		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
-	}
-	
-	@Override
-	protected boolean checkConditions(L2PcInstance player)
-	{
-		if (player.getLevel() < MIN_LV)
-		{
-			player.sendPacket(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
-			return false;
-		}
-		return true;
+		new IceQueensCastle();
 	}
 }

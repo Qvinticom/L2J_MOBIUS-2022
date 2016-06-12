@@ -22,6 +22,7 @@ import java.sql.ResultSet;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -94,10 +95,13 @@ public class AdminShowQuests implements IAdminCommandHandler
 					val[0] = "name";
 					val[1] = cmdParams[2];
 				}
-				if ((cmdParams.length > 3) && cmdParams[3].equals("custom"))
+				if (cmdParams.length > 3)
 				{
-					val[0] = "custom";
-					val[1] = cmdParams[2];
+					if (cmdParams[3].equals("custom"))
+					{
+						val[0] = "custom";
+						val[1] = cmdParams[2];
+					}
 				}
 			}
 		}
@@ -152,7 +156,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 	private static void showFirstQuestMenu(L2PcInstance target, L2PcInstance actor)
 	{
 		final StringBuilder replyMSG = new StringBuilder("<html><body><table width=270><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center>Player: " + target.getName() + "</center></td><td width=45><button value=\"Back\" action=\"bypass -h admin_admin6\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table>");
-		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		final int ID = target.getObjectId();
 		
 		replyMSG.append("Quest Menu for <font color=\"LEVEL\">" + target.getName() + "</font> (ID:" + ID + ")<br><center>");
@@ -169,7 +173,6 @@ public class AdminShowQuests implements IAdminCommandHandler
 	
 	private static void showQuestMenu(L2PcInstance target, L2PcInstance actor, String[] val)
 	{
-		// TODO(Zoey76): Refactor this into smaller methods and separate database access logic from HTML creation.
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			ResultSet rs;
@@ -177,7 +180,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 			final int ID = target.getObjectId();
 			
 			final StringBuilder replyMSG = new StringBuilder("<html><body>");
-			final NpcHtmlMessage adminReply = new NpcHtmlMessage();
+			final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 			
 			switch (val[0])
 			{
@@ -319,20 +322,20 @@ public class AdminShowQuests implements IAdminCommandHandler
 		QuestState qs = target.getQuestState(val[0]);
 		final String[] outval = new String[3];
 		
-		if ("state".equals(val[1]))
+		if (val[1].equals("state"))
 		{
 			switch (val[2])
 			{
 				case "COMPLETED":
 				{
-					qs.exitQuest("1".equals(val[3]));
+					qs.exitQuest((val[3].equals("1")) ? QuestType.REPEATABLE : QuestType.ONE_TIME);
 					break;
 				}
 				case "DELETE":
 				{
 					Quest.deleteQuestInDb(qs, true);
-					qs.exitQuest(true);
-					target.sendPacket(new QuestList());
+					qs.exitQuest(QuestType.REPEATABLE);
+					target.sendPacket(new QuestList(target));
 					target.sendPacket(new ExShowQuestMark(qs.getQuest().getId(), qs.getCond()));
 					break;
 				}
@@ -341,7 +344,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 					qs = QuestManager.getInstance().getQuest(Integer.parseInt(val[0])).newQuestState(target);
 					qs.setState(State.STARTED);
 					qs.set("cond", "1");
-					target.sendPacket(new QuestList());
+					target.sendPacket(new QuestList(target));
 					target.sendPacket(new ExShowQuestMark(qs.getQuest().getId(), qs.getCond()));
 					val[0] = qs.getQuest().getName();
 					break;
@@ -349,8 +352,8 @@ public class AdminShowQuests implements IAdminCommandHandler
 				case "CC":
 				{
 					qs = QuestManager.getInstance().getQuest(Integer.parseInt(val[0])).newQuestState(target);
-					qs.exitQuest(false);
-					target.sendPacket(new QuestList());
+					qs.exitQuest(QuestType.ONE_TIME);
+					target.sendPacket(new QuestList(target));
 					target.sendPacket(new ExShowQuestMark(qs.getQuest().getId(), qs.getCond()));
 					val[0] = qs.getQuest().getName();
 					break;
@@ -367,7 +370,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 			{
 				qs.set(val[1], val[2]);
 			}
-			target.sendPacket(new QuestList());
+			target.sendPacket(new QuestList(target));
 			target.sendPacket(new ExShowQuestMark(qs.getQuest().getId(), qs.getCond()));
 		}
 		actor.sendMessage("");

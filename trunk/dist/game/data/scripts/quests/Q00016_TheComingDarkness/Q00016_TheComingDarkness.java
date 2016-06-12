@@ -25,12 +25,10 @@ import com.l2jmobius.gameserver.model.quest.State;
 import quests.Q00017_LightAndDarkness.Q00017_LightAndDarkness;
 
 /**
- * The Coming Darkness (16)<br>
- * Original jython script by disKret.<br>
- * TODO: Zoey76: This quest is still not retail like, Altars AI is incomplete.
- * @author nonom
+ * The Coming Darkness (16)
+ * @author Gladicek
  */
-public class Q00016_TheComingDarkness extends Quest
+public final class Q00016_TheComingDarkness extends Quest
 {
 	// NPCs
 	private static final int HIERARCH = 31517;
@@ -41,104 +39,261 @@ public class Q00016_TheComingDarkness extends Quest
 	private static final int EVIL_ALTAR_5 = 31516;
 	// Item
 	private static final int CRYSTAL_OF_SEAL = 7167;
+	// Misc
+	private static final int MIN_LEVEL = 62;
 	
 	public Q00016_TheComingDarkness()
 	{
-		super(16, Q00016_TheComingDarkness.class.getSimpleName(), "The Coming Darkness");
+		super(16);
 		addStartNpc(HIERARCH);
 		addTalkId(HIERARCH, EVIL_ALTAR_1, EVIL_ALTAR_2, EVIL_ALTAR_3, EVIL_ALTAR_4, EVIL_ALTAR_5);
 		registerQuestItems(CRYSTAL_OF_SEAL);
+		addCondMinLevel(MIN_LEVEL, "31517-07.html");
+		addCondCompletedQuest(Q00017_LightAndDarkness.class.getSimpleName(), "");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final String htmltext = event;
+		String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		final int cond = qs.getCond();
 		switch (event)
 		{
-			case "31517-02.htm":
+			case "31517-03.htm":
 			{
 				qs.startQuest();
 				giveItems(player, CRYSTAL_OF_SEAL, 5);
 				break;
 			}
-			case "31512-01.html":
-			case "31513-01.html":
-			case "31514-01.html":
-			case "31515-01.html":
-			case "31516-01.html":
+			case "31512-02.htm":
 			{
-				final int npcId = Integer.parseInt(event.replace("-01.html", ""));
-				if ((cond == (npcId - 31511)) && hasQuestItems(player, CRYSTAL_OF_SEAL))
+				if (qs.isCond(1))
 				{
-					takeItems(player, CRYSTAL_OF_SEAL, 1);
-					qs.setCond(cond + 1, true);
+					if (hasQuestItems(player, CRYSTAL_OF_SEAL))
+					{
+						qs.setMemoState(1);
+						qs.setCond(2);
+						takeItems(player, CRYSTAL_OF_SEAL, 1);
+						htmltext = event;
+					}
+					else
+					{
+						htmltext = "31512-03.html";
+					}
 				}
 				break;
+			}
+			case "31513-02.htm":
+			{
+				if (qs.isCond(2))
+				{
+					if (hasQuestItems(player, CRYSTAL_OF_SEAL))
+					{
+						qs.setMemoState(2);
+						qs.setCond(3);
+						takeItems(player, CRYSTAL_OF_SEAL, 1);
+						htmltext = event;
+					}
+					else
+					{
+						htmltext = "31513-03.html";
+					}
+				}
+				break;
+			}
+			case "31514-02.htm":
+			{
+				if (qs.isCond(3))
+				{
+					if (hasQuestItems(player, CRYSTAL_OF_SEAL))
+					{
+						qs.setMemoState(3);
+						qs.setCond(4);
+						takeItems(player, CRYSTAL_OF_SEAL, 1);
+						htmltext = event;
+					}
+					else
+					{
+						htmltext = "31514-03.html";
+					}
+				}
+				break;
+			}
+			case "31515-02.htm":
+			{
+				if (qs.isCond(4))
+				{
+					if (hasQuestItems(player, CRYSTAL_OF_SEAL))
+					{
+						qs.setMemoState(4);
+						qs.setCond(5);
+						takeItems(player, CRYSTAL_OF_SEAL, 1);
+						htmltext = event;
+					}
+					else
+					{
+						htmltext = "31515-03.html";
+					}
+				}
+				break;
+			}
+			case "31516-02.htm":
+			{
+				if (qs.isCond(5))
+				{
+					if (hasQuestItems(player, CRYSTAL_OF_SEAL))
+					{
+						qs.setMemoState(5);
+						qs.setCond(6);
+						takeItems(player, CRYSTAL_OF_SEAL, 1);
+						htmltext = event;
+					}
+					else
+					{
+						htmltext = "31516-03.html";
+					}
+					break;
+				}
 			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
-		
-		final QuestState qs2 = player.getQuestState(Q00017_LightAndDarkness.class.getSimpleName());
-		if ((qs2 != null) && !qs2.isCompleted())
-		{
-			return "31517-04.html";
-		}
 		
 		switch (qs.getState())
 		{
-			case State.COMPLETED:
-			{
-				htmltext = getAlreadyCompletedMsg(player);
-				break;
-			}
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= 62) ? "31517-00.htm" : "31517-05.html";
+				if (npc.getId() == HIERARCH)
+				{
+					htmltext = "31517-01.html";
+				}
 				break;
 			}
 			case State.STARTED:
 			{
-				final int npcId = npc.getId();
-				if (npcId == HIERARCH)
+				switch (npc.getId())
 				{
-					if (qs.isCond(6))
+					case HIERARCH:
 					{
-						addExpAndSp(player, 865187, 69172);
-						qs.exitQuest(false, true);
-						htmltext = "31517-03.html";
+						if ((qs.getCond() >= 1) && (qs.getCond() <= 5))
+						{
+							if (hasQuestItems(player, CRYSTAL_OF_SEAL))
+							{
+								htmltext = "31517-04.html";
+							}
+							else
+							{
+								if (!isSimulated)
+								{
+									qs.exitQuest(true, true);
+								}
+								htmltext = "31517-06.html";
+							}
+							break;
+						}
+						else if (qs.isCond(6))
+						{
+							if (!isSimulated)
+							{
+								addExpAndSp(player, 1_795_524, 79);
+								qs.exitQuest(false, true);
+							}
+							htmltext = "31517-05.html";
+						}
 					}
-					else
+						break;
+					case EVIL_ALTAR_1:
 					{
-						htmltext = "31517-02a.html";
+						if (qs.isCond(1))
+						{
+							htmltext = "31512-01.html";
+						}
+						else
+						{
+							if (qs.isMemoState(1))
+							{
+								htmltext = "31512-04.html";
+							}
+						}
+						break;
+					}
+					case EVIL_ALTAR_2:
+					{
+						if (qs.isCond(2))
+						{
+							htmltext = "31513-01.html";
+						}
+						else
+						{
+							if (qs.isMemoState(2))
+							{
+								htmltext = "31513-04.html";
+							}
+						}
+						break;
+					}
+					case EVIL_ALTAR_3:
+					{
+						if (qs.isCond(3))
+						{
+							htmltext = "31514-01.html";
+						}
+						else
+						{
+							if (qs.isMemoState(3))
+							{
+								htmltext = "31514-04.html";
+							}
+						}
+						break;
+					}
+					case EVIL_ALTAR_4:
+					{
+						if (qs.isCond(4))
+						{
+							htmltext = "31515-01.html";
+						}
+						else
+						{
+							if (qs.isMemoState(4))
+							{
+								htmltext = "31515-04.html";
+							}
+						}
+						break;
+					}
+					case EVIL_ALTAR_5:
+					{
+						if (qs.isCond(5))
+						{
+							htmltext = "31516-01.html";
+						}
+						else
+						{
+							if (qs.isMemoState(5))
+							{
+								htmltext = "31516-04.html";
+							}
+						}
+						break;
 					}
 				}
-				else if ((npcId - 31511) == qs.getCond())
-				{
-					htmltext = npcId + "-00.html";
-				}
-				else
-				{
-					htmltext = npcId + "-01.html";
-				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
 		}

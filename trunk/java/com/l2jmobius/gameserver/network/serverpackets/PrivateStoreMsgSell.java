@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class PrivateStoreMsgSell extends L2GameServerPacket
+public class PrivateStoreMsgSell implements IClientOutgoingPacket
 {
 	private final int _objId;
 	private String _storeMsg;
@@ -26,17 +28,19 @@ public class PrivateStoreMsgSell extends L2GameServerPacket
 	public PrivateStoreMsgSell(L2PcInstance player)
 	{
 		_objId = player.getObjectId();
-		if (player.getSellList() != null)
+		if ((player.getSellList() != null) || player.isSellingBuffs())
 		{
 			_storeMsg = player.getSellList().getTitle();
 		}
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xA2);
-		writeD(_objId);
-		writeS(_storeMsg);
+		OutgoingPackets.PRIVATE_STORE_MSG.writeId(packet);
+		
+		packet.writeD(_objId);
+		packet.writeS(_storeMsg);
+		return true;
 	}
 }

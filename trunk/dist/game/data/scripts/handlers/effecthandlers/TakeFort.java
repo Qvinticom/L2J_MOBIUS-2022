@@ -18,10 +18,11 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.entity.Fort;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Take Fort effect implementation.
@@ -29,9 +30,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class TakeFort extends AbstractEffect
 {
-	public TakeFort(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public TakeFort(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -41,17 +41,17 @@ public final class TakeFort extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (!info.getEffector().isPlayer())
+		if (!effector.isPlayer())
 		{
 			return;
 		}
 		
-		final Fort fort = FortManager.getInstance().getFort(info.getEffector().getActingPlayer());
+		final Fort fort = FortManager.getInstance().getFort(effector);
 		if (fort != null)
 		{
-			fort.endOfSiege(info.getEffector().getActingPlayer().getClan());
+			fort.endOfSiege(effector.getClan());
 		}
 	}
 }

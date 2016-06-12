@@ -17,60 +17,106 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
+ * Check if this effect is not counted as being stunned.
  * @author UnAfraid
  */
 public final class KnockBack extends AbstractEffect
 {
-	private int _distance = 50;
-	private int _speed = 0;
-	private int _delay = 0;
-	private int _animationSpeed = 0;
+	private final int _distance;
+	private final int _speed;
+	private final int _delay;
+	private final int _animationSpeed;
+	private final boolean _knockDown;
+	private final FlyType _type;
 	
-	public KnockBack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public KnockBack(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		if (params != null)
+		_distance = params.getInt("distance", 50);
+		_speed = params.getInt("speed", 0);
+		_delay = params.getInt("delay", 0);
+		_animationSpeed = params.getInt("animationSpeed", 0);
+		_knockDown = params.getBoolean("knockDown", false);
+		_type = params.getEnum("type", FlyType.class, _knockDown ? FlyType.PUSH_DOWN_HORIZONTAL : FlyType.PUSH_HORIZONTAL);
+	}
+	
+	@Override
+	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
+	{
+		return _knockDown || Formulas.calcProbability(100, effector, effected, skill);
+	}
+	
+	@Override
+	public boolean isInstant()
+	{
+		return !_knockDown;
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.KNOCK;
+	}
+	
+	@Override
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	{
+		if (!_knockDown)
 		{
-			_distance = params.getInt("distance", 50);
-			_speed = params.getInt("speed", 0);
-			_delay = params.getInt("delay", 0);
-			_animationSpeed = params.getInt("animationSpeed", 0);
+			knockBack(effector, effected);
 		}
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void continuousInstant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character effected = info.getEffected();
-		if ((!effected.isPlayer() && !effected.isMonster()) || effected.isRaid() || effected.isRaidMinion())
+		if (_knockDown)
 		{
-			return;
+			knockBack(effector, effected);
 		}
-		
-		final double radians = Math.toRadians(Util.calculateAngleFrom(info.getEffector(), info.getEffected()));
-		final int x = (int) (info.getEffected().getX() + (_distance * Math.cos(radians)));
-		final int y = (int) (info.getEffected().getY() + (_distance * Math.sin(radians)));
+	}
+	
+	@Override
+	public void onExit(BuffInfo info)
+	{
+		if (!info.getEffected().isPlayer())
+		{
+			info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
+		}
+	}
+	
+	public void knockBack(L2Character effector, L2Character effected)
+	{
+		final double radians = Math.toRadians(Util.calculateAngleFrom(effector, effected));
+		final int x = (int) (effected.getX() + (_distance * Math.cos(radians)));
+		final int y = (int) (effected.getY() + (_distance * Math.sin(radians)));
 		final int z = effected.getZ();
-		final Location loc = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceId());
+		final Location loc = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceWorld());
 		
 		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		effected.broadcastPacket(new FlyToLocation(effected, loc, FlyType.PUSH_HORIZONTAL, _speed, _delay, _animationSpeed));
-		effected.abortAttack();
-		effected.abortCast();
+		effected.broadcastPacket(new FlyToLocation(effected, loc, _type, _speed, _delay, _animationSpeed));
+		if (_knockDown)
+		{
+			effected.setHeading(Util.calculateHeadingFrom(effected, effector));
+		}
 		effected.setXYZ(loc);
 		effected.broadcastPacket(new ValidateLocation(effected));
+		effected.revalidateZone(true);
 	}
 }

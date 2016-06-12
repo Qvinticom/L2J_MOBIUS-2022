@@ -16,41 +16,36 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * @author ShanSoft
  * @structure chdSdS
  */
-public final class RequestSaveBookMarkSlot extends L2GameClientPacket
+public final class RequestSaveBookMarkSlot implements IClientIncomingPacket
 {
-	private static final String _C__D0_51_01_REQUESTSAVEBOOKMARKSLOT = "[C] D0:51:01 RequestSaveBookMarkSlot";
-	
 	private int icon;
 	private String name, tag;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		name = readS();
-		icon = readD();
-		tag = readS();
+		name = packet.readS();
+		icon = packet.readD();
+		tag = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		activeChar.teleportBookmarkAdd(activeChar.getX(), activeChar.getY(), activeChar.getZ(), icon, tag, name);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_51_01_REQUESTSAVEBOOKMARKSLOT;
 	}
 }

@@ -16,13 +16,31 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class Earthquake extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.model.interfaces.ILocational;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
+public class Earthquake implements IClientOutgoingPacket
 {
 	private final int _x;
 	private final int _y;
 	private final int _z;
 	private final int _intensity;
 	private final int _duration;
+	
+	/**
+	 * @param location
+	 * @param intensity
+	 * @param duration
+	 */
+	public Earthquake(ILocational location, int intensity, int duration)
+	{
+		_x = location.getX();
+		_y = location.getY();
+		_z = location.getZ();
+		_intensity = intensity;
+		_duration = duration;
+	}
 	
 	/**
 	 * @param x
@@ -41,14 +59,16 @@ public class Earthquake extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xD3);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
-		writeD(_intensity);
-		writeD(_duration);
-		writeD(0x00); // Unknown
+		OutgoingPackets.EARTHQUAKE.writeId(packet);
+		
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		packet.writeD(_intensity);
+		packet.writeD(_duration);
+		packet.writeD(0x00); // Unknown
+		return true;
 	}
 }

@@ -51,28 +51,20 @@ public final class GraciaSeedsManager
 		switch (seedType)
 		{
 			case SODTYPE:
-			{
 				// Seed of Destruction
 				GlobalVariablesManager.getInstance().set("SoDState", _SoDState);
 				GlobalVariablesManager.getInstance().set("SoDTiatKilled", _SoDTiatKilled);
 				GlobalVariablesManager.getInstance().set("SoDLSCDate", _SoDLastStateChangeDate.getTimeInMillis());
 				break;
-			}
 			case SOITYPE:
-			{
 				// Seed of Infinity
 				break;
-			}
 			case SOATYPE:
-			{
 				// Seed of Annihilation
 				break;
-			}
 			default:
-			{
 				_log.warning(getClass().getSimpleName() + ": Unknown SeedType in SaveData: " + seedType);
 				break;
-			}
 		}
 	}
 	
@@ -97,12 +89,9 @@ public final class GraciaSeedsManager
 		switch (_SoDState)
 		{
 			case 1:
-			{
 				// do nothing, players should kill Tiat a few times
 				break;
-			}
 			case 2:
-			{
 				// Conquest Complete state, if too much time is passed than change to defense state
 				final long timePast = System.currentTimeMillis() - _SoDLastStateChangeDate.getTimeInMillis();
 				if (timePast >= Config.SOD_STAGE_2_LENGTH)
@@ -115,53 +104,47 @@ public final class GraciaSeedsManager
 					ThreadPoolManager.getInstance().scheduleEffect(new UpdateSoDStateTask(), Config.SOD_STAGE_2_LENGTH - timePast);
 				}
 				break;
-			}
 			case 3:
-			{
 				// not implemented
 				setSoDState(1, true);
 				break;
-			}
 			default:
-			{
 				_log.warning(getClass().getSimpleName() + ": Unknown Seed of Destruction state(" + _SoDState + ")! ");
-			}
 		}
 	}
 	
 	public void updateSodState()
 	{
 		final Quest quest = QuestManager.getInstance().getQuest(ENERGY_SEEDS);
-		if (quest != null)
+		if (quest == null)
 		{
-			quest.notifyEvent("StopSoDAi", null, null);
+			_log.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
 		}
 		else
 		{
-			_log.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
+			quest.notifyEvent("StopSoDAi", null, null);
 		}
 	}
 	
 	public void increaseSoDTiatKilled()
 	{
-		if (_SoDState != 1)
+		if (_SoDState == 1)
 		{
-			return;
-		}
-		_SoDTiatKilled++;
-		if (_SoDTiatKilled >= Config.SOD_TIAT_KILL_COUNT)
-		{
-			setSoDState(2, false);
-		}
-		saveData(SODTYPE);
-		final Quest esQuest = QuestManager.getInstance().getQuest(ENERGY_SEEDS);
-		if (esQuest != null)
-		{
-			esQuest.notifyEvent("StartSoDAi", null, null);
-		}
-		else
-		{
-			_log.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
+			_SoDTiatKilled++;
+			if (_SoDTiatKilled >= Config.SOD_TIAT_KILL_COUNT)
+			{
+				setSoDState(2, false);
+			}
+			saveData(SODTYPE);
+			final Quest esQuest = QuestManager.getInstance().getQuest(ENERGY_SEEDS);
+			if (esQuest == null)
+			{
+				_log.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
+			}
+			else
+			{
+				esQuest.notifyEvent("StartSoDAi", null, null);
+			}
 		}
 	}
 	
@@ -194,23 +177,15 @@ public final class GraciaSeedsManager
 		switch (_SoDState)
 		{
 			case 1:
-			{
 				return -1;
-			}
 			case 2:
-			{
-				return (_SoDLastStateChangeDate.getTimeInMillis() + Config.SOD_STAGE_2_LENGTH) - System.currentTimeMillis();
-			}
+				return ((_SoDLastStateChangeDate.getTimeInMillis() + Config.SOD_STAGE_2_LENGTH) - System.currentTimeMillis());
 			case 3:
-			{
 				// not implemented yet
 				return -1;
-			}
 			default:
-			{
 				// this should not happen!
 				return -1;
-			}
 		}
 	}
 	

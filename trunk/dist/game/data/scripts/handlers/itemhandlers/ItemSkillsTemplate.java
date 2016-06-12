@@ -16,15 +16,18 @@
  */
 package handlers.itemhandlers;
 
+import java.util.List;
+
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.entity.TvTEvent;
+import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -41,12 +44,6 @@ public class ItemSkillsTemplate implements IItemHandler
 			return false;
 		}
 		
-		if (!TvTEvent.onScrollUse(playable.getObjectId()))
-		{
-			playable.sendPacket(ActionFailed.STATIC_PACKET);
-			return false;
-		}
-		
 		// Pets can use items only when they are tradable.
 		if (playable.isPet() && !item.isTradeable())
 		{
@@ -60,7 +57,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			return false;
 		}
 		
-		final SkillHolder[] skills = item.getEtcItem().getSkills();
+		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
 		if (skills == null)
 		{
 			_log.info("Item " + item + " does not have registered any skill for handler.");
@@ -68,6 +65,7 @@ public class ItemSkillsTemplate implements IItemHandler
 		}
 		
 		boolean hasConsumeSkill = false;
+		boolean successfulUse = false;
 		
 		for (SkillHolder skillInfo : skills)
 		{
@@ -85,25 +83,25 @@ public class ItemSkillsTemplate implements IItemHandler
 					hasConsumeSkill = true;
 				}
 				
-				if (!itemSkill.checkCondition(playable, playable.getTarget(), false))
+				if (!itemSkill.checkCondition(playable, playable.getTarget()))
 				{
-					return false;
+					continue;
 				}
 				
 				if (playable.isSkillDisabled(itemSkill))
 				{
-					return false;
+					continue;
 				}
 				
 				// Verify that skill is not under reuse.
 				if (!checkReuse(playable, itemSkill, item))
 				{
-					return false;
+					continue;
 				}
 				
 				if (!item.isPotion() && !item.isElixir() && !item.isScroll() && playable.isCastingNow())
 				{
-					return false;
+					continue;
 				}
 				
 				// Send message to the master.
@@ -114,16 +112,21 @@ public class ItemSkillsTemplate implements IItemHandler
 					playable.sendPacket(sm);
 				}
 				
-				if (itemSkill.isSimultaneousCast() || ((item.getItem().hasImmediateEffect() || item.getItem().hasExImmediateEffect()) && itemSkill.isStatic()))
+				if (itemSkill.isWithoutAction() || item.getItem().hasImmediateEffect() || item.getItem().hasExImmediateEffect())
 				{
-					playable.doSimultaneousCast(itemSkill);
+					SkillCaster.triggerCast(playable, null, itemSkill, item, false);
+					successfulUse = true;
 				}
 				else
 				{
 					playable.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-					if (!playable.useMagic(itemSkill, forceUse, false))
+					if (playable.useMagic(itemSkill, item, forceUse, false))
 					{
-						return false;
+						successfulUse = true;
+					}
+					else
+					{
+						continue;
 					}
 				}
 				
@@ -134,13 +137,16 @@ public class ItemSkillsTemplate implements IItemHandler
 			}
 		}
 		
-		if (checkConsume(item, hasConsumeSkill) && !playable.destroyItem("Consume", item.getObjectId(), 1, playable, false))
+		if (successfulUse && checkConsume(item, hasConsumeSkill))
 		{
-			playable.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
-			return false;
+			if (!playable.destroyItem("Consume", item.getObjectId(), 1, playable, false))
+			{
+				playable.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				return false;
+			}
 		}
 		
-		return true;
+		return successfulUse;
 	}
 	
 	/**
@@ -154,6 +160,7 @@ public class ItemSkillsTemplate implements IItemHandler
 		{
 			case CAPSULE:
 			case SKILL_REDUCE:
+			case SKILL_REDUCE_ON_SKILL_SUCCESS:
 			{
 				if (!hasConsumeSkill && item.getItem().hasImmediateEffect())
 				{
@@ -174,53 +181,56 @@ public class ItemSkillsTemplate implements IItemHandler
 	{
 		final long remainingTime = (skill != null) ? playable.getSkillRemainingReuseTime(skill.getReuseHashCode()) : playable.getItemRemainingReuseTime(item.getObjectId());
 		final boolean isAvailable = remainingTime <= 0;
-		if (playable.isPlayer() && !isAvailable)
+		if (playable.isPlayer())
 		{
-			final int hours = (int) (remainingTime / 3600000L);
-			final int minutes = (int) (remainingTime % 3600000L) / 60000;
-			final int seconds = (int) ((remainingTime / 1000) % 60);
-			SystemMessage sm = null;
-			if (hours > 0)
+			if (!isAvailable)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
-				if ((skill == null) || skill.isStatic())
+				final int hours = (int) (remainingTime / 3600000L);
+				final int minutes = (int) (remainingTime % 3600000L) / 60000;
+				final int seconds = (int) ((remainingTime / 1000) % 60);
+				SystemMessage sm = null;
+				if (hours > 0)
 				{
-					sm.addItemName(item);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+					if ((skill == null) || skill.isStatic())
+					{
+						sm.addItemName(item);
+					}
+					else
+					{
+						sm.addSkillName(skill);
+					}
+					sm.addInt(hours);
+					sm.addInt(minutes);
+				}
+				else if (minutes > 0)
+				{
+					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+					if ((skill == null) || skill.isStatic())
+					{
+						sm.addItemName(item);
+					}
+					else
+					{
+						sm.addSkillName(skill);
+					}
+					sm.addInt(minutes);
 				}
 				else
 				{
-					sm.addSkillName(skill);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+					if ((skill == null) || skill.isStatic())
+					{
+						sm.addItemName(item);
+					}
+					else
+					{
+						sm.addSkillName(skill);
+					}
 				}
-				sm.addInt(hours);
-				sm.addInt(minutes);
+				sm.addInt(seconds);
+				playable.sendPacket(sm);
 			}
-			else if (minutes > 0)
-			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
-				if ((skill == null) || skill.isStatic())
-				{
-					sm.addItemName(item);
-				}
-				else
-				{
-					sm.addSkillName(skill);
-				}
-				sm.addInt(minutes);
-			}
-			else
-			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
-				if ((skill == null) || skill.isStatic())
-				{
-					sm.addItemName(item);
-				}
-				else
-				{
-					sm.addSkillName(skill);
-				}
-			}
-			sm.addInt(seconds);
-			playable.sendPacket(sm);
 		}
 		return isAvailable;
 	}

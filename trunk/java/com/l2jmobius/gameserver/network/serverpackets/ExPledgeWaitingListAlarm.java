@@ -16,17 +16,21 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
  * @author Sdw
  */
-public class ExPledgeWaitingListAlarm extends L2GameServerPacket
+public class ExPledgeWaitingListAlarm implements IClientOutgoingPacket
 {
 	public static final ExPledgeWaitingListAlarm STATIC_PACKET = new ExPledgeWaitingListAlarm();
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x147);
+		OutgoingPackets.EX_PLEDGE_WAITING_LIST_ALARM.writeId(packet);
+		
+		return true;
 	}
 }

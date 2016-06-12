@@ -17,10 +17,11 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -32,10 +33,8 @@ public final class FocusSouls extends AbstractEffect
 {
 	private final int _charge;
 	
-	public FocusSouls(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public FocusSouls(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_charge = params.getInt("charge", 0);
 	}
 	
@@ -46,20 +45,22 @@ public final class FocusSouls extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (!info.getEffected().isPlayer() || info.getEffected().isAlikeDead())
+		if (!effected.isPlayer() || effected.isAlikeDead())
 		{
 			return;
 		}
 		
-		final L2PcInstance target = info.getEffected().getActingPlayer();
-		final int maxSouls = (int) target.calcStat(Stats.MAX_SOULS, 0, null, null);
+		final L2PcInstance target = effected.getActingPlayer();
+		final int maxSouls = (int) target.getStat().getValue(Stats.MAX_SOULS, 0);
 		if (maxSouls > 0)
 		{
-			if (target.getChargedSouls() < maxSouls)
+			final int amount = _charge;
+			if ((target.getChargedSouls() < maxSouls))
 			{
-				target.increaseSouls(((target.getChargedSouls() + _charge) <= maxSouls) ? _charge : (maxSouls - target.getChargedSouls()));
+				final int count = ((target.getChargedSouls() + amount) <= maxSouls) ? amount : (maxSouls - target.getChargedSouls());
+				target.increaseSouls(count);
 			}
 			else
 			{

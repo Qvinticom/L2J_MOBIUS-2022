@@ -16,22 +16,24 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Sdw
  */
-public class ExResponseBeautyRegistReset extends L2GameServerPacket
+public class ExResponseBeautyRegistReset implements IClientOutgoingPacket
 {
 	private final L2PcInstance _activeChar;
 	private final int _type;
 	private final int _result;
 	
-	public static final int FAILURE = 0;
-	public static final int SUCCESS = 1;
+	public final static int FAILURE = 0;
+	public final static int SUCCESS = 1;
 	
-	public static final int CHANGE = 0;
-	public static final int RESTORE = 1;
+	public final static int CHANGE = 0;
+	public final static int RESTORE = 1;
 	
 	public ExResponseBeautyRegistReset(L2PcInstance activeChar, int type, int result)
 	{
@@ -41,17 +43,17 @@ public class ExResponseBeautyRegistReset extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x136);
+		OutgoingPackets.EX_RESPONSE_BEAUTY_REGIST_RESET.writeId(packet);
 		
-		writeQ(_activeChar.getAdena());
-		writeQ(_activeChar.getBeautyTickets());
-		writeD(_type);
-		writeD(_result);
-		writeD(_activeChar.getVisualHair());
-		writeD(_activeChar.getVisualFace());
-		writeD(_activeChar.getVisualHairColor());
+		packet.writeQ(_activeChar.getAdena());
+		packet.writeQ(_activeChar.getBeautyTickets());
+		packet.writeD(_type);
+		packet.writeD(_result);
+		packet.writeD(_activeChar.getVisualHair());
+		packet.writeD(_activeChar.getVisualFace());
+		packet.writeD(_activeChar.getVisualHairColor());
+		return true;
 	}
 }

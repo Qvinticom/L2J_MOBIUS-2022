@@ -18,8 +18,8 @@ package handlers.admincommandhandlers;
 
 import java.io.File;
 import java.util.StringTokenizer;
-
-import javax.script.ScriptException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.cache.HtmCache;
@@ -28,26 +28,28 @@ import com.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
 import com.l2jmobius.gameserver.data.xml.impl.AbilityPointsData;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
+import com.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemGroupsData;
+import com.l2jmobius.gameserver.data.xml.impl.FishingData;
 import com.l2jmobius.gameserver.data.xml.impl.ItemCrystalizationData;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
-import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
+import com.l2jmobius.gameserver.data.xml.impl.OptionData;
+import com.l2jmobius.gameserver.data.xml.impl.SayuneData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.TeleportersData;
 import com.l2jmobius.gameserver.data.xml.impl.TransformData;
-import com.l2jmobius.gameserver.data.xml.impl.WallData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.scripting.L2ScriptEngineManager;
+import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -55,12 +57,14 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class AdminReload implements IAdminCommandHandler
 {
+	private static final Logger LOGGER = Logger.getLogger(AdminReload.class.getName());
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_reload"
 	};
 	
-	private static final String RELOAD_USAGE = "Usage: //reload <config|access|npc|quest [quest_id|quest_name]|walker|htm[l] [file|directory]|multisell|buylist|teleport|skill|item|door|effect|handler|enchant>";
+	private static final String RELOAD_USAGE = "Usage: //reload <config|access|npc|quest [quest_id|quest_name]|walker|htm[l] [file|directory]|multisell|buylist|teleport|skill|item|door|effect|handler|enchant|options|fishing>";
 	
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
@@ -135,7 +139,7 @@ public class AdminReload implements IAdminCommandHandler
 					if (st.hasMoreElements())
 					{
 						final String path = st.nextToken();
-						final File file = new File(Config.DATAPACK_ROOT, "html/" + path);
+						final File file = new File(Config.DATAPACK_ROOT, "data/html/" + path);
 						if (file.exists())
 						{
 							HtmCache.getInstance().reload(file);
@@ -191,12 +195,6 @@ public class AdminReload implements IAdminCommandHandler
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Doors.");
 					break;
 				}
-				case "wall":
-				{
-					WallData.getInstance().load();
-					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Walls.");
-					break;
-				}
 				case "zone":
 				{
 					ZoneManager.getInstance().reload();
@@ -205,7 +203,7 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				case "cw":
 				{
-					CursedWeaponsManager.getInstance().reload();
+					CursedWeaponsManager.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Cursed Weapons.");
 					break;
 				}
@@ -217,31 +215,29 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				case "effect":
 				{
-					final File file = new File(L2ScriptEngineManager.SCRIPT_FOLDER, "handlers/EffectMasterHandler.java");
 					try
 					{
-						L2ScriptEngineManager.getInstance().executeScript(file);
-						AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Effects.");
+						ScriptEngineManager.getInstance().executeEffectMasterHandler();
+						AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded effect master handler.");
 					}
-					catch (ScriptException e)
+					catch (Exception e)
 					{
-						L2ScriptEngineManager.getInstance().reportScriptFileError(file, e);
-						activeChar.sendMessage("There was an error while loading handlers.");
+						LOGGER.log(Level.WARNING, "Failed executing effect master handler!", e);
+						activeChar.sendMessage("Error reloading effect master handler!");
 					}
 					break;
 				}
 				case "handler":
 				{
-					final File file = new File(L2ScriptEngineManager.SCRIPT_FOLDER, "handlers/MasterHandler.java");
 					try
 					{
-						L2ScriptEngineManager.getInstance().executeScript(file);
-						AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Handlers.");
+						ScriptEngineManager.getInstance().executeMasterHandler();
+						AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded master handler.");
 					}
-					catch (ScriptException e)
+					catch (Exception e)
 					{
-						L2ScriptEngineManager.getInstance().reportScriptFileError(file, e);
-						activeChar.sendMessage("There was an error while loading handlers.");
+						LOGGER.log(Level.WARNING, "Failed executing master handler!", e);
+						activeChar.sendMessage("Error reloading master handler!");
 					}
 					break;
 				}
@@ -264,12 +260,6 @@ public class AdminReload implements IAdminCommandHandler
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item crystalization data.");
 					break;
 				}
-				case "primeshop":
-				{
-					PrimeShopData.getInstance().load();
-					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded L2 Store data.");
-					break;
-				}
 				case "ability":
 				{
 					AbilityPointsData.getInstance().load();
@@ -280,6 +270,30 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					AppearanceItemData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded appearance item data.");
+					break;
+				}
+				case "sayune":
+				{
+					SayuneData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Sayune data.");
+					break;
+				}
+				case "sets":
+				{
+					ArmorSetsData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Armor sets data.");
+					break;
+				}
+				case "options":
+				{
+					OptionData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Options data.");
+					break;
+				}
+				case "fishing":
+				{
+					FishingData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Fishing data.");
 					break;
 				}
 				default:

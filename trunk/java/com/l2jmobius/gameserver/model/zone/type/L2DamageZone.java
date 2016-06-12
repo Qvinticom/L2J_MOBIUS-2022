@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.stats.Stats;
+import com.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.TaskZoneSettings;
 
@@ -59,7 +60,12 @@ public class L2DamageZone extends L2ZoneType
 		_castle = null;
 		
 		setTargetType(InstanceType.L2Playable); // default only playabale
-		setSettings(ZoneManager.getSettings(getName()) == null ? new TaskZoneSettings() : ZoneManager.getSettings(getName()));
+		AbstractZoneSettings settings = ZoneManager.getSettings(getName());
+		if (settings == null)
+		{
+			settings = new TaskZoneSettings();
+		}
+		setSettings(settings);
 	}
 	
 	@Override
@@ -100,22 +106,23 @@ public class L2DamageZone extends L2ZoneType
 	@Override
 	protected void onEnter(L2Character character)
 	{
-		if ((getSettings().getTask() != null) || ((_damageHPPerSec == 0) && (_damageMPPerSec == 0)))
+		if ((getSettings().getTask() == null) && ((_damageHPPerSec != 0) || (_damageMPPerSec != 0)))
 		{
-			return;
-		}
-		
-		final L2PcInstance player = character.getActingPlayer();
-		if ((getCastle() != null) && (!getCastle().getSiege().isInProgress() || (player == null) || (player.getSiegeState() == 2)))
-		{
-			return;
-		}
-		
-		synchronized (this)
-		{
-			if (getSettings().getTask() == null)
+			final L2PcInstance player = character.getActingPlayer();
+			if (getCastle() != null) // Castle zone
 			{
-				getSettings().setTask(ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ApplyDamage(this), _startTask, _reuseTask));
+				if (!(getCastle().getSiege().isInProgress() && (player != null) && (player.getSiegeState() != 2))) // Siege and no defender
+				{
+					return;
+				}
+			}
+			
+			synchronized (this)
+			{
+				if (getSettings().getTask() == null)
+				{
+					getSettings().setTask(ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ApplyDamage(this), _startTask, _reuseTask));
+				}
 			}
 		}
 	}
@@ -195,7 +202,7 @@ public class L2DamageZone extends L2ZoneType
 						}
 					}
 					
-					final double multiplier = 1 + (temp.calcStat(Stats.DAMAGE_ZONE_VULN, 0, null, null) / 100);
+					final double multiplier = 1 + (temp.getStat().getValue(Stats.DAMAGE_ZONE_VULN, 0) / 100);
 					
 					if (getHPDamagePerSecond() != 0)
 					{

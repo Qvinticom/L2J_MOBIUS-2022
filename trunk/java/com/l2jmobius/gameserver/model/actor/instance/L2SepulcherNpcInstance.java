@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.model.actor.instance;
 import java.util.concurrent.Future;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
@@ -38,7 +39,6 @@ import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.Rnd;
 
 /**
  * @author sandman
@@ -49,13 +49,9 @@ public class L2SepulcherNpcInstance extends L2Npc
 	protected Future<?> _spawnNextMysteriousBoxTask = null;
 	protected Future<?> _spawnMonsterTask = null;
 	
-	private static final String HTML_FILE_PATH = "html/SepulcherNpc/";
+	private static final String HTML_FILE_PATH = "data/html/SepulcherNpc/";
 	private static final int HALLS_KEY = 7260;
 	
-	/**
-	 * Creates a sepulcher.
-	 * @param template the sepulcher NPC template
-	 */
 	public L2SepulcherNpcInstance(L2NpcTemplate template)
 	{
 		super(template);
@@ -205,7 +201,6 @@ public class L2SepulcherNpcInstance extends L2Npc
 			case 31485:
 			case 31486:
 			case 31487:
-			{
 				setIsInvul(false);
 				reduceCurrentHp(getMaxHp() + 1, player, null);
 				if (_spawnMonsterTask != null)
@@ -214,7 +209,7 @@ public class L2SepulcherNpcInstance extends L2Npc
 				}
 				_spawnMonsterTask = ThreadPoolManager.getInstance().scheduleEffect(new SpawnMonster(getId()), 3500);
 				break;
-			}
+			
 			case 31455:
 			case 31456:
 			case 31457:
@@ -228,7 +223,6 @@ public class L2SepulcherNpcInstance extends L2Npc
 			case 31465:
 			case 31466:
 			case 31467:
-			{
 				setIsInvul(false);
 				reduceCurrentHp(getMaxHp() + 1, player, null);
 				if ((player.getParty() != null) && !player.getParty().isLeader(player))
@@ -237,7 +231,7 @@ public class L2SepulcherNpcInstance extends L2Npc
 				}
 				player.addItem("Quest", HALLS_KEY, 1, player, true);
 				break;
-			}
+			
 			default:
 			{
 				if (hasListener(EventType.ON_NPC_QUEST_START))
@@ -261,7 +255,17 @@ public class L2SepulcherNpcInstance extends L2Npc
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		return HTML_FILE_PATH + (val == 0 ? "" + npcId : npcId + "-" + val) + ".htm";
+		String pom = "";
+		if (val == 0)
+		{
+			pom = "" + npcId;
+		}
+		else
+		{
+			pom = npcId + "-" + val;
+		}
+		
+		return HTML_FILE_PATH + pom + ".htm";
 	}
 	
 	@Override
@@ -281,8 +285,8 @@ public class L2SepulcherNpcInstance extends L2Npc
 		if (isBusy())
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			html.setFile(player.getHtmlPrefix(), "html/npcbusy.htm");
-			html.replace("%busymessage%", getBusyMessage());
+			html.setFile(player.getHtmlPrefix(), "data/html/npcbusy.htm");
+			html.replace("%busymessage%", ""); // busy message was never used.
 			html.replace("%npcname%", getName());
 			html.replace("%playername%", player.getName());
 			player.sendPacket(html);
@@ -317,9 +321,7 @@ public class L2SepulcherNpcInstance extends L2Npc
 					case 31934:
 					case 31939:
 					case 31944:
-					{
 						FourSepulchersManager.getInstance().spawnShadow(getId());
-					}
 					default:
 					{
 						openNextDoor(getId());
@@ -442,7 +444,7 @@ public class L2SepulcherNpcInstance extends L2Npc
 	public void showHtmlFile(L2PcInstance player, String file)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		html.setFile(player.getHtmlPrefix(), "html/SepulcherNpc/" + file);
+		html.setFile(player.getHtmlPrefix(), "data/html/SepulcherNpc/" + file);
 		html.replace("%npcname%", getName());
 		player.sendPacket(html);
 	}

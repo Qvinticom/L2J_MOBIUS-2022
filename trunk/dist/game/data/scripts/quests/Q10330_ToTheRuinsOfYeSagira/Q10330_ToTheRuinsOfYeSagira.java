@@ -16,10 +16,8 @@
  */
 package quests.Q10330_ToTheRuinsOfYeSagira;
 
-import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -29,29 +27,28 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import quests.Q10329_BackupSeekers.Q10329_BackupSeekers;
 
 /**
+ * To the Ruins of Ye Sagira (10330)
  * @author Gladicek
  */
-public class Q10330_ToTheRuinsOfYeSagira extends Quest
+public final class Q10330_ToTheRuinsOfYeSagira extends Quest
 {
-	// Npcs
+	// NPCs
 	private static final int ATRAN = 33448;
 	private static final int LAKCIS = 32977;
 	// Items
-	private static final ItemHolder LEATHER_SHIRT = new ItemHolder(22, 1);
-	private static final ItemHolder LEATHER_PANTS = new ItemHolder(29, 1);
-	// Level Condition
+	private static final int LEATHER_SHIRT = 22;
+	private static final int LEATHER_PANTS = 29;
+	// Misc
 	private static final int MIN_LEVEL = 8;
 	private static final int MAX_LEVEL = 20;
 	
 	public Q10330_ToTheRuinsOfYeSagira()
 	{
-		super(10330, Q10330_ToTheRuinsOfYeSagira.class.getSimpleName(), "To the Ruins of Ye Sagira");
+		super(10330);
 		addStartNpc(ATRAN);
 		addTalkId(ATRAN, LAKCIS);
-		addCondMinLevel(MIN_LEVEL, "33448-05.htm");
-		addCondMaxLevel(MAX_LEVEL, "33448-05.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33448-05.htm");
 		addCondCompletedQuest(Q10329_BackupSeekers.class.getSimpleName(), "33448-05.htm");
-		addCondNotRace(Race.ERTHEIA, "33448-07.html");
 	}
 	
 	@Override
@@ -67,7 +64,7 @@ public class Q10330_ToTheRuinsOfYeSagira extends Quest
 		switch (event)
 		{
 			case "33448-02.htm":
-			case "32977-02.html":
+			case "32977-02.htm":
 			{
 				htmltext = event;
 				break;
@@ -78,14 +75,14 @@ public class Q10330_ToTheRuinsOfYeSagira extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32977-03.html":
+			case "32977-03.htm":
 			{
 				if (qs.isStarted())
 				{
-					showOnScreenMsg(player, NpcStringId.ARMOR_HAS_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
+					showOnScreenMsg(player, NpcStringId.ARMOR_HAS_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
 					giveAdena(player, 620, true);
-					giveItems(player, LEATHER_SHIRT);
-					giveItems(player, LEATHER_PANTS);
+					giveItems(player, LEATHER_SHIRT, 1);
+					giveItems(player, LEATHER_PANTS, 1);
 					addExpAndSp(player, 23000, 5);
 					qs.exitQuest(false, true);
 					htmltext = event;
@@ -106,17 +103,17 @@ public class Q10330_ToTheRuinsOfYeSagira extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = npc.getId() == ATRAN ? "33448-01.htm" : "32977-04.html";
+				htmltext = npc.getId() == ATRAN ? "33448-01.htm" : "32977-04.htm";
 				break;
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == ATRAN ? "33448-04.html" : "32977-01.html";
+				htmltext = npc.getId() == ATRAN ? "33448-04.htm" : "32977-01.htm";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == ATRAN ? "33448-06.html" : "32977-05.html";
+				htmltext = npc.getId() == ATRAN ? "33448-06.htm" : "32977-05.htm";
 				break;
 			}
 		}

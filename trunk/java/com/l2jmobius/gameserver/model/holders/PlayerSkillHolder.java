@@ -83,4 +83,9 @@ public class PlayerSkillHolder implements ISkillsHolder
 	{
 		return _skills.get(skillId);
 	}
+	
+	public Skill removeSkill(Skill skill)
+	{
+		return _skills.remove(skill.getId());
+	}
 }

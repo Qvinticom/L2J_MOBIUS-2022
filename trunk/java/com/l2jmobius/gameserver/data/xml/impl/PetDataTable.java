@@ -16,26 +16,30 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.model.L2PetData;
 import com.l2jmobius.gameserver.model.L2PetLevelData;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * This class parse and hold all pet parameters.<br>
  * TODO: load and use all pet parameters.
  * @author Zoey76 (rework)
  */
-public final class PetDataTable implements IXmlReader
+public final class PetDataTable implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(PetDataTable.class.getName());
+	
 	private final Map<Integer, L2PetData> _pets = new HashMap<>();
 	
 	/**
@@ -50,15 +54,16 @@ public final class PetDataTable implements IXmlReader
 	public void load()
 	{
 		_pets.clear();
-		parseDatapackDirectory("stats/pets", false);
+		parseDatapackDirectory("data/stats/pets", false);
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _pets.size() + " Pets.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		NamedNodeMap attrs;
-		for (Node d = doc.getFirstChild().getFirstChild(); d != null; d = d.getNextSibling())
+		final Node n = doc.getFirstChild();
+		for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 		{
 			if (d.getNodeName().equals("pet"))
 			{
@@ -173,7 +178,11 @@ public final class PetDataTable implements IXmlReader
 	public L2PetLevelData getPetLevelData(int petId, int petLevel)
 	{
 		final L2PetData pd = getPetData(petId);
-		return pd != null ? pd.getPetLevelData(petLevel) : null;
+		if (pd != null)
+		{
+			return pd.getPetLevelData(petLevel);
+		}
+		return null;
 	}
 	
 	/**

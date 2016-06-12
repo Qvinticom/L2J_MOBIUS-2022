@@ -16,29 +16,30 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import com.l2jmobius.gameserver.model.L2Crest;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeEmblem;
 
 /**
  * @author -Wooden-, Sdw
  */
-public final class RequestExPledgeCrestLarge extends L2GameClientPacket
+public final class RequestExPledgeCrestLarge implements IClientIncomingPacket
 {
-	private static final String _C__D0_10_REQUESTEXPLEDGECRESTLARGE = "[C] D0:10 RequestExPledgeCrestLarge";
-	
 	private int _crestId;
 	private int _clanId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_crestId = readD();
-		_clanId = readD();
+		_crestId = packet.readD();
+		_clanId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		final L2Crest crest = CrestTable.getInstance().getCrest(_crestId);
 		final byte[] data = crest != null ? crest.getData() : null;
@@ -49,28 +50,16 @@ public final class RequestExPledgeCrestLarge extends L2GameClientPacket
 				if (i < 4)
 				{
 					final byte[] fullChunk = new byte[14336];
-					System.arraycopy(data, 14336 * i, fullChunk, 0, 14336);
-					sendPacket(new ExPledgeEmblem(_crestId, fullChunk, _clanId, i));
+					System.arraycopy(data, (14336 * i), fullChunk, 0, 14336);
+					client.sendPacket(new ExPledgeEmblem(_crestId, fullChunk, _clanId, i));
 				}
 				else
 				{
 					final byte[] lastChunk = new byte[8320];
-					System.arraycopy(data, 14336 * i, lastChunk, 0, 8320);
-					sendPacket(new ExPledgeEmblem(_crestId, lastChunk, _clanId, i));
+					System.arraycopy(data, (14336 * i), lastChunk, 0, 8320);
+					client.sendPacket(new ExPledgeEmblem(_crestId, lastChunk, _clanId, i));
 				}
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_10_REQUESTEXPLEDGECRESTLARGE;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

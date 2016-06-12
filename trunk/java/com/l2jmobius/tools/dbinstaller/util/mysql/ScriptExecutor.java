@@ -27,8 +27,8 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
+import com.l2jmobius.commons.util.file.filter.SQLFilter;
 import com.l2jmobius.tools.dbinstaller.DBOutputInterface;
-import com.l2jmobius.util.file.filter.SQLFilter;
 
 /**
  * @author mrTJO

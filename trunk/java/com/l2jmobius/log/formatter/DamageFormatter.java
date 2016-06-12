@@ -22,12 +22,11 @@ import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.commons.util.StringUtil;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.util.StringUtil;
 
 public class DamageFormatter extends Formatter
 {
@@ -50,7 +49,7 @@ public class DamageFormatter extends Formatter
 				
 				if (p instanceof L2Character)
 				{
-					if ((p instanceof L2Attackable) && ((L2Attackable) p).isRaid())
+					if ((p instanceof L2Character) && ((L2Character) p).isRaid())
 					{
 						StringUtil.append(output, "RaidBoss ");
 					}

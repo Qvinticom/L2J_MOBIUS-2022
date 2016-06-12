@@ -16,14 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.ItemListType;
 import com.l2jmobius.gameserver.model.ItemInfo;
 import com.l2jmobius.gameserver.model.TradeItem;
 import com.l2jmobius.gameserver.model.buylist.Product;
+import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
 import com.l2jmobius.gameserver.model.items.L2WarehouseItem;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.clientpackets.ensoul.SoulCrystalOption;
 
 /**
  * @author UnAfraid
@@ -41,87 +42,89 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		return MASKS;
 	}
 	
-	@Override
-	protected void onNewMaskAdded(ItemListType component)
+	protected void writeItem(PacketWriter packet, TradeItem item)
 	{
+		writeItem(packet, new ItemInfo(item));
 	}
 	
-	protected void writeItem(TradeItem item)
+	protected void writeItem(PacketWriter packet, L2WarehouseItem item)
 	{
-		writeItem(new ItemInfo(item));
+		writeItem(packet, new ItemInfo(item));
 	}
 	
-	protected void writeItem(L2WarehouseItem item)
+	protected void writeItem(PacketWriter packet, L2ItemInstance item)
 	{
-		writeItem(new ItemInfo(item));
+		writeItem(packet, new ItemInfo(item));
 	}
 	
-	protected void writeItem(L2ItemInstance item)
+	protected void writeItem(PacketWriter packet, Product item)
 	{
-		writeItem(new ItemInfo(item));
+		writeItem(packet, new ItemInfo(item));
 	}
 	
-	protected void writeItem(Product item)
+	protected void writeTradeItem(PacketWriter packet, TradeItem item)
 	{
-		writeItem(new ItemInfo(item));
+		packet.writeH(item.getItem().getType1());
+		packet.writeD(item.getObjectId()); // ObjectId
+		packet.writeD(item.getItem().getDisplayId()); // ItemId
+		packet.writeQ(item.getCount()); // Quantity
+		packet.writeC(item.getItem().getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
+		packet.writeC(item.getCustomType1()); // Filler (always 0)
+		packet.writeQ(item.getItem().getBodyPart()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
+		packet.writeC(item.getEnchant()); // Enchant level (pet level shown in control item)
+		packet.writeC(0x00); // TODO : Find me
+		packet.writeH(0x00); // Equipped : 00-No, 01-yes
+		packet.writeH(item.getCustomType2());
+		writeItemElementalAndEnchant(packet, new ItemInfo(item));
 	}
 	
-	protected void writeTradeItem(TradeItem item)
-	{
-		writeH(item.getItem().getType1());
-		writeD(item.getObjectId()); // ObjectId
-		writeD(item.getItem().getDisplayId()); // ItemId
-		writeQ(item.getCount()); // Quantity
-		writeC(item.getItem().getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
-		writeC(item.getCustomType1()); // Filler (always 0)
-		writeQ(item.getItem().getBodyPart()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
-		writeC(item.getEnchant()); // Enchant level (pet level shown in control item)
-		writeH(0x00); // Equipped : 00-No, 01-yes
-		writeC(item.getCustomType2());
-		writeD(0);
-		final ItemInfo iteminfo = new ItemInfo(item);
-		writeItemElementalAndEnchant(iteminfo);
-		writeItemSoulCrystalOptions(iteminfo);
-	}
-	
-	protected void writeItem(ItemInfo item)
+	protected void writeItem(PacketWriter packet, ItemInfo item)
 	{
 		final int mask = calculateMask(item);
 		// cddcQcchQccddc
-		writeC(mask);
-		writeD(item.getObjectId()); // ObjectId
-		writeD(item.getItem().getDisplayId()); // ItemId
-		writeC(item.getEquipped() == 0 ? item.getLocation() : 0xFF); // T1
-		writeQ(item.getCount()); // Quantity
-		writeC(item.getItem().getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
-		writeC(item.getCustomType1()); // Filler (always 0)
-		writeH(item.getEquipped()); // Equipped : 00-No, 01-yes
-		writeQ(item.getItem().getBodyPart()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
-		writeC(item.getEnchant()); // Enchant level (pet level shown in control item)
-		writeC(0);
-		writeD(item.getMana());
-		writeD(item.getTime());
-		writeC(0x01); // GOD Item enabled = 1 disabled (red) = 0
+		packet.writeC(mask);
+		packet.writeD(item.getObjectId()); // ObjectId
+		packet.writeD(item.getItem().getDisplayId()); // ItemId
+		packet.writeC(item.getItem().isQuestItem() || (item.getEquipped() == 1) ? 0xFF : item.getLocation()); // T1
+		packet.writeQ(item.getCount()); // Quantity
+		packet.writeC(item.getItem().getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
+		packet.writeC(item.getCustomType1()); // Filler (always 0)
+		packet.writeH(item.getEquipped()); // Equipped : 00-No, 01-yes
+		packet.writeQ(item.getItem().getBodyPart()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
+		packet.writeC(item.getEnchant()); // Enchant level (pet level shown in control item)
+		packet.writeC(0x01); // TODO : Find me
+		packet.writeD(item.getMana());
+		packet.writeD(item.getTime());
+		packet.writeC(0x01); // GOD Item enabled = 1 disabled (red) = 0
 		if (containsMask(mask, ItemListType.AUGMENT_BONUS))
 		{
-			writeD(item.get1stAugmentationId());
-			writeD(item.get2ndAugmentationId());
+			packet.writeQ(item.getAugmentationBonus());
 		}
 		if (containsMask(mask, ItemListType.ELEMENTAL_ATTRIBUTE))
 		{
-			writeItemElemental(item);
+			writeItemElemental(packet, item);
 		}
 		if (containsMask(mask, ItemListType.ENCHANT_EFFECT))
 		{
-			writeItemEnchantEffect(item);
+			writeItemEnchantEffect(packet, item);
 		}
 		if (containsMask(mask, ItemListType.VISUAL_ID))
 		{
-			writeD(item.getVisualId()); // Item remodel visual ID
+			packet.writeD(item.getVisualId()); // Item remodel visual ID
 		}
 		if (containsMask(mask, ItemListType.SOUL_CRYSTAL))
 		{
-			writeItemSoulCrystalOptions(item);
+			packet.writeC(item.getSoulCrystalOptions().size()); // Size of regular soul crystal options.
+			for (EnsoulOption option : item.getSoulCrystalOptions())
+			{
+				packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
+			}
+			
+			packet.writeC(item.getSoulCrystalSpecialOptions().size()); // Size of special soul crystal options.
+			for (EnsoulOption option : item.getSoulCrystalSpecialOptions())
+			{
+				packet.writeD(option.getId()); // Special Soul Crystal Ability ID.
+			}
 		}
 	}
 	
@@ -141,7 +144,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			for (byte i = 0; i < 6; i++)
 			{
-				if (item.getElementDefAttr(i) >= 0)
+				if (item.getElementDefAttr(i) > 0)
 				{
 					mask |= ItemListType.ELEMENTAL_ATTRIBUTE.getMask();
 					break;
@@ -166,105 +169,78 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 			mask |= ItemListType.VISUAL_ID.getMask();
 		}
 		
-		if (item.getSpecialSoulCrystalOption() != null)
+		if (!item.getSoulCrystalOptions().isEmpty() || !item.getSoulCrystalSpecialOptions().isEmpty())
 		{
 			mask |= ItemListType.SOUL_CRYSTAL.getMask();
-		}
-		else
-		{
-			for (SoulCrystalOption sco : item.getCommonSoulCrystalOptions())
-			{
-				if (sco != null)
-				{
-					mask |= ItemListType.SOUL_CRYSTAL.getMask();
-					break;
-				}
-			}
 		}
 		
 		return mask;
 	}
 	
-	protected void writeItemElementalAndEnchant(ItemInfo item)
+	protected void writeItemElementalAndEnchant(PacketWriter packet, ItemInfo item)
 	{
-		writeItemElemental(item);
-		writeItemEnchantEffect(item);
+		writeItemElemental(packet, item);
+		writeItemEnchantEffect(packet, item);
 	}
 	
-	protected void writeItemElemental(ItemInfo item)
+	protected void writeItemElemental(PacketWriter packet, ItemInfo item)
 	{
-		writeH(item.getAttackElementType());
-		writeH(item.getAttackElementPower());
+		packet.writeH(item.getAttackElementType());
+		packet.writeH(item.getAttackElementPower());
 		for (byte i = 0; i < 6; i++)
 		{
-			writeH(item.getElementDefAttr(i));
+			packet.writeH(item.getElementDefAttr(i));
 		}
 	}
 	
-	protected void writeItemEnchantEffect(ItemInfo item)
+	protected void writeItemEnchantEffect(PacketWriter packet, ItemInfo item)
 	{
 		// Enchant Effects
 		for (int op : item.getEnchantOptions())
 		{
-			writeD(op);
+			packet.writeD(op);
 		}
 	}
 	
-	protected void writeInventoryBlock(PcInventory inventory)
+	protected void writeInventoryBlock(PacketWriter packet, PcInventory inventory)
 	{
 		if (inventory.hasInventoryBlock())
 		{
-			writeH(inventory.getBlockItems().length);
-			writeC(inventory.getBlockMode());
-			for (int i : inventory.getBlockItems())
+			packet.writeH(inventory.getBlockItems().size());
+			packet.writeC(inventory.getBlockMode().getClientId());
+			for (int id : inventory.getBlockItems())
 			{
-				writeD(i);
+				packet.writeD(id);
 			}
 		}
 		else
 		{
-			writeH(0x00);
+			packet.writeH(0x00);
 		}
 	}
 	
-	protected void writeCommissionItem(ItemInfo item)
+	protected void writeCommissionItem(PacketWriter packet, ItemInfo item)
 	{
-		writeD(0); // Always 0
-		writeD(item.getItem().getId());
-		writeQ(item.getCount());
-		writeH(item.getItem().getType2());
-		writeQ(item.getItem().getBodyPart());
-		writeH(item.getEnchant());
-		writeH(item.getCustomType2());
-		writeItemElementalAndEnchant(item);
-		writeD(item.getVisualId());
-		writeItemSoulCrystalOptions(item);
-	}
-	
-	protected void writeItemSoulCrystalOptions(ItemInfo item)
-	{
-		int count = 0;
-		for (SoulCrystalOption sc : item.getCommonSoulCrystalOptions())
+		packet.writeD(0); // Always 0
+		packet.writeD(item.getItem().getId());
+		packet.writeQ(item.getCount());
+		packet.writeH(item.getItem().getType2());
+		packet.writeQ(item.getItem().getBodyPart());
+		packet.writeC(item.getEnchant());
+		packet.writeC(0x00); // TODO: Find me
+		packet.writeH(item.getCustomType2());
+		writeItemElementalAndEnchant(packet, item);
+		packet.writeD(item.getVisualId());
+		packet.writeC(item.getSoulCrystalOptions().size()); // Size of regular soul crystal options.
+		for (EnsoulOption option : item.getSoulCrystalOptions())
 		{
-			if (sc != null)
-			{
-				count++;
-			}
+			packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
 		}
 		
-		writeC(count);
-		for (SoulCrystalOption sco : item.getCommonSoulCrystalOptions())
+		packet.writeC(item.getSoulCrystalSpecialOptions().size()); // Size of special soul crystal options.
+		for (EnsoulOption option : item.getSoulCrystalSpecialOptions())
 		{
-			if (sco != null)
-			{
-				writeD(sco.getEffect());
-			}
-		}
-		
-		writeC(item.getSpecialSoulCrystalOption() != null);
-		if (item.getSpecialSoulCrystalOption() != null)
-		{
-			writeD(item.getSpecialSoulCrystalOption().getEffect());
+			packet.writeD(option.getId()); // Special Soul Crystal Ability ID.
 		}
 	}
 }

@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.model.conditions;
 
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -60,6 +61,11 @@ public class ConditionPlayerCanSwitchSubclass extends Condition
 			player.sendPacket(SystemMessageId.A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_WHILE_YOU_ARE_OVER_YOUR_WEIGHT_LIMIT);
 			canSwitchSub = false;
 		}
+		else if (player.isOnEvent(CeremonyOfChaosEvent.class))
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_CHANGE_YOUR_SUBCLASS_WHILE_REGISTERED_IN_THE_CEREMONY_OF_CHAOS);
+			canSwitchSub = false;
+		}
 		else if (player.isAllSkillsDisabled())
 		{
 			canSwitchSub = false;
@@ -69,7 +75,7 @@ public class ConditionPlayerCanSwitchSubclass extends Condition
 			canSwitchSub = false;
 			player.sendPacket(SystemMessageId.YOU_CANNOT_CHANGE_THE_CLASS_BECAUSE_OF_IDENTITY_CRISIS);
 		}
-		else if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) || (player.getPvpFlag() > 0) || (player.getInstanceId() > 0) || player.isTransformed() || player.isMounted())
+		else if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) || (player.getPvpFlag() > 0) || player.isInInstance() || player.isTransformed() || player.isMounted())
 		{
 			canSwitchSub = false;
 		}

@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.model;
 
-import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
 import com.l2jmobius.gameserver.model.variables.PlayerVariables;
@@ -56,10 +55,11 @@ public class CharSelectInfoPackage
 	private int _y = 0;
 	private int _z = 0;
 	private String _htmlPrefix = null;
-	private int _vitalityPoints = 0;
-	private int _accessLevel = 0;
 	private boolean _isGood = false;
 	private boolean _isEvil = false;
+	private int _vitalityPoints = 0;
+	private int _accessLevel = 0;
+	private boolean _isNoble;
 	private final PlayerVariables _vars;
 	
 	/**
@@ -321,14 +321,9 @@ public class CharSelectInfoPackage
 		_sp = sp;
 	}
 	
-	public int getWeaponEnchantEffect()
+	public int getEnchantEffect()
 	{
-		return getEnchantEffect(Inventory.PAPERDOLL_RHAND);
-	}
-	
-	public int getEnchantEffect(int slot)
-	{
-		return _paperdoll[slot][2];
+		return _paperdoll[Inventory.PAPERDOLL_RHAND][2];
 	}
 	
 	public void setReputation(int reputation)
@@ -423,53 +418,21 @@ public class CharSelectInfoPackage
 	
 	public boolean isHairAccessoryEnabled()
 	{
-		return _vars.getBoolean("hairAccessoryEnabled", true);
+		return _vars.getBoolean(PlayerVariables.HAIR_ACCESSORY_VARIABLE_NAME, true);
 	}
 	
-	public int getTransformationId()
+	public int getVitalityItemsUsed()
 	{
-		final int weaponId = getPaperdollItemId(Inventory.PAPERDOLL_RHAND);
-		switch (weaponId)
-		{
-			case 8190:
-			{
-				return 301;
-			}
-			case 8689:
-			{
-				return 302;
-			}
-		}
-		return 0;
+		return _vars.getInt(PlayerVariables.VITALITY_ITEMS_USED_VARIABLE_NAME, 0);
 	}
 	
-	public int getVitalityPercent()
+	public boolean isNoble()
 	{
-		return 200; // TODO: Implement.
+		return _isNoble;
 	}
 	
-	public int getVitalityItemCount()
+	public void setNoble(boolean noble)
 	{
-		return 5; // TODO: Implement.
-	}
-	
-	public boolean isAvailable()
-	{
-		return getAccessLevel() > -100;
-	}
-	
-	public boolean isHero()
-	{
-		return Hero.getInstance().isHero(getObjectId());
-	}
-	
-	public int get1stAugmentationId()
-	{
-		return 0x0000FFFF & getAugmentationId();
-	}
-	
-	public int get2ndAugmentationId()
-	{
-		return getAugmentationId() >> 16;
+		_isNoble = noble;
 	}
 }

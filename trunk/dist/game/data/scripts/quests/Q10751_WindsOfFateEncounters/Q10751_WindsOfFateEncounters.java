@@ -16,70 +16,80 @@
  */
 package quests.Q10751_WindsOfFateEncounters;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.cache.HtmCache;
+import java.util.HashSet;
+import java.util.Set;
+
+import com.l2jmobius.gameserver.enums.CategoryType;
+import com.l2jmobius.gameserver.enums.HtmlActionScope;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.handler.BypassHandler;
-import com.l2jmobius.gameserver.handler.IBypassHandler;
+import com.l2jmobius.gameserver.instancemanager.CastleManager;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerBypass;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
+import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.gameserver.util.Util;
+import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
+import com.l2jmobius.gameserver.network.serverpackets.TutorialCloseHtml;
+import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+import com.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
+import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
 /**
  * Winds of Fate: Encounters (10751)
- * @author Stayway
+ * @author malyelfik
  */
-public class Q10751_WindsOfFateEncounters extends Quest implements IBypassHandler
+public final class Q10751_WindsOfFateEncounters extends Quest
 {
-	// NPCs
+	// NPC
 	private static final int NAVARI = 33931;
 	private static final int AYANTHE = 33942;
 	private static final int KATALIN = 33943;
 	private static final int RAYMOND = 30289;
-	private static final int TELESHA = 33981;
 	private static final int MYSTERIOUS_WIZARD = 33980;
+	private static final int TELESHA = 33981;
 	// Monsters
-	private static final int SKELETON_ARCHER = 27529;
-	private static final int SKELETON_WARRIOR = 27528;
-	// Items
-	private static final ItemHolder WIND_SPIRIT_REALM_RELIC = new ItemHolder(39535, 1);
-	private static final ItemHolder NAVARIS_SUPPORT_BOX_F = new ItemHolder(40266, 1);
-	private static final ItemHolder NAVARIS_SUPPORT_BOX_M = new ItemHolder(40267, 1);
-	// Requirements
-	private static final int MIN_LEVEL = 38;
-	// Teleport
-	private static final Location TP_LOC = new Location(-80565, 251763, -3080);
-	private static final String[] TP_COMMANDS =
+	private static final int[] MONSTERS =
 	{
-		"Q10751_Teleport"
+		27528, // Skeleton Warrior
+		27529, // Skeleton Archer
 	};
+	// Items
+	private static final int WIND_SPIRIT_REALMS_RELIC = 39535;
+	private static final int NAVARI_SUPPORT_BOX_FIGHTER = 40266;
+	private static final int NAVARI_SUPPORT_BOX_MAGE = 40267;
+	// Location
+	private static final Location TELEPORT_LOC = new Location(-80565, 251763, -3080);
+	// Misc
+	private static final int MIN_LEVEL = 38;
+	private static final String KILL_COUNT_VAR = "KillCount";
 	
 	public Q10751_WindsOfFateEncounters()
 	{
-		super(10751, Q10751_WindsOfFateEncounters.class.getSimpleName(), "Winds of Fate: Encounters");
+		super(10751);
 		addStartNpc(NAVARI);
-		addTalkId(NAVARI, AYANTHE, RAYMOND, KATALIN, TELESHA, MYSTERIOUS_WIZARD);
-		addKillId(SKELETON_ARCHER, SKELETON_WARRIOR);
-		registerQuestItems(WIND_SPIRIT_REALM_RELIC.getId(), WIND_SPIRIT_REALM_RELIC.getId(), NAVARIS_SUPPORT_BOX_F.getId());
-		addCondMinLevel(MIN_LEVEL, "noLevel.html");
-		addCondRace(Race.ERTHEIA, "no_quest.html");
-		BypassHandler.getInstance().registerHandler(this);
+		addFirstTalkId(TELESHA);
+		addTalkId(NAVARI, AYANTHE, KATALIN, RAYMOND, TELESHA, MYSTERIOUS_WIZARD);
+		addKillId(MONSTERS);
+		
+		addCondRace(Race.ERTHEIA, "");
+		addCondInCategory(CategoryType.FIRST_CLASS_GROUP, "");
+		addCondMinLevel(MIN_LEVEL, "33931-00.htm");
+		registerQuestItems(WIND_SPIRIT_REALMS_RELIC);
 	}
 	
 	@Override
@@ -91,36 +101,43 @@ public class Q10751_WindsOfFateEncounters extends Quest implements IBypassHandle
 			return null;
 		}
 		
-		String htmltext = null;
+		String htmltext = event;
 		switch (event)
 		{
-			case "33931-03.html":
-			case "33931-05.html":
 			case "30289-02.html":
-			case "30289-05.html":
-			case "33942-04.html":
+			case "30289-06.html":
 			case "33942-05.html":
 			case "33942-06.html":
 			case "33942-07.html":
 			case "33942-08.html":
-			case "33942-08a.html":
-			case "33942-08b.html":
-			case "33943-04.html":
+			case "33942-09.html":
+			case "33942-10.html":
 			case "33943-05.html":
 			case "33943-06.html":
 			case "33943-07.html":
-			case "33943-08a.html":
-			case "33943-08b.html":
+			case "33943-08.html":
+			case "33943-09.html":
+			case "33943-10.html":
+				break;
+			case "33931-02.htm":
 			{
-				htmltext = event;
+				qs.startQuest();
+				if (player.isMageClass())
+				{
+					qs.setCond(3, true);
+				}
+				else
+				{
+					qs.setCond(2, true);
+					htmltext = "33931-03.htm";
+				}
 				break;
 			}
 			case "33943-02.html":
 			{
 				if (qs.isCond(2))
 				{
-					htmltext = event;
-					qs.setCond(4);
+					qs.setCond(4, true);
 				}
 				break;
 			}
@@ -128,109 +145,104 @@ public class Q10751_WindsOfFateEncounters extends Quest implements IBypassHandle
 			{
 				if (qs.isCond(3))
 				{
-					htmltext = event;
-					qs.setCond(4);
+					qs.setCond(5, true);
 				}
 				break;
 			}
 			case "30289-03.html":
 			{
-				if (qs.isCond(4))
+				if (qs.isCond(4) || qs.isCond(5))
 				{
-					htmltext = event;
-					qs.setCond(6);
-					qs.set(Integer.toString(SKELETON_ARCHER), 0);
-					qs.set(Integer.toString(SKELETON_WARRIOR), 0);
+					giveItems(player, WIND_SPIRIT_REALMS_RELIC, 1);
+					qs.setCond(6, true);
 				}
 				break;
 			}
-			case "wizard":
+			case "SPAWN_WIZZARD":
+			{
+				if (qs.isCond(6) && (npc != null) && (npc.getId() == TELESHA))
+				{
+					final L2Npc wizzard = addSpawn(MYSTERIOUS_WIZARD, npc, true, 30000);
+					wizzard.setSummoner(player);
+					wizzard.setTitle(player.getAppearance().getVisibleName());
+					wizzard.broadcastInfo();
+					showOnScreenMsg(player, NpcStringId.TALK_TO_THE_MYSTERIOUS_WIZARD2, ExShowScreenMessage.TOP_CENTER, 10000);
+					npc.deleteMe();
+				}
+				htmltext = null;
+				break;
+			}
+			case "33980-06.html":
 			{
 				if (qs.isCond(6))
 				{
-					addSpawn(MYSTERIOUS_WIZARD, npc.getX() + 20, npc.getY() + 20, npc.getZ(), npc.getHeading(), false, 50000);
+					giveItems(player, WIND_SPIRIT_REALMS_RELIC, 1);
+					qs.setCond(7, true);
+					showOnScreenMsg(player, NpcStringId.RETURN_TO_RAYMOND_OF_THE_TOWN_OF_GLUDIO, ExShowScreenMessage.TOP_CENTER, 8000);
 				}
 				break;
 			}
-			case "mysterious-01.html":
-			{
-				if (qs.isCond(6))
-				{
-					giveItems(player, WIND_SPIRIT_REALM_RELIC);
-					showOnScreenMsg(player, NpcStringId.RETURN_TO_RAYMOND_OF_THE_TOWN_OF_GLUDIO, ExShowScreenMessage.TOP_CENTER, 4500);
-					qs.setCond(7);
-					htmltext = event;
-				}
-				break;
-			}
-			case "33931-04.htm":
-			{
-				if (player.getClassId().isMage())
-				{
-					qs.startQuest();
-					qs.setCond(3);
-					giveItems(player, WIND_SPIRIT_REALM_RELIC);
-				}
-				htmltext = event;
-				break;
-			}
-			case "33931-02.htm":
-			{
-				if (!player.getClassId().isMage())
-				{
-					qs.startQuest();
-					qs.setCond(2);
-					giveItems(player, WIND_SPIRIT_REALM_RELIC);
-					htmltext = event;
-				}
-				break;
-			}
-			case "30289-04.htm":
+			case "30289-07.html":
 			{
 				if (qs.isCond(7))
 				{
-					htmltext = event;
-				}
-				break;
-			}
-			case "accept":
-			{
-				if (qs.isCond(7))
-				{
-					if (player.getClassId().isMage())
+					if (!player.isMageClass())
 					{
-						htmltext = "30289-06.html";
-						qs.setCond(9);
+						qs.setCond(8, true);
 					}
 					else
 					{
-						htmltext = "30289-07.html";
-						qs.setCond(8);
+						qs.setCond(9, true);
+						htmltext = "30289-08.html";
 					}
 				}
 				break;
 			}
+			case "33942-11.html":
+			{
+				final ClassId newClass = ClassId.CLOUD_BREAKER;
+				if (qs.isCond(9) && newClass.childOf(player.getClassId()))
+				{
+					player.setBaseClass(newClass);
+					player.setClassId(newClass.getId());
+					player.broadcastUserInfo();
+					player.sendPacket(new SocialAction(player.getObjectId(), 23));
+					giveAdena(player, 11000, false);
+					giveItems(player, NAVARI_SUPPORT_BOX_MAGE, 1);
+					addExpAndSp(player, 2700000, 648);
+					qs.exitQuest(false, true);
+				}
+				break;
+			}
+			case "33943-11.html":
+			{
+				final ClassId newClass = ClassId.MARAUDER;
+				if (qs.isCond(8) && newClass.childOf(player.getClassId()))
+				{
+					player.setBaseClass(newClass);
+					player.setClassId(newClass.getId());
+					player.broadcastUserInfo();
+					player.sendPacket(new SocialAction(player.getObjectId(), 23));
+					giveAdena(player, 11000, false);
+					giveItems(player, NAVARI_SUPPORT_BOX_FIGHTER, 1);
+					addExpAndSp(player, 2700000, 648);
+					qs.exitQuest(false, true);
+				}
+				break;
+			}
+			default:
+				htmltext = null;
 		}
-		
-		if (event.startsWith("change_to_"))
+		return htmltext;
+	}
+	
+	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		String htmltext = getNoQuestMsg(player);
+		if (npc.getId() == TELESHA)
 		{
-			final int classId = Integer.parseInt(event.replace("change_to_", ""));
-			player.setBaseClassId(classId);
-			player.setClassId(classId);
-			giveAdena(player, 110000, true);
-			addExpAndSp(player, 2700000, 648);
-			if (classId == 184)
-			{
-				htmltext = "33943-ccf.html";
-				giveItems(player, NAVARIS_SUPPORT_BOX_F);
-			}
-			else if (classId == 185)
-			{
-				htmltext = "33942-ccm.html";
-				giveItems(player, NAVARIS_SUPPORT_BOX_M);
-			}
-			player.broadcastUserInfo();
-			qs.exitQuest(false, true);
+			htmltext = "33981-01.html";
 		}
 		return htmltext;
 	}
@@ -241,116 +253,110 @@ public class Q10751_WindsOfFateEncounters extends Quest implements IBypassHandle
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if (player.getRace() != Race.ERTHEIA)
+		switch (npc.getId())
 		{
-			return "noErtheia.html";
-		}
-		
-		switch (qs.getState())
-		{
-			case State.CREATED:
+			case NAVARI:
 			{
-				switch (npc.getId())
+				switch (qs.getState())
 				{
-					case NAVARI:
-					{
-						htmltext = player.getClassId().isMage() ? "33931-m.htm" : "33931-f.htm";
+					case State.CREATED:
+						htmltext = "33931-01.htm";
 						break;
-					}
-					case AYANTHE:
-					case RAYMOND:
+					case State.STARTED:
 					{
-						if (player.getRace() != Race.ERTHEIA)
+						switch (qs.getCond())
 						{
-							htmltext = getNoQuestMsg(player);
+							case 2:
+								htmltext = "33931-04.html";
+								break;
+							case 3:
+								htmltext = "33931-05.html";
+								break;
 						}
 						break;
+					}
+					case State.COMPLETED:
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+				}
+				break;
+			}
+			case KATALIN:
+			{
+				if (!player.isMageClass())
+				{
+					if (qs.isStarted())
+					{
+						switch (qs.getCond())
+						{
+							case 2:
+								htmltext = "33943-01.html";
+								break;
+							case 4:
+								htmltext = "33943-03.html";
+								break;
+							case 8:
+								htmltext = "33943-04.html";
+								break;
+						}
+					}
+					else if (qs.isCompleted())
+					{
+						htmltext = getAlreadyCompletedMsg(player);
 					}
 				}
 				break;
 			}
-			case State.STARTED:
+			case AYANTHE:
 			{
-				switch (npc.getId())
+				if (player.isMageClass())
 				{
-					case NAVARI:
+					if (qs.isStarted())
 					{
-						if (qs.isCond(2))
+						switch (qs.getCond())
 						{
-							htmltext = "33931-03.html";
+							case 3:
+								htmltext = "33942-01.html";
+								break;
+							case 5:
+								htmltext = "33942-03.html";
+								break;
+							case 9:
+								htmltext = "33942-04.html";
+								break;
 						}
-						else if (qs.isCond(3))
-						{
-							htmltext = "33931-05.html";
-						}
-						break;
 					}
-					case AYANTHE:
+					else if (qs.isCompleted())
 					{
-						if (qs.isCond(3))
-						{
-							htmltext = "33942-01.html";
-						}
-						else if (qs.isCond(4))
-						{
-							htmltext = "33942-10.html";
-						}
-						else if (qs.isCond(9))
-						{
-							htmltext = "33942-03.html";
-						}
-						break;
+						htmltext = getAlreadyCompletedMsg(player);
 					}
-					case KATALIN:
+				}
+				break;
+			}
+			case RAYMOND:
+			{
+				if (qs.isStarted())
+				{
+					switch (qs.getCond())
 					{
-						if (qs.isCond(2))
-						{
-							htmltext = "33943-01.html";
-						}
-						else if (qs.isCond(4) && !player.getClassId().isMage())
-						{
-							htmltext = "33943-09.html";
-						}
-						else if (qs.isCond(8))
-						{
-							htmltext = "33943-03.html";
-						}
-						break;
-					}
-					case RAYMOND:
-					{
-						if (qs.isCond(4))
-						{
+						case 4:
+						case 5:
 							htmltext = "30289-01.html";
-						}
-						else if (qs.isCond(7))
-						{
+							break;
+						case 6:
 							htmltext = "30289-04.html";
-						}
-						break;
-					}
-					case TELESHA:
-					{
-						if (qs.isCond(6))
-						{
-							htmltext = "telesha.html";
-						}
-						break;
-					}
-					case MYSTERIOUS_WIZARD:
-					{
-						if (qs.isCond(6))
-						{
-							htmltext = "mysterious.html";
-						}
-						break;
+							break;
+						case 7:
+							htmltext = "30289-05.html";
+							break;
+						case 8:
+							htmltext = "30289-09.html";
+							break;
+						case 9:
+							htmltext = "30289-10.html";
+							break;
 					}
 				}
-				break;
-			}
-			case State.COMPLETED:
-			{
-				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
 		}
@@ -360,87 +366,141 @@ public class Q10751_WindsOfFateEncounters extends Quest implements IBypassHandle
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null) && qs.isStarted() && qs.isCond(6) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(6))
 		{
-			int kills = qs.getInt(Integer.toString(SKELETON_ARCHER));
-			kills++;
-			qs.set(Integer.toString(SKELETON_ARCHER), kills);
-			
-			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
-			log.addNpcString(NpcStringId.KILL_SKELETONS, kills);
-			killer.sendPacket(log);
-			
-			if (kills >= 5)
+			int killCount = qs.getInt(KILL_COUNT_VAR);
+			if (killCount <= 5)
 			{
-				addSpawn(TELESHA, npc.getX() + 20, npc.getY() + 20, npc.getZ(), npc.getHeading(), false, 50000);
-				showOnScreenMsg(killer, NpcStringId.CHECK_ON_TELESHA, ExShowScreenMessage.TOP_CENTER, 4500);
+				qs.set(KILL_COUNT_VAR, ++killCount);
+				sendNpcLogList(killer);
+			}
+			
+			if ((killCount >= 5) && !L2World.getInstance().getVisibleObjects(npc, L2Npc.class, 1000).stream().anyMatch(n -> ((n.getId() == TELESHA) && (n.getSummoner() == killer))))
+			{
+				final L2Npc telsha = addSpawn(TELESHA, npc, false, 30000);
+				telsha.setSummoner(killer);
+				telsha.setTitle(killer.getAppearance().getVisibleName());
+				telsha.broadcastInfo();
+				showOnScreenMsg(killer, NpcStringId.CHECK_ON_TELESHA, ExShowScreenMessage.TOP_CENTER, 10000);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	@RegisterEvent(EventType.ON_PLAYER_LEVEL_CHANGED)
-	@RegisterType(ListenerRegisterType.GLOBAL)
-	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance player)
 	{
-		if (Config.DISABLE_TUTORIAL)
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(6))
 		{
-			return;
+			final int killCount = qs.getInt(KILL_COUNT_VAR);
+			if (killCount > 0)
+			{
+				final Set<NpcLogListHolder> holder = new HashSet<>(1);
+				holder.add(new NpcLogListHolder(NpcStringId.KILL_SKELETONS, killCount));
+				return holder;
+			}
 		}
-		final L2PcInstance player = event.getActiveChar();
-		if ((player.getLevel() >= MIN_LEVEL) && (player.getRace() == Race.ERTHEIA))
+		return super.getNpcLogList(player);
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_PRESS_TUTORIAL_MARK)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
+	{
+		if (event.getMarkId() == getId())
 		{
+			final L2PcInstance player = event.getActiveChar();
 			final QuestState qs = getQuestState(player, false);
 			if (qs == null)
 			{
-				final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
-				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10751_WindsOfFateEncounters/Announce.html"));
-				player.sendPacket(html);
+				player.sendPacket(new PlaySound(3, "Npcdialog1.serenia_quest_12", 0, 0, 0, 0, 0));
+				player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), "popup.html")));
 			}
 		}
 	}
 	
-	@Override
-	public boolean useBypass(String command, L2PcInstance player, L2Character bypassOrigin)
+	@RegisterEvent(EventType.ON_PLAYER_BYPASS)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void OnPlayerBypass(OnPlayerBypass event)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) || (player.getLevel() < MIN_LEVEL) || (player.getRace() != Race.ERTHEIA))
-		{
-			return false;
-		}
+		final String command = event.getCommand();
+		final L2PcInstance player = event.getActiveChar();
+		final QuestState st = getQuestState(player, false);
 		
-		if (player.isInParty())
+		if (st == null)
 		{
-			player.sendPacket(new ExShowScreenMessage("You cannot teleport when you are in party.", 5000));
+			if (command.equals("Q10751_teleport"))
+			{
+				player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
+				
+				if (CastleManager.getInstance().getCastles().stream().anyMatch(c -> c.getSiege().isInProgress()))
+				{
+					showOnScreenMsg(player, NpcStringId.YOU_MAY_NOT_TELEPORT_IN_MIDDLE_OF_A_SIEGE, ExShowScreenMessage.TOP_CENTER, 5000);
+				}
+				else if (player.isInParty())
+				{
+					showOnScreenMsg(player, NpcStringId.YOU_CANNOT_TELEPORT_IN_PARTY_STATUS, ExShowScreenMessage.TOP_CENTER, 5000);
+				}
+				else if (player.isInInstance())
+				{
+					showOnScreenMsg(player, NpcStringId.YOU_MAY_NOT_TELEPORT_WHILE_USING_INSTANCE_ZONE, ExShowScreenMessage.TOP_CENTER, 5000);
+				}
+				else if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player))
+				{
+					showOnScreenMsg(player, NpcStringId.YOU_CANNOT_TELEPORT_IN_COMBAT, ExShowScreenMessage.TOP_CENTER, 5000);
+				}
+				else if (player.isTransformed())
+				{
+					showOnScreenMsg(player, NpcStringId.YOU_CANNOT_TELEPORT_WHILE_IN_A_TRANSFORMED_STATE, ExShowScreenMessage.TOP_CENTER, 5000);
+				}
+				else if (player.isDead())
+				{
+					showOnScreenMsg(player, NpcStringId.YOU_CANNOT_TELEPORT_WHILE_YOU_ARE_DEAD, ExShowScreenMessage.TOP_CENTER, 5000);
+				}
+				else
+				{
+					player.teleToLocation(TELEPORT_LOC);
+				}
+				player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
+			}
+			else if (command.equals("Q10751_close"))
+			{
+				player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
+				player.sendPacket(new TutorialShowQuestionMark(getId()));
+				player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
+			}
 		}
-		else if (player.isInCombat())
-		{
-			player.sendPacket(new ExShowScreenMessage("You cannot teleport when you are in combat.", 5000));
-		}
-		else if (player.isInDuel())
-		{
-			player.sendPacket(new ExShowScreenMessage("You cannot teleport when you are in a duel.", 5000));
-		}
-		else if (player.isInOlympiadMode())
-		{
-			player.sendPacket(new ExShowScreenMessage("You cannot teleport when you are in Olympiad.", 5000));
-		}
-		else if (player.isInVehicle())
-		{
-			player.sendPacket(new ExShowScreenMessage("You cannot teleport when you are in any vehicle or mount.", 5000));
-		}
-		else
-		{
-			player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			player.teleToLocation(TP_LOC);
-		}
-		return true;
 	}
 	
-	@Override
-	public String[] getBypassList()
+	@RegisterEvent(EventType.ON_PLAYER_LEVEL_CHANGED)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
-		return TP_COMMANDS;
+		final L2PcInstance player = event.getActiveChar();
+		final QuestState st = getQuestState(player, false);
+		final int oldLevel = event.getOldLevel();
+		final int newLevel = event.getNewLevel();
+		
+		if ((st == null) && (player.getRace().equals(Race.ERTHEIA)) && (oldLevel < newLevel) && (newLevel >= MIN_LEVEL) && (player.isInCategory(CategoryType.FIRST_CLASS_GROUP)))
+		{
+			showOnScreenMsg(player, NpcStringId.QUEEN_NAVARI_HAS_SENT_A_LETTER_NCLICK_THE_QUESTION_MARK_ICON_TO_READ, ExShowScreenMessage.TOP_CENTER, 10000);
+			player.sendPacket(new TutorialShowQuestionMark(getId()));
+		}
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void OnPlayerLogin(OnPlayerLogin event)
+	{
+		final L2PcInstance player = event.getActiveChar();
+		final QuestState st = getQuestState(player, false);
+		
+		if ((st == null) && player.getRace().equals(Race.ERTHEIA) && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.FIRST_CLASS_GROUP)))
+		{
+			showOnScreenMsg(player, NpcStringId.QUEEN_NAVARI_HAS_SENT_A_LETTER_NCLICK_THE_QUESTION_MARK_ICON_TO_READ, ExShowScreenMessage.TOP_CENTER, 10000);
+			player.sendPacket(new TutorialShowQuestionMark(getId()));
+		}
 	}
 }

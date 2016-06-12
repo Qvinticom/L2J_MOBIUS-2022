@@ -19,10 +19,10 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
@@ -32,15 +32,8 @@ import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
  */
 public final class ThrowUp extends AbstractEffect
 {
-	public ThrowUp(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public ThrowUp(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.STUNNED.getMask();
 	}
 	
 	@Override
@@ -50,24 +43,23 @@ public final class ThrowUp extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		// Get current position of the L2Character
-		final int curX = info.getEffected().getX();
-		final int curY = info.getEffected().getY();
-		final int curZ = info.getEffected().getZ();
+		final int curX = effected.getX();
+		final int curY = effected.getY();
+		final int curZ = effected.getZ();
 		
 		// Calculate distance between effector and effected current position
-		final double dx = info.getEffector().getX() - curX;
-		final double dy = info.getEffector().getY() - curY;
-		final double dz = info.getEffector().getZ() - curZ;
+		final double dx = effector.getX() - curX;
+		final double dy = effector.getY() - curY;
+		final double dz = effector.getZ() - curZ;
 		final double distance = Math.sqrt((dx * dx) + (dy * dy));
 		if (distance > 2000)
 		{
-			_log.info("EffectThrow was going to use invalid coordinates for characters, getEffected: " + curX + "," + curY + " and getEffector: " + info.getEffector().getX() + "," + info.getEffector().getY());
+			_log.info("EffectThrow was going to use invalid coordinates for characters, getEffected: " + curX + "," + curY + " and getEffector: " + effector.getX() + "," + effector.getY());
 			return;
 		}
-		int offset = Math.min((int) distance + info.getSkill().getFlyRadius(), 1400);
+		int offset = Math.min((int) distance + skill.getFlyRadius(), 1400);
 		
 		double cos;
 		double sin;
@@ -91,15 +83,16 @@ public final class ThrowUp extends AbstractEffect
 		cos = dx / distance;
 		
 		// Calculate the new destination with offset included
-		final int x = info.getEffector().getX() - (int) (offset * cos);
-		final int y = info.getEffector().getY() - (int) (offset * sin);
-		final int z = info.getEffected().getZ();
+		final int x = effector.getX() - (int) (offset * cos);
+		final int y = effector.getY() - (int) (offset * sin);
+		final int z = effected.getZ();
 		
-		final Location destination = GeoData.getInstance().moveCheck(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), x, y, z, info.getEffected().getInstanceId());
+		final Location destination = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceWorld());
 		
-		info.getEffected().broadcastPacket(new FlyToLocation(info.getEffected(), destination, FlyType.THROW_UP));
+		effected.broadcastPacket(new FlyToLocation(effected, destination, FlyType.THROW_UP));
 		// TODO: Review.
-		info.getEffected().setXYZ(destination);
-		info.getEffected().broadcastPacket(new ValidateLocation(info.getEffected()));
+		effected.setXYZ(destination);
+		effected.broadcastPacket(new ValidateLocation(effected));
+		effected.revalidateZone(true);
 	}
 }

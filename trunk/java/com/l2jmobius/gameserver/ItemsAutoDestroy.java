@@ -16,18 +16,18 @@
  */
 package com.l2jmobius.gameserver;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 
 public final class ItemsAutoDestroy
 {
-	private final Map<Integer, L2ItemInstance> _items = new ConcurrentHashMap<>();
+	private final List<L2ItemInstance> _items = new LinkedList<>();
 	
 	protected ItemsAutoDestroy()
 	{
@@ -42,55 +42,51 @@ public final class ItemsAutoDestroy
 	public synchronized void addItem(L2ItemInstance item)
 	{
 		item.setDropTime(System.currentTimeMillis());
-		_items.put(item.getObjectId(), item);
+		_items.add(item);
 	}
 	
 	public synchronized void removeItems()
 	{
-		final long curtime = System.currentTimeMillis();
-		for (L2ItemInstance item : _items.values())
+		if (_items.isEmpty())
 		{
-			if (item == null)
-			{
-				continue;
-			}
-			
+			return;
+		}
+		
+		final long curtime = System.currentTimeMillis();
+		final Iterator<L2ItemInstance> itemIterator = _items.iterator();
+		while (itemIterator.hasNext())
+		{
+			final L2ItemInstance item = itemIterator.next();
 			if ((item.getDropTime() == 0) || (item.getItemLocation() != ItemLocation.VOID))
 			{
-				_items.remove(item.getObjectId());
+				itemIterator.remove();
 			}
-			else if (item.getItem().getAutoDestroyTime() > 0)
+			else
 			{
-				if ((curtime - item.getDropTime()) > item.getItem().getAutoDestroyTime())
+				final long autoDestroyTime;
+				if (item.getItem().getAutoDestroyTime() > 0)
 				{
-					L2World.getInstance().removeVisibleObject(item, item.getWorldRegion());
-					L2World.getInstance().removeObject(item);
-					_items.remove(item.getObjectId());
+					autoDestroyTime = item.getItem().getAutoDestroyTime();
+				}
+				else if (item.getItem().hasExImmediateEffect())
+				{
+					autoDestroyTime = Config.HERB_AUTO_DESTROY_TIME;
+				}
+				else
+				{
+					autoDestroyTime = ((Config.AUTODESTROY_ITEM_AFTER == 0) ? 3600000 : Config.AUTODESTROY_ITEM_AFTER * 1000);
+				}
+				
+				if ((curtime - item.getDropTime()) > autoDestroyTime)
+				{
+					item.decayMe();
+					itemIterator.remove();
 					if (Config.SAVE_DROPPED_ITEM)
 					{
 						ItemsOnGroundManager.getInstance().removeObject(item);
 					}
 				}
-			}
-			else if (item.getItem().hasExImmediateEffect() && ((curtime - item.getDropTime()) > Config.HERB_AUTO_DESTROY_TIME))
-			{
-				L2World.getInstance().removeVisibleObject(item, item.getWorldRegion());
-				L2World.getInstance().removeObject(item);
-				_items.remove(item.getObjectId());
-				if (Config.SAVE_DROPPED_ITEM)
-				{
-					ItemsOnGroundManager.getInstance().removeObject(item);
-				}
-			}
-			else if ((curtime - item.getDropTime()) > ((Config.AUTODESTROY_ITEM_AFTER == 0) ? 3600000 : Config.AUTODESTROY_ITEM_AFTER * 1000))
-			{
-				L2World.getInstance().removeVisibleObject(item, item.getWorldRegion());
-				L2World.getInstance().removeObject(item);
-				_items.remove(item.getObjectId());
-				if (Config.SAVE_DROPPED_ITEM)
-				{
-					ItemsOnGroundManager.getInstance().removeObject(item);
-				}
+				
 			}
 		}
 	}

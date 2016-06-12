@@ -22,16 +22,18 @@ import java.util.logging.Level;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -39,24 +41,23 @@ import com.l2jmobius.gameserver.util.Util;
  * This class ...
  * @version $Revision: 1.7.2.4.2.6 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestDestroyItem extends L2GameClientPacket
+public final class RequestDestroyItem implements IClientIncomingPacket
 {
-	private static final String _C__60_REQUESTDESTROYITEM = "[C] 60 RequestDestroyItem";
-	
 	private int _objectId;
 	private long _count;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_count = readQ();
+		_objectId = packet.readD();
+		_count = packet.readQ();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -71,7 +72,7 @@ public final class RequestDestroyItem extends L2GameClientPacket
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("destroy"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("destroy"))
 		{
 			activeChar.sendMessage("You are destroying items too fast.");
 			return;
@@ -81,7 +82,13 @@ public final class RequestDestroyItem extends L2GameClientPacket
 		
 		if (activeChar.isProcessingTransaction() || (activeChar.getPrivateStoreType() != PrivateStoreType.NONE))
 		{
-			activeChar.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			client.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			return;
+		}
+		
+		if (activeChar.hasItemRequest())
+		{
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DESTROY_OR_CRYSTALLIZE_ITEMS_WHILE_ENCHANTING_ATTRIBUTES);
 			return;
 		}
 		
@@ -90,21 +97,29 @@ public final class RequestDestroyItem extends L2GameClientPacket
 		// if we can't find the requested item, its actually a cheat
 		if (itemToRemove == null)
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
+			// gm can destroy other player items
+			if (activeChar.isGM())
+			{
+				final L2Object obj = L2World.getInstance().findObject(_objectId);
+				if (obj instanceof L2ItemInstance)
+				{
+					if (_count > ((L2ItemInstance) obj).getCount())
+					{
+						count = ((L2ItemInstance) obj).getCount();
+					}
+					activeChar.useAdminCommand("admin_delete_item " + _objectId + " " + count);
+				}
+				return;
+			}
+			
+			client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
 			return;
 		}
 		
 		// Cannot discard item that the skill is consuming
-		if (activeChar.isCastingNow() && (activeChar.getCurrentSkill() != null) && (activeChar.getCurrentSkill().getSkill().getItemConsumeId() == itemToRemove.getId()))
+		if (activeChar.isCastingNow(s -> s.getSkill().getItemConsumeId() == itemToRemove.getId()))
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
-			return;
-		}
-		
-		// Cannot discard item that the skill is consuming
-		if (activeChar.isCastingSimultaneouslyNow() && (activeChar.getLastSimultaneousSkillCast() != null) && (activeChar.getLastSimultaneousSkillCast().getItemConsumeId() == itemToRemove.getId()))
-		{
-			activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
+			client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
 			return;
 		}
 		
@@ -114,11 +129,11 @@ public final class RequestDestroyItem extends L2GameClientPacket
 		{
 			if (itemToRemove.isHeroItem())
 			{
-				activeChar.sendPacket(SystemMessageId.HERO_WEAPONS_CANNOT_BE_DESTROYED);
+				client.sendPacket(SystemMessageId.HERO_WEAPONS_CANNOT_BE_DESTROYED);
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
+				client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
 			}
 			return;
 		}
@@ -166,18 +181,19 @@ public final class RequestDestroyItem extends L2GameClientPacket
 		
 		if (itemToRemove.isEquipped())
 		{
-			final SystemMessage sm;
 			if (itemToRemove.getEnchantLevel() > 0)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 				sm.addInt(itemToRemove.getEnchantLevel());
+				sm.addItemName(itemToRemove);
+				client.sendPacket(sm);
 			}
 			else
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
+				sm.addItemName(itemToRemove);
+				client.sendPacket(sm);
 			}
-			sm.addItemName(itemToRemove);
-			activeChar.sendPacket(sm);
 			
 			final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
 			
@@ -186,7 +202,7 @@ public final class RequestDestroyItem extends L2GameClientPacket
 			{
 				iu.addModifiedItem(itm);
 			}
-			activeChar.sendPacket(iu);
+			activeChar.sendInventoryUpdate(iu);
 		}
 		
 		final L2ItemInstance removedItem = activeChar.getInventory().destroyItem("Destroy", itemToRemove, count, activeChar, null);
@@ -207,19 +223,11 @@ public final class RequestDestroyItem extends L2GameClientPacket
 			{
 				iu.addModifiedItem(removedItem);
 			}
-			activeChar.sendPacket(iu);
+			activeChar.sendInventoryUpdate(iu);
 		}
 		else
 		{
-			sendPacket(new ItemList(activeChar, true));
+			activeChar.sendItemList(true);
 		}
-		
-		activeChar.sendPacket(new ExUserInfoInvenWeight(activeChar));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__60_REQUESTDESTROYITEM;
 	}
 }

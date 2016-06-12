@@ -73,7 +73,11 @@ public final class Product
 	
 	public long getPrice()
 	{
-		return _price < 0 ? getItem().getReferencePrice() : _price;
+		if (_price < 0)
+		{
+			return getItem().getReferencePrice();
+		}
+		return _price;
 	}
 	
 	public long getRestockDelay()
@@ -113,7 +117,7 @@ public final class Product
 		}
 		if ((_restockTask == null) || _restockTask.isDone())
 		{
-			_restockTask = ThreadPoolManager.getInstance().scheduleGeneral(new RestockTask(), getRestockDelay());
+			_restockTask = ThreadPoolManager.getInstance().scheduleGeneral(this::restock, getRestockDelay());
 		}
 		final boolean result = _count.addAndGet(-val) >= 0;
 		save();
@@ -130,7 +134,7 @@ public final class Product
 		final long remainTime = nextRestockTime - System.currentTimeMillis();
 		if (remainTime > 0)
 		{
-			_restockTask = ThreadPoolManager.getInstance().scheduleGeneral(new RestockTask(), remainTime);
+			_restockTask = ThreadPoolManager.getInstance().scheduleGeneral(this::restock, remainTime);
 		}
 		else
 		{
@@ -144,36 +148,27 @@ public final class Product
 		save();
 	}
 	
-	protected final class RestockTask implements Runnable
-	{
-		@Override
-		public void run()
-		{
-			restock();
-		}
-	}
-	
 	private void save()
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("INSERT INTO `buylists`(`buylist_id`, `item_id`, `count`, `next_restock_time`) VALUES(?, ?, ?, ?) ON DUPLICATE KEY UPDATE `count` = ?, `next_restock_time` = ?"))
+			PreparedStatement statement = con.prepareStatement("INSERT INTO `buylists`(`buylist_id`, `item_id`, `count`, `next_restock_time`) VALUES(?, ?, ?, ?) ON DUPLICATE KEY UPDATE `count` = ?, `next_restock_time` = ?"))
 		{
-			ps.setInt(1, getBuyListId());
-			ps.setInt(2, getItemId());
-			ps.setLong(3, getCount());
-			ps.setLong(5, getCount());
+			statement.setInt(1, getBuyListId());
+			statement.setInt(2, getItemId());
+			statement.setLong(3, getCount());
+			statement.setLong(5, getCount());
 			if ((_restockTask != null) && (_restockTask.getDelay(TimeUnit.MILLISECONDS) > 0))
 			{
 				final long nextRestockTime = System.currentTimeMillis() + _restockTask.getDelay(TimeUnit.MILLISECONDS);
-				ps.setLong(4, nextRestockTime);
-				ps.setLong(6, nextRestockTime);
+				statement.setLong(4, nextRestockTime);
+				statement.setLong(6, nextRestockTime);
 			}
 			else
 			{
-				ps.setLong(4, 0);
-				ps.setLong(6, 0);
+				statement.setLong(4, 0);
+				statement.setLong(6, 0);
 			}
-			ps.executeUpdate();
+			statement.executeUpdate();
 		}
 		catch (Exception e)
 		{

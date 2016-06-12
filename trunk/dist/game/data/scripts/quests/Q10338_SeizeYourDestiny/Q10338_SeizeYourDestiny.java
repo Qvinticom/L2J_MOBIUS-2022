@@ -17,6 +17,8 @@
 package quests.Q10338_SeizeYourDestiny;
 
 import com.l2jmobius.gameserver.enums.CategoryType;
+import com.l2jmobius.gameserver.enums.Movie;
+import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -28,9 +30,10 @@ import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
 /**
+ * Seize Your Destiny (10338)
  * @author Sdw
  */
-public class Q10338_SeizeYourDestiny extends Quest
+public final class Q10338_SeizeYourDestiny extends Quest
 {
 	// NPCs
 	private static final int CELLPHINE = 33477;
@@ -41,21 +44,22 @@ public class Q10338_SeizeYourDestiny extends Quest
 	// Items
 	private static final ItemHolder SCROLL_OF_AFTERLIFE = new ItemHolder(17600, 1);
 	private static final ItemHolder STEEL_DOOR_GUILD_COIN = new ItemHolder(37045, 400);
-	// Teleport
+	// Locations
 	private static final Location RELIQUARY_OF_THE_GIANT = new Location(-114962, 226564, -2864);
-	// Movie
-	private static final int RELIQUARY_OF_THE_GIANT_SCENE = 55;
+	// Misc
+	private static final int MIN_LV = 85;
 	
 	public Q10338_SeizeYourDestiny()
 	{
-		super(10338, Q10338_SeizeYourDestiny.class.getSimpleName(), "Seize Your Destiny");
+		super(10338);
 		addStartNpc(CELLPHINE);
 		addTalkId(CELLPHINE, HADEL, HERMUNCUS);
 		addKillId(HARNAKS_WRAITH);
-		addCondNotClassId(ClassId.JUDICATOR, "33477-04.html");
-		addCondIsNotSubClassActive("33477-04.html");
-		addCondMinLevel(85, "33477-04.html");
-		addCondInCategory(CategoryType.FOURTH_CLASS_GROUP, "33477-04.html");
+		addCondNotRace(Race.ERTHEIA, "33477-08.htm");
+		addCondNotClassId(ClassId.JUDICATOR, "");
+		addCondIsNotSubClassActive("");
+		addCondMinLevel(MIN_LV, "33477-07.htm");
+		addCondInCategory(CategoryType.FOURTH_CLASS_GROUP, "33477-07.htm");
 	}
 	
 	@Override
@@ -78,17 +82,17 @@ public class Q10338_SeizeYourDestiny extends Quest
 					htmltext = "";
 					break;
 				}
-				teleportPlayer(player, RELIQUARY_OF_THE_GIANT, 0);
-				player.showQuestMovie(RELIQUARY_OF_THE_GIANT_SCENE);
+				player.teleToLocation(RELIQUARY_OF_THE_GIANT, null);
+				playMovie(player, Movie.SC_AWAKENING_VIEW);
 				break;
 			}
-			case "33477-03.html":
+			case "33477-03.htm":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "33344-05.html":
+			case "33344-05.htm":
 			{
 				if (qs.isCond(1))
 				{
@@ -97,7 +101,7 @@ public class Q10338_SeizeYourDestiny extends Quest
 				}
 				break;
 			}
-			case "33340-02.html":
+			case "33340-02.htm":
 			{
 				if (qs.isCond(3))
 				{
@@ -109,9 +113,9 @@ public class Q10338_SeizeYourDestiny extends Quest
 				}
 				break;
 			}
-			case "33344-02.html":
-			case "33344-03.html":
-			case "33344-04.html":
+			case "33344-02.htm":
+			case "33344-03.htm":
+			case "33344-04.htm":
 			case "33477-02.htm":
 			{
 				htmltext = event;
@@ -127,17 +131,18 @@ public class Q10338_SeizeYourDestiny extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
+		
 		switch (npc.getId())
 		{
 			case CELLPHINE:
 			{
 				if (qs.isStarted())
 				{
-					htmltext = "33477-06.html";
+					htmltext = "33477-06.htm";
 				}
-				else if (hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()) || qs.isCompleted())
+				if (hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()) || qs.isCompleted())
 				{
-					htmltext = "33477-05.html";
+					htmltext = "33477-05.htm";
 				}
 				else if (qs.isCreated())
 				{
@@ -149,15 +154,15 @@ public class Q10338_SeizeYourDestiny extends Quest
 			{
 				if (qs.isCompleted() || player.isInCategory(CategoryType.AWAKEN_GROUP) || hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()))
 				{
-					htmltext = "33344-07.html";
+					htmltext = "33344-07.htm";
 				}
 				else if (player.getLevel() < 85)
 				{
-					htmltext = "33344-06.html";
+					htmltext = "33344-06.htm";
 				}
 				else if (player.isSubClassActive() && !player.isDualClassActive())
 				{
-					htmltext = "33344-09.html";
+					htmltext = "33344-09.htm";
 				}
 				else
 				{
@@ -165,17 +170,17 @@ public class Q10338_SeizeYourDestiny extends Quest
 					{
 						case 1:
 						{
-							htmltext = "33344-01.html";
+							htmltext = "33344-01.htm";
 							break;
 						}
 						case 2:
 						{
-							htmltext = "33344-08.html";
+							htmltext = "33344-08.htm";
 							break;
 						}
 						case 3:
 						{
-							htmltext = "33344-07.html";
+							htmltext = "33344-07.htm";
 							break;
 						}
 					}
@@ -186,17 +191,17 @@ public class Q10338_SeizeYourDestiny extends Quest
 			{
 				if (player.isSubClassActive() && !player.isDualClassActive())
 				{
-					htmltext = "33340-04.html";
+					htmltext = "33340-04.htm";
 					break;
 				}
 				else if (qs.isCond(3))
 				{
-					htmltext = "33340-01.html";
+					htmltext = "33340-01.htm";
 					break;
 				}
 				else if (hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()))
 				{
-					htmltext = "33340-03.html";
+					htmltext = "33340-03.htm";
 					break;
 				}
 				break;
@@ -208,10 +213,13 @@ public class Q10338_SeizeYourDestiny extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCond(2))
+		if (npc.getId() == HARNAKS_WRAITH)
 		{
-			qs.setCond(3, true);
+			final QuestState qs = getQuestState(player, false);
+			if ((qs != null) && qs.isCond(2))
+			{
+				qs.setCond(3, true);
+			}
 		}
 		return super.onKill(npc, player, isSummon);
 	}

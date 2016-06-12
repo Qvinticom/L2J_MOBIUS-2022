@@ -54,7 +54,7 @@ public final class Q00621_EggDelivery extends Quest
 	
 	public Q00621_EggDelivery()
 	{
-		super(621, Q00621_EggDelivery.class.getSimpleName(), "Egg Delivery");
+		super(621);
 		addStartNpc(JEREMY);
 		addTalkId(JEREMY, PULIN, VALENTINE);
 		addTalkId(TALKERS);

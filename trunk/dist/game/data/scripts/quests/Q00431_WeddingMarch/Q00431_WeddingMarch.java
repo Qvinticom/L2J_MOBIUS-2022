@@ -24,8 +24,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
 /**
- * Wedding March (431)<br>
- * Original Jython script by CubicVirtuoso.
+ * Wedding March (431)
  * @author eyjine
  */
 public class Q00431_WeddingMarch extends Quest
@@ -47,7 +46,7 @@ public class Q00431_WeddingMarch extends Quest
 	
 	public Q00431_WeddingMarch()
 	{
-		super(431, Q00431_WeddingMarch.class.getSimpleName(), "Wedding March");
+		super(431);
 		addStartNpc(KANTABILON);
 		addTalkId(KANTABILON);
 		addKillId(MOBS);

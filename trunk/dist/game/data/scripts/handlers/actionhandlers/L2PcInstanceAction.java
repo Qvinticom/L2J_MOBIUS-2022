@@ -22,15 +22,13 @@ import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.handler.IActionHandler;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public class L2PcInstanceAction implements IActionHandler
 {
-	private static final int CURSED_WEAPON_VICTIM_MIN_LEVEL = 21;
-	
 	/**
 	 * Manage actions when a player click on this L2PcInstance.<BR>
 	 * <BR>
@@ -56,14 +54,8 @@ public class L2PcInstanceAction implements IActionHandler
 	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
-		// See description in TvTEvent.java
-		if (!TvTEvent.onAction(activeChar, target.getObjectId()))
-		{
-			return false;
-		}
-		
 		// Check if the L2PcInstance is confused
-		if (activeChar.isOutOfControl())
+		if (activeChar.isControlBlocked())
 		{
 			return false;
 		}
@@ -83,44 +75,39 @@ public class L2PcInstanceAction implements IActionHandler
 		}
 		else if (interact)
 		{
-			final L2PcInstance player = target.getActingPlayer();
 			// Check if this L2PcInstance has a Private Store
-			if (player.getPrivateStoreType() != PrivateStoreType.NONE)
+			if (((L2PcInstance) target).getPrivateStoreType() != PrivateStoreType.NONE)
 			{
-				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, player);
-			}
-			// Check if this L2PcInstance is autoAttackable
-			else if (player.isAutoAttackable(activeChar))
-			{
-				if ((player.isCursedWeaponEquipped() && (activeChar.getLevel() < CURSED_WEAPON_VICTIM_MIN_LEVEL)) //
-					|| (activeChar.isCursedWeaponEquipped() && (player.getLevel() < CURSED_WEAPON_VICTIM_MIN_LEVEL)))
-				{
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				}
-				else
-				{
-					if (GeoData.getInstance().canSeeTarget(activeChar, player))
-					{
-						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-					}
-					else
-					{
-						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, GeoData.getInstance().moveCheck(activeChar, player));
-					}
-					activeChar.onActionRequest();
-				}
+				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 			}
 			else
 			{
-				// This Action Failed packet avoids activeChar getting stuck when clicking three or more times
-				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				if (GeoData.getInstance().canSeeTarget(activeChar, player))
+				// Check if this L2PcInstance is autoAttackable
+				if (target.isAutoAttackable(activeChar))
 				{
-					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
+					// activeChar with lvl < 21 can't attack a cursed weapon holder
+					// And a cursed weapon holder can't attack activeChars with lvl < 21
+					if ((((L2PcInstance) target).isCursedWeaponEquipped() && (activeChar.getLevel() < 21)) || (activeChar.isCursedWeaponEquipped() && (((L2Character) target).getLevel() < 21)))
+					{
+						activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+					}
+					else
+					{
+						if (GeoData.getInstance().canSeeTarget(activeChar, target))
+						{
+							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+							activeChar.onActionRequest();
+						}
+					}
 				}
 				else
 				{
-					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, GeoData.getInstance().moveCheck(activeChar, player));
+					// This Action Failed packet avoids activeChar getting stuck when clicking three or more times
+					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+					if (GeoData.getInstance().canSeeTarget(activeChar, target))
+					{
+						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target);
+					}
 				}
 			}
 		}

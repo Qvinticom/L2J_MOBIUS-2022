@@ -16,10 +16,12 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 
 /**
@@ -28,18 +30,18 @@ import com.l2jmobius.gameserver.model.stats.Formulas;
 public final class SkillTurning extends AbstractEffect
 {
 	private final int _chance;
+	private final boolean _staticChance;
 	
-	public SkillTurning(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public SkillTurning(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_chance = params.getInt("chance", 100);
+		_staticChance = params.getBoolean("staticChance", false);
 	}
 	
 	@Override
-	public boolean calcSuccess(BuffInfo info)
+	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
-		return Formulas.calcProbability(_chance, info.getEffector(), info.getEffected(), info.getSkill());
+		return _staticChance ? Formulas.calcProbability(_chance, effector, effected, skill) : ((_chance >= 100) || (Rnd.get(100) < _chance));
 	}
 	
 	@Override
@@ -49,13 +51,13 @@ public final class SkillTurning extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if ((info.getEffected() == null) || (info.getEffected() == info.getEffector()) || info.getEffected().isRaid())
+		if ((effected == effector) || effected.isRaid())
 		{
 			return;
 		}
 		
-		info.getEffected().breakCast();
+		effected.breakCast();
 	}
 }

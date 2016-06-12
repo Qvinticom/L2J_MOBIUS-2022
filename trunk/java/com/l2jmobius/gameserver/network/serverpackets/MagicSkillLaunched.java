@@ -17,65 +17,66 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.Collection;
+import java.util.Collections;
 
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.skills.SkillCastingType;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * MagicSkillLaunched server packet implementation.
  * @author UnAfraid
  */
-public class MagicSkillLaunched extends L2GameServerPacket
+public class MagicSkillLaunched implements IClientOutgoingPacket
 {
 	private final int _charObjId;
 	private final int _skillId;
 	private final int _skillLevel;
-	private final int _maxLevel;
-	private final List<L2Object> _targets;
+	private final SkillCastingType _castingType;
+	private final Collection<L2Object> _targets;
 	
-	public MagicSkillLaunched(L2Character cha, int skillId, int skillLevel, L2Object... targets)
+	public MagicSkillLaunched(L2Character cha, int skillId, int skillLevel, SkillCastingType castingType, Collection<L2Object> targets)
 	{
 		_charObjId = cha.getObjectId();
 		_skillId = skillId;
 		_skillLevel = skillLevel;
-		_maxLevel = SkillData.getInstance().getMaxLevel(_skillId);
+		_castingType = castingType;
 		
-		//@formatter:off
 		if (targets == null)
 		{
-			targets = new L2Object[] { cha };
+			targets = Collections.singletonList(cha);
 		}
-		//@formatter:on
-		_targets = Arrays.asList(targets);
+		
+		_targets = targets;
+	}
+	
+	public MagicSkillLaunched(L2Character cha, int skillId, int skillLevel, SkillCastingType castingType, L2Object... targets)
+	{
+		this(cha, skillId, skillLevel, castingType, (targets == null ? Collections.singletonList(cha) : Arrays.asList(targets)));
 	}
 	
 	public MagicSkillLaunched(L2Character cha, int skillId, int skillLevel)
 	{
-		this(cha, skillId, skillId, cha);
+		this(cha, skillId, skillId, SkillCastingType.NORMAL, Collections.singletonList(cha));
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x54);
-		writeD(0x00); // TODO: Find me!
-		writeD(_charObjId);
-		writeD(_skillId);
-		if (_skillLevel < 100)
-		{
-			writeD(_skillLevel);
-		}
-		else
-		{
-			writeH(_maxLevel);
-			writeH(_skillLevel);
-		}
-		writeD(_targets.size());
+		OutgoingPackets.MAGIC_SKILL_LAUNCHED.writeId(packet);
+		
+		packet.writeD(_castingType.getClientBarId()); // MagicSkillUse castingType
+		packet.writeD(_charObjId);
+		packet.writeD(_skillId);
+		packet.writeD(_skillLevel);
+		packet.writeD(_targets.size());
 		for (L2Object target : _targets)
 		{
-			writeD(target.getObjectId());
+			packet.writeD(target.getObjectId());
 		}
+		return true;
 	}
 }

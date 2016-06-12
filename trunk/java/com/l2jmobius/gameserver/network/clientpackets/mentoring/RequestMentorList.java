@@ -16,34 +16,31 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.mentoring;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.mentoring.ExMentorList;
 
 /**
  * @author UnAfraid
  */
-public class RequestMentorList extends L2GameClientPacket
+public class RequestMentorList implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
-		activeChar.sendPacket(new ExMentorList(activeChar));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
+		client.sendPacket(new ExMentorList(activeChar));
 	}
 }

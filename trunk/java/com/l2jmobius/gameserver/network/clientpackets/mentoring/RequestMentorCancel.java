@@ -17,41 +17,44 @@
 package com.l2jmobius.gameserver.network.clientpackets.mentoring;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.instancemanager.MentorManager;
 import com.l2jmobius.gameserver.model.L2Mentee;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.mentoring.OnPlayerMenteeLeft;
-import com.l2jmobius.gameserver.model.events.impl.character.player.mentoring.OnPlayerMenteeRemove;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerMenteeLeft;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerMenteeRemove;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author UnAfraid
  */
-public class RequestMentorCancel extends L2GameClientPacket
+public class RequestMentorCancel implements IClientIncomingPacket
 {
 	private int _confirmed;
 	private String _name;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_confirmed = readD();
-		_name = readS();
+		_confirmed = packet.readD();
+		_name = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (_confirmed != 1)
 		{
 			return;
 		}
 		
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		final int objectId = CharNameTable.getInstance().getIdByName(_name);
 		if (player != null)
 		{
@@ -60,11 +63,11 @@ public class RequestMentorCancel extends L2GameClientPacket
 				final L2Mentee mentee = MentorManager.getInstance().getMentee(player.getObjectId(), objectId);
 				if (mentee != null)
 				{
-					MentorManager.getInstance().cancelMentoringBuffs(mentee.getPlayerInstance());
+					MentorManager.getInstance().cancelAllMentoringBuffs(mentee.getPlayerInstance());
 					
 					if (MentorManager.getInstance().isAllMenteesOffline(player.getObjectId(), mentee.getObjectId()))
 					{
-						MentorManager.getInstance().cancelMentoringBuffs(player);
+						MentorManager.getInstance().cancelAllMentoringBuffs(player);
 					}
 					
 					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MENTORING_RELATIONSHIP_WITH_S1_HAS_BEEN_CANCELED_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_TWO_DAYS).addString(_name));
@@ -74,17 +77,18 @@ public class RequestMentorCancel extends L2GameClientPacket
 					// Notify to scripts
 					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeRemove(player, mentee), player);
 				}
+				
 			}
 			else if (player.isMentee())
 			{
 				final L2Mentee mentor = MentorManager.getInstance().getMentor(player.getObjectId());
 				if ((mentor != null) && (mentor.getObjectId() == objectId))
 				{
-					MentorManager.getInstance().cancelMentoringBuffs(player);
+					MentorManager.getInstance().cancelAllMentoringBuffs(player);
 					
 					if (MentorManager.getInstance().isAllMenteesOffline(mentor.getObjectId(), player.getObjectId()))
 					{
-						MentorManager.getInstance().cancelMentoringBuffs(mentor.getPlayerInstance());
+						MentorManager.getInstance().cancelAllMentoringBuffs(mentor.getPlayerInstance());
 					}
 					
 					MentorManager.getInstance().setPenalty(mentor.getObjectId(), Config.MENTOR_PENALTY_FOR_MENTEE_LEAVE);
@@ -97,11 +101,5 @@ public class RequestMentorCancel extends L2GameClientPacket
 				}
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
 	}
 }

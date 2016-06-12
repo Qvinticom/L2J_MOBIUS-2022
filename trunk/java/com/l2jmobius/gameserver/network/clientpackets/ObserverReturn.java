@@ -16,39 +16,35 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * This class ...
  * @version $Revision: 1.7.4.4 $ $Date: 2005/03/27 18:46:19 $
  */
-public final class ObserverReturn extends L2GameClientPacket
+public final class ObserverReturn implements IClientIncomingPacket
 {
-	private static final String __C__C1_OBSERVERRETURN = "[C] C1 ObserverReturn";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (activeChar.inObserverMode())
 		{
 			activeChar.leaveObserverMode();
 			// activeChar.teleToLocation(activeChar.getObsX(), activeChar.getObsY(), activeChar.getObsZ());
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return __C__C1_OBSERVERRETURN;
 	}
 }

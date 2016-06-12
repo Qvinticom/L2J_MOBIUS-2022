@@ -52,10 +52,14 @@ public enum TargetType
 	PC_BODY,
 	/** Self. */
 	SELF,
-	/** Servitor, not pet. */
+	/** Servitor or pet. */
 	SUMMON,
 	/** Anything targetable. */
 	TARGET,
 	/** Wyverns. */
-	WYVERN_TARGET;
+	WYVERN_TARGET,
+	/** Mentee's Mentor. */
+	MY_MENTOR,
+	/** Me or my party (if any). Seen in aura skills. */
+	MY_PARTY,
 }

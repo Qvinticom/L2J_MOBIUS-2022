@@ -17,16 +17,12 @@
 package com.l2jmobius.gameserver.model.actor.instance;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.entity.Hero;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.Rnd;
+import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
 /**
  * This class manages all RaidBoss.<br>
@@ -36,12 +32,17 @@ public class L2RaidBossInstance extends L2MonsterInstance
 {
 	private static final int RAIDBOSS_MAINTENANCE_INTERVAL = 30000; // 30 sec
 	
-	private RaidBossSpawnManager.StatusEnum _raidStatus;
 	private boolean _useRaidCurse = true;
 	
 	/**
-	 * Creates a raid boss.
-	 * @param template the raid boss template
+	 * Constructor of L2RaidBossInstance (use L2Character and L2NpcInstance constructor).<br>
+	 * <B><U>Actions</U>:</B>
+	 * <ul>
+	 * <li>Call the L2Character constructor to set the _template of the L2RaidBossInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
+	 * <li>Set the name of the L2RaidBossInstance</li>
+	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li>
+	 * </ul>
+	 * @param template to apply to the NPC
 	 */
 	public L2RaidBossInstance(L2NpcTemplate template)
 	{
@@ -54,51 +55,15 @@ public class L2RaidBossInstance extends L2MonsterInstance
 	@Override
 	public void onSpawn()
 	{
-		setIsNoRndWalk(true);
 		super.onSpawn();
+		setRandomWalking(false);
+		broadcastPacket(new PlaySound(1, getParameters().getString("RaidSpawnMusic", "Rm01_A"), 0, 0, 0, 0, 0));
 	}
 	
 	@Override
 	protected int getMaintenanceInterval()
 	{
 		return RAIDBOSS_MAINTENANCE_INTERVAL;
-	}
-	
-	@Override
-	public boolean doDie(L2Character killer)
-	{
-		if (!super.doDie(killer))
-		{
-			return false;
-		}
-		
-		final L2PcInstance player = killer.getActingPlayer();
-		if (player != null)
-		{
-			broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
-			if (player.getParty() != null)
-			{
-				for (L2PcInstance member : player.getParty().getMembers())
-				{
-					member.setRaidPoints(member.getRaidPoints() + (getLevel() / 2) + Rnd.get(-5, 5));
-					if (member.isNoble())
-					{
-						Hero.getInstance().setRBkilled(member.getObjectId(), getId());
-					}
-				}
-			}
-			else
-			{
-				player.setRaidPoints(player.getRaidPoints() + (getLevel() / 2) + Rnd.get(-5, 5));
-				if (player.isNoble())
-				{
-					Hero.getInstance().setRBkilled(player.getObjectId(), getId());
-				}
-			}
-		}
-		
-		RaidBossSpawnManager.getInstance().updateStatus(this, true);
-		return true;
 	}
 	
 	/**
@@ -127,26 +92,19 @@ public class L2RaidBossInstance extends L2MonsterInstance
 		final int spawnY = spawn.getY();
 		final int spawnZ = spawn.getZ();
 		
-		if (!isInCombat() && !isMovementDisabled() && !isInsideRadius(spawnX, spawnY, spawnZ, Math.max(Config.MAX_DRIFT_RANGE, 200), true, false))
+		if (!isInCombat() && !isMovementDisabled())
 		{
-			teleToLocation(spawnX, spawnY, spawnZ, false);
+			if (!isInsideRadius(spawnX, spawnY, spawnZ, Math.max(Config.MAX_DRIFT_RANGE, 200), true, false))
+			{
+				teleToLocation(spawnX, spawnY, spawnZ);
+			}
 		}
 	}
 	
-	public void setRaidStatus(RaidBossSpawnManager.StatusEnum status)
-	{
-		_raidStatus = status;
-	}
-	
-	public RaidBossSpawnManager.StatusEnum getRaidStatus()
-	{
-		return _raidStatus;
-	}
-	
 	@Override
-	public int getVitalityPoints(int damage)
+	public int getVitalityPoints(int level, long exp, boolean isBoss)
 	{
-		return -super.getVitalityPoints(damage) / 100;
+		return -super.getVitalityPoints(level, exp, isBoss);
 	}
 	
 	@Override

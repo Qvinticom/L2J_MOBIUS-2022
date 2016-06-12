@@ -17,6 +17,7 @@
 package quests.Q00510_AClansPrestige;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
+import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -47,7 +48,7 @@ public class Q00510_AClansPrestige extends Quest
 	
 	public Q00510_AClansPrestige()
 	{
-		super(510, Q00510_AClansPrestige.class.getSimpleName(), "A Clan's Prestige");
+		super(510);
 		addStartNpc(VALDIS);
 		addTalkId(VALDIS);
 		addKillId(MOBS);
@@ -130,7 +131,7 @@ public class Q00510_AClansPrestige extends Quest
 			{
 				if ((clan == null) || !player.isClanLeader())
 				{
-					qs.exitQuest(true);
+					qs.exitQuest(QuestType.REPEATABLE);
 					return "31331-8.html";
 				}
 				

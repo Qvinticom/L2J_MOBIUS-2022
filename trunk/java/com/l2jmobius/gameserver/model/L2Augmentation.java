@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.data.xml.impl.OptionData;
@@ -31,104 +30,78 @@ import com.l2jmobius.gameserver.model.options.Options;
  */
 public final class L2Augmentation
 {
-	private int _effectsId = 0;
-	private AugmentationStatBoni _boni = null;
+	private static final Logger LOGGER = Logger.getLogger(L2Augmentation.class.getName());
+	private final List<Options> _options = new ArrayList<>();
+	private boolean _active;
+	private final int _id;
 	
-	public L2Augmentation(int effects)
+	public L2Augmentation(int id)
 	{
-		_effectsId = effects;
-		_boni = new AugmentationStatBoni(_effectsId);
-	}
-	
-	public static class AugmentationStatBoni
-	{
-		private static final Logger _log = Logger.getLogger(AugmentationStatBoni.class.getName());
-		private final List<Options> _options = new ArrayList<>();
-		private boolean _active;
+		_id = id;
+		_active = false;
+		final int[] stats = new int[2];
+		stats[0] = 0x0000FFFF & id;
+		stats[1] = (id >> 16);
 		
-		public AugmentationStatBoni(int augmentationId)
+		for (int stat : stats)
 		{
-			_active = false;
-			final int[] stats = new int[2];
-			stats[0] = 0x0000FFFF & augmentationId;
-			stats[1] = augmentationId >> 16;
-			
-			for (int stat : stats)
+			final Options op = OptionData.getInstance().getOptions(stat);
+			if (op != null)
 			{
-				final Options op = OptionData.getInstance().getOptions(stat);
-				if (op != null)
-				{
-					_options.add(op);
-				}
-				else
-				{
-					_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't find option: " + stat);
-				}
+				_options.add(op);
+			}
+			else
+			{
+				LOGGER.warning(getClass().getSimpleName() + ": Couldn't find option: " + stat);
 			}
 		}
-		
-		public void applyBonus(L2PcInstance player)
-		{
-			// make sure the bonuses are not applied twice..
-			if (_active)
-			{
-				return;
-			}
-			
-			for (Options op : _options)
-			{
-				op.apply(player);
-			}
-			
-			_active = true;
-		}
-		
-		public void removeBonus(L2PcInstance player)
-		{
-			// make sure the bonuses are not removed twice
-			if (!_active)
-			{
-				return;
-			}
-			
-			for (Options op : _options)
-			{
-				op.remove(player);
-			}
-			
-			_active = false;
-		}
-	}
-	
-	public int getAttributes()
-	{
-		return _effectsId;
 	}
 	
 	/**
 	 * Get the augmentation "id" used in serverpackets.
 	 * @return augmentationId
 	 */
-	public int getAugmentationId()
+	public int getId()
 	{
-		return _effectsId;
+		return _id;
 	}
 	
-	/**
-	 * Applies the bonuses to the player.
-	 * @param player
-	 */
+	public List<Options> getOptions()
+	{
+		return _options;
+	}
+	
 	public void applyBonus(L2PcInstance player)
 	{
-		_boni.applyBonus(player);
+		// make sure the bonuses are not applied twice..
+		if (_active)
+		{
+			return;
+		}
+		
+		for (Options op : _options)
+		{
+			op.apply(player);
+		}
+		
+		player.getStat().recalculateStats(true);
+		_active = true;
 	}
 	
-	/**
-	 * Removes the augmentation bonuses from the player.
-	 * @param player
-	 */
 	public void removeBonus(L2PcInstance player)
 	{
-		_boni.removeBonus(player);
+		// make sure the bonuses are not removed twice
+		if (!_active)
+		{
+			return;
+		}
+		
+		for (Options op : _options)
+		{
+			op.remove(player);
+		}
+		
+		player.getStat().recalculateStats(true);
+		_active = false;
 	}
 }

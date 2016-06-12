@@ -16,21 +16,24 @@
  */
 package handlers.effecthandlers;
 
+import java.util.logging.Level;
+
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2DecoyInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2EffectPointInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
-import com.l2jmobius.util.Rnd;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * Summon Npc effect implementation.
@@ -43,16 +46,16 @@ public final class SummonNpc extends AbstractEffect
 	private final int _npcCount;
 	private final boolean _randomOffset;
 	private final boolean _isSummonSpawn;
+	private final boolean _singleInstance; // Only one instance of this NPC is allowed.
 	
-	public SummonNpc(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public SummonNpc(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_despawnDelay = params.getInt("despawnDelay", 20000);
 		_npcId = params.getInt("npcId", 0);
 		_npcCount = params.getInt("npcCount", 1);
 		_randomOffset = params.getBoolean("randomOffset", false);
 		_isSummonSpawn = params.getBoolean("isSummonSpawn", false);
+		_singleInstance = params.getBoolean("singleInstance", false);
 	}
 	
 	@Override
@@ -68,20 +71,20 @@ public final class SummonNpc extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if ((info.getEffected() == null) || !info.getEffected().isPlayer() || info.getEffected().isAlikeDead() || info.getEffected().getActingPlayer().inObserverMode())
+		if (!effected.isPlayer() || effected.isAlikeDead() || effected.getActingPlayer().inObserverMode())
 		{
 			return;
 		}
 		
 		if ((_npcId <= 0) || (_npcCount <= 0))
 		{
-			_log.warning(SummonNpc.class.getSimpleName() + ": Invalid NPC ID or count skill ID: " + info.getSkill().getId());
+			_log.warning(SummonNpc.class.getSimpleName() + ": Invalid NPC ID or count skill ID: " + skill.getId());
 			return;
 		}
 		
-		final L2PcInstance player = info.getEffected().getActingPlayer();
+		final L2PcInstance player = effected.getActingPlayer();
 		if (player.isMounted())
 		{
 			return;
@@ -90,8 +93,35 @@ public final class SummonNpc extends AbstractEffect
 		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_npcId);
 		if (npcTemplate == null)
 		{
-			_log.warning(SummonNpc.class.getSimpleName() + ": Spawn of the nonexisting NPC ID: " + _npcId + ", skill ID:" + info.getSkill().getId());
+			_log.warning(SummonNpc.class.getSimpleName() + ": Spawn of the nonexisting NPC ID: " + _npcId + ", skill ID:" + skill.getId());
 			return;
+		}
+		
+		int x = player.getX();
+		int y = player.getY();
+		int z = player.getZ();
+		
+		if (skill.getTargetType() == TargetType.GROUND)
+		{
+			final Location wordPosition = player.getActingPlayer().getCurrentSkillWorldPosition();
+			if (wordPosition != null)
+			{
+				x = wordPosition.getX();
+				y = wordPosition.getY();
+				z = wordPosition.getZ();
+			}
+		}
+		else
+		{
+			x = effected.getX();
+			y = effected.getY();
+			z = effected.getZ();
+		}
+		
+		if (_randomOffset)
+		{
+			x += (Rnd.nextBoolean() ? Rnd.get(20, 50) : Rnd.get(-50, -20));
+			y += (Rnd.nextBoolean() ? Rnd.get(20, 50) : Rnd.get(-50, -20));
 		}
 		
 		switch (npcTemplate.getType())
@@ -102,10 +132,9 @@ public final class SummonNpc extends AbstractEffect
 				decoy.setCurrentHp(decoy.getMaxHp());
 				decoy.setCurrentMp(decoy.getMaxMp());
 				decoy.setHeading(player.getHeading());
-				decoy.setInstanceId(player.getInstanceId());
+				decoy.setInstance(player.getInstanceWorld());
 				decoy.setSummoner(player);
-				decoy.spawnMe(player.getX(), player.getY(), player.getZ());
-				player.setDecoy(decoy);
+				decoy.spawnMe(x, y, z);
 				break;
 			}
 			case "L2EffectPoint": // TODO: Implement proper signet skills.
@@ -113,25 +142,11 @@ public final class SummonNpc extends AbstractEffect
 				final L2EffectPointInstance effectPoint = new L2EffectPointInstance(npcTemplate, player);
 				effectPoint.setCurrentHp(effectPoint.getMaxHp());
 				effectPoint.setCurrentMp(effectPoint.getMaxMp());
-				int x = player.getX();
-				int y = player.getY();
-				int z = player.getZ();
-				
-				if (info.getSkill().getTargetType() == L2TargetType.GROUND)
-				{
-					final Location wordPosition = player.getActingPlayer().getCurrentSkillWorldPosition();
-					if (wordPosition != null)
-					{
-						x = wordPosition.getX();
-						y = wordPosition.getY();
-						z = wordPosition.getZ();
-					}
-				}
-				
 				effectPoint.setIsInvul(true);
 				effectPoint.setSummoner(player);
+				effectPoint.setTitle(player.getName());
 				effectPoint.spawnMe(x, y, z);
-				_despawnDelay = NpcData.getInstance().getTemplate(_npcId).getParameters().getInt("despawn_time") * 1000;
+				_despawnDelay = effectPoint.getParameters().getInt("despawn_time", 0) * 1000;
 				if (_despawnDelay > 0)
 				{
 					effectPoint.scheduleDespawn(_despawnDelay);
@@ -143,30 +158,28 @@ public final class SummonNpc extends AbstractEffect
 				L2Spawn spawn;
 				try
 				{
-					spawn = new L2Spawn(_npcId);
+					spawn = new L2Spawn(npcTemplate);
 				}
 				catch (Exception e)
 				{
-					_log.warning(SummonNpc.class.getSimpleName() + ": " + e.getMessage());
+					_log.log(Level.WARNING, SummonNpc.class.getSimpleName() + ": Unable to create spawn. " + e.getMessage(), e);
 					return;
-				}
-				
-				int x = player.getX();
-				int y = player.getY();
-				if (_randomOffset)
-				{
-					x += Rnd.nextBoolean() ? Rnd.get(20, 50) : Rnd.get(-50, -20);
-					y += Rnd.nextBoolean() ? Rnd.get(20, 50) : Rnd.get(-50, -20);
 				}
 				
 				spawn.setX(x);
 				spawn.setY(y);
-				spawn.setZ(player.getZ());
+				spawn.setZ(z);
 				spawn.setHeading(player.getHeading());
 				spawn.stopRespawn();
 				
+				// If only single instance is allowed, delete previous NPCs.
+				if (_singleInstance)
+				{
+					player.getSummonedNpcs().stream().filter(npc -> npc.getId() == _npcId).forEach(npc -> npc.deleteMe());
+				}
+				
 				final L2Npc npc = spawn.doSpawn(_isSummonSpawn);
-				npc.setSummoner(player);
+				player.addSummonedNpc(npc); // npc.setSummoner(player);
 				npc.setName(npcTemplate.getName());
 				npc.setTitle(npcTemplate.getName());
 				if (_despawnDelay > 0)

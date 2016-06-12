@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.gameserverpackets;
 
-import com.l2jmobius.util.network.BaseSendablePacket;
+import com.l2jmobius.commons.util.network.BaseSendablePacket;
 
 /**
  * @author UnAfraid

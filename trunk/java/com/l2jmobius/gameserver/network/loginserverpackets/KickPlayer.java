@@ -16,10 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.loginserverpackets;
 
-import com.l2jmobius.util.network.BaseRecievePacket;
+import com.l2jmobius.commons.util.network.BaseRecievePacket;
 
 public class KickPlayer extends BaseRecievePacket
 {
+	
 	private final String _account;
 	
 	/**
@@ -38,4 +39,5 @@ public class KickPlayer extends BaseRecievePacket
 	{
 		return _account;
 	}
+	
 }

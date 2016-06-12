@@ -16,13 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets.friend;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * @author UnAfraid
  */
-public class FriendAddRequestResult extends L2GameServerPacket
+public class FriendAddRequestResult implements IClientOutgoingPacket
 {
 	private final int _result;
 	private final int _charId;
@@ -40,20 +42,22 @@ public class FriendAddRequestResult extends L2GameServerPacket
 		_isOnline = activeChar.isOnlineInt();
 		_charObjectId = activeChar.getObjectId();
 		_charLevel = activeChar.getLevel();
-		_charClassId = activeChar.getActiveClassId();
+		_charClassId = activeChar.getActiveClass();
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x55);
-		writeD(_result);
-		writeD(_charId);
-		writeS(_charName);
-		writeD(_isOnline);
-		writeD(_charObjectId);
-		writeD(_charLevel);
-		writeD(_charClassId);
-		writeH(0x00); // Always 0 on retail
+		OutgoingPackets.FRIEND_ADD_REQUEST_RESULT.writeId(packet);
+		
+		packet.writeD(_result);
+		packet.writeD(_charId);
+		packet.writeS(_charName);
+		packet.writeD(_isOnline);
+		packet.writeD(_charObjectId);
+		packet.writeD(_charLevel);
+		packet.writeD(_charClassId);
+		packet.writeH(0x00); // Always 0 on retail
+		return true;
 	}
 }

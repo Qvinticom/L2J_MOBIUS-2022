@@ -28,7 +28,6 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
 /**
  * Grave Robber Rescue (450)
@@ -48,7 +47,7 @@ public class Q00450_GraveRobberRescue extends Quest
 	
 	public Q00450_GraveRobberRescue()
 	{
-		super(450, Q00450_GraveRobberRescue.class.getSimpleName(), "Grave Robber Rescue");
+		super(450);
 		addStartNpc(KANEMIKA);
 		addTalkId(KANEMIKA, WARRIOR);
 		registerQuestItems(EVIDENCE_OF_MIGRATION);
@@ -57,9 +56,9 @@ public class Q00450_GraveRobberRescue extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
+		final QuestState st = getQuestState(player, false);
 		
-		if (qs == null)
+		if (st == null)
 		{
 			return null;
 		}
@@ -70,26 +69,18 @@ public class Q00450_GraveRobberRescue extends Quest
 			case "32650-04.htm":
 			case "32650-05.htm":
 			case "32650-06.html":
-			{
 				break;
-			}
 			case "32650-07.htm":
-			{
-				qs.startQuest();
+				st.startQuest();
 				break;
-			}
 			case "despawn":
-			{
 				npc.setBusy(false);
 				npc.deleteMe();
 				htmltext = null;
 				break;
-			}
 			default:
-			{
 				htmltext = null;
 				break;
-			}
 		}
 		return htmltext;
 	}
@@ -98,49 +89,42 @@ public class Q00450_GraveRobberRescue extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, true);
+		final QuestState st = getQuestState(player, true);
 		
-		if (qs == null)
+		if (st == null)
 		{
 			return htmltext;
 		}
 		
 		if (npc.getId() == KANEMIKA)
 		{
-			switch (qs.getState())
+			switch (st.getState())
 			{
 				case State.COMPLETED:
-				{
-					if (!qs.isNowAvailable())
+					if (!st.isNowAvailable())
 					{
 						htmltext = "32650-03.html";
 						break;
 					}
-					qs.setState(State.CREATED);
-					// fallthrou
-				}
+					st.setState(State.CREATED);
 				case State.CREATED:
-				{
 					htmltext = (player.getLevel() >= MIN_LEVEL) ? "32650-01.htm" : "32650-02.htm";
 					break;
-				}
 				case State.STARTED:
-				{
-					if (qs.isCond(1))
+					if (st.isCond(1))
 					{
-						htmltext = !hasQuestItems(player, EVIDENCE_OF_MIGRATION) ? "32650-08.html" : "32650-09.html";
+						htmltext = (!hasQuestItems(player, EVIDENCE_OF_MIGRATION)) ? "32650-08.html" : "32650-09.html";
 					}
 					else
 					{
 						giveAdena(player, 65000, true); // Glory days reward: 6 886 980 exp, 8 116 410 sp, 371 400 Adena
-						qs.exitQuest(QuestType.DAILY, true);
+						st.exitQuest(QuestType.DAILY, true);
 						htmltext = "32650-10.html";
 					}
 					break;
-				}
 			}
 		}
-		else if (qs.isCond(1))
+		else if (st.isCond(1))
 		{
 			if (npc.isBusy())
 			{
@@ -158,7 +142,7 @@ public class Q00450_GraveRobberRescue extends Quest
 				
 				if (getQuestItemsCount(player, EVIDENCE_OF_MIGRATION) == 10)
 				{
-					qs.setCond(2, true);
+					st.setCond(2, true);
 				}
 				htmltext = "32651-01.html";
 			}
@@ -166,17 +150,19 @@ public class Q00450_GraveRobberRescue extends Quest
 			{
 				if (getRandom(100) < 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.GRUNT_OH));
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.GRUNT_OH);
 				}
 				else
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.GRUNT_WHAT_S_WRONG_WITH_ME));
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.GRUNT_WHAT_S_WRONG_WITH_ME);
 				}
 				npc.deleteMe();
 				htmltext = null;
 				
 				final L2Attackable monster = (L2Attackable) addSpawn(WARRIOR_MON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 600000);
-				addAttackDesire(monster, player);
+				monster.setRunning();
+				monster.addDamageHate(player, 0, 999);
+				monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 				showOnScreenMsg(player, NpcStringId.THE_GRAVE_ROBBER_WARRIOR_HAS_BEEN_FILLED_WITH_DARK_ENERGY_AND_IS_ATTACKING_YOU, 5, 5000);
 			}
 		}

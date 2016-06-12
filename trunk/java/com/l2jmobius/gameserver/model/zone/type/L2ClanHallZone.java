@@ -16,12 +16,11 @@
  */
 package com.l2jmobius.gameserver.model.zone.type;
 
-import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
+import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
-import com.l2jmobius.gameserver.model.entity.clanhall.AuctionableHall;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.serverpackets.AgitDecoInfo;
 
 /**
  * A clan hall zone
@@ -40,16 +39,6 @@ public class L2ClanHallZone extends L2ResidenceZone
 		if (name.equals("clanHallId"))
 		{
 			setResidenceId(Integer.parseInt(value));
-			// Register self to the correct clan hall
-			final ClanHall hall = ClanHallManager.getInstance().getClanHallById(getResidenceId());
-			if (hall != null)
-			{
-				hall.setZone(this);
-			}
-			else
-			{
-				_log.warning("L2ClanHallZone: Clan hall with id " + getResidenceId() + " does not exist!");
-			}
 		}
 		else
 		{
@@ -60,19 +49,10 @@ public class L2ClanHallZone extends L2ResidenceZone
 	@Override
 	protected void onEnter(L2Character character)
 	{
-		if (!character.isPlayer())
+		if (character.isPlayer())
 		{
-			return;
+			character.setInsideZone(ZoneId.CLAN_HALL, true);
 		}
-		// Set as in clan hall
-		character.setInsideZone(ZoneId.CLAN_HALL, true);
-		final AuctionableHall clanHall = ClanHallManager.getInstance().getAuctionableHallById(getResidenceId());
-		if (clanHall == null)
-		{
-			return;
-		}
-		// Send decoration packet
-		character.sendPacket(new AgitDecoInfo(clanHall));
 	}
 	
 	@Override
@@ -82,5 +62,16 @@ public class L2ClanHallZone extends L2ResidenceZone
 		{
 			character.setInsideZone(ZoneId.CLAN_HALL, false);
 		}
+	}
+	
+	@Override
+	public final Location getBanishSpawnLoc()
+	{
+		final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(getResidenceId());
+		if (clanHall == null)
+		{
+			return null;
+		}
+		return clanHall.getBanishLocation();
 	}
 }

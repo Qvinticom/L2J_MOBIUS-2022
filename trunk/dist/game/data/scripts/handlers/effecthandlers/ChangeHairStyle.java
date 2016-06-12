@@ -17,10 +17,11 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Change Hair Style effect implementation.
@@ -30,10 +31,8 @@ public final class ChangeHairStyle extends AbstractEffect
 {
 	private final int _value;
 	
-	public ChangeHairStyle(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public ChangeHairStyle(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_value = params.getInt("value", 0);
 	}
 	
@@ -44,14 +43,14 @@ public final class ChangeHairStyle extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isPlayer() || info.getEffected().isAlikeDead())
+		if (!effected.isPlayer())
 		{
 			return;
 		}
 		
-		final L2PcInstance player = info.getEffector().getActingPlayer();
+		final L2PcInstance player = effected.getActingPlayer();
 		player.getAppearance().setHairStyle(_value);
 		player.broadcastUserInfo();
 	}

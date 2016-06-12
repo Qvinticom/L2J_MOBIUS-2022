@@ -10,6 +10,8 @@
 		<baseWIT>39</baseWIT>
 		<baseLUC>32</baseLUC>
 		<baseCHA>43</baseCHA>
+		<physicalAbnormalResist>10</physicalAbnormalResist>
+		<magicAbnormalResist>15</magicAbnormalResist>
 		<creationPoints>
 			<node x="-114628" y="259915" z="-1192" />
 			<node x="-114539" y="260101" z="-1192" />
@@ -51,7 +53,7 @@
 		<baseRndDam>10</baseRndDam>
 		<baseMoveSpd>
 			<walk>85</walk>
-			<run>122</run>
+			<run>139</run>
 			<slowSwim>50</slowSwim>
 			<fastSwim>50</fastSwim>
 		</baseMoveSpd>
@@ -870,57 +872,49 @@
 		<level val="101">
 			<hp>5243</hp>
 			<mp>1823.1</mp>
-			<cp>3145.8</cp>
+			<cp>3145.79</cp>
 			<hpRegen>11.5</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="102">
 			<hp>5323.22</hp>
 			<mp>1851.75</mp>
-			<cp>3193.932</cp>
+			<cp>3193.92</cp>
 			<hpRegen>11.6</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="103">
 			<hp>5403.86</hp>
 			<mp>1880.55</mp>
-			<cp>3242.316</cp>
+			<cp>3242.3</cp>
 			<hpRegen>11.7</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="104">
 			<hp>5484.92</hp>
 			<mp>1909.5</mp>
-			<cp>3290.952</cp>
+			<cp>3290.92</cp>
 			<hpRegen>11.8</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="105">
 			<hp>5566.4</hp>
 			<mp>1938.6</mp>
-			<cp>3339.84</cp>
+			<cp>3339.8</cp>
 			<hpRegen>11.9</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="106">
 			<hp>5648.3</hp>
 			<mp>1967.85</mp>
-			<cp>3388.98</cp>
+			<cp>3388.92</cp>
 			<hpRegen>12</hpRegen>
-			<mpRegen>3</mpRegen>
-			<cpRegen>8.5</cpRegen>
-		</level>
-		<level val="107">
-			<hp>5730.62</hp>
-			<mp>1997.25</mp>
-			<cp>3438.372</cp>
-			<hpRegen>12.1</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 	</lvlUpgainData>

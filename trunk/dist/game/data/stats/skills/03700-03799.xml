@@ -1,1547 +1,2017 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="3700" levels="1" name="Doom Shield">
+	<skill id="3700" toLevel="1" name="Doom Shield">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.shield_doom_shield_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="magicSuccRes" val="1.02" />
+		<icon>icon.shield_doom_shield_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ResistDDMagic">
+				<amount>2</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3701" levels="1" name="Leather Armor of Doom">
+	<skill id="3701" toLevel="1" name="Leather Armor of Doom">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t72_ul_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="breath" val="383" />
-				<mul stat="pAtk" val="1.0827" />
-				<mul stat="regMp" val="1.0827" />
-			</effect>
+		<icon>icon.armor_t72_ul_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="13" />
+				<POISON>13</POISON>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>8.27</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>8.27</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Breath">
+				<amount>383</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3702" levels="1" name="Doom Gloves">
+	<skill id="3702" toLevel="1" name="Doom Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t72_g_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="breath" val="33" />
-				<mul stat="pAtk" val="1.0041" />
-				<mul stat="regMp" val="1.0041" />
-			</effect>
+		<icon>icon.armor_t72_g_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="2" />
+				<POISON>2</POISON>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Breath">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3703" levels="1" name="Doom Boots">
+	<skill id="3703" toLevel="1" name="Doom Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t72_b_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="breath" val="33" />
-				<mul stat="pAtk" val="1.0041" />
-				<mul stat="regMp" val="1.0041" />
-			</effect>
+		<icon>icon.armor_t72_b_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="3" />
+				<POISON>3</POISON>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Breath">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3704" levels="1" name="Doom Helmet">
+	<skill id="3704" toLevel="1" name="Doom Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="breath" val="50" />
-				<mul stat="pAtk" val="1.0062" />
-				<mul stat="regMp" val="1.0062" />
-			</effect>
+		<icon>icon.armor_leather_helmet_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="2" />
+				<POISON>2</POISON>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>0.62</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.62</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Breath">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3705" levels="1" name="Doom Gloves">
+	<skill id="3705" toLevel="1" name="Doom Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t73_g_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="1.16" />
-				<add stat="breath" val="33" />
-				<mul stat="regMp" val="1.0083" />
+		<icon>icon.armor_t73_g_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="Speed">
+				<amount>1.16</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="MpRegen">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Breath">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3706" levels="1" name="Doom Boots">
+	<skill id="3706" toLevel="1" name="Doom Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t73_b_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="1.16" />
-				<add stat="breath" val="33" />
-				<mul stat="regMp" val="1.0083" />
+		<icon>icon.armor_t73_b_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="Speed">
+				<amount>1.16</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="MpRegen">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Breath">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3707" levels="1" name="Tunic of Doom">
+	<skill id="3707" toLevel="1" name="Tunic of Doom">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t73_u_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="breath" val="200" />
-				<mul stat="regMp" val="1.0724" />
-				<add stat="runSpd" val="7" />
+		<icon>icon.armor_t73_u_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="MpRegen">
+				<amount>7.24</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Breath">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3708" levels="1" name="Stockings of Doom">
+	<skill id="3708" toLevel="1" name="Stockings of Doom">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t73_l_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="2.91" />
-				<add stat="breath" val="88" />
-				<mul stat="regMp" val="1.0208" />
+		<icon>icon.armor_t73_l_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="Speed">
+				<amount>2.91</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="MpRegen">
+				<amount>2.08</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Breath">
+				<amount>88</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3709" levels="1" name="Doom Helmet">
+	<skill id="3709" toLevel="1" name="Doom Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="1.75" />
-				<add stat="breath" val="50" />
-				<mul stat="regMp" val="1.0125" />
+		<icon>icon.armor_leather_helmet_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="Speed">
+				<amount>1.75</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="MpRegen">
+				<amount>1.25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Breath">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3710" levels="1" name="Blue Wolf Breastplate">
+	<skill id="3710" toLevel="1" name="Blue Wolf Breastplate">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t68_u_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="regHp" val="1.0724" />
-				<add stat="runSpd" val="7" />
+		<icon>icon.armor_t68_u_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="HpRegen">
+				<amount>7.24</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3711" levels="1" name="Blue Wolf Gaiters">
+	<skill id="3711" toLevel="1" name="Blue Wolf Gaiters">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t68_l_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="2.91" />
-				<mul stat="regHp" val="1.0208" />
+		<icon>icon.armor_t68_l_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="Speed">
+				<amount>2.91</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="HpRegen">
+				<amount>2.08</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3712" levels="1" name="Blue Wolf Boots">
+	<skill id="3712" toLevel="1" name="Blue Wolf Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t68_b_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="1.16" />
-				<mul stat="regHp" val="1.0083" />
+		<icon>icon.armor_t68_b_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="Speed">
+				<amount>1.16</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="HpRegen">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3713" levels="1" name="Blue Wolf Gloves">
+	<skill id="3713" toLevel="1" name="Blue Wolf Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t68_g_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="1.16" />
-				<mul stat="regHp" val="1.0083" />
+		<icon>icon.armor_t68_g_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="Speed">
+				<amount>1.16</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="HpRegen">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3714" levels="1" name="Blue Wolf Helmet">
+	<skill id="3714" toLevel="1" name="Blue Wolf Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="1.75" />
-				<mul stat="regHp" val="1.0125" />
+		<icon>icon.armor_leather_helmet_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="Speed">
+				<amount>1.75</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="HpRegen">
+				<amount>1.25</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3715" levels="1" name="Blue Wolf Leather Armor">
+	<skill id="3715" toLevel="1" name="Blue Wolf Leather Armor">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t69_ul_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtkSpd" val="1.15" />
-				<mul stat="pDef" val="1.0219" />
+		<icon>icon.armor_t69_ul_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>2.19</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3716" levels="1" name="Blue Wolf Boots">
+	<skill id="3716" toLevel="1" name="Blue Wolf Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t69_b_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="1.0088" />
+		<icon>icon.armor_t69_b_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>0.88</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3717" levels="1" name="Blue Wolf Gloves">
+	<skill id="3717" toLevel="1" name="Blue Wolf Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t69_g_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="1.0088" />
+		<icon>icon.armor_t69_g_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>0.88</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3718" levels="1" name="Blue Wolf Helmet">
+	<skill id="3718" toLevel="1" name="Blue Wolf Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="1.0132" />
+		<icon>icon.armor_leather_helmet_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>1.32</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3719" levels="1" name="Blue Wolf Boots">
+	<skill id="3719" toLevel="1" name="Blue Wolf Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t70_b_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="34" />
-				<mul stat="regMp" val="1.0083" />
+		<icon>icon.armor_t70_b_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>34</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="MpRegen">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3720" levels="1" name="Blue Wolf Gloves">
+	<skill id="3720" toLevel="1" name="Blue Wolf Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t70_g_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="34" />
-				<mul stat="regMp" val="1.0083" />
+		<icon>icon.armor_t70_g_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>34</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="MpRegen">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3721" levels="1" name="Blue Wolf Tunic">
+	<skill id="3721" toLevel="1" name="Blue Wolf Tunic">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t70_u_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="205" />
-				<mul stat="regMp" val="1.0724" />
+		<icon>icon.armor_t70_u_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>205</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="MpRegen">
+				<amount>7.24</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3722" levels="1" name="Blue Wolf Stockings">
+	<skill id="3722" toLevel="1" name="Blue Wolf Stockings">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t70_l_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="85" />
-				<mul stat="regMp" val="1.0208" />
+		<icon>icon.armor_t70_l_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>85</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="MpRegen">
+				<amount>2.08</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3723" levels="1" name="Blue Wolf Helmet">
+	<skill id="3723" toLevel="1" name="Blue Wolf Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="51" />
-				<mul stat="regMp" val="1.0125" />
+		<icon>icon.armor_leather_helmet_i00</icon>
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>51</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="MpRegen">
+				<amount>1.25</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3724" levels="1" name="Dark Crystal Helmet">
+	<skill id="3724" toLevel="1" name="Dark Crystal Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="healEffect" val="1.01" />
-			</effect>
+		<icon>icon.armor_helmet_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="7.5" />
+				<PARALYZE>7.5</PARALYZE>
 			</effect>
-		</for>
+			<effect name="HealEffect">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3725" levels="1" name="Dark Crystal Breastplate">
+	<skill id="3725" toLevel="1" name="Dark Crystal Breastplate">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t74_u_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="healEffect" val="1.12" />
-			</effect>
+		<icon>icon.armor_t74_u_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="20" />
+				<PARALYZE>20</PARALYZE>
 			</effect>
-		</for>
+			<effect name="HealEffect">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3726" levels="1" name="Dark Crystal Gaiters">
+	<skill id="3726" toLevel="1" name="Dark Crystal Gaiters">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t74_l_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="healEffect" val="1.02" />
-			</effect>
+		<icon>icon.armor_t74_l_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="12.5" />
+				<PARALYZE>12.5</PARALYZE>
 			</effect>
-		</for>
+			<effect name="HealEffect">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3727" levels="1" name="Dark Crystal Gloves">
+	<skill id="3727" toLevel="1" name="Dark Crystal Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t15_g_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="healEffect" val="1.01" />
-			</effect>
+		<icon>icon.armor_t15_g_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="5" />
+				<PARALYZE>5</PARALYZE>
 			</effect>
-		</for>
+			<effect name="HealEffect">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3728" levels="1" name="Dark Crystal Boots">
+	<skill id="3728" toLevel="1" name="Dark Crystal Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t74_b_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="healEffect" val="1.01" />
-			</effect>
+		<icon>icon.armor_t74_b_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="5" />
+				<PARALYZE>5</PARALYZE>
 			</effect>
-		</for>
+			<effect name="HealEffect">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3729" levels="1" name="Dark Crystal Shield">
+	<skill id="3729" toLevel="1" name="Dark Crystal Shield">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="magicSuccRes" val="1.02" />
+		<icon>icon.shield_dark_crystal_shield_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ResistDDMagic">
+				<amount>2</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3730" levels="1" name="Dark Crystal Leather Armor">
+	<skill id="3730" toLevel="1" name="Dark Crystal Leather Armor">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t75_u_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.0724" />
-				<mul stat="pAtk" val="1.0724" />
-			</effect>
+		<icon>icon.armor_t75_u_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="20" />
+				<PARALYZE>20</PARALYZE>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>7.24</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>7.24</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3731" levels="1" name="Dark Crystal Gloves">
+	<skill id="3731" toLevel="1" name="Dark Crystal Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t15_g_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.0041" />
-				<mul stat="pAtk" val="1.0041" />
-			</effect>
+		<icon>icon.armor_t15_g_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="5" />
+				<PARALYZE>5</PARALYZE>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3732" levels="1" name="Dark Crystal Boots">
+	<skill id="3732" toLevel="1" name="Dark Crystal Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t75_b_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.0041" />
-				<mul stat="pAtk" val="1.0041" />
-			</effect>
+		<icon>icon.armor_t75_b_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="5" />
+				<PARALYZE>5</PARALYZE>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3733" levels="1" name="Dark Crystal Helmet">
+	<skill id="3733" toLevel="1" name="Dark Crystal Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.0062" />
-				<mul stat="pAtk" val="1.0062" />
-			</effect>
+		<icon>icon.armor_helmet_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="7.5" />
+				<PARALYZE>7.5</PARALYZE>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>0.62</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>0.62</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3734" levels="1" name="Dark Crystal Leggings">
+	<skill id="3734" toLevel="1" name="Dark Crystal Leggings">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t75_l_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.0103" />
-				<mul stat="pAtk" val="1.0103" />
-			</effect>
+		<icon>icon.armor_t75_l_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="12.5" />
+				<PARALYZE>12.5</PARALYZE>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>1.03</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>1.03</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3735" levels="1" name="Dark Crystal Gloves">
+	<skill id="3735" toLevel="1" name="Dark Crystal Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t15_g_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="1.0133" />
-				<add stat="runSpd" val="1.16" />
-				<sub stat="cancel" val="8" />
-			</effect>
+		<icon>icon.armor_t15_g_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="8.33" />
+				<PARALYZE>8.33</PARALYZE>
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>1.16</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>1.33</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReduceCancel">
+				<amount>-8</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3736" levels="1" name="Dark Crystal Robe">
+	<skill id="3736" toLevel="1" name="Dark Crystal Robe">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t76_ul_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="cancelVuln" val="8.33" />
-				<mul stat="mAtkSpd" val="1.15" />
-				<mul stat="pDef" val="1.0333" />
-				<add stat="runSpd" val="2.91" />
-			</effect>
+		<icon>icon.armor_t76_ul_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="20" />
+				<PARALYZE>20</PARALYZE>
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>2.91</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>3.33</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>8.33</amount>
+				<slot>BUFF</slot>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3737" levels="1" name="Dark Crystal Boots">
+	<skill id="3737" toLevel="1" name="Dark Crystal Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t76_b_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="1.0133" />
-				<add stat="runSpd" val="1.16" />
-				<sub stat="cancel" val="8" />
-			</effect>
+		<icon>icon.armor_t76_b_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="8.33" />
+				<PARALYZE>8.33</PARALYZE>
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>1.16</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>1.33</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReduceCancel">
+				<amount>-8</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3738" levels="1" name="Dark Crystal Helmet">
+	<skill id="3738" toLevel="1" name="Dark Crystal Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="1.02" />
-				<add stat="runSpd" val="1.75" />
-				<sub stat="cancel" val="13" />
-			</effect>
+		<icon>icon.armor_helmet_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="12.5" />
+				<PARALYZE>12.5</PARALYZE>
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>1.75</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReduceCancel">
+				<amount>-13</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3739" levels="1" name="Tallum Gloves">
+	<skill id="3739" toLevel="1" name="Tallum Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t77_g_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.0083" />
-				<add stat="weightPenalty" val="960" />
-			</effect>
+		<icon>icon.armor_t77_g_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="8" />
-				<param BLEED="8" />
+				<POISON>8</POISON>
+				<BLEED>8</BLEED>
 			</effect>
-		</for>
+			<effect name="PhysicalAttackSpeed">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>960</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3740" levels="1" name="Tallum Boots">
+	<skill id="3740" toLevel="1" name="Tallum Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t77_b_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.0083" />
-				<add stat="weightPenalty" val="960" />
-			</effect>
+		<icon>icon.armor_t77_b_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="8" />
-				<param BLEED="8" />
+				<POISON>8</POISON>
+				<BLEED>8</BLEED>
 			</effect>
-		</for>
+			<effect name="PhysicalAttackSpeed">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>960</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3741" levels="1" name="Tallum Plate Armor">
+	<skill id="3741" toLevel="1" name="Tallum Plate Armor">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t77_ul_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="weightPenalty" val="8159" />
-				<mul stat="pAtkSpd" val="1.0932" />
-			</effect>
+		<icon>icon.armor_t77_ul_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="52" />
-				<param BLEED="52" />
+				<POISON>52</POISON>
+				<BLEED>52</BLEED>
 			</effect>
-		</for>
+			<effect name="PhysicalAttackSpeed">
+				<amount>9.32</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>8159</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3742" levels="1" name="Tallum Helmet">
+	<skill id="3742" toLevel="1" name="Tallum Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.0125" />
-				<add stat="weightPenalty" val="1440" />
-			</effect>
+		<icon>icon.armor_helmet_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="12" />
-				<param BLEED="12" />
+				<POISON>12</POISON>
+				<BLEED>12</BLEED>
 			</effect>
-		</for>
+			<effect name="PhysicalAttackSpeed">
+				<amount>1.25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>1440</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3743" levels="1" name="Tallum Leather Armor">
+	<skill id="3743" toLevel="1" name="Tallum Leather Armor">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t78_ul_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="315" />
-				<mul stat="regMp" val="1.0932" />
-			</effect>
+		<icon>icon.armor_t78_ul_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="52" />
-				<param BLEED="52" />
+				<POISON>52</POISON>
+				<BLEED>52</BLEED>
 			</effect>
-		</for>
+			<effect name="MaxMp">
+				<amount>315</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>9.32</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3744" levels="1" name="Tallum Gloves">
+	<skill id="3744" toLevel="1" name="Tallum Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t78_g_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="regMp" val="1.0083" />
-				<add stat="maxMp" val="37" />
-			</effect>
+		<icon>icon.armor_t78_g_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="8" />
-				<param BLEED="8" />
+				<POISON>8</POISON>
+				<BLEED>8</BLEED>
 			</effect>
-		</for>
+			<effect name="MaxMp">
+				<amount>37</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3745" levels="1" name="Tallum Boots">
+	<skill id="3745" toLevel="1" name="Tallum Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t78_b_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="regMp" val="1.0083" />
-				<add stat="maxMp" val="37" />
-			</effect>
+		<icon>icon.armor_t78_b_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="8" />
-				<param BLEED="8" />
+				<POISON>8</POISON>
+				<BLEED>8</BLEED>
 			</effect>
-		</for>
+			<effect name="MaxMp">
+				<amount>37</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3746" levels="1" name="Tallum Helmet">
+	<skill id="3746" toLevel="1" name="Tallum Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="regMp" val="1.0125" />
-				<add stat="maxMp" val="56" />
-			</effect>
+		<icon>icon.armor_helmet_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="12" />
-				<param BLEED="12" />
+				<POISON>12</POISON>
+				<BLEED>12</BLEED>
 			</effect>
-		</for>
+			<effect name="MaxMp">
+				<amount>56</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>1.25</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3747" levels="1" name="Tallum Gloves">
+	<skill id="3747" toLevel="1" name="Tallum Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t79_g_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mDef" val="1.0133" />
-			</effect>
+		<icon>icon.armor_t79_g_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="13.33" />
-				<param BLEED="13.33" />
+				<POISON>13.33</POISON>
+				<BLEED>13.33</BLEED>
 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>1.33</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3748" levels="1" name="Tallum Boots">
+	<skill id="3748" toLevel="1" name="Tallum Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t79_b_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mDef" val="1.0133" />
-			</effect>
+		<icon>icon.armor_t79_b_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="13.33" />
-				<param BLEED="13.33" />
+				<POISON>13.33</POISON>
+				<BLEED>13.33</BLEED>
 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>1.33</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3749" levels="1" name="Tallum Tunic">
+	<skill id="3749" toLevel="1" name="Tallum Tunic">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t79_u_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtkSpd" val="1.15" />
+		<icon>icon.armor_t79_u_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3750" levels="1" name="Tallum Stockings">
+	<skill id="3750" toLevel="1" name="Tallum Stockings">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t79_l_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mDef" val="1.0333" />
-			</effect>
+		<icon>icon.armor_t79_l_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="33.33" />
-				<param BLEED="33.33" />
+				<POISON>33.33</POISON>
+				<BLEED>33.33</BLEED>
 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>3.33</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3751" levels="1" name="Tallum Helmet">
+	<skill id="3751" toLevel="1" name="Tallum Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mDef" val="1.02" />
-			</effect>
+		<icon>icon.armor_helmet_i00</icon>
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="20" />
-				<param BLEED="20" />
+				<POISON>20</POISON>
+				<BLEED>20</BLEED>
 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3752" levels="1" name="Majestic Gauntlets">
+	<skill id="3752" toLevel="1" name="Majestic Gauntlets">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t83_g_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.0041" />
-				<add stat="accCombat" val="0.31" />
-			</effect>
+		<icon>icon.armor_t83_g_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="8.33" />
+				<SHOCK>8.33</SHOCK>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>0.31</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3753" levels="1" name="Majestic Circlet">
+	<skill id="3753" toLevel="1" name="Majestic Circlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.0062" />
-				<add stat="accCombat" val="0.47" />
-			</effect>
+		<icon>icon.armor_leather_helmet_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="12.5" />
+				<SHOCK>12.5</SHOCK>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>0.62</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>0.47</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3754" levels="1" name="Majestic Plate Armor">
+	<skill id="3754" toLevel="1" name="Majestic Plate Armor">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t83_ul_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="accCombat" val="0.579" />
-				<mul stat="pAtk" val="1.0827" />
-			</effect>
+		<icon>icon.armor_t83_ul_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="20.83" />
+				<SHOCK>20.83</SHOCK>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>8.27</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>0.579</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3755" levels="1" name="Majestic Boots">
+	<skill id="3755" toLevel="1" name="Majestic Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t83_b_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.0062" />
-				<add stat="accCombat" val="0.47" />
-			</effect>
+		<icon>icon.armor_t83_b_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="8.33" />
+				<SHOCK>8.33</SHOCK>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>0.62</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>0.47</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3756" levels="1" name="Majestic Gauntlets">
+	<skill id="3756" toLevel="1" name="Majestic Gauntlets">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t84_g_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.0083">
-					<using kind="BOW,CROSSBOW" />
-				</mul>
-				<add stat="maxMp" val="40" />
-				<add stat="weightPenalty" val="960" />
-			</effect>
+		<icon>icon.armor_t84_g_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="8.33" />
+				<SHOCK>8.33</SHOCK>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="MaxMp">
+				<amount>40</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>960</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3757" levels="1" name="Majestic Leather Armor">
+	<skill id="3757" toLevel="1" name="Majestic Leather Armor">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t84_ul_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="weightPenalty" val="8159" />
-				<add stat="maxMp" val="340" />
-				<mul stat="pAtk" val="1.0932">
-					<using kind="BOW,CROSSBOW" />
-				</mul>
-			</effect>
+		<icon>icon.armor_t84_ul_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="20.83" />
+				<SHOCK>20.83</SHOCK>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>9.32</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="MaxMp">
+				<amount>340</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>8159</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3758" levels="1" name="Majestic Boots">
+	<skill id="3758" toLevel="1" name="Majestic Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t84_b_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.0083">
-					<using kind="BOW,CROSSBOW" />
-				</mul>
-				<add stat="maxMp" val="40" />
-				<add stat="weightPenalty" val="960" />
-			</effect>
+		<icon>icon.armor_t84_b_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="8.33" />
+				<SHOCK>8.33</SHOCK>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="MaxMp">
+				<amount>40</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>960</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3759" levels="1" name="Majestic Circlet">
+	<skill id="3759" toLevel="1" name="Majestic Circlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.0125">
-					<using kind="BOW,CROSSBOW" />
-				</mul>
-				<add stat="maxMp" val="60" />
-				<add stat="weightPenalty" val="1440" />
-			</effect>
+		<icon>icon.armor_leather_helmet_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="12.5" />
+				<SHOCK>12.5</SHOCK>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>1.25</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="MaxMp">
+				<amount>60</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>1440</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3760" levels="1" name="Majestic Gauntlets">
+	<skill id="3760" toLevel="1" name="Majestic Gauntlets">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t85_g_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="40" />
-				<mul stat="regMp" val="1.0133" />
-			</effect>
+		<icon>icon.armor_t85_g_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="8.33" />
+				<SHOCK>8.33</SHOCK>
 			</effect>
-		</for>
+			<effect name="MaxMp">
+				<amount>40</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>1.33</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3761" levels="1" name="Majestic Robe">
+	<skill id="3761" toLevel="1" name="Majestic Robe">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t85_ul_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtkSpd" val="1.15" />
-				<mul stat="regMp" val="1.0333" />
-			</effect>
+		<icon>icon.armor_t85_ul_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="20.83" />
+				<SHOCK>20.83</SHOCK>
 			</effect>
-		</for>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>3.33</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3762" levels="1" name="Majestic Boots">
+	<skill id="3762" toLevel="1" name="Majestic Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t85_b_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="40" />
-				<mul stat="regMp" val="1.0133" />
-			</effect>
+		<icon>icon.armor_t85_b_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="8.33" />
+				<SHOCK>8.33</SHOCK>
 			</effect>
-		</for>
+			<effect name="MaxMp">
+				<amount>40</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>1.33</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3763" levels="1" name="Majestic Circlet">
+	<skill id="3763" toLevel="1" name="Majestic Circlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="60" />
-				<mul stat="regMp" val="1.02" />
-			</effect>
+		<icon>icon.armor_leather_helmet_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="12.5" />
+				<SHOCK>12.5</SHOCK>
 			</effect>
-		</for>
+			<effect name="MaxMp">
+				<amount>60</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3764" levels="1" name="Armor of Nightmare">
+	<skill id="3764" toLevel="1" name="Armor of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t80_ul_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.1708" />
-			</effect>
+		<icon>icon.armor_t80_ul_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="29.16" />
-				<param HOLD="29.16" />
+				<SLEEP>29.16</SLEEP>
+				<HOLD>29.16</HOLD>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>17.08</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3765" levels="1" name="Gauntlets of Nightmare">
+	<skill id="3765" toLevel="1" name="Gauntlets of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t80_g_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.0083" />
-			</effect>
+		<icon>icon.armor_t80_g_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="11.66" />
-				<param HOLD="11.66" />
+				<SLEEP>11.66</SLEEP>
+				<HOLD>11.66</HOLD>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3766" levels="1" name="Boots of Nightmare">
+	<skill id="3766" toLevel="1" name="Boots of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t80_b_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.0083" />
-			</effect>
+		<icon>icon.armor_t80_b_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="11.66" />
-				<param HOLD="11.66" />
+				<SLEEP>11.66</SLEEP>
+				<HOLD>11.66</HOLD>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3767" levels="1" name="Helm of Nightmare">
+	<skill id="3767" toLevel="1" name="Helm of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.0125" />
-			</effect>
+		<icon>icon.armor_leather_helmet_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="17.5" />
-				<param HOLD="17.5" />
+				<SLEEP>17.5</SLEEP>
+				<HOLD>17.5</HOLD>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>1.25</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3768" levels="1" name="Leather Armor of Nightmare">
+	<skill id="3768" toLevel="1" name="Leather Armor of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t81_ul_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="absorbDam" val="3" />
-				<mul stat="mDef" val="1.0827" />
-			</effect>
+		<icon>icon.armor_t81_ul_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="29.16" />
-				<param HOLD="29.16" />
+				<SLEEP>29.16</SLEEP>
+				<HOLD>29.16</HOLD>
 			</effect>
-		</for>
+			<effect name="VampiricAttack">
+				<amount>3</amount>
+				<chance>30</chance>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>8.27</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3769" levels="1" name="Gauntlets of Nightmare">
+	<skill id="3769" toLevel="1" name="Gauntlets of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t81_g_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.0041" />
-			</effect>
+		<icon>icon.armor_t81_g_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="11.66" />
-				<param HOLD="11.66" />
+				<SLEEP>11.66</SLEEP>
+				<HOLD>11.66</HOLD>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3770" levels="1" name="Boots of Nightmare">
+	<skill id="3770" toLevel="1" name="Boots of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t81_b_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.0041" />
-			</effect>
+		<icon>icon.armor_t81_b_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="11.66" />
-				<param HOLD="11.66" />
+				<SLEEP>11.66</SLEEP>
+				<HOLD>11.66</HOLD>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3771" levels="1" name="Gauntlets of Nightmare">
+	<skill id="3771" toLevel="1" name="Gauntlets of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t82_g_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="regMp" val="1.0041" />
-				<mul stat="mAtk" val="1.0041" />
-			</effect>
+		<icon>icon.armor_t82_g_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="11.66" />
-				<param HOLD="11.66" />
+				<SLEEP>11.66</SLEEP>
+				<HOLD>11.66</HOLD>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3772" levels="1" name="Robe of Nightmare">
+	<skill id="3772" toLevel="1" name="Robe of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t82_ul_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtk" val="1.0827" />
-				<mul stat="regMp" val="1.0827" />
-			</effect>
+		<icon>icon.armor_t82_ul_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="29.16" />
-				<param HOLD="29.16" />
+				<SLEEP>29.16</SLEEP>
+				<HOLD>29.16</HOLD>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>8.27</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>8.27</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3773" levels="1" name="Boots of Nightmare">
+	<skill id="3773" toLevel="1" name="Boots of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t82_b_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="regMp" val="1.0041" />
-				<mul stat="mAtk" val="1.0041" />
-			</effect>
+		<icon>icon.armor_t82_b_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="11.66" />
-				<param HOLD="11.66" />
+				<SLEEP>11.66</SLEEP>
+				<HOLD>11.66</HOLD>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3774" levels="1" name="Shield of Nightmare">
+	<skill id="3774" toLevel="1" name="Shield of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="magicSuccRes" val="1.02" />
+		<icon>icon.shield_shield_of_nightmare_i00</icon>
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ResistDDMagic">
+				<amount>2</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3775" levels="1" name="Draconic Leather Gloves">
+	<skill id="3775" toLevel="1" name="Draconic Leather Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t89_g_i00" />
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.0041" />
-				<mul stat="pAtk" val="1.0041" />
-				<add stat="maxMp" val="74" />
-				<add stat="weightPenalty" val="960" />
+		<icon>icon.armor_t89_g_i00</icon>
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>0.41</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PhysicalAttackSpeed">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>74</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>960</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3776" levels="1" name="Draconic Leather Boots">
+	<skill id="3776" toLevel="1" name="Draconic Leather Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t89_b_i00" />
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.0041" />
-				<mul stat="pAtk" val="1.0041" />
-				<add stat="maxMp" val="74" />
-				<add stat="weightPenalty" val="960" />
+		<icon>icon.armor_t89_b_i00</icon>
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>0.41</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PhysicalAttackSpeed">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>74</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>960</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3777" levels="1" name="Draconic Leather Armor">
+	<skill id="3777" toLevel="1" name="Draconic Leather Armor">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t89_ul_i00" />
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="weightPenalty" val="8159" />
-				<add stat="maxMp" val="630" />
-				<mul stat="pAtk" val="1.058" />
-				<mul stat="pAtkSpd" val="1.058" />
+		<icon>icon.armor_t89_ul_i00</icon>
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>5.8</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5.8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>630</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>8159</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3778" levels="1" name="Draconic Leather Helmet">
+	<skill id="3778" toLevel="1" name="Draconic Leather Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.0062" />
-				<mul stat="pAtk" val="1.0062" />
-				<add stat="maxMp" val="111" />
-				<add stat="weightPenalty" val="1440" />
+		<icon>icon.armor_leather_helmet_i00</icon>
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>0.62</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PhysicalAttackSpeed">
+				<amount>0.62</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>111</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>1440</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3779" levels="1" name="Major Arcana Gloves">
+	<skill id="3779" toLevel="1" name="Major Arcana Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t90_g_i00" />
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtk" val="1.0041" />
-				<add stat="runSpd" val="1.16" />
-				<sub stat="cancel" val="8" />
-				<add stat="weightPenalty" val="960" />
-			</effect>
+		<icon>icon.armor_t90_g_i00</icon>
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="8.3" />
+				<SHOCK>8.3</SHOCK>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>1.16</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>960</amount>
+			</effect>
+			<effect name="ReduceCancel">
+				<amount>-8</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3780" levels="1" name="Major Arcana Robe">
+	<skill id="3780" toLevel="1" name="Major Arcana Robe">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t90_ul_i00" />
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<sub stat="cancel" val="21" />
-				<add stat="weightPenalty" val="8159" />
-				<mul stat="mAtk" val="1.1603" />
-				<mul stat="runSpd" val="1.0991" />
-			</effect>
+		<icon>icon.armor_t90_ul_i00</icon>
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="20.83" />
+				<SHOCK>20.83</SHOCK>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>16.03</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>9.91</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>8159</amount>
+			</effect>
+			<effect name="ReduceCancel">
+				<amount>-21</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3781" levels="1" name="Major Arcana Boots">
+	<skill id="3781" toLevel="1" name="Major Arcana Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t90_b_i00" />
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtk" val="1.0041" />
-				<add stat="runSpd" val="1.16" />
-				<sub stat="cancel" val="8" />
-				<add stat="weightPenalty" val="960" />
-			</effect>
+		<icon>icon.armor_t90_b_i00</icon>
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="8.3" />
+				<SHOCK>8.3</SHOCK>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>1.16</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>960</amount>
+			</effect>
+			<effect name="ReduceCancel">
+				<amount>-8</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3782" levels="1" name="Major Arcana Circlet">
+	<skill id="3782" toLevel="1" name="Major Arcana Circlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtk" val="1.0062" />
-				<add stat="runSpd" val="1.175" />
-				<sub stat="cancel" val="13" />
-				<add stat="weightPenalty" val="1440" />
-			</effect>
+		<icon>icon.armor_leather_helmet_i00</icon>
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="12.5" />
+				<SHOCK>12.5</SHOCK>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>0.62</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>1.175</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>1440</amount>
+			</effect>
+			<effect name="ReduceCancel">
+				<amount>-13</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3783" levels="1" name="Imperial Crusader Gaiters">
+	<skill id="3783" toLevel="1" name="Imperial Crusader Gaiters">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t88_l_i00" />
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="1.0208" />
-				<add stat="maxHp" val="185" />
-			</effect>
+		<icon>icon.armor_t88_l_i00</icon>
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="17.5" />
-				<param HOLD="17.5" />
+				<SLEEP>17.5</SLEEP>
+				<HOLD>17.5</HOLD>
 			</effect>
-		</for>
+			<effect name="PhysicalDefence">
+				<amount>2.08</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>185</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3784" levels="1" name="Imperial Crusader Gauntlets">
+	<skill id="3784" toLevel="1" name="Imperial Crusader Gauntlets">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t88_g_i00" />
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="1.0083" />
-				<add stat="maxHp" val="74" />
-			</effect>
+		<icon>icon.armor_t88_g_i00</icon>
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="7" />
-				<param HOLD="7" />
+				<SLEEP>7</SLEEP>
+				<HOLD>7</HOLD>
 			</effect>
-		</for>
+			<effect name="PhysicalDefence">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>74</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3785" levels="1" name="Imperial Crusader Boots">
+	<skill id="3785" toLevel="1" name="Imperial Crusader Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t88_b_i00" />
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="1.0083" />
-				<add stat="maxHp" val="74" />
-			</effect>
+		<icon>icon.armor_t88_b_i00</icon>
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="7" />
-				<param HOLD="7" />
+				<SLEEP>7</SLEEP>
+				<HOLD>7</HOLD>
 			</effect>
-		</for>
+			<effect name="PhysicalDefence">
+				<amount>0.83</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>74</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3786" levels="1" name="Imperial Crusader Shield">
+	<skill id="3786" toLevel="1" name="Imperial Crusader Shield">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.shield_imperial_crusader_shield_i00" />
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="magicSuccRes" val="1.02" />
+		<icon>icon.shield_imperial_crusader_shield_i00</icon>
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ResistDDMagic">
+				<amount>2</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3787" levels="1" name="Imperial Crusader Helmet">
+	<skill id="3787" toLevel="1" name="Imperial Crusader Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="1.0125" />
-				<add stat="maxHp" val="111" />
-			</effect>
+		<icon>icon.armor_helmet_i00</icon>
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="10.5" />
-				<param HOLD="10.5" />
+				<SLEEP>10.5</SLEEP>
+				<HOLD>10.5</HOLD>
 			</effect>
-		</for>
+			<effect name="PhysicalDefence">
+				<amount>1.25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>111</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3788" levels="1" name="Imperial Crusader Breastplate">
+	<skill id="3788" toLevel="1" name="Imperial Crusader Breastplate">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t88_u_i00" />
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="889" />
-				<mul stat="pDef" val="1.0724" />
-			</effect>
+		<icon>icon.armor_t88_u_i00</icon>
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="28" />
-				<param HOLD="28" />
+				<SLEEP>28</SLEEP>
+				<HOLD>28</HOLD>
 			</effect>
-		</for>
+			<effect name="PhysicalDefence">
+				<amount>7.24</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>889</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3789" levels="1" name="Dynasty Breastplate">
+	<skill id="3789" toLevel="1" name="Dynasty Breastplate">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t91_uf_i00" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="darkRes" val="3.2" />
-				<add stat="maxHp" val="984" />
-				<mul stat="pDef" val="1.0724" />
+		<icon>icon.armor_t91_uf_i00</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>7.24</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="DefenceAttribute">
+				<amount>3.2</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MaxHp">
+				<amount>984</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3790" levels="1" name="Dynasty Gaiters">
+	<skill id="3790" toLevel="1" name="Dynasty Gaiters">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t91_l_i00" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="1.0208" />
-				<add stat="maxHp" val="205" />
-				<add stat="darkRes" val="2" />
+		<icon>icon.armor_t91_l_i00</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>2.08</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="DefenceAttribute">
+				<amount>2</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MaxHp">
+				<amount>205</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3791" levels="1" name="Dynasty Gauntlets">
+	<skill id="3791" toLevel="1" name="Dynasty Gauntlets">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t91_g_i00" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="1.0083" />
-				<add stat="maxHp" val="82" />
-				<add stat="darkRes" val="0.8" />
+		<icon>icon.armor_t91_g_i00</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>0.83</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="DefenceAttribute">
+				<amount>0.8</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MaxHp">
+				<amount>82</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3792" levels="1" name="Dynasty Boots">
+	<skill id="3792" toLevel="1" name="Dynasty Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t91_b_i00" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="1.0083" />
-				<add stat="maxHp" val="82" />
-				<add stat="darkRes" val="0.8" />
+		<icon>icon.armor_t91_b_i00</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>0.83</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="DefenceAttribute">
+				<amount>0.8</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MaxHp">
+				<amount>82</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3793" levels="1" name="Dynasty Shield">
+	<skill id="3793" toLevel="1" name="Dynasty Shield">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.shield_dynasty_shield_i00" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="magicSuccRes" val="1.02" />
+		<icon>icon.shield_dynasty_shield_i00</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ResistDDMagic">
+				<amount>2</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3794" levels="1" name="Dynasty Helmet">
+	<skill id="3794" toLevel="1" name="Dynasty Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="1.0125" />
-				<add stat="maxHp" val="123" />
-				<add stat="darkRes" val="1.2" />
+		<icon>icon.armor_helmet_i00</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>1.25</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="DefenceAttribute">
+				<amount>1.2</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MaxHp">
+				<amount>123</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3795" levels="1" name="Dynasty Leather Armor">
+	<skill id="3795" toLevel="1" name="Dynasty Leather Armor">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t92_ud_i00" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="accCombat" val="3.4" />
-				<add stat="darkRes" val="3.2" />
-				<add stat="maxMp" val="492" />
-				<mul stat="pAtkSpd" val="1.0477" />
-				<add stat="rEvas" val="3.4" />
+		<icon>icon.armor_t92_ud_i00</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>3.4</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="Accuracy">
+				<amount>3.4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>4.77</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>492</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>3.2</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3796" levels="1" name="Dynasty Leather Leggings">
+	<skill id="3796" toLevel="1" name="Dynasty Leather Leggings">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t92_l_i00" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="accCombat" val="0.79" />
-				<add stat="rEvas" val="0.79" />
-				<add stat="maxHp" val="205" />
-				<mul stat="pAtkSpd" val="1.0068" />
-				<add stat="darkRes" val="2" />
+		<icon>icon.armor_t92_l_i00</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>0.79</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="Accuracy">
+				<amount>0.79</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>0.67999999999999</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>2</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MaxHp">
+				<amount>205</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3797" levels="1" name="Dynasty Leather Boots">
+	<skill id="3797" toLevel="1" name="Dynasty Leather Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t92_b_i00" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="accCombat" val="0.31" />
-				<add stat="rEvas" val="0.31" />
-				<add stat="maxHp" val="82" />
-				<mul stat="pAtkSpd" val="1.0027" />
-				<add stat="darkRes" val="0.8" />
+		<icon>icon.armor_t92_b_i00</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>0.31</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="Accuracy">
+				<amount>0.31</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>0.27</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>0.8</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MaxHp">
+				<amount>82</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3798" levels="1" name="Dynasty Leather Helmet">
+	<skill id="3798" toLevel="1" name="Dynasty Leather Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="accCombat" val="0.47" />
-				<add stat="rEvas" val="0.47" />
-				<add stat="maxHp" val="123" />
-				<mul stat="pAtkSpd" val="1.0041" />
-				<add stat="darkRes" val="1.2" />
+		<icon>icon.armor_helmet_i00</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>0.47</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="Accuracy">
+				<amount>0.47</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>0.41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>1.2</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MaxHp">
+				<amount>123</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3799" levels="1" name="Dynasty Tunic">
+	<skill id="3799" toLevel="1" name="Dynasty Tunic">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t93_uw_i00" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtkSpd" val="1.15" />
+		<icon>icon.armor_t93_uw_i00</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
 </list>

@@ -22,6 +22,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.L2ManufactureItem;
@@ -29,6 +30,7 @@ import com.l2jmobius.gameserver.model.L2RecipeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeShopMsg;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
@@ -38,41 +40,40 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * RequestRecipeShopListSet client packet class.
  */
-public final class RequestRecipeShopListSet extends L2GameClientPacket
+public final class RequestRecipeShopListSet implements IClientIncomingPacket
 {
-	private static final String _C__BB_RequestRecipeShopListSet = "[C] BB RequestRecipeShopListSet";
-	
 	private static final int BATCH_LENGTH = 12;
 	
 	private L2ManufactureItem[] _items = null;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		final int count = readD();
-		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
+		final int count = packet.readD();
+		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
-			return;
+			return false;
 		}
 		
 		_items = new L2ManufactureItem[count];
 		for (int i = 0; i < count; i++)
 		{
-			final int id = readD();
-			final long cost = readQ();
+			final int id = packet.readD();
+			final long cost = packet.readQ();
 			if (cost < 0)
 			{
 				_items = null;
-				return;
+				return false;
 			}
 			_items[i] = new L2ManufactureItem(id, cost);
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -87,15 +88,15 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket
 		
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) || player.isInDuel())
 		{
-			player.sendPacket(SystemMessageId.WHILE_YOU_ARE_ENGAGED_IN_COMBAT_YOU_CANNOT_OPERATE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
-			player.sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(SystemMessageId.WHILE_YOU_ARE_ENGAGED_IN_COMBAT_YOU_CANNOT_OPERATE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (player.isInsideZone(ZoneId.NO_STORE))
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_WORKSHOP_HERE);
-			player.sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_WORKSHOP_HERE);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -127,11 +128,5 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket
 		player.sitDown();
 		player.broadcastUserInfo();
 		Broadcast.toSelfAndKnownPlayers(player, new RecipeShopMsg(player));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__BB_RequestRecipeShopListSet;
 	}
 }

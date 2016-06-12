@@ -16,25 +16,31 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
  * Lets drink to code!
  * @author zabbix
  */
-public class GameGuardQuery extends L2GameServerPacket
+public class GameGuardQuery implements IClientOutgoingPacket
 {
 	public static final GameGuardQuery STATIC_PACKET = new GameGuardQuery();
 	
 	private GameGuardQuery()
 	{
+		
 	}
 	
 	@Override
-	public void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x74);
-		writeD(0xE1B752B6);
-		writeD(0x51AFEF3A);
-		writeD(0xB1180C49);
-		writeD(0x08F4F7D7);
+		OutgoingPackets.GAME_GUARD_QUERY.writeId(packet);
+		
+		packet.writeD(0x27533DD9);
+		packet.writeD(0x2E72A51D);
+		packet.writeD(0x2017038B);
+		packet.writeD(0xC35B1EA3);
+		return true;
 	}
 }

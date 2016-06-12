@@ -16,32 +16,32 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.friend;
 
-import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.BlockList;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.friend.FriendAddRequest;
 
-public final class RequestFriendInvite extends L2GameClientPacket
+public final class RequestFriendInvite implements IClientIncomingPacket
 {
-	private static final String _C__77_REQUESTFRIENDINVITE = "[C] 77 RequestFriendInvite";
-	
 	private String _name;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_name = readS();
+		_name = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getActiveChar();
-		
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -67,6 +67,14 @@ public final class RequestFriendInvite extends L2GameClientPacket
 			activeChar.sendPacket(SystemMessageId.A_USER_CURRENTLY_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_SEND_PARTY_AND_FRIEND_INVITATIONS);
 			return;
 		}
+		
+		// Cannot request friendship in Ceremony of Chaos event.
+		if (activeChar.isOnEvent(CeremonyOfChaosEvent.class))
+		{
+			client.sendPacket(SystemMessageId.YOU_CANNOT_INVITE_A_FRIEND_OR_PARTY_WHILE_PARTICIPATING_IN_THE_CEREMONY_OF_CHAOS);
+			return;
+		}
+		
 		// Target blocked active player.
 		if (BlockList.isBlocked(friend, activeChar))
 		{
@@ -84,7 +92,7 @@ public final class RequestFriendInvite extends L2GameClientPacket
 		}
 		
 		// Target already in friend list.
-		if (activeChar.getFriendList().containsKey(friend.getObjectId()))
+		if (activeChar.getFriendList().contains(friend.getObjectId()))
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST);
 			sm.addString(_name);
@@ -99,22 +107,11 @@ public final class RequestFriendInvite extends L2GameClientPacket
 			activeChar.sendPacket(sm);
 			return;
 		}
-		if (Config.FACTION_SYSTEM_ENABLED && ((friend.isEvil() && activeChar.isGood()) || (friend.isGood() && activeChar.isEvil())))
-		{
-			activeChar.sendMessage("You cannot have a friend of the opposing faction.");
-			return;
-		}
 		// Friend request sent.
 		activeChar.onTransactionRequest(friend);
 		friend.sendPacket(new FriendAddRequest(activeChar.getName()));
 		sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_REQUESTED_C1_TO_BE_ON_YOUR_FRIENDS_LIST);
 		sm.addString(_name);
 		activeChar.sendPacket(sm);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__77_REQUESTFRIENDINVITE;
 	}
 }

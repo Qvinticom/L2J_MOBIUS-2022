@@ -20,11 +20,11 @@ import com.l2jmobius.gameserver.enums.TrapAction;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.trap.OnTrapAction;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnTrapAction;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -35,10 +35,8 @@ public final class TrapRemove extends AbstractEffect
 {
 	private final int _power;
 	
-	public TrapRemove(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public TrapRemove(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		if (params.isEmpty())
 		{
 			throw new IllegalArgumentException(getClass().getSimpleName() + ": effect without power!");
@@ -54,20 +52,24 @@ public final class TrapRemove extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character target = info.getEffected();
-		if (!target.isTrap() || target.isAlikeDead())
+		if (!effected.isTrap())
 		{
 			return;
 		}
 		
-		final L2TrapInstance trap = (L2TrapInstance) target;
-		if (!trap.canBeSeen(info.getEffector()))
+		if (effected.isAlikeDead())
 		{
-			if (info.getEffector().isPlayer())
+			return;
+		}
+		
+		final L2TrapInstance trap = (L2TrapInstance) effected;
+		if (!trap.canBeSeen(effector))
+		{
+			if (effector.isPlayer())
 			{
-				info.getEffector().sendPacket(SystemMessageId.INVALID_TARGET);
+				effector.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 			return;
 		}
@@ -78,12 +80,12 @@ public final class TrapRemove extends AbstractEffect
 		}
 		
 		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(trap, info.getEffector(), TrapAction.TRAP_DISARMED), trap);
+		EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(trap, effector, TrapAction.TRAP_DISARMED), trap);
 		
 		trap.unSummon();
-		if (info.getEffector().isPlayer())
+		if (effector.isPlayer())
 		{
-			info.getEffector().sendPacket(SystemMessageId.THE_TRAP_DEVICE_HAS_BEEN_STOPPED);
+			effector.sendPacket(SystemMessageId.THE_TRAP_DEVICE_HAS_BEEN_STOPPED);
 		}
 	}
 }

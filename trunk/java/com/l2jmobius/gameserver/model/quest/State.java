@@ -44,17 +44,11 @@ public class State
 		switch (state)
 		{
 			case 1:
-			{
 				return "Started";
-			}
 			case 2:
-			{
 				return "Completed";
-			}
 			default:
-			{
 				return "Start";
-			}
 		}
 	}
 	
@@ -68,17 +62,11 @@ public class State
 		switch (statename)
 		{
 			case "Started":
-			{
 				return 1;
-			}
 			case "Completed":
-			{
 				return 2;
-			}
 			default:
-			{
 				return 0;
-			}
 		}
 	}
 }

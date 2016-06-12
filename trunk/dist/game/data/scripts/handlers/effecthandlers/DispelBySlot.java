@@ -24,11 +24,12 @@ import java.util.Map.Entry;
 import com.l2jmobius.gameserver.model.CharEffectList;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Dispel By Slot effect implementation.
@@ -39,10 +40,8 @@ public final class DispelBySlot extends AbstractEffect
 	private final String _dispel;
 	private final Map<AbnormalType, Short> _dispelAbnormals;
 	
-	public DispelBySlot(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public DispelBySlot(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_dispel = params.getString("dispel", null);
 		if ((_dispel != null) && !_dispel.isEmpty())
 		{
@@ -72,14 +71,13 @@ public final class DispelBySlot extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		if (_dispelAbnormals.isEmpty())
 		{
 			return;
 		}
 		
-		final L2Character effected = info.getEffected();
 		final CharEffectList effectList = effected.getEffectList();
 		// There is no need to iterate over all buffs,
 		// Just iterate once over all slots to dispel and get the buff with that abnormal if exists,
@@ -87,10 +85,13 @@ public final class DispelBySlot extends AbstractEffect
 		for (Entry<AbnormalType, Short> entry : _dispelAbnormals.entrySet())
 		{
 			// Dispel transformations (buff and by GM)
-			if ((entry.getKey() == AbnormalType.TRANSFORM) && (effected.isTransformed() || effected.isPlayer() || (entry.getValue() == effected.getActingPlayer().getTransformationId()) || (entry.getValue() < 0)))
+			if ((entry.getKey() == AbnormalType.TRANSFORM))
 			{
-				info.getEffected().stopTransformation(true);
-				continue;
+				if ((entry.getValue() == effected.getTransformationId()) || (entry.getValue() < 0))
+				{
+					effected.stopTransformation(true);
+					continue;
+				}
 			}
 			
 			final BuffInfo toDispel = effectList.getBuffInfoByAbnormalType(entry.getKey());

@@ -16,35 +16,36 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.BeautyShopData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.beautyshop.BeautyData;
 import com.l2jmobius.gameserver.model.beautyshop.BeautyItem;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExResponseBeautyRegistReset;
 
 /**
  * @author Sdw
  */
-public class RequestShowResetShopList extends L2GameClientPacket
+public class RequestShowResetShopList implements IClientIncomingPacket
 {
-	private static final String _C__D0_CD_REQUESTSHOWRESETSHOPLIST = "[C] D0;CD RequestShowResetShopList";
-	
 	private int _hairId;
 	private int _faceId;
 	private int _colorId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_hairId = readD();
-		_faceId = readD();
-		_colorId = readD();
+		_hairId = packet.readD();
+		_faceId = packet.readD();
+		_colorId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -89,10 +90,19 @@ public class RequestShowResetShopList extends L2GameClientPacket
 			requiredAdena += face.getResetAdena();
 		}
 		
-		if ((player.getAdena() < requiredAdena) || ((requiredAdena > 0) && !player.reduceAdena(getClass().getSimpleName(), requiredAdena, null, true)))
+		if ((player.getAdena() < requiredAdena))
 		{
 			player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.RESTORE, ExResponseBeautyRegistReset.FAILURE));
 			return;
+		}
+		
+		if (requiredAdena > 0)
+		{
+			if (!player.reduceAdena(getClass().getSimpleName(), requiredAdena, null, true))
+			{
+				player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.RESTORE, ExResponseBeautyRegistReset.FAILURE));
+				return;
+			}
 		}
 		
 		player.getVariables().remove("visualHairId");
@@ -100,11 +110,5 @@ public class RequestShowResetShopList extends L2GameClientPacket
 		player.getVariables().remove("visualFaceId");
 		
 		player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.RESTORE, ExResponseBeautyRegistReset.SUCCESS));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_CD_REQUESTSHOWRESETSHOPLIST;
 	}
 }

@@ -16,38 +16,36 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrLoadEventTopRankers;
 
 /**
  * Halloween rank list client packet. Format: (ch)ddd
  */
-public class BrEventRankerList extends L2GameClientPacket
+public class BrEventRankerList implements IClientIncomingPacket
 {
-	private static final String _C__D0_7B_BREVENTRANKERLIST = "[C] D0:7B BrEventRankerList";
-	
 	private int _eventId;
 	private int _day;
 	@SuppressWarnings("unused")
 	private int _ranking;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_eventId = readD();
-		_day = readD(); // 0 - current, 1 - previous
-		_ranking = readD();
+		_eventId = packet.readD();
+		_day = packet.readD(); // 0 - current, 1 - previous
+		_ranking = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		// TODO count, bestScore, myScore
-		getClient().sendPacket(new ExBrLoadEventTopRankers(_eventId, _day, 0, 0, 0));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_7B_BREVENTRANKERLIST;
+		final int count = 0;
+		final int bestScore = 0;
+		final int myScore = 0;
+		client.sendPacket(new ExBrLoadEventTopRankers(_eventId, _day, count, bestScore, myScore));
 	}
 }

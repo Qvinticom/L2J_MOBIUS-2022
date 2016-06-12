@@ -1,1789 +1,2837 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="4300" levels="1" name="Race">
+	<skill id="4300" toLevel="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Giant -->
-		<set name="icon" val="icon.skill4300" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<icon>icon.skill4300</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4301" levels="1" name="Race">
+	<skill id="4301" toLevel="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Bug -->
-		<set name="icon" val="icon.skill4301" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<icon>icon.skill4301</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4302" levels="1" name="Race">
+	<skill id="4302" toLevel="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Fairy -->
-		<set name="icon" val="icon.skill4302" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<icon>icon.skill4302</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4303" levels="1" name="Enchant Type">
+	<skill id="4303" toLevel="1" name="Enchant Type">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4303" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4303</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4304" levels="1" name="Enchant Type">
+	<skill id="4304" toLevel="1" name="Enchant Type">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4304" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4304</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4305" levels="1" name="Enchant Type">
+	<skill id="4305" toLevel="1" name="Enchant Type">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4305" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4305</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4306" levels="1" name="Enchant Type">
+	<skill id="4306" toLevel="1" name="Enchant Type">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4306" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4306</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4307" levels="1" name="Enchant Type">
+	<skill id="4307" toLevel="1" name="Enchant Type">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4307" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4307</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4308" levels="1" name="Enchant Type">
+	<skill id="4308" toLevel="1" name="Enchant Type">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4308" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4308</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4309" levels="1" name="Enchant Type">
+	<skill id="4309" toLevel="1" name="Enchant Type">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4309" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4309</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4310" levels="1" name="Enchant Type">
+	<skill id="4310" toLevel="1" name="Enchant Type">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4310" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4310</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4311" levels="1" name="Week Type">
+	<skill id="4311" toLevel="1" name="Week Type">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4311" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4311</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4312" levels="1" name="Defense Type">
+	<skill id="4312" toLevel="1" name="Defense Type">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4312" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4312</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4313" levels="1" name="Defense Type">
+	<skill id="4313" toLevel="1" name="Defense Type">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4313" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4313</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4314" levels="12" name="Holy Light Burst">
+	<skill id="4314" toLevel="12" name="Holy Light Burst">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<table name="#power"> 21 31 43 58 75 92 108 115 121 125 129 132 </table>
-		<set name="affectRange" val="200" />
-		<set name="castRange" val="700" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1200" />
-		<set name="element" val="4" /> <!-- Holy -->
-		<set name="elementPower" val="20" />
-		<set name="hitTime" val="2000" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
-		<for>
-			<effect name="MagicalAttack" />
-		</for>
+		<affectRange>200</affectRange>
+		<castRange>700</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1200</effectRange>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2000</hitTime>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">17</value>
+			<value level="2">29</value>
+			<value level="3">39</value>
+			<value level="4">53</value>
+			<value level="5">67</value>
+			<value level="6">83</value>
+			<value level="7">97</value>
+			<value level="8">103</value>
+			<value level="9">108</value>
+			<value level="10">112</value>
+			<value level="11">115</value>
+			<value level="12">116</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">21</value>
+					<value level="2">31</value>
+					<value level="3">43</value>
+					<value level="4">58</value>
+					<value level="5">75</value>
+					<value level="6">92</value>
+					<value level="7">108</value>
+					<value level="8">115</value>
+					<value level="9">121</value>
+					<value level="10">125</value>
+					<value level="11">129</value>
+					<value level="12">132</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4315" levels="12" name="Hold">
+	<skill id="4315" toLevel="12" name="Hold">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="ROOT_MAGICALLY" />
-		<set name="abnormalVisualEffect" val="ROOT" />
-		<set name="activateRate" val="70" />
-		<set name="affectRange" val="300" />
-		<set name="basicProperty" val="MEN" />
-		<set name="castRange" val="700" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1200" />
-		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill1201" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
-		<set name="trait" val="HOLD" />
-		<for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>70</activateRate>
+		<affectRange>300</affectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>700</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill1201</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">17</value>
+			<value level="2">29</value>
+			<value level="3">39</value>
+			<value level="4">53</value>
+			<value level="5">67</value>
+			<value level="6">83</value>
+			<value level="7">97</value>
+			<value level="8">103</value>
+			<value level="9">108</value>
+			<value level="10">112</value>
+			<value level="11">115</value>
+			<value level="12">116</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>HOLD</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
 			<effect name="Root" />
-		</for>
+		</effects>
 	</skill>
-	<skill id="4316" levels="12" name="Drain Energy">
+	<skill id="4316" toLevel="12" name="Drain Energy">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<table name="#mpConsume"> 31 51 71 94 121 149 175 186 195 202 206 209 </table>
 		<table name="#power"> 11 16 22 29 38 46 54 58 61 63 65 66 </table>
-		<set name="affectRange" val="150" />
-		<set name="castRange" val="750" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1250" />
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
-		<set name="hitTime" val="2500" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
-		<for>
+		<affectRange>150</affectRange>
+		<castRange>750</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1250</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2500</hitTime>
+		<magicLvl>
+			<value level="1">14</value>
+			<value level="2">24</value>
+			<value level="3">34</value>
+			<value level="4">44</value>
+			<value level="5">54</value>
+			<value level="6">64</value>
+			<value level="7">74</value>
+			<value level="8">79</value>
+			<value level="9">84</value>
+			<value level="10">89</value>
+			<value level="11">94</value>
+			<value level="12">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">31</value>
+			<value level="2">51</value>
+			<value level="3">71</value>
+			<value level="4">94</value>
+			<value level="5">121</value>
+			<value level="6">149</value>
+			<value level="7">175</value>
+			<value level="8">186</value>
+			<value level="9">195</value>
+			<value level="10">202</value>
+			<value level="11">206</value>
+			<value level="12">209</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
 			<effect name="HpDrain">
-				<param power="0.4" />
+				<power>
+					<value level="1">11</value>
+					<value level="2">16</value>
+					<value level="3">22</value>
+					<value level="4">29</value>
+					<value level="5">38</value>
+					<value level="6">46</value>
+					<value level="7">54</value>
+					<value level="8">58</value>
+					<value level="9">61</value>
+					<value level="10">63</value>
+					<value level="11">65</value>
+					<value level="12">66</value>
+				</power>
+				<percentage>40</percentage>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4317" levels="5" name="Increase Rage Might">
+	<skill id="4317" toLevel="5" name="Increase Rage Might">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<table name="#pAtk"> 1.15 1.2 1.25 1.3 1.35 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="RAGE_MIGHT" />
-		<set name="effectPoint" val="100" />
-		<set name="hitTime" val="1800" />
-		<set name="magicLvl" val="60" />
-		<set name="mpConsume" val="50" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="#pAtk" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>RAGE_MIGHT</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>1800</hitTime>
+		<magicLvl>60</magicLvl>
+		<mpConsume>50</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+					<value level="3">25</value>
+					<value level="4">30</value>
+					<value level="5">35</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4318" levels="2" name="Ultimate Buff">
-		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="ULTIMATE_BUFF" />
-		<set name="abnormalVisualEffect" val="BIG_BODY" />
-		<set name="effectPoint" val="100" />
-		<set name="magicLvl" val="60" />
-		<set name="mpConsume" val="50" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
+	<skill id="4318" toLevel="2" name="Ultimate Buff">
+		<!-- Glory Days confirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>ULTIMATE_BUFF</abnormalType>
+		<abnormalVisualEffect>BIG_BODY</abnormalVisualEffect>
+		<effectPoint>100</effectPoint>
+		<magicLvl>60</magicLvl>
+		<mpConsume>50</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<icon>
+			<value level="1">icon.skill0755</value>
+			<value level="2">icon.skill0757</value>
+		</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="Grow">
-				<mul stat="pAtk" val="1.83" />
-				<add stat="accCombat" val="4" />
-				<add stat="rEvas" val="4" />
-				<mul stat="pDef" val="1.83" />
-				<mul stat="pAtkSpd" val="1.33" />
-				<mul stat="critRate" val="1.3" />
-				<mul stat="mDef" val="5" />
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>83</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk" fromLevel="2" toLevel="2">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>400</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>83</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>33</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed" fromLevel="2" toLevel="2">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4319" levels="1" name="Paralysis">
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="PARALYZE" />
-		<set name="abnormalVisualEffect" val="PARALYZE" />
-		<set name="castRange" val="1500" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="2000" />
-		<set name="icon" val="icon.skill1170" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="60" />
-		<set name="mpConsume" val="50" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="power" val="30" /> <!-- Freya retail 0, no level depend, possibly done differently -->
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<set name="trait" val="PARALYZE" />
-		<for>
-			<effect name="Paralyze" />
-		</for>
+	<skill id="4319" toLevel="1" name="Paralysis">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<castRange>1500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>2000</effectRange>
+		<icon>icon.skill1170</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<mpConsume>50</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<trait>PARALYZE</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
-	<skill id="4320" levels="12" name="Poison">
+	<skill id="4320" toLevel="12" name="Poison">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#dot"> 16 24 32 41 50 58 63 63 66 66 68 68 </table>
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 83 77 78 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="POISON" />
-		<set name="abnormalVisualEffect" val="DOT_POISON" />
-		<set name="castRange" val="1500" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="2000" />
-		<set name="icon" val="icon.skill4035" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<set name="trait" val="POISON" />
-		<for>
-			<effect name="DamOverTime" ticks="5">
-				<param power="#dot" />
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+			<value level="5">6</value>
+			<value level="6">7</value>
+			<value level="7">8</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">9</value>
+			<value level="11">10</value>
+			<value level="12">10</value>
+		</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<castRange>1500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>2000</effectRange>
+		<icon>icon.skill4035</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">83</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<trait>POISON</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>
+					<value level="1">16</value>
+					<value level="2">24</value>
+					<value level="3">32</value>
+					<value level="4">41</value>
+					<value level="5">50</value>
+					<value level="6">58</value>
+					<value level="7">63</value>
+					<value level="8">63</value>
+					<value level="9">66</value>
+					<value level="10">66</value>
+					<value level="11">68</value>
+					<value level="12">68</value>
+				</power>
+				<ticks>5</ticks>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4321" levels="1" name="Decrease P. Def">
+	<skill id="4321" toLevel="1" name="Decrease P. Def">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="4" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="PD_DOWN" />
-		<set name="castRange" val="1500" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="2000" />
-		<set name="icon" val="icon.skill0122" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="60" />
-		<set name="mpConsume" val="50" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="0.34" />
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<castRange>1500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>2000</effectRange>
+		<icon>icon.skill0122</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<mpConsume>50</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>-66</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4322" levels="1" name="Adventurer's Wind Walk">
-		<!-- Freya retail confirmed -->
-		<!-- Newbie Guide Buff -->
-		<set name="abnormalLvl" val="3" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="SPEED_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1204" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="60" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="33" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="4323" levels="1" name="Adventurer's Shield">
-		<!-- Freya retail confirmed -->
-		<!-- Newbie Guide Buff -->
-		<set name="abnormalLvl" val="4" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="PD_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1040" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="60" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="1.15" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="4324" levels="1" name="Adventurer's Blessed Body">
-		<!-- Freya retail confirmed -->
-		<!-- Newbie Guide Buff -->
-		<set name="abnormalLvl" val="7" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="MAX_HP_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1045" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="60" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.35" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="4325" levels="1" name="Adventurer's Vampiric Rage">
-		<!-- Freya retail confirmed -->
-		<!-- Newbie Guide Buff -->
-		<set name="abnormalLvl" val="5" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1268" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="60" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<add stat="absorbDam" val="9" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="4326" levels="1" name="Adventurer's Regeneration">
+	<skill id="4322" toLevel="1" name="Adventurer's Wind Walk">
 		<!-- Freya retail confirmed -->
 		<!-- Newbie Guide Buff -->
-		<set name="abnormalLvl" val="4" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="HP_REGEN_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1044" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="60" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="regHp" val="1.2" />
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SPEED_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1204</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>33</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4327" levels="1" name="Adventurer's Haste">
+	<skill id="4323" toLevel="1" name="Adventurer's Shield">
 		<!-- Freya retail confirmed -->
 		<!-- Newbie Guide Buff -->
-		<set name="abnormalLvl" val="2" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1086" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="60" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.15" />
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1040</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4328" levels="1" name="Adventurer's Blessed Soul">
+	<skill id="4324" toLevel="1" name="Adventurer's Blessed Body">
 		<!-- Freya retail confirmed -->
 		<!-- Newbie Guide Buff -->
-		<set name="abnormalLvl" val="7" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="MAX_MP_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1048" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="60" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxMp" val="1.35" />
+		<abnormalLvl>7</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MAX_HP_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1045</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY_NOT</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>35</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4329" levels="1" name="Adventurer's Acumen">
+	<skill id="4325" toLevel="1" name="Adventurer's Vampiric Rage">
 		<!-- Freya retail confirmed -->
 		<!-- Newbie Guide Buff -->
-		<set name="abnormalLvl" val="4" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="CASTING_TIME_DOWN" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1085" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="60" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtkSpd" val="1.3" />
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1268</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>80</chance>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4330" levels="1" name="Adventurer's Concentration">
+	<skill id="4326" toLevel="1" name="Adventurer's Regeneration">
 		<!-- Freya retail confirmed -->
 		<!-- Newbie Guide Buff -->
-		<set name="abnormalLvl" val="2" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1078" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="60" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<sub stat="cancel" val="18" />
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>HP_REGEN_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1044</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4331" levels="1" name="Adventurer's Empower">
+	<skill id="4327" toLevel="1" name="Adventurer's Haste">
 		<!-- Freya retail confirmed -->
 		<!-- Newbie Guide Buff -->
-		<set name="abnormalLvl" val="2" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="MA_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1059" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="60" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtk" val="1.55" />
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1086</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4332" levels="1" name="Mental Aegis">
+	<skill id="4328" toLevel="1" name="Adventurer's Blessed Soul">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill1035" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<!-- Newbie Guide Buff -->
+		<abnormalLvl>7</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MAX_MP_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1048</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxMp">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4329" toLevel="1" name="Adventurer's Acumen">
+		<!-- Freya retail confirmed -->
+		<!-- Newbie Guide Buff -->
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CASTING_TIME_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1085</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4330" toLevel="1" name="Adventurer's Concentration">
+		<!-- Freya retail confirmed -->
+		<!-- Newbie Guide Buff -->
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1078</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ReduceCancel">
+				<amount>-18</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4331" toLevel="1" name="Adventurer's Empower">
+		<!-- Freya retail confirmed -->
+		<!-- Newbie Guide Buff -->
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MA_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1059</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>55</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4332" toLevel="1" name="Mental Aegis">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill1035</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param HOLD="100" />
-				<param SLEEP="100" />
-				<param DERANGEMENT="100" />
+				<HOLD>100</HOLD>
+				<DERANGEMENT>100</DERANGEMENT>
+				<SLEEP>100</SLEEP>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4333" levels="5" name="Dark Attack Resistance">
+	<skill id="4333" toLevel="5" name="Dark Attack Resistance">
 		<!-- Freya retail confirmed -->
 		<table name="#darkRes"> 10 20 30 40 50 </table>
-		<set name="icon" val="icon.skill4333" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="darkRes" val="#darkRes" />
+		<icon>icon.skill4333</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</amount>
+				<attribute>DARK</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4334" levels="1" name="SSQ Cancel">
+	<skill id="4334" toLevel="1" name="SSQ Cancel">
 		<!-- Confirmed CT2.5 -->
-		<set name="affectRange" val="2000" />
-		<set name="castRange" val="1000" />
-		<set name="effectRange" val="1500" />
-		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
-		<for>
+		<affectRange>2000</affectRange>
+		<castRange>1000</castRange>
+		<effectRange>1500</effectRange>
+		<magicLvl>99</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
 			<effect name="DispelAll" />
-		</for>
+		</effects>
 	</skill>
-	<skill id="4335" levels="1" name="Holy Attack">
+	<skill id="4335" toLevel="1" name="Holy Attack">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill1043" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="holyPower" val="20" />
+		<icon>icon.skill1043</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="AttackAttribute">
+				<amount>20</amount>
+				<attribute>HOLY</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4336" levels="5" name="Dark Attack Vulnerability">
+	<skill id="4336" toLevel="5" name="Dark Attack Vulnerability">
 		<!-- Freya retail confirmed -->
 		<table name="#darkRes"> 11 25 43 67 100 </table>
-		<set name="icon" val="icon.skill4336_new" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<sub stat="darkRes" val="#darkRes" />
+		<icon>icon.skill4336_new</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">-11</value>
+					<value level="2">-25</value>
+					<value level="3">-43</value>
+					<value level="4">-67</value>
+					<value level="5">-100</value>
+				</amount>
+				<attribute>DARK</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4337" levels="5" name="Holy Attack Resistance">
+	<skill id="4337" toLevel="5" name="Holy Attack Resistance">
 		<!-- Freya retail confirmed -->
 		<table name="#darkRes"> 10 20 30 40 50 </table>
-		<set name="icon" val="icon.skill4337" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="holyRes" val="#darkRes" />
+		<icon>icon.skill4337</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</amount>
+				<attribute>HOLY</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4338" levels="1" name="Adventurer's Life Cubic">
+	<skill id="4338" toLevel="1" name="Adventurer's Life Cubic">
 		<!-- Confirmed CT2.5 -->
 		<!-- Newbie Guide Buff -->
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="18" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>18</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonCubic">
-				<param cubicId="3" cubicDelay="13" cubicDuration="3600" cubicMaxCount="20" />
-				<param cubicSkill1Chance="13" cubicSkill2Chance="33" cubicSkill3Chance="53" />
+				<cubicId>3</cubicId>
+				<cubicLvl>20</cubicLvl>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4339" levels="1" name="Mimir's Elixir">
+	<skill id="4339" toLevel="1" name="Mimir's Elixir">
 		<!-- Freya retail confirmed -->
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="magicLvl" val="60" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<magicLvl>60</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4340" levels="1" name="Ultimate Buff, 2nd">
+	<skill id="4340" toLevel="1" name="Ultimate Buff, 2nd">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="ULTIMATE_BUFF" />
-		<set name="abnormalVisualEffect" val="BIG_BODY" />
-		<set name="effectPoint" val="100" />
-		<set name="magicLvl" val="60" />
-		<set name="mpConsume" val="50" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ULTIMATE_BUFF</abnormalType>
+		<abnormalVisualEffect>BIG_BODY</abnormalVisualEffect>
+		<effectPoint>100</effectPoint>
+		<magicLvl>60</magicLvl>
+		<mpConsume>50</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="Grow">
-				<mul stat="pAtk" val="5" />
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>400</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4341" levels="1" name="Ultimate Buff, 3rd">
+	<skill id="4341" toLevel="1" name="Ultimate Buff, 3rd">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="ULTIMATE_BUFF" />
-		<set name="abnormalVisualEffect" val="BIG_BODY" />
-		<set name="effectPoint" val="100" />
-		<set name="magicLvl" val="60" />
-		<set name="mpConsume" val="50" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ULTIMATE_BUFF</abnormalType>
+		<abnormalVisualEffect>BIG_BODY</abnormalVisualEffect>
+		<effectPoint>100</effectPoint>
+		<magicLvl>60</magicLvl>
+		<mpConsume>50</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="Grow">
-				<mul stat="pDef" val="5" />
-				<mul stat="mDef" val="5" />
 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>400</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>400</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4342" levels="2" name="Clan Hall: Wind Walk">
+	<skill id="4342" toLevel="2" name="Clan Hall: Wind Walk">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 </table>
-		<table name="#mpConsume"> 50 100 </table>
 		<table name="#runSpd"> 20 33 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="SPEED_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1204" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="#runSpd" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SPEED_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1204</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">100</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">33</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4343" levels="3" name="Clan Hall: Decrease Weight">
+	<skill id="4343" toLevel="3" name="Clan Hall: Decrease Weight">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#mpConsume"> 50 0 100 </table>
 		<table name="#Weight"> 3000 6000 9000 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="DECREASE_WEIGHT_PENALTY" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1257" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<add stat="weightPenalty" val="#Weight" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>DECREASE_WEIGHT_PENALTY</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1257</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">0</value>
+			<value level="3">100</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="WeightPenalty">
+				<amount>
+					<value level="1">3000</value>
+					<value level="2">6000</value>
+					<value level="3">9000</value>
+				</amount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4344" levels="3" name="Clan Hall: Shield">
+	<skill id="4344" toLevel="3" name="Clan Hall: Shield">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#magicLvl"> 7 25 44 </table>
-		<table name="#mpConsume"> 50 0 100 </table>
 		<table name="#rate"> 1.08 1.12 1.15 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="PD_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1040" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="#rate" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1040</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">7</value>
+			<value level="2">25</value>
+			<value level="3">44</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">0</value>
+			<value level="3">100</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">12</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4345" levels="3" name="Clan Hall: Might">
+	<skill id="4345" toLevel="3" name="Clan Hall: Might">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#mpConsume"> 50 0 100 </table>
 		<table name="#rate"> 1.08 1.12 1.15 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="PA_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1068" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="#rate" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>PA_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1068</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">0</value>
+			<value level="3">100</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">12</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4346" levels="4" name="Clan Hall: Mental Shield">
+	<skill id="4346" toLevel="4" name="Clan Hall: Mental Shield">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 4 </table>
-		<table name="#mpConsume"> 50 0 0 100 </table>
-		<table name="#traits"> 20 30 40 50 </table> <!-- TODO: Freya retail has still old values (50 60 70 80) here, retail bug? -->
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="RESIST_DERANGEMENT" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1035" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
+		<table name="#traits"> 50 60 70 80 </table>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>RESIST_DERANGEMENT</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1035</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">0</value>
+			<value level="3">0</value>
+			<value level="4">100</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="DefenceTrait">
-				<param HOLD="#traits" />
-				<param SLEEP="#traits" />
-				<param DERANGEMENT="#traits" />
+				<HOLD>
+					<value level="1">50</value>
+					<value level="2">60</value>
+					<value level="3">70</value>
+					<value level="4">80</value>
+				</HOLD>
+				<DERANGEMENT>
+					<value level="1">50</value>
+					<value level="2">60</value>
+					<value level="3">70</value>
+					<value level="4">80</value>
+				</DERANGEMENT>
+				<SLEEP>
+					<value level="1">50</value>
+					<value level="2">60</value>
+					<value level="3">70</value>
+					<value level="4">80</value>
+				</SLEEP>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4347" levels="6" name="Clan Hall: Blessed Body">
+	<skill id="4347" toLevel="6" name="Clan Hall: Blessed Body">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
 		<table name="#maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
-		<table name="#mpConsume"> 0 150 0 0 0 300 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="MAX_HP_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1045" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="#maxHp" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MAX_HP_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1045</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">0</value>
+			<value level="2">150</value>
+			<value level="3">0</value>
+			<value level="4">0</value>
+			<value level="5">0</value>
+			<value level="6">300</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY_NOT</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">25</value>
+					<value level="5">30</value>
+					<value level="6">35</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4348" levels="6" name="Clan Hall: Blessed Soul">
+	<skill id="4348" toLevel="6" name="Clan Hall: Blessed Soul">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
 		<table name="#maxMp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
-		<table name="#mpConsume"> 0 150 0 0 0 300 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="MAX_MP_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1048" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxMp" val="#maxMp" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MAX_MP_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1048</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">0</value>
+			<value level="2">150</value>
+			<value level="3">0</value>
+			<value level="4">0</value>
+			<value level="5">0</value>
+			<value level="6">300</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">25</value>
+					<value level="5">30</value>
+					<value level="6">35</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4349" levels="2" name="Clan Hall: Magic Barrier">
+	<skill id="4349" toLevel="2" name="Clan Hall: Magic Barrier">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 2 3 </table>
 		<table name="#mDef"> 1.23 1.3 </table>
-		<table name="#mpConsume"> 150 300 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="MD_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1036" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mDef" val="#mDef" />
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MD_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1036</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">150</value>
+			<value level="2">300</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">23</value>
+					<value level="2">30</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4350" levels="4" name="Clan Hall: Resist Shock">
+	<skill id="4350" toLevel="4" name="Clan Hall: Resist Shock">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 4 </table>
-		<table name="#mpConsume"> 150 0 0 300 </table>
 		<table name="#trait_shock"> 15 20 30 40 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="RESIST_SHOCK" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1259" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>RESIST_SHOCK</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1259</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">150</value>
+			<value level="2">0</value>
+			<value level="3">0</value>
+			<value level="4">300</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="#trait_shock" />
+				<SHOCK>
+					<value level="1">15</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+				</SHOCK>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4351" levels="6" name="Clan Hall: Concentration">
+	<skill id="4351" toLevel="6" name="Clan Hall: Concentration">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
 		<table name="#cancel"> 18 25 36 42 48 53 </table>
-		<table name="#mpConsume"> 0 200 0 0 0 400 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1078" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<sub stat="cancel" val="#cancel" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1078</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">0</value>
+			<value level="2">200</value>
+			<value level="3">0</value>
+			<value level="4">0</value>
+			<value level="5">0</value>
+			<value level="6">400</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ReduceCancel">
+				<amount>
+					<value level="1">-18</value>
+					<value level="2">-25</value>
+					<value level="3">-36</value>
+					<value level="4">-42</value>
+					<value level="5">-48</value>
+					<value level="6">-53</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4352" levels="2" name="Clan Hall: Berserker Spirit">
+	<skill id="4352" toLevel="2" name="Clan Hall: Berserker Spirit">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#mAtk"> 1.1 1.16 </table>
 		<table name="#mAtkSpd"> 1.05 1.08 </table>
 		<table name="#mDef"> 0.9 0.84 </table>
-		<table name="#mpConsume"> 200 400 </table>
 		<table name="#pAtk"> 1.05 1.08 </table>
 		<table name="#pAtkSpd"> 1.05 1.08 </table>
 		<table name="#pDef"> 0.95 0.92 </table>
 		<table name="#rEvas"> 2 4 </table>
 		<table name="#runSpd"> 5 8 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="BERSERKER" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1062" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtk" val="#mAtk" />
-				<mul stat="pAtk" val="#pAtk" />
-				<mul stat="mDef" val="#mDef" />
-				<mul stat="pDef" val="#pDef" />
-				<mul stat="mAtkSpd" val="#mAtkSpd" />
-				<mul stat="pAtkSpd" val="#pAtkSpd" />
-				<add stat="runSpd" val="#runSpd" />
-				<sub stat="rEvas" val="#rEvas" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BERSERKER</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1062</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">200</value>
+			<value level="2">400</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">16</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-16</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-4</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4353" levels="6" name="Clan Hall: Bless Shield">
+	<skill id="4353" toLevel="6" name="Clan Hall: Bless Shield">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
-		<table name="#mpConsume"> 0 200 0 0 0 400 </table>
 		<table name="#rShld"> 1.05 1.1 1.15 1.2 1.25 1.3 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="SHIELD_PROB_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1243" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="rShld" val="#rShld" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SHIELD_PROB_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1243</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">0</value>
+			<value level="2">200</value>
+			<value level="3">0</value>
+			<value level="4">0</value>
+			<value level="5">0</value>
+			<value level="6">400</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ShieldDefenceRate">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4354" levels="4" name="Clan Hall: Vampiric Rage">
+	<skill id="4354" toLevel="4" name="Clan Hall: Vampiric Rage">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 4 </table>
 		<table name="#absorbDam"> 6 7 8 9 </table>
-		<table name="#mpConsume"> 200 0 0 400 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1268" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<add stat="absorbDam" val="#absorbDam" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1268</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">200</value>
+			<value level="2">0</value>
+			<value level="3">0</value>
+			<value level="4">400</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">7</value>
+					<value level="3">8</value>
+					<value level="4">9</value>
+				</amount>
+				<chance>80</chance>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4355" levels="3" name="Clan Hall: Acumen">
+	<skill id="4355" toLevel="3" name="Clan Hall: Acumen">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
-		<table name="#mpConsume"> 300 0 600 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="CASTING_TIME_DOWN" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1085" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtkSpd" val="#mAtkSpd" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CASTING_TIME_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1085</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">300</value>
+			<value level="2">0</value>
+			<value level="3">600</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">23</value>
+					<value level="3">30</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4356" levels="3" name="Clan Hall: Empower">
+	<skill id="4356" toLevel="3" name="Clan Hall: Empower">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#mAtk"> 1.55 1.65 1.75 </table>
-		<table name="#mpConsume"> 300 0 600 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="MA_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1059" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtk" val="#mAtk" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MA_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1059</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">300</value>
+			<value level="2">0</value>
+			<value level="3">600</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">55</value>
+					<value level="2">65</value>
+					<value level="3">75</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4357" levels="2" name="Clan Hall: Haste">
+	<skill id="4357" toLevel="2" name="Clan Hall: Haste">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 </table>
-		<table name="#mpConsume"> 300 600 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1086" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="#pAtkSpd" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1086</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">300</value>
+			<value level="2">600</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">33</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4358" levels="3" name="Clan Hall: Guidance">
+	<skill id="4358" toLevel="3" name="Clan Hall: Guidance">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#accCombat"> 2 3 4 </table>
-		<table name="#mpConsume"> 200 0 400 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="HIT_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1240" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<add stat="accCombat" val="#accCombat" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>HIT_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1240</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">200</value>
+			<value level="2">0</value>
+			<value level="3">400</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4359" levels="3" name="Clan Hall: Focus">
+	<skill id="4359" toLevel="3" name="Clan Hall: Focus">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#mpConsume"> 300 0 600 </table>
-		<table name="#rCrit"> 1.2 1.25 1.3 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="CRITICAL_PROB_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1077" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="critRate" val="#rCrit" />
+		<table name="#rCrit"> 0.2 0.25 0.3 </table>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CRITICAL_PROB_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1077</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">300</value>
+			<value level="2">0</value>
+			<value level="3">600</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">25</value>
+					<value level="3">30</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4360" levels="3" name="Clan Hall: Death Whisper">
+	<skill id="4360" toLevel="3" name="Clan Hall: Death Whisper">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#cAtk"> 1.25 1.3 1.35 </table>
-		<table name="#mpConsume"> 300 0 600 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="CRITICAL_DMG_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1242" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="critDmg" val="#cAtk" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CRITICAL_DMG_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1242</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<mpConsume>
+			<value level="1">300</value>
+			<value level="2">0</value>
+			<value level="3">600</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">25</value>
+					<value level="2">30</value>
+					<value level="3">35</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4361" levels="2" name="Curse of Destruction">
+	<skill id="4361" toLevel="2" name="Curse of Destruction">
 		<!-- Freya retail confirmed -->
 		<!-- Fighter -->
-		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#traits"> 0 50 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="SSQ_TOWN_CURSE" />
-		<set name="canBeDispeled" val="false" />
-		<set name="castRange" val="600" />
-		<set name="effectRange" val="1100" />
-		<set name="icon" val="icon.skill0046" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Debuff">
-				<sub stat="accCombat" val="12" />
-			</effect>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SSQ_TOWN_CURSE</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<icon>icon.skill0046</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="#traits" />
-				<param HOLD="#traits" />
-				<param SHOCK="#traits" />
+				<SLEEP>
+					<value level="1">0</value>
+					<value level="2">50</value>
+				</SLEEP>
+				<SHOCK>
+					<value level="1">0</value>
+					<value level="2">50</value>
+				</SHOCK>
+				<HOLD>
+					<value level="1">0</value>
+					<value level="2">50</value>
+				</HOLD>
 			</effect>
-		</for>
+			<effect name="Accuracy">
+				<amount>-12</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4362" levels="2" name="Curse of Destruction">
+	<skill id="4362" toLevel="2" name="Curse of Destruction">
 		<!-- Freya retail confirmed -->
 		<!-- Mage -->
-		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#traits"> 0 50 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="SSQ_TOWN_CURSE" />
-		<set name="canBeDispeled" val="false" />
-		<set name="castRange" val="600" />
-		<set name="effectRange" val="1100" />
-		<set name="icon" val="icon.skill0046" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Debuff">
-				<mul stat="mAtkSpd" val="0.7" />
-			</effect>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SSQ_TOWN_CURSE</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<icon>icon.skill0046</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="#traits" />
-				<param HOLD="#traits" />
-				<param SHOCK="#traits" />
+				<SLEEP>
+					<value level="1">0</value>
+					<value level="2">50</value>
+				</SLEEP>
+				<SHOCK>
+					<value level="1">0</value>
+					<value level="2">50</value>
+				</SHOCK>
+				<HOLD>
+					<value level="1">0</value>
+					<value level="2">50</value>
+				</HOLD>
 			</effect>
-		</for>
+			<effect name="MagicalAttackSpeed">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4363" levels="1" name="Curse of Destruction">
+	<skill id="4363" toLevel="1" name="Curse of Destruction">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="HIT_DOWN" />
-		<set name="castRange" val="600" />
-		<set name="effectRange" val="1100" />
-		<set name="icon" val="icon.skill0046" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Debuff">
-				<sub stat="accCombat" val="12" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>HIT_DOWN</abnormalType>
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<icon>icon.skill0046</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Accuracy">
+				<amount>-12</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4364" levels="2" name="Blessing of Revelations">
+	<skill id="4364" toLevel="2" name="Blessing of Revelations">
 		<!-- Freya retail confirmed -->
 		<!-- Fighter -->
-		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#traits"> 0 25 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="SSQ_TOWN_BLESSING" />
-		<set name="canBeDispeled" val="false" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1044" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="weightLimit" val="1.25" />
-			</effect>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SSQ_TOWN_BLESSING</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1044</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="25" />
-				<param BLEED="25" />
-				<param HOLD="#traits" />
-				<param SHOCK="#traits" />
-				<param PARALYZE="#traits" />
+				<POISON>25</POISON>
+				<HOLD>
+					<value level="1">0</value>
+					<value level="2">25</value>
+				</HOLD>
+				<PARALYZE>
+					<value level="1">0</value>
+					<value level="2">25</value>
+				</PARALYZE>
+				<BLEED>25</BLEED>
+				<SHOCK>
+					<value level="1">0</value>
+					<value level="2">25</value>
+				</SHOCK>
 			</effect>
-		</for>
+			<effect name="WeightLimit">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4365" levels="2" name="Blessing of Revelations">
+	<skill id="4365" toLevel="2" name="Blessing of Revelations">
 		<!-- Mage -->
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#traits"> 0 25 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="SSQ_TOWN_BLESSING" />
-		<set name="canBeDispeled" val="false" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1044" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<sub stat="cancel" val="25" />
-			</effect>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SSQ_TOWN_BLESSING</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1044</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="DefenceTrait">
-				<param HOLD="25" />
-				<param DERANGEMENT="25" />
-				<param SHOCK="#traits" />
-				<param PARALYZE="#traits" />
+				<HOLD>25</HOLD>
+				<SHOCK>
+					<value level="1">0</value>
+					<value level="2">25</value>
+				</SHOCK>
+				<DERANGEMENT>25</DERANGEMENT>
+				<PARALYZE>
+					<value level="1">0</value>
+					<value level="2">25</value>
+				</PARALYZE>
 			</effect>
-		</for>
+			<effect name="ReduceCancel">
+				<amount>-25</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4366" levels="1" name="Blessing of Revelations">
+	<skill id="4366" toLevel="1" name="Blessing of Revelations">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="DECREASE_WEIGHT_PENALTY" />
-		<set name="canBeDispeled" val="false" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1044" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="weightLimit" val="1.25" />
-			</effect>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>DECREASE_WEIGHT_PENALTY</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1044</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="25" />
-				<param BLEED="25" />
+				<POISON>25</POISON>
+				<BLEED>25</BLEED>
 			</effect>
-		</for>
-	</skill>
-	<skill id="4367" levels="1" name="Clan Hall Blessing">
-		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="PUBLIC_SLOT" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="ManaHealOverTime" ticks="5">
-				<param power="9.26" />
+			<effect name="WeightLimit">
+				<amount>25</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4368" levels="1" name="Clan Hall Blessing">
+	<skill id="4367" toLevel="1" name="Clan Hall Blessing">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="PUBLIC_SLOT" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="ManaHealOverTime" ticks="5">
-				<param power="18.52" />
-				<add stat="maxMp" val="5000" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<icon>icon.skill11756</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ManaHealOverTime">
+				<power>9.26</power>
+				<ticks>5</ticks>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4369" levels="1" name="Clan Hall Blessing">
+	<skill id="4368" toLevel="1" name="Clan Hall Blessing">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="PUBLIC_SLOT" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="ManaHealOverTime" ticks="5">
-				<param power="27.78" />
-				<add stat="maxMp" val="10000" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<icon>icon.skill11756</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ManaHealOverTime">
+				<power>18.52</power>
+				<ticks>5</ticks>
 			</effect>
-		</for>
-	</skill>
-	<skill id="4370" levels="1" name="Clan Hall Blessing">
-		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="PUBLIC_SLOT" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="ManaHealOverTime" ticks="5">
-				<param power="61.11" />
-				<add stat="maxMp" val="28000" />
+			<effect name="MaxMp">
+				<amount>5000</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4371" levels="1" name="Clan Hall Blessing">
+	<skill id="4369" toLevel="1" name="Clan Hall Blessing">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="PUBLIC_SLOT" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="ManaHealOverTime" ticks="5">
-				<param power="116.7" />
-				<add stat="maxMp" val="58000" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<icon>icon.skill11756</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ManaHealOverTime">
+				<power>27.78</power>
+				<ticks>5</ticks>
 			</effect>
-		</for>
-	</skill>
-	<skill id="4372" levels="1" name="Clan Hall Blessing">
-		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="PUBLIC_SLOT" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="ManaHealOverTime" ticks="5">
-				<param power="200" />
-				<add stat="maxMp" val="103000" />
+			<effect name="MaxMp">
+				<amount>10000</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4373" levels="1" name="Clan Hall Blessing">
+	<skill id="4370" toLevel="1" name="Clan Hall Blessing">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="PUBLIC_SLOT" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="ManaHealOverTime" ticks="5">
-				<param power="205.6" />
-				<add stat="maxMp" val="106000" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<icon>icon.skill11756</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ManaHealOverTime">
+				<power>61.11</power>
+				<ticks>5</ticks>
 			</effect>
-		</for>
-	</skill>
-	<skill id="4374" levels="1" name="Clan Hall Blessing">
-		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="PUBLIC_SLOT" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="ManaHealOverTime" ticks="5">
-				<param power="288.9" />
-				<add stat="maxMp" val="151000" />
+			<effect name="MaxMp">
+				<amount>28000</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4375" levels="1" name="Clan Hall Blessing">
+	<skill id="4371" toLevel="1" name="Clan Hall Blessing">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="PUBLIC_SLOT" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="ManaHealOverTime" ticks="5">
-				<param power="372.2" />
-				<add stat="maxMp" val="196000" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<icon>icon.skill11756</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ManaHealOverTime">
+				<power>116.7</power>
+				<ticks>5</ticks>
 			</effect>
-		</for>
-	</skill>
-	<skill id="4376" levels="1" name="Strong Resistance to P.Atk.">
-		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4376" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="3" /> <!-- pDef +200% -->
+			<effect name="MaxMp">
+				<amount>58000</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4377" levels="12" name="Wield Temper">
+	<skill id="4372" toLevel="1" name="Clan Hall Blessing">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<icon>icon.skill11756</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ManaHealOverTime">
+				<power>200</power>
+				<ticks>5</ticks>
+			</effect>
+			<effect name="MaxMp">
+				<amount>103000</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4373" toLevel="1" name="Clan Hall Blessing">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<icon>icon.skill11756</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ManaHealOverTime">
+				<power>205.6</power>
+				<ticks>5</ticks>
+			</effect>
+			<effect name="MaxMp">
+				<amount>106000</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4374" toLevel="1" name="Clan Hall Blessing">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<icon>icon.skill11756</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ManaHealOverTime">
+				<power>288.9</power>
+				<ticks>5</ticks>
+			</effect>
+			<effect name="MaxMp">
+				<amount>151000</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4375" toLevel="1" name="Clan Hall Blessing">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<icon>icon.skill11756</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ManaHealOverTime">
+				<power>372.2</power>
+				<ticks>5</ticks>
+			</effect>
+			<effect name="MaxMp">
+				<amount>196000</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4376" toLevel="1" name="Strong Resistance to P.Atk.">
+		<!-- Freya retail confirmed -->
+		<icon>icon.skill4376</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4377" toLevel="12" name="Wield Temper">
+		<!-- Freya retail confirmed -->
 		<table name="#power"> 46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
-		<set name="castRange" val="40" />
-		<set name="coolTime" val="800" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="200" />
-		<set name="hitTime" val="1000" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="PhysicalAttack" />
-		</for>
-	</skill>
-	<skill id="4378" levels="12" name="Damage Shield">
-		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
-		<set name="abnormalLvl" val="2" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="DMG_SHIELD" />
-		<set name="effectPoint" val="1" />
-		<set name="hitTime" val="1800" />
-		<set name="icon" val="icon.action105" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="reflectDam" val="20" />
+		<castRange>40</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1000</hitTime>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">28</value>
+			<value level="4">38</value>
+			<value level="5">50</value>
+			<value level="6">61</value>
+			<value level="7">71</value>
+			<value level="8">76</value>
+			<value level="9">80</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
+			<value level="12">85</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">46</value>
+					<value level="2">105</value>
+					<value level="3">219</value>
+					<value level="4">417</value>
+					<value level="5">722</value>
+					<value level="6">1136</value>
+					<value level="7">1626</value>
+					<value level="8">1876</value>
+					<value level="9">2112</value>
+					<value level="10">2320</value>
+					<value level="11">2487</value>
+					<value level="12">2617</value>
+				</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4379" levels="5" name="Spear Resistance">
+	<skill id="4378" toLevel="12" name="Damage Shield">
+		<!-- Freya retail confirmed -->
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>DMG_SHIELD</abnormalType>
+		<effectPoint>1</effectPoint>
+		<hitTime>1800</hitTime>
+		<icon>icon.action105</icon>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">12</value>
+			<value level="2">19</value>
+			<value level="3">26</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">72</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamageShield">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4379" toLevel="5" name="Spear Resistance">
 		<!-- Freya retail confirmed -->
 		<table name="#trait_pole"> 10 20 30 40 50 </table>
-		<set name="icon" val="icon.skill4379" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>icon.skill4379</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POLE="#trait_pole" />
+				<POLE>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</POLE>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4380" levels="1" name="Arena CP Recovery">
+	<skill id="4380" toLevel="1" name="Arena CP Recovery">
 		<!-- Confirmed CT2.5 -->
 		<!-- Arena Skill -->
-		<set name="castRange" val="600" />
-		<set name="effectRange" val="1100" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="CpHeal">
-				<param power="5000" />
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Cp">
+				<amount>5000</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4381" levels="1" name="Week Type">
+	<skill id="4381" toLevel="1" name="Week Type">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4381" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" /> <!-- Just Boadcast -->
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4381</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType> <!-- Just Boadcast -->
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4382" levels="12" name="Curse of Lake Ghost">
+	<skill id="4382" toLevel="12" name="Curse of Lake Ghost">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<table name="#power"> 46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="BIG_HEAD" />
-		<set name="abnormalVisualEffect" val="BIG_HEAD" />
-		<set name="activateRate" val="80" />
-		<set name="castRange" val="40" />
-		<set name="coolTime" val="800" />
-		<set name="effectPoint" val="-100" />
-		<set name="hitTime" val="1000" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="power" val="#power" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="PhysicalAttack" />
-		</for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>BIG_HEAD</abnormalType>
+		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<castRange>40</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">28</value>
+			<value level="4">38</value>
+			<value level="5">50</value>
+			<value level="6">61</value>
+			<value level="7">71</value>
+			<value level="8">76</value>
+			<value level="9">80</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
+			<value level="12">85</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>200</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">46</value>
+					<value level="2">105</value>
+					<value level="3">219</value>
+					<value level="4">417</value>
+					<value level="5">722</value>
+					<value level="6">1136</value>
+					<value level="7">1626</value>
+					<value level="8">1876</value>
+					<value level="9">2112</value>
+					<value level="10">2320</value>
+					<value level="11">2487</value>
+					<value level="12">2617</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4383" levels="1" name="Aggression Stone">
+	<skill id="4383" toLevel="1" name="Aggression Stone">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="2" />
-		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="TURN_STONE" />
-		<set name="abnormalVisualEffect" val="FLESH_STONE" />
-		<set name="affectRange" val="200" />
-		<set name="effectPoint" val="-100" />
-		<set name="element" val="3" /> <!-- Earth -->
-		<set name="elementPower" val="20" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="ACTIVE_WITH_TRIGGER" />
-		<set name="power" val="100" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
-		<for>
-			<effect name="Stun" />
-			<effect name="BlockDamage">
-				<param block="HP"/>
-			</effect>
-			<effect name="BlockDamage">
-				<param block="MP"/>
-			</effect>
-			<effect name="BlockBuff" />
-			<effect name="BlockDebuff" />
-			<effect name="Buff">
-				<mul stat="regHp" val="0" />
-			</effect>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TURN_STONE</abnormalType>
+		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
+		<affectRange>200</affectRange>
+		<effectPoint>-100</effectPoint>
+		<attributeType>EARTH</attributeType>
+		<attributeValue>20</attributeValue>
+		<magicLvl>80</magicLvl>
+		<operateType>A3</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="BlockActions" />
 			<effect name="TargetMeProbability">
-				<param chance="40" />
+				<chance>40</chance>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4384" levels="1" name="Scapegoat's Grace">
+	<skill id="4384" toLevel="1" name="Scapegoat's Grace">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="4" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="PD_DOWN" />
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="1100" />
-		<set name="icon" val="icon.skill0122" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff" />
-		</for>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<castRange>600</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1100</effectRange>
+		<icon>icon.skill0122</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4385" levels="1" name="Scapegoat's Grace">
+	<skill id="4385" toLevel="1" name="Scapegoat's Grace">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="4" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="ATTACK_TIME_UP" />
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="1100" />
-		<set name="icon" val="icon.skill4037" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff" />
-		</for>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>ATTACK_TIME_UP</abnormalType>
+		<castRange>600</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1100</effectRange>
+		<icon>icon.skill4037</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4386" levels="1" name="Scapegoat's Grace">
+	<skill id="4386" toLevel="1" name="Scapegoat's Grace">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="10" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="POISON" />
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="1100" />
-		<set name="icon" val="icon.skill4036" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff" />
-		</for>
+		<abnormalLvl>10</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<castRange>600</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1100</effectRange>
+		<icon>icon.skill4036</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<isDebuff>true</isDebuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4387" levels="1" name="Scapegoat's Grace">
+	<skill id="4387" toLevel="1" name="Scapegoat's Grace">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="2" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="HEAL_EFFECT_DOWN" />
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="1100" />
-		<set name="icon" val="icon.skill1269" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff" />
-		</for>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
+		<castRange>600</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1100</effectRange>
+		<icon>icon.skill1269</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4388" levels="5" name="Paralysis Resistance">
+	<skill id="4388" toLevel="5" name="Paralysis Resistance">
 		<!-- Freya retail confirmed -->
 		<table name="#trait_paralyze"> 10 20 30 40 50 </table>
-		<set name="icon" val="icon.skill4388" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>icon.skill4388</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="#trait_paralyze" />
+				<PARALYZE>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</PARALYZE>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4389" levels="5" name="Mental Attack Resistance">
+	<skill id="4389" toLevel="5" name="Mental Attack Resistance">
 		<!-- Freya retail confirmed -->
 		<table name="#trait_derangement"> 10 20 30 40 50 </table>
-		<set name="icon" val="icon.skill4389" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>icon.skill4389</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param DERANGEMENT="#trait_derangement" />
+				<DERANGEMENT>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</DERANGEMENT>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4390" levels="2" name="Mystic Immunity">
+	<skill id="4390" toLevel="2" name="Mystic Immunity">
+		<!-- TODO: Auto level parse, Requires manual update -->
 		<!-- Freya retail confirmed -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="BlockBuff" />
-			<effect name="BlockDebuff" />
-		</for>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="BuffBlock" />
+			<effect name="DebuffBlock" />
+		</effects>
 	</skill>
-	<skill id="4391" levels="2" name="Wind Walk">
+	<skill id="4391" toLevel="2" name="Wind Walk">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 2 3 </table>
 		<table name="#runSpd"> 20 33 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="SPEED_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="hitTime" val="100" />
-		<set name="icon" val="icon.skill1204" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="#runSpd" />
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+		</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SPEED_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<hitTime>100</hitTime>
+		<icon>icon.skill1204</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">33</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4392" levels="3" name="Shield">
+	<skill id="4392" toLevel="3" name="Shield">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 2 3 4 </table>
 		<table name="#rate"> 1.08 1.12 1.15 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="PD_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="hitTime" val="100" />
-		<set name="icon" val="icon.skill1040" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="#rate" />
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+		</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<hitTime>100</hitTime>
+		<icon>icon.skill1040</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">12</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4393" levels="3" name="Might">
+	<skill id="4393" toLevel="3" name="Might">
 		<!-- Freya retail confirmed -->
 		<!-- by DrLecter -->
-		<table name="#abnormalLvls"> 2 3 4 </table>
 		<table name="#pAtk"> 1.08 1.12 1.15 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="PA_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1068" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="#pAtk" />
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+		</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PA_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1068</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">12</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4394" levels="6" name="Blessed Body">
+	<skill id="4394" toLevel="6" name="Blessed Body">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 2 3 4 5 6 7 </table>
-		<table name="#maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="MAX_HP_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1045" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="#maxHp" />
+		<table name="#maxHp"> 10 15 20 25 30 35 </table>
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+			<value level="5">6</value>
+			<value level="6">7</value>
+		</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MAX_HP_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1045</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY_NOT</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">25</value>
+					<value level="5">30</value>
+					<value level="6">35</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4395" levels="6" name="Blessed Soul">
+	<skill id="4395" toLevel="6" name="Blessed Soul">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 2 3 4 5 6 7 </table>
 		<table name="#maxMp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="MAX_MP_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1048" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxMp" val="#maxMp" />
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+			<value level="5">6</value>
+			<value level="6">7</value>
+		</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MAX_MP_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1048</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">25</value>
+					<value level="5">30</value>
+					<value level="6">35</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4396" levels="2" name="Magic Barrier">
+	<skill id="4396" toLevel="2" name="Magic Barrier">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 3 4 </table>
 		<table name="#mDef"> 1.23 1.3 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="MD_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1036" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mDef" val="#mDef" />
+		<abnormalLvl>
+			<value level="1">3</value>
+			<value level="2">4</value>
+		</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MD_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1036</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">23</value>
+					<value level="2">30</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4397" levels="2" name="Berserker Spirit">
+	<skill id="4397" toLevel="2" name="Berserker Spirit">
 		<!-- Freya retail confirmed -->
 		<!-- by DrLecter -->
-		<table name="#abnormalLvls"> 2 3 </table>
 		<table name="#mAtk"> 1.1 1.16 </table>
 		<table name="#mAtkSpd"> 1.05 1.08 </table>
 		<table name="#mDef"> 0.9 0.84 </table>
@@ -1792,71 +2840,155 @@
 		<table name="#pDef"> 0.95 0.92 </table>
 		<table name="#rEvas"> 2 4 </table>
 		<table name="#runSpd"> 5 8 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="BERSERKER" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1062" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="#pAtk" />
-				<mul stat="pAtkSpd" val="#pAtkSpd" />
-				<mul stat="mAtk" val="#mAtk" />
-				<mul stat="mAtkSpd" val="#mAtkSpd" />
-				<add stat="runSpd" val="#runSpd" />
-				<sub stat="rEvas" val="#rEvas" />
-				<mul stat="mDef" val="#mDef" />
-				<mul stat="pDef" val="#pDef" />
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+		</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BERSERKER</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1062</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">16</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-16</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-4</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4398" levels="6" name="Blessed Shield">
+	<skill id="4398" toLevel="6" name="Blessed Shield">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 2 3 4 5 6 7 </table>
 		<table name="#rShld"> 1.05 1.1 1.15 1.2 1.25 1.3 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="SHIELD_PROB_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1243" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="rShld" val="#rShld" />
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+			<value level="5">6</value>
+			<value level="6">7</value>
+		</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SHIELD_PROB_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1243</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ShieldDefenceRate">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4399" levels="4" name="Vampiric Rage">
+	<skill id="4399" toLevel="4" name="Vampiric Rage">
 		<!-- Freya retail confirmed -->
-		<!-- by DrLecter -->
-		<table name="#abnormalLvls"> 2 3 4 5 </table>
 		<table name="#absorbDam"> 6 7 8 9 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill1268" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<add stat="absorbDam" val="#absorbDam" />
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+		</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
+		<castRange>400</castRange>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1268</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">7</value>
+					<value level="3">8</value>
+					<value level="4">9</value>
+				</amount>
+				<chance>80</chance>
 			</effect>
-		</for>
+		</effects>
 	</skill>
 </list>

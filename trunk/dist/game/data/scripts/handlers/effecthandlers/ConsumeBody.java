@@ -17,10 +17,11 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Consume Body effect implementation.
@@ -28,9 +29,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class ConsumeBody extends AbstractEffect
 {
-	public ConsumeBody(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public ConsumeBody(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -40,13 +40,13 @@ public final class ConsumeBody extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffected().isNpc() || !info.getEffected().isDead())
+		if (!effected.isNpc() || !effected.isDead())
 		{
 			return;
 		}
 		
-		((L2Npc) info.getEffected()).endDecayTask();
+		((L2Npc) effected).endDecayTask();
 	}
 }

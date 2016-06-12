@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.taskmanager;
 
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
@@ -25,7 +26,6 @@ import java.util.logging.Logger;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
 import com.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
 
 /**
@@ -52,21 +52,21 @@ public class AttackStanceTaskManager
 	 */
 	public void addAttackStanceTask(L2Character actor)
 	{
-		if (actor == null)
+		if (actor != null)
 		{
-			return;
+			// if (actor.isPlayable())
+			// {
+			// final PlayerInstance player = actor.getActingPlayer();
+			// for (L2CubicInstance cubic : player.getCubics().values())
+			// {
+			// if (cubic.getId() != L2CubicInstance.LIFE_CUBIC)
+			// {
+			// cubic.doAction();
+			// }
+			// }
+			// }
+			_attackStanceTasks.put(actor, System.currentTimeMillis());
 		}
-		if (actor.isPlayable())
-		{
-			for (L2CubicInstance cubic : actor.getActingPlayer().getCubics().values())
-			{
-				if (cubic.getId() != L2CubicInstance.LIFE_CUBIC)
-				{
-					cubic.doAction();
-				}
-			}
-		}
-		_attackStanceTasks.put(actor, System.currentTimeMillis());
 	}
 	
 	/**
@@ -75,15 +75,14 @@ public class AttackStanceTaskManager
 	 */
 	public void removeAttackStanceTask(L2Character actor)
 	{
-		if (actor == null)
+		if (actor != null)
 		{
-			return;
+			if (actor.isSummon())
+			{
+				actor = actor.getActingPlayer();
+			}
+			_attackStanceTasks.remove(actor);
 		}
-		if (actor.isSummon())
-		{
-			actor = actor.getActingPlayer();
-		}
-		_attackStanceTasks.remove(actor);
 	}
 	
 	/**
@@ -93,15 +92,15 @@ public class AttackStanceTaskManager
 	 */
 	public boolean hasAttackStanceTask(L2Character actor)
 	{
-		if (actor == null)
+		if (actor != null)
 		{
-			return false;
+			if (actor.isSummon())
+			{
+				actor = actor.getActingPlayer();
+			}
+			return _attackStanceTasks.containsKey(actor);
 		}
-		if (actor.isSummon())
-		{
-			actor = actor.getActingPlayer();
-		}
-		return _attackStanceTasks.containsKey(actor);
+		return false;
 	}
 	
 	protected class FightModeScheduler implements Runnable
@@ -112,9 +111,12 @@ public class AttackStanceTaskManager
 			final long current = System.currentTimeMillis();
 			try
 			{
+				final Iterator<Entry<L2Character, Long>> iter = _attackStanceTasks.entrySet().iterator();
+				Entry<L2Character, Long> e;
 				L2Character actor;
-				for (Entry<L2Character, Long> e : _attackStanceTasks.entrySet())
+				while (iter.hasNext())
 				{
+					e = iter.next();
 					if ((current - e.getValue()) > 15000)
 					{
 						actor = e.getKey();
@@ -132,7 +134,7 @@ public class AttackStanceTaskManager
 								actor.getServitors().values().forEach(s -> s.broadcastPacket(new AutoAttackStop(s.getObjectId())));
 							}
 						}
-						_attackStanceTasks.remove(e.getKey());
+						iter.remove();
 					}
 				}
 			}

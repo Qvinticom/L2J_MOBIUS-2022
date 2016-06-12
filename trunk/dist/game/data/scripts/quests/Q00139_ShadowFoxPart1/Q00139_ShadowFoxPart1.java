@@ -51,7 +51,7 @@ public class Q00139_ShadowFoxPart1 extends Quest
 	
 	public Q00139_ShadowFoxPart1()
 	{
-		super(139, Q00139_ShadowFoxPart1.class.getSimpleName(), "Shadow Fox - 1");
+		super(139);
 		addStartNpc(MIA);
 		addTalkId(MIA);
 		addKillId(MOBS);

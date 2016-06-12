@@ -119,13 +119,13 @@ public class AdminPledge implements IAdminCommandHandler
 						
 						ClanTable.getInstance().destroyClan(targetPlayer.getClanId());
 						clan = targetPlayer.getClan();
-						if (clan != null)
+						if (clan == null)
 						{
-							activeChar.sendMessage("There was a problem while destroying the clan.");
+							activeChar.sendMessage("Clan disbanded.");
 						}
 						else
 						{
-							activeChar.sendMessage("Clan disbanded.");
+							activeChar.sendMessage("There was a problem while destroying the clan.");
 						}
 						break;
 					}
@@ -213,4 +213,5 @@ public class AdminPledge implements IAdminCommandHandler
 	{
 		AdminHtml.showAdminHtml(activeChar, "game_menu.htm");
 	}
+	
 }

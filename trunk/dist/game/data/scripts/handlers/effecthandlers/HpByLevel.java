@@ -17,10 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -32,17 +32,9 @@ public final class HpByLevel extends AbstractEffect
 {
 	private final double _power;
 	
-	public HpByLevel(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public HpByLevel(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_power = params.getDouble("power", 0);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.BUFF;
 	}
 	
 	@Override
@@ -52,21 +44,16 @@ public final class HpByLevel extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (info.getEffector() == null)
-		{
-			return;
-		}
-		
 		// Calculation
 		final double abs = _power;
-		final double absorb = (info.getEffector().getCurrentHp() + abs) > info.getEffector().getMaxHp() ? info.getEffector().getMaxHp() : (info.getEffector().getCurrentHp() + abs);
-		final int restored = (int) (absorb - info.getEffector().getCurrentHp());
-		info.getEffector().setCurrentHp(absorb);
+		final double absorb = ((effector.getCurrentHp() + abs) > effector.getMaxHp() ? effector.getMaxHp() : (effector.getCurrentHp() + abs));
+		final int restored = (int) (absorb - effector.getCurrentHp());
+		effector.setCurrentHp(absorb);
 		// System message
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
 		sm.addInt(restored);
-		info.getEffector().sendPacket(sm);
+		effector.sendPacket(sm);
 	}
 }

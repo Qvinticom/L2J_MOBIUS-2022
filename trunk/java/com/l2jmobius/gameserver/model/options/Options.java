@@ -17,16 +17,13 @@
 package com.l2jmobius.gameserver.model.options;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
-import com.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
 import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 
 /**
@@ -35,10 +32,10 @@ import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 public class Options
 {
 	private final int _id;
-	private final List<FuncTemplate> _funcs = new ArrayList<>();
+	private final List<AbstractEffect> _effects = new ArrayList<>();
 	
-	private final List<SkillHolder> _activeSkills = new ArrayList<>();
-	private final List<SkillHolder> _passiveSkills = new ArrayList<>();
+	private SkillHolder _activeSkill = null;
+	private SkillHolder _passiveSkill = null;
 	
 	private final List<OptionsSkillHolder> _activationSkills = new ArrayList<>();
 	
@@ -55,64 +52,49 @@ public class Options
 		return _id;
 	}
 	
-	public boolean hasFuncs()
+	public void addEffect(AbstractEffect effect)
 	{
-		return !_funcs.isEmpty();
+		_effects.add(effect);
 	}
 	
-	public List<AbstractFunction> getStatFuncs(L2ItemInstance item, L2Character player)
+	public List<AbstractEffect> getEffects()
 	{
-		if (_funcs.isEmpty())
-		{
-			return Collections.<AbstractFunction> emptyList();
-		}
-		
-		final List<AbstractFunction> funcs = new ArrayList<>(_funcs.size());
-		for (FuncTemplate fuctionTemplate : _funcs)
-		{
-			final AbstractFunction fuction = fuctionTemplate.getFunc(player, player, item, this);
-			if (fuction != null)
-			{
-				funcs.add(fuction);
-			}
-			player.sendDebugMessage("Adding stats: " + fuctionTemplate.getStat() + " val: " + fuctionTemplate.getValue());
-		}
-		return funcs;
+		return _effects;
 	}
 	
-	public void addFunc(FuncTemplate template)
+	public boolean hasEffects()
 	{
-		_funcs.add(template);
+		return !_effects.isEmpty();
 	}
 	
 	public boolean hasActiveSkill()
 	{
-		return !_activeSkills.isEmpty();
+		return _activeSkill != null;
 	}
 	
-	public List<SkillHolder> getActiveSkill()
+	public SkillHolder getActiveSkill()
 	{
-		return _activeSkills;
+		return _activeSkill;
 	}
 	
-	public void addActiveSkill(SkillHolder holder)
+	public void setActiveSkill(SkillHolder holder)
 	{
-		_activeSkills.add(holder);
+		_activeSkill = holder;
 	}
 	
 	public boolean hasPassiveSkill()
 	{
-		return !_passiveSkills.isEmpty();
+		return _passiveSkill != null;
 	}
 	
-	public List<SkillHolder> getPassiveSkill()
+	public SkillHolder getPassiveSkill()
 	{
-		return _passiveSkills;
+		return _passiveSkill;
 	}
 	
-	public void addPassiveSkill(SkillHolder holder)
+	public void setPassiveSkill(SkillHolder holder)
 	{
-		_passiveSkills.add(holder);
+		_passiveSkill = holder;
 	}
 	
 	public boolean hasActivationSkills()
@@ -158,25 +140,46 @@ public class Options
 	public void apply(L2PcInstance player)
 	{
 		player.sendDebugMessage("Activating option id: " + _id);
-		if (hasFuncs())
+		if (hasEffects())
 		{
-			player.addStatFuncs(getStatFuncs(null, player));
+			final BuffInfo info = new BuffInfo(player, player, null, true, null, this);
+			for (AbstractEffect effect : _effects)
+			{
+				if (effect.isInstant())
+				{
+					if (effect.calcSuccess(info.getEffector(), info.getEffected(), info.getSkill()))
+					{
+						effect.instant(info.getEffector(), info.getEffected(), info.getSkill(), info.getItem());
+					}
+					player.sendDebugMessage("Appling instant effect: " + effect.getClass().getSimpleName());
+				}
+				else
+				{
+					effect.continuousInstant(info.getEffector(), info.getEffected(), info.getSkill(), info.getItem());
+					effect.pump(player, info.getSkill());
+					
+					if (effect.canStart(info))
+					{
+						info.addEffect(effect);
+					}
+					
+					player.sendDebugMessage("Appling continious effect: " + effect.getClass().getSimpleName());
+				}
+			}
+			if (!info.getEffects().isEmpty())
+			{
+				player.getEffectList().add(info);
+			}
 		}
 		if (hasActiveSkill())
 		{
-			for (SkillHolder holder : _activeSkills)
-			{
-				addSkill(player, holder.getSkill());
-				player.sendDebugMessage("Adding active skill: " + holder);
-			}
+			addSkill(player, getActiveSkill().getSkill());
+			player.sendDebugMessage("Adding active skill: " + getActiveSkill());
 		}
 		if (hasPassiveSkill())
 		{
-			for (SkillHolder holder : _passiveSkills)
-			{
-				addSkill(player, holder.getSkill());
-				player.sendDebugMessage("Adding passive skill: " + holder);
-			}
+			addSkill(player, getPassiveSkill().getSkill());
+			player.sendDebugMessage("Adding passive skill: " + getPassiveSkill());
 		}
 		if (hasActivationSkills())
 		{
@@ -187,32 +190,33 @@ public class Options
 			}
 		}
 		
+		player.getStat().recalculateStats(true);
 		player.sendSkillList();
 	}
 	
 	public void remove(L2PcInstance player)
 	{
 		player.sendDebugMessage("Deactivating option id: " + _id);
-		if (hasFuncs())
+		if (hasEffects())
 		{
-			player.removeStatsOwner(this);
+			for (BuffInfo info : player.getEffectList().getOptions())
+			{
+				if (info.getOption() == this)
+				{
+					player.sendDebugMessage("Removing effects: " + info.getEffects());
+					player.getEffectList().remove(false, info, this);
+				}
+			}
 		}
 		if (hasActiveSkill())
 		{
-			for (SkillHolder holder : _activeSkills)
-			{
-				player.removeSkill(holder.getSkill(), false, false);
-				player.sendDebugMessage("Removing active skill: " + holder);
-			}
+			player.removeSkill(getActiveSkill().getSkill(), false, false);
+			player.sendDebugMessage("Removing active skill: " + getActiveSkill());
 		}
 		if (hasPassiveSkill())
 		{
-			for (SkillHolder holder : _passiveSkills)
-			{
-				player.removeSkill(holder.getSkill(), false, true);
-				player.sendDebugMessage("Removing passive skill: " + holder);
-			}
-			
+			player.removeSkill(getPassiveSkill().getSkill(), false, true);
+			player.sendDebugMessage("Removing passive skill: " + getPassiveSkill());
 		}
 		if (hasActivationSkills())
 		{
@@ -222,10 +226,12 @@ public class Options
 				player.sendDebugMessage("Removing trigger skill: " + holder);
 			}
 		}
+		
+		player.getStat().recalculateStats(true);
 		player.sendSkillList();
 	}
 	
-	private final void addSkill(L2PcInstance player, Skill skill)
+	private void addSkill(L2PcInstance player, Skill skill)
 	{
 		boolean updateTimeStamp = false;
 		

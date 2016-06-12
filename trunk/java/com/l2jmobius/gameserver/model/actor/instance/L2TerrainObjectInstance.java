@@ -23,10 +23,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public final class L2TerrainObjectInstance extends L2Npc
 {
-	/**
-	 * Creates a terrain object.
-	 * @param template the terrain object NPC template
-	 */
 	public L2TerrainObjectInstance(L2NpcTemplate template)
 	{
 		super(template);

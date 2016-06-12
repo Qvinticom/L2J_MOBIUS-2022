@@ -16,29 +16,37 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
+import java.util.stream.Stream;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.L2ArmorSet;
 import com.l2jmobius.gameserver.model.holders.ArmorsetSkillHolder;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.util.data.xml.IXmlReader;
+import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.stats.BaseStats;
 
 /**
  * Loads armor set bonuses.
  * @author godson, Luno, UnAfraid
  */
-public final class ArmorSetsData implements IXmlReader
+public final class ArmorSetsData implements IGameXmlReader
 {
-	private final Map<Integer, L2ArmorSet> _armorSets = new HashMap<>();
+	private static final Logger LOGGER = Logger.getLogger(ArmorSetsData.class.getName());
 	
-	/**
-	 * Instantiates a new armor sets data.
-	 */
+	private final Map<Integer, L2ArmorSet> _armorSets = new HashMap<>();
+	private final Map<Integer, List<L2ArmorSet>> _armorSetItems = new HashMap<>();
+	
 	protected ArmorSetsData()
 	{
 		load();
@@ -48,136 +56,96 @@ public final class ArmorSetsData implements IXmlReader
 	public void load()
 	{
 		_armorSets.clear();
-		parseDatapackDirectory("stats/armorsets", false);
+		parseDatapackDirectory("data/stats/armorsets", false);
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _armorSets.size() + " Armor sets.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
 			{
-				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+				for (Node setNode = n.getFirstChild(); setNode != null; setNode = setNode.getNextSibling())
 				{
-					if ("set".equalsIgnoreCase(d.getNodeName()))
+					if ("set".equalsIgnoreCase(setNode.getNodeName()))
 					{
-						final L2ArmorSet set = new L2ArmorSet();
-						set.setIsVisual(parseBoolean(d.getAttributes(), "visual", false));
-						set.setMinimumPieces(parseInteger(d.getAttributes(), "minimumPieces"));
-						
-						for (Node a = d.getFirstChild(); a != null; a = a.getNextSibling())
+						final int id = parseInteger(setNode.getAttributes(), "id");
+						final int minimumPieces = parseInteger(setNode.getAttributes(), "minimumPieces", 0);
+						final boolean isVisual = parseBoolean(setNode.getAttributes(), "visual", false);
+						final L2ArmorSet set = new L2ArmorSet(id, minimumPieces, isVisual);
+						if (_armorSets.putIfAbsent(id, set) != null)
 						{
-							final NamedNodeMap attrs = a.getAttributes();
-							switch (a.getNodeName())
+							LOGGER.warning("Duplicate set entry with id: " + id + " in file: " + f.getName());
+						}
+						for (Node innerSetNode = setNode.getFirstChild(); innerSetNode != null; innerSetNode = innerSetNode.getNextSibling())
+						{
+							switch (innerSetNode.getNodeName())
 							{
-								case "chest":
+								case "requiredItems":
 								{
-									set.addChest(parseInteger(attrs, "id"));
+									forEach(innerSetNode, b -> "item".equals(b.getNodeName()), node ->
+									{
+										final NamedNodeMap attrs = node.getAttributes();
+										final int itemId = parseInteger(attrs, "id");
+										final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+										if (item == null)
+										{
+											LOGGER.warning("Attempting to register non existing required item: " + itemId + " to a set: " + f.getName());
+										}
+										else if (!set.addRequiredItem(itemId))
+										{
+											LOGGER.warning("Attempting to register duplicate required item " + item + " to a set: " + f.getName());
+										}
+									});
 									break;
 								}
-								case "feet":
+								case "optionalItems":
 								{
-									set.addFeet(parseInteger(attrs, "id"));
+									forEach(innerSetNode, b -> "item".equals(b.getNodeName()), node ->
+									{
+										final NamedNodeMap attrs = node.getAttributes();
+										final int itemId = parseInteger(attrs, "id");
+										final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+										if (item == null)
+										{
+											LOGGER.warning("Attempting to register non existing optional item: " + itemId + " to a set: " + f.getName());
+										}
+										else if (!set.addOptionalItem(itemId))
+										{
+											LOGGER.warning("Attempting to register duplicate optional item " + item + " to a set: " + f.getName());
+										}
+									});
 									break;
 								}
-								case "gloves":
+								case "skills":
 								{
-									set.addGloves(parseInteger(attrs, "id"));
+									forEach(innerSetNode, b -> "skill".equals(b.getNodeName()), node ->
+									{
+										final NamedNodeMap attrs = node.getAttributes();
+										final int skillId = parseInteger(attrs, "id");
+										final int skillLevel = parseInteger(attrs, "level");
+										final int minPieces = parseInteger(attrs, "minimumPieces", set.getMinimumPieces());
+										final int minEnchant = parseInteger(attrs, "minimumEnchant", 0);
+										final boolean isOptional = parseBoolean(attrs, "optional", false);
+										set.addSkill(new ArmorsetSkillHolder(skillId, skillLevel, minPieces, minEnchant, isOptional));
+									});
 									break;
 								}
-								case "head":
+								case "stats":
 								{
-									set.addHead(parseInteger(attrs, "id"));
-									break;
-								}
-								case "legs":
-								{
-									set.addLegs(parseInteger(attrs, "id"));
-									break;
-								}
-								case "shield":
-								{
-									set.addShield(parseInteger(attrs, "id"));
-									break;
-								}
-								case "skill":
-								{
-									final int skillId = parseInteger(attrs, "id");
-									final int skillLevel = parseInteger(attrs, "level");
-									final int minimumPieces = parseInteger(attrs, "minimumPieces", set.getMinimumPieces());
-									set.addSkill(new ArmorsetSkillHolder(skillId, skillLevel, minimumPieces));
-									break;
-								}
-								case "shield_skill":
-								{
-									final int skillId = parseInteger(attrs, "id");
-									final int skillLevel = parseInteger(attrs, "level");
-									set.addShieldSkill(new SkillHolder(skillId, skillLevel));
-									break;
-								}
-								case "enchant6skill":
-								{
-									final int skillId = parseInteger(attrs, "id");
-									final int skillLevel = parseInteger(attrs, "level");
-									final int minimumEnchant = parseInteger(attrs, "minimumEnchant", 6);
-									set.addEnchantSkill(new ArmorsetSkillHolder(skillId, skillLevel, minimumEnchant));
-									break;
-								}
-								case "enchant7skill":
-								{
-									final int skillId = parseInteger(attrs, "id");
-									final int skillLevel = parseInteger(attrs, "level");
-									final int minimumEnchant = parseInteger(attrs, "minimumEnchant", 7);
-									set.addEnchantSkill(new ArmorsetSkillHolder(skillId, skillLevel, minimumEnchant));
-									break;
-								}
-								case "enchant8skill":
-								{
-									final int skillId = parseInteger(attrs, "id");
-									final int skillLevel = parseInteger(attrs, "level");
-									final int minimumEnchant = parseInteger(attrs, "minimumEnchant", 8);
-									set.addEnchantSkill(new ArmorsetSkillHolder(skillId, skillLevel, minimumEnchant));
-									break;
-								}
-								case "con":
-								{
-									set.addCon(parseInteger(attrs, "val"));
-									break;
-								}
-								case "dex":
-								{
-									set.addDex(parseInteger(attrs, "val"));
-									break;
-								}
-								case "str":
-								{
-									set.addStr(parseInteger(attrs, "val"));
-									break;
-								}
-								case "men":
-								{
-									set.addMen(parseInteger(attrs, "val"));
-									break;
-								}
-								case "wit":
-								{
-									set.addWit(parseInteger(attrs, "val"));
-									break;
-								}
-								case "int":
-								{
-									set.addInt(parseInteger(attrs, "val"));
+									forEach(innerSetNode, b -> "stat".equals(b.getNodeName()), node ->
+									{
+										final NamedNodeMap attrs = node.getAttributes();
+										set.addStatsBonus(parseEnum(attrs, BaseStats.class, "type"), parseInteger(attrs, "val"));
+									});
 									break;
 								}
 							}
 						}
 						
-						for (int chestId : set.getChests())
-						{
-							_armorSets.put(chestId, set);
-						}
+						Stream.concat(set.getRequiredItems().stream(), set.getOptionalItems().stream()).forEach(itemHolder -> _armorSetItems.computeIfAbsent(itemHolder, key -> new ArrayList<>()).add(set));
 					}
 				}
 			}
@@ -185,27 +153,25 @@ public final class ArmorSetsData implements IXmlReader
 	}
 	
 	/**
-	 * Checks if is armor set.
-	 * @param chestId the chest Id to verify.
-	 * @return {@code true} if the chest Id belongs to a registered armor set, {@code false} otherwise.
+	 * @param setId the set id that is attached to a set
+	 * @return the armor set associated to the given item id
 	 */
-	public boolean isArmorSet(int chestId)
+	public L2ArmorSet getSet(int setId)
 	{
-		return _armorSets.containsKey(chestId);
+		return _armorSets.get(setId);
 	}
 	
 	/**
-	 * Gets the sets the.
-	 * @param chestId the chest Id identifying the armor set.
-	 * @return the armor set associated to the give chest Id.
+	 * @param itemId the item id that is attached to a set
+	 * @return the armor set associated to the given item id
 	 */
-	public L2ArmorSet getSet(int chestId)
+	public List<L2ArmorSet> getSets(int itemId)
 	{
-		return _armorSets.get(chestId);
+		return _armorSetItems.getOrDefault(itemId, Collections.emptyList());
 	}
 	
 	/**
-	 * Gets the single instance of ArmorSetsData.
+	 * Gets the single instance of ArmorSetsData
 	 * @return single instance of ArmorSetsData
 	 */
 	public static ArmorSetsData getInstance()

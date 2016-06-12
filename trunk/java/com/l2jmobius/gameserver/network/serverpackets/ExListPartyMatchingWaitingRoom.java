@@ -16,82 +16,69 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.concurrent.TimeUnit;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
+import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.base.ClassId;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Gnacik
  */
-public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
+public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
-	// private final int _page;
-	private final int _minlvl;
-	private final int _maxlvl;
-	private final int _mode;
-	private final int _currentTemplateId;
-	private final List<L2PcInstance> _members;
+	private static final int NUM_PER_PAGE = 64;
+	private final int _size;
+	private final List<L2PcInstance> _players = new LinkedList<>();
 	
-	public ExListPartyMatchingWaitingRoom(L2PcInstance player, int page, int minlvl, int maxlvl, int mode)
+	public ExListPartyMatchingWaitingRoom(L2PcInstance player, int page, int minLevel, int maxLevel, List<ClassId> classIds, String query)
 	{
-		_activeChar = player;
-		// _page = page;
-		_minlvl = minlvl;
-		_maxlvl = maxlvl;
-		_mode = mode;
-		_members = new ArrayList<>();
-		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		_currentTemplateId = (world != null) && (world.getTemplateId() >= 0) ? world.getTemplateId() : -1;
+		final List<L2PcInstance> players = MatchingRoomManager.getInstance().getPlayerInWaitingList(minLevel, maxLevel, classIds, query);
+		
+		_size = players.size();
+		final int startIndex = (page - 1) * NUM_PER_PAGE;
+		int chunkSize = _size - startIndex;
+		if (chunkSize > NUM_PER_PAGE)
+		{
+			chunkSize = NUM_PER_PAGE;
+		}
+		for (int i = startIndex; i < (startIndex + chunkSize); i++)
+		{
+			_players.add(players.get(i));
+		}
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x36);
-		if (_mode == 0)
-		{
-			writeD(0);
-			writeD(0);
-			return;
-		}
+		OutgoingPackets.EX_LIST_PARTY_MATCHING_WAITING_ROOM.writeId(packet);
 		
-		for (L2PcInstance cha : PartyMatchWaitingList.getInstance().getPlayers())
+		packet.writeD(_size);
+		packet.writeD(_players.size());
+		for (L2PcInstance player : _players)
 		{
-			if ((cha == null) || (cha == _activeChar))
+			packet.writeS(player.getName());
+			packet.writeD(player.getClassId().getId());
+			packet.writeD(player.getLevel());
+			final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
+			packet.writeD((instance != null) && (instance.getTemplateId() >= 0) ? instance.getTemplateId() : -1);
+			final Map<Integer, Long> _instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player);
+			packet.writeD(_instanceTimes.size());
+			for (Entry<Integer, Long> entry : _instanceTimes.entrySet())
 			{
-				continue;
+				final long instanceTime = TimeUnit.MILLISECONDS.toSeconds(entry.getValue() - System.currentTimeMillis());
+				packet.writeD(entry.getKey());
+				packet.writeD((int) instanceTime);
 			}
-			
-			if (!cha.isPartyWaiting())
-			{
-				PartyMatchWaitingList.getInstance().removePlayer(cha);
-				continue;
-			}
-			
-			else if ((cha.getLevel() < _minlvl) || (cha.getLevel() > _maxlvl))
-			{
-				continue;
-			}
-			
-			_members.add(cha);
 		}
-		
-		writeD(0x01); // Page?
-		writeD(_members.size());
-		for (L2PcInstance member : _members)
-		{
-			writeS(member.getName());
-			writeD(member.getActiveClassId());
-			writeD(member.getLevel());
-			writeD(_currentTemplateId);
-			writeD(0x00); // TODO: Instance ID reuse size
-			// TODO: Loop for instanceId
-		}
+		return true;
 	}
 }

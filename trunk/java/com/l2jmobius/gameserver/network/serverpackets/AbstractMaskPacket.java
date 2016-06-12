@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.model.interfaces.IUpdateTypeComponent;
  * @author UnAfraid
  * @param <T>
  */
-public abstract class AbstractMaskPacket<T extends IUpdateTypeComponent>extends L2GameServerPacket
+public abstract class AbstractMaskPacket<T extends IUpdateTypeComponent> implements IClientOutgoingPacket
 {
 	protected static final byte[] DEFAULT_FLAG_ARRAY =
 	{
@@ -38,19 +38,27 @@ public abstract class AbstractMaskPacket<T extends IUpdateTypeComponent>extends 
 	
 	protected abstract byte[] getMasks();
 	
-	protected abstract void onNewMaskAdded(T component);
+	protected void onNewMaskAdded(T component)
+	{
+		
+	}
 	
-	@SuppressWarnings("unchecked")
-	public void addComponentType(T... updateComponents)
+	@SafeVarargs
+	public final void addComponentType(T... updateComponents)
 	{
 		for (T component : updateComponents)
 		{
 			if (!containsMask(component))
 			{
-				getMasks()[component.getMask() >> 3] |= DEFAULT_FLAG_ARRAY[component.getMask() & 7];
+				addMask(component.getMask());
 				onNewMaskAdded(component);
 			}
 		}
+	}
+	
+	protected void addMask(int mask)
+	{
+		getMasks()[mask >> 3] |= DEFAULT_FLAG_ARRAY[mask & 7];
 	}
 	
 	public boolean containsMask(T component)
@@ -61,5 +69,15 @@ public abstract class AbstractMaskPacket<T extends IUpdateTypeComponent>extends 
 	public boolean containsMask(int mask)
 	{
 		return (getMasks()[mask >> 3] & DEFAULT_FLAG_ARRAY[mask & 7]) != 0;
+	}
+	
+	/**
+	 * @param masks
+	 * @param type
+	 * @return {@code true} if the mask contains the current update component type
+	 */
+	public boolean containsMask(int masks, T type)
+	{
+		return (masks & type.getMask()) == type.getMask();
 	}
 }

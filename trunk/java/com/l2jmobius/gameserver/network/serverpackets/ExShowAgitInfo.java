@@ -16,30 +16,39 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.Map;
+import java.util.Collection;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import com.l2jmobius.gameserver.model.entity.clanhall.AuctionableHall;
+import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
+import com.l2jmobius.gameserver.model.entity.ClanHall;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author KenM
  */
-public class ExShowAgitInfo extends L2GameServerPacket
+public class ExShowAgitInfo implements IClientOutgoingPacket
 {
-	@Override
-	protected void writeImpl()
+	public static final ExShowAgitInfo STATIC_PACKET = new ExShowAgitInfo();
+	
+	private ExShowAgitInfo()
 	{
-		writeC(0xfe);
-		writeH(0x16);
-		final Map<Integer, AuctionableHall> clannhalls = ClanHallManager.getInstance().getAllAuctionableClanHalls();
-		writeD(clannhalls.size());
-		for (AuctionableHall ch : clannhalls.values())
+	}
+	
+	@Override
+	public boolean write(PacketWriter packet)
+	{
+		OutgoingPackets.EX_SHOW_AGIT_INFO.writeId(packet);
+		
+		final Collection<ClanHall> clanHalls = ClanHallData.getInstance().getClanHalls();
+		packet.writeD(clanHalls.size());
+		clanHalls.forEach(clanHall ->
 		{
-			writeD(ch.getId());
-			writeS(ch.getOwnerId() <= 0 ? "" : ClanTable.getInstance().getClan(ch.getOwnerId()).getName()); // owner clan name
-			writeS(ch.getOwnerId() <= 0 ? "" : ClanTable.getInstance().getClan(ch.getOwnerId()).getLeaderName()); // leader name
-			writeD(ch.getGrade() > 0 ? 0x00 : 0x01); // 0 - auction 1 - war clanhall 2 - ETC (rainbow spring clanhall)
-		}
+			packet.writeD(clanHall.getResidenceId());
+			packet.writeS(clanHall.getOwnerId() <= 0 ? "" : ClanTable.getInstance().getClan(clanHall.getOwnerId()).getName()); // owner clan name
+			packet.writeS(clanHall.getOwnerId() <= 0 ? "" : ClanTable.getInstance().getClan(clanHall.getOwnerId()).getLeaderName()); // leader name
+			packet.writeD(clanHall.getType().getClientVal()); // Clan hall type
+		});
+		return true;
 	}
 }

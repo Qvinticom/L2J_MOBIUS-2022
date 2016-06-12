@@ -23,7 +23,7 @@
 													<xs:simpleType>
 														<xs:restriction base="xs:positiveInteger">
 															<xs:minInclusive value="1" />
-															<xs:maxInclusive value="107" />
+															<xs:maxInclusive value="105" />
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:attribute>
@@ -93,7 +93,7 @@
 										<xs:simpleType>
 											<xs:restriction base="xs:positiveInteger">
 												<xs:minInclusive value="1" />
-												<xs:maxInclusive value="107" />
+												<xs:maxInclusive value="105" />
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
@@ -101,7 +101,7 @@
 										<xs:simpleType>
 											<xs:restriction base="xs:positiveInteger">
 												<xs:minInclusive value="1" />
-												<xs:maxInclusive value="107" />
+												<xs:maxInclusive value="105" />
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
@@ -112,6 +112,10 @@
 									<xs:attribute name="skillId" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="skillLvl" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="skillName" type="xs:normalizedString" use="required" />
+									<xs:attribute name="treeId" type="xs:positiveInteger" />
+									<xs:attribute name="row" type="xs:positiveInteger" />
+									<xs:attribute name="column" type="xs:positiveInteger" />
+									<xs:attribute name="pointsRequired" type="xs:positiveInteger" />
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
@@ -136,6 +140,7 @@
 								<xs:restriction base="xs:token">
 									<xs:enumeration value="abilitySkillTree" />
 									<xs:enumeration value="alchemySkillTree" />
+									<xs:enumeration value="awakeningSaveSkillTree" />
 									<xs:enumeration value="classSkillTree" />
 									<xs:enumeration value="collectSkillTree" />
 									<xs:enumeration value="dualClassSkillTree" />

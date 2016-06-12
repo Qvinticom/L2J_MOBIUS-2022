@@ -16,36 +16,30 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Level;
-
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeInfo;
-import com.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
 
-public final class RequestPledgeInfo extends L2GameClientPacket
+public final class RequestPledgeInfo implements IClientIncomingPacket
 {
-	private static final String _C__65_REQUESTPLEDGEINFO = "[C] 65 RequestPledgeInfo";
-	
 	private int _clanId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_clanId = readD();
+		_clanId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		if (Config.DEBUG)
-		{
-			_log.log(Level.FINE, "Info for clan " + _clanId + " requested");
-		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -56,25 +50,11 @@ public final class RequestPledgeInfo extends L2GameClientPacket
 		{
 			if (Config.DEBUG)
 			{
-				_log.warning(getType() + ": Clan data for clanId " + _clanId + " is missing for player " + activeChar);
+				_log.warning(getClass().getSimpleName() + ": Clan data for clanId " + _clanId + " is missing for player " + activeChar);
 			}
 			return; // we have no clan data ?!? should not happen
 		}
 		
-		activeChar.sendPacket(new PledgeInfo(clan));
-		activeChar.sendPacket(new PledgeSkillList(clan));
-		activeChar.broadcastUserInfo();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__65_REQUESTPLEDGEINFO;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
+		client.sendPacket(new PledgeInfo(clan));
 	}
 }

@@ -17,9 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.PetItemList;
 
@@ -32,10 +33,8 @@ public final class Restoration extends AbstractEffect
 	private final int _itemId;
 	private final int _itemCount;
 	
-	public Restoration(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Restoration(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_itemId = params.getInt("itemId", 0);
 		_itemCount = params.getInt("itemCount", 0);
 	}
@@ -47,28 +46,28 @@ public final class Restoration extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if ((info.getEffected() == null) || !info.getEffected().isPlayable())
+		if (!effected.isPlayable())
 		{
 			return;
 		}
 		
 		if ((_itemId <= 0) || (_itemCount <= 0))
 		{
-			info.getEffected().sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
+			effected.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
 			_log.warning(Restoration.class.getSimpleName() + " effect with wrong item Id/count: " + _itemId + "/" + _itemCount + "!");
 			return;
 		}
 		
-		if (info.getEffected().isPlayer())
+		if (effected.isPlayer())
 		{
-			info.getEffected().getActingPlayer().addItem("Skill", _itemId, _itemCount, info.getEffector(), true);
+			effected.getActingPlayer().addItem("Skill", _itemId, _itemCount, effector, true);
 		}
-		else if (info.getEffected().isPet())
+		else if (effected.isPet())
 		{
-			info.getEffected().getInventory().addItem("Skill", _itemId, _itemCount, info.getEffected().getActingPlayer(), info.getEffector());
-			info.getEffected().getActingPlayer().sendPacket(new PetItemList(info.getEffected().getInventory().getItems()));
+			effected.getInventory().addItem("Skill", _itemId, _itemCount, effected.getActingPlayer(), effector);
+			effected.getActingPlayer().sendPacket(new PetItemList(effected.getInventory().getItems()));
 		}
 	}
 }

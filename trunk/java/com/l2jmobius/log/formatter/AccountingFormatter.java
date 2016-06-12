@@ -22,9 +22,10 @@ import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.StringUtil;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.util.StringUtil;
+import com.l2jmobius.gameserver.network.client.ConnectionState;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 public class AccountingFormatter extends Formatter
 {
@@ -55,14 +56,14 @@ public class AccountingFormatter extends Formatter
 					{
 						if (!client.isDetached())
 						{
-							address = client.getConnection().getInetAddress().getHostAddress();
+							address = client.getConnectionAddress().getHostAddress();
 						}
 					}
 					catch (Exception e)
 					{
 					}
 					
-					switch (client.getState())
+					switch ((ConnectionState) client.getConnectionState())
 					{
 						case IN_GAME:
 						{
@@ -73,7 +74,7 @@ public class AccountingFormatter extends Formatter
 							}
 							break;
 						}
-						case AUTHED:
+						case AUTHENTICATED:
 						{
 							if (client.getAccountName() != null)
 							{

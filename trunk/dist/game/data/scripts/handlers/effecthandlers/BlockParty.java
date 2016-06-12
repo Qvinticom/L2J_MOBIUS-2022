@@ -18,12 +18,13 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Block Party effect implementation.
@@ -31,9 +32,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class BlockParty extends AbstractEffect
 {
-	public BlockParty(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public BlockParty(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -43,14 +43,14 @@ public final class BlockParty extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		PunishmentManager.getInstance().stopPunishment(info.getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN);
+		PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, effected.getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN, 0, "Party banned by bot report", "system", true));
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onExit(BuffInfo info)
 	{
-		PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, info.getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN, 0, "Party banned by bot report", "system", true));
+		PunishmentManager.getInstance().stopPunishment(info.getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN);
 	}
 }

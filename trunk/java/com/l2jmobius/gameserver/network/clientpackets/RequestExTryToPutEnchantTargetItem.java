@@ -16,35 +16,34 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Level;
-
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutEnchantTargetItemResult;
 
 /**
  * @author KenM
  */
-public class RequestExTryToPutEnchantTargetItem extends L2GameClientPacket
+public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 {
-	private static final String _C__D0_4C_REQUESTEXTRYTOPUTENCHANTTARGETITEM = "[C] D0:4C RequestExTryToPutEnchantTargetItem";
-	
 	private int _objectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
+		_objectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -68,22 +67,16 @@ public class RequestExTryToPutEnchantTargetItem extends L2GameClientPacket
 		final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
 		if ((scrollTemplate == null) || !scrollTemplate.isValid(item, null))
 		{
-			activeChar.sendPacket(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
+			client.sendPacket(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
 			activeChar.removeRequest(request.getClass());
-			activeChar.sendPacket(new ExPutEnchantTargetItemResult(0));
+			client.sendPacket(new ExPutEnchantTargetItemResult(0));
 			if (scrollTemplate == null)
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": Undefined scroll have been used id: " + scroll.getId());
+				_log.warning(getClass().getSimpleName() + ": Undefined scroll have been used id: " + scroll.getId());
 			}
 			return;
 		}
 		request.setTimestamp(System.currentTimeMillis());
-		activeChar.sendPacket(new ExPutEnchantTargetItemResult(_objectId));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_4C_REQUESTEXTRYTOPUTENCHANTTARGETITEM;
+		client.sendPacket(new ExPutEnchantTargetItemResult(_objectId));
 	}
 }

@@ -23,7 +23,6 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
 /**
  * @author DS
@@ -58,36 +57,21 @@ public final class OlympiadAnnouncer implements Runnable
 				switch (task.getGame().getType())
 				{
 					case NON_CLASSED:
-					{
 						npcString = NpcStringId.OLYMPIAD_CLASS_FREE_INDIVIDUAL_MATCH_IS_GOING_TO_BEGIN_IN_ARENA_S1_IN_A_MOMENT;
 						break;
-					}
 					case CLASSED:
-					{
 						npcString = NpcStringId.OLYMPIAD_CLASS_INDIVIDUAL_MATCH_IS_GOING_TO_BEGIN_IN_ARENA_S1_IN_A_MOMENT;
 						break;
-					}
-					case TEAMS:
-					{
-						npcString = NpcStringId.OLYMPIAD_ALL_CLASS_BATTLE_IS_GOING_TO_BEGIN_IN_ARENA_S1_IN_A_MOMENT;
-						break;
-					}
 					default:
-					{
 						continue;
-					}
 				}
 				
-				L2Npc manager;
-				NpcSay packet;
 				for (L2Spawn spawn : _managers)
 				{
-					manager = spawn.getLastSpawn();
+					final L2Npc manager = spawn.getLastSpawn();
 					if (manager != null)
 					{
-						packet = new NpcSay(manager.getObjectId(), ChatType.NPC_SHOUT, manager.getId(), npcString);
-						packet.addStringParameter(arenaId);
-						manager.broadcastPacket(packet);
+						manager.broadcastSay(ChatType.NPC_SHOUT, npcString, arenaId);
 					}
 				}
 				break;

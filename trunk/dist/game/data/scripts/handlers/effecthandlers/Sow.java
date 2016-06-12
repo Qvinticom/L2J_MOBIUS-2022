@@ -16,19 +16,20 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.QuestSound;
+import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2Seed;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.Rnd;
 
 /**
  * Sow effect implementation.
@@ -36,9 +37,8 @@ import com.l2jmobius.util.Rnd;
  */
 public final class Sow extends AbstractEffect
 {
-	public Sow(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Sow(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -48,17 +48,17 @@ public final class Sow extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (!info.getEffector().isPlayer() || !info.getEffected().isMonster())
+		if (!effector.isPlayer() || !effected.isMonster())
 		{
 			return;
 		}
 		
-		final L2PcInstance player = info.getEffector().getActingPlayer();
-		final L2MonsterInstance target = (L2MonsterInstance) info.getEffected();
+		final L2PcInstance player = effector.getActingPlayer();
+		final L2MonsterInstance target = (L2MonsterInstance) effected;
 		
-		if (target.isDead() || !target.getTemplate().canBeSown() || target.isSeeded() || (target.getSeederId() != player.getObjectId()))
+		if (target.isDead() || (!target.getTemplate().canBeSown()) || target.isSeeded() || (target.getSeederId() != player.getObjectId()))
 		{
 			return;
 		}
@@ -82,9 +82,10 @@ public final class Sow extends AbstractEffect
 			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SEED_WAS_NOT_SOWN);
 		}
 		
-		if (player.isInParty())
+		final L2Party party = player.getParty();
+		if (party != null)
 		{
-			player.getParty().broadcastPacket(sm);
+			party.broadcastPacket(sm);
 		}
 		else
 		{
@@ -116,7 +117,7 @@ public final class Sow extends AbstractEffect
 		
 		// 5% decrease in chance if player level
 		// is more than +/- 5 levels to _target's_ level
-		int diff = levelPlayer - levelTarget;
+		int diff = (levelPlayer - levelTarget);
 		if (diff < 0)
 		{
 			diff = -diff;

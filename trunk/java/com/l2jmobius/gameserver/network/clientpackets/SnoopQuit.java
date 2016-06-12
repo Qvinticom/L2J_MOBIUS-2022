@@ -16,33 +16,35 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * @author -Wooden-
  */
-public final class SnoopQuit extends L2GameClientPacket
+public final class SnoopQuit implements IClientIncomingPacket
 {
-	private static final String _C__B4_SNOOPQUIT = "[C] B4 SnoopQuit";
-	
 	private int _snoopID;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_snoopID = readD();
+		_snoopID = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		final L2PcInstance player = L2World.getInstance().getPlayer(_snoopID);
 		if (player == null)
 		{
 			return;
 		}
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -50,11 +52,6 @@ public final class SnoopQuit extends L2GameClientPacket
 		
 		player.removeSnooper(activeChar);
 		activeChar.removeSnooped(player);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__B4_SNOOPQUIT;
+		
 	}
 }

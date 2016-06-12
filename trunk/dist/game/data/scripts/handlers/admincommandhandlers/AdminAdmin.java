@@ -62,6 +62,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		"admin_set_mod",
 		"admin_saveolymp",
 		"admin_sethero",
+		"admin_settruehero",
 		"admin_givehero",
 		"admin_endolympiad",
 		"admin_setconfig",
@@ -136,6 +137,18 @@ public class AdminAdmin implements IAdminCommandHandler
 			target.setHero(!target.isHero());
 			target.broadcastUserInfo();
 		}
+		else if (command.startsWith("admin_settruehero"))
+		{
+			if (activeChar.getTarget() == null)
+			{
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				return false;
+			}
+			
+			final L2PcInstance target = activeChar.getTarget().isPlayer() ? activeChar.getTarget().getActingPlayer() : activeChar;
+			target.setTrueHero(!target.isTrueHero());
+			target.broadcastUserInfo();
+		}
 		else if (command.startsWith("admin_givehero"))
 		{
 			if (activeChar.getTarget() == null)
@@ -190,7 +203,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			}
 			finally
 			{
-				activeChar.refreshOverloaded();
+				activeChar.refreshOverloaded(true);
 			}
 			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}

@@ -51,7 +51,7 @@ public class L2ShuttleEngine implements Runnable
 	{
 		try
 		{
-			if (!_shuttle.isVisible())
+			if (!_shuttle.isSpawned())
 			{
 				return;
 			}

@@ -16,52 +16,29 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeCrest;
 
 /**
- * @author Mobius
+ * This class ...
+ * @version $Revision: 1.4.4.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestPledgeCrest extends L2GameClientPacket
+public final class RequestPledgeCrest implements IClientIncomingPacket
 {
-	private static final String _C__68_REQUESTPLEDGECREST = "[C] 68 RequestPledgeCrest";
-	
 	private int _crestId;
-	private int _clanId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_crestId = readD();
-		_clanId = readD();
+		_crestId = packet.readD();
+		packet.readD(); // clanId
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		if (_crestId == 0)
-		{
-			return;
-		}
-		
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if ((activeChar.getClan() != null) && (activeChar.getClan().getId() == _clanId))
-		{
-			return;
-		}
-		
-		sendPacket(new PledgeCrest(_crestId));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__68_REQUESTPLEDGECREST;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
+		client.sendPacket(new PledgeCrest(_crestId));
 	}
 }

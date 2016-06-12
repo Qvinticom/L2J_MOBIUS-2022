@@ -18,9 +18,9 @@ package events.LoveYourGatekeeper;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.event.LongTimeEvent;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Love Your Gatekeeper event.
  * @author Gladicek
  */
-final class LoveYourGatekeeper extends LongTimeEvent
+public final class LoveYourGatekeeper extends LongTimeEvent
 {
 	// NPC
 	private static final int GATEKEEPER = 32477;
@@ -43,7 +43,6 @@ final class LoveYourGatekeeper extends LongTimeEvent
 	
 	private LoveYourGatekeeper()
 	{
-		super(LoveYourGatekeeper.class.getSimpleName(), "events");
 		addStartNpc(GATEKEEPER);
 		addFirstTalkId(GATEKEEPER);
 		addTalkId(GATEKEEPER);
@@ -56,27 +55,30 @@ final class LoveYourGatekeeper extends LongTimeEvent
 		{
 			case "transform_stick":
 			{
-				if (player.getAdena() < PRICE)
+				if (player.getAdena() >= PRICE)
 				{
-					return "32477-3.htm";
-				}
-				final long reuse = player.getVariables().getLong(REUSE, 0);
-				if (reuse > System.currentTimeMillis())
-				{
-					final long remainingTime = (reuse - System.currentTimeMillis()) / 1000;
-					final int hours = (int) (remainingTime / 3600);
-					final int minutes = (int) ((remainingTime % 3600) / 60);
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
-					sm.addItemName(GATEKEEPER_TRANSFORMATION_STICK);
-					sm.addInt(hours);
-					sm.addInt(minutes);
-					player.sendPacket(sm);
+					final long reuse = player.getVariables().getLong(REUSE, 0);
+					if (reuse > System.currentTimeMillis())
+					{
+						final long remainingTime = (reuse - System.currentTimeMillis()) / 1000;
+						final int hours = (int) (remainingTime / 3600);
+						final int minutes = (int) ((remainingTime % 3600) / 60);
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
+						sm.addItemName(GATEKEEPER_TRANSFORMATION_STICK);
+						sm.addInt(hours);
+						sm.addInt(minutes);
+						player.sendPacket(sm);
+					}
+					else
+					{
+						takeItems(player, Inventory.ADENA_ID, PRICE);
+						giveItems(player, GATEKEEPER_TRANSFORMATION_STICK, 1);
+						player.getVariables().set(REUSE, System.currentTimeMillis() + (HOURS * 3600000));
+					}
 				}
 				else
 				{
-					takeItems(player, Inventory.ADENA_ID, PRICE);
-					giveItems(player, GATEKEEPER_TRANSFORMATION_STICK, 1);
-					player.getVariables().set(REUSE, System.currentTimeMillis() + (HOURS * 3600000));
+					return "32477-3.htm";
 				}
 				return null;
 			}

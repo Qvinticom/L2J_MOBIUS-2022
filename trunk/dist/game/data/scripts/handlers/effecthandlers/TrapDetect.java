@@ -17,10 +17,11 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Trap Detect effect implementation.
@@ -30,10 +31,8 @@ public final class TrapDetect extends AbstractEffect
 {
 	private final int _power;
 	
-	public TrapDetect(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public TrapDetect(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		if (params.isEmpty())
 		{
 			throw new IllegalArgumentException(getClass().getSimpleName() + ": effect without power!");
@@ -49,17 +48,17 @@ public final class TrapDetect extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (!info.getEffected().isTrap() || info.getEffected().isAlikeDead())
+		if (!effected.isTrap() || effected.isAlikeDead())
 		{
 			return;
 		}
 		
-		final L2TrapInstance trap = (L2TrapInstance) info.getEffected();
+		final L2TrapInstance trap = (L2TrapInstance) effected;
 		if (trap.getLevel() <= _power)
 		{
-			trap.setDetected(info.getEffector());
+			trap.setDetected(effector);
 		}
 	}
 }

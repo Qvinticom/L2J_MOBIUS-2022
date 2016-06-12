@@ -30,7 +30,7 @@ public class ItemSkills extends ItemSkillsTemplate
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		final L2PcInstance activeChar = playable.getActingPlayer();
-		if ((activeChar != null) && activeChar.isInOlympiadMode() && item.isOlyRestrictedItem())
+		if ((activeChar != null) && activeChar.isInOlympiadMode())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_OLYMPIAD_MATCH);
 			return false;

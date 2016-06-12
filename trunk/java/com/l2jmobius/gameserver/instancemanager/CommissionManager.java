@@ -83,21 +83,13 @@ public final class CommissionManager
 		{
 			try (PreparedStatement ps = con.prepareStatement(SELECT_ALL_ITEMS))
 			{
-				ps.setString(1, ItemLocation.COMMISSION.toString());
+				ps.setString(1, ItemLocation.COMMISSION.name());
 				try (ResultSet rs = ps.executeQuery())
 				{
 					while (rs.next())
 					{
-						final int itemOwnerId = rs.getInt("owner_id");
-						final int itemObjectId = rs.getInt("object_id");
-						final L2ItemInstance itemInstance = L2ItemInstance.restoreFromDb(itemOwnerId, rs);
-						if (itemInstance == null)
-						{
-							_log.warning(getClass().getSimpleName() + ": Failed loading item instance with item object id " + itemObjectId + " and owner id " + itemOwnerId + ".");
-							continue;
-						}
-						
-						itemInstances.put(itemObjectId, itemInstance);
+						final L2ItemInstance itemInstance = new L2ItemInstance(rs);
+						itemInstances.put(itemInstance.getObjectId(), itemInstance);
 					}
 				}
 			}
@@ -236,7 +228,7 @@ public final class CommissionManager
 				return;
 			}
 			
-			final long registrationFee = (long) Math.max(MIN_REGISTRATION_AND_SALE_FEE, totalPrice * REGISTRATION_FEE_PER_DAY * durationInDays);
+			final long registrationFee = (long) Math.max(MIN_REGISTRATION_AND_SALE_FEE, (totalPrice * REGISTRATION_FEE_PER_DAY) * durationInDays);
 			if (!player.getInventory().reduceAdena("Commission Registration Fee", registrationFee, player, null))
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_TO_REGISTER_THE_ITEM);
@@ -306,7 +298,7 @@ public final class CommissionManager
 			return;
 		}
 		
-		if ((player.getInventory().getSize(false) >= (player.getInventoryLimit() * 0.8)) || (player.getWeightPenalty() >= 3))
+		if (!player.isInventoryUnder80(false) || (player.getWeightPenalty() >= 3))
 		{
 			player.sendPacket(SystemMessageId.IF_THE_WEIGHT_IS_80_OR_MORE_AND_THE_INVENTORY_NUMBER_IS_90_OR_MORE_PURCHASE_CANCELLATION_IS_NOT_POSSIBLE);
 			player.sendPacket(SystemMessageId.CANCELLATION_OF_SALE_HAS_FAILED_BECAUSE_REQUIREMENTS_ARE_NOT_MET);
@@ -357,7 +349,7 @@ public final class CommissionManager
 			return;
 		}
 		
-		if ((player.getInventory().getSize(false) >= (player.getInventoryLimit() * 0.8)) || (player.getWeightPenalty() >= 3))
+		if (!player.isInventoryUnder80(false) || (player.getWeightPenalty() >= 3))
 		{
 			player.sendPacket(SystemMessageId.IF_THE_WEIGHT_IS_80_OR_MORE_AND_THE_INVENTORY_NUMBER_IS_90_OR_MORE_PURCHASE_CANCELLATION_IS_NOT_POSSIBLE);
 			player.sendPacket(ExResponseCommissionBuyItem.FAILED);
@@ -382,7 +374,7 @@ public final class CommissionManager
 		
 		if (deleteItemFromDB(commissionId))
 		{
-			final long saleFee = (long) Math.max(MIN_REGISTRATION_AND_SALE_FEE, totalPrice * SALE_FEE_PER_DAY * commissionItem.getDurationInDays());
+			final long saleFee = (long) Math.max(MIN_REGISTRATION_AND_SALE_FEE, (totalPrice * SALE_FEE_PER_DAY) * commissionItem.getDurationInDays());
 			final Message mail = new Message(itemInstance.getOwnerId(), itemInstance, MailType.COMMISSION_ITEM_SOLD);
 			
 			final Mail attachement = mail.createAttachments();
@@ -430,7 +422,8 @@ public final class CommissionManager
 	{
 		if ((_commissionItems.remove(commissionItem.getCommissionId()) != null) && deleteItemFromDB(commissionItem.getCommissionId()))
 		{
-			MailManager.getInstance().sendMessage(new Message(commissionItem.getItemInstance().getOwnerId(), commissionItem.getItemInstance(), MailType.COMMISSION_ITEM_RETURNED));
+			final Message mail = new Message(commissionItem.getItemInstance().getOwnerId(), commissionItem.getItemInstance(), MailType.COMMISSION_ITEM_RETURNED);
+			MailManager.getInstance().sendMessage(mail);
 		}
 	}
 	
@@ -442,6 +435,15 @@ public final class CommissionManager
 	public CommissionItem getCommissionItem(long commissionId)
 	{
 		return _commissionItems.get(commissionId);
+	}
+	
+	/**
+	 * @param objectId
+	 * @return {@code true} if player with the objectId has commission items, {@code false} otherwise
+	 */
+	public boolean hasCommissionItems(int objectId)
+	{
+		return _commissionItems.values().stream().anyMatch(item -> item.getItemInstance().getObjectId() == objectId);
 	}
 	
 	/**

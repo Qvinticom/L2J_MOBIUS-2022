@@ -53,14 +53,15 @@ public class PlayerHelp implements IBypassHandler
 			final NpcHtmlMessage html;
 			if (cmd.length > 1)
 			{
-				html = new NpcHtmlMessage(0, Integer.parseInt(cmd[1]));
+				final int itemId = Integer.parseInt(cmd[1]);
+				html = new NpcHtmlMessage(0, itemId);
 			}
 			else
 			{
 				html = new NpcHtmlMessage();
 			}
 			
-			html.setFile(activeChar.getHtmlPrefix(), "html/help/" + cmd[0]);
+			html.setFile(activeChar.getHtmlPrefix(), "data/html/help/" + cmd[0]);
 			activeChar.sendPacket(html);
 		}
 		catch (Exception e)

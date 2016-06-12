@@ -32,13 +32,12 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class AdminMonsterRace implements IAdminCommandHandler
 {
-	// private static Logger _log = Logger.getLogger(AdminMonsterRace.class.getName());
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_mons"
 	};
-	static int state = -1;
+	
+	protected static int state = -1;
 	
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
@@ -110,14 +109,16 @@ public class AdminMonsterRace implements IAdminCommandHandler
 			
 			ThreadPoolManager.getInstance().scheduleGeneral(new RunRace(codes, activeChar), 5000);
 		}
+		
 	}
 	
-	private class RunRace implements Runnable
+	class RunRace implements Runnable
 	{
+		
 		private final int[][] codes;
 		private final L2PcInstance activeChar;
 		
-		RunRace(int[][] pCodes, L2PcInstance pActiveChar)
+		public RunRace(int[][] pCodes, L2PcInstance pActiveChar)
 		{
 			codes = pCodes;
 			activeChar = pActiveChar;
@@ -130,7 +131,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 			// MonsterRace.getInstance().newSpeeds();
 			// int[][] speeds2 = MonsterRace.getInstance().getSpeeds();
 			/*
-			 * int[] speed = new int[8]; for (int i=0; i<8; i++) { for (int j=0; j<20; j++) { //_log.info("Adding "+speeds1[i][j] +" and "+ speeds2[i][j]); speed[i] += (speeds1[i][j]*1); // + (speeds2[i][j]*1); } _log.info("Total speed for "+(i+1)+" = "+speed[i]); }
+			 * int[] speed = new int[8]; for (int i=0; i<8; i++) { for (int j=0; j<20; j++) { //LOGGER.info("Adding "+speeds1[i][j] +" and "+ speeds2[i][j]); speed[i] += (speeds1[i][j]*1); // + (speeds2[i][j]*1); } LOGGER.info("Total speed for "+(i+1)+" = "+speed[i]); }
 			 */
 			
 			final MonRaceInfo spk = new MonRaceInfo(codes[2][0], codes[2][1], MonsterRace.getInstance().getMonsters(), MonsterRace.getInstance().getSpeeds());

@@ -16,39 +16,40 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Sdw
  */
-public class RequestPledgeRecruitBoardAccess extends L2GameClientPacket
+public class RequestPledgeRecruitBoardAccess implements IClientIncomingPacket
 {
-	private static final String _C__D0_D5_REQUESTPLEDGERECRUITBOARDACCESS = "[C] D0;D5 RequestPledgeRecruitBoardAccess";
-	
 	private int _applyType;
 	private int _karma;
 	private String _information;
 	private String _datailedInformation;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_applyType = readD();
-		_karma = readD();
-		_information = readS();
-		_datailedInformation = readS();
+		_applyType = packet.readD();
+		_karma = packet.readD();
+		_information = packet.readS();
+		_datailedInformation = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		
 		if (activeChar == null)
 		{
@@ -109,9 +110,4 @@ public class RequestPledgeRecruitBoardAccess extends L2GameClientPacket
 		}
 	}
 	
-	@Override
-	public String getType()
-	{
-		return _C__D0_D5_REQUESTPLEDGERECRUITBOARDACCESS;
-	}
 }

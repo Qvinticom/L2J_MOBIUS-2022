@@ -16,29 +16,34 @@
  */
 package com.l2jmobius.gameserver.cache;
 
-import java.io.BufferedInputStream;
 import java.io.File;
-import java.io.FileInputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.file.filter.HTMLFilter;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.file.filter.HTMLFilter;
 
 /**
  * @author Layane
  */
 public class HtmCache
 {
-	private static final Logger _log = Logger.getLogger(HtmCache.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(HtmCache.class.getName());
 	
 	private static final HTMLFilter HTML_FILTER = new HTMLFilter();
+	private static final Pattern EXTEND_PATTERN = Pattern.compile("<extend template=\"([a-zA-Z0-9-_./\\ ]*)\">(.*?)</extend>", Pattern.DOTALL);
+	private static final Pattern ABSTRACT_BLOCK_PATTERN = Pattern.compile("<abstract block=\"([a-zA-Z0-9-_. ]*)\" ?/>", Pattern.DOTALL);
+	private static final Pattern BLOCK_PATTERN = Pattern.compile("<block name=\"([a-zA-Z0-9-_. ]*)\">(.*?)</block>", Pattern.DOTALL);
 	
-	private static final Map<String, String> _cache = Config.LAZY_CACHE ? new ConcurrentHashMap<>() : new HashMap<>();
+	private final Map<String, String> _cache = Config.LAZY_CACHE ? new ConcurrentHashMap<>() : new HashMap<>();
 	
 	private int _loadedFiles;
 	private long _bytesBuffLen;
@@ -57,23 +62,23 @@ public class HtmCache
 	{
 		if (!Config.LAZY_CACHE)
 		{
-			_log.info("Html cache start...");
+			LOGGER.info("Html cache start...");
 			parseDir(f);
-			_log.info("Cache[HTML]: " + String.format("%.3f", getMemoryUsage()) + " megabytes on " + getLoadedFiles() + " files loaded");
+			LOGGER.info("Cache[HTML]: " + String.format("%.3f", getMemoryUsage()) + " megabytes on " + getLoadedFiles() + " files loaded");
 		}
 		else
 		{
 			_cache.clear();
 			_loadedFiles = 0;
 			_bytesBuffLen = 0;
-			_log.info("Cache[HTML]: Running lazy cache");
+			LOGGER.info("Cache[HTML]: Running lazy cache");
 		}
 	}
 	
 	public void reloadPath(File f)
 	{
 		parseDir(f);
-		_log.info("Cache[HTML]: Reloaded specified path.");
+		LOGGER.info("Cache[HTML]: Reloaded specified path.");
 	}
 	
 	public double getMemoryUsage()
@@ -107,39 +112,32 @@ public class HtmCache
 	
 	public String loadFile(File file)
 	{
-		if (!HTML_FILTER.accept(file))
+		if (HTML_FILTER.accept(file))
 		{
-			return null;
-		}
-		
-		final String relpath = Util.getRelativePath(Config.DATAPACK_ROOT, file);
-		String content = null;
-		try (FileInputStream fis = new FileInputStream(file);
-			BufferedInputStream bis = new BufferedInputStream(fis))
-		{
-			final int bytes = bis.available();
-			final byte[] raw = new byte[bytes];
-			
-			bis.read(raw);
-			content = new String(raw, "UTF-8");
-			content = content.replaceAll("(?s)<!--.*?-->", ""); // Remove html comments
-			
-			final String oldContent = _cache.put(relpath, content);
-			if (oldContent == null)
+			try
 			{
-				_bytesBuffLen += bytes;
-				_loadedFiles++;
+				String content = processHtml(Util.readAllLines(file, StandardCharsets.UTF_8, null));
+				content = content.replaceAll("(?s)<!--.*?-->", ""); // Remove html comments
+				// content = content.replaceAll("\r", "").replaceAll("\n", ""); // Remove new lines
+				
+				final String oldContent = _cache.put(file.toURI().getPath().substring(Config.DATAPACK_ROOT.toURI().getPath().length()), content);
+				if (oldContent == null)
+				{
+					_bytesBuffLen += content.length() * 2;
+					_loadedFiles++;
+				}
+				else
+				{
+					_bytesBuffLen = (_bytesBuffLen - oldContent.length()) + (content.length() * 2);
+				}
+				return content;
 			}
-			else
+			catch (Exception e)
 			{
-				_bytesBuffLen = (_bytesBuffLen - oldContent.length()) + bytes;
+				LOGGER.log(Level.WARNING, "Problem with htm file:", e);
 			}
 		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, "Problem with htm file " + e.getMessage(), e);
-		}
-		return content;
+		return null;
 	}
 	
 	public String getHtmForce(String prefix, String path)
@@ -148,7 +146,7 @@ public class HtmCache
 		if (content == null)
 		{
 			content = "<html><body>My text is missing:<br>" + path + "</body></html>";
-			_log.warning("Cache[HTML]: Missing HTML page: " + path);
+			LOGGER.warning("Cache[HTML]: Missing HTML page: " + path);
 		}
 		return content;
 	}
@@ -194,6 +192,81 @@ public class HtmCache
 	public boolean isLoadable(String path)
 	{
 		return HTML_FILTER.accept(new File(Config.DATAPACK_ROOT, path));
+	}
+	
+	private String parseTemplateName(String name)
+	{
+		if (!name.startsWith("data/"))
+		{
+			if (name.startsWith("html/"))
+			{
+				return "data/" + name;
+			}
+			else if (name.startsWith("CommunityBoard/"))
+			{
+				return "data/html/" + name;
+			}
+			else if (name.startsWith("scripts/"))
+			{
+				return "data/scripts/" + name;
+			}
+		}
+		return name;
+	}
+	
+	private String processHtml(String result)
+	{
+		final Matcher extendMatcher = EXTEND_PATTERN.matcher(result);
+		if (extendMatcher.find())
+		{
+			// If extend matcher finds something, process template
+			final String templateName = parseTemplateName(extendMatcher.group(1));
+			
+			// Generate block name -> content map
+			final Map<String, String> blockMap = generateBlockMap(result);
+			
+			// Attempt to find the template
+			String template = getHtm(templateName + "-template.htm");
+			if (template != null)
+			{
+				// Attempt to find the abstract blocks
+				final Matcher blockMatcher = ABSTRACT_BLOCK_PATTERN.matcher(template);
+				while (blockMatcher.find())
+				{
+					final String name = blockMatcher.group(1);
+					if (!blockMap.containsKey(name))
+					{
+						LOGGER.warning(getClass().getSimpleName() + ": Abstract block definition [" + name + "] is not implemented!");
+						continue;
+					}
+					
+					// Replace the matched content with the block.
+					template = template.replace(blockMatcher.group(0), blockMap.get(name));
+				}
+				
+				// Replace the entire extend block
+				result = result.replace(extendMatcher.group(0), template);
+			}
+			else
+			{
+				LOGGER.warning(getClass().getSimpleName() + ": Missing template: " + templateName + "-template.htm !");
+			}
+		}
+		
+		return result;
+	}
+	
+	private Map<String, String> generateBlockMap(String data)
+	{
+		final Map<String, String> blockMap = new LinkedHashMap<>();
+		final Matcher blockMatcher = BLOCK_PATTERN.matcher(data);
+		while (blockMatcher.find())
+		{
+			final String name = blockMatcher.group(1);
+			final String content = blockMatcher.group(2);
+			blockMap.put(name, content);
+		}
+		return blockMap;
 	}
 	
 	public static HtmCache getInstance()

@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,18 +27,17 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.templates.L2PcTemplate;
 import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * Loads player's base stats.
  * @author Forsaiken, Zoey76, GKR
  */
-public final class PlayerTemplateData implements IXmlReader
+public final class PlayerTemplateData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(PlayerTemplateData.class.getName());
 	
@@ -54,13 +54,13 @@ public final class PlayerTemplateData implements IXmlReader
 	public void load()
 	{
 		_playerTemplates.clear();
-		parseDatapackDirectory("stats/chars/baseStats", false);
+		parseDatapackDirectory("data/stats/chars/baseStats", false);
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _playerTemplates.size() + " character templates.");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _dataCount + " level up gain records.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		NamedNodeMap attrs;
 		int classId = 0;
@@ -98,11 +98,11 @@ public final class PlayerTemplateData implements IXmlReader
 									{
 										if (cnd.getNodeName().equalsIgnoreCase("radius"))
 										{
-											set.set("collisionRadius", cnd.getTextContent());
+											set.set("collision_radius", cnd.getTextContent());
 										}
 										else if (cnd.getNodeName().equalsIgnoreCase("height"))
 										{
-											set.set("collisionHeight", cnd.getTextContent());
+											set.set("collision_height", cnd.getTextContent());
 										}
 									}
 									if ("node".equalsIgnoreCase(cnd.getNodeName()))
@@ -128,7 +128,7 @@ public final class PlayerTemplateData implements IXmlReader
 									}
 									else if (!cnd.getNodeName().equals("#text"))
 									{
-										set.set(nd.getNodeName() + cnd.getNodeName(), cnd.getTextContent());
+										set.set((nd.getNodeName() + cnd.getNodeName()), cnd.getTextContent());
 									}
 								}
 							}
@@ -138,8 +138,8 @@ public final class PlayerTemplateData implements IXmlReader
 							}
 						}
 						// calculate total pdef and mdef from parts
-						set.set("basePDef", set.getInt("basePDefchest", 0) + set.getInt("basePDeflegs", 0) + set.getInt("basePDefhead", 0) + set.getInt("basePDeffeet", 0) + set.getInt("basePDefgloves", 0) + set.getInt("basePDefunderwear", 0) + set.getInt("basePDefcloak", 0));
-						set.set("baseMDef", set.getInt("baseMDefrear", 0) + set.getInt("baseMDeflear", 0) + set.getInt("baseMDefrfinger", 0) + set.getInt("baseMDefrfinger", 0) + set.getInt("baseMDefneck", 0));
+						set.set("basePDef", (set.getInt("basePDefchest", 0) + set.getInt("basePDeflegs", 0) + set.getInt("basePDefhead", 0) + set.getInt("basePDeffeet", 0) + set.getInt("basePDefgloves", 0) + set.getInt("basePDefunderwear", 0) + set.getInt("basePDefcloak", 0)));
+						set.set("baseMDef", (set.getInt("baseMDefrear", 0) + set.getInt("baseMDeflear", 0) + set.getInt("baseMDefrfinger", 0) + set.getInt("baseMDefrfinger", 0) + set.getInt("baseMDefneck", 0)));
 						
 						_playerTemplates.put(ClassId.getClassId(classId), new L2PcTemplate(set, creationPoints));
 					}
@@ -151,11 +151,12 @@ public final class PlayerTemplateData implements IXmlReader
 							{
 								attrs = lvlNode.getAttributes();
 								final int level = parseInteger(attrs, "val");
+								
 								for (Node valNode = lvlNode.getFirstChild(); valNode != null; valNode = valNode.getNextSibling())
 								{
 									final String nodeName = valNode.getNodeName();
 									
-									if ((level < Config.PLAYER_MAXIMUM_LEVEL) && (nodeName.startsWith("hp") || nodeName.startsWith("mp") || nodeName.startsWith("cp")) && _playerTemplates.containsKey(ClassId.getClassId(classId)))
+									if ((nodeName.startsWith("hp") || nodeName.startsWith("mp") || nodeName.startsWith("cp")) && _playerTemplates.containsKey(ClassId.getClassId(classId)))
 									{
 										_playerTemplates.get(ClassId.getClassId(classId)).setUpgainValue(nodeName, level, Double.parseDouble(valNode.getTextContent()));
 										_dataCount++;
@@ -163,7 +164,6 @@ public final class PlayerTemplateData implements IXmlReader
 								}
 							}
 						}
-						// TODO: Generate stats automatically.
 					}
 				}
 			}
@@ -180,7 +180,7 @@ public final class PlayerTemplateData implements IXmlReader
 		return _playerTemplates.get(ClassId.getClassId(classId));
 	}
 	
-	public static PlayerTemplateData getInstance()
+	public static final PlayerTemplateData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

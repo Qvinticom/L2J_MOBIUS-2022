@@ -21,9 +21,10 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
@@ -44,9 +45,22 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class Blink extends AbstractEffect
 {
-	public Blink(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	private final int _flyCourse;
+	private final int _flyRadius;
+	
+	private final FlyType _flyType;
+	private final int _flySpeed;
+	private final int _flyDelay;
+	private final int _animationSpeed;
+	
+	public Blink(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
+		_flyCourse = params.getInt("angle", 0);
+		_flyRadius = params.getInt("range", 0);
+		_flyType = params.getEnum("flyType", FlyType.class, FlyType.DUMMY);
+		_flySpeed = params.getInt("speed", 0);
+		_flyDelay = params.getInt("delay", 0);
+		_animationSpeed = params.getInt("animationSpeed", 0);
 	}
 	
 	@Override
@@ -56,27 +70,31 @@ public final class Blink extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public boolean canStart(BuffInfo info)
 	{
-		final L2Character effected = info.getEffected();
-		final int radius = info.getSkill().getFlyRadius();
+		// While affected by escape blocking effect you cannot use Blink or Scroll of Escape
+		return !info.getEffected().cannotEscape();
+	}
+	
+	@Override
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	{
 		final double angle = Util.convertHeadingToDegree(effected.getHeading());
 		final double radian = Math.toRadians(angle);
-		final double course = Math.toRadians(info.getSkill().getFlyCourse());
-		final int x1 = (int) (Math.cos(Math.PI + radian + course) * radius);
-		final int y1 = (int) (Math.sin(Math.PI + radian + course) * radius);
+		final double course = Math.toRadians(_flyCourse);
+		final int x1 = (int) (Math.cos(Math.PI + radian + course) * _flyRadius);
+		final int y1 = (int) (Math.sin(Math.PI + radian + course) * _flyRadius);
 		
 		final int x = effected.getX() + x1;
 		final int y = effected.getY() + y1;
 		final int z = effected.getZ();
 		
-		final Location destination = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceId());
+		final Location destination = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceWorld());
 		
 		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		effected.broadcastPacket(new FlyToLocation(effected, destination, FlyType.DUMMY));
-		effected.abortAttack();
-		effected.abortCast();
+		effected.broadcastPacket(new FlyToLocation(effected, destination, _flyType, _flySpeed, _flyDelay, _animationSpeed));
 		effected.setXYZ(destination);
 		effected.broadcastPacket(new ValidateLocation(effected));
+		effected.revalidateZone(true);
 	}
 }

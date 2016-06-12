@@ -21,10 +21,9 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -34,9 +33,8 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RebalanceHP extends AbstractEffect
 {
-	public RebalanceHP(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public RebalanceHP(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -52,98 +50,145 @@ public final class RebalanceHP extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (!info.getEffector().isPlayer() || !info.getEffector().isInParty())
+		if (!effector.isPlayer())
 		{
 			return;
 		}
 		
 		double fullHP = 0;
 		double currentHPs = 0;
-		final L2Party party = info.getEffector().getParty();
-		final Skill skill = info.getSkill();
-		final L2Character effector = info.getEffector();
-		for (L2PcInstance member : party.getMembers())
+		final L2Party party = effector.getParty();
+		
+		switch (skill.getTargetType())
 		{
-			if (!member.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, member, true))
+			case MY_PARTY:
 			{
-				fullHP += member.getMaxHp();
-				currentHPs += member.getCurrentHp();
+				if (party != null)
+				{
+					for (L2PcInstance member : party.getMembers())
+					{
+						if (!member.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, member, true))
+						{
+							fullHP += member.getMaxHp();
+							currentHPs += member.getCurrentHp();
+						}
+						
+						final L2Summon summon = member.getPet();
+						if ((summon != null) && (!summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true)))
+						{
+							fullHP += summon.getMaxHp();
+							currentHPs += summon.getCurrentHp();
+						}
+						
+						for (L2Summon servitors : member.getServitors().values())
+						{
+							fullHP += servitors.getMaxHp();
+							currentHPs += servitors.getCurrentHp();
+						}
+					}
+					
+					final double percentHP = currentHPs / fullHP;
+					for (L2PcInstance member : party.getMembers())
+					{
+						if (!member.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, member, true))
+						{
+							double newHP = member.getMaxHp() * percentHP;
+							if (newHP > member.getCurrentHp()) // The target gets healed
+							{
+								// The heal will be blocked if the current hp passes the limit
+								if (member.getCurrentHp() > member.getMaxRecoverableHp())
+								{
+									newHP = member.getCurrentHp();
+								}
+								else if (newHP > member.getMaxRecoverableHp())
+								{
+									newHP = member.getMaxRecoverableHp();
+								}
+							}
+							
+							member.setCurrentHp(newHP);
+						}
+						
+						final L2Summon summon = member.getPet();
+						if ((summon != null) && (!summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true)))
+						{
+							double newHP = summon.getMaxHp() * percentHP;
+							if (newHP > summon.getCurrentHp()) // The target gets healed
+							{
+								// The heal will be blocked if the current hp passes the limit
+								if (summon.getCurrentHp() > summon.getMaxRecoverableHp())
+								{
+									newHP = summon.getCurrentHp();
+								}
+								else if (newHP > summon.getMaxRecoverableHp())
+								{
+									newHP = summon.getMaxRecoverableHp();
+								}
+							}
+							summon.setCurrentHp(newHP);
+						}
+						
+						for (L2Summon servitors : member.getServitors().values())
+						{
+							if (!servitors.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true))
+							{
+								double newHP = servitors.getMaxHp() * percentHP;
+								if (newHP > servitors.getCurrentHp()) // The target gets healed
+								{
+									// The heal will be blocked if the current hp passes the limit
+									if (servitors.getCurrentHp() > servitors.getMaxRecoverableHp())
+									{
+										newHP = servitors.getCurrentHp();
+									}
+									else if (newHP > servitors.getMaxRecoverableHp())
+									{
+										newHP = servitors.getMaxRecoverableHp();
+									}
+								}
+								servitors.setCurrentHp(newHP);
+							}
+						}
+					}
+				}
+				break;
 			}
-			
-			final L2Summon summon = member.getPet();
-			if ((summon != null) && !summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true))
+			case SUMMON:
 			{
-				fullHP += summon.getMaxHp();
-				currentHPs += summon.getCurrentHp();
-			}
-			
-			for (L2Summon servitors : member.getServitors().values())
-			{
-				fullHP += servitors.getMaxHp();
-				currentHPs += servitors.getCurrentHp();
+				for (L2Summon summon : effector.getServitors().values())
+				{
+					if (!summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true))
+					{
+						fullHP += summon.getMaxHp();
+						currentHPs += summon.getCurrentHp();
+					}
+				}
+				
+				final double percentHP = currentHPs / fullHP;
+				for (L2Summon summon : effector.getServitors().values())
+				{
+					if (!summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true))
+					{
+						double newHP = summon.getMaxHp() * percentHP;
+						if (newHP > summon.getCurrentHp()) // The target gets healed
+						{
+							// The heal will be blocked if the current hp passes the limit
+							if (summon.getCurrentHp() > summon.getMaxRecoverableHp())
+							{
+								newHP = summon.getCurrentHp();
+							}
+							else if (newHP > summon.getMaxRecoverableHp())
+							{
+								newHP = summon.getMaxRecoverableHp();
+							}
+						}
+						
+						summon.setCurrentHp(newHP);
+					}
+				}
 			}
 		}
 		
-		for (L2PcInstance member : party.getMembers())
-		{
-			if (!member.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, member, true))
-			{
-				double newHP = (member.getMaxHp() * currentHPs) / fullHP;
-				if (newHP > member.getCurrentHp()) // The target gets healed
-				{
-					// The heal will be blocked if the current hp passes the limit
-					if (member.getCurrentHp() > member.getMaxRecoverableHp())
-					{
-						newHP = member.getCurrentHp();
-					}
-					else if (newHP > member.getMaxRecoverableHp())
-					{
-						newHP = member.getMaxRecoverableHp();
-					}
-				}
-				member.setCurrentHp(newHP);
-			}
-			final L2Summon summon = member.getPet();
-			if ((summon != null) && !summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true))
-			{
-				double newHP = (summon.getMaxHp() * currentHPs) / fullHP;
-				if (newHP > summon.getCurrentHp()) // The target gets healed
-				{
-					// The heal will be blocked if the current hp passes the limit
-					if (summon.getCurrentHp() > summon.getMaxRecoverableHp())
-					{
-						newHP = summon.getCurrentHp();
-					}
-					else if (newHP > summon.getMaxRecoverableHp())
-					{
-						newHP = summon.getMaxRecoverableHp();
-					}
-				}
-				summon.setCurrentHp(newHP);
-			}
-			
-			for (L2Summon servitors : member.getServitors().values())
-			{
-				if (!servitors.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true))
-				{
-					double newHP = (servitors.getMaxHp() * currentHPs) / fullHP;
-					if (newHP > servitors.getCurrentHp()) // The target gets healed
-					{
-						// The heal will be blocked if the current hp passes the limit
-						if (servitors.getCurrentHp() > servitors.getMaxRecoverableHp())
-						{
-							newHP = servitors.getCurrentHp();
-						}
-						else if (newHP > servitors.getMaxRecoverableHp())
-						{
-							newHP = servitors.getMaxRecoverableHp();
-						}
-					}
-					servitors.setCurrentHp(newHP);
-				}
-			}
-		}
 	}
 }

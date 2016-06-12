@@ -16,102 +16,44 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.enums.EffectCalculationType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.stat.CharStat;
-import com.l2jmobius.gameserver.model.conditions.Condition;
-import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
-import com.l2jmobius.gameserver.model.stats.functions.FuncAdd;
-import com.l2jmobius.gameserver.model.stats.functions.FuncMul;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * @author Zealar
+ * @author NosBit
  */
-public final class MaxHp extends AbstractEffect
+public class MaxHp extends AbstractStatEffect
 {
-	private final double _power;
-	private final EffectCalculationType _type;
 	private final boolean _heal;
 	
-	public MaxHp(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public MaxHp(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
+		super(params, Stats.MAX_HP);
 		
-		_type = params.getEnum("type", EffectCalculationType.class, EffectCalculationType.DIFF);
-		switch (_type)
-		{
-			case DIFF:
-			{
-				_power = params.getInt("power", 0);
-				break;
-			}
-			default:
-			{
-				_power = 1 + (params.getInt("power", 0) / 100.0);
-			}
-		}
 		_heal = params.getBoolean("heal", false);
-		
-		if (params.isEmpty())
-		{
-			_log.warning(getClass().getSimpleName() + ": must have parameters.");
-		}
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void continuousInstant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character effected = info.getEffected();
-		final CharStat charStat = effected.getStat();
-		final double currentHp = effected.getCurrentHp();
-		double amount = _power;
-		
-		synchronized (charStat)
+		if (_heal && !effected.isHpBlocked())
 		{
-			switch (_type)
+			switch (_mode)
 			{
 				case DIFF:
 				{
-					charStat.getActiveChar().addStatFunc(new FuncAdd(Stats.MAX_HP, 1, this, _power, null));
-					if (_heal)
-					{
-						effected.setCurrentHp(currentHp + _power);
-					}
+					effected.setCurrentHp(effected.getCurrentHp() + _amount);
 					break;
 				}
 				case PER:
 				{
-					final double maxHp = effected.getMaxHp();
-					charStat.getActiveChar().addStatFunc(new FuncMul(Stats.MAX_HP, 1, this, _power, null));
-					if (_heal)
-					{
-						amount = (_power - 1) * maxHp;
-						effected.setCurrentHp(currentHp + amount);
-					}
+					effected.setCurrentHp(effected.getCurrentHp() + (effected.getMaxHp() * (_amount / 100)));
 					break;
 				}
 			}
-		}
-		if (_heal)
-		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
-			sm.addInt((int) amount);
-			effected.sendPacket(sm);
-		}
-	}
-	
-	@Override
-	public void onExit(BuffInfo info)
-	{
-		final CharStat charStat = info.getEffected().getStat();
-		synchronized (charStat)
-		{
-			charStat.getActiveChar().removeStatsOwner(this);
 		}
 	}
 }

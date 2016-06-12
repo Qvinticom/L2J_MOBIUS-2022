@@ -17,9 +17,11 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutItemResultForVariationCancel;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -27,21 +29,21 @@ import com.l2jmobius.gameserver.util.Util;
  * Format(ch) d
  * @author -Wooden-
  */
-public final class RequestConfirmCancelItem extends L2GameClientPacket
+public final class RequestConfirmCancelItem implements IClientIncomingPacket
 {
-	private static final String _C__D0_42_REQUESTCONFIRMCANCELITEM = "[C] D0:42 RequestConfirmCancelItem";
 	private int _objectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
+		_objectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -54,7 +56,7 @@ public final class RequestConfirmCancelItem extends L2GameClientPacket
 		
 		if (item.getOwnerId() != activeChar.getObjectId())
 		{
-			Util.handleIllegalPlayerAction(getClient().getActiveChar(), "Warning!! Character " + getClient().getActiveChar().getName() + " of account " + getClient().getActiveChar().getAccountName() + " tryied to destroy augment on item that doesn't own.", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(client.getActiveChar(), "Warning!! Character " + client.getActiveChar().getName() + " of account " + client.getActiveChar().getAccountName() + " tryied to destroy augment on item that doesn't own.", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
@@ -74,7 +76,6 @@ public final class RequestConfirmCancelItem extends L2GameClientPacket
 		switch (item.getItem().getCrystalType())
 		{
 			case C:
-			{
 				if (item.getCrystalCount() < 1720)
 				{
 					price = 95000;
@@ -88,9 +89,7 @@ public final class RequestConfirmCancelItem extends L2GameClientPacket
 					price = 210000;
 				}
 				break;
-			}
 			case B:
-			{
 				if (item.getCrystalCount() < 1746)
 				{
 					price = 240000;
@@ -100,9 +99,7 @@ public final class RequestConfirmCancelItem extends L2GameClientPacket
 					price = 270000;
 				}
 				break;
-			}
 			case A:
-			{
 				if (item.getCrystalCount() < 2160)
 				{
 					price = 330000;
@@ -116,67 +113,19 @@ public final class RequestConfirmCancelItem extends L2GameClientPacket
 					price = 420000;
 				}
 				break;
-			}
 			case S:
-			{
-				if (item.getCrystalCount() <= 2052)
-				{
-					price = 480000;
-				}
-				else
-				{
-					price = 920000;
-				}
+				price = 480000;
 				break;
-			}
 			case S80:
 			case S84:
-			{
-				if (item.getCrystalCount() <= 4965)
-				{
-					price = 920000;
-				}
-				else if (item.getCrystalCount() <= 7050)
-				{
-					price = 2800000;
-				}
-				else if (item.getCrystalCount() <= 8233)
-				{
-					price = 2800000;
-				}
-				else
-				{
-					price = 3200000;
-				}
+				price = 920000;
 				break;
-			}
-			case R:
-			{
-				price = 3492800;
-				break;
-			}
-			case R95:
-			{
-				price = 2943200;
-				break;
-			}
-			case R99:
-			{
-				price = 6485800;
-				break;
-			}
+			// TODO: S84 TOP price 3.2M
+			// any other item type is not augmentable
 			default:
-			{
 				return;
-			}
 		}
 		
 		activeChar.sendPacket(new ExPutItemResultForVariationCancel(item, price));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_42_REQUESTCONFIRMCANCELITEM;
 	}
 }

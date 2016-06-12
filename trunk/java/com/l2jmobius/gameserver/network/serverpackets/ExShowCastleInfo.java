@@ -16,49 +16,56 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.List;
+import java.util.Collection;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import com.l2jmobius.gameserver.enums.TaxType;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.entity.Castle;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author KenM
  */
-public class ExShowCastleInfo extends L2GameServerPacket
+public class ExShowCastleInfo implements IClientOutgoingPacket
 {
-	public ExShowCastleInfo()
+	public static final ExShowCastleInfo STATIC_PACKET = new ExShowCastleInfo();
+	
+	private ExShowCastleInfo()
 	{
+		
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x14);
-		final List<Castle> castles = CastleManager.getInstance().getCastles();
-		writeD(castles.size());
+		OutgoingPackets.EX_SHOW_CASTLE_INFO.writeId(packet);
+		
+		final Collection<Castle> castles = CastleManager.getInstance().getCastles();
+		packet.writeD(castles.size());
 		for (Castle castle : castles)
 		{
-			writeD(castle.getResidenceId());
+			packet.writeD(castle.getResidenceId());
 			if (castle.getOwnerId() > 0)
 			{
 				if (ClanTable.getInstance().getClan(castle.getOwnerId()) != null)
 				{
-					writeS(ClanTable.getInstance().getClan(castle.getOwnerId()).getName());
+					packet.writeS(ClanTable.getInstance().getClan(castle.getOwnerId()).getName());
 				}
 				else
 				{
 					_log.warning("Castle owner with no name! Castle: " + castle.getName() + " has an OwnerId = " + castle.getOwnerId() + " who does not have a  name!");
-					writeS("");
+					packet.writeS("");
 				}
 			}
 			else
 			{
-				writeS("");
+				packet.writeS("");
 			}
-			writeD(castle.getTaxPercent());
-			writeD((int) (castle.getSiege().getSiegeDate().getTimeInMillis() / 1000));
+			packet.writeD(castle.getTaxPercent(TaxType.BUY));
+			packet.writeD((int) (castle.getSiege().getSiegeDate().getTimeInMillis() / 1000));
 		}
+		return true;
 	}
 }

@@ -106,12 +106,13 @@ public class AdminLogin implements IAdminCommandHandler
 					Config.SERVER_LIST_TYPE = newType;
 					LoginServerThread.getInstance().sendServerType();
 					activeChar.sendMessage("Server Type changed to " + getServerTypeName(newType));
+					showMainPage(activeChar);
 				}
 				else
 				{
 					activeChar.sendMessage("Server Type is already " + getServerTypeName(newType));
+					showMainPage(activeChar);
 				}
-				showMainPage(activeChar);
 			}
 			else
 			{
@@ -134,12 +135,13 @@ public class AdminLogin implements IAdminCommandHandler
 						Config.SERVER_LIST_TYPE = age;
 						LoginServerThread.getInstance().sendServerStatus(ServerStatus.SERVER_AGE, age);
 						activeChar.sendMessage("Server Age changed to " + age);
+						showMainPage(activeChar);
 					}
 					else
 					{
 						activeChar.sendMessage("Server Age is already " + age);
+						showMainPage(activeChar);
 					}
-					showMainPage(activeChar);
 				}
 				catch (NumberFormatException e)
 				{
@@ -163,8 +165,8 @@ public class AdminLogin implements IAdminCommandHandler
 	 */
 	private void showMainPage(L2PcInstance activeChar)
 	{
-		final NpcHtmlMessage html = new NpcHtmlMessage();
-		html.setFile(activeChar.getHtmlPrefix(), "html/admin/login.htm");
+		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
+		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/login.htm");
 		html.replace("%server_name%", LoginServerThread.getInstance().getServerName());
 		html.replace("%status%", LoginServerThread.getInstance().getStatusString());
 		html.replace("%clock%", getServerTypeName(Config.SERVER_LIST_TYPE));
@@ -190,40 +192,26 @@ public class AdminLogin implements IAdminCommandHandler
 				switch (currentType)
 				{
 					case 0x01:
-					{
 						nameType += "Normal";
 						break;
-					}
 					case 0x02:
-					{
 						nameType += "Relax";
 						break;
-					}
 					case 0x04:
-					{
 						nameType += "Test";
 						break;
-					}
 					case 0x08:
-					{
 						nameType += "NoLabel";
 						break;
-					}
 					case 0x10:
-					{
 						nameType += "Restricted";
 						break;
-					}
 					case 0x20:
-					{
 						nameType += "Event";
 						break;
-					}
 					case 0x40:
-					{
 						nameType += "Free";
 						break;
-					}
 				}
 			}
 		}

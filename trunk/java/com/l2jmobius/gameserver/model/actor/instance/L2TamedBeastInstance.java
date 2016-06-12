@@ -22,10 +22,11 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;
@@ -33,11 +34,11 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.StopMove;
-import com.l2jmobius.util.Rnd;
 
 // While a tamed beast behaves a lot like a pet (ingame) and does have
 // an owner, in all other aspects, it acts like a mob.
@@ -142,20 +143,18 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 	
 	public void setFoodType(int foodItemId)
 	{
-		if (foodItemId <= 0)
+		if (foodItemId > 0)
 		{
-			return;
+			_foodSkillId = foodItemId;
+			
+			// start the duration checks
+			// start the buff tasks
+			if (_durationCheckTask != null)
+			{
+				_durationCheckTask.cancel(true);
+			}
+			_durationCheckTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new CheckDuration(this), DURATION_CHECK_INTERVAL, DURATION_CHECK_INTERVAL);
 		}
-		
-		_foodSkillId = foodItemId;
-		
-		// start the duration checks
-		// start the buff tasks
-		if (_durationCheckTask != null)
-		{
-			_durationCheckTask.cancel(true);
-		}
-		_durationCheckTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new CheckDuration(this), DURATION_CHECK_INTERVAL, DURATION_CHECK_INTERVAL);
 	}
 	
 	@Override
@@ -219,7 +218,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 		for (Skill skill : _beastSkills)
 		{
 			ThreadPoolManager.getInstance().scheduleGeneral(new buffCast(skill), delay);
-			delay += 100 + skill.getHitTime();
+			delay += (100 + skill.getHitTime());
 		}
 		ThreadPoolManager.getInstance().scheduleGeneral(new buffCast(null), delay);
 	}
@@ -236,13 +235,13 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 		@Override
 		public void run()
 		{
-			if (_skill != null)
+			if (_skill == null)
 			{
-				sitCastAndFollow(_skill, _owner);
+				getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, _owner);
 			}
 			else
 			{
-				getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, _owner);
+				sitCastAndFollow(_skill, _owner);
 			}
 		}
 	}
@@ -348,12 +347,12 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 		}
 		
 		// if the tamed beast is currently in the middle of casting, let it complete its skill...
-		if (isCastingNow())
+		if (isCastingNow(SkillCaster::isAnyNormalType))
 		{
 			return;
 		}
 		
-		final float HPRatio = (float) _owner.getCurrentHp() / _owner.getMaxHp();
+		final float HPRatio = ((float) _owner.getCurrentHp()) / _owner.getMaxHp();
 		
 		// if the owner has a lot of HP, then debuff the enemy with a random debuff among the available skills
 		// use of more than one debuff at this moment is acceptable
@@ -362,7 +361,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 			for (Skill skill : getTemplate().getSkills().values())
 			{
 				// if the skill is a debuff, check if the attacker has it already [ attacker.getEffect(L2Skill skill) ]
-				if (skill.isDebuff() && (Rnd.get(3) < 1) && (attacker != null) && attacker.isAffectedBySkill(skill.getId()))
+				if (skill.isDebuff() && (Rnd.get(3) < 1) && ((attacker != null) && attacker.isAffectedBySkill(skill.getId())))
 				{
 					sitCastAndFollow(skill, attacker);
 				}
@@ -372,9 +371,17 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 		// for lower HP ranges, heal or recharge the owner with 1 skill use per attack.
 		else if (HPRatio < 0.5)
 		{
+			int chance = 1;
+			if (HPRatio < 0.25)
+			{
+				chance = 2;
+			}
+			
+			// if the owner has a lot of HP, then debuff the enemy with a random debuff among the available skills
 			for (Skill skill : getTemplate().getSkills().values())
 			{
-				if ((Rnd.get(5) < (HPRatio < 0.25 ? 2 : 1)) && skill.hasEffectType(L2EffectType.CPHEAL, L2EffectType.HEAL, L2EffectType.MANAHEAL_BY_LEVEL, L2EffectType.MANAHEAL_PERCENT))
+				// if the skill is a buff, check if the owner has it already [ owner.getEffect(L2Skill skill) ]
+				if ((Rnd.get(5) < chance) && skill.hasEffectType(L2EffectType.CPHEAL, L2EffectType.HEAL, L2EffectType.MANAHEAL_BY_LEVEL, L2EffectType.MANAHEAL_PERCENT))
 				{
 					sitCastAndFollow(skill, _owner);
 				}
@@ -450,21 +457,20 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 				{
 					final L2Object oldTarget = owner.getTarget();
 					owner.setTarget(_tamedBeast);
-					final L2Object[] targets =
-					{
-						_tamedBeast
-					};
 					
 					// emulate a call to the owner using food, but bypass all checks for range, etc
 					// this also causes a call to the AI tasks handling feeding, which may call onReceiveFood as required.
-					owner.callSkill(SkillData.getInstance().getSkill(foodTypeSkillId, 1), targets);
+					SkillCaster.triggerCast(owner, _tamedBeast, SkillData.getInstance().getSkill(foodTypeSkillId, 1));
 					owner.setTarget(oldTarget);
 				}
-				// if the owner has no food, the beast immediately despawns, except when it was only
-				// newly spawned. Newly spawned beasts can last up to 5 minutes
-				else if (_tamedBeast.getRemainingTime() < (MAX_DURATION - 300000))
+				else
 				{
-					_tamedBeast.setRemainingTime(-1);
+					// if the owner has no food, the beast immediately despawns, except when it was only
+					// newly spawned. Newly spawned beasts can last up to 5 minutes
+					if (_tamedBeast.getRemainingTime() < (MAX_DURATION - 300000))
+					{
+						_tamedBeast.setRemainingTime(-1);
+					}
 				}
 				// There are too many conflicting reports about whether distance from home should be taken into consideration. Disabled for now.
 				// if (_tamedBeast.isTooFarFromHome())
@@ -512,7 +518,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 				return;
 			}
 			// if the tamed beast is currently casting a spell, do not interfere (do not attempt to cast anything new yet).
-			if (isCastingNow())
+			if (isCastingNow(SkillCaster::isAnyNormalType))
 			{
 				return;
 			}

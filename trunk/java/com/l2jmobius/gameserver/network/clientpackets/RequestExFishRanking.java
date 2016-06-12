@@ -16,42 +16,24 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * Format: (ch) just a trigger
  * @author -Wooden-
  */
-public final class RequestExFishRanking extends L2GameClientPacket
+public final class RequestExFishRanking implements IClientIncomingPacket
 {
-	private static final String _C__D0_18_REQUESTEXFISHRANKING = "[C] D0:18 RequestExFishRanking";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		
-		if (Config.ALT_FISH_CHAMPIONSHIP_ENABLED)
-		{
-			FishingChampionshipManager.getInstance().showMidResult(activeChar);
-		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_18_REQUESTEXFISHRANKING;
+		_log.info("C5: RequestExFishRanking");
 	}
 }

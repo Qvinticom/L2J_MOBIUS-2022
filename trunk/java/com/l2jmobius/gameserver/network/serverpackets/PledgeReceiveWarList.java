@@ -16,45 +16,52 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import java.util.Collection;
+
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.model.ClanWar;
 import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author -Wooden-
  */
-public class PledgeReceiveWarList extends L2GameServerPacket
+public class PledgeReceiveWarList implements IClientOutgoingPacket
 {
 	private final L2Clan _clan;
 	private final int _tab;
+	private final Collection<ClanWar> _clanList;
 	
 	public PledgeReceiveWarList(L2Clan clan, int tab)
 	{
 		_clan = clan;
 		_tab = tab;
+		_clanList = clan.getWarList().values();
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x40);
+		OutgoingPackets.PLEDGE_RECEIVE_WAR_LIST.writeId(packet);
 		
-		writeD(0x00); // page ?
-		writeD(_tab == 0 ? _clan.getWarList().size() : _clan.getAttackerList().size());
-		for (Integer i : _tab == 0 ? _clan.getWarList() : _clan.getAttackerList())
+		packet.writeD(_tab); // page
+		packet.writeD(_clanList.size());
+		for (ClanWar clanWar : _clanList)
 		{
-			final L2Clan clan = ClanTable.getInstance().getClan(i);
+			final L2Clan clan = clanWar.getOpposingClan(_clan);
+			
 			if (clan == null)
 			{
 				continue;
 			}
 			
-			writeS(clan.getName());
-			writeD(_tab); // ??
-			writeD(0x00); // TODO: Find me
-			writeD(0x00); // TODO: Find me
-			writeD(0x00); // TODO: Find me
-			writeD(0x00); // TODO: Find me
+			packet.writeS(clan.getName());
+			packet.writeD(clanWar.getState().ordinal()); // type: 0 = Declaration, 1 = Blood Declaration, 2 = In War, 3 = Victory, 4 = Defeat, 5 = Tie, 6 = Error
+			packet.writeD(clanWar.getRemainingTime()); // Time if friends to start remaining
+			packet.writeD(clanWar.getKillDifference(_clan)); // Score
+			packet.writeD(0); // @TODO: Recent change in points
+			packet.writeD(clanWar.getKillToStart()); // Friends to start war left
 		}
+		return true;
 	}
 }

@@ -24,51 +24,67 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
 /**
- * @author NviX
+ * Block the Exit (760)
+ * @author St3eT
  */
-public class Q00760_BlockTheExit extends Quest
+public final class Q00760_BlockTheExit extends Quest
 {
-	// NPC
+	// NPCs
 	private static final int KURTIZ = 30870;
-	// Monsters
 	private static final int DARK_RIDER = 26102;
 	// Items
-	private static final int CURTIZ_REWARD_BOX = 46560;
+	private static final int REWARD_BOX = 46560; // Curtiz's Reward Box
 	// Misc
 	private static final int MIN_LEVEL = 99;
-	private static final int MAX_LEVEL = 105;
 	
 	public Q00760_BlockTheExit()
 	{
-		super(760, Q00760_BlockTheExit.class.getSimpleName(), "Block the Exit");
+		super(760);
 		addStartNpc(KURTIZ);
 		addTalkId(KURTIZ);
 		addKillId(DARK_RIDER);
-		addCondMinLevel(MIN_LEVEL, "no_level.html");
-		addCondMaxLevel(MAX_LEVEL, "no_level.html");
+		addCondMinLevel(MIN_LEVEL, "30870-07.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final String htmltext = event;
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
-			return getNoQuestMsg(player);
+			return null;
 		}
 		
+		String htmltext = null;
 		switch (event)
 		{
-			case "30870-7.html":
+			case "30870-02.htm":
+			case "30870-03.htm":
 			{
-				qs.startQuest();
+				htmltext = event;
 				break;
 			}
-			case "30870-8.html":
+			case "30870-04.html":
 			{
-				giveItems(player, CURTIZ_REWARD_BOX, 1);
-				qs.exitQuest(QuestType.DAILY, true);
+				st.startQuest();
+				htmltext = event;
+				break;
+			}
+			case "30870-06.html":
+			{
+				if (st.isCond(1))
+				{
+					if (player.getLevel() >= MIN_LEVEL)
+					{
+						st.exitQuest(QuestType.DAILY, true);
+						giveItems(player, REWARD_BOX, 1);
+						htmltext = event;
+					}
+					else
+					{
+						htmltext = getNoQuestLevelRewardMsg(player);
+					}
+				}
 				break;
 			}
 		}
@@ -76,42 +92,55 @@ public class Q00760_BlockTheExit extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
-		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
+		final QuestState st = getQuestState(player, true);
+		String htmltext = null;
 		
-		if (qs.isCreated())
+		switch (st.getState())
 		{
-			htmltext = "30870-1.html";
-		}
-		else if (qs.isStarted())
-		{
-			if (qs.isCond(1))
+			case State.CREATED:
 			{
-				htmltext = "30870-4.html";
+				htmltext = "30870-01.htm";
+				break;
 			}
-			else if (qs.isCond(2))
+			case State.STARTED:
 			{
-				htmltext = "30870-5.html";
+				htmltext = st.isCond(2) ? "30870-05.html" : "30870-04.html";
+				break;
 			}
-		}
-		else if (qs.isCompleted())
-		{
-			if (!qs.isNowAvailable())
+			case State.COMPLETED:
 			{
-				htmltext = "30870-6.html";
-			}
-			else
-			{
-				qs.setState(State.CREATED);
-				htmltext = "30870-1.html";
+				if (st.isNowAvailable())
+				{
+					st.setState(State.CREATED);
+					htmltext = "30870-01.htm";
+				}
+				else
+				{
+					htmltext = getAlreadyCompletedMsg(player, QuestType.DAILY);
+				}
+				break;
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	{
+		executeForEachPlayer(killer, npc, isSummon, true, false);
+		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
+	{
+		final QuestState st = getQuestState(player, false);
+		if ((st != null) && st.isCond(1))
+		{
+			st.setCond(2, true);
+		}
+		super.actionForEachPlayer(player, npc, isSummon);
 	}
 }

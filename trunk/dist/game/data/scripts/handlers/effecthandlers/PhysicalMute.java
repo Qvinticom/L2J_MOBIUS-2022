@@ -18,10 +18,10 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Physical Mute effect implementation.
@@ -29,20 +29,19 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class PhysicalMute extends AbstractEffect
 {
-	public PhysicalMute(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public PhysicalMute(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public int getEffectFlags()
+	public long getEffectFlags()
 	{
 		return EffectFlag.PSYCHICAL_MUTED.getMask();
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_MUTED);
+		effected.getAI().notifyEvent(CtrlEvent.EVT_MUTED);
 	}
 }

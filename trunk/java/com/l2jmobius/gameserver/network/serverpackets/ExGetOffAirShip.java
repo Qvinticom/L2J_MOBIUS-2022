@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class ExGetOffAirShip extends L2GameServerPacket
+public class ExGetOffAirShip implements IClientOutgoingPacket
 {
 	private final int _playerId, _airShipId, _x, _y, _z;
 	
@@ -32,15 +34,15 @@ public class ExGetOffAirShip extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x65);
+		OutgoingPackets.EX_GET_OFF_AIR_SHIP.writeId(packet);
 		
-		writeD(_playerId);
-		writeD(_airShipId);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
+		packet.writeD(_playerId);
+		packet.writeD(_airShipId);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		return true;
 	}
 }

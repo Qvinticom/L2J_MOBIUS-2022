@@ -22,16 +22,13 @@ import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.model.zone.type.NpcSpawnTerritory;
+import com.l2jmobius.gameserver.model.zone.type.L2SpawnTerritory;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * Small typo fix by Zoey76 24/02/2011
@@ -89,7 +86,7 @@ public class AdminZone implements IAdminCommandHandler
 				{
 					zone.visualizeZone(activeChar.getZ());
 				}
-				for (NpcSpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
+				for (L2SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
 				{
 					territory.visualizeZone(activeChar.getZ());
 				}
@@ -97,7 +94,8 @@ public class AdminZone implements IAdminCommandHandler
 			}
 			else
 			{
-				ZoneManager.getInstance().getZoneById(Integer.parseInt(next)).visualizeZone(activeChar.getZ());
+				final int zoneId = Integer.parseInt(next);
+				ZoneManager.getInstance().getZoneById(zoneId).visualizeZone(activeChar.getZ());
 			}
 		}
 		else if (actualCommand.equalsIgnoreCase("admin_zone_visual_clear"))
@@ -110,8 +108,8 @@ public class AdminZone implements IAdminCommandHandler
 	
 	private static void showHtml(L2PcInstance activeChar)
 	{
-		final String htmContent = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/zone.htm");
-		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
+		final String htmContent = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/zone.htm");
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		adminReply.setHtml(htmContent);
 		adminReply.replace("%PEACE%", activeChar.isInsideZone(ZoneId.PEACE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
 		adminReply.replace("%PVP%", activeChar.isInsideZone(ZoneId.PVP) ? "<font color=\"LEVEL\">YES</font>" : "NO");
@@ -130,30 +128,34 @@ public class AdminZone implements IAdminCommandHandler
 		adminReply.replace("%DANGER%", activeChar.isInsideZone(ZoneId.DANGER_AREA) ? "<font color=\"LEVEL\">YES</font>" : "NO");
 		adminReply.replace("%NOSTORE%", activeChar.isInsideZone(ZoneId.NO_STORE) ? "<font color=\"LEVEL\">YES</font>" : "NO");
 		adminReply.replace("%SCRIPT%", activeChar.isInsideZone(ZoneId.SCRIPT) ? "<font color=\"LEVEL\">YES</font>" : "NO");
+		
 		final StringBuilder zones = new StringBuilder(100);
-		final L2WorldRegion region = L2World.getInstance().getRegion(activeChar.getX(), activeChar.getY());
-		for (L2ZoneType zone : region.getZones())
+		for (L2ZoneType zone : ZoneManager.getInstance().getRegion(activeChar).getZones().values())
 		{
 			if (zone.isCharacterInZone(activeChar))
 			{
 				if (zone.getName() != null)
 				{
-					StringUtil.append(zones, zone.getName() + "<br1>");
+					zones.append(zone.getName());
+					zones.append("<br1>");
 					if (zone.getId() < 300000)
 					{
-						StringUtil.append(zones, "(", String.valueOf(zone.getId()), ")");
+						zones.append("(");
+						zones.append(zone.getId());
+						zones.append(")");
 					}
 				}
 				else
 				{
-					StringUtil.append(zones, String.valueOf(zone.getId()));
+					zones.append(zone.getId());
 				}
-				StringUtil.append(zones, " ");
+				zones.append(" ");
 			}
 		}
-		for (NpcSpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
+		for (L2SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
 		{
-			StringUtil.append(zones, territory.getName() + "<br1>");
+			zones.append(territory.getName());
+			zones.append("<br1>");
 		}
 		adminReply.replace("%ZLIST%", zones.toString());
 		activeChar.sendPacket(adminReply);

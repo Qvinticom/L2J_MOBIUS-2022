@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets.commission;
 
-import java.util.List;
+import java.util.Collection;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
 
 /**
@@ -26,22 +28,23 @@ import com.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
  */
 public class ExResponseCommissionItemList extends AbstractItemPacket
 {
-	private final List<L2ItemInstance> _items;
+	private final Collection<L2ItemInstance> _items;
 	
-	public ExResponseCommissionItemList(List<L2ItemInstance> items)
+	public ExResponseCommissionItemList(Collection<L2ItemInstance> items)
 	{
 		_items = items;
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xF3);
-		writeD(_items.size());
+		OutgoingPackets.EX_RESPONSE_COMMISSION_ITEM_LIST.writeId(packet);
+		
+		packet.writeD(_items.size());
 		for (L2ItemInstance itemInstance : _items)
 		{
-			writeItem(itemInstance);
+			writeItem(packet, itemInstance);
 		}
+		return true;
 	}
 }

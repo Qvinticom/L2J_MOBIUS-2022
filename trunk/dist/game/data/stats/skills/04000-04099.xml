@@ -1,1977 +1,3929 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<!-- 5 Talisman can be equipped. --> 
-	<skill id="4000" levels="1" name="Returning Warrior's Bracelet">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="4000" toLevel="1" name="Returning Warrior's Bracelet">
+		<!-- Glory Days confirmed -->
+		<!-- 5 Talisman can be equipped. -->
+		<icon>icon.high_agathion_bracelet_i01</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>2</slots>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4001" levels="12" name="Gust">
+	<skill id="4001" toLevel="12" name="Gust">
 		<!-- Freya retail confirmed -->
-		<table name="#hitTime"> 4000 4000 4000 4000 4000 4000 4000 1000 1000 1000 1000 1000 </table>
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
 		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="element" val="2" /> <!-- Wind -->
-		<set name="elementPower" val="20" />
-		<set name="hitTime" val="#hitTime" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="MagicalAttack" />
-		</for>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<attributeType>WIND</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>
+			<value level="1">4000</value>
+			<value level="2">4000</value>
+			<value level="3">4000</value>
+			<value level="4">4000</value>
+			<value level="5">4000</value>
+			<value level="6">4000</value>
+			<value level="7">4000</value>
+			<value level="8">1000</value>
+			<value level="9">1000</value>
+			<value level="10">1000</value>
+			<value level="11">1000</value>
+			<value level="12">1000</value>
+		</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">18</value>
+					<value level="2">26</value>
+					<value level="3">38</value>
+					<value level="4">52</value>
+					<value level="5">68</value>
+					<value level="6">85</value>
+					<value level="7">102</value>
+					<value level="8">110</value>
+					<value level="9">116</value>
+					<value level="10">122</value>
+					<value level="11">126</value>
+					<value level="12">129</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4002" levels="12" name="Blood Siphon">
+	<skill id="4002" toLevel="12" name="Blood Siphon">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 17 28 38 49 63 78 92 97 102 105 108 109 </table>
 		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">17</value>
+			<value level="2">28</value>
+			<value level="3">38</value>
+			<value level="4">49</value>
+			<value level="5">63</value>
+			<value level="6">78</value>
+			<value level="7">92</value>
+			<value level="8">97</value>
+			<value level="9">102</value>
+			<value level="10">105</value>
+			<value level="11">108</value>
+			<value level="12">109</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="HpDrain">
-				<param power="0.2" />
+				<power>
+					<value level="1">18</value>
+					<value level="2">26</value>
+					<value level="3">38</value>
+					<value level="4">52</value>
+					<value level="5">68</value>
+					<value level="6">85</value>
+					<value level="7">102</value>
+					<value level="8">110</value>
+					<value level="9">116</value>
+					<value level="10">122</value>
+					<value level="11">126</value>
+					<value level="12">129</value>
+				</power>
+				<percentage>20</percentage>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4003" levels="1" name="Golem Body">
+	<skill id="4003" toLevel="1" name="Golem Body">
 		<!-- Freya retail confirmed -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param BOW="70" />
-				<param DAGGER="30" />
-				<param BLUNT="-10" />
-				<param DUALDAGGER="30" />
+				<BOW>70</BOW>
+				<BLUNT>-10</BLUNT>
+				<DAGGER>30</DAGGER>
+				<DUALDAGGER>30</DUALDAGGER>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4004" levels="1" name="Fragile Skull">
+	<skill id="4004" toLevel="1" name="Fragile Skull">
 		<!-- Freya retail confirmed -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param BLUNT="-10" />
+				<BLUNT>-10</BLUNT>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4005" levels="1" name="Floating Target">
+	<skill id="4005" toLevel="1" name="Floating Target">
 		<!-- Freya retail confirmed -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<sub stat="windRes" val="15" />
-			</effect>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param BOW="-10" />
+				<BOW>-10</BOW>
 			</effect>
-		</for>
+			<effect name="DefenceAttribute">
+				<amount>-15</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4006" levels="1" name="Burning Wood">
+	<skill id="4006" toLevel="1" name="Burning Wood">
 		<!-- Freya retail confirmed -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<sub stat="fireRes" val="15" />
-			</effect>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param POISON="50" />
+				<POISON>50</POISON>
 			</effect>
-		</for>
+			<effect name="DefenceAttribute">
+				<amount>-15</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4007" levels="1" name="Immortal Life">
+	<skill id="4007" toLevel="1" name="Immortal Life">
 		<!-- Freya retail confirmed -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="holyRes" val="20" />
-				<sub stat="darkPower" val="20" />
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>HOLY</attribute>
 			</effect>
-		</for>
+			<effect name="AttackAttribute">
+				<amount>-20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4008" levels="1" name="Insect Skin">
+	<skill id="4008" toLevel="1" name="Insect Skin">
 		<!-- Freya retail confirmed -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<sub stat="fireRes" val="15" />
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>-15</amount>
+				<attribute>FIRE</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4009" levels="5" name="Fire Resistance">
+	<skill id="4009" toLevel="5" name="Fire Resistance">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.skill4009" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4009</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4010" levels="5" name="Water Resistance">
+	<skill id="4010" toLevel="5" name="Water Resistance">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.skill4010" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4010</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4011" levels="5" name="Wind Resistance">
+	<skill id="4011" toLevel="5" name="Wind Resistance">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.skill4011" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4011</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4012" levels="5" name="Earth Resistance">
+	<skill id="4012" toLevel="5" name="Earth Resistance">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.skill4012" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4012</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4013" levels="1" name="Resistance To Fire, Vulnerable To Water">
+	<skill id="4013" toLevel="1" name="Resistance To Fire, Vulnerable To Water">
 		<!-- Confirmed CT2.5 -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4014" levels="1" name="Resistance To Water, Vulnerable To Fire">
+	<skill id="4014" toLevel="1" name="Resistance To Water, Vulnerable To Fire">
 		<!-- Confirmed CT2.5 -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4015" levels="1" name="Resistance To Wind, Vulnerable To Earth">
+	<skill id="4015" toLevel="1" name="Resistance To Wind, Vulnerable To Earth">
 		<!-- Confirmed CT2.5 -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4016" levels="1" name="Resistance To Earth, Vulnerable To Wind">
+	<skill id="4016" toLevel="1" name="Resistance To Earth, Vulnerable To Wind">
 		<!-- Confirmed CT2.5 -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4017" levels="1" name="Queen Ant's Blow">
+	<skill id="4017" toLevel="1" name="Queen Ant's Blow">
 		<!-- Confirmed CT2.5 -->
 		<!-- Queen Ant Skills -->
-		<set name="affectRange" val="250" />
-		<set name="coolTime" val="500" />
-		<set name="effectPoint" val="-100" />
-		<set name="hitTime" val="1300" />
-		<set name="magicLvl" val="40" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="271" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
-		<for>
-			<effect name="PhysicalAttack" />
-		</for>
+		<affectRange>250</affectRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1300</hitTime>
+		<magicLvl>40</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>271</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4018" levels="1" name="Decrease Speed">
+	<skill id="4018" toLevel="1" name="Decrease Speed">
 		<!-- Confirmed CT2.5 -->
 		<!-- Queen Ant Skills -->
-		<set name="abnormalLvl" val="3" />
-		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="SPEED_DOWN" />
-		<set name="activateRate" val="70" />
-		<set name="basicProperty" val="MEN" />
-		<set name="castRange" val="500" />
-		<set name="coolTime" val="500" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1000" />
-		<set name="hitTime" val="2200" />
-		<set name="icon" val="icon.skill4018" />
-		<set name="isDebuff" val="true" />
-		<set name="lvlBonusRate" val="3" />
-		<set name="magicLvl" val="40" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="power" val="542" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="PhysicalAttack" />
-			<effect name="Debuff">
-				<mul stat="runSpd" val="0.7" />
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>70</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>500</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1000</effectRange>
+		<hitTime>2200</hitTime>
+		<icon>icon.skill4018</icon>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>3</lvlBonusRate>
+		<magicLvl>40</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>542</power>
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4019" levels="1" name="Decrease Speed">
+	<skill id="4019" toLevel="1" name="Decrease Speed">
 		<!-- Confirmed CT2.5 -->
 		<!-- Queen Ant Skills -->
-		<set name="abnormalLvl" val="3" />
-		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="SPEED_DOWN" />
-		<set name="activateRate" val="40" />
-		<set name="affectRange" val="200" />
-		<set name="basicProperty" val="MEN" />
-		<set name="castRange" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1500" />
-		<set name="hitTime" val="1700" />
-		<set name="icon" val="icon.skill4019" />
-		<set name="isDebuff" val="true" />
-		<set name="lvlBonusRate" val="3" />
-		<set name="magicLvl" val="40" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
-		<for>
-			<effect name="DamOverTime" ticks="3">
-				<param power="30" />
-				<mul stat="runSpd" val="0.7" />
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>40</activateRate>
+		<affectRange>200</affectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>1000</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1500</effectRange>
+		<hitTime>1700</hitTime>
+		<icon>icon.skill4019</icon>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>3</lvlBonusRate>
+		<magicLvl>40</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="DamOverTime">
+				<power>30</power>
+				<ticks>3</ticks>
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4020" levels="1" name="Recovery">
+	<skill id="4020" toLevel="1" name="Recovery">
 		<!-- Confirmed CT2.5 -->
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="35" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
+		<castRange>600</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>35</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="Heal">
-				<param power="10846" />
+				<power>10846</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4021" levels="1" name="Queen Ant">
+	<skill id="4021" toLevel="1" name="Queen Ant">
 		<!-- Confirmed CT2.5 -->
 		<!-- Queen Ant Skills -->
-		<set name="icon" val="icon.skillboss" />
-		<set name="magicLvl" val="40" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>icon.skillboss</icon>
+		<magicLvl>40</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param BOW="80" />
+				<BOW>80</BOW>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4022" levels="1" name="Body of Nurse Ant">
+	<skill id="4022" toLevel="1" name="Body of Nurse Ant">
 		<!-- Confirmer CT2.5 -->
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="magicLvl" val="35" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<magicLvl>35</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4023" levels="1" name="Body of Royal Guard Ant">
+	<skill id="4023" toLevel="1" name="Body of Royal Guard Ant">
 		<!-- Confirmer CT2.5 -->
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="magicLvl" val="35" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<magicLvl>35</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4024" levels="1" name="Recovery">
+	<skill id="4024" toLevel="1" name="Recovery">
 		<!-- Confirmed CT2.5 -->
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="35" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
+		<castRange>600</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>35</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="Heal">
-				<param power="10846" />
+				<power>10846</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4025" levels="12" name="Master Recharge">
+	<skill id="4025" toLevel="12" name="Master Recharge">
 		<!-- Freya retail confirmed -->
 		<table name="#amount"> 23 38 52 70 90 110 129 138 144 149 153 155 </table>
-		<table name="#effectPoints"> 138 204 285 379 477 566 635 659 676 689 700 709 </table>
-		<table name="#magicLvl"> 17 27 37 47 57 67 77 82 87 92 97 102 </table>
-		<table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
-		<set name="castRange" val="400" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="900" />
-		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="OWNER_PET" />
-		<for>
+		<castRange>400</castRange>
+		<effectPoint>
+			<value level="1">138</value>
+			<value level="2">204</value>
+			<value level="3">285</value>
+			<value level="4">379</value>
+			<value level="5">477</value>
+			<value level="6">566</value>
+			<value level="7">635</value>
+			<value level="8">659</value>
+			<value level="9">676</value>
+			<value level="10">689</value>
+			<value level="11">700</value>
+			<value level="12">709</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">17</value>
+			<value level="2">27</value>
+			<value level="3">37</value>
+			<value level="4">47</value>
+			<value level="5">57</value>
+			<value level="6">67</value>
+			<value level="7">77</value>
+			<value level="8">82</value>
+			<value level="9">87</value>
+			<value level="10">92</value>
+			<value level="11">97</value>
+			<value level="12">102</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">24</value>
+			<value level="2">39</value>
+			<value level="3">53</value>
+			<value level="4">70</value>
+			<value level="5">90</value>
+			<value level="6">110</value>
+			<value level="7">130</value>
+			<value level="8">138</value>
+			<value level="9">145</value>
+			<value level="10">150</value>
+			<value level="11">153</value>
+			<value level="12">155</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="ManaHealByLevel">
-				<param power="#amount" />
+				<power>
+					<value level="1">23</value>
+					<value level="2">38</value>
+					<value level="3">52</value>
+					<value level="4">70</value>
+					<value level="5">90</value>
+					<value level="6">110</value>
+					<value level="7">129</value>
+					<value level="8">138</value>
+					<value level="9">144</value>
+					<value level="10">149</value>
+					<value level="11">153</value>
+					<value level="12">155</value>
+				</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4026" levels="1" name="Gludio Flame">
+	<skill id="4026" toLevel="1" name="Gludio Flame">
 		<!-- Freya retail confirmed -->
-		<set name="affectRange" val="200" />
-		<set name="castRange" val="900" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1400" />
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="60" />
-		<set name="mpConsume" val="28" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="43" />
-		<set name="reuseDelay" val="15000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
-		<for>
-			<effect name="MagicalAttack" />
-		</for>
+		<affectRange>200</affectRange>
+		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1400</effectRange>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<mpConsume>28</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>15000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>43</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4027" levels="1" name="Gludio Heal">
+	<skill id="4027" toLevel="1" name="Gludio Heal">
 		<!-- Freya retail confirmed -->
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="5000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="60" />
-		<set name="mpConsume" val="98" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="10000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
+		<castRange>600</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>5000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<mpConsume>98</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="Heal">
-				<param power="628" />
+				<power>628</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4028" levels="3" name="Might">
+	<skill id="4028" toLevel="3" name="Might">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#magicLvl"> 20 40 70 </table>
-		<table name="#mpConsume"> 10 18 33 </table>
 		<table name="#pAtk"> 1.08 1.12 1.15 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="PA_UP" />
-		<set name="abnormalVisualEffect" val="BIG_BODY" />
-		<set name="effectPoint" val="100" />
-		<set name="hitTime" val="1800" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>PA_UP</abnormalType>
+		<abnormalVisualEffect>BIG_BODY</abnormalVisualEffect>
+		<effectPoint>100</effectPoint>
+		<hitTime>1800</hitTime>
+		<magicLvl>
+			<value level="1">20</value>
+			<value level="2">40</value>
+			<value level="3">70</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">10</value>
+			<value level="2">18</value>
+			<value level="3">33</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<icon>icon.skill4028</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="Grow">
-				<mul stat="pAtk" val="#pAtk" />
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">12</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4029" levels="3" name="Shield">
-		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#magicLvl"> 20 40 70 </table>
-		<table name="#mpConsume"> 10 18 33 </table>
+	<skill id="4029" toLevel="3" name="Shield">
 		<table name="#pDef"> 1.08 1.12 1.15 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="PD_UP" />
-		<set name="effectPoint" val="100" />
-		<set name="hitTime" val="1800" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="#pDef" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>1800</hitTime>
+		<magicLvl>
+			<value level="1">20</value>
+			<value level="2">40</value>
+			<value level="3">70</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">10</value>
+			<value level="2">18</value>
+			<value level="3">33</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<icon>icon.skill1040</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">12</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4030" levels="3" name="Might">
+	<skill id="4030" toLevel="3" name="Might">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#magicLvl"> 20 40 70 </table>
-		<table name="#mpConsume"> 10 18 33 </table>
 		<table name="#pAtk"> 1.08 1.12 1.15 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="PA_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="900" />
-		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="CLAN" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="#pAtk" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>PA_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">20</value>
+			<value level="2">40</value>
+			<value level="3">70</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">10</value>
+			<value level="2">18</value>
+			<value level="3">33</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<icon>icon.skill4028</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">12</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4031" levels="3" name="Might">
+	<skill id="4031" toLevel="3" name="Might">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#magicLvl"> 20 40 70 </table>
-		<table name="#mpConsume"> 10 18 33 </table>
 		<table name="#pDef"> 1.08 1.12 1.15 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="PD_UP" />
-		<set name="castRange" val="400" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="900" />
-		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill4031" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="CLAN" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="#pDef" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>PD_UP</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill4031</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">20</value>
+			<value level="2">40</value>
+			<value level="3">70</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">10</value>
+			<value level="2">18</value>
+			<value level="3">33</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">12</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4032" levels="12" name="Power Strike">
+	<skill id="4032" toLevel="12" name="Power Strike">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<table name="#power"> 46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
-		<set name="castRange" val="40" />
-		<set name="coolTime" val="800" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="200" />
-		<set name="hitTime" val="1000" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="PhysicalAttack" />
-		</for>
+		<castRange>40</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1000</hitTime>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">28</value>
+			<value level="4">38</value>
+			<value level="5">50</value>
+			<value level="6">61</value>
+			<value level="7">71</value>
+			<value level="8">76</value>
+			<value level="9">80</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
+			<value level="12">85</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">46</value>
+					<value level="2">105</value>
+					<value level="3">219</value>
+					<value level="4">417</value>
+					<value level="5">722</value>
+					<value level="6">1136</value>
+					<value level="7">1626</value>
+					<value level="8">1876</value>
+					<value level="9">2112</value>
+					<value level="10">2320</value>
+					<value level="11">2487</value>
+					<value level="12">2617</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4033" levels="12" name="Aura Burn">
+	<skill id="4033" toLevel="12" name="Aura Burn">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
 		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
-		<set name="affectRange" val="200" />
-		<set name="effectPoint" val="-100" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
-		<for>
-			<effect name="MagicalAttack" />
-		</for>
+		<affectRange>200</affectRange>
+		<effectPoint>-100</effectPoint>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">18</value>
+			<value level="2">29</value>
+			<value level="3">40</value>
+			<value level="4">53</value>
+			<value level="5">68</value>
+			<value level="6">83</value>
+			<value level="7">98</value>
+			<value level="8">104</value>
+			<value level="9">109</value>
+			<value level="10">113</value>
+			<value level="11">115</value>
+			<value level="12">117</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>3.5</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">18</value>
+					<value level="2">26</value>
+					<value level="3">38</value>
+					<value level="4">52</value>
+					<value level="5">68</value>
+					<value level="6">85</value>
+					<value level="7">102</value>
+					<value level="8">110</value>
+					<value level="9">116</value>
+					<value level="10">122</value>
+					<value level="11">126</value>
+					<value level="12">129</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4034" levels="12" name="Ice Bolt">
+	<skill id="4034" toLevel="12" name="Ice Bolt">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
 		<table name="#power"> 11 16 23 31 41 51 61 66 70 73 76 78 </table>
-		<set name="abnormalLvl" val="2" />
-		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="SPEED_DOWN" />
-		<set name="activateRate" val="60" />
-		<set name="basicProperty" val="MEN" />
-		<set name="castRange" val="600" />
-		<set name="coolTime" val="200" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="3100" />
-		<set name="icon" val="icon.skill1184" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="MagicalAttack" />
-			<effect name="Debuff">
-				<mul stat="runSpd" val="0.8" />
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>60</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>600</castRange>
+		<coolTime>200</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>3100</hitTime>
+		<icon>icon.skill1184</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<attributeType>WATER</attributeType>
+		<attributeValue>20</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">11</value>
+					<value level="2">16</value>
+					<value level="3">23</value>
+					<value level="4">31</value>
+					<value level="5">41</value>
+					<value level="6">51</value>
+					<value level="7">61</value>
+					<value level="8">66</value>
+					<value level="9">70</value>
+					<value level="10">73</value>
+					<value level="11">76</value>
+					<value level="12">78</value>
+				</power>
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4035" levels="12" name="Poison">
+	<skill id="4035" toLevel="12" name="Poison">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#dmg"> 16 24 32 41 50 58 63 63 66 66 68 68 </table>
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 83 77 78 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="POISON" />
-		<set name="abnormalVisualEffect" val="DOT_POISON" />
-		<set name="activateRate" val="70" />
-		<set name="basicProperty" val="CON" />
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill4035" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<set name="trait" val="POISON" />
-		<for>
-			<effect name="DamOverTime" ticks="3">
-				<param power="#dmg" />
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+			<value level="5">6</value>
+			<value level="6">7</value>
+			<value level="7">8</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">9</value>
+			<value level="11">10</value>
+			<value level="12">10</value>
+		</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>70</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2000</hitTime>
+		<icon>icon.skill4035</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">83</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<trait>POISON</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>
+					<value level="1">16</value>
+					<value level="2">24</value>
+					<value level="3">32</value>
+					<value level="4">41</value>
+					<value level="5">50</value>
+					<value level="6">58</value>
+					<value level="7">63</value>
+					<value level="8">63</value>
+					<value level="9">66</value>
+					<value level="10">66</value>
+					<value level="11">68</value>
+					<value level="12">68</value>
+				</power>
+				<ticks>3</ticks>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4036" levels="12" name="Poison">
+	<skill id="4036" toLevel="12" name="Poison">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#dmg"> 16 24 32 41 50 58 63 63 66 66 68 68 </table>
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="POISON" />
-		<set name="abnormalVisualEffect" val="DOT_POISON" />
-		<set name="activateRate" val="35" />
-		<set name="affectRange" val="200" />
-		<set name="basicProperty" val="CON" />
-		<set name="castRange" val="500" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1000" />
-		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill4036" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
-		<set name="trait" val="POISON" />
-		<for>
-			<effect name="DamOverTime" ticks="3">
-				<param power="#dmg" />
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+			<value level="5">6</value>
+			<value level="6">7</value>
+			<value level="7">8</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">9</value>
+			<value level="11">10</value>
+			<value level="12">10</value>
+		</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>35</activateRate>
+		<affectRange>200</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1000</effectRange>
+		<hitTime>2000</hitTime>
+		<icon>icon.skill4036</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">18</value>
+			<value level="2">29</value>
+			<value level="3">40</value>
+			<value level="4">53</value>
+			<value level="5">68</value>
+			<value level="6">83</value>
+			<value level="7">98</value>
+			<value level="8">104</value>
+			<value level="9">109</value>
+			<value level="10">113</value>
+			<value level="11">115</value>
+			<value level="12">117</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<trait>POISON</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="DamOverTime">
+				<power>
+					<value level="1">16</value>
+					<value level="2">24</value>
+					<value level="3">32</value>
+					<value level="4">41</value>
+					<value level="5">50</value>
+					<value level="6">58</value>
+					<value level="7">63</value>
+					<value level="8">63</value>
+					<value level="9">66</value>
+					<value level="10">66</value>
+					<value level="11">68</value>
+					<value level="12">68</value>
+				</power>
+				<ticks>3</ticks>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4037" levels="3" name="Decrease P.Atk">
+	<skill id="4037" toLevel="3" name="Decrease P.Atk">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#magicLvl"> 20 40 70 </table>
-		<table name="#mpConsume"> 20 35 65 </table>
 		<table name="#pAtk"> 0.83 0.8 0.77 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="PA_DOWN" />
-		<set name="activateRate" val="70" />
-		<set name="basicProperty" val="MEN" />
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill4037" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Debuff">
-				<mul stat="pAtk" val="#pAtk" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PA_DOWN</abnormalType>
+		<activateRate>70</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>1500</hitTime>
+		<icon>icon.skill4037</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>
+			<value level="1">20</value>
+			<value level="2">40</value>
+			<value level="3">70</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">20</value>
+			<value level="2">35</value>
+			<value level="3">65</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">-17</value>
+					<value level="2">-20</value>
+					<value level="3">-23</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4038" levels="5" name="Decrease Atk.Spd.">
+	<skill id="4038" toLevel="5" name="Decrease Atk.Spd.">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 2 3 3 </table>
-		<table name="#magicLvl"> 10 20 30 50 70 </table>
-		<table name="#mpConsume"> 13 20 27 45 65 </table>
 		<table name="#pAtkSpd"> 0.83 0.8 0.8 0.77 0.77 </table>
 		<table name="#time"> 5 10 10 15 15 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="ATTACK_TIME_UP" />
-		<set name="activateRate" val="80" />
-		<set name="basicProperty" val="MEN" />
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill4038" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Debuff">
-				<mul stat="pAtkSpd" val="#pAtkSpd" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">2</value>
+			<value level="4">3</value>
+			<value level="5">3</value>
+		</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ATTACK_TIME_UP</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>1500</hitTime>
+		<icon>icon.skill4038</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">50</value>
+			<value level="5">70</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">45</value>
+			<value level="5">65</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">-17</value>
+					<value level="2">-20</value>
+					<value level="3">-20</value>
+					<value level="4">-23</value>
+					<value level="5">-23</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4039" levels="12" name="Mana Drain">
+	<skill id="4039" toLevel="12" name="Mana Drain">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
-		<table name="#power"> 34 57 78 105 134 165 194 206 216 224 229 232 </table>
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="MagicalAttackMp" />
-		</for>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mp">
+				<amount>
+					<value level="1">-34</value>
+					<value level="2">-57</value>
+					<value level="3">-78</value>
+					<value level="4">-105</value>
+					<value level="5">-134</value>
+					<value level="6">-165</value>
+					<value level="7">-194</value>
+					<value level="8">-206</value>
+					<value level="9">-216</value>
+					<value level="10">-224</value>
+					<value level="11">-229</value>
+					<value level="12">-232</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4040" levels="12" name="Power Shot">
+	<skill id="4040" toLevel="12" name="Power Shot">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
-		<table name="#power"> 122 279 584 1110 1920 3030 4336 5002 5632 6187 6632 6978 </table>
-		<set name="castRange" val="700" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1200" />
-		<set name="hitTime" val="4000" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="17000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="PhysicalAttack" />
-		</for>
+		<castRange>700</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>4000</hitTime>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">25</value>
+			<value level="2">40</value>
+			<value level="3">56</value>
+			<value level="4">76</value>
+			<value level="5">99</value>
+			<value level="6">121</value>
+			<value level="7">142</value>
+			<value level="8">151</value>
+			<value level="9">159</value>
+			<value level="10">165</value>
+			<value level="11">168</value>
+			<value level="12">170</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>17000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">122</value>
+					<value level="2">279</value>
+					<value level="3">584</value>
+					<value level="4">1110</value>
+					<value level="5">1920</value>
+					<value level="6">3030</value>
+					<value level="7">4336</value>
+					<value level="8">5002</value>
+					<value level="9">5632</value>
+					<value level="10">6187</value>
+					<value level="11">6632</value>
+					<value level="12">6978</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4041" levels="2" name="Cruma Blaze">
+	<skill id="4041" toLevel="2" name="Cruma Blaze">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 45 50 </table>
-		<table name="#mpConsume"> 40 45 </table>
 		<table name="#power"> 60 68 </table>
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="MagicalAttack" />
-		</for>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">45</value>
+			<value level="2">50</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">40</value>
+			<value level="2">45</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">60</value>
+					<value level="2">68</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4042" levels="1" name="Nurka Blaze">
+	<skill id="4042" toLevel="1" name="Nurka Blaze">
 		<!-- Freya retail confirmed -->
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="45" />
-		<set name="mpConsume" val="40" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="60" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="MagicalAttack" />
-		</for>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>45</magicLvl>
+		<mpConsume>40</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>60</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4043" levels="1" name="Partisan Flame">
+	<skill id="4043" toLevel="1" name="Partisan Flame">
 		<!-- Freya retail confirmed -->
-		<set name="affectRange" val="200" />
-		<set name="castRange" val="400" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="900" />
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="45" />
-		<set name="mpConsume" val="60" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="30" />
-		<set name="reuseDelay" val="15000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
-		<for>
-			<effect name="MagicalAttack" />
-		</for>
+		<affectRange>200</affectRange>
+		<castRange>400</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>45</magicLvl>
+		<mpConsume>60</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>15000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>30</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4044" levels="1" name="Partisan Heal">
+	<skill id="4044" toLevel="1" name="Partisan Heal">
 		<!-- Freya retail confirmed -->
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="5000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="45" />
-		<set name="mpConsume" val="70" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="10000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
+		<castRange>600</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>5000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>45</magicLvl>
+		<mpConsume>70</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="Heal">
-				<param power="427" />
+				<power>427</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4045" levels="1" name="Full Magic Attack Resistance">
-		<!-- Freya retail confirmed -->
-		<set name="magicLvl" val="50" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+	<skill id="4045" toLevel="1" name="Full Magic Attack Resistance">
+		<!-- Glory Days retail confirmed -->
+		<magicLvl>50</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<!-- TODO p_abnormal_rate_limit -->
 			<effect name="DefenceTrait">
-				<param HOLD="100" />
-				<param SLEEP="100" />
-				<param DERANGEMENT="100" />
-				<param PARALYZE="100" />
-				<param SHOCK="100" />
-				<param BOSS="100" />
-				<param PHYSICAL_BLOCKADE="100" />
+				<HOLD>100</HOLD>
+				<DERANGEMENT>100</DERANGEMENT>
+				<SHOCK>100</SHOCK>
+				<PHYSICAL_BLOCKADE>100</PHYSICAL_BLOCKADE>
+				<KNOCKBACK>100</KNOCKBACK>
+				<PULL>100</PULL>
+				<DISARM>100</DISARM>
+				<TURN_STONE>100</TURN_STONE>
+				<SLEEP>100</SLEEP>
+				<BOSS>100</BOSS>
+				<AIRBIND>100</AIRBIND>
+				<DEPORT>100</DEPORT>
+				<PARALYZE>100</PARALYZE>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKDOWN>100</KNOCKDOWN>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4046" levels="12" name="Sleep">
+	<skill id="4046" toLevel="12" name="Sleep">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="SLEEP" />
-		<set name="abnormalVisualEffect" val="SLEEP" />
-		<set name="activateRate" val="80" />
-		<set name="basicProperty" val="MEN" />
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill4046" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<set name="trait" val="SLEEP" />
-		<for>
-			<effect name="Sleep" />
-		</for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>SLEEP</abnormalType>
+		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill4046</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<removedOnDamage>true</removedOnDamage>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>2</hitCancelTime>
+		<trait>SLEEP</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
-	<skill id="4047" levels="13" name="Hold">
+	<skill id="4047" toLevel="13" name="Hold">
 		<!-- Freya retail confirmed and Updated to Ertheia -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 99 </table> <!-- Confirmed -->
-		<table name="#mpConsume"> 10 16 22 28 36 44 52 55 58 60 62 62 64 </table> <!-- Confirmed -->
-		<table name="#mpInitialConsume"> 3 4 5 7 9 11 13 14 15 15 15 16 16 </table> <!-- Confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="ROOT_MAGICALLY" />
-		<set name="abnormalVisualEffect" val="ROOT" />
-		<set name="activateRate" val="80" />
-		<set name="basicProperty" val="MEN" />
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill4047" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<set name="trait" val="HOLD" />
-		<for>
+		<!-- Confirmed -->
+		<!-- Confirmed -->
+		<!-- Confirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill4047</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+			<value level="13">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">10</value>
+			<value level="2">16</value>
+			<value level="3">22</value>
+			<value level="4">28</value>
+			<value level="5">36</value>
+			<value level="6">44</value>
+			<value level="7">52</value>
+			<value level="8">55</value>
+			<value level="9">58</value>
+			<value level="10">60</value>
+			<value level="11">62</value>
+			<value level="12">62</value>
+			<value level="13">64</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+			<value level="4">7</value>
+			<value level="5">9</value>
+			<value level="6">11</value>
+			<value level="7">13</value>
+			<value level="8">14</value>
+			<value level="9">15</value>
+			<value level="10">15</value>
+			<value level="11">15</value>
+			<value level="12">16</value>
+			<value level="13">16</value>
+		</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>HOLD</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="Root" />
-		</for>
+		</effects>
 	</skill>
-	<skill id="4048" levels="3" name="Dash">
+	<skill id="4048" toLevel="3" name="Dash">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 10 10 </table>
 		<table name="#runSpd"> 1.5 1.8 2 </table>
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
-		<set name="effectPoint" val="-1" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="12" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="runSpd" val="#runSpd" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
+		<effectPoint>-1</effectPoint>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">10</value>
+			<value level="3">10</value>
+		</magicLvl>
+		<mpConsume>12</mpConsume>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>1000</hitTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">80</value>
+					<value level="3">100</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4049" levels="16" name="Cubic Strike">
+	<skill id="4049" toLevel="16" name="Cubic Strike">
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -379 -438 -495 -549 -590 -611 -635 -655 -662 -669 -679 -679 -681 -684 -687 -689 </table>
-		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85 </table>
 		<table name="#power"> 436 645 936 1242 1520 1792 2086 2399 2459 2542 2626 2710 2794 2878 2961 3044 </table>
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="MagicalAttack" />
-		</for>
+		<effectPoint>
+			<value level="1">-379</value>
+			<value level="2">-438</value>
+			<value level="3">-495</value>
+			<value level="4">-549</value>
+			<value level="5">-590</value>
+			<value level="6">-611</value>
+			<value level="7">-635</value>
+			<value level="8">-655</value>
+			<value level="9">-662</value>
+			<value level="10">-669</value>
+			<value level="11">-679</value>
+			<value level="12">-679</value>
+			<value level="13">-681</value>
+			<value level="14">-684</value>
+			<value level="15">-687</value>
+			<value level="16">-689</value>
+		</effectPoint>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">46</value>
+			<value level="3">52</value>
+			<value level="4">58</value>
+			<value level="5">62</value>
+			<value level="6">66</value>
+			<value level="7">70</value>
+			<value level="8">74</value>
+			<value level="9">76</value>
+			<value level="10">78</value>
+			<value level="11">80</value>
+			<value level="12">81</value>
+			<value level="13">82</value>
+			<value level="14">83</value>
+			<value level="15">84</value>
+			<value level="16">85</value>
+		</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">436</value>
+					<value level="2">645</value>
+					<value level="3">936</value>
+					<value level="4">1242</value>
+					<value level="5">1520</value>
+					<value level="6">1792</value>
+					<value level="7">2086</value>
+					<value level="8">2399</value>
+					<value level="9">2459</value>
+					<value level="10">2542</value>
+					<value level="11">2626</value>
+					<value level="12">2710</value>
+					<value level="13">2794</value>
+					<value level="14">2878</value>
+					<value level="15">2961</value>
+					<value level="16">3044</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4050" levels="16" name="Cubic Drain">
+	<skill id="4050" toLevel="16" name="Cubic Drain">
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -408 -467 -523 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 </table>
-		<table name="#magicLvl"> 43 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85 </table>
 		<table name="#power"> 543 760 1084 1377 1635 1955 2262 2386 2425 2524 2632 2722 2812 2898 2986 3062 </table>
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
+		<effectPoint>
+			<value level="1">-408</value>
+			<value level="2">-467</value>
+			<value level="3">-523</value>
+			<value level="4">-566</value>
+			<value level="5">-597</value>
+			<value level="6">-624</value>
+			<value level="7">-646</value>
+			<value level="8">-655</value>
+			<value level="9">-662</value>
+			<value level="10">-669</value>
+			<value level="11">-676</value>
+			<value level="12">-679</value>
+			<value level="13">-681</value>
+			<value level="14">-684</value>
+			<value level="15">-687</value>
+			<value level="16">-689</value>
+		</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">43</value>
+			<value level="2">49</value>
+			<value level="3">55</value>
+			<value level="4">60</value>
+			<value level="5">64</value>
+			<value level="6">68</value>
+			<value level="7">72</value>
+			<value level="8">74</value>
+			<value level="9">76</value>
+			<value level="10">78</value>
+			<value level="11">80</value>
+			<value level="12">81</value>
+			<value level="13">82</value>
+			<value level="14">83</value>
+			<value level="15">84</value>
+			<value level="16">85</value>
+		</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="HpDrain">
-				<param power="0.4" />
+				<power>
+					<value level="1">543</value>
+					<value level="2">760</value>
+					<value level="3">1084</value>
+					<value level="4">1377</value>
+					<value level="5">1635</value>
+					<value level="6">1955</value>
+					<value level="7">2262</value>
+					<value level="8">2386</value>
+					<value level="9">2425</value>
+					<value level="10">2524</value>
+					<value level="11">2632</value>
+					<value level="12">2722</value>
+					<value level="13">2812</value>
+					<value level="14">2898</value>
+					<value level="15">2986</value>
+					<value level="16">3062</value>
+				</power>
+				<percentage>40</percentage>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4051" levels="20" name="Cubic Heal">
+	<skill id="4051" toLevel="20" name="Cubic Heal">
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
 		<!-- Levels 17, 18 and 19 doesn't exist in client. -->
 		<table name="#amount"> 201 241 281 314 339 361 382 390 398 405 413 418 422 426 430 434 0 0 0 68 </table>
-		<table name="#effectPoints"> 408 467 523 566 597 624 646 653 660 667 674 677 679 682 685 687 0 0 0 1 </table>
-		<table name="#magicLvl"> 43 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85 0 0 0 18 </table>
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="1100" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
+		<castRange>600</castRange>
+		<effectPoint>
+			<value level="1">408</value>
+			<value level="2">467</value>
+			<value level="3">523</value>
+			<value level="4">566</value>
+			<value level="5">597</value>
+			<value level="6">624</value>
+			<value level="7">646</value>
+			<value level="8">653</value>
+			<value level="9">660</value>
+			<value level="10">667</value>
+			<value level="11">674</value>
+			<value level="12">677</value>
+			<value level="13">679</value>
+			<value level="14">682</value>
+			<value level="15">685</value>
+			<value level="16">687</value>
+			<value level="17">0</value>
+			<value level="18">0</value>
+			<value level="19">0</value>
+			<value level="20">1</value>
+		</effectPoint>
+		<effectRange>1100</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">43</value>
+			<value level="2">49</value>
+			<value level="3">55</value>
+			<value level="4">60</value>
+			<value level="5">64</value>
+			<value level="6">68</value>
+			<value level="7">72</value>
+			<value level="8">74</value>
+			<value level="9">76</value>
+			<value level="10">78</value>
+			<value level="11">80</value>
+			<value level="12">81</value>
+			<value level="13">82</value>
+			<value level="14">83</value>
+			<value level="15">84</value>
+			<value level="16">85</value>
+			<value level="17">0</value>
+			<value level="18">0</value>
+			<value level="19">0</value>
+			<value level="20">18</value>
+		</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="Heal">
-				<param power="#amount" />
+				<power>
+					<value level="1">201</value>
+					<value level="2">241</value>
+					<value level="3">281</value>
+					<value level="4">314</value>
+					<value level="5">339</value>
+					<value level="6">361</value>
+					<value level="7">382</value>
+					<value level="8">390</value>
+					<value level="9">398</value>
+					<value level="10">405</value>
+					<value level="11">413</value>
+					<value level="12">418</value>
+					<value level="13">422</value>
+					<value level="14">426</value>
+					<value level="15">430</value>
+					<value level="16">434</value>
+					<value level="17">0</value>
+					<value level="18">0</value>
+					<value level="19">0</value>
+					<value level="20">68</value>
+				</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4052" levels="15" name="Cubic Poison">
+	<skill id="4052" toLevel="15" name="Cubic Poison">
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
-		<table name="#abnormalLvls"> 5 6 7 7 7 8 8 8 8 8 8 8 8 8 8 </table>
 		<table name="#dot"> 41 50 58 58 58 63 63 63 63 66 66 66 66 66 66 </table>
-		<table name="#effectPoints"> -467 -523 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 </table>
-		<table name="#magicLvl"> 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="POISON" />
-		<set name="abnormalVisualEffect" val="DOT_POISON" />
-		<set name="activateRate" val="70" />
-		<set name="basicProperty" val="CON" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="icon" val="icon.skill1168" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="DamOverTime" ticks="3">
-				<param power="#dot" />
+		<abnormalLvl>
+			<value level="1">5</value>
+			<value level="2">6</value>
+			<value level="3">7</value>
+			<value level="4">7</value>
+			<value level="5">7</value>
+			<value level="6">8</value>
+			<value level="7">8</value>
+			<value level="8">8</value>
+			<value level="9">8</value>
+			<value level="10">8</value>
+			<value level="11">8</value>
+			<value level="12">8</value>
+			<value level="13">8</value>
+			<value level="14">8</value>
+			<value level="15">8</value>
+		</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>70</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>
+			<value level="1">-467</value>
+			<value level="2">-523</value>
+			<value level="3">-566</value>
+			<value level="4">-597</value>
+			<value level="5">-624</value>
+			<value level="6">-646</value>
+			<value level="7">-655</value>
+			<value level="8">-662</value>
+			<value level="9">-669</value>
+			<value level="10">-676</value>
+			<value level="11">-679</value>
+			<value level="12">-681</value>
+			<value level="13">-684</value>
+			<value level="14">-687</value>
+			<value level="15">-689</value>
+		</effectPoint>
+		<icon>icon.skill1168</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>
+			<value level="1">49</value>
+			<value level="2">55</value>
+			<value level="3">60</value>
+			<value level="4">64</value>
+			<value level="5">68</value>
+			<value level="6">72</value>
+			<value level="7">74</value>
+			<value level="8">76</value>
+			<value level="9">78</value>
+			<value level="10">80</value>
+			<value level="11">81</value>
+			<value level="12">82</value>
+			<value level="13">83</value>
+			<value level="14">84</value>
+			<value level="15">85</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>
+					<value level="1">41</value>
+					<value level="2">50</value>
+					<value level="3">58</value>
+					<value level="4">58</value>
+					<value level="5">58</value>
+					<value level="6">63</value>
+					<value level="7">63</value>
+					<value level="8">63</value>
+					<value level="9">63</value>
+					<value level="10">66</value>
+					<value level="11">66</value>
+					<value level="12">66</value>
+					<value level="13">66</value>
+					<value level="14">66</value>
+					<value level="15">66</value>
+				</power>
+				<ticks>3</ticks>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4053" levels="16" name="Decrease P.Atk">
+	<skill id="4053" toLevel="16" name="Decrease P.Atk">
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -379 -438 -495 -549 -590 -611 -635 -655 -662 -669 -676 -679 -681 -684 -687 -689 </table>
-		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85 </table>
-		<set name="abnormalLvl" val="3" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="PA_DOWN" />
-		<set name="activateRate" val="80" />
-		<set name="basicProperty" val="MEN" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="icon" val="icon.skill1164" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Debuff">
-				<mul stat="pAtk" val="0.77" />
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>PA_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>
+			<value level="1">-379</value>
+			<value level="2">-438</value>
+			<value level="3">-495</value>
+			<value level="4">-549</value>
+			<value level="5">-590</value>
+			<value level="6">-611</value>
+			<value level="7">-635</value>
+			<value level="8">-655</value>
+			<value level="9">-662</value>
+			<value level="10">-669</value>
+			<value level="11">-676</value>
+			<value level="12">-679</value>
+			<value level="13">-681</value>
+			<value level="14">-684</value>
+			<value level="15">-687</value>
+			<value level="16">-689</value>
+		</effectPoint>
+		<icon>icon.skill1164</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">46</value>
+			<value level="3">52</value>
+			<value level="4">58</value>
+			<value level="5">62</value>
+			<value level="6">66</value>
+			<value level="7">70</value>
+			<value level="8">74</value>
+			<value level="9">76</value>
+			<value level="10">78</value>
+			<value level="11">80</value>
+			<value level="12">81</value>
+			<value level="13">82</value>
+			<value level="14">83</value>
+			<value level="15">84</value>
+			<value level="16">85</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>-23</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4054" levels="16" name="Decrease P. Def">
+	<skill id="4054" toLevel="16" name="Decrease P. Def">
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -379 -438 -495 -549 -590 -611 -635 -655 -662 -669 -676 -679 -681 -684 -687 -689 </table>
-		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85 </table>
-		<set name="abnormalLvl" val="3" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="PD_DOWN" />
-		<set name="activateRate" val="80" />
-		<set name="basicProperty" val="MEN" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="icon" val="icon.skill0122" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Debuff">
-				<mul stat="pDef" val="0.77" />
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>
+			<value level="1">-379</value>
+			<value level="2">-438</value>
+			<value level="3">-495</value>
+			<value level="4">-549</value>
+			<value level="5">-590</value>
+			<value level="6">-611</value>
+			<value level="7">-635</value>
+			<value level="8">-655</value>
+			<value level="9">-662</value>
+			<value level="10">-669</value>
+			<value level="11">-676</value>
+			<value level="12">-679</value>
+			<value level="13">-681</value>
+			<value level="14">-684</value>
+			<value level="15">-687</value>
+			<value level="16">-689</value>
+		</effectPoint>
+		<icon>icon.skill0122</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">46</value>
+			<value level="3">52</value>
+			<value level="4">58</value>
+			<value level="5">62</value>
+			<value level="6">66</value>
+			<value level="7">70</value>
+			<value level="8">74</value>
+			<value level="9">76</value>
+			<value level="10">78</value>
+			<value level="11">80</value>
+			<value level="12">81</value>
+			<value level="13">82</value>
+			<value level="14">83</value>
+			<value level="15">84</value>
+			<value level="16">85</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>-23</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4055" levels="16" name="Decrease Atk.Speed">
+	<skill id="4055" toLevel="16" name="Decrease Atk.Speed">
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -379 -438 -495 -549 -590 -611 -635 -655 -662 -669 -676 -679 -681 -684 -687 -689 </table>
-		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85 </table>
-		<set name="abnormalLvl" val="3" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="ATTACK_TIME_UP" />
-		<set name="activateRate" val="80" />
-		<set name="basicProperty" val="MEN" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="icon" val="icon.skill1206" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Debuff">
-				<mul stat="pAtkSpd" val="0.77" />
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>ATTACK_TIME_UP</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>
+			<value level="1">-379</value>
+			<value level="2">-438</value>
+			<value level="3">-495</value>
+			<value level="4">-549</value>
+			<value level="5">-590</value>
+			<value level="6">-611</value>
+			<value level="7">-635</value>
+			<value level="8">-655</value>
+			<value level="9">-662</value>
+			<value level="10">-669</value>
+			<value level="11">-676</value>
+			<value level="12">-679</value>
+			<value level="13">-681</value>
+			<value level="14">-684</value>
+			<value level="15">-687</value>
+			<value level="16">-689</value>
+		</effectPoint>
+		<icon>icon.skill1206</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">46</value>
+			<value level="3">52</value>
+			<value level="4">58</value>
+			<value level="5">62</value>
+			<value level="6">66</value>
+			<value level="7">70</value>
+			<value level="8">74</value>
+			<value level="9">76</value>
+			<value level="10">78</value>
+			<value level="11">80</value>
+			<value level="12">81</value>
+			<value level="13">82</value>
+			<value level="14">83</value>
+			<value level="15">84</value>
+			<value level="16">85</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-23</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4056" levels="1" name="Immortal Attack">
+	<skill id="4056" toLevel="1" name="Immortal Attack">
 		<!-- Freya retail confirmed -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4057" levels="1" name="Insect Vulnerability">
+	<skill id="4057" toLevel="1" name="Insect Vulnerability">
 		<!-- Freya retail confirmed -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param BUG_WEAKNESS="-15" />
+				<BUG_WEAKNESS>-15</BUG_WEAKNESS>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4058" levels="1" name="Animal Vulnerability">
+	<skill id="4058" toLevel="1" name="Animal Vulnerability">
 		<!-- Freya retail confirmed -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param ANIMAL_WEAKNESS="-15" />
+				<ANIMAL_WEAKNESS>-15</ANIMAL_WEAKNESS>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4059" levels="1" name="Plant Vulnerability">
+	<skill id="4059" toLevel="1" name="Plant Vulnerability">
 		<!-- Freya retail confirmed -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PLANT_WEAKNESS="-15" />
+				<PLANT_WEAKNESS>-15</PLANT_WEAKNESS>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4060" levels="1" name="Beast Vulnerability">
+	<skill id="4060" toLevel="1" name="Beast Vulnerability">
 		<!-- Freya retail confirmed -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param BEAST_WEAKNESS="-15" />
+				<BEAST_WEAKNESS>-15</BEAST_WEAKNESS>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4061" levels="1" name="Dragon Vulnerability">
+	<skill id="4061" toLevel="1" name="Dragon Vulnerability">
 		<!-- Freya retail confirmed -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param DRAGON_WEAKNESS="-15" />
+				<DRAGON_WEAKNESS>-15</DRAGON_WEAKNESS>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4062" levels="1" name="Orfen">
+	<skill id="4062" toLevel="1" name="Orfen">
 		<!-- Confirmed CT2.5 -->
 		<!-- Orfen Skills -->
-		<set name="icon" val="icon.skillboss" />
-		<set name="magicLvl" val="50" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>icon.skillboss</icon>
+		<magicLvl>50</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param BOW="80" />
+				<BOW>80</BOW>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4063" levels="1" name="Paralysis">
+	<skill id="4063" toLevel="1" name="Paralysis">
 		<!-- Confirmed CT2.5 -->
 		<!-- Orfen Skills -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="PARALYZE" />
-		<set name="abnormalVisualEffect" val="PARALYZE" />
-		<set name="activateRate" val="90" />
-		<set name="basicProperty" val="MEN" />
-		<set name="castRange" val="50" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="200" />
-		<set name="hitTime" val="3600" />
-		<set name="icon" val="icon.skill1170" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="50" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="power" val="916" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<set name="trait" val="PARALYZE" />
-		<for>
-			<effect name="PhysicalAttack" />
-			<effect name="Paralyze" />
-		</for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>50</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>3600</hitTime>
+		<icon>icon.skill1170</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>50</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>PARALYZE</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>916</power>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
-	<skill id="4064" levels="1" name="Paralysis">
+	<skill id="4064" toLevel="1" name="Paralysis">
 		<!-- Confirmed CT2.5 -->
 		<!-- Orfen Skills -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="PARALYZE" />
-		<set name="abnormalVisualEffect" val="PARALYZE" />
-		<set name="activateRate" val="30" />
-		<set name="affectRange" val="200" />
-		<set name="basicProperty" val="MEN" />
-		<set name="castRange" val="800" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1300" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill1170" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="50" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
-		<set name="trait" val="PARALYZE" />
-		<for>
-			<effect name="Paralyze" />
-		</for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>30</activateRate>
+		<affectRange>200</affectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>800</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1300</effectRange>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1170</icon>
+		<isDebuff>true</isDebuff>
+		<magicLvl>50</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>PARALYZE</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
-	<skill id="4065" levels="12" name="Heal">
+	<skill id="4065" toLevel="12" name="Heal">
 		<!-- Freya retail confirmed -->
 		<table name="#amount"> 83 151 245 362 494 628 743 789 826 867 895 913 </table>
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 24 35 49 64 78 91 97 101 104 105 105 </table>
-		<table name="#mpInitialConsume"> 4 6 9 13 16 20 23 25 26 26 27 27 </table>
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="2000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
+		<castRange>600</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">24</value>
+			<value level="3">35</value>
+			<value level="4">49</value>
+			<value level="5">64</value>
+			<value level="6">78</value>
+			<value level="7">91</value>
+			<value level="8">97</value>
+			<value level="9">101</value>
+			<value level="10">104</value>
+			<value level="11">105</value>
+			<value level="12">105</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">4</value>
+			<value level="2">6</value>
+			<value level="3">9</value>
+			<value level="4">13</value>
+			<value level="5">16</value>
+			<value level="6">20</value>
+			<value level="7">23</value>
+			<value level="8">25</value>
+			<value level="9">26</value>
+			<value level="10">26</value>
+			<value level="11">27</value>
+			<value level="12">27</value>
+		</mpInitialConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="Heal">
-				<param power="#amount" />
+				<power>
+					<value level="1">83</value>
+					<value level="2">151</value>
+					<value level="3">245</value>
+					<value level="4">362</value>
+					<value level="5">494</value>
+					<value level="6">628</value>
+					<value level="7">743</value>
+					<value level="8">789</value>
+					<value level="9">826</value>
+					<value level="10">867</value>
+					<value level="11">895</value>
+					<value level="12">913</value>
+				</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4066" levels="12" name="Twister">
+	<skill id="4066" toLevel="12" name="Twister">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
 		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="element" val="2" /> <!-- Wind -->
-		<set name="elementPower" val="20" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="MagicalAttack" />
-		</for>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<attributeType>WIND</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">18</value>
+					<value level="2">26</value>
+					<value level="3">38</value>
+					<value level="4">52</value>
+					<value level="5">68</value>
+					<value level="6">85</value>
+					<value level="7">102</value>
+					<value level="8">110</value>
+					<value level="9">116</value>
+					<value level="10">122</value>
+					<value level="11">126</value>
+					<value level="12">129</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4067" levels="12" name="Blow">
+	<skill id="4067" toLevel="12" name="Blow">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<table name="#power"> 137 314 656 1249 2164 3408 4878 5627 6335 6960 7461 7850 </table>
-		<set name="blowChance" val="20" />
-		<set name="castRange" val="40" />
-		<set name="coolTime" val="800" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="200" />
-		<set name="hitTime" val="1000" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="FatalBlow" />
-		</for>
+		<castRange>40</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1000</hitTime>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">28</value>
+			<value level="4">38</value>
+			<value level="5">50</value>
+			<value level="6">61</value>
+			<value level="7">71</value>
+			<value level="8">76</value>
+			<value level="9">80</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
+			<value level="12">85</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="FatalBlow">
+				<power>
+					<value level="1">137</value>
+					<value level="2">314</value>
+					<value level="3">656</value>
+					<value level="4">1249</value>
+					<value level="5">2164</value>
+					<value level="6">3408</value>
+					<value level="7">4878</value>
+					<value level="8">5627</value>
+					<value level="9">6335</value>
+					<value level="10">6960</value>
+					<value level="11">7461</value>
+					<value level="12">7850</value>
+				</power>
+				<chance>20</chance>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4068" levels="12" name="Mechanical Cannon">
+	<skill id="4068" toLevel="12" name="Mechanical Cannon">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<table name="#power"> 46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
-		<set name="castRange" val="600" />
-		<set name="coolTime" val="800" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="1000" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="PhysicalAttack" />
-		</for>
+		<castRange>600</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>1000</hitTime>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">28</value>
+			<value level="4">38</value>
+			<value level="5">50</value>
+			<value level="6">61</value>
+			<value level="7">71</value>
+			<value level="8">76</value>
+			<value level="9">80</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
+			<value level="12">85</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">46</value>
+					<value level="2">105</value>
+					<value level="3">219</value>
+					<value level="4">417</value>
+					<value level="5">722</value>
+					<value level="6">1136</value>
+					<value level="7">1626</value>
+					<value level="8">1876</value>
+					<value level="9">2112</value>
+					<value level="10">2320</value>
+					<value level="11">2487</value>
+					<value level="12">2617</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4069" levels="12" name="Curve Beam">
+	<skill id="4069" toLevel="12" name="Curve Beam">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
 		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="MagicalAttack" />
-		</for>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">18</value>
+					<value level="2">26</value>
+					<value level="3">38</value>
+					<value level="4">52</value>
+					<value level="5">68</value>
+					<value level="6">85</value>
+					<value level="7">102</value>
+					<value level="8">110</value>
+					<value level="9">116</value>
+					<value level="10">122</value>
+					<value level="11">126</value>
+					<value level="12">129</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4070" levels="1" name="Decrease Atk. Spd.">
+	<skill id="4070" toLevel="1" name="Decrease Atk. Spd.">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
-		<set name="abnormalLvl" val="3" />
-		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="ATTACK_TIME_UP" />
-		<set name="activateRate" val="10" />
-		<set name="basicProperty" val="MEN" />
-		<set name="effectPoint" val="-100" />
-		<set name="icon" val="icon.skill1206" />
-		<set name="isDebuff" val="true" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Debuff">
-				<mul stat="pAtkSpd" val="0.77" />
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>ATTACK_TIME_UP</abnormalType>
+		<activateRate>10</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<icon>icon.skill1206</icon>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-23</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4071" levels="5" name="Bow/Crossbow Resistance">
-		<table name="#icons"> icon.skill4071 icon.skill4071 icon.skill4071 icon.skill4272 icon.skill4272 </table>
+	<skill id="4071" toLevel="5" name="Bow/Crossbow Resistance">
 		<table name="#traits"> 10 20 30 40 50 </table>
-		<set name="icon" val="#icons" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<icon>
+			<value level="1">icon.skill4071</value>
+			<value level="2">icon.skill4071</value>
+			<value level="3">icon.skill4071</value>
+			<value level="4">icon.skill4272</value>
+			<value level="5">icon.skill4272</value>
+		</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param BOW="#traits" />
-				<param CROSSBOW="#traits" />
+				<BOW>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</BOW>
+				<CROSSBOW>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</CROSSBOW>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4072" levels="12" name="Stun">
+	<skill id="4072" toLevel="12" name="Stun">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#power"> 16 35 73 139 241 379 542 626 704 774 829 873 </table>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">3</value>
+			<value level="4">3</value>
+			<value level="5">3</value>
+			<value level="6">3</value>
+			<value level="7">3</value>
+			<value level="8">3</value>
+			<value level="9">9</value>
+			<value level="10">9</value>
+			<value level="11">9</value>
+			<value level="12">9</value>
+		</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>30</activateRate>
+		<affectRange>150</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1000</hitTime>
+		<icon>icon.skill0100</icon>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">28</value>
+			<value level="4">38</value>
+			<value level="5">50</value>
+			<value level="6">61</value>
+			<value level="7">71</value>
+			<value level="8">76</value>
+			<value level="9">80</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
+			<value level="12">85</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">16</value>
+					<value level="2">35</value>
+					<value level="3">73</value>
+					<value level="4">139</value>
+					<value level="5">241</value>
+					<value level="6">379</value>
+					<value level="7">542</value>
+					<value level="8">626</value>
+					<value level="9">704</value>
+					<value level="10">774</value>
+					<value level="11">829</value>
+					<value level="12">873</value>
+				</power>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="4073" toLevel="12" name="Stun">
+		<!-- Freya retail confirmed -->
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<table name="#power"> 16 35 73 139 241 379 542 626 704 774 829 873 </table>
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="STUN" />
-		<set name="abnormalVisualEffect" val="STUN" />
-		<set name="activateRate" val="30" />
-		<set name="affectRange" val="150" />
-		<set name="basicProperty" val="CON" />
-		<set name="coolTime" val="800" />
-		<set name="effectPoint" val="-100" />
-		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill0100" />
-		<set name="isDebuff" val="true" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
-		<set name="trait" val="SHOCK" />
-		<for>
-			<effect name="PhysicalAttack" />
-			<effect name="Stun" />
-		</for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">3</value>
+			<value level="3">9</value>
+			<value level="4">3</value>
+			<value level="5">3</value>
+			<value level="6">3</value>
+			<value level="7">3</value>
+			<value level="8">3</value>
+			<value level="9">3</value>
+			<value level="10">9</value>
+			<value level="11">9</value>
+			<value level="12">9</value>
+		</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>40</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1000</hitTime>
+		<icon>icon.skill0100</icon>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">16</value>
+					<value level="2">35</value>
+					<value level="3">73</value>
+					<value level="4">139</value>
+					<value level="5">241</value>
+					<value level="6">379</value>
+					<value level="7">542</value>
+					<value level="8">626</value>
+					<value level="9">704</value>
+					<value level="10">774</value>
+					<value level="11">829</value>
+					<value level="12">873</value>
+				</power>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
-	<skill id="4073" levels="12" name="Stun">
+	<skill id="4074" toLevel="2" name="Haste">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
-		<table name="#power"> 16 35 73 139 241 379 542 626 704 774 829 873 </table>
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="STUN" />
-		<set name="abnormalVisualEffect" val="STUN" />
-		<set name="activateRate" val="50" />
-		<set name="basicProperty" val="CON" />
-		<set name="castRange" val="40" />
-		<set name="coolTime" val="800" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="200" />
-		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill0100" />
-		<set name="isDebuff" val="true" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<set name="trait" val="SHOCK" />
-		<for>
-			<effect name="PhysicalAttack" />
-			<effect name="Stun" />
-		</for>
-	</skill>
-	<skill id="4074" levels="2" name="Haste">
-		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 </table>
-		<table name="#magicLvl"> 30 70 </table>
-		<table name="#mpConsume"> 14 33 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
-		<set name="castRange" val="400" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="900" />
-		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill1086" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="#pAtkSpd" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>2000</hitTime>
+		<icon>icon.skill1086</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">30</value>
+			<value level="2">70</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">14</value>
+			<value level="2">33</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">33</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4075" levels="12" name="Stun">
+	<skill id="4075" toLevel="12" name="Stun">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="STUN" />
-		<set name="abnormalVisualEffect" val="STUN" />
-		<set name="activateRate" val="80" />
-		<set name="basicProperty" val="CON" />
-		<set name="castRange" val="40" />
-		<set name="coolTime" val="800" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="200" />
-		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill0092" />
-		<set name="isDebuff" val="true" />
-		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<set name="trait" val="SHOCK" />
-		<for>
-			<effect name="Stun" />
-		</for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>40</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1000</hitTime>
+		<icon>icon.skill0092</icon>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">28</value>
+			<value level="4">38</value>
+			<value level="5">50</value>
+			<value level="6">61</value>
+			<value level="7">71</value>
+			<value level="8">76</value>
+			<value level="9">80</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
+			<value level="12">85</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
-	<skill id="4076" levels="3" name="Decrease Speed">
+	<skill id="4076" toLevel="3" name="Decrease Speed">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#magicLvl"> 20 40 70 </table>
-		<table name="#mpConsume"> 20 35 65 </table>
 		<table name="#runSpd"> 0.9 0.8 0.7 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="SPEED_DOWN" />
-		<set name="activateRate" val="80" />
-		<set name="basicProperty" val="MEN" />
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill1160" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Debuff">
-				<mul stat="runSpd" val="#runSpd" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2000</hitTime>
+		<icon>icon.skill1160</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>
+			<value level="1">20</value>
+			<value level="2">40</value>
+			<value level="3">70</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">20</value>
+			<value level="2">35</value>
+			<value level="3">65</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-20</value>
+					<value level="3">-30</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4077" levels="12" name="Aura Burn">
+	<skill id="4077" toLevel="12" name="Aura Burn">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
-		<table name="#mpInitialConsume"> 3 4 6 7 9 11 13 14 15 15 16 16 </table>
 		<table name="#power"> 14 21 30 42 55 68 82 88 93 98 101 104 </table>
-		<set name="castRange" val="150" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="650" />
-		<set name="hitTime" val="1500" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="MagicalAttack" />
-		</for>
-	</skill>
-	<skill id="4078" levels="12" name="Flame Strike">
-		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
-		<table name="#power"> 9 13 19 26 34 43 51 55 58 61 63 65 </table>
-		<set name="affectRange" val="200" />
-		<set name="castRange" val="500" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="900" />
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
-		<for>
-			<effect name="MagicalAttack" />
-		</for>
-	</skill>
-	<skill id="4079" levels="1" name="Siege Hammer">
-		<!-- Confirmed CT2.5 -->
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="4800" />
-		<set name="magicLvl" val="49" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="665060" />
-		<set name="reuseDelay" val="5000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="PhysicalAttack" />
-		</for>
-	</skill>
-	<skill id="4080" levels="1" name="Dark Heal">
-		<!-- Freya retail confirmed -->
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="5000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="60" />
-		<set name="mpConsume" val="98" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Heal">
-				<param power="628" />
+		<castRange>150</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>650</effectRange>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">10</value>
+			<value level="2">16</value>
+			<value level="3">21</value>
+			<value level="4">28</value>
+			<value level="5">36</value>
+			<value level="6">44</value>
+			<value level="7">52</value>
+			<value level="8">55</value>
+			<value level="9">58</value>
+			<value level="10">60</value>
+			<value level="11">61</value>
+			<value level="12">62</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">6</value>
+			<value level="4">7</value>
+			<value level="5">9</value>
+			<value level="6">11</value>
+			<value level="7">13</value>
+			<value level="8">14</value>
+			<value level="9">15</value>
+			<value level="10">15</value>
+			<value level="11">16</value>
+			<value level="12">16</value>
+		</mpInitialConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">14</value>
+					<value level="2">21</value>
+					<value level="3">30</value>
+					<value level="4">42</value>
+					<value level="5">55</value>
+					<value level="6">68</value>
+					<value level="7">82</value>
+					<value level="8">88</value>
+					<value level="9">93</value>
+					<value level="10">98</value>
+					<value level="11">101</value>
+					<value level="12">104</value>
+				</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4081" levels="1" name="Pretending to steal">
+	<skill id="4078" toLevel="12" name="Flame Strike">
 		<!-- Freya retail confirmed -->
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="70" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<table name="#power"> 9 13 19 26 34 43 51 55 58 61 63 65 </table>
+		<affectRange>200</affectRange>
+		<castRange>500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">18</value>
+			<value level="2">29</value>
+			<value level="3">40</value>
+			<value level="4">53</value>
+			<value level="5">68</value>
+			<value level="6">83</value>
+			<value level="7">98</value>
+			<value level="8">104</value>
+			<value level="9">109</value>
+			<value level="10">113</value>
+			<value level="11">115</value>
+			<value level="12">117</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">9</value>
+					<value level="2">13</value>
+					<value level="3">19</value>
+					<value level="4">26</value>
+					<value level="5">34</value>
+					<value level="6">43</value>
+					<value level="7">51</value>
+					<value level="8">55</value>
+					<value level="9">58</value>
+					<value level="10">61</value>
+					<value level="11">63</value>
+					<value level="12">65</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4082" levels="1" name="Poison of Death">
+	<skill id="4079" toLevel="1" name="Siege Hammer">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="4200" />
-		<set name="abnormalType" val="FATAL_POISON" />
-		<set name="abnormalVisualEffect" val="DOT_POISON" />
-		<set name="canBeDispeled" val="false" />
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="icon" val="icon.skill4082" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="50" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="DamOverTime" ticks="3">
-				<param canKill="true" power="30" />
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>4800</hitTime>
+		<magicLvl>49</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpSiegeHammer" />
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>665060</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4080" toLevel="1" name="Dark Heal">
+		<!-- Freya retail confirmed -->
+		<castRange>600</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>5000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>60</magicLvl>
+		<mpConsume>98</mpConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpSiegeHammer" />
+		</conditions>
+		<effects>
+			<effect name="Heal">
+				<power>628</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="4081" toLevel="1" name="Pretending to steal">
+		<!-- Freya retail confirmed -->
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>70</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="4082" toLevel="1" name="Poison of Death">
+		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>4200</abnormalTime>
+		<abnormalType>FATAL_POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<canBeDispelled>false</canBeDispelled>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<icon>icon.skill4082</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>50</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<canKill>true</canKill>
+				<power>30</power>
+				<ticks>3</ticks>
 			</effect>
 			<effect name="Root" />
-		</for>
+		</effects>
 	</skill>
-	<skill id="4083" levels="1" name="Die! You fool!">
+	<skill id="4083" toLevel="1" name="Die! You fool!">
 		<!-- Confirmed CT2.5 -->
-		<set name="castRange" val="600" />
-		<set name="coolTime" val="800" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="1000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="70" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="90000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="PhysicalAttack" />
-		</for>
+		<castRange>600</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>70</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>90000</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4084" levels="11" name="Physical Attack Resistance">
+	<skill id="4084" toLevel="11" name="Physical Attack Resistance">
 		<!-- Freya retail confirmed -->
 		<table name="#pDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2.0 3.33 10 1001 </table>
-		<set name="icon" val="icon.skill4084" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="#pDef" />
+		<icon>icon.skill4084</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">11</value>
+					<value level="3">17</value>
+					<value level="4">25</value>
+					<value level="5">33</value>
+					<value level="6">43</value>
+					<value level="7">67</value>
+					<value level="8">100</value>
+					<value level="9">233</value>
+					<value level="10">900</value>
+					<value level="11">100000</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4085" levels="1" name="Critical Damage">
+	<skill id="4085" toLevel="1" name="Critical Damage">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4085" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="critDmg" val="1.25" />
+		<icon>icon.skill4085</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>25</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4086" levels="1" name="Critical Chance">
+	<skill id="4086" toLevel="1" name="Critical Chance">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4086" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="critRate" val="1.5" />
+		<icon>icon.skill4086</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>50</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4087" levels="12" name="Blaze">
+	<skill id="4087" toLevel="12" name="Blaze">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
 		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="MagicalAttack" />
-		</for>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">18</value>
+					<value level="2">26</value>
+					<value level="3">38</value>
+					<value level="4">52</value>
+					<value level="5">68</value>
+					<value level="6">85</value>
+					<value level="7">102</value>
+					<value level="8">110</value>
+					<value level="9">116</value>
+					<value level="10">122</value>
+					<value level="11">126</value>
+					<value level="12">129</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4088" levels="12" name="Bleed">
+	<skill id="4088" toLevel="12" name="Bleed">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#damage"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="BLEEDING" />
-		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
-		<set name="activateRate" val="100" />
-		<set name="basicProperty" val="CON" />
-		<set name="castRange" val="40" />
-		<set name="coolTime" val="800" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="200" />
-		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill0096" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<set name="trait" val="BLEED" />
-		<for>
-			<effect name="DamOverTime" ticks="3">
-				<param power="#damage" />
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+			<value level="5">6</value>
+			<value level="6">7</value>
+			<value level="7">8</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">9</value>
+			<value level="11">10</value>
+			<value level="12">10</value>
+		</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>40</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1000</hitTime>
+		<icon>icon.skill0096</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">28</value>
+			<value level="4">38</value>
+			<value level="5">50</value>
+			<value level="6">61</value>
+			<value level="7">71</value>
+			<value level="8">76</value>
+			<value level="9">80</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
+			<value level="12">85</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>BLEED</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>
+					<value level="1">18</value>
+					<value level="2">25</value>
+					<value level="3">34</value>
+					<value level="4">44</value>
+					<value level="5">54</value>
+					<value level="6">62</value>
+					<value level="7">67</value>
+					<value level="8">67</value>
+					<value level="9">70</value>
+					<value level="10">70</value>
+					<value level="11">71</value>
+					<value level="12">71</value>
+				</power>
+				<ticks>3</ticks>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4089" levels="1" name="Spirit Bear">
+	<skill id="4089" toLevel="1" name="Spirit Bear">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="POSSESSION" />
-		<set name="effectPoint" val="-100" />
-		<set name="hitTime" val="1500" />
-		<set name="magicLvl" val="40" />
-		<set name="mpConsume" val="18" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="runSpd" val="0.85" />
-				<mul stat="pAtk" val="1.15" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>POSSESSION</abnormalType>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1500</hitTime>
+		<magicLvl>40</magicLvl>
+		<mpConsume>18</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<icon>icon.skill0076</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>-15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4090" levels="1" name="Spirit Wolf">
+	<skill id="4090" toLevel="1" name="Spirit Wolf">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="POSSESSION" />
-		<set name="effectPoint" val="-100" />
-		<set name="hitTime" val="1500" />
-		<set name="magicLvl" val="40" />
-		<set name="mpConsume" val="18" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="runSpd" val="1.4" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>POSSESSION</abnormalType>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1500</hitTime>
+		<magicLvl>40</magicLvl>
+		<mpConsume>18</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<icon>icon.skill0083</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>40</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4091" levels="3" name="Spirit Ogre">
+	<skill id="4091" toLevel="3" name="Spirit Ogre">
 		<!-- Confirmed CT2.5 -->
 		<table name="#accCombat"> 3 7 7 </table>
-		<table name="#magicLvl"> 40 60 75 </table>
-		<table name="#MaxHp"> 14 21 21 </table>
-		<table name="#mpConsume"> 18 18 19 </table>
+		<table name="#maxHpHeal"> 14 21 21 </table>
 		<table name="#pAtk"> 1.05 1.15 1.15 </table>
 		<table name="#pDef"> 1.1 1.3 1.3 </table>
 		<table name="#rEvas"> 10 10 5 </table>
 		<table name="#runSpd"> 0.85 0.85 0.9 </table>
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="POSSESSION" />
-		<set name="abnormalVisualEffect" val="BIG_BODY" />
-		<set name="effectPoint" val="-100" />
-		<set name="hitTime" val="1500" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>POSSESSION</abnormalType>
+		<abnormalVisualEffect>BIG_BODY</abnormalVisualEffect>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1500</hitTime>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">60</value>
+			<value level="3">75</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">18</value>
+			<value level="2">18</value>
+			<value level="3">19</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<icon>icon.skill0109</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="Grow">
-				<mul stat="runSpd" val="#runSpd" />
-				<mul stat="pAtk" val="#pAtk" />
-				<mul stat="pDef" val="#pDef" />
-				<sub stat="rEvas" val="#rEvas" />
-				<add stat="accCombat" val="#accCombat" />
 			</effect>
 			<effect name="MaxHp">
-				<param power="#MaxHp" />
-				<param type="PER" />
-				<param heal="true" />
+				<amount>
+					<value level="1">14</value>
+					<value level="2">21</value>
+					<value level="3">21</value>
+				</amount>
+				<mode>PER</mode>
+				<heal>true</heal>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">15</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">-15</value>
+					<value level="2">-15</value>
+					<value level="3">-10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">30</value>
+					<value level="3">30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-10</value>
+					<value level="3">-5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4092" levels="1" name="Spirit Puma">
+	<skill id="4092" toLevel="1" name="Spirit Puma">
 		<!-- Freya retail confirmed -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="POSSESSION" />
-		<set name="effectPoint" val="-100" />
-		<set name="hitTime" val="1500" />
-		<set name="magicLvl" val="40" />
-		<set name="mpConsume" val="18" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.3" />
-				<add stat="rEvas" val="4" />
-				<mul stat="pDef" val="0.8" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>POSSESSION</abnormalType>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1500</hitTime>
+		<magicLvl>40</magicLvl>
+		<mpConsume>18</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<icon>icon.skill0282</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>-20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PhysicalEvasion">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4093" levels="1" name="Evasion">
+	<skill id="4093" toLevel="1" name="Evasion">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4093" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="rEvas" val="4" />
+		<icon>icon.skill4093</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>4</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4094" levels="12" name="Cancellation">
+	<skill id="4094" toLevel="12" name="Cancellation">
 		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
-		<table name="#mpInitialConsume"> 3 4 6 7 9 11 13 14 15 15 16 16 </table>
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="6000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>6000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">10</value>
+			<value level="2">16</value>
+			<value level="3">21</value>
+			<value level="4">28</value>
+			<value level="5">36</value>
+			<value level="6">44</value>
+			<value level="7">52</value>
+			<value level="8">55</value>
+			<value level="9">58</value>
+			<value level="10">60</value>
+			<value level="11">61</value>
+			<value level="12">62</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">6</value>
+			<value level="4">7</value>
+			<value level="5">9</value>
+			<value level="6">11</value>
+			<value level="7">13</value>
+			<value level="8">14</value>
+			<value level="9">15</value>
+			<value level="10">15</value>
+			<value level="11">16</value>
+			<value level="12">16</value>
+		</mpInitialConsume>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="DispelAll" />
-		</for>
+		</effects>
 	</skill>
-	<skill id="4095" levels="1" name="Damage Shield">
+	<skill id="4095" toLevel="1" name="Damage Shield">
 		<!-- Freya retail confirmed -->
-		<set name="icon" val="icon.skill4095" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="reflectDam" val="20" />
+		<icon>icon.skill4095</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DamageShield">
+				<amount>20</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4096" levels="3" name="Hawk Eye">
+	<skill id="4096" toLevel="3" name="Hawk Eye">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#accCombat"> 6 8 10 </table>
-		<table name="#magicLvl"> 20 40 70 </table>
-		<table name="#mpConsume"> 10 18 33 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="AB_HAWK_EYE" />
-		<set name="effectPoint" val="100" />
-		<set name="hitTime" val="1500" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="accCombat" val="#accCombat" />
-				<mul stat="pDef" val="0.9" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>AB_HAWK_EYE</abnormalType>
+		<effectPoint>100</effectPoint>
+		<hitTime>1500</hitTime>
+		<magicLvl>
+			<value level="1">20</value>
+			<value level="2">40</value>
+			<value level="3">70</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">10</value>
+			<value level="2">18</value>
+			<value level="3">33</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<icon>icon.skill0131</icon>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>-10</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">8</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="4097" levels="12" name="Chant of Life">
+	<skill id="4097" toLevel="12" name="Chant of Life">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#hot"> 7 12 18 27 37 46 55 23 32 42 51 58 </table>
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 33 59 88 122 159 195 228 242 252 259 262 262 </table>
-		<table name="#power"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill1229" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="HealOverTime" ticks="1">
-				<param power="#hot" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
+			<value level="11">11</value>
+			<value level="12">12</value>
+		</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
+		<castRange>600</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2000</hitTime>
+		<icon>icon.skill1229</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">33</value>
+			<value level="2">59</value>
+			<value level="3">88</value>
+			<value level="4">122</value>
+			<value level="5">159</value>
+			<value level="6">195</value>
+			<value level="7">228</value>
+			<value level="8">242</value>
+			<value level="9">252</value>
+			<value level="10">259</value>
+			<value level="11">262</value>
+			<value level="12">262</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealOverTime">
+				<power>
+					<value level="1">7</value>
+					<value level="2">12</value>
+					<value level="3">18</value>
+					<value level="4">27</value>
+					<value level="5">37</value>
+					<value level="6">46</value>
+					<value level="7">55</value>
+					<value level="8">23</value>
+					<value level="9">32</value>
+					<value level="10">42</value>
+					<value level="11">51</value>
+					<value level="12">58</value>
+				</power>
+				<ticks>1</ticks>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="4098" levels="12" name="Silence">
+	<skill id="4098" toLevel="12" name="Silence">
 		<!-- Freya retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="SILENCE" />
-		<set name="abnormalVisualEffect" val="SILENCE" />
-		<set name="activateRate" val="80" />
-		<set name="basicProperty" val="MEN" />
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill1064" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<set name="trait" val="DERANGEMENT" />
-		<for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>SILENCE</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2000</hitTime>
+		<icon>icon.skill1064</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>
+			<value level="1">10</value>
+			<value level="2">20</value>
+			<value level="3">30</value>
+			<value level="4">40</value>
+			<value level="5">50</value>
+			<value level="6">60</value>
+			<value level="7">70</value>
+			<value level="8">75</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
+			<value level="11">90</value>
+			<value level="12">95</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">20</value>
+			<value level="3">27</value>
+			<value level="4">35</value>
+			<value level="5">45</value>
+			<value level="6">55</value>
+			<value level="7">65</value>
+			<value level="8">69</value>
+			<value level="9">73</value>
+			<value level="10">75</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<trait>DERANGEMENT</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="Mute" />
-		</for>
+		</effects>
 	</skill>
-	<skill id="4099" levels="2" name="Berserker Spirit">
+	<skill id="4099" toLevel="2" name="Berserker Spirit">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvls"> 1 2 </table>
-		<table name="#magicLvl"> 40 70 </table>
 		<table name="#mAtk"> 1.1 1.16 </table>
 		<table name="#mAtkSpd"> 1.05 1.08 </table>
 		<table name="#mDef"> 0.9 0.84 </table>
-		<table name="#mpConsume"> 18 33 </table>
 		<table name="#pAtk"> 1.05 1.08 </table>
 		<table name="#pAtkSpd"> 1.05 1.08 </table>
 		<table name="#pDef"> 0.95 0.92 </table>
 		<table name="#rEvas"> 5 8 </table>
 		<table name="#runSpd"> 5 8 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="BERSERKER" />
-		<set name="castRange" val="400" />
-		<set name="effectPoint" val="100" />
-		<set name="effectRange" val="900" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill1062" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="#pAtk" />
-				<mul stat="pAtkSpd" val="#pAtkSpd" />
-				<mul stat="mAtk" val="#mAtk" />
-				<mul stat="mAtkSpd" val="#pAtkSpd" />
-				<add stat="runSpd" val="#runSpd" />
-				<mul stat="pDef" val="#pDef" />
-				<mul stat="mDef" val="#mDef" />
-				<sub stat="rEvas" val="#rEvas" />
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>BERSERKER</abnormalType>
+		<castRange>400</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1062</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">70</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">18</value>
+			<value level="2">33</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">16</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-16</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-8</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>

@@ -17,17 +17,14 @@
 package com.l2jmobius.gameserver.model.olympiad;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -38,15 +35,11 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class OlympiadManager
 {
-	private final List<Integer> _nonClassBasedRegisters;
-	private final Map<Integer, List<Integer>> _classBasedRegisters;
-	private final List<List<Integer>> _teamsBasedRegisters;
+	private final Set<Integer> _nonClassBasedRegisters = ConcurrentHashMap.newKeySet();
+	private final Map<Integer, Set<Integer>> _classBasedRegisters = new ConcurrentHashMap<>();
 	
 	protected OlympiadManager()
 	{
-		_nonClassBasedRegisters = new CopyOnWriteArrayList<>();
-		_classBasedRegisters = new ConcurrentHashMap<>();
-		_teamsBasedRegisters = new CopyOnWriteArrayList<>();
 	}
 	
 	public static OlympiadManager getInstance()
@@ -54,31 +47,26 @@ public class OlympiadManager
 		return SingletonHolder._instance;
 	}
 	
-	public final List<Integer> getRegisteredNonClassBased()
+	public final Set<Integer> getRegisteredNonClassBased()
 	{
 		return _nonClassBasedRegisters;
 	}
 	
-	public final Map<Integer, List<Integer>> getRegisteredClassBased()
+	public final Map<Integer, Set<Integer>> getRegisteredClassBased()
 	{
 		return _classBasedRegisters;
 	}
 	
-	public final List<List<Integer>> getRegisteredTeamsBased()
+	protected final List<Set<Integer>> hasEnoughRegisteredClassed()
 	{
-		return _teamsBasedRegisters;
-	}
-	
-	protected final List<List<Integer>> hasEnoughRegisteredClassed()
-	{
-		List<List<Integer>> result = null;
-		for (Map.Entry<Integer, List<Integer>> classList : _classBasedRegisters.entrySet())
+		List<Set<Integer>> result = null;
+		for (Map.Entry<Integer, Set<Integer>> classList : _classBasedRegisters.entrySet())
 		{
 			if ((classList.getValue() != null) && (classList.getValue().size() >= Config.ALT_OLY_CLASSED))
 			{
 				if (result == null)
 				{
-					result = new CopyOnWriteArrayList<>();
+					result = new ArrayList<>();
 				}
 				
 				result.add(classList.getValue());
@@ -92,16 +80,10 @@ public class OlympiadManager
 		return _nonClassBasedRegisters.size() >= Config.ALT_OLY_NONCLASSED;
 	}
 	
-	protected final boolean hasEnoughRegisteredTeams()
-	{
-		return _teamsBasedRegisters.size() >= Config.ALT_OLY_TEAMS;
-	}
-	
 	protected final void clearRegistered()
 	{
 		_nonClassBasedRegisters.clear();
 		_classBasedRegisters.clear();
-		_teamsBasedRegisters.clear();
 		AntiFeedManager.getInstance().clear(AntiFeedManager.OLYMPIAD_ID);
 	}
 	
@@ -110,24 +92,9 @@ public class OlympiadManager
 		return isRegistered(noble, noble, false);
 	}
 	
-	private final boolean isRegistered(L2PcInstance noble, L2PcInstance player, boolean showMessage)
+	private boolean isRegistered(L2PcInstance noble, L2PcInstance player, boolean showMessage)
 	{
 		final Integer objId = Integer.valueOf(noble.getObjectId());
-		// party may be already dispersed
-		for (List<Integer> team : _teamsBasedRegisters)
-		{
-			if ((team != null) && team.contains(objId))
-			{
-				if (showMessage)
-				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_REGISTERED_ON_THE_WAITING_LIST_FOR_THE_3_VS_3_CLASS_IRRELEVANT_TEAM_MATCH);
-					sm.addPcName(noble);
-					player.sendPacket(sm);
-				}
-				return true;
-			}
-		}
-		
 		if (_nonClassBasedRegisters.contains(objId))
 		{
 			if (showMessage)
@@ -139,7 +106,7 @@ public class OlympiadManager
 			return true;
 		}
 		
-		final List<Integer> classed = _classBasedRegisters.get(noble.getBaseClassId());
+		final Set<Integer> classed = _classBasedRegisters.get(noble.getBaseClass());
 		if ((classed != null) && classed.contains(objId))
 		{
 			if (showMessage)
@@ -159,7 +126,7 @@ public class OlympiadManager
 		return isRegistered(noble, noble, false) || isInCompetition(noble, noble, false);
 	}
 	
-	private final boolean isInCompetition(L2PcInstance noble, L2PcInstance player, boolean showMessage)
+	private boolean isInCompetition(L2PcInstance noble, L2PcInstance player, boolean showMessage)
 	{
 		if (!Olympiad._inCompPeriod)
 		{
@@ -198,13 +165,6 @@ public class OlympiadManager
 						player.sendPacket(sm);
 						break;
 					}
-					case TEAMS:
-					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_REGISTERED_ON_THE_WAITING_LIST_FOR_THE_3_VS_3_CLASS_IRRELEVANT_TEAM_MATCH);
-						sm.addPcName(noble);
-						player.sendPacket(sm);
-						break;
-					}
 				}
 				return true;
 			}
@@ -237,110 +197,64 @@ public class OlympiadManager
 		{
 			case CLASSED:
 			{
-				if (!checkNoble(player, player))
+				if (player.isOnEvent())
 				{
+					player.sendMessage("You can't join olympiad while participating on TvT Event.");
+					return false;
+				}
+				
+				if ((Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0) && !AntiFeedManager.getInstance().tryAddPlayer(AntiFeedManager.OLYMPIAD_ID, player, Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP))
+				{
+					final NpcHtmlMessage message = new NpcHtmlMessage(player.getLastHtmlActionOriginId());
+					message.setFile(player.getHtmlPrefix(), "data/html/mods/OlympiadIPRestriction.htm");
+					message.replace("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(player, Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP)));
+					player.sendPacket(message);
+					if (player.isGM() && player.isDebug())
+					{
+						player.sendMessage("HTML: data/html/mods/OlympiadIPRestriction.htm");
+					}
 					return false;
 				}
 				
 				if (Olympiad.getInstance().getRemainingWeeklyMatchesClassed(charId) < 1)
 				{
-					player.sendPacket(SystemMessageId.YOU_CAN_ENTER_UP_TO_50_FREE_FOR_ALL_BATTLES_AND_50_CLASS_SPECIFIC_BATTLES_PER_WEEK);
+					player.sendPacket(SystemMessageId.YOU_CAN_ENTER_UP_TO_30_FREE_FOR_ALL_BATTLES_AND_30_CLASS_SPECIFIC_BATTLES_PER_WEEK);
 					return false;
 				}
 				
-				List<Integer> classed = _classBasedRegisters.get(player.getBaseClassId());
-				if (classed != null)
-				{
-					classed.add(charId);
-				}
-				else
-				{
-					classed = new CopyOnWriteArrayList<>();
-					classed.add(charId);
-					_classBasedRegisters.put(player.getBaseClassId(), classed);
-				}
-				
+				_classBasedRegisters.computeIfAbsent(player.getBaseClass(), k -> ConcurrentHashMap.newKeySet()).add(charId);
 				player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REGISTERED_FOR_THE_OLYMPIAD_WAITING_LIST_FOR_A_CLASS_BATTLE);
 				break;
 			}
 			case NON_CLASSED:
 			{
-				if (!checkNoble(player, player))
+				if (player.isOnEvent())
 				{
+					player.sendMessage("You can't join olympiad while participating on TvT Event.");
+					return false;
+				}
+				
+				if ((Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0) && !AntiFeedManager.getInstance().tryAddPlayer(AntiFeedManager.OLYMPIAD_ID, player, Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP))
+				{
+					final NpcHtmlMessage message = new NpcHtmlMessage(player.getLastHtmlActionOriginId());
+					message.setFile(player.getHtmlPrefix(), "data/html/mods/OlympiadIPRestriction.htm");
+					message.replace("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(player, Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP)));
+					player.sendPacket(message);
+					if (player.isGM() && player.isDebug())
+					{
+						player.sendMessage("HTML: data/html/mods/OlympiadIPRestriction.htm");
+					}
 					return false;
 				}
 				
 				if (Olympiad.getInstance().getRemainingWeeklyMatchesNonClassed(charId) < 1)
 				{
-					player.sendPacket(SystemMessageId.YOU_CAN_ENTER_UP_TO_50_FREE_FOR_ALL_BATTLES_AND_50_CLASS_SPECIFIC_BATTLES_PER_WEEK);
+					player.sendPacket(SystemMessageId.YOU_CAN_ENTER_UP_TO_30_FREE_FOR_ALL_BATTLES_AND_30_CLASS_SPECIFIC_BATTLES_PER_WEEK);
 					return false;
 				}
 				
 				_nonClassBasedRegisters.add(charId);
 				player.sendPacket(SystemMessageId.YOU_ARE_CURRENTLY_REGISTERED_FOR_A_1V1_CLASS_IRRELEVANT_MATCH);
-				break;
-			}
-			case TEAMS:
-			{
-				final L2Party party = player.getParty();
-				if ((party == null) || (party.getMemberCount() != 3))
-				{
-					player.sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_MADE_BECAUSE_THE_REQUIREMENTS_HAVE_NOT_BEEN_MET_TO_PARTICIPATE_IN_A_TEAM_MATCH_YOU_MUST_FIRST_FORM_A_3_MEMBER_PARTY);
-					return false;
-				}
-				if (!party.isLeader(player))
-				{
-					player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_REQUEST_A_TEAM_MATCH);
-					return false;
-				}
-				
-				int teamPoints = 0;
-				final List<Integer> team = new ArrayList<>(party.getMemberCount());
-				for (L2PcInstance noble : party.getMembers())
-				{
-					if (!checkNoble(noble, player))
-					{
-						// remove previously registered party members
-						if (Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0)
-						{
-							for (L2PcInstance unreg : party.getMembers())
-							{
-								if (unreg == noble)
-								{
-									break;
-								}
-								
-								AntiFeedManager.getInstance().removePlayer(AntiFeedManager.OLYMPIAD_ID, unreg);
-							}
-						}
-						return false;
-					}
-					
-					if (Olympiad.getInstance().getRemainingWeeklyMatchesTeam(noble.getObjectId()) < 1)
-					{
-						player.sendPacket(SystemMessageId.YOU_CAN_ENTER_UP_TO_50_FREE_FOR_ALL_BATTLES_AND_50_CLASS_SPECIFIC_BATTLES_PER_WEEK);
-						return false;
-					}
-					team.add(noble.getObjectId());
-					teamPoints += Olympiad.getInstance().getNoblePoints(noble.getObjectId());
-				}
-				if (teamPoints < 10)
-				{
-					// TODO: replace with retail message
-					player.sendMessage("Your team must have at least 10 points in total.");
-					// remove previously registered party members
-					if (Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0)
-					{
-						for (L2PcInstance unreg : party.getMembers())
-						{
-							AntiFeedManager.getInstance().removePlayer(AntiFeedManager.OLYMPIAD_ID, unreg);
-						}
-					}
-					return false;
-				}
-				
-				party.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_CURRENTLY_REGISTERED_FOR_A_3_VS_3_CLASS_IRRELEVANT_TEAM_MATCH));
-				_teamsBasedRegisters.add(team);
 				break;
 			}
 		}
@@ -386,11 +300,9 @@ public class OlympiadManager
 			return true;
 		}
 		
-		final List<Integer> classed = _classBasedRegisters.get(noble.getBaseClassId());
+		final Set<Integer> classed = _classBasedRegisters.get(noble.getBaseClass());
 		if ((classed != null) && classed.remove(objId))
 		{
-			_classBasedRegisters.put(noble.getBaseClassId(), classed);
-			
 			if (Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0)
 			{
 				AntiFeedManager.getInstance().removePlayer(AntiFeedManager.OLYMPIAD_ID, noble);
@@ -400,15 +312,6 @@ public class OlympiadManager
 			return true;
 		}
 		
-		for (List<Integer> team : _teamsBasedRegisters)
-		{
-			if ((team != null) && team.contains(objId))
-			{
-				_teamsBasedRegisters.remove(team);
-				ThreadPoolManager.getInstance().executeGeneral(new AnnounceUnregToTeam(team));
-				return true;
-			}
-		}
 		return false;
 	}
 	
@@ -426,149 +329,12 @@ public class OlympiadManager
 			return;
 		}
 		
-		final List<Integer> classed = _classBasedRegisters.get(player.getBaseClassId());
-		if ((classed != null) && classed.remove(objId))
-		{
-			return;
-		}
-		
-		for (List<Integer> team : _teamsBasedRegisters)
-		{
-			if ((team != null) && team.contains(objId))
-			{
-				_teamsBasedRegisters.remove(team);
-				ThreadPoolManager.getInstance().executeGeneral(new AnnounceUnregToTeam(team));
-				return;
-			}
-		}
-	}
-	
-	/**
-	 * @param noble - checked noble
-	 * @param player - messages will be sent to this L2PcInstance
-	 * @return true if all requirements are met
-	 */
-	// TODO: move to the bypass handler after reworking points system
-	private final boolean checkNoble(L2PcInstance noble, L2PcInstance player)
-	{
-		SystemMessage sm;
-		if (!noble.isNoble())
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_ONLY_NOBLESSE_EXALTED_CHARACTERS_CAN_PARTICIPATE_IN_THE_OLYMPIAD);
-			sm.addPcName(noble);
-			player.sendPacket(sm);
-			return false;
-		}
-		
-		if (noble.isSubClassActive())
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_SUBCLASSES_AND_DUEL_CLASSES_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD);
-			sm.addPcName(noble);
-			player.sendPacket(sm);
-			return false;
-		}
-		
-		if (noble.isCursedWeaponEquipped())
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_THE_OWNER_OF_S2_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD);
-			sm.addPcName(noble);
-			sm.addItemName(noble.getCursedWeaponEquippedId());
-			player.sendPacket(sm);
-			return false;
-		}
-		
-		if (!noble.isInventoryUnder90(true))
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_AS_THE_INVENTORY_WEIGHT_SLOT_IS_FILLED_BEYOND_80);
-			sm.addPcName(noble);
-			player.sendPacket(sm);
-			return false;
-		}
-		
-		final int charId = noble.getObjectId();
-		if (noble.isOnEvent())
-		{
-			player.sendMessage("You can't join olympiad while participating on TvT Event.");
-			return false;
-		}
-		
-		if (isRegistered(noble, player, true) || isInCompetition(noble, player, true))
-		{
-			return false;
-		}
-		
-		StatsSet statDat = Olympiad.getNobleStats(charId);
-		if (statDat == null)
-		{
-			statDat = new StatsSet();
-			statDat.set(Olympiad.CLASS_ID, noble.getBaseClassId());
-			statDat.set(Olympiad.CHAR_NAME, noble.getName());
-			statDat.set(Olympiad.POINTS, Olympiad.DEFAULT_POINTS);
-			statDat.set(Olympiad.COMP_DONE, 0);
-			statDat.set(Olympiad.COMP_WON, 0);
-			statDat.set(Olympiad.COMP_LOST, 0);
-			statDat.set(Olympiad.COMP_DRAWN, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK_CLASSED, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK_NON_CLASSED, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK_TEAM, 0);
-			statDat.set("to_save", true);
-			Olympiad.addNobleStats(charId, statDat);
-		}
-		
-		final int points = Olympiad.getInstance().getNoblePoints(charId);
-		if (points <= 0)
-		{
-			final NpcHtmlMessage message = new NpcHtmlMessage(player.getLastHtmlActionOriginId());
-			message.setFile(player.getHtmlPrefix(), "html/olympiad/noble_nopoints1.htm");
-			message.replace("%objectId%", String.valueOf(noble.getLastHtmlActionOriginId()));
-			player.sendPacket(message);
-			return false;
-		}
-		
-		if ((Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0) && !AntiFeedManager.getInstance().tryAddPlayer(AntiFeedManager.OLYMPIAD_ID, noble, Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP))
-		{
-			final NpcHtmlMessage message = new NpcHtmlMessage(player.getLastHtmlActionOriginId());
-			message.setFile(player.getHtmlPrefix(), "html/mods/OlympiadIPRestriction.htm");
-			message.replace("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(player, Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP)));
-			player.sendPacket(message);
-			return false;
-		}
-		
-		return true;
-	}
-	
-	private static final class AnnounceUnregToTeam implements Runnable
-	{
-		private final List<Integer> _team;
-		
-		public AnnounceUnregToTeam(List<Integer> t)
-		{
-			_team = t;
-		}
-		
-		@Override
-		public final void run()
-		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BEEN_REMOVED_FROM_THE_OLYMPIAD_WAITING_LIST);
-			for (int objectId : _team)
-			{
-				final L2PcInstance teamMember = L2World.getInstance().getPlayer(objectId);
-				if (teamMember != null)
-				{
-					teamMember.sendPacket(sm);
-					if (Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0)
-					{
-						AntiFeedManager.getInstance().removePlayer(AntiFeedManager.OLYMPIAD_ID, teamMember);
-					}
-				}
-			}
-		}
+		_classBasedRegisters.getOrDefault(player.getBaseClass(), Collections.emptySet()).remove(objId);
 	}
 	
 	public int getCountOpponents()
 	{
-		return _nonClassBasedRegisters.size() + _classBasedRegisters.size() + _teamsBasedRegisters.size();
+		return _nonClassBasedRegisters.size() + _classBasedRegisters.size();
 	}
 	
 	private static class SingletonHolder

@@ -16,39 +16,33 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.EnchantResult;
 
 /**
  * @author KenM
  */
-public class RequestExCancelEnchantItem extends L2GameClientPacket
+public class RequestExCancelEnchantItem implements IClientIncomingPacket
 {
-	private static final String _C__D0_4E_REQUESTEXCANCELENCHANTITEM = "[C] D0:4E RequestExCancelEnchantItem";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// nothing (trigger)
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		activeChar.sendPacket(new EnchantResult(2, 0, 0));
+		client.sendPacket(new EnchantResult(2, 0, 0));
 		activeChar.removeRequest(EnchantItemRequest.class);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_4E_REQUESTEXCANCELENCHANTITEM;
 	}
 }

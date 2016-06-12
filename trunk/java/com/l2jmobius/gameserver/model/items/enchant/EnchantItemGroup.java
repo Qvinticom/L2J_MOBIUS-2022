@@ -71,7 +71,7 @@ public final class EnchantItemGroup
 			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't match proper chance for item group: " + _name, new IllegalStateException());
 			return _chances.get(_chances.size() - 1).getChance();
 		}
-		_log.log(Level.WARNING, getClass().getSimpleName() + ": item group: " + _name + " doesn't have any chances!");
+		_log.warning(getClass().getSimpleName() + ": item group: " + _name + " doesn't have any chances!");
 		return -1;
 	}
 }

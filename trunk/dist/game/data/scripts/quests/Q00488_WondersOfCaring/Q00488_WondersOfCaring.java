@@ -19,60 +19,58 @@ package quests.Q00488_WondersOfCaring;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
 
 /**
  * Wonders of Caring (488)
- * @URL https://l2wiki.com/Wonders_of_Caring
- * @author Gigi
+ * @author St3eT
  */
-public class Q00488_WondersOfCaring extends Quest
+public final class Q00488_WondersOfCaring extends Quest
 {
 	// NPCs
-	private static final int ADVANTURES_GUIDE = 32327;
+	private static final int ADVENTURER = 32327;
 	private static final int DOLPHREN = 32880;
-	// MONSTERS
-	private static final int CNIMERA_PRICE = 20965;
-	private static final int MUTATED_CREATION = 20966;
-	private static final int CREATURE_OF_THE_PAST = 20967;
-	private static final int FORGOTTEN_FACE = 20968;
-	private static final int GIANTS_SHADOW = 20969;
-	private static final int SOLDIER_OS_ANCIENT_TIMESS = 20970;
-	private static final int WARRIOR_OS_ANCIENT_TIME = 20971;
-	private static final int SHAMAN_ON_ANCIENT_TIMES = 20972;
-	private static final int FORGOTTEN_ANCIENT_PEOPLE = 20973;
+	private static final int[] MONSTERS =
+	{
+		20965, // Chimera Piece
+		20970, // Soldier of Ancient Times
+		20966, // Mutated Creation
+		20971, // Warrior of Ancient Times
+		20972, // Shaman of Ancient Times
+		20967, // Creature of the Past
+		20973, // Forgotten Ancient People
+		20968, // Forgotten Face
+		20969, // Giant's Shadow
+	};
 	// Items
-	private static final int RELIC_BOX = 19500;
-	private static final ItemHolder ADENA = new ItemHolder(57, 283800);
+	private static final int BOX = 19500; // Relic Box
 	// Misc
 	private static final int MIN_LEVEL = 75;
 	private static final int MAX_LEVEL = 79;
-	// Reward
-	private static final int EXP_REWARD = 22901550;
-	private static final int SP_REWARD = 5496;
 	
 	public Q00488_WondersOfCaring()
 	{
-		super(488, Q00488_WondersOfCaring.class.getSimpleName(), "Wonders of Caring");
-		addStartNpc(ADVANTURES_GUIDE);
-		addTalkId(ADVANTURES_GUIDE, DOLPHREN);
-		registerQuestItems(RELIC_BOX);
-		addKillId(CNIMERA_PRICE, MUTATED_CREATION, CREATURE_OF_THE_PAST, FORGOTTEN_FACE, GIANTS_SHADOW, SOLDIER_OS_ANCIENT_TIMESS, WARRIOR_OS_ANCIENT_TIME, SHAMAN_ON_ANCIENT_TIMES, FORGOTTEN_ANCIENT_PEOPLE);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.html");
+		super(488);
+		addStartNpc(ADVENTURER);
+		addTalkId(ADVENTURER, DOLPHREN);
+		addKillId(MONSTERS);
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "");
+		registerQuestItems(BOX);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		
+		if (st == null)
 		{
-			return getNoQuestMsg(player);
+			return null;
 		}
 		
+		String htmltext = null;
 		switch (event)
 		{
 			case "32327-02.htm":
@@ -83,7 +81,7 @@ public class Q00488_WondersOfCaring extends Quest
 			}
 			case "32327-04.htm":
 			{
-				qs.startQuest();
+				st.startQuest();
 				htmltext = event;
 				break;
 			}
@@ -92,38 +90,62 @@ public class Q00488_WondersOfCaring extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
-		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
+		final QuestState st = getQuestState(player, true);
 		
-		switch (npc.getId())
+		switch (st.getState())
 		{
-			case ADVANTURES_GUIDE:
+			case State.CREATED:
 			{
-				if (qs.isCreated())
+				if (npc.getId() == ADVENTURER)
 				{
 					htmltext = "32327-01.htm";
 				}
-				else if (qs.getCond() > 0)
+				break;
+			}
+			case State.STARTED:
+			{
+				if (st.isCond(1))
 				{
-					htmltext = "32327-05.html";
+					htmltext = npc.getId() == ADVENTURER ? "32327-05.html" : "32880-01.html";
 				}
-				else if (qs.isCompleted() && !qs.isNowAvailable())
+				else if (st.isCond(2))
 				{
-					htmltext = "32327-07.html";
+					if (npc.getId() == ADVENTURER)
+					{
+						htmltext = "32327-05.html";
+					}
+					else if (npc.getId() == DOLPHREN)
+					{
+						if (!isSimulated)
+						{
+							st.exitQuest(QuestType.DAILY, true);
+							giveAdena(player, 490_545, true);
+							if (player.getLevel() >= MIN_LEVEL)
+							{
+								addExpAndSp(player, 22_901_550, 5_496);
+							}
+						}
+						htmltext = "32880-02.html";
+					}
 				}
 				break;
 			}
-			case DOLPHREN:
+			case State.COMPLETED:
 			{
-				if (qs.isCond(2) && (getQuestItemsCount(player, RELIC_BOX) >= 50))
+				if ((npc.getId() == ADVENTURER) && st.isNowAvailable())
 				{
-					takeItems(player, RELIC_BOX, -1);
-					giveItems(player, ADENA);
-					addExpAndSp(player, EXP_REWARD, SP_REWARD);
-					qs.exitQuest(QuestType.DAILY, true);
-					htmltext = "32880-01.html";
+					if (!isSimulated)
+					{
+						st.setState(State.CREATED);
+					}
+					htmltext = "32327-01.htm";
+				}
+				else if ((npc.getId() == DOLPHREN) && st.isCompleted() && !st.isNowAvailable())
+				{
+					htmltext = "32880-03.html";
 				}
 				break;
 			}
@@ -132,13 +154,17 @@ public class Q00488_WondersOfCaring extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc monster, L2PcInstance killer, boolean isSummon)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, monster, RELIC_BOX, 1, 50, 0.2, true))
+		final QuestState st = getQuestState(killer, false);
+		
+		if ((st != null) && st.isCond(1))
 		{
-			qs.setCond(2, true);
+			if (giveItemRandomly(killer, BOX, 1, 50, 0.4, true))
+			{
+				st.setCond(2, true);
+			}
 		}
-		return super.onKill(monster, killer, isSummon);
+		return super.onKill(npc, killer, isSummon);
 	}
 }

@@ -17,12 +17,13 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Hide effect implementation.
@@ -30,9 +31,33 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class Hide extends AbstractEffect
 {
-	public Hide(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Hide(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
+	}
+	
+	@Override
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	{
+		if (effected.isPlayer())
+		{
+			effected.setInvisible(true);
+			
+			if ((effected.getAI().getNextIntention() != null) && (effected.getAI().getNextIntention().getCtrlIntention() == CtrlIntention.AI_INTENTION_ATTACK))
+			{
+				effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			}
+			
+			L2World.getInstance().forEachVisibleObject(effected, L2Character.class, target ->
+			{
+				if ((target.getTarget() == effected))
+				{
+					target.setTarget(null);
+					target.abortAttack();
+					target.abortCast();
+					target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				}
+			});
+		}
 	}
 	
 	@Override
@@ -44,32 +69,6 @@ public final class Hide extends AbstractEffect
 			if (!activeChar.inObserverMode())
 			{
 				activeChar.setInvisible(false);
-			}
-		}
-	}
-	
-	@Override
-	public void onStart(BuffInfo info)
-	{
-		if (info.getEffected().isPlayer())
-		{
-			final L2PcInstance activeChar = info.getEffected().getActingPlayer();
-			activeChar.setInvisible(true);
-			
-			if ((activeChar.getAI().getNextIntention() != null) && (activeChar.getAI().getNextIntention().getCtrlIntention() == CtrlIntention.AI_INTENTION_ATTACK))
-			{
-				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			}
-			
-			for (L2Character target : activeChar.getKnownList().getKnownCharacters())
-			{
-				if ((target != null) && (target.getTarget() == activeChar))
-				{
-					target.setTarget(null);
-					target.abortAttack();
-					target.abortCast();
-					target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-				}
 			}
 		}
 	}

@@ -16,37 +16,33 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.friend;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.friend.ExFriendDetailInfo;
 
 /**
  * @author Sdw
  */
-public class RequestFriendDetailInfo extends L2GameClientPacket
+public class RequestFriendDetailInfo implements IClientIncomingPacket
 {
-	private static final String _C__D0_97_REQUESTFRIENDDETAILINFO = "[C] D0:97 RequestFriendDetailInfo";
 	private String _name;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_name = readS();
+		_name = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player != null)
 		{
-			player.sendPacket(new ExFriendDetailInfo(player, _name));
+			client.sendPacket(new ExFriendDetailInfo(player, _name));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_97_REQUESTFRIENDDETAILINFO;
 	}
 }

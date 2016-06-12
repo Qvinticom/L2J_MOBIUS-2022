@@ -16,55 +16,64 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ManagePledgePower;
 
-public final class RequestPledgePower extends L2GameClientPacket
+public final class RequestPledgePower implements IClientIncomingPacket
 {
-	private static final String _C__CC_REQUESTPLEDGEPOWER = "[C] CC RequestPledgePower";
-	
 	private int _rank;
 	private int _action;
 	private int _privs;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_rank = readD();
-		_action = readD();
+		_rank = packet.readD();
+		_action = packet.readD();
 		if (_action == 2)
 		{
-			_privs = readD();
+			_privs = packet.readD();
 		}
 		else
 		{
 			_privs = 0;
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
-		if ((player == null) || !player.isClanLeader())
+		final L2PcInstance player = client.getActiveChar();
+		if (player == null)
 		{
 			return;
 		}
 		
 		if (_action == 2)
 		{
-			player.getClan().setRankPrivs(_rank, _privs);
+			if (player.isClanLeader())
+			{
+				if (_rank == 9)
+				{
+					// The rights below cannot be bestowed upon Academy members:
+					// Join a clan or be dismissed
+					// Title management, crest management, master management, level management,
+					// bulletin board administration
+					// Clan war, right to dismiss, set functions
+					// Auction, manage taxes, attack/defend registration, mercenary management
+					// => Leaves only CP_CL_VIEW_WAREHOUSE, CP_CH_OPEN_DOOR, CP_CS_OPEN_DOOR?
+					_privs &= ClanPrivilege.CL_VIEW_WAREHOUSE.getBitmask() | ClanPrivilege.CH_OPEN_DOOR.getBitmask() | ClanPrivilege.CS_OPEN_DOOR.getBitmask();
+				}
+				player.getClan().setRankPrivs(_rank, _privs);
+			}
 		}
 		else
 		{
-			player.getClan().updateRankPrivs(_rank, player.getClan().getRankPrivs(_rank).getBitmask());
+			player.sendPacket(new ManagePledgePower(client.getActiveChar().getClan(), _action, _rank));
 		}
-		player.sendPacket(new ManagePledgePower(player.getClan(), _action, _rank));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__CC_REQUESTPLEDGEPOWER;
 	}
 }

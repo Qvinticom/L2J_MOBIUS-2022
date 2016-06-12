@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.ADENA_ID;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
@@ -30,43 +31,41 @@ import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExChangePostState;
-import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author Migi, DS
  */
-public final class RequestPostAttachment extends L2GameClientPacket
+public final class RequestPostAttachment implements IClientIncomingPacket
 {
-	private static final String _C__D0_6A_REQUESTPOSTATTACHMENT = "[C] D0:6A RequestPostAttachment";
-	
 	private int _msgId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_msgId = readD();
+		_msgId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (!Config.ALLOW_MAIL || !Config.ALLOW_ATTACHMENTS)
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("getattach"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("getattach"))
 		{
 			return;
 		}
@@ -79,25 +78,25 @@ public final class RequestPostAttachment extends L2GameClientPacket
 		
 		if (!activeChar.isInsideZone(ZoneId.PEACE))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_IN_A_NON_PEACE_ZONE_LOCATION);
+			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_IN_A_NON_PEACE_ZONE_LOCATION);
 			return;
 		}
 		
 		if (activeChar.getActiveTradeList() != null)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_DURING_AN_EXCHANGE);
+			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_DURING_AN_EXCHANGE);
 			return;
 		}
 		
 		if (activeChar.hasItemRequest())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_MAIL_WHILE_ENCHANTING_AN_ITEM_BESTOWING_AN_ATTRIBUTE_OR_COMBINING_JEWELS);
+			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_MAIL_WHILE_ENCHANTING_AN_ITEM_BESTOWING_AN_ATTRIBUTE_OR_COMBINING_JEWELS);
 			return;
 		}
 		
 		if (activeChar.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_BECAUSE_THE_PRIVATE_STORE_OR_WORKSHOP_IS_IN_PROGRESS);
+			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_BECAUSE_THE_PRIVATE_STORE_OR_WORKSHOP_IS_IN_PROGRESS);
 			return;
 		}
 		
@@ -167,21 +166,21 @@ public final class RequestPostAttachment extends L2GameClientPacket
 		// Item Max Limit Check
 		if (!activeChar.getInventory().validateCapacity(slots))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
+			client.sendPacket(SystemMessageId.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
 			return;
 		}
 		
 		// Weight limit Check
 		if (!activeChar.getInventory().validateWeight(weight))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
+			client.sendPacket(SystemMessageId.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
 			return;
 		}
 		
 		final long adena = msg.getReqAdena();
 		if ((adena > 0) && !activeChar.reduceAdena("PayMail", adena, null, true))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA);
+			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA);
 			return;
 		}
 		
@@ -221,23 +220,20 @@ public final class RequestPostAttachment extends L2GameClientPacket
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1);
 			sm.addItemName(item.getId());
 			sm.addLong(count);
-			activeChar.sendPacket(sm);
+			client.sendPacket(sm);
 		}
 		
 		// Send updated item list to the player
 		if (playerIU != null)
 		{
-			activeChar.sendPacket(playerIU);
+			activeChar.sendInventoryUpdate(playerIU);
 		}
 		else
 		{
-			activeChar.sendPacket(new ItemList(activeChar, false));
+			activeChar.sendItemList(false);
 		}
 		
 		msg.removeAttachments();
-		
-		// Update current load status on player
-		activeChar.sendPacket(new ExUserInfoInvenWeight(activeChar));
 		
 		SystemMessage sm;
 		final L2PcInstance sender = L2World.getInstance().getPlayer(msg.getSenderId());
@@ -267,19 +263,7 @@ public final class RequestPostAttachment extends L2GameClientPacket
 			sender.sendPacket(sm);
 		}
 		
-		activeChar.sendPacket(new ExChangePostState(true, _msgId, Message.READED));
-		activeChar.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_RECEIVED);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_6A_REQUESTPOSTATTACHMENT;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
+		client.sendPacket(new ExChangePostState(true, _msgId, Message.READED));
+		client.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_RECEIVED);
 	}
 }

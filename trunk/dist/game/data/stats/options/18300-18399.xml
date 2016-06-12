@@ -2,10 +2,16 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/optionsData.xsd">
 	<option id="18300" name="o_f_61_2u_acc_earring_21">
 		<!-- HP Regeneration + 0.125 MP Regeneration + 0.04 -->
-		<for>
-			<add stat="regHp" val="0.125" />
-			<add stat="regMp" val="0.04" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.04</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.125</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18301" name="o_s_64_1g_acc_earring_1">
 		<!-- Passive: Increase Earth P. Def. -->
@@ -81,548 +87,971 @@
 	</option>
 	<option id="18319" name="o_f_64_2g_acc_earring_1">
 		<!-- M. Def. + 2.67 -->
-		<for>
-			<add stat="mDef" val="2.67" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>2.67</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18320" name="o_f_64_2g_acc_earring_2">
 		<!-- M. Def. + 1.33 Increase Max HP 14.0 -->
-		<for>
-			<add stat="mDef" val="1.33" />
-			<add stat="maxHp" val="14.0" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>14.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18321" name="o_f_64_2g_acc_earring_3">
 		<!-- M. Def. + 1.33 Max MP + 6.5 -->
-		<for>
-			<add stat="mDef" val="1.33" />
-			<add stat="maxMp" val="6.5" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>6.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18322" name="o_f_64_2g_acc_earring_4">
 		<!-- M. Def. + 1.33 Increase M. Atk. 2.2 -->
-		<for>
-			<add stat="mDef" val="1.33" />
-			<add stat="mAtk" val="2.2" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2.2</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18323" name="o_f_64_2g_acc_earring_5">
 		<!-- M. Def. + 1.33 HP Regeneration + 0.75 -->
-		<for>
-			<add stat="mDef" val="1.33" />
-			<add stat="regHp" val="0.75" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.75</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18324" name="o_f_64_2g_acc_earring_6">
 		<!-- M. Def. + 1.33 MP Regeneration + 0.025 -->
-		<for>
-			<add stat="mDef" val="1.33" />
-			<add stat="regMp" val="0.025" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.025</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18325" name="o_f_64_2g_acc_earring_7">
 		<!-- Increase Max HP 28.0 -->
-		<for>
-			<add stat="maxHp" val="28.0" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>28.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18326" name="o_f_64_2g_acc_earring_8">
 		<!-- Increase Max HP 14.0 Max MP + 6.5 -->
-		<for>
-			<add stat="maxHp" val="14.0" />
-			<add stat="maxMp" val="6.5" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>14.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>6.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18327" name="o_f_64_2g_acc_earring_9">
 		<!-- Increase Max HP 14.0 Increase M. Atk. 2.2 -->
-		<for>
-			<add stat="maxHp" val="14.0" />
-			<add stat="mAtk" val="2.2" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>14.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2.2</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18328" name="o_f_64_2g_acc_earring_10">
 		<!-- Increase Max HP 14.0 HP Regeneration + 0.75 -->
-		<for>
-			<add stat="maxHp" val="14.0" />
-			<add stat="regHp" val="0.75" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>14.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.75</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18329" name="o_f_64_2g_acc_earring_11">
 		<!-- Increase Max HP 14.0 MP Regeneration + 0.025 -->
-		<for>
-			<add stat="maxHp" val="14.0" />
-			<add stat="regMp" val="0.025" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.025</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>14.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18330" name="o_f_64_2g_acc_earring_12">
 		<!-- Max MP + 13.0 -->
-		<for>
-			<add stat="maxMp" val="13.0" />
-		</for>
+		<effects>
+			<effect name="MaxMp">
+				<amount>13.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18331" name="o_f_64_2g_acc_earring_13">
 		<!-- Max MP + 6.5 Increase M. Atk. 2.2 -->
-		<for>
-			<add stat="maxMp" val="6.5" />
-			<add stat="mAtk" val="2.2" />
-		</for>
+		<effects>
+			<effect name="MaxMp">
+				<amount>6.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2.2</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18332" name="o_f_64_2g_acc_earring_14">
 		<!-- Max MP + 6.5 HP Regeneration + 0.75 -->
-		<for>
-			<add stat="maxMp" val="6.5" />
-			<add stat="regHp" val="0.75" />
-		</for>
+		<effects>
+			<effect name="MaxMp">
+				<amount>6.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.75</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18333" name="o_f_64_2g_acc_earring_15">
 		<!-- Max MP + 6.5 MP Regeneration + 0.025 -->
-		<for>
-			<add stat="maxMp" val="6.5" />
-			<add stat="regMp" val="0.025" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.025</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>6.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18334" name="o_f_64_2g_acc_earring_16">
 		<!-- Increase M. Atk. 4.4 -->
-		<for>
-			<add stat="mAtk" val="4.4" />
-		</for>
+		<effects>
+			<effect name="MAtk">
+				<amount>4.4</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18335" name="o_f_64_2g_acc_earring_17">
 		<!-- Increase M. Atk. 2.2 HP Regeneration + 0.75 -->
-		<for>
-			<add stat="mAtk" val="2.2" />
-			<add stat="regHp" val="0.75" />
-		</for>
+		<effects>
+			<effect name="MAtk">
+				<amount>2.2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.75</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18336" name="o_f_64_2g_acc_earring_18">
 		<!-- Increase M. Atk. 2.2 MP Regeneration + 0.025 -->
-		<for>
-			<add stat="mAtk" val="2.2" />
-			<add stat="regMp" val="0.025" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.025</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2.2</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18337" name="o_f_64_2g_acc_earring_19">
 		<!-- HP Regeneration + 0.15 -->
-		<for>
-			<add stat="regHp" val="0.15" />
-		</for>
+		<effects>
+			<effect name="HpRegen">
+				<amount>0.15</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18338" name="o_f_64_2g_acc_earring_20">
 		<!-- MP Regeneration + 0.05 -->
-		<for>
-			<add stat="regMp" val="0.05" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.05</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18339" name="o_f_64_2g_acc_earring_21">
 		<!-- HP Regeneration + 0.75 MP Regeneration + 0.025 -->
-		<for>
-			<add stat="regHp" val="0.75" />
-			<add stat="regMp" val="0.025" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.025</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.75</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18340" name="o_f_64_2s_acc_earring_1">
 		<!-- M. Def. + 3.1 -->
-		<for>
-			<add stat="mDef" val="3.1" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>3.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18341" name="o_f_64_2s_acc_earring_2">
 		<!-- M. Def. + 1.55 Increase Max HP 16.5 -->
-		<for>
-			<add stat="mDef" val="1.55" />
-			<add stat="maxHp" val="16.5" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.55</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>16.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18342" name="o_f_64_2s_acc_earring_3">
 		<!-- M. Def. + 1.55 Max MP + 7.5 -->
-		<for>
-			<add stat="mDef" val="1.55" />
-			<add stat="maxMp" val="7.5" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.55</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>7.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18343" name="o_f_64_2s_acc_earring_4">
 		<!-- M. Def. + 1.55 Increase M. Atk. 2.55 -->
-		<for>
-			<add stat="mDef" val="1.55" />
-			<add stat="mAtk" val="2.55" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.55</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2.55</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18344" name="o_f_64_2s_acc_earring_5">
 		<!-- M. Def. + 1.55 HP Regeneration + 0.09 -->
-		<for>
-			<add stat="mDef" val="1.55" />
-			<add stat="regHp" val="0.09" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.55</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.09</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18345" name="o_f_64_2s_acc_earring_6">
 		<!-- M. Def. + 1.55 MP Regeneration + 0.03 -->
-		<for>
-			<add stat="mDef" val="1.55" />
-			<add stat="regMp" val="0.03" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.55</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.03</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18346" name="o_f_64_2s_acc_earring_7">
 		<!-- Increase Max HP 33.0 -->
-		<for>
-			<add stat="maxHp" val="33.0" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>33.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18347" name="o_f_64_2s_acc_earring_8">
 		<!-- Increase Max HP 16.5 Max MP + 7.5 -->
-		<for>
-			<add stat="maxHp" val="16.5" />
-			<add stat="maxMp" val="7.5" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>16.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>7.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18348" name="o_f_64_2s_acc_earring_9">
 		<!-- Increase Max HP 16.5 Increase M. Atk. 2.55 -->
-		<for>
-			<add stat="maxHp" val="16.5" />
-			<add stat="mAtk" val="2.55" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>16.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2.55</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18349" name="o_f_64_2s_acc_earring_10">
 		<!-- Increase Max HP 16.5 HP Regeneration + 0.09 -->
-		<for>
-			<add stat="maxHp" val="16.5" />
-			<add stat="regHp" val="0.09" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>16.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.09</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18350" name="o_f_64_2s_acc_earring_11">
 		<!-- Increase Max HP 16.5 MP Regeneration + 0.03 -->
-		<for>
-			<add stat="maxHp" val="16.5" />
-			<add stat="regMp" val="0.03" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.03</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>16.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18351" name="o_f_64_2s_acc_earring_12">
 		<!-- Max MP + 15.0 -->
-		<for>
-			<add stat="maxMp" val="15.0" />
-		</for>
+		<effects>
+			<effect name="MaxMp">
+				<amount>15.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18352" name="o_f_64_2s_acc_earring_13">
 		<!-- Max MP + 7.5 Increase M. Atk. 2.55 -->
-		<for>
-			<add stat="maxMp" val="7.5" />
-			<add stat="mAtk" val="2.55" />
-		</for>
+		<effects>
+			<effect name="MaxMp">
+				<amount>7.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2.55</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18353" name="o_f_64_2s_acc_earring_14">
 		<!-- Max MP + 7.5 HP Regeneration + 0.09 -->
-		<for>
-			<add stat="maxMp" val="7.5" />
-			<add stat="regHp" val="0.09" />
-		</for>
+		<effects>
+			<effect name="MaxMp">
+				<amount>7.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.09</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18354" name="o_f_64_2s_acc_earring_15">
 		<!-- Max MP + 7.5 MP Regeneration + 0.03 -->
-		<for>
-			<add stat="maxMp" val="7.5" />
-			<add stat="regMp" val="0.03" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.03</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>7.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18355" name="o_f_64_2s_acc_earring_16">
 		<!-- Increase M. Atk. 5.1 -->
-		<for>
-			<add stat="mAtk" val="5.1" />
-		</for>
+		<effects>
+			<effect name="MAtk">
+				<amount>5.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18356" name="o_f_64_2s_acc_earring_17">
 		<!-- Increase M. Atk. 2.55 HP Regeneration + 0.09 -->
-		<for>
-			<add stat="mAtk" val="2.55" />
-			<add stat="regHp" val="0.09" />
-		</for>
+		<effects>
+			<effect name="MAtk">
+				<amount>2.55</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.09</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18357" name="o_f_64_2s_acc_earring_18">
 		<!-- Increase M. Atk. 2.55 MP Regeneration + 0.03 -->
-		<for>
-			<add stat="mAtk" val="2.55" />
-			<add stat="regMp" val="0.03" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.03</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2.55</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18358" name="o_f_64_2s_acc_earring_19">
 		<!-- HP Regeneration + 0.18 -->
-		<for>
-			<add stat="regHp" val="0.18" />
-		</for>
+		<effects>
+			<effect name="HpRegen">
+				<amount>0.18</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18359" name="o_f_64_2s_acc_earring_20">
 		<!-- MP Regeneration + 0.06 -->
-		<for>
-			<add stat="regMp" val="0.06" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.06</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18360" name="o_f_64_2s_acc_earring_21">
 		<!-- HP Regeneration + 0.09 MP Regeneration + 0.03 -->
-		<for>
-			<add stat="regHp" val="0.09" />
-			<add stat="regMp" val="0.03" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.03</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.09</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18361" name="o_f_64_2r_acc_earring_1">
 		<!-- M. Def. + 3.8 -->
-		<for>
-			<add stat="mDef" val="3.8" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>3.8</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18362" name="o_f_64_2r_acc_earring_2">
 		<!-- M. Def. + 1.9 Increase Max HP 20.0 -->
-		<for>
-			<add stat="mDef" val="1.9" />
-			<add stat="maxHp" val="20.0" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.9</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18363" name="o_f_64_2r_acc_earring_3">
 		<!-- M. Def. + 1.9 Max MP + 9.0 -->
-		<for>
-			<add stat="mDef" val="1.9" />
-			<add stat="maxMp" val="9.0" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.9</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>9.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18364" name="o_f_64_2r_acc_earring_4">
 		<!-- M. Def. + 1.9 Increase M. Atk. 3.1 -->
-		<for>
-			<add stat="mDef" val="1.9" />
-			<add stat="mAtk" val="3.1" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.9</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>3.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18365" name="o_f_64_2r_acc_earring_5">
 		<!-- M. Def. + 1.9 HP Regeneration + 0.11 -->
-		<for>
-			<add stat="mDef" val="1.9" />
-			<add stat="regHp" val="0.11" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.9</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.11</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18366" name="o_f_64_2r_acc_earring_6">
 		<!-- M. Def. + 1.9 MP Regeneration + 0.035 -->
-		<for>
-			<add stat="mDef" val="1.9" />
-			<add stat="regMp" val="0.035" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>1.9</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.035</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18367" name="o_f_64_2r_acc_earring_7">
 		<!-- Increase Max HP 40.0 -->
-		<for>
-			<add stat="maxHp" val="40.0" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>40.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18368" name="o_f_64_2r_acc_earring_8">
 		<!-- Increase Max HP 20.0 Max MP + 9.0 -->
-		<for>
-			<add stat="maxHp" val="20.0" />
-			<add stat="maxMp" val="9.0" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>20.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>9.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18369" name="o_f_64_2r_acc_earring_9">
 		<!-- Increase Max HP 20.0 Increase M. Atk. 3.1 -->
-		<for>
-			<add stat="maxHp" val="20.0" />
-			<add stat="mAtk" val="3.1" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>20.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>3.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18370" name="o_f_64_2r_acc_earring_10">
 		<!-- Increase Max HP 20.0 HP Regeneration + 0.11 -->
-		<for>
-			<add stat="maxHp" val="20.0" />
-			<add stat="regHp" val="0.11" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>20.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.11</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18371" name="o_f_64_2r_acc_earring_11">
 		<!-- Increase Max HP 20.0 MP Regeneration + 0.035 -->
-		<for>
-			<add stat="maxHp" val="20.0" />
-			<add stat="regMp" val="0.035" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.035</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18372" name="o_f_64_2r_acc_earring_12">
 		<!-- Max MP + 18.0 -->
-		<for>
-			<add stat="maxMp" val="18.0" />
-		</for>
+		<effects>
+			<effect name="MaxMp">
+				<amount>18.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18373" name="o_f_64_2r_acc_earring_13">
 		<!-- Max MP + 9.0 Increase M. Atk. 3.1 -->
-		<for>
-			<add stat="maxMp" val="9.0" />
-			<add stat="mAtk" val="3.1" />
-		</for>
+		<effects>
+			<effect name="MaxMp">
+				<amount>9.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>3.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18374" name="o_f_64_2r_acc_earring_14">
 		<!-- Max MP + 9.0 HP Regeneration + 0.11 -->
-		<for>
-			<add stat="maxMp" val="9.0" />
-			<add stat="regHp" val="0.11" />
-		</for>
+		<effects>
+			<effect name="MaxMp">
+				<amount>9.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.11</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18375" name="o_f_64_2r_acc_earring_15">
 		<!-- Max MP + 9.0 MP Regeneration + 0.035 -->
-		<for>
-			<add stat="maxMp" val="9.0" />
-			<add stat="regMp" val="0.035" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.035</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>9.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18376" name="o_f_64_2r_acc_earring_16">
 		<!-- Increase M. Atk. 6.2 -->
-		<for>
-			<add stat="mAtk" val="6.2" />
-		</for>
+		<effects>
+			<effect name="MAtk">
+				<amount>6.2</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18377" name="o_f_64_2r_acc_earring_17">
 		<!-- Increase M. Atk. 3.1 HP Regeneration + 0.11 -->
-		<for>
-			<add stat="mAtk" val="3.1" />
-			<add stat="regHp" val="0.11" />
-		</for>
+		<effects>
+			<effect name="MAtk">
+				<amount>3.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.11</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18378" name="o_f_64_2r_acc_earring_18">
 		<!-- Increase M. Atk. 3.1 MP Regeneration + 0.035 -->
-		<for>
-			<add stat="mAtk" val="3.1" />
-			<add stat="regMp" val="0.035" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.035</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>3.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18379" name="o_f_64_2r_acc_earring_19">
 		<!-- HP Regeneration + 0.22 -->
-		<for>
-			<add stat="regHp" val="0.22" />
-		</for>
+		<effects>
+			<effect name="HpRegen">
+				<amount>0.22</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18380" name="o_f_64_2r_acc_earring_20">
 		<!-- MP Regeneration + 0.07 -->
-		<for>
-			<add stat="regMp" val="0.07" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.07</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18381" name="o_f_64_2r_acc_earring_21">
 		<!-- HP Regeneration + 0.11 MP Regeneration + 0.035 -->
-		<for>
-			<add stat="regHp" val="0.11" />
-			<add stat="regMp" val="0.035" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.035</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.11</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18382" name="o_f_64_2u_acc_earring_1">
 		<!-- M. Def. + 4.5 -->
-		<for>
-			<add stat="mDef" val="4.5" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>4.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18383" name="o_f_64_2u_acc_earring_2">
 		<!-- M. Def. + 2.25 Increase Max HP 23.5 -->
-		<for>
-			<add stat="mDef" val="2.25" />
-			<add stat="maxHp" val="23.5" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>2.25</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>23.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18384" name="o_f_64_2u_acc_earring_3">
 		<!-- M. Def. + 2.25 Max MP + 10.5 -->
-		<for>
-			<add stat="mDef" val="2.25" />
-			<add stat="maxMp" val="10.5" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>2.25</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>10.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18385" name="o_f_64_2u_acc_earring_4">
 		<!-- M. Def. + 2.25 Increase M. Atk. 3.65 -->
-		<for>
-			<add stat="mDef" val="2.25" />
-			<add stat="mAtk" val="3.65" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>2.25</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>3.65</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18386" name="o_f_64_2u_acc_earring_5">
 		<!-- M. Def. + 2.25 HP Regeneration + 0.13 -->
-		<for>
-			<add stat="mDef" val="2.25" />
-			<add stat="regHp" val="0.13" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>2.25</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.13</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18387" name="o_f_64_2u_acc_earring_6">
 		<!-- M. Def. + 2.25 MP Regeneration + 0.04 -->
-		<for>
-			<add stat="mDef" val="2.25" />
-			<add stat="regMp" val="0.04" />
-		</for>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>2.25</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.04</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18388" name="o_f_64_2u_acc_earring_7">
 		<!-- Increase Max HP 47.0 MP Regeneration + 0.04 -->
-		<for>
-			<add stat="maxHp" val="47.0" />
-			<add stat="regMp" val="0.04" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.04</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>47.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18389" name="o_f_64_2u_acc_earring_8">
 		<!-- Increase Max HP 23.5 Max MP + 10.5 -->
-		<for>
-			<add stat="maxHp" val="23.5" />
-			<add stat="maxMp" val="10.5" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>23.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>10.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18390" name="o_f_64_2u_acc_earring_9">
 		<!-- Increase Max HP 23.5 Increase M. Atk. 3.65 -->
-		<for>
-			<add stat="maxHp" val="23.5" />
-			<add stat="mAtk" val="3.65" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>23.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>3.65</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18391" name="o_f_64_2u_acc_earring_10">
 		<!-- Increase Max HP 23.5 HP Regeneration + 0.13 -->
-		<for>
-			<add stat="maxHp" val="23.5" />
-			<add stat="regHp" val="0.13" />
-		</for>
+		<effects>
+			<effect name="MaxHp">
+				<amount>23.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.13</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18392" name="o_f_64_2u_acc_earring_11">
 		<!-- Increase Max HP 23.5 MP Regeneration + 0.04 -->
-		<for>
-			<add stat="maxHp" val="23.5" />
-			<add stat="regMp" val="0.04" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.04</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>23.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18393" name="o_f_64_2u_acc_earring_12">
 		<!-- Max MP + 21.0 -->
-		<for>
-			<add stat="maxMp" val="21.0" />
-		</for>
+		<effects>
+			<effect name="MaxMp">
+				<amount>21.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18394" name="o_f_64_2u_acc_earring_13">
 		<!-- Max MP + 10.5 Increase M. Atk. 3.65 -->
-		<for>
-			<add stat="maxMp" val="10.5" />
-			<add stat="mAtk" val="3.65" />
-		</for>
+		<effects>
+			<effect name="MaxMp">
+				<amount>10.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>3.65</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18395" name="o_f_64_2u_acc_earring_14">
 		<!-- Max MP + 10.5 HP Regeneration + 0.13 -->
-		<for>
-			<add stat="maxMp" val="10.5" />
-			<add stat="regHp" val="0.13" />
-		</for>
+		<effects>
+			<effect name="MaxMp">
+				<amount>10.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.13</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18396" name="o_f_64_2u_acc_earring_15">
 		<!-- Max MP + 10.5 MP Regeneration + 0.04 -->
-		<for>
-			<add stat="maxMp" val="10.5" />
-			<add stat="regMp" val="0.04" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.04</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>10.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18397" name="o_f_64_2u_acc_earring_16">
 		<!-- Increase M. Atk. 7.3 -->
-		<for>
-			<add stat="mAtk" val="7.3" />
-		</for>
+		<effects>
+			<effect name="MAtk">
+				<amount>7.3</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18398" name="o_f_64_2u_acc_earring_17">
 		<!-- Increase M. Atk. 3.65 HP Regeneration + 0.13 -->
-		<for>
-			<add stat="mAtk" val="3.65" />
-			<add stat="regHp" val="0.13" />
-		</for>
+		<effects>
+			<effect name="MAtk">
+				<amount>3.65</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>0.13</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 	<option id="18399" name="o_f_64_2u_acc_earring_18">
 		<!-- Increase M. Atk. 3.65 MP Regeneration + 0.04 -->
-		<for>
-			<add stat="mAtk" val="3.65" />
-			<add stat="regMp" val="0.04" />
-		</for>
+		<effects>
+			<effect name="MpRegen">
+				<amount>0.04</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>3.65</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</option>
 </list>

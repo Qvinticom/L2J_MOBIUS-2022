@@ -16,32 +16,35 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.commission;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CommissionManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.commission.CommissionItem;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.commission.ExCloseCommission;
 import com.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionBuyInfo;
 
 /**
  * @author NosBit
  */
-public class RequestCommissionBuyInfo extends L2GameClientPacket
+public class RequestCommissionBuyInfo implements IClientIncomingPacket
 {
 	private long _commissionId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_commissionId = readQ();
-		// readD(); // CommissionItemType
+		_commissionId = packet.readQ();
+		// packet.readD(); // CommissionItemType
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -49,33 +52,26 @@ public class RequestCommissionBuyInfo extends L2GameClientPacket
 		
 		if (!CommissionManager.isPlayerAllowedToInteract(player))
 		{
-			player.sendPacket(ExCloseCommission.STATIC_PACKET);
+			client.sendPacket(ExCloseCommission.STATIC_PACKET);
 			return;
 		}
 		
-		if ((player.getInventory().getSize(false) >= (player.getInventoryLimit() * 0.8)) || (player.getWeightPenalty() >= 3))
+		if (!player.isInventoryUnder80(false) || (player.getWeightPenalty() >= 3))
 		{
-			player.sendPacket(SystemMessageId.IF_THE_WEIGHT_IS_80_OR_MORE_AND_THE_INVENTORY_NUMBER_IS_90_OR_MORE_PURCHASE_CANCELLATION_IS_NOT_POSSIBLE);
-			player.sendPacket(ExResponseCommissionBuyInfo.FAILED);
+			client.sendPacket(SystemMessageId.IF_THE_WEIGHT_IS_80_OR_MORE_AND_THE_INVENTORY_NUMBER_IS_90_OR_MORE_PURCHASE_CANCELLATION_IS_NOT_POSSIBLE);
+			client.sendPacket(ExResponseCommissionBuyInfo.FAILED);
 			return;
 		}
 		
 		final CommissionItem commissionItem = CommissionManager.getInstance().getCommissionItem(_commissionId);
 		if (commissionItem != null)
 		{
-			player.sendPacket(new ExResponseCommissionBuyInfo(commissionItem));
+			client.sendPacket(new ExResponseCommissionBuyInfo(commissionItem));
 		}
 		else
 		{
-			player.sendPacket(SystemMessageId.ITEM_PURCHASE_IS_NOT_AVAILABLE_BECAUSE_THE_CORRESPONDING_ITEM_DOES_NOT_EXIST);
-			player.sendPacket(ExResponseCommissionBuyInfo.FAILED);
+			client.sendPacket(SystemMessageId.ITEM_PURCHASE_IS_NOT_AVAILABLE_BECAUSE_THE_CORRESPONDING_ITEM_DOES_NOT_EXIST);
+			client.sendPacket(ExResponseCommissionBuyInfo.FAILED);
 		}
 	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
-	}
-	
 }

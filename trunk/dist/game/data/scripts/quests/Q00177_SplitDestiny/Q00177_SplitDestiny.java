@@ -16,6 +16,7 @@
  */
 package quests.Q00177_SplitDestiny;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.SubclassInfoType;
@@ -28,31 +29,16 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
+ * Split of Destiny (177)
  * @author Sdw
  */
-public class Q00177_SplitDestiny extends Quest
+public final class Q00177_SplitDestiny extends Quest
 {
 	// NPCs
 	private static final int HADEL = 33344;
 	private static final int ISHUMA = 32615;
-	// Items
-	private static final ItemHolder PETRIFIED_GIANTS_HAND = new ItemHolder(17718, 2);
-	private static final ItemHolder PETRIFIED_GIANTS_FOOT = new ItemHolder(17719, 2);
-	private static final int PETRIFIED_GIANTS_HAND_PIECE = 17720;
-	private static final int PETRIFIED_GIANTS_FOOT_PIECE = 17721;
-	// Rewards
-	private static final ItemHolder RECIPE_TWILIGHT_NECKLACE = new ItemHolder(36791, 1);
-	private static final ItemHolder CRYSTAL_R = new ItemHolder(17371, 1);
-	private static final ItemHolder RED_SOUL_CRYSTAL_15 = new ItemHolder(10480, 1);
-	private static final ItemHolder BLUE_SOUL_CRYSTAL_15 = new ItemHolder(10481, 1);
-	private static final ItemHolder GREEN_SOUL_CRYSTAL_15 = new ItemHolder(10482, 1);
-	// Variable
-	private static final String VAR_SUB_INDEX = "split_destiny_sub_id";
-	
-	// Mobs
 	private static final int[] GIANTS_HAND_MONSTERS =
 	{
 		21549, // Corrupted Guard
@@ -61,7 +47,6 @@ public class Q00177_SplitDestiny extends Quest
 		21548, // Resurrected Knight
 		21587, // Vampire Warrior
 	};
-	
 	private static final int[] GIANTS_FOOT_MONSTERS =
 	{
 		22257, // Island Guardian
@@ -69,10 +54,20 @@ public class Q00177_SplitDestiny extends Quest
 		22259, // Muddy Coral
 		22260, // Kleopora
 	};
+	// Items
+	private static final ItemHolder PETRIFIED_GIANTS_HAND = new ItemHolder(17718, 2);
+	private static final ItemHolder PETRIFIED_GIANTS_FOOT = new ItemHolder(17719, 2);
+	private static final int PETRIFIED_GIANTS_HAND_PIECE = 17720;
+	private static final int PETRIFIED_GIANTS_FOOT_PIECE = 17721;
+	// Rewards
+	private static final ItemHolder RECIPE_TWILIGHT_NECKLACE = new ItemHolder(36791, 1);
+	private static final ItemHolder CRYSTAL_R = new ItemHolder(17371, 5);
+	// Variable
+	private static final String VAR_SUB_INDEX = "SPLIT_DESTINY_SUB_ID";
 	
 	public Q00177_SplitDestiny()
 	{
-		super(177, Q00177_SplitDestiny.class.getSimpleName(), "Split Destiny");
+		super(177);
 		addStartNpc(HADEL);
 		addTalkId(HADEL, ISHUMA);
 		addKillId(GIANTS_HAND_MONSTERS);
@@ -122,8 +117,8 @@ public class Q00177_SplitDestiny extends Quest
 			{
 				if (qs.isCond(7) && (getQuestItemsCount(player, PETRIFIED_GIANTS_HAND_PIECE) >= 10) && (getQuestItemsCount(player, PETRIFIED_GIANTS_FOOT_PIECE) >= 10))
 				{
-					takeItems(player, PETRIFIED_GIANTS_HAND_PIECE, 10);
-					takeItems(player, PETRIFIED_GIANTS_FOOT_PIECE, 10);
+					takeItems(player, PETRIFIED_GIANTS_HAND_PIECE, -1);
+					takeItems(player, PETRIFIED_GIANTS_FOOT_PIECE, -1);
 					qs.setCond(8, true);
 					htmltext = event;
 				}
@@ -131,17 +126,20 @@ public class Q00177_SplitDestiny extends Quest
 			}
 			case "33344-25.htm":
 			{
-				if (qs.isCond(9) && hasItem(player, PETRIFIED_GIANTS_HAND) && hasItem(player, PETRIFIED_GIANTS_FOOT))
+				if (qs.isCond(9) && (qs.getMemoState() == 0) && hasItem(player, PETRIFIED_GIANTS_HAND) && hasItem(player, PETRIFIED_GIANTS_FOOT))
 				{
 					takeItem(player, PETRIFIED_GIANTS_HAND);
 					takeItem(player, PETRIFIED_GIANTS_FOOT);
+					qs.setMemoState(1);
+					htmltext = event;
+				}
+				else if (qs.isCond(9) && (qs.getMemoState() == 1))
+				{
 					htmltext = event;
 				}
 				break;
 			}
-			case "blue_crystal":
-			case "green_crystal":
-			case "red_crystal":
+			case "33344-27.htm":
 			{
 				if (qs.isCond(9))
 				{
@@ -160,24 +158,10 @@ public class Q00177_SplitDestiny extends Quest
 					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 					player.broadcastSocialAction(SocialAction.LEVEL_UP);
 					
-					if (event.equals("red_crystal"))
-					{
-						giveItems(player, RED_SOUL_CRYSTAL_15);
-					}
-					else if (event.equals("blue_crystal"))
-					{
-						giveItems(player, BLUE_SOUL_CRYSTAL_15);
-					}
-					else if (event.equals("green_crystal"))
-					{
-						giveItems(player, GREEN_SOUL_CRYSTAL_15);
-					}
-					
 					giveItems(player, RECIPE_TWILIGHT_NECKLACE);
 					giveItems(player, CRYSTAL_R);
 					addExpAndSp(player, 175739575, 42177);
 					qs.exitQuest(false, true);
-					htmltext = "33344-28.htm";
 				}
 				break;
 			}
@@ -185,13 +169,11 @@ public class Q00177_SplitDestiny extends Quest
 			case "33344-18.htm":
 			case "32615-02.htm":
 			case "33344-26.htm":
-			case "33344-27.htm":
 			{
 				htmltext = event;
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -253,53 +235,56 @@ public class Q00177_SplitDestiny extends Quest
 			{
 				htmltext = "33344-12.htm";
 			}
-			else if (!player.isSubClassActive() || !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) || (player.getLevel() < 80))
-			{
-				htmltext = "33344-02.htm";
-			}
-			else if (!CategoryData.getInstance().isInCategory(CategoryType.AWAKEN_GROUP, player.getBaseClassId()))
-			{
-				htmltext = "33344-03.htm";
-			}
-			else if (CategoryData.getInstance().isInCategory(CategoryType.SIGEL_GROUP, player.getBaseClassId()) && player.isInCategory(CategoryType.SIGEL_CANDIDATE))
-			{
-				htmltext = "33344-sigel.htm";
-			}
-			else if (CategoryData.getInstance().isInCategory(CategoryType.TYRR_GROUP, player.getBaseClassId()) && player.isInCategory(CategoryType.TYRR_CANDIDATE))
-			{
-				htmltext = "33344-tyrr.htm";
-			}
-			else if (CategoryData.getInstance().isInCategory(CategoryType.OTHELL_GROUP, player.getBaseClassId()) && player.isInCategory(CategoryType.OTHELL_CANDIDATE))
-			{
-				htmltext = "33344-othell.htm";
-			}
-			else if (CategoryData.getInstance().isInCategory(CategoryType.YUL_GROUP, player.getBaseClassId()) && player.isInCategory(CategoryType.YUL_CANDIDATE))
-			{
-				htmltext = "33344-yul.htm";
-			}
-			else if (CategoryData.getInstance().isInCategory(CategoryType.FEOH_GROUP, player.getBaseClassId()) && player.isInCategory(CategoryType.FEOH_CANDIDATE))
-			{
-				htmltext = "33344-feoh.htm";
-			}
-			else if (CategoryData.getInstance().isInCategory(CategoryType.ISS_GROUP, player.getBaseClassId()) && player.isInCategory(CategoryType.ISS_CANDIDATE))
-			{
-				htmltext = "33344-iss.htm";
-			}
-			else if (CategoryData.getInstance().isInCategory(CategoryType.WYNN_GROUP, player.getBaseClassId()) && player.isInCategory(CategoryType.WYNN_CANDIDATE))
-			{
-				htmltext = "33344-wynn.htm";
-			}
-			else if (CategoryData.getInstance().isInCategory(CategoryType.AEORE_GROUP, player.getBaseClassId()) && player.isInCategory(CategoryType.AEORE_CANDIDATE))
-			{
-				htmltext = "33344-aeore.htm";
-			}
-			else if (player.hasDualClass())
-			{
-				htmltext = "33344-12.htm";
-			}
 			else
 			{
-				htmltext = "33344-01.htm";
+				if (!player.isSubClassActive() || !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) || (player.getLevel() < 80))
+				{
+					htmltext = "33344-02.htm";
+				}
+				else if (!CategoryData.getInstance().isInCategory(CategoryType.AWAKEN_GROUP, player.getBaseClass()))
+				{
+					htmltext = "33344-03.htm";
+				}
+				else if (CategoryData.getInstance().isInCategory(CategoryType.SIGEL_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.SIGEL_CANDIDATE))
+				{
+					htmltext = "33344-sigel.htm";
+				}
+				else if (CategoryData.getInstance().isInCategory(CategoryType.TYRR_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.TYRR_CANDIDATE))
+				{
+					htmltext = "33344-tyrr.htm";
+				}
+				else if (CategoryData.getInstance().isInCategory(CategoryType.OTHELL_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.OTHELL_CANDIDATE))
+				{
+					htmltext = "33344-othell.htm";
+				}
+				else if (CategoryData.getInstance().isInCategory(CategoryType.YUL_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.YUL_CANDIDATE))
+				{
+					htmltext = "33344-yul.htm";
+				}
+				else if (CategoryData.getInstance().isInCategory(CategoryType.FEOH_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.FEOH_CANDIDATE))
+				{
+					htmltext = "33344-feoh.htm";
+				}
+				else if (CategoryData.getInstance().isInCategory(CategoryType.ISS_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.ISS_CANDIDATE))
+				{
+					htmltext = "33344-iss.htm";
+				}
+				else if (CategoryData.getInstance().isInCategory(CategoryType.WYNN_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.WYNN_CANDIDATE))
+				{
+					htmltext = "33344-wynn.htm";
+				}
+				else if (CategoryData.getInstance().isInCategory(CategoryType.AEORE_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.AEORE_CANDIDATE))
+				{
+					htmltext = "33344-aeore.htm";
+				}
+				else if (player.hasDualClass())
+				{
+					htmltext = "33344-12.htm";
+				}
+				else
+				{
+					htmltext = "33344-01.htm";
+				}
 			}
 		}
 		else if ((npc.getId() == ISHUMA) && qs.isStarted())
@@ -326,7 +311,6 @@ public class Q00177_SplitDestiny extends Quest
 				}
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -341,7 +325,7 @@ public class Q00177_SplitDestiny extends Quest
 			{
 				case 1:
 				{
-					if (Util.contains(GIANTS_HAND_MONSTERS, npc.getId()))
+					if (CommonUtil.contains(GIANTS_HAND_MONSTERS, npc.getId()))
 					{
 						giveItems(killer, PETRIFIED_GIANTS_HAND_PIECE, 1);
 						qs.setCond(2, true);
@@ -350,15 +334,18 @@ public class Q00177_SplitDestiny extends Quest
 				}
 				case 2:
 				{
-					if (Util.contains(GIANTS_HAND_MONSTERS, npc.getId()) && giveItemRandomly(killer, npc, PETRIFIED_GIANTS_HAND_PIECE, 1, 10, 1.0, true))
+					if (CommonUtil.contains(GIANTS_HAND_MONSTERS, npc.getId()))
 					{
-						qs.setCond(3, true);
+						if (giveItemRandomly(killer, npc, PETRIFIED_GIANTS_HAND_PIECE, 1, 10, 1.0, true))
+						{
+							qs.setCond(3, true);
+						}
 					}
 					break;
 				}
 				case 4:
 				{
-					if (Util.contains(GIANTS_FOOT_MONSTERS, npc.getId()))
+					if (CommonUtil.contains(GIANTS_FOOT_MONSTERS, npc.getId()))
 					{
 						giveItems(killer, PETRIFIED_GIANTS_FOOT_PIECE, 1);
 						qs.setCond(5, true);
@@ -367,15 +354,17 @@ public class Q00177_SplitDestiny extends Quest
 				}
 				case 5:
 				{
-					if (Util.contains(GIANTS_FOOT_MONSTERS, npc.getId()) && giveItemRandomly(killer, npc, PETRIFIED_GIANTS_FOOT_PIECE, 1, 10, 1.0, true))
+					if (CommonUtil.contains(GIANTS_FOOT_MONSTERS, npc.getId()))
 					{
-						qs.setCond(6, true);
+						if (giveItemRandomly(killer, npc, PETRIFIED_GIANTS_FOOT_PIECE, 1, 10, 1.0, true))
+						{
+							qs.setCond(6, true);
+						}
 					}
 					break;
 				}
 			}
 		}
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 }

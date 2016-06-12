@@ -18,10 +18,11 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
@@ -33,10 +34,8 @@ public final class Resurrection extends AbstractEffect
 {
 	private final int _power;
 	
-	public Resurrection(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Resurrection(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_power = params.getInt("power", 0);
 	}
 	
@@ -53,22 +52,20 @@ public final class Resurrection extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
-		
-		if (activeChar.isPlayer())
+		if (effector.isPlayer())
 		{
-			if (target.getActingPlayer() != null)
+			final L2PcInstance player = effected.getActingPlayer();
+			if (!player.isResurrectionBlocked() && !player.isReviveRequested())
 			{
-				target.getActingPlayer().reviveRequest(activeChar.getActingPlayer(), info.getSkill(), target.isPet(), _power);
+				effected.getActingPlayer().reviveRequest(effector.getActingPlayer(), skill, effected.isPet(), _power);
 			}
 		}
 		else
 		{
-			DecayTaskManager.getInstance().cancel(target);
-			target.doRevive(Formulas.calculateSkillResurrectRestorePercent(_power, activeChar));
+			DecayTaskManager.getInstance().cancel(effected);
+			effected.doRevive(Formulas.calculateSkillResurrectRestorePercent(_power, effector));
 		}
 	}
 }

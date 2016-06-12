@@ -20,16 +20,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2OlympiadManagerInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
 import com.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
@@ -37,9 +35,6 @@ import com.l2jmobius.gameserver.model.zone.L2ZoneRespawn;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExOlympiadMatchEnd;
-import com.l2jmobius.gameserver.network.serverpackets.ExOlympiadUserInfo;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * An olympiad stadium
@@ -47,12 +42,20 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class L2OlympiadStadiumZone extends L2ZoneRespawn
 {
-	private List<Location> _spectatorLocations;
+	private final List<L2DoorInstance> _doors = new ArrayList<>(2);
+	private final List<L2Spawn> _buffers = new ArrayList<>(2);
+	private final List<Location> _spectatorLocations = new ArrayList<>(1);
+	private int _instanceTemplate = 0;
 	
 	public L2OlympiadStadiumZone(int id)
 	{
 		super(id);
-		setSettings(ZoneManager.getSettings(getName()) == null ? new Settings() : ZoneManager.getSettings(getName()));
+		AbstractZoneSettings settings = ZoneManager.getSettings(getName());
+		if (settings == null)
+		{
+			settings = new Settings();
+		}
+		setSettings(settings);
 	}
 	
 	public final class Settings extends AbstractZoneSettings
@@ -86,110 +89,71 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn
 		return (Settings) super.getSettings();
 	}
 	
+	@Override
+	public void parseLoc(int x, int y, int z, String type)
+	{
+		if ((type != null) && type.equals("spectatorSpawn"))
+		{
+			_spectatorLocations.add(new Location(x, y, z));
+		}
+		else
+		{
+			super.parseLoc(x, y, z, type);
+		}
+	}
+	
+	@Override
+	public void setParameter(String name, String value)
+	{
+		if (name.equals("instanceTemplate"))
+		{
+			_instanceTemplate = Integer.parseInt(value);
+		}
+		else
+		{
+			super.setParameter(name, value);
+		}
+	}
+	
 	public final void registerTask(OlympiadGameTask task)
 	{
 		getSettings().setTask(task);
 	}
 	
-	public final void openDoors()
-	{
-		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(getInstanceId()).getDoors())
-		{
-			if ((door != null) && !door.getOpen())
-			{
-				door.openMe();
-			}
-		}
-	}
-	
-	public final void closeDoors()
-	{
-		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(getInstanceId()).getDoors())
-		{
-			if ((door != null) && door.getOpen())
-			{
-				door.closeMe();
-			}
-		}
-	}
-	
-	public final void spawnBuffers()
-	{
-		for (L2Npc buffer : InstanceManager.getInstance().getInstance(getInstanceId()).getNpcs())
-		{
-			if ((buffer instanceof L2OlympiadManagerInstance) && !buffer.isVisible())
-			{
-				buffer.spawnMe();
-			}
-		}
-	}
-	
-	public final void deleteBuffers()
-	{
-		for (L2Npc buffer : InstanceManager.getInstance().getInstance(getInstanceId()).getNpcs())
-		{
-			if ((buffer instanceof L2OlympiadManagerInstance) && buffer.isVisible())
-			{
-				buffer.decayMe();
-			}
-		}
-	}
-	
-	public final void broadcastStatusUpdate(L2PcInstance player)
-	{
-		final ExOlympiadUserInfo packet = new ExOlympiadUserInfo(player);
-		for (L2PcInstance target : getPlayersInside())
-		{
-			if ((target != null) && (target.inObserverMode() || (target.getOlympiadSide() != player.getOlympiadSide())))
-			{
-				target.sendPacket(packet);
-			}
-		}
-	}
-	
-	public final void broadcastPacketToObservers(L2GameServerPacket packet)
-	{
-		for (L2Character character : getCharactersInside())
-		{
-			if ((character != null) && character.isPlayer() && character.getActingPlayer().inObserverMode())
-			{
-				character.sendPacket(packet);
-			}
-		}
-	}
-	
 	@Override
 	protected final void onEnter(L2Character character)
 	{
-		if ((getSettings().getOlympiadTask() != null) && getSettings().getOlympiadTask().isBattleStarted())
+		if (getSettings().getOlympiadTask() != null)
 		{
-			character.setInsideZone(ZoneId.PVP, true);
-			if (character.isPlayer())
+			if (getSettings().getOlympiadTask().isBattleStarted())
 			{
-				character.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
-				getSettings().getOlympiadTask().getGame().sendOlympiadInfo(character);
+				character.setInsideZone(ZoneId.PVP, true);
+				if (character.isPlayer())
+				{
+					character.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
+					getSettings().getOlympiadTask().getGame().sendOlympiadInfo(character);
+				}
 			}
 		}
 		
-		if (!character.isPlayable())
+		if (character.isPlayable())
 		{
-			return;
-		}
-		final L2PcInstance player = character.getActingPlayer();
-		if (player != null)
-		{
-			// only participants, observers and GMs allowed
-			if (!player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && !player.isInOlympiadMode() && !player.inObserverMode())
+			final L2PcInstance player = character.getActingPlayer();
+			if (player != null)
 			{
-				ThreadPoolManager.getInstance().executeGeneral(new KickPlayer(player));
-			}
-			else
-			{
-				// check for pet
-				final L2Summon pet = player.getPet();
-				if (pet != null)
+				// only participants, observers and GMs allowed
+				if (!player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && !player.isInOlympiadMode())
 				{
-					pet.unSummon(player);
+					ThreadPoolManager.getInstance().executeGeneral(new KickPlayer(player));
+				}
+				else
+				{
+					// check for pet
+					final L2Summon pet = player.getPet();
+					if (pet != null)
+					{
+						pet.unSummon(player);
+					}
 				}
 			}
 		}
@@ -212,47 +176,11 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn
 		}
 	}
 	
-	public final void updateZoneStatusForCharactersInside()
-	{
-		if (getSettings().getOlympiadTask() == null)
-		{
-			return;
-		}
-		
-		final boolean battleStarted = getSettings().getOlympiadTask().isBattleStarted();
-		final SystemMessage sm = battleStarted ? SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE) : SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
-		for (L2Character character : getCharactersInside())
-		{
-			if (character == null)
-			{
-				continue;
-			}
-			
-			if (battleStarted)
-			{
-				character.setInsideZone(ZoneId.PVP, true);
-				if (character.isPlayer())
-				{
-					character.sendPacket(sm);
-				}
-			}
-			else
-			{
-				character.setInsideZone(ZoneId.PVP, false);
-				if (character.isPlayer())
-				{
-					character.sendPacket(sm);
-					character.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
-				}
-			}
-		}
-	}
-	
 	private static final class KickPlayer implements Runnable
 	{
 		private L2PcInstance _player;
 		
-		public KickPlayer(L2PcInstance player)
+		protected KickPlayer(L2PcInstance player)
 		{
 			_player = player;
 		}
@@ -260,41 +188,36 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn
 		@Override
 		public void run()
 		{
-			if (_player == null)
+			if (_player != null)
 			{
-				return;
+				_player.getServitors().values().forEach(s -> s.unSummon(_player));
+				_player.teleToLocation(TeleportWhereType.TOWN, null);
+				_player = null;
 			}
-			
-			_player.getServitors().values().forEach(s ->
-			{
-				s.unSummon(_player);
-			});
-			
-			_player.teleToLocation(TeleportWhereType.TOWN);
-			_player.setInstanceId(0);
-			_player = null;
 		}
 	}
 	
-	@Override
-	public void parseLoc(int x, int y, int z, String type)
+	public List<L2DoorInstance> getDoors()
 	{
-		if ((type != null) && type.equals("spectatorSpawn"))
-		{
-			if (_spectatorLocations == null)
-			{
-				_spectatorLocations = new ArrayList<>();
-			}
-			_spectatorLocations.add(new Location(x, y, z));
-		}
-		else
-		{
-			super.parseLoc(x, y, z, type);
-		}
+		return _doors;
+	}
+	
+	public List<L2Spawn> getBuffers()
+	{
+		return _buffers;
 	}
 	
 	public List<Location> getSpectatorSpawns()
 	{
 		return _spectatorLocations;
+	}
+	
+	/**
+	 * Returns zone instanceTemplate
+	 * @return
+	 */
+	public int getInstanceTemplateId()
+	{
+		return _instanceTemplate;
 	}
 }

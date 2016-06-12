@@ -19,12 +19,12 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -39,10 +39,8 @@ public final class Heal extends AbstractEffect
 {
 	private final double _power;
 	
-	public Heal(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Heal(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_power = params.getDouble("power", 0);
 	}
 	
@@ -59,37 +57,40 @@ public final class Heal extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
-		if ((target == null) || target.isDead() || target.isDoor() || target.isInvul())
+		if (effected.isDead() || effected.isDoor() || effected.isHpBlocked())
+		{
+			return;
+		}
+		
+		if ((effected != effector) && effected.isAffected(EffectFlag.FACEOFF))
 		{
 			return;
 		}
 		
 		double amount = _power;
 		double staticShotBonus = 0;
-		int mAtkMul = 1;
-		final boolean sps = info.getSkill().isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-		final boolean bss = info.getSkill().isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		
-		if (((sps || bss) && activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass()) || activeChar.isSummon())
+		double mAtkMul = 1;
+		final boolean sps = skill.isMagic() && effector.isChargedShot(ShotType.SPIRITSHOTS);
+		final boolean bss = skill.isMagic() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		final double shotsBonus = effector.getStat().getValue(Stats.SHOTS_BONUS);
+		if (((sps || bss) && (effector.isPlayer() && effector.getActingPlayer().isMageClass())) || effector.isSummon())
 		{
-			staticShotBonus = info.getSkill().getMpConsume(); // static bonus for spiritshots
-			mAtkMul = bss ? 4 : 2;
+			staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots
+			mAtkMul = bss ? 4 * shotsBonus : 2 * shotsBonus;
 			staticShotBonus *= bss ? 2.4 : 1.0;
 		}
-		else if ((sps || bss) && activeChar.isNpc())
+		else if ((sps || bss) && effector.isNpc())
 		{
-			staticShotBonus = 2.4 * info.getSkill().getMpConsume(); // always blessed spiritshots
-			mAtkMul = 4;
+			staticShotBonus = 2.4 * skill.getMpConsume(); // always blessed spiritshots
+			mAtkMul = 4 * shotsBonus;
 		}
 		else
 		{
 			// no static bonus
 			// grade dynamic bonus
-			final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
+			final L2ItemInstance weaponInst = effector.getActiveWeaponInstance();
 			if (weaponInst != null)
 			{
 				mAtkMul = weaponInst.getItem().getCrystalType() == CrystalType.S84 ? 4 : weaponInst.getItem().getCrystalType() == CrystalType.S80 ? 2 : 1;
@@ -98,48 +99,53 @@ public final class Heal extends AbstractEffect
 			mAtkMul = bss ? mAtkMul * 4 : mAtkMul + 1;
 		}
 		
-		if (!info.getSkill().isStatic())
+		if (!skill.isStatic())
 		{
-			amount += staticShotBonus + Math.sqrt(mAtkMul * activeChar.getMAtk(activeChar, null));
-			amount = target.calcStat(Stats.HEAL_EFFECT, amount, null, null);
+			amount += staticShotBonus + Math.sqrt(mAtkMul * effector.getMAtk());
+			amount = effected.getStat().getValue(Stats.HEAL_EFFECT, amount);
 			// Heal critic, since CT2.3 Gracia Final
-			if (info.getSkill().isMagic() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill())))
+			if (skill.isMagic() && Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill))
 			{
 				amount *= 3;
-				activeChar.sendPacket(SystemMessageId.M_CRITICAL);
-				activeChar.sendPacket(new ExMagicAttackInfo(activeChar.getObjectId(), target.getObjectId(), ExMagicAttackInfo.CRITICAL_HEAL));
-				if (target.isPlayer() && (target != activeChar))
+				effector.sendPacket(SystemMessageId.M_CRITICAL);
+				effector.sendPacket(new ExMagicAttackInfo(effector.getObjectId(), effected.getObjectId(), ExMagicAttackInfo.CRITICAL_HEAL));
+				if (effected.isPlayer() && (effected != effector))
 				{
-					target.sendPacket(new ExMagicAttackInfo(activeChar.getObjectId(), target.getObjectId(), ExMagicAttackInfo.CRITICAL_HEAL));
+					effected.sendPacket(new ExMagicAttackInfo(effector.getObjectId(), effected.getObjectId(), ExMagicAttackInfo.CRITICAL_HEAL));
 				}
 			}
 		}
 		
-		// Prevents overheal and negative amount
-		amount = Math.max(Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp()), 0);
+		// Prevents overheal
+		amount = Math.min(amount, effected.getMaxRecoverableHp() - effected.getCurrentHp());
 		if (amount != 0)
 		{
-			target.setCurrentHp(amount + target.getCurrentHp());
+			final double newHp = amount + effected.getCurrentHp();
+			effected.setCurrentHp(newHp, false);
+			effected.broadcastStatusUpdate(effector);
 		}
 		
-		if (target.isPlayer())
+		if (effected.isPlayer())
 		{
-			if (info.getSkill().getId() == 4051)
+			if (skill.getId() == 4051)
 			{
-				target.sendPacket(SystemMessageId.REJUVENATING_HP);
-			}
-			else if (activeChar.isPlayer() && (activeChar != target))
-			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_C1);
-				sm.addString(activeChar.getName());
-				sm.addInt((int) amount);
-				target.sendPacket(sm);
+				effected.sendPacket(SystemMessageId.REJUVENATING_HP);
 			}
 			else
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
-				sm.addInt((int) amount);
-				target.sendPacket(sm);
+				if (effector.isPlayer() && (effector != effected))
+				{
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_C1);
+					sm.addString(effector.getName());
+					sm.addInt((int) amount);
+					effected.sendPacket(sm);
+				}
+				else
+				{
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
+					sm.addInt((int) amount);
+					effected.sendPacket(sm);
+				}
 			}
 		}
 	}

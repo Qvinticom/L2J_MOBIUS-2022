@@ -18,14 +18,16 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.HennaData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2Henna;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Zoey76
  */
-public class HennaEquipList extends L2GameServerPacket
+public class HennaEquipList implements IClientOutgoingPacket
 {
 	private final L2PcInstance _player;
 	private final List<L2Henna> _hennaEquipList;
@@ -43,26 +45,27 @@ public class HennaEquipList extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xEE);
-		writeQ(_player.getAdena()); // activeChar current amount of Adena
-		writeD(3); // available equip slot
-		writeD(_hennaEquipList.size());
+		OutgoingPackets.HENNA_EQUIP_LIST.writeId(packet);
+		packet.writeQ(_player.getAdena()); // activeChar current amount of Adena
+		packet.writeD(3); // available equip slot
+		packet.writeD(_hennaEquipList.size());
 		
 		for (L2Henna henna : _hennaEquipList)
 		{
 			// Player must have at least one dye in inventory
 			// to be able to see the Henna that can be applied with it.
-			if (_player.getInventory().getItemByItemId(henna.getDyeItemId()) != null)
+			if ((_player.getInventory().getItemByItemId(henna.getDyeItemId())) != null)
 			{
-				writeD(henna.getDyeId()); // dye Id
-				writeD(henna.getDyeItemId()); // item Id of the dye
-				writeQ(henna.getWearCount()); // amount of dyes required
-				writeQ(henna.getWearFee()); // amount of Adena required
-				writeD(henna.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00); // meet the requirement or not
-				writeD(0x00);
+				packet.writeD(henna.getDyeId()); // dye Id
+				packet.writeD(henna.getDyeItemId()); // item Id of the dye
+				packet.writeQ(henna.getWearCount()); // amount of dyes required
+				packet.writeQ(henna.getWearFee()); // amount of Adena required
+				packet.writeD(henna.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00); // meet the requirement or not
+				packet.writeD(0x00); // TODO: Find me!
 			}
 		}
+		return true;
 	}
 }

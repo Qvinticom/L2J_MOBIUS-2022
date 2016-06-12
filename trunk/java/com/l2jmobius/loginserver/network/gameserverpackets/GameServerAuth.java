@@ -20,13 +20,13 @@ import java.util.Arrays;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.network.BaseRecievePacket;
 import com.l2jmobius.loginserver.GameServerTable;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import com.l2jmobius.loginserver.GameServerThread;
 import com.l2jmobius.loginserver.network.L2JGameServerPacketHandler.GameServerState;
 import com.l2jmobius.loginserver.network.loginserverpackets.AuthResponse;
 import com.l2jmobius.loginserver.network.loginserverpackets.LoginServerFail;
-import com.l2jmobius.util.network.BaseRecievePacket;
 
 /**
  * <pre>
@@ -122,36 +122,53 @@ public class GameServerAuth extends BaseRecievePacket
 			}
 			else
 			{
-				if (!Config.ACCEPT_NEW_GAMESERVER || !_acceptAlternativeId)
+				// there is already a server registered with the desired id and different hex id
+				// try to register this one with an alternative id
+				if (Config.ACCEPT_NEW_GAMESERVER && _acceptAlternativeId)
 				{
+					gsi = new GameServerInfo(id, hexId, _server);
+					if (gameServerTable.registerWithFirstAvailableId(gsi))
+					{
+						_server.attachGameServerInfo(gsi, _port, _hosts, _maxPlayers);
+						gameServerTable.registerServerOnDB(gsi);
+					}
+					else
+					{
+						_server.forceClose(LoginServerFail.REASON_NO_FREE_ID);
+						return false;
+					}
+				}
+				else
+				{
+					// server id is already taken, and we cant get a new one for you
 					_server.forceClose(LoginServerFail.REASON_WRONG_HEXID);
 					return false;
 				}
-				gsi = new GameServerInfo(id, hexId, _server);
-				if (!gameServerTable.registerWithFirstAvailableId(gsi))
-				{
-					_server.forceClose(LoginServerFail.REASON_NO_FREE_ID);
-					return false;
-				}
-				_server.attachGameServerInfo(gsi, _port, _hosts, _maxPlayers);
-				gameServerTable.registerServerOnDB(gsi);
 			}
 		}
 		else
 		{
-			if (!Config.ACCEPT_NEW_GAMESERVER)
+			// can we register on this id?
+			if (Config.ACCEPT_NEW_GAMESERVER)
+			{
+				gsi = new GameServerInfo(id, hexId, _server);
+				if (gameServerTable.register(id, gsi))
+				{
+					_server.attachGameServerInfo(gsi, _port, _hosts, _maxPlayers);
+					gameServerTable.registerServerOnDB(gsi);
+				}
+				else
+				{
+					// some one took this ID meanwhile
+					_server.forceClose(LoginServerFail.REASON_ID_RESERVED);
+					return false;
+				}
+			}
+			else
 			{
 				_server.forceClose(LoginServerFail.REASON_WRONG_HEXID);
 				return false;
 			}
-			gsi = new GameServerInfo(id, hexId, _server);
-			if (!gameServerTable.register(id, gsi))
-			{
-				_server.forceClose(LoginServerFail.REASON_ID_RESERVED);
-				return false;
-			}
-			_server.attachGameServerInfo(gsi, _port, _hosts, _maxPlayers);
-			gameServerTable.registerServerOnDB(gsi);
 		}
 		
 		return true;

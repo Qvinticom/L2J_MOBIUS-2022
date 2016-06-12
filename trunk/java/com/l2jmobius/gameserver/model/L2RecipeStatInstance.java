@@ -55,4 +55,5 @@ public class L2RecipeStatInstance
 	{
 		return _value;
 	}
+	
 }

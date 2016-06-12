@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.events;
 
-import java.io.File;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -25,30 +24,33 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.PriorityBlockingQueue;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.script.ScriptException;
-
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
+import com.l2jmobius.gameserver.enums.AttributeType;
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -60,7 +62,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
-import com.l2jmobius.gameserver.model.entity.Instance;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
 import com.l2jmobius.gameserver.model.events.annotations.Ids;
 import com.l2jmobius.gameserver.model.events.annotations.NpcLevelRange;
@@ -71,11 +72,19 @@ import com.l2jmobius.gameserver.model.events.annotations.Ranges;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureKill;
+import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureAttacked;
+import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureZoneEnter;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureZoneExit;
+import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableAggroRangeEnter;
+import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableAttack;
+import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableFactionCall;
+import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableHate;
+import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableKill;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcCanBeSeen;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcCreatureSee;
+import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcDespawn;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcEventReceived;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMoveFinished;
@@ -83,27 +92,26 @@ import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMoveNodeArr
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMoveRouteFinished;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcSkillFinished;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcSocialActionSee;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcSpawn;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcTeleport;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.attackable.OnAttackableAggroRangeEnter;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.attackable.OnAttackableAttack;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.attackable.OnAttackableFactionCall;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.attackable.OnAttackableHate;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.attackable.OnAttackableKill;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSkillLearn;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSummonSpawn;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSummonTalk;
-import com.l2jmobius.gameserver.model.events.impl.character.trap.OnTrapAction;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnTrapAction;
+import com.l2jmobius.gameserver.model.events.impl.instance.OnInstanceCreated;
+import com.l2jmobius.gameserver.model.events.impl.instance.OnInstanceDestroy;
+import com.l2jmobius.gameserver.model.events.impl.instance.OnInstanceEnter;
+import com.l2jmobius.gameserver.model.events.impl.instance.OnInstanceLeave;
+import com.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
 import com.l2jmobius.gameserver.model.events.impl.item.OnItemBypassEvent;
 import com.l2jmobius.gameserver.model.events.impl.item.OnItemTalk;
 import com.l2jmobius.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
-import com.l2jmobius.gameserver.model.events.impl.sieges.castle.OnCastleSiegeFinish;
-import com.l2jmobius.gameserver.model.events.impl.sieges.castle.OnCastleSiegeOwnerChange;
-import com.l2jmobius.gameserver.model.events.impl.sieges.castle.OnCastleSiegeStart;
+import com.l2jmobius.gameserver.model.events.impl.sieges.OnCastleSiegeFinish;
+import com.l2jmobius.gameserver.model.events.impl.sieges.OnCastleSiegeOwnerChange;
+import com.l2jmobius.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
 import com.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
 import com.l2jmobius.gameserver.model.events.listeners.AnnotationEventListener;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
@@ -112,17 +120,25 @@ import com.l2jmobius.gameserver.model.events.listeners.FunctionEventListener;
 import com.l2jmobius.gameserver.model.events.listeners.RunnableEventListener;
 import com.l2jmobius.gameserver.model.events.returns.AbstractEventReturn;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
+import com.l2jmobius.gameserver.model.events.timers.IEventTimerCancel;
+import com.l2jmobius.gameserver.model.events.timers.IEventTimerEvent;
+import com.l2jmobius.gameserver.model.events.timers.TimerHolder;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.MovieHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.interfaces.INamable;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
+import com.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import com.l2jmobius.gameserver.model.interfaces.IPositionable;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
 import com.l2jmobius.gameserver.model.items.L2EtcItem;
 import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.olympiad.Olympiad;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.spawns.SpawnGroup;
+import com.l2jmobius.gameserver.model.spawns.SpawnTemplate;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -131,29 +147,69 @@ import com.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.scripting.L2ScriptEngineManager;
-import com.l2jmobius.gameserver.scripting.ScriptManager;
+import com.l2jmobius.gameserver.scripting.ManagedScript;
 import com.l2jmobius.gameserver.util.MinionList;
-import com.l2jmobius.util.Rnd;
 
 /**
- * Abstract script.
- * @author KenM, UnAfraid, Zoey76
+ * @author UnAfraid
  */
-public abstract class AbstractScript implements INamable
+public abstract class AbstractScript extends ManagedScript implements IEventTimerEvent<String>, IEventTimerCancel<String>
 {
-	public static final Logger _log = Logger.getLogger(AbstractScript.class.getName());
+	protected static final Logger _log = Logger.getLogger(AbstractScript.class.getName());
 	private final Map<ListenerRegisterType, Set<Integer>> _registeredIds = new ConcurrentHashMap<>();
-	private final List<AbstractEventListener> _listeners = new CopyOnWriteArrayList<>();
-	private final File _scriptFile;
-	private boolean _isActive;
+	private final Queue<AbstractEventListener> _listeners = new PriorityBlockingQueue<>();
+	private volatile TimerExecutor<String> _timerExecutor;
 	
 	public AbstractScript()
 	{
-		_scriptFile = L2ScriptEngineManager.getInstance().getCurrentLoadingScript();
 		initializeAnnotationListeners();
+	}
+	
+	@Override
+	public final void onTimerEvent(TimerHolder<String> holder)
+	{
+		onTimerEvent(holder.getEvent(), holder.getParams(), holder.getNpc(), holder.getPlayer());
+	}
+	
+	@Override
+	public final void onTimerCancel(TimerHolder<String> holder)
+	{
+		onTimerCancel(holder.getEvent(), holder.getParams(), holder.getNpc(), holder.getPlayer());
+	}
+	
+	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	{
+		_log.warning("[" + getClass().getSimpleName() + "]: Timer event arrived at non overriden onTimerEvent method event: " + event + " npc: " + npc + " player: " + player);
+	}
+	
+	public void onTimerCancel(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	{
+	}
+	
+	/**
+	 * @return the {@link TimerExecutor} object that manages timers
+	 */
+	public TimerExecutor<String> getTimers()
+	{
+		if (_timerExecutor == null)
+		{
+			synchronized (this)
+			{
+				if (_timerExecutor == null)
+				{
+					_timerExecutor = new TimerExecutor<>(this, this);
+				}
+			}
+		}
+		return _timerExecutor;
+	}
+	
+	public boolean hasTimers()
+	{
+		return _timerExecutor != null;
 	}
 	
 	private void initializeAnnotationListeners()
@@ -170,17 +226,17 @@ public abstract class AbstractScript implements INamable
 				final EventType eventType = listener.value();
 				if (method.getParameterCount() != 1)
 				{
-					_log.log(Level.WARNING, getClass().getSimpleName() + ": Non properly defined annotation listener on method: " + method.getName() + " expected parameter count is 1 but found: " + method.getParameterCount());
+					_log.warning(getClass().getSimpleName() + ": Non properly defined annotation listener on method: " + method.getName() + " expected parameter count is 1 but found: " + method.getParameterCount());
 					continue;
 				}
 				else if (!eventType.isEventClass(method.getParameterTypes()[0]))
 				{
-					_log.log(Level.WARNING, getClass().getSimpleName() + ": Non properly defined annotation listener on method: " + method.getName() + " expected parameter to be type of: " + eventType.getEventClass().getSimpleName() + " but found: " + method.getParameterTypes()[0].getSimpleName());
+					_log.warning(getClass().getSimpleName() + ": Non properly defined annotation listener on method: " + method.getName() + " expected parameter to be type of: " + eventType.getEventClass().getSimpleName() + " but found: " + method.getParameterTypes()[0].getSimpleName());
 					continue;
 				}
 				else if (!eventType.isReturnClass(method.getReturnType()))
 				{
-					_log.log(Level.WARNING, getClass().getSimpleName() + ": Non properly defined annotation listener on method: " + method.getName() + " expected return type to be one of: " + Arrays.toString(eventType.getReturnClasses()) + " but found: " + method.getReturnType().getSimpleName());
+					_log.warning(getClass().getSimpleName() + ": Non properly defined annotation listener on method: " + method.getName() + " expected return type to be one of: " + Arrays.toString(eventType.getReturnClasses()) + " but found: " + method.getReturnType().getSimpleName());
 					continue;
 				}
 				
@@ -194,7 +250,8 @@ public abstract class AbstractScript implements INamable
 				{
 					if (annotation instanceof Id)
 					{
-						for (int id : ((Id) annotation).value())
+						final Id npc = (Id) annotation;
+						for (int id : npc.value())
 						{
 							ids.add(id);
 						}
@@ -215,7 +272,7 @@ public abstract class AbstractScript implements INamable
 						final Range range = (Range) annotation;
 						if (range.from() > range.to())
 						{
-							_log.log(Level.WARNING, getClass().getSimpleName() + ": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
+							_log.warning(getClass().getSimpleName() + ": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
 							continue;
 						}
 						
@@ -226,13 +283,15 @@ public abstract class AbstractScript implements INamable
 					}
 					else if (annotation instanceof Ranges)
 					{
-						for (Range range : ((Ranges) annotation).value())
+						final Ranges ranges = (Ranges) annotation;
+						for (Range range : ranges.value())
 						{
 							if (range.from() > range.to())
 							{
-								_log.log(Level.WARNING, getClass().getSimpleName() + ": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
+								_log.warning(getClass().getSimpleName() + ": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
 								continue;
 							}
+							
 							for (int id = range.from(); id <= range.to(); id++)
 							{
 								ids.add(id);
@@ -244,19 +303,21 @@ public abstract class AbstractScript implements INamable
 						final NpcLevelRange range = (NpcLevelRange) annotation;
 						if (range.from() > range.to())
 						{
-							_log.log(Level.WARNING, getClass().getSimpleName() + ": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
+							_log.warning(getClass().getSimpleName() + ": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
 							continue;
 						}
 						else if (type != ListenerRegisterType.NPC)
 						{
-							_log.log(Level.WARNING, getClass().getSimpleName() + ": ListenerRegisterType " + type + " for " + annotation.getClass().getSimpleName() + " NPC is expected!");
+							_log.warning(getClass().getSimpleName() + ": ListenerRegisterType " + type + " for " + annotation.getClass().getSimpleName() + " NPC is expected!");
 							continue;
 						}
 						
 						for (int level = range.from(); level <= range.to(); level++)
 						{
-							NpcData.getInstance().getAllOfLevel(level).forEach(template -> ids.add(template.getId()));
+							final List<L2NpcTemplate> templates = NpcData.getInstance().getAllOfLevel(level);
+							templates.forEach(template -> ids.add(template.getId()));
 						}
+						
 					}
 					else if (annotation instanceof NpcLevelRanges)
 					{
@@ -265,12 +326,12 @@ public abstract class AbstractScript implements INamable
 						{
 							if (range.from() > range.to())
 							{
-								_log.log(Level.WARNING, getClass().getSimpleName() + ": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
+								_log.warning(getClass().getSimpleName() + ": Wrong " + annotation.getClass().getSimpleName() + " from is higher then to!");
 								continue;
 							}
 							else if (type != ListenerRegisterType.NPC)
 							{
-								_log.log(Level.WARNING, getClass().getSimpleName() + ": ListenerRegisterType " + type + " for " + annotation.getClass().getSimpleName() + " NPC is expected!");
+								_log.warning(getClass().getSimpleName() + ": ListenerRegisterType " + type + " for " + annotation.getClass().getSimpleName() + " NPC is expected!");
 								continue;
 							}
 							
@@ -283,14 +344,14 @@ public abstract class AbstractScript implements INamable
 					}
 					else if (annotation instanceof Priority)
 					{
-						priority = ((Priority) annotation).value();
+						final Priority p = (Priority) annotation;
+						priority = p.value();
 					}
 				}
 				
 				if (!ids.isEmpty())
 				{
-					_registeredIds.putIfAbsent(type, ConcurrentHashMap.newKeySet(ids.size()));
-					_registeredIds.get(type).addAll(ids);
+					_registeredIds.computeIfAbsent(type, k -> ConcurrentHashMap.newKeySet()).addAll(ids);
 				}
 				
 				registerAnnotation(method, eventType, type, priority, ids);
@@ -298,50 +359,25 @@ public abstract class AbstractScript implements INamable
 		}
 	}
 	
-	public void setActive(boolean status)
-	{
-		_isActive = status;
-	}
-	
-	public boolean isActive()
-	{
-		return _isActive;
-	}
-	
-	public File getScriptFile()
-	{
-		return _scriptFile;
-	}
-	
-	public boolean reload()
-	{
-		try
-		{
-			L2ScriptEngineManager.getInstance().executeScript(getScriptFile());
-			return true;
-		}
-		catch (ScriptException e)
-		{
-			return false;
-		}
-	}
-	
 	/**
 	 * Unloads all listeners registered by this class.
-	 * @return {@code true}
 	 */
+	@Override
 	public boolean unload()
 	{
 		_listeners.forEach(AbstractEventListener::unregisterMe);
 		_listeners.clear();
+		if (_timerExecutor != null)
+		{
+			_timerExecutor.cancelAllTimers();
+		}
 		return true;
 	}
-	
-	public abstract ScriptManager<?> getManager();
 	
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
+	 * Provides callback operation when L2Attackable dies from a player.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -352,6 +388,7 @@ public abstract class AbstractScript implements INamable
 	}
 	
 	/**
+	 * Provides callback operation when L2Attackable dies from a player.
 	 * @param callback
 	 * @param npcIds
 	 * @return
@@ -369,9 +406,9 @@ public abstract class AbstractScript implements INamable
 	 * @param npcIds
 	 * @return
 	 */
-	protected final List<AbstractEventListener> addCreatureKillId(Function<OnCreatureKill, ? extends AbstractEventReturn> callback, int... npcIds)
+	protected final List<AbstractEventListener> addCreatureKillId(Function<OnCreatureDeath, ? extends AbstractEventReturn> callback, int... npcIds)
 	{
-		return registerFunction(callback, EventType.ON_CREATURE_KILL, ListenerRegisterType.NPC, npcIds);
+		return registerFunction(callback, EventType.ON_CREATURE_DEATH, ListenerRegisterType.NPC, npcIds);
 	}
 	
 	/**
@@ -380,9 +417,9 @@ public abstract class AbstractScript implements INamable
 	 * @param npcIds
 	 * @return
 	 */
-	protected final List<AbstractEventListener> setCreatureKillId(Consumer<OnCreatureKill> callback, int... npcIds)
+	protected final List<AbstractEventListener> setCreatureKillId(Consumer<OnCreatureDeath> callback, int... npcIds)
 	{
-		return registerConsumer(callback, EventType.ON_CREATURE_KILL, ListenerRegisterType.NPC, npcIds);
+		return registerConsumer(callback, EventType.ON_CREATURE_DEATH, ListenerRegisterType.NPC, npcIds);
 	}
 	
 	/**
@@ -391,9 +428,44 @@ public abstract class AbstractScript implements INamable
 	 * @param npcIds
 	 * @return
 	 */
-	protected final List<AbstractEventListener> setCreatureKillId(Consumer<OnCreatureKill> callback, Collection<Integer> npcIds)
+	protected final List<AbstractEventListener> setCreatureKillId(Consumer<OnCreatureDeath> callback, Collection<Integer> npcIds)
 	{
-		return registerConsumer(callback, EventType.ON_CREATURE_KILL, ListenerRegisterType.NPC, npcIds);
+		return registerConsumer(callback, EventType.ON_CREATURE_DEATH, ListenerRegisterType.NPC, npcIds);
+	}
+	
+	// ---------------------------------------------------------------------------------------------------------------------------
+	
+	/**
+	 * Provides instant callback operation when L2Attackable dies from a player with return type.
+	 * @param callback
+	 * @param npcIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> addCreatureAttackedId(Function<OnCreatureAttacked, ? extends AbstractEventReturn> callback, int... npcIds)
+	{
+		return registerFunction(callback, EventType.ON_CREATURE_ATTACKED, ListenerRegisterType.NPC, npcIds);
+	}
+	
+	/**
+	 * Provides instant callback operation when L2Attackable dies from a player.
+	 * @param callback
+	 * @param npcIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setCreatureAttackedId(Consumer<OnCreatureAttacked> callback, int... npcIds)
+	{
+		return registerConsumer(callback, EventType.ON_CREATURE_ATTACKED, ListenerRegisterType.NPC, npcIds);
+	}
+	
+	/**
+	 * Provides instant callback operation when {@link L2Attackable} dies from a {@link L2PcInstance}.
+	 * @param callback
+	 * @param npcIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setCreatureAttackedid(Consumer<OnCreatureAttacked> callback, Collection<Integer> npcIds)
+	{
+		return registerConsumer(callback, EventType.ON_CREATURE_ATTACKED, ListenerRegisterType.NPC, npcIds);
 	}
 	
 	// ---------------------------------------------------------------------------------------------------------------------------
@@ -515,19 +587,6 @@ public abstract class AbstractScript implements INamable
 	// ---------------------------------------------------------------------------------------------------------------------------
 	
 	/**
-	 * Provides instant callback operation when L2Npc sees skill from a player.
-	 * @param callback
-	 * @param npcIds
-	 * @return
-	 */
-	protected final List<AbstractEventListener> setNpcSocialActionSeeId(Consumer<OnNpcSocialActionSee> callback, int... npcIds)
-	{
-		return registerConsumer(callback, EventType.ON_NPC_SOCIAL_ACTION_SEE, ListenerRegisterType.NPC, npcIds);
-	}
-	
-	// ---------------------------------------------------------------------------------------------------------------------------
-	
-	/**
 	 * Provides instant callback operation when L2Npc casts skill on a player.
 	 * @param callback
 	 * @param npcIds
@@ -571,6 +630,30 @@ public abstract class AbstractScript implements INamable
 	protected final List<AbstractEventListener> setNpcSpawnId(Consumer<OnNpcSpawn> callback, Collection<Integer> npcIds)
 	{
 		return registerConsumer(callback, EventType.ON_NPC_SPAWN, ListenerRegisterType.NPC, npcIds);
+	}
+	
+	// ---------------------------------------------------------------------------------------------------------------------------
+	
+	/**
+	 * Provides instant callback operation when L2Npc is despawned.
+	 * @param callback
+	 * @param npcIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setNpcDespawnId(Consumer<OnNpcDespawn> callback, int... npcIds)
+	{
+		return registerConsumer(callback, EventType.ON_NPC_DESPAWN, ListenerRegisterType.NPC, npcIds);
+	}
+	
+	/**
+	 * Provides instant callback operation when L2Npc is despawned.
+	 * @param callback
+	 * @param npcIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setNpcDespawnId(Consumer<OnNpcDespawn> callback, Collection<Integer> npcIds)
+	{
+		return registerConsumer(callback, EventType.ON_NPC_DESPAWN, ListenerRegisterType.NPC, npcIds);
 	}
 	
 	// ---------------------------------------------------------------------------------------------------------------------------
@@ -772,6 +855,17 @@ public abstract class AbstractScript implements INamable
 	protected final List<AbstractEventListener> setNpcCreatureSeeId(Consumer<OnNpcCreatureSee> callback, int... npcIds)
 	{
 		return registerConsumer(callback, EventType.ON_NPC_CREATURE_SEE, ListenerRegisterType.NPC, npcIds);
+	}
+	
+	/**
+	 * Provides instant callback operation when {@link L2Character} sees another creature.
+	 * @param callback
+	 * @param npcIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setCreatureSeeId(Consumer<OnCreatureSee> callback, int... npcIds)
+	{
+		return registerConsumer(callback, EventType.ON_CREATURE_SEE, ListenerRegisterType.NPC, npcIds);
 	}
 	
 	/**
@@ -1169,6 +1263,124 @@ public abstract class AbstractScript implements INamable
 		return registerConsumer(callback, EventType.ON_PLAYER_PROFESSION_CHANGE, ListenerRegisterType.GLOBAL);
 	}
 	
+	/**
+	 * Provides instant callback operation when instance world created
+	 * @param callback
+	 * @param templateIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setInstanceCreatedId(Consumer<OnInstanceCreated> callback, int... templateIds)
+	{
+		return registerConsumer(callback, EventType.ON_INSTANCE_CREATED, ListenerRegisterType.INSTANCE, templateIds);
+	}
+	
+	/**
+	 * Provides instant callback operation when instance world created
+	 * @param callback
+	 * @param templateIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setInstanceCreatedId(Consumer<OnInstanceCreated> callback, Collection<Integer> templateIds)
+	{
+		return registerConsumer(callback, EventType.ON_INSTANCE_CREATED, ListenerRegisterType.INSTANCE, templateIds);
+	}
+	
+	// ---------------------------------------------------------------------------------------------------------------------------
+	
+	/**
+	 * Provides instant callback operation when instance world destroyed
+	 * @param callback
+	 * @param templateIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setInstanceDestroyId(Consumer<OnInstanceDestroy> callback, int... templateIds)
+	{
+		return registerConsumer(callback, EventType.ON_INSTANCE_DESTROY, ListenerRegisterType.INSTANCE, templateIds);
+	}
+	
+	/**
+	 * Provides instant callback operation when instance world destroyed
+	 * @param callback
+	 * @param templateIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setInstanceDestroyId(Consumer<OnInstanceDestroy> callback, Collection<Integer> templateIds)
+	{
+		return registerConsumer(callback, EventType.ON_INSTANCE_DESTROY, ListenerRegisterType.INSTANCE, templateIds);
+	}
+	
+	// ---------------------------------------------------------------------------------------------------------------------------
+	
+	/**
+	 * Provides instant callback operation when player enters into instance world
+	 * @param callback
+	 * @param templateIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setInstanceEnterId(Consumer<OnInstanceEnter> callback, int... templateIds)
+	{
+		return registerConsumer(callback, EventType.ON_INSTANCE_ENTER, ListenerRegisterType.INSTANCE, templateIds);
+	}
+	
+	/**
+	 * Provides instant callback operation when player enters into instance world
+	 * @param callback
+	 * @param templateIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setInstanceEnterId(Consumer<OnInstanceEnter> callback, Collection<Integer> templateIds)
+	{
+		return registerConsumer(callback, EventType.ON_INSTANCE_ENTER, ListenerRegisterType.INSTANCE, templateIds);
+	}
+	
+	// ---------------------------------------------------------------------------------------------------------------------------
+	
+	/**
+	 * Provides instant callback operation when player leave from instance world
+	 * @param callback
+	 * @param templateIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setInstanceLeaveId(Consumer<OnInstanceLeave> callback, int... templateIds)
+	{
+		return registerConsumer(callback, EventType.ON_INSTANCE_LEAVE, ListenerRegisterType.INSTANCE, templateIds);
+	}
+	
+	/**
+	 * Provides instant callback operation when player leave from instance world
+	 * @param callback
+	 * @param templateIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setInstanceLeaveId(Consumer<OnInstanceLeave> callback, Collection<Integer> templateIds)
+	{
+		return registerConsumer(callback, EventType.ON_INSTANCE_LEAVE, ListenerRegisterType.INSTANCE, templateIds);
+	}
+	
+	// ---------------------------------------------------------------------------------------------------------------------------
+	
+	/**
+	 * Provides instant callback operation on instance status change
+	 * @param callback
+	 * @param templateIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setInstanceStatusChangeId(Consumer<OnInstanceStatusChange> callback, int... templateIds)
+	{
+		return registerConsumer(callback, EventType.ON_INSTANCE_STATUS_CHANGE, ListenerRegisterType.INSTANCE, templateIds);
+	}
+	
+	/**
+	 * Provides instant callback operation on instance status change
+	 * @param callback
+	 * @param templateIds
+	 * @return
+	 */
+	protected final List<AbstractEventListener> setInstanceStatusChangeId(Consumer<OnInstanceStatusChange> callback, Collection<Integer> templateIds)
+	{
+		return registerConsumer(callback, EventType.ON_INSTANCE_STATUS_CHANGE, ListenerRegisterType.INSTANCE, templateIds);
+	}
+	
 	// --------------------------------------------------------------------------------------------------
 	// --------------------------------Default listener register methods---------------------------------
 	// --------------------------------------------------------------------------------------------------
@@ -1368,14 +1580,22 @@ public abstract class AbstractScript implements INamable
 						}
 						break;
 					}
+					case INSTANCE:
+					{
+						final InstanceTemplate template = InstanceManager.getInstance().getInstanceTemplate(id);
+						if (template != null)
+						{
+							listeners.add(template.addListener(action.apply(template)));
+						}
+						break;
+					}
 					default:
 					{
-						_log.log(Level.WARNING, getClass().getSimpleName() + ": Unhandled register type: " + registerType);
+						_log.warning(getClass().getSimpleName() + ": Unhandled register type: " + registerType);
 					}
 				}
 				
-				_registeredIds.putIfAbsent(registerType, ConcurrentHashMap.newKeySet(1));
-				_registeredIds.get(registerType).add(id);
+				_registeredIds.computeIfAbsent(registerType, k -> ConcurrentHashMap.newKeySet()).add(id);
 			}
 		}
 		else
@@ -1480,14 +1700,23 @@ public abstract class AbstractScript implements INamable
 						}
 						break;
 					}
+					case INSTANCE:
+					{
+						final InstanceTemplate template = InstanceManager.getInstance().getInstanceTemplate(id);
+						if (template != null)
+						{
+							listeners.add(template.addListener(action.apply(template)));
+						}
+						break;
+					}
 					default:
 					{
-						_log.log(Level.WARNING, getClass().getSimpleName() + ": Unhandled register type: " + registerType);
+						_log.warning(getClass().getSimpleName() + ": Unhandled register type: " + registerType);
 					}
 				}
 			}
-			_registeredIds.putIfAbsent(registerType, ConcurrentHashMap.newKeySet(ids.size()));
-			_registeredIds.get(registerType).addAll(ids);
+			
+			_registeredIds.computeIfAbsent(registerType, k -> ConcurrentHashMap.newKeySet()).addAll(ids);
 		}
 		else
 		{
@@ -1531,12 +1760,63 @@ public abstract class AbstractScript implements INamable
 	
 	public Set<Integer> getRegisteredIds(ListenerRegisterType type)
 	{
-		return _registeredIds.containsKey(type) ? _registeredIds.get(type) : Collections.emptySet();
+		return _registeredIds.getOrDefault(type, Collections.emptySet());
 	}
 	
-	public List<AbstractEventListener> getListeners()
+	public Queue<AbstractEventListener> getListeners()
 	{
 		return _listeners;
+	}
+	
+	/**
+	 * -------------------------------------------------------------------------------------------------------
+	 */
+	
+	/**
+	 * @param template
+	 */
+	public void onSpawnActivate(SpawnTemplate template)
+	{
+		
+	}
+	
+	/**
+	 * @param template
+	 */
+	public void onSpawnDeactivate(SpawnTemplate template)
+	{
+		
+	}
+	
+	/**
+	 * @param template
+	 * @param group
+	 * @param npc
+	 */
+	public void onSpawnNpc(SpawnTemplate template, SpawnGroup group, L2Npc npc)
+	{
+		
+	}
+	
+	/**
+	 * @param template
+	 * @param group
+	 * @param npc
+	 */
+	public void onSpawnDespawnNpc(SpawnTemplate template, SpawnGroup group, L2Npc npc)
+	{
+		
+	}
+	
+	/**
+	 * @param template
+	 * @param group
+	 * @param npc
+	 * @param killer
+	 */
+	public void onSpawnNpcDeath(SpawnTemplate template, SpawnGroup group, L2Npc npc, L2Character killer)
+	{
+		
 	}
 	
 	/**
@@ -1565,6 +1845,20 @@ public abstract class AbstractScript implements INamable
 	public static void showOnScreenMsg(L2PcInstance player, NpcStringId npcString, int position, int time, String... params)
 	{
 		player.sendPacket(new ExShowScreenMessage(npcString, position, time, params));
+	}
+	
+	/**
+	 * Show an on screen message to the player.
+	 * @param player the player to display the message to
+	 * @param npcString the NPC string to display
+	 * @param position the position of the message on the screen
+	 * @param time the duration of the message in milliseconds
+	 * @param showEffect the upper effect
+	 * @param params values of parameters to replace in the NPC String (like S1, C1 etc.)
+	 */
+	public static void showOnScreenMsg(L2PcInstance player, NpcStringId npcString, int position, int time, boolean showEffect, String... params)
+	{
+		player.sendPacket(new ExShowScreenMessage(npcString, position, time, showEffect, params));
 	}
 	
 	/**
@@ -1650,6 +1944,25 @@ public abstract class AbstractScript implements INamable
 	public static L2Npc addSpawn(int npcId, IPositionable pos, boolean randomOffset, long despawnDelay, boolean isSummonSpawn)
 	{
 		return addSpawn(npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), randomOffset, despawnDelay, isSummonSpawn, 0);
+	}
+	
+	/**
+	 * Add a temporary spawn of the specified NPC.
+	 * @param summoner the NPC that requires this spawn
+	 * @param npcId the ID of the NPC to spawn
+	 * @param pos the object containing the spawn location coordinates
+	 * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
+	 * @param instanceId the ID of the instance to spawn the NPC in (0 - the open world)
+	 * @return the {@link L2Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
+	 * @see #addSpawn(int, IPositionable)
+	 * @see #addSpawn(int, IPositionable, boolean)
+	 * @see #addSpawn(int, IPositionable, boolean, long)
+	 * @see #addSpawn(int, IPositionable, boolean, long, boolean)
+	 * @see #addSpawn(int, int, int, int, int, boolean, long, boolean, int)
+	 */
+	public static L2Npc addSpawn(L2Npc summoner, int npcId, IPositionable pos, boolean randomOffset, int instanceId)
+	{
+		return addSpawn(summoner, npcId, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading(), randomOffset, 0, false, instanceId);
 	}
 	
 	/**
@@ -1741,19 +2054,21 @@ public abstract class AbstractScript implements INamable
 	 * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
 	 * @param despawnDelay time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
 	 * @param isSummonSpawn if {@code true}, displays a summon animation on NPC spawn
-	 * @param instanceId the ID of the instance to spawn the NPC in (0 - the open world)
+	 * @param instance instance where NPC should be spawned ({@code null} - normal world)
 	 * @return the {@link L2Npc} object of the newly spawned NPC or {@code null} if the NPC doesn't exist
 	 * @see #addSpawn(int, IPositionable, boolean, long, boolean, int)
 	 * @see #addSpawn(int, int, int, int, int, boolean, long)
 	 * @see #addSpawn(int, int, int, int, int, boolean, long, boolean)
 	 */
-	public static L2Npc addSpawn(L2Npc summoner, int npcId, int x, int y, int z, int heading, boolean randomOffset, long despawnDelay, boolean isSummonSpawn, int instanceId)
+	public static L2Npc addSpawn(L2Npc summoner, int npcId, int x, int y, int z, int heading, boolean randomOffset, long despawnDelay, boolean isSummonSpawn, int instance)
 	{
 		try
 		{
+			final L2Spawn spawn = new L2Spawn(npcId);
+			
 			if ((x == 0) && (y == 0))
 			{
-				_log.log(Level.SEVERE, "addSpawn(): invalid spawn coordinates for NPC #" + npcId + "!");
+				_log.severe("addSpawn(): invalid spawn coordinates for NPC #" + npcId + "!");
 				return null;
 			}
 			
@@ -1774,8 +2089,7 @@ public abstract class AbstractScript implements INamable
 				y += offset;
 			}
 			
-			final L2Spawn spawn = new L2Spawn(npcId);
-			spawn.setInstanceId(instanceId);
+			spawn.setInstanceId(instance);
 			spawn.setHeading(heading);
 			spawn.setX(x);
 			spawn.setY(y);
@@ -1994,11 +2308,11 @@ public abstract class AbstractScript implements INamable
 	public static int getEnchantLevel(L2PcInstance player, int itemId)
 	{
 		final L2ItemInstance enchantedItem = player.getInventory().getItemByItemId(itemId);
-		if (enchantedItem != null)
+		if (enchantedItem == null)
 		{
-			return enchantedItem.getEnchantLevel();
+			return 0;
 		}
-		return 0;
+		return enchantedItem.getEnchantLevel();
 	}
 	
 	/**
@@ -2007,7 +2321,7 @@ public abstract class AbstractScript implements INamable
 	 * @param count the amount of Adena to give
 	 * @param applyRates if {@code true} quest rates will be applied to the amount
 	 */
-	public static void giveAdena(L2PcInstance player, long count, boolean applyRates)
+	public void giveAdena(L2PcInstance player, long count, boolean applyRates)
 	{
 		if (applyRates)
 		{
@@ -2061,31 +2375,21 @@ public abstract class AbstractScript implements INamable
 					switch (((L2EtcItem) item).getItemType())
 					{
 						case POTION:
-						{
 							count *= Config.RATE_QUEST_REWARD_POTION;
 							break;
-						}
-						case SCRL_ENCHANT_WP:
-						case SCRL_ENCHANT_AM:
+						case ENCHT_WP:
+						case ENCHT_AM:
 						case SCROLL:
-						{
 							count *= Config.RATE_QUEST_REWARD_SCROLL;
 							break;
-						}
 						case RECIPE:
-						{
 							count *= Config.RATE_QUEST_REWARD_RECIPE;
 							break;
-						}
 						case MATERIAL:
-						{
 							count *= Config.RATE_QUEST_REWARD_MATERIAL;
 							break;
-						}
 						default:
-						{
 							count *= Config.RATE_QUEST_REWARD;
-						}
 					}
 				}
 			}
@@ -2118,26 +2422,30 @@ public abstract class AbstractScript implements INamable
 	private static void sendItemGetMessage(L2PcInstance player, L2ItemInstance item, long count)
 	{
 		// If item for reward is gold, send message of gold reward to client
-		final SystemMessage smsg;
 		if (item.getId() == Inventory.ADENA_ID)
 		{
-			smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
+			final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
 			smsg.addLong(count);
+			player.sendPacket(smsg);
 		}
 		// Otherwise, send message of object reward to client
-		else if (count > 1)
-		{
-			smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
-			smsg.addItemName(item);
-			smsg.addLong(count);
-		}
 		else
 		{
-			smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
-			smsg.addItemName(item);
+			if (count > 1)
+			{
+				final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+				smsg.addItemName(item);
+				smsg.addLong(count);
+				player.sendPacket(smsg);
+			}
+			else
+			{
+				final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+				smsg.addItemName(item);
+				player.sendPacket(smsg);
+			}
 		}
 		// send packets
-		player.sendPacket(smsg);
 		player.sendPacket(new ExUserInfoInvenWeight(player));
 		player.sendPacket(new ExAdenaInvenCount(player));
 	}
@@ -2150,7 +2458,19 @@ public abstract class AbstractScript implements INamable
 	 */
 	public static void giveItems(L2PcInstance player, int itemId, long count)
 	{
-		giveItems(player, itemId, count, 0);
+		giveItems(player, itemId, count, 0, false);
+	}
+	
+	/**
+	 * Give item/reward to the player
+	 * @param player
+	 * @param itemId
+	 * @param count
+	 * @param playSound
+	 */
+	public static void giveItems(L2PcInstance player, int itemId, long count, boolean playSound)
+	{
+		giveItems(player, itemId, count, 0, playSound);
 	}
 	
 	/**
@@ -2168,8 +2488,9 @@ public abstract class AbstractScript implements INamable
 	 * @param itemId
 	 * @param count
 	 * @param enchantlevel
+	 * @param playSound
 	 */
-	public static void giveItems(L2PcInstance player, int itemId, long count, int enchantlevel)
+	public static void giveItems(L2PcInstance player, int itemId, long count, int enchantlevel, boolean playSound)
 	{
 		if (count <= 0)
 		{
@@ -2189,6 +2510,10 @@ public abstract class AbstractScript implements INamable
 			item.setEnchantLevel(enchantlevel);
 		}
 		
+		if (playSound)
+		{
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		}
 		sendItemGetMessage(player, item, count);
 	}
 	
@@ -2196,10 +2521,10 @@ public abstract class AbstractScript implements INamable
 	 * @param player
 	 * @param itemId
 	 * @param count
-	 * @param attributeId
-	 * @param attributeLevel
+	 * @param attributeType
+	 * @param attributeValue
 	 */
-	public static void giveItems(L2PcInstance player, int itemId, long count, byte attributeId, int attributeLevel)
+	public static void giveItems(L2PcInstance player, int itemId, long count, AttributeType attributeType, int attributeValue)
 	{
 		if (count <= 0)
 		{
@@ -2214,17 +2539,18 @@ public abstract class AbstractScript implements INamable
 		}
 		
 		// set enchant level for item if that item is not adena
-		if ((attributeId >= 0) && (attributeLevel > 0))
+		if ((attributeType != null) && (attributeValue > 0))
 		{
-			item.setElementAttr(attributeId, attributeLevel);
+			item.setAttribute(new AttributeHolder(attributeType, attributeValue));
 			if (item.isEquipped())
 			{
-				item.updateElementAttrBonus(player);
+				// Recalculate all stats
+				player.getStat().recalculateStats(true);
 			}
 			
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(item);
-			player.sendPacket(iu);
+			player.sendInventoryUpdate(iu);
 		}
 		
 		sendItemGetMessage(player, item, count);
@@ -2350,33 +2676,20 @@ public abstract class AbstractScript implements INamable
 	 */
 	public static boolean takeItems(L2PcInstance player, int itemId, long amount)
 	{
-		final List<L2ItemInstance> items = player.getInventory().getItemsByItemId(itemId);
-		if (amount < 0)
+		// Get object item from player's inventory list
+		final L2ItemInstance item = player.getInventory().getItemByItemId(itemId);
+		if (item == null)
 		{
-			items.forEach(i -> takeItem(player, i, i.getCount()));
+			return false;
 		}
-		else
+		
+		// Tests on count value in order not to have negative value
+		if ((amount < 0) || (amount > item.getCount()))
 		{
-			long currentCount = 0;
-			for (L2ItemInstance i : items)
-			{
-				long toDelete = i.getCount();
-				if ((currentCount + toDelete) > amount)
-				{
-					toDelete = amount - currentCount;
-				}
-				if (toDelete > 0)
-				{
-					takeItem(player, i, toDelete);
-				}
-				currentCount += toDelete;
-			}
+			amount = item.getCount();
 		}
-		return true;
-	}
-	
-	private static boolean takeItem(L2PcInstance player, L2ItemInstance item, long toDelete)
-	{
+		
+		// Destroy the quantity of items wanted
 		if (item.isEquipped())
 		{
 			final L2ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart());
@@ -2385,10 +2698,10 @@ public abstract class AbstractScript implements INamable
 			{
 				iu.addModifiedItem(itm);
 			}
-			player.sendPacket(iu);
+			player.sendInventoryUpdate(iu);
 			player.broadcastUserInfo();
 		}
-		return player.destroyItemByItemId("Quest", item.getId(), toDelete, player, true);
+		return player.destroyItemByItemId("Quest", itemId, amount, player, true);
 	}
 	
 	/**
@@ -2399,7 +2712,11 @@ public abstract class AbstractScript implements INamable
 	 */
 	protected static boolean takeItem(L2PcInstance player, ItemHolder holder)
 	{
-		return (holder != null) && takeItems(player, holder.getId(), holder.getCount());
+		if (holder == null)
+		{
+			return false;
+		}
+		return takeItems(player, holder.getId(), holder.getCount());
 	}
 	
 	/**
@@ -2450,6 +2767,11 @@ public abstract class AbstractScript implements INamable
 		return check;
 	}
 	
+	public static void playSound(Instance world, String sound)
+	{
+		world.broadcastPacket(new PlaySound(sound));
+	}
+	
 	/**
 	 * Send a packet in order to play a sound to the player.
 	 * @param player the player whom to send the packet
@@ -2478,13 +2800,12 @@ public abstract class AbstractScript implements INamable
 	 */
 	public static void addExpAndSp(L2PcInstance player, long exp, int sp)
 	{
-		player.addExpAndSp((long) player.calcStat(Stats.EXPSP_RATE, exp * Config.RATE_QUEST_REWARD_XP, null, null), (int) player.calcStat(Stats.EXPSP_RATE, sp * Config.RATE_QUEST_REWARD_SP, null, null));
-		PcCafePointsManager.getInstance().givePcCafePoint(player, (long) (exp * Config.RATE_QUEST_REWARD_XP));
+		player.addExpAndSp((long) player.getStat().getValue(Stats.EXPSP_RATE, (exp * Config.RATE_QUEST_REWARD_XP)), (int) player.getStat().getValue(Stats.EXPSP_RATE, (sp * Config.RATE_QUEST_REWARD_SP)));
 	}
 	
 	/**
 	 * Get a random integer from 0 (inclusive) to {@code max} (exclusive).<br>
-	 * Use this method instead of importing {@link com.l2jmobius.util.Rnd} utility.
+	 * Use this method instead of importing {@link com.l2jmobius.commons.util.Rnd} utility.
 	 * @param max the maximum value for randomization
 	 * @return a random integer number from 0 to {@code max - 1}
 	 */
@@ -2495,7 +2816,7 @@ public abstract class AbstractScript implements INamable
 	
 	/**
 	 * Get a random integer from {@code min} (inclusive) to {@code max} (inclusive).<br>
-	 * Use this method instead of importing {@link com.l2jmobius.util.Rnd} utility.
+	 * Use this method instead of importing {@link com.l2jmobius.commons.util.Rnd} utility.
 	 * @param min the minimum value for randomization
 	 * @param max the maximum value for randomization
 	 * @return a random integer number from {@code min} to {@code max}
@@ -2507,12 +2828,32 @@ public abstract class AbstractScript implements INamable
 	
 	/**
 	 * Get a random boolean.<br>
-	 * Use this method instead of importing {@link com.l2jmobius.util.Rnd} utility.
+	 * Use this method instead of importing {@link com.l2jmobius.commons.util.Rnd} utility.
 	 * @return {@code true} or {@code false} randomly
 	 */
 	public static boolean getRandomBoolean()
 	{
 		return Rnd.nextBoolean();
+	}
+	
+	/**
+	 * Get a random entry.<br>
+	 * @param entry array with values.
+	 * @return random one value from array entry.
+	 */
+	public static String getRandomEntry(String... entry)
+	{
+		return entry[getRandom(entry.length)];
+	}
+	
+	/**
+	 * Get a random entry.<br>
+	 * @param entry array with values.
+	 * @return random one value from array entry.
+	 */
+	public static int getRandomEntry(int... entry)
+	{
+		return entry[getRandom(entry.length)];
 	}
 	
 	/**
@@ -2593,7 +2934,7 @@ public abstract class AbstractScript implements INamable
 		{
 			_log.log(Level.WARNING, getClass().getSimpleName() + ": called openDoor(" + doorId + ", " + instanceId + "); but door wasnt found!", new NullPointerException());
 		}
-		else if (!door.getOpen())
+		else if (!door.isOpen())
 		{
 			door.openMe();
 		}
@@ -2611,7 +2952,7 @@ public abstract class AbstractScript implements INamable
 		{
 			_log.log(Level.WARNING, getClass().getSimpleName() + ": called closeDoor(" + doorId + ", " + instanceId + "); but door wasnt found!", new NullPointerException());
 		}
-		else if (door.getOpen())
+		else if (door.isOpen())
 		{
 			door.closeMe();
 		}
@@ -2642,37 +2983,13 @@ public abstract class AbstractScript implements INamable
 	}
 	
 	/**
-	 * Teleport a player into/out of an instance.
-	 * @param player the player to teleport
-	 * @param loc the {@link Location} object containing the destination coordinates
-	 * @param instanceId the ID of the instance to teleport the player to (0 to teleport out of an instance)
-	 */
-	public void teleportPlayer(L2PcInstance player, Location loc, int instanceId)
-	{
-		teleportPlayer(player, loc, instanceId, true);
-	}
-	
-	/**
-	 * Teleport a player into/out of an instance.
-	 * @param player the player to teleport
-	 * @param loc the {@link Location} object containing the destination coordinates
-	 * @param instanceId the ID of the instance to teleport the player to (0 to teleport out of an instance)
-	 * @param allowRandomOffset if {@code true}, will randomize the teleport coordinates by +/-Config.MAX_OFFSET_ON_TELEPORT
-	 */
-	public void teleportPlayer(L2PcInstance player, Location loc, int instanceId, boolean allowRandomOffset)
-	{
-		loc.setInstanceId(instanceId);
-		player.teleToLocation(loc, allowRandomOffset);
-	}
-	
-	/**
-	 * Monster is running and attacking the character.
+	 * Monster is running and attacking the playable.
 	 * @param npc the NPC that performs the attack
-	 * @param target the target of the attack
+	 * @param playable the player
 	 */
-	protected void addAttackDesire(L2Npc npc, L2Character target)
+	protected void addAttackPlayerDesire(L2Npc npc, L2Playable playable)
 	{
-		addAttackDesire(npc, target, 999);
+		addAttackPlayerDesire(npc, playable, 999);
 	}
 	
 	/**
@@ -2681,12 +2998,23 @@ public abstract class AbstractScript implements INamable
 	 * @param target the target of the attack
 	 * @param desire the desire to perform the attack
 	 */
-	protected void addAttackDesire(L2Npc npc, L2Character target, int desire)
+	protected void addAttackPlayerDesire(L2Npc npc, L2Playable target, int desire)
 	{
 		if (npc instanceof L2Attackable)
 		{
 			((L2Attackable) npc).addDamageHate(target, 0, desire);
 		}
+		npc.setIsRunning(true);
+		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+	}
+	
+	/**
+	 * Monster is running and attacking the target.
+	 * @param npc the NPC that performs the attack
+	 * @param target the target of the attack
+	 */
+	protected void addAttackDesire(L2Npc npc, L2Character target)
+	{
 		npc.setIsRunning(true);
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 	}
@@ -2733,7 +3061,7 @@ public abstract class AbstractScript implements INamable
 	 * @param skill the skill to cast
 	 * @param desire the desire to cast the skill
 	 */
-	protected void addSkillCastDesire(L2Npc npc, L2Character target, SkillHolder skill, int desire)
+	protected void addSkillCastDesire(L2Npc npc, L2Object target, SkillHolder skill, int desire)
 	{
 		addSkillCastDesire(npc, target, skill.getSkill(), desire);
 	}
@@ -2745,14 +3073,14 @@ public abstract class AbstractScript implements INamable
 	 * @param skill the skill to cast
 	 * @param desire the desire to cast the skill
 	 */
-	protected void addSkillCastDesire(L2Npc npc, L2Character target, Skill skill, int desire)
+	protected void addSkillCastDesire(L2Npc npc, L2Object target, Skill skill, int desire)
 	{
-		if (npc instanceof L2Attackable)
+		if (npc.isAttackable() && (target != null) && target.isCharacter())
 		{
-			((L2Attackable) npc).addDamageHate(target, 0, desire);
+			((L2Attackable) npc).addDamageHate((L2Character) target, 0, desire);
 		}
-		npc.setTarget(target);
-		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill, target);
+		npc.setTarget(target != null ? target : npc);
+		npc.doCast(skill);
 	}
 	
 	/**
@@ -2815,6 +3143,11 @@ public abstract class AbstractScript implements INamable
 		player.sendPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
 	}
 	
+	public static void specialCamera(Instance world, L2Character creature, int force, int angle1, int angle2, int time, int range, int duration, int relYaw, int relPitch, int isWide, int relAngle, int unk)
+	{
+		world.broadcastPacket(new SpecialCamera(creature, force, angle1, angle2, time, range, duration, relYaw, relPitch, isWide, relAngle, unk));
+	}
+	
 	/**
 	 * @param player
 	 * @param x
@@ -2843,5 +3176,45 @@ public abstract class AbstractScript implements INamable
 	public void clearRadar(L2PcInstance player)
 	{
 		player.getRadar().removeAllMarkers();
+	}
+	
+	/**
+	 * Play scene for PlayerInstance.
+	 * @param player the player
+	 * @param movie the movie
+	 */
+	public void playMovie(L2PcInstance player, Movie movie)
+	{
+		new MovieHolder(Arrays.asList(player), movie);
+	}
+	
+	/**
+	 * Play scene for all PlayerInstance inside list.
+	 * @param players list with PlayerInstance
+	 * @param movie the movie
+	 */
+	public void playMovie(List<L2PcInstance> players, Movie movie)
+	{
+		new MovieHolder(players, movie);
+	}
+	
+	/**
+	 * Play scene for all PlayerInstance inside set.
+	 * @param players set with PlayerInstance
+	 * @param movie the movie
+	 */
+	public void playMovie(Set<L2PcInstance> players, Movie movie)
+	{
+		new MovieHolder(new ArrayList<>(players), movie);
+	}
+	
+	/**
+	 * Play scene for all PlayerInstance inside instance.
+	 * @param instance Instance object
+	 * @param movie the movie
+	 */
+	public void playMovie(Instance instance, Movie movie)
+	{
+		playMovie(instance.getPlayers(), movie);
 	}
 }

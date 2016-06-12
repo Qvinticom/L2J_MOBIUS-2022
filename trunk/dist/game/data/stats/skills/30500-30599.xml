@@ -1,1174 +1,2594 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="30500" levels="28" name="Lateral Hit" enchantGroup1="10" enchantGroup2="10" enchantGroup3="5">
-		<!-- Source: https://l2wiki.com/Lateral_Hit_-_Eviscerator -->
-		<table name="#magicLevel"> 1 20 28 36 42 46 50 54 60 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99 101 103 105 </table>
+	<skill id="30500" toLevel="28" name="Lateral Hit">
+		<!-- Updated to IO -->
+		<!-- Attacks target with 22 Power added to P. Atk., and decreases their P. Def. by 10% for 20 sec. 20% more damage if target is Stunned. Requires a fist weapon. -->
+		<table name="#pDef"> 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 </table>
 		<table name="#power"> 22 77 141 221 669 856 1073 1323 1602 1913 2256 2629 3034 3879 4149 4434 4733 18990 20811 23098 25950 29500 33928 39478 46478 47996 49514 51032 </table>
-		<table name="#mpConsumes"> 8 17 23 29 35 39 44 47 52 55 59 63 67 69 70 71 73 73 74 75 75 75 76 76 77 78 79 80 </table>
-		<table name="#ench1Power"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
-		<table name="#ench1Chance"> 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 </table>
-		<table name="#ench2rCrit"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
-		<set name="castRange" val="40" />
-		<set name="coolTime" val="500" />
-		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill30500" />
-		<set name="activateRate" val="60" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="overHit" val="true" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLevel" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="reuseDelay" val="2000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<set name="isDebuff" val="true" />
-		<enchant2 name="activateRate" val="#ench1Chance" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
-			<effect name="Debuff">
-				<mul stat="pDef" val="0.3" />
-			</effect>
-		</for>
-		<enchant1for>
+		<icon>icon.skill30500</icon>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<castRange>40</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-687</effectPoint>
+		<effectRange>400</effectRange> <!-- Unconfirmed -->
+		<hitTime>1000</hitTime>
+		<magicLvl>
+			<value level="1">1</value>
+			<value level="2">20</value>
+			<value level="3">28</value>
+			<value level="4">36</value>
+			<value level="5">42</value>
+			<value level="6">46</value>
+			<value level="7">50</value>
+			<value level="8">54</value>
+			<value level="9">60</value>
+			<value level="10">62</value>
+			<value level="11">66</value>
+			<value level="12">70</value>
+			<value level="13">74</value>
+			<value level="14">77</value>
+			<value level="15">79</value>
+			<value level="16">81</value>
+			<value level="17">83</value>
+			<value level="18">85</value>
+			<value level="19">87</value>
+			<value level="20">89</value>
+			<value level="21">91</value>
+			<value level="22">93</value>
+			<value level="23">95</value>
+			<value level="24">97</value>
+			<value level="25">99</value>
+			<value level="26">101</value>
+			<value level="27">103</value>
+			<value level="28">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">8</value>
+			<value level="2">17</value>
+			<value level="3">23</value>
+			<value level="4">29</value>
+			<value level="5">35</value>
+			<value level="6">39</value>
+			<value level="7">44</value>
+			<value level="8">47</value>
+			<value level="9">52</value>
+			<value level="10">55</value>
+			<value level="11">59</value>
+			<value level="12">63</value>
+			<value level="13">67</value>
+			<value level="14">69</value>
+			<value level="15">70</value>
+			<value level="16">71</value>
+			<value level="17">73</value>
+			<value level="18">73</value>
+			<value level="19">74</value>
+			<value level="20">75</value>
+			<value level="21">75</value>
+			<value level="22">75</value>
+			<value level="23">76</value>
+			<value level="24">76</value>
+			<value level="25">77</value>
+			<value level="26">78</value>
+			<value level="27">79</value>
+			<value level="28">80</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<operateType>A2</operateType>
+		<reuseDelay>2000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isDebuff>true</isDebuff>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="PhysicalAttack">
-				<mul stat="physicalSkillPower" val="#ench1Power" > <!-- Phisical skill power Chance from side +1% to +20%-->
-					<using kind="FIST,DUALFIST" />
-				</mul>
+				<!-- Unconfirmed -->
+				<power>
+					<value level="1">22</value>
+					<value level="2">77</value>
+					<value level="3">141</value>
+					<value level="4">221</value>
+					<value level="5">669</value>
+					<value level="6">856</value>
+					<value level="7">1073</value>
+					<value level="8">1323</value>
+					<value level="9">1602</value>
+					<value level="10">1913</value>
+					<value level="11">2256</value>
+					<value level="12">2629</value>
+					<value level="13">3034</value>
+					<value level="14">3879</value>
+					<value level="15">4149</value>
+					<value level="16">4434</value>
+					<value level="17">4733</value>
+					<value level="18">18990</value>
+					<value level="19">20811</value>
+					<value level="20">23098</value>
+					<value level="21">25950</value>
+					<value level="22">29500</value>
+					<value level="23">33928</value>
+					<value level="24">39478</value>
+					<value level="25">46478</value>
+					<value level="26">47996</value>
+					<value level="27">49514</value>
+					<value level="28">51032</value>
+				</power>
+				<criticalChance>15</criticalChance>
+				<abnormalType>STUN</abnormalType>
+				<damageModifier>1.2</damageModifier>
+				<overHit>true</overHit>
 			</effect>
-		</enchant1for>
-		<enchant2for>
-			<effect name="Buff">
-				<mul stat="critRatePos" val="#ench2rCrit"> <!-- Critical Chance from side +1% to +20%-->
-					<and>
-						<player front="false" />
-						<player behind="false" />
-					</and>
-				</mul>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-10</value>
+					<value level="3">-10</value>
+					<value level="4">-10</value>
+					<value level="5">-10</value>
+					<value level="6">-10</value>
+					<value level="7">-10</value>
+					<value level="8">-10</value>
+					<value level="9">-10</value>
+					<value level="10">-10</value>
+					<value level="11">-10</value>
+					<value level="12">-10</value>
+					<value level="13">-10</value>
+					<value level="14">-10</value>
+					<value level="15">-10</value>
+					<value level="16">-10</value>
+					<value level="17">-10</value>
+					<value level="18">-30</value>
+					<value level="19">-30</value>
+					<value level="20">-30</value>
+					<value level="21">-30</value>
+					<value level="22">-30</value>
+					<value level="23">-30</value>
+					<value level="24">-30</value>
+					<value level="25">-30</value>
+					<value level="26">-30</value>
+					<value level="27">-30</value>
+					<value level="28">-30</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</enchant2for>
+		</effects>
 	</skill>
-	<skill id="30501" levels="27" name="Backspin Blow" enchantGroup1="10" enchantGroup2="5">
-	<!-- Source: https://l2wiki.com/Backspin_Blow_-_Eviscerator -->
-		<table name="#magicLevel"> 20 28 36 42 46 50 54 58 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99 101 103 105 </table>
+	<skill id="30501" toLevel="27" name="Backspin Blow">
+		<!-- Updated to IO -->
+		<!-- Attacks target with 129 Power added to P. Atk. Requires a fist weapon. -->
 		<table name="#power"> 129 235 369 1116 1428 1789 2205 2671 3189 3760 4383 5058 6466 6916 7390 7888 28134 30832 34221 38446 43706 50268 58492 68865 71115 73365 75615 </table>
-		<table name="#mpConsumes"> 17 23 29 35 39 44 47 54 55 59 63 67 69 70 71 73 73 74 75 75 75 76 76 77 78 79 80 </table>
-		<table name="#ench1Power"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
-		<table name="#ench2rCrit"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
-		<set name="icon" val="icon.skill30501" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="ONE" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLevel" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="5000" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
-		</for>
-		<enchant1for>
+		<icon>icon.skill30501</icon>
+		<castRange>40</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-687</effectPoint>
+		<effectRange>400</effectRange> <!-- Unconfirmed -->
+		<hitTime>1000</hitTime>
+		<magicLvl>
+			<value level="1">20</value>
+			<value level="2">28</value>
+			<value level="3">36</value>
+			<value level="4">42</value>
+			<value level="5">46</value>
+			<value level="6">50</value>
+			<value level="7">54</value>
+			<value level="8">58</value>
+			<value level="9">62</value>
+			<value level="10">66</value>
+			<value level="11">70</value>
+			<value level="12">74</value>
+			<value level="13">77</value>
+			<value level="14">79</value>
+			<value level="15">81</value>
+			<value level="16">83</value>
+			<value level="17">85</value>
+			<value level="18">87</value>
+			<value level="19">89</value>
+			<value level="20">91</value>
+			<value level="21">93</value>
+			<value level="22">95</value>
+			<value level="23">97</value>
+			<value level="24">99</value>
+			<value level="25">101</value>
+			<value level="26">103</value>
+			<value level="27">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">17</value>
+			<value level="2">23</value>
+			<value level="3">29</value>
+			<value level="4">35</value>
+			<value level="5">39</value>
+			<value level="6">44</value>
+			<value level="7">47</value>
+			<value level="8">52</value>
+			<value level="9">55</value>
+			<value level="10">59</value>
+			<value level="11">63</value>
+			<value level="12">67</value>
+			<value level="13">69</value>
+			<value level="14">70</value>
+			<value level="15">71</value>
+			<value level="16">73</value>
+			<value level="17">73</value>
+			<value level="18">74</value>
+			<value level="19">75</value>
+			<value level="20">75</value>
+			<value level="21">75</value>
+			<value level="22">76</value>
+			<value level="23">76</value>
+			<value level="24">77</value>
+			<value level="25">78</value>
+			<value level="26">79</value>
+			<value level="27">80</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="PhysicalAttack">
-				<mul stat="physicalSkillPower" val="#ench1Power" >
-					<using kind="FIST,DUALFIST" />
-				</mul>
+				<!-- Unconfirmed -->
+				<power>
+					<value level="1">129</value>
+					<value level="2">235</value>
+					<value level="3">369</value>
+					<value level="4">1116</value>
+					<value level="5">1428</value>
+					<value level="6">1789</value>
+					<value level="7">2205</value>
+					<value level="8">2671</value>
+					<value level="9">3189</value>
+					<value level="10">3760</value>
+					<value level="11">4383</value>
+					<value level="12">5058</value>
+					<value level="13">6466</value>
+					<value level="14">6916</value>
+					<value level="15">7390</value>
+					<value level="16">7888</value>
+					<value level="17">28134</value>
+					<value level="18">30832</value>
+					<value level="19">34221</value>
+					<value level="20">38446</value>
+					<value level="21">43706</value>
+					<value level="22">50268</value>
+					<value level="23">58492</value>
+					<value level="24">68865</value>
+					<value level="25">71115</value>
+					<value level="26">73365</value>
+					<value level="27">75615</value>
+				</power>
+				<pDefMod>0.7</pDefMod>
+				<overHit>true</overHit>
+				<criticalChance>15</criticalChance>
 			</effect>
-		</enchant1for>
-		<enchant2for>
-			<effect name="Buff">
-				<mul stat="critRate" val="#ench2rCrit">
-					<using kind="FIST,DUALFIST" />
-				</mul>
-			</effect>
-		</enchant2for>
+		</effects>
 	</skill>
-	<skill id="30502" levels="24" name="Chin Strike" enchantGroup1="10" enchantGroup2="10">
-	<!-- Source: https://l2wiki.com/Chin_Strike -->
-		<table name="#magicLevel"> 40 44 48 52 56 60 64 68 72 76 78 80 82 84 86 88 90 92 94 96 98 101 103 105 </table>
-		<table name="#mpConsumes"> 34 37 41 45 49 54 57 61 65 68 70 71 72 73 74 75 75 75 76 76 77 78 79 80 </table>
-		<table name="#ench1Chance"> 61 62 63 64 65 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81</table>
-		<table name="#ench2Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
-		<set name="icon" val="icon.skill30502" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="ONE" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="magicLvl" val="#magicLevel" />
-		<set name="effectRange" val="600" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="30000" />
-		<set name="isDebuff" val="true" />
-		<set name="abnormalTime" val="3" />
-		<set name="abnormalType" val="KNOCK_DOWN" />
-		<set name="abnormalVisualEffect" val="KNOCK_DOWN" />
-		<set name="activateRate" val="60" />
-		<set name="fanRange" val="0,0,80,150" />
-		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="150" />
-		<set name="effectPoint" val="-100" /> <!-- Need verify -->
-		<set name="flyRadius" val="55" />
-		<set name="trait" val="KNOCKDOWN" />
-		<enchant1 name="activateRate" val="#ench1Chance" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<for>
-			<effect name="KnockDown" />
-		</for>
-		<enchant2for>
-			<effect name="KnockDown">
-				<mul stat="pDef" val="#ench2Hex" />
+	<skill id="30502" toLevel="24" name="Chin Strike">
+		<!-- Updated to IO -->
+		<!-- Knocks down target for 3 sec. Requires a fist weapon. -->
+		<icon>icon.skill30502</icon>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<activateRate>100</activateRate> <!-- Guessed -->
+		<castRange>40</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-709</effectPoint>
+		<effectRange>400</effectRange> <!-- Unconfirmed -->
+		<hitTime>1000</hitTime>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">44</value>
+			<value level="3">48</value>
+			<value level="4">52</value>
+			<value level="5">56</value>
+			<value level="6">60</value>
+			<value level="7">64</value>
+			<value level="8">68</value>
+			<value level="9">72</value>
+			<value level="10">76</value>
+			<value level="11">78</value>
+			<value level="12">80</value>
+			<value level="13">82</value>
+			<value level="14">84</value>
+			<value level="15">86</value>
+			<value level="16">88</value>
+			<value level="17">90</value>
+			<value level="18">92</value>
+			<value level="19">94</value>
+			<value level="20">96</value>
+			<value level="21">98</value>
+			<value level="22">101</value>
+			<value level="23">103</value>
+			<value level="24">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">34</value>
+			<value level="2">37</value>
+			<value level="3">41</value>
+			<value level="4">45</value>
+			<value level="5">49</value>
+			<value level="6">54</value>
+			<value level="7">57</value>
+			<value level="8">61</value>
+			<value level="9">65</value>
+			<value level="10">68</value>
+			<value level="11">70</value>
+			<value level="12">71</value>
+			<value level="13">72</value>
+			<value level="14">73</value>
+			<value level="15">74</value>
+			<value level="16">75</value>
+			<value level="17">75</value>
+			<value level="18">75</value>
+			<value level="19">76</value>
+			<value level="20">76</value>
+			<value level="21">77</value>
+			<value level="22">78</value>
+			<value level="23">79</value>
+			<value level="24">80</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<operateType>A2</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isDebuff>true</isDebuff>
+		<trait>KNOCKDOWN</trait>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="KnockBack">
+				<speed>300</speed>
+				<distance>50</distance>
+				<knockDown>true</knockDown>
 			</effect>
-		</enchant2for>
+		</effects>
 	</skill>
-	<skill id="30503" levels="11" name="Spinning Kick" enchantGroup1="10" enchantGroup2="5">
-	<!-- Source: https://l2wiki.com/Spinning_Kick_-_Eviscerator -->
-		<table name="#magicLevel"> 85 86 88 90 92 94 96 98 101 103 105 </table>
+	<skill id="30503" toLevel="11" name="Spinning Kick">
+		<!-- Updated to IO -->
+		<!-- Attacks target with 35167 Power added to P. Atk. Ignores Shield Defense. Requires a fist weapon. -->
 		<table name="#power"> 35167 36755 40540 45273 51165 58506 67683 79217 88893 91705 94517 </table>
-		<table name="#mpConsumes"> 81 81 82 83 83 83 84 84 84 84 84 </table>
-		<table name="#ench1Power"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
-		<table name="#ench2rCrit"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
-		<set name="icon" val="icon.skill30503" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="ONE" />
-		<set name="magicLvl" val="#magicLevel" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="power" val="#power" />
-		<set name="castRange" val="60" />
-		<set name="hitTime" val="2000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="5000" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<for>
-			<effect name="EnergyAttack">
-				<param power="#power" />
-				<param criticalChance="15" />
-				<param ignoreShieldDefence="true" />
-			</effect>
-		</for>
-		<enchant1for>
+		<icon>icon.skill30503</icon>
+		<castRange>60</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-687</effectPoint>
+		<effectRange>400</effectRange> <!-- Unconfirmed -->
+		<hitTime>2000</hitTime>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+			<value level="9">101</value>
+			<value level="10">103</value>
+			<value level="11">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">81</value>
+			<value level="2">81</value>
+			<value level="3">82</value>
+			<value level="4">83</value>
+			<value level="5">83</value>
+			<value level="6">83</value>
+			<value level="7">84</value>
+			<value level="8">84</value>
+			<value level="9">84</value>
+			<value level="10">84</value>
+			<value level="11">84</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="PhysicalAttack">
-				<mul stat="physicalSkillPower" val="#ench1Power" >
-					<using kind="FIST,DUALFIST" />
-				</mul>
+				<!-- Unconfirmed -->
+				<power>
+					<value level="1">35167</value>
+					<value level="2">36755</value>
+					<value level="3">40540</value>
+					<value level="4">45273</value>
+					<value level="5">51165</value>
+					<value level="6">58506</value>
+					<value level="7">67683</value>
+					<value level="8">79217</value>
+					<value level="9">88893</value>
+					<value level="10">91705</value>
+					<value level="11">94517</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<criticalChance>15</criticalChance>
+				<overHit>true</overHit>
 			</effect>
-		</enchant1for>
-		<enchant2for>
-			<effect name="Buff">
-				<mul stat="critRate" val="#ench2rCrit">
-					<using kind="FIST,DUALFIST" />
-				</mul>
-			</effect>
-		</enchant2for>
+		</effects>
 	</skill>
-	<skill id="30504" levels="16" name="Gravity Hit" enchantGroup1="10" enchantGroup2="5">
-	<!-- Source: https://l2wiki.com/Gravity_Hit_-_Eviscerator -->
-		<table name="#magicLevel"> 76 78 80 82 84 85 87 89 91 93 95 97 99 101 103 105 </table>
+	<skill id="30504" toLevel="16" name="Gravity Hit">
+		<!-- Updated to IO -->
+		<!-- Attacks target with 10417 Power added to P. Atk. Ignores 50% of target's P. Def. Requires a fist weapon. -->
+		<!-- FIXME -->
 		<table name="#power"> 10417 11147 11917 12727 13577 35167 38540 42776 48058 54633 62836 73116 86081 88893 91705 94517 </table>
-		<table name="#mpConsumes"> 75 77 78 79 80 81 82 82 83 83 84 84 85 86 87 88 </table>
-		<table name="#ench1Power"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
-		<table name="#ench2rCrit"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
-		<set name="icon" val="icon.skill30504" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="ONE" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLevel" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="2500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="9000" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
-		</for>
-		<enchant1for>
+		<icon>icon.skill30504</icon>
+		<castRange>40</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-700</effectPoint>
+		<effectRange>400</effectRange> <!-- Unconfirmed -->
+		<hitTime>2500</hitTime>
+		<magicLvl>
+			<value level="1">76</value>
+			<value level="2">78</value>
+			<value level="3">80</value>
+			<value level="4">82</value>
+			<value level="5">84</value>
+			<value level="6">85</value>
+			<value level="7">87</value>
+			<value level="8">89</value>
+			<value level="9">91</value>
+			<value level="10">93</value>
+			<value level="11">95</value>
+			<value level="12">97</value>
+			<value level="13">99</value>
+			<value level="14">101</value>
+			<value level="15">103</value>
+			<value level="16">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">75</value>
+			<value level="2">77</value>
+			<value level="3">78</value>
+			<value level="4">79</value>
+			<value level="5">80</value>
+			<value level="6">81</value>
+			<value level="7">82</value>
+			<value level="8">82</value>
+			<value level="9">83</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
+			<value level="12">84</value>
+			<value level="13">85</value>
+			<value level="14">86</value>
+			<value level="15">87</value>
+			<value level="16">88</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<operateType>A1</operateType>
+		<reuseDelay>9000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="PhysicalAttack">
-				<mul stat="physicalSkillPower" val="#ench1Power" >
-					<using kind="FIST,DUALFIST" />
-				</mul>
+				<!-- Unconfirmed -->
+				<!-- Ignores 50% of target's P. Def -->
+				<power>
+					<value level="1">10417</value>
+					<value level="2">11147</value>
+					<value level="3">11917</value>
+					<value level="4">12727</value>
+					<value level="5">13577</value>
+					<value level="6">35167</value>
+					<value level="7">38540</value>
+					<value level="8">42776</value>
+					<value level="9">48058</value>
+					<value level="10">54633</value>
+					<value level="11">62836</value>
+					<value level="12">73116</value>
+					<value level="13">86081</value>
+					<value level="14">88893</value>
+					<value level="15">91705</value>
+					<value level="16">94517</value>
+				</power>
+				<pDefMod>0.5</pDefMod>
+				<criticalChance>15</criticalChance>
+				<overHit>true</overHit>
 			</effect>
-		</enchant1for>
-		<enchant2for>
-			<effect name="Buff">
-				<mul stat="critRate" val="#ench2rCrit">
-					<using kind="FIST,DUALFIST" />
-				</mul>
-			</effect>
-		</enchant2for>
+		</effects>
 	</skill>
-	<skill id="30505" levels="10" name="Pressure Punch" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
-	<!-- Source: https://l2wiki.com/Pressure_Punch_-_Eviscerator -->
-		<table name="#magicLevel"> 87 89 91 93 95 97 99 101 103 105 </table>
+	<skill id="30505" toLevel="10" name="Pressure Punch">
+		<!-- Updated to IO -->
+		<!-- Attacks target with 17266 Power added to P. Atk, causing target to tumble toward you. Requires a fist weapon. -->
 		<table name="#power"> 17266 19164 21530 24475 28150 32755 38563 39823 41083 42343 </table>
-		<table name="#mpConsumes"> 149 150 151 151 152 153 155 157 159 161 </table>
-		<table name="#ench1Power"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
-		<table name="#ench1Chance">61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80</table>
-		<table name="#ench2Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
-		<set name="icon" val="icon.skill30505" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="abnormalTime" val="1" />
-		<set name="abnormalType" val="KNOCK_DOWN" />
-		<set name="abnormalVisualEffect" val="KNOCK_DOWN" />
-		<set name="targetType" val="ONE" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLevel" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="hitTime" val="2000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="30000" />
-		<set name="isDebuff" val="true" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="trait" val="KNOCKDOWN" />
-		<enchant2 name="activateRate" val="#ench1Chance" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<for>
-			<effect name="KnockDown">
-				<param speed="700" distance="0" />
-			</effect>
-		</for>
-		<enchant1for>
+		<icon>icon.skill30505</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<activateRate>80</activateRate> <!-- Guessed -->
+		<affectRange>200</affectRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-687</effectPoint>
+		<effectRange>400</effectRange> <!-- Unconfirmed -->
+		<hitTime>2000</hitTime>
+		<magicLvl>
+			<value level="1">87</value>
+			<value level="2">89</value>
+			<value level="3">91</value>
+			<value level="4">93</value>
+			<value level="5">95</value>
+			<value level="6">97</value>
+			<value level="7">99</value>
+			<value level="8">101</value>
+			<value level="9">103</value>
+			<value level="10">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">149</value>
+			<value level="2">150</value>
+			<value level="3">151</value>
+			<value level="4">151</value>
+			<value level="5">152</value>
+			<value level="6">153</value>
+			<value level="7">155</value>
+			<value level="8">157</value>
+			<value level="9">159</value>
+			<value level="10">161</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<trait>PULL</trait>
+		<reuseDelay>30000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<isDebuff>true</isDebuff>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="PhysicalAttack">
-				<mul stat="physicalSkillPower" val="#ench1Power" >
-					<using kind="FIST,DUALFIST" />
-				</mul>
+				<!-- Unconfirmed -->
+				<power>
+					<value level="1">17266</value>
+					<value level="2">19164</value>
+					<value level="3">21530</value>
+					<value level="4">24475</value>
+					<value level="5">28150</value>
+					<value level="6">32755</value>
+					<value level="7">38563</value>
+					<value level="8">39823</value>
+					<value level="9">41083</value>
+					<value level="10">42343</value>
+				</power>
+				<criticalChance>15</criticalChance>
 			</effect>
-		</enchant1for>
-		<enchant3for>
-			<effect name="KnockDown">
-				<mul stat="pDef" val="#ench2Hex"  >
-					<using kind="FIST,DUALFIST" />
-				</mul>
+			<effect name="PullBack">
+				<type>THROW_UP</type>
+				<speed>333</speed>
+				<animationSpeed>333</animationSpeed>
 			</effect>
-		</enchant3for>
+		</effects>
 	</skill>
-	<skill id="30506" levels="14" name="Distant Kick" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
-	<!-- Source: https://l2wiki.com/Distant_Kick_-_Eviscerator -->
-		<table name="#magicLevel"> 79 81 83 85 87 89 91 93 95 97 99 101 103 105 </table>
-		<table name="#power"> 5164 5518 5890 19693 21581 23953 26909 30589 35181 40936 48185 49769 51343 52917 </table>
-		<table name="#mpConsumes"> 141 143 146 147 149 150 151 151 152 153 155  157 156 161</table>
-		<table name="#effectPoints"> -318 -432 -482 -511 -535 -535 -535 -535 -535 -535 -535 -535 -535 -535</table>
-		<table name="#ench1Power"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
-		<table name="#ench2Chance">61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80</table>
-		<table name="#ench3Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
-		<set name="icon" val="icon.skill30506" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="ONE" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLevel" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="KNOCK_DOWN" />
-		<set name="abnormalVisualEffect" val="KNOCK_DOWN" />
-		<set name="activateRate" val="60" />
-		<set name="castRange" val="80" />
-		<set name="effectRange" val="80" />
-		<set name="hitTime" val="2000" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="30000" />
-		<set name="isDebuff" val="true" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="trait" val="KNOCKDOWN" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<for>
-			<effect name="EnergyAttack">
-				<param power="#power" />
-				<param criticalChance="15" />
-				<param ignoreShieldDefence="true" />
-			</effect>
-			<effect name="KnockDown">
-				<param speed="700" distance="50" />
-			</effect>
-		</for>
-		<enchant2 name="activateRate" val="#ench2Chance" />
-		<enchant1for>
+	<skill id="30506" toLevel="14" name="Distant Kick">
+		<!-- Updated to IO -->
+		<!-- Attacks frontal target with 5164 Power added to P. Atk. and blows them away. Requires a fist weapon. -->
+		<!-- FIXME -->
+		<table name="#power"> 5164 5518 5890 19693 21581 23953 26909 30589 35181 40936 48195 49769 51343 52917 </table>
+		<icon>icon.skill30506</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalType>STUN</abnormalType>
+		<abnormalTime>2</abnormalTime>
+		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
+		<affectRange>200</affectRange>
+		<castRange>80</castRange>
+		<coolTime>1000</coolTime>
+		<effectPoint>-687</effectPoint>
+		<effectRange>400</effectRange> <!-- Unconfirmed -->
+		<fanRange>0;0;200;90</fanRange>
+		<hitTime>2000</hitTime>
+		<magicLvl>
+			<value level="1">79</value>
+			<value level="2">81</value>
+			<value level="3">83</value>
+			<value level="4">85</value>
+			<value level="5">87</value>
+			<value level="6">89</value>
+			<value level="7">91</value>
+			<value level="8">93</value>
+			<value level="9">95</value>
+			<value level="10">97</value>
+			<value level="11">99</value>
+			<value level="12">101</value>
+			<value level="13">103</value>
+			<value level="14">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">141</value>
+			<value level="2">143</value>
+			<value level="3">146</value>
+			<value level="4">147</value>
+			<value level="5">149</value>
+			<value level="6">150</value>
+			<value level="7">151</value>
+			<value level="8">151</value>
+			<value level="9">152</value>
+			<value level="10">153</value>
+			<value level="11">155</value>
+			<value level="12">157</value>
+			<value level="13">159</value>
+			<value level="14">161</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<operateType>A2</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<isDebuff>true</isDebuff>
+		<trait>KNOCKBACK</trait>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="PhysicalAttack">
-				<mul stat="physicalSkillPower" val="#ench1Power" >
-					<using kind="FIST,DUALFIST" />
-				</mul>
+				<!-- Unconfirmed -->
+				<power>
+					<value level="1">5164</value>
+					<value level="2">5518</value>
+					<value level="3">5890</value>
+					<value level="4">19693</value>
+					<value level="5">21581</value>
+					<value level="6">23953</value>
+					<value level="7">26909</value>
+					<value level="8">30589</value>
+					<value level="9">35181</value>
+					<value level="10">40936</value>
+					<value level="11">48195</value>
+					<value level="12">49769</value>
+					<value level="13">51343</value>
+					<value level="14">52917</value>
+				</power>
+				<criticalChance>15</criticalChance>
 			</effect>
-		</enchant1for>
-		<enchant3for>
-			<effect name="KnockDown">
-				<mul stat="pDef" val="#ench3Hex" >
-					<using kind="FIST,DUALFIST" />
-				</mul>
+			<effect name="KnockBack">
+				<type>THROW_UP</type>
+				<distance>100</distance>
+				<animationSpeed>0</animationSpeed>
 			</effect>
-		</enchant3for>
+		</effects>
 	</skill>
-	<skill id="30507" levels="24" name="Left Sidestep" enchantGroup1="10" enchantGroup2="10">
-	<!-- Source: https://l2wiki.com/Left_Sidestep_-_Eviscerator -->
-		<table name="#mpConsumes"> 13 14 16 18 19 21 23 24 26 27 28 28 29 29 29 30 30 30 30 30 30 30 30 30 </table>
-		<table name="#magicLevel"> 40 44 48 52 56 60 64 68 72 76 78 80 82 84 86 88 90 92 94 96 98 101 103 105 </table>
-		<table name="#ench1EffectRange"> 510 520 530 540 550 560 570 580 590 600 610 620 630 640 650 660 670 680 690 700</table>
-		<table name="#ench2Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
-		<set name="icon" val="icon.skill30507" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="magicLvl" val="#magicLevel"/>
-		<set name="abnormalTime" val="7" />
-		<set name="abnormalType" val="STUN" />
-		<set name="abnormalVisualEffect" val="STUN" />
-		<set name="activateRate" val="60" />
-		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="600" />
-		<set name="basicProperty" val="CON" />
-		<set name="castRange" val="300" />
-		<set name="coolTime" val="300" />
-		<set name="effectPoint" val="-100" /> <!-- Need verify -->
-		<set name="effectRange" val="500" />
-		<set name="fanRange" val="0,0,600,60" />
-		<set name="flyType" val="CHARGE" />
-		<set name="hitTime" val="100" />
-		<set name="isDebuff" val="true" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="7000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<set name="trait" val="SHOCK" />
-		<set name="nextActionAttack" val="true" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<enchant1 name="effectRange" val="#ench1EffectRange" />
-		<for>
-			<effect name="Stun"/> <!-- need Disables targeting -->
-		</for>
-		<enchant2for>
-			<effect name="Debuff">
-				<mul stat="pDef" val="#ench2Hex" />
-				<param DUALFIST="1.3" />
+	<skill id="30507" toLevel="24" name="Left Sidestep">
+		<!-- Updated to IO -->
+		<!-- Disables targeting and finds weakness to the enemy's left. Enemy is stunned for 5 sec. Requires a fist weapon. -->
+		<icon>icon.skill30507</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate> <!-- Unconfirmed -->
+		<effectPoint>-687</effectPoint>
+		<effectRange>900</effectRange> <!-- Unconfirmed -->
+		<operateType>A2</operateType> <!-- A1 in client? -->
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">14</value>
+			<value level="3">16</value>
+			<value level="4">18</value>
+			<value level="5">19</value>
+			<value level="6">21</value>
+			<value level="7">23</value>
+			<value level="8">24</value>
+			<value level="9">26</value>
+			<value level="10">27</value>
+			<value level="11">28</value>
+			<value level="12">28</value>
+			<value level="13">29</value>
+			<value level="14">29</value>
+			<value level="15">29</value>
+			<value level="16">30</value>
+			<value level="17">30</value>
+			<value level="18">30</value>
+			<value level="19">30</value>
+			<value level="20">30</value>
+			<value level="21">30</value>
+			<value level="22">30</value>
+			<value level="23">30</value>
+			<value level="24">30</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<castRange>300</castRange>
+		<hitTime>100</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>7000</reuseDelay>
+		<isDebuff>true</isDebuff>
+		<trait>SHOCK</trait>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<startEffects>
+			<effect name="FlyMove">
+				<!-- Left -->
+				<flyType>CHARGE</flyType>
+				<animationSpeed>333</animationSpeed>
+				<angle>270</angle>
 			</effect>
-		</enchant2for>
+		</startEffects>
+		<effects>
+			<effect name="BlockActions" />
+			<effect name="TargetCancel">
+				<!-- Unconfirmed -->
+				<chance>100</chance>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="30508" levels="27" name="Right Sidestep" enchantGroup1="10" enchantGroup2="10">
-		<!-- Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by for 5 seconds 10%. -->
-		<!-- The decrease in resistance is not canceled when striking. Requires a fist weapon.. -->
-		<table name="#magicLvl"> 20 28 36 42 46 50 54 58 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99 101 103 105</table>
-		<table name="#mpConsume"> 7 9 11 14 15 17 19 20 22 23 25 26 27 28 28 29 29 29 30 30 30 30 30 31 31 31 31</table>
-		<table name="#ench1EffectRange"> 510 520 530 540 550 560 570 580 590 600 610 620 630 640 650 660 670 680 690 700</table>
-		<table name="#ench2Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
-		<set name="icon" val="icon.skill30508" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="abnormalLvl" val="85" />
-		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="STUN" />
-		<set name="abnormalVisualEffect" val="STUN" />
-		<set name="activateRate" val="60" />
-		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="600" />
-		<set name="basicProperty" val="CON" />
-		<set name="castRange" val="600" />
-		<set name="coolTime" val="200" />
-		<set name="effectPoint" val="-669" />
-		<set name="effectRange" val="800" />
-		<set name="flyType" val="CHARGE" />
-		<set name="hitTime" val="800" />
-		<set name="isDebuff" val="true" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="mpInitialConsume" val="83" />
-		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="DIRECTIONAL_CONTINUOUS" />
-		<set name="power" val="4224" />
-		<set name="reuseDelay" val="20000" />
-		<set name="rideState" val="NONE" />
-		<set name="soulMaxConsumeCount" val="5" />
-		<set name="targetType" val="AREA" />
-		<set name="trait" val="SHOCK" />
-		<set name="nextActionAttack" val="true" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<cond msgId="113" addName="1">
-			<and>
-				<using kind="FIST,DUALFIST" />
-				<target mindistance="200" />
-			</and>
-		</cond>
-		<for>
-			<effect name="PhysicalSoulAttack" />
-			<effect name="Stun" />
-		</for>
-		<enchant1 name="effectRange" val="#ench1EffectRange" />
-		<enchant2for>
-			<effect name="Debuff">
-				<mul stat="pDef" val="#ench2Hex" />
-				<param DUALFIST="1.3" />
+	<skill id="30508" toLevel="27" name="Right Sidestep">
+		<!-- Updated to IO -->
+		<!-- Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon. -->
+		<table name="#fistDecrease"> -10 -10 -10 -10 -10 -10 -10 -10 -10 -10 -10 -10 -10 -10 -10 -10 -30 -30 -30 -30 -30 -30 -30 -30 -30 -30 -30 </table>
+		<icon>icon.skill30508</icon>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>REAL_TARGET</abnormalType>
+		<effectPoint>-687</effectPoint>
+		<effectRange>900</effectRange> <!-- Unconfirmed -->
+		<operateType>A2</operateType> <!-- A1 in client? -->
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>
+			<value level="1">7</value>
+			<value level="2">9</value>
+			<value level="3">11</value>
+			<value level="4">14</value>
+			<value level="5">15</value>
+			<value level="6">17</value>
+			<value level="7">19</value>
+			<value level="8">20</value>
+			<value level="9">22</value>
+			<value level="10">23</value>
+			<value level="11">25</value>
+			<value level="12">26</value>
+			<value level="13">27</value>
+			<value level="14">28</value>
+			<value level="15">28</value>
+			<value level="16">29</value>
+			<value level="17">29</value>
+			<value level="18">29</value>
+			<value level="19">30</value>
+			<value level="20">30</value>
+			<value level="21">30</value>
+			<value level="22">30</value>
+			<value level="23">30</value>
+			<value level="24">31</value>
+			<value level="25">32</value>
+			<value level="26">33</value>
+			<value level="27">34</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<castRange>300</castRange>
+		<hitTime>100</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>7000</reuseDelay>
+		<isDebuff>true</isDebuff>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<startEffects>
+			<effect name="FlyMove">
+				<!-- Right -->
+				<flyType>CHARGE</flyType>
+				<animationSpeed>333</animationSpeed>
+				<angle>90</angle>
 			</effect>
-		</enchant2for>
+		</startEffects>
+		<effects>
+			<effect name="DefenceTrait">
+				<FIST>
+					<value level="1">-10</value>
+					<value level="2">-10</value>
+					<value level="3">-10</value>
+					<value level="4">-10</value>
+					<value level="5">-10</value>
+					<value level="6">-10</value>
+					<value level="7">-10</value>
+					<value level="8">-10</value>
+					<value level="9">-10</value>
+					<value level="10">-10</value>
+					<value level="11">-10</value>
+					<value level="12">-10</value>
+					<value level="13">-10</value>
+					<value level="14">-10</value>
+					<value level="15">-10</value>
+					<value level="16">-10</value>
+					<value level="17">-30</value>
+					<value level="18">-30</value>
+					<value level="19">-30</value>
+					<value level="20">-30</value>
+					<value level="21">-30</value>
+					<value level="22">-30</value>
+					<value level="23">-30</value>
+					<value level="24">-30</value>
+					<value level="25">-30</value>
+					<value level="26">-30</value>
+					<value level="27">-30</value>
+				</FIST>
+			</effect>
+			<effect name="TargetCancel">
+				<!-- Unconfirmed -->
+				<chance>100</chance>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="30509" levels="4" name="Back Step">
-		<!-- Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by for 5 seconds 10%. -->
-		<table name="#magicLvl"> 76 89 93 97 101</table>
-		<table name="#mpConsume"> 27 30 35 44 48</table>
-		<table name="#pAtks">1.10 1.15 1.20 1.20 1.20</table>
-		<set name="icon" val="icon.skill30509" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="abnormalTime" val="5" />
-		<set name="effectRange" val="280" />
-		<set name="hitTime" val="100" />
-		<set name="reuseDelay" val="7000" />
-		<set name="targetType" val="SELF" />
-		<set name="affectLimit" val="6-12" />
-		<set name="affectRange" val="100" />
-		<set name="castRange" val="150" />
-		<set name="coolTime" val="200" />
-		<set name="effectPoint" val="-659" />
-		<set name="flyCourse" val="0" /> <!-- Teleport to Back -->
-		<set name="flyRadius" val="150" />
-		<set name="flyType" val="CHARGE" />
-		<set name="mpInitialConsume" val="50" />
-		<set name="power" val="100" />
-		<set name="rideState" val="NONE" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<for>
-			<effect name="RemoveTarget">
-				<param chance="80" />
+	<skill id="30509" toLevel="5" name="Back Step">
+		<!-- Updated to IO -->
+		<!-- Disables targeting and retreats backwards, recovering 10% HP. Requires a Fist Weapon. -->
+		<table name="#pAtk"> 1.05 1.10 1.15 1.20 1.20 </table>
+		<table name="#knockdown"> 0 0 0 0 50 </table>
+		<icon>icon.skill30509</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>NONE</abnormalType>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>
+			<value level="1">27</value>
+			<value level="2">30</value>
+			<value level="3">35</value>
+			<value level="4">44</value>
+			<value level="5">48</value>
+		</mpConsume>
+		<castRange>150</castRange>
+		<hitTime>100</hitTime>
+		<effectPoint>-100</effectPoint>
+		<reuseDelay>7000</reuseDelay>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<startEffects>
+			<effect name="FlyMove">
+				<!-- Your back -->
+				<flyType>WARP_BACK</flyType>
+				<angle>180</angle>
+				<animationSpeed>333</animationSpeed>
+				<range>280</range>
+				<selfPos>false</selfPos>
 			</effect>
-			<effect name="Buff">
-				<add stat="pAtk" val="#pAtks" />
+		</startEffects>
+		<effects>
+			<effect name="TargetCancel">
+				<!-- Unconfirmed -->
+				<chance>100</chance>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 		<selfEffects>
-			<effect name="Blink" />
+			<effect name="AttackTrait">
+				<KNOCKDOWN>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">50</value>
+				</KNOCKDOWN>
+			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="30510" levels="1" name="Infighter">
+	<skill id="30510" toLevel="1" name="Infighter">
+		<!-- Updated to Ertheia -->
 		<!-- Using Right Sidestep increases P. Critical Rate. -->
-		<set name="icon" val="icon.skill30510" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<set name="magicLvl" val="97" />
-		<set name="castRange" val="0" />
-		<for>
-			<effect name="Buff">
-				<mul stat="critDmgPos" val="1.03"> <!-- Increases side critical attack damage by 3% Need Verifi -->
-					<player front="false" behind="false" />
-				</mul>
+		<icon>icon.skill30510</icon>
+		<operateType>P</operateType>
+		<magicLvl>97</magicLvl>
+		<effects>
+			<effect name="TriggerSkillBySkill"> <!-- Check if is on skill cast or skill casted. -->
+				<!-- Inside Position -->
+				<!-- Left Sidestep -->
+				<skillId>30532</skillId>
+				<skillLevel>1</skillLevel>
+				<castSkillId>30507</castSkillId>
 			</effect>
-		</for>
+			<effect name="TriggerSkillBySkill"> <!-- Check if is on skill cast or skill casted. -->
+				<!-- Inside Position -->
+				<!-- Right Sidestep -->
+				<skillId>30532</skillId>
+				<skillLevel>1</skillLevel>
+				<castSkillId>30508</castSkillId>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="30511" levels="5" name="Air Light" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
-	<!-- Source: https://l2wiki.com/Air_Light_-_Eviscerator -->
-		<table name="#magicLvl"> 40 85 95 99 101 </table>
-		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
-		<table name="#mpConsumes"> 20 44 45 45 45 </table>
-		<table name="#pAtk"> 1.1 1.15 1.2 1.25 1.25 </table>
-		<table name="#pAtkSpd"> 1.01 1.014 1.018 1.022 1.026 1.03 1.034 1.038 1.042 1.046 1.05 1.054 1.058 1.062 1.066 1.07 1.074 1.078 1.082 1.086</table>
-		<table name="#ench2pDef"> 1.01 1.014 1.018 1.022 1.026 1.03 1.034 1.038 1.042 1.046 1.05 1.054 1.058 1.062 1.066 1.07 1.074 1.078 1.082 1.086</table>
-		<table name="#ench3mDef"> 1.01 1.014 1.018 1.022 1.026 1.03 1.034 1.038 1.042 1.046 1.05 1.054 1.058 1.062 1.066 1.07 1.074 1.078 1.082 1.086</table>
-		<set name="icon" val="icon.skill30511" />
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="abnormalTime" val="1800" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="30000" />
-		<enchant1for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="#pAtkSpd" />
+	<skill id="30511" toLevel="5" name="Air Light">
+		<!-- Updated to IO -->
+		<!-- For 10 min., you're less bound by gravity and P. Atk. + 10%. -->
+		<table name="#pAtk"> 1.10 1.15 1.20 1.25 1.25 </table>
+		<table name="#resists"> 0 15 20 25 30 </table>
+		<icon>icon.skill30511</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>NONE</abnormalType>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>
+			<value level="1">20</value>
+			<value level="2">44</value>
+			<value level="3">45</value>
+			<value level="4">45</value>
+			<value level="5">45</value>
+		</mpConsume>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>687</effectPoint>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="DefenceTrait">
+				<KNOCKDOWN>
+					<value level="1">0</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">25</value>
+					<value level="5">30</value>
+				</KNOCKDOWN>
+				<KNOCKBACK>
+					<value level="1">0</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">25</value>
+					<value level="5">30</value>
+				</KNOCKBACK>
+				<PULL>
+					<value level="1">0</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">25</value>
+					<value level="5">30</value>
+				</PULL>
+				<AIRBIND>
+					<value level="1">0</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">25</value>
+					<value level="5">30</value>
+				</AIRBIND>
 			</effect>
-		</enchant1for>
-		<enchant2for>
-			<effect name="Buff">
-				<mul stat="pDef" val="#ench2pDef" />
+			<effect name="PAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">25</value>
+					<value level="5">25</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</enchant2for>
-		<enchant3for>
-			<effect name="Buff">
-				<mul stat="mDef" val="#ench3mDef" />
-			</effect>
-		</enchant3for>
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="#pAtk" />
-			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="30512" levels="3" name="Distortion" enchantGroup1="10" enchantGroup2="10">
-	<!-- Source: https://l2wiki.com/Distortion_-_Eviscerator -->
-		<table name="#magicLvl"> 76 85 101 </table>
-		<table name="#enchTime"> 61 62 63 64 65 66 67 68 69 70 70.5 71 71.5 72 72.5 73 73.5 74 74.5 75</table>
-		<table name="#ench2defCritDamage"> 0.99 0.985 0.98 0.975 0.97 0.965 0.96 0.955 0.95 0.945 0.94 0.935 0.93 0.925 0.92 0.915 0.91 0.905 0.90 0.895</table>
-		<set name="icon" val="icon.skill30512" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="abnormalTime" val="60" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="41" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="180000" />
-		<set name="targetType" val="SELF" />
-		<set name="abnormalTime" val="60" />
-		<set name="magicLvl" val="#magicLvl" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<enchant1 name="abnormalTime" val="#enchTime" />
-		<enchant2for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.15" >
-					<using kind="FIST,DUALFIST" />
-				</mul>
-				<mul stat="physicalSkillPower" val="1.15" >
-					<using kind="FIST,DUALFIST" />
-				</mul>
-				<mul stat="critDmgAdd" val="1.15" >
-					<using kind="HEAVY" />
-				</mul>
-				<mul stat="defCritDamage" val="#ench2defCritDamage">
-					<using kind="FIST,DUALFIST" />
-				</mul>
+	<skill id="30512" toLevel="3" name="Distortion">
+		<!-- Updated to IO -->
+		<!-- For 60 sec., distorts space to attack from behind. Requires a fist weapon. -->
+		<icon>icon.skill30512</icon>
+		<table name="#attack"> 1.05 1.10 1.15 </table>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>41</mpConsume>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>687</effectPoint>
+		<reuseDelay>180000</reuseDelay>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AttackBehind" />
+			<effect name="PAtk">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</enchant2for>
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.05" >
-					<using kind="FIST,DUALFIST" />
-				</mul>
-				<mul stat="physicalSkillPower" val="1.05" >
-					<using kind="FIST,DUALFIST" />
-				</mul>
-				<mul stat="critDmgAdd" val="1.05" >
-					<using kind="HEAVY" />
-				</mul>
-				<mul stat="physicalSkillPower" val="1.05" >
-					<using kind="FIST,DUALFIST" />
-				</mul>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="30514" levels="3" name="Fluid Weave">
-	<!-- Source: https://l2wiki.com/Fluid_Weave -->
-		<table name="#magicLvl"> 40 85 101 </table>
-		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#mpConsumes"> 13 29 45 </table>
+	<skill id="30514" toLevel="3" name="Fluid Weave">
+		<!-- Updated to IO -->
+		<!-- For 3 sec., P. Skill Evasion + 50%, P. Evasion + 50, M. Evasion + 50. Requires a fist weapon. -->
+		<table name="#pSkillEvas"> 50 70 70 </table>
 		<table name="#rEvas"> 50 70 70 </table>
 		<table name="#mEvas"> 50 70 70 </table>
-		<table name="#pSkillEvas"> 50 70 70 </table>
-		<set name="icon" val="icon.skill30514" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="abnormalTime" val="3" />
-		<set name="hitTime" val="200" />
-		<set name="reuseDelay" val="5000" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<effect name="Buff">
-			<add stat="pSkillEvas" val="#pSkillEvas" />
-			<add stat="rEvas" val="#rEvas" />
-			<add stat="mEvas" val="#mEvas" />
-		</effect>
+		<table name="#blockDebuff"> 0 1 3 </table>
+		<icon>icon.skill30514</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>
+			<value level="1">13</value>
+			<value level="2">29</value>
+			<value level="3">45</value>
+		</mpConsume>
+		<hitTime>200</hitTime>
+		<effectPoint>379</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<!-- TODO: Effect should be only available on skill level 2 or 3. -->
+			<effect name="AbnormalShield">
+				<times>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">3</value>
+				</times>
+			</effect>
+			<effect name="SkillEvasion">
+				<magicType>0</magicType>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">70</value>
+					<value level="3">70</value>
+				</amount>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">70</value>
+					<value level="3">70</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">70</value>
+					<value level="3">70</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="30515" levels="1" name="Spallation" enchantGroup1="10" enchantGroup2="10">
-		<table name="#enchTime"> 31 32 33 34 35 36 37 38 39 40 40.5 41 41.5 42 42.5 43 43.5 44 44.5 45</table>
-		<table name="#ench1runSpd"> 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40</table>
-		<table name="#bonus"> 1 1 1 1 1 2 2 2 2 2 3 3 3 3 3 4 4 4 4 4</table>
-		<set name="icon" val="icon.skill30515" />
-		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="abnormalTime" val="30" />
-		<set name="mpConsume" val="31" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="300000" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<enchant1 name="abnormalTime" val="#enchTime" />
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="runSpd" val="#ench1runSpd" />
+	<skill id="30515" toLevel="1" name="Spallation">
+		<!-- Updated to Ertheia -->
+		<!-- Creates a protective sphere that diffuses all ranged attacks and debuffs for 30 sec. Damaged if attacked within the sphere. Requires a fist weapon. -->
+		<icon>icon.skill30515</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>NONE</abnormalType>
+		<abnormalVisualEffect>SPACEREF</abnormalVisualEffect>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>31</mpConsume>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>379</effectPoint>
+		<reuseDelay>300000</reuseDelay>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SphericBarrier">
+				<amount>150</amount>
 			</effect>
-			<effect name="Buff">
-				<add stat="runSpd" val="#bonus">
-					<player incombat="false" />
-				</add>
-			</effect>
-		</enchant1for>
-		<effect name="Buff">
-			<add stat="runSpd" val="34" />
-			<add stat="rEvas" val="40" />
-			<add stat="pSkillEvas" val="45" />
-			<sub stat="debuffVuln" val="100" />
-		</effect>
+		</effects>
 	</skill>
-	<skill id="30516" levels="1" name="Gravity Barrier" enchantGroup1="10">
-		<!-- Level 1 : Cancels all debuffs and becomes invincible against all debuffs and damage. -->
-		<table name="#ench1abnormalTime"> 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 19 20</table>
-		<set name="icon" val="icon.skill30516" />
-		<set name="magicLvl" val="93" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="abnormalType" val="INVINCIBILITY" />
-		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
-		<set name="mpConsume" val="30" />
-		<set name="hitTime" val="200" />
-		<set name="reuseDelay" val="300000" />
-		<set name="targetType" val="SELF" />
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="10" />
-		<set name="activateRate" val="0" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="castRange" val="0" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<enchant1 name="abnormalTime" val="#ench1abnormalTime" />
-		<for>
-			<effect name="BlockDamage">
-				<param block="HP"/>
+	<skill id="30516" toLevel="1" name="Gravity Barrier">
+		<!-- Updated to IO -->
+		<!-- Cancels all debuffs and becomes invincible against all debuffs and damage. -->
+		<icon>icon.skill30516</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>INVINCIBILITY</abnormalType>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<canCastWhileDisabled>true</canCastWhileDisabled>
+		<operateType>A2</operateType>
+		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>30</mpConsume>
+		<hitTime>200</hitTime>
+		<effectPoint>379</effectPoint>
+		<reuseDelay>300000</reuseDelay>
+		<effects>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
 			</effect>
-			<effect name="BlockDamage">
-				<param block="MP"/>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
 			</effect>
-			<effect name="BlockDebuff" />
-			<effect name="Buff">
-				<sub stat="cancelVuln" val="100" />
+			<effect name="DebuffBlock" />
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
 			</effect>
-		</for>
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="30517" levels="11" name="Heavy Hand" enchantGroup1="10" enchantGroup2="10">
-	<!-- Source: https://l2wiki.com/Heavy_Hand_-_Eviscerator -->
-		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 101 103 105 </table>
-		<table name="#mpConsume"> 73 74 75 75 75 76 76 77 78 79 80 </table>
-		<table name="#ench1Chance">61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80</table>
-		<table name="#ench2Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
-		<set name="icon" val="icon.skill30517" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="SILENCE_PHYSICAL" />
-		<set name="abnormalVisualEffect" val="SILENCE" />
-		<set name="activateRate" val="60" />
-		<set name="basicProperty" val="MEN" />
-		<set name="hitTime" val="2000" />
-		<set name="coolTime" val="70" />
-		<set name="castRange" val="200" />
-		<set name="reuseDelay" val="60000" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="900" />
-		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="150" />
-		<set name="targetType" val="AREA" />
-		<set name="overHit" val="true" />
-		<set name="isDebuff" val="true" />
-		<set name="trait" val="DERANGEMENT" />
-		<cond msgId="113" addName="1">
-			<using kind="DUALFIST, FIST" />
-		</cond>
-		<enchant1 name="activateRate" val="#ench1Chance" />
-		<for>
-			<effect name="PhysicalMute" />
-			<effect name="Debuff">
-				<mul stat="runSpd" val="0.5" />
+	<skill id="30517" toLevel="11" name="Heavy Hand">
+		<!-- Updated to IO -->
+		<!-- Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
+		<icon>icon.skill30517</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>BLOCK_ESCAPE</abnormalType>
+		<activateRate>80</activateRate> <!-- Guessed -->
+		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
+		<affectRange>300</affectRange>
+		<effectPoint>-379</effectPoint>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<mpConsume>
+			<value level="1">73</value>
+			<value level="2">74</value>
+			<value level="3">75</value>
+			<value level="4">75</value>
+			<value level="5">75</value>
+			<value level="6">76</value>
+			<value level="7">76</value>
+			<value level="8">77</value>
+			<value level="9">78</value>
+			<value level="10">79</value>
+			<value level="11">80</value>
+		</mpConsume>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<isDebuff>true</isDebuff>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="BlockEscape" />
+			<effect name="Speed">
+				<amount>-100</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-		<enchant2for>
-			<effect name="Debuff">
-				<mul stat="pDef" val="#ench2Hex" />
-			</effect>
-		</enchant2for>
+		</effects>
 	</skill>
-	<skill id="30518" levels="11" name="Reverse Weight" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
-	<!-- Source: https://l2wiki.com/Reverse_Weight_-_Eviscerator -->
+	<skill id="30518" toLevel="11" name="Reverse Weight">
+		<!-- Updated to IO -->
+		<!-- Attacks nearby enemies with 19693 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon. -->
 		<table name="#power"> 19693 20582 22701 25350 28648 32757 37894 44352 49769 51343 52917 </table>
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105</table>
-		<table name="#mpConsume"> 147 149 150 151 151 152 153 155 157 159 161</table>
-		<table name="#effectPoints"> -318 -432 -482 -511 -535 -535 -535 -535 -535 -535 -535</table>
-		<table name="#pPower"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
-		<table name="#ench2Chance">61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80</table>
-		<table name="#ench3Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
-		<set name="icon" val="icon.skill30518" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="abnormalLvl" val="4" />
-		<set name="abnormalTime" val="2" />
-		<set name="abnormalType" val="KNOCK_DOWN" />
-		<set name="abnormalVisualEffect" val="KNOCK_DOWN" />
-		<set name="activateRate" val="60" />
-		<set name="affectRange" val="400" />
-		<set name="basicProperty" val="CON" />
-		<set name="coolTime" val="500" />
-		<set name="effectPoint" val="-1500" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="hitTime" val="2500" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="6" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="reuseDelay" val="30000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
-		<set name="trait" val="KNOCKDOWN" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
-			<effect name="KnockDown">
-				<param speed="700" distance="50" />
+		<icon>icon.skill30518</icon>
+		<abnormalTime>1</abnormalTime> <!-- Unconfirmed -->
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<activateRate>80</activateRate> <!-- Guessed -->
+		<affectLimit>2-6</affectLimit>
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<affectRange>300</affectRange> <!-- Unconfirmed -->
+		<effectPoint>-687</effectPoint>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<mpConsume>
+			<value level="1">1479</value>
+			<value level="2">1487</value>
+			<value level="3">1500</value>
+			<value level="4">1510</value>
+			<value level="5">1516</value>
+			<value level="6">1523</value>
+			<value level="7">1532</value>
+			<value level="8">1544</value>
+			<value level="9">1556</value>
+			<value level="10">1568</value>
+			<value level="11">1580</value>
+		</mpConsume>
+		<hitTime>2500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<isMagic>6</isMagic>
+		<isDebuff>true</isDebuff>
+		<trait>KNOCKDOWN</trait>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack"><!-- TODO: Damage increases twice with each enemy affected. -->
+				<power>
+					<value level="1">19693</value>
+					<value level="2">20582</value>
+					<value level="3">22701</value>
+					<value level="4">25350</value>
+					<value level="5">28648</value>
+					<value level="6">32757</value>
+					<value level="7">37894</value>
+					<value level="8">44352</value>
+					<value level="9">49769</value>
+					<value level="10">51343</value>
+					<value level="11">52917</value>
+				</power>
+				<overHit>true</overHit>
 			</effect>
-		</for>
-		<enchant1for>
-			<effect name="PhysicalAttack">
-				<mul stat="physicalSkillPower" val="#pPower" >
-					<using kind="FIST,DUALFIST" />
-				</mul>
+			<effect name="KnockBack">
+				<speed>400</speed>
+				<distance>50</distance>
+				<knockDown>true</knockDown>
 			</effect>
-		</enchant1for>
-		<enchant2 name="activateRate" val="#ench2Chance" />
-		<enchant3for>
-			<effect name="KnockDown">
-				<mul stat="pDef" val="#ench3Hex" >
-					<using kind="FIST,DUALFIST" />
-				</mul>
-			</effect>
-		</enchant3for>
+		</effects>
 	</skill>
-	<skill id="30519" levels="1" name="Warped Space">
-		<set name="icon" val="icon.skill30519" />
-		<set name="mpConsume" val="772" />
-		<set name="hitTime" val="2500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="6000" />
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="PARALYZE" />
-		<set name="abnormalVisualEffect" val="PARALYZE" />
-		<set name="activateRate" val="30" />
-		<set name="affectRange" val="200" />
-		<set name="basicProperty" val="MEN" />
-		<set name="castRange" val="800" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1300" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="98" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
-		<set name="trait" val="PARALYZE" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<for>
-			<effect name="Paralyze">
-				<mul stat="pDef" val="0.90" />
-				<mul stat="mDef" val="0.90" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="30520" levels="3" name="Steel Mind" enchantGroup1="10">
-	<!-- Source: https://l2wiki.com/Steel_Mind_-_Eviscerator -->
-		<table name="#spd"> 50 70 70 </table>
-		<table name="#pAtks">1.15 1.30 1.30</table>
-		<table name="#cAtk">1.10 1.15 15</table>
-		<table name="#magicLvl"> 85 99 101 </table>
-		<table name="#mpConsumes"> 221 232 243</table>
-		<table name="#ench1abnormalTime">31 32 33 34 35 36 37 38 39 40 40.5 41 41.5 42 42.5 43 43.5 44 44.5 45</table>
-		<set name="icon" val="icon.skill30520" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="abnormalTime" val="30" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="300000" />
-		<enchant1 name="abnormalTime" val="#ench1abnormalTime" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="#spd" />
-				<add stat="pAtk" val="#pAtks" />
-				<add stat="critDmg" val="#cAtk" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="30521" levels="1" name="Damage Up">
+	<skill id="30519" toLevel="1" name="Warped Space">
 		<!-- AUTO GENERATED SKILL -->
+		<!-- Creates a warped space where the enemy is trapped and their abilities are decreased. Requires a fist weapon. -->
+		<icon>icon.skill30519</icon>
+		<operateType>A1</operateType>
+		<mpConsume>772</mpConsume>
+		<hitTime>2500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-707</effectPoint>
+		<reuseDelay>600000</reuseDelay>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>13432</npcId> <!-- Gravity Core -->
+				<npcCount>1</npcCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30520" toLevel="3" name="Steel Mind">
+		<!-- Updated to IO -->
+		<!-- For 30 sec., HP stays at 1. Speed + 50, P. Atk. + 15%, P. Critical Damage + 10%, Skill Critical Damage + 10%, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 90. Normal attacks have normal damage x 5. When duration ends, 30% of HP is restored. Requires a fist weapon. -->
+		<icon>icon.skill30520</icon>
+		<abnormalTime>30</abnormalTime>
+		<abnormalVisualEffect>PMENTAL_TRAIL</abnormalVisualEffect>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>
+			<value level="1">221</value>
+			<value level="2">232</value>
+			<value level="3">243</value>
+		</mpConsume>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>100</effectPoint>
+		<reuseDelay>300000</reuseDelay>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<KNOCKDOWN>90</KNOCKDOWN>
+				<KNOCKBACK>90</KNOCKBACK>
+				<PULL>90</PULL>
+				<AIRBIND>90</AIRBIND>
+				<AGGRESSION>90</AGGRESSION>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Damage Up -->
+				<chance>100</chance>
+				<targetType>TARGET</targetType>
+				<affectScope>SINGLE</affectScope>
+				<minDamage>100</minDamage>
+				<skillId>30521</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="IgnoreDeath" />
+			<effect name="PAtk">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">30</value>
+					<value level="3">30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">70</value>
+					<value level="3">70</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+		<endEffects>
+			<effect name="HealPercent">
+				<power>
+					<value level="1">30</value>
+					<value level="2">30</value>
+					<value level="3">40</value>
+				</power>
+			</effect>
+		</endEffects>
+	</skill>
+	<skill id="30521" toLevel="1" name="Damage Up">
+		<!-- Updated to Ertheia -->
 		<!-- Inflicts normal damage x 5. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="1000" />
-	</skill>
-	<skill id="30522" levels="1" name="Eminent Attack Movement">
-		<set name="icon" val="icon.skill30522" />
-		<set name="magicLvl" val="40" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="runSpd" val="1.05" />
-				<mul stat="pDef" val="1.05" />
-				<mul stat="mDef" val="1.05" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<!-- reuseDelay>1000</reuseDelay IN RETAIL IS IGNORED -->
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<pAtkMod>5</pAtkMod>
+				<criticalChance>5</criticalChance>
+				<overHit>true</overHit>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="30523" levels="3" name="Battle Dash">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="30522" toLevel="1" name="Eminent Attack Movement">
+		<!-- Updated to IO -->
+		<!-- Speed has a chance to increase every time you receive damage. -->
+		<icon>icon.skill30522</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByDamage">
+				<!-- Battle Dash -->
+				<minDamage>1</minDamage>
+				<skillId>30523</skillId>
+				<skillLevel>1</skillLevel>
+				<chance>20</chance>
+				<targetType>SELF</targetType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30523" toLevel="3" name="Battle Dash">
+		<!-- Updated to IO -->
 		<!-- Speed + 10. -->
-		<set name="icon" val="icon.skill30523" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="4" />
+		<table name="#triggeredLevel"> 2 3 0 </table>
+		<table name="#runSpd"> 10 20 40 </table>
+		<table name="#pDefMDef"> 1.10 1.15 1.20 </table>
+		<icon>icon.skill30523</icon>
+		<abnormalTime>10</abnormalTime> <!-- Unconfirmed -->
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<effectPoint>2</effectPoint>
+		<isMagic>4</isMagic>
+		<effects>
+			<effect name="TriggerSkillByDamage">
+				<!-- Battle Dash -->
+				<minDamage>1</minDamage>
+				<skillId>30523</skillId>
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">0</value>
+				</skillLevel>
+				<chance>20</chance>
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="30524" levels="1" name="Reliable Hit">
+	<skill id="30524" toLevel="1" name="Reliable Hit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Fixed damage. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="30526" levels="1" name="Heavy Punch">
-		<!-- Level 1 : Has a chance to inflict normal damage x 5. Requires a Fist Weapon to activate. -->
-		<set name="icon" val="icon.skill30526" />
-		<set name="magicLvl" val="76" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<set name="activateRate" val="60" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.05" >
-					<using kind="FIST, DUALFIST" />
-				</mul>
+	<skill id="30526" toLevel="1" name="Heavy Punch">
+		<!-- Updated to Ertheia -->
+		<!-- Has a chance to inflict normal damage x 5. Requires a Fist Weapon to activate. -->
+		<icon>icon.skill30526</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<!-- Damage Up -->
+				<minDamage>100</minDamage>
+				<skillId>30521</skillId>
+				<skillLevel>1</skillLevel>
+				<chance>13</chance>
+				<targetType>TARGET</targetType>
+				<affectScope>SINGLE</affectScope>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="30527" levels="1" name="Twisted Space - NPC">
+	<skill id="30527" toLevel="1" name="Twisted Space - NPC">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill1042</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-707</effectPoint>
+		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="30528" levels="1" name="Spatial Trap">
+	<skill id="30528" toLevel="1" name="Spatial Trap">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Trapped in some space, your battle strength is weakened. -->
-		<set name="icon" val="icon.skill30525" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill30525</icon>
+		<operateType>A2</operateType>
+		<effectPoint>-707</effectPoint>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="30530" levels="15" name="Crushing Air" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
-	<!-- Source: https://l2wiki.com/Crushing_Air_-_Eviscerator -->
-		<table name="#power"> 11159 11936 12714 13941 14269 15046 15824 16601 16638 16679 17000 17059 17118 17177 17236 </table>
-		<table name="#magicLvl"> 76 78 80 82 84 86 88 90 92 94 96 98 101 103 105 </table>
-		<table name="#mpConsume"> 34 35 35 36 36 37 37 37 37 38 38 38 38 38 38 </table>
-		<table name="#ench1Chance">61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80</table>
-		<table name="#ench2EffectRange"> 610 620 630 640 650 660 670 680 690 700 710 720 730 740 750 760 770 780 790 800</table>
-		<table name="#ench3Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
-		<set name="icon" val="icon.skill30530" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="ONE" />
-		<set name="effectRange" val="600" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="30000" />
-		<set name="isDebuff" val="true" />
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="SILENCE_PHYSICAL" />
-		<set name="abnormalVisualEffect" val="AIR_BATTLE_SLOW" />
-		<set name="activateRate" val="60" />
-		<set name="basicProperty" val="MEN" />
-		<set name="hitTime" val="1000" />
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" />
-		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="150" />
-		<set name="trait" val="DERANGEMENT" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<enchant1 name="activateRate" val="#ench1Chance" />
-		<enchant2 name="effectRange" val="#ench2EffectRange" />
-		<enchant3for>
-			<effect name="Debuff">
-				<mul stat="pDef" val="#ench3Hex" />
+	<skill id="30530" toLevel="15" name="Crushing Air">
+		<!-- Updated to IO -->
+		<!-- Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
+		<icon>icon.skill30530</icon>
+		<abnormalTime>10</abnormalTime> <!-- Unconfirmed -->
+		<abnormalVisualEffect>GRAVITY_SPACE_3</abnormalVisualEffect>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>
+			<value level="1">34</value>
+			<value level="2">35</value>
+			<value level="3">35</value>
+			<value level="4">36</value>
+			<value level="5">36</value>
+			<value level="6">37</value>
+			<value level="7">37</value>
+			<value level="8">37</value>
+			<value level="9">37</value>
+			<value level="10">38</value>
+			<value level="11">38</value>
+			<value level="12">38</value>
+			<value level="13">38</value>
+			<value level="14">38</value>
+			<value level="15">38</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-379</effectPoint>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="Speed">
+				<amount>-100</amount>
+				<mode>PER</mode>
 			</effect>
-		</enchant3for>
-		<effect name="Debuff">
-			<mul stat="mAtk" val="0.50" />
-			<mul stat="pAtk" val="0.50" />
-		</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="30532" levels="3" name="Inside Position">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="30532" toLevel="3" name="Inside Position">
+		<!-- Updated to IO -->
 		<!-- Increases P. Critical Rate by 10. -->
-		<set name="icon" val="icon.skill30510" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="4" />
-	</skill>
-	<skill id="30540" levels="14" name="Eminent Fist Weapon Mastery">
-	<!-- Source: https://l2wiki.com/Eminent_Fist_Weapon_Mastery_-_Eviscerator -->
-		<table name="#accCombat"> 0 2 3 3 3 4 4 8 8 8 8 8 8 8 </table>
-		<table name="#cAtkAdd"> 0 0 0 0 0 1.10 1.10 1.45 1.45 1.45 1.45 1.45 1.45 1.45 </table>
-		<table name="#magicLvl"> 5 20 40 52 64 76 80 85 90 95 99 100 102 104 </table>
-		<table name="#pAtkAdd"> 4 13 63 124 208 306 471 3378 3916 4540 5110 5790 6143 6517 </table>
-		<table name="#pAtkMul"> 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.45 1.45 1.45 1.45 1.45 1.45 1.45 </table>
-		<table name="#rCrit"> 0 0 10 10 10 20 20 60 60 60 60 60 60 60 </table>
-		<set name="icon" val="icon.skill30524" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="critRate" val="#rCrit">
-					<using kind="FIST,DUALFIST" />
-				</add>
-				<mul stat="pAtk" val="#pAtkMul">
-					<using kind="FIST,DUALFIST" />
-				</mul>
-				<add stat="pAtk" val="#pAtkAdd">
-					<using kind="FIST,DUALFIST" />
-				</add>
-				<add stat="accCombat" val="#accCombat">
-					<using kind="FIST,DUALFIST" />
-				</add>
-				<mul stat="critDmgAdd" val="#cAtkAdd">
-					<using kind="FIST,DUALFIST" />
-				</mul>
-				<mul stat="pAtkSpd" val="1.10">
-					<using kind="FIST,DUALFIST" />
-				</mul>
+		<table name="#triggeredLevel"> 2 3 3 </table>
+		<table name="#rCrit"> 10 20 40 </table>
+		<table name="#cAtk"> 1 1 1.20 </table>
+		<table name="#rCritSkill"> 1.10 1.20 1.40 </table>
+		<table name="#cAtkSkill"> 1 1 1.20 </table>
+		<table name="#cAtk"> 1 1 1.20 </table>
+		<icon>icon.skill30510</icon>
+		<abnormalTime>10</abnormalTime> <!-- Unconfirmed -->
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<effectPoint>2</effectPoint>
+		<isMagic>4</isMagic>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">25</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="30541" levels="14" name="Eminent Light Armor Mastery">
-	<!-- Source: https://l2wiki.com/Eminent_Light_Armor_Mastery_-_Eviscerator -->
-		<table name="#magicLvl"> 5 20 40 52 64 76 80 85 90 95 99 100 102 104 </table>
-		<table name="#pDef"> 14 17 34 51 69 91 99 1657 1819 1999 2155 2415 2506 2601 </table>
-		<table name="#mDef"> 14 17 34 51 69 91 99 949 1073 1214 1340 1511 1588 1668</table>
-		<table name="#rEvas"> 1 2 3 4 5 6 7 12 12 12 12 12 12 12</table>
-		<set name="icon" val="icon.skill10254" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="pDef" val="#pDef">
-					<using kind="LIGHT" />
-				</add>
-				<add stat="mDef" val="#mDef">
-					<using kind="LIGHT" />
-				</add>
-				<add stat="rEvas" val="#rEvas">
-					<using kind="LIGHT" />
-				</add>
-				<mul stat="pDef" val="1.10">
-					<using kind="LIGHT" />
-				</mul>
-				<mul stat="mDef" val="1.10">
-					<using kind="LIGHT" />
-				</mul>
-				<mul stat="defCritRate" val="0.65">
-					<using kind="LIGHT" />
-				</mul>
+			<effect name="TriggerSkillBySkill"> <!-- Check if is on skill cast or skill casted. -->
+				<!-- Inside Position -->
+				<!-- Left Sidestep -->
+				<skillId>30532</skillId>
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+				</skillLevel>
+				<castSkillId>30507</castSkillId>
 			</effect>
-		</for>
+			<effect name="TriggerSkillBySkill"> <!-- Check if is on skill cast or skill casted. -->
+				<!-- Inside Position -->
+				<!-- Right Sidestep -->
+				<skillId>30532</skillId>
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+				</skillLevel>
+				<castSkillId>30508</castSkillId>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="30542" levels="10" name="Eminent Stability">
+	<skill id="30540" toLevel="17" name="Eminent Fist Weapon Mastery">
+		<!-- Updated to IO -->
+		<!-- When equipped with a fist weapon, P. Atk. + 10% and + 4. -->
+		<table name="#accCombat"> 0 2 3 3 3 4 4 8 8 8 8 8 8 8 8 8 8 </table>
+		<table name="#cAtk"> 1 1 1 1 1 1.1 1.1 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 </table>
+		<table name="#pAtkSpd"> 1 1 1 1 1 1 1 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<!-- TODO -->
+		<table name="#pAtkAdd"> 4 13 63 124 208 306 471 3378 3916 4540 5110 5790 6143 6517 6914 7335 7781 </table>
+		<table name="#pAtkMul"> 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 </table>
+		<table name="#rCrit"> 0 0 10 10 10 20 20 60 60 60 60 60 60 60 60 60 60 </table>
+		<icon>icon.skill30524</icon>
+		<magicLvl>
+			<value level="1">5</value>
+			<value level="2">20</value>
+			<value level="3">40</value>
+			<value level="4">52</value>
+			<value level="5">64</value>
+			<value level="6">76</value>
+			<value level="7">80</value>
+			<value level="8">85</value>
+			<value level="9">90</value>
+			<value level="10">95</value>
+			<value level="11">99</value>
+			<value level="12">99</value>
+			<value level="13">99</value>
+			<value level="14">99</value>
+			<value level="15">99</value>
+			<value level="16">99</value>
+			<value level="17">99</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+					<value level="6">10</value>
+					<value level="7">10</value>
+					<value level="8">45</value>
+					<value level="9">45</value>
+					<value level="10">45</value>
+					<value level="11">45</value>
+					<value level="12">45</value>
+					<value level="13">45</value>
+					<value level="14">45</value>
+					<value level="15">45</value>
+					<value level="16">45</value>
+					<value level="17">45</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>FIST</item>
+					<item>DUALFIST</item>
+				</weaponType>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">13</value>
+					<value level="3">63</value>
+					<value level="4">124</value>
+					<value level="5">208</value>
+					<value level="6">306</value>
+					<value level="7">471</value>
+					<value level="8">3378</value>
+					<value level="9">3916</value>
+					<value level="10">4540</value>
+					<value level="11">5110</value>
+					<value level="12">5790</value>
+					<value level="13">6143</value>
+					<value level="14">6517</value>
+					<value level="15">6914</value>
+					<value level="16">7335</value>
+					<value level="17">7781</value>
+				</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>FIST</item>
+					<item>DUALFIST</item>
+				</weaponType>
+			</effect>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">3</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">4</value>
+					<value level="8">8</value>
+					<value level="9">8</value>
+					<value level="10">8</value>
+					<value level="11">8</value>
+					<value level="12">8</value>
+					<value level="13">8</value>
+					<value level="14">8</value>
+					<value level="15">8</value>
+					<value level="16">8</value>
+					<value level="17">8</value>
+				</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>FIST</item>
+					<item>DUALFIST</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">15</value>
+					<value level="9">15</value>
+					<value level="10">15</value>
+					<value level="11">15</value>
+					<value level="12">15</value>
+					<value level="13">15</value>
+					<value level="14">15</value>
+					<value level="15">15</value>
+					<value level="16">15</value>
+					<value level="17">15</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>FIST</item>
+					<item>DUALFIST</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>FIST</item>
+					<item>DUALFIST</item>
+				</weaponType>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">10</value>
+					<value level="7">10</value>
+					<value level="8">45</value>
+					<value level="9">45</value>
+					<value level="10">45</value>
+					<value level="11">45</value>
+					<value level="12">45</value>
+					<value level="13">45</value>
+					<value level="14">45</value>
+					<value level="15">45</value>
+					<value level="16">45</value>
+					<value level="17">45</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>FIST</item>
+					<item>DUALFIST</item>
+				</weaponType>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+					<value level="6">20</value>
+					<value level="7">20</value>
+					<value level="8">60</value>
+					<value level="9">60</value>
+					<value level="10">60</value>
+					<value level="11">60</value>
+					<value level="12">60</value>
+					<value level="13">60</value>
+					<value level="14">60</value>
+					<value level="15">60</value>
+					<value level="16">60</value>
+					<value level="17">60</value>
+				</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>FIST</item>
+					<item>DUALFIST</item>
+				</weaponType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30541" toLevel="17" name="Eminent Light Armor Mastery">
+		<!-- Updated to IO -->
+		<!-- When equipped with light armor, P. Def. + 14. -->
+		<table name="#crit"> 1 0.85 0.80 0.80 0.80 0.75 0.75 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 </table>
+		<table name="#pDef"> 1 1 1 1 1 1 1 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 </table>
+		<table name="#pDef2"> 14 17 34 51 69 91 99 1657 1819 1999 2155 2415 2506 2601 2700 2813 2920 </table>
+		<table name="#mDef"> 1 1 1 1 1 1 1.03 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 </table>
+		<table name="#mDef2"> 0 0 0 0 0 0 276 949 1073 1214 1340 1511 1588 1668 1753 1842 1935 </table>
+		<table name="#rEvas"> 0 2 3 3 3 4 4 12 12 12 12 12 12 12 12 12 12 </table>
+		<!-- TODO -->
+		<icon>icon.skill10254</icon>
+		<magicLvl>
+			<value level="1">5</value>
+			<value level="2">20</value>
+			<value level="3">40</value>
+			<value level="4">52</value>
+			<value level="5">64</value>
+			<value level="6">76</value>
+			<value level="7">80</value>
+			<value level="8">85</value>
+			<value level="9">90</value>
+			<value level="10">95</value>
+			<value level="11">99</value>
+			<value level="12">99</value>
+			<value level="13">99</value>
+			<value level="14">99</value>
+			<value level="15">99</value>
+			<value level="16">99</value>
+			<value level="17">99</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">3</value>
+					<value level="8">10</value>
+					<value level="9">10</value>
+					<value level="10">10</value>
+					<value level="11">10</value>
+					<value level="12">10</value>
+					<value level="13">10</value>
+					<value level="14">10</value>
+					<value level="15">10</value>
+					<value level="16">10</value>
+					<value level="17">10</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">276</value>
+					<value level="8">949</value>
+					<value level="9">1073</value>
+					<value level="10">1214</value>
+					<value level="11">1340</value>
+					<value level="12">1511</value>
+					<value level="13">1588</value>
+					<value level="14">1668</value>
+					<value level="15">1753</value>
+					<value level="16">1842</value>
+					<value level="17">1935</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">10</value>
+					<value level="9">10</value>
+					<value level="10">10</value>
+					<value level="11">10</value>
+					<value level="12">10</value>
+					<value level="13">10</value>
+					<value level="14">10</value>
+					<value level="15">10</value>
+					<value level="16">10</value>
+					<value level="17">10</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">14</value>
+					<value level="2">17</value>
+					<value level="3">34</value>
+					<value level="4">51</value>
+					<value level="5">69</value>
+					<value level="6">91</value>
+					<value level="7">99</value>
+					<value level="8">1657</value>
+					<value level="9">1819</value>
+					<value level="10">1999</value>
+					<value level="11">2155</value>
+					<value level="12">2415</value>
+					<value level="13">2506</value>
+					<value level="14">2601</value>
+					<value level="15">2700</value>
+					<value level="16">2813</value>
+					<value level="17">2920</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">3</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">4</value>
+					<value level="8">12</value>
+					<value level="9">12</value>
+					<value level="10">12</value>
+					<value level="11">12</value>
+					<value level="12">12</value>
+					<value level="13">12</value>
+					<value level="14">12</value>
+					<value level="15">12</value>
+					<value level="16">12</value>
+					<value level="17">12</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-15</value>
+					<value level="3">-20</value>
+					<value level="4">-20</value>
+					<value level="5">-20</value>
+					<value level="6">-25</value>
+					<value level="7">-25</value>
+					<value level="8">-35</value>
+					<value level="9">-35</value>
+					<value level="10">-35</value>
+					<value level="11">-35</value>
+					<value level="12">-35</value>
+					<value level="13">-35</value>
+					<value level="14">-35</value>
+					<value level="15">-35</value>
+					<value level="16">-35</value>
+					<value level="17">-35</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-15</value>
+					<value level="3">-20</value>
+					<value level="4">-20</value>
+					<value level="5">-20</value>
+					<value level="6">-25</value>
+					<value level="7">-25</value>
+					<value level="8">-35</value>
+					<value level="9">-35</value>
+					<value level="10">-35</value>
+					<value level="11">-35</value>
+					<value level="12">-35</value>
+					<value level="13">-35</value>
+					<value level="14">-35</value>
+					<value level="15">-35</value>
+					<value level="16">-35</value>
+					<value level="17">-35</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30542" toLevel="13" name="Eminent Stability">
+		<!-- Updated to IO -->
 		<!-- Max HP + 58, HP Recovery Bonus + 2.5, MP Recovery Bonus + 1.2. -->
-		<table name="#maxHp"> 58 196 473 6004 6305 6620 6883 6951 7088 7227</table>
-		<table name="#maxCp"> 0 0 231 545 573 601 625 631 644 657</table>
-		<table name="#regHp"> 2.5 4.5 66.5 12 12 12 12 12 12 12</table>
-		<table name="#regMp"> 1.2 1.8 2.4 6 6 6 6 6 6 6</table>
-		<table name="#regCp"> 0 0 2.4 12 12 12 12 12 12 12</table>
-		<table name="#runSpd"> 0 0 10 14 14 14 14 14 14 14</table>
-		<table name="#magicLvl"> 20 40 76 85 90 95 99 100 102 104</table>
-		<set name="icon" val="icon.skill11506" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="#maxHp" />
-				<add stat="maxCp" val="#maxCp" />
-				<add stat="regCp" val="#regHp" />
-				<add stat="regHp" val="#regHp" />
-				<add stat="regMp" val="#regMp" />
-				<add stat="runSpd" val="#runSpd" />
+		<table name="#maxHp"> 58 196 473 6004 6305 6620 6883 6951 7088 7227 7370 7515 7663 </table>
+		<table name="#maxCp"> 0 0 231 545 573 601 625 631 644 657 670 683 696 </table>
+		<table name="#regHp"> 2.5 4.5 6.5 12 12 12 12 12 12 12 12 12 12 </table>
+		<table name="#regMp"> 1.2 1.8 2.4 6 6 6 6 6 6 6 6 6 6 </table>
+		<table name="#regCp"> 0 0 2.4 12 12 12 12 12 12 12 12 12 12 </table>
+		<table name="#runSpd"> 0 0 10 14 14 14 14 14 14 14 14 14 14 </table>
+		<icon>icon.skill11506</icon>
+		<magicLvl>
+			<value level="1">20</value>
+			<value level="2">40</value>
+			<value level="3">76</value>
+			<value level="4">85</value>
+			<value level="5">90</value>
+			<value level="6">95</value>
+			<value level="7">99</value>
+			<value level="8">100</value>
+			<value level="9">102</value>
+			<value level="10">104</value>
+			<value level="11">104</value>
+			<value level="12">104</value>
+			<value level="13">104</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">58</value>
+					<value level="2">196</value>
+					<value level="3">473</value>
+					<value level="4">6004</value>
+					<value level="5">6305</value>
+					<value level="6">6620</value>
+					<value level="7">6883</value>
+					<value level="8">6951</value>
+					<value level="9">7088</value>
+					<value level="10">7227</value>
+					<value level="11">7370</value>
+					<value level="12">7515</value>
+					<value level="13">7663</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="30543" levels="8" name="Eminent Attribute Resistance">
-		<table name="#magicLvl"> 76 85 90 95 99 100 102 104</table>
-		<table name="#resistance"> 10 20 22 24 26 30 32 34</table>
-		<set name="icon" val="icon.skill11006" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="windPower" val="#resistance" />
-				<add stat="earthPower" val="#resistance" />
-				<add stat="firePower" val="#resistance" />
-				<add stat="waterPower" val="#resistance" />
-				<add stat="darkPower" val="#resistance" />
-				<add stat="holyPower" val="#resistance" />
-				<add stat="windRes" val="#resistance" />
-				<add stat="earthRes" val="#resistance" />
-				<add stat="fireRes" val="#resistance" />
-				<add stat="waterRes" val="#resistance" />
-				<add stat="darkRes" val="#resistance" />
-				<add stat="holyRes" val="#resistance" />
+			<effect name="Speed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+					<value level="4">14</value>
+					<value level="5">14</value>
+					<value level="6">14</value>
+					<value level="7">14</value>
+					<value level="8">14</value>
+					<value level="9">14</value>
+					<value level="10">14</value>
+					<value level="11">14</value>
+					<value level="12">14</value>
+					<value level="13">14</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">231</value>
+					<value level="4">545</value>
+					<value level="5">573</value>
+					<value level="6">601</value>
+					<value level="7">625</value>
+					<value level="8">631</value>
+					<value level="9">644</value>
+					<value level="10">657</value>
+					<value level="11">670</value>
+					<value level="12">683</value>
+					<value level="13">696</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">2.5</value>
+					<value level="2">4.5</value>
+					<value level="3">6.5</value>
+					<value level="4">12</value>
+					<value level="5">12</value>
+					<value level="6">12</value>
+					<value level="7">12</value>
+					<value level="8">12</value>
+					<value level="9">12</value>
+					<value level="10">12</value>
+					<value level="11">12</value>
+					<value level="12">12</value>
+					<value level="13">12</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">1.2</value>
+					<value level="2">1.8</value>
+					<value level="3">2.4</value>
+					<value level="4">6</value>
+					<value level="5">6</value>
+					<value level="6">6</value>
+					<value level="7">6</value>
+					<value level="8">6</value>
+					<value level="9">6</value>
+					<value level="10">6</value>
+					<value level="11">6</value>
+					<value level="12">6</value>
+					<value level="13">6</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CpRegen">
+				<amount>
+					<value level="1">2.5</value>
+					<value level="2">4.5</value>
+					<value level="3">6.5</value>
+					<value level="4">12</value>
+					<value level="5">12</value>
+					<value level="6">12</value>
+					<value level="7">12</value>
+					<value level="8">12</value>
+					<value level="9">12</value>
+					<value level="10">12</value>
+					<value level="11">12</value>
+					<value level="12">12</value>
+					<value level="13">12</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<!-- Level 1 : Hold/Mental Resistance + 30. -->
-	<!-- Level 2 : Hold / Mental / Pull / Knock Back / Knock Down Resistance + 30. -->
-	<skill id="30544" levels="2" name="Eminent Trait Resistance">
-		<table name="#magicLvl"> 76 85 </table>
-		<set name="icon" val="icon.skill10005" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+	<skill id="30543" toLevel="11" name="Eminent Attribute Resistance">
+		<!-- Updated to IO -->
+		<!-- Attack Attribute Bonus + 10, Attribute Resistance + 10. -->
+		<table name="#attribute"> 10 20 22 24 26 30 32 34 36 38 40 </table>
+		<!-- TODO -->
+		<icon>icon.skill11006</icon>
+		<magicLvl>
+			<value level="1">76</value>
+			<value level="2">85</value>
+			<value level="3">85</value>
+			<value level="4">85</value>
+			<value level="5">85</value>
+			<value level="6">85</value>
+			<value level="7">85</value>
+			<value level="8">85</value>
+			<value level="9">85</value>
+			<value level="10">85</value>
+			<value level="11">85</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">22</value>
+					<value level="4">24</value>
+					<value level="5">26</value>
+					<value level="6">30</value>
+					<value level="7">32</value>
+					<value level="8">34</value>
+					<value level="9">36</value>
+					<value level="10">38</value>
+					<value level="11">40</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">22</value>
+					<value level="4">24</value>
+					<value level="5">26</value>
+					<value level="6">30</value>
+					<value level="7">32</value>
+					<value level="8">34</value>
+					<value level="9">36</value>
+					<value level="10">38</value>
+					<value level="11">40</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">22</value>
+					<value level="4">24</value>
+					<value level="5">26</value>
+					<value level="6">30</value>
+					<value level="7">32</value>
+					<value level="8">34</value>
+					<value level="9">36</value>
+					<value level="10">38</value>
+					<value level="11">40</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">22</value>
+					<value level="4">24</value>
+					<value level="5">26</value>
+					<value level="6">30</value>
+					<value level="7">32</value>
+					<value level="8">34</value>
+					<value level="9">36</value>
+					<value level="10">38</value>
+					<value level="11">40</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">22</value>
+					<value level="4">24</value>
+					<value level="5">26</value>
+					<value level="6">30</value>
+					<value level="7">32</value>
+					<value level="8">34</value>
+					<value level="9">36</value>
+					<value level="10">38</value>
+					<value level="11">40</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">22</value>
+					<value level="4">24</value>
+					<value level="5">26</value>
+					<value level="6">30</value>
+					<value level="7">32</value>
+					<value level="8">34</value>
+					<value level="9">36</value>
+					<value level="10">38</value>
+					<value level="11">40</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">22</value>
+					<value level="4">24</value>
+					<value level="5">26</value>
+					<value level="6">30</value>
+					<value level="7">32</value>
+					<value level="8">34</value>
+					<value level="9">36</value>
+					<value level="10">38</value>
+					<value level="11">40</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">22</value>
+					<value level="4">24</value>
+					<value level="5">26</value>
+					<value level="6">30</value>
+					<value level="7">32</value>
+					<value level="8">34</value>
+					<value level="9">36</value>
+					<value level="10">38</value>
+					<value level="11">40</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">22</value>
+					<value level="4">24</value>
+					<value level="5">26</value>
+					<value level="6">30</value>
+					<value level="7">32</value>
+					<value level="8">34</value>
+					<value level="9">36</value>
+					<value level="10">38</value>
+					<value level="11">40</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">22</value>
+					<value level="4">24</value>
+					<value level="5">26</value>
+					<value level="6">30</value>
+					<value level="7">32</value>
+					<value level="8">34</value>
+					<value level="9">36</value>
+					<value level="10">38</value>
+					<value level="11">40</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">22</value>
+					<value level="4">24</value>
+					<value level="5">26</value>
+					<value level="6">30</value>
+					<value level="7">32</value>
+					<value level="8">34</value>
+					<value level="9">36</value>
+					<value level="10">38</value>
+					<value level="11">40</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">22</value>
+					<value level="4">24</value>
+					<value level="5">26</value>
+					<value level="6">30</value>
+					<value level="7">32</value>
+					<value level="8">34</value>
+					<value level="9">36</value>
+					<value level="10">38</value>
+					<value level="11">40</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="30544" toLevel="2" name="Eminent Trait Resistance">
+		<!-- Updated to IO -->
+		<!-- Hold/Mental Resistance + 30. -->
+		<table name="#traitResist1"> 30 30 </table>
+		<table name="#traitResist2"> 0 30 </table>
+		<icon>icon.skill10005</icon>
+		<magicLvl>
+			<value level="1">76</value>
+			<value level="2">85</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<effects>
 			<effect name="DefenceTrait">
-				<param HOLD="30" />
-				<param SLEEP="30" />
-				<param BLEED="30" />
-				<param DERANGEMENT="30" />
-				<param POISON="30" />
+				<HOLD>
+					<value level="1">30</value>
+					<value level="2">30</value>
+				</HOLD>
+				<DERANGEMENT>
+					<value level="1">30</value>
+					<value level="2">30</value>
+				</DERANGEMENT>
+				<PULL>
+					<value level="1">0</value>
+					<value level="2">30</value>
+				</PULL>
+				<KNOCKBACK>
+					<value level="1">0</value>
+					<value level="2">30</value>
+				</KNOCKBACK>
+				<KNOCKDOWN>
+					<value level="1">0</value>
+					<value level="2">30</value>
+				</KNOCKDOWN>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="30545" levels="3" name="Eminent Ability">
-		<table name="#magicLvl"> 40 76 85 </table>
-		<table name="#base">2 4 14</table>
-		<set name="icon" val="icon.skill0430" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="STR" val="#base" />
+	<skill id="30545" toLevel="3" name="Eminent Ability">
+		<!-- STR + 2. -->
+		<table name="#STR"> 2 4 14 </table>
+		<icon>icon.skill0430</icon>
+		<operateType>P</operateType>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">76</value>
+			<value level="3">85</value>
+		</magicLvl>
+		<effects>
+			<effect name="SkillCritical">
+				<stat>STR</stat>
 			</effect>
-		</for>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">14</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="30546" levels="11" name="Flying Knee Kick" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
-		<!-- Lands a knee kick on the target. Target is knocked down for $s1. Fist weapon must be equipped. -->
-		<table name="#mpConsumes"> 29 29 30 30 30 30 30 31 32 33 34</table>
-		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 101 103 105</table>
-		<table name="#ench1Chance"> 61 62 63 64 65 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81</table>
-		<table name="#ench2EffectRange"> 310 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470 480 490 500</table>
-		<table name="#ench3Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="ONE" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="castRange" val="300" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="70000" />
-		<set name="isDebuff" val="true" />
-		<set name="abnormalTime" val="3" />
-		<set name="abnormalType" val="KNOCK_DOWN" />
-		<set name="abnormalVisualEffect" val="KNOCK_DOWN" />
-		<set name="activateRate" val="60" />
-		<set name="fanRange" val="0,0,80,150" />
-		<set name="flyType" val="CHARGE" />
-		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="300" />
-		<set name="effectPoint" val="-100" /> <!-- Need verify -->
-		<set name="flyRadius" val="55" />
-		<set name="nextActionAttack" val="true" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="trait" val="KNOCKDOWN" />
-		<cond msgId="113" addName="1">
-			<using kind="FIST,DUALFIST" />
-		</cond>
-		<enchant1 name="activateRate" val="#ench1Chance" />
-		<enchant2 name="effectRange" val="#ench2EffectRange" />
-		<for>
-			<effect name="PhysicalAttack"/>
-			<effect name="KnockDown">
-				<param speed="700" distance="50" />
+	<skill id="30546" toLevel="11" name="Flying Knee Kick">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Lands a knee kick on the target. Target is knocked down for 3 seconds. Fist weapon must be equipped. -->
+		<icon>icon.skill30546</icon>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<activateRate>80</activateRate> <!-- Guessed -->
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<flyType>CHARGE</flyType> <!-- Should launch flyType 3 (CHARGE) with animationSpeed 333 -->
+		<nextActionAttack>true</nextActionAttack>
+		<operateType>DA2</operateType>
+		<trait>KNOCKDOWN</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>
+			<value level="1">29</value>
+			<value level="2">29</value>
+			<value level="3">30</value>
+			<value level="4">30</value>
+			<value level="5">30</value>
+			<value level="6">30</value>
+			<value level="7">30</value>
+			<value level="8">31</value>
+			<value level="9">32</value>
+			<value level="10">33</value>
+			<value level="11">34</value>
+		</mpConsume>
+		<castRange>300</castRange>
+		<hitTime>100</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>7000</reuseDelay>
+		<effectPoint>-700</effectPoint>
+		<isDebuff>true</isDebuff>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+			<condition name="OpCheckCastRange">
+				<distance>200</distance>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="KnockBack">
+				<speed>600</speed>
+				<distance>50</distance>
+				<knockDown>true</knockDown>
 			</effect>
-		</for>
-		<enchant3for>
-			<effect name="PhysicalAttack" />
-			<effect name="KnockDown">
-				<mul stat="pDef" val="#ench3Hex" />
-				<param speed="700" distance="50" />
-			</effect>
-		</enchant3for>
+		</effects>
 	</skill>
-	<skill id="30547" levels="4" name="Stamp Punch" enchantGroup1="5">
-		<!-- Throws a powerful punch to a fallen target with $s1 Power added to P. Atk. Ignores $s2 of target's P. Def. Fist weapon must be equipped. -->
-		<table name="#rCrit"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20 </table>
-		<table name="#mpConsumes"> 85 85 85 85 </table>
-		<table name="#magicLevel"> 99 101 103 105 </table>
+	<skill id="30547" toLevel="4" name="Stamp Punch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Throws a powerful punch to a fallen target with 91570 Power added to P. Atk. Ignores 50% of target's P. Def. Fist weapon must be equipped. -->
 		<table name="#power"> 91570 95080 98736 102392 </table>
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="ONE" />
-		<set name="castRange" val="80" />
-		<set name="effectRange" val="80" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLevel" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="hitTime" val="2000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isDebuff" val="true" />
-		<set name="abnormalTime" val="5" />
-		<set name="ignorePhysDefPercent" val="50" />
-		<set name="isDebuff" val="true" />
-		<set name="nextActionAttack" val="true" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<cond msgId="113" addName="1">
-			<using kind="DUALFIST, FIST" />
-		</cond>
-		<enchant1 name="magicLvl" val="105" />
-		<for>
-			<effect name="PhysicalAttack" />
-		</for>
-		<enchant1for>
-			<effect name="PhysicalAttack" >
-				<mul stat="critRate" val="#rCrit">
-					<using kind="FIST,DUALFIST" />
-				</mul>
+		<icon>icon.skill30547</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>85</mpConsume>
+		<castRange>80</castRange>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-700</effectPoint>
+		<reuseDelay>5000</reuseDelay>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+			<condition name="OpCheckAbnormal">
+				<type>KNOCKDOWN</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<!-- Ignores 50% of target's P. Def -->
+				<power>
+					<value level="1">91570</value>
+					<value level="2">95080</value>
+					<value level="3">98736</value>
+					<value level="4">102392</value>
+				</power>
+				<pDefMod>0.5</pDefMod>
 			</effect>
-		</enchant1for>
+		</effects>
 	</skill>
 </list>

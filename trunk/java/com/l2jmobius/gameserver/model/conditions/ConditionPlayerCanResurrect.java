@@ -45,10 +45,6 @@ public class ConditionPlayerCanResurrect extends Condition
 		{
 			return true;
 		}
-		if (effected == null)
-		{
-			return false;
-		}
 		boolean canResurrect = true;
 		
 		if (effected.isPlayer())
@@ -112,6 +108,6 @@ public class ConditionPlayerCanResurrect extends Condition
 				}
 			}
 		}
-		return _val == canResurrect;
+		return (_val == canResurrect);
 	}
 }

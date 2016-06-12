@@ -17,18 +17,26 @@
 package com.l2jmobius.gameserver.model.actor.instance;
 
 import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 
 public class L2WarehouseInstance extends L2NpcInstance
 {
-	/**
-	 * Creates a warehouse NPC.
-	 * @param template the warehouse NPC template
-	 */
 	public L2WarehouseInstance(L2NpcTemplate template)
 	{
 		super(template);
 		setInstanceType(InstanceType.L2WarehouseInstance);
+	}
+	
+	@Override
+	public boolean isAutoAttackable(L2Character attacker)
+	{
+		if (attacker.isMonster())
+		{
+			return true;
+		}
+		
+		return super.isAutoAttackable(attacker);
 	}
 	
 	@Override
@@ -40,6 +48,17 @@ public class L2WarehouseInstance extends L2NpcInstance
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		return "html/warehouse/" + (val == 0 ? "" + npcId : npcId + "-" + val) + ".htm";
+		String pom = "";
+		
+		if (val == 0)
+		{
+			pom = "" + npcId;
+		}
+		else
+		{
+			pom = npcId + "-" + val;
+		}
+		
+		return "data/html/warehouse/" + pom + ".htm";
 	}
 }

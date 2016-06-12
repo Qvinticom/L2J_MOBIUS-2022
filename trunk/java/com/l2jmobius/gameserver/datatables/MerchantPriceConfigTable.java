@@ -20,7 +20,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -32,7 +31,9 @@ import org.xml.sax.SAXException;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.InstanceListManager;
+import com.l2jmobius.gameserver.enums.TaxType;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 
@@ -41,7 +42,7 @@ import com.l2jmobius.gameserver.model.entity.Castle;
  */
 public class MerchantPriceConfigTable implements InstanceListManager
 {
-	// Zoey76: TODO: Implement using IXmlReader.
+	// Zoey76: TODO: Implement using IGameXmlReader.
 	private static Logger LOGGER = Logger.getLogger(MerchantPriceConfigTable.class.getName());
 	
 	public static MerchantPriceConfigTable getInstance()
@@ -58,7 +59,7 @@ public class MerchantPriceConfigTable implements InstanceListManager
 	{
 		for (MerchantPriceConfig mpc : _mpcs.values())
 		{
-			if ((npc.getWorldRegion() != null) && npc.getWorldRegion().containsZone(mpc.getZoneId()))
+			if (ZoneManager.getInstance().getRegion(npc).getZones().containsKey(mpc.getZoneId()))
 			{
 				return mpc;
 			}
@@ -76,88 +77,85 @@ public class MerchantPriceConfigTable implements InstanceListManager
 		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
-		final File file = new File(Config.DATAPACK_ROOT + "/" + MPCS_FILE);
-		if (!file.exists())
+		final File file = new File(Config.DATAPACK_ROOT + "/data/" + MPCS_FILE);
+		if (file.exists())
 		{
-			return;
-		}
-		
-		int defaultPriceConfigId;
-		final Document doc = factory.newDocumentBuilder().parse(file);
-		
-		Node n = doc.getDocumentElement();
-		final Node dpcNode = n.getAttributes().getNamedItem("defaultPriceConfig");
-		if (dpcNode == null)
-		{
-			throw new IllegalStateException("merchantPriceConfig must define an 'defaultPriceConfig'");
-		}
-		defaultPriceConfigId = Integer.parseInt(dpcNode.getNodeValue());
-		
-		MerchantPriceConfig mpc;
-		for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
-		{
-			mpc = parseMerchantPriceConfig(n);
-			if (mpc != null)
+			int defaultPriceConfigId;
+			final Document doc = factory.newDocumentBuilder().parse(file);
+			
+			Node n = doc.getDocumentElement();
+			final Node dpcNode = n.getAttributes().getNamedItem("defaultPriceConfig");
+			if (dpcNode == null)
 			{
-				_mpcs.put(mpc.getId(), mpc);
+				throw new IllegalStateException("merchantPriceConfig must define an 'defaultPriceConfig'");
 			}
+			defaultPriceConfigId = Integer.parseInt(dpcNode.getNodeValue());
+			
+			MerchantPriceConfig mpc;
+			for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
+			{
+				mpc = parseMerchantPriceConfig(n);
+				if (mpc != null)
+				{
+					_mpcs.put(mpc.getId(), mpc);
+				}
+			}
+			
+			final MerchantPriceConfig defaultMpc = this.getMerchantPriceConfig(defaultPriceConfigId);
+			if (defaultMpc == null)
+			{
+				throw new IllegalStateException("'defaultPriceConfig' points to an non-loaded priceConfig");
+			}
+			_defaultMpc = defaultMpc;
 		}
-		
-		final MerchantPriceConfig defaultMpc = getMerchantPriceConfig(defaultPriceConfigId);
-		if (defaultMpc == null)
-		{
-			throw new IllegalStateException("'defaultPriceConfig' points to an non-loaded priceConfig");
-		}
-		_defaultMpc = defaultMpc;
 	}
 	
 	private MerchantPriceConfig parseMerchantPriceConfig(Node n)
 	{
-		if (!n.getNodeName().equals("priceConfig"))
+		if (n.getNodeName().equals("priceConfig"))
 		{
-			return null;
+			final int id;
+			final int baseTax;
+			int castleId = -1;
+			int zoneId = -1;
+			final String name;
+			
+			Node node = n.getAttributes().getNamedItem("id");
+			if (node == null)
+			{
+				throw new IllegalStateException("Must define the priceConfig 'id'");
+			}
+			id = Integer.parseInt(node.getNodeValue());
+			
+			node = n.getAttributes().getNamedItem("name");
+			if (node == null)
+			{
+				throw new IllegalStateException("Must define the priceConfig 'name'");
+			}
+			name = node.getNodeValue();
+			
+			node = n.getAttributes().getNamedItem("baseTax");
+			if (node == null)
+			{
+				throw new IllegalStateException("Must define the priceConfig 'baseTax'");
+			}
+			baseTax = Integer.parseInt(node.getNodeValue());
+			
+			node = n.getAttributes().getNamedItem("castleId");
+			if (node != null)
+			{
+				castleId = Integer.parseInt(node.getNodeValue());
+			}
+			
+			node = n.getAttributes().getNamedItem("zoneId");
+			if (node != null)
+			{
+				zoneId = Integer.parseInt(node.getNodeValue());
+			}
+			
+			return new MerchantPriceConfig(id, name, baseTax, castleId, zoneId);
 		}
-		
-		final int id;
-		final int baseTax;
-		int castleId = -1;
-		int zoneId = -1;
-		final String name;
-		
-		Node node = n.getAttributes().getNamedItem("id");
-		if (node == null)
-		{
-			throw new IllegalStateException("Must define the priceConfig 'id'");
-		}
-		id = Integer.parseInt(node.getNodeValue());
-		
-		node = n.getAttributes().getNamedItem("name");
-		if (node == null)
-		{
-			throw new IllegalStateException("Must define the priceConfig 'name'");
-		}
-		name = node.getNodeValue();
-		
-		node = n.getAttributes().getNamedItem("baseTax");
-		if (node == null)
-		{
-			throw new IllegalStateException("Must define the priceConfig 'baseTax'");
-		}
-		baseTax = Integer.parseInt(node.getNodeValue());
-		
-		node = n.getAttributes().getNamedItem("castleId");
-		if (node != null)
-		{
-			castleId = Integer.parseInt(node.getNodeValue());
-		}
-		
-		node = n.getAttributes().getNamedItem("zoneId");
-		if (node != null)
-		{
-			zoneId = Integer.parseInt(node.getNodeValue());
-		}
-		
-		return new MerchantPriceConfig(id, name, baseTax, castleId, zoneId);
+		return null;
 	}
 	
 	@Override
@@ -166,11 +164,11 @@ public class MerchantPriceConfigTable implements InstanceListManager
 		try
 		{
 			loadXML();
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _mpcs.size() + " merchant price configs.");
+			LOGGER.info("Loaded " + _mpcs.size() + " merchant price configs.");
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Failed loading MerchantPriceConfigTable. Reason: " + e.getMessage(), e);
+			LOGGER.severe("Failed loading MerchantPriceConfigTable: " + e);
 		}
 	}
 	
@@ -267,14 +265,14 @@ public class MerchantPriceConfigTable implements InstanceListManager
 			return hasCastle() ? getCastle().getTaxRate() : 0.0;
 		}
 		
-		public int getTotalTax()
+		public int getTotalTax(TaxType taxType)
 		{
-			return hasCastle() ? (getCastle().getTaxPercent() + getBaseTax()) : getBaseTax();
+			return hasCastle() ? (getCastle().getTaxPercent(taxType) + getBaseTax()) : getBaseTax();
 		}
 		
-		public double getTotalTaxRate()
+		public double getTotalTaxRate(TaxType taxType)
 		{
-			return getTotalTax() / 100.0;
+			return getTotalTax(taxType) / 100.0;
 		}
 		
 		public void updateReferences()

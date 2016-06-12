@@ -16,22 +16,13 @@
  */
 package com.l2jmobius.gameserver.model.effects;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.handler.EffectHandler;
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
-import com.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
 
 /**
  * Abstract effect implementation.<br>
@@ -44,105 +35,7 @@ public abstract class AbstractEffect
 {
 	protected static final Logger _log = Logger.getLogger(AbstractEffect.class.getName());
 	
-	// Conditions
-	/** Attach condition. */
-	private final Condition _attachCond;
-	// Apply condition
-	// private final Condition _applyCond; // TODO: Use or cleanup.
-	private List<FuncTemplate> _funcTemplates;
-	/** Effect name. */
-	private final String _name;
-	/** Ticks. */
-	private final int _ticks;
-	
-	/**
-	 * Abstract effect constructor.
-	 * @param attachCond the attach condition
-	 * @param applyCond the apply condition
-	 * @param set the attributes
-	 * @param params the parameters
-	 */
-	protected AbstractEffect(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
-	{
-		_attachCond = attachCond;
-		// _applyCond = applyCond;
-		_name = set.getString("name");
-		_ticks = set.getInt("ticks", 0);
-	}
-	
-	/**
-	 * Creates an effect given the parameters.
-	 * @param attachCond the attach condition
-	 * @param applyCond the apply condition
-	 * @param set the attributes
-	 * @param params the parameters
-	 * @return the new effect
-	 */
-	public static AbstractEffect createEffect(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
-	{
-		final String name = set.getString("name");
-		final Class<? extends AbstractEffect> handler = EffectHandler.getInstance().getHandler(name);
-		if (handler == null)
-		{
-			_log.warning(AbstractEffect.class.getSimpleName() + ": Requested unexistent effect handler: " + name);
-			return null;
-		}
-		
-		final Constructor<?> constructor;
-		try
-		{
-			constructor = handler.getConstructor(Condition.class, Condition.class, StatsSet.class, StatsSet.class);
-		}
-		catch (NoSuchMethodException | SecurityException e)
-		{
-			_log.warning(AbstractEffect.class.getSimpleName() + ": Requested unexistent constructor for effect handler: " + name + ": " + e.getMessage());
-			return null;
-		}
-		
-		try
-		{
-			return (AbstractEffect) constructor.newInstance(attachCond, applyCond, set, params);
-		}
-		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e)
-		{
-			_log.warning(AbstractEffect.class.getSimpleName() + ": Unable to initialize effect handler: " + name + ": " + e.getMessage());
-		}
-		return null;
-	}
-	
-	/**
-	 * Tests the attach condition.
-	 * @param caster the caster
-	 * @param target the target
-	 * @param skill the skill
-	 * @return {@code true} if there isn't a condition to test or it's passed, {@code false} otherwise
-	 */
-	public boolean testConditions(L2Character caster, L2Character target, Skill skill)
-	{
-		return (_attachCond == null) || _attachCond.test(caster, target, skill);
-	}
-	
-	/**
-	 * Attaches a function template.
-	 * @param f the function
-	 */
-	public void attach(FuncTemplate f)
-	{
-		if (_funcTemplates == null)
-		{
-			_funcTemplates = new ArrayList<>(1);
-		}
-		_funcTemplates.add(f);
-	}
-	
-	/**
-	 * Gets the effect name.
-	 * @return the name
-	 */
-	public String getName()
-	{
-		return _name;
-	}
+	private int _ticks;
 	
 	/**
 	 * Gets the effect ticks
@@ -153,14 +46,18 @@ public abstract class AbstractEffect
 		return _ticks;
 	}
 	
+	/**
+	 * Sets the effect ticks
+	 * @param ticks the ticks
+	 */
+	protected void setTicks(int ticks)
+	{
+		_ticks = ticks;
+	}
+	
 	public double getTicksMultiplier()
 	{
 		return (getTicks() * Config.EFFECT_TICK_RATIO) / 1000f;
-	}
-	
-	public List<FuncTemplate> getFuncTemplates()
-	{
-		return _funcTemplates;
 	}
 	
 	/**
@@ -168,10 +65,12 @@ public abstract class AbstractEffect
 	 * If it lands will be scheduled and added to the character effect list.<br>
 	 * Override in effect implementation to change behavior. <br>
 	 * <b>Warning:</b> Must be used only for instant effects continuous effects will not call this they have their success handled by activate_rate.
-	 * @param info the buff info
+	 * @param effector
+	 * @param effected
+	 * @param skill
 	 * @return {@code true} if this effect land, {@code false} otherwise
 	 */
-	public boolean calcSuccess(BuffInfo info)
+	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
 		return true;
 	}
@@ -195,6 +94,21 @@ public abstract class AbstractEffect
 	public boolean canStart(BuffInfo info)
 	{
 		return true;
+	}
+	
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	{
+		
+	}
+	
+	public void continuousInstant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	{
+		
+	}
+	
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	{
+		
 	}
 	
 	/**
@@ -222,39 +136,14 @@ public abstract class AbstractEffect
 	 */
 	public void onExit(BuffInfo info)
 	{
-	}
-	
-	/**
-	 * Get this effect's stats functions.
-	 * @param caster the caster
-	 * @param target the target
-	 * @param skill the skill
-	 * @return a list of stat functions.
-	 */
-	public List<AbstractFunction> getStatFuncs(L2Character caster, L2Character target, Skill skill)
-	{
-		if (getFuncTemplates() == null)
-		{
-			return Collections.<AbstractFunction> emptyList();
-		}
 		
-		final List<AbstractFunction> functions = new ArrayList<>(getFuncTemplates().size());
-		for (FuncTemplate functionTemplate : getFuncTemplates())
-		{
-			final AbstractFunction function = functionTemplate.getFunc(caster, target, skill, this);
-			if (function != null)
-			{
-				functions.add(function);
-			}
-		}
-		return functions;
 	}
 	
 	/**
 	 * Get the effect flags.
 	 * @return bit flag for current effect
 	 */
-	public int getEffectFlags()
+	public long getEffectFlags()
 	{
 		return EffectFlag.NONE.getMask();
 	}
@@ -262,15 +151,7 @@ public abstract class AbstractEffect
 	@Override
 	public String toString()
 	{
-		return "Effect " + _name;
-	}
-	
-	public void decreaseForce()
-	{
-	}
-	
-	public void increaseEffect()
-	{
+		return "Effect " + getClass().getSimpleName();
 	}
 	
 	public boolean checkCondition(Object obj)
@@ -285,5 +166,25 @@ public abstract class AbstractEffect
 	public boolean isInstant()
 	{
 		return false;
+	}
+	
+	/**
+	 * @param effector
+	 * @param effected
+	 * @param skill
+	 * @return {@code true} if pump can be invoked, {@code false} otherwise
+	 */
+	public boolean canPump(L2Character effector, L2Character effected, Skill skill)
+	{
+		return true;
+	}
+	
+	/**
+	 * @param effected
+	 * @param skill
+	 */
+	public void pump(L2Character effected, Skill skill)
+	{
+		
 	}
 }

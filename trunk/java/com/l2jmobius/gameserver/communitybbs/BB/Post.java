@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.communitybbs.BB;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.communitybbs.Manager.PostBBSManager;
  */
 public class Post
 {
-	private static final Logger _log = Logger.getLogger(Post.class.getName());
+	private static Logger LOGGER = Logger.getLogger(Post.class.getName());
 	
 	public static class CPost
 	{
@@ -45,7 +45,7 @@ public class Post
 		public String postTxt;
 	}
 	
-	private final List<CPost> _post = new ArrayList<>();
+	private final List<CPost> _post;
 	
 	/**
 	 * @param _PostOwner
@@ -57,6 +57,7 @@ public class Post
 	 */
 	public Post(String _PostOwner, int _PostOwnerID, long date, int tid, int _PostForumID, String txt)
 	{
+		_post = new CopyOnWriteArrayList<>();
 		final CPost cp = new CPost();
 		cp.postId = 0;
 		cp.postOwner = _PostOwner;
@@ -67,11 +68,6 @@ public class Post
 		cp.postTxt = txt;
 		_post.add(cp);
 		insertindb(cp);
-	}
-	
-	public Post(Topic t)
-	{
-		load(t);
 	}
 	
 	public void insertindb(CPost cp)
@@ -90,13 +86,27 @@ public class Post
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error while saving new Post to db " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error while saving new Post to db " + e.getMessage(), e);
 		}
+	}
+	
+	public Post(Topic t)
+	{
+		_post = new CopyOnWriteArrayList<>();
+		load(t);
 	}
 	
 	public CPost getCPost(int id)
 	{
-		return _post.get(id);
+		int i = 0;
+		for (CPost cp : _post)
+		{
+			if (i++ == id)
+			{
+				return cp;
+			}
+		}
+		return null;
 	}
 	
 	public void deleteme(Topic t)
@@ -111,7 +121,7 @@ public class Post
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error while deleting post: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error while deleting post: " + e.getMessage(), e);
 		}
 	}
 	
@@ -143,7 +153,7 @@ public class Post
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Data error on Post " + t.getForumID() + "/" + t.getID() + " : " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Data error on Post " + t.getForumID() + "/" + t.getID() + " : " + e.getMessage(), e);
 		}
 	}
 	
@@ -152,10 +162,10 @@ public class Post
 	 */
 	public void updatetxt(int i)
 	{
-		final CPost cp = getCPost(i);
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE posts SET post_txt=? WHERE post_id=? AND post_topic_id=? AND post_forum_id=?"))
 		{
+			final CPost cp = getCPost(i);
 			ps.setString(1, cp.postTxt);
 			ps.setInt(2, cp.postId);
 			ps.setInt(3, cp.postTopicId);
@@ -164,7 +174,7 @@ public class Post
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error while saving new Post to db " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error while saving new Post to db " + e.getMessage(), e);
 		}
 	}
 }

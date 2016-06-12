@@ -16,86 +16,62 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.PartyMatchRoom;
-import com.l2jmobius.gameserver.model.PartyMatchRoomList;
-import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
+import com.l2jmobius.gameserver.model.L2CommandChannel;
+import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.matching.CommandChannelMatchingRoom;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
-import com.l2jmobius.gameserver.network.serverpackets.ListPartyWating;
-import com.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.serverpackets.ListPartyWaiting;
 
-/**
- * This class ...
- * @version $Revision: 1.1.4.2 $ $Date: 2005/03/27 15:29:30 $
- */
-public final class RequestPartyMatchConfig extends L2GameClientPacket
+public final class RequestPartyMatchConfig implements IClientIncomingPacket
 {
-	private static final String _C__7F_REQUESTPARTYMATCHCONFIG = "[C] 7F RequestPartyMatchConfig";
-	
-	private int _auto, _loc, _lvl;
+	private int _page, _location, _level;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_auto = readD(); //
-		_loc = readD(); // Location
-		_lvl = readD(); // my level
+		_page = packet.readD();
+		_location = packet.readD();
+		_level = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		
-		if (_activeChar == null)
+		if (activeChar == null)
 		{
 			return;
 		}
 		
-		if (!_activeChar.isInPartyMatchRoom() && (_activeChar.getParty() != null) && (_activeChar.getParty().getLeader() != _activeChar))
-		{
-			_activeChar.sendPacket(SystemMessageId.THE_LIST_OF_PARTY_ROOMS_CAN_ONLY_BE_VIEWED_BY_A_PERSON_WHO_IS_NOT_PART_OF_A_PARTY);
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
+		final L2Party party = activeChar.getParty();
+		final L2CommandChannel cc = party == null ? null : party.getCommandChannel();
 		
-		if (_activeChar.isInPartyMatchRoom())
+		if ((party != null) && (cc != null) && (cc.getLeader() == activeChar))
 		{
-			// If Player is in Room show him room, not list
-			final PartyMatchRoomList _list = PartyMatchRoomList.getInstance();
-			if (_list == null)
+			if (activeChar.getMatchingRoom() == null)
 			{
-				return;
+				activeChar.setMatchingRoom(new CommandChannelMatchingRoom(activeChar.getName(), party.getDistributionType().ordinal(), 1, activeChar.getLevel(), 50, activeChar));
 			}
-			
-			final PartyMatchRoom _room = _list.getPlayerRoom(_activeChar);
-			if (_room == null)
-			{
-				return;
-			}
-			
-			_activeChar.sendPacket(new PartyMatchDetail(_activeChar, _room));
-			_activeChar.sendPacket(new ExPartyRoomMember(_activeChar, _room, 2));
-			
-			_activeChar.setPartyRoom(_room.getId());
-			// _activeChar.setPartyMatching(1);
-			_activeChar.broadcastUserInfo();
+		}
+		else if ((cc != null) && (cc.getLeader() != activeChar))
+		{
+			activeChar.sendPacket(SystemMessageId.THE_COMMAND_CHANNEL_AFFILIATED_PARTY_S_PARTY_MEMBER_CANNOT_USE_THE_MATCHING_SCREEN);
+		}
+		else if ((party != null) && (party.getLeader() != activeChar))
+		{
+			activeChar.sendPacket(SystemMessageId.THE_LIST_OF_PARTY_ROOMS_CAN_ONLY_BE_VIEWED_BY_A_PERSON_WHO_IS_NOT_PART_OF_A_PARTY);
 		}
 		else
 		{
-			// Add to waiting list
-			PartyMatchWaitingList.getInstance().addPlayer(_activeChar);
-			
-			// Send Room list
-			_activeChar.sendPacket(new ListPartyWating(_activeChar, _auto, _loc, _lvl));
+			MatchingRoomManager.getInstance().addToWaitingList(activeChar);
+			activeChar.sendPacket(new ListPartyWaiting(_level, _location, _page));
 		}
 	}
 	
-	@Override
-	public String getType()
-	{
-		return _C__7F_REQUESTPARTYMATCHCONFIG;
-	}
 }

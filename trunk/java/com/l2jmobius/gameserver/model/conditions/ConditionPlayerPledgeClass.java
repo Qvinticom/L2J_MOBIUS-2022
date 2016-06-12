@@ -26,6 +26,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public final class ConditionPlayerPledgeClass extends Condition
 {
+	
 	private final int _pledgeClass;
 	
 	/**
@@ -44,6 +45,10 @@ public final class ConditionPlayerPledgeClass extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		return (effector.getActingPlayer() != null) && (effector.getActingPlayer().getClan() != null) && ((_pledgeClass == -1) ? effector.getActingPlayer().isClanLeader() : (effector.getActingPlayer().getPledgeClass() >= _pledgeClass));
+		if ((effector.getActingPlayer() == null) || (effector.getActingPlayer().getClan() == null))
+		{
+			return false;
+		}
+		return (_pledgeClass == -1) ? effector.getActingPlayer().isClanLeader() : (effector.getActingPlayer().getPledgeClass() >= _pledgeClass);
 	}
 }

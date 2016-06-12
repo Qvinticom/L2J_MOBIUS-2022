@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.instancemanager;
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,6 +30,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
@@ -37,6 +40,8 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.enums.ManorMode;
 import com.l2jmobius.gameserver.model.CropProcure;
@@ -49,15 +54,15 @@ import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.interfaces.IStorable;
 import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.util.Rnd;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * Castle manor system.
  * @author malyelfik
  */
-public final class CastleManorManager implements IXmlReader, IStorable
+public final class CastleManorManager implements IGameXmlReader, IStorable
 {
+	private static final Logger LOGGER = Logger.getLogger(CastleManorManager.class.getName());
+	
 	// SQL queries
 	private static final String INSERT_PRODUCT = "INSERT INTO castle_manor_production VALUES (?, ?, ?, ?, ?, ?)";
 	private static final String INSERT_CROP = "INSERT INTO castle_manor_procure VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -91,7 +96,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 			{
 				_mode = ManorMode.MODIFIABLE;
 			}
-			else if ((hour == Config.ALT_MANOR_REFRESH_TIME) && (min >= Config.ALT_MANOR_REFRESH_MIN) && (min < maintenanceMin))
+			else if ((hour == Config.ALT_MANOR_REFRESH_TIME) && ((min >= Config.ALT_MANOR_REFRESH_MIN) && (min < maintenanceMin)))
 			{
 				_mode = ManorMode.MAINTENANCE;
 			}
@@ -121,12 +126,12 @@ public final class CastleManorManager implements IXmlReader, IStorable
 	@Override
 	public final void load()
 	{
-		parseDatapackFile("Seeds.xml");
+		parseDatapackFile("data/Seeds.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _seeds.size() + " seeds.");
 	}
 	
 	@Override
-	public final void parseDocument(Document doc)
+	public final void parseDocument(Document doc, File f)
 	{
 		StatsSet set;
 		NamedNodeMap attrs;
@@ -162,7 +167,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		}
 	}
 	
-	private final void loadDb()
+	private void loadDb()
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement stProduction = con.prepareStatement("SELECT * FROM castle_manor_production WHERE castle_id=?");
@@ -241,14 +246,14 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Unable to load manor data! " + e.getMessage());
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Unable to load manor data! ", e);
 		}
 	}
 	
 	// -------------------------------------------------------
 	// Manor methods
 	// -------------------------------------------------------
-	private final void scheduleModeChange()
+	private void scheduleModeChange()
 	{
 		// Calculate next mode change
 		_nextModeChange = Calendar.getInstance();
@@ -256,7 +261,6 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		switch (_mode)
 		{
 			case MODIFIABLE:
-			{
 				_nextModeChange.set(Calendar.HOUR_OF_DAY, Config.ALT_MANOR_APPROVE_TIME);
 				_nextModeChange.set(Calendar.MINUTE, Config.ALT_MANOR_APPROVE_MIN);
 				if (_nextModeChange.before(Calendar.getInstance()))
@@ -264,22 +268,17 @@ public final class CastleManorManager implements IXmlReader, IStorable
 					_nextModeChange.add(Calendar.DATE, 1);
 				}
 				break;
-			}
 			case MAINTENANCE:
-			{
 				_nextModeChange.set(Calendar.HOUR_OF_DAY, Config.ALT_MANOR_REFRESH_TIME);
 				_nextModeChange.set(Calendar.MINUTE, Config.ALT_MANOR_REFRESH_MIN + Config.ALT_MANOR_MAINTENANCE_MIN);
 				break;
-			}
 			case APPROVED:
-			{
 				_nextModeChange.set(Calendar.HOUR_OF_DAY, Config.ALT_MANOR_REFRESH_TIME);
 				_nextModeChange.set(Calendar.MINUTE, Config.ALT_MANOR_REFRESH_MIN);
 				break;
-			}
 		}
 		// Schedule mode change
-		ThreadPoolManager.getInstance().scheduleGeneral(this::changeMode, _nextModeChange.getTimeInMillis() - System.currentTimeMillis());
+		ThreadPoolManager.getInstance().scheduleGeneral(this::changeMode, (_nextModeChange.getTimeInMillis() - System.currentTimeMillis()));
 	}
 	
 	public final void changeMode()
@@ -433,7 +432,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		scheduleModeChange();
 		if (Config.DEBUG)
 		{
-			LOGGER.info(getClass().getName() + ": Manor mode changed to " + _mode.toString() + "!");
+			LOGGER.info(getClass().getSimpleName() + ": Manor mode changed to " + _mode.toString() + "!");
 		}
 	}
 	
@@ -468,7 +467,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 			}
 			catch (Exception e)
 			{
-				LOGGER.severe(getClass().getSimpleName() + ": Unable to store manor data! " + e.getMessage());
+				LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Unable to store manor data!", e);
 			}
 		}
 	}
@@ -505,7 +504,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 			}
 			catch (Exception e)
 			{
-				LOGGER.severe(getClass().getSimpleName() + ": Unable to store manor data! " + e.getMessage());
+				LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Unable to store manor data!", e);
 			}
 		}
 	}
@@ -526,7 +525,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		}
 		catch (Exception e)
 		{
-			LOGGER.info(getClass().getSimpleName() + ": Unable to store manor data! " + e.getMessage());
+			LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Unable to store manor data!", e);
 		}
 	}
 	
@@ -546,13 +545,13 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		}
 		catch (Exception e)
 		{
-			LOGGER.info(getClass().getSimpleName() + ": Unable to store manor data! " + e.getMessage());
+			LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Unable to store manor data!", e);
 		}
 	}
 	
 	public final List<SeedProduction> getSeedProduction(int castleId, boolean nextPeriod)
 	{
-		return nextPeriod ? _productionNext.get(castleId) : _production.get(castleId);
+		return (nextPeriod) ? _productionNext.get(castleId) : _production.get(castleId);
 	}
 	
 	public final SeedProduction getSeedProduct(int castleId, int seedId, boolean nextPeriod)
@@ -569,7 +568,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 	
 	public final List<CropProcure> getCropProcure(int castleId, boolean nextPeriod)
 	{
-		return nextPeriod ? _procureNext.get(castleId) : _procure.get(castleId);
+		return (nextPeriod) ? _procureNext.get(castleId) : _procure.get(castleId);
 	}
 	
 	public final CropProcure getCropProcure(int castleId, int cropId, boolean nextPeriod)
@@ -597,7 +596,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		}
 		for (CropProcure crop : procure)
 		{
-			total += crop.getPrice() * crop.getStartAmount();
+			total += (crop.getPrice() * crop.getStartAmount());
 		}
 		return total;
 	}
@@ -689,7 +688,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 		}
 		catch (Exception e)
 		{
-			LOGGER.severe(getClass().getSimpleName() + ": Unable to store manor data! " + e.getMessage());
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Unable to store manor data! ", e);
 			return false;
 		}
 	}
@@ -717,7 +716,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 			}
 			catch (Exception e)
 			{
-				LOGGER.severe(getClass().getSimpleName() + ": Unable to store manor data! " + e.getMessage());
+				LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Unable to store manor data!", e);
 			}
 		}
 	}

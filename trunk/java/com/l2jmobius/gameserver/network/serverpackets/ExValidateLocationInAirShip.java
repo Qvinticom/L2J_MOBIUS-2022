@@ -16,37 +16,40 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * update 27.8.10
  * @author kerberos JIV
  */
-public class ExValidateLocationInAirShip extends L2GameServerPacket
+public class ExValidateLocationInAirShip implements IClientOutgoingPacket
 {
 	private final L2PcInstance _activeChar;
-	private final int shipId, x, y, z, h;
+	private final int _shipId, _heading;
+	private final Location _loc;
 	
 	public ExValidateLocationInAirShip(L2PcInstance player)
 	{
 		_activeChar = player;
-		shipId = _activeChar.getAirShip().getObjectId();
-		x = player.getInVehiclePosition().getX();
-		y = player.getInVehiclePosition().getY();
-		z = player.getInVehiclePosition().getZ();
-		h = player.getHeading();
+		_shipId = _activeChar.getAirShip().getObjectId();
+		_loc = player.getInVehiclePosition();
+		_heading = player.getHeading();
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x70);
-		writeD(_activeChar.getObjectId());
-		writeD(shipId);
-		writeD(x);
-		writeD(y);
-		writeD(z);
-		writeD(h);
+		OutgoingPackets.EX_VALIDATE_LOCATION_IN_AIR_SHIP.writeId(packet);
+		
+		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_shipId);
+		packet.writeD(_loc.getX());
+		packet.writeD(_loc.getY());
+		packet.writeD(_loc.getZ());
+		packet.writeD(_heading);
+		return true;
 	}
 }

@@ -21,8 +21,10 @@ import java.util.Map;
 import java.util.logging.Level;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
+import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
@@ -36,6 +38,7 @@ import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.type.ArmorType;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import com.l2jmobius.gameserver.network.serverpackets.ShopPreviewInfo;
@@ -44,10 +47,8 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  ** @author Gnacik
  */
-public final class RequestPreviewItem extends L2GameClientPacket
+public final class RequestPreviewItem implements IClientIncomingPacket
 {
-	private static final String _C__C7_REQUESTPREVIEWITEM = "[C] C7 RequestPreviewItem";
-	
 	@SuppressWarnings("unused")
 	private int _unk;
 	private int _listId;
@@ -68,7 +69,7 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		{
 			try
 			{
-				activeChar.sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_TRYING_ON_EQUIPMENT);
+				activeChar.sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_TRYING_ON_EQUIPMENT2);
 				activeChar.sendPacket(new ExUserInfoEquipSlot(activeChar));
 			}
 			catch (Exception e)
@@ -79,11 +80,11 @@ public final class RequestPreviewItem extends L2GameClientPacket
 	}
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_unk = readD();
-		_listId = readD();
-		_count = readD();
+		_unk = packet.readD();
+		_listId = packet.readD();
+		_count = packet.readD();
 		
 		if (_count < 0)
 		{
@@ -91,7 +92,7 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		}
 		if (_count > 100)
 		{
-			return; // prevent too long lists
+			return false; // prevent too long lists
 		}
 		
 		// Create _items table that will contain all ItemID to Wear
@@ -100,12 +101,13 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		// Fill _items table with all ItemID to Wear
 		for (int i = 0; i < _count; i++)
 		{
-			_items[i] = readD();
+			_items[i] = packet.readD();
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (_items == null)
 		{
@@ -113,13 +115,13 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		}
 		
 		// Get the current player and return if null
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("buy"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("buy"))
 		{
 			activeChar.sendMessage("You are buying too fast.");
 			return;
@@ -143,7 +145,7 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		
 		if ((_count < 1) || (_listId >= 4000000))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -151,7 +153,7 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		final L2MerchantInstance merchant = (target instanceof L2MerchantInstance) ? (L2MerchantInstance) target : null;
 		if (merchant == null)
 		{
-			_log.warning(getClass().getName() + " Null merchant!");
+			_log.warning("Null merchant!");
 			return;
 		}
 		
@@ -190,7 +192,7 @@ public final class RequestPreviewItem extends L2GameClientPacket
 			
 			if (template instanceof L2Weapon)
 			{
-				if (activeChar.getRace().ordinal() == 5)
+				if (activeChar.getRace() == Race.KAMAEL)
 				{
 					if (template.getItemType() == WeaponType.NONE)
 					{
@@ -202,9 +204,15 @@ public final class RequestPreviewItem extends L2GameClientPacket
 					}
 				}
 			}
-			else if ((template instanceof L2Armor) && (activeChar.getRace().ordinal() == 5) && ((template.getItemType() == ArmorType.HEAVY) || (template.getItemType() == ArmorType.MAGIC)))
+			else if (template instanceof L2Armor)
 			{
-				continue;
+				if (activeChar.getRace() == Race.KAMAEL)
+				{
+					if ((template.getItemType() == ArmorType.HEAVY) || (template.getItemType() == ArmorType.MAGIC))
+					{
+						continue;
+					}
+				}
 			}
 			
 			if (itemList.containsKey(slot))
@@ -237,9 +245,4 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		}
 	}
 	
-	@Override
-	public String getType()
-	{
-		return _C__C7_REQUESTPREVIEWITEM;
-	}
 }

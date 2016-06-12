@@ -16,27 +16,26 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public final class RestartResponse extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
+public final class RestartResponse implements IClientOutgoingPacket
 {
-	private static final RestartResponse STATIC_PACKET_TRUE = new RestartResponse(true);
-	private static final RestartResponse STATIC_PACKET_FALSE = new RestartResponse(false);
-	
-	public static RestartResponse valueOf(boolean result)
-	{
-		return result ? STATIC_PACKET_TRUE : STATIC_PACKET_FALSE;
-	}
+	public static final RestartResponse TRUE = new RestartResponse(true);
+	public static final RestartResponse FALSE = new RestartResponse(false);
 	
 	private final boolean _result;
 	
-	public RestartResponse(boolean result)
+	private RestartResponse(boolean result)
 	{
 		_result = result;
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x71);
-		writeD(_result ? 1 : 0);
+		OutgoingPackets.RESTART_RESPONSE.writeId(packet);
+		packet.writeD(_result ? 1 : 0);
+		return true;
 	}
 }

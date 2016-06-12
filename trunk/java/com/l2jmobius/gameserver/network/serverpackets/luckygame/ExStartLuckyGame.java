@@ -16,30 +16,33 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets.luckygame;
 
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * @author Mobius
  */
-public class ExStartLuckyGame extends L2GameServerPacket
+public class ExStartLuckyGame implements IClientOutgoingPacket
 {
 	private static final int FORTUNE_READING_TICKET = 23767;
 	private static final int LUXURY_FORTUNE_READING_TICKET = 23768;
 	private int _type = 0;
+	private int _count = 0;
 	
-	public ExStartLuckyGame(int type)
+	public ExStartLuckyGame(L2PcInstance activeChar, int type)
 	{
 		_type = type;
+		_count = (int) activeChar.getInventory().getInventoryItemCount(_type == 2 ? LUXURY_FORTUNE_READING_TICKET : FORTUNE_READING_TICKET, -1);
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		final long count = getClient().getActiveChar().getInventory().getInventoryItemCount(_type == 2 ? LUXURY_FORTUNE_READING_TICKET : FORTUNE_READING_TICKET, -1);
-		
-		writeC(0xFE);
-		writeH(0x160);
-		writeD(_type);
-		writeD((int) count);
+		OutgoingPackets.EX_START_LUCKY_GAME.writeId(packet);
+		packet.writeD(_type);
+		packet.writeD(_count);
+		return true;
 	}
 }

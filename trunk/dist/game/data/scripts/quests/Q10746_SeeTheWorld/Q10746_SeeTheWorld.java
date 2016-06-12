@@ -17,40 +17,43 @@
 package quests.Q10746_SeeTheWorld;
 
 import com.l2jmobius.gameserver.enums.Race;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
-import quests.Q10745_TheSecretIngredients.Q10745_TheSecretIngredients;
-
 /**
- * @author Neanrakyr
+ * See the World (10746)
+ * @author Sdw
  */
-public class Q10746_SeeTheWorld extends Quest
+public final class Q10746_SeeTheWorld extends Quest
 {
-	// Npcs
+	// NPCs
 	private static final int KARLA = 33933;
 	private static final int ASTIEL = 33948;
 	private static final int LEVIAN = 30037;
 	// Items
 	private static final ItemHolder EMISSARY_SUPPORT_BOX_WARRIOR = new ItemHolder(40264, 1);
 	private static final ItemHolder EMISSARY_SUPPORT_BOX_MAGE = new ItemHolder(40265, 1);
-	// Level Condition
+	// Location
+	private static final Location GLUDIN_VILLAGE = new Location(-80684, 149770, -3040);
+	// Misc
 	private static final int MIN_LEVEL = 19;
 	private static final int MAX_LEVEL = 25;
 	
 	public Q10746_SeeTheWorld()
 	{
-		super(10746, Q10746_SeeTheWorld.class.getSimpleName(), "See The World");
+		super(10746);
 		addStartNpc(KARLA);
 		addTalkId(KARLA, ASTIEL, LEVIAN);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33933-noLevel.html");
-		addCondRace(Race.ERTHEIA, "33933-no.html");
-		addCondCompletedQuest(Q10745_TheSecretIngredients.class.getSimpleName(), "restriction.html");
+		
+		addCondRace(Race.ERTHEIA, "");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33933-00.htm");
 	}
 	
 	@Override
@@ -62,78 +65,100 @@ public class Q10746_SeeTheWorld extends Quest
 			return null;
 		}
 		
-		String htmltext = null;
+		String htmltext = event;
 		switch (event)
 		{
-			case "33933-02.html":
+			case "33933-02.htm":
 			{
 				qs.startQuest();
-				htmltext = event;
 				break;
 			}
-			case "33948-02.html":
+			case "33948-03.html":
 			{
-				if (qs.isCond(1))
+				if (qs.isCond(2))
 				{
-					qs.setCond(2);
-					player.teleToLocation(-80806, 149975, -3048);
-					htmltext = event;
+					player.teleToLocation(GLUDIN_VILLAGE);
 				}
 				break;
 			}
+			default:
+				htmltext = null;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = qs.isCompleted() ? getAlreadyCompletedMsg(player) : getNoQuestMsg(player);
+		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case KARLA:
 			{
-				if (qs.isCreated())
+				switch (qs.getState())
 				{
-					htmltext = "33933-01.htm";
-				}
-				else if (qs.isStarted())
-				{
-					htmltext = "33933-02.html";
+					case State.CREATED:
+						htmltext = "33933-01.htm";
+						break;
+					case State.STARTED:
+					{
+						if (qs.isCond(1))
+						{
+							htmltext = "33933-03.html";
+						}
+						break;
+					}
+					case State.COMPLETED:
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
 				}
 				break;
 			}
 			case ASTIEL:
 			{
-				switch (qs.getCond())
+				if (qs.isStarted())
 				{
-					case 1:
+					if (qs.isCond(1))
 					{
+						if (!isSimulated)
+						{
+							qs.setCond(2, true);
+						}
 						htmltext = "33948-01.html";
-						break;
+					}
+					else if (qs.isCond(2))
+					{
+						htmltext = "33948-02.html";
 					}
 				}
 				break;
 			}
 			case LEVIAN:
 			{
-				if (qs.isCond(2))
+				if (qs.isStarted() && qs.isCond(2))
 				{
-					giveAdena(player, 43000, true);
-					addExpAndSp(player, 53422, 5);
-					if (player.isMageClass())
+					if (!isSimulated)
 					{
-						giveItems(player, EMISSARY_SUPPORT_BOX_MAGE);
+						giveAdena(player, 43000, true);
+						addExpAndSp(player, 53422, 5);
+						if (player.isMageClass())
+						{
+							giveItems(player, EMISSARY_SUPPORT_BOX_MAGE);
+						}
+						else
+						{
+							giveItems(player, EMISSARY_SUPPORT_BOX_WARRIOR);
+						}
+						showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
+						qs.exitQuest(false, true);
 					}
-					else
-					{
-						giveItems(player, EMISSARY_SUPPORT_BOX_WARRIOR);
-					}
-					showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
-					qs.exitQuest(false, true);
 					htmltext = "30037-01.html";
+				}
+				else if (qs.isCompleted())
+				{
+					htmltext = getAlreadyCompletedMsg(player);
 				}
 				break;
 			}

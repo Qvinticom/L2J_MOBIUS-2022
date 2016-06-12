@@ -34,13 +34,13 @@ public class OnNpcSkillSee implements IBaseEvent
 	private final L2Object[] _targets;
 	private final boolean _isSummon;
 	
-	public OnNpcSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
+	public OnNpcSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, boolean isSummon, L2Object... targets)
 	{
 		_npc = npc;
 		_caster = caster;
 		_skill = skill;
-		_targets = targets;
 		_isSummon = isSummon;
+		_targets = targets;
 	}
 	
 	public L2Npc getTarget()

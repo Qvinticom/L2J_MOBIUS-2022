@@ -16,152 +16,139 @@
  */
 package quests.Q00943_FillingTheEnergyOfDestruction;
 
-import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Filling the Energy of Destruction (943)
- * @author karma12
+ * @author St3eT
  */
-public class Q00943_FillingTheEnergyOfDestruction extends Quest
+public final class Q00943_FillingTheEnergyOfDestruction extends Quest
 {
-	// NPC
-	private static final int SEED_TALISMAN_MANAGER = 33715;
-	// Raids
-	private static final int ISTINA_EASY = 29195;
-	private static final int ISTINA_HARD = 29196;
-	private static final int OCTAVIS_EASY = 29194;
-	private static final int OCTAVIS_HARD = 29212;
-	private static final int SPEZION_EASY = 25867;
-	private static final int SPEZION_HARD = 25868;
-	private static final int BAYLOR = 29213;
-	private static final int BALOK = 29218;
-	private static final int RON = 25825;
-	private static final int TAUTI_1 = 29236;
-	private static final int TAUTI_2 = 29237;
-	private static final int TAUTI_3 = 29238;
-	// Item
-	private static final int CORE_OF_TWISTED_MAGIC = 35668;
-	// Rewards
+	// NPCs
+	private static final int SEED_TALISMAN = 33715;
+	private static final int[] BOSSES =
+	{
+		29195, // Istina (common)
+		29196, // Istina (extreme)
+		29194, // Octavis (common)
+		29212, // Octavis (extreme)
+		25779, // Spezion (normal)
+		25867, // Spezion (extreme)
+		29213, // Baylor
+		29218, // Balok
+		25825, // Ron
+		29236, // Tauti (common)
+		29237, // Tauti (extreme)
+	};
+	// Items
+	private static final int TWISTED_MAGIC = 35668;
 	private static final int ENERGY_OF_DESTRUCTION = 35562;
+	// Misc
+	private static final int MIN_LEVEL = 90;
 	
 	public Q00943_FillingTheEnergyOfDestruction()
 	{
-		super(943, Q00943_FillingTheEnergyOfDestruction.class.getSimpleName(), "Filling the Energy of Destruction");
-		
-		addStartNpc(SEED_TALISMAN_MANAGER);
-		addTalkId(SEED_TALISMAN_MANAGER);
-		addKillId(ISTINA_EASY, ISTINA_HARD, OCTAVIS_EASY, OCTAVIS_HARD, SPEZION_EASY, SPEZION_HARD, BAYLOR, BALOK, RON, TAUTI_1, TAUTI_2, TAUTI_3);
-		registerQuestItems(CORE_OF_TWISTED_MAGIC);
-	}
-	
-	@Override
-	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
-	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
-		{
-			giveItems(player, CORE_OF_TWISTED_MAGIC, 1);
-			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			st.setCond(2, true);
-		}
+		super(943);
+		addStartNpc(SEED_TALISMAN);
+		addTalkId(SEED_TALISMAN);
+		addKillId(BOSSES);
+		registerQuestItems(TWISTED_MAGIC);
+		addCondMinLevel(MIN_LEVEL, "33715-08.html");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final String htmltext = event;
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		
+		if (st == null)
 		{
-			return htmltext;
+			return null;
 		}
 		
+		String htmltext = null;
 		switch (event)
 		{
+			case "33715-02.htm":
+			{
+				htmltext = event;
+				break;
+			}
 			case "33715-03.htm":
 			{
-				qs.startQuest();
+				st.startQuest();
+				htmltext = event;
 				break;
 			}
 			case "33715-06.html":
 			{
-				takeItems(player, CORE_OF_TWISTED_MAGIC, 1);
+				st.exitQuest(QuestType.DAILY, true);
 				giveItems(player, ENERGY_OF_DESTRUCTION, 1);
-				if (player.getLevel() >= 99)
-				{
-					addExpAndSp(player, 0, 5371901);
-				}
-				qs.exitQuest(QuestType.DAILY, true);
+				htmltext = event;
 				break;
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
-	{
-		executeForEachPlayer(killer, npc, isSummon, true, true);
-		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
+		final QuestState st = getQuestState(player, true);
 		
-		switch (qs.getState())
+		if (npc.getId() == SEED_TALISMAN)
 		{
-			case State.COMPLETED:
+			switch (st.getState())
 			{
-				if (qs.isNowAvailable())
+				case State.CREATED:
 				{
-					qs.setState(State.CREATED);
-					htmltext = (player.getLevel() >= 90) ? "33715-01.htm" : "33715-00.htm";
+					htmltext = "33715-01.htm";
+					break;
 				}
-				else
+				case State.STARTED:
 				{
-					htmltext = "33715-07.html";
+					htmltext = st.isCond(1) ? "33715-04.html" : "33715-05.html";
+					break;
 				}
-				break;
-			}
-			case State.CREATED:
-			{
-				htmltext = (player.getLevel() >= 90) ? "33715-01.htm" : "33715-00.htm";
-				break;
-			}
-			case State.STARTED:
-			{
-				if (qs.isCond(1))
+				case State.COMPLETED:
 				{
-					htmltext = "33715-04.html";
-				}
-				else if (qs.isCond(2))
-				{
-					if (player.getLevel() < 90)
+					if (st.isNowAvailable())
 					{
-						htmltext = "33715-00a.html";
+						st.setState(State.CREATED);
+						htmltext = "33715-01.htm";
 					}
 					else
 					{
-						htmltext = "33715-05.html";
+						htmltext = "33715-07.html";
 					}
+					break;
 				}
-				break;
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	{
+		executeForEachPlayer(player, npc, isSummon, true, true);
+		return super.onKill(npc, player, isSummon);
+	}
+	
+	@Override
+	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
+	{
+		final QuestState st = getQuestState(player, true);
+		if ((st != null) && st.isCond(1) && (npc.calculateDistance(player, false, false) <= 1500))
+		{
+			st.setCond(2, true);
+			giveItems(player, TWISTED_MAGIC, 1);
+		}
 	}
 }

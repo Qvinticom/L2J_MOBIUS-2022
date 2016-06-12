@@ -257,15 +257,18 @@ public enum PlayerClass
 		_type = pType;
 	}
 	
-	public static EnumSet<PlayerClass> getSet(Race race, ClassLevel level)
+	public static final EnumSet<PlayerClass> getSet(Race race, ClassLevel level)
 	{
 		final EnumSet<PlayerClass> allOf = EnumSet.noneOf(PlayerClass.class);
 		
 		for (PlayerClass playerClass : EnumSet.allOf(PlayerClass.class))
 		{
-			if (((race == null) || playerClass.isOfRace(race)) && ((level == null) || playerClass.isOfLevel(level)))
+			if ((race == null) || playerClass.isOfRace(race))
 			{
-				allOf.add(playerClass);
+				if ((level == null) || playerClass.isOfLevel(level))
+				{
+					allOf.add(playerClass);
+				}
 			}
 		}
 		return allOf;

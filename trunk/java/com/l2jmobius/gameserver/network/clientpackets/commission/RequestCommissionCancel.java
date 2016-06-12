@@ -16,27 +16,24 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.commission;
 
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 
 /**
  * This Packet doesn't seem to be doing anything.
  * @author NosBit
  */
-public class RequestCommissionCancel extends L2GameClientPacket
+public class RequestCommissionCancel implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
+		return false;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
 	}
 }

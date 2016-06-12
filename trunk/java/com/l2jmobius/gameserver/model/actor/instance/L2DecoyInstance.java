@@ -20,32 +20,36 @@ import java.util.concurrent.Future;
 import java.util.logging.Level;
 
 import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Decoy;
-import com.l2jmobius.gameserver.model.actor.knownlist.DecoyKnownList;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.items.L2Weapon;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
-public class L2DecoyInstance extends L2Decoy
+public class L2DecoyInstance extends L2Character
 {
+	private final L2PcInstance _owner;
 	private int _totalLifeTime;
 	private int _timeRemaining;
 	private Future<?> _DecoyLifeTask;
 	private Future<?> _HateSpam;
 	
-	/**
-	 * Creates a decoy.
-	 * @param template the decoy NPC template
-	 * @param owner the owner
-	 * @param totalLifeTime the total life time
-	 */
 	public L2DecoyInstance(L2NpcTemplate template, L2PcInstance owner, int totalLifeTime)
 	{
-		super(template, owner);
+		super(template);
 		setInstanceType(InstanceType.L2DecoyInstance);
+		_owner = owner;
+		setXYZInvisible(owner.getX(), owner.getY(), owner.getZ());
+		setIsInvul(false);
 		_totalLifeTime = totalLifeTime;
 		_timeRemaining = _totalLifeTime;
 		final int skilllevel = getTemplate().getDisplayId() - 13070;
@@ -70,18 +74,6 @@ public class L2DecoyInstance extends L2Decoy
 		return true;
 	}
 	
-	@Override
-	public DecoyKnownList getKnownList()
-	{
-		return (DecoyKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new DecoyKnownList(this));
-	}
-	
 	static class DecoyLifetime implements Runnable
 	{
 		private final L2PcInstance _activeChar;
@@ -100,7 +92,8 @@ public class L2DecoyInstance extends L2Decoy
 			try
 			{
 				_Decoy.decTimeRemaining(1000);
-				if (_Decoy.getTimeRemaining() < 0)
+				final double newTimeRemaining = _Decoy.getTimeRemaining();
+				if (newTimeRemaining < 0)
 				{
 					_Decoy.unSummon(_activeChar);
 				}
@@ -138,7 +131,6 @@ public class L2DecoyInstance extends L2Decoy
 		}
 	}
 	
-	@Override
 	public void unSummon(L2PcInstance owner)
 	{
 		if (_DecoyLifeTask != null)
@@ -151,7 +143,12 @@ public class L2DecoyInstance extends L2Decoy
 			_HateSpam.cancel(true);
 			_HateSpam = null;
 		}
-		super.unSummon(owner);
+		
+		if (isSpawned() && !isDead())
+		{
+			ZoneManager.getInstance().getRegion(this).removeFromZones(this);
+			decayMe();
+		}
 	}
 	
 	public void decTimeRemaining(int value)
@@ -167,5 +164,123 @@ public class L2DecoyInstance extends L2Decoy
 	public int getTotalLifeTime()
 	{
 		return _totalLifeTime;
+	}
+	
+	@Override
+	public void onSpawn()
+	{
+		super.onSpawn();
+		sendPacket(new CharInfo(this, false));
+	}
+	
+	@Override
+	public void updateAbnormalVisualEffects()
+	{
+		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
+		{
+			if (isVisibleFor(player))
+			{
+				player.sendPacket(new CharInfo(this, isInvisible() && player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
+			}
+		});
+	}
+	
+	public void stopDecay()
+	{
+		DecayTaskManager.getInstance().cancel(this);
+	}
+	
+	@Override
+	public void onDecay()
+	{
+		deleteMe(_owner);
+	}
+	
+	@Override
+	public boolean isAutoAttackable(L2Character attacker)
+	{
+		return _owner.isAutoAttackable(attacker);
+	}
+	
+	@Override
+	public L2ItemInstance getActiveWeaponInstance()
+	{
+		return null;
+	}
+	
+	@Override
+	public L2Weapon getActiveWeaponItem()
+	{
+		return null;
+	}
+	
+	@Override
+	public L2ItemInstance getSecondaryWeaponInstance()
+	{
+		return null;
+	}
+	
+	@Override
+	public L2Weapon getSecondaryWeaponItem()
+	{
+		return null;
+	}
+	
+	@Override
+	public final int getId()
+	{
+		return getTemplate().getId();
+	}
+	
+	@Override
+	public int getLevel()
+	{
+		return getTemplate().getLevel();
+	}
+	
+	public void deleteMe(L2PcInstance owner)
+	{
+		decayMe();
+	}
+	
+	public final L2PcInstance getOwner()
+	{
+		return _owner;
+	}
+	
+	@Override
+	public L2PcInstance getActingPlayer()
+	{
+		return _owner;
+	}
+	
+	@Override
+	public L2NpcTemplate getTemplate()
+	{
+		return (L2NpcTemplate) super.getTemplate();
+	}
+	
+	@Override
+	public void sendInfo(L2PcInstance activeChar)
+	{
+		activeChar.sendPacket(new CharInfo(this, isInvisible() && activeChar.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
+	}
+	
+	@Override
+	public void sendPacket(IClientOutgoingPacket... packets)
+	{
+		if (getOwner() != null)
+		{
+			getOwner().sendPacket(packets);
+		}
+	}
+	
+	@Override
+	public void sendPacket(SystemMessageId id)
+	{
+		if (getOwner() != null)
+		{
+			getOwner().sendPacket(id);
+		}
 	}
 }

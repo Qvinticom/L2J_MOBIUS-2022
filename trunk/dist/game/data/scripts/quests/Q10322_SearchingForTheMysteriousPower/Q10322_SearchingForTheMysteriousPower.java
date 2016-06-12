@@ -25,9 +25,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
-import com.l2jmobius.gameserver.util.Broadcast;
 import com.l2jmobius.gameserver.util.Util;
 
 import quests.Q10321_QualificationsOfTheSeeker.Q10321_QualificationsOfTheSeeker;
@@ -79,12 +77,12 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 	
 	public Q10322_SearchingForTheMysteriousPower()
 	{
-		super(10322, Q10322_SearchingForTheMysteriousPower.class.getSimpleName(), "Searching For The Mysterious Power");
+		super(10322);
 		addStartNpc(SHANNON);
-		addTalkId(SHANNON, EVAIN, ADVENTURERS_GUIDE);
+		addTalkId(SHANNON, ADVENTURERS_GUIDE, EVAIN);
 		addKillId(SCARECROW);
-		addCondMaxLevel(MAX_LEVEL, "32974-06.htm");
-		addCondCompletedQuest(Q10321_QualificationsOfTheSeeker.class.getSimpleName(), "32974-06.htm");
+		addCondMaxLevel(MAX_LEVEL, "32974-01a.htm");
+		addCondCompletedQuest(Q10321_QualificationsOfTheSeeker.class.getSimpleName(), "32974-01a.htm");
 	}
 	
 	@Override
@@ -110,7 +108,7 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32981-02.html":
+			case "32981-02.htm":
 			{
 				if (qs.isCond(4))
 				{
@@ -152,7 +150,7 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
@@ -168,12 +166,12 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 				}
 				else if (npc.getId() == EVAIN)
 				{
-					htmltext = "33464-07.html";
+					htmltext = "33464-07.htm";
 					break;
 				}
 				else if (npc.getId() == ADVENTURERS_GUIDE)
 				{
-					htmltext = "32981-04.html";
+					htmltext = "32981-04.htm";
 					break;
 				}
 			}
@@ -183,7 +181,7 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 				{
 					if (qs.isCond(1))
 					{
-						htmltext = "32974-04.html";
+						htmltext = "32974-04.htm";
 						break;
 					}
 				}
@@ -191,17 +189,12 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 				{
 					if (qs.isCond(4))
 					{
-						htmltext = "32981-01.html";
+						htmltext = "32981-01.htm";
 						break;
 					}
 					else if (qs.isCond(5))
 					{
-						htmltext = "32981-03.html";
-						break;
-					}
-					else
-					{
-						htmltext = getNoQuestMsg(player);
+						htmltext = "32981-03.htm";
 						break;
 					}
 				}
@@ -212,46 +205,49 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 						case 1:
 						{
 							qs.setCond(2, true);
-							htmltext = "33464-01.html";
+							htmltext = "33464-01.htm";
 							break;
 						}
 						case 2:
 						{
-							htmltext = "33464-02.html";
+							htmltext = "33464-02.htm";
 							break;
 						}
 						case 3:
 						{
 							qs.setCond(4, true);
-							htmltext = "33464-03.html";
+							htmltext = "33464-03.htm";
 							break;
 						}
 						case 4:
 						{
-							htmltext = "33464-04.html";
+							htmltext = "33464-04.htm";
 							break;
 						}
 						case 5:
 						{
-							htmltext = "33464-05.html";
+							htmltext = "33464-05.htm";
 							break;
 						}
 						case 6:
 						{
-							htmltext = "33464-06.html";
-							showOnScreenMsg(player, NpcStringId.WEAPONS_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
-							giveItems(player, WOODEN_ARROW, 500);
-							giveItems(player, ADENA, 70);
-							giveItems(player, HEALING_POTION, 50);
-							giveItems(player, APPRENTICE_ADVENTURERS_STAFF, 1);
-							giveItems(player, APPRENTICE_ADVENTURERS_BONE_CLUB, 1);
-							giveItems(player, APPRENTICE_ADVENTURERS_KNIFE, 1);
-							giveItems(player, APPRENTICE_ADVENTURERS_CESTUS, 1);
-							giveItems(player, APPRENTICE_ADVENTURERS_BOW, 1);
-							giveItems(player, APPRENTICE_ADVENTURERS_LONG_SWORD, 1);
-							addExpAndSp(player, 300, 5);
-							Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.THERE_S_THE_NEXT_TRAINING_STEP));
-							qs.exitQuest(false, true);
+							if (!isSimulated)
+							{
+								showOnScreenMsg(player, NpcStringId.WEAPONS_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
+								giveItems(player, WOODEN_ARROW, 500);
+								giveItems(player, ADENA, 70);
+								giveItems(player, HEALING_POTION, 50);
+								giveItems(player, APPRENTICE_ADVENTURERS_STAFF, 1);
+								giveItems(player, APPRENTICE_ADVENTURERS_BONE_CLUB, 1);
+								giveItems(player, APPRENTICE_ADVENTURERS_KNIFE, 1);
+								giveItems(player, APPRENTICE_ADVENTURERS_CESTUS, 1);
+								giveItems(player, APPRENTICE_ADVENTURERS_BOW, 1);
+								giveItems(player, APPRENTICE_ADVENTURERS_LONG_SWORD, 1);
+								addExpAndSp(player, 300, 5);
+								npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THERE_S_THE_NEXT_TRAINING_STEP);
+								qs.exitQuest(false, true);
+							}
+							htmltext = "33464-06.htm";
 							break;
 						}
 					}
@@ -262,18 +258,18 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 			{
 				if (npc.getId() == SHANNON)
 				{
-					htmltext = "32974-05.html";
+					htmltext = "32974-05.htm";
 					break;
 				}
 				else if (npc.getId() == EVAIN)
 				{
-					htmltext = "33464-08.html";
+					htmltext = "33464-08.htm";
 					break;
 				}
 				// Official is using same html for created/completed
 				else if (npc.getId() == ADVENTURERS_GUIDE)
 				{
-					htmltext = "32981-04.html";
+					htmltext = "32981-04.htm";
 					break;
 				}
 			}

@@ -16,34 +16,30 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.primeshop;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRGamePoint;
 
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRGamePoint extends L2GameClientPacket
+public final class RequestBRGamePoint implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// There is nothing to read.
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player != null)
 		{
-			player.sendPacket(new ExBRGamePoint(player));
+			client.sendPacket(new ExBRGamePoint(player));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
 	}
 }

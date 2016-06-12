@@ -18,13 +18,15 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
+import com.l2jmobius.gameserver.model.stats.Stats;
 
 /**
  * Backstab effect implementation.
@@ -32,15 +34,23 @@ import com.l2jmobius.gameserver.model.stats.Formulas;
  */
 public final class Backstab extends AbstractEffect
 {
-	public Backstab(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	private final double _power;
+	private final double _chance;
+	private final double _criticalChance;
+	private final boolean _overHit;
+	
+	public Backstab(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
+		_power = params.getDouble("power", 0);
+		_chance = params.getDouble("chance", 0);
+		_criticalChance = params.getDouble("criticalChance", 0);
+		_overHit = params.getBoolean("overHit", false);
 	}
 	
 	@Override
-	public boolean calcSuccess(BuffInfo info)
+	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
-		return !info.getEffector().isInFrontOf(info.getEffected()) && !Formulas.calcPhysicalSkillEvasion(info.getEffector(), info.getEffected(), info.getSkill()) && Formulas.calcBlowSuccess(info.getEffector(), info.getEffected(), info.getSkill());
+		return !effector.isInFrontOf(effected) && !Formulas.calcPhysicalSkillEvasion(effector, effected, skill) && Formulas.calcBlowSuccess(effector, effected, skill, _chance);
 	}
 	
 	@Override
@@ -56,42 +66,48 @@ public final class Backstab extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (info.getEffector().isAlikeDead())
+		if (effector.isAlikeDead())
 		{
 			return;
 		}
 		
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
-		final Skill skill = info.getSkill();
-		final boolean ss = skill.useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		final byte shld = Formulas.calcShldUse(activeChar, target, skill);
-		double damage = Formulas.calcBackstabDamage(activeChar, target, skill, shld, ss);
+		if (_overHit && effected.isAttackable())
+		{
+			((L2Attackable) effected).overhitEnabled(true);
+		}
 		
-		// Crit rate base crit rate for skill, modified with STR bonus
-		if (Formulas.calcCrit(activeChar, target, skill))
+		final boolean ss = skill.useSoulShot() && effector.isChargedShot(ShotType.SOULSHOTS);
+		final byte shld = Formulas.calcShldUse(effector, effected);
+		double damage = Formulas.calcBlowDamage(effector, effected, skill, true, _power, shld, ss);
+		
+		if (Formulas.calcCrit(_criticalChance, effector, effected, skill))
 		{
 			damage *= 2;
 		}
 		
-		target.reduceCurrentHp(damage, activeChar, skill);
-		target.notifyDamageReceived(damage, activeChar, skill, true, false);
-		
-		// Manage attack or cast break of the target (calculating rate, sending message...)
-		if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
-		{
-			target.breakAttack();
-			target.breakCast();
-		}
-		
-		if (activeChar.isPlayer())
-		{
-			activeChar.getActingPlayer().sendDamageMessage(target, (int) damage, false, true, false);
-		}
-		
 		// Check if damage should be reflected
-		Formulas.calcDamageReflected(activeChar, target, skill, true);
+		Formulas.calcDamageReflected(effector, effected, skill, true);
+		
+		final double damageCap = effected.getStat().getValue(Stats.DAMAGE_LIMIT);
+		if (damageCap > 0)
+		{
+			damage = Math.min(damage, damageCap);
+		}
+		
+		effected.reduceCurrentHp(damage, effector, skill, false, true, true, false);
+		// Manage attack or cast break of the target (calculating rate, sending message...)
+		if (!effected.isRaid() && Formulas.calcAtkBreak(effected, damage))
+		{
+			effected.breakAttack();
+			effected.breakCast();
+		}
+		
+		if (effector.isPlayer())
+		{
+			final L2PcInstance activePlayer = effector.getActingPlayer();
+			activePlayer.sendDamageMessage(effected, skill, (int) damage, true, false);
+		}
 	}
 }

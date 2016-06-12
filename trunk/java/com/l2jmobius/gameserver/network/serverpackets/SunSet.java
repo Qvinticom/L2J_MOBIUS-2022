@@ -16,7 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class SunSet extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
+public class SunSet implements IClientOutgoingPacket
 {
 	public static final SunSet STATIC_PACKET = new SunSet();
 	
@@ -25,8 +28,9 @@ public class SunSet extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x13);
+		OutgoingPackets.SUN_SET.writeId(packet);
+		return true;
 	}
 }

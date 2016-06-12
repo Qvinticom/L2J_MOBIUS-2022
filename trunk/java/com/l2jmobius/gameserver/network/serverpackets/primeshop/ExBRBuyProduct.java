@@ -16,13 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets.primeshop;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * @author Gnacik, UnAfraid
  */
-public class ExBRBuyProduct extends L2GameServerPacket
+public class ExBRBuyProduct implements IClientOutgoingPacket
 {
 	public enum ExBrProductReplyType implements IIdentifiable
 	{
@@ -43,7 +45,7 @@ public class ExBRBuyProduct extends L2GameServerPacket
 		SOLD_OUT(-14);
 		private final int _id;
 		
-		private ExBrProductReplyType(int id)
+		ExBrProductReplyType(int id)
 		{
 			_id = id;
 		}
@@ -63,10 +65,11 @@ public class ExBRBuyProduct extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xD9);
-		writeD(_reply);
+		OutgoingPackets.EX_BR_BUY_PRODUCT.writeId(packet);
+		
+		packet.writeD(_reply);
+		return true;
 	}
 }

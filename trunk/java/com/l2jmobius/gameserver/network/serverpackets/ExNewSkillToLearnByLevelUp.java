@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
  * @author Sdw
  */
-public class ExNewSkillToLearnByLevelUp extends L2GameServerPacket
+public class ExNewSkillToLearnByLevelUp implements IClientOutgoingPacket
 {
 	public static final ExNewSkillToLearnByLevelUp STATIC_PACKET = new ExNewSkillToLearnByLevelUp();
 	
@@ -28,9 +31,10 @@ public class ExNewSkillToLearnByLevelUp extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xFD);
+		OutgoingPackets.EX_NEW_SKILL_TO_LEARN_BY_LEVEL_UP.writeId(packet);
+		
+		return true;
 	}
 }

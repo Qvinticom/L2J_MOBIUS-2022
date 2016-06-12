@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2ControllableMobInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -61,15 +62,15 @@ public class AdminKill implements IAdminCommandHandler
 						try
 						{
 							final int radius = Integer.parseInt(st.nextToken());
-							for (L2Character knownChar : plyr.getKnownList().getKnownCharactersInRadius(radius))
+							L2World.getInstance().forEachVisibleObjectInRange(plyr, L2Character.class, radius, knownChar ->
 							{
-								if ((knownChar instanceof L2ControllableMobInstance) || (knownChar == activeChar))
+								if ((knownChar instanceof L2ControllableMobInstance) || (knownChar instanceof FriendlyNpcInstance) || (knownChar == activeChar))
 								{
-									continue;
+									return;
 								}
 								
 								kill(activeChar, knownChar);
-							}
+							});
 							
 							activeChar.sendMessage("Killed all characters within a " + radius + " unit radius.");
 							return true;
@@ -88,14 +89,14 @@ public class AdminKill implements IAdminCommandHandler
 					{
 						final int radius = Integer.parseInt(firstParam);
 						
-						for (L2Character knownChar : activeChar.getKnownList().getKnownCharactersInRadius(radius))
+						L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2Character.class, radius, wo ->
 						{
-							if ((knownChar instanceof L2ControllableMobInstance) || (knownChar == activeChar))
+							if ((wo instanceof L2ControllableMobInstance) || (wo instanceof FriendlyNpcInstance))
 							{
-								continue;
+								return;
 							}
-							kill(activeChar, knownChar);
-						}
+							kill(activeChar, wo);
+						});
 						
 						activeChar.sendMessage("Killed all characters within a " + radius + " unit radius.");
 						return true;
@@ -127,7 +128,7 @@ public class AdminKill implements IAdminCommandHandler
 	{
 		if (target instanceof L2PcInstance)
 		{
-			if (!((L2PcInstance) target).isGM())
+			if (!target.isGM())
 			{
 				target.stopAllEffects(); // e.g. invincibility effect
 			}
@@ -155,7 +156,7 @@ public class AdminKill implements IAdminCommandHandler
 		}
 		if (Config.DEBUG)
 		{
-			_log.fine("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") killed character " + target.getObjectId());
+			_log.finer("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") killed character " + target.getObjectId());
 		}
 	}
 	

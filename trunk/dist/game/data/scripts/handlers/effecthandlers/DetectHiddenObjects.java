@@ -16,11 +16,13 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jmobius.gameserver.enums.DoorOpenType;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Detect Hidden Objects effect implementation.
@@ -28,9 +30,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class DetectHiddenObjects extends AbstractEffect
 {
-	public DetectHiddenObjects(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public DetectHiddenObjects(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -40,18 +41,18 @@ public final class DetectHiddenObjects extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (!info.getEffected().isDoor())
+		if (!effected.isDoor())
 		{
 			return;
 		}
 		
-		final L2DoorInstance door = (L2DoorInstance) info.getEffected();
+		final L2DoorInstance door = (L2DoorInstance) effected;
 		if (door.getTemplate().isStealth())
 		{
 			door.setMeshIndex(1);
-			door.setTargetable(door.getTemplate().getOpenType() != 0);
+			door.setTargetable(door.getTemplate().getOpenType() != DoorOpenType.NONE);
 			door.broadcastStatusUpdate();
 		}
 	}

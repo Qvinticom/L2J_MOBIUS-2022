@@ -22,18 +22,17 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 
 /**
  * another type of zone where your speed is changed
- * @author kerberos, Pandragon
+ * @author kerberos
  */
 public class L2SwampZone extends L2ZoneType
 {
 	private double _move_bonus;
+	
 	private int _castleId;
 	private Castle _castle;
-	private int _eventId;
 	
 	public L2SwampZone(int id)
 	{
@@ -45,9 +44,6 @@ public class L2SwampZone extends L2ZoneType
 		// no castle by default
 		_castleId = 0;
 		_castle = null;
-		
-		// no event by default
-		_eventId = 0;
 	}
 	
 	@Override
@@ -60,10 +56,6 @@ public class L2SwampZone extends L2ZoneType
 		else if (name.equals("castleId"))
 		{
 			_castleId = Integer.parseInt(value);
-		}
-		else if (name.equals("eventId"))
-		{
-			_eventId = Integer.parseInt(value);
 		}
 		else
 		{
@@ -103,10 +95,6 @@ public class L2SwampZone extends L2ZoneType
 		character.setInsideZone(ZoneId.SWAMP, true);
 		if (character.isPlayer())
 		{
-			if (_eventId > 0)
-			{
-				character.sendPacket(new OnEventTrigger(_eventId, true));
-			}
 			character.getActingPlayer().broadcastUserInfo();
 		}
 	}
@@ -120,10 +108,6 @@ public class L2SwampZone extends L2ZoneType
 			character.setInsideZone(ZoneId.SWAMP, false);
 			if (character.isPlayer())
 			{
-				if (_eventId > 0)
-				{
-					character.sendPacket(new OnEventTrigger(_eventId, false));
-				}
 				character.getActingPlayer().broadcastUserInfo();
 			}
 		}

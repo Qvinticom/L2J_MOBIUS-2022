@@ -18,37 +18,45 @@ package com.l2jmobius.gameserver.model.items;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.ItemTable;
+import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.ItemGrade;
-import com.l2jmobius.gameserver.model.Elementals;
+import com.l2jmobius.gameserver.enums.ItemSkillType;
+import com.l2jmobius.gameserver.model.L2ExtractableProduct;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import com.l2jmobius.gameserver.model.commission.CommissionItemType;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.events.ListenersContainer;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
+import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
 import com.l2jmobius.gameserver.model.items.type.ActionType;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.items.type.ItemType;
 import com.l2jmobius.gameserver.model.items.type.MaterialType;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
+import com.l2jmobius.gameserver.model.stats.Stats;
+import com.l2jmobius.gameserver.model.stats.functions.FuncAdd;
+import com.l2jmobius.gameserver.model.stats.functions.FuncSet;
 import com.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * This class contains all informations concerning the item (weapon, armor, etc).<BR>
@@ -61,7 +69,7 @@ import com.l2jmobius.util.StringUtil;
  */
 public abstract class L2Item extends ListenersContainer implements IIdentifiable
 {
-	protected static final Logger _log = Logger.getLogger(L2Item.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(L2Item.class.getName());
 	
 	public static final int TYPE1_WEAPON_RING_EARRING_NECKLACE = 0;
 	public static final int TYPE1_SHIELD_ARMOR = 1;
@@ -112,60 +120,60 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	
 	public static final int SLOT_MULTI_ALLWEAPON = SLOT_LR_HAND | SLOT_R_HAND;
 	
-	private final int _itemId;
-	private final int _displayId;
-	private final String _name;
-	private final String _additionalName;
-	private final String _icon;
-	private final int _weight;
-	private final boolean _stackable;
-	private final MaterialType _materialType;
-	private final CrystalType _crystalType;
-	private final int _equipReuseDelay;
-	private final int _duration;
-	private final int _time;
-	private final int _autoDestroyTime;
-	private final int _bodyPart;
-	private final int _referencePrice;
-	private final int _crystalCount;
-	private final boolean _sellable;
-	private final boolean _dropable;
-	private final boolean _destroyable;
-	private final boolean _tradeable;
-	private final boolean _depositable;
-	private final boolean _auctionable;
-	private final int _enchantable;
-	private final boolean _elementable;
-	private final boolean _questItem;
-	private final boolean _freightable;
-	private final boolean _allow_self_resurrection;
-	private final boolean _is_oly_restricted;
-	private final boolean _for_npc;
-	private final boolean _common;
-	private final boolean _heroItem;
-	private final boolean _pvpItem;
-	private final boolean _immediate_effect;
-	private final boolean _ex_immediate_effect;
-	private final int _defaultEnchantLevel;
-	private final ActionType _defaultAction;
-	private final boolean _isBlessedItem;
+	private int _itemId;
+	private int _displayId;
+	private String _name;
+	private String _icon;
+	private int _weight;
+	private boolean _stackable;
+	private MaterialType _materialType;
+	private CrystalType _crystalType;
+	private int _equipReuseDelay;
+	private int _duration;
+	private int _time;
+	private int _autoDestroyTime;
+	private int _bodyPart;
+	private int _referencePrice;
+	private int _crystalCount;
+	private boolean _sellable;
+	private boolean _dropable;
+	private boolean _destroyable;
+	private boolean _tradeable;
+	private boolean _depositable;
+	private int _enchantable;
+	private boolean _elementable;
+	private boolean _questItem;
+	private boolean _freightable;
+	private boolean _allow_self_resurrection;
+	private boolean _is_oly_restricted;
+	private boolean _is_coc_restricted;
+	private boolean _for_npc;
+	private boolean _common;
+	private boolean _heroItem;
+	private boolean _pvpItem;
+	private boolean _immediate_effect;
+	private boolean _ex_immediate_effect;
+	private int _defaultEnchantLevel;
+	private ActionType _defaultAction;
 	
 	protected int _type1; // needed for item list (inventory)
 	protected int _type2; // different lists for armor, weapon, etc
-	protected Elementals[] _elementals = null;
+	private Map<AttributeType, AttributeHolder> _elementals = null;
 	protected List<FuncTemplate> _funcTemplates;
 	protected List<Condition> _preConditions;
-	private SkillHolder[] _skillHolder;
-	private SkillHolder _unequipSkill = null;
-	private SkillHolder _equipSkill = null;
+	private List<ItemSkillHolder> _skills;
+	private List<ItemChanceHolder> _createItems;
 	
-	private final int _useSkillDisTime;
-	private final int _reuseDelay;
-	private final int _sharedReuseGroup;
+	private int _useSkillDisTime;
+	private int _reuseDelay;
+	private int _sharedReuseGroup;
 	
-	private final CommissionItemType _commissionItemType;
-	private final int _compoundItem;
-	private final float _compoundChance;
+	private CommissionItemType _commissionItemType;
+	private int _compoundItem;
+	private float _compoundChance;
+	
+	private boolean _isAppearanceable;
+	private boolean _isBlessed;
 	
 	/**
 	 * Constructor of the L2Item that fill class variables.<BR>
@@ -174,10 +182,14 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	 */
 	protected L2Item(StatsSet set)
 	{
+		set(set);
+	}
+	
+	public void set(StatsSet set)
+	{
 		_itemId = set.getInt("item_id");
 		_displayId = set.getInt("displayId", _itemId);
 		_name = set.getString("name");
-		_additionalName = set.getString("additionalName", null);
 		_icon = set.getString("icon", null);
 		_weight = set.getInt("weight", 0);
 		_materialType = set.getEnum("material", MaterialType.class, MaterialType.STEEL);
@@ -185,7 +197,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		_duration = set.getInt("duration", -1);
 		_time = set.getInt("time", -1);
 		_autoDestroyTime = set.getInt("auto_destroy_time", -1) * 1000;
-		_bodyPart = ItemTable.SLOTS.get(set.getString("bodypart", "none"));
+		_bodyPart = ItemTable._slots.get(set.getString("bodypart", "none"));
 		_referencePrice = set.getInt("price", 0);
 		_crystalType = set.getEnum("crystal_type", CrystalType.class, CrystalType.NONE);
 		_crystalCount = set.getInt("crystal_count", 0);
@@ -196,20 +208,21 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		_destroyable = set.getBoolean("is_destroyable", true);
 		_tradeable = set.getBoolean("is_tradable", true);
 		_depositable = set.getBoolean("is_depositable", true);
-		_auctionable = set.getBoolean("is_auctionable", true);
 		_elementable = set.getBoolean("element_enabled", false);
 		_enchantable = set.getInt("enchant_enabled", 0);
 		_questItem = set.getBoolean("is_questitem", false);
 		_freightable = set.getBoolean("is_freightable", false);
 		_allow_self_resurrection = set.getBoolean("allow_self_resurrection", false);
 		_is_oly_restricted = set.getBoolean("is_oly_restricted", false);
+		_is_coc_restricted = set.getBoolean("is_coc_restricted", false);
 		_for_npc = set.getBoolean("for_npc", false);
+		_isAppearanceable = set.getBoolean("isAppearanceable", false);
+		_isBlessed = set.getBoolean("blessed", false);
 		
 		_immediate_effect = set.getBoolean("immediate_effect", false);
 		_ex_immediate_effect = set.getBoolean("ex_immediate_effect", false);
 		
 		_defaultAction = set.getEnum("default_action", ActionType.class, ActionType.NONE);
-		_isBlessedItem = set.getBoolean("isBlessedItem", false);
 		_useSkillDisTime = set.getInt("useSkillDisTime", 0);
 		_defaultEnchantLevel = set.getInt("enchanted", 0);
 		_reuseDelay = set.getInt("reuse_delay", 0);
@@ -217,103 +230,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		_commissionItemType = set.getEnum("commissionItemType", CommissionItemType.class, CommissionItemType.OTHER_ITEM);
 		_compoundItem = set.getInt("compoundItem", 0);
 		_compoundChance = set.getFloat("compoundChance", 0);
-		
-		String skills = set.getString("item_skill", null);
-		if (skills != null)
-		{
-			final String[] skillsSplit = skills.split(";");
-			_skillHolder = new SkillHolder[skillsSplit.length];
-			int used = 0;
-			
-			for (String element : skillsSplit)
-			{
-				try
-				{
-					final String[] skillSplit = element.split("-");
-					final int id = Integer.parseInt(skillSplit[0]);
-					final int level = Integer.parseInt(skillSplit[1]);
-					
-					if (id == 0)
-					{
-						_log.info(StringUtil.concat("Ignoring item_skill(", element, ") for item ", toString(), ". Skill id is 0!"));
-						continue;
-					}
-					
-					if (level == 0)
-					{
-						_log.info(StringUtil.concat("Ignoring item_skill(", element, ") for item ", toString(), ". Skill level is 0!"));
-						continue;
-					}
-					
-					_skillHolder[used] = new SkillHolder(id, level);
-					++used;
-				}
-				catch (Exception e)
-				{
-					_log.warning(StringUtil.concat("Failed to parse item_skill(", element, ") for item ", toString(), "! Format: SkillId0-SkillLevel0[;SkillIdN-SkillLevelN]"));
-				}
-			}
-			
-			// this is only loading? just don't leave a null or use a collection?
-			if (used != _skillHolder.length)
-			{
-				final SkillHolder[] skillHolder = new SkillHolder[used];
-				System.arraycopy(_skillHolder, 0, skillHolder, 0, used);
-				_skillHolder = skillHolder;
-			}
-		}
-		
-		skills = set.getString("unequip_skill", null);
-		if (skills != null)
-		{
-			final String[] info = skills.split("-");
-			if ((info != null) && (info.length == 2))
-			{
-				int id = 0;
-				int level = 0;
-				try
-				{
-					id = Integer.parseInt(info[0]);
-					level = Integer.parseInt(info[1]);
-				}
-				catch (Exception nfe)
-				{
-					// Incorrect syntax, don't add new skill
-					_log.info(StringUtil.concat("Couldnt parse ", skills, " in weapon unequip skills! item ", toString()));
-				}
-				if ((id > 0) && (level > 0))
-				{
-					_unequipSkill = new SkillHolder(id, level);
-				}
-			}
-		}
-		
-		skills = set.getString("equip_skill", null);
-		if (skills != null)
-		{
-			final String[] info = skills.split("-");
-			if ((info != null) && (info.length == 2))
-			{
-				int id = 0;
-				int level = 0;
-				try
-				{
-					id = Integer.parseInt(info[0]);
-					level = Integer.parseInt(info[1]);
-				}
-				catch (Exception nfe)
-				{
-					// Incorrect syntax, don't add new skill
-					_log.info(StringUtil.concat("Couldnt parse ", skills, " in item equip skill! item ", toString()));
-				}
-				if ((id > 0) && (level > 0))
-				{
-					_equipSkill = new SkillHolder(id, level);
-				}
-			}
-		}
-		
-		_common = (_itemId >= 11605) && (_itemId <= 12361);
+		_common = ((_itemId >= 11605) && (_itemId <= 12361));
 		_heroItem = ((_itemId >= 6611) && (_itemId <= 6621)) || ((_itemId >= 9388) && (_itemId <= 9390)) || (_itemId == 6842);
 		_pvpItem = ((_itemId >= 10667) && (_itemId <= 10835)) || ((_itemId >= 12852) && (_itemId <= 12977)) || ((_itemId >= 14363) && (_itemId <= 14525)) || (_itemId == 14528) || (_itemId == 14529) || (_itemId == 14558) || ((_itemId >= 15913) && (_itemId <= 16024)) || ((_itemId >= 16134) && (_itemId <= 16147)) || (_itemId == 16149) || (_itemId == 16151) || (_itemId == 16153) || (_itemId == 16155) || (_itemId == 16157) || (_itemId == 16159) || ((_itemId >= 16168) && (_itemId <= 16176)) || ((_itemId >= 16179) && (_itemId <= 16220));
 	}
@@ -460,18 +377,12 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		{
 			case S80:
 			case S84:
-			{
 				return CrystalType.S;
-			}
 			case R95:
 			case R99:
-			{
 				return CrystalType.R;
-			}
 			default:
-			{
 				return _crystalType;
-			}
 		}
 	}
 	
@@ -495,38 +406,29 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 			{
 				case TYPE2_SHIELD_ARMOR:
 				case TYPE2_ACCESSORY:
-				{
 					return _crystalCount + (getCrystalType().getCrystalEnchantBonusArmor() * ((3 * enchantLevel) - 6));
-				}
 				case TYPE2_WEAPON:
-				{
 					return _crystalCount + (getCrystalType().getCrystalEnchantBonusWeapon() * ((2 * enchantLevel) - 3));
-				}
 				default:
-				{
 					return _crystalCount;
-				}
 			}
 		}
-		if (enchantLevel <= 0)
+		else if (enchantLevel > 0)
+		{
+			switch (_type2)
+			{
+				case TYPE2_SHIELD_ARMOR:
+				case TYPE2_ACCESSORY:
+					return _crystalCount + (getCrystalType().getCrystalEnchantBonusArmor() * enchantLevel);
+				case TYPE2_WEAPON:
+					return _crystalCount + (getCrystalType().getCrystalEnchantBonusWeapon() * enchantLevel);
+				default:
+					return _crystalCount;
+			}
+		}
+		else
 		{
 			return _crystalCount;
-		}
-		switch (_type2)
-		{
-			case TYPE2_SHIELD_ARMOR:
-			case TYPE2_ACCESSORY:
-			{
-				return _crystalCount + (getCrystalType().getCrystalEnchantBonusArmor() * enchantLevel);
-			}
-			case TYPE2_WEAPON:
-			{
-				return _crystalCount + (getCrystalType().getCrystalEnchantBonusWeapon() * enchantLevel);
-			}
-			default:
-			{
-				return _crystalCount;
-			}
 		}
 	}
 	
@@ -538,59 +440,37 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		return _name;
 	}
 	
-	/**
-	 * @return the item's additional name.
-	 */
-	public String getAdditionalName()
+	public Collection<AttributeHolder> getAttributes()
 	{
-		return _additionalName;
+		return _elementals != null ? _elementals.values() : null;
 	}
 	
-	/**
-	 * @return the base elemental of the item.
-	 */
-	public final Elementals[] getElementals()
+	public AttributeHolder getAttribute(AttributeType type)
 	{
-		return _elementals;
-	}
-	
-	public Elementals getElemental(byte attribute)
-	{
-		for (Elementals elm : _elementals)
-		{
-			if (elm.getElement() == attribute)
-			{
-				return elm;
-			}
-		}
-		return null;
+		return _elementals != null ? _elementals.get(type) : null;
 	}
 	
 	/**
 	 * Sets the base elemental of the item.
-	 * @param element the element to set.
+	 * @param holder the element to set.
 	 */
-	public void setElementals(Elementals element)
+	public void setAttributes(AttributeHolder holder)
 	{
 		if (_elementals == null)
 		{
-			_elementals = new Elementals[1];
-			_elementals[0] = element;
+			_elementals = new LinkedHashMap<>(3);
+			_elementals.put(holder.getType(), holder);
 		}
 		else
 		{
-			Elementals elm = getElemental(element.getElement());
-			if (elm != null)
+			final AttributeHolder attribute = getAttribute(holder.getType());
+			if (attribute != null)
 			{
-				elm.setValue(element.getValue());
+				attribute.setValue(holder.getValue());
 			}
 			else
 			{
-				elm = element;
-				final Elementals[] array = new Elementals[_elementals.length + 1];
-				System.arraycopy(_elementals, 0, array, 0, _elementals.length);
-				array[_elementals.length] = elm;
-				_elementals = array;
+				_elementals.put(holder.getType(), holder);
 			}
 		}
 	}
@@ -676,14 +556,6 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	}
 	
 	/**
-	 * @return {@code true} if the item can be put into auctionhouse, {@code false} otherwise.
-	 */
-	public final boolean isAuctionable()
-	{
-		return _auctionable;
-	}
-	
-	/**
 	 * This method also check the enchant blacklist.
 	 * @return {@code true} if the item can be enchanted, {@code false} otherwise.
 	 */
@@ -729,137 +601,147 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	
 	public boolean isPotion()
 	{
-		return getItemType() == EtcItemType.POTION;
+		return (getItemType() == EtcItemType.POTION);
 	}
 	
 	public boolean isElixir()
 	{
-		return getItemType() == EtcItemType.ELIXIR;
+		return (getItemType() == EtcItemType.ELIXIR);
 	}
 	
 	public boolean isScroll()
 	{
-		return getItemType() == EtcItemType.SCROLL;
+		return (getItemType() == EtcItemType.SCROLL);
 	}
 	
-	/**
-	 * Get the functions used by this item.
-	 * @param item : L2ItemInstance pointing out the item
-	 * @param player : L2Character pointing out the player
-	 * @return the list of functions
-	 */
-	public final List<AbstractFunction> getStatFuncs(L2ItemInstance item, L2Character player)
+	public List<FuncTemplate> getFunctionTemplates()
 	{
-		if ((_funcTemplates == null) || _funcTemplates.isEmpty())
-		{
-			return Collections.<AbstractFunction> emptyList();
-		}
-		
-		final List<AbstractFunction> funcs = new ArrayList<>(_funcTemplates.size());
-		for (FuncTemplate t : _funcTemplates)
-		{
-			final AbstractFunction f = t.getFunc(player, player, item, item);
-			if (f != null)
-			{
-				funcs.add(f);
-			}
-		}
-		return funcs;
+		return _funcTemplates != null ? _funcTemplates : Collections.emptyList();
 	}
 	
 	/**
 	 * Add the FuncTemplate f to the list of functions used with the item
-	 * @param f : FuncTemplate to add
+	 * @param template : FuncTemplate to add
 	 */
-	public void attach(FuncTemplate f)
+	public void addFunctionTemplate(FuncTemplate template)
 	{
-		switch (f.getStat())
+		switch (template.getStat())
 		{
 			case FIRE_RES:
 			case FIRE_POWER:
 			{
-				setElementals(new Elementals(Elementals.FIRE, (int) f.getValue()));
+				setAttributes(new AttributeHolder(AttributeType.FIRE, (int) template.getValue()));
 				break;
 			}
 			case WATER_RES:
 			case WATER_POWER:
 			{
-				setElementals(new Elementals(Elementals.WATER, (int) f.getValue()));
+				setAttributes(new AttributeHolder(AttributeType.WATER, (int) template.getValue()));
 				break;
 			}
 			case WIND_RES:
 			case WIND_POWER:
 			{
-				setElementals(new Elementals(Elementals.WIND, (int) f.getValue()));
+				setAttributes(new AttributeHolder(AttributeType.WIND, (int) template.getValue()));
 				break;
 			}
 			case EARTH_RES:
 			case EARTH_POWER:
 			{
-				setElementals(new Elementals(Elementals.EARTH, (int) f.getValue()));
+				setAttributes(new AttributeHolder(AttributeType.EARTH, (int) template.getValue()));
 				break;
 			}
 			case HOLY_RES:
 			case HOLY_POWER:
 			{
-				setElementals(new Elementals(Elementals.HOLY, (int) f.getValue()));
+				setAttributes(new AttributeHolder(AttributeType.HOLY, (int) template.getValue()));
 				break;
 			}
 			case DARK_RES:
 			case DARK_POWER:
 			{
-				setElementals(new Elementals(Elementals.DARK, (int) f.getValue()));
+				setAttributes(new AttributeHolder(AttributeType.DARK, (int) template.getValue()));
 				break;
 			}
 		}
 		
 		if (_funcTemplates == null)
 		{
-			_funcTemplates = new ArrayList<>(1);
+			_funcTemplates = new ArrayList<>();
 		}
-		_funcTemplates.add(f);
+		_funcTemplates.add(template);
 	}
 	
-	public final void attach(Condition c)
+	public final void attachCondition(Condition c)
 	{
 		if (_preConditions == null)
 		{
-			_preConditions = new ArrayList<>(1);
+			_preConditions = new ArrayList<>();
 		}
-		if (!_preConditions.contains(c))
-		{
-			_preConditions.add(c);
-		}
-	}
-	
-	public boolean hasSkills()
-	{
-		return _skillHolder != null;
+		_preConditions.add(c);
 	}
 	
 	/**
 	 * Method to retrieve skills linked to this item armor and weapon: passive skills etcitem: skills used on item use <-- ???
 	 * @return Skills linked to this item as SkillHolder[]
 	 */
-	public final SkillHolder[] getSkills()
+	public final List<ItemSkillHolder> getAllSkills()
 	{
-		return _skillHolder;
+		return _skills;
 	}
 	
 	/**
-	 * @return skill that activates, when player unequip this weapon or armor
+	 * @param condition
+	 * @return {@code List} of {@link ItemSkillHolder} if item has skills and matches the condition, {@code null} otherwise
 	 */
-	public final Skill getUnequipSkill()
+	public final List<ItemSkillHolder> getSkills(Predicate<ItemSkillHolder> condition)
 	{
-		return _unequipSkill == null ? null : _unequipSkill.getSkill();
+		return _skills != null ? _skills.stream().filter(condition).collect(Collectors.toList()) : null;
 	}
 	
 	/**
-	 * @return skill that activates, when player equips this item
+	 * @param type
+	 * @return {@code List} of {@link ItemSkillHolder} if item has skills, {@code null} otherwise
 	 */
-	public final Skill getEquipSkill()
+	public final List<ItemSkillHolder> getSkills(ItemSkillType type)
 	{
-		return _equipSkill == null ? null : _equipSkill.getSkill();
+		return _skills != null ? _skills.stream().filter(sk -> sk.getType() == type).collect(Collectors.toList()) : null;
+	}
+	
+	/**
+	 * Executes the action on each item skill with the specified type (If there are skills at all)
+	 * @param type
+	 * @param action
+	 */
+	public final void forEachSkill(ItemSkillType type, Consumer<ItemSkillHolder> action)
+	{
+		if (_skills != null)
+		{
+			_skills.stream().filter(sk -> sk.getType() == type).forEach(action);
+		}
+	}
+	
+	public void addSkill(ItemSkillHolder holder)
+	{
+		if (_skills == null)
+		{
+			_skills = new ArrayList<>();
+		}
+		_skills.add(holder);
+	}
+	
+	public List<ItemChanceHolder> getCreateItems()
+	{
+		return _createItems != null ? _createItems : Collections.emptyList();
+	}
+	
+	public void addCreateItem(ItemChanceHolder item)
+	{
+		if (_createItems == null)
+		{
+			_createItems = new ArrayList<>();
+		}
+		_createItems.add(item);
 	}
 	
 	public boolean checkCondition(L2Character activeChar, L2Object object, boolean sendMessage)
@@ -870,7 +752,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		}
 		
 		// Don't allow hero equipment and restricted items during Olympiad
-		if ((isOlyRestrictedItem() || isHeroItem()) && (activeChar instanceof L2PcInstance) && activeChar.getActingPlayer().isInOlympiadMode())
+		if ((isOlyRestrictedItem() || isHeroItem()) && (activeChar.isPlayer() && activeChar.getActingPlayer().isInOlympiadMode()))
 		{
 			if (isEquipable())
 			{
@@ -880,6 +762,12 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 			{
 				activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_OLYMPIAD_MATCH);
 			}
+			return false;
+		}
+		
+		if (isCocRestrictedItem() && (activeChar.isPlayer() && (activeChar.getActingPlayer().isOnEvent(CeremonyOfChaosEvent.class))))
+		{
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ITEM_IN_THE_TOURNAMENT);
 			return false;
 		}
 		
@@ -898,7 +786,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 			
 			if (!preCondition.test(activeChar, target, null, null))
 			{
-				if (activeChar instanceof L2Summon)
+				if (activeChar.isSummon())
 				{
 					activeChar.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
 					return false;
@@ -953,9 +841,30 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		return _is_oly_restricted || Config.LIST_OLY_RESTRICTED_ITEMS.contains(_itemId);
 	}
 	
+	/**
+	 * @return {@code true} if item cannot be used in Ceremony of Chaos games.
+	 */
+	public boolean isCocRestrictedItem()
+	{
+		return _is_coc_restricted;
+	}
+	
 	public boolean isForNpc()
 	{
 		return _for_npc;
+	}
+	
+	public boolean isAppearanceable()
+	{
+		return _isAppearanceable;
+	}
+	
+	/**
+	 * @return {@code true} if the item is blessed, {@code false} otherwise.
+	 */
+	public final boolean isBlessed()
+	{
+		return _isBlessed;
 	}
 	
 	/**
@@ -993,14 +902,6 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	public ActionType getDefaultAction()
 	{
 		return _defaultAction;
-	}
-	
-	/**
-	 * @return {@code true} else item it is blessed (example: ID: 18084)
-	 */
-	public boolean isBlessedItem()
-	{
-		return _isBlessedItem;
 	}
 	
 	public int useSkillDisTime()
@@ -1061,8 +962,23 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		return getItemType() == EtcItemType.PET_COLLAR;
 	}
 	
-	public Skill getEnchant4Skill()
+	/**
+	 * @param extractableProduct
+	 */
+	public void addCapsuledItem(L2ExtractableProduct extractableProduct)
 	{
-		return null;
+	}
+	
+	public double getStats(Stats stat, double defaultValue)
+	{
+		if (_funcTemplates != null)
+		{
+			final FuncTemplate template = _funcTemplates.stream().filter(func -> (func.getStat() == stat) && ((func.getFunctionClass() == FuncAdd.class) || (func.getFunctionClass() == FuncSet.class))).findFirst().orElse(null);
+			if (template != null)
+			{
+				return template.getValue();
+			}
+		}
+		return defaultValue;
 	}
 }

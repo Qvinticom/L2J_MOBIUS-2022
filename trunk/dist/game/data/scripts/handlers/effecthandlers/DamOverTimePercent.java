@@ -17,7 +17,6 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -32,12 +31,11 @@ public final class DamOverTimePercent extends AbstractEffect
 	private final boolean _canKill;
 	private final double _power;
 	
-	public DamOverTimePercent(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public DamOverTimePercent(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_canKill = params.getBoolean("canKill", false);
-		_power = params.getDouble("power", 0);
+		_power = params.getDouble("power");
+		setTicks(params.getInt("ticks"));
 	}
 	
 	@Override
@@ -75,8 +73,8 @@ public final class DamOverTimePercent extends AbstractEffect
 				damage = info.getEffected().getCurrentHp() - 1;
 			}
 		}
-		info.getEffected().reduceCurrentHpByDOT(damage, info.getEffector(), info.getSkill());
-		info.getEffected().notifyDamageReceived(damage, info.getEffector(), info.getSkill(), false, true);
+		
+		info.getEffected().reduceCurrentHp(damage, info.getEffector(), info.getSkill(), true, false, false, false);
 		
 		return info.getSkill().isToggle();
 	}

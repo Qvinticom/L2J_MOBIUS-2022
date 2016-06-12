@@ -54,7 +54,7 @@ public enum NpcInfoType implements IUpdateTypeComponent
 	CURRENT_MP(0x19, 4),
 	MAX_HP(0x1A, 4),
 	MAX_MP(0x1B, 4),
-	UNKNOWN11(0x1C, 1),
+	SUMMONED(0x1C, 1),
 	UNKNOWN12(0x1D, (2 * 4)),
 	TITLE(0x1E, 2),
 	NAME_NPCSTRINGID(0x1F, 4),

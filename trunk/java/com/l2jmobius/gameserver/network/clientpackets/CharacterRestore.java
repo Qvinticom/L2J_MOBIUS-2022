@@ -16,47 +16,42 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerRestore;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
 
 /**
  * This class ...
  * @version $Revision: 1.4.2.1.2.2 $ $Date: 2005/03/27 15:29:29 $
  */
-public final class CharacterRestore extends L2GameClientPacket
+public final class CharacterRestore implements IClientIncomingPacket
 {
-	private static final String _C__7B_CHARACTERRESTORE = "[C] 7B CharacterRestore";
-	
 	// cd
 	private int _charSlot;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_charSlot = readD();
+		_charSlot = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		if (!getClient().getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterRestore"))
+		if (!client.getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterRestore"))
 		{
 			return;
 		}
 		
-		getClient().markRestoredChar(_charSlot);
-		final CharSelectionInfo cl = new CharSelectionInfo(getClient().getAccountName(), getClient().getSessionId().playOkID1);
-		sendPacket(cl);
-		getClient().setCharSelection(cl.getCharInfo());
-		final CharSelectInfoPackage charInfo = getClient().getCharSelection(_charSlot);
-		EventDispatcher.getInstance().notifyEvent(new OnPlayerRestore(charInfo.getObjectId(), charInfo.getName(), getClient()));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__7B_CHARACTERRESTORE;
+		client.markRestoredChar(_charSlot);
+		final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1, 0);
+		client.sendPacket(cl);
+		client.setCharSelection(cl.getCharInfo());
+		final CharSelectInfoPackage charInfo = client.getCharSelection(_charSlot);
+		EventDispatcher.getInstance().notifyEvent(new OnPlayerRestore(charInfo.getObjectId(), charInfo.getName(), client));
 	}
 }

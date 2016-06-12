@@ -21,8 +21,8 @@ import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.attackable.OnAttackableAttack;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.attackable.OnAttackableKill;
+import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableAttack;
+import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableKill;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -34,10 +34,6 @@ public final class L2QuestGuardInstance extends L2GuardInstance
 	private boolean _isAutoAttackable = true;
 	private boolean _isPassive = false;
 	
-	/**
-	 * Creates a quest guard.
-	 * @param template the quest guard NPC template
-	 */
 	public L2QuestGuardInstance(L2NpcTemplate template)
 	{
 		super(template);

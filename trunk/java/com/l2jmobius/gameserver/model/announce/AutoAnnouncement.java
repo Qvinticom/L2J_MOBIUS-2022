@@ -95,16 +95,16 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 	public boolean storeMe()
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement(INSERT_QUERY, Statement.RETURN_GENERATED_KEYS))
+			PreparedStatement st = con.prepareStatement(INSERT_QUERY, Statement.RETURN_GENERATED_KEYS))
 		{
-			ps.setInt(1, getType().ordinal());
-			ps.setString(2, getContent());
-			ps.setString(3, getAuthor());
-			ps.setLong(4, getInitial());
-			ps.setLong(5, getDelay());
-			ps.setInt(6, getRepeat());
-			ps.execute();
-			try (ResultSet rset = ps.getGeneratedKeys())
+			st.setInt(1, getType().ordinal());
+			st.setString(2, getContent());
+			st.setString(3, getAuthor());
+			st.setLong(4, getInitial());
+			st.setLong(5, getDelay());
+			st.setInt(6, getRepeat());
+			st.execute();
+			try (ResultSet rset = st.getGeneratedKeys())
 			{
 				if (rset.next())
 				{
@@ -124,16 +124,16 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 	public boolean updateMe()
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement(UPDATE_QUERY))
+			PreparedStatement st = con.prepareStatement(UPDATE_QUERY))
 		{
-			ps.setInt(1, getType().ordinal());
-			ps.setString(2, getContent());
-			ps.setString(3, getAuthor());
-			ps.setLong(4, getInitial());
-			ps.setLong(5, getDelay());
-			ps.setLong(6, getRepeat());
-			ps.setLong(7, getId());
-			ps.execute();
+			st.setInt(1, getType().ordinal());
+			st.setString(2, getContent());
+			st.setString(3, getAuthor());
+			st.setLong(4, getInitial());
+			st.setLong(5, getDelay());
+			st.setLong(6, getRepeat());
+			st.setLong(7, getId());
+			st.execute();
 		}
 		catch (Exception e)
 		{
@@ -166,18 +166,19 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 	@Override
 	public void run()
 	{
-		if ((_currentState != -1) && (_currentState <= 0))
+		if ((_currentState == -1) || (_currentState > 0))
 		{
-			return;
+			for (String content : getContent().split(Config.EOL))
+			{
+				Broadcast.toAllOnlinePlayers(content, (getType() == AnnouncementType.AUTO_CRITICAL));
+			}
+			
+			if (_currentState != -1)
+			{
+				_currentState--;
+			}
+			
+			_task = ThreadPoolManager.getInstance().scheduleGeneral(this, _delay);
 		}
-		for (String content : getContent().split(Config.EOL))
-		{
-			Broadcast.toAllOnlinePlayers(content, getType() == AnnouncementType.AUTO_CRITICAL);
-		}
-		if (_currentState != -1)
-		{
-			_currentState--;
-		}
-		_task = ThreadPoolManager.getInstance().scheduleGeneral(this, _delay);
 	}
 }

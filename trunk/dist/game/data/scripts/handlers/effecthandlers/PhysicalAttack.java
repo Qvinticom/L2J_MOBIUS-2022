@@ -16,49 +16,72 @@
  */
 package handlers.effecthandlers;
 
-import java.util.StringTokenizer;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.items.type.WeaponType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.Stats;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Physical Attack effect implementation.
- * @author Adry_85
+ * Physical Attack effect implementation. <br>
+ * Current formulas were tested to be the best matching retail, damage appears to be identical: <br>
+ * For melee skills: 70 * graciaSkillBonus1.10113 * (patk * lvlmod + power) * crit * ss * skillpowerbonus / pdef <br>
+ * For ranged skills: 70 * (patk * lvlmod + power + patk + power) * crit * ss * skillpower / pdef <br>
+ * @author Nik
  */
 public final class PhysicalAttack extends AbstractEffect
 {
-	private final String _type1;
-	private final double _valueReduce;
-	private final String _type2;
-	private final double _valueIncrease;
-	private final boolean _isLastAttack;
+	private final double _power;
+	private final double _pAtkMod;
+	private final double _pDefMod;
+	private final double _criticalChance;
+	private final boolean _ignoreShieldDefence;
+	private final boolean _overHit;
 	
-	public PhysicalAttack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	private final Set<AbnormalType> _abnormals;
+	private final double _abnormalPowerMod;
+	
+	public PhysicalAttack(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
+		_power = params.getDouble("power", 0);
+		_pAtkMod = params.getDouble("pAtkMod", 1.0);
+		_pDefMod = params.getDouble("pDefMod", 1.0);
+		_criticalChance = params.getDouble("criticalChance", 0);
+		_ignoreShieldDefence = params.getBoolean("ignoreShieldDefence", false);
+		_overHit = params.getBoolean("overHit", false);
 		
-		_type1 = params.getString("weaponTypeDec", "NONE");
-		_valueReduce = params.getDouble("valueDec", 1);
-		_type2 = params.getString("weaponTypeInc", "NONE");
-		_valueIncrease = params.getDouble("valueInc", 1);
-		_isLastAttack = params.getBoolean("isLastAttack", false);
+		final String abnormals = params.getString("abnormalType", null);
+		if ((abnormals != null) && !abnormals.isEmpty())
+		{
+			_abnormals = new HashSet<>();
+			for (String slot : abnormals.split(";"))
+			{
+				_abnormals.add(AbnormalType.getAbnormalType(slot));
+			}
+		}
+		else
+		{
+			_abnormals = Collections.<AbnormalType> emptySet();
+		}
+		_abnormalPowerMod = params.getDouble("damageModifier", 1);
 	}
 	
 	@Override
-	public boolean calcSuccess(BuffInfo info)
+	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
-		return !Formulas.calcPhysicalSkillEvasion(info.getEffector(), info.getEffected(), info.getSkill());
+		return !Formulas.calcPhysicalSkillEvasion(effector, effected, skill);
 	}
 	
 	@Override
@@ -74,102 +97,78 @@ public final class PhysicalAttack extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
-		final Skill skill = info.getSkill();
-		
-		if (activeChar.isAlikeDead())
+		if (effector.isAlikeDead())
 		{
 			return;
 		}
 		
-		if (((info.getSkill().getFlyRadius() > 0) || (skill.getFlyType() != null)) && activeChar.isMovementDisabled())
+		if (effected.isPlayer() && effected.getActingPlayer().isFakeDeath())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
-			sm.addSkillName(skill);
-			activeChar.sendPacket(sm);
-			return;
+			effected.stopFakeDeath(true);
 		}
 		
-		if (target.isPlayer() && target.getActingPlayer().isFakeDeath())
+		if (_overHit && effected.isAttackable())
 		{
-			target.stopFakeDeath(true);
+			((L2Attackable) effected).overhitEnabled(true);
 		}
 		
-		int damage = 0;
-		final boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		final byte shld = Formulas.calcShldUse(activeChar, target, skill);
-		// Physical damage critical rate is only affected by STR.
-		final boolean crit = (skill.getBaseCritRate() > 0) && Formulas.calcCrit(activeChar, target, skill);
-		damage = (int) Formulas.calcPhysDam(activeChar, target, skill, shld, false, ss);
+		final double attack = effector.getPAtk() * _pAtkMod;
+		double defence = effected.getPDef() * _pDefMod;
 		
-		if (crit)
+		if (!_ignoreShieldDefence)
 		{
-			damage *= 2;
-		}
-		
-		if ((activeChar.getActiveWeaponItem() != null) && (_type1 != "NONE") && (_type2 != "NONE"))
-		{
-			StringTokenizer st = new StringTokenizer(_type1, ",");
-			while (st.hasMoreTokens())
+			switch (Formulas.calcShldUse(effector, effected))
 			{
-				if (activeChar.getActiveWeaponItem().getItemType() == WeaponType.valueOf(st.nextToken().trim()))
+				case Formulas.SHIELD_DEFENSE_SUCCEED:
 				{
-					damage *= _valueReduce;
+					defence += effected.getShldDef();
 					break;
 				}
-			}
-			st = new StringTokenizer(_type2, ",");
-			while (st.hasMoreTokens())
-			{
-				if (activeChar.getActiveWeaponItem().getItemType() == WeaponType.valueOf(st.nextToken().trim()))
+				case Formulas.SHIELD_DEFENSE_PERFECT_BLOCK:
 				{
-					damage *= _valueIncrease;
+					defence = -1;
 					break;
 				}
 			}
 		}
 		
-		if (damage > 0)
+		double damage = 1;
+		final boolean critical = (_criticalChance > 0) && ((BaseStats.STR.calcBonus(effector) * _criticalChance) > (Rnd.nextDouble() * 100));
+		
+		if (defence != -1)
 		{
-			// reduce damage if target has maxdamage buff
-			final double maxDamage = target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null);
-			if (maxDamage > 0)
-			{
-				damage = (int) maxDamage;
-			}
+			// Trait, elements
+			final double weaponTraitMod = Formulas.calcWeaponTraitBonus(effector, effected);
+			final double generalTraitMod = Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), false);
+			final double attributeMod = Formulas.calcAttributeBonus(effector, effected, skill);
+			final double pvpPveMod = Formulas.calculatePvpPveBonus(effector, effected, skill, true);
+			final double randomMod = effector.getRandomDamageMultiplier();
 			
-			activeChar.sendDamageMessage(target, damage, false, crit, false);
-			if (_isLastAttack && !target.isPlayer() && !target.isRaid())
-			{
-				if (damage < target.getCurrentHp())
-				{
-					target.setCurrentHp(1);
-				}
-				else
-				{
-					target.reduceCurrentHp(damage, activeChar, skill);
-				}
-			}
-			else
-			{
-				target.reduceCurrentHp(damage, activeChar, skill);
-				target.notifyDamageReceived(damage, activeChar, skill, crit, false);
-			}
+			// Skill specific mods.
+			final double wpnMod = effector.getAttackType().isRanged() ? 70 : (70 * 1.10113);
+			final double rangedBonus = effector.getAttackType().isRanged() ? (attack + _power) : 0;
+			final double abnormalMod = _abnormals.stream().anyMatch(effected::hasAbnormalType) ? _abnormalPowerMod : 1;
+			final double critMod = critical ? Formulas.calcCritDamage(effector, effected, skill) : 1;
+			final double ssmod = (skill.useSoulShot() && effector.isChargedShot(ShotType.SOULSHOTS)) ? effector.getStat().getValue(Stats.SHOTS_BONUS, 2) : 1; // 2.04 for dual weapon?
 			
-			// Check if damage should be reflected
-			Formulas.calcDamageReflected(activeChar, target, skill, crit);
-		}
-		else
-		{
-			activeChar.sendPacket(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
+			// ...................____________Melee Damage_____________......................................___________________Ranged Damage____________________
+			// ATTACK CALCULATION 77 * ((pAtk * lvlMod) + power) / pdef            RANGED ATTACK CALCULATION 70 * ((pAtk * lvlMod) + power + patk + power) / pdef
+			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^``````````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+			final double baseMod = (wpnMod * ((attack * effector.getLevelMod()) + _power + rangedBonus)) / defence;
+			damage = baseMod * abnormalMod * ssmod * critMod * weaponTraitMod * generalTraitMod * attributeMod * pvpPveMod * randomMod;
+			damage = effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, damage);
 		}
 		
-		if (skill.isSuicideAttack())
+		// Check if damage should be reflected
+		Formulas.calcDamageReflected(effector, effected, skill, critical);
+		final double damageCap = effected.getStat().getValue(Stats.DAMAGE_LIMIT);
+		if (damageCap > 0)
 		{
-			activeChar.doDie(activeChar);
+			damage = Math.min(damage, damageCap);
 		}
+		effected.reduceCurrentHp(damage, effector, skill, false, false, critical, false);
+		effector.sendDamageMessage(effected, skill, (int) damage, critical, false);
 	}
 }

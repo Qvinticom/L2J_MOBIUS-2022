@@ -18,6 +18,7 @@ package handlers.voicedcommandhandlers;
 
 import java.util.StringTokenizer;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.cache.HtmCache;
@@ -30,6 +31,8 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class ChangePassword implements IVoicedCommandHandler
 {
+	private static final Logger LOGGER = Logger.getLogger(ChangePassword.class.getName());
+	
 	private static final String[] _voicedCommands =
 	{
 		"changepassword"
@@ -57,7 +60,7 @@ public class ChangePassword implements IVoicedCommandHandler
 					repeatnewpass = st.nextToken();
 				}
 				
-				if ((curpass != null) && (newpass != null) && (repeatnewpass != null))
+				if (!((curpass == null) || (newpass == null) || (repeatnewpass == null)))
 				{
 					if (!newpass.equals(repeatnewpass))
 					{
@@ -86,13 +89,13 @@ public class ChangePassword implements IVoicedCommandHandler
 			catch (Exception e)
 			{
 				activeChar.sendMessage("A problem occured while changing password!");
-				_log.log(Level.WARNING, "", e);
+				LOGGER.log(Level.WARNING, "", e);
 			}
 		}
 		else
 		{
 			// showHTML(activeChar);
-			String html = HtmCache.getInstance().getHtm("en", "html/mods/ChangePassword.htm");
+			String html = HtmCache.getInstance().getHtm("en", "data/html/mods/ChangePassword.htm");
 			if (html == null)
 			{
 				html = "<html><body><br><br><center><font color=LEVEL>404:</font> File Not Found</center></body></html>";

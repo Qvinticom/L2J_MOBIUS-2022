@@ -16,11 +16,8 @@
  */
 package instances.HideoutOfTheDawn;
 
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 
 import instances.AbstractInstance;
 
@@ -33,19 +30,11 @@ public final class HideoutOfTheDawn extends AbstractInstance
 	// NPCs
 	private static final int WOOD = 32593;
 	private static final int JAINA = 32617;
-	// Location
-	private static final Location WOOD_LOC = new Location(-23758, -8959, -5384, 0, 0);
-	private static final Location JAINA_LOC = new Location(147072, 23743, -1984, 0);
 	// Misc
 	private static final int TEMPLATE_ID = 113;
 	
-	class HotDWorld extends InstanceWorld
-	{
-	}
-	
 	public HideoutOfTheDawn()
 	{
-		super(HideoutOfTheDawn.class.getSimpleName());
 		addStartNpc(WOOD);
 		addTalkId(WOOD, JAINA);
 	}
@@ -53,32 +42,17 @@ public final class HideoutOfTheDawn extends AbstractInstance
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		switch (npc.getId())
+		if (npc.getId() == WOOD)
 		{
-			case WOOD:
-			{
-				enterInstance(talker, new HotDWorld(), "HideoutOfTheDawn.xml", TEMPLATE_ID);
-				return "32593-01.htm";
-			}
-			case JAINA:
-			{
-				final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(talker);
-				world.removeAllowed(talker.getObjectId());
-				talker.setInstanceId(0);
-				talker.teleToLocation(JAINA_LOC);
-				return "32617-01.htm";
-			}
+			enterInstance(talker, npc, TEMPLATE_ID);
+			return "32593-01.htm";
 		}
-		return super.onTalk(npc, talker);
+		finishInstance(talker, 0);
+		return "32617-01.htm";
 	}
 	
-	@Override
-	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
+	public static void main(String[] args)
 	{
-		if (firstEntrance)
-		{
-			world.addAllowed(player.getObjectId());
-		}
-		teleportPlayer(player, WOOD_LOC, world.getInstanceId(), false);
+		new HideoutOfTheDawn();
 	}
 }

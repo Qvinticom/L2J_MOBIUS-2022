@@ -1,130 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
 	<npcs>
-		<npc>30298</npc> <!-- Pinter (Blacksmith) -->
-		<npc>30300</npc> <!-- Pushkin (Blacksmith) -->
-		<npc>30317</npc> <!-- Kluto (Blacksmith) -->
-		<npc>30458</npc> <!-- Poitan (Blacksmith) -->
-		<npc>30471</npc> <!-- Rupio (Blacksmith) -->
-		<npc>30678</npc> <!-- Helton (Blacksmith) -->
-		<npc>30688</npc> <!-- Duning (Blacksmith) -->
-		<npc>30846</npc> <!-- Wilbert (Blacksmith) -->
-		<npc>30898</npc> <!-- Morning (Blacksmith) -->
-		<npc>31271</npc> <!-- Hilda (Blacksmith) -->
-		<npc>31316</npc> <!-- Vincenz (Blacksmith) -->
-		<npc>31583</npc> <!-- Feynn (Blacksmith) -->
-		<npc>31960</npc> <!-- Buryun (Blacksmith) -->
-		<npc>31990</npc> <!-- Siger (Blacksmith) -->
-		<npc>33998</npc> <!-- Momet (Blacksmith) -->
-		<npc>34208</npc> <!-- Bartman (Blacksmith) -->
+		<npc>30688</npc> <!-- Duning -->
+		<npc>30300</npc> <!-- Pushkin -->
+		<npc>30846</npc> <!-- Wilbert -->
+		<npc>31271</npc> <!-- Hilda -->
+		<npc>31316</npc> <!-- Vincenz -->
+		<npc>30458</npc> <!-- Poitan -->
+		<npc>30678</npc> <!-- Helton -->
+		<npc>30298</npc> <!-- Pinter -->
+		<npc>30317</npc> <!-- Kluto -->
+		<npc>31960</npc> <!-- Buryun -->
+		<npc>30898</npc> <!-- Morning -->
 	</npcs>
 	<item>
-		<!-- Mid-grade Life Stone - Lv. 46 -->
-		<ingredient count="27" id="8733" />
-		<!-- Spirit Stone -->
-		<production count="1" id="45929" />
+		<ingredient id="8733" count="27"/> <!-- Mid-grade Life Stone - Lv. 46 --> 
+		<production id="45929" count="1"/> <!-- Spirit Stone --> 
 	</item>
 	<item>
-		<!-- Mid-grade Life Stone - Lv. 49 -->
-		<ingredient count="22" id="8734" />
-		<!-- Spirit Stone -->
-		<production count="1" id="45929" />
+		<ingredient id="8734" count="22"/> <!-- Mid-grade Life Stone - Lv. 49 --> 
+		<production id="45929" count="1"/> <!-- Spirit Stone --> 
 	</item>
 	<item>
-		<!-- Mid-grade Life Stone - Lv. 52 -->
-		<ingredient count="19" id="8735" />
-		<!-- Spirit Stone -->
-		<production count="1" id="45929" />
+		<ingredient id="8735" count="19"/> <!-- Mid-grade Life Stone - Lv. 52 --> 
+		<production id="45929" count="1"/> <!-- Spirit Stone --> 
 	</item>
 	<item>
-		<!-- Mid-grade Life Stone - Lv. 55 -->
-		<ingredient count="16" id="8736" />
-		<!-- Spirit Stone -->
-		<production count="1" id="45929" />
+		<ingredient id="8736" count="16"/> <!-- Mid-grade Life Stone - Lv. 55 --> 
+		<production id="45929" count="1"/> <!-- Spirit Stone --> 
 	</item>
 	<item>
-		<!-- Mid-grade Life Stone - Lv. 58 -->
-		<ingredient count="13" id="8737" />
-		<!-- Spirit Stone -->
-		<production count="1" id="45929" />
+		<ingredient id="8737" count="13"/> <!-- Mid-grade Life Stone - Lv. 58 --> 
+		<production id="45929" count="1"/> <!-- Spirit Stone --> 
 	</item>
 	<item>
-		<!-- Mid-grade Life Stone - Lv. 61 -->
-		<ingredient count="11" id="8738" />
-		<!-- Spirit Stone -->
-		<production count="1" id="45929" />
+		<ingredient id="8738" count="11"/> <!-- Mid-grade Life Stone - Lv. 61 --> 
+		<production id="45929" count="1"/> <!-- Spirit Stone --> 
 	</item>
 	<item>
-		<!-- Mid-grade Life Stone - Lv. 64 -->
-		<ingredient count="9" id="8739" />
-		<!-- Spirit Stone -->
-		<production count="1" id="45929" />
+		<ingredient id="8739" count="9"/> <!-- Mid-grade Life Stone - Lv. 64 --> 
+		<production id="45929" count="1"/> <!-- Spirit Stone --> 
 	</item>
 	<item>
-		<!-- Mid-grade Life Stone - Lv. 67 -->
-		<ingredient count="7" id="8740" />
-		<!-- Spirit Stone -->
-		<production count="1" id="45929" />
+		<ingredient id="8740" count="7"/> <!-- Mid-grade Life Stone - Lv. 67 --> 
+		<production id="45929" count="1"/> <!-- Spirit Stone --> 
 	</item>
 	<item>
-		<!-- Mid-grade Life Stone - Lv. 70 -->
-		<ingredient count="6" id="8741" />
-		<!-- Spirit Stone -->
-		<production count="1" id="45929" />
+		<ingredient id="8741" count="6"/> <!-- Mid-grade Life Stone - Lv. 70 --> 
+		<production id="45929" count="1"/> <!-- Spirit Stone --> 
 	</item>
 	<item>
-		<!-- Mid-grade Life Stone - Lv. 76 -->
-		<ingredient count="6" id="8742" />
-		<!-- Spirit Stone -->
-		<production count="1" id="45929" />
+		<ingredient id="8742" count="6"/> <!-- Mid-grade Life Stone - Lv. 76 --> 
+		<production id="45929" count="1"/> <!-- Spirit Stone --> 
 	</item>
 	<item>
-		<!-- Mid-grade Life Stone - Lv. 80 -->
-		<ingredient count="5" id="9574" />
-		<!-- Spirit Stone -->
-		<production count="1" id="45929" />
+		<ingredient id="9574" count="5"/> <!-- Mid-grade Life Stone - Lv. 80 --> 
+		<production id="45929" count="1"/> <!-- Spirit Stone --> 
 	</item>
 	<item>
-		<!-- Mid-grade Life Stone - Lv. 82 -->
-		<ingredient count="4" id="10484" />
-		<!-- Spirit Stone -->
-		<production count="1" id="45929" />
+		<ingredient id="10484" count="4"/> <!-- Mid-grade Life Stone - Lv. 82 --> 
+		<production id="45929" count="1"/> <!-- Spirit Stone --> 
 	</item>
 	<item>
-		<!-- Mid-grade Life Stone - Lv. 84 -->
-		<ingredient count="3" id="14167" />
-		<!-- Spirit Stone -->
-		<production count="1" id="45929" />
+		<ingredient id="14167" count="3"/> <!-- Mid-grade Life Stone - Lv. 84 --> 
+		<production id="45929" count="1"/> <!-- Spirit Stone --> 
 	</item>
 	<item>
-		<!-- Mid-grade Life Stone - Lv. 85 -->
-		<ingredient count="3" id="16161" />
-		<!-- Spirit Stone -->
-		<production count="1" id="45929" />
+		<ingredient id="16161" count="3"/> <!-- Mid-grade Life Stone - Lv. 85 --> 
+		<production id="45929" count="1"/> <!-- Spirit Stone --> 
 	</item>
 	<item>
-		<!-- Mid-grade Life Stone - Lv. 86 -->
-		<ingredient count="2" id="16165" />
-		<!-- Spirit Stone -->
-		<production count="1" id="45929" />
-	</item>
-	<!-- Top - Grade -->
-	<item>
-		<!-- Mid-grade Life Stone (R-grade) -->
-		<ingredient count="25" id="18564" />
-		<!-- Mid-grade Spirit Stone -->
-		<production count="1" id="45930" />
+		<ingredient id="16165" count="2"/> <!-- Mid-grade Life Stone - Lv. 86 --> 
+		<production id="45929" count="1"/> <!-- Spirit Stone --> 
 	</item>
 	<item>
-		<!-- Mid-grade Life Stone (R95-grade) -->
-		<ingredient count="25" id="18569" />
-		<!-- High-grade Spirit Stone -->
-		<production count="1" id="45931" />
+		<ingredient id="18564" count="25"/> <!-- Mid-grade Life Stone (R-grade) --> 
+		<production id="45930" count="1"/> <!-- Mid-grade Spirit Stone --> 
 	</item>
 	<item>
-		<!-- Mid-grade Life Stone (R99-grade) -->
-		<ingredient count="25" id="18574" />
-		<!-- Top-grade Spirit Stone -->
-		<production count="1" id="45932" />
+		<ingredient id="18569" count="25"/> <!-- Mid-grade Life Stone (R95-grade) --> 
+		<production id="45931" count="1"/> <!-- High-grade Spirit Stone --> 
+	</item>
+	<item>
+		<ingredient id="18574" count="25"/> <!-- Mid-grade Life Stone (R99-grade) --> 
+		<production id="45932" count="1"/> <!-- Top-grade Spirit Stone --> 
 	</item>
 </list>

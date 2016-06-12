@@ -1,976 +1,1683 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="15400" levels="1" name="Shield of Darkness">
+	<skill id="15400" toLevel="1" name="Shield of Darkness">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. greatly increases temporarily due to the power of darkness. -->
-		<set name="icon" val="icon.skill0110" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="reuseDelay" val="30000" />
+		<icon>icon.skill0110</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<effectPoint>100</effectPoint>
+		<abnormalType>PD_UP_SPECIAL</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<attributeType>DARK</attributeType>
+		<attributeValue>50</attributeValue>
+		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
+		<reuseDelay>30000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15401" levels="1" name="Burning Blood">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="15401" toLevel="1" name="Burning Blood">
+		<!-- Glory Days confirmed -->
 		<!-- Restored to full health from death. Buffs/ Debuffs remain even after death, but the Noblesse Blessing and Raid Blessing disappear. (Effect only applied at Kartia's Labyrinth - Tainted Dimension Attacker.) -->
-		<set name="icon" val="icon.skill5873" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1000" />
-		<set name="reuseDelay" val="5000" />
+		<icon>icon.skill5873</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<effectPoint>687</effectPoint>
+		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>2400</abnormalTime>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>22</isMagic>
+		<staticReuse>true</staticReuse>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>RESURRECTION_SPECIAL</type>
+				<level>1</level>
+				<hasAbnormal>false</hasAbnormal>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="ResurrectionSpecial">
+				<power>100</power>
+				<instanceId>205;206;207</instanceId>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="15402" levels="1" name="Wisp's Blessing">
+	<skill id="15402" toLevel="1" name="Wisp's Blessing">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. And M. Atk. increases temporarily. -->
-		<set name="icon" val="icon.skill11046" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="hitTime" val="1000" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill11046</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>696</effectPoint>
+		<abnormalType>NPC_MULTI_BUFF1</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>90</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15403" levels="1" name="Favor Exchange">
+	<skill id="15403" toLevel="1" name="Favor Exchange">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 sec., Speed + 30%. -->
-		<set name="icon" val="icon.skill1204" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="1000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill1204</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>2</effectPoint>
+		<abnormalType>MULTI_DEBUFF</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>93</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<isMagic>2</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15404" levels="1" name="Unable to Target">
+	<skill id="15404" toLevel="1" name="Unable to Target">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Cannot target. -->
-		<set name="icon" val="icon.notargetting" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.notargetting</icon>
+		<operateType>A2</operateType>
+		<abnormalType>MA_DOWN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>0</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15405" levels="1" name="Master's Blessing (Awakening)">
+	<skill id="15405" toLevel="1" name="Master's Blessing (Awakening)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Uses the Master's Blessing buff. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="1000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15406" levels="1" name="Warrior's Harmony Zone">
+	<skill id="15406" toLevel="1" name="Warrior's Harmony Zone">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Creates a zone that provides the Harmony skill. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="1000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15407" levels="1" name="Knight's Harmony Zone">
+	<skill id="15407" toLevel="1" name="Knight's Harmony Zone">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Creates a zone that provides the Harmony skill. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="1000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15408" levels="1" name="Wizard's Harmony Zone">
+	<skill id="15408" toLevel="1" name="Wizard's Harmony Zone">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Creates a zone that provides the Harmony skill. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="1000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15409" levels="1" name="Summon Buff Servant">
+	<skill id="15409" toLevel="1" name="Summon Buff Servant">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons the Buff Servant. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="1000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15410" levels="1" name="Full Attack">
+	<skill id="15410" toLevel="1" name="Full Attack">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Pulls in PCs within range and inflicts damage. -->
-		<set name="icon" val="icon.skill10015" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="500" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="1000" />
-		<set name="reuseDelay" val="10000" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill10015</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>500</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-2066</effectPoint>
+		<abnormalType>STUN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>900</effectRange>
+		<activateRate>200</activateRate>
+		<magicLvl>96</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<trait>PULL</trait>
+		<attributeType>EARTH</attributeType>
+		<attributeValue>50</attributeValue>
+		<affectRange>800</affectRange>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="15411" levels="1" name="Soul Break">
+	<skill id="15411" toLevel="1" name="Soul Break">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts a powerful attack on a target. -->
-		<set name="icon" val="icon.skill0223" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="500" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill0223</icon>
+		<operateType>A2</operateType>
+		<castRange>500</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-111</effectPoint>
+		<abnormalType>BLEEDING</abnormalType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>460</effectRange>
+		<magicLvl>95</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>7</abnormalTime>
+		<trait>BLEED</trait>
+		<attributeType>EARTH</attributeType>
+		<attributeValue>50</attributeValue>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15412" levels="1" name="Presentation - Toad Cannon Explosion">
+	<skill id="15412" toLevel="1" name="Presentation - Toad Cannon Explosion">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1000" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15413" levels="1" name="Raid Boss (Lv. 96)">
+	<skill id="15413" toLevel="1" name="Raid Boss (Lv. 96)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Giant golem created by Dr. Chaos to excavate the Nornil Ruins. This Detector Golem is equipped with attack functions as well, and is a complete collection of all of Dr. Chaos' technological wonders. -->
-		<set name="icon" val="icon.skillraid" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skillraid</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="15414" levels="1" name="Raid Boss (Lv. 96)">
+	<skill id="15414" toLevel="1" name="Raid Boss (Lv. 96)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Leader of the Spiculas that activated the Intruder Elimination Project under Mother Nornil's orders. This prototype Spicula is emotionless and almost machine-like. It is currently creating mutations in various machines by spreading the Laido Virus. -->
-		<set name="icon" val="icon.skillraid" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skillraid</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="15415" levels="1" name="Appearance Modification (No-grade)">
+	<skill id="15415" toLevel="1" name="Appearance Modification (No-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Changed to the appearance of a No-grade item. -->
-		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="100" />
-		<set name="reuseDelay" val="2000" />
-		<set name="isMagic" val="4" />
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10800</abnormalTime>
+		<abnormalVisualEffect>NGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15416" levels="1" name="Appearance Modification (D-grade)">
+	<skill id="15416" toLevel="1" name="Appearance Modification (D-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Changed to the appearance of a D-grade item. -->
-		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="100" />
-		<set name="reuseDelay" val="2000" />
-		<set name="isMagic" val="4" />
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10800</abnormalTime>
+		<abnormalVisualEffect>DGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15417" levels="1" name="Appearance Modification (C-grade)">
+	<skill id="15417" toLevel="1" name="Appearance Modification (C-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Changed to the appearance of a C-grade item. -->
-		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="100" />
-		<set name="reuseDelay" val="2000" />
-		<set name="isMagic" val="4" />
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10800</abnormalTime>
+		<abnormalVisualEffect>CGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15418" levels="1" name="Appearance Modification (B-grade)">
+	<skill id="15418" toLevel="1" name="Appearance Modification (B-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Changed to the appearance of a B-grade item. -->
-		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="100" />
-		<set name="reuseDelay" val="2000" />
-		<set name="isMagic" val="4" />
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10800</abnormalTime>
+		<abnormalVisualEffect>BGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15419" levels="1" name="Appearance Modification (A-grade)">
+	<skill id="15419" toLevel="1" name="Appearance Modification (A-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Changed to the appearance of an A-grade item. -->
-		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="100" />
-		<set name="reuseDelay" val="2000" />
-		<set name="isMagic" val="4" />
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10800</abnormalTime>
+		<abnormalVisualEffect>AGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15420" levels="1" name="Before Lind Attack">
+	<skill id="15420" toLevel="1" name="Before Lind Attack">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
 	</skill>
-	<skill id="15421" levels="1" name="Lind Attack">
+	<skill id="15421" toLevel="1" name="Lind Attack">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill11755" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="1500" />
+		<icon>icon.skill11755</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<reuseDelay>1500</reuseDelay>
 	</skill>
-	<skill id="15426" levels="1" name="Energy Drain">
+	<skill id="15426" toLevel="1" name="Energy Drain">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="145000" />
-		<set name="hitTime" val="500" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>145000</castRange>
+		<effectPoint>100</effectPoint>
+		<hitTime>500</hitTime>
 	</skill>
-	<skill id="15427" levels="1" name="Bleed">
+	<skill id="15427" toLevel="1" name="Bleed">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- AoE Bleeding. -->
-		<set name="icon" val="icon.skill0096" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-574</effectPoint>
+		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15428" levels="1" name="Knock Back">
+	<skill id="15428" toLevel="1" name="Knock Back">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- AoE Knock Back. -->
-		<set name="icon" val="icon.skill10549" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill10549</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-574</effectPoint>
+		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15429" levels="1" name="Yoke">
+	<skill id="15429" toLevel="1" name="Yoke">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's AoE Aerial Yoke. -->
-		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="10000" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill1042</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>10000</hitTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-867</effectPoint>
+		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15430" levels="1" name="Lindvior's Jump">
+	<skill id="15430" toLevel="1" name="Lindvior's Jump">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Ranged attack. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="5000" />
-		<set name="coolTime" val="5000" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<hitTime>5000</hitTime>
+		<coolTime>5000</coolTime>
+		<effectPoint>-574</effectPoint>
+		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15431" levels="1" name="Supersonic Blaster">
+	<skill id="15431" toLevel="1" name="Supersonic Blaster">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="42" />
-		<set name="castRange" val="1200" />
-		<set name="hitTime" val="1900" />
-		<set name="reuseDelay" val="7000" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>42</mpConsume>
+		<castRange>1200</castRange>
+		<hitTime>1900</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1700</effectRange>
+		<magicLvl>97</magicLvl>
+		<reuseDelay>7000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15432" levels="1" name="Power Strike">
+	<skill id="15432" toLevel="1" name="Power Strike">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="80" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="800" />
-		<set name="reuseDelay" val="6000" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>80</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>200</effectRange>
+		<magicLvl>97</magicLvl>
+		<reuseDelay>6000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15433" levels="1" name="Surrender to Dark">
+	<skill id="15433" toLevel="1" name="Surrender to Dark">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Dark Attack Resistance decreased, and Holy Attack Resistance increases momentarily. -->
-		<set name="icon" val="icon.skill4336_new" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="65" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="2000" />
-		<set name="reuseDelay" val="8000" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill4336_new</icon>
+		<operateType>A2</operateType>
+		<mpConsume>65</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>2000</hitTime>
+		<reuseDelay>8000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<abnormalType>ARMOR_UNHOLY</abnormalType>
+		<basicProperty>MAGIC</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<activateRate>80</activateRate>
+		<magicLvl>97</magicLvl>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15434" levels="1" name="Drain Energy">
+	<skill id="15434" toLevel="1" name="Drain Energy">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="73" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="2000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>73</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>2000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15435" levels="1" name="Power Strike">
+	<skill id="15435" toLevel="1" name="Power Strike">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="20" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="800" />
-		<set name="reuseDelay" val="6000" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>20</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>800</coolTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>200</effectRange>
+		<magicLvl>97</magicLvl>
+		<reuseDelay>6000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15436" levels="1" name="Wide Sweep">
+	<skill id="15436" toLevel="1" name="Wide Sweep">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="119" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="1800" />
-		<set name="reuseDelay" val="6000" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>119</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1800</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>200</effectRange>
+		<magicLvl>97</magicLvl>
+		<fanRange>0;0;1000;180</fanRange>
+		<reuseDelay>6000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="15437" levels="1" name="Sonic Blaster">
+	<skill id="15437" toLevel="1" name="Sonic Blaster">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="80" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1900" />
-		<set name="reuseDelay" val="15000" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>80</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1900</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>97</magicLvl>
+		<reuseDelay>15000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15438" levels="1" name="Hold">
+	<skill id="15438" toLevel="1" name="Hold">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Afflicted with Hold and unable to move temporarily. -->
-		<set name="icon" val="icon.skill4047" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="73" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="2500" />
-		<set name="reuseDelay" val="8000" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill4047</icon>
+		<operateType>A2</operateType>
+		<mpConsume>73</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>2500</hitTime>
+		<reuseDelay>8000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<basicProperty>MAGIC</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<activateRate>80</activateRate>
+		<magicLvl>97</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<trait>HOLD</trait>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15439" levels="1" name="Drain Energy">
+	<skill id="15439" toLevel="1" name="Drain Energy">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="109" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="2000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>109</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>2000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15440" levels="1" name="Aura Burn">
+	<skill id="15440" toLevel="1" name="Aura Burn">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="150" />
-		<set name="hitTime" val="1500" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>150</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<effectRange>650</effectRange>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15441" levels="1" name="Death Bomb">
+	<skill id="15441" toLevel="1" name="Death Bomb">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="119" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>97</magicLvl>
+		<affectRange>150</affectRange>
+		<mpConsume>119</mpConsume>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="15442" levels="1" name="Bleed">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- HP decreases from bleeding momentarily. -->
-		<set name="icon" val="icon.skill0096" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="80" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="800" />
-		<set name="reuseDelay" val="6000" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="15443" levels="1" name="Drain Energy">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="102" />
-		<set name="castRange" val="400" />
-		<set name="hitTime" val="2500" />
-		<set name="reuseDelay" val="3000" />
-		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="15444" levels="1" name="Bleed">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- HP decreases from bleeding momentarily. -->
-		<set name="icon" val="icon.skill0096" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="120" />
-		<set name="castRange" val="500" />
-		<set name="hitTime" val="2000" />
-		<set name="reuseDelay" val="6000" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="15445" levels="1" name="Super Strike">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="247" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="1800" />
-		<set name="reuseDelay" val="6000" />
-	</skill>
-	<skill id="15446" levels="1" name="Drain Energy">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="282" />
-		<set name="castRange" val="500" />
-		<set name="hitTime" val="2500" />
-		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="15447" levels="1" name="Bleed">
+	<skill id="15442" toLevel="1" name="Bleed">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- HP decreases from bleeding momentarily. -->
-		<set name="icon" val="icon.skill0096" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="83" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="800" />
-		<set name="reuseDelay" val="6000" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<mpConsume>80</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>6000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<abnormalType>BLEEDING</abnormalType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>200</effectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<activateRate>100</activateRate>
+		<magicLvl>97</magicLvl>
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<trait>BLEED</trait>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15448" levels="1" name="Aura Burn">
+	<skill id="15443" toLevel="1" name="Drain Energy">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="3" />
-		<set name="castRange" val="150" />
-		<set name="hitTime" val="1500" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>102</mpConsume>
+		<castRange>400</castRange>
+		<hitTime>2500</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>2.5</hitCancelTime>
+		<effectRange>900</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15449" levels="1" name="Wind Strike">
+	<skill id="15444" toLevel="1" name="Bleed">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="7" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="1" />
+		<!-- HP decreases from bleeding momentarily. -->
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<mpConsume>120</mpConsume>
+		<castRange>500</castRange>
+		<hitTime>2000</hitTime>
+		<reuseDelay>6000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<abnormalType>BLEEDING</abnormalType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1000</effectRange>
+		<lvlBonusRate>1</lvlBonusRate>
+		<activateRate>50</activateRate>
+		<magicLvl>97</magicLvl>
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<trait>BLEED</trait>
+		<affectRange>200</affectRange>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="15450" levels="1" name="Weakness">
+	<skill id="15445" toLevel="1" name="Super Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>247</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1800</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>200</effectRange>
+		<magicLvl>97</magicLvl>
+		<reuseDelay>6000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15446" toLevel="1" name="Drain Energy">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>282</mpConsume>
+		<castRange>500</castRange>
+		<hitTime>2500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>3.5</hitCancelTime>
+		<effectRange>1000</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<affectRange>200</affectRange>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="15447" toLevel="1" name="Bleed">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- HP decreases from bleeding momentarily. -->
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<mpConsume>83</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>6000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<abnormalType>BLEEDING</abnormalType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>200</effectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<activateRate>100</activateRate>
+		<magicLvl>97</magicLvl>
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<trait>BLEED</trait>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15448" toLevel="1" name="Aura Burn">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>3</mpConsume>
+		<castRange>150</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<effectRange>650</effectRange>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15449" toLevel="1" name="Wind Strike">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>7</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>3000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>3.5</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>WIND</attributeType>
+		<attributeValue>20</attributeValue>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="15450" toLevel="1" name="Weakness">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. decreases momentarily. -->
-		<set name="icon" val="icon.skill4037" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="20" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="reuseDelay" val="8000" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill4037</icon>
+		<operateType>A2</operateType>
+		<mpConsume>20</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>8000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<abnormalType>PA_DOWN</abnormalType>
+		<basicProperty>MAGIC</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<lvlBonusRate>1</lvlBonusRate>
+		<activateRate>70</activateRate>
+		<magicLvl>97</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15451" levels="1" name="Bleed">
+	<skill id="15451" toLevel="1" name="Bleed">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- HP decreases from bleeding momentarily. -->
-		<set name="icon" val="icon.skill0096" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="112" />
-		<set name="hitTime" val="3300" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<mpConsume>112</mpConsume>
+		<hitTime>3300</hitTime>
+		<effectPoint>-100</effectPoint>
+		<abnormalType>BLEEDING</abnormalType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<activateRate>90</activateRate>
+		<magicLvl>97</magicLvl>
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<trait>BLEED</trait>
+		<affectRange>200</affectRange>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="15452" levels="1" name="Decrease P. Atk.">
+	<skill id="15452" toLevel="1" name="Decrease P. Atk.">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. decreases momentarily. -->
-		<set name="icon" val="icon.skill1164" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="112" />
-		<set name="hitTime" val="3300" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill1164</icon>
+		<operateType>A2</operateType>
+		<mpConsume>112</mpConsume>
+		<hitTime>3300</hitTime>
+		<effectPoint>-100</effectPoint>
+		<abnormalType>PA_DOWN</abnormalType>
+		<basicProperty>MAGIC</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<activateRate>90</activateRate>
+		<magicLvl>97</magicLvl>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<affectRange>200</affectRange>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="15453" levels="1" name="Vampiric Touch">
+	<skill id="15453" toLevel="1" name="Vampiric Touch">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="135" />
-		<set name="castRange" val="750" />
-		<set name="hitTime" val="2500" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>135</mpConsume>
+		<castRange>750</castRange>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1250</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<hitTime>2500</hitTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15454" levels="1" name="Memorable Raid Blessing">
+	<skill id="15454" toLevel="1" name="Memorable Raid Blessing">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 hr., P. Atk. + 5%, M. Atk. + 20%, P. Def. + 5%, M. Def. + 5%, Atk. Spd. + 5%, Casting Spd. + 5%, Max HP/ MP + 5%, and XP/ SP gained through hunting + 30%. -->
-		<set name="icon" val="icon.skilltransform4" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="900" />
-		<set name="reuseDelay" val="1800000" />
-		<set name="isMagic" val="4" />
+		<icon>icon.skilltransform4</icon>
+		<operateType>A2</operateType>
+		<castRange>900</castRange>
+		<reuseDelay>1800000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1500</effectRange>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>7200</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<staticReuse>true</staticReuse>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15455" levels="1" name="Sensitive Skin">
+	<skill id="15455" toLevel="1" name="Sensitive Skin">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Received damage increases due to skin sensitivity. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>97</magicLvl>
 	</skill>
-	<skill id="15456" levels="1" name="Triol's Voice">
+	<skill id="15456" toLevel="1" name="Triol's Voice">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Triol's Voice. -->
-		<set name="icon" val="icon.skill0223" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="5000" />
-		<set name="coolTime" val="500" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill0223</icon>
+		<operateType>A1</operateType>
+		<hitTime>5000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>5</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<affectRange>800</affectRange>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="15457" levels="2" name="Triol's Reign">
+	<skill id="15457" toLevel="2" name="Triol's Reign">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Blood is drained by Triol, one of the 4 Demons of Hell. -->
-		<set name="icon" val="icon.skill0096" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<effectPoint>-100</effectPoint>
+		<abnormalType>BLEEDING</abnormalType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+		</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<trait>BLEED</trait>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15458" levels="1" name="Memorable Raid Shield">
+	<skill id="15458" toLevel="1" name="Memorable Raid Shield">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Defensive shield cast by the Memorable Raid boss unto itself. For 10 min., it only receives a certain amount of damage. -->
-		<set name="icon" val="icon.skill0110" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="100" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0110</icon>
+		<operateType>A2</operateType>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
+		<abnormalType>PD_UP_SPECIAL</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15459" levels="1" name="Blaze">
+	<skill id="15459" toLevel="1" name="Blaze">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="73" />
-		<set name="castRange" val="1000" />
-		<set name="hitTime" val="2000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>73</mpConsume>
+		<castRange>1000</castRange>
+		<hitTime>2000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>2</hitCancelTime>
+		<effectRange>1500</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15460" levels="1" name="Poison">
+	<skill id="15460" toLevel="1" name="Poison">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- HP decreases from poison momentarily. -->
-		<set name="icon" val="icon.skill4036" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="109" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill4036</icon>
+		<operateType>A2</operateType>
+		<mpConsume>109</mpConsume>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<abnormalType>POISON</abnormalType>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<lvlBonusRate>1</lvlBonusRate>
+		<activateRate>35</activateRate>
+		<magicLvl>97</magicLvl>
+		<abnormalLvl>9</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<trait>POISON</trait>
+		<affectRange>200</affectRange>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="15461" levels="1" name="Drain Energy">
+	<skill id="15461" toLevel="1" name="Drain Energy">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="52" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>52</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>4000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>3.5</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15462" levels="1" name="Heal">
+	<skill id="15462" toLevel="1" name="Heal">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="127" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="2000" />
-		<set name="reuseDelay" val="8000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>127</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>2000</hitTime>
+		<reuseDelay>8000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15463" levels="1" name="Prominence">
+	<skill id="15463" toLevel="1" name="Prominence">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="37" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>37</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>4000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>3.5</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15464" levels="1" name="Death Link">
+	<skill id="15464" toLevel="1" name="Death Link">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="37" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>37</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>4000</hitTime>
+		<effectPoint>-100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>3.5</hitCancelTime>
+		<effectRange>1400</effectRange>
+		<magicLvl>97</magicLvl>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15465" levels="15" name="Vitality Reward 1 (Quest)">
+	<skill id="15465" toLevel="15" name="Vitality Reward 1 (Quest)">
 		<!-- AUTO GENERATED SKILL -->
-		<table name="#castRanges"> 900 900 900 900 900 900 900 900 900 900 900 900 900 900 -1 </table>
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="#castRanges" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>
+			<value level="1">1400</value>
+			<value level="2">1400</value>
+			<value level="3">1400</value>
+			<value level="4">1400</value>
+			<value level="5">1400</value>
+			<value level="6">1400</value>
+			<value level="7">1400</value>
+			<value level="8">1400</value>
+			<value level="9">1400</value>
+			<value level="10">1400</value>
+			<value level="11">1400</value>
+			<value level="12">1400</value>
+			<value level="13">1400</value>
+			<value level="14">1400</value>
+			<value level="15">-1</value>
+		</effectRange>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<castRange>
+			<value level="1">900</value>
+			<value level="2">900</value>
+			<value level="3">900</value>
+			<value level="4">900</value>
+			<value level="5">900</value>
+			<value level="6">900</value>
+			<value level="7">900</value>
+			<value level="8">900</value>
+			<value level="9">900</value>
+			<value level="10">900</value>
+			<value level="11">900</value>
+			<value level="12">900</value>
+			<value level="13">900</value>
+			<value level="14">900</value>
+			<value level="15">-1</value>
+		</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+		</conditions>
 	</skill>
-	<skill id="15466" levels="1" name="Triol's CON Increase">
+	<skill id="15466" toLevel="1" name="Triol's CON Increase">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 200%. -->
-		<set name="icon" val="icon.skill1045" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="110" />
+		<icon>icon.skill1045</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<magicLvl>99</magicLvl>
+		<mpConsume>110</mpConsume>
 	</skill>
-	<skill id="15467" levels="1" name="Triol's P. Def. Increase">
+	<skill id="15467" toLevel="1" name="Triol's P. Def. Increase">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. + 200%. -->
-		<set name="icon" val="icon.skill1040" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill1040</icon>
+		<operateType>P</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
 	</skill>
-	<skill id="15468" levels="1" name="Triol's M. Def. Decrease">
+	<skill id="15468" toLevel="1" name="Triol's M. Def. Decrease">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 50%. -->
-		<set name="icon" val="icon.skill1388" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill1388</icon>
+		<operateType>P</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
 	</skill>
-	<skill id="15469" levels="1" name="Rites for Triol">
+	<skill id="15469" toLevel="1" name="Rites for Triol">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 min., HP Recovery Bonus + 20%. -->
-		<set name="icon" val="icon.skill1044" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill1044</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<effectPoint>1</effectPoint>
+		<abnormalType>HP_REGEN_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15470" levels="1" name="Cancel HP Regeneration">
+	<skill id="15470" toLevel="1" name="Cancel HP Regeneration">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill01703" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill01703</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15471" levels="1" name="Appearance Modification (No-grade) (Raid)">
+	<skill id="15471" toLevel="1" name="Appearance Modification (No-grade) (Raid)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Changed to the appearance of a No-grade item. -->
-		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="100" />
-		<set name="reuseDelay" val="2000" />
-		<set name="isMagic" val="4" />
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalVisualEffect>NGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15472" levels="1" name="Appearance Modification (D-grade) (Raid)">
+	<skill id="15472" toLevel="1" name="Appearance Modification (D-grade) (Raid)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Changed to the appearance of a D-grade item. -->
-		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="100" />
-		<set name="reuseDelay" val="2000" />
-		<set name="isMagic" val="4" />
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalVisualEffect>DGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15473" levels="1" name="Appearance Modification (C-grade) (Raid)">
+	<skill id="15473" toLevel="1" name="Appearance Modification (C-grade) (Raid)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Changed to the appearance of a C-grade item. -->
-		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="100" />
-		<set name="reuseDelay" val="2000" />
-		<set name="isMagic" val="4" />
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalVisualEffect>CGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15474" levels="1" name="Appearance Modification (B-grade) (Raid)">
+	<skill id="15474" toLevel="1" name="Appearance Modification (B-grade) (Raid)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Changed to the appearance of a B-grade item. -->
-		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="100" />
-		<set name="reuseDelay" val="2000" />
-		<set name="isMagic" val="4" />
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalVisualEffect>BGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15475" levels="1" name="Appearance Modification (A-grade) (Raid)">
+	<skill id="15475" toLevel="1" name="Appearance Modification (A-grade) (Raid)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Changed to the appearance of an A-grade item. -->
-		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="100" />
-		<set name="reuseDelay" val="2000" />
-		<set name="isMagic" val="4" />
+		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF4</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalVisualEffect>AGRADE_CHANGE</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15476" levels="1" name="Spore Spray">
+	<skill id="15476" toLevel="1" name="Spore Spray">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- HP and Speed decreased due to spores. -->
-		<set name="icon" val="icon.skill1160" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill1160</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<abnormalType>MULTI_DEBUFF</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<activateRate>100</activateRate>
+		<magicLvl>53</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15477" levels="1" name="Corrosive Acid Spray">
+	<skill id="15477" toLevel="1" name="Corrosive Acid Spray">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. and M. Def. decreased. -->
-		<set name="icon" val="icon.skill0122" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill0122</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-190</effectPoint>
+		<abnormalType>PD_DOWN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<activateRate>100</activateRate>
+		<magicLvl>54</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15478" levels="1" name="Spread Disease">
+	<skill id="15478" toLevel="1" name="Spread Disease">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- HP decreases from disease momentarily. -->
-		<set name="icon" val="icon.skill0096" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<abnormalType>POISON</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<activateRate>100</activateRate>
+		<magicLvl>55</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<trait>POISON</trait>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15479" levels="1" name="Vomit Mucus">
+	<skill id="15479" toLevel="1" name="Vomit Mucus">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Accuracy decreased due to mucus. -->
-		<set name="icon" val="icon.skill1222" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill1222</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-331</effectPoint>
+		<abnormalType>HIT_DOWN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<activateRate>100</activateRate>
+		<magicLvl>57</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15480" levels="1" name="Shoot Poison">
+	<skill id="15480" toLevel="1" name="Shoot Poison">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- HP decreased due to poison. -->
-		<set name="icon" val="icon.skill0096" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<abnormalType>POISON</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<activateRate>100</activateRate>
+		<magicLvl>57</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<trait>POISON</trait>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15481" levels="1" name="Shoot Spider Web">
+	<skill id="15481" toLevel="1" name="Shoot Spider Web">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The web decreases Speed by 10%. -->
-		<set name="icon" val="icon.skill0102" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill0102</icon>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-341</effectPoint>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<activateRate>100</activateRate>
+		<magicLvl>57</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15482" levels="1" name="Presentation - Lind">
+	<skill id="15482" toLevel="1" name="Presentation - Lind">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's Event Presentation Skill. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="10000" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>10000</hitTime>
 	</skill>
-	<skill id="15483" levels="1" name="Destroy">
+	<skill id="15483" toLevel="1" name="Destroy">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. On a single enemy. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<coolTime>500</coolTime>
 	</skill>
-	<skill id="15484" levels="1" name="Lightning">
+	<skill id="15484" toLevel="1" name="Lightning">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. On a single enemy. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
 	</skill>
-	<skill id="15485" levels="1" name="Eliminate">
+	<skill id="15485" toLevel="1" name="Eliminate">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. On a single enemy. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<coolTime>500</coolTime>
 	</skill>
-	<skill id="15486" levels="1" name="Straight Blow">
+	<skill id="15486" toLevel="1" name="Straight Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bleed on a single enemy. -->
-		<set name="icon" val="icon.skill0096" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="750" />
-		<set name="coolTime" val="500" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill0096</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>750</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15487" levels="1" name="Disarray">
+	<skill id="15487" toLevel="1" name="Disarray">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. On a single enemy. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<coolTime>500</coolTime>
 	</skill>
-	<skill id="15488" levels="1" name="Penetrate">
+	<skill id="15488" toLevel="1" name="Penetrate">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. On a single enemy. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<coolTime>500</coolTime>
 	</skill>
-	<skill id="15489" levels="1" name="Vivacity">
+	<skill id="15489" toLevel="1" name="Vivacity">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Def. for 5 sec. -->
-		<set name="icon" val="icon.skill1040" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="hitTime" val="750" />
-		<set name="coolTime" val="500" />
+		<icon>icon.skill1040</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>750</hitTime>
+		<effectPoint>100</effectPoint>
+		<coolTime>500</coolTime>
 	</skill>
-	<skill id="15490" levels="1" name="Rush">
+	<skill id="15490" toLevel="1" name="Rush">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Rush toward enemy. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="600" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<effectPoint>-100</effectPoint>
+		<castRange>600</castRange>
 	</skill>
-	<skill id="15491" levels="1" name="Deadly Weapon">
+	<skill id="15491" toLevel="1" name="Deadly Weapon">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. On a single enemy. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-100</effectPoint>
+		<coolTime>500</coolTime>
 	</skill>
-	<skill id="15492" levels="1" name="Immediate Response">
+	<skill id="15492" toLevel="1" name="Immediate Response">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Poison on a single enemy. -->
-		<set name="icon" val="icon.skill4035" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill4035</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15493" levels="1" name="Forward March">
+	<skill id="15493" toLevel="1" name="Forward March">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Rush toward enemy. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="600" />
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<effectPoint>-100</effectPoint>
+		<castRange>600</castRange>
 	</skill>
-	<skill id="15494" levels="1" name="Strategic Response">
+	<skill id="15494" toLevel="1" name="Strategic Response">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Atk. Spd. for 5 sec. -->
-		<set name="icon" val="icon.skill1086" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="hitTime" val="750" />
-		<set name="coolTime" val="500" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill1086</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>750</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>100</effectPoint>
+		<isMagic>1</isMagic>
 	</skill>
-	<skill id="15495" levels="1" name="Ingenious Response">
+	<skill id="15495" toLevel="1" name="Ingenious Response">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Def. for 5 sec. -->
-		<set name="icon" val="icon.skill1040" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="hitTime" val="750" />
-		<set name="coolTime" val="500" />
+		<icon>icon.skill1040</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>750</hitTime>
+		<effectPoint>100</effectPoint>
+		<coolTime>500</coolTime>
 	</skill>
-	<skill id="15496" levels="1" name="Travis' Authority">
+	<skill id="15496" toLevel="1" name="Travis' Authority">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- AoE M. Atk. On target's area. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic>
 	</skill>
-	<skill id="15497" levels="1" name="Summon Royal Guard">
+	<skill id="15497" toLevel="1" name="Summon Royal Guard">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons Royal Guard Member. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="10" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
 	</skill>
-	<skill id="15498" levels="1" name="Dragon Defender">
+	<skill id="15498" toLevel="1" name="Dragon Defender">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 hr., Atk. Spd. + 10%, Casting Spd. + 10%, Max HP/MP + 10%, and Speed + 10. -->
-		<set name="icon" val="icon.skill4689" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="1000" />
-		<set name="isMagic" val="4" />
+		<icon>icon.skill4689</icon>
+		<operateType>A2</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
 	</skill>
-	<skill id="15499" levels="1" name="Energy of Life">
+	<skill id="15499" toLevel="1" name="Energy of Life">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="2000" />
-		<set name="hitTime" val="100" />
-		<set name="reuseDelay" val="2000" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>2000</castRange>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
+		<reuseDelay>2000</reuseDelay>
 	</skill>
 </list>

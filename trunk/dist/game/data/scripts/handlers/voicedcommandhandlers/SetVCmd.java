@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * @author Zoey76
  */
-class SetVCmd implements IVoicedCommandHandler
+public class SetVCmd implements IVoicedCommandHandler
 {
 	private static final String[] VOICED_COMMANDS =
 	{

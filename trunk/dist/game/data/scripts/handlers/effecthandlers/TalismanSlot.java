@@ -17,9 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Talisman Slot effect implementation.
@@ -29,10 +30,8 @@ public final class TalismanSlot extends AbstractEffect
 {
 	private final int _slots;
 	
-	public TalismanSlot(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public TalismanSlot(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_slots = params.getInt("slots", 0);
 	}
 	
@@ -43,15 +42,9 @@ public final class TalismanSlot extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().getActingPlayer().getStat().addTalismanSlots(_slots);
-	}
-	
-	@Override
-	public boolean onActionTime(BuffInfo info)
-	{
-		return info.getSkill().isPassive();
+		effected.getActingPlayer().getStat().addTalismanSlots(_slots);
 	}
 	
 	@Override

@@ -16,21 +16,26 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
+import java.util.logging.Logger;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * This class load, holds and calculates the hit condition bonuses.
  * @author Nik
  */
-public final class HitConditionBonusData implements IXmlReader
+public final class HitConditionBonusData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(HitConditionBonusData.class.getName());
+	
 	private int frontBonus = 0;
 	private int sideBonus = 0;
 	private int backBonus = 0;
@@ -50,7 +55,7 @@ public final class HitConditionBonusData implements IXmlReader
 	@Override
 	public void load()
 	{
-		parseDatapackFile("stats/hitConditionBonus.xml");
+		parseDatapackFile("data/stats/hitConditionBonus.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded Hit Condition bonuses.");
 		if (Config.DEBUG)
 		{
@@ -65,7 +70,7 @@ public final class HitConditionBonusData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node d = doc.getFirstChild().getFirstChild(); d != null; d = d.getNextSibling())
 		{
@@ -139,7 +144,7 @@ public final class HitConditionBonusData implements IXmlReader
 		}
 		
 		// Get side bonus
-		if (attacker.isBehindTarget())
+		if (attacker.isBehindTarget(true))
 		{
 			mod += backBonus;
 		}

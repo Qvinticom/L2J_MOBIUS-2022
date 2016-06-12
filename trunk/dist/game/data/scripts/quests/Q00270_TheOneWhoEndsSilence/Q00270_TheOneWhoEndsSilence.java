@@ -52,7 +52,7 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 	
 	public Q00270_TheOneWhoEndsSilence()
 	{
-		super(270, Q00270_TheOneWhoEndsSilence.class.getSimpleName(), "The One Who Ends Silence");
+		super(270);
 		addStartNpc(FAKE_GREYMORE);
 		addTalkId(FAKE_GREYMORE);
 		addKillId(SEEKER_SOLINA, SAVIOR_SOLINA, ASCETIC_SOLINA, DIVINITY_JUDGE, DIVINITY_MANAGER, DIVINITY_SUPERVISOR, DIVINITY_WORSHIPPER, DIVINITY_PROTECTOR, DIVINITY_FIGHTER, DIVINITY_MAGUS);

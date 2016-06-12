@@ -21,10 +21,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
@@ -35,14 +33,9 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.instancemanager.tasks.GrandBossManagerStoreTask;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.interfaces.IStorable;
-import com.l2jmobius.gameserver.model.zone.type.L2BossZone;
 
 /**
  * Grand Boss manager.
@@ -51,20 +44,16 @@ import com.l2jmobius.gameserver.model.zone.type.L2BossZone;
 public final class GrandBossManager implements IStorable
 {
 	// SQL queries
-	private static final String DELETE_GRAND_BOSS_LIST = "DELETE FROM grandboss_list";
-	private static final String INSERT_GRAND_BOSS_LIST = "INSERT INTO grandboss_list (player_id,zone) VALUES (?,?)";
 	private static final String UPDATE_GRAND_BOSS_DATA = "UPDATE grandboss_data set loc_x = ?, loc_y = ?, loc_z = ?, heading = ?, respawn_time = ?, currentHP = ?, currentMP = ?, status = ? where boss_id = ?";
 	private static final String UPDATE_GRAND_BOSS_DATA2 = "UPDATE grandboss_data set status = ? where boss_id = ?";
 	
 	protected static Logger _log = Logger.getLogger(GrandBossManager.class.getName());
 	
-	protected static final Map<Integer, L2GrandBossInstance> BOSSES = new ConcurrentHashMap<>();
+	protected static Map<Integer, L2GrandBossInstance> _bosses = new ConcurrentHashMap<>();
 	
 	protected static Map<Integer, StatsSet> _storedInfo = new HashMap<>();
 	
-	private final Map<Integer, Integer> _bossStatus = new ConcurrentHashMap<>();
-	
-	private final Map<Integer, L2BossZone> _zones = new ConcurrentHashMap<>();
+	private final Map<Integer, Integer> _bossStatus = new HashMap<>();
 	
 	protected GrandBossManager()
 	{
@@ -88,22 +77,18 @@ public final class GrandBossManager implements IStorable
 				info.set("loc_z", rs.getInt("loc_z"));
 				info.set("heading", rs.getInt("heading"));
 				info.set("respawn_time", rs.getLong("respawn_time"));
-				final double HP = rs.getDouble("currentHP"); // jython doesn't recognize doubles
-				final int true_HP = (int) HP; // so use java's ability to type cast
-				info.set("currentHP", true_HP); // to convert double to int
-				final double MP = rs.getDouble("currentMP");
-				final int true_MP = (int) MP;
-				info.set("currentMP", true_MP);
+				info.set("currentHP", rs.getDouble("currentHP"));
+				info.set("currentMP", rs.getDouble("currentMP"));
 				final int status = rs.getInt("status");
 				_bossStatus.put(bossId, status);
 				_storedInfo.put(bossId, info);
-				_log.info(getClass().getSimpleName() + ": " + NpcData.getInstance().getTemplate(bossId).getName() + "(" + bossId + ") status is " + status + ".");
+				_log.info(getClass().getSimpleName() + ": " + NpcData.getInstance().getTemplate(bossId).getName() + "(" + bossId + ") status is " + status);
 				if (status > 0)
 				{
-					_log.info(getClass().getSimpleName() + ": Next spawn date of " + NpcData.getInstance().getTemplate(bossId).getName() + " is " + new Date(info.getLong("respawn_time")) + ".");
+					_log.info(getClass().getSimpleName() + ": Next spawn date of " + NpcData.getInstance().getTemplate(bossId).getName() + " is " + new Date(info.getLong("respawn_time")));
 				}
 			}
-			_log.info(getClass().getSimpleName() + ": Loaded " + _storedInfo.size() + " Instances");
+			_log.info(getClass().getSimpleName() + ": Loaded " + _storedInfo.size() + " Instances.");
 		}
 		catch (SQLException e)
 		{
@@ -111,83 +96,9 @@ public final class GrandBossManager implements IStorable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error while initializing GrandBossManager: " + e.getMessage(), e);
+			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error while initializing GrandBossManager: " + e.getMessage(), e);
 		}
 		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new GrandBossManagerStoreTask(), 5 * 60 * 1000, 5 * 60 * 1000);
-	}
-	
-	/**
-	 * Zone Functions
-	 */
-	public void initZones()
-	{
-		final Map<Integer, List<Integer>> zones = new HashMap<>();
-		for (Integer zoneId : _zones.keySet())
-		{
-			zones.put(zoneId, new ArrayList<>());
-		}
-		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			Statement s = con.createStatement();
-			ResultSet rs = s.executeQuery("SELECT * from grandboss_list ORDER BY player_id"))
-		{
-			while (rs.next())
-			{
-				zones.get(rs.getInt("zone")).add(rs.getInt("player_id"));
-			}
-			_log.info(getClass().getSimpleName() + ": Initialized " + _zones.size() + " Grand Boss Zones");
-		}
-		catch (SQLException e)
-		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not load grandboss_list table: " + e.getMessage(), e);
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, "Error while initializing GrandBoss zones: " + e.getMessage(), e);
-		}
-		
-		for (Entry<Integer, L2BossZone> e : _zones.entrySet())
-		{
-			e.getValue().setAllowedPlayers(zones.get(e.getKey()));
-		}
-		
-		zones.clear();
-	}
-	
-	public void addZone(L2BossZone zone)
-	{
-		_zones.put(zone.getId(), zone);
-	}
-	
-	public L2BossZone getZone(int zoneId)
-	{
-		return _zones.get(zoneId);
-	}
-	
-	public L2BossZone getZone(L2Character character)
-	{
-		return _zones.values().stream().filter(z -> z.isCharacterInZone(character)).findFirst().orElse(null);
-	}
-	
-	public L2BossZone getZone(Location loc)
-	{
-		return getZone(loc.getX(), loc.getY(), loc.getZ());
-	}
-	
-	public L2BossZone getZone(int x, int y, int z)
-	{
-		return _zones.values().stream().filter(zone -> zone.isInsideZone(x, y, z)).findFirst().orElse(null);
-	}
-	
-	public boolean checkIfInZone(String zoneType, L2Object obj)
-	{
-		final L2BossZone temp = getZone(obj.getX(), obj.getY(), obj.getZ());
-		return (temp != null) && temp.getName().equalsIgnoreCase(zoneType);
-	}
-	
-	public boolean checkIfInZone(L2PcInstance player)
-	{
-		return (player != null) && (getZone(player.getX(), player.getY(), player.getZ()) != null);
 	}
 	
 	public int getBossStatus(int bossId)
@@ -210,13 +121,13 @@ public final class GrandBossManager implements IStorable
 	{
 		if (boss != null)
 		{
-			BOSSES.put(boss.getId(), boss);
+			_bosses.put(boss.getId(), boss);
 		}
 	}
 	
 	public L2GrandBossInstance getBoss(int bossId)
 	{
-		return BOSSES.get(bossId);
+		return _bosses.get(bossId);
 	}
 	
 	public StatsSet getStatsSet(int bossId)
@@ -233,32 +144,11 @@ public final class GrandBossManager implements IStorable
 	@Override
 	public boolean storeMe()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			Statement s = con.createStatement())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
-			s.executeUpdate(DELETE_GRAND_BOSS_LIST);
-			
-			try (PreparedStatement insert = con.prepareStatement(INSERT_GRAND_BOSS_LIST))
-			{
-				for (Entry<Integer, L2BossZone> e : _zones.entrySet())
-				{
-					final List<Integer> list = e.getValue().getAllowedPlayers();
-					if ((list == null) || list.isEmpty())
-					{
-						continue;
-					}
-					for (Integer player : list)
-					{
-						insert.setInt(1, player);
-						insert.setInt(2, e.getKey());
-						insert.executeUpdate();
-						insert.clearParameters();
-					}
-				}
-			}
 			for (Entry<Integer, StatsSet> e : _storedInfo.entrySet())
 			{
-				final L2GrandBossInstance boss = BOSSES.get(e.getKey());
+				final L2GrandBossInstance boss = _bosses.get(e.getKey());
 				final StatsSet info = e.getValue();
 				if ((boss == null) || (info == null))
 				{
@@ -298,7 +188,7 @@ public final class GrandBossManager implements IStorable
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't store grandbosses to database:" + e.getMessage(), e);
+			_log.log(Level.WARNING, "Couldn't store grandbosses to database: " + e.getMessage(), e);
 			return false;
 		}
 		return true;
@@ -308,7 +198,7 @@ public final class GrandBossManager implements IStorable
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
-			final L2GrandBossInstance boss = BOSSES.get(bossId);
+			final L2GrandBossInstance boss = _bosses.get(bossId);
 			final StatsSet info = _storedInfo.get(bossId);
 			
 			if (statusOnly || (boss == null) || (info == null))
@@ -346,7 +236,7 @@ public final class GrandBossManager implements IStorable
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update grandbosses to database:" + e.getMessage(), e);
+			_log.log(Level.WARNING, "Couldn't update grandbosses to database:" + e.getMessage(), e);
 		}
 	}
 	
@@ -357,15 +247,9 @@ public final class GrandBossManager implements IStorable
 	{
 		storeMe();
 		
-		BOSSES.clear();
+		_bosses.clear();
 		_storedInfo.clear();
 		_bossStatus.clear();
-		_zones.clear();
-	}
-	
-	public Map<Integer, L2BossZone> getZones()
-	{
-		return _zones;
 	}
 	
 	/**

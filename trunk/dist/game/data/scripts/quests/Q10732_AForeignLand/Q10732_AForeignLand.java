@@ -25,59 +25,59 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowUsm;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 
 /**
+ * A Foreign Land (10732)
  * @author Sdw
  */
-public class Q10732_AForeignLand extends Quest
+public final class Q10732_AForeignLand extends Quest
 {
 	// NPC's
 	private static final int NAVARI = 33931;
 	private static final int GERETH = 33932;
 	// Misc
 	private static final int MAX_LEVEL = 20;
-	private static final int ERTHEIA_FIRST_QUEST_USM_ID = 14;
 	
 	public Q10732_AForeignLand()
 	{
-		super(10732, Q10732_AForeignLand.class.getSimpleName(), "A Foreign Land");
+		super(10732);
 		addStartNpc(NAVARI);
 		addTalkId(NAVARI, GERETH);
-		addCondMaxLevel(MAX_LEVEL, "no_quest.html"); // TODO: Find proper HTML
-		addCondRace(Race.ERTHEIA, "no_quest.html"); // TODO: Find proper HTML
+		addCondRace(Race.ERTHEIA, "");
+		addCondMaxLevel(MAX_LEVEL, "33931-00.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		String htmltext = null;
-		
 		if (qs == null)
 		{
-			return htmltext;
+			return null;
 		}
 		
+		String htmltext = event;
 		switch (event)
 		{
-			case "33931-03.html":
+			case "33931-02.htm":
+				break;
+			case "33931-03.htm":
 			{
 				qs.startQuest();
-				player.sendPacket(new ExShowUsm(ERTHEIA_FIRST_QUEST_USM_ID));
-				htmltext = event;
+				player.sendPacket(ExShowUsm.ERTHEIA_FIRST_QUEST);
 				break;
 			}
 			case "33932-02.html":
 			{
-				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_001_Radar_01.htm", TutorialShowHtml.LARGE_WINDOW));
-				giveAdena(player, 3000, true);
-				addExpAndSp(player, 75, 2);
-				qs.exitQuest(false, true);
+				if (qs.isStarted())
+				{
+					player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_001_Radar_01.htm", TutorialShowHtml.LARGE_WINDOW));
+					giveAdena(player, 3000, true);
+					addExpAndSp(player, 75, 2);
+					qs.exitQuest(false, true);
+				}
 				break;
 			}
-			case "33931-02.htm":
-			{
-				htmltext = event;
-				break;
-			}
+			default:
+				htmltext = null;
 		}
 		return htmltext;
 	}
@@ -85,36 +85,32 @@ public class Q10732_AForeignLand extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
+		final QuestState st = getQuestState(player, true);
+		if (st.isCompleted())
+		{
+			return getAlreadyCompletedMsg(player);
+		}
 		
+		String htmltext = getNoQuestMsg(player);
 		switch (npc.getId())
 		{
 			case NAVARI:
 			{
-				if (qs.isCreated())
+				if (st.isCreated())
 				{
 					htmltext = "33931-01.htm";
 				}
-				else if (qs.isStarted())
+				else if (st.isStarted())
 				{
 					htmltext = "33931-04.html";
-				}
-				else if (qs.isCompleted())
-				{
-					htmltext = getAlreadyCompletedMsg(player);
 				}
 				break;
 			}
 			case GERETH:
 			{
-				if (qs.isStarted())
+				if (st.isStarted())
 				{
 					htmltext = "33932-01.html";
-				}
-				else if (qs.isCompleted())
-				{
-					htmltext = getAlreadyCompletedMsg(player);
 				}
 				break;
 			}

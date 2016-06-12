@@ -19,10 +19,11 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.enums.CastleSide;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.entity.Castle;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Take Castle effect implementation.
@@ -32,10 +33,8 @@ public final class TakeCastle extends AbstractEffect
 {
 	private final CastleSide _side;
 	
-	public TakeCastle(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public TakeCastle(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_side = params.getEnum("side", CastleSide.class);
 	}
 	
@@ -46,14 +45,14 @@ public final class TakeCastle extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (!info.getEffector().isPlayer())
+		if (!effector.isPlayer())
 		{
 			return;
 		}
 		
-		final L2PcInstance effector = info.getEffector().getActingPlayer();
-		CastleManager.getInstance().getCastle(effector).engrave(effector.getClan(), info.getEffected(), _side);
+		final Castle castle = CastleManager.getInstance().getCastle(effector);
+		castle.engrave(effector.getClan(), effected, _side);
 	}
 }

@@ -27,9 +27,9 @@ import com.l2jmobius.gameserver.network.serverpackets.ExStopMoveAirShip;
  */
 public class L2AirShipAI extends L2VehicleAI
 {
-	public L2AirShipAI(L2AirShipInstance creature)
+	public L2AirShipAI(L2AirShipInstance airShip)
 	{
-		super(creature);
+		super(airShip);
 	}
 	
 	@Override
@@ -44,7 +44,7 @@ public class L2AirShipAI extends L2VehicleAI
 	}
 	
 	@Override
-	protected void clientStopMoving(Location loc)
+	public void clientStopMoving(Location loc)
 	{
 		if (_actor.isMoving())
 		{

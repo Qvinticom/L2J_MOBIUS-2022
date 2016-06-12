@@ -36,13 +36,12 @@ public enum PcCondOverride
 	DESTROY_ALL_ITEMS(12, "Overrides item destroy conditions"),
 	SEE_ALL_PLAYERS(13, "Overrides the conditions to see hidden players"),
 	TARGET_ALL(14, "Overrides target conditions"),
-	DROP_ALL_ITEMS(15, "Overrides item drop conditions"),
-	VULNERABLE_ALL_PLAYERS(16, "Overrides the conditions to invulnerable players");
+	DROP_ALL_ITEMS(15, "Overrides item drop conditions");
 	
 	private final int _mask;
 	private final String _descr;
 	
-	private PcCondOverride(int id, String descr)
+	PcCondOverride(int id, String descr)
 	{
 		_mask = 1 << id;
 		_descr = descr;

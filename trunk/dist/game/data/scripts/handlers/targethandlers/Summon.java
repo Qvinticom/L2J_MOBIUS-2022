@@ -16,48 +16,32 @@
  */
 package handlers.targethandlers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
- * Target Summon handler.
- * @author UnAfraid
+ * Target automatically one of my summons.
+ * @author Nik
  */
 public class Summon implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public Enum<TargetType> getTargetType()
 	{
-		if (!activeChar.hasSummon())
-		{
-			return EMPTY_TARGET_LIST;
-		}
-		if (!activeChar.hasPet() && activeChar.hasServitors())
-		{
-			return activeChar.getServitors().values().toArray(new L2Character[0]);
-		}
-		if (activeChar.hasPet() && !activeChar.hasServitors())
-		{
-			return new L2Character[]
-			{
-				activeChar.getPet()
-			};
-		}
-		final List<L2Character> targets = new ArrayList<>(1 + activeChar.getServitors().size());
-		targets.add(activeChar.getPet());
-		targets.addAll(activeChar.getServitors().values());
-		return targets.toArray(new L2Character[0]);
+		return TargetType.SUMMON;
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public L2Object getTarget(L2Character activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		return L2TargetType.SUMMON;
+		if (activeChar.isPlayer() && activeChar.hasSummon())
+		{
+			return activeChar.getActingPlayer().getAnyServitor();
+		}
+		
+		return activeChar.getPet();
 	}
 }

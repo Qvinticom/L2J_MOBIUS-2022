@@ -1,1354 +1,1706 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="3400" levels="1" name="Stat Enhancing Earring">
+	<skill id="3400" toLevel="1" name="Stat Enhancing Earring">
 		<!-- Confirmed CT2.5 -->
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="AttackTrait">
-				<param DERANGEMENT="6" />
+				<DERANGEMENT>6</DERANGEMENT>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3401" levels="1" name="Dynasty Resistance Necklace">
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+	<skill id="3401" toLevel="1" name="Dynasty Resistance Necklace">
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param DERANGEMENT="9" />
+				<DERANGEMENT>9</DERANGEMENT>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3402" levels="1" name="Dynasty Resistance Ring">
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+	<skill id="3402" toLevel="1" name="Dynasty Resistance Ring">
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param DERANGEMENT="4" />
+				<DERANGEMENT>4</DERANGEMENT>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3403" levels="1" name="Dynasty Resistance Earring">
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
+	<skill id="3403" toLevel="1" name="Dynasty Resistance Earring">
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="DefenceTrait">
-				<param DERANGEMENT="6" />
+				<DERANGEMENT>6</DERANGEMENT>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3404" levels="1" name="Mysterious Effect">
+	<skill id="3404" toLevel="1" name="Mysterious Effect">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="0" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="BIG_HEAD" />
-		<set name="abnormalVisualEffect" val="BIG_HEAD" />
-		<set name="activateRate" val="0" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<set name="trait" val="ETC" />
-		<cond msgId="113" addName="1">
-			<not>
-				<player transformationId="103" />
-			</not>
-		</cond>
+		<abnormalLvl>0</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BIG_HEAD</abnormalType>
+		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
+		<activateRate>0</activateRate>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>1800000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<trait>ETC</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CannotUseInTransform">
+				<transformId>103</transformId>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="3405" levels="1" name="Large Firecracker Effect">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="1200000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="3405" toLevel="1" name="Large Firecracker Effect">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>1200000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="3406" levels="1" name="Weight Loss Ring">
+	<skill id="3406" toLevel="1" name="Weight Loss Ring">
 		<!-- Confirmed CT2.5 -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="weightPenalty" val="9000" />
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="WeightPenalty">
+				<amount>9000</amount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3407" levels="1" name="Stealth Ring">
+	<skill id="3407" toLevel="1" name="Stealth Ring">
 		<!-- Confirmed CT2.5 -->
 		<!-- set name="avoidAggro" val="100" / -->
-		<set name="abnormalLvl" val="0" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="STEALTH" />
-		<set name="abnormalVisualEffect" val="STEALTH" />
-		<set name="activateRate" val="0" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<abnormalLvl>0</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>STEALTH</abnormalType>
+		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
+		<activateRate>0</activateRate>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SilentMove">
-				<mul stat="runSpd" val="0.6" />
+				<chance>100</chance>
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>-40</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3408" levels="1" name="Blessed Ring of Escape">
+	<skill id="3408" toLevel="1" name="Blessed Ring of Escape">
 		<!-- Confirmed CT2.5 -->
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="200" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="60000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<and>
-				<player canEscape="true" />
-				<not>
-					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-				</not>
-			</and>
-		</cond>
-		<for>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>200</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
 			<effect name="Escape">
-				<param escapeType="TOWN" />
+				<escapeType>TOWN</escapeType>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3409" levels="1" name="Blessed Ring of Resurrection">
+	<skill id="3409" toLevel="1" name="Blessed Ring of Resurrection">
 		<!-- Confirmed CT2.5 -->
-		<set name="blockedInOlympiad" val="true" />
-		<set name="castRange" val="400" />
-		<set name="effectPoint" val="1" />
-		<set name="effectRange" val="600" />
-		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="300000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="PC_BODY" />
-		<cond>
-			<player canResurrect="true" />
-		</cond>
-		<for>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>PC_BODY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpResurrection" />
+		</conditions>
+		<effects>
 			<effect name="Resurrection">
-				<param power="100" />
+				<power>100</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3410" levels="1" name="Blue Talisman - Damage Reflect">
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.etc_talisman_i01" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="360000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="reflectDam" val="10" />
+	<skill id="3410" toLevel="1" name="Blue Talisman - Damage Reflect">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>7</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_talisman_i01</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>360000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamageShield">
+				<amount>10</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3411" levels="1" name="Special Ability: Focus">
-		<set name="icon" val="icon.skill1077" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="critRate" val="109.2" />
-				<mul stat="maxHp" val="1.1" />
-				<mul stat="pvpPhysDmg" val="1.05" />
-				<mul stat="pvpPhysSkillsDmg" val="1.05" />
-				<mul stat="pvpMagicalDmg" val="1.05" />
+	<skill id="3411" toLevel="1" name="Special Ability: Focus">
+		<icon>icon.ensoul_big_old</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>109.2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3412" levels="1" name="Dynasty Breastplate">
+	<skill id="3412" toLevel="1" name="Dynasty Breastplate">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t91_u_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pDef" val="1.046" /> <!-- P. Def +4.6% -->
-				<add stat="maxHp" val="418" /> <!-- MaxHP +418 -->
-				<add stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
-			</effect>
+		<icon>icon.armor_t91_u_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="EnableCloak" />
-		</for>
+			<effect name="PhysicalDefence">
+				<amount>4.6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>6</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MaxHp">
+				<amount>418</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3413" levels="1" name="Dynasty Leather Armor">
+	<skill id="3413" toLevel="1" name="Dynasty Leather Armor">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t92_u_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="rEvas" val="1.72" /> <!-- Evacion +1.72 -->
-				<add stat="accCombat" val="1.72" /> <!-- Accuracy +1.72 -->
-				<add stat="maxHp" val="418" /> <!-- MaxHP +418 -->
-				<add stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
-			</effect>
+		<icon>icon.armor_t92_u_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="EnableCloak" />
-		</for>
+			<effect name="PhysicalEvasion">
+				<amount>1.72</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>1.72</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>6</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MaxHp">
+				<amount>418</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3414" levels="1" name="Dynasty Leather Armor">
+	<skill id="3414" toLevel="1" name="Dynasty Leather Armor">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t92_ud_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.054" /> <!-- P. Atk. +5.4% -->
-				<add stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
-				<add stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
-				<mul stat="physicalMpConsumeRate" val="0.95" /> <!-- MP consumption of the active skill is decreased -5% -->
-			</effect>
+		<icon>icon.armor_t92_ud_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="EnableCloak" />
-		</for>
+			<effect name="PAtk">
+				<amount>5.4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>8</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MaxHp">
+				<amount>492</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3415" levels="1" name="Dynasty Leather Armor">
+	<skill id="3415" toLevel="1" name="Dynasty Leather Armor">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t92_ub_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.054" /> <!-- P. Atk +5.4% -->
-				<add stat="maxHp" val="492" /> <!-- MaxHP +492 -->
-				<add stat="critRate" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
-				<add stat="critDmgAdd" val="234" /> <!-- Critical Damage +234 -->
-				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			</effect>
+		<icon>icon.armor_t92_ub_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="EnableCloak" />
-		</for>
+			<effect name="PAtk">
+				<amount>5.4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>234</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>24.6</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>8</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MaxHp">
+				<amount>492</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3416" levels="1" name="Dynasty Tunic">
+	<skill id="3416" toLevel="1" name="Dynasty Tunic">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t93_u_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtkSpd" val="1.12" /> <!-- Casting Spd. +12% -->
-				<add stat="maxMp" val="257" /> <!-- Max MP +257 -->
-				<add stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
-			</effect>
+		<icon>icon.armor_t93_u_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="EnableCloak" />
-		</for>
+			<effect name="MagicalAttackSpeed">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>257</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>6</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3417" levels="1" name="Equip Shield">
+	<skill id="3417" toLevel="1" name="Equip Shield">
 		<!-- Confirmed CT2.5 -->
 		<!-- Dynasty Shield Skill -->
-		<set name="icon" val="icon.shield_dynasty_shield_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="rShld" val="1.05" />
+		<icon>icon.shield_dynasty_shield_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ShieldDefenceRate">
+				<amount>5</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3418" levels="1" name="Active Skill: Transform Pig">
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="effectPoint" val="1" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="600000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
+	<skill id="3418" toLevel="1" name="Active Skill: Transform Pig">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>104</transformId>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Transformation">
-				<param id="104" />
+				<transformationId>104</transformationId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3419" levels="1" name="Magic Immunity">
-		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+	<skill id="3419" toLevel="1" name="Magic Immunity">
+		<icon>icon.etc_stripe_shirts_s_i05</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="3420" levels="1" name="Dynasty Leather Armor">
+	<skill id="3420" toLevel="1" name="Dynasty Leather Armor">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.armor_t92_u_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.054" /> <!-- increase Atk. Spd. +5.4% -->
-				<mul stat="pAtk" val="1.0266" /> <!-- Increase P. Atk. +2.66% -->
-				<mul stat="pDef" val="1.0266" /> <!-- Increase P. Def. +2.66% -->
-				<add stat="maxHp" val="492" /> <!-- MaxHP +492 -->
-				<add stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			</effect>
+		<icon>icon.armor_t92_u_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="EnableCloak" />
-		</for>
-	</skill>
-	<skill id="3421" levels="1" name="Ride Wolf">
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="icon.skill0083" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
-	</skill>
-	<skill id="3422" levels="1" name="Dismount Wolf">
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="icon.skill0083" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
-	</skill>
-	<skill id="3423" levels="1" name="Release Agathion's Seal - Little Angel">
-		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="SummonAgathion">
-				<param npcId="16031" />
+			<effect name="PAtk">
+				<amount>2.66</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3424" levels="1" name="Release Agathion's Seal - Little Devil">
-		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="SummonAgathion">
-				<param npcId="16032" />
+			<effect name="PhysicalDefence">
+				<amount>2.66</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3425" levels="1" name="Release Agathion's Seal - Rudolph">
-		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="SummonAgathion">
-				<param npcId="16033" />
+			<effect name="PhysicalAttackSpeed">
+				<amount>5.4</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="DefenceAttribute">
+				<amount>8</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MaxHp">
+				<amount>492</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3426" levels="1" name="Maximum Ability">
+	<skill id="3421" toLevel="1" name="Ride Wolf">
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>icon.skill0083</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="3422" toLevel="1" name="Dismount Wolf">
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>icon.skill0083</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="3423" toLevel="1" name="Release Agathion's Seal - Little Angel">
+		<!-- Confirmed CT2.5 -->
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>16031</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3424" toLevel="1" name="Release Agathion's Seal - Little Devil">
+		<!-- Confirmed CT2.5 -->
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>16032</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3425" toLevel="1" name="Release Agathion's Seal - Rudolph">
+		<!-- Confirmed CT2.5 -->
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>16033</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3426" toLevel="1" name="Maximum Ability">
 		<!-- Confirmed CT2.5 -->
 		<!-- Rapier +4 Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<for>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<operateType>P</operateType>
+		<effects>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
-				<param isCritical="true" />
-				<param minDamage="1" chance="5" />
-				<param skillId="5547" skillLevel="1" /> <!-- Maximum Ability -->
-				<param targetType="PARTY" />
-				<param allowWeapons="ALL" />
+				<!-- Maximum Ability -->
+				<attackerType>L2Character</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>5</chance>
+				<targetType>MY_PARTY</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>5547</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3427" levels="1" name="Special Ability: Infinity Rapier">
+	<skill id="3427" toLevel="1" name="Special Ability: Infinity Rapier">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<set name="icon" val="icon.weapon_infinity_rapier_i00" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.25" /> <!-- HP +25% -->
-				<mul stat="maxMp" val="1.3" /> <!-- MP +30% -->
-				<mul stat="maxCp" val="1.5" /> <!-- CP +50% -->
-				<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
-				<mul stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<mul stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-				<add stat="reflectDam" val="9" /> <!-- Reflect Damage 9% -->
-			</effect>
+		<icon>icon.weapon_infinity_rapier_i00</icon>
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
-				<param isCritical="true" />
-				<param minDamage="1" chance="5" />
-				<param skillId="5547" skillLevel="1" /> <!-- Maximum Ability -->
-				<param targetType="PARTY" />
-				<param allowWeapons="ALL" />
+				<!-- Maximum Ability -->
+				<attackerType>L2Character</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>5</chance>
+				<targetType>MY_PARTY</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>5547</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3428" levels="1" name="Blue Talisman - Explosion">
-		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="effectPoint" val="669" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.etc_talisman_i01" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="75" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.2" />
-				<mul stat="pAtkSpd" val="1.1" />
+			<effect name="DamageShield">
+				<amount>9</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+			<effect name="MaxCp">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3429" levels="1" name="Red Talisman - Life Force">
+	<skill id="3428" toLevel="1" name="Blue Talisman - Explosion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_talisman_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<effectPoint>669</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_talisman_i01</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>75</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3429" toLevel="1" name="Red Talisman - Life Force">
+		<!-- Confirmed CT2.5 -->
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_talisman_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>75</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>1800000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="HealPercent">
-				<param power="100" />
+				<power>100</power>
 			</effect>
 			<effect name="ManaHealPercent">
-				<param power="100" />
+				<power>100</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3430" levels="1" name="White Talisman - Darkness">
+	<skill id="3430" toLevel="1" name="White Talisman - Darkness">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="effectPoint" val="669" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.etc_talisman_i06" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="75" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="darkRes" val="50" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<effectPoint>669</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_talisman_i06</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>75</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>DARK</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3431" levels="1" name="White Talisman - Storm">
+	<skill id="3431" toLevel="1" name="White Talisman - Storm">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="effectPoint" val="669" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.etc_talisman_i06" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="75" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="windRes" val="50" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<effectPoint>669</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_talisman_i06</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>75</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>WIND</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3432" levels="1" name="White Talisman - Water">
+	<skill id="3432" toLevel="1" name="White Talisman - Water">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="effectPoint" val="669" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.etc_talisman_i06" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="75" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="waterRes" val="50" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<effectPoint>669</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_talisman_i06</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>75</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>WATER</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3433" levels="1" name="White Talisman - Fire">
+	<skill id="3433" toLevel="1" name="White Talisman - Fire">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="effectPoint" val="669" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.etc_talisman_i06" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="75" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="fireRes" val="50" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<effectPoint>669</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_talisman_i06</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>75</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>FIRE</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3434" levels="1" name="White Talisman - Earth">
+	<skill id="3434" toLevel="1" name="White Talisman - Earth">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="effectPoint" val="669" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.etc_talisman_i06" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="75" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="earthRes" val="50" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<effectPoint>669</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_talisman_i06</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>75</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>EARTH</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3435" levels="1" name="White Talisman - Light">
+	<skill id="3435" toLevel="1" name="White Talisman - Light">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="effectPoint" val="669" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.etc_talisman_i06" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="75" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="holyRes" val="50" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<effectPoint>669</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_talisman_i06</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>75</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>HOLY</attribute>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3436" levels="1" name="Blue Talisman - Self-destruction">
+	<skill id="3436" toLevel="1" name="Blue Talisman - Self-destruction">
 		<!-- Confirmed CT2.5 -->
-		<set name="affectLimit" val="6-12" />
-		<set name="affectRange" val="200" />
-		<set name="effectPoint" val="-669" />
-		<set name="hitTime" val="3000" />
-		<set name="hpConsume" val="800" />
-		<set name="icon" val="icon.etc_talisman_i01" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="200" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
-		<for>
-			<effect name="MagicalAttack" />
-		</for>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>200</affectRange>
+		<effectPoint>-669</effectPoint>
+		<hitTime>3000</hitTime>
+		<hpConsume>800</hpConsume>
+		<icon>icon.etc_talisman_i01</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>75</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>200</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3437" levels="1" name="Blue Talisman - Magic Explosion">
+	<skill id="3437" toLevel="1" name="Blue Talisman - Magic Explosion">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="effectPoint" val="669" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.etc_talisman_i01" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="75" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="mCritRate" val="4" />
-				<mul stat="mAtk" val="1.55" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<effectPoint>669</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_talisman_i01</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>75</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>55</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MagicCriticalRate">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="3438" levels="1" name="Blue Talisman - Greater Healing">
+	<skill id="3438" toLevel="1" name="Blue Talisman - Greater Healing">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="effectPoint" val="669" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.etc_talisman_i01" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="75" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="healEffect" val="1000" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<effectPoint>669</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_talisman_i01</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>75</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealEffect">
+				<amount>1000</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3439" levels="1" name="Silk Shirt">
-		<set name="magicLvl" val="49" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="118" />
+	<skill id="3439" toLevel="1" name="Silk Shirt">
+		<magicLvl>49</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>118</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3440" levels="1" name="Silk Shirt">
-		<set name="magicLvl" val="49" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="51" />
+	<skill id="3440" toLevel="1" name="Silk Shirt">
+		<magicLvl>49</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>51</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3441" levels="1" name="Silk Shirt">
-		<set name="magicLvl" val="49" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxCp" val="354" />
+	<skill id="3441" toLevel="1" name="Silk Shirt">
+		<magicLvl>49</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>354</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3442" levels="1" name="Silk Shirt">
-		<set name="magicLvl" val="49" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="59" />
-				<add stat="maxMp" val="26" />
+	<skill id="3442" toLevel="1" name="Silk Shirt">
+		<magicLvl>49</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>26</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3443" levels="1" name="Silk Shirt">
-		<set name="magicLvl" val="49" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="59" />
-				<add stat="maxCp" val="117" />
+			<effect name="MaxHp">
+				<amount>59</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3444" levels="1" name="Silk Shirt">
-		<set name="magicLvl" val="49" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="26" />
-				<add stat="maxCp" val="117" />
+	<skill id="3443" toLevel="1" name="Silk Shirt">
+		<magicLvl>49</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>117</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3445" levels="1" name="Thin Leather Shirt">
-		<set name="magicLvl" val="58" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="147" />
+			<effect name="MaxHp">
+				<amount>59</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3446" levels="1" name="Thin Leather Shirt">
-		<set name="magicLvl" val="58" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="72" />
+	<skill id="3444" toLevel="1" name="Silk Shirt">
+		<magicLvl>49</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>117</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3447" levels="1" name="Thin Leather Shirt">
-		<set name="magicLvl" val="58" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxCp" val="441" />
+			<effect name="MaxMp">
+				<amount>26</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3448" levels="1" name="Thin Leather Shirt">
-		<set name="magicLvl" val="58" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="74" />
-				<add stat="maxMp" val="36" />
+	<skill id="3445" toLevel="1" name="Thin Leather Shirt">
+		<magicLvl>58</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>147</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3449" levels="1" name="Thin Leather Shirt">
-		<set name="magicLvl" val="58" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="74" />
-				<add stat="maxCp" val="222" />
+	<skill id="3446" toLevel="1" name="Thin Leather Shirt">
+		<magicLvl>58</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>72</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3450" levels="1" name="Thin Leather Shirt">
-		<set name="magicLvl" val="58" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="36" />
-				<add stat="maxCp" val="222" />
+	<skill id="3447" toLevel="1" name="Thin Leather Shirt">
+		<magicLvl>58</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>441</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3451" levels="1" name="Scale Shirt">
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="172" />
+	<skill id="3448" toLevel="1" name="Thin Leather Shirt">
+		<magicLvl>58</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>36</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3452" levels="1" name="Scale Shirt">
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="85" />
+			<effect name="MaxHp">
+				<amount>74</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3453" levels="1" name="Scale Shirt">
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxCp" val="516" />
+	<skill id="3449" toLevel="1" name="Thin Leather Shirt">
+		<magicLvl>58</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>222</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3454" levels="1" name="Scale Shirt">
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="86" />
-				<add stat="maxMp" val="43" />
+			<effect name="MaxHp">
+				<amount>74</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3455" levels="1" name="Scale Shirt">
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="86" />
-				<add stat="maxCp" val="258" />
+	<skill id="3450" toLevel="1" name="Thin Leather Shirt">
+		<magicLvl>58</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>222</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3456" levels="1" name="Scale Shirt">
-		<set name="magicLvl" val="64" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="43" />
-				<add stat="maxCp" val="258" />
+			<effect name="MaxMp">
+				<amount>36</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3457" levels="1" name="Mithril Shirt">
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="224" />
+	<skill id="3451" toLevel="1" name="Scale Shirt">
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>172</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3458" levels="1" name="Mithril Shirt">
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="111" />
+	<skill id="3452" toLevel="1" name="Scale Shirt">
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>85</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3459" levels="1" name="Mithril Shirt">
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxCp" val="672" />
+	<skill id="3453" toLevel="1" name="Scale Shirt">
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>516</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3460" levels="1" name="Mithril Shirt">
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="112" />
-				<add stat="maxMp" val="56" />
+	<skill id="3454" toLevel="1" name="Scale Shirt">
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>43</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3461" levels="1" name="Mithril Shirt">
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="112" />
-				<add stat="maxCp" val="336" />
+			<effect name="MaxHp">
+				<amount>86</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3462" levels="1" name="Mithril Shirt">
-		<set name="magicLvl" val="75" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="56" />
-				<add stat="maxCp" val="336" />
+	<skill id="3455" toLevel="1" name="Scale Shirt">
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>258</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3463" levels="1" name="Striped Silk Shirt">
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="135" />
+			<effect name="MaxHp">
+				<amount>86</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3464" levels="1" name="Striped Silk Shirt">
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="66" />
+	<skill id="3456" toLevel="1" name="Scale Shirt">
+		<magicLvl>64</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>258</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3465" levels="1" name="Striped Silk Shirt">
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxCp" val="405" />
+			<effect name="MaxMp">
+				<amount>43</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3466" levels="1" name="Striped Silk Shirt">
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="68" />
-				<add stat="maxMp" val="33" />
+	<skill id="3457" toLevel="1" name="Mithril Shirt">
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>224</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3467" levels="1" name="Striped Silk Shirt">
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="68" />
-				<add stat="maxCp" val="203" />
+	<skill id="3458" toLevel="1" name="Mithril Shirt">
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>111</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3468" levels="1" name="Striped Silk Shirt">
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="33" />
-				<add stat="maxCp" val="203" />
+	<skill id="3459" toLevel="1" name="Mithril Shirt">
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>672</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3469" levels="1" name="Thin Striped Leather Shirt">
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="160" />
+	<skill id="3460" toLevel="1" name="Mithril Shirt">
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>56</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3470" levels="1" name="Thin Striped Leather Shirt">
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="78" />
+			<effect name="MaxHp">
+				<amount>112</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3471" levels="1" name="Thin Striped Leather Shirt">
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxCp" val="480" />
+	<skill id="3461" toLevel="1" name="Mithril Shirt">
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>336</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3472" levels="1" name="Thin Striped Leather Shirt">
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="80" />
-				<add stat="maxMp" val="39" />
+			<effect name="MaxHp">
+				<amount>112</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3473" levels="1" name="Thin Striped Leather Shirt">
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="80" />
-				<add stat="maxCp" val="240" />
+	<skill id="3462" toLevel="1" name="Mithril Shirt">
+		<magicLvl>75</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>336</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3474" levels="1" name="Thin Striped Leather Shirt">
-		<set name="magicLvl" val="61" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="39" />
-				<add stat="maxCp" val="240" />
+			<effect name="MaxMp">
+				<amount>56</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3475" levels="1" name="Striped Scale Shirt">
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="186" />
+	<skill id="3463" toLevel="1" name="Striped Silk Shirt">
+		<magicLvl>55</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>135</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3476" levels="1" name="Striped Scale Shirt">
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="92" />
+	<skill id="3464" toLevel="1" name="Striped Silk Shirt">
+		<magicLvl>55</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>66</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3477" levels="1" name="Striped Scale Shirt">
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxCp" val="564" />
+	<skill id="3465" toLevel="1" name="Striped Silk Shirt">
+		<magicLvl>55</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>405</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3478" levels="1" name="Striped Scale Shirt">
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="93" />
-				<add stat="maxMp" val="46" />
+	<skill id="3466" toLevel="1" name="Striped Silk Shirt">
+		<magicLvl>55</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3479" levels="1" name="Striped Scale Shirt">
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="93" />
-				<add stat="maxCp" val="282" />
+			<effect name="MaxHp">
+				<amount>68</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3480" levels="1" name="Striped Scale Shirt">
-		<set name="magicLvl" val="67" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="46" />
-				<add stat="maxCp" val="282" />
+	<skill id="3467" toLevel="1" name="Striped Silk Shirt">
+		<magicLvl>55</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>203</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3481" levels="1" name="Striped Mithril Shirt">
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="246" />
+			<effect name="MaxHp">
+				<amount>68</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3482" levels="1" name="Striped Mithril Shirt">
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="122" />
+	<skill id="3468" toLevel="1" name="Striped Silk Shirt">
+		<magicLvl>55</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>203</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="3483" levels="1" name="Striped Mithril Shirt">
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxCp" val="744" />
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3484" levels="1" name="Striped Mithril Shirt">
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="123" />
-				<add stat="maxMp" val="61" />
+	<skill id="3469" toLevel="1" name="Thin Striped Leather Shirt">
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>160</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3485" levels="1" name="Striped Mithril Shirt">
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxHp" val="123" />
-				<add stat="maxCp" val="372" />
+	<skill id="3470" toLevel="1" name="Thin Striped Leather Shirt">
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>78</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3486" levels="1" name="Striped Mithril Shirt">
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="maxMp" val="61" />
-				<add stat="maxCp" val="372" />
+	<skill id="3471" toLevel="1" name="Thin Striped Leather Shirt">
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>480</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3487" levels="1" name="Blue Talisman - P. Atk.">
+	<skill id="3472" toLevel="1" name="Thin Striped Leather Shirt">
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>39</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>80</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3473" toLevel="1" name="Thin Striped Leather Shirt">
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>240</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>80</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3474" toLevel="1" name="Thin Striped Leather Shirt">
+		<magicLvl>61</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>240</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>39</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3475" toLevel="1" name="Striped Scale Shirt">
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>186</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3476" toLevel="1" name="Striped Scale Shirt">
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>92</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3477" toLevel="1" name="Striped Scale Shirt">
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>564</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3478" toLevel="1" name="Striped Scale Shirt">
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>46</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>93</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3479" toLevel="1" name="Striped Scale Shirt">
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>282</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>93</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3480" toLevel="1" name="Striped Scale Shirt">
+		<magicLvl>67</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>282</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>46</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3481" toLevel="1" name="Striped Mithril Shirt">
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>246</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3482" toLevel="1" name="Striped Mithril Shirt">
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>122</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3483" toLevel="1" name="Striped Mithril Shirt">
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>744</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3484" toLevel="1" name="Striped Mithril Shirt">
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>61</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>123</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3485" toLevel="1" name="Striped Mithril Shirt">
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>372</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>123</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3486" toLevel="1" name="Striped Mithril Shirt">
+		<magicLvl>80</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>372</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>61</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3487" toLevel="1" name="Blue Talisman - P. Atk.">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="effectPoint" val="532" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.etc_talisman_i01" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="360000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="pAtk" val="9.4" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<effectPoint>532</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_talisman_i01</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>360000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>9.4</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3488" levels="1" name="Blue Talisman - Shield Defense">
+	<skill id="3488" toLevel="1" name="Blue Talisman - Shield Defense">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="TALISMAN" />
-		<set name="effectPoint" val="532" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.etc_talisman_i01" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="360000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="sDef" val="63" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<effectPoint>532</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_talisman_i01</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>360000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ShieldDefence">
+				<amount>63</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3489" levels="1" name="Yellow Talisman - M. Atk.">
+	<skill id="3489" toLevel="1" name="Yellow Talisman - M. Atk.">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.etc_talisman_i02" />
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="mAtk" val="11.7" />
+		<icon>icon.etc_talisman_i02</icon>
+		<magicLvl>55</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>11.7</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3490" levels="1" name="Yellow Talisman - P. Def.">
+	<skill id="3490" toLevel="1" name="Yellow Talisman - P. Def.">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.etc_talisman_i02" />
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="pDef" val="18.3" />
+		<icon>icon.etc_talisman_i02</icon>
+		<magicLvl>55</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>18.3</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3491" levels="1" name="Yellow Talisman - Evasion">
+	<skill id="3491" toLevel="1" name="Yellow Talisman - Evasion">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.etc_talisman_i02" />
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="rEvas" val="1.1" />
+		<icon>icon.etc_talisman_i02</icon>
+		<magicLvl>55</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>1.1</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3492" levels="1" name="Yellow Talisman - Speed">
+	<skill id="3492" toLevel="1" name="Yellow Talisman - Speed">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.etc_talisman_i02" />
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="3" />
+		<icon>icon.etc_talisman_i02</icon>
+		<magicLvl>55</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="Speed">
+				<amount>3</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3493" levels="1" name="Yellow Talisman - HP Regeneration">
+	<skill id="3493" toLevel="1" name="Yellow Talisman - HP Regeneration">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.etc_talisman_i02" />
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="regHp" val="1.01" />
+		<icon>icon.etc_talisman_i02</icon>
+		<magicLvl>55</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="HpRegen">
+				<amount>1</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3494" levels="1" name="Yellow Talisman - CP Regeneration">
+	<skill id="3494" toLevel="1" name="Yellow Talisman - CP Regeneration">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.etc_talisman_i02" />
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="regCp" val="1.01" />
+		<icon>icon.etc_talisman_i02</icon>
+		<magicLvl>55</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="CpRegen">
+				<amount>1</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3495" levels="1" name="Yellow Talisman - Healing">
+	<skill id="3495" toLevel="1" name="Yellow Talisman - Healing">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.etc_talisman_i02" />
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="healEffect" val="8" />
+		<icon>icon.etc_talisman_i02</icon>
+		<magicLvl>55</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="HealEffect">
+				<amount>8</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3496" levels="1" name="Red Talisman - HP/CP Recovery">
+	<skill id="3496" toLevel="1" name="Red Talisman - HP/CP Recovery">
 		<!-- Confirmed CT2.5 -->
-		<set name="effectPoint" val="532" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.etc_talisman_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="55" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="300000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<effectPoint>532</effectPoint>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_talisman_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="Heal">
-				<param power="100" />
+				<power>100</power>
 			</effect>
-			<effect name="CpHeal">
-				<param power="100" />
+			<effect name="Cp">
+				<amount>100</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3497" levels="1" name="Yellow Talisman - MP Regeneration">
+	<skill id="3497" toLevel="1" name="Yellow Talisman - MP Regeneration">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.etc_talisman_i02" />
-		<set name="magicLvl" val="55" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="regMp" val="1.01" />
+		<icon>icon.etc_talisman_i02</icon>
+		<magicLvl>55</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MpRegen">
+				<amount>1</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3498" levels="1" name="Special Ability: Light">
+	<skill id="3498" toLevel="1" name="Special Ability: Light">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.skill0150" />
-		<set name="magicLvl" val="46" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="weightLimit" val="1.2" />
+		<icon>icon.ensoul_big_old</icon>
+		<magicLvl>46</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="WeightLimit">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="3499" levels="1" name="Dispel Transform">
+	<skill id="3499" toLevel="1" name="Dispel Transform">
 		<!-- Confirmed CT2.5 -->
-		<set name="effectPoint" val="10" />
-		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skilltransform2" />
-		<set name="magicLvl" val="56" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<effectPoint>10</effectPoint>
+		<hitTime>2500</hitTime>
+		<icon>icon.skilltransform2</icon>
+		<magicLvl>56</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="DispelBySlot">
-				<param dispel="TRANSFORM,9" />
+				<dispel>TRANSFORM,9</dispel>
 			</effect>
-		</for>
+		</effects>
 	</skill>
 </list>

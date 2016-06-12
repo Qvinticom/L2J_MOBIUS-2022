@@ -23,15 +23,15 @@ import java.util.concurrent.ScheduledFuture;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.TrapAction;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.knownlist.TrapKnownList;
 import com.l2jmobius.gameserver.model.actor.tasks.npc.trap.TrapTask;
 import com.l2jmobius.gameserver.model.actor.tasks.npc.trap.TrapTriggerTask;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.trap.OnTrapAction;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnTrapAction;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
@@ -40,7 +40,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo.TrapInfo;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
@@ -62,23 +62,16 @@ public final class L2TrapInstance extends L2Npc
 	// Tasks
 	private ScheduledFuture<?> _trapTask = null;
 	
-	/**
-	 * Creates a trap.
-	 * @param template the trap NPC template
-	 * @param instanceId the instance ID
-	 * @param lifeTime the life time
-	 */
 	public L2TrapInstance(L2NpcTemplate template, int instanceId, int lifeTime)
 	{
 		super(template);
 		setInstanceType(InstanceType.L2TrapInstance);
-		setInstanceId(instanceId);
+		setInstanceById(instanceId);
 		setName(template.getName());
 		setIsInvul(false);
-		
 		_owner = null;
 		_isTriggered = false;
-		_skill = getTemplate().getParameters().getObject("trap_skill", SkillHolder.class);
+		_skill = getParameters().getObject("trap_skill", SkillHolder.class);
 		_hasLifeTime = lifeTime >= 0;
 		_lifeTime = lifeTime != 0 ? lifeTime : 30000;
 		_remainingTime = _lifeTime;
@@ -88,12 +81,6 @@ public final class L2TrapInstance extends L2Npc
 		}
 	}
 	
-	/**
-	 * Creates a trap.
-	 * @param template the trap NPC template
-	 * @param owner the owner
-	 * @param lifeTime the life time
-	 */
 	public L2TrapInstance(L2NpcTemplate template, L2PcInstance owner, int lifeTime)
 	{
 		this(template, owner.getInstanceId(), lifeTime);
@@ -101,27 +88,27 @@ public final class L2TrapInstance extends L2Npc
 	}
 	
 	@Override
-	public void broadcastPacket(L2GameServerPacket mov)
+	public void broadcastPacket(IClientOutgoingPacket mov)
 	{
-		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
+		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
-			if ((player != null) && (_isTriggered || canBeSeen(player)))
+			if (_isTriggered || canBeSeen(player))
 			{
 				player.sendPacket(mov);
 			}
-		}
+		});
 	}
 	
 	@Override
-	public void broadcastPacket(L2GameServerPacket mov, int radiusInKnownlist)
+	public void broadcastPacket(IClientOutgoingPacket mov, int radiusInKnownlist)
 	{
-		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
+		L2World.getInstance().forEachVisibleObjectInRange(this, L2PcInstance.class, radiusInKnownlist, player ->
 		{
-			if ((player != null) && isInsideRadius(player, radiusInKnownlist, false, false) && (_isTriggered || canBeSeen(player)))
+			if (_isTriggered || canBeSeen(player))
 			{
 				player.sendPacket(mov);
 			}
-		}
+		});
 	}
 	
 	/**
@@ -174,63 +161,18 @@ public final class L2TrapInstance extends L2Npc
 	
 	public boolean checkTarget(L2Character target)
 	{
-		// Range seems to be reduced from Freya(300) to H5(150)
-		if (!target.isInsideRadius(this, 150, false, false))
+		if (!target.isInsideRadius(this, 300, false, false))
 		{
 			return false;
 		}
 		
-		if (!Skill.checkForAreaOffensiveSkills(this, target, _skill.getSkill(), _isInArena))
-		{
-			return false;
-		}
-		
-		// observers
-		if (target.isPlayer() && target.getActingPlayer().inObserverMode())
-		{
-			return false;
-		}
-		
-		// olympiad own team and their summons not attacked
-		if ((_owner != null) && _owner.isInOlympiadMode())
-		{
-			final L2PcInstance player = target.getActingPlayer();
-			if ((player != null) && player.isInOlympiadMode() && (player.getOlympiadSide() == _owner.getOlympiadSide()))
-			{
-				return false;
-			}
-		}
-		
-		if (_isInArena)
-		{
-			return true;
-		}
-		
-		// trap owned by players not attack non-flagged players
-		if (_owner != null)
-		{
-			if (target instanceof L2Attackable)
-			{
-				return true;
-			}
-			
-			final L2PcInstance player = target.getActingPlayer();
-			if ((player == null) || ((player.getPvpFlag() == 0) && (player.getReputation() >= 0)))
-			{
-				return false;
-			}
-		}
-		return true;
+		return _skill.getSkill().getTarget(this, target, false, true, false) != null;
 	}
 	
 	@Override
 	public boolean deleteMe()
 	{
-		if (_owner != null)
-		{
-			_owner.setTrap(null);
-			_owner = null;
-		}
+		_owner = null;
 		return super.deleteMe();
 	}
 	
@@ -251,12 +193,6 @@ public final class L2TrapInstance extends L2Npc
 		return _owner != null ? _owner.getReputation() : 0;
 	}
 	
-	@Override
-	public TrapKnownList getKnownList()
-	{
-		return (TrapKnownList) super.getKnownList();
-	}
-	
 	/**
 	 * Get the owner of this trap.
 	 * @return the owner
@@ -266,6 +202,7 @@ public final class L2TrapInstance extends L2Npc
 		return _owner;
 	}
 	
+	@Override
 	public byte getPvpFlag()
 	{
 		return _owner != null ? _owner.getPvpFlag() : 0;
@@ -286,12 +223,6 @@ public final class L2TrapInstance extends L2Npc
 	public Skill getSkill()
 	{
 		return _skill.getSkill();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new TrapKnownList(this));
 	}
 	
 	@Override
@@ -324,7 +255,7 @@ public final class L2TrapInstance extends L2Npc
 	}
 	
 	@Override
-	public void sendDamageMessage(L2Character target, int damage, boolean mcrit, boolean pcrit, boolean miss)
+	public void sendDamageMessage(L2Character target, Skill skill, int damage, boolean crit, boolean miss)
 	{
 		if (miss || (_owner == null))
 		{
@@ -336,7 +267,7 @@ public final class L2TrapInstance extends L2Npc
 			OlympiadGameManager.getInstance().notifyCompetitorDamage(getOwner(), damage);
 		}
 		
-		if ((target.isInvul() || target.isHpBlocked()) && !target.isNpc())
+		if (target.isHpBlocked() && !(target instanceof L2NpcInstance))
 		{
 			_owner.sendPacket(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
 		}
@@ -346,7 +277,7 @@ public final class L2TrapInstance extends L2Npc
 			sm.addCharName(this);
 			sm.addCharName(target);
 			sm.addInt(damage);
-			sm.addPopup(target.getObjectId(), getObjectId(), damage * -1);
+			sm.addPopup(target.getObjectId(), getObjectId(), (damage * -1));
 			_owner.sendPacket(sm);
 		}
 	}
@@ -421,28 +352,19 @@ public final class L2TrapInstance extends L2Npc
 			_trapTask = null;
 		}
 		
-		if (_owner != null)
-		{
-			_owner.setTrap(null);
-			_owner = null;
-		}
+		_owner = null;
 		
-		if (!isVisible() || isDead())
+		if (isSpawned() && !isDead())
 		{
-			return;
+			ZoneManager.getInstance().getRegion(this).removeFromZones(this);
+			deleteMe();
 		}
-		
-		if (getWorldRegion() != null)
-		{
-			getWorldRegion().removeFromZones(this);
-		}
-		
-		deleteMe();
 	}
 	
 	@Override
 	public void updateAbnormalVisualEffects()
 	{
+		
 	}
 	
 	public boolean hasLifeTime()

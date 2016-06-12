@@ -16,23 +16,26 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.CrystalizationData;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * @author UnAfraid
  */
-public final class ItemCrystalizationData implements IXmlReader
+public final class ItemCrystalizationData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(ItemCrystalizationData.class.getName());
+	
 	private final Map<Integer, CrystalizationData> _items = new HashMap<>();
 	
 	protected ItemCrystalizationData()
@@ -43,12 +46,12 @@ public final class ItemCrystalizationData implements IXmlReader
 	@Override
 	public void load()
 	{
-		parseDatapackFile("CrystalizableItems.xml");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _items.size() + " Items");
+		parseDatapackFile("data/CrystalizableItems.xml");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _items.size() + " Items");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
@@ -65,7 +68,10 @@ public final class ItemCrystalizationData implements IXmlReader
 							if ("item".equalsIgnoreCase(c.getNodeName()))
 							{
 								final NamedNodeMap attrs = c.getAttributes();
-								data.addItem(new ItemChanceHolder(parseInteger(attrs, "id"), parseDouble(attrs, "chance"), parseLong(attrs, "count")));
+								final int itemId = parseInteger(attrs, "id");
+								final long itemCount = parseLong(attrs, "count");
+								final double itemChance = parseDouble(attrs, "chance");
+								data.addItem(new ItemChanceHolder(itemId, itemChance, itemCount));
 							}
 						}
 						_items.put(id, data);

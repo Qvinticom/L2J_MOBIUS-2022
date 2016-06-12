@@ -16,81 +16,61 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.enums.MatchingRoomType;
+import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.PartyMatchRoom;
-import com.l2jmobius.gameserver.model.PartyMatchRoomList;
-import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.matching.MatchingRoom;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
-import com.l2jmobius.gameserver.network.serverpackets.ListPartyWating;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * format (ch) d
  * @author -Wooden-
  */
-public final class RequestOustFromPartyRoom extends L2GameClientPacket
+public final class RequestOustFromPartyRoom implements IClientIncomingPacket
 {
-	private static final String _C__D0_09_REQUESTOUSTFROMPARTYROOM = "[C] D0:09 RequestOustFromPartyRoom";
-	
-	private int _charid;
+	private int _charObjId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_charid = readD();
+		_charObjId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance member = L2World.getInstance().getPlayer(_charid);
+		final L2PcInstance member = L2World.getInstance().getPlayer(_charObjId);
 		if (member == null)
 		{
 			return;
 		}
 		
-		final PartyMatchRoom room = PartyMatchRoomList.getInstance().getPlayerRoom(member);
-		if ((room == null) || (room.getOwner() != player))
+		final MatchingRoom room = player.getMatchingRoom();
+		if ((room == null) || (room.getRoomType() != MatchingRoomType.PARTY) || (room.getLeader() != player) || (player == member))
 		{
 			return;
 		}
 		
-		if (player.isInParty() && member.isInParty() && (player.getParty().getLeaderObjectId() == member.getParty().getLeaderObjectId()))
+		final L2Party playerParty = player.getParty();
+		final L2Party memberParty = player.getParty();
+		
+		if ((playerParty != null) && (memberParty != null) && (playerParty.getLeaderObjectId() == memberParty.getLeaderObjectId()))
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_DISMISS_A_PARTY_MEMBER_BY_FORCE);
+			client.sendPacket(SystemMessageId.YOU_CANNOT_DISMISS_A_PARTY_MEMBER_BY_FORCE);
 		}
 		else
 		{
-			// Remove member from party room
-			room.deleteMember(member);
-			member.setPartyRoom(0);
-			
-			// Close the PartyRoom window
-			member.sendPacket(new ExClosePartyRoom());
-			
-			// Add player back on waiting list
-			PartyMatchWaitingList.getInstance().addPlayer(member);
-			
-			// Send Room list
-			final int loc = 0; // TODO: Closes town
-			member.sendPacket(new ListPartyWating(member, 0, loc, member.getLevel()));
-			
-			// Clean player's LFP title
-			member.broadcastUserInfo();
-			member.sendPacket(SystemMessageId.YOU_HAVE_BEEN_OUSTED_FROM_THE_PARTY_ROOM);
+			room.deleteMember(member, true);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_09_REQUESTOUSTFROMPARTYROOM;
 	}
 }

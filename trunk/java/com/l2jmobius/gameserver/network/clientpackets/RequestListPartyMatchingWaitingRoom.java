@@ -16,45 +16,58 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.LinkedList;
+import java.util.List;
+
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.base.ClassId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExListPartyMatchingWaitingRoom;
 
 /**
  * @author Gnacik
  */
-public class RequestListPartyMatchingWaitingRoom extends L2GameClientPacket
+public class RequestListPartyMatchingWaitingRoom implements IClientIncomingPacket
 {
-	private static final String _C__D0_31_REQUESTLISTPARTYMATCHINGWAITINGROOM = "[C] D0:31 RequestListPartyMatchingWaitingRoom";
 	private int _page;
-	private int _minlvl;
-	private int _maxlvl;
-	private int _mode; // 1 - waitlist 0 - room waitlist
+	private int _minLevel;
+	private int _maxLevel;
+	private List<ClassId> _classId; // 1 - waitlist 0 - room waitlist
+	private String _query;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_page = readD();
-		_minlvl = readD();
-		_maxlvl = readD();
-		_mode = readD();
+		_page = packet.readD();
+		_minLevel = packet.readD();
+		_maxLevel = packet.readD();
+		final int size = packet.readD();
+		
+		if ((size > 0) && (size < 128))
+		{
+			_classId = new LinkedList<>();
+			for (int i = 0; i < size; i++)
+			{
+				_classId.add(ClassId.getClassId(packet.readD()));
+			}
+		}
+		if (packet.getReadableBytes() > 0)
+		{
+			_query = packet.readS();
+		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
-		
-		if (_activeChar == null)
+		final L2PcInstance activeChar = client.getActiveChar();
+		if (activeChar == null)
 		{
 			return;
 		}
 		
-		_activeChar.sendPacket(new ExListPartyMatchingWaitingRoom(_activeChar, _page, _minlvl, _maxlvl, _mode));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_31_REQUESTLISTPARTYMATCHINGWAITINGROOM;
+		client.sendPacket(new ExListPartyMatchingWaitingRoom(activeChar, _page, _minLevel, _maxLevel, _classId, _query));
 	}
 }

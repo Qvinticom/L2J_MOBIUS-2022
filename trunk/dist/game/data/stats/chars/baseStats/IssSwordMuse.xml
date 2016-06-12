@@ -10,6 +10,8 @@
 		<baseWIT>38</baseWIT>
 		<baseLUC>34</baseLUC>
 		<baseCHA>41</baseCHA>
+		<physicalAbnormalResist>10</physicalAbnormalResist>
+		<magicAbnormalResist>15</magicAbnormalResist>
 		<creationPoints>
 			<node x="-114628" y="259915" z="-1192" />
 			<node x="-114539" y="260101" z="-1192" />
@@ -51,7 +53,7 @@
 		<baseRndDam>10</baseRndDam>
 		<baseMoveSpd>
 			<walk>90</walk>
-			<run>125</run>
+			<run>143</run>
 			<slowSwim>50</slowSwim>
 			<fastSwim>50</fastSwim>
 		</baseMoveSpd>
@@ -852,15 +854,15 @@
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="99">
-			<hp>5046.03</hp>
-			<mp>2355</mp>
+			<hp>5046.02</hp>
+			<mp>2355.0</mp>
 			<cp>5790.22</cp>
 			<hpRegen>11.4</hpRegen>
 			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="100">
-			<hp>5095.51</hp>
+			<hp>5095.48</hp>
 			<mp>2392.8</mp>
 			<cp>5846.97</cp>
 			<hpRegen>11.5</hpRegen>
@@ -868,59 +870,51 @@
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="101">
-			<hp>5145.47</hp>
+			<hp>5145.41</hp>
 			<mp>2430.8</mp>
 			<cp>5904.26</cp>
 			<hpRegen>11.6</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="102">
-			<hp>5195.91</hp>
+			<hp>5195.81</hp>
 			<mp>2469</mp>
 			<cp>5962.09</cp>
 			<hpRegen>11.7</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="103">
-			<hp>5246.83</hp>
+			<hp>5246.68</hp>
 			<mp>2507.4</mp>
 			<cp>6020.46</cp>
 			<hpRegen>11.8</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="104">
-			<hp>5298.23</hp>
+			<hp>5298.02</hp>
 			<mp>2546</mp>
 			<cp>6079.37</cp>
 			<hpRegen>11.9</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="105">
-			<hp>5350.11</hp>
+			<hp>5349.83</hp>
 			<mp>2584.8</mp>
 			<cp>6138.82</cp>
 			<hpRegen>12</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="106">
-			<hp>5402.47</hp>
+			<hp>5402.11</hp>
 			<mp>2623.8</mp>
 			<cp>6198.81</cp>
 			<hpRegen>12.1</hpRegen>
-			<mpRegen>3</mpRegen>
-			<cpRegen>8.5</cpRegen>
-		</level>
-		<level val="107">
-			<hp>5455.31</hp>
-			<mp>2663</mp>
-			<cp>6259.34</cp>
-			<hpRegen>12.2</hpRegen>
-			<mpRegen>3</mpRegen>
+			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
 	</lvlUpgainData>

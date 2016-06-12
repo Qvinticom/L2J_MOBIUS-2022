@@ -93,14 +93,13 @@ public class UIKeysSettings
 			return;
 		}
 		
-		// TODO(Zoey76): Refactor this to use batch.
 		query = "REPLACE INTO character_ui_categories (`charId`, `catId`, `order`, `cmdId`) VALUES ";
 		for (int category : _storedCategories.keySet())
 		{
 			int order = 0;
 			for (int key : _storedCategories.get(category))
 			{
-				query += "(" + _playerObjId + ", " + category + ", " + order++ + ", " + key + "),";
+				query += "(" + _playerObjId + ", " + category + ", " + (order++) + ", " + key + "),";
 			}
 		}
 		query = query.substring(0, query.length() - 1) + "; ";
@@ -147,10 +146,10 @@ public class UIKeysSettings
 		_storedCategories = new HashMap<>();
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT * FROM character_ui_categories WHERE `charId` = ? ORDER BY `catId`, `order`"))
+			PreparedStatement stmt = con.prepareStatement("SELECT * FROM character_ui_categories WHERE `charId` = ? ORDER BY `catId`, `order`"))
 		{
-			ps.setInt(1, _playerObjId);
-			try (ResultSet rs = ps.executeQuery())
+			stmt.setInt(1, _playerObjId);
+			try (ResultSet rs = stmt.executeQuery())
 			{
 				while (rs.next())
 				{
@@ -179,15 +178,20 @@ public class UIKeysSettings
 		_storedKeys = new HashMap<>();
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT * FROM character_ui_actions WHERE `charId` = ? ORDER BY `cat`, `order`"))
+			PreparedStatement stmt = con.prepareStatement("SELECT * FROM character_ui_actions WHERE `charId` = ? ORDER BY `cat`, `order`"))
 		{
-			ps.setInt(1, _playerObjId);
-			try (ResultSet rs = ps.executeQuery())
+			stmt.setInt(1, _playerObjId);
+			try (ResultSet rs = stmt.executeQuery())
 			{
 				while (rs.next())
 				{
 					final int cat = rs.getInt("cat");
-					UIData.addKey(_storedKeys, cat, new ActionKey(cat, rs.getInt("cmd"), rs.getInt("key"), rs.getInt("tgKey1"), rs.getInt("tgKey2"), rs.getInt("show")));
+					final int cmd = rs.getInt("cmd");
+					final int key = rs.getInt("key");
+					final int tgKey1 = rs.getInt("tgKey1");
+					final int tgKey2 = rs.getInt("tgKey2");
+					final int show = rs.getInt("show");
+					UIData.addKey(_storedKeys, cat, new ActionKey(cat, cmd, key, tgKey1, tgKey2, show));
 				}
 			}
 		}

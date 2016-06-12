@@ -16,7 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class SunRise extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
+public class SunRise implements IClientOutgoingPacket
 {
 	public static final SunRise STATIC_PACKET = new SunRise();
 	
@@ -25,8 +28,9 @@ public class SunRise extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x12);
+		OutgoingPackets.SUN_RISE.writeId(packet);
+		return true;
 	}
 }

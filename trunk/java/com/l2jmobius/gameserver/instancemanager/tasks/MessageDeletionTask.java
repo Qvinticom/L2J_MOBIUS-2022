@@ -71,7 +71,9 @@ public final class MessageDeletionTask implements Runnable
 				final L2PcInstance receiver = L2World.getInstance().getPlayer(msg.getReceiverId());
 				if (receiver != null)
 				{
-					receiver.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MAIL_WAS_RETURNED_DUE_TO_THE_EXCEEDED_WAITING_TIME));
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_MAIL_WAS_RETURNED_DUE_TO_THE_EXCEEDED_WAITING_TIME);
+					// sm.addString(msg.getReceiverName());
+					receiver.sendPacket(sm);
 				}
 			}
 			catch (Exception e)

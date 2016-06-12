@@ -22,6 +22,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
@@ -29,19 +30,18 @@ import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 import quests.Q10733_TheTestForSurvival.Q10733_TheTestForSurvival;
 
 /**
+ * Do Or Die (10734)
  * @author Sdw
  */
-public class Q10734_DoOrDie extends Quest
+public final class Q10734_DoOrDie extends Quest
 {
 	// NPC's
 	private static final int KATALIN = 33943;
 	private static final int AYANTHE = 33942;
 	private static final int ADVENTURER_S_GUIDE_APPRENTICE = 33950;
 	private static final int TRAINING_DUMMY = 19546;
-	// Misc
-	private static final int MAX_LEVEL = 20;
 	// Skills
-	private static final SkillHolder[] COMMON_BUFFS =
+	private final static SkillHolder[] COMMON_BUFFS =
 	{
 		new SkillHolder(5182, 1), // Blessing of Protection
 		new SkillHolder(15642, 1), // Horn Melody
@@ -56,16 +56,16 @@ public class Q10734_DoOrDie extends Quest
 	};
 	private static final SkillHolder WARRIOR_HARMONY = new SkillHolder(15649, 1);
 	private static final SkillHolder WIZARD_HARMONY = new SkillHolder(15650, 1);
+	// Misc
+	private static final int MAX_LEVEL = 20;
 	
 	public Q10734_DoOrDie()
 	{
-		super(10734, Q10734_DoOrDie.class.getSimpleName(), "Do or Die");
+		super(10734);
 		addStartNpc(KATALIN, AYANTHE);
 		addTalkId(KATALIN, AYANTHE, ADVENTURER_S_GUIDE_APPRENTICE);
 		addKillId(TRAINING_DUMMY);
-		addCondMaxLevel(MAX_LEVEL, "33942-08.html");
-		addCondRace(Race.ERTHEIA, "33942-08.html");
-		addCondCompletedQuest(Q10733_TheTestForSurvival.class.getSimpleName(), "33942-08.html");
+		addCondRace(Race.ERTHEIA, "");
 	}
 	
 	@Override
@@ -77,21 +77,23 @@ public class Q10734_DoOrDie extends Quest
 			return null;
 		}
 		
-		String htmltext = null;
+		String htmltext = event;
 		switch (event)
 		{
-			case "33943-03.html":
-			case "33942-03.html":
+			case "33942-02.htm":
+			case "33943-02.htm":
+			case "33950-02.html":
+				break;
+			case "33942-03.htm":
+			case "33943-03.htm":
 			{
 				qs.startQuest();
-				showOnScreenMsg(player, NpcStringId.ATTACK_THE_TRAINING_DUMMY, ExShowScreenMessage.TOP_CENTER, 4500);
-				htmltext = event;
+				showOnScreenMsg(player, NpcStringId.ATTACK_THE_TRAINING_DUMMY, ExShowScreenMessage.TOP_CENTER, 10000);
 				break;
 			}
 			case "other_buffs":
 			{
-				htmltext = player.isMageClass() ? "33950-03.html" : "33950-05.html";
-				
+				htmltext = (player.isMageClass()) ? "33950-03.html" : "33950-05.html";
 				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_002_Guide_01.htm", TutorialShowHtml.LARGE_WINDOW));
 				break;
 			}
@@ -99,142 +101,171 @@ public class Q10734_DoOrDie extends Quest
 			{
 				if (qs.isCond(4) || qs.isCond(5))
 				{
-					showOnScreenMsg(player, NpcStringId.ATTACK_THE_TRAINING_DUMMY, ExShowScreenMessage.TOP_CENTER, 4500);
 					qs.setCond(6, true);
-					
-					for (SkillHolder skillHolder : COMMON_BUFFS)
-					{
-						npc.setTarget(player);
-						npc.doCast(skillHolder.getSkill());
-					}
-					if (player.isMageClass())
-					{
-						htmltext = "33950-06.html";
-						npc.setTarget(player);
-						npc.doCast(WIZARD_HARMONY.getSkill());
-					}
-					else
-					{
-						htmltext = "33950-04.html";
-						npc.setTarget(player);
-						npc.doCast(WARRIOR_HARMONY.getSkill());
-					}
+					showOnScreenMsg(player, NpcStringId.ATTACK_THE_TRAINING_DUMMY, ExShowScreenMessage.TOP_CENTER, 10000);
+					htmltext = castBuffs(npc, player, "33950-06.html", "33950-04.html");
 				}
 				break;
 			}
-			case "33943-02.htm":
-			case "33942-02.htm":
-			case "33950-02.html":
-			{
-				htmltext = event;
-				break;
-			}
+			default:
+				htmltext = null;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = qs.isCompleted() ? getAlreadyCompletedMsg(player) : getNoQuestMsg(player);
+		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case KATALIN:
 			{
-				switch (qs.getCond())
+				if (!player.isMageClass())
 				{
-					case 0:
+					switch (qs.getState())
 					{
-						htmltext = !player.isMageClass() ? "33943-01.htm" : "33943-08.html";
-						break;
-					}
-					case 1:
-					{
-						if (!player.isMageClass())
+						case State.CREATED:
+							htmltext = (meetStartRestrictions(player)) ? "33943-01.htm" : "33943-08.htm";
+							break;
+						case State.STARTED:
 						{
-							htmltext = "33943-04.html";
+							switch (qs.getCond())
+							{
+								case 1:
+								{
+									if (!isSimulated)
+									{
+										showOnScreenMsg(player, NpcStringId.ATTACK_THE_TRAINING_DUMMY, ExShowScreenMessage.TOP_CENTER, 10000);
+									}
+									htmltext = "33943-04.html";
+									break;
+								}
+								case 3:
+								{
+									if (!isSimulated)
+									{
+										showOnScreenMsg(player, NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURER_S_GUIDE, ExShowScreenMessage.TOP_CENTER, 10000);
+										qs.setCond(5, true);
+									}
+									htmltext = "33943-05.html";
+									break;
+								}
+								case 5:
+								{
+									if (!isSimulated)
+									{
+										showOnScreenMsg(player, NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURER_S_GUIDE, ExShowScreenMessage.TOP_CENTER, 10000);
+									}
+									htmltext = "33943-06.html";
+									break;
+								}
+								case 8:
+								{
+									if (!isSimulated)
+									{
+										giveAdena(player, 7000, true);
+										addExpAndSp(player, 805, 2);
+										qs.exitQuest(false, true);
+									}
+									htmltext = "33943-07.html";
+									break;
+								}
+							}
+							break;
 						}
-						break;
-					}
-					case 3:
-					{
-						showOnScreenMsg(player, NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURER_S_GUIDE, ExShowScreenMessage.TOP_CENTER, 4500);
-						qs.setCond(5, true);
-						htmltext = "33943-05.html";
-						break;
-					}
-					case 5:
-					{
-						htmltext = "33943-06.html";
-						break;
-					}
-					case 8:
-					{
-						giveAdena(player, 7000, true);
-						addExpAndSp(player, 805, 2);
-						qs.exitQuest(false, true);
-						htmltext = "33943-07.html";
-						break;
+						case State.COMPLETED:
+							htmltext = getAlreadyCompletedMsg(player);
+							break;
 					}
 				}
 				break;
 			}
 			case AYANTHE:
 			{
-				switch (qs.getCond())
+				if (player.isMageClass())
 				{
-					case 0:
+					switch (qs.getState())
 					{
-						htmltext = player.isMageClass() ? "33942-01.htm" : "33942-08.html";
-						break;
-					}
-					case 1:
-					{
-						if (player.isMageClass())
+						case State.CREATED:
+							htmltext = (meetStartRestrictions(player)) ? "33942-01.htm" : "33942-08.htm";
+							break;
+						case State.STARTED:
 						{
-							htmltext = "33942-04.html";
+							switch (qs.getCond())
+							{
+								case 1:
+								{
+									if (!isSimulated)
+									{
+										showOnScreenMsg(player, NpcStringId.ATTACK_THE_TRAINING_DUMMY, ExShowScreenMessage.TOP_CENTER, 10000);
+									}
+									htmltext = "33942-04.html";
+									break;
+								}
+								case 2:
+								{
+									if (!isSimulated)
+									{
+										showOnScreenMsg(player, NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURER_S_GUIDE, ExShowScreenMessage.TOP_CENTER, 10000);
+										qs.setCond(4, true);
+									}
+									htmltext = "33942-05.html";
+									break;
+								}
+								case 4:
+								{
+									if (!isSimulated)
+									{
+										showOnScreenMsg(player, NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURER_S_GUIDE, ExShowScreenMessage.TOP_CENTER, 10000);
+									}
+									htmltext = "33942-06.html";
+									break;
+								}
+								case 7:
+								{
+									if (!isSimulated)
+									{
+										giveAdena(player, 7000, true);
+										addExpAndSp(player, 805, 2);
+										qs.exitQuest(false, true);
+									}
+									htmltext = "33942-07.html";
+									break;
+								}
+							}
+							break;
 						}
-						break;
-					}
-					case 2:
-					{
-						showOnScreenMsg(player, NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURER_S_GUIDE, ExShowScreenMessage.TOP_CENTER, 4500);
-						qs.setCond(4, true);
-						htmltext = "33942-05.html";
-						break;
-					}
-					case 4:
-					{
-						htmltext = "33942-06.html";
-						break;
-					}
-					case 7:
-					{
-						giveAdena(player, 7000, true);
-						addExpAndSp(player, 805, 2);
-						qs.exitQuest(false, true);
-						htmltext = "33942-07.html";
-						break;
+						case State.COMPLETED:
+							htmltext = getAlreadyCompletedMsg(player);
+							break;
 					}
 				}
 				break;
 			}
 			case ADVENTURER_S_GUIDE_APPRENTICE:
 			{
-				switch (qs.getCond())
+				if (qs.isStarted())
 				{
-					case 4:
-					case 5:
+					switch (qs.getCond())
 					{
-						htmltext = "33950-01.html";
-						break;
-					}
-					case 6:
-					{
-						htmltext = player.isMageClass() ? "33950-06.html" : "33950-04.html";
-						break;
+						case 4:
+						case 5:
+						{
+							htmltext = "33950-01.html";
+							break;
+						}
+						case 6:
+						{
+							if (!isSimulated)
+							{
+								showOnScreenMsg(player, NpcStringId.ATTACK_THE_TRAINING_DUMMY, ExShowScreenMessage.TOP_CENTER, 10000);
+							}
+							htmltext = castBuffs(npc, player, "33950-07.html", "33950-08.html");
+							break;
+						}
 					}
 				}
 			}
@@ -246,20 +277,35 @@ public class Q10734_DoOrDie extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if (qs == null)
+		if ((qs != null) && (qs.isCond(1) || qs.isCond(6)))
 		{
-			return super.onKill(npc, killer, isSummon);
+			final int nextCond = (killer.isMageClass()) ? (qs.getCond() + 1) : (qs.getCond() + 2);
+			qs.setCond(nextCond, true);
 		}
-		
-		if (qs.isCond(1))
-		{
-			qs.setCond(killer.isMageClass() ? 2 : 3, true);
-		}
-		else if (qs.isCond(6))
-		{
-			qs.setCond(killer.isMageClass() ? 7 : 8, true);
-		}
-		
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	private boolean meetStartRestrictions(L2PcInstance player)
+	{
+		final QuestState qs = player.getQuestState(Q10733_TheTestForSurvival.class.getSimpleName());
+		return ((player.getLevel() < MAX_LEVEL) && (qs != null) && qs.isCompleted());
+	}
+	
+	private String castBuffs(L2Npc npc, L2PcInstance player, String mage, String fighter)
+	{
+		for (SkillHolder skillHolder : COMMON_BUFFS)
+		{
+			npc.setTarget(player);
+			npc.doCast(skillHolder.getSkill());
+		}
+		
+		npc.setTarget(player);
+		if (player.isMageClass())
+		{
+			npc.doCast(WIZARD_HARMONY.getSkill());
+			return mage;
+		}
+		npc.doCast(WARRIOR_HARMONY.getSkill());
+		return fighter;
 	}
 }

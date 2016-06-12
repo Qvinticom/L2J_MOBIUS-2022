@@ -18,6 +18,7 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.enums.CastleSide;
@@ -222,8 +223,8 @@ public final class AdminCastle implements IAdminCommandHandler
 			}
 			else
 			{
-				final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
-				html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/castlemanage.htm"));
+				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
+				html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/castlemanage.htm"));
 				activeChar.sendPacket(html);
 			}
 		}
@@ -237,20 +238,20 @@ public final class AdminCastle implements IAdminCommandHandler
 		if (castle != null)
 		{
 			final L2Clan ownerClan = castle.getOwner();
-			final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
-			html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/admin/castlemanage_selected.htm"));
+			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
+			html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/admin/castlemanage_selected.htm"));
 			html.replace("%castleId%", castle.getResidenceId());
 			html.replace("%castleName%", castle.getName());
 			html.replace("%ownerName%", ownerClan != null ? ownerClan.getLeaderName() : "NPC");
 			html.replace("%ownerClan%", ownerClan != null ? ownerClan.getName() : "NPC");
-			html.replace("%castleSide%", Util.capitalizeFirst(castle.getSide().toString().toLowerCase()));
+			html.replace("%castleSide%", CommonUtil.capitalizeFirst(castle.getSide().toString().toLowerCase()));
 			player.sendPacket(html);
 		}
 	}
 	
 	private boolean checkTarget(L2PcInstance player)
 	{
-		return (player.getTarget() != null) && player.getTarget().isPlayer() && (((L2PcInstance) player.getTarget()).getClan() != null);
+		return ((player.getTarget() != null) && player.getTarget().isPlayer() && (((L2PcInstance) player.getTarget()).getClan() != null));
 	}
 	
 	@Override

@@ -16,33 +16,30 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.luckygame;
 
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.luckygame.ExBettingLuckyGameResult;
 
 /**
  * @author Mobius
  */
-public class RequestLuckyGamePlay extends L2GameClientPacket
+public class RequestLuckyGamePlay implements IClientIncomingPacket
 {
 	private int _type;
 	private int _count;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_type = readD(); // luxury = 2, normal = 1
-		_count = readD(); // count
+		_type = packet.readD(); // luxury = 2, normal = 1
+		_count = packet.readD(); // count
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		getActiveChar().sendPacket(new ExBettingLuckyGameResult(_type, _count));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
+		client.getActiveChar().sendPacket(new ExBettingLuckyGameResult(client.getActiveChar(), _type, _count));
 	}
 }

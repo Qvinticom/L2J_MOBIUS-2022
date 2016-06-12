@@ -16,61 +16,52 @@
  */
 package quests.Q10335_RequestToFindSakum;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
+import com.l2jmobius.gameserver.enums.QuestSound;
+import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
- * Request to find Sakum (10335)
- * @author spider
+ * Request To Find Sakum (10335)
+ * @author St3eT
  */
-public class Q10335_RequestToFindSakum extends Quest
+public final class Q10335_RequestToFindSakum extends Quest
 {
 	// NPCs
 	private static final int BATHIS = 30332;
 	private static final int KALLESIN = 33177;
 	private static final int ZENATH = 33509;
-	// Monsters
 	private static final int SKELETON_TRACKER = 20035;
 	private static final int SKELETON_BOWMAN = 20051;
-	private static final int RUIN_ZOMBIE = 20026;
 	private static final int RUIN_SPARTOI = 20054;
-	private static final Map<Integer, Integer> MOBS_REQUIRED = new HashMap<>();
-	{
-		MOBS_REQUIRED.put(SKELETON_TRACKER, 10);
-		MOBS_REQUIRED.put(SKELETON_BOWMAN, 10);
-		MOBS_REQUIRED.put(RUIN_ZOMBIE, 15);
-		MOBS_REQUIRED.put(RUIN_SPARTOI, 15);
-	}
-	// Rewards
-	private static final int ADENA_REWARD = 90000;
-	private static final int EXP_REWARD = 350000;
-	private static final int SP_REWARD = 84;
-	// Others
+	private static final int RUIN_ZOMBIE = 20026;
+	private static final int RUIN_ZOMBIE_LEADER = 20029;
+	// Misc
 	private static final int MIN_LEVEL = 23;
 	private static final int MAX_LEVEL = 40;
 	
 	public Q10335_RequestToFindSakum()
 	{
-		super(10335, Q10335_RequestToFindSakum.class.getSimpleName(), "Request to find Sakum");
+		super(10335);
 		addStartNpc(BATHIS);
 		addTalkId(BATHIS, KALLESIN, ZENATH);
-		addKillId(SKELETON_TRACKER, SKELETON_BOWMAN, RUIN_ZOMBIE, RUIN_SPARTOI);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.htm");
+		addKillId(SKELETON_TRACKER, SKELETON_BOWMAN, RUIN_SPARTOI, RUIN_ZOMBIE, RUIN_ZOMBIE_LEADER);
+		addCondNotRace(Race.ERTHEIA, "30332-08.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "30332-07.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return null;
 		}
@@ -79,41 +70,36 @@ public class Q10335_RequestToFindSakum extends Quest
 		switch (event)
 		{
 			case "30332-02.htm":
+			case "33509-03.htm":
 			{
 				htmltext = event;
 				break;
 			}
-			case "30332-03.htm": // start the quest
+			case "30332-03.htm":
 			{
-				qs.startQuest();
+				st.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "33177-02.html": // next step, killing mobs
+			case "33177-02.htm":
 			{
-				qs.setCond(2);
-				qs.set(Integer.toString(SKELETON_TRACKER), 0);
-				qs.set(Integer.toString(SKELETON_BOWMAN), 0);
-				qs.set(Integer.toString(RUIN_ZOMBIE), 0);
-				qs.set(Integer.toString(RUIN_SPARTOI), 0);
-				htmltext = event;
-				break;
-			}
-			case "33509-02.html":
-			{
-				htmltext = event;
-				break;
-			}
-			case "33509-03.html":
-			{
-				if (qs.isCond(3))
-				{ // exit quest.
-					giveAdena(player, ADENA_REWARD, true);
-					addExpAndSp(player, EXP_REWARD, SP_REWARD);
-					qs.exitQuest(false, true);
+				if (st.isCond(1))
+				{
+					st.setCond(2);
 					htmltext = event;
-					break;
 				}
+				break;
+			}
+			case "33509-04.htm":
+			{
+				if (st.isCond(3))
+				{
+					giveAdena(player, 900, true);
+					addExpAndSp(player, 350000, 84);
+					st.exitQuest(false, true);
+					htmltext = event;
+				}
+				break;
 			}
 		}
 		return htmltext;
@@ -122,25 +108,16 @@ public class Q10335_RequestToFindSakum extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, true);
-		String htmltext = null;
-		switch (qs.getState())
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = getQuestState(player, true);
+		
+		switch (st.getState())
 		{
 			case State.CREATED:
 			{
-				switch (npc.getId())
+				if (npc.getId() == BATHIS)
 				{
-					case BATHIS:
-					{
-						htmltext = "30332-01.htm";
-						break;
-					}
-					case KALLESIN:
-					case ZENATH:
-					{
-						htmltext = getNoQuestMsg(player);
-						break;
-					}
+					htmltext = "30332-01.htm";
 				}
 				break;
 			}
@@ -150,34 +127,46 @@ public class Q10335_RequestToFindSakum extends Quest
 				{
 					case BATHIS:
 					{
-						htmltext = "30332-04.html";
+						htmltext = st.isCond(1) ? "30332-04.htm" : "30332-05.htm";
 						break;
 					}
 					case KALLESIN:
 					{
-						if (qs.isCond(1))
+						switch (st.getCond())
 						{
-							htmltext = "33177-01.html";
-						}
-						else if (qs.isCond(2))
-						{
-							htmltext = "33177-03.html";
-						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
+							case 1:
+							{
+								htmltext = "33177-01.htm";
+								break;
+							}
+							case 2:
+							{
+								htmltext = "33177-03.htm";
+								break;
+							}
+							case 3:
+							{
+								htmltext = "33177-04.htm";
+								break;
+							}
 						}
 						break;
 					}
 					case ZENATH:
 					{
-						if (qs.isCond(3))
+						switch (st.getCond())
 						{
-							htmltext = "33509-01.html";
-						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
+							case 1:
+							case 2:
+							{
+								htmltext = "33509-01.htm";
+								break;
+							}
+							case 3:
+							{
+								htmltext = "33509-02.htm";
+								break;
+							}
 						}
 						break;
 					}
@@ -189,14 +178,18 @@ public class Q10335_RequestToFindSakum extends Quest
 				switch (npc.getId())
 				{
 					case BATHIS:
+					{
+						htmltext = "30332-06.htm";
+						break;
+					}
 					case KALLESIN:
 					{
-						htmltext = getAlreadyCompletedMsg(player);
+						htmltext = "33177-05.htm";
 						break;
 					}
 					case ZENATH:
 					{
-						htmltext = "33509-04.html";
+						htmltext = "33509-05.htm";
 						break;
 					}
 				}
@@ -209,28 +202,82 @@ public class Q10335_RequestToFindSakum extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null) && qs.isStarted() && qs.isCond(2) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
+		final QuestState st = getQuestState(killer, false);
+		
+		if ((st != null) && st.isStarted() && st.isCond(2))
 		{
-			int kills = qs.getInt(Integer.toString(npc.getId()));
-			if (kills < MOBS_REQUIRED.get(npc.getId())) // check if killed required number of monsters
+			int killedTracker = st.getInt("killed_" + SKELETON_TRACKER);
+			int killedBowman = st.getInt("killed_" + SKELETON_BOWMAN);
+			int killedRuinSpartois = st.getInt("killed_" + RUIN_SPARTOI);
+			int killedZombie = st.getInt("killed_" + RUIN_ZOMBIE);
+			
+			switch (npc.getId())
 			{
-				kills++;
-				qs.set(Integer.toString(npc.getId()), kills);
+				case SKELETON_TRACKER:
+				{
+					if (killedTracker < 10)
+					{
+						killedTracker++;
+						st.set("killed_" + SKELETON_TRACKER, killedTracker);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					break;
+				}
+				case SKELETON_BOWMAN:
+				{
+					if (killedBowman < 10)
+					{
+						killedBowman++;
+						st.set("killed_" + SKELETON_BOWMAN, killedBowman);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					break;
+				}
+				case RUIN_SPARTOI:
+				{
+					if (killedRuinSpartois < 15)
+					{
+						killedRuinSpartois++;
+						st.set("killed_" + RUIN_SPARTOI, killedRuinSpartois);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					break;
+				}
+				case RUIN_ZOMBIE:
+				case RUIN_ZOMBIE_LEADER:
+				{
+					if (killedZombie < 15)
+					{
+						killedZombie++;
+						st.set("killed_" + RUIN_ZOMBIE, killedZombie);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					break;
+				}
 			}
 			
-			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
-			log.addNpc(SKELETON_TRACKER, qs.getInt(Integer.toString(SKELETON_TRACKER)));
-			log.addNpc(SKELETON_BOWMAN, qs.getInt(Integer.toString(SKELETON_BOWMAN)));
-			log.addNpc(RUIN_SPARTOI, qs.getInt(Integer.toString(RUIN_SPARTOI)));
-			log.addNpc(RUIN_ZOMBIE, qs.getInt(Integer.toString(RUIN_ZOMBIE)));
-			killer.sendPacket(log);
-			
-			if ((qs.getInt(Integer.toString(SKELETON_TRACKER)) >= MOBS_REQUIRED.get(SKELETON_TRACKER)) && (qs.getInt(Integer.toString(SKELETON_BOWMAN)) >= MOBS_REQUIRED.get(SKELETON_BOWMAN)) && (qs.getInt(Integer.toString(RUIN_SPARTOI)) >= MOBS_REQUIRED.get(RUIN_SPARTOI)) && (qs.getInt(Integer.toString(RUIN_ZOMBIE)) >= MOBS_REQUIRED.get(RUIN_ZOMBIE)))
+			if ((killedTracker == 10) && (killedBowman == 10) && (killedRuinSpartois == 15) && (killedZombie == 15))
 			{
-				qs.setCond(3);
+				st.setCond(3, true);
 			}
+			sendNpcLogList(killer);
 		}
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
+	{
+		final QuestState st = getQuestState(activeChar, false);
+		if ((st != null) && st.isStarted() && st.isCond(2))
+		{
+			final Set<NpcLogListHolder> npcLogList = new HashSet<>(4);
+			npcLogList.add(new NpcLogListHolder(SKELETON_TRACKER, false, st.getInt("killed_" + SKELETON_TRACKER)));
+			npcLogList.add(new NpcLogListHolder(SKELETON_BOWMAN, false, st.getInt("killed_" + SKELETON_BOWMAN)));
+			npcLogList.add(new NpcLogListHolder(RUIN_SPARTOI, false, st.getInt("killed_" + RUIN_SPARTOI)));
+			npcLogList.add(new NpcLogListHolder(RUIN_ZOMBIE, false, st.getInt("killed_" + RUIN_ZOMBIE)));
+			return npcLogList;
+		}
+		return super.getNpcLogList(activeChar);
 	}
 }

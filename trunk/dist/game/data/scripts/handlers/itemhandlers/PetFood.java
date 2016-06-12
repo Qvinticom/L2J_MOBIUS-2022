@@ -16,14 +16,16 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jmobius.Config;
+import java.util.List;
+
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
+import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -44,18 +46,15 @@ public class PetFood implements IItemHandler
 			return false;
 		}
 		
-		final SkillHolder[] skills = item.getItem().getSkills();
+		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
 		if (skills != null)
 		{
-			for (SkillHolder sk : skills)
-			{
-				useFood(playable, sk.getSkillId(), sk.getSkillLvl(), item);
-			}
+			skills.forEach(holder -> useFood(playable, holder.getSkillId(), holder.getSkillLvl(), item));
 		}
 		return true;
 	}
 	
-	private boolean useFood(L2Playable activeChar, int skillId, int skillLevel, L2ItemInstance item)
+	public boolean useFood(L2Playable activeChar, int skillId, int skillLevel, L2ItemInstance item)
 	{
 		final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 		if (skill != null)
@@ -66,7 +65,7 @@ public class PetFood implements IItemHandler
 				if (pet.destroyItem("Consume", item.getObjectId(), 1, null, false))
 				{
 					pet.broadcastPacket(new MagicSkillUse(pet, pet, skillId, skillLevel, 0, 0));
-					pet.setCurrentFed(pet.getCurrentFed() + (skill.getFeed() * Config.PET_FOOD_RATE));
+					skill.applyEffects(pet, pet);
 					pet.broadcastStatusUpdate();
 					if (pet.isHungry())
 					{
@@ -78,11 +77,18 @@ public class PetFood implements IItemHandler
 			else if (activeChar.isPlayer())
 			{
 				final L2PcInstance player = activeChar.getActingPlayer();
-				if (player.isMounted() && PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood().contains(Integer.valueOf(item.getId())) && player.destroyItem("Consume", item.getObjectId(), 1, null, false))
+				if (player.isMounted())
 				{
-					player.broadcastPacket(new MagicSkillUse(player, player, skillId, skillLevel, 0, 0));
-					player.setCurrentFeed(player.getCurrentFeed() + skill.getFeed());
-					return true;
+					final List<Integer> foodIds = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();
+					if (foodIds.contains(Integer.valueOf(item.getId())))
+					{
+						if (player.destroyItem("Consume", item.getObjectId(), 1, null, false))
+						{
+							player.broadcastPacket(new MagicSkillUse(player, player, skillId, skillLevel, 0, 0));
+							skill.applyEffects(player, player);
+							return true;
+						}
+					}
 				}
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 				sm.addItemName(item);

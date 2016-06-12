@@ -77,21 +77,21 @@
 			<point x="-89304" y="-140802" />
 		</zone>
 		<zone id="9" minZ="-9184" maxZ="-8984">
-			<point x="-88512" y="-142679" />
+			<point x="-88471" y="-142588" />
 			<point x="-88417" y="-142318" />
 			<point x="-88906" y="-141825" />
-			<point x="-89271" y="-141896" />
+			<point x="-89145" y="-141891" />
 		</zone>
 		<zone id="10" minZ="-9184" maxZ="-8984">
-			<point x="-88455" y="-142693" />
-			<point x="-87361" y="-142677" />
-			<point x="-87645" y="-142372" />
-			<point x="-88201" y="-142374" />
+			<point x="-88412" y="-142651" />
+			<point x="-87384" y="-142648" />
+			<point x="-87672" y="-142385" />
+			<point x="-88194" y="-142412" />
 		</zone>
 		<zone id="11" minZ="-9184" maxZ="-8984">
 			<point x="-87321" y="-142651" />
 			<point x="-86557" y="-141902" />
-			<point x="-86900" y="-141818" />
+			<point x="-86912" y="-141846" />
 			<point x="-87412" y="-142316" />
 		</zone>
 		<zone id="12" minZ="-9184" maxZ="-8984">
@@ -115,10 +115,10 @@
 		<zone id="15" minZ="-9184" maxZ="-8984">
 			<point x="-88921" y="-140820" />
 			<point x="-88399" y="-140306" />
-			<point x="-88500" y="-139940" />
-			<point x="-89255" y="-140698" />
+			<point x="-88466" y="-140046" />
+			<point x="-89143" y="-140741" />
 		</zone>
-		<zone id="16" minZ="-9228" maxZ="-9028">
+		<zone id="16" minZ="-9184" maxZ="-8984">
 			<point x="-88059" y="-147379" />
 			<point x="-87699" y="-147371" />
 			<point x="-87707" y="-146959" />
@@ -204,7 +204,7 @@
 			<zone id="8" count="5" mustKill="true" />
 		</spawn>
 		<spawn npcId="18333" flag="0">
-			<zone id="8" count="5" mustKill="false" />
+			<zone id="8" count="5" mustKill="true" />
 		</spawn>
 		<spawn npcId="18330" flag="0">
 			<zone id="9" count="3" mustKill="true" />
@@ -219,7 +219,7 @@
 			<zone id="9" count="5" mustKill="true" />
 		</spawn>
 		<spawn npcId="18333" flag="0">
-			<zone id="9" count="5" mustKill="false" />
+			<zone id="9" count="5" mustKill="true" />
 		</spawn>
 		<spawn npcId="18330" flag="0">
 			<zone id="10" count="3" mustKill="true" />
@@ -234,7 +234,7 @@
 			<zone id="10" count="5" mustKill="true" />
 		</spawn>
 		<spawn npcId="18333" flag="0">
-			<zone id="10" count="5" mustKill="false" />
+			<zone id="10" count="5" mustKill="true" />
 		</spawn>
 		<spawn npcId="18330" flag="0">
 			<zone id="11" count="3" mustKill="true" />
@@ -249,7 +249,7 @@
 			<zone id="11" count="5" mustKill="true" />
 		</spawn>
 		<spawn npcId="18333" flag="0">
-			<zone id="11" count="5" mustKill="false" />
+			<zone id="11" count="5" mustKill="true" />
 		</spawn>
 		<spawn npcId="18330" flag="0">
 			<zone id="12" count="3" mustKill="true" />
@@ -264,7 +264,7 @@
 			<zone id="12" count="5" mustKill="true" />
 		</spawn>
 		<spawn npcId="18333" flag="0">
-			<zone id="12" count="5" mustKill="false" />
+			<zone id="12" count="5" mustKill="true" />
 		</spawn>
 		<spawn npcId="18330" flag="0">
 			<zone id="13" count="3" mustKill="true" />
@@ -279,7 +279,7 @@
 			<zone id="13" count="5" mustKill="true" />
 		</spawn>
 		<spawn npcId="18333" flag="0">
-			<zone id="13" count="5" mustKill="false" />
+			<zone id="13" count="5" mustKill="true" />
 		</spawn>
 		<spawn npcId="18330" flag="0">
 			<zone id="14" count="3" mustKill="true" />
@@ -294,7 +294,7 @@
 			<zone id="14" count="5" mustKill="true" />
 		</spawn>
 		<spawn npcId="18333" flag="0">
-			<zone id="14" count="5" mustKill="false" />
+			<zone id="14" count="5" mustKill="true" />
 		</spawn>
 		<spawn npcId="18330" flag="0">
 			<zone id="15" count="3" mustKill="true" />
@@ -309,7 +309,7 @@
 			<zone id="15" count="5" mustKill="true" />
 		</spawn>
 		<spawn npcId="18333" flag="0">
-			<zone id="15" count="5" mustKill="false" />
+			<zone id="15" count="5" mustKill="true" />
 		</spawn>
 		<spawn npcId="18339" flag="1">
 			<zone id="16" count="4" />

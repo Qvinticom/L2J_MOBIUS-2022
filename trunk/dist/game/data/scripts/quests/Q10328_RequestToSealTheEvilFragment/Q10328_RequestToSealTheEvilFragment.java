@@ -25,21 +25,22 @@ import com.l2jmobius.gameserver.model.quest.State;
 import quests.Q10327_IntruderWhoWantsTheBookOfGiants.Q10327_IntruderWhoWantsTheBookOfGiants;
 
 /**
+ * Request to Seal the Evil Fragment (10328)
  * @author Gladicek
  */
 public final class Q10328_RequestToSealTheEvilFragment extends Quest
 {
-	// Npcs
+	// NPCs
 	private static final int PANTHEON = 32972;
 	private static final int KAKAI = 30565;
-	// Item
+	// Items
 	private static final int EVIL_FRAGMENT = 17577;
-	// Level Condition
+	// Misc
 	private static final int MAX_LEVEL = 20;
 	
 	public Q10328_RequestToSealTheEvilFragment()
 	{
-		super(10328, Q10328_RequestToSealTheEvilFragment.class.getSimpleName(), "Request to Seal the Evil Fragment");
+		super(10328);
 		addStartNpc(PANTHEON);
 		addTalkId(PANTHEON, KAKAI);
 		addCondMaxLevel(MAX_LEVEL, "32972-06.htm");
@@ -59,7 +60,7 @@ public final class Q10328_RequestToSealTheEvilFragment extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "32972-04.html":
+			case "32972-04.htm":
 			{
 				qs.startQuest();
 				giveItems(player, EVIL_FRAGMENT, 1);
@@ -68,12 +69,12 @@ public final class Q10328_RequestToSealTheEvilFragment extends Quest
 			}
 			case "32972-02.htm":
 			case "32972-03.htm":
-			case "30565-02.html":
+			case "30565-02.htm":
 			{
 				htmltext = event;
 				break;
 			}
-			case "30565-03.html":
+			case "30565-03.htm":
 			{
 				if (qs.isStarted())
 				{
@@ -101,17 +102,18 @@ public final class Q10328_RequestToSealTheEvilFragment extends Quest
 				if (npc.getId() == PANTHEON)
 				{
 					htmltext = "32972-01.htm";
+					break;
 				}
 				break;
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == PANTHEON ? "32972-05.html" : "30565-01.html";
+				htmltext = npc.getId() == PANTHEON ? "32972-05.htm" : "30565-01.htm";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == PANTHEON ? "32972-07.html" : "30565-04.html";
+				htmltext = npc.getId() == PANTHEON ? "32972-07.htm" : "30565-04.htm";
 				break;
 			}
 		}

@@ -21,29 +21,29 @@ import java.sql.PreparedStatement;
 import java.util.logging.Level;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.friend.FriendAddRequestResult;
-import com.l2jmobius.gameserver.network.serverpackets.friend.FriendList;
 
-public final class RequestAnswerFriendInvite extends L2GameClientPacket
+public final class RequestAnswerFriendInvite implements IClientIncomingPacket
 {
-	private static final String _C__78_REQUESTANSWERFRIENDINVITE = "[C] 78 RequestAnswerFriendInvite";
-	
 	private int _response;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_response = readC();
+		_response = packet.readC();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -55,10 +55,18 @@ public final class RequestAnswerFriendInvite extends L2GameClientPacket
 			return;
 		}
 		
-		if (player.getFriendList().containsKey(requestor.getObjectId()) //
-			|| requestor.getFriendList().containsKey(player.getObjectId()))
+		if (player == requestor)
 		{
-			requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST));
+			player.sendPacket(SystemMessageId.YOU_CANNOT_ADD_YOURSELF_TO_YOUR_OWN_FRIEND_LIST);
+			return;
+		}
+		
+		if (player.getFriendList().contains(requestor.getObjectId()) //
+			|| requestor.getFriendList().contains(player.getObjectId()))
+		{
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_ON_YOUR_FRIEND_LIST);
+			sm.addCharName(player);
+			requestor.sendPacket(sm);
 			return;
 		}
 		
@@ -79,19 +87,17 @@ public final class RequestAnswerFriendInvite extends L2GameClientPacket
 				msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST);
 				msg.addString(player.getName());
 				requestor.sendPacket(msg);
-				requestor.addFriend(player);
+				requestor.getFriendList().add(player.getObjectId());
 				
 				// has joined as friend.
 				msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_JOINED_AS_A_FRIEND);
 				msg.addString(requestor.getName());
 				player.sendPacket(msg);
-				player.addFriend(requestor);
+				player.getFriendList().add(requestor.getObjectId());
 				
 				// Send notifications for both player in order to show them online
 				player.sendPacket(new FriendAddRequestResult(requestor, 1));
 				requestor.sendPacket(new FriendAddRequestResult(player, 1));
-				player.sendPacket(new FriendList(player));
-				requestor.sendPacket(new FriendList(requestor));
 			}
 			catch (Exception e)
 			{
@@ -102,17 +108,9 @@ public final class RequestAnswerFriendInvite extends L2GameClientPacket
 		{
 			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_A_FRIEND_TO_YOUR_FRIENDS_LIST);
 			requestor.sendPacket(msg);
-			player.sendPacket(new FriendAddRequestResult(requestor, 0));
-			requestor.sendPacket(new FriendAddRequestResult(player, 0));
 		}
 		
 		player.setActiveRequester(null);
 		requestor.onTransactionResponse();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__78_REQUESTANSWERFRIENDINVITE;
 	}
 }

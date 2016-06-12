@@ -32,10 +32,11 @@ import ai.AbstractNpcAI;
  * Proof Of Courage implementation.
  * @author St3eT
  */
-final class ProofOfCourage extends AbstractNpcAI
+public final class ProofOfCourage extends AbstractNpcAI
 {
 	// Misc
 	private static final Map<Integer, List<ClassId>> CLASSLIST = new HashMap<>();
+	
 	static
 	{
 		CLASSLIST.put(32146, Arrays.asList(ClassId.TROOPER, ClassId.WARDER));
@@ -48,7 +49,6 @@ final class ProofOfCourage extends AbstractNpcAI
 	
 	private ProofOfCourage()
 	{
-		super(ProofOfCourage.class.getSimpleName(), "village_master");
 		addStartNpc(CLASSLIST.keySet());
 		addTalkId(CLASSLIST.keySet());
 	}
@@ -60,7 +60,7 @@ final class ProofOfCourage extends AbstractNpcAI
 		{
 			return npc.getId() + "-noclass.html";
 		}
-		if (!CLASSLIST.get(npc.getId()).contains(talker.getClassId()))
+		else if (!CLASSLIST.get(npc.getId()).contains(talker.getClassId()))
 		{
 			return npc.getId() + "-no.html";
 		}

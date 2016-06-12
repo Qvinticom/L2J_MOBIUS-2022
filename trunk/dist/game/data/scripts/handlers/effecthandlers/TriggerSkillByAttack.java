@@ -16,13 +16,14 @@
  */
 package handlers.effecthandlers;
 
+import java.util.logging.Level;
+
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.handler.TargetHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDamageDealt;
@@ -31,8 +32,8 @@ import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
-import com.l2jmobius.util.Rnd;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * Trigger Skill By Attack effect implementation.
@@ -45,31 +46,33 @@ public final class TriggerSkillByAttack extends AbstractEffect
 	private final int _minDamage;
 	private final int _chance;
 	private final SkillHolder _skill;
-	private final L2TargetType _targetType;
+	private final TargetType _targetType;
 	private final InstanceType _attackerType;
 	private int _allowWeapons;
-	private final boolean _isCritical;
+	private final Boolean _isCritical;
+	private final boolean _allowNormalAttack;
+	private final boolean _allowSkillAttack;
+	private final boolean _allowReflect;
 	
 	/**
-	 * @param attachCond
-	 * @param applyCond
-	 * @param set
 	 * @param params
 	 */
-	public TriggerSkillByAttack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	
+	public TriggerSkillByAttack(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_minAttackerLevel = params.getInt("minAttackerLevel", 1);
-		_maxAttackerLevel = params.getInt("maxAttackerLevel", 100);
+		_maxAttackerLevel = params.getInt("maxAttackerLevel", 127);
 		_minDamage = params.getInt("minDamage", 1);
 		_chance = params.getInt("chance", 100);
 		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1));
-		_targetType = params.getEnum("targetType", L2TargetType.class, L2TargetType.SELF);
+		_targetType = params.getEnum("targetType", TargetType.class, TargetType.SELF);
 		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
-		_isCritical = params.getBoolean("isCritical", false);
+		_isCritical = params.getObject("isCritical", Boolean.class);
+		_allowNormalAttack = params.getBoolean("allowNormalAttack", true);
+		_allowSkillAttack = params.getBoolean("allowSkillAttack", false);
+		_allowReflect = params.getBoolean("allowReflect", false);
 		
-		if (params.getString("allowWeapons").equalsIgnoreCase("ALL"))
+		if (params.getString("allowWeapons", "ALL").equalsIgnoreCase("ALL"))
 		{
 			_allowWeapons = 0;
 		}
@@ -84,20 +87,31 @@ public final class TriggerSkillByAttack extends AbstractEffect
 	
 	public void onAttackEvent(OnCreatureDamageDealt event)
 	{
-		if (event.isDamageOverTime() || (_chance == 0) || (_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0))
+		if (event.isDamageOverTime() || (_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0)) || (!_allowNormalAttack && !_allowSkillAttack))
 		{
 			return;
 		}
 		
-		if (_isCritical != event.isCritical())
+		// Check if there is dependancy on critical.
+		if ((_isCritical != null) && (_isCritical != event.isCritical()))
 		{
 			return;
 		}
 		
-		final ITargetTypeHandler targetHandler = TargetHandler.getInstance().getHandler(_targetType);
-		if (targetHandler == null)
+		// When no skill attacks are allowed.
+		if (!_allowSkillAttack && (event.getSkill() != null))
 		{
-			_log.warning("Handler for target type: " + _targetType + " does not exist.");
+			return;
+		}
+		
+		// When no normal attacks are allowed.
+		if (!_allowNormalAttack && (event.getSkill() == null))
+		{
+			return;
+		}
+		
+		if (!_allowReflect && event.isReflect())
+		{
 			return;
 		}
 		
@@ -116,22 +130,28 @@ public final class TriggerSkillByAttack extends AbstractEffect
 			return;
 		}
 		
-		if ((_allowWeapons > 0) && ((event.getAttacker().getActiveWeaponItem() == null) || ((event.getAttacker().getActiveWeaponItem().getItemType().mask() & _allowWeapons) == 0)))
+		if (_allowWeapons > 0)
 		{
-			return;
+			if ((event.getAttacker().getActiveWeaponItem() == null) || ((event.getAttacker().getActiveWeaponItem().getItemType().mask() & _allowWeapons) == 0))
+			{
+				return;
+			}
 		}
 		
 		final Skill triggerSkill = _skill.getSkill();
-		for (L2Object triggerTarget : targetHandler.getTargetList(triggerSkill, event.getAttacker(), false, event.getTarget()))
+		L2Object target = null;
+		try
 		{
-			if ((triggerTarget == null) || !triggerTarget.isCharacter())
-			{
-				continue;
-			}
-			if (!((L2Character) triggerTarget).isInvul())
-			{
-				event.getAttacker().makeTriggerCast(triggerSkill, (L2Character) triggerTarget);
-			}
+			target = TargetHandler.getInstance().getHandler(_targetType).getTarget(event.getAttacker(), event.getTarget(), triggerSkill, false, false, false);
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, "Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
+		}
+		
+		if ((target != null) && target.isCharacter())
+		{
+			SkillCaster.triggerCast(event.getAttacker(), (L2Character) target, triggerSkill);
 		}
 	}
 	

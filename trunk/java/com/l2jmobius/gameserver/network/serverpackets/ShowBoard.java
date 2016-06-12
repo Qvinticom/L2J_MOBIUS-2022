@@ -18,9 +18,10 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
-import com.l2jmobius.util.StringUtil;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class ShowBoard extends L2GameServerPacket
+public class ShowBoard implements IClientOutgoingPacket
 {
 	private final String _content;
 	private int _showBoard = 1; // 1 show, 0 hide
@@ -41,7 +42,7 @@ public class ShowBoard extends L2GameServerPacket
 	
 	public ShowBoard(List<String> arg)
 	{
-		final StringBuilder builder = new StringBuilder(5 + StringUtil.getLength(arg) + arg.size()).append("1002\u0008");
+		final StringBuilder builder = new StringBuilder(256).append("1002\u0008");
 		for (String str : arg)
 		{
 			builder.append(str).append("\u0008");
@@ -50,18 +51,20 @@ public class ShowBoard extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x7B);
-		writeC(_showBoard); // c4 1 to show community 00 to hide
-		writeS("bypass _bbshome"); // top
-		writeS("bypass _bbsgetfav"); // favorite
-		writeS("bypass _bbsloc"); // region
-		writeS("bypass _bbsclan"); // clan
-		writeS("bypass _bbsmemo"); // memo
-		writeS("bypass _bbsmail"); // mail
-		writeS("bypass _bbsfriends"); // friends
-		writeS("bypass bbs_add_fav"); // add fav.
-		writeS(_content);
+		OutgoingPackets.SHOW_BOARD.writeId(packet);
+		
+		packet.writeC(_showBoard); // c4 1 to show community 00 to hide
+		packet.writeS("bypass _bbshome"); // top
+		packet.writeS("bypass _bbsgetfav"); // favorite
+		packet.writeS("bypass _bbsloc"); // region
+		packet.writeS("bypass _bbsclan"); // clan
+		packet.writeS("bypass _bbsmemo"); // memo
+		packet.writeS("bypass _bbsmail"); // mail
+		packet.writeS("bypass _bbsfriends"); // friends
+		packet.writeS("bypass bbs_add_fav"); // add fav.
+		packet.writeS(_content);
+		return true;
 	}
 }

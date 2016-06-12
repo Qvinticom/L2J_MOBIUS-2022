@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
@@ -32,14 +33,9 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.StringUtil;
 
 public class L2NpcInstance extends L2Npc
 {
-	/**
-	 * Creates a NPC.
-	 * @param template the NPC template
-	 */
 	public L2NpcInstance(L2NpcTemplate template)
 	{
 		super(template);
@@ -74,7 +70,7 @@ public class L2NpcInstance extends L2Npc
 	{
 		if (Config.DEBUG)
 		{
-			_log.fine("SkillList activated on: " + npc.getObjectId());
+			_log.finer("SkillList activated on: " + npc.getObjectId());
 		}
 		
 		final int npcId = npc.getTemplate().getId();
@@ -105,14 +101,32 @@ public class L2NpcInstance extends L2Npc
 		
 		if (!npc.getTemplate().canTeach(classId))
 		{
-			npc.showNoTeachHtml(player);
+			String html = "";
+			
+			if (npc instanceof L2WarehouseInstance)
+			{
+				html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/warehouse/" + npcId + "-noteach.htm");
+			}
+			
+			final NpcHtmlMessage noTeachMsg = new NpcHtmlMessage(npc.getObjectId());
+			if (html == null)
+			{
+				_log.warning("Npc " + npcId + " missing noTeach html!");
+				noTeachMsg.setHtml("<html><body>I cannot teach you any skills.<br>You must find your current class teachers.</body></html>");
+			}
+			else
+			{
+				noTeachMsg.setHtml(html);
+				noTeachMsg.replace("%objectId%", String.valueOf(npc.getObjectId()));
+			}
+			player.sendPacket(noTeachMsg);
 			return;
 		}
 		
 		if (((L2NpcInstance) npc).getClassesToTeach().isEmpty())
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-			final String sb = StringUtil.concat("<html><body>I cannot teach you. My class list is empty.<br>Ask admin to fix it. Need add my npcid and classes to skill_learn.sql.<br>NpcId:", String.valueOf(npcId), ", Your classId:", String.valueOf(player.getClassId().getId()), "</body></html>");
+			final String sb = "<html><body>I cannot teach you. My class list is empty.<br>Ask admin to fix it. Need add my npcid and classes to skill_learn.sql.<br>NpcId:" + npcId + ", Your classId:" + player.getClassId().getId() + "</body></html>";
 			html.setHtml(sb);
 			player.sendPacket(html);
 			return;
@@ -132,15 +146,18 @@ public class L2NpcInstance extends L2Npc
 				sm.addInt(minLevel);
 				player.sendPacket(sm);
 			}
-			else if (player.getClassId().level() == 1)
-			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN_PLEASE_COME_BACK_AFTER_S1ND_CLASS_CHANGE);
-				sm.addInt(2);
-				player.sendPacket(sm);
-			}
 			else
 			{
-				player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
+				if (player.getClassId().level() == 1)
+				{
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN_PLEASE_COME_BACK_AFTER_S1ND_CLASS_CHANGE);
+					sm.addInt(2);
+					player.sendPacket(sm);
+				}
+				else
+				{
+					player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
+				}
 			}
 		}
 		else

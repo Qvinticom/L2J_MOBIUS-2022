@@ -39,6 +39,10 @@ public class ConditionPlayerSiegeSide extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		return (effector.getActingPlayer() != null) && (effector.getActingPlayer().getSiegeSide() == _siegeSide);
+		if (effector.getActingPlayer() == null)
+		{
+			return false;
+		}
+		return effector.getActingPlayer().getSiegeSide() == _siegeSide;
 	}
 }

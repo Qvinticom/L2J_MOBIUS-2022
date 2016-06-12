@@ -29,6 +29,7 @@ import com.l2jmobius.gameserver.GameServer;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.cache.HtmCache;
+import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -54,7 +55,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			final NpcHtmlMessage html = new NpcHtmlMessage();
 			final Runtime RunTime = Runtime.getRuntime();
 			final int mb = 1024 * 1024;
-			html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/serverinfo.htm"));
+			html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/serverinfo.htm"));
 			
 			html.replace("%os_name%", System.getProperty("os.name"));
 			html.replace("%os_ver%", System.getProperty("os.version"));
@@ -117,7 +118,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 		{
 			case "ALL":
 			{
-				return L2World.getInstance().getAllPlayersCount();
+				return L2World.getInstance().getPlayers().size();
 			}
 			case "OFF_TRADE":
 			{
@@ -136,7 +137,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			case "GM":
 			{
 				int onlineGMcount = 0;
-				for (L2PcInstance gm : L2World.getInstance().getAllGMs())
+				for (L2PcInstance gm : AdminData.getInstance().getAllGms(true))
 				{
 					if ((gm != null) && gm.isOnline() && (gm.getClient() != null) && !gm.getClient().isDetached())
 					{

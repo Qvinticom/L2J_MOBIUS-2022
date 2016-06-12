@@ -18,11 +18,12 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Headquarter Create effect implementation.
@@ -33,10 +34,8 @@ public final class HeadquarterCreate extends AbstractEffect
 	private static final int HQ_NPC_ID = 35062;
 	private final boolean _isAdvanced;
 	
-	public HeadquarterCreate(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public HeadquarterCreate(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_isAdvanced = params.getBoolean("isAdvanced", false);
 	}
 	
@@ -47,19 +46,18 @@ public final class HeadquarterCreate extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2PcInstance player = info.getEffector().getActingPlayer();
-		if (!player.isClanLeader())
+		final L2PcInstance player = effector.getActingPlayer();
+		if ((player.getClan() == null) || (player.getClan().getLeaderId() != player.getObjectId()))
 		{
 			return;
 		}
 		
-		final L2SiegeFlagInstance flag = new L2SiegeFlagInstance(player, NpcData.getInstance().getTemplate(HQ_NPC_ID), _isAdvanced, false);
+		final L2SiegeFlagInstance flag = new L2SiegeFlagInstance(player, NpcData.getInstance().getTemplate(HQ_NPC_ID), _isAdvanced);
 		flag.setTitle(player.getClan().getName());
 		flag.setCurrentHpMp(flag.getMaxHp(), flag.getMaxMp());
 		flag.setHeading(player.getHeading());
 		flag.spawnMe(player.getX(), player.getY(), player.getZ() + 50);
-		// already call addFlag method in L2SiegeFlagInstance constructor
 	}
 }

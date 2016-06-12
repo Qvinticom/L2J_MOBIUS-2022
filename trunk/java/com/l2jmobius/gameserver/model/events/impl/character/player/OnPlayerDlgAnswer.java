@@ -63,4 +63,5 @@ public class OnPlayerDlgAnswer implements IBaseEvent
 	{
 		return EventType.ON_PLAYER_DLG_ANSWER;
 	}
+	
 }

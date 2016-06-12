@@ -72,7 +72,7 @@ public class Q00647_InfluxOfMachines extends Quest
 	
 	public Q00647_InfluxOfMachines()
 	{
-		super(647, Q00647_InfluxOfMachines.class.getSimpleName(), "Influx of Machines");
+		super(647);
 		addStartNpc(GUTENHAGEN);
 		addTalkId(GUTENHAGEN);
 		addKillId(MOBS.keySet());

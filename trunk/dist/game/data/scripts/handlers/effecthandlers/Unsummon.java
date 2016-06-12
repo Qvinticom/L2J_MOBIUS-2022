@@ -16,15 +16,17 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.util.Rnd;
 
 /**
  * Unsummon effect implementation.
@@ -34,18 +36,36 @@ public final class Unsummon extends AbstractEffect
 {
 	private final int _chance;
 	
-	public Unsummon(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Unsummon(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
-		_chance = params.getInt("chance", 100);
+		_chance = params.getInt("chance", -1);
 	}
 	
 	@Override
-	public boolean calcSuccess(BuffInfo info)
+	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
-		final int magicLevel = info.getSkill().getMagicLevel();
-		return ((magicLevel <= 0) || ((info.getEffected().getLevel() - 9) <= magicLevel)) && ((_chance * Formulas.calcAttributeBonus(info.getEffector(), info.getEffected(), info.getSkill()) * Formulas.calcGeneralTraitBonus(info.getEffector(), info.getEffected(), info.getSkill().getTraitType(), false)) > (Rnd.nextDouble() * 100));
+		if (_chance < 0)
+		{
+			return true;
+		}
+		
+		final int magicLevel = skill.getMagicLevel();
+		if ((magicLevel <= 0) || ((effected.getLevel() - 9) <= magicLevel))
+		{
+			final double chance = _chance * Formulas.calcAttributeBonus(effector, effected, skill) * Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), false);
+			if ((chance >= 100) || (chance > (Rnd.nextDouble() * 100)))
+			{
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return info.getEffected().isSummon();
 	}
 	
 	@Override
@@ -55,11 +75,11 @@ public final class Unsummon extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (info.getEffected().isServitor())
+		if (effected.isServitor())
 		{
-			final L2Summon servitor = (L2Summon) info.getEffected();
+			final L2Summon servitor = (L2Summon) effected;
 			final L2PcInstance summonOwner = servitor.getOwner();
 			
 			servitor.abortAttack();

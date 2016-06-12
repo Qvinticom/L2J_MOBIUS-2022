@@ -66,6 +66,6 @@ public final class NpcRoutesHolder
 	 */
 	private String getUniqueKey(ILocational loc)
 	{
-		return loc.getX() + "-" + loc.getY() + "-" + loc.getZ();
+		return (loc.getX() + "-" + loc.getY() + "-" + loc.getZ());
 	}
 }

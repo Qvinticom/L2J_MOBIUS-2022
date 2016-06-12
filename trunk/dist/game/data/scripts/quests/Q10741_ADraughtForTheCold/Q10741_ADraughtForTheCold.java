@@ -22,11 +22,13 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
 
 /**
+ * A Draught For The Cold (10741)
  * @author Sdw
  */
-public class Q10741_ADraughtForTheCold extends Quest
+public final class Q10741_ADraughtForTheCold extends Quest
 {
 	// NPC's
 	private static final int SIVANTHE = 33951;
@@ -45,13 +47,14 @@ public class Q10741_ADraughtForTheCold extends Quest
 	
 	public Q10741_ADraughtForTheCold()
 	{
-		super(10741, Q10741_ADraughtForTheCold.class.getSimpleName(), "A Draught For The Cold");
+		super(10741);
 		addStartNpc(SIVANTHE);
 		addTalkId(SIVANTHE, LEIRA);
 		addKillId(HONEY_BEE, KIKU, ROBUST_HONEY_BEE);
+		
+		addCondRace(Race.ERTHEIA, "");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33951-00.htm");
 		registerQuestItems(EMPTY_HONEY_JAR, SWEET_HONEY, NUTRITIOUS_MEAT);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33951-07.html");
-		addCondRace(Race.ERTHEIA, "33951-07.html");
 	}
 	
 	@Override
@@ -63,19 +66,15 @@ public class Q10741_ADraughtForTheCold extends Quest
 			return null;
 		}
 		
-		String htmltext = null;
+		String htmltext = event;
 		switch (event)
 		{
-			case "33951-03.html":
+			case "33951-02.htm":
+				break;
+			case "33951-03.htm":
 			{
 				qs.startQuest();
 				giveItems(player, EMPTY_HONEY_JAR, 10);
-				htmltext = event;
-				break;
-			}
-			case "33951-02.htm":
-			{
-				htmltext = event;
 				break;
 			}
 			case "33952-02.html":
@@ -85,10 +84,11 @@ public class Q10741_ADraughtForTheCold extends Quest
 					giveAdena(player, 2000, true);
 					addExpAndSp(player, 22973, 2);
 					qs.exitQuest(false, true);
-					htmltext = event;
 				}
 				break;
 			}
+			default:
+				htmltext = null;
 		}
 		return htmltext;
 	}
@@ -99,16 +99,27 @@ public class Q10741_ADraughtForTheCold extends Quest
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if (qs.isCompleted())
-		{
-			return getAlreadyCompletedMsg(player);
-		}
-		
 		switch (npc.getId())
 		{
 			case SIVANTHE:
 			{
-				htmltext = qs.isStarted() ? "33951-04.html" : "33951-01.htm";
+				switch (qs.getState())
+				{
+					case State.CREATED:
+						htmltext = "33951-01.htm";
+						break;
+					case State.STARTED:
+					{
+						if (qs.isCond(1))
+						{
+							htmltext = "33951-04.html";
+						}
+						break;
+					}
+					case State.COMPLETED:
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+				}
 				break;
 			}
 			case LEIRA:

@@ -16,23 +16,23 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jmobius.gameserver.MonsterRace;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.knownlist.RaceManagerKnownList;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.DeleteObject;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
 import com.l2jmobius.gameserver.network.serverpackets.MonRaceInfo;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -89,10 +89,6 @@ public class L2RaceManagerInstance extends L2Npc
 		100000
 	};
 	
-	/**
-	 * Creates a race manager.
-	 * @param template the race manager NPC template
-	 */
 	public L2RaceManagerInstance(L2NpcTemplate template)
 	{
 		super(template);
@@ -101,7 +97,7 @@ public class L2RaceManagerInstance extends L2Npc
 		{
 			_notInitialized = false;
 			
-			_managers = new ArrayList<>();
+			_managers = new CopyOnWriteArrayList<>();
 			
 			final ThreadPoolManager s = ThreadPoolManager.getInstance();
 			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1), 0, 10 * MINUTE);
@@ -124,20 +120,20 @@ public class L2RaceManagerInstance extends L2Npc
 			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (58 * SECOND), 10 * MINUTE);
 			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (59 * SECOND), 10 * MINUTE);
 			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.THEY_RE_OFF), 9 * MINUTE, 10 * MINUTE);
+			// */
 		}
 		_managers.add(this);
 	}
 	
 	@Override
-	public final RaceManagerKnownList getKnownList()
+	public boolean isAutoAttackable(L2Character attacker)
 	{
-		return (RaceManagerKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new RaceManagerKnownList(this));
+		if (attacker.isMonster())
+		{
+			return true;
+		}
+		
+		return super.isAutoAttackable(attacker);
 	}
 	
 	class Announcement implements Runnable
@@ -163,19 +159,16 @@ public class L2RaceManagerInstance extends L2Npc
 		{
 			case 816: // SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1
 			case 817: // SystemMessageId.NOW_SELLING_TICKETS_FOR_MONSTER_RACE_S1
-			{
 				if (_state != ACCEPTING_BETS)
-				{// _log.info("Race Initializing");
+				{// LOGGER.info("Race Initializing");
 					_state = ACCEPTING_BETS;
 					startRace();
-				} // else{_log.info("Race open");}
+				} // else{LOGGER.info("Race open");}
 				sm.addInt(_raceNumber);
 				break;
-			}
 			case 818: // SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S
 			case 820: // SystemMessageId.MONSTER_RACE_S2_WILL_BEGIN_IN_S1_MINUTE_S
 			case 823: // SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S
-			{
 				sm.addInt(_minutes);
 				if (type.getId() == 820)
 				{
@@ -183,47 +176,40 @@ public class L2RaceManagerInstance extends L2Npc
 				}
 				_minutes--;
 				break;
-			}
 			case 819: // SystemMessageId.TICKETS_SALES_ARE_CLOSED_FOR_MONSTER_RACE_S1_ODDS_ARE_POSTED
-			{
-				// _log.info("Sales closed");
+				// LOGGER.info("Sales closed");
 				sm.addInt(_raceNumber);
 				_state = WAITING;
 				_minutes = 2;
 				break;
-			}
 			case 821: // SystemMessageId.MONSTER_RACE_S1_WILL_BEGIN_IN_30_SECONDS
 			case 822: // SystemMessageId.MONSTER_RACE_S1_IS_ABOUT_TO_BEGIN_COUNTDOWN_IN_FIVE_SECONDS
 			case 825: // SystemMessageId.MONSTER_RACE_S1_IS_FINISHED
-			{
 				sm.addInt(_raceNumber);
 				_minutes = 5;
 				break;
-			}
 			case 826: // SystemMessageId.FIRST_PRIZE_GOES_TO_THE_PLAYER_IN_LANE_S1_SECOND_PRIZE_GOES_TO_THE_PLAYER_IN_LANE_S2
-			{
-				// _log.info("Placing");
+				// LOGGER.info("Placing");
 				_state = RACE_END;
 				sm.addInt(MonsterRace.getInstance().getFirstPlace());
 				sm.addInt(MonsterRace.getInstance().getSecondPlace());
 				break;
-			}
 		}
 		// _logn.info("Counter: "+minutes);
-		// _log.info("State: "+state);
+		// LOGGER.info("State: "+state);
 		broadcast(sm);
-		// _log.info("Player's known: "+getKnownPlayers().size());
+		// LOGGER.info("Player's known: "+getKnownPlayers().size());
 		
 		if (type == SystemMessageId.THEY_RE_OFF)
 		{
-			// _log.info("Starting race");
+			// LOGGER.info("Starting race");
 			_state = STARTING_RACE;
 			startRace();
 			_minutes = 5;
 		}
 	}
 	
-	protected void broadcast(L2GameServerPacket pkt)
+	protected void broadcast(IClientOutgoingPacket pkt)
 	{
 		for (L2RaceManagerInstance manager : _managers)
 		{
@@ -262,6 +248,7 @@ public class L2RaceManagerInstance extends L2Npc
 			_packet = new MonRaceInfo(_codes[0][0], _codes[0][1], race.getMonsters(), race.getSpeeds());
 			sendMonsterInfo();
 		}
+		
 	}
 	
 	@Override
@@ -460,7 +447,7 @@ public class L2RaceManagerInstance extends L2Npc
 			iu.addItem(item);
 			final L2ItemInstance adenaupdate = player.getInventory().getItemByItemId(Inventory.ADENA_ID);
 			iu.addModifiedItem(adenaupdate);
-			player.sendPacket(iu);
+			player.sendInventoryUpdate(iu);
 			return;
 		}
 		html.replace("1race", String.valueOf(_raceNumber));
@@ -518,6 +505,7 @@ public class L2RaceManagerInstance extends L2Npc
 				return _place;
 			}
 		}
+		
 	}
 	
 	class RunRace implements Runnable
@@ -548,4 +536,5 @@ public class L2RaceManagerInstance extends L2Npc
 			}
 		}
 	}
+	
 }

@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.model.actor.instance;
 
 import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.network.serverpackets.commission.ExShowCommission;
@@ -30,6 +31,17 @@ public class CommissionManagerInstance extends L2Npc
 	{
 		super(template);
 		setInstanceType(InstanceType.CommissionManagerInstance);
+	}
+	
+	@Override
+	public boolean isAutoAttackable(L2Character attacker)
+	{
+		if (attacker.isMonster())
+		{
+			return true;
+		}
+		
+		return super.isAutoAttackable(attacker);
 	}
 	
 	@Override

@@ -27,10 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public final class L2ObservationInstance extends L2Npc
 {
-	/**
-	 * Creates an observation.
-	 * @param template the observation NPC template
-	 */
 	public L2ObservationInstance(L2NpcTemplate template)
 	{
 		super(template);
@@ -46,20 +42,23 @@ public final class L2ObservationInstance extends L2Npc
 		{
 			if (val == 0)
 			{
-				filename = "html/observation/" + getId() + "-Oracle.htm";
+				filename = "data/html/observation/" + getId() + "-Oracle.htm";
 			}
 			else
 			{
-				filename = "html/observation/" + getId() + "-Oracle-" + val + ".htm";
+				filename = "data/html/observation/" + getId() + "-Oracle-" + val + ".htm";
 			}
-		}
-		else if (val == 0)
-		{
-			filename = "html/observation/" + getId() + ".htm";
 		}
 		else
 		{
-			filename = "html/observation/" + getId() + "-" + val + ".htm";
+			if (val == 0)
+			{
+				filename = "data/html/observation/" + getId() + ".htm";
+			}
+			else
+			{
+				filename = "data/html/observation/" + getId() + "-" + val + ".htm";
+			}
 		}
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());

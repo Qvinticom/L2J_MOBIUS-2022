@@ -21,8 +21,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -41,7 +41,7 @@ public final class ItemsOnGroundManager implements Runnable
 {
 	private static final Logger _log = Logger.getLogger(ItemsOnGroundManager.class.getName());
 	
-	private final List<L2ItemInstance> _items = new CopyOnWriteArrayList<>();
+	private final Set<L2ItemInstance> _items = ConcurrentHashMap.newKeySet();
 	
 	protected ItemsOnGroundManager()
 	{
@@ -120,14 +120,20 @@ public final class ItemsOnGroundManager implements Runnable
 					final long dropTime = rs.getLong(8);
 					item.setDropTime(dropTime);
 					item.setProtected(dropTime == -1);
-					item.setIsVisible(true);
+					item.setSpawned(true);
 					L2World.getInstance().addVisibleObject(item, item.getWorldRegion());
 					_items.add(item);
 					count++;
 					// add to ItemsAutoDestroy only items not protected
-					if (!Config.LIST_PROTECTED_ITEMS.contains(item.getId()) && (dropTime > -1) && (((Config.AUTODESTROY_ITEM_AFTER > 0) && !item.getItem().hasExImmediateEffect()) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && item.getItem().hasExImmediateEffect())))
+					if (!Config.LIST_PROTECTED_ITEMS.contains(item.getId()))
 					{
-						ItemsAutoDestroy.getInstance().addItem(item);
+						if (dropTime > -1)
+						{
+							if (((Config.AUTODESTROY_ITEM_AFTER > 0) && !item.getItem().hasExImmediateEffect()) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && item.getItem().hasExImmediateEffect()))
+							{
+								ItemsAutoDestroy.getInstance().addItem(item);
+							}
+						}
 					}
 				}
 			}
@@ -146,11 +152,10 @@ public final class ItemsOnGroundManager implements Runnable
 	
 	public void save(L2ItemInstance item)
 	{
-		if (!Config.SAVE_DROPPED_ITEM)
+		if (Config.SAVE_DROPPED_ITEM)
 		{
-			return;
+			_items.add(item);
 		}
-		_items.add(item);
 	}
 	
 	public void removeObject(L2ItemInstance item)
@@ -200,28 +205,33 @@ public final class ItemsOnGroundManager implements Runnable
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("INSERT INTO itemsonground(object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable) VALUES(?,?,?,?,?,?,?,?,?)"))
+			PreparedStatement statement = con.prepareStatement("INSERT INTO itemsonground(object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable) VALUES(?,?,?,?,?,?,?,?,?)"))
 		{
 			for (L2ItemInstance item : _items)
 			{
-				if ((item == null) || CursedWeaponsManager.getInstance().isCursed(item.getId()))
+				if (item == null)
+				{
+					continue;
+				}
+				
+				if (CursedWeaponsManager.getInstance().isCursed(item.getId()))
 				{
 					continue; // Cursed Items not saved to ground, prevent double save
 				}
 				
 				try
 				{
-					ps.setInt(1, item.getObjectId());
-					ps.setInt(2, item.getId());
-					ps.setLong(3, item.getCount());
-					ps.setInt(4, item.getEnchantLevel());
-					ps.setInt(5, item.getX());
-					ps.setInt(6, item.getY());
-					ps.setInt(7, item.getZ());
-					ps.setLong(8, item.isProtected() ? -1 : item.getDropTime()); // item is protected or AutoDestroyed
-					ps.setLong(9, item.isEquipable() ? 1 : 0); // set equip-able
-					ps.execute();
-					ps.clearParameters();
+					statement.setInt(1, item.getObjectId());
+					statement.setInt(2, item.getId());
+					statement.setLong(3, item.getCount());
+					statement.setInt(4, item.getEnchantLevel());
+					statement.setInt(5, item.getX());
+					statement.setInt(6, item.getY());
+					statement.setInt(7, item.getZ());
+					statement.setLong(8, (item.isProtected() ? -1 : item.getDropTime())); // item is protected or AutoDestroyed
+					statement.setLong(9, (item.isEquipable() ? 1 : 0)); // set equip-able
+					statement.execute();
+					statement.clearParameters();
 				}
 				catch (Exception e)
 				{

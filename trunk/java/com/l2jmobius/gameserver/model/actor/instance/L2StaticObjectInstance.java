@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.knownlist.StaticObjectKnownList;
 import com.l2jmobius.gameserver.model.actor.stat.StaticObjStat;
 import com.l2jmobius.gameserver.model.actor.status.StaticObjStatus;
 import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
@@ -44,18 +43,6 @@ public final class L2StaticObjectInstance extends L2Character
 	private int _type = -1; // 0 - map signs, 1 - throne , 2 - arena signs
 	private ShowTownMap _map;
 	
-	/**
-	 * Creates a static object.
-	 * @param template the static object
-	 * @param staticId the static ID
-	 */
-	public L2StaticObjectInstance(L2CharTemplate template, int staticId)
-	{
-		super(template);
-		setInstanceType(InstanceType.L2StaticObjectInstance);
-		_staticObjectId = staticId;
-	}
-	
 	@Override
 	protected L2CharacterAI initAI()
 	{
@@ -72,16 +59,15 @@ public final class L2StaticObjectInstance extends L2Character
 		return _staticObjectId;
 	}
 	
-	@Override
-	public final StaticObjectKnownList getKnownList()
+	/**
+	 * @param template
+	 * @param staticId
+	 */
+	public L2StaticObjectInstance(L2CharTemplate template, int staticId)
 	{
-		return (StaticObjectKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new StaticObjectKnownList(this));
+		super(template);
+		setInstanceType(InstanceType.L2StaticObjectInstance);
+		_staticObjectId = staticId;
 	}
 	
 	@Override
@@ -176,7 +162,7 @@ public final class L2StaticObjectInstance extends L2Character
 	public void setMeshIndex(int meshIndex)
 	{
 		_meshIndex = meshIndex;
-		broadcastPacket(new StaticObject(this));
+		this.broadcastPacket(new StaticObject(this));
 	}
 	
 	/**

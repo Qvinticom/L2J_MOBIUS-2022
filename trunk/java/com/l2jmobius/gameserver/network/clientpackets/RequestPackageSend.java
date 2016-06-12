@@ -16,9 +16,8 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Level;
-
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -27,66 +26,65 @@ import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import com.l2jmobius.gameserver.model.itemcontainer.PcFreight;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author -Wooden-
  * @author UnAfraid Thanks mrTJO
  */
-public class RequestPackageSend extends L2GameClientPacket
+public class RequestPackageSend implements IClientIncomingPacket
 {
-	private static final String _C_A8_REQUESTPACKAGESEND = "[C] A8 RequestPackageSend";
 	private static final int BATCH_LENGTH = 12; // length of the one item
 	
 	private ItemHolder _items[] = null;
 	private int _objectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
+		_objectId = packet.readD();
 		
-		final int count = readD();
-		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
+		final int count = packet.readD();
+		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
-			return;
+			return false;
 		}
 		
 		_items = new ItemHolder[count];
 		for (int i = 0; i < count; i++)
 		{
-			final int objId = readD();
-			final long cnt = readQ();
+			final int objId = packet.readD();
+			final long cnt = packet.readQ();
 			if ((objId < 1) || (cnt < 0))
 			{
 				_items = null;
-				return;
+				return false;
 			}
 			
 			_items[i] = new ItemHolder(objId, cnt);
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if ((_items == null) || (player == null) || !player.getAccountChars().containsKey(_objectId))
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("deposit"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("deposit"))
 		{
 			player.sendMessage("You depositing items too fast.");
 			return;
 		}
 		
 		final L2Npc manager = player.getLastFolkNPC();
-		if ((manager == null) || !player.isInsideRadius(manager, L2Npc.INTERACTION_DISTANCE, false, false))
+		if (((manager == null) || !player.isInsideRadius(manager, L2Npc.INTERACTION_DISTANCE, false, false)))
 		{
 			return;
 		}
@@ -121,7 +119,7 @@ public class RequestPackageSend extends L2GameClientPacket
 			final L2ItemInstance item = player.checkItemManipulation(i.getId(), i.getCount(), "freight");
 			if (item == null)
 			{
-				_log.log(Level.WARNING, "Error depositing a warehouse object for char " + player.getName() + " (validity check)");
+				_log.warning("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
 				warehouse.deleteMe();
 				return;
 			}
@@ -170,7 +168,7 @@ public class RequestPackageSend extends L2GameClientPacket
 			final L2ItemInstance oldItem = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
 			if (oldItem == null)
 			{
-				_log.log(Level.WARNING, "Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
+				_log.warning("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
 				warehouse.deleteMe();
 				return;
 			}
@@ -178,7 +176,7 @@ public class RequestPackageSend extends L2GameClientPacket
 			final L2ItemInstance newItem = player.getInventory().transferItem("Trade", i.getId(), i.getCount(), warehouse, player, null);
 			if (newItem == null)
 			{
-				_log.log(Level.WARNING, "Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");
+				_log.warning("Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");
 				continue;
 			}
 			
@@ -198,15 +196,14 @@ public class RequestPackageSend extends L2GameClientPacket
 		warehouse.deleteMe();
 		
 		// Send updated item list to the player
-		sendPacket(playerIU != null ? playerIU : new ItemList(player, false));
-		
-		// Update current load status on player
-		player.sendPacket(new ExUserInfoInvenWeight(player));
+		if (playerIU != null)
+		{
+			player.sendInventoryUpdate(playerIU);
+		}
+		else
+		{
+			player.sendItemList(false);
+		}
 	}
 	
-	@Override
-	public String getType()
-	{
-		return _C_A8_REQUESTPACKAGESEND;
-	}
 }

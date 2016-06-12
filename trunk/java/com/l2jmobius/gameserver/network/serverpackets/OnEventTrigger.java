@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
  * @author Gnacik, UnAfraid
  */
-public class OnEventTrigger extends L2GameServerPacket
+public class OnEventTrigger implements IClientOutgoingPacket
 {
 	private final int _emitterId;
 	private final int _enabled;
@@ -31,10 +34,12 @@ public class OnEventTrigger extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xCF);
-		writeD(_emitterId);
-		writeC(_enabled);
+		OutgoingPackets.EVENT_TRIGGER.writeId(packet);
+		
+		packet.writeD(_emitterId);
+		packet.writeC(_enabled);
+		return true;
 	}
 }

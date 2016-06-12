@@ -1,1547 +1,3323 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="2100" levels="1" name="Escape: 1 second">
+	<skill id="2100" toLevel="1" name="Escape: 1 second">
 		<!-- Confirmed CT2.5 -->
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="1000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<and>
-				<player canEscape="true" />
-				<not>
-					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-				</not>
-			</and>
-		</cond>
-		<for>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
 			<effect name="Escape">
-				<param escapeType="TOWN" />
+				<escapeType>TOWN</escapeType>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2101" levels="1" name="Feed: General Strider">
+	<skill id="2101" toLevel="1" name="Feed: General Strider">
 		<!-- Confirmed CT2.5 -->
-		<set name="feed" val="200" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Feed">
+				<normal>200</normal>
+				<ride>200</ride>
+				<wyvern>0</wyvern>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2102" levels="1" name="Feed: Clan Hall Strider">
+	<skill id="2102" toLevel="1" name="Feed: Clan Hall Strider">
 		<!-- Confirmed CT2.5 -->
-		<set name="feed" val="450" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Feed">
+				<normal>200</normal>
+				<ride>450</ride>
+				<wyvern>0</wyvern>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2103" levels="1" name="Mysterious Potion">
+	<skill id="2103" toLevel="1" name="Mysterious Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="0" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="BIG_HEAD" />
-		<set name="abnormalVisualEffect" val="BIG_HEAD" />
-		<set name="activateRate" val="0" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<set name="trait" val="ETC" />
-		<cond msgId="113" addName="1">
-			<not>
-				<player transformationId="103" />
-			</not>
-		</cond>
+		<abnormalLvl>0</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>BIG_HEAD</abnormalType>
+		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
+		<activateRate>0</activateRate>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<trait>ETC</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CannotUseInTransform">
+				<transformId>103</transformId>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="2104" levels="1" name="Greater Compressed Package of Soulshots: No-grade">
+	<skill id="2104" toLevel="1" name="Greater Compressed Package of Soulshots: No-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="1835" itemCount="1000" />
+				<itemId>1835</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2105" levels="1" name="Greater Compressed Package of Soulshots: D-grade">
+	<skill id="2105" toLevel="1" name="Greater Compressed Package of Soulshots: D-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="1463" itemCount="1000" />
+				<itemId>1463</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2106" levels="1" name="Greater Compressed Package of Soulshots: C-grade">
+	<skill id="2106" toLevel="1" name="Greater Compressed Package of Soulshots: C-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="1464" itemCount="1000" />
+				<itemId>1464</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2107" levels="1" name="Greater Compressed Package of Soulshots: B-grade">
+	<skill id="2107" toLevel="1" name="Greater Compressed Package of Soulshots: B-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="1465" itemCount="1000" />
+				<itemId>1465</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2108" levels="1" name="Greater Compressed Package of Soulshots: A-grade">
+	<skill id="2108" toLevel="1" name="Greater Compressed Package of Soulshots: A-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="1466" itemCount="1000" />
+				<itemId>1466</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2109" levels="1" name="Greater Compressed Package of Soulshots: S-grade">
+	<skill id="2109" toLevel="1" name="Greater Compressed Package of Soulshots: S-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="1467" itemCount="1000" />
+				<itemId>1467</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2110" levels="1" name="Greater Compressed Package of Spiritshots: No-grade">
+	<skill id="2110" toLevel="1" name="Greater Compressed Package of Spiritshots: No-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="2509" itemCount="1000" />
+				<itemId>2509</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2111" levels="1" name="Greater Compressed Package of Spiritshots: D-grade">
+	<skill id="2111" toLevel="1" name="Greater Compressed Package of Spiritshots: D-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="2510" itemCount="1000" />
+				<itemId>2510</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2112" levels="1" name="Greater Compressed Package of Spiritshots: C-grade">
+	<skill id="2112" toLevel="1" name="Greater Compressed Package of Spiritshots: C-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="2511" itemCount="1000" />
+				<itemId>2511</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2113" levels="1" name="Greater Compressed Package of Spiritshots: B-grade">
+	<skill id="2113" toLevel="1" name="Greater Compressed Package of Spiritshots: B-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="2512" itemCount="1000" />
+				<itemId>2512</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2114" levels="1" name="Greater Compressed Package of Spiritshots: A-grade">
+	<skill id="2114" toLevel="1" name="Greater Compressed Package of Spiritshots: A-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="2513" itemCount="1000" />
+				<itemId>2513</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2115" levels="1" name="Greater Compressed Package of Spiritshots: S-grade">
+	<skill id="2115" toLevel="1" name="Greater Compressed Package of Spiritshots: S-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="2514" itemCount="1000" />
+				<itemId>2514</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2116" levels="1" name="Greater Compressed Package of Blessed Spiritshots: No-grade">
+	<skill id="2116" toLevel="1" name="Greater Compressed Package of Blessed Spiritshots: No-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="3947" itemCount="1000" />
+				<itemId>3947</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2117" levels="1" name="Greater Compressed Package of Blessed Spiritshots: D-grade">
+	<skill id="2117" toLevel="1" name="Greater Compressed Package of Blessed Spiritshots: D-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="3948" itemCount="1000" />
+				<itemId>3948</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2118" levels="1" name="Greater Compressed Package of Blessed Spiritshots: C-grade">
+	<skill id="2118" toLevel="1" name="Greater Compressed Package of Blessed Spiritshots: C-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="3949" itemCount="1000" />
+				<itemId>3949</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2119" levels="1" name="Greater Compressed Package of Blessed Spiritshots: B-grade">
+	<skill id="2119" toLevel="1" name="Greater Compressed Package of Blessed Spiritshots: B-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="3950" itemCount="1000" />
+				<itemId>3950</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2120" levels="1" name="Greater Compressed Package of Blessed Spiritshots: A-grade">
+	<skill id="2120" toLevel="1" name="Greater Compressed Package of Blessed Spiritshots: A-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="3951" itemCount="1000" />
+				<itemId>3951</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2121" levels="1" name="Greater Compressed Package of Blessed Spiritshots: S-grade">
+	<skill id="2121" toLevel="1" name="Greater Compressed Package of Blessed Spiritshots: S-grade">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Restoration">
-				<param itemId="3952" itemCount="1000" />
+				<itemId>3952</itemId>
+				<itemCount>1000</itemCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2122" levels="1" name="Facelifting Potion">
+	<skill id="2122" toLevel="1" name="Facelifting Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="500" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5235" /> <!-- Facelifting Potion - A -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>5235</itemConsumeId> <!-- Facelifting Potion - A -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="ChangeFace" />
-		</for>
+		</effects>
 	</skill>
-	<skill id="2123" levels="1" name="Facelifting Potion">
+	<skill id="2123" toLevel="1" name="Facelifting Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="500" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5236" /> <!-- Facelifting Potion - B -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>5236</itemConsumeId> <!-- Facelifting Potion - B -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="ChangeFace">
-				<param value="1" />
+				<value>1</value>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2124" levels="1" name="Facelifting Potion">
+	<skill id="2124" toLevel="1" name="Facelifting Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="500" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5237" /> <!-- Facelifting Potion - C -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>5237</itemConsumeId> <!-- Facelifting Potion - C -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="ChangeFace">
-				<param value="2" />
+				<value>2</value>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2125" levels="1" name="Dye Potion">
+	<skill id="2125" toLevel="1" name="Dye Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="500" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5238" /> <!-- Dye Potion - A -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>5238</itemConsumeId> <!-- Dye Potion - A -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="ChangeHairColor" />
-		</for>
+		</effects>
 	</skill>
-	<skill id="2126" levels="1" name="Dye Potion">
+	<skill id="2126" toLevel="1" name="Dye Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="500" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5239" /> <!-- Dye Potion - B -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>5239</itemConsumeId> <!-- Dye Potion - B -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="ChangeHairColor">
-				<param value="1" />
+				<value>1</value>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2127" levels="1" name="Dye Potion">
+	<skill id="2127" toLevel="1" name="Dye Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="500" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5240" /> <!-- Dye Potion - C -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>5240</itemConsumeId> <!-- Dye Potion - C -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="ChangeHairColor">
-				<param value="2" />
+				<value>2</value>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2128" levels="1" name="Dye Potion">
+	<skill id="2128" toLevel="1" name="Dye Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="500" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5241" /> <!-- Dye Potion - D -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>5241</itemConsumeId> <!-- Dye Potion - D -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="ChangeHairColor">
-				<param value="3" />
+				<value>3</value>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2129" levels="1" name="Hair Style Change Potion">
+	<skill id="2129" toLevel="1" name="Hair Style Change Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="500" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5242" /> <!-- Hair Style Change Potion - A -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>5242</itemConsumeId> <!-- Hair Style Change Potion - A -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="ChangeHairStyle" />
-		</for>
+		</effects>
 	</skill>
-	<skill id="2130" levels="1" name="Hair Style Change Potion">
+	<skill id="2130" toLevel="1" name="Hair Style Change Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="500" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5243" /> <!-- Hair Style Change Potion - B -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>5243</itemConsumeId> <!-- Hair Style Change Potion - B -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="ChangeHairStyle">
-				<param value="1" />
+				<value>1</value>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2131" levels="1" name="Hair Style Change Potion">
+	<skill id="2131" toLevel="1" name="Hair Style Change Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="500" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5244" /> <!-- Hair Style Change Potion - C -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>5244</itemConsumeId> <!-- Hair Style Change Potion - C -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="ChangeHairStyle">
-				<param value="2" />
+				<value>2</value>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2132" levels="1" name="Hair Style Change Potion">
+	<skill id="2132" toLevel="1" name="Hair Style Change Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="500" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5245" /> <!-- Hair Style Change Potion - D -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>5245</itemConsumeId> <!-- Hair Style Change Potion - D -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="ChangeHairStyle">
-				<param value="3" />
+				<value>3</value>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2133" levels="1" name="Hair Style Change Potion">
+	<skill id="2133" toLevel="1" name="Hair Style Change Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="500" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5246" /> <!-- Hair Style Change Potion - E -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>5246</itemConsumeId> <!-- Hair Style Change Potion - E -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="ChangeHairStyle">
-				<param value="4" />
+				<value>4</value>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2134" levels="1" name="Hair Style Change Potion">
+	<skill id="2134" toLevel="1" name="Hair Style Change Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="500" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5247" /> <!-- Hair Style Change Potion - F -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="1518">
-			<player sex="1" />
-		</cond>
-		<for>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>5247</itemConsumeId> <!-- Hair Style Change Potion - F -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckSex">
+				<isFemale>true</isFemale>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="ChangeHairStyle">
-				<param value="5" />
+				<value>5</value>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2135" levels="1" name="Hair Style Change Potion">
+	<skill id="2135" toLevel="1" name="Hair Style Change Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="500" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5248" /> <!-- Hair Style Change Potion - G -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="1518">
-			<player sex="1" />
-		</cond>
-		<for>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>5248</itemConsumeId> <!-- Hair Style Change Potion - G -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckSex">
+				<isFemale>true</isFemale>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="ChangeHairStyle">
-				<param value="6" />
+				<value>6</value>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2136" levels="1" name="Rice Cake">
+	<skill id="2136" toLevel="1" name="Rice Cake">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="HealPercent">
-				<param power="3" />
+				<power>3</power>
 			</effect>
 			<effect name="ManaHealPercent">
-				<param power="1" />
+				<power>1</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2137" levels="1" name="Summon Regular Tree">
+	<skill id="2137" toLevel="1" name="Summon Regular Tree">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+		</conditions>
+		<effects>
 			<effect name="SummonNpc">
-				<param npcId="13006" npcCount="1" despawnDelay="1200000" />
+				<npcId>13006</npcId>
+				<npcCount>1</npcCount>
+				<despawnDelay>1200000</despawnDelay>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2138" levels="1" name="Summon Special Tree">
+	<skill id="2138" toLevel="1" name="Summon Special Tree">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+		</conditions>
+		<effects>
 			<effect name="SummonNpc">
-				<param npcId="13007" npcCount="1" despawnDelay="1200000" />
+				<npcId>13007</npcId>
+				<npcCount>1</npcCount>
+				<despawnDelay>1200000</despawnDelay>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2139" levels="1" name="Special Tree Recovery Bonus">
+	<skill id="2139" toLevel="1" name="Special Tree Recovery Bonus">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="99" />
-		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="HP_REGEN_UP" />
-		<set name="affectRange" val="200" />
-		<set name="icon" val="icon.skill1044" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
-		<for>
-			<effect name="Buff">
-				<mul stat="regMp" val="1.2" />
-				<mul stat="regHp" val="1.4" />
+		<abnormalLvl>99</abnormalLvl>
+		<abnormalTime>45</abnormalTime>
+		<abnormalType>BUFF_TREE</abnormalType>
+		<affectRange>200</affectRange>
+		<icon>icon.skill1044</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+		</conditions>
+		<effects>
+			<effect name="HpRegen">
+				<amount>40</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2140" levels="1" name="Item - Carol Sound Crystal">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2140" toLevel="1" name="Item - Carol Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2141" levels="1" name="Item - Carol Sound Crystal">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2141" toLevel="1" name="Item - Carol Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2142" levels="1" name="Item - Carol Sound Crystal">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2142" toLevel="1" name="Item - Carol Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2143" levels="1" name="Item - Carol Sound Crystal">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2143" toLevel="1" name="Item - Carol Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2144" levels="1" name="Item - Carol Sound Crystal">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2144" toLevel="1" name="Item - Carol Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2145" levels="1" name="Item - Carol Sound Crystal">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2145" toLevel="1" name="Item - Carol Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2146" levels="1" name="Item - Carol Sound Crystal">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2146" toLevel="1" name="Item - Carol Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2147" levels="1" name="Item - Carol Sound Crystal">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2147" toLevel="1" name="Item - Carol Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2148" levels="1" name="Item - Carol Sound Crystal">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2148" toLevel="1" name="Item - Carol Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2149" levels="1" name="Item - Carol Sound Crystal">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2149" toLevel="1" name="Item - Carol Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2150" levels="1" name="Soulshot: D-Grade">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2150" toLevel="1" name="Soulshot: D-Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2151" levels="1" name="Soulshot: C-Grade">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2151" toLevel="1" name="Soulshot: C-Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2152" levels="1" name="Soulshot: B-Grade">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2152" toLevel="1" name="Soulshot: B-Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2153" levels="1" name="Soulshot: A-Grade">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2153" toLevel="1" name="Soulshot: A-Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2154" levels="1" name="Soulshot: S-Grade">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2154" toLevel="1" name="Soulshot: S-Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2155" levels="1" name="Spiritshot: D-Grade">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2155" toLevel="1" name="Spiritshot: D-Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2156" levels="1" name="Spiritshot: C-Grade">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2156" toLevel="1" name="Spiritshot: C-Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2157" levels="1" name="Spiritshot: B-Grade">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2157" toLevel="1" name="Spiritshot: B-Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2158" levels="1" name="Spiritshot: A-Grade">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2158" toLevel="1" name="Spiritshot: A-Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2159" levels="1" name="Spiritshot: S-Grade">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2159" toLevel="1" name="Spiritshot: S-Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2160" levels="1" name="Blessed Spiritshot: D-Grade">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2160" toLevel="1" name="Blessed Spiritshot: D-Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2161" levels="1" name="Blessed Spiritshot: C-Grade">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2161" toLevel="1" name="Blessed Spiritshot: C-Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2162" levels="1" name="Blessed Spiritshot: B-Grade">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2162" toLevel="1" name="Blessed Spiritshot: B-Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2163" levels="1" name="Blessed Spiritshot: A-Grade">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2163" toLevel="1" name="Blessed Spiritshot: A-Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2164" levels="1" name="Blessed Spiritshot: S-Grade">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2164" toLevel="1" name="Blessed Spiritshot: S-Grade">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2165" levels="1" name="Momentum Stone">
+	<skill id="2165" toLevel="1" name="Momentum Stone">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="FocusEnergy">
-				<param charge="2" />
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="FocusMomentum">
+				<maxCharges>2</maxCharges>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2166" levels="2" name="CP Potion">
+	<skill id="2166" toLevel="2" name="CP Potion">
 		<table name="#amount"> 50 200 </table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="CpHeal">
-				<param power="#amount" />
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Cp">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">200</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2167" levels="4" name="SP Scroll">
+	<skill id="2167" toLevel="4" name="SP Scroll">
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 500 5000 100000 500000 </table>
-		<table name="#itemConsumeId"> 5593 5594 5595 9898 </table>
-		<set name="hitTime" val="200" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="#itemConsumeId" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="3000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>200</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">5593</value>
+			<value level="2">5594</value>
+			<value level="3">5595</value>
+			<value level="4">9898</value>
+		</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="GiveSp">
-				<param sp="#amount" />
+				<sp>
+					<value level="1">500</value>
+					<value level="2">5000</value>
+					<value level="3">100000</value>
+					<value level="4">500000</value>
+				</sp>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2168" levels="6" name="Lucky Charm">
-		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
-		<table name="#itemConsumeId"> 5703 5803 5804 5805 5806 5807 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="REDUCE_DROP_PENALTY" />
-		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.etc_orcish_talisman_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="#itemConsumeId" />
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="10000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="reduceDeathPenaltyByRaid" val="0" />
+	<skill id="2168" toLevel="6" name="Lucky Charm">
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+		</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>REDUCE_DROP_PENALTY</abnormalType>
+		<hitTime>2000</hitTime>
+		<icon>icon.etc_orcish_talisman_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">5703</value>
+			<value level="2">5803</value>
+			<value level="3">5804</value>
+			<value level="4">5805</value>
+			<value level="5">5806</value>
+			<value level="6">5807</value>
+		</itemConsumeId>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>
+					<value level="1">1</value>
+					<value level="2">20</value>
+					<value level="3">40</value>
+					<value level="4">52</value>
+					<value level="5">61</value>
+					<value level="6">76</value>
+				</minLevel>
+				<maxLevel>
+					<value level="1">19</value>
+					<value level="2">39</value>
+					<value level="3">51</value>
+					<value level="4">60</value>
+					<value level="5">75</value>
+					<value level="6">85</value>
+				</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="ReduceDropPenalty">
+				<deathPenalty>-100</deathPenalty>
+				<mode>PER</mode>
+				<type>RAID</type>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2169" levels="2" name="Magic Haste Potion">
+	<skill id="2169" toLevel="2" name="Magic Haste Potion">
 		<!-- Lvl 2 is Greater Magic Haste Potion -->
-		<table name="#abnormalLvls"> 2 3 </table>
-		<table name="#icons"> icon.etc_potion_of_acumen2_i00 icon.etc_potion_of_acumen3_i00 </table>
-		<table name="#magicLvl"> 35 48 </table>
 		<table name="#mAtkSpd"> 1.23 1.3 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="CASTING_TIME_DOWN" />
-		<set name="icon" val="#icons" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtkSpd" val="#mAtkSpd" />
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+		</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CASTING_TIME_DOWN</abnormalType>
+		<icon>
+			<value level="1">icon.etc_potion_of_acumen2_i00</value>
+			<value level="2">icon.etc_potion_of_acumen3_i00</value>
+		</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>
+			<value level="1">35</value>
+			<value level="2">48</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">23</value>
+					<value level="2">30</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2170" levels="1" name="Scroll: Cancel Sleep">
-		<set name="castRange" val="400" />
-		<set name="coolTime" val="1000" />
-		<set name="effectPoint" val="1" />
-		<set name="effectRange" val="600" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="6037" /> <!-- Waking Scroll -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
+	<skill id="2170" toLevel="1" name="Scroll: Cancel Sleep">
+		<castRange>400</castRange>
+		<coolTime>1000</coolTime>
+		<effectPoint>1</effectPoint>
+		<effectRange>600</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>6037</itemConsumeId> <!-- Waking Scroll -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="DispelBySlot">
-				<param dispel="SLEEP,1" />
+				<dispel>SLEEP,1</dispel>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2171" levels="1" name="Spellbook Paper">
+	<skill id="2171" toLevel="1" name="Spellbook Paper">
 		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			5917,1,10;5918,1,10;5919,1,10;5920,1,10;736,1,60
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="10">
+						<item id="5917" count="1" />
+					</item>
+					<item chance="10">
+						<item id="5918" count="1" />
+					</item>
+					<item chance="10">
+						<item id="5919" count="1" />
+					</item>
+					<item chance="10">
+						<item id="5920" count="1" />
+					</item>
+					<item chance="60">
+						<item id="736" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2172" levels="1" name="Scroll of Giants">
+	<skill id="2172" toLevel="1" name="Scroll of Giants">
 		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			5922,1,2.5;5923,1,2.5;5924,1,2.5;5925,1,2.5;5926,1,2.5;5927,1,2.5;5928,1,2.5;5929,1,2.5;5930,1,2.5;5931,1,2.5;5932,1,2.5;5933,1,2.5;5934,1,2.5;5935,1,2.5;5936,1,2.5;5937,1,2.5;5938,1,2.5;5939,1,2.5;5940,1,2.5;5941,1,2.5;5942,1,25;5943,1,25
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2.5">
+						<item id="5922" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5923" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5924" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5925" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5926" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5927" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5928" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5929" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5930" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5931" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5932" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5933" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5934" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5935" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5936" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5937" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5938" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5939" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5940" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5941" count="1" />
+					</item>
+					<item chance="25">
+						<item id="5942" count="1" />
+					</item>
+					<item chance="25">
+						<item id="5943" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2173" levels="1" name="Book of Giants">
+	<skill id="2173" toLevel="1" name="Book of Giants">
 		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			5945,1,5;5946,1,5;5947,1,5;5948,1,5;5949,1,5;5950,1,5;5951,1,5;5952,1,5;5953,1,5;5954,1,5;5942,1,25;5943,1,25
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5">
+						<item id="5945" count="1" />
+					</item>
+					<item chance="5">
+						<item id="5946" count="1" />
+					</item>
+					<item chance="5">
+						<item id="5947" count="1" />
+					</item>
+					<item chance="5">
+						<item id="5948" count="1" />
+					</item>
+					<item chance="5">
+						<item id="5949" count="1" />
+					</item>
+					<item chance="5">
+						<item id="5950" count="1" />
+					</item>
+					<item chance="5">
+						<item id="5951" count="1" />
+					</item>
+					<item chance="5">
+						<item id="5952" count="1" />
+					</item>
+					<item chance="5">
+						<item id="5953" count="1" />
+					</item>
+					<item chance="5">
+						<item id="5954" count="1" />
+					</item>
+					<item chance="25">
+						<item id="5942" count="1" />
+					</item>
+					<item chance="25">
+						<item id="5943" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2174" levels="3" name="Ingredient Bag">
+	<skill id="2174" toLevel="3" name="Ingredient Bag">
 		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			6019,2,30;6013,2,30;6014,1,20;6016,1,20
-			6017,2,10;6020,2,20;6014,1,35;6016,1,35
-			6012,1,20;6018,2,20;6019,2,20;6013,1,40
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="30">
+							<item id="6019" count="2" />
+						</item>
+						<item chance="30">
+							<item id="6013" count="2" />
+						</item>
+						<item chance="20">
+							<item id="6014" count="1" />
+						</item>
+						<item chance="20">
+							<item id="6016" count="1" />
+						</item>
+					</value>
+					<value level="2">
+						<item chance="10">
+							<item id="6017" count="2" />
+						</item>
+						<item chance="20">
+							<item id="6020" count="2" />
+						</item>
+						<item chance="35">
+							<item id="6014" count="1" />
+						</item>
+						<item chance="35">
+							<item id="6016" count="1" />
+						</item>
+					</value>
+					<value level="3">
+						<item chance="20">
+							<item id="6012" count="1" />
+						</item>
+						<item chance="20">
+							<item id="6018" count="2" />
+						</item>
+						<item chance="20">
+							<item id="6019" count="2" />
+						</item>
+						<item chance="40">
+							<item id="6013" count="1" />
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2175" levels="1" name="Ingredient Box">
+	<skill id="2175" toLevel="1" name="Ingredient Box">
 		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			6017,2,20;6020,2,20;6016,1,35;6015,2,25
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="20">
+						<item id="6017" count="2" />
+					</item>
+					<item chance="20">
+						<item id="6020" count="2" />
+					</item>
+					<item chance="35">
+						<item id="6016" count="1" />
+					</item>
+					<item chance="25">
+						<item id="6015" count="2" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2176" levels="4" name="Ancient Papyrus">
+	<skill id="2176" toLevel="4" name="Ancient Papyrus">
 		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			5978,1,2;5983,1,2;5988,1,2;5994,1,2;5995,1,2;5975,1,8;5976,1,8;5977,1,8;5981,1,8;5982,1,8;5973,1,11.4;5974,1,11.2;5980,1,11.2;5985,1,11.2;5972,1,1.8;5979,1,1.6;5984,1,1.6
-			5978,1,4;5983,1,4;5988,1,4;5994,1,4;5995,1,4;5975,1,3.6;5976,1,3.6;5977,1,3.6;5981,1,3.6;5982,1,3.6;5973,1,10.5;5974,1,10.5;5980,1,10.5;5985,1,10.5;5972,1,6.8;5979,1,6.6;5984,1,6.6
-			6001,1,1.6;5971,1,1.6;5970,1,1.6;4408,1,1.6;4409,1,1.6;5986,1,1.6;5987,1,1.6;5993,1,1.6;5999,1,1.6;6000,1,1.6;5991,1,10.25;5992,1,10.25;5997,1,10.25;5998,1,10.25;5989,1,14.34;5990,1,14.33;5996,1,14.33
-			6001,1,3;5971,1,3;5970,1,3;4408,1,3;4409,1,3;5986,1,2;5987,1,2;5993,1,2;5999,1,2;6000,1,2;5991,1,2.5;5992,1,2.5;5997,1,2.6;5998,1,2.6;5989,1,21.6;5990,1,21.6;5996,1,21.6
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="2">
+							<item id="5978" count="1" />
+						</item>
+						<item chance="2">
+							<item id="5983" count="1" />
+						</item>
+						<item chance="2">
+							<item id="5988" count="1" />
+						</item>
+						<item chance="2">
+							<item id="5994" count="1" />
+						</item>
+						<item chance="2">
+							<item id="5995" count="1" />
+						</item>
+						<item chance="8">
+							<item id="5975" count="1" />
+						</item>
+						<item chance="8">
+							<item id="5976" count="1" />
+						</item>
+						<item chance="8">
+							<item id="5977" count="1" />
+						</item>
+						<item chance="8">
+							<item id="5981" count="1" />
+						</item>
+						<item chance="8">
+							<item id="5982" count="1" />
+						</item>
+						<item chance="11.4">
+							<item id="5973" count="1" />
+						</item>
+						<item chance="11.2">
+							<item id="5974" count="1" />
+						</item>
+						<item chance="11.2">
+							<item id="5980" count="1" />
+						</item>
+						<item chance="11.2">
+							<item id="5985" count="1" />
+						</item>
+						<item chance="1.8">
+							<item id="5972" count="1" />
+						</item>
+						<item chance="1.6">
+							<item id="5979" count="1" />
+						</item>
+						<item chance="1.6">
+							<item id="5984" count="1" />
+						</item>
+					</value>
+					<value level="2">
+						<item chance="4">
+							<item id="5978" count="1" />
+						</item>
+						<item chance="4">
+							<item id="5983" count="1" />
+						</item>
+						<item chance="4">
+							<item id="5988" count="1" />
+						</item>
+						<item chance="4">
+							<item id="5994" count="1" />
+						</item>
+						<item chance="4">
+							<item id="5995" count="1" />
+						</item>
+						<item chance="3.6">
+							<item id="5975" count="1" />
+						</item>
+						<item chance="3.6">
+							<item id="5976" count="1" />
+						</item>
+						<item chance="3.6">
+							<item id="5977" count="1" />
+						</item>
+						<item chance="3.6">
+							<item id="5981" count="1" />
+						</item>
+						<item chance="3.6">
+							<item id="5982" count="1" />
+						</item>
+						<item chance="10.5">
+							<item id="5973" count="1" />
+						</item>
+						<item chance="10.5">
+							<item id="5974" count="1" />
+						</item>
+						<item chance="10.5">
+							<item id="5980" count="1" />
+						</item>
+						<item chance="10.5">
+							<item id="5985" count="1" />
+						</item>
+						<item chance="6.8">
+							<item id="5972" count="1" />
+						</item>
+						<item chance="6.6">
+							<item id="5979" count="1" />
+						</item>
+						<item chance="6.6">
+							<item id="5984" count="1" />
+						</item>
+					</value>
+					<value level="3">
+						<item chance="1.6">
+							<item id="6001" count="1" />
+						</item>
+						<item chance="1.6">
+							<item id="5971" count="1" />
+						</item>
+						<item chance="1.6">
+							<item id="5970" count="1" />
+						</item>
+						<item chance="1.6">
+							<item id="4408" count="1" />
+						</item>
+						<item chance="1.6">
+							<item id="4409" count="1" />
+						</item>
+						<item chance="1.6">
+							<item id="5986" count="1" />
+						</item>
+						<item chance="1.6">
+							<item id="5987" count="1" />
+						</item>
+						<item chance="1.6">
+							<item id="5993" count="1" />
+						</item>
+						<item chance="1.6">
+							<item id="5999" count="1" />
+						</item>
+						<item chance="1.6">
+							<item id="6000" count="1" />
+						</item>
+						<item chance="10.25">
+							<item id="5991" count="1" />
+						</item>
+						<item chance="10.25">
+							<item id="5992" count="1" />
+						</item>
+						<item chance="10.25">
+							<item id="5997" count="1" />
+						</item>
+						<item chance="10.25">
+							<item id="5998" count="1" />
+						</item>
+						<item chance="14.34">
+							<item id="5989" count="1" />
+						</item>
+						<item chance="14.33">
+							<item id="5990" count="1" />
+						</item>
+						<item chance="14.33">
+							<item id="5996" count="1" />
+						</item>
+					</value>
+					<value level="4">
+						<item chance="3">
+							<item id="6001" count="1" />
+						</item>
+						<item chance="3">
+							<item id="5971" count="1" />
+						</item>
+						<item chance="3">
+							<item id="5970" count="1" />
+						</item>
+						<item chance="3">
+							<item id="4408" count="1" />
+						</item>
+						<item chance="3">
+							<item id="4409" count="1" />
+						</item>
+						<item chance="2">
+							<item id="5986" count="1" />
+						</item>
+						<item chance="2">
+							<item id="5987" count="1" />
+						</item>
+						<item chance="2">
+							<item id="5993" count="1" />
+						</item>
+						<item chance="2">
+							<item id="5999" count="1" />
+						</item>
+						<item chance="2">
+							<item id="6000" count="1" />
+						</item>
+						<item chance="2.5">
+							<item id="5991" count="1" />
+						</item>
+						<item chance="2.5">
+							<item id="5992" count="1" />
+						</item>
+						<item chance="2.6">
+							<item id="5997" count="1" />
+						</item>
+						<item chance="2.6">
+							<item id="5998" count="1" />
+						</item>
+						<item chance="21.6">
+							<item id="5989" count="1" />
+						</item>
+						<item chance="21.6">
+							<item id="5990" count="1" />
+						</item>
+						<item chance="21.6">
+							<item id="5996" count="1" />
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2177" levels="1" name="Blessed Scroll of Escape: Clan Hall">
+	<skill id="2177" toLevel="1" name="Blessed Scroll of Escape: Clan Hall">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="200" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5858" /> <!-- Blessed Scroll of Escape: Clan Hall -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<and>
-				<player canEscape="true" />
-				<player clanHall="-1" />
-				<not>
-					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-				</not>
-			</and>
-		</cond>
-		<for>
+		<hitTime>200</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>5858</itemConsumeId> <!-- Blessed Scroll of Escape: Clan Hall -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+			<condition name="OpHome">
+				<type>CLANHALL</type>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Escape">
-				<param escapeType="CLANHALL" />
+				<escapeType>CLANHALL</escapeType>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2178" levels="1" name="Blessed Scroll of Escape: Castle">
+	<skill id="2178" toLevel="1" name="Blessed Scroll of Escape: Castle">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="200" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="5859" /> <!-- Blessed Scroll of Escape: Castle -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<and>
-				<player canEscape="true" />
-				<not>
-					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-				</not>
-			</and>
-		</cond>
-		<for>
+		<hitTime>200</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>5859</itemConsumeId> <!-- Blessed Scroll of Escape: Castle -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+			<condition name="OpHome">
+				<type>CASTLE</type>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Escape">
-				<param escapeType="CASTLE" />
+				<escapeType>CASTLE</escapeType>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2179" levels="1" name="Blessed Scroll of Resurrection: Pet">
-		<set name="castRange" val="400" />
-		<set name="effectPoint" val="1" />
-		<set name="effectRange" val="600" />
-		<set name="hitTime" val="15000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="6387" /> <!-- Blessed Scroll of Resurrection for Pets -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="PC_BODY" />
-		<cond msgId="113" addName="1">
-			<target npcType="L2PetInstance" />
-		</cond>
-		<cond>
-			<player canResurrect="true" />
-		</cond>
-		<for>
+	<skill id="2179" toLevel="1" name="Blessed Scroll of Resurrection: Pet">
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>6387</itemConsumeId> <!-- Blessed Scroll of Resurrection for Pets -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<coolTime>500</coolTime>
+		<targetType>PC_BODY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpResurrection" />
+			<condition name="OpCompanion">
+				<type>PET</type>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Resurrection">
-				<param power="100" />
+				<power>100</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="2180" levels="1" name="Feed: Castle Strider">
+	<skill id="2180" toLevel="1" name="Feed: Castle Strider">
 		<!-- Confirmed CT2.5 -->
-		<set name="feed" val="450" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Feed">
+				<normal>200</normal>
+				<ride>450</ride>
+				<wyvern>450</wyvern>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2181" levels="1" name="Item - Fishing Shot">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+	<skill id="2181" toLevel="1" name="Item - Fishing Shot">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2182" levels="1" name="Item - Fishing Shot">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+	<skill id="2182" toLevel="1" name="Item - Fishing Shot">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2183" levels="1" name="Item - Fishing Shot">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+	<skill id="2183" toLevel="1" name="Item - Fishing Shot">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2184" levels="1" name="Item - Fishing Shot">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+	<skill id="2184" toLevel="1" name="Item - Fishing Shot">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2185" levels="1" name="Item - Fishing Shot">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+	<skill id="2185" toLevel="1" name="Item - Fishing Shot">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2186" levels="1" name="Item - Fishing Shot">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+	<skill id="2186" toLevel="1" name="Item - Fishing Shot">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2187" levels="1" name="Item - Special Sound Crystal">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="2187" toLevel="1" name="Item - Special Sound Crystal">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2188" levels="1" name="Golden Spice">
+	<skill id="2188" toLevel="1" name="Golden Spice">
 		<!-- Confirmed CT2.5 -->
-		<set name="castRange" val="40" />
-		<set name="effectPoint" val="-150" />
-		<set name="effectRange" val="200" />
-		<set name="hitTime" val="1000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="6643" /> <!-- Old Golden Spice -->
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="500" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<castRange>40</castRange>
+		<effectPoint>-150</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>6643</itemConsumeId> <!-- Old Golden Spice -->
+		<magicLvl>80</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2189" levels="1" name="Crystal Spice">
+	<skill id="2189" toLevel="1" name="Crystal Spice">
 		<!-- Confirmed CT2.5 -->
-		<set name="castRange" val="40" />
-		<set name="effectPoint" val="-150" />
-		<set name="effectRange" val="200" />
-		<set name="hitTime" val="1000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="6644" /> <!-- Old Crystal Spice -->
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="500" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<castRange>40</castRange>
+		<effectPoint>-150</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>6644</itemConsumeId> <!-- Old Crystal Spice -->
+		<magicLvl>80</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2190" levels="9" name="Small Green Nimble Fish">
+	<skill id="2190" toLevel="9" name="Small Green Nimble Fish">
 		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			6908,6,27.6;6913,1,16.56
-			6908,6,28.2;6911,2,21.15
-			6908,6,30.6;6915,1,30.6
-			6908,6,33.4;6913,1,20.04
-			6908,8,29.92;6911,2,28.05
-			6908,6,41.6;6915,1,33.28
-			6908,12,15;6913,1,18;6920,8,24
-			6908,8,39.68;6911,2,37.2
-			6908,12,26.5;6915,1,42.4
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="27.6">
+							<item id="6908" count="6" />
+						</item>
+						<item chance="16.56">
+							<item id="6913" count="1" />
+						</item>
+					</value>
+					<value level="2">
+						<item chance="28.2">
+							<item id="6908" count="6" />
+						</item>
+						<item chance="21.15">
+							<item id="6911" count="2" />
+						</item>
+					</value>
+					<value level="3">
+						<item chance="30.6">
+							<item id="6908" count="6" />
+						</item>
+						<item chance="30.6">
+							<item id="6915" count="1" />
+						</item>
+					</value>
+					<value level="4">
+						<item chance="33.4">
+							<item id="6908" count="6" />
+						</item>
+						<item chance="20.04">
+							<item id="6913" count="1" />
+						</item>
+					</value>
+					<value level="5">
+						<item chance="29.92">
+							<item id="6908" count="8" />
+						</item>
+						<item chance="28.05">
+							<item id="6911" count="2" />
+						</item>
+					</value>
+					<value level="6">
+						<item chance="41.6">
+							<item id="6908" count="6" />
+						</item>
+						<item chance="33.28">
+							<item id="6915" count="1" />
+						</item>
+					</value>
+					<value level="7">
+						<item chance="15">
+							<item id="6908" count="12" />
+						</item>
+						<item chance="18">
+							<item id="6913" count="1" />
+						</item>
+						<item chance="24">
+							<item id="6920" count="8" />
+						</item>
+					</value>
+					<value level="8">
+						<item chance="39.68">
+							<item id="6908" count="8" />
+						</item>
+						<item chance="37.2">
+							<item id="6911" count="2" />
+						</item>
+					</value>
+					<value level="9">
+						<item chance="26.5">
+							<item id="6908" count="12" />
+						</item>
+						<item chance="42.4">
+							<item id="6915" count="1" />
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2191" levels="9" name="Small Jade Nimble Fish">
+	<skill id="2191" toLevel="9" name="Small Jade Nimble Fish">
 		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			6908,12,19;6913,1,22.8;6920,8,30.4
-			6908,8,47.2;6911,2,44.25
-			6908,12,31;6915,1,49.6
-			6908,12,21.6668;6913,1,26;6920,16,17.3334
-			6908,16,27.2;6911,4,25.5
-			6908,12,35.5;6915,2,28.4
-			6908,12,24.3332;6913,2,16.6856;6920,16,19.4667
-			6908,16,30;6911,4,28.125
-			6908,12,38.5;6915,2,30.8
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="19">
+							<item id="6908" count="12" />
+						</item>
+						<item chance="22.8">
+							<item id="6913" count="1" />
+						</item>
+						<item chance="30.4">
+							<item id="6920" count="8" />
+						</item>
+					</value>
+					<value level="2">
+						<item chance="47.2">
+							<item id="6908" count="8" />
+						</item>
+						<item chance="44.25">
+							<item id="6911" count="2" />
+						</item>
+					</value>
+					<value level="3">
+						<item chance="31">
+							<item id="6908" count="12" />
+						</item>
+						<item chance="49.6">
+							<item id="6915" count="1" />
+						</item>
+					</value>
+					<value level="4">
+						<item chance="21.6668">
+							<item id="6908" count="12" />
+						</item>
+						<item chance="26">
+							<item id="6913" count="1" />
+						</item>
+						<item chance="17.3334">
+							<item id="6920" count="16" />
+						</item>
+					</value>
+					<value level="5">
+						<item chance="27.2">
+							<item id="6908" count="16" />
+						</item>
+						<item chance="25.5">
+							<item id="6911" count="4" />
+						</item>
+					</value>
+					<value level="6">
+						<item chance="35.5">
+							<item id="6908" count="12" />
+						</item>
+						<item chance="28.4">
+							<item id="6915" count="2" />
+						</item>
+					</value>
+					<value level="7">
+						<item chance="24.3332">
+							<item id="6908" count="12" />
+						</item>
+						<item chance="16.6856">
+							<item id="6913" count="2" />
+						</item>
+						<item chance="19.4667">
+							<item id="6920" count="16" />
+						</item>
+					</value>
+					<value level="8">
+						<item chance="30">
+							<item id="6908" count="16" />
+						</item>
+						<item chance="28.125">
+							<item id="6911" count="4" />
+						</item>
+					</value>
+					<value level="9">
+						<item chance="38.5">
+							<item id="6908" count="12" />
+						</item>
+						<item chance="30.8">
+							<item id="6915" count="2" />
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2192" levels="9" name="Small Blue Nimble Fish">
+	<skill id="2192" toLevel="9" name="Small Blue Nimble Fish">
 		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			6908,12,26.3332;6913,2,18.0572;6920,16,21.0667
-			6908,16,32;6911,4,30
-			6908,12,41;6915,2,32.8
-			6904,1,1.992;6908,14,14.2288;6909,4,13.28;6913,1,19.92;6920,16,13.2801
-			6904,1,2.0064;6908,10,19.1088;6909,2,16.0512;6911,4,12.5401;6921,4,13.3762
-			6904,1,2.52;6908,16,16.8;6909,4,12.6;6915,4,14
-			6904,1,2.04;6908,14,14.5716;6909,4,13.6;6913,2,10.2;6920,16,13.6001
-			6904,1,2.0688;6908,10,19.7028;6909,2,16.5504;6911,4,12.9301;6921,4,13.7922
-			6904,1,2.61;6908,16,17.4;6909,4,13.05;6915,4,14.5
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="26.3332">
+							<item id="6908" count="12" />
+						</item>
+						<item chance="18.0572">
+							<item id="6913" count="2" />
+						</item>
+						<item chance="21.0667">
+							<item id="6920" count="16" />
+						</item>
+					</value>
+					<value level="2">
+						<item chance="32">
+							<item id="6908" count="16" />
+						</item>
+						<item chance="30">
+							<item id="6911" count="4" />
+						</item>
+					</value>
+					<value level="3">
+						<item chance="41">
+							<item id="6908" count="12" />
+						</item>
+						<item chance="32.8">
+							<item id="6915" count="2" />
+						</item>
+					</value>
+					<value level="4">
+						<item chance="1.992">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="14.2288">
+							<item id="6908" count="14" />
+						</item>
+						<item chance="13.28">
+							<item id="6909" count="4" />
+						</item>
+						<item chance="19.92">
+							<item id="6913" count="1" />
+						</item>
+						<item chance="13.2801">
+							<item id="6920" count="16" />
+						</item>
+					</value>
+					<value level="5">
+						<item chance="2.0064">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="19.1088">
+							<item id="6908" count="10" />
+						</item>
+						<item chance="16.0512">
+							<item id="6909" count="2" />
+						</item>
+						<item chance="12.5401">
+							<item id="6911" count="4" />
+						</item>
+						<item chance="13.3762">
+							<item id="6921" count="4" />
+						</item>
+					</value>
+					<value level="6">
+						<item chance="2.52">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="16.8">
+							<item id="6908" count="16" />
+						</item>
+						<item chance="12.6">
+							<item id="6909" count="4" />
+						</item>
+						<item chance="14">
+							<item id="6915" count="4" />
+						</item>
+					</value>
+					<value level="7">
+						<item chance="2.04">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="14.5716">
+							<item id="6908" count="14" />
+						</item>
+						<item chance="13.6">
+							<item id="6909" count="4" />
+						</item>
+						<item chance="10.2">
+							<item id="6913" count="2" />
+						</item>
+						<item chance="13.6001">
+							<item id="6920" count="16" />
+						</item>
+					</value>
+					<value level="8">
+						<item chance="2.0688">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="19.7028">
+							<item id="6908" count="10" />
+						</item>
+						<item chance="16.5504">
+							<item id="6909" count="2" />
+						</item>
+						<item chance="12.9301">
+							<item id="6911" count="4" />
+						</item>
+						<item chance="13.7922">
+							<item id="6921" count="4" />
+						</item>
+					</value>
+					<value level="9">
+						<item chance="2.61">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="17.4">
+							<item id="6908" count="16" />
+						</item>
+						<item chance="13.05">
+							<item id="6909" count="4" />
+						</item>
+						<item chance="14.5">
+							<item id="6915" count="4" />
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2193" levels="9" name="Small Yellow Nimble Fish">
+	<skill id="2193" toLevel="9" name="Small Yellow Nimble Fish">
 		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			6904,1,2.1216;6908,14,15.1544;6909,4,14.144;6913,2,10.608;6920,16,14.1441
-			6904,1,2.1456;6908,20,10.2172;6909,2,17.1648;6911,4,13.4101;6921,4,14.3042
-			6904,1,2.712;6908,16,18.08;6909,4,13.56;6915,4,15.0666
-			6904,1,2.592;6908,14,18.514;6909,4,17.28;6913,2,12.96;6920,16,17.28
-			6904,1,2.6544;6908,20,12.64;6909,4,10.6176;6911,4,16.5901;6921,4,17.6962
-			6904,1,3.408;6908,16,22.72;6909,4,17.04;6915,4,18.9334
-			6904,1,2.784;6908,14,19.8856;6909,4,18.56;6913,2,13.92;6920,16,18.5599
-			6904,1,2.8512;6908,20,13.5772;6909,4,11.4049;6911,4,17.8201;6921,4,19.0082
-			6904,1,3.648;6908,16,24.3198;6909,4,18.2399;6915,4,20.2666
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="2.1216">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="15.1544">
+							<item id="6908" count="14" />
+						</item>
+						<item chance="14.144">
+							<item id="6909" count="4" />
+						</item>
+						<item chance="10.608">
+							<item id="6913" count="2" />
+						</item>
+						<item chance="14.1441">
+							<item id="6920" count="16" />
+						</item>
+					</value>
+					<value level="2">
+						<item chance="2.1456">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="10.2172">
+							<item id="6908" count="20" />
+						</item>
+						<item chance="17.1648">
+							<item id="6909" count="2" />
+						</item>
+						<item chance="13.4101">
+							<item id="6911" count="4" />
+						</item>
+						<item chance="14.3042">
+							<item id="6921" count="4" />
+						</item>
+					</value>
+					<value level="3">
+						<item chance="2.712">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="18.08">
+							<item id="6908" count="16" />
+						</item>
+						<item chance="13.56">
+							<item id="6909" count="4" />
+						</item>
+						<item chance="15.0666">
+							<item id="6915" count="4" />
+						</item>
+					</value>
+					<value level="4">
+						<item chance="2.592">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="18.514">
+							<item id="6908" count="14" />
+						</item>
+						<item chance="17.28">
+							<item id="6909" count="4" />
+						</item>
+						<item chance="12.96">
+							<item id="6913" count="2" />
+						</item>
+						<item chance="17.28">
+							<item id="6920" count="16" />
+						</item>
+					</value>
+					<value level="5">
+						<item chance="2.6544">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="12.64">
+							<item id="6908" count="20" />
+						</item>
+						<item chance="10.6176">
+							<item id="6909" count="4" />
+						</item>
+						<item chance="16.5901">
+							<item id="6911" count="4" />
+						</item>
+						<item chance="17.6962">
+							<item id="6921" count="4" />
+						</item>
+					</value>
+					<value level="6">
+						<item chance="3.408">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="22.72">
+							<item id="6908" count="16" />
+						</item>
+						<item chance="17.04">
+							<item id="6909" count="4" />
+						</item>
+						<item chance="18.9334">
+							<item id="6915" count="4" />
+						</item>
+					</value>
+					<value level="7">
+						<item chance="2.784">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="19.8856">
+							<item id="6908" count="14" />
+						</item>
+						<item chance="18.56">
+							<item id="6909" count="4" />
+						</item>
+						<item chance="13.92">
+							<item id="6913" count="2" />
+						</item>
+						<item chance="18.5599">
+							<item id="6920" count="16" />
+						</item>
+					</value>
+					<value level="8">
+						<item chance="2.8512">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="13.5772">
+							<item id="6908" count="20" />
+						</item>
+						<item chance="11.4049">
+							<item id="6909" count="4" />
+						</item>
+						<item chance="17.8201">
+							<item id="6911" count="4" />
+						</item>
+						<item chance="19.0082">
+							<item id="6921" count="4" />
+						</item>
+					</value>
+					<value level="9">
+						<item chance="3.648">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="24.3198">
+							<item id="6908" count="16" />
+						</item>
+						<item chance="18.2399">
+							<item id="6909" count="4" />
+						</item>
+						<item chance="20.2666">
+							<item id="6915" count="4" />
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2194" levels="9" name="Small Orange Nimble Fish">
+	<skill id="2194" toLevel="9" name="Small Orange Nimble Fish">
 		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			6904,1,2.9856;6908,28,10.6628;6909,4,19.904;6913,2,14.928;6920,16,19.9039
-			6904,1,3.048;6908,20,14.5144;6909,4,12.192;6911,8,9.5252;6921,8,10.16
-			6904,1,3.894;6908,32,12.98;6909,4,19.47;6915,4,21.6334
-			7698,1,5.304;6910,1,21.216;6914,2,13.2601
-			7686,1,6.208;6910,1,24.8321;6912,8,17.2445
-			7697,1,6.336;6910,1,25.344;6916,4,23.4666
-			7698,1,6.528;6910,1,26.112;6914,2,16.3201
-			7686,1,6.72;6910,2,13.44;6912,8,18.6667
-			7697,1,6.864;6910,1,27.456;6916,4,25.4222
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="2.9856">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="10.6628">
+							<item id="6908" count="28" />
+						</item>
+						<item chance="19.904">
+							<item id="6909" count="4" />
+						</item>
+						<item chance="14.928">
+							<item id="6913" count="2" />
+						</item>
+						<item chance="19.9039">
+							<item id="6920" count="16" />
+						</item>
+					</value>
+					<value level="2">
+						<item chance="3.048">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="14.5144">
+							<item id="6908" count="20" />
+						</item>
+						<item chance="12.192">
+							<item id="6909" count="4" />
+						</item>
+						<item chance="9.5252">
+							<item id="6911" count="8" />
+						</item>
+						<item chance="10.16">
+							<item id="6921" count="8" />
+						</item>
+					</value>
+					<value level="3">
+						<item chance="3.894">
+							<item id="6904" count="1" />
+						</item>
+						<item chance="12.98">
+							<item id="6908" count="32" />
+						</item>
+						<item chance="19.47">
+							<item id="6909" count="4" />
+						</item>
+						<item chance="21.6334">
+							<item id="6915" count="4" />
+						</item>
+					</value>
+					<value level="4">
+						<item chance="5.304">
+							<item id="7698" count="1" />
+						</item>
+						<item chance="21.216">
+							<item id="6910" count="1" />
+						</item>
+						<item chance="13.2601">
+							<item id="6914" count="2" />
+						</item>
+					</value>
+					<value level="5">
+						<item chance="6.208">
+							<item id="7686" count="1" />
+						</item>
+						<item chance="24.8321">
+							<item id="6910" count="1" />
+						</item>
+						<item chance="17.2445">
+							<item id="6912" count="8" />
+						</item>
+					</value>
+					<value level="6">
+						<item chance="6.336">
+							<item id="7697" count="1" />
+						</item>
+						<item chance="25.344">
+							<item id="6910" count="1" />
+						</item>
+						<item chance="23.4666">
+							<item id="6916" count="4" />
+						</item>
+					</value>
+					<value level="7">
+						<item chance="6.528">
+							<item id="7698" count="1" />
+						</item>
+						<item chance="26.112">
+							<item id="6910" count="1" />
+						</item>
+						<item chance="16.3201">
+							<item id="6914" count="2" />
+						</item>
+					</value>
+					<value level="8">
+						<item chance="6.72">
+							<item id="7686" count="1" />
+						</item>
+						<item chance="13.44">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="18.6667">
+							<item id="6912" count="8" />
+						</item>
+					</value>
+					<value level="9">
+						<item chance="6.864">
+							<item id="7697" count="1" />
+						</item>
+						<item chance="27.456">
+							<item id="6910" count="1" />
+						</item>
+						<item chance="25.4222">
+							<item id="6916" count="4" />
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2195" levels="9" name="Small Purple Nimble Fish">
+	<skill id="2195" toLevel="9" name="Small Purple Nimble Fish">
 		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			7698,1,7;6910,2,18.6666;6914,2,17.5
-			7686,1,7.144;6910,2,14.288;6912,8,19.8445
-			7697,1,7.28;6910,1,29.12;6916,4,26.963
-			7698,1,7.44;6910,2,19.84;6914,2,18.5999
-			7686,1,7.584;6910,2,15.168;6912,8,21.0667
-			7697,1,8.72;6910,2,17.44;6916,4,32.2964
-			7685,1,5.3328;7698,1,5.3328;6907,1,5.3328;6910,2,14.2208;6914,2,13.3321
-			7686,1,6.798;6905,1,6.798;6910,2,13.596;6912,8,18.8833
-			7697,1,6.942;6906,1,6.942;6910,2,13.884;6916,8,12.8555
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="7">
+							<item id="7698" count="1" />
+						</item>
+						<item chance="18.6666">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="17.5">
+							<item id="6914" count="2" />
+						</item>
+					</value>
+					<value level="2">
+						<item chance="7.144">
+							<item id="7686" count="1" />
+						</item>
+						<item chance="14.288">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="19.8445">
+							<item id="6912" count="8" />
+						</item>
+					</value>
+					<value level="3">
+						<item chance="7.28">
+							<item id="7697" count="1" />
+						</item>
+						<item chance="29.12">
+							<item id="6910" count="1" />
+						</item>
+						<item chance="26.963">
+							<item id="6916" count="4" />
+						</item>
+					</value>
+					<value level="4">
+						<item chance="7.44">
+							<item id="7698" count="1" />
+						</item>
+						<item chance="19.84">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="18.5999">
+							<item id="6914" count="2" />
+						</item>
+					</value>
+					<value level="5">
+						<item chance="7.584">
+							<item id="7686" count="1" />
+						</item>
+						<item chance="15.168">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="21.0667">
+							<item id="6912" count="8" />
+						</item>
+					</value>
+					<value level="6">
+						<item chance="8.72">
+							<item id="7697" count="1" />
+						</item>
+						<item chance="17.44">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="32.2964">
+							<item id="6916" count="4" />
+						</item>
+					</value>
+					<value level="7">
+						<item chance="5.3328">
+							<item id="7685" count="1" />
+						</item>
+						<item chance="5.3328">
+							<item id="7698" count="1" />
+						</item>
+						<item chance="5.3328">
+							<item id="6907" count="1" />
+						</item>
+						<item chance="14.2208">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="13.3321">
+							<item id="6914" count="2" />
+						</item>
+					</value>
+					<value level="8">
+						<item chance="6.798">
+							<item id="7686" count="1" />
+						</item>
+						<item chance="6.798">
+							<item id="6905" count="1" />
+						</item>
+						<item chance="13.596">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="18.8833">
+							<item id="6912" count="8" />
+						</item>
+					</value>
+					<value level="9">
+						<item chance="6.942">
+							<item id="7697" count="1" />
+						</item>
+						<item chance="6.942">
+							<item id="6906" count="1" />
+						</item>
+						<item chance="13.884">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="12.8555">
+							<item id="6916" count="8" />
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2196" levels="9" name="Small Red Nimble Fish">
+	<skill id="2196" toLevel="9" name="Small Red Nimble Fish">
 		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			7685,1,6.1296;7698,1,6.1296;6907,1,6.1296;6910,2,16.3456;6914,2,15.3241
-			7686,1,7.806;6905,1,7.806;6910,2,15.612;6912,8,21.6833
-			7697,1,7.956;6906,1,7.956;6910,2,15.912;6916,8,14.7333
-			7685,1,6.4848;7698,1,6.4848;6907,1,6.4848;6910,2,17.2928;6914,2,16.2121
-			7686,1,8.256;6905,1,8.256;6910,2,16.512;6912,8,22.9333
-			7697,1,8.412;6906,1,8.412;6910,2,16.824;6916,8,15.5778
-			7685,1,7.5696;7698,1,7.5696;6907,1,7.5696;6910,4,10.0928;6914,2,18.9236
-			7686,1,9.648;6905,1,9.648;6910,2,19.296;6912,8,21.44
-			7697,1,10.29;6906,1,10.29;6910,2,20.58;6916,8,19.0555
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="6.1296">
+							<item id="7685" count="1" />
+						</item>
+						<item chance="6.1296">
+							<item id="7698" count="1" />
+						</item>
+						<item chance="6.1296">
+							<item id="6907" count="1" />
+						</item>
+						<item chance="16.3456">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="15.3241">
+							<item id="6914" count="2" />
+						</item>
+					</value>
+					<value level="2">
+						<item chance="7.806">
+							<item id="7686" count="1" />
+						</item>
+						<item chance="7.806">
+							<item id="6905" count="1" />
+						</item>
+						<item chance="15.612">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="21.6833">
+							<item id="6912" count="8" />
+						</item>
+					</value>
+					<value level="3">
+						<item chance="7.956">
+							<item id="7697" count="1" />
+						</item>
+						<item chance="7.956">
+							<item id="6906" count="1" />
+						</item>
+						<item chance="15.912">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="14.7333">
+							<item id="6916" count="8" />
+						</item>
+					</value>
+					<value level="4">
+						<item chance="6.4848">
+							<item id="7685" count="1" />
+						</item>
+						<item chance="6.4848">
+							<item id="7698" count="1" />
+						</item>
+						<item chance="6.4848">
+							<item id="6907" count="1" />
+						</item>
+						<item chance="17.2928">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="16.2121">
+							<item id="6914" count="2" />
+						</item>
+					</value>
+					<value level="5">
+						<item chance="8.256">
+							<item id="7686" count="1" />
+						</item>
+						<item chance="8.256">
+							<item id="6905" count="1" />
+						</item>
+						<item chance="16.512">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="22.9333">
+							<item id="6912" count="8" />
+						</item>
+					</value>
+					<value level="6">
+						<item chance="8.412">
+							<item id="7697" count="1" />
+						</item>
+						<item chance="8.412">
+							<item id="6906" count="1" />
+						</item>
+						<item chance="16.824">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="15.5778">
+							<item id="6916" count="8" />
+						</item>
+					</value>
+					<value level="7">
+						<item chance="7.5696">
+							<item id="7685" count="1" />
+						</item>
+						<item chance="7.5696">
+							<item id="7698" count="1" />
+						</item>
+						<item chance="7.5696">
+							<item id="6907" count="1" />
+						</item>
+						<item chance="10.0928">
+							<item id="6910" count="4" />
+						</item>
+						<item chance="18.9236">
+							<item id="6914" count="2" />
+						</item>
+					</value>
+					<value level="8">
+						<item chance="9.648">
+							<item id="7686" count="1" />
+						</item>
+						<item chance="9.648">
+							<item id="6905" count="1" />
+						</item>
+						<item chance="19.296">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="21.44">
+							<item id="6912" count="8" />
+						</item>
+					</value>
+					<value level="9">
+						<item chance="10.29">
+							<item id="7697" count="1" />
+						</item>
+						<item chance="10.29">
+							<item id="6906" count="1" />
+						</item>
+						<item chance="20.58">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="19.0555">
+							<item id="6916" count="8" />
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2197" levels="9" name="Small White Nimble Fish">
+	<skill id="2197" toLevel="9" name="Small White Nimble Fish">
 		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			7685,1,8.3856;7698,1,8.3856;6907,1,8.3856;6910,4,11.1808;6914,4,10.4818
-			7686,1,10.686;6905,1,10.686;6910,2,21.372;6912,8,23.7468
-			7697,1,10.884;6906,1,10.884;6910,2,21.768;6916,8,16.1244
-			7685,1,8.8752;7698,1,8.8752;6907,1,8.8752;6910,4,11.8336;6914,4,11.0938
-			7686,1,11.322;6905,1,11.322;6910,2,22.644;6912,16,12.58
-			7697,1,11.538;6906,1,11.538;6910,2,23.076;6916,8,17.0936
-			7685,1,9.4128;7698,1,9.4128;6907,1,9.4128;6910,4,12.5504;6914,4,11.7658
-			7686,1,12;6905,1,12;6910,2,24;6912,16,13.3334
-			7697,1,12.234;6906,1,12.234;6910,2,24.468;6916,8,18.1248
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="8.3856">
+							<item id="7685" count="1" />
+						</item>
+						<item chance="8.3856">
+							<item id="7698" count="1" />
+						</item>
+						<item chance="8.3856">
+							<item id="6907" count="1" />
+						</item>
+						<item chance="11.1808">
+							<item id="6910" count="4" />
+						</item>
+						<item chance="10.4818">
+							<item id="6914" count="4" />
+						</item>
+					</value>
+					<value level="2">
+						<item chance="10.686">
+							<item id="7686" count="1" />
+						</item>
+						<item chance="10.686">
+							<item id="6905" count="1" />
+						</item>
+						<item chance="21.372">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="23.7468">
+							<item id="6912" count="8" />
+						</item>
+					</value>
+					<value level="3">
+						<item chance="10.884">
+							<item id="7697" count="1" />
+						</item>
+						<item chance="10.884">
+							<item id="6906" count="1" />
+						</item>
+						<item chance="21.768">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="16.1244">
+							<item id="6916" count="8" />
+						</item>
+					</value>
+					<value level="4">
+						<item chance="8.8752">
+							<item id="7685" count="1" />
+						</item>
+						<item chance="8.8752">
+							<item id="7698" count="1" />
+						</item>
+						<item chance="8.8752">
+							<item id="6907" count="1" />
+						</item>
+						<item chance="11.8336">
+							<item id="6910" count="4" />
+						</item>
+						<item chance="11.0938">
+							<item id="6914" count="4" />
+						</item>
+					</value>
+					<value level="5">
+						<item chance="11.322">
+							<item id="7686" count="1" />
+						</item>
+						<item chance="11.322">
+							<item id="6905" count="1" />
+						</item>
+						<item chance="22.644">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="12.58">
+							<item id="6912" count="16" />
+						</item>
+					</value>
+					<value level="6">
+						<item chance="11.538">
+							<item id="7697" count="1" />
+						</item>
+						<item chance="11.538">
+							<item id="6906" count="1" />
+						</item>
+						<item chance="23.076">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="17.0936">
+							<item id="6916" count="8" />
+						</item>
+					</value>
+					<value level="7">
+						<item chance="9.4128">
+							<item id="7685" count="1" />
+						</item>
+						<item chance="9.4128">
+							<item id="7698" count="1" />
+						</item>
+						<item chance="9.4128">
+							<item id="6907" count="1" />
+						</item>
+						<item chance="12.5504">
+							<item id="6910" count="4" />
+						</item>
+						<item chance="11.7658">
+							<item id="6914" count="4" />
+						</item>
+					</value>
+					<value level="8">
+						<item chance="12">
+							<item id="7686" count="1" />
+						</item>
+						<item chance="12">
+							<item id="6905" count="1" />
+						</item>
+						<item chance="24">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="13.3334">
+							<item id="6912" count="16" />
+						</item>
+					</value>
+					<value level="9">
+						<item chance="12.234">
+							<item id="7697" count="1" />
+						</item>
+						<item chance="12.234">
+							<item id="6906" count="1" />
+						</item>
+						<item chance="24.468">
+							<item id="6910" count="2" />
+						</item>
+						<item chance="18.1248">
+							<item id="6916" count="8" />
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2198" levels="9" name="Small Black Nimble Fish">
+	<skill id="2198" toLevel="9" name="Small Black Nimble Fish">
 		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			7685,1,9.9888;7698,1,9.9888;6907,1,9.9888;6910,4,13.3184;6914,4,12.4858
-			7686,1,12.738;6905,1,12.738;6910,4,12.738;6912,16,14.1534
-			7697,1,12.996;6906,1,12.996;6910,4,12.996;6916,8,19.2536
-			7685,1,11.0832;7698,1,11.0832;6907,1,11.0832;6910,4,11.822;6914,4,13.8542
-			7686,2,9.428;6905,1,14.1421;6910,4,14.1421;6912,16,15.7134
-			7697,1,14.418;6906,1,14.418;6910,4,14.418;6916,8,21.36
-			7685,1,11.7696;7698,1,11.7696;6907,1,11.7696;6910,4,12.554;6914,4,14.7122
-			7686,2,10.008;6905,1,15.0121;6910,4,15.0121;6912,16,16.6802
-			7697,2,10.208;6906,1,15.3121;6910,4,15.3121;6916,8,22.6844
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="9.9888">
+							<item id="7685" count="1" />
+						</item>
+						<item chance="9.9888">
+							<item id="7698" count="1" />
+						</item>
+						<item chance="9.9888">
+							<item id="6907" count="1" />
+						</item>
+						<item chance="13.3184">
+							<item id="6910" count="4" />
+						</item>
+						<item chance="12.4858">
+							<item id="6914" count="4" />
+						</item>
+					</value>
+					<value level="2">
+						<item chance="12.738">
+							<item id="7686" count="1" />
+						</item>
+						<item chance="12.738">
+							<item id="6905" count="1" />
+						</item>
+						<item chance="12.738">
+							<item id="6910" count="4" />
+						</item>
+						<item chance="14.1534">
+							<item id="6912" count="16" />
+						</item>
+					</value>
+					<value level="3">
+						<item chance="12.996">
+							<item id="7697" count="1" />
+						</item>
+						<item chance="12.996">
+							<item id="6906" count="1" />
+						</item>
+						<item chance="12.996">
+							<item id="6910" count="4" />
+						</item>
+						<item chance="19.2536">
+							<item id="6916" count="8" />
+						</item>
+					</value>
+					<value level="4">
+						<item chance="11.0832">
+							<item id="7685" count="1" />
+						</item>
+						<item chance="11.0832">
+							<item id="7698" count="1" />
+						</item>
+						<item chance="11.0832">
+							<item id="6907" count="1" />
+						</item>
+						<item chance="11.822">
+							<item id="6910" count="4" />
+						</item>
+						<item chance="13.8542">
+							<item id="6914" count="4" />
+						</item>
+					</value>
+					<value level="5">
+						<item chance="9.428">
+							<item id="7686" count="2" />
+						</item>
+						<item chance="14.1421">
+							<item id="6905" count="1" />
+						</item>
+						<item chance="14.1421">
+							<item id="6910" count="4" />
+						</item>
+						<item chance="15.7134">
+							<item id="6912" count="16" />
+						</item>
+					</value>
+					<value level="6">
+						<item chance="14.418">
+							<item id="7697" count="1" />
+						</item>
+						<item chance="14.418">
+							<item id="6906" count="1" />
+						</item>
+						<item chance="14.418">
+							<item id="6910" count="4" />
+						</item>
+						<item chance="21.36">
+							<item id="6916" count="8" />
+						</item>
+					</value>
+					<value level="7">
+						<item chance="11.7696">
+							<item id="7685" count="1" />
+						</item>
+						<item chance="11.7696">
+							<item id="7698" count="1" />
+						</item>
+						<item chance="11.7696">
+							<item id="6907" count="1" />
+						</item>
+						<item chance="12.554">
+							<item id="6910" count="4" />
+						</item>
+						<item chance="14.7122">
+							<item id="6914" count="4" />
+						</item>
+					</value>
+					<value level="8">
+						<item chance="10.008">
+							<item id="7686" count="2" />
+						</item>
+						<item chance="15.0121">
+							<item id="6905" count="1" />
+						</item>
+						<item chance="15.0121">
+							<item id="6910" count="4" />
+						</item>
+						<item chance="16.6802">
+							<item id="6912" count="16" />
+						</item>
+					</value>
+					<value level="9">
+						<item chance="10.208">
+							<item id="7697" count="2" />
+						</item>
+						<item chance="15.3121">
+							<item id="6906" count="1" />
+						</item>
+						<item chance="15.3121">
+							<item id="6910" count="4" />
+						</item>
+						<item chance="22.6844">
+							<item id="6916" count="8" />
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="2199" levels="3" name="Small Green Treasure Chest">
+	<skill id="2199" toLevel="3" name="Small Green Treasure Chest">
 		<!-- Confirmed CT2.5 -->
-		<table name="#extractableItems">
-			6908,12,30.6;7609,8,48.96
-			6908,12,41.6;7609,16,33.28
-			6908,24,26.5;7609,26,24.2284
-		</table>
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="30.6">
+							<item id="6908" count="12" />
+						</item>
+						<item chance="48.96">
+							<item id="7609" count="8" />
+						</item>
+					</value>
+					<value level="2">
+						<item chance="41.6">
+							<item id="6908" count="12" />
+						</item>
+						<item chance="33.28">
+							<item id="7609" count="16" />
+						</item>
+					</value>
+					<value level="3">
+						<item chance="26.5">
+							<item id="6908" count="24" />
+						</item>
+						<item chance="24.2284">
+							<item id="7609" count="26" />
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 </list>

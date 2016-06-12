@@ -16,140 +16,205 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.alchemy;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.LinkedList;
+import java.util.List;
 
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.enums.PrivateStoreType;
+import com.l2jmobius.gameserver.enums.Race;
+import com.l2jmobius.gameserver.enums.TryMixCubeResultType;
+import com.l2jmobius.gameserver.enums.TryMixCubeType;
+import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.AlchemyResult;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.alchemy.ExTryMixCube;
+import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
-public class RequestAlchemyTryMixCube extends L2GameClientPacket
+/**
+ * @author Sdw
+ */
+public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 {
-	private static final int AIR_STONE = 39461;
-	private static final int ELCYUM_CRYSTAL = 36514;
-	private final Map<Integer, Long> _items = new HashMap<>();
+	// TODO: Figure out how much stones are given
+	private static final int TEMPEST_STONE_AMOUNT = 1;
 	
-	public RequestAlchemyTryMixCube()
+	private final List<ItemHolder> _items = new LinkedList<>();
+	
+	@Override
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_items.clear();
+		final int itemsCount = packet.readD();
+		if ((itemsCount <= 0) || (itemsCount > 4))
+		{
+			return false;
+		}
+		
+		for (int i = 0; i < itemsCount; i++)
+		{
+			_items.add(new ItemHolder(packet.readD(), packet.readQ()));
+		}
+		return true;
 	}
 	
 	@Override
-	protected void readImpl()
+	public void run(L2GameClient client)
 	{
-		final int count = readD();
-		for (int i = 0; i < count; ++i)
+		final L2PcInstance player = client.getActiveChar();
+		if ((player == null) || (player.getRace() != Race.ERTHEIA))
 		{
-			_items.put(readD(), readQ());
-		}
-	}
-	
-	@Override
-	protected void runImpl()
-	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		if ((_items == null) || _items.isEmpty())
-		{
-			activeChar.sendPacket(ExTryMixCube.FAIL);
-			return;
-		}
-		if (activeChar.isInCombat())
-		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_DURING_BATTLE);
-			activeChar.sendPacket(ExTryMixCube.FAIL);
-			return;
-		}
-		if (activeChar.isInStoreMode())
-		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_TRADING_OR_USING_A_PRIVATE_STORE_OR_SHOP);
-			activeChar.sendPacket(ExTryMixCube.FAIL);
-			return;
-		}
-		if (activeChar.isDead())
-		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_DEAD);
-			activeChar.sendPacket(ExTryMixCube.FAIL);
-			return;
-		}
-		if (activeChar.isMovementDisabled())
-		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_IMMOBILE);
-			activeChar.sendPacket(ExTryMixCube.FAIL);
 			return;
 		}
 		
-		long totalPrice = 0;
-		long count = 0;
-		for (int itemId : _items.keySet())
+		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player))
 		{
-			final int itemObjectId = itemId;
-			final long itemCount = _items.get(itemId);
-			final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(itemObjectId);
-			if (item != null)
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_DURING_BATTLE);
+			return;
+		}
+		else if (player.isInStoreMode() || (player.getPrivateStoreType() != PrivateStoreType.NONE))
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_TRADING_OR_USING_A_PRIVATE_STORE_OR_SHOP);
+			return;
+		}
+		else if (player.isDead())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_DEAD);
+			return;
+		}
+		else if (player.isMovementDisabled())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_IMMOBILE);
+			return;
+		}
+		
+		if ((player.getKnownSkill(CommonSkill.ALCHEMY_CUBE.getId()) == null) && !player.canOverrideCond(PcCondOverride.SKILL_CONDITIONS))
+		{
+			player.sendPacket(new ExTryMixCube(TryMixCubeType.FAIL_SKILL_WRONG));
+			return;
+		}
+		
+		int position = 0;
+		long itemsPrice = 0;
+		
+		// First loop for safety check + price calculation
+		for (ItemHolder item : _items)
+		{
+			final L2ItemInstance itemInstance = player.getInventory().getItemByObjectId(item.getId());
+			if (itemInstance == null)
 			{
-				if ((item.getCount() < itemCount) || !item.isDestroyable() || (item.getEnchantLevel() > 0) || item.isAugmented() || item.isShadowItem())
-				{
-					continue;
-				}
-				if (item.getId() == ELCYUM_CRYSTAL)
-				{
-					if (_items.size() <= 3)
-					{
-						continue;
-					}
-					count = itemCount;
-				}
-				else
-				{
-					final long price = item.getId() == Inventory.ADENA_ID ? itemCount : item.getReferencePrice();
-					if (price <= 0)
-					{
-						continue;
-					}
-					totalPrice += price;
-				}
-				activeChar.destroyItem("AlchemyMixCube", itemObjectId, itemCount, activeChar, true);
+				return;
+			}
+			
+			if ((itemInstance.getCount() <= 0) || (itemInstance.getCount() < item.getCount()))
+			{
+				player.sendPacket(new ExTryMixCube(TryMixCubeType.FAIL_ITEM_WRONG));
+				return;
+			}
+			
+			final int price = itemInstance.getReferencePrice();
+			if (itemInstance.getReferencePrice() == 0)
+			{
+				player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_COMBINED);
+				player.sendPacket(new ExTryMixCube(TryMixCubeType.FAIL_ITEM_WRONG));
+				return;
+			}
+			
+			if ((itemInstance.getEnchantLevel() > 0) || itemInstance.isAugmented())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_COMBINE_ITEMS_THAT_HAVE_BEEN_ENCHANTED_OR_AUGMENTED);
+				player.sendPacket(new ExTryMixCube(TryMixCubeType.FAIL_ITEM_WRONG));
+				return;
+			}
+			
+			itemsPrice += price * item.getCount();
+			position++;
+			
+			if ((position == 4) && (itemInstance.getId() != Inventory.ELCYUM_CRYSTAL_ID))
+			{
+				player.sendPacket(new ExTryMixCube(TryMixCubeType.FAIL_ITEM_WRONG));
+				return;
 			}
 		}
 		
-		long stoneCount = 0;
-		if (totalPrice > 0)
+		// Calculate the amount of air stones the player should received based on the total price of items he mixed.
+		int airStonesCount = (int) Math.floor((itemsPrice / 5_000) * (_items.size() < 3 ? 0.3f : 0.5f));
+		
+		// Process only if there is at least one air stone to give
+		if (airStonesCount > 0)
 		{
-			if (_items.size() >= 3)
+			final InventoryUpdate iu = new InventoryUpdate();
+			
+			long elcyumCrystals = 0;
+			
+			// Second loop for items deletion if we're still in the game
+			for (ItemHolder item : _items)
 			{
-				stoneCount = totalPrice / 10000;
-				stoneCount += count * 1000;
+				final L2ItemInstance itemInstance = player.getInventory().getItemByObjectId(item.getId());
+				if (itemInstance == null)
+				{
+					return;
+				}
+				
+				if (itemInstance.getCount() < item.getCount())
+				{
+					return;
+				}
+				
+				if (itemInstance.getId() == Inventory.ELCYUM_CRYSTAL_ID)
+				{
+					elcyumCrystals = item.getCount();
+				}
+				
+				player.getInventory().destroyItem("Alchemy", itemInstance, item.getCount(), player, null);
+				iu.addItem(itemInstance);
 			}
-			else if ((totalPrice >= 20000) && (totalPrice < 35000))
+			
+			final ExTryMixCube mixCubeResult = new ExTryMixCube(TryMixCubeType.SUCCESS_NORMAL);
+			
+			// Whenever there is Elcyum Crystal applied there's a chance to receive Tempest Stone
+			// TODO: Figure out the chance
+			if ((elcyumCrystals > 0) && (Rnd.get(100) < 50))
 			{
-				stoneCount = 1;
+				// Broadcast animation on success
+				player.broadcastPacket(new MagicSkillUse(player, CommonSkill.ALCHEMY_CUBE_RANDOM_SUCCESS.getId(), TEMPEST_STONE_AMOUNT, 500, 1500));
+				
+				// Give Tempest Stone to the player
+				final L2ItemInstance tempestStonesInstance = player.addItem("Alchemy", Inventory.TEMPEST_STONE_ID, TEMPEST_STONE_AMOUNT, null, true);
+				iu.addItem(tempestStonesInstance);
+				
+				// Add the alchemy result entry to the packet
+				mixCubeResult.addItem(new AlchemyResult(Inventory.TEMPEST_STONE_ID, TEMPEST_STONE_AMOUNT, TryMixCubeResultType.EXTRA));
 			}
-			else if ((totalPrice >= 35000) && (totalPrice < 50000))
+			
+			// Calculate the elcyum crystals bonus
+			final boolean bonusSuccess = ((100. * Rnd.nextDouble()) < (elcyumCrystals / 1000));
+			if (bonusSuccess)
 			{
-				stoneCount = 2;
+				airStonesCount *= Math.min(elcyumCrystals, 2);
 			}
-			else if (totalPrice >= 50000)
-			{
-				stoneCount = (long) Math.floor(totalPrice / 16666.666666666668);
-			}
+			
+			final L2ItemInstance airStonesInstance = player.addItem("Alchemy", Inventory.AIR_STONE_ID, airStonesCount, null, true);
+			iu.addItem(airStonesInstance);
+			
+			// Add the Air Stones
+			mixCubeResult.addItem(new AlchemyResult(Inventory.AIR_STONE_ID, airStonesCount, bonusSuccess ? TryMixCubeResultType.BONUS : TryMixCubeResultType.NORMAL));
+			
+			// send packets
+			player.sendPacket(mixCubeResult);
+			player.sendInventoryUpdate(iu);
 		}
-		if (stoneCount > 0)
+		else
 		{
-			activeChar.addItem("AlchemyMixCube", AIR_STONE, stoneCount, activeChar, true);
+			player.sendPacket(new ExTryMixCube(TryMixCubeType.FAIL_ITEM_WRONG));
 		}
-		activeChar.sendPacket(new ExTryMixCube(AIR_STONE, stoneCount));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
 	}
 }

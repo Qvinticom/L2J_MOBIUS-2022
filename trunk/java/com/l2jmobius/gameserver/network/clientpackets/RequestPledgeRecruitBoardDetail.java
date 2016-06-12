@@ -16,49 +16,42 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeRecruitBoardDetail;
 
 /**
  * @author Sdw
  */
-public class RequestPledgeRecruitBoardDetail extends L2GameClientPacket
+public class RequestPledgeRecruitBoardDetail implements IClientIncomingPacket
 {
-	private static final String _C__D0_D6_REQUESTPLEDGERECRUITBOARDDETAIL = "[C] D0;D6 RequestPledgeRecruitBoardDetail";
-	
 	private int _clanId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_clanId = readD();
+		_clanId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
 		final PledgeRecruitInfo pledgeRecruitInfo = ClanEntryManager.getInstance().getClanById(_clanId);
-		
 		if (pledgeRecruitInfo == null)
 		{
 			return;
 		}
 		
-		activeChar.sendPacket(new ExPledgeRecruitBoardDetail(pledgeRecruitInfo));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_D6_REQUESTPLEDGERECRUITBOARDDETAIL;
+		client.sendPacket(new ExPledgeRecruitBoardDetail(pledgeRecruitInfo));
 	}
 }

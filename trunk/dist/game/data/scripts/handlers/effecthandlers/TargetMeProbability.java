@@ -17,10 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 
 /**
@@ -31,17 +31,15 @@ public final class TargetMeProbability extends AbstractEffect
 {
 	private final int _chance;
 	
-	public TargetMeProbability(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public TargetMeProbability(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_chance = params.getInt("chance", 100);
 	}
 	
 	@Override
-	public boolean calcSuccess(BuffInfo info)
+	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
-		return Formulas.calcProbability(_chance, info.getEffector(), info.getEffected(), info.getSkill());
+		return Formulas.calcProbability(_chance, effector, effected, skill);
 	}
 	
 	@Override
@@ -51,19 +49,13 @@ public final class TargetMeProbability extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (info.getEffected().isPlayable())
+		if (effected.isPlayable())
 		{
-			if (info.getEffected().getTarget() != info.getEffector())
+			if (effected.getTarget() != effector)
 			{
-				final L2PcInstance effector = info.getEffector().getActingPlayer();
-				// If effector is null, then its not a player, but NPC. If its not null, then it should check if the skill is pvp skill.
-				if ((effector == null) || effector.checkPvpSkill(info.getEffected(), info.getSkill()))
-				{
-					// Target is different
-					info.getEffected().setTarget(info.getEffector());
-				}
+				effected.setTarget(effector);
 			}
 		}
 	}

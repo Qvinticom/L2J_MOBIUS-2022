@@ -17,6 +17,7 @@
 package quests.Q10320_LetsGoToTheCentralSquare;
 
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -31,9 +32,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
-import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * Let's Go To The Central Square (10320)
@@ -44,24 +43,20 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 	// NPCs
 	private static final int PANTHEON = 32972;
 	private static final int THEODORE = 32975;
-	// Misc
-	private static final int MAX_LEVEL = 20;
 	// Zone
 	private static final int TALKING_ISLAND_PRESENTATION_MOVIE_ZONE = 200034;
-	// Variables names
+	// Misc
+	private static final int MAX_LEVEL = 20;
 	private static final String MOVIE_VAR = "TI_presentation_movie";
-	// Movies
-	private static final int SCENE_SI_ILLUSION_01_QUE = 101;
-	private static final int SCENE_SI_ILLUSION_02_QUE = 102;
 	
 	public Q10320_LetsGoToTheCentralSquare()
 	{
-		super(10320, Q10320_LetsGoToTheCentralSquare.class.getSimpleName(), "Let's Go To The Central Square");
+		super(10320);
 		addStartNpc(PANTHEON);
 		addTalkId(PANTHEON, THEODORE);
 		addEnterZoneId(TALKING_ISLAND_PRESENTATION_MOVIE_ZONE);
-		addCondMaxLevel(MAX_LEVEL, "32972-06.html");
-		addCondNotRace(Race.ERTHEIA, "32972-07.html");
+		addCondMaxLevel(MAX_LEVEL, "32972-01a.htm");
+		addCondNotRace(Race.ERTHEIA, "32972-01b.htm");
 	}
 	
 	@Override
@@ -79,8 +74,6 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 			case "32972-03.htm":
 			{
 				qs.startQuest();
-				qs.setCond(2); // Show arrow hack
-				qs.setCond(1);
 				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_001_Radar_01.htm", TutorialShowHtml.LARGE_WINDOW));
 				htmltext = event;
 				break;
@@ -90,13 +83,16 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32975-02.html":
+			case "32975-02.htm":
 			{
-				giveAdena(player, 30, true);
-				addExpAndSp(player, 30, 5);
-				qs.exitQuest(false, true);
-				htmltext = event;
-				Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.WAIT_WAIT_A_MINUTE_I_STILL_HAVE_TIME));
+				if (qs.isStarted())
+				{
+					giveAdena(player, 30, true);
+					addExpAndSp(player, 30, 5);
+					qs.exitQuest(false, true);
+					htmltext = event;
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WAIT_WAIT_A_MINUTE_I_STILL_HAVE_TIME);
+				}
 				break;
 			}
 		}
@@ -113,17 +109,17 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = npc.getId() == PANTHEON ? "32972-01.htm" : "32975-04.html";
+				htmltext = npc.getId() == PANTHEON ? "32972-01.htm" : "32975-04.htm";
 				break;
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == PANTHEON ? "32972-04.html" : "32975-01.html";
+				htmltext = npc.getId() == PANTHEON ? "32972-04.htm" : "32975-01.htm";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == PANTHEON ? "32972-05.html" : "32975-03.html";
+				htmltext = npc.getId() == PANTHEON ? "32972-05.htm" : "32975-03.htm";
 				break;
 			}
 		}
@@ -142,7 +138,7 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 				if (player.getLevel() <= MAX_LEVEL)
 				{
 					final QuestState qs = getQuestState(player, false);
-					player.showQuestMovie(((qs != null) && qs.isStarted()) ? SCENE_SI_ILLUSION_02_QUE : SCENE_SI_ILLUSION_01_QUE);
+					playMovie(player, ((qs != null) && qs.isStarted()) ? Movie.SI_ILLUSION_02_QUE : Movie.SI_ILLUSION_01_QUE);
 				}
 				player.getVariables().remove(MOVIE_VAR);
 			}

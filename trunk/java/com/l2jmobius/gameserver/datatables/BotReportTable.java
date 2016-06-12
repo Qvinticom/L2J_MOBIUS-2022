@@ -29,6 +29,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
 import org.xml.sax.Attributes;
@@ -37,6 +38,7 @@ import org.xml.sax.helpers.DefaultHandler;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -50,7 +52,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class BotReportTable
 {
-	// Zoey76: TODO: Split XML parsing from SQL operations, use IXmlReader instead of SAXParser.
+	// Zoey76: TODO: Split XML parsing from SQL operations, use IGameXmlReader instead of SAXParser.
 	private static final Logger LOGGER = Logger.getLogger(BotReportTable.class.getName());
 	
 	private static final int COLUMN_BOT_ID = 1;
@@ -72,35 +74,34 @@ public final class BotReportTable
 	private Map<Integer, ReportedCharData> _reports;
 	private Map<Integer, PunishHolder> _punishments;
 	
-	BotReportTable()
+	protected BotReportTable()
 	{
-		if (!Config.BOTREPORT_ENABLE)
+		if (Config.BOTREPORT_ENABLE)
 		{
-			return;
-		}
-		
-		_ipRegistry = new HashMap<>();
-		_charRegistry = new ConcurrentHashMap<>();
-		_reports = new ConcurrentHashMap<>();
-		_punishments = new ConcurrentHashMap<>();
-		
-		try
-		{
-			final File punishments = new File("./config/BotReportPunishments.xml");
-			if (!punishments.exists())
+			_ipRegistry = new HashMap<>();
+			_charRegistry = new ConcurrentHashMap<>();
+			_reports = new ConcurrentHashMap<>();
+			_punishments = new ConcurrentHashMap<>();
+			
+			try
 			{
-				throw new FileNotFoundException(punishments.getName());
+				final File punishments = new File("./config/BotReportPunishments.xml");
+				if (!punishments.exists())
+				{
+					throw new FileNotFoundException(punishments.getName());
+				}
+				
+				final SAXParser parser = SAXParserFactory.newInstance().newSAXParser();
+				parser.parse(punishments, new PunishmentsLoader());
+			}
+			catch (Exception e)
+			{
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not load punishments from /config/BotReportPunishments.xml", e);
 			}
 			
-			SAXParserFactory.newInstance().newSAXParser().parse(punishments, new PunishmentsLoader());
+			loadReportedCharData();
+			scheduleResetPointTask();
 		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "BotReportTable: Could not load punishments from /config/BotReportPunishments.xml", e);
-		}
-		
-		loadReportedCharData();
-		scheduleResetPointTask();
 	}
 	
 	/**
@@ -164,11 +165,11 @@ public final class BotReportTable
 				}
 			}
 			
-			LOGGER.info("BotReportTable: Loaded " + _reports.size() + " bot reports");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _reports.size() + " bot reports");
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "BotReportTable: Could not load reported char data!", e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not load reported char data!", e);
 		}
 	}
 	
@@ -197,7 +198,7 @@ public final class BotReportTable
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, "BotReportTable: Could not update reported char data in database!", e);
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not update reported char data in database!", e);
 		}
 	}
 	
@@ -288,7 +289,7 @@ public final class BotReportTable
 					return false;
 				}
 				
-				final long reuse = System.currentTimeMillis() - rcdRep.getLastReporTime();
+				final long reuse = (System.currentTimeMillis() - rcdRep.getLastReporTime());
 				if (reuse < Config.BOTREPORT_REPORT_DELAY)
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_MAKE_ANOTHER_REPORT_IN_S1_MINUTE_S_YOU_HAVE_S2_POINT_S_REMAINING_ON_THIS_ACCOUNT);
@@ -359,19 +360,17 @@ public final class BotReportTable
 	 */
 	private void punishBot(L2PcInstance bot, PunishHolder ph)
 	{
-		if (ph == null)
+		if (ph != null)
 		{
-			return;
-		}
-		ph._punish.applyEffects(bot, bot);
-		if (ph._systemMessageId <= -1)
-		{
-			return;
-		}
-		final SystemMessageId id = SystemMessageId.getSystemMessageId(ph._systemMessageId);
-		if (id != null)
-		{
-			bot.sendPacket(id);
+			ph._punish.applyEffects(bot, bot);
+			if (ph._systemMessageId > -1)
+			{
+				final SystemMessageId id = SystemMessageId.getSystemMessageId(ph._systemMessageId);
+				if (id != null)
+				{
+					bot.sendPacket(id);
+				}
+			}
 		}
 	}
 	
@@ -391,7 +390,7 @@ public final class BotReportTable
 		}
 		else
 		{
-			LOGGER.warning("BotReportTable: Could not add punishment for " + neededReports + " report(s): Skill " + skillId + "-" + skillLevel + " does not exist!");
+			LOGGER.warning(getClass().getSimpleName() + ": Could not add punishment for " + neededReports + " report(s): Skill " + skillId + "-" + skillLevel + " does not exist!");
 		}
 	}
 	
@@ -427,7 +426,7 @@ public final class BotReportTable
 		catch (Exception e)
 		{
 			ThreadPoolManager.getInstance().scheduleGeneral(new ResetPointTask(), 24 * 3600 * 1000);
-			LOGGER.log(Level.WARNING, "BotReportTable: Could not properly schedule bot report points reset task. Scheduled in 24 hours.", e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not properly schedule bot report points reset task. Scheduled in 24 hours.", e);
 		}
 	}
 	
@@ -443,7 +442,7 @@ public final class BotReportTable
 	 */
 	private static int hashIp(L2PcInstance player)
 	{
-		final String con = player.getClient().getConnection().getInetAddress().getHostAddress();
+		final String con = player.getClient().getConnectionAddress().getHostAddress();
 		final String[] rawByte = con.split("\\.");
 		final int[] rawIp = new int[4];
 		for (int i = 0; i < 4; i++)
@@ -462,7 +461,11 @@ public final class BotReportTable
 	 */
 	private static boolean timeHasPassed(Map<Integer, Long> map, int objectId)
 	{
-		return !map.containsKey(objectId) || ((System.currentTimeMillis() - map.get(objectId)) > Config.BOTREPORT_REPORT_DELAY);
+		if (map.containsKey(objectId))
+		{
+			return (System.currentTimeMillis() - map.get(objectId)) > Config.BOTREPORT_REPORT_DELAY;
+		}
+		return true;
 	}
 	
 	/**
@@ -559,33 +562,32 @@ public final class BotReportTable
 		@Override
 		public void startElement(String uri, String localName, String qName, Attributes attr)
 		{
-			if (!qName.equals("punishment"))
+			if (qName.equals("punishment"))
 			{
-				return;
-			}
-			int reportCount = -1, skillId = -1, skillLevel = 1, sysMessage = -1;
-			try
-			{
-				reportCount = Integer.parseInt(attr.getValue("neededReportCount"));
-				skillId = Integer.parseInt(attr.getValue("skillId"));
-				final String level = attr.getValue("skillLevel");
-				final String systemMessageId = attr.getValue("sysMessageId");
-				if (level != null)
+				int reportCount = -1, skillId = -1, skillLevel = 1, sysMessage = -1;
+				try
 				{
-					skillLevel = Integer.parseInt(level);
+					reportCount = Integer.parseInt(attr.getValue("neededReportCount"));
+					skillId = Integer.parseInt(attr.getValue("skillId"));
+					final String level = attr.getValue("skillLevel");
+					final String systemMessageId = attr.getValue("sysMessageId");
+					if (level != null)
+					{
+						skillLevel = Integer.parseInt(level);
+					}
+					
+					if (systemMessageId != null)
+					{
+						sysMessage = Integer.parseInt(systemMessageId);
+					}
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
 				}
 				
-				if (systemMessageId != null)
-				{
-					sysMessage = Integer.parseInt(systemMessageId);
-				}
+				addPunishment(reportCount, skillId, skillLevel, sysMessage);
 			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
-			
-			addPunishment(reportCount, skillId, skillLevel, sysMessage);
 		}
 	}
 	
@@ -607,6 +609,7 @@ public final class BotReportTable
 		public void run()
 		{
 			resetPointsAndSchedule();
+			
 		}
 	}
 	

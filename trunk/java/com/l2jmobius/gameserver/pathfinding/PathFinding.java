@@ -20,6 +20,7 @@ import java.util.List;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.pathfinding.cellnodes.CellPathFinding;
 import com.l2jmobius.gameserver.pathfinding.geonodes.GeoPathFinding;
 
@@ -30,12 +31,18 @@ public abstract class PathFinding
 {
 	public static PathFinding getInstance()
 	{
-		return Config.PATHFINDING == 1 ? GeoPathFinding.getInstance() : CellPathFinding.getInstance();
+		if (Config.PATHFINDING == 1)
+		{
+			// Higher Memory Usage, Smaller Cpu Usage
+			return GeoPathFinding.getInstance();
+		}
+		// Cell pathfinding, calculated directly from geodata files
+		return CellPathFinding.getInstance();
 	}
 	
 	public abstract boolean pathNodesExist(short regionoffset);
 	
-	public abstract List<AbstractNodeLoc> findPath(int x, int y, int z, int tx, int ty, int tz, int instanceId, boolean playable);
+	public abstract List<AbstractNodeLoc> findPath(int x, int y, int z, int tx, int ty, int tz, Instance instance, boolean playable);
 	
 	// @formatter:off
 	/*
@@ -98,7 +105,7 @@ public abstract class PathFinding
 		int end_x = end.getLoc().getX();
 		int end_y = end.getLoc().getY();
 		//List of Visited Nodes
-		FastNodeList visited = new FastNodeList(800); // TODO! Add limit to cfg
+		FastNodeList visited = new FastNodeList(800);//TODO! Add limit to cfg
 		
 		// List of Nodes to Visit
 		BinaryNodeHeap to_visit = new BinaryNodeHeap(800);

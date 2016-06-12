@@ -27,6 +27,8 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.ActionHandler;
 import com.l2jmobius.gameserver.handler.ActionShiftHandler;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
+import com.l2jmobius.gameserver.handler.AffectObjectHandler;
+import com.l2jmobius.gameserver.handler.AffectScopeHandler;
 import com.l2jmobius.gameserver.handler.BypassHandler;
 import com.l2jmobius.gameserver.handler.ChatHandler;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
@@ -34,7 +36,6 @@ import com.l2jmobius.gameserver.handler.IHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.handler.PunishmentHandler;
 import com.l2jmobius.gameserver.handler.TargetHandler;
-import com.l2jmobius.gameserver.handler.TelnetHandler;
 import com.l2jmobius.gameserver.handler.UserCommandHandler;
 import com.l2jmobius.gameserver.handler.VoicedCommandHandler;
 
@@ -58,7 +59,6 @@ import handlers.admincommandhandlers.AdminAdmin;
 import handlers.admincommandhandlers.AdminAnnouncements;
 import handlers.admincommandhandlers.AdminBBS;
 import handlers.admincommandhandlers.AdminBuffs;
-import handlers.admincommandhandlers.AdminCHSiege;
 import handlers.admincommandhandlers.AdminCamera;
 import handlers.admincommandhandlers.AdminCastle;
 import handlers.admincommandhandlers.AdminChangeAccessLevel;
@@ -98,7 +98,7 @@ import handlers.admincommandhandlers.AdminMenu;
 import handlers.admincommandhandlers.AdminMessages;
 import handlers.admincommandhandlers.AdminMobGroup;
 import handlers.admincommandhandlers.AdminMonsterRace;
-import handlers.admincommandhandlers.AdminPCBangPoints;
+import handlers.admincommandhandlers.AdminOlympiad;
 import handlers.admincommandhandlers.AdminPForge;
 import handlers.admincommandhandlers.AdminPathNode;
 import handlers.admincommandhandlers.AdminPcCondOverride;
@@ -125,20 +125,16 @@ import handlers.admincommandhandlers.AdminTarget;
 import handlers.admincommandhandlers.AdminTargetSay;
 import handlers.admincommandhandlers.AdminTeleport;
 import handlers.admincommandhandlers.AdminTest;
-import handlers.admincommandhandlers.AdminTvTEvent;
 import handlers.admincommandhandlers.AdminUnblockIp;
 import handlers.admincommandhandlers.AdminVitality;
-import handlers.admincommandhandlers.AdminWall;
 import handlers.admincommandhandlers.AdminZone;
-import handlers.bypasshandlers.AlternateClassMaster;
-import handlers.bypasshandlers.ArcanCityMovie;
+import handlers.admincommandhandlers.AdminZones;
 import handlers.bypasshandlers.Augment;
 import handlers.bypasshandlers.Buy;
 import handlers.bypasshandlers.BuyShadowItem;
 import handlers.bypasshandlers.ChatLink;
 import handlers.bypasshandlers.ClanWarehouse;
-import handlers.bypasshandlers.CrystalCavernsMovie;
-import handlers.bypasshandlers.Ensoul;
+import handlers.bypasshandlers.EnsoulWindow;
 import handlers.bypasshandlers.EventEngine;
 import handlers.bypasshandlers.Freight;
 import handlers.bypasshandlers.ItemAuctionLink;
@@ -147,15 +143,10 @@ import handlers.bypasshandlers.Loto;
 import handlers.bypasshandlers.Multisell;
 import handlers.bypasshandlers.NpcViewMod;
 import handlers.bypasshandlers.Observation;
-import handlers.bypasshandlers.OlympiadManagerLink;
-import handlers.bypasshandlers.OlympiadObservation;
 import handlers.bypasshandlers.PlayerHelp;
 import handlers.bypasshandlers.PrivateWarehouse;
 import handlers.bypasshandlers.QuestLink;
-import handlers.bypasshandlers.QuestList;
-import handlers.bypasshandlers.ReceivePremium;
 import handlers.bypasshandlers.ReleaseAttribute;
-import handlers.bypasshandlers.RentPet;
 import handlers.bypasshandlers.SkillList;
 import handlers.bypasshandlers.TerritoryStatus;
 import handlers.bypasshandlers.TutorialClose;
@@ -189,14 +180,12 @@ import handlers.itemhandlers.BlessedSpiritShot;
 import handlers.itemhandlers.Book;
 import handlers.itemhandlers.Bypass;
 import handlers.itemhandlers.Calculator;
-import handlers.itemhandlers.ChangeAttribute;
 import handlers.itemhandlers.CharmOfCourage;
 import handlers.itemhandlers.Elixir;
 import handlers.itemhandlers.EnchantAttribute;
 import handlers.itemhandlers.EnchantScrolls;
 import handlers.itemhandlers.EventItem;
 import handlers.itemhandlers.ExtractableItems;
-import handlers.itemhandlers.FatedSupportBox;
 import handlers.itemhandlers.FishShots;
 import handlers.itemhandlers.Harvester;
 import handlers.itemhandlers.ItemSkills;
@@ -212,53 +201,59 @@ import handlers.itemhandlers.SoulShots;
 import handlers.itemhandlers.SpecialXMas;
 import handlers.itemhandlers.SpiritShot;
 import handlers.itemhandlers.SummonItems;
-import handlers.itemhandlers.TeleportBookmark;
 import handlers.punishmenthandlers.BanHandler;
 import handlers.punishmenthandlers.ChatBanHandler;
 import handlers.punishmenthandlers.JailHandler;
-import handlers.targethandlers.Area;
-import handlers.targethandlers.AreaCorpseMob;
-import handlers.targethandlers.AreaFriendly;
-import handlers.targethandlers.AreaSummon;
-import handlers.targethandlers.Aura;
-import handlers.targethandlers.AuraCorpseMob;
-import handlers.targethandlers.AuraFriendly;
-import handlers.targethandlers.BehindArea;
-import handlers.targethandlers.BehindAura;
-import handlers.targethandlers.Clan;
-import handlers.targethandlers.ClanMember;
-import handlers.targethandlers.CommandChannel;
-import handlers.targethandlers.CorpseClan;
-import handlers.targethandlers.CorpseMob;
-import handlers.targethandlers.EnemySummon;
-import handlers.targethandlers.FlagPole;
-import handlers.targethandlers.FrontArea;
-import handlers.targethandlers.FrontAura;
+import handlers.targethandlers.AdvanceBase;
+import handlers.targethandlers.Artillery;
+import handlers.targethandlers.DoorTreasure;
+import handlers.targethandlers.Enemy;
+import handlers.targethandlers.EnemyNot;
+import handlers.targethandlers.EnemyOnly;
+import handlers.targethandlers.FortressFlagpole;
 import handlers.targethandlers.Ground;
-import handlers.targethandlers.Holy;
-import handlers.targethandlers.One;
-import handlers.targethandlers.OneFriendly;
-import handlers.targethandlers.OwnerPet;
-import handlers.targethandlers.Party;
-import handlers.targethandlers.PartyClan;
-import handlers.targethandlers.PartyMember;
-import handlers.targethandlers.PartyNotMe;
-import handlers.targethandlers.PartyOther;
+import handlers.targethandlers.HolyThing;
+import handlers.targethandlers.Item;
+import handlers.targethandlers.MyMentor;
+import handlers.targethandlers.MyParty;
+import handlers.targethandlers.None;
+import handlers.targethandlers.NpcBody;
+import handlers.targethandlers.Others;
 import handlers.targethandlers.PcBody;
-import handlers.targethandlers.Pet;
 import handlers.targethandlers.Self;
-import handlers.targethandlers.Servitor;
 import handlers.targethandlers.Summon;
-import handlers.targethandlers.TargetParty;
-import handlers.targethandlers.Unlockable;
-import handlers.telnethandlers.ChatsHandler;
-import handlers.telnethandlers.DebugHandler;
-import handlers.telnethandlers.HelpHandler;
-import handlers.telnethandlers.PlayerHandler;
-import handlers.telnethandlers.ReloadHandler;
-import handlers.telnethandlers.ServerHandler;
-import handlers.telnethandlers.StatusHandler;
-import handlers.telnethandlers.ThreadHandler;
+import handlers.targethandlers.Target;
+import handlers.targethandlers.WyvernTarget;
+import handlers.targethandlers.affectobject.All;
+import handlers.targethandlers.affectobject.Clan;
+import handlers.targethandlers.affectobject.Friend;
+import handlers.targethandlers.affectobject.FriendPc;
+import handlers.targethandlers.affectobject.HiddenPlace;
+import handlers.targethandlers.affectobject.Invisible;
+import handlers.targethandlers.affectobject.NotFriend;
+import handlers.targethandlers.affectobject.NotFriendPc;
+import handlers.targethandlers.affectobject.ObjectDeadNpcBody;
+import handlers.targethandlers.affectobject.UndeadRealEnemy;
+import handlers.targethandlers.affectobject.WyvernObject;
+import handlers.targethandlers.affectscope.BalakasScope;
+import handlers.targethandlers.affectscope.DeadParty;
+import handlers.targethandlers.affectscope.DeadPartyPledge;
+import handlers.targethandlers.affectscope.DeadPledge;
+import handlers.targethandlers.affectscope.DeadUnion;
+import handlers.targethandlers.affectscope.Fan;
+import handlers.targethandlers.affectscope.FanPB;
+import handlers.targethandlers.affectscope.Party;
+import handlers.targethandlers.affectscope.PartyPledge;
+import handlers.targethandlers.affectscope.Pledge;
+import handlers.targethandlers.affectscope.PointBlank;
+import handlers.targethandlers.affectscope.Range;
+import handlers.targethandlers.affectscope.RangeSortByHp;
+import handlers.targethandlers.affectscope.RingRange;
+import handlers.targethandlers.affectscope.Single;
+import handlers.targethandlers.affectscope.Square;
+import handlers.targethandlers.affectscope.SquarePB;
+import handlers.targethandlers.affectscope.StaticObjectScope;
+import handlers.targethandlers.affectscope.SummonExceptMaster;
 import handlers.usercommandhandlers.ChannelDelete;
 import handlers.usercommandhandlers.ChannelInfo;
 import handlers.usercommandhandlers.ChannelLeave;
@@ -282,13 +277,12 @@ import handlers.voicedcommandhandlers.Debug;
 import handlers.voicedcommandhandlers.Lang;
 import handlers.voicedcommandhandlers.Premium;
 import handlers.voicedcommandhandlers.StatsVCmd;
-import handlers.voicedcommandhandlers.Wedding;
 
 /**
  * Master handler.
  * @author UnAfraid
  */
-final class MasterHandler
+public class MasterHandler
 {
 	private static final Logger _log = Logger.getLogger(MasterHandler.class.getName());
 	
@@ -305,7 +299,8 @@ final class MasterHandler
 		UserCommandHandler.getInstance(),
 		VoicedCommandHandler.getInstance(),
 		TargetHandler.getInstance(),
-		TelnetHandler.getInstance(),
+		AffectObjectHandler.getInstance(),
+		AffectScopeHandler.getInstance(),
 	};
 	
 	private static final Class<?>[][] HANDLERS =
@@ -340,8 +335,8 @@ final class MasterHandler
 			AdminBuffs.class,
 			AdminCamera.class,
 			AdminChangeAccessLevel.class,
-			AdminCHSiege.class,
 			AdminClan.class,
+			AdminClanHall.class,
 			AdminCastle.class,
 			AdminPcCondOverride.class,
 			AdminCreateItem.class,
@@ -378,11 +373,12 @@ final class MasterHandler
 			AdminMessages.class,
 			AdminMobGroup.class,
 			AdminMonsterRace.class,
+			AdminOlympiad.class,
 			AdminPathNode.class,
-			AdminPCBangPoints.class,
 			AdminPetition.class,
 			AdminPForge.class,
 			AdminPledge.class,
+			AdminZones.class,
 			AdminPolymorph.class,
 			AdminPremium.class,
 			AdminPrimePoints.class,
@@ -397,7 +393,6 @@ final class MasterHandler
 			AdminShop.class,
 			AdminShowQuests.class,
 			AdminShutdown.class,
-			AdminClanHall.class,
 			AdminSkill.class,
 			AdminSpawn.class,
 			AdminSummon.class,
@@ -405,23 +400,18 @@ final class MasterHandler
 			AdminTargetSay.class,
 			AdminTeleport.class,
 			AdminTest.class,
-			AdminTvTEvent.class,
 			AdminUnblockIp.class,
 			AdminVitality.class,
-			AdminWall.class,
 			AdminZone.class,
 		},
 		{
 			// Bypass Handlers
-			AlternateClassMaster.class,
-			ArcanCityMovie.class,
 			Augment.class,
 			Buy.class,
 			BuyShadowItem.class,
 			ChatLink.class,
 			ClanWarehouse.class,
-			CrystalCavernsMovie.class,
-			Ensoul.class,
+			EnsoulWindow.class,
 			EventEngine.class,
 			Freight.class,
 			ItemAuctionLink.class,
@@ -430,15 +420,10 @@ final class MasterHandler
 			Multisell.class,
 			NpcViewMod.class,
 			Observation.class,
-			OlympiadObservation.class,
-			OlympiadManagerLink.class,
 			QuestLink.class,
 			PlayerHelp.class,
 			PrivateWarehouse.class,
-			QuestList.class,
-			ReceivePremium.class,
 			ReleaseAttribute.class,
-			RentPet.class,
 			SkillList.class,
 			TerritoryStatus.class,
 			TutorialClose.class,
@@ -481,14 +466,12 @@ final class MasterHandler
 			Book.class,
 			Bypass.class,
 			Calculator.class,
-			ChangeAttribute.class,
 			CharmOfCourage.class,
 			Elixir.class,
 			EnchantAttribute.class,
 			EnchantScrolls.class,
 			EventItem.class,
 			ExtractableItems.class,
-			FatedSupportBox.class,
 			FishShots.class,
 			Harvester.class,
 			ItemSkills.class,
@@ -504,7 +487,6 @@ final class MasterHandler
 			SpecialXMas.class,
 			SpiritShot.class,
 			SummonItems.class,
-			TeleportBookmark.class,
 		},
 		{
 			// Punishment Handlers
@@ -537,7 +519,6 @@ final class MasterHandler
 			// TODO: Add configuration options for this voiced commands:
 			// CastleVCmd.class,
 			// SetVCmd.class,
-			Config.L2JMOD_ALLOW_WEDDING ? Wedding.class : null,
 			Config.BANKING_SYSTEM_ENABLED ? Banking.class : null,
 			Config.L2JMOD_CHAT_ADMIN ? ChatAdmin.class : null,
 			Config.L2JMOD_MULTILANG_ENABLE && Config.L2JMOD_MULTILANG_VOICED_ALLOW ? Lang.class : null,
@@ -547,58 +528,68 @@ final class MasterHandler
 		},
 		{
 			// Target Handlers
-			Area.class,
-			AreaCorpseMob.class,
-			AreaFriendly.class,
-			AreaSummon.class,
-			Aura.class,
-			AuraCorpseMob.class,
-			AuraFriendly.class,
-			BehindArea.class,
-			BehindAura.class,
-			Clan.class,
-			ClanMember.class,
-			CommandChannel.class,
-			CorpseClan.class,
-			CorpseMob.class,
-			EnemySummon.class,
-			FlagPole.class,
-			FrontArea.class,
-			FrontAura.class,
+			AdvanceBase.class,
+			Artillery.class,
+			DoorTreasure.class,
+			Enemy.class,
+			EnemyNot.class,
+			EnemyOnly.class,
+			FortressFlagpole.class,
 			Ground.class,
-			Holy.class,
-			One.class,
-			OneFriendly.class,
-			OwnerPet.class,
-			Party.class,
-			PartyClan.class,
-			PartyMember.class,
-			PartyNotMe.class,
-			PartyOther.class,
+			HolyThing.class,
+			Item.class,
+			MyMentor.class,
+			MyParty.class,
+			None.class,
+			NpcBody.class,
+			Others.class,
 			PcBody.class,
-			Pet.class,
 			Self.class,
-			Servitor.class,
 			Summon.class,
-			TargetParty.class,
-			Unlockable.class,
+			Target.class,
+			WyvernTarget.class,
 		},
 		{
-			// Telnet Handlers
-			ChatsHandler.class,
-			DebugHandler.class,
-			HelpHandler.class,
-			PlayerHandler.class,
-			ReloadHandler.class,
-			ServerHandler.class,
-			StatusHandler.class,
-			ThreadHandler.class,
+			// Affect Objects
+			All.class,
+			Clan.class,
+			Friend.class,
+			FriendPc.class,
+			HiddenPlace.class,
+			Invisible.class,
+			NotFriend.class,
+			NotFriendPc.class,
+			ObjectDeadNpcBody.class,
+			UndeadRealEnemy.class,
+			WyvernObject.class,
 		},
+		{
+			// Affect Scopes
+			BalakasScope.class,
+			DeadParty.class,
+			DeadPartyPledge.class,
+			DeadPledge.class,
+			DeadUnion.class,
+			Fan.class,
+			FanPB.class,
+			Party.class,
+			PartyPledge.class,
+			Pledge.class,
+			PointBlank.class,
+			Range.class,
+			RangeSortByHp.class,
+			RingRange.class,
+			Single.class,
+			Square.class,
+			SquarePB.class,
+			StaticObjectScope.class,
+			SummonExceptMaster.class,
+		}
 	};
 	
 	public static void main(String[] args)
 	{
-		_log.log(Level.INFO, "Loading Handlers...");
+		_log.info("Loading Handlers...");
 		
 		final Map<IHandler<?, ?>, Method> registerHandlerMethods = new HashMap<>();
 		for (IHandler<?, ?> loadInstance : LOAD_INSTANCES)
@@ -615,7 +606,7 @@ final class MasterHandler
 		
 		registerHandlerMethods.entrySet().stream().filter(e -> e.getValue() == null).forEach(e ->
 		{
-			_log.log(Level.WARNING, "Failed loading handlers of: " + e.getKey().getClass().getSimpleName() + " seems registerHandler function does not exist.");
+			_log.warning("Failed loading handlers of: " + e.getKey().getClass().getSimpleName() + " seems registerHandler function does not exist.");
 		});
 		
 		for (Class<?> classes[] : HANDLERS)
@@ -648,9 +639,9 @@ final class MasterHandler
 		
 		for (IHandler<?, ?> loadInstance : LOAD_INSTANCES)
 		{
-			_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + loadInstance.size() + " Handlers");
+			_log.info(loadInstance.getClass().getSimpleName() + ": Loaded " + loadInstance.size() + " Handlers");
 		}
 		
-		_log.log(Level.INFO, "Handlers Loaded...");
+		_log.info("Handlers Loaded...");
 	}
 }

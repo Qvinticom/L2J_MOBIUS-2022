@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
 	<skillTree type="pledgeSkillTree">
+		<!-- Confirmed CT2.5 -->
 		<!-- Clan Skills -->
 		<skill skillName="Clan Body" skillId="370" skillLvl="1" getLevel="5" levelUpSp="1000">
 			<socialClass>HEIR</socialClass>
@@ -8,7 +9,7 @@
 		<skill skillName="Clan Body" skillId="370" skillLvl="2" getLevel="7" levelUpSp="3600">
 			<socialClass>HEIR</socialClass>
 		</skill>
-		<skill skillName="Clan Body" skillId="370" skillLvl="3" getLevel="9" levelUpSp="7700">
+		<skill skillName="Clan Body" skillId="370" skillLvl="3" getLevel="9" levelUpSp="7770">
 			<socialClass>HEIR</socialClass>
 		</skill>
 		<skill skillName="Clan Body" skillId="370" skillLvl="4" getLevel="10" levelUpSp="8200">
@@ -273,19 +274,19 @@
 			<socialClass>ELDER</socialClass>
 		</skill>
 		<skill skillName="Clan Sleep Resistance" skillId="388" skillLvl="1" getLevel="5" levelUpSp="1000">
-			<socialClass>KNIGHT</socialClass>
+			<socialClass>ELDER</socialClass>
 		</skill>
 		<skill skillName="Clan Sleep Resistance" skillId="388" skillLvl="2" getLevel="7" levelUpSp="3600">
-			<socialClass>KNIGHT</socialClass>
+			<socialClass>ELDER</socialClass>
 		</skill>
 		<skill skillName="Clan Sleep Resistance" skillId="388" skillLvl="3" getLevel="9" levelUpSp="7700">
-			<socialClass>KNIGHT</socialClass>
+			<socialClass>ELDER</socialClass>
 		</skill>
 		<skill skillName="Clan Sleep Resistance" skillId="388" skillLvl="4" getLevel="10" levelUpSp="8200">
-			<socialClass>KNIGHT</socialClass>
+			<socialClass>ELDER</socialClass>
 		</skill>
 		<skill skillName="Clan Sleep Resistance" skillId="388" skillLvl="5" getLevel="11" levelUpSp="10000">
-			<socialClass>KNIGHT</socialClass>
+			<socialClass>ELDER</socialClass>
 		</skill>
 		<skill skillName="Clan Wind Walk" skillId="389" skillLvl="1" getLevel="5" levelUpSp="1000">
 			<socialClass>ELDER</socialClass>
@@ -305,129 +306,128 @@
 		<skill skillName="Clan Imperium" skillId="391" skillLvl="1" getLevel="5">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Resistance Hall" skillId="19003" skillLvl="1" getLevel="5" levelUpSp="1000">
+		<skill getLevel="5" skillName="Clan Resistance Hall" skillId="19003" skillLvl="1" levelUpSp="1000">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Resistance Hall" skillId="19003" skillLvl="2" getLevel="7" levelUpSp="3600">
+		<skill getLevel="7" skillName="Clan Resistance Hall" skillId="19003" skillLvl="2" levelUpSp="3600">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Resistance Hall" skillId="19003" skillLvl="3" getLevel="9" levelUpSp="7700">
+		<skill getLevel="9" skillName="Clan Resistance Hall" skillId="19003" skillLvl="3" levelUpSp="7700">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Resistance Hall" skillId="19003" skillLvl="4" getLevel="10" levelUpSp="8200">
+		<skill getLevel="10" skillName="Clan Resistance Hall" skillId="19003" skillLvl="4" levelUpSp="8200">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan De-Buff Control" skillId="19004" skillLvl="1" getLevel="5" levelUpSp="1000">
+		<skill getLevel="5" skillName="Clan De-Buff Control" skillId="19004" skillLvl="1" levelUpSp="1000">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan De-Buff Control" skillId="19004" skillLvl="2" getLevel="7" levelUpSp="3600">
+		<skill getLevel="7" skillName="Clan De-Buff Control" skillId="19004" skillLvl="2" levelUpSp="3600">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan De-Buff Control" skillId="19004" skillLvl="3" getLevel="9" levelUpSp="7700">
+		<skill getLevel="9" skillName="Clan De-Buff Control" skillId="19004" skillLvl="3" levelUpSp="7700">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan De-Buff Control" skillId="19004" skillLvl="4" getLevel="10" levelUpSp="8200">
+		<skill getLevel="10" skillName="Clan De-Buff Control" skillId="19004" skillLvl="4" levelUpSp="8200">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan De-Buff Control" skillId="19004" skillLvl="5" getLevel="11" levelUpSp="10000">
+		<skill getLevel="11" skillName="Clan De-Buff Control" skillId="19004" skillLvl="5" levelUpSp="10000">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Muzzle Control" skillId="19005" skillLvl="1" getLevel="5" levelUpSp="1000">
+		<skill getLevel="5" skillName="Clan Muzzle Control" skillId="19005" skillLvl="1" levelUpSp="1000">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Muzzle Control" skillId="19005" skillLvl="2" getLevel="7" levelUpSp="3600">
+		<skill getLevel="7" skillName="Clan Muzzle Control" skillId="19005" skillLvl="2" levelUpSp="3600">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Muzzle Control" skillId="19005" skillLvl="3" getLevel="9" levelUpSp="7700">
+		<skill getLevel="9" skillName="Clan Muzzle Control" skillId="19005" skillLvl="3" levelUpSp="7700">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Muzzle Control" skillId="19005" skillLvl="4" getLevel="10" levelUpSp="8200">
+		<skill getLevel="10" skillName="Clan Muzzle Control" skillId="19005" skillLvl="4" levelUpSp="8200">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Muzzle Control" skillId="19005" skillLvl="5" getLevel="11" levelUpSp="10000">
+		<skill getLevel="11" skillName="Clan Muzzle Control" skillId="19005" skillLvl="5" levelUpSp="10000">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Mental Control" skillId="19006" skillLvl="1" getLevel="5" levelUpSp="1000">
+		<skill getLevel="5" skillName="Clan Mental Control" skillId="19006" skillLvl="1" levelUpSp="1000">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Mental Control" skillId="19006" skillLvl="2" getLevel="7" levelUpSp="3600">
+		<skill getLevel="7" skillName="Clan Mental Control" skillId="19006" skillLvl="2" levelUpSp="3600">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Mental Control" skillId="19006" skillLvl="3" getLevel="9" levelUpSp="7700">
+		<skill getLevel="9" skillName="Clan Mental Control" skillId="19006" skillLvl="3" levelUpSp="7700">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Mental Control" skillId="19006" skillLvl="4" getLevel="10" levelUpSp="8200">
+		<skill getLevel="10" skillName="Clan Mental Control" skillId="19006" skillLvl="4" levelUpSp="8200">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Mental Control" skillId="19006" skillLvl="5" getLevel="11" levelUpSp="10000">
+		<skill getLevel="11" skillName="Clan Mental Control" skillId="19006" skillLvl="5" levelUpSp="10000">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Summon" skillId="19007" skillLvl="1" getLevel="7" levelUpSp="10000">
+		<skill getLevel="7" skillName="Clan Summon" skillId="19007" skillLvl="1" levelUpSp="10000">
 			<socialClass>VISCOUNT</socialClass>
 		</skill>
-		<skill skillName="Clan Guardian" skillId="19008" skillLvl="1" getLevel="11" levelUpSp="25000">
-			<socialClass>EMPEROR</socialClass>
+		<skill getLevel="11" skillName="Clan Guardian" skillId="19008" skillLvl="1" levelUpSp="25000">
+			<socialClass>DISTINGUISHED_KING</socialClass>
 		</skill>
-		<skill skillName="Clan Advent" skillId="19009" skillLvl="1" getLevel="5">
-			<socialClass>VASSAL</socialClass>
-		</skill>
-		<skill skillName="Clan Copy" skillId="19010" skillLvl="1" getLevel="9" levelUpSp="15000">
+		<!-- TODO: Missing skill id 19009 : When the clan leader logs in, blabla ... -->
+		<skill getLevel="9" skillName="Clan Copy" skillId="19010" skillLvl="1" levelUpSp="15000">
 			<socialClass>MARQUIS</socialClass>
 		</skill>
-		<skill skillName="Clan Un-debuff" skillId="19013" skillLvl="1" getLevel="9" levelUpSp="20000">
+		<skill getLevel="9" skillName="Clan Un-debuff" skillId="19013" skillLvl="1" levelUpSp="20000">
 			<socialClass>MARQUIS</socialClass>
 		</skill>
-		<skill skillName="Clan Defense" skillId="19014" skillLvl="1" getLevel="11" levelUpSp="20000">
-			<socialClass>EMPEROR</socialClass>
+		<skill getLevel="11" skillName="Clan Defense" skillId="19014" skillLvl="1" levelUpSp="20000">
+			<socialClass>DISTINGUISHED_KING</socialClass>
 		</skill>
-		<skill skillName="Clan Friendly" skillId="19015" skillLvl="1" getLevel="9" levelUpSp="15000">
+		<skill getLevel="9" skillName="Clan Friendly" skillId="19015" skillLvl="1" levelUpSp="15000">
 			<socialClass>MARQUIS</socialClass>
 		</skill>
-		<skill skillName="Clan Boundary" skillId="19016" skillLvl="1" getLevel="8" levelUpSp="15000">
-			<socialClass>MARQUIS</socialClass>
+		<skill getLevel="8" skillName="Clan Boundary" skillId="19016" skillLvl="1" levelUpSp="15000">
+			<socialClass>COUNT</socialClass>
 		</skill>
-		<skill skillName="Clan Prison" skillId="19017" skillLvl="1" getLevel="10" levelUpSp="20000">
+		<skill getLevel="10" skillName="Clan Prison" skillId="19017" skillLvl="1" levelUpSp="20000">
 			<socialClass>DUKE</socialClass>
 		</skill>
-		<skill skillName="Clan Resilience" skillId="19110" skillLvl="1" getLevel="5" levelUpSp="1000">
+		<skill getLevel="5" skillName="Clan Resilience" skillId="19110" skillLvl="1" levelUpSp="1000">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Resilience" skillId="19110" skillLvl="2" getLevel="7" levelUpSp="3600">
+		<skill getLevel="7" skillName="Clan Resilience" skillId="19110" skillLvl="2" levelUpSp="3600">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Resilience" skillId="19110" skillLvl="3" getLevel="9" levelUpSp="7700">
+		<skill getLevel="9" skillName="Clan Resilience" skillId="19110" skillLvl="3" levelUpSp="7700">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Resilience" skillId="19110" skillLvl="4" getLevel="10" levelUpSp="8200">
+		<skill getLevel="10" skillName="Clan Resilience" skillId="19110" skillLvl="4" levelUpSp="8200">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Resilience" skillId="19110" skillLvl="5" getLevel="11" levelUpSp="10000">
+		<skill getLevel="11" skillName="Clan Resilience" skillId="19110" skillLvl="5" levelUpSp="10000">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Steadfastness" skillId="19111" skillLvl="1" getLevel="5" levelUpSp="1000">
+		<skill getLevel="5" skillName="Clan Steadfastness" skillId="19111" skillLvl="1" levelUpSp="1000">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Steadfastness" skillId="19111" skillLvl="2" getLevel="7" levelUpSp="3600">
+		<skill getLevel="7" skillName="Clan Steadfastness" skillId="19111" skillLvl="2" levelUpSp="3600">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Steadfastness" skillId="19111" skillLvl="3" getLevel="9" levelUpSp="7700">
+		<skill getLevel="9" skillName="Clan Steadfastness" skillId="19111" skillLvl="3" levelUpSp="7700">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Steadfastness" skillId="19111" skillLvl="4" getLevel="10" levelUpSp="8200">
+		<skill getLevel="10" skillName="Clan Steadfastness" skillId="19111" skillLvl="4" levelUpSp="8200">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Steadfastness" skillId="19111" skillLvl="5" getLevel="11" levelUpSp="10000">
+		<skill getLevel="11" skillName="Clan Steadfastness" skillId="19111" skillLvl="5" levelUpSp="10000">
 			<socialClass>ELDER</socialClass>
 		</skill>
-		<skill skillName="Clan Escape" skillId="19112" skillLvl="1" getLevel="7" levelUpSp="15000">
+		<skill getLevel="7" skillName="Clan Escape" skillId="19112" skillLvl="1" levelUpSp="15000">
 			<socialClass>VISCOUNT</socialClass>
 		</skill>
-		<skill skillName="Clan Escape Lock" skillId="19113" skillLvl="1" getLevel="10" levelUpSp="25000">
+		<skill getLevel="10" skillName="Clan Escape Lock" skillId="19113" skillLvl="1" levelUpSp="25000">
 			<socialClass>MARQUIS</socialClass>
 		</skill>
-		<skill skillName="Clan Resurrection Lock" skillId="19114" skillLvl="1" getLevel="10" levelUpSp="25000">
+		<skill getLevel="10" skillName="Clan Resurrection Lock" skillId="19114" skillLvl="1" levelUpSp="25000">
 			<socialClass>MARQUIS</socialClass>
 		</skill>
+		
 		<!-- Castle/Fort Skills -->
 		<skill skillName="Residence Body" skillId="590" skillLvl="1" getLevel="4" residenceSkill="true">
 			<socialClass>APPRENTICE</socialClass>

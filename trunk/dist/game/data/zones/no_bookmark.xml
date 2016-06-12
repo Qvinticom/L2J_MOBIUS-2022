@@ -100,7 +100,7 @@
 		<node X="25456" Y="121770" />
 		<node X="9991" Y="121797" />
 	</zone>
-	<zone name="no_boormark_b_tower_bascule_bridge" type="ConditionZone" shape="NPoly" minZ="1956" maxZ="10956">
+	<zone name="no_boormark_b_tower_bascule_bridge" type="ConditionZone" shape="NPoly" minZ="10956" maxZ="1956">
 		<stat name="NoBookmark" val="true" />
 		<node X="17887" Y="244199" />
 		<node X="20797" Y="243918" />
@@ -1414,7 +1414,7 @@
 		<node X="-24541" Y="244809" />
 		<node X="-24161" Y="244291" />
 	</zone>
-	<zone name="no_bookmark_area_iron_gate" type="ConditionZone" shape="NPoly" minZ="468" maxZ="1268">
+	<zone name="no_bookmark_area_iron_gate" type="ConditionZone" shape="NPoly" minZ="1268" maxZ="468">
 		<stat name="NoBookmark" val="true" />
 		<node X="5914" Y="244526" />
 		<node X="6114" Y="244526" />
@@ -2806,28 +2806,28 @@
 		<node X="145760" Y="-47633" />
 		<node X="145415" Y="-47471" />
 	</zone>
-	<zone name="no_bookmark_rune_slow_1" type="ConditionZone" shape="NPoly" minZ="09" maxZ="509">
+	<zone name="no_bookmark_rune_slow_1" type="ConditionZone" shape="NPoly" minZ="509" maxZ="9">
 		<stat name="NoBookmark" val="true" />
 		<node X="13785" Y="-47663" />
 		<node X="14046" Y="-47854" />
 		<node X="14203" Y="-47668" />
 		<node X="13916" Y="-47450" />
 	</zone>
-	<zone name="no_bookmark_rune_slow_2" type="ConditionZone" shape="NPoly" minZ="18" maxZ="518">
+	<zone name="no_bookmark_rune_slow_2" type="ConditionZone" shape="NPoly" minZ="518" maxZ="18">
 		<stat name="NoBookmark" val="true" />
 		<node X="13917" Y="-50851" />
 		<node X="14209" Y="-50630" />
 		<node X="14052" Y="-50447" />
 		<node X="13788" Y="-50647" />
 	</zone>
-	<zone name="no_bookmark_rune_damage_1" type="ConditionZone" shape="NPoly" minZ="09" maxZ="509">
+	<zone name="no_bookmark_rune_damage_1" type="ConditionZone" shape="NPoly" minZ="509" maxZ="9">
 		<stat name="NoBookmark" val="true" />
 		<node X="13785" Y="-47663" />
 		<node X="14046" Y="-47854" />
 		<node X="14203" Y="-47668" />
 		<node X="13916" Y="-47450" />
 	</zone>
-	<zone name="no_bookmark_rune_damage_2" type="ConditionZone" shape="NPoly" minZ="18" maxZ="518">
+	<zone name="no_bookmark_rune_damage_2" type="ConditionZone" shape="NPoly" minZ="518" maxZ="18">
 		<stat name="NoBookmark" val="true" />
 		<node X="13917" Y="-50851" />
 		<node X="14209" Y="-50630" />
@@ -7976,49 +7976,49 @@
 		<node X="149815" Y="-55388" />
 		<node X="149018" Y="-55289" />
 	</zone>
-	<zone name="no_bookmark_rune_castle_agit_001" type="ConditionZone" shape="NPoly" minZ="150" maxZ="850">
+	<zone name="no_bookmark_rune_castle_agit_001" type="ConditionZone" shape="NPoly" minZ="850" maxZ="150">
 		<stat name="NoBookmark" val="true" />
 		<node X="37433" Y="-51016" />
 		<node X="38034" Y="-51016" />
 		<node X="38034" Y="-50565" />
 		<node X="37433" Y="-50565" />
 	</zone>
-	<zone name="no_bookmark_rune_castle_agit_002" type="ConditionZone" shape="NPoly" minZ="150" maxZ="850">
+	<zone name="no_bookmark_rune_castle_agit_002" type="ConditionZone" shape="NPoly" minZ="850" maxZ="150">
 		<stat name="NoBookmark" val="true" />
 		<node X="38569" Y="-50790" />
 		<node X="39107" Y="-50522" />
 		<node X="38908" Y="-50119" />
 		<node X="38369" Y="-50386" />
 	</zone>
-	<zone name="no_bookmark_rune_castle_agit_003" type="ConditionZone" shape="NPoly" minZ="150" maxZ="850">
+	<zone name="no_bookmark_rune_castle_agit_003" type="ConditionZone" shape="NPoly" minZ="850" maxZ="150">
 		<stat name="NoBookmark" val="true" />
 		<node X="39123" Y="-49827" />
 		<node X="39513" Y="-50048" />
 		<node X="39808" Y="-49526" />
 		<node X="39414" Y="-49304" />
 	</zone>
-	<zone name="no_bookmark_rune_castle_agit_004" type="ConditionZone" shape="NPoly" minZ="150" maxZ="850">
+	<zone name="no_bookmark_rune_castle_agit_004" type="ConditionZone" shape="NPoly" minZ="850" maxZ="150">
 		<stat name="NoBookmark" val="true" />
 		<node X="39394" Y="-48636" />
 		<node X="39846" Y="-48636" />
 		<node X="39845" Y="-47837" />
 		<node X="39394" Y="-47837" />
 	</zone>
-	<zone name="no_bookmark_rune_castle_agit_005" type="ConditionZone" shape="NPoly" minZ="150" maxZ="850">
+	<zone name="no_bookmark_rune_castle_agit_005" type="ConditionZone" shape="NPoly" minZ="850" maxZ="150">
 		<stat name="NoBookmark" val="true" />
 		<node X="39123" Y="-46646" />
 		<node X="39414" Y="-47172" />
 		<node X="39808" Y="-46954" />
 		<node X="39517" Y="-46427" />
 	</zone>
-	<zone name="no_bookmark_rune_castle_agit_006" type="ConditionZone" shape="NPoly" minZ="150" maxZ="850">
+	<zone name="no_bookmark_rune_castle_agit_006" type="ConditionZone" shape="NPoly" minZ="850" maxZ="150">
 		<stat name="NoBookmark" val="true" />
 		<node X="38371" Y="-46086" />
 		<node X="38577" Y="-45688" />
 		<node X="39111" Y="-45960" />
 		<node X="38906" Y="-46362" />
 	</zone>
-	<zone name="no_bookmark_rune_castle_agit_007" type="ConditionZone" shape="NPoly" minZ="150" maxZ="850">
+	<zone name="no_bookmark_rune_castle_agit_007" type="ConditionZone" shape="NPoly" minZ="850" maxZ="150">
 		<stat name="NoBookmark" val="true" />
 		<node X="37432" Y="-45908" />
 		<node X="38033" Y="-45908" />
@@ -8266,5 +8266,12 @@
 		<node X="-17016" Y="-52133" />
 		<node X="-17448" Y="-52169" />
 		<node X="-18226" Y="-52870" />
+	</zone>
+
+	<!-- High five zone -->
+	<zone name="no_boormark_olympiad_stadiums" type="ConditionZone" shape="Cuboid" minZ="-8485" maxZ="1149">
+		<stat name="NoBookmark" val="true" />
+		<node X="-98296" Y="-262136" />
+		<node X="-65544" Y="-229384" />
 	</zone>
 </list>

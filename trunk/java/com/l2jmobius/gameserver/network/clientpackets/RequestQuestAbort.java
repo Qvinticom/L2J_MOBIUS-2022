@@ -16,33 +16,37 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.events.Containers;
+import com.l2jmobius.gameserver.model.events.EventDispatcher;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerQuestAbort;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.QuestList;
 
 /**
  * This class ...
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestQuestAbort extends L2GameClientPacket
+public final class RequestQuestAbort implements IClientIncomingPacket
 {
-	private static final String _C__63_REQUESTQUESTABORT = "[C] 63 RequestQuestAbort";
-	
 	private int _questId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_questId = readD();
+		_questId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -54,23 +58,11 @@ public final class RequestQuestAbort extends L2GameClientPacket
 			final QuestState qs = activeChar.getQuestState(qe.getName());
 			if (qs != null)
 			{
-				qs.exitQuest(true);
-				activeChar.sendPacket(new QuestList());
-			}
-			else if (Config.DEBUG)
-			{
-				_log.info("Player '" + activeChar.getName() + "' try to abort quest " + qe.getName() + " but he didn't have it started.");
+				qs.exitQuest(QuestType.REPEATABLE);
+				activeChar.sendPacket(new QuestList(activeChar));
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerQuestAbort(activeChar, _questId), activeChar, Containers.Players());
+				qe.onQuestAborted(activeChar);
 			}
 		}
-		else if (Config.DEBUG)
-		{
-			_log.warning("Quest (id='" + _questId + "') not found.");
-		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__63_REQUESTQUESTABORT;
 	}
 }

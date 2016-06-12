@@ -60,7 +60,7 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 	
 	public Q00136_MoreThanMeetsTheEye()
 	{
-		super(136, Q00136_MoreThanMeetsTheEye.class.getSimpleName(), "More Than Meets the Eye");
+		super(136);
 		addStartNpc(HARDIN);
 		addTalkId(HARDIN, ERRICKIN, CLAYTON);
 		addKillId(GHOST1, GHOST2, GHOST3, GLASS_JAGUAR, MIRROR);

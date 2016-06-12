@@ -1,190 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<!-- Max HP + $s1 --> 
-	<skill id="13900" levels="1" name="Sigel">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.15" />
-			</effect>
-		</for>
+	<skill id="13900" toLevel="2" name="Sigel">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Max HP + $s1 -->
+		<icon>icon.ensoul_big_ep</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- Mounts the Shadow Blue. --> 
-	<skill id="13901" levels="1" name="Shadow Blue">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13901" toLevel="1" name="Shadow Blue">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Mounts the Shadow Blue. -->
+		<icon>icon.skill8601</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
 	</skill>
-	<!-- Atk. Spd. +1%% --> 
-	<skill id="13902" levels="1" name="Fury (Practice)">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.01" />
-			</effect>
-		</for>
+	<skill id="13902" toLevel="1" name="Fury (Practice)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Atk. Spd. +1 -->
+		<icon>icon.ensoul_big_old</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- Casting Spd. +1%% --> 
-	<skill id="13903" levels="1" name="Acumen (Practice)">
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtkSpd" val="1.01" />
-			</effect>
-		</for>
+	<skill id="13903" toLevel="1" name="Acumen (Practice)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Casting Spd. +1 -->
+		<icon>icon.ensoul_big_old</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- Special buff prepared by Roa. Go find Roa during special events. For $s1 hour, XP/SP + $s2. --> 
-	<skill id="13904" levels="1" name="Roa's Assistance">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13904" toLevel="1" name="Roa's Assistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Special buff prepared by Roa. Go find Roa during special events. For $s1 hour, XP/SP + $s2. -->
+		<icon>icon.skill19226</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<isMagic>4</isMagic>
 	</skill>
-	<!-- Resurrects all dead party members and restores 100%% of the XP lost. --> 
-	<skill id="13905" levels="1" name="Red Libra Talisman - Resurrection">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13905" toLevel="1" name="Red Libra Talisman - Resurrection">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Resurrects all dead party members and restores 100 of the XP lost. -->
+		<icon>BranchSys2.icon.g_giant_gem</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>600000</reuseDelay>
 	</skill>
-	<!-- Restores all party members' HP/MP/CP and has a chance of dispelling their debuffs. --> 
-	<skill id="13906" levels="1" name="Red Libra Talisman - Restoration">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13906" toLevel="1" name="Red Libra Talisman - Restoration">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restores all party members' HP/MP/CP and has a chance of dispelling their debuffs. -->
+		<icon>BranchSys2.icon.g_giant_gem</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>600000</reuseDelay>
 	</skill>
-	<!-- Cancels all party members' debuffs and makes them immune to debuffs for 7 seconds. --> 
-	<skill id="13907" levels="1" name="Red Libra Talisman - Cancel">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13907" toLevel="1" name="Red Libra Talisman - Cancel">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Cancels all party members' debuffs and makes them immune to debuffs for 7 seconds. -->
+		<icon>BranchSys2.icon.g_giant_gem</icon>
+		<operateType>A2</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>100000</reuseDelay>
 	</skill>
-	<!-- Party's Speed + 70 for 10 seconds. --> 
-	<skill id="13908" levels="1" name="Red Libra Talisman - Speed">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13908" toLevel="1" name="Red Libra Talisman - Speed">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Party's Speed + 70 for 10 seconds. -->
+		<icon>BranchSys2.icon.g_giant_gem</icon>
+		<operateType>A2</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>100000</reuseDelay>
 	</skill>
-	<!-- Received Damage - 10%%. --> 
-	<skill id="13909" levels="1" name="Red Libra Talisman - Resistance">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13909" toLevel="1" name="Red Libra Talisman - Resistance">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Received Damage - 10. -->
+		<icon>BranchSys2.icon.g_giant_gem</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- P. Atk. + 6%%, Atk. Spd. + 15%%, P. Critical Rate + 82, P. Critical Damage + 7%%, P. Skill Critical Damage + 10%%, Max HP/MP/CP + 15%%. --> 
-	<skill id="13910" levels="1" name="Elysium Shaper">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13910" toLevel="1" name="Elysium Shaper">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 6, Atk. Spd. + 15, P. Critical Rate + 82, P. Critical Damage + 7, P. Skill Critical Damage + 10, Max HP/MP/CP + 15. -->
+		<icon>icon.weapon_the_dagger_of_hero_i01</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- P. Atk. + 6%%, Atk. Spd. + 15%%, P. Critical Rate + 82, P. Critical Damage + 7%%, P. Skill Critical Damage + 10%%, Max HP/MP/CP + 15%%. --> 
-	<skill id="13911" levels="1" name="Elysium Cutter">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13911" toLevel="1" name="Elysium Cutter">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 6, Atk. Spd. + 15, P. Critical Rate + 82, P. Critical Damage + 7, P. Skill Critical Damage + 10, Max HP/MP/CP + 15. -->
+		<icon>icon.weapon_the_sword_of_hero_i01</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- P. Atk. + 6%%, Atk. Spd. + 15%%, P. Critical Rate + 82, P. Critical Damage + 7%%, P. Skill Critical Damage + 10%%, Max HP/MP/CP + 15%%. --> 
-	<skill id="13912" levels="1" name="Elysium Slasher">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13912" toLevel="1" name="Elysium Slasher">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 6, Atk. Spd. + 15, P. Critical Rate + 82, P. Critical Damage + 7, P. Skill Critical Damage + 10, Max HP/MP/CP + 15. -->
+		<icon>icon.weapon_the_two_handed_sword_of_hero_i01</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- P. Atk. + 6%%, Atk. Spd. + 15%%, P. Critical Rate + 82, P. Critical Damage + 7%%, P. Skill Critical Damage + 10%%, Max HP/MP/CP + 15%%. --> 
-	<skill id="13913" levels="1" name="Elysium Avenger">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13913" toLevel="1" name="Elysium Avenger">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 6, Atk. Spd. + 15, P. Critical Rate + 82, P. Critical Damage + 7, P. Skill Critical Damage + 10, Max HP/MP/CP + 15. -->
+		<icon>icon.weapon_the_axe_of_hero_i01</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- P. Atk. + 6%%, Atk. Spd. + 15%%, P. Critical Rate + 82, P. Critical Damage + 7%%, P. Skill Critical Damage + 10%%, Max HP/MP/CP + 15%%. --> 
-	<skill id="13914" levels="1" name="Elysium Fighter">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13914" toLevel="1" name="Elysium Fighter">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 6, Atk. Spd. + 15, P. Critical Rate + 82, P. Critical Damage + 7, P. Skill Critical Damage + 10, Max HP/MP/CP + 15. -->
+		<icon>icon.weapon_the_fist_of_hero_i01</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- P. Atk. + 6%%, Atk. Spd. + 15%%, P. Critical Rate + 82, P. Critical Damage + 7%%, P. Skill Critical Damage + 10%%, Max HP/MP/CP + 15%%. --> 
-	<skill id="13915" levels="1" name="Elysium Stormer">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13915" toLevel="1" name="Elysium Stormer">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 6, Atk. Spd. + 15, P. Critical Rate + 82, P. Critical Damage + 7, P. Skill Critical Damage + 10, Max HP/MP/CP + 15. -->
+		<icon>icon.weapon_the_pole_of_hero_i01</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- P. Atk. + 6%%, Atk. Spd. + 15%%, P. Critical Rate + 82, P. Critical Damage + 7%%, P. Skill Critical Damage + 10%%, Max HP/MP/CP + 15%%. --> 
-	<skill id="13916" levels="1" name="Elysium Thrower">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13916" toLevel="1" name="Elysium Thrower">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 6, Atk. Spd. + 15, P. Critical Rate + 82, P. Critical Damage + 7, P. Skill Critical Damage + 10, Max HP/MP/CP + 15. -->
+		<icon>icon.weapon_the_bow_of_hero_i01</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- P. Atk. + 6%%, Atk. Spd. + 15%%, P. Critical Rate + 82, P. Critical Damage + 7%%, P. Skill Critical Damage + 10%%, Max HP/MP/CP + 15%%. --> 
-	<skill id="13917" levels="1" name="Elysium Shooter">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13917" toLevel="1" name="Elysium Shooter">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 6, Atk. Spd. + 15, P. Critical Rate + 82, P. Critical Damage + 7, P. Skill Critical Damage + 10, Max HP/MP/CP + 15. -->
+		<icon>icon.weapon_infinity_shooter_i01</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- M. Atk. + 6%%, Casting Spd. + 15%%, M. Critical Rate + 25%%, M. Critical Damage + 10%%, Max HP/MP/CP + 15%%. --> 
-	<skill id="13918" levels="1" name="Elysium Buster">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13918" toLevel="1" name="Elysium Buster">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Atk. + 6, Casting Spd. + 15, M. Critical Rate + 25, M. Critical Damage + 10, Max HP/MP/CP + 15. -->
+		<icon>icon.weapon_infinity_sword_i01</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- M. Atk. + 6%%, Casting Spd. + 15%%, M. Critical Rate + 25%%, M. Critical Damage + 10%%, Max HP/MP/CP + 15%%. --> 
-	<skill id="13919" levels="1" name="Elysium Caster">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13919" toLevel="1" name="Elysium Caster">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Atk. + 6, Casting Spd. + 15, M. Critical Rate + 25, M. Critical Damage + 10, Max HP/MP/CP + 15. -->
+		<icon>icon.weapon_the_mace_of_hero_i01</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- P. Atk. + 6%%, M. Atk. + 6%%, Atk. Spd. + 15%%, Casting Spd. + 15%%, P. Critical Rate + 82, M. Critical Rate + 25%%, P. Critical Damage + 7%%, M. Critical Damage + 10%%, Max HP/MP/CP + 15%%. --> 
-	<skill id="13920" levels="1" name="Elysium Retributer">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13920" toLevel="1" name="Elysium Retributer">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 6, M. Atk. + 6, Atk. Spd. + 15, Casting Spd. + 15, P. Critical Rate + 82, M. Critical Rate + 25, P. Critical Damage + 7, M. Critical Damage + 10, Max HP/MP/CP + 15. -->
+		<icon>icon.weapon_the_staff_of_hero_i01</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- P. Atk. + 6%%, Atk. Spd. + 15%%, P. Critical Rate + 82, P. Critical Damage + 7%%, P. Skill Critical Damage + 10%%, Max HP/MP/CP + 15%%. --> 
-	<skill id="13921" levels="1" name="Elysium Dualsword">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13921" toLevel="1" name="Elysium Dualsword">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 6, Atk. Spd. + 15, P. Critical Rate + 82, P. Critical Damage + 7, P. Skill Critical Damage + 10, Max HP/MP/CP + 15. -->
+		<icon>icon.weapon_r_dualsword_i01</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- P. Atk. + 6%%, Atk. Spd. + 15%%, P. Critical Rate + 82, P. Critical Damage + 7%%, P. Skill Critical Damage + 10%%, Max HP/MP/CP + 15%%. --> 
-	<skill id="13922" levels="1" name="Elysium Dual Dagger">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13922" toLevel="1" name="Elysium Dual Dagger">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 6, Atk. Spd. + 15, P. Critical Rate + 82, P. Critical Damage + 7, P. Skill Critical Damage + 10, Max HP/MP/CP + 15. -->
+		<icon>icon.weapon_r_dualdagger_i01</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- P. Atk. + 6%%, Atk. Spd. + 15%%, P. Critical Rate + 82, P. Critical Damage + 7%%, P. Skill Critical Damage + 10%%, Max HP/MP/CP + 15%%. --> 
-	<skill id="13923" levels="1" name="Elysium Dual Blunt Weapon">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13923" toLevel="1" name="Elysium Dual Blunt Weapon">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 6, Atk. Spd. + 15, P. Critical Rate + 82, P. Critical Damage + 7, P. Skill Critical Damage + 10, Max HP/MP/CP + 15. -->
+		<icon>icon.weapon_r_dualblunt_i01</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- Expands inventory. --> 
-	<skill id="13924" levels="1" name="La Vie En Rose's Radiant Brooch">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="13924" toLevel="1" name="La Vie En Rose's Radiant Brooch">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Expands inventory. -->
+		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
+		<operateType>P</operateType>
 	</skill>
 </list>

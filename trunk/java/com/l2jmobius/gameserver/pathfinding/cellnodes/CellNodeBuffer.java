@@ -114,6 +114,7 @@ public class CellNodeBuffer
 	public final List<CellNode> debugPath()
 	{
 		final List<CellNode> result = new LinkedList<>();
+		
 		for (CellNode n = _current; n.getParent() != null; n = (CellNode) n.getParent())
 		{
 			result.add(n);
@@ -133,12 +134,13 @@ public class CellNodeBuffer
 				result.add(n);
 			}
 		}
+		
 		return result;
 	}
 	
-	private final void getNeighbors()
+	private void getNeighbors()
 	{
-		if (_current.getLoc().canGoNone())
+		if (!_current.getLoc().canGoAll())
 		{
 			return;
 		}
@@ -176,37 +178,47 @@ public class CellNodeBuffer
 			nodeN = addNode(x, y - 1, z, false);
 		}
 		
-		if (!Config.ADVANCED_DIAGONAL_STRATEGY)
+		if (Config.ADVANCED_DIAGONAL_STRATEGY)
 		{
-			return;
-		}
-		
-		// SouthEast
-		if ((nodeE != null) && (nodeS != null) && nodeE.getLoc().canGoSouth() && nodeS.getLoc().canGoEast())
-		{
-			addNode(x + 1, y + 1, z, true);
-		}
-		
-		// SouthWest
-		if ((nodeS != null) && (nodeW != null) && nodeW.getLoc().canGoSouth() && nodeS.getLoc().canGoWest())
-		{
-			addNode(x - 1, y + 1, z, true);
-		}
-		
-		// NorthEast
-		if ((nodeN != null) && (nodeE != null) && nodeE.getLoc().canGoNorth() && nodeN.getLoc().canGoEast())
-		{
-			addNode(x + 1, y - 1, z, true);
-		}
-		
-		// NorthWest
-		if ((nodeN != null) && (nodeW != null) && nodeW.getLoc().canGoNorth() && nodeN.getLoc().canGoWest())
-		{
-			addNode(x - 1, y - 1, z, true);
+			// SouthEast
+			if ((nodeE != null) && (nodeS != null))
+			{
+				if (nodeE.getLoc().canGoSouth() && nodeS.getLoc().canGoEast())
+				{
+					addNode(x + 1, y + 1, z, true);
+				}
+			}
+			
+			// SouthWest
+			if ((nodeS != null) && (nodeW != null))
+			{
+				if (nodeW.getLoc().canGoSouth() && nodeS.getLoc().canGoWest())
+				{
+					addNode(x - 1, y + 1, z, true);
+				}
+			}
+			
+			// NorthEast
+			if ((nodeN != null) && (nodeE != null))
+			{
+				if (nodeE.getLoc().canGoNorth() && nodeN.getLoc().canGoEast())
+				{
+					addNode(x + 1, y - 1, z, true);
+				}
+			}
+			
+			// NorthWest
+			if ((nodeN != null) && (nodeW != null))
+			{
+				if (nodeW.getLoc().canGoNorth() && nodeN.getLoc().canGoWest())
+				{
+					addNode(x - 1, y - 1, z, true);
+				}
+			}
 		}
 	}
 	
-	private final CellNode getNode(int x, int y, int z)
+	private CellNode getNode(int x, int y, int z)
 	{
 		final int aX = x - _baseX;
 		if ((aX < 0) || (aX >= _mapSize))
@@ -243,7 +255,7 @@ public class CellNodeBuffer
 		return result;
 	}
 	
-	private final CellNode addNode(int x, int y, int z, boolean diagonal)
+	private CellNode addNode(int x, int y, int z, boolean diagonal)
 	{
 		final CellNode newNode = getNode(x, y, z);
 		if (newNode == null)
@@ -264,21 +276,24 @@ public class CellNodeBuffer
 		{
 			weight = Config.HIGH_WEIGHT;
 		}
-		else if (isHighWeight(x + 1, y, geoZ))
+		else
 		{
-			weight = Config.MEDIUM_WEIGHT;
-		}
-		else if (isHighWeight(x - 1, y, geoZ))
-		{
-			weight = Config.MEDIUM_WEIGHT;
-		}
-		else if (isHighWeight(x, y + 1, geoZ))
-		{
-			weight = Config.MEDIUM_WEIGHT;
-		}
-		else if (isHighWeight(x, y - 1, geoZ))
-		{
-			weight = Config.MEDIUM_WEIGHT;
+			if (isHighWeight(x + 1, y, geoZ))
+			{
+				weight = Config.MEDIUM_WEIGHT;
+			}
+			else if (isHighWeight(x - 1, y, geoZ))
+			{
+				weight = Config.MEDIUM_WEIGHT;
+			}
+			else if (isHighWeight(x, y + 1, geoZ))
+			{
+				weight = Config.MEDIUM_WEIGHT;
+			}
+			else if (isHighWeight(x, y - 1, geoZ))
+			{
+				weight = Config.MEDIUM_WEIGHT;
+			}
 		}
 		
 		newNode.setParent(_current);
@@ -307,13 +322,27 @@ public class CellNodeBuffer
 		return newNode;
 	}
 	
-	private final boolean isHighWeight(int x, int y, int z)
+	private boolean isHighWeight(int x, int y, int z)
 	{
 		final CellNode result = getNode(x, y, z);
-		return (result == null) || !result.getLoc().canGoAll() || (Math.abs(result.getLoc().getZ() - z) > 16);
+		if (result == null)
+		{
+			return true;
+		}
+		
+		if (!result.getLoc().canGoAll())
+		{
+			return true;
+		}
+		if (Math.abs(result.getLoc().getZ() - z) > 16)
+		{
+			return true;
+		}
+		
+		return false;
 	}
 	
-	private final double getCost(int x, int y, int z, float weight)
+	private double getCost(int x, int y, int z, float weight)
 	{
 		final int dX = x - _targetX;
 		final int dY = y - _targetY;

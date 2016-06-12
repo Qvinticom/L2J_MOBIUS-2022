@@ -17,9 +17,11 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
@@ -27,10 +29,8 @@ import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
  * This class ...
  * @version $Revision: 1.13.4.7 $ $Date: 2005/03/27 15:29:30 $
  */
-public class ValidatePosition extends L2GameClientPacket
+public class ValidatePosition implements IClientIncomingPacket
 {
-	private static final String _C__59_VALIDATEPOSITION = "[C] 59 ValidatePosition";
-	
 	private int _x;
 	private int _y;
 	private int _z;
@@ -38,19 +38,20 @@ public class ValidatePosition extends L2GameClientPacket
 	private int _data; // vehicle id
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_x = readD();
-		_y = readD();
-		_z = readD();
-		_heading = readD();
-		_data = readD();
+		_x = packet.readD();
+		_y = packet.readD();
+		_z = packet.readD();
+		_heading = packet.readD();
+		_data = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || activeChar.isTeleporting() || activeChar.inObserverMode())
 		{
 			return;
@@ -62,13 +63,16 @@ public class ValidatePosition extends L2GameClientPacket
 		
 		if (Config.DEVELOPER)
 		{
-			_log.fine("client pos: " + _x + " " + _y + " " + _z + " head " + _heading);
-			_log.fine("server pos: " + realX + " " + realY + " " + realZ + " head " + activeChar.getHeading());
+			_log.finer("client pos: " + _x + " " + _y + " " + _z + " head " + _heading);
+			_log.finer("server pos: " + realX + " " + realY + " " + realZ + " head " + activeChar.getHeading());
 		}
 		
-		if ((_x == 0) && (_y == 0) && (realX != 0))
+		if ((_x == 0) && (_y == 0))
 		{
-			return;
+			if (realX != 0)
+			{
+				return;
+			}
 		}
 		
 		int dx, dy, dz;
@@ -81,24 +85,40 @@ public class ValidatePosition extends L2GameClientPacket
 				dx = _x - activeChar.getInVehiclePosition().getX();
 				dy = _y - activeChar.getInVehiclePosition().getY();
 				// dz = _z - activeChar.getInVehiclePosition().getZ();
-				diffSq = (dx * dx) + (dy * dy);
+				diffSq = ((dx * dx) + (dy * dy));
 				if (diffSq > 250000)
 				{
-					sendPacket(new GetOnVehicle(activeChar.getObjectId(), _data, activeChar.getInVehiclePosition()));
+					client.sendPacket(new GetOnVehicle(activeChar.getObjectId(), _data, activeChar.getInVehiclePosition()));
 				}
 			}
 			return;
 		}
-		
-		if (activeChar.isInAirShip() || activeChar.isFalling(_z))
+		if (activeChar.isInAirShip())
 		{
+			// Zoey76: TODO: Implement or cleanup.
+			// if (Config.COORD_SYNCHRONIZE == 2)
+			// {
+			// dx = _x - activeChar.getInVehiclePosition().getX();
+			// dy = _y - activeChar.getInVehiclePosition().getY();
+			// dz = _z - activeChar.getInVehiclePosition().getZ();
+			// diffSq = ((dx * dx) + (dy * dy));
+			// if (diffSq > 250000)
+			// {
+			// sendPacket(new GetOnVehicle(activeChar.getObjectId(), _data, activeChar.getInBoatPosition()));
+			// }
+			// }
 			return;
+		}
+		
+		if (activeChar.isFalling(_z))
+		{
+			return; // disable validations during fall to avoid "jumping"
 		}
 		
 		dx = _x - realX;
 		dy = _y - realY;
 		dz = _z - realZ;
-		diffSq = (dx * dx) + (dy * dy);
+		diffSq = ((dx * dx) + (dy * dy));
 		
 		// Zoey76: TODO: Implement or cleanup.
 		// L2Party party = activeChar.getParty();
@@ -183,11 +203,5 @@ public class ValidatePosition extends L2GameClientPacket
 		activeChar.setClientZ(_z);
 		activeChar.setClientHeading(_heading); // No real need to validate heading.
 		activeChar.setLastServerPosition(realX, realY, realZ);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__59_VALIDATEPOSITION;
 	}
 }

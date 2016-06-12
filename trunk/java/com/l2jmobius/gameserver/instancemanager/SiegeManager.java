@@ -21,6 +21,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
@@ -29,7 +30,8 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.commons.util.PropertiesParser;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;
@@ -39,7 +41,6 @@ import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Siege;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.util.PropertiesParser;
 
 public final class SiegeManager
 {
@@ -88,16 +89,15 @@ public final class SiegeManager
 		
 		boolean register = false;
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT clan_id FROM siege_clans where clan_id=? and castle_id=?"))
+			PreparedStatement statement = con.prepareStatement("SELECT clan_id FROM siege_clans where clan_id=? and castle_id=?"))
 		{
-			ps.setInt(1, clan.getId());
-			ps.setInt(2, castleid);
-			try (ResultSet rs = ps.executeQuery())
+			statement.setInt(1, clan.getId());
+			statement.setInt(2, castleid);
+			try (ResultSet rs = statement.executeQuery())
 			{
-				while (rs.next())
+				if (rs.next())
 				{
 					register = true;
-					break;
 				}
 			}
 		}
@@ -116,7 +116,7 @@ public final class SiegeManager
 		}
 	}
 	
-	private final void load()
+	private void load()
 	{
 		final PropertiesParser siegeSettings = new PropertiesParser(Config.SIEGE_CONFIGURATION_FILE);
 		
@@ -188,7 +188,6 @@ public final class SiegeManager
 			}
 			_controlTowers.put(castle.getResidenceId(), controlTowers);
 			_flameTowers.put(castle.getResidenceId(), flameTowers);
-			MercTicketManager.MERCS_MAX_PER_CASTLE[castle.getResidenceId() - 1] = siegeSettings.getInt(castle.getName() + "MaxMercenaries", MercTicketManager.MERCS_MAX_PER_CASTLE[castle.getResidenceId() - 1]);
 			
 			if (castle.getOwnerId() != 0)
 			{
@@ -266,7 +265,7 @@ public final class SiegeManager
 	
 	public final List<Siege> getSieges()
 	{
-		final List<Siege> sieges = new ArrayList<>();
+		final List<Siege> sieges = new LinkedList<>();
 		for (Castle castle : CastleManager.getInstance().getCastles())
 		{
 			sieges.add(castle.getSiege());
@@ -274,7 +273,7 @@ public final class SiegeManager
 		return sieges;
 	}
 	
-	private final void loadTrapUpgrade(int castleId)
+	private void loadTrapUpgrade(int castleId)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM castle_trapupgrade WHERE castleId=?"))

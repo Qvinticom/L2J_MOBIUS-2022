@@ -16,9 +16,10 @@
  */
 package com.l2jmobius.gameserver.datatables;
 
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jmobius.gameserver.script.DateRange;
 import com.l2jmobius.gameserver.script.EventDrop;
@@ -34,7 +35,7 @@ public class EventDroplist
 	/**
 	 * The table containing all DataDrop object
 	 */
-	private static final List<DateDrop> ALL_NPC_DATE_DROPS = new ArrayList<>();
+	private static final List<DateDrop> _allNpcDateDrops = new CopyOnWriteArrayList<>();
 	
 	public static class DateDrop
 	{
@@ -73,7 +74,7 @@ public class EventDroplist
 	 */
 	public void addGlobalDrop(int[] itemIdList, int[] count, int chance, DateRange dateRange)
 	{
-		ALL_NPC_DATE_DROPS.add(new DateDrop(dateRange, new EventDrop(itemIdList, count[0], count[1], chance)));
+		_allNpcDateDrops.add(new DateDrop(dateRange, new EventDrop(itemIdList, count[0], count[1], chance)));
 	}
 	
 	/**
@@ -85,7 +86,7 @@ public class EventDroplist
 	 */
 	public void addGlobalDrop(int itemId, long min, long max, int chance, DateRange dateRange)
 	{
-		ALL_NPC_DATE_DROPS.add(new DateDrop(dateRange, new EventDrop(itemId, min, max, chance)));
+		_allNpcDateDrops.add(new DateDrop(dateRange, new EventDrop(itemId, min, max, chance)));
 	}
 	
 	/**
@@ -95,7 +96,7 @@ public class EventDroplist
 	 */
 	public void addGlobalDrop(DateRange dateRange, EventDrop eventDrop)
 	{
-		ALL_NPC_DATE_DROPS.add(new DateDrop(dateRange, eventDrop));
+		_allNpcDateDrops.add(new DateDrop(dateRange, eventDrop));
 	}
 	
 	/**
@@ -103,9 +104,9 @@ public class EventDroplist
 	 */
 	public List<DateDrop> getAllDrops()
 	{
-		final List<DateDrop> list = new ArrayList<>();
+		final List<DateDrop> list = new LinkedList<>();
 		final Date currentDate = new Date();
-		for (DateDrop drop : ALL_NPC_DATE_DROPS)
+		for (DateDrop drop : _allNpcDateDrops)
 		{
 			if (drop._dateRange.isWithinRange(currentDate))
 			{

@@ -16,35 +16,37 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.DuelManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Format:(ch) ddd
  * @author -Wooden-
  */
-public final class RequestDuelAnswerStart extends L2GameClientPacket
+public final class RequestDuelAnswerStart implements IClientIncomingPacket
 {
-	private static final String _C__D0_1C_REQUESTDUELANSWERSTART = "[C] D0:1C RequestDuelAnswerStart";
 	private int _partyDuel;
 	@SuppressWarnings("unused")
 	private int _unk1;
 	private int _response;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_partyDuel = readD();
-		_unk1 = readD();
-		_response = readD();
+		_partyDuel = packet.readD();
+		_unk1 = packet.readD();
+		_response = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -78,6 +80,7 @@ public final class RequestDuelAnswerStart extends L2GameClientPacket
 				msg1.addString(requestor.getName());
 				
 				msg2 = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_ACCEPTED_YOUR_CHALLENGE_TO_DUEL_AGAINST_THEIR_PARTY_THE_DUEL_WILL_BEGIN_IN_A_FEW_MOMENTS);
+				msg2.addString(player.getName());
 			}
 			else
 			{
@@ -85,13 +88,13 @@ public final class RequestDuelAnswerStart extends L2GameClientPacket
 				msg1.addString(requestor.getName());
 				
 				msg2 = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ACCEPTED_YOUR_CHALLENGE_TO_A_DUEL_THE_DUEL_WILL_BEGIN_IN_A_FEW_MOMENTS);
+				msg2.addString(player.getName());
 			}
-			msg2.addString(player.getName());
 			
 			player.sendPacket(msg1);
 			requestor.sendPacket(msg2);
 			
-			DuelManager.getInstance().addDuel(requestor, player, _partyDuel == 1);
+			DuelManager.getInstance().addDuel(requestor, player, _partyDuel);
 		}
 		else if (_response == -1)
 		{
@@ -116,11 +119,5 @@ public final class RequestDuelAnswerStart extends L2GameClientPacket
 		
 		player.setActiveRequester(null);
 		requestor.onTransactionResponse();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_1C_REQUESTDUELANSWERSTART;
 	}
 }

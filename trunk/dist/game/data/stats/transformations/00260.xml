@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/transformations.xsd">
-	<transform id="260" type="FLYING" can_swim="0" spawn_height="300" normal_attackable="0">
+	<transform id="260" type="FLYING" can_swim="1" spawn_height="300" normal_attackable="0">
 		<Male>
 			<common>
 				<base range="20" attackSpeed="300" attackType="SWORD" critRate="5" mAtk="5" pAtk="5" randomDamage="10" />
-				<stats str="41" int="29" con="31" dex="33" wit="11" men="25" />
+				<stats str="88" int="43" con="80" dex="57" wit="36" men="37" />
 				<defense chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" />
 				<magicDefense rear="9" lear="9" rfinger="5" lfinger="5" neck="13" />
 				<collision radius="9" height="38" />
 				<moving walk="96" run="160" waterWalk="50" waterRun="50" flyWalk="96" flyRun="160" unknownWalk="0" unknownRun="0" />
 			</common>
-			<actions>2 3 4 5 6 7 8 9 11 40 50 55 56 63 64 65</actions>
+			<actions>2 3 4 5 6 7 8 9 11 40 50 55 56 63 64 65 86</actions>
 			<additionalSkills>
 				<skill id="950" level="2" minLevel="80" /> <!-- Nail Attack -->
 				<skill id="951" level="2" minLevel="80" /> <!-- Wing Assault -->
@@ -37,7 +37,7 @@
 				<skill id="953" level="1" /> <!-- Life to Soul -->
 				<skill id="1544" level="1" /> <!-- Death Beam -->
 				<skill id="1545" level="1" /> <!-- Soul Sucking -->
-				<skill id="619" level="1" /> <!-- Transform Dispel -->
+				<skill id="619" level="1" /> <!-- Dispel Transform -->
 			</skills>
 			<levels>
 				<level val="1" levelMod="0.9" hp="73.15" mp="33.0" cp="10.45" hpRegen="2.0" mpRegen="0.9" cpRegen="2.0" />
@@ -144,13 +144,13 @@
 		<Female>
 			<common>
 				<base range="20" attackSpeed="300" attackType="SWORD" critRate="5" mAtk="5" pAtk="5" randomDamage="10" />
-				<stats str="41" int="29" con="31" dex="33" wit="11" men="25" />
+				<stats str="88" int="43" con="80" dex="57" wit="36" men="37" />
 				<defense chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" />
 				<magicDefense rear="9" lear="9" rfinger="5" lfinger="5" neck="13" />
 				<collision radius="10" height="32.7" />
 				<moving walk="96" run="160" waterWalk="50" waterRun="50" flyWalk="96" flyRun="160" unknownWalk="0" unknownRun="0" />
 			</common>
-			<actions>2 3 4 5 6 7 8 9 11 40 50 55 56 63 64 65</actions>
+			<actions>2 3 4 5 6 7 8 9 11 40 50 55 56 63 64 65 86</actions>
 			<additionalSkills>
 				<skill id="950" level="2" minLevel="80" /> <!-- Nail Attack -->
 				<skill id="951" level="2" minLevel="80" /> <!-- Wing Assault -->
@@ -177,7 +177,7 @@
 				<skill id="951" level="1" /> <!-- Wing Assault -->
 				<skill id="1544" level="1" /> <!-- Death Beam -->
 				<skill id="1545" level="1" /> <!-- Soul Sucking -->
-				<skill id="619" level="1" /> <!-- Transform Dispel -->
+				<skill id="619" level="1" /> <!-- Dispel Transform -->
 			</skills>
 			<levels>
 				<level val="1" levelMod="0.9" hp="73.15" mp="33.0" cp="10.45" hpRegen="2.0" mpRegen="0.9" cpRegen="2.0" />

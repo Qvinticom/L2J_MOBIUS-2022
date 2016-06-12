@@ -17,46 +17,15 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
-import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.stats.Stats;
 
 /**
- * Cubic Mastery effect implementation.
- * @author Zoey76
+ * @author Sdw
  */
-public final class CubicMastery extends AbstractEffect
+public final class CubicMastery extends AbstractStatAddEffect
 {
-	private final int _cubicCount;
-	
-	public CubicMastery(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public CubicMastery(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
-		_cubicCount = params.getInt("cubicCount", 1);
-	}
-	
-	@Override
-	public boolean canStart(BuffInfo info)
-	{
-		return (info.getEffector() != null) && (info.getEffected() != null) && info.getEffected().isPlayer();
-	}
-	
-	@Override
-	public void onStart(BuffInfo info)
-	{
-		info.getEffected().getActingPlayer().getStat().setMaxCubicCount(_cubicCount);
-	}
-	
-	@Override
-	public boolean onActionTime(BuffInfo info)
-	{
-		return info.getSkill().isPassive();
-	}
-	
-	@Override
-	public void onExit(BuffInfo info)
-	{
-		info.getEffected().getActingPlayer().getStat().setMaxCubicCount(1);
+		super(params, Stats.MAX_CUBIC);
 	}
 }

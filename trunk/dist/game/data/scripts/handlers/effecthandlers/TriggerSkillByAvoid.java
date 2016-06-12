@@ -16,12 +16,14 @@
  */
 package handlers.effecthandlers;
 
+import java.util.logging.Level;
+
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.handler.TargetHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureAttackAvoid;
@@ -29,8 +31,8 @@ import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
-import com.l2jmobius.util.Rnd;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * Trigger Skill By Avoid effect implementation.
@@ -40,26 +42,22 @@ public final class TriggerSkillByAvoid extends AbstractEffect
 {
 	private final int _chance;
 	private final SkillHolder _skill;
-	private final L2TargetType _targetType;
+	private final TargetType _targetType;
 	
 	/**
-	 * @param attachCond
-	 * @param applyCond
-	 * @param set
 	 * @param params
 	 */
-	public TriggerSkillByAvoid(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	
+	public TriggerSkillByAvoid(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_chance = params.getInt("chance", 100);
 		_skill = new SkillHolder(params.getInt("skillId", 0), params.getInt("skillLevel", 0));
-		_targetType = params.getEnum("targetType", L2TargetType.class, L2TargetType.ONE);
+		_targetType = params.getEnum("targetType", TargetType.class, TargetType.TARGET);
 	}
 	
 	public void onAvoidEvent(OnCreatureAttackAvoid event)
 	{
-		if (event.isDamageOverTime() || (_chance == 0) || (_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0))
+		if (event.isDamageOverTime() || (_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0)))
 		{
 			return;
 		}
@@ -71,22 +69,25 @@ public final class TriggerSkillByAvoid extends AbstractEffect
 			return;
 		}
 		
-		if (Rnd.get(100) > _chance)
+		if ((_chance < 100) && (Rnd.get(100) > _chance))
 		{
 			return;
 		}
 		
 		final Skill triggerSkill = _skill.getSkill();
-		for (L2Object triggerTarget : targetHandler.getTargetList(triggerSkill, event.getTarget(), false, event.getAttacker()))
+		L2Object target = null;
+		try
 		{
-			if ((triggerTarget == null) || !triggerTarget.isCharacter())
-			{
-				continue;
-			}
-			if (!((L2Character) triggerTarget).isInvul())
-			{
-				event.getTarget().makeTriggerCast(triggerSkill, (L2Character) triggerTarget);
-			}
+			target = TargetHandler.getInstance().getHandler(_targetType).getTarget(event.getTarget(), event.getAttacker(), triggerSkill, false, false, false);
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, "Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
+		}
+		
+		if ((target != null) && target.isCharacter())
+		{
+			SkillCaster.triggerCast(event.getAttacker(), (L2Character) target, triggerSkill);
 		}
 	}
 	

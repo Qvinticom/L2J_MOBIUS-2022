@@ -18,43 +18,38 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.Arrays;
 
-import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2EtcItem;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Zoey76
  */
-public class RequestUnEquipItem extends L2GameClientPacket
+public class RequestUnEquipItem implements IClientIncomingPacket
 {
-	private static final String _C__16_REQUESTUNEQUIPITEM = "[C] 16 RequestUnequipItem";
-	
 	private int _slot;
 	
 	/**
 	 * Packet type id 0x16 format: cd
 	 */
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_slot = readD();
+		_slot = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		if (Config.DEBUG)
-		{
-			_log.fine("Request unequip slot " + _slot);
-		}
-		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -68,9 +63,9 @@ public class RequestUnEquipItem extends L2GameClientPacket
 		}
 		
 		// The English system message say weapon, but it's applied to any equipped item.
-		if (activeChar.isAttackingNow() || activeChar.isCastingNow() || activeChar.isCastingSimultaneouslyNow())
+		if (activeChar.isAttackingNow() || activeChar.isCastingNow())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_CHANGE_WEAPONS_DURING_AN_ATTACK);
+			client.sendPacket(SystemMessageId.YOU_CANNOT_CHANGE_WEAPONS_DURING_AN_ATTACK);
 			return;
 		}
 		
@@ -87,20 +82,20 @@ public class RequestUnEquipItem extends L2GameClientPacket
 		}
 		
 		// Prevent player from unequipping items in special conditions.
-		if (activeChar.isStunned() || activeChar.isSleeping() || activeChar.isParalyzed() || activeChar.isAlikeDead())
+		if (activeChar.hasBlockActions() || activeChar.isAlikeDead())
 		{
 			return;
 		}
 		
 		if (!activeChar.getInventory().canManipulateWithItemId(item.getId()))
 		{
-			activeChar.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_TAKEN_OFF);
+			client.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_TAKEN_OFF);
 			return;
 		}
 		
 		if (item.isWeapon() && item.getWeaponItem().isForceEquip() && !activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS))
 		{
-			activeChar.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_TAKEN_OFF);
+			client.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_TAKEN_OFF);
 			return;
 		}
 		
@@ -121,17 +116,11 @@ public class RequestUnEquipItem extends L2GameClientPacket
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
 			}
 			sm.addItemName(unequipped[0]);
-			activeChar.sendPacket(sm);
+			client.sendPacket(sm);
 			
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addItems(Arrays.asList(unequipped));
-			activeChar.sendPacket(iu);
+			activeChar.sendInventoryUpdate(iu);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__16_REQUESTUNEQUIPITEM;
 	}
 }

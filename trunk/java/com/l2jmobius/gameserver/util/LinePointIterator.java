@@ -65,7 +65,7 @@ public final class LinePointIterator
 			_first = false;
 			return true;
 		}
-		if (_dx >= _dy)
+		else if (_dx >= _dy)
 		{
 			if (_srcX != _dstX)
 			{
@@ -81,18 +81,21 @@ public final class LinePointIterator
 				return true;
 			}
 		}
-		else if (_srcY != _dstY)
+		else
 		{
-			_srcY += _sy;
-			
-			_error += _dx;
-			if (_error >= _dy)
+			if (_srcY != _dstY)
 			{
-				_srcX += _sx;
-				_error -= _dy;
+				_srcY += _sy;
+				
+				_error += _dx;
+				if (_error >= _dy)
+				{
+					_srcX += _sx;
+					_error -= _dy;
+				}
+				
+				return true;
 			}
-			
-			return true;
 		}
 		
 		return false;

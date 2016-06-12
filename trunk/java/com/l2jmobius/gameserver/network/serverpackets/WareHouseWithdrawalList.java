@@ -17,21 +17,24 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 public final class WareHouseWithdrawalList extends AbstractItemPacket
 {
 	public static final int PRIVATE = 1;
 	public static final int CLAN = 2;
 	public static final int CASTLE = 3; // not sure
-	public static final int FREIGHT = 4;
+	public static final int FREIGHT = 1;
 	private L2PcInstance _activeChar;
 	private long _playerAdena;
-	private L2ItemInstance[] _items;
-	private L2ItemInstance[] _invItems;
+	private final int _invSize;
+	private Collection<L2ItemInstance> _items;
 	private final List<Integer> _itemsStackable = new ArrayList<>();
 	/**
 	 * <ul>
@@ -49,6 +52,7 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket
 		_whType = type;
 		
 		_playerAdena = _activeChar.getAdena();
+		_invSize = player.getInventory().getSize();
 		if (_activeChar.getActiveWarehouse() == null)
 		{
 			_log.warning("error while sending withdraw request to: " + _activeChar.getName());
@@ -56,39 +60,37 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket
 		}
 		
 		_items = _activeChar.getActiveWarehouse().getItems();
-		_invItems = _activeChar.getInventory().getItems();
 		
 		for (L2ItemInstance item : _items)
 		{
-			for (L2ItemInstance invitem : _invItems)
+			if (item.isStackable())
 			{
-				if (item.isStackable() && (item.getDisplayId() == invitem.getDisplayId()))
-				{
-					_itemsStackable.add(item.getDisplayId());
-				}
+				_itemsStackable.add(item.getDisplayId());
 			}
 		}
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x42);
-		writeH(_whType);
-		writeQ(_playerAdena);
-		writeH(_items.length);
-		writeH(_itemsStackable.size());
+		OutgoingPackets.WAREHOUSE_WITHDRAW_LIST.writeId(packet);
+		
+		packet.writeH(_whType);
+		packet.writeQ(_playerAdena);
+		packet.writeH(_items.size());
+		packet.writeH(_itemsStackable.size());
 		for (int itemId : _itemsStackable)
 		{
-			writeD(itemId);
+			packet.writeD(itemId);
 		}
-		writeD(_invItems.length);
+		packet.writeD(_invSize);
 		for (L2ItemInstance item : _items)
 		{
-			writeItem(item);
-			writeD(item.getObjectId());
-			writeD(0);
-			writeD(0);
+			writeItem(packet, item);
+			packet.writeD(item.getObjectId());
+			packet.writeD(0);
+			packet.writeD(0);
 		}
+		return true;
 	}
 }

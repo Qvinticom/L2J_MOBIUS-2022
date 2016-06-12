@@ -19,9 +19,11 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.templates.L2PcTemplate;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public final class NewCharacterSuccess extends L2GameServerPacket
+public final class NewCharacterSuccess implements IClientOutgoingPacket
 {
 	private final List<L2PcTemplate> _chars = new ArrayList<>();
 	
@@ -31,11 +33,11 @@ public final class NewCharacterSuccess extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x0D);
-		writeD(_chars.size());
+		OutgoingPackets.NEW_CHARACTER_SUCCESS.writeId(packet);
 		
+		packet.writeD(_chars.size());
 		for (L2PcTemplate chr : _chars)
 		{
 			if (chr == null)
@@ -44,26 +46,33 @@ public final class NewCharacterSuccess extends L2GameServerPacket
 			}
 			
 			// TODO: Unhardcode these
-			writeD(chr.getRace().ordinal());
-			writeD(chr.getClassId().getId());
-			writeD(0x63);
-			writeD(chr.getBaseSTR());
-			writeD(0x01);
-			writeD(0x63);
-			writeD(chr.getBaseDEX());
-			writeD(0x01);
-			writeD(0x63);
-			writeD(chr.getBaseCON());
-			writeD(0x01);
-			writeD(0x63);
-			writeD(chr.getBaseINT());
-			writeD(0x01);
-			writeD(0x63);
-			writeD(chr.getBaseWIT());
-			writeD(0x01);
-			writeD(0x63);
-			writeD(chr.getBaseMEN());
-			writeD(0x01);
+			packet.writeD(chr.getRace().ordinal());
+			packet.writeD(chr.getClassId().getId());
+			
+			packet.writeD(99);
+			packet.writeD(chr.getBaseSTR());
+			packet.writeD(1);
+			
+			packet.writeD(99);
+			packet.writeD(chr.getBaseDEX());
+			packet.writeD(1);
+			
+			packet.writeD(99);
+			packet.writeD(chr.getBaseCON());
+			packet.writeD(1);
+			
+			packet.writeD(99);
+			packet.writeD(chr.getBaseINT());
+			packet.writeD(1);
+			
+			packet.writeD(99);
+			packet.writeD(chr.getBaseWIT());
+			packet.writeD(1);
+			
+			packet.writeD(99);
+			packet.writeD(chr.getBaseMEN());
+			packet.writeD(1);
 		}
+		return true;
 	}
 }

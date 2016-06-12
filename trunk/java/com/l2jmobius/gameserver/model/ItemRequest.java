@@ -75,6 +75,14 @@ public class ItemRequest
 	@Override
 	public boolean equals(Object obj)
 	{
-		return (this == obj) || ((obj instanceof ItemRequest) && (_objectId != ((ItemRequest) obj)._objectId));
+		if (this == obj)
+		{
+			return true;
+		}
+		if (!(obj instanceof ItemRequest))
+		{
+			return false;
+		}
+		return (_objectId != ((ItemRequest) obj)._objectId);
 	}
 }

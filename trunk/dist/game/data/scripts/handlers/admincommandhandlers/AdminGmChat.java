@@ -31,6 +31,7 @@ import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
  */
 public class AdminGmChat implements IAdminCommandHandler
 {
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_gmchat",
@@ -112,7 +113,8 @@ public class AdminGmChat implements IAdminCommandHandler
 				offset = 13;
 			}
 			text = command.substring(offset);
-			AdminData.getInstance().broadcastToGMs(new CreatureSay(0, ChatType.ALLIANCE, activeChar.getName(), text));
+			final CreatureSay cs = new CreatureSay(0, ChatType.ALLIANCE, activeChar.getName(), text);
+			AdminData.getInstance().broadcastToGMs(cs);
 		}
 		catch (StringIndexOutOfBoundsException e)
 		{

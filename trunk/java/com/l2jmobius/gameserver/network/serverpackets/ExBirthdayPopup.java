@@ -16,26 +16,25 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
- * @author Gnat
+ * @author Gnacik
  **/
-
-public class ExBirthdayPopup extends L2GameServerPacket
+public class ExBirthdayPopup implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	public static final ExBirthdayPopup STATIC_PACKET = new ExBirthdayPopup();
 	
-	public ExBirthdayPopup(L2PcInstance character)
+	private ExBirthdayPopup()
 	{
-		_activeChar = character;
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x90);
-		writeD(_activeChar.getObjectId());
+		OutgoingPackets.EX_NOTIFY_BIRTH_DAY.writeId(packet);
+		
+		return true;
 	}
 }

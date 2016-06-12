@@ -31,7 +31,6 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -66,6 +65,7 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 	private static final int MIN_PLAYER_LVL = 45;
 	private static final int MIN_HACHLING_LVL = 55;
 	private static final Map<Integer, NpcData> NPC_DATA = new HashMap<>();
+	
 	static
 	{
 		NPC_DATA.put(TREE_OF_WIND, new NpcData(NpcStringId.HEY_YOU_VE_ALREADY_DRUNK_THE_ESSENCE_OF_WIND, 2, 1, 270));
@@ -76,7 +76,7 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 	
 	public Q00421_LittleWingsBigAdventure()
 	{
-		super(421, Q00421_LittleWingsBigAdventure.class.getSimpleName(), "Little Wing's Big Adventure");
+		super(421);
 		addStartNpc(CRONOS);
 		addTalkId(CRONOS, MIMYU);
 		addAttackId(NPC_DATA.keySet());
@@ -87,15 +87,6 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if ("DESPAWN_GUARDIAN".equals(event))
-		{
-			if (npc != null)
-			{
-				npc.deleteMe();
-			}
-			return super.onAdvEvent(event, npc, player);
-		}
-		
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
 		if (qs == null)
@@ -177,6 +168,14 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 			case "30747-10.html":
 			{
 				htmltext = event;
+				break;
+			}
+			case "DESPAWN_GUARDIAN":
+			{
+				if (npc != null)
+				{
+					npc.deleteMe();
+				}
 				break;
 			}
 		}
@@ -396,16 +395,20 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 								npc.doCast(DRYAD_ROOT.getSkill());
 							}
 						}
-						else if ((getRandom(100) < 2) && hasQuestItems(attacker, FAIRY_LEAF))
+						else if (getRandom(100) < 2)
 						{
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.GIVE_ME_A_FAIRY_LEAF));
-							takeItems(attacker, FAIRY_LEAF, 1);
-							qs.setMemoState(qs.getMemoState() + data.memoStateValue);
-							qs.unset("hits");
-							playSound(attacker, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (qs.getMemoState() == 15)
+							if (hasQuestItems(attacker, FAIRY_LEAF))
 							{
-								qs.setCond(3);
+								npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.GIVE_ME_A_FAIRY_LEAF);
+								takeItems(attacker, FAIRY_LEAF, 1);
+								qs.setMemoState(qs.getMemoState() + data.memoStateValue);
+								qs.unset("hits");
+								playSound(attacker, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								
+								if (qs.getMemoState() == 15)
+								{
+									qs.setCond(3);
+								}
 							}
 						}
 					}
@@ -415,13 +418,13 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 					switch (getRandom(3))
 					{
 						case 0:
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WHY_DO_YOU_BOTHER_ME_AGAIN));
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WHY_DO_YOU_BOTHER_ME_AGAIN);
 							break;
 						case 1:
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, data.message));
+							npc.broadcastSay(ChatType.NPC_GENERAL, data.message);
 							break;
 						case 2:
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.LEAVE_NOW_BEFORE_YOU_INCUR_THE_WRATH_OF_THE_GUARDIAN_GHOST));
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.LEAVE_NOW_BEFORE_YOU_INCUR_THE_WRATH_OF_THE_GUARDIAN_GHOST);
 							break;
 					}
 				}

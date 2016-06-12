@@ -22,8 +22,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.util.Rnd;
 
 /**
  * @author Nyaran
@@ -162,22 +162,50 @@ public class L2MapRegion
 	
 	public final Location getSpawnLoc()
 	{
-		return Config.RANDOM_RESPAWN_IN_TOWN_ENABLED ? _spawnLocs.get(Rnd.get(_spawnLocs.size())) : _spawnLocs.get(0);
+		if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED)
+		{
+			return _spawnLocs.get(Rnd.get(_spawnLocs.size()));
+		}
+		return _spawnLocs.get(0);
 	}
 	
 	public final Location getOtherSpawnLoc()
 	{
-		return _otherSpawnLocs != null ? Config.RANDOM_RESPAWN_IN_TOWN_ENABLED ? _otherSpawnLocs.get(Rnd.get(_otherSpawnLocs.size())) : _otherSpawnLocs.get(0) : getSpawnLoc();
+		if (_otherSpawnLocs != null)
+		{
+			if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED)
+			{
+				return _otherSpawnLocs.get(Rnd.get(_otherSpawnLocs.size()));
+			}
+			return _otherSpawnLocs.get(0);
+		}
+		return getSpawnLoc();
 	}
 	
 	public final Location getChaoticSpawnLoc()
 	{
-		return _chaoticSpawnLocs != null ? Config.RANDOM_RESPAWN_IN_TOWN_ENABLED ? _chaoticSpawnLocs.get(Rnd.get(_chaoticSpawnLocs.size())) : _chaoticSpawnLocs.get(0) : getSpawnLoc();
+		if (_chaoticSpawnLocs != null)
+		{
+			if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED)
+			{
+				return _chaoticSpawnLocs.get(Rnd.get(_chaoticSpawnLocs.size()));
+			}
+			return _chaoticSpawnLocs.get(0);
+		}
+		return getSpawnLoc();
 	}
 	
 	public final Location getBanishSpawnLoc()
 	{
-		return _banishSpawnLocs != null ? Config.RANDOM_RESPAWN_IN_TOWN_ENABLED ? _banishSpawnLocs.get(Rnd.get(_banishSpawnLocs.size())) : _banishSpawnLocs.get(0) : getSpawnLoc();
+		if (_banishSpawnLocs != null)
+		{
+			if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED)
+			{
+				return _banishSpawnLocs.get(Rnd.get(_banishSpawnLocs.size()));
+			}
+			return _banishSpawnLocs.get(0);
+		}
+		return getSpawnLoc();
 	}
 	
 	public final void addBannedRace(String race, String point)

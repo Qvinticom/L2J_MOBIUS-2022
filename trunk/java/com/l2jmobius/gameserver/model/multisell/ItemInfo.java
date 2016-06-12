@@ -16,8 +16,12 @@
  */
 package com.l2jmobius.gameserver.model.multisell;
 
-import com.l2jmobius.gameserver.model.Elementals;
+import java.util.Collection;
+
+import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
+import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.variables.ItemVariables;
 
 /**
  * @author DS
@@ -27,34 +31,25 @@ public class ItemInfo
 	private final int _enchantLevel, _augmentId;
 	private final byte _elementId;
 	private final int _elementPower;
-	private final int[] _elementals = new int[6];
+	private final AttributeHolder[] _attributes;
+	private final int _visualId;
+	private final int _visualStoneId;
+	private final long _visualIdLifetime;
+	private final Collection<EnsoulOption> _specialAbilities;
+	private final Collection<EnsoulOption> _additionalSpecialAbilities;
 	
 	public ItemInfo(L2ItemInstance item)
 	{
 		_enchantLevel = item.getEnchantLevel();
-		_augmentId = item.getAugmentation() != null ? item.getAugmentation().getAugmentationId() : 0;
-		_elementId = item.getAttackElementType();
-		_elementPower = item.getAttackElementPower();
-		_elementals[0] = item.getElementDefAttr(Elementals.FIRE);
-		_elementals[1] = item.getElementDefAttr(Elementals.WATER);
-		_elementals[2] = item.getElementDefAttr(Elementals.WIND);
-		_elementals[3] = item.getElementDefAttr(Elementals.EARTH);
-		_elementals[4] = item.getElementDefAttr(Elementals.HOLY);
-		_elementals[5] = item.getElementDefAttr(Elementals.DARK);
-	}
-	
-	public ItemInfo(int enchantLevel)
-	{
-		_enchantLevel = enchantLevel;
-		_augmentId = 0;
-		_elementId = Elementals.NONE;
-		_elementPower = 0;
-		_elementals[0] = 0;
-		_elementals[1] = 0;
-		_elementals[2] = 0;
-		_elementals[3] = 0;
-		_elementals[4] = 0;
-		_elementals[5] = 0;
+		_augmentId = item.getAugmentation() != null ? item.getAugmentation().getId() : 0;
+		_elementId = item.getAttackAttributeType().getClientId();
+		_elementPower = item.getAttackAttributePower();
+		_attributes = item.getAttributes() != null ? item.getAttributes().toArray(new AttributeHolder[6]) : new AttributeHolder[6];
+		_visualId = item.getVisualId();
+		_visualStoneId = item.getVariables().getInt(ItemVariables.VISUAL_APPEARANCE_STONE_ID, 0);
+		_visualIdLifetime = item.getVisualLifeTime();
+		_specialAbilities = item.getSpecialAbilities();
+		_additionalSpecialAbilities = item.getAdditionalSpecialAbilities();
 	}
 	
 	public final int getEnchantLevel()
@@ -77,8 +72,33 @@ public class ItemInfo
 		return _elementPower;
 	}
 	
-	public final int[] getElementals()
+	public final AttributeHolder[] getElementals()
 	{
-		return _elementals;
+		return _attributes;
+	}
+	
+	public int getVisualId()
+	{
+		return _visualId;
+	}
+	
+	public int getVisualStoneId()
+	{
+		return _visualStoneId;
+	}
+	
+	public long getVisualIdLifeTime()
+	{
+		return _visualIdLifetime;
+	}
+	
+	public Collection<EnsoulOption> getSpecialAbilities()
+	{
+		return _specialAbilities;
+	}
+	
+	public Collection<EnsoulOption> getAdditionalSpecialAbilities()
+	{
+		return _additionalSpecialAbilities;
 	}
 }

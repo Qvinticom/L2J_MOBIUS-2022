@@ -1,100 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="30600" levels="1" name="Additional Hit">
+	<skill id="30600" toLevel="1" name="Heavy Hit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Powerful hit on target. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="10000" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-1</effectPoint>
+		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="30601" levels="1" name="Additional Hit">
+	<skill id="30601" toLevel="1" name="Heavy Hit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Powerful hit on target. -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="2000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="10000" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1</effectPoint>
+		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="30602" levels="1" name="Eviscerator Aura">
-		<set name="icon" val="icon.icon_lender" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="reuseDelay" val="5000" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="1000" />
-		<for>
-			<effect name="TriggerForce" ticks="2">
-				<param skillId="30603" skillLevel="1" />
-				<param targetType="PARTY" />
+	<skill id="30602" toLevel="1" name="Eviscerator Aura">
+		<!-- Casts Eviscerator Force on entire party, which increases P. Skill Critical Rate + 1%. -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<toggleGroupId>0</toggleGroupId>
+		<icon>icon.icon_lender</icon>
+		<magicLvl>85</magicLvl>
+		<operateType>AU</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>3</isMagic>
+		<effects>
+			<effect name="CallSkillOnActionTime">
+				<!-- Eviscerator Force -->
+				<skillId>30603</skillId>
+				<skillLevel>1</skillLevel>
+				<ticks>7</ticks>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="30603" levels="1" name="Eviscerator Force">
+	<skill id="30603" toLevel="1" name="Eviscerator Force">
 		<!-- P. Skill Critical Rate + 1%. -->
-		<set name="icon" val="icon.icon_lender_01" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
-		<set name="magicLvl" val="85" />
-		<set name="isMagic" val="3" />
-		<set name="isTriggeredSkill" val="true" />
-		<for>
-			<effect name="Buff">
-				<mul stat="physicalSkillPower" val="1.01" /> <!-- IMPLEMENT P.Skill Critical Rate and change stat -->
-			</effect>
-		</for>
+		<abnormallVL>1</abnormallVL>
+		<abnormalTime>11</abnormalTime>
+		<abnormalType>SYNERGY_LENKER</abnormalType>
+		<affectRange>1600</affectRange>
+		<canBeDispelled>false</canBeDispelled>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<icon>icon.icon_lender_01</icon>
+		<operateType>A6</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>2</effectPoint>
+		<isMagic>3</isMagic>
+		<effects>
+		</effects>
 	</skill>
-	<skill id="30604" levels="1" name="Block Eviscerator Force">
+	<skill id="30604" toLevel="1" name="Block Eviscerator Force">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Blocks Eviscerator Force. -->
-		<set name="icon" val="icon.icon_lender" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.icon_lender</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="30605" levels="1" name="Sayha's Seer Aura">
-		<set name="icon" val="icon.icon_Er_wizard" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="reuseDelay" val="5000" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="1000" />
-		<for>
-			<effect name="TriggerForce" ticks="2">
-				<param skillId="30606" skillLevel="1" />
-				<param targetType="PARTY" />
+	<skill id="30605" toLevel="1" name="Sayha's Seer Aura">
+		<!-- Casts Sayha's Seer Force on entire party, which increases M. Critical Rate + 1%. -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<toggleGroupId>0</toggleGroupId>
+		<icon>icon.icon_Er_wizard</icon>
+		<magicLvl>85</magicLvl>
+		<operateType>AU</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>3</isMagic>
+		<effects>
+			<effect name="CallSkillOnActionTime">
+				<!-- Sayha's Seer Force -->
+				<skillId>30606</skillId>
+				<skillLevel>1</skillLevel>
+				<ticks>7</ticks>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="30606" levels="1" name="Sayha's Seer Force">
-		<set name="icon" val="icon.icon_Er_wizard_01" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
-		<set name="magicLvl" val="85" />
-		<set name="isMagic" val="3" />
-		<set name="isTriggeredSkill" val="true" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mCritRate" val="1.01" />
+	<skill id="30606" toLevel="1" name="Sayha's Seer Force">
+		<!-- M. Critical Rate + 1%. -->
+		<abnormallVL>1</abnormallVL>
+		<abnormalTime>11</abnormalTime>
+		<abnormalType>SYNERGY_SEER</abnormalType>
+		<affectRange>1600</affectRange>
+		<canBeDispelled>false</canBeDispelled>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<icon>icon.icon_Er_wizard_01</icon>
+		<operateType>A6</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>2</effectPoint>
+		<isMagic>3</isMagic>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<amount>1</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="30607" levels="1" name="Block Sayha's Seer Force">
+	<skill id="30607" toLevel="1" name="Block Sayha's Seer Force">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Blocks Sayha's Seer Force. -->
-		<set name="icon" val="icon.icon_Er_wizard" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.icon_Er_wizard</icon>
+		<operateType>P</operateType>
 	</skill>
-	<!-- P. Atk. + $s1. --> 
-	<skill id="30608" levels="1" name="Fury of Eviscerator">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="30608" toLevel="5" name="Fury of Eviscerator">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- P. Atk. + 5%. -->
+		<icon>icon.skill30509</icon>
+		<operateType>A2</operateType>
+		<hitTime>300</hitTime>
+		<effectPoint>500</effectPoint>
+		<isMagic>4</isMagic>
 	</skill>
 </list>

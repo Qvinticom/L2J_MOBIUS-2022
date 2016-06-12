@@ -16,29 +16,24 @@
  */
 package com.l2jmobius.gameserver.model.zone.type;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.Future;
+import java.lang.ref.WeakReference;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.model.Fishing;
+import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.serverpackets.ExAutoFishAvailable;
+import com.l2jmobius.gameserver.network.serverpackets.fishing.ExAutoFishAvailable;
 
 /**
  * A fishing zone
- * @author durgus, Darky999
+ * @author durgus
  */
 public class L2FishingZone extends L2ZoneType
 {
-	private final Map<Integer, Future<?>> _task = new HashMap<>();
-	int _fishx = 0;
-	int _fishy = 0;
-	int _fishz = 0;
-	
 	public L2FishingZone(int id)
 	{
 		super(id);
@@ -47,14 +42,44 @@ public class L2FishingZone extends L2ZoneType
 	@Override
 	protected void onEnter(L2Character character)
 	{
-		if (character.isPlayable() || (character.getLevel() > 85))
+		if (character.isPlayer())
 		{
+			if ((Config.ALLOWFISHING || character.canOverrideCond(PcCondOverride.ZONE_CONDITIONS)) && !character.isInsideZone(ZoneId.FISHING))
+			{
+				final WeakReference<L2PcInstance> weakPlayer = new WeakReference<>(character.getActingPlayer());
+				ThreadPoolManager.getInstance().executeGeneral(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						final L2PcInstance player = weakPlayer.get();
+						if (player != null)
+						{
+							final Fishing fishing = player.getFishing();
+							if (player.isInsideZone(ZoneId.FISHING))
+							{
+								if (fishing.canFish() && !fishing.isFishing())
+								{
+									if (fishing.isAtValidLocation())
+									{
+										player.sendPacket(ExAutoFishAvailable.YES);
+									}
+									else
+									{
+										player.sendPacket(ExAutoFishAvailable.NO);
+									}
+								}
+								ThreadPoolManager.getInstance().scheduleGeneral(this, 7000);
+							}
+							else
+							{
+								player.sendPacket(ExAutoFishAvailable.NO);
+							}
+						}
+					}
+				});
+			}
 			character.setInsideZone(ZoneId.FISHING, true);
-		}
-		
-		if (character.isPlayer() && !_task.containsKey(((L2PcInstance) character).getObjectId()))
-		{
-			_task.put(((L2PcInstance) character).getObjectId(), ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new fishingAvailable((L2PcInstance) character), 500, 2000));
 		}
 	}
 	
@@ -64,51 +89,15 @@ public class L2FishingZone extends L2ZoneType
 		if (character.isPlayer())
 		{
 			character.setInsideZone(ZoneId.FISHING, false);
+			character.sendPacket(ExAutoFishAvailable.NO);
 		}
-		_task.remove(character.getObjectId());
-		final Future<?> t = _task.get(character.getObjectId());
-		if (t != null)
-		{
-			t.cancel(false);
-		}
-	}
-	
-	@Override
-	public void onDieInside(L2Character character)
-	{
-		onExit(character);
-	}
-	
-	@Override
-	public void onReviveInside(L2Character character)
-	{
-		onEnter(character);
 	}
 	
 	/*
-	 * getWaterZ() this added function returns the Z value for the water surface. In effect this simply returns the upper Z value of the zone. This required some modification of L2ZoneForm, and zone form extentions.
+	 * getWaterZ() this added function returns the Z value for the water surface. In effect this simply returns the upper Z value of the zone. This required some modification of L2ZoneForm, and zone form extensions.
 	 */
 	public int getWaterZ()
 	{
 		return getZone().getHighZ();
-	}
-	
-	class fishingAvailable implements Runnable
-	{
-		private final L2PcInstance player;
-		
-		fishingAvailable(L2PcInstance pl)
-		{
-			player = pl;
-		}
-		
-		@Override
-		public void run()
-		{
-			if (Config.ALLOWFISHING && player.isInsideZone(ZoneId.FISHING) && !player.isInsideZone(ZoneId.WATER) && !player.isInBoat() && !player.isInCraftMode() && !player.isInStoreMode() && !player.isTransformed())
-			{
-				player.sendPacket(new ExAutoFishAvailable(player));
-			}
-		}
 	}
 }

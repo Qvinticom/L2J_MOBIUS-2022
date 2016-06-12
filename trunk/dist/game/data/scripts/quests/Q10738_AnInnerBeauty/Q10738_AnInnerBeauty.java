@@ -19,35 +19,36 @@ package quests.Q10738_AnInnerBeauty;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
 import quests.Q10737_GrakonsWarehouse.Q10737_GrakonsWarehouse;
 
 /**
+ * An Inner Beauty (10738)
  * @author Sdw
  */
-public class Q10738_AnInnerBeauty extends Quest
+public final class Q10738_AnInnerBeauty extends Quest
 {
 	// NPC's
 	private static final int GRAKON = 33947;
 	private static final int EVNA = 33935;
+	// Items
+	private static final int GRAKON_S_NOTE = 39521;
 	// Misc
 	private static final int MIN_LEVEL = 5;
 	private static final int MAX_LEVEL = 20;
-	// Items
-	private static final ItemHolder GRAKON_S_NOTE = new ItemHolder(39521, 1);
 	
 	public Q10738_AnInnerBeauty()
 	{
-		super(10738, Q10738_AnInnerBeauty.class.getSimpleName(), "An Inner Beauty");
+		super(10738);
 		addStartNpc(GRAKON);
 		addTalkId(GRAKON, EVNA);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33947-05.html");
-		addCondRace(Race.ERTHEIA, "33947-05.html");
-		addCondCompletedQuest(Q10737_GrakonsWarehouse.class.getSimpleName(), "33947-05.html");
-		registerQuestItems(GRAKON_S_NOTE.getId());
+		
+		addCondRace(Race.ERTHEIA, "");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33947-00.htm");
+		addCondCompletedQuest(Q10737_GrakonsWarehouse.class.getSimpleName(), "33947-00.htm");
+		registerQuestItems(GRAKON_S_NOTE);
 	}
 	
 	@Override
@@ -59,21 +60,17 @@ public class Q10738_AnInnerBeauty extends Quest
 			return null;
 		}
 		
-		String htmltext = null;
+		String htmltext = event;
 		switch (event)
 		{
 			case "33947-02.htm":
 			case "33947-03.htm":
 			case "33935-02.html":
-			{
-				htmltext = event;
 				break;
-			}
-			case "33947-04.html":
+			case "33947-04.htm":
 			{
 				qs.startQuest();
-				giveItems(player, GRAKON_S_NOTE);
-				htmltext = event;
+				giveItems(player, GRAKON_S_NOTE, 1);
 				break;
 			}
 			case "33935-03.html":
@@ -83,10 +80,11 @@ public class Q10738_AnInnerBeauty extends Quest
 					giveAdena(player, 12000, true);
 					addExpAndSp(player, 2625, 1);
 					qs.exitQuest(false, true);
-					htmltext = event;
 				}
 				break;
 			}
+			default:
+				htmltext = null;
 		}
 		return htmltext;
 	}
@@ -95,7 +93,12 @@ public class Q10738_AnInnerBeauty extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = qs.isCompleted() ? getAlreadyCompletedMsg(player) : getNoQuestMsg(player);
+		String htmltext = getNoQuestMsg(player);
+		
+		if (qs.isCompleted())
+		{
+			htmltext = getAlreadyCompletedMsg(player);
+		}
 		
 		if (npc.getId() == GRAKON)
 		{
@@ -105,12 +108,15 @@ public class Q10738_AnInnerBeauty extends Quest
 			}
 			else if (qs.isStarted())
 			{
-				htmltext = "33947-04.html";
+				htmltext = "33947-05.html";
 			}
 		}
-		else if ((npc.getId() == EVNA) && qs.isStarted())
+		else if (npc.getId() == EVNA)
 		{
-			htmltext = "33935-01.html";
+			if (qs.isStarted())
+			{
+				htmltext = "33935-01.html";
+			}
 		}
 		return htmltext;
 	}

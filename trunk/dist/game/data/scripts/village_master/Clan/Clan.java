@@ -21,12 +21,13 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
+
+import ai.AbstractNpcAI;
 
 /**
  * @author UnAfraid
  */
-final class Clan extends Quest
+public final class Clan extends AbstractNpcAI
 {
 	// @formatter:off
 	private static final int[] NPCS =
@@ -63,7 +64,6 @@ final class Clan extends Quest
 	
 	private Clan()
 	{
-		super(-1, Clan.class.getSimpleName(), "village_master");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}
@@ -71,9 +71,12 @@ final class Clan extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (LEADER_REQUIRED.containsKey(event) && !player.isClanLeader())
+		if (LEADER_REQUIRED.containsKey(event))
 		{
-			return LEADER_REQUIRED.get(event);
+			if (!player.isClanLeader())
+			{
+				return LEADER_REQUIRED.get(event);
+			}
 		}
 		return event;
 	}

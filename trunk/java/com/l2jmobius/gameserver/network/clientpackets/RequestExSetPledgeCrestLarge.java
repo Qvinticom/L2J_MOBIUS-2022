@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -23,35 +24,34 @@ import com.l2jmobius.gameserver.model.L2Crest;
 import com.l2jmobius.gameserver.model.L2Crest.CrestType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * Format : chdb c (id) 0xD0 h (subid) 0x11 d data size b raw data (picture i think ;) )
  * @author -Wooden-
  */
-public final class RequestExSetPledgeCrestLarge extends L2GameClientPacket
+public final class RequestExSetPledgeCrestLarge implements IClientIncomingPacket
 {
-	private static final String _C__D0_11_REQUESTEXSETPLEDGECRESTLARGE = "[C] D0:11 RequestExSetPledgeCrestLarge";
-	
 	private int _length;
 	private byte[] _data = null;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_length = readD();
+		_length = packet.readD();
 		if (_length > 2176)
 		{
-			return;
+			return false;
 		}
 		
-		_data = new byte[_length];
-		readB(_data);
+		_data = packet.readB(_length);
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -65,19 +65,19 @@ public final class RequestExSetPledgeCrestLarge extends L2GameClientPacket
 		
 		if ((_length < 0) || (_length > 2176))
 		{
-			activeChar.sendPacket(SystemMessageId.THE_SIZE_OF_THE_UPLOADED_SYMBOL_DOES_NOT_MEET_THE_STANDARD_REQUIREMENTS);
+			client.sendPacket(SystemMessageId.THE_SIZE_OF_THE_UPLOADED_SYMBOL_DOES_NOT_MEET_THE_STANDARD_REQUIREMENTS);
 			return;
 		}
 		
 		if (clan.getDissolvingExpiryTime() > System.currentTimeMillis())
 		{
-			activeChar.sendPacket(SystemMessageId.AS_YOU_ARE_CURRENTLY_SCHEDULE_FOR_CLAN_DISSOLUTION_YOU_CANNOT_REGISTER_OR_DELETE_A_CLAN_CREST);
+			client.sendPacket(SystemMessageId.AS_YOU_ARE_CURRENTLY_SCHEDULE_FOR_CLAN_DISSOLUTION_YOU_CANNOT_REGISTER_OR_DELETE_A_CLAN_CREST);
 			return;
 		}
 		
 		if (!activeChar.hasClanPrivilege(ClanPrivilege.CL_REGISTER_CREST))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+			client.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return;
 		}
 		
@@ -86,14 +86,14 @@ public final class RequestExSetPledgeCrestLarge extends L2GameClientPacket
 			if (clan.getCrestLargeId() != 0)
 			{
 				clan.changeLargeCrest(0);
-				activeChar.sendPacket(SystemMessageId.THE_CLAN_MARK_HAS_BEEN_DELETED);
+				client.sendPacket(SystemMessageId.THE_CLAN_MARK_HAS_BEEN_DELETED);
 			}
 		}
 		else
 		{
 			if (clan.getLevel() < 3)
 			{
-				activeChar.sendPacket(SystemMessageId.A_CLAN_CREST_CAN_ONLY_BE_REGISTERED_WHEN_THE_CLAN_S_SKILL_LEVEL_IS_3_OR_ABOVE);
+				client.sendPacket(SystemMessageId.A_CLAN_CREST_CAN_ONLY_BE_REGISTERED_WHEN_THE_CLAN_S_SKILL_LEVEL_IS_3_OR_ABOVE);
 				return;
 			}
 			
@@ -101,14 +101,8 @@ public final class RequestExSetPledgeCrestLarge extends L2GameClientPacket
 			if (crest != null)
 			{
 				clan.changeLargeCrest(crest.getId());
-				activeChar.sendPacket(SystemMessageId.THE_CLAN_MARK_WAS_SUCCESSFULLY_REGISTERED_THE_SYMBOL_WILL_APPEAR_ON_THE_CLAN_FLAG_AND_THE_INSIGNIA_IS_ONLY_DISPLAYED_ON_ITEMS_PERTAINING_TO_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_CASTLE);
+				client.sendPacket(SystemMessageId.THE_CLAN_MARK_WAS_SUCCESSFULLY_REGISTERED_THE_SYMBOL_WILL_APPEAR_ON_THE_CLAN_FLAG_AND_THE_INSIGNIA_IS_ONLY_DISPLAYED_ON_ITEMS_PERTAINING_TO_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_CASTLE);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_11_REQUESTEXSETPLEDGECRESTLARGE;
 	}
 }

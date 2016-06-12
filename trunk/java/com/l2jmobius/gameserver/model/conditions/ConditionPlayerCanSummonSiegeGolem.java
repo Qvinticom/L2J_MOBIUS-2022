@@ -48,7 +48,12 @@ public class ConditionPlayerCanSummonSiegeGolem extends Condition
 		}
 		
 		final L2PcInstance player = effector.getActingPlayer();
-		boolean canSummonSiegeGolem = !player.isAlikeDead() && !player.isCursedWeaponEquipped() && (player.getClan() != null);
+		boolean canSummonSiegeGolem = true;
+		if (player.isAlikeDead() || player.isCursedWeaponEquipped() || (player.getClan() == null))
+		{
+			canSummonSiegeGolem = false;
+		}
+		
 		final Castle castle = CastleManager.getInstance().getCastle(player);
 		final Fort fort = FortManager.getInstance().getFort(player);
 		if ((castle == null) && (fort == null))
@@ -71,6 +76,6 @@ public class ConditionPlayerCanSummonSiegeGolem extends Condition
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			canSummonSiegeGolem = false;
 		}
-		return _val == canSummonSiegeGolem;
+		return (_val == canSummonSiegeGolem);
 	}
 }

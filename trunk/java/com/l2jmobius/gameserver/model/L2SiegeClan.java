@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.model;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.gameserver.enums.SiegeClanType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 public class L2SiegeClan
 {
 	private int _clanId = 0;
-	private final List<L2Npc> _flag = new CopyOnWriteArrayList<>();
+	private final Set<L2Npc> _flags = ConcurrentHashMap.newKeySet();
 	private SiegeClanType _type;
 	
 	public L2SiegeClan(int clanId, SiegeClanType type)
@@ -36,25 +36,32 @@ public class L2SiegeClan
 	
 	public int getNumFlags()
 	{
-		return _flag.size();
+		return _flags.size();
 	}
 	
 	public void addFlag(L2Npc flag)
 	{
-		_flag.add(flag);
+		_flags.add(flag);
 	}
 	
 	public boolean removeFlag(L2Npc flag)
 	{
-		final boolean ret = _flag.remove(flag);
+		if (flag == null)
+		{
+			return false;
+		}
+		
 		flag.deleteMe();
-		return ret;
+		
+		return getFlag().remove(flag);
 	}
 	
 	public void removeFlags()
 	{
-		_flag.forEach(f -> f.decayMe());
-		_flag.clear();
+		for (L2Npc flag : getFlag())
+		{
+			removeFlag(flag);
+		}
 	}
 	
 	public final int getClanId()
@@ -62,9 +69,9 @@ public class L2SiegeClan
 		return _clanId;
 	}
 	
-	public final List<L2Npc> getFlag()
+	public final Set<L2Npc> getFlag()
 	{
-		return _flag;
+		return _flags;
 	}
 	
 	public SiegeClanType getType()

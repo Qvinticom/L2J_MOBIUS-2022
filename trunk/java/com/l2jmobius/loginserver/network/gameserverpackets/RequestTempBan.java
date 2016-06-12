@@ -23,8 +23,8 @@ import java.sql.SQLException;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.util.network.BaseRecievePacket;
 import com.l2jmobius.loginserver.LoginController;
-import com.l2jmobius.util.network.BaseRecievePacket;
 
 /**
  * @author mrTJO

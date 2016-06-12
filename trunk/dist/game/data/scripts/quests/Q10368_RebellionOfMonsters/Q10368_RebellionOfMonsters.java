@@ -16,58 +16,47 @@
  */
 package quests.Q10368_RebellionOfMonsters;
 
-import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
+import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Rebellion of Monsters (10368)
- * @author spider
+ * @author St3eT
  */
-public class Q10368_RebellionOfMonsters extends Quest
+public final class Q10368_RebellionOfMonsters extends Quest
 {
 	// NPCs
 	private static final int FRED = 33179;
-	// Monsters
 	private static final int WEARY_JAGUAR = 23024;
 	private static final int WEARY_JAGUAR_SCOUT = 23025;
 	private static final int ANT_SOLDIER = 23099;
 	private static final int ANT_WARRIOR_CAPTAIN = 23100;
-	private static final HashMap<Integer, Integer> MOBS_REQUIRED = new HashMap<>();
-	{
-		MOBS_REQUIRED.put(WEARY_JAGUAR, 10);
-		MOBS_REQUIRED.put(WEARY_JAGUAR_SCOUT, 15);
-		MOBS_REQUIRED.put(ANT_SOLDIER, 15);
-		MOBS_REQUIRED.put(ANT_WARRIOR_CAPTAIN, 20);
-	}
-	// Rewards
-	private static final int ADENA_REWARD = 99000;
-	private static final int EXP_REWARD = 750000;
-	private static final int SP_REWARD = 180;
-	// Others
+	// Misc
 	private static final int MIN_LEVEL = 34;
 	private static final int MAX_LEVEL = 40;
 	
 	public Q10368_RebellionOfMonsters()
 	{
-		super(10368, Q10368_RebellionOfMonsters.class.getSimpleName(), "Rebellion of Monsters");
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.htm");
+		super(10368);
 		addStartNpc(FRED);
 		addTalkId(FRED);
-		addKillId(MOBS_REQUIRED.keySet());
+		addKillId(WEARY_JAGUAR, WEARY_JAGUAR_SCOUT, ANT_SOLDIER, ANT_WARRIOR_CAPTAIN);
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33179-08.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return null;
 		}
@@ -80,15 +69,21 @@ public class Q10368_RebellionOfMonsters extends Quest
 				htmltext = event;
 				break;
 			}
-			case "33179-03.htm": // start quest
+			case "33179-03.htm":
 			{
-				qs.startQuest();
-				qs.set(Integer.toString(WEARY_JAGUAR), 0);
-				qs.set(Integer.toString(WEARY_JAGUAR_SCOUT), 0);
-				qs.set(Integer.toString(ANT_SOLDIER), 0);
-				qs.set(Integer.toString(ANT_WARRIOR_CAPTAIN), 0);
-				qs.setCond(2);
-				qs.setCond(1); // arrow hack
+				st.startQuest();
+				htmltext = event;
+				break;
+			}
+			case "33179-06.html":
+			{
+				if (st.isCond(2))
+				{
+					giveAdena(player, 990, true);
+					addExpAndSp(player, 750000, 180);
+					st.exitQuest(false, true);
+				}
+				break;
 			}
 		}
 		return htmltext;
@@ -97,9 +92,10 @@ public class Q10368_RebellionOfMonsters extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, true);
-		String htmltext = null;
-		switch (qs.getState())
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = getQuestState(player, true);
+		
+		switch (st.getState())
 		{
 			case State.CREATED:
 			{
@@ -108,26 +104,19 @@ public class Q10368_RebellionOfMonsters extends Quest
 			}
 			case State.STARTED:
 			{
-				if (qs.isCond(1))
+				if (st.isCond(1))
 				{
 					htmltext = "33179-04.html";
 				}
-				else if (qs.isCond(2)) // end quest
+				else if (st.isCond(2))
 				{
-					giveAdena(player, ADENA_REWARD, true);
-					addExpAndSp(player, EXP_REWARD, SP_REWARD);
-					qs.unset(Integer.toString(WEARY_JAGUAR));
-					qs.unset(Integer.toString(WEARY_JAGUAR_SCOUT));
-					qs.unset(Integer.toString(ANT_SOLDIER));
-					qs.unset(Integer.toString(ANT_WARRIOR_CAPTAIN));
-					qs.exitQuest(false, true);
 					htmltext = "33179-05.html";
 				}
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = getAlreadyCompletedMsg(player);
+				htmltext = "33179-07.html";
 				break;
 			}
 		}
@@ -137,28 +126,81 @@ public class Q10368_RebellionOfMonsters extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null) && qs.isStarted() && qs.isCond(1) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
+		final QuestState st = getQuestState(killer, false);
+		
+		if ((st != null) && st.isStarted() && st.isCond(1))
 		{
-			if (qs.getInt(Integer.toString(npc.getId())) < MOBS_REQUIRED.get(npc.getId()))
+			int killedJaguar = st.getInt("killed_" + WEARY_JAGUAR);
+			int killedJaguarScout = st.getInt("killed_" + WEARY_JAGUAR_SCOUT);
+			int killedSoldier = st.getInt("killed_" + ANT_SOLDIER);
+			int killedCaptain = st.getInt("killed_" + ANT_WARRIOR_CAPTAIN);
+			
+			switch (npc.getId())
 			{
-				int kills = qs.getInt(Integer.toString(npc.getId()));
-				kills++;
-				qs.set(Integer.toString(npc.getId()), kills);
+				case WEARY_JAGUAR:
+				{
+					if (killedJaguar < 10)
+					{
+						killedJaguar++;
+						st.set("killed_" + WEARY_JAGUAR, killedJaguar);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					break;
+				}
+				case WEARY_JAGUAR_SCOUT:
+				{
+					if (killedJaguarScout < 15)
+					{
+						killedJaguarScout++;
+						st.set("killed_" + WEARY_JAGUAR_SCOUT, killedJaguarScout);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					break;
+				}
+				case ANT_SOLDIER:
+				{
+					if (killedSoldier < 15)
+					{
+						killedSoldier++;
+						st.set("killed_" + ANT_SOLDIER, killedSoldier);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					break;
+				}
+				case ANT_WARRIOR_CAPTAIN:
+				{
+					if (killedCaptain < 20)
+					{
+						killedCaptain++;
+						st.set("killed_" + ANT_WARRIOR_CAPTAIN, killedCaptain);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					break;
+				}
 			}
 			
-			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
-			log.addNpc(WEARY_JAGUAR, qs.getInt(Integer.toString(WEARY_JAGUAR)));
-			log.addNpc(WEARY_JAGUAR_SCOUT, qs.getInt(Integer.toString(WEARY_JAGUAR_SCOUT)));
-			log.addNpc(ANT_SOLDIER, qs.getInt(Integer.toString(ANT_SOLDIER)));
-			log.addNpc(ANT_WARRIOR_CAPTAIN, qs.getInt(Integer.toString(ANT_WARRIOR_CAPTAIN)));
-			killer.sendPacket(log);
-			
-			if ((qs.getInt(Integer.toString(WEARY_JAGUAR)) >= MOBS_REQUIRED.get(WEARY_JAGUAR)) && (qs.getInt(Integer.toString(WEARY_JAGUAR_SCOUT)) >= MOBS_REQUIRED.get(WEARY_JAGUAR_SCOUT)) && (qs.getInt(Integer.toString(ANT_SOLDIER)) >= MOBS_REQUIRED.get(ANT_SOLDIER)) && (qs.getInt(Integer.toString(ANT_WARRIOR_CAPTAIN)) >= MOBS_REQUIRED.get(ANT_WARRIOR_CAPTAIN)))
+			if ((killedJaguar == 10) && (killedJaguarScout == 15) && (killedSoldier == 15) && (killedCaptain == 20))
 			{
-				qs.setCond(2);
+				st.setCond(2, true);
 			}
+			sendNpcLogList(killer);
 		}
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
+	{
+		final QuestState st = getQuestState(activeChar, false);
+		if ((st != null) && st.isStarted() && st.isCond(1))
+		{
+			final Set<NpcLogListHolder> npcLogList = new HashSet<>(4);
+			npcLogList.add(new NpcLogListHolder(WEARY_JAGUAR, false, st.getInt("killed_" + WEARY_JAGUAR)));
+			npcLogList.add(new NpcLogListHolder(WEARY_JAGUAR_SCOUT, false, st.getInt("killed_" + WEARY_JAGUAR_SCOUT)));
+			npcLogList.add(new NpcLogListHolder(ANT_SOLDIER, false, st.getInt("killed_" + ANT_SOLDIER)));
+			npcLogList.add(new NpcLogListHolder(ANT_WARRIOR_CAPTAIN, false, st.getInt("killed_" + ANT_WARRIOR_CAPTAIN)));
+			return npcLogList;
+		}
+		return super.getNpcLogList(activeChar);
 	}
 }

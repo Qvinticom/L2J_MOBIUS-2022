@@ -16,21 +16,17 @@
  */
 package handlers.usercommandhandlers;
 
+import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
+
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
+import com.l2jmobius.gameserver.model.skills.SkillCastingType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jmobius.gameserver.network.serverpackets.SetupGauge;
-import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * Unstuck user command.
@@ -45,18 +41,13 @@ public class Unstuck implements IUserCommandHandler
 	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
-		if (!TvTEvent.onEscapeUse(activeChar.getObjectId()))
-		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			return false;
-		}
 		if (activeChar.isJailed())
 		{
 			activeChar.sendMessage("You cannot use this function while you are jailed.");
 			return false;
 		}
 		
-		final int unstuckTimer = activeChar.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000;
+		final int unstuckTimer = (activeChar.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000);
 		
 		if (activeChar.isInOlympiadMode())
 		{
@@ -64,12 +55,10 @@ public class Unstuck implements IUserCommandHandler
 			return false;
 		}
 		
-		if (activeChar.isCastingNow() || activeChar.isMovementDisabled() || activeChar.isMuted() || activeChar.isAlikeDead() || activeChar.inObserverMode() || activeChar.isCombatFlagEquipped())
+		if (activeChar.isCastingNow(SkillCaster::isAnyNormalType) || activeChar.isMovementDisabled() || activeChar.isMuted() || activeChar.isAlikeDead() || activeChar.inObserverMode() || activeChar.isCombatFlagEquipped())
 		{
 			return false;
 		}
-		
-		activeChar.forceIsCasting(GameTimeController.getInstance().getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
 		
 		final Skill escape = SkillData.getInstance().getSkill(2099, 1); // 5 minutes escape
 		final Skill GM_escape = SkillData.getInstance().getSkill(2100, 1); // 1 second escape
@@ -87,53 +76,26 @@ public class Unstuck implements IUserCommandHandler
 			activeChar.doCast(escape);
 			return true;
 		}
-		else if (Config.UNSTUCK_INTERVAL > 100)
-		{
-			activeChar.sendMessage("You use Escape: " + (unstuckTimer / 60000) + " minutes.");
-		}
 		else
 		{
-			activeChar.sendMessage("You use Escape: " + (unstuckTimer / 1000) + " seconds.");
-		}
-		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		// SoE Animation section
-		activeChar.setTarget(activeChar);
-		activeChar.disableAllSkills();
-		
-		final MagicSkillUse msk = new MagicSkillUse(activeChar, 1050, 1, unstuckTimer, 0);
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, msk, 900);
-		final SetupGauge sg = new SetupGauge(0, unstuckTimer);
-		activeChar.sendPacket(sg);
-		// End SoE Animation section
-		
-		// continue execution later
-		activeChar.setSkillCast(ThreadPoolManager.getInstance().scheduleGeneral(new EscapeFinalizer(activeChar), unstuckTimer));
-		
-		return true;
-	}
-	
-	private static class EscapeFinalizer implements Runnable
-	{
-		private final L2PcInstance _activeChar;
-		
-		EscapeFinalizer(L2PcInstance activeChar)
-		{
-			_activeChar = activeChar;
-		}
-		
-		@Override
-		public void run()
-		{
-			if (_activeChar.isDead())
+			final SkillCaster skillCaster = SkillCaster.castSkill(activeChar, activeChar.getTarget(), escape, null, SkillCastingType.NORMAL, false, false, unstuckTimer);
+			if (skillCaster == null)
 			{
-				return;
+				activeChar.sendPacket(ActionFailed.get(SkillCastingType.NORMAL));
+				activeChar.getAI().setIntention(AI_INTENTION_ACTIVE);
+				return false;
 			}
 			
-			_activeChar.enableAllSkills();
-			_activeChar.setIsCastingNow(false);
-			_activeChar.setInstanceId(0);
-			_activeChar.teleToLocation(TeleportWhereType.TOWN);
+			if (Config.UNSTUCK_INTERVAL > 100)
+			{
+				activeChar.sendMessage("You use Escape: " + (unstuckTimer / 60000) + " minutes.");
+			}
+			else
+			{
+				activeChar.sendMessage("You use Escape: " + (unstuckTimer / 1000) + " seconds.");
+			}
 		}
+		return true;
 	}
 	
 	@Override

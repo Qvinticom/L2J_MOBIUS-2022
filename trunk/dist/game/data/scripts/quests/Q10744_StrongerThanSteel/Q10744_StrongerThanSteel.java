@@ -23,31 +23,34 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
 /**
+ * Stronger Than Steel (10744)
  * @author Sdw
  */
-public class Q10744_StrongerThanSteel extends Quest
+public final class Q10744_StrongerThanSteel extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int MILONE = 33953;
 	private static final int DOLKIN = 33954;
+	// Monsters
 	private static final int TREANT = 23457;
 	private static final int LEAFIE = 23458;
+	// Items
+	private static final int TREANT_LEAF = 39532;
+	private static final int LEAFIE_LEAF = 39531;
 	// Misc
 	private static final int MIN_LEVEL = 15;
 	private static final int MAX_LEVEL = 20;
-	// Item
-	private static final int TREANT_LEAF = 39532;
-	private static final int LEAFIE_LEAF = 39531;
 	
 	public Q10744_StrongerThanSteel()
 	{
-		super(10744, Q10744_StrongerThanSteel.class.getSimpleName(), "Stronger Than Steel");
+		super(10744);
 		addStartNpc(MILONE);
 		addTalkId(MILONE, DOLKIN);
 		addKillId(TREANT, LEAFIE);
+		
+		addCondRace(Race.ERTHEIA, "");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33953-00.htm");
 		registerQuestItems(TREANT_LEAF, LEAFIE_LEAF);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_quest.html");
-		addCondRace(Race.ERTHEIA, "no_quest.html");
 	}
 	
 	@Override
@@ -59,19 +62,15 @@ public class Q10744_StrongerThanSteel extends Quest
 			return null;
 		}
 		
-		String htmltext = null;
+		String htmltext = event;
 		switch (event)
 		{
 			case "33953-02.htm":
 			case "33954-02.html":
-			{
-				htmltext = event;
 				break;
-			}
-			case "33953-03.html":
+			case "33953-03.htm":
 			{
 				qs.startQuest();
-				htmltext = event;
 				break;
 			}
 			case "33954-03.html":
@@ -82,15 +81,22 @@ public class Q10744_StrongerThanSteel extends Quest
 				}
 				break;
 			}
+			default:
+				htmltext = null;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = qs.isCompleted() ? getAlreadyCompletedMsg(player) : getNoQuestMsg(player);
+		String htmltext = getNoQuestMsg(player);
+		
+		if (qs.isCompleted())
+		{
+			htmltext = getAlreadyCompletedMsg(player);
+		}
 		
 		switch (npc.getId())
 		{
@@ -100,29 +106,38 @@ public class Q10744_StrongerThanSteel extends Quest
 				{
 					htmltext = "33953-01.htm";
 				}
-				else if (qs.isStarted())
+				else if (qs.isStarted() && qs.isCond(1))
 				{
-					htmltext = "33953-03.html";
+					htmltext = "33953-04.html";
 				}
 				break;
 			}
 			case DOLKIN:
 			{
-				if (qs.isCond(1))
+				if (qs.isStarted())
 				{
-					htmltext = "33954-01.html";
-				}
-				else if (qs.isCond(3))
-				{
-					htmltext = "33954-04.html";
-					giveAdena(player, 34000, true);
-					addExpAndSp(player, 112001, 5);
-					qs.exitQuest(false, true);
+					if (qs.isCond(1))
+					{
+						htmltext = "33954-01.html";
+					}
+					else if (qs.isCond(2))
+					{
+						htmltext = "33954-04.html";
+					}
+					else if (qs.isCond(3))
+					{
+						if (!isSimulated)
+						{
+							giveAdena(player, 34000, true);
+							addExpAndSp(player, 112001, 5);
+							qs.exitQuest(false, true);
+						}
+						htmltext = "33954-05.html";
+					}
 				}
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -147,7 +162,6 @@ public class Q10744_StrongerThanSteel extends Quest
 				qs.setCond(3, true);
 			}
 		}
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 }

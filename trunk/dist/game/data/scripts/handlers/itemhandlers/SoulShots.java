@@ -16,20 +16,21 @@
  */
 package handlers.itemhandlers;
 
-import java.util.logging.Level;
+import java.util.List;
 
+import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.ActionType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.util.Broadcast;
-import com.l2jmobius.util.Rnd;
 
 public class SoulShots implements IItemHandler
 {
@@ -45,15 +46,14 @@ public class SoulShots implements IItemHandler
 		final L2PcInstance activeChar = playable.getActingPlayer();
 		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 		final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
-		final SkillHolder[] skills = item.getItem().getSkills();
-		
-		final int itemId = item.getId();
-		
+		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
 		if (skills == null)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
+			_log.warning(getClass().getSimpleName() + ": is missing skills!");
 			return false;
 		}
+		
+		final int itemId = item.getId();
 		
 		// Check if Soul shot can be used
 		if ((weaponInst == null) || (weaponItem.getSoulShotCount() == 0))
@@ -110,23 +110,7 @@ public class SoulShots implements IItemHandler
 		
 		// Send message to client
 		activeChar.sendPacket(SystemMessageId.YOUR_SOULSHOTS_ARE_ENABLED);
-		// Visual effect change if player has equipped Ruby lvl 3 or higher
-		if ((activeChar.getInventory().getItemByItemId(38859) != null) && activeChar.getInventory().getItemByItemId(38859).isEquipped())
-		{
-			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, 17817, 1, 0, 0), 600);
-		}
-		else if ((activeChar.getInventory().getItemByItemId(38858) != null) && activeChar.getInventory().getItemByItemId(38858).isEquipped())
-		{
-			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, 17816, 1, 0, 0), 600);
-		}
-		else if ((activeChar.getInventory().getItemByItemId(38857) != null) && activeChar.getInventory().getItemByItemId(38857).isEquipped())
-		{
-			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, 17815, 1, 0, 0), 600);
-		}
-		else
-		{
-			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
-		}
+		skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, holder.getSkillId(), holder.getSkillLvl(), 0, 0), 600));
 		return true;
 	}
 }

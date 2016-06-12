@@ -398,8 +398,12 @@
 	</option>
 	<option id="24699" name="o_f_84_1u_92">
 		<!-- STR +1 increase. -->
-		<for>
-			<add stat="STR" val="1" />
-		</for>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+				<stat>STR</stat>
+			</effect>
+		</effects>
 	</option>
 </list>

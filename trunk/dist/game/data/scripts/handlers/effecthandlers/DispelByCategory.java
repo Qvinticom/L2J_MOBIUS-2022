@@ -16,11 +16,16 @@
  */
 package handlers.effecthandlers;
 
+import java.util.List;
+
+import com.l2jmobius.gameserver.enums.DispelSlotType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 
 /**
@@ -29,15 +34,13 @@ import com.l2jmobius.gameserver.model.stats.Formulas;
  */
 public final class DispelByCategory extends AbstractEffect
 {
-	private final String _slot;
+	private final DispelSlotType _slot;
 	private final int _rate;
 	private final int _max;
 	
-	public DispelByCategory(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public DispelByCategory(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
-		_slot = params.getString("slot", null);
+		_slot = params.getEnum("slot", DispelSlotType.class, DispelSlotType.BUFF);
 		_rate = params.getInt("rate", 0);
 		_max = params.getInt("max", 0);
 	}
@@ -55,16 +58,17 @@ public final class DispelByCategory extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (info.getEffected().isDead())
+		if (effected.isDead())
 		{
 			return;
 		}
 		
-		for (BuffInfo can : Formulas.calcCancelStealEffects(info.getEffector(), info.getEffected(), info.getSkill(), _slot, _rate, _max))
+		final List<BuffInfo> canceled = Formulas.calcCancelStealEffects(effector, effected, skill, _slot, _rate, _max);
+		for (BuffInfo can : canceled)
 		{
-			info.getEffected().getEffectList().stopSkillEffects(true, can.getSkill());
+			effected.getEffectList().stopSkillEffects(true, can.getSkill());
 		}
 	}
 }

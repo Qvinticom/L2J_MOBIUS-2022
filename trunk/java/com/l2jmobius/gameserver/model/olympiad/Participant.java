@@ -42,7 +42,7 @@ public final class Participant
 		player = plr;
 		name = plr.getName();
 		side = olympiadSide;
-		baseClass = plr.getBaseClassId();
+		baseClass = plr.getBaseClass();
 		stats = Olympiad.getNobleStats(getObjectId());
 		clanName = plr.getClan() != null ? plr.getClan().getName() : "";
 		clanId = plr.getClanId();
@@ -70,7 +70,7 @@ public final class Participant
 		{
 			player = L2World.getInstance().getPlayer(getObjectId());
 		}
-		return player != null;
+		return (player != null);
 	}
 	
 	/**

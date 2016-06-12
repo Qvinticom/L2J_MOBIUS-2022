@@ -1,1610 +1,3151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="10700" levels="7" name="Mug">
-	<!-- Source: https://l2wiki.com/Mug_-_Othell_Fortune_Seeker -->
-		<table name="#mpConsume"> 18 21 24 27 30 33 36 </table>
+	<skill id="10700" toLevel="7" name="Mug">
+		<!-- Inflicts 11903 damage onto nearby enemies and steals their item. Requires a dagger or dual dagger. -->
 		<table name="#power"> 11903 13957 15601 17244 21855 22921 23987 </table>
-		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="castRange" val="200" />
-		<set name="reuseDelay" val="3000" />
-		<set name="effectPoint" val="-1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="AURA" />
-		<set name="power" val="#power" />
-	</skill>
-	<skill id="10701" levels="4" name="Superior Vitality">
-		<table name="#increase">1.05 1.07 1.1 1.15</table>
-		<table name="#magicLvl">85 90 95 99</table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="#increase" />
-				<mul stat="maxCp" val="#increase" />
-				<mul stat="pAtk" val="#increase" />
-				<mul stat="pvePhysDmg" val="1.3" />
-				<mul stat="pvePhysSkillsDmg" val="1.3" />
+		<affectLimit>9-10</affectLimit>
+		<affectRange>250</affectRange>
+		<icon>icon.skill10700</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">18</value>
+			<value level="2">21</value>
+			<value level="3">24</value>
+			<value level="4">27</value>
+			<value level="5">30</value>
+			<value level="6">33</value>
+			<value level="7">36</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1030</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-709</effectPoint>
+		<reuseDelay>3000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">11903</value>
+					<value level="2">13957</value>
+					<value level="3">15601</value>
+					<value level="4">17244</value>
+					<value level="5">21855</value>
+					<value level="6">22921</value>
+					<value level="7">23987</value>
+				</power>
 			</effect>
-		</for>
+			<effect name="Plunder" />
+		</effects>
 	</skill>
-	<skill id="10702" levels="7" name="Plunder">
-	<!-- Source: https://l2wiki.com/Plunder_-_Othell_Fortune_Seeker -->
-		<table name="#mpConsume"> 12 14 16 18 20 22 24 </table>
+	<skill id="10701" toLevel="4" name="Superior Vitality">
+		<!-- Max HP and CP + 5%. P. Atk. + 5%. Increases damage inflicted on an NPC by 30%. -->
+		<table name="#inc"> 1.05 1.07 1.1 1.15 </table>
+		<icon>icon.skill0211</icon>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10702" toLevel="7" name="Plunder">
+		<!-- Inflicts 13580 damage onto target and steals their item. Requires a dagger or dual dagger. -->
 		<table name="#power"> 13580 15946 18311 20204 27142 28466 29790 </table>
-		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="castRange" val="200" />
-		<set name="reuseDelay" val="3000" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="effectPoint" val="-1" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="ONE" />
-		<set name="power" val="#power" />
-	</skill>
-	<!-- Cancels target's armor for $s1. Requires dagger/dual dagger. Consumes $s2 Soulstones. --> 
-	<skill id="10703" levels="3" name="Armor Breaker">
-		<set name="icon" val="icon.skill10703" />
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="DISBODY" />
-		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
-		<set name="activateRate" val="90" />
-		<set name="power" val="50" />
-		<set name="basicProperty" val="STR" />
-		<set name="castRange" val="40" />
-		<set name="coolTime" val="500" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="200" />
-		<set name="hitTime" val="1000" />
-		<set name="isDebuff" val="true" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="99" />
-		<set name="mpConsume" val="77" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="90000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<set name="itemConsumeCount" val="2" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->		
-		<for>
-			<effect name="RemoveArmor">
-				<param chance="80" />
+		<icon>icon.skill10548</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">12</value>
+			<value level="2">14</value>
+			<value level="3">16</value>
+			<value level="4">18</value>
+			<value level="5">20</value>
+			<value level="6">22</value>
+			<value level="7">24</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>830</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-709</effectPoint>
+		<reuseDelay>3000</reuseDelay>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">13580</value>
+					<value level="2">15946</value>
+					<value level="3">18311</value>
+					<value level="4">20204</value>
+					<value level="5">27142</value>
+					<value level="6">28466</value>
+					<value level="7">29790</value>
+				</power>
 			</effect>
-		</for>
+			<effect name="Plunder" />
+		</effects>
 	</skill>
-	<!-- Reveals the enemy's back and inflicts Stun for $s1. Requires dagger/dual dagger. Consumes $s2 Soulstones. --> 
-	<skill id="10704" levels="3" name="Mass Power Bluff">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+	<skill id="10703" toLevel="3" name="Armor Breaker">
+		<!-- Updated to IO -->
+		<!-- Cancels target's armor for 3 seconds. Requires dagger/dual dagger. Consumes 2 Soulstones. -->
+		<icon>icon.skill10703</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>DISARM</abnormalType>
+		<activateRate>80</activateRate> <!-- Guessed -->
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<trait>DISARM</trait> <!-- Guessed -->
+		<mpConsume>
+			<value level="1">77</value>
+			<value level="2">79</value>
+			<value level="3">81</value>
+		</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>90000</reuseDelay>
+		<effectPoint>-655</effectPoint>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="Disarmor" />
+		</effects>
 	</skill>
-	<!-- Front Critical Rate - 10%%, Side Critical Rate + 10%%, Critical Damage + 10%%, Rear Critical Rate + 20%%, Critical Damage + 20%%. --> 
-	<skill id="10705" levels="1" name="Shadow Walking">
-		<set name="icon" val="icon.skill10705" />
-		<set name="magicLvl" val="40" />
-		<set name="mpConsume" val="64" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="critDmgPos" val="0.9">
-					<player front="true" />
-				</mul>
-				<mul stat="critDmgPos" val="1.1">
-					<and>
-						<player front="false" />
-						<player behind="false" />
-					</and>
-				</mul>
-				<mul stat="critDmgPos" val="1.2">
-					<player behind="true" />
-				</mul>
+	<skill id="10704" toLevel="3" name="Mass Power Bluff">
+		<!-- Reveals the enemy's back and inflicts Stun for 3 seconds. Requires dagger/dual dagger. Consumes 2 Soulstones. -->
+		<icon>icon.skill10704</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate> <!-- Guessed -->
+		<affectRange>200</affectRange> <!-- Guessed -->
+		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
+		<itemConsumeCount>2</itemConsumeCount>
+		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
+		<operateType>A2</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<trait>DERANGEMENT</trait>
+		<mpConsume>155</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1000</hitTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-1</effectPoint>
+		<isDebuff>true</isDebuff>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Bluff">
+				<chance>80</chance>
 			</effect>
-		</for>
+			<effect name="TargetCancel">
+				<chance>80</chance>
+			</effect>
+			<effect name="DeleteHateOfMe">
+				<chance>80</chance>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
-	<skill id="10747" levels="1" name="Rogue - Individual Passive">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0217" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+	<skill id="10705" toLevel="1" name="Shadow Walking">
+		<!-- Updated to IO -->
+		<!-- Front Critical Rate - 10%, Side Critical Rate + 10%, Critical Damage + 10%, Rear Critical Rate + 20%, Critical Damage + 20%. -->
+		<icon>icon.skill10705</icon>
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<mpConsume>64</mpConsume>
+		<effects>
+			<effect name="CriticalDamagePosition">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<position>SIDE</position>
+			</effect>
+			<effect name="CriticalDamagePosition">
+				<amount>20</amount>
+				<mode>PER</mode>
+				<position>BACK</position>
+			</effect>
+			<effect name="CriticalRatePositionBonus">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<position>FRONT</position>
+			</effect>
+			<effect name="CriticalRatePositionBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<position>SIDE</position>
+			</effect>
+			<effect name="CriticalRatePositionBonus">
+				<amount>20</amount>
+				<mode>PER</mode>
+				<position>BACK</position>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="10748" levels="1" name="Rogue - Individual">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="10747" toLevel="1" name="Rogue - Individual Passive">
+		<!-- Glory Days confirmed -->
+		<icon>icon.skill0217</icon>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="10748" toLevel="1" name="Rogue - Individual">
+		<!-- Glory Days confirmed -->
 		<!-- Pierce through target to inflict a fatal blow. Attacks with 8875 Power added to P. Atk. Over-hit. Half-kill. -->
-		<set name="icon" val="icon.skill1543" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="50" />
-		<set name="hitTime" val="1200" />
-		<set name="coolTime" val="400" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="4" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="10749" levels="1" name="Heavy Hit">
-		<set name="hitTime" val="2000" />
-		<set name="coolTime" val="500" />
-		<set name="castRange" val="200" />
-		<set name="reuseDelay" val="10000" />
-		<table name="#power">15000</table>
-		<set name="magicLvl" val="99" />
-		<set name="isDebuff" val="true" />
-		<set name="nextActionAttack" val="true" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="overHit" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="effectRange" val="100" />
-	</skill>
-	<skill id="10750" levels="1" name="Heavy Hit">
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="castRange" val="600" />
-		<set name="reuseDelay" val="10000" />
-		<set name="abnormalTime" val="10" />
-		<set name="targetType" val="ONE" />
-		<set name="effectRange" val="650" />
-		<set name="magicLvl" val="99" />
-		<set name="power" val="5000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="trait" val="SHOCK" />
-		<set name="isDebuff" val="true" />
-		<for>
-			<effect name="PhysicalAttack" />
-			<effect name="Stun" />
-		</for>
-	</skill>
-	<skill id="10751" levels="7" name="Superior Bow/Crossbow Mastery">
-	<!-- Source: https://l2wiki.com/Superior_Bow/Crossbow_Mastery_-_Yul_Sagittarius -->
-		<table name="#pAtk"> 1663 1928 2235 2515 2850 3023 3208 </table>
-		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<add stat="pAtk" val="#pAtk">
-					<using kind="CROSSBOW,BOW" />
-				</add>
-				<mul stat="pAtkSpd" val="1.15">
-					<using kind="CROSSBOW,BOW" />
-				</mul>
-				<add stat="accCombat" val="8" />
-				<add stat="skillCritical" val="1" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<activateRate>130</activateRate>
+		<icon>icon.skill1543</icon>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>85</magicLevel>
+		<operateType>A2</operateType>
+		<castRange>50</castRange>
+		<effectRange>60</effectRange>
+		<hitTime>1200</hitTime>
+		<coolTime>400</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>4</isMagic>
+		<effectPoint>-709</effectPoint>
+		<isDebuff>true</isDebuff>
+		<reuseDelayGroup>11509</reuseDelayGroup>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicLvl>85</magicLvl>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="TeleportToTarget" />
+			<effect name="TargetCancel" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
-		</for>
-	</skill>
-	<skill id="10752" levels="7" name="Superior Light Armor Mastery">
-	<!-- Source: https://l2wiki.com/Superior_Light_Armor_Mastery_-_Yul_Sagittarius -->
-		<!-- Not done spd and rCrit depending on DEX -->
-		<table name="#pDef"> 1506 1645 1817 1959 2196 2279 2365 </table>
-		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<add stat="maxHp" val="4783">
-					<using kind="LIGHT" />
-				</add>
-				<add stat="pDef" val="#pDef">
-					<using kind="LIGHT" />
-				</add>
-				<mul stat="regMp" val="1.1">
-					<using kind="LIGHT" />
-				</mul>
-				<mul stat="defCritRate" val="0.65">
-					<using kind="LIGHT" />
-				</mul>
-				<add stat="rEvas" val="7">
-					<using kind="LIGHT" />
-				</add>
+			<effect name="FatalBlow">
+				<chance>30</chance>
+				<power>8875</power>
+				<overHit>true</overHit>
 			</effect>
-		</for>
-	</skill>
-	<skill id="10753" levels="1" name="Superior Hawkeye Mastery">
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="pAtkRange" val="500">
-					<using kind="CROSSBOW,BOW" />
-				</add>
-				<mul stat="maxMp" val="1.25" />
-				<mul stat="physicalMpConsumeRate" val="0.7">
-					<using kind="CROSSBOW,BOW" />
-				</mul>
+			<effect name="Lethal">
+				<halfLethal>15</halfLethal>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="10754" levels="7" name="Superior Survival Ability">
-	<!-- Source: https://l2wiki.com/Superior_Survival_Ability_-_Yul_Ghost_Sentinel -->
-		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<table name="#runSpd"> 17 18 19 20 22 23 24 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<sub stat="damageZoneVuln" val="30" />
-				<mul stat="weightLimit" val="1.5" />
-				<add stat="runSpd" val="#runSpd" />
+	<skill id="10749" toLevel="1" name="Heavy Hit">
+		<!-- Glory Days confirmed -->
+		<!-- Inflicts a powerful blow on target. -->
+		<icon>icon.skill10317</icon>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>85</magicLevel>
+		<nextActionAttack>true</nextActionAttack>
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<effectRange>200</effectRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-687</effectPoint>
+		<rideState>NONE</rideState>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<reuseDelay>10000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>AIRBIND</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power>
 			</effect>
+		</effects>
+	</skill>
+	<skill id="10750" toLevel="1" name="Heavy Hit">
+		<!-- Glory Days confirmed -->
+		<!-- IO Retail: 1128 p.atk vs 2265 p.def = 1883 damage -->
+		<!-- Inflicts a powerful blow on target. -->
+		<icon>icon.skill10317</icon>
+		<flyType>CHARGE</flyType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>85</magicLevel>
+		<nextActionAttack>true</nextActionAttack>
+		<operateType>DA1</operateType>
+		<castRange>600</castRange>
+		<effectRange>800</effectRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-687</effectPoint>
+		<rideState>NONE</rideState>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<reuseDelay>10000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>KNOCKDOWN</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>10000</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10751" toLevel="10" name="Superior Bow/Crossbow Mastery">
+		<!-- Glory Days confirmed -->
+		<!-- P. Atk. + 10%, Additional P. Atk. + 1663, Atk. Sp.d + 15%, P. Accuracy + 8 when using a bow or crossbow. STR + 2. Depending on your STR, the Cooldown resets or the abnormal status duration increases + 2 times. -->
+		<table name="#pAtk"> 1663 1928 2235 2515 2850 3023 3208 3403 3610 3830 </table>
+		<icon>icon.skill10751</icon>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">100</value>
+			<value level="6">102</value>
+			<value level="7">104</value>
+			<value level="8">106</value>
+			<value level="9">108</value>
+			<value level="10">110</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCritical">
+				<stat>STR</stat>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">1663</value>
+					<value level="2">1928</value>
+					<value level="3">2235</value>
+					<value level="4">2515</value>
+					<value level="5">2850</value>
+					<value level="6">3023</value>
+					<value level="7">3208</value>
+					<value level="8">3403</value>
+					<value level="9">3610</value>
+					<value level="10">3830</value>
+				</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item> CROSSBOW</item>
+					<item> TWOHANDCROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="Accuracy">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item> CROSSBOW</item>
+					<item> TWOHANDCROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item> CROSSBOW</item>
+					<item> TWOHANDCROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10752" toLevel="10" name="Superior Light Armor Mastery">
+		<!-- Glory Days confirmed -->
+		<!-- Max HP + 4783, P. Def. + 1506, P. Evasion + 14, MP recovery bonus + 6, and chance of receiving critical attacks - 35% when equipped with Light Armor. Spd. and P. Skill Critical Rate change depending on DEX. STR + 2. -->
+		<table name="#pDef"> 1506 1645 1817 1959 2196 2279 2365 2455 2558 2655 </table>
+		<icon>icon.skill10752</icon>
+		<magicCriticalRate>5</magicCriticalRate>
+		<operateType>P</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">100</value>
+			<value level="6">102</value>
+			<value level="7">104</value>
+			<value level="8">106</value>
+			<value level="9">108</value>
+			<value level="10">110</value>
+		</magicLvl>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">1506</value>
+					<value level="2">1645</value>
+					<value level="3">1817</value>
+					<value level="4">1959</value>
+					<value level="5">2196</value>
+					<value level="6">2279</value>
+					<value level="7">2365</value>
+					<value level="8">2455</value>
+					<value level="9">2558</value>
+					<value level="10">2655</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>14</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="MpRegen">
+				<amount>6</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>-35</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="MaxHp">
+				<amount>4783</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="StatBonusSkillCritical">
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatBonusSpeed">
+				<stat>DEX</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10753" toLevel="1" name="Superior Hawkeye Mastery">
+		<!-- Glory Days confirmed -->
+		<!-- When using a bow/crossbow, increases range by 500 and Max MP by 25%, and decreases MP consumption upon skill use by 30%. -->
+		<icon>icon.skill0113</icon>
+		<magicCriticalRate>5</magicCriticalRate>
+		<operateType>P</operateType>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MaxMp">
+				<amount>25</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item> CROSSBOW</item>
+					<item> TWOHANDCROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalAttackRange">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item> CROSSBOW</item>
+					<item> TWOHANDCROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-30</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+				<weaponType>
+					<item>BOW</item>
+					<item> CROSSBOW</item>
+					<item> TWOHANDCROSSBOW</item>
+				</weaponType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10754" toLevel="10" name="Superior Survival Ability">
+		<!-- Glory Days confirmed -->
+		<!-- Speed + 17, Weight Limit + 51%, and Terrain Damage - 30%. STR + 2. When inflicting a critical during, Survival Movement is triggered. -->
+		<table name="#runSpd"> 17 18 19 20 22 23 24 25 26 27 </table>
+		<icon>icon.skill0295</icon>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">100</value>
+			<value level="6">102</value>
+			<value level="7">104</value>
+			<value level="8">106</value>
+			<value level="9">108</value>
+			<value level="10">110</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<effects>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="1" />
-				<param chance="35" />
-				<param skillId="10809" skillLevel="1" />
-				<param targetType="SELF" />
-				<param allowWeapons="ALL" />
-				<param isCritical="true" />
+				<!-- Survival Movement -->
+				<isCritical>true</isCritical>
+				<skillId>10809</skillId>
+				<skillLevel>1</skillLevel>
+				<allowWeapons>BOW,CROSSBOW,TWOHANDCROSSBOW</allowWeapons>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
 			</effect>
-		</for>
-	</skill>
-	<skill id="10755" levels="7" name="Superior Mental Attack Resistance">
-	<!-- Source: https://l2wiki.com/Superior_Mental_Attack_Resistance_-_Yul_Trickster -->
-		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<table name="#resistance"> 20 22 24 26 30 32 34 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<param HOLD="#resistance" />
-				<param SLEEP="#resistance" />
-				<param PARALYZE="#resistance" />
-				<param BLEED="#resistance" />
-				<param SHOCK="#resistance" />
-				<param POISON="#resistance" />
-				<param DERANGEMENT="#resistance" />
-				<add stat="reflectSkillMagic" val="10" />
-				<add stat="reflectSkillPhysic" val="10" />
+			<effect name="Speed">
+				<amount>
+					<value level="1">17</value>
+					<value level="2">18</value>
+					<value level="3">19</value>
+					<value level="4">20</value>
+					<value level="5">22</value>
+					<value level="6">23</value>
+					<value level="7">24</value>
+					<value level="8">25</value>
+					<value level="9">26</value>
+					<value level="10">27</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-	</skill>
-	<skill id="10756" levels="7" name="Superior Critical Arrow">
-	<!-- Source: https://l2wiki.com/Superior_Critical_Arrow_-_Yul_Sagittarius -->
-		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<table name="#critDmg"> 1.05 1.06 1.07 1.08 1.10 1.12 1.14 </table>
-		<table name="#skillCriticalProbability"> 10 12 14 16 20 22 24 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<mul stat="critRate" val="1.25" />
-				<mul stat="critDmg" val="#critDmg" />
-				<mul stat="skillCriticalProbability" val="#skillCriticalProbability" />
+			<effect name="WeightLimit">
+				<amount>51</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="AreaDamage">
+				<amount>-30</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="10757" levels="4" name="Dead Eye Stance">
-		<table name="#magicLvl"> 85 90 95 99 </table>
+	<skill id="10755" toLevel="10" name="Superior Mental Attack Resistance">
+		<!-- Glory Days confirmed -->
+		<!-- Resistance + 20% to Hold/Sleep/Paralysis/Mental Attacks/Poison/Bleed/Stun. STR + 2. In addition, has a 10% chance of reflecting P./M. abnormal states back to the attacker. -->
+		<table name="#res"> 20 22 24 26 30 32 34 36 38 40 </table>
+		<icon>icon.skill10005</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">100</value>
+			<value level="6">102</value>
+			<value level="7">104</value>
+			<value level="8">106</value>
+			<value level="9">108</value>
+			<value level="10">110</value>
+		</magicLvl>
+		<effects>
+			<effect name="DefenceTrait">
+				<HOLD>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">30</value>
+					<value level="6">32</value>
+					<value level="7">34</value>
+					<value level="8">36</value>
+					<value level="9">38</value>
+					<value level="10">40</value>
+				</HOLD>
+				<DERANGEMENT>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">30</value>
+					<value level="6">32</value>
+					<value level="7">34</value>
+					<value level="8">36</value>
+					<value level="9">38</value>
+					<value level="10">40</value>
+				</DERANGEMENT>
+				<BLEED>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">30</value>
+					<value level="6">32</value>
+					<value level="7">34</value>
+					<value level="8">36</value>
+					<value level="9">38</value>
+					<value level="10">40</value>
+				</BLEED>
+				<PARALYZE>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">30</value>
+					<value level="6">32</value>
+					<value level="7">34</value>
+					<value level="8">36</value>
+					<value level="9">38</value>
+					<value level="10">40</value>
+				</PARALYZE>
+				<SLEEP>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">30</value>
+					<value level="6">32</value>
+					<value level="7">34</value>
+					<value level="8">36</value>
+					<value level="9">38</value>
+					<value level="10">40</value>
+				</SLEEP>
+				<SHOCK>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">30</value>
+					<value level="6">32</value>
+					<value level="7">34</value>
+					<value level="8">36</value>
+					<value level="9">38</value>
+					<value level="10">40</value>
+				</SHOCK>
+				<POISON>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">30</value>
+					<value level="6">32</value>
+					<value level="7">34</value>
+					<value level="8">36</value>
+					<value level="9">38</value>
+					<value level="10">40</value>
+				</POISON>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="ReflectSkill">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ReflectSkill">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+				<type>MAGIC</type>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10756" toLevel="10" name="Superior Critical Arrow">
+		<!-- Glory Days confirmed -->
+		<!-- p. Critical Rate + 25%, and P. Critical Damage + 5%, Skill Mastery rate + 1000%. STR + 2. -->
+		<table name="#cAtk"> 1.05 1.06 1.07 1.08 1.1 1.12 1.14 1.16 1.18 1.20 </table>
+		<icon>icon.skill10756</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">100</value>
+			<value level="6">102</value>
+			<value level="7">104</value>
+			<value level="8">106</value>
+			<value level="9">108</value>
+			<value level="10">110</value>
+		</magicLvl>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">8</value>
+					<value level="5">10</value>
+					<value level="6">12</value>
+					<value level="7">14</value>
+					<value level="8">16</value>
+					<value level="9">18</value>
+					<value level="10">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="SkillCriticalProbability">
+				<amount>1000</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10757" toLevel="4" name="Dead Eye Stance">
+		<!-- Can't be Glory Days confirmed, was toggle -->
+		<!-- For 30 min., P. Atk. + 10%, and skill power + 5% when equipped with a bow or crossbow. -->
 		<table name="#pAtk"> 1.10 1.12 1.15 1.20 </table>
 		<table name="#physicalSkillPower"> 1.05 1.06 1.07 1.10 </table>
-		<table name="#abnormalLvls"> 1 2 3 4 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalType" val="YUL_STANCE" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="30000" />
-		<set name="abnormalTime" val="1800" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="#pAtk">
-					<using kind="CROSSBOW, BOW" />
-				</mul>
-				<mul stat="physicalSkillPower" val="#physicalSkillPower">
-					<using kind="CROSSBOW, BOW" />
-				</mul>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>SHOOTING_STANCE</abnormalType>
+		<icon>icon.skill10757</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<mpConsume>10</mpConsume>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>687</effectPoint>
+		<toggleGroupId>2</toggleGroupId>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">12</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item> CROSSBOW</item>
+					<item> TWOHANDCROSSBOW</item>
+				</weaponType>
 			</effect>
-		</for>
-	</skill>
-	<skill id="10758" levels="4" name="Rapid Fire Stance">
-		<table name="#magicLvl">85 90 95 99</table>
-		<table name="#pAtk">1.10 1.12 1.15 1.20</table>
-		<table name="#pReuse">0.95 0.94 0.93 0.90</table>
-		<table name="#abnormalLvls"> 1 2 3 4 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalType" val="YUL_STANCE" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="30000" />
-		<set name="abnormalTime" val="1800" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="#pAtk">
-					<using kind="CROSSBOW,BOW" />
-				</mul>
-				<mul stat="pReuse" val="#pReuse">
-					<using kind="CROSSBOW,BOW" />
-				</mul>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">10</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item> CROSSBOW</item>
+					<item> TWOHANDCROSSBOW</item>
+				</weaponType>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="10759" levels="4" name="Sniper Stance">
-		<table name="#magicLvl">85 90 95 99</table>
-		<table name="#pAtk">1.10 1.12 1.15 1.20</table>
-		<table name="#pAtkSpd">1.05 1.06 1.07 1.10</table>
-		<table name="#abnormalLvls"> 1 2 3 4 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalType" val="YUL_STANCE" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="30000" />
-		<set name="abnormalTime" val="1800" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="#pAtk">
-					<using kind="CROSSBOW,BOW" />
-				</mul>
-				<mul stat="pAtkSpd" val="#pAtkSpd">
-					<using kind="CROSSBOW,BOW" />
-				</mul>
+	<skill id="10758" toLevel="4" name="Rapid Fire Stance">
+		<!-- Can't be Glory Days confirmed, was toggle -->
+		<!-- For 30 min., P. Atk. + 10% and P. Skill Cooldown - 5% when a bow or crossbow is equipped. -->
+		<table name="#pAtk"> 1.10 1.12 1.15 1.20 </table>
+		<table name="#pReuse"> 0.95 0.94 0.93 0.90 </table>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>SHOOTING_STANCE</abnormalType>
+		<icon>icon.skill10758</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<mpConsume>10</mpConsume>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>687</effectPoint>
+		<toggleGroupId>2</toggleGroupId>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">12</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item> CROSSBOW</item>
+					<item> TWOHANDCROSSBOW</item>
+				</weaponType>
 			</effect>
-		</for>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-6</value>
+					<value level="3">-7</value>
+					<value level="4">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+				<weaponType>
+					<item>BOW</item>
+					<item> CROSSBOW</item>
+					<item> TWOHANDCROSSBOW</item>
+				</weaponType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="10760" levels="11" name="Tornado Shot" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
-	<!-- Source: https://l2wiki.com/Tornado_Shot_-_Yul_Sagittarius -->
-		<table name="#mpConsume"> 98 100 103 107 110 114 117 121 125 129 133 </table>
-		<table name="#ench1MpConsume"> 113 106 99 91 84 77 70 62 55 48 </table>
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
-		<table name="#power"> 20814 21546 23011 24476 25941 27406 28871 30336 32284 34232 36180 </table> <!-- Guessed -->
-		<table name="#enchelementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
-		<table name="#enchPower"> 31801 32534 33266 33998 34731 35463 36196 36928 37661 38393 </table>
-		<table name="#ench9Reuse"> 6900 6800 6700 6600 6500 6400 6300 6200 6100 6000 </table> <!-- Need verify -->
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="ONE" />
-		<set name="nextActionAttack" val="true" />
-		<set name="overHit" val="true" />
-		<set name="baseCritRate" val="15" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="hitTime" val="2200" />
-		<set name="coolTime" val="350" />
-		<set name="castRange" val="1100" />
-		<set name="reuseDelay" val="7000" />
-		<set name="effectPoint" val="-100" /> <!-- Need verify -->
-		<set name="effectRange" val="1600" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant1 name="power" val="#enchPower" />
-		<enchant1 name="magicLvl" val="99" />
-		<enchant2 name="pvpPower" val="#enchPower" />
-		<enchant2 name="magicLvl" val="99" />
-		<enchant3 name="element" val="0" />
-		<enchant3 name="elementPower" val="#enchelementPower" />
-		<enchant3 name="power" val="#enchPower" />
-		<enchant3 name="magicLvl" val="99" />
-		<enchant4 name="element" val="1" />
-		<enchant4 name="elementPower" val="#enchelementPower" />
-		<enchant4 name="power" val="#enchPower" />
-		<enchant4 name="magicLvl" val="99" />
-		<enchant5 name="element" val="2" />
-		<enchant5 name="elementPower" val="#enchelementPower" />
-		<enchant5 name="power" val="#enchPower" />
-		<enchant5 name="magicLvl" val="99" />
-		<enchant6 name="element" val="3" />
-		<enchant6 name="elementPower" val="#enchelementPower" />
-		<enchant6 name="power" val="#enchPower" />
-		<enchant6 name="magicLvl" val="99" />
-		<enchant7 name="element" val="4" />
-		<enchant7 name="elementPower" val="#enchelementPower" />
-		<enchant7 name="power" val="#enchPower" />
-		<enchant7 name="magicLvl" val="99" />
-		<enchant8 name="element" val="5" />
-		<enchant8 name="elementPower" val="#enchelementPower" />
-		<enchant8 name="power" val="#enchPower" />
-		<enchant8 name="magicLvl" val="99" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
-		<enchant9 name="power" val="#enchPower" />
-		<enchant9 name="magicLvl" val="99" />
-		<cond msgId="113" addName="1">
-			<using kind="BOW, CROSSBOW" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
-		</for>
+	<skill id="10759" toLevel="4" name="Sniper Stance">
+		<!-- Can't be Glory Days confirmed, was toggle -->
+		<!-- For 30 min., P. Atk. + 10% and Atk. Spd. + 5% when a bow or crossbow is equipped. -->
+		<table name="#pAtk"> 1.10 1.12 1.15 1.20 </table>
+		<table name="#pAtkSpd"> 1.05 1.06 1.07 1.10 </table>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>SHOOTING_STANCE</abnormalType>
+		<icon>icon.skill10759</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<mpConsume>10</mpConsume>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>687</effectPoint>
+		<toggleGroupId>2</toggleGroupId>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">12</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item> CROSSBOW</item>
+					<item> TWOHANDCROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">10</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item> CROSSBOW</item>
+					<item> TWOHANDCROSSBOW</item>
+				</weaponType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="10761" levels="11" name="Bow Strike" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
-	<!-- Source: https://l2wiki.com/Bow_Strike_-_Yul_Sagittarius -->
-		<table name="#mpConsume"> 60 61 63 65 67 69 71 74 77 80 83 </table>
-		<table name="#ench1MpConsume"> 69 65 60 56 51 47 42 38 34 29 </table>
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
-		<table name="#power"> 2681 2771 2952 3133 3313 3494 3675 3855 4035 4215 4395 </table> <!-- Guessed -->
-		<table name="#enchPower"> 4036 4126 4216 4307 4397 4487 4578 4668 4758 4848 </table>
-		<table name="#enchelementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
-		<table name="#ench9Reuse"> 4900 4800 4700 4600 4500 4400 4300 4200 4100 4000 </table> <!-- Need verify -->
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="abnormalTime" val="1" />
-		<set name="abnormalType" val="KNOCK_DOWN" />
-		<set name="abnormalVisualEffect" val="KNOCK_BACK" />
-		<set name="activateRate" val="60" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="ONE" />
-		<set name="overHit" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="baseCritRate" val="15" />
-		<set name="isDebuff" val="true" />
-		<set name="hitTime" val="1200" />
-		<set name="coolTime" val="350" />
-		<set name="castRange" val="40" />
-		<set name="reuseDelay" val="5000" />
-		<set name="effectPoint" val="-100" /> <!-- Need verify -->
-		<set name="effectRange" val="400" />
-		<set name="trait" val="KNOCKBACK" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant1 name="power" val="#enchPower" />
-		<enchant1 name="magicLvl" val="99" />
-		<enchant2 name="pvpPower" val="#enchPower" />
-		<enchant2 name="magicLvl" val="99" />
-		<enchant3 name="element" val="0" />
-		<enchant3 name="elementPower" val="#enchelementPower" />
-		<enchant3 name="power" val="#enchPower" />
-		<enchant3 name="magicLvl" val="99" />
-		<enchant4 name="element" val="1" />
-		<enchant4 name="elementPower" val="#enchelementPower" />
-		<enchant4 name="power" val="#enchPower" />
-		<enchant4 name="magicLvl" val="99" />
-		<enchant5 name="element" val="2" />
-		<enchant5 name="elementPower" val="#enchelementPower" />
-		<enchant5 name="power" val="#enchPower" />
-		<enchant5 name="magicLvl" val="99" />
-		<enchant6 name="element" val="3" />
-		<enchant6 name="elementPower" val="#enchelementPower" />
-		<enchant6 name="power" val="#enchPower" />
-		<enchant6 name="magicLvl" val="99" />
-		<enchant7 name="element" val="4" />
-		<enchant7 name="elementPower" val="#enchelementPower" />
-		<enchant7 name="power" val="#enchPower" />
-		<enchant7 name="magicLvl" val="99" />
-		<enchant8 name="element" val="5" />
-		<enchant8 name="elementPower" val="#enchelementPower" />
-		<enchant8 name="power" val="#enchPower" />
-		<enchant8 name="magicLvl" val="99" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
-		<enchant9 name="power" val="#enchPower" />
-		<enchant9 name="magicLvl" val="99" />
-		<cond msgId="113" addName="1">
-			<using kind="BOW, CROSSBOW" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
+	<skill id="10760" toLevel="11" name="Tornado Shot">
+		<!-- Glory Days confirmed -->
+		<!-- Attacks target with 20814 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
+		<table name="#power"> 20814 21546 23011 24476 25941 27406 28871 30336 33258 34786 36314 </table>
+		<icon>icon.skill10760</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">98</value>
+			<value level="2">100</value>
+			<value level="3">103</value>
+			<value level="4">107</value>
+			<value level="5">110</value>
+			<value level="6">114</value>
+			<value level="7">117</value>
+			<value level="8">121</value>
+			<value level="9">125</value>
+			<value level="10">129</value>
+			<value level="11">133</value>
+		</mpConsume>
+		<castRange>1100</castRange>
+		<effectRange>1500</effectRange>
+		<hitTime>2200</hitTime>
+		<coolTime>350</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+			<value level="9">101</value>
+			<value level="10">103</value>
+			<value level="11">105</value>
+		</magicLvl>
+		<effectPoint>
+			<value level="1">-689</value>
+			<value level="2">-692</value>
+			<value level="3">-696</value>
+			<value level="4">-700</value>
+			<value level="5">-704</value>
+			<value level="6">-707</value>
+			<value level="7">-710</value>
+			<value level="8">-713</value>
+			<value level="9">-716</value>
+			<value level="10">-719</value>
+			<value level="11">-722</value>
+		</effectPoint>
+		<reuseDelay>7000</reuseDelay>
+		<affectLimit>5-12</affectLimit>
+		<fanRange>
+			<value level="1">0;0;900;50</value>
+			<value level="2">0;0;700;50</value>
+			<value level="3">0;0;700;50</value>
+			<value level="4">0;0;700;50</value>
+			<value level="5">0;0;700;50</value>
+			<value level="6">0;0;700;50</value>
+			<value level="7">0;0;700;50</value>
+			<value level="8">0;0;700;50</value>
+			<value level="9">0;0;700;50</value>
+			<value level="10">0;0;700;50</value>
+			<value level="11">0;0;700;50</value>
+		</fanRange>
+		<rideState>NONE</rideState>
+		<alterSkill>
+			<item id="11000" level="1" chance="100" abnormalType="KNOCKDOWN" /> <!-- Heavy Hit -->
+			<item id="10999" level="1" chance="100" abnormalType="AIRBIND" /> <!-- Heavy Hit -->
+			<item id="14579" level="1" chance="100" abnormalType="EARTHWORM_DEBUFF" />
+		</alterSkill>
+		<targetType>ENEMY</targetType>
+		<affectScope>SQUARE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">20814</value>
+					<value level="2">21546</value>
+					<value level="3">23011</value>
+					<value level="4">24476</value>
+					<value level="5">25941</value>
+					<value level="6">27406</value>
+					<value level="7">28871</value>
+					<value level="8">30336</value>
+					<value level="9">33258</value>
+					<value level="10">34786</value>
+					<value level="11">36314</value>
+				</power>
+				<overHit>true</overHit>
+				<criticalChance>5</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10761" toLevel="11" name="Bow Strike">
+		<!-- Glory Days confirmed -->
+		<!-- Knocks back frontal enemies. Attacks target with 2681 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
+		<table name="#power"> 2681 2771 2952 3133 3313 3494 3675 3855 4063 4239 4415 </table>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
+		<activateRate>200</activateRate>
+		<lvlBonusRate>20</lvlBonusRate>
+		<icon>icon.skill10761</icon>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+			<value level="9">101</value>
+			<value level="10">103</value>
+			<value level="11">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">60</value>
+			<value level="2">61</value>
+			<value level="3">63</value>
+			<value level="4">65</value>
+			<value level="5">67</value>
+			<value level="6">69</value>
+			<value level="7">71</value>
+			<value level="8">74</value>
+			<value level="9">77</value>
+			<value level="10">80</value>
+			<value level="11">83</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1200</hitTime>
+		<coolTime>350</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>
+			<value level="1">-689</value>
+			<value level="2">-692</value>
+			<value level="3">-696</value>
+			<value level="4">-700</value>
+			<value level="5">-704</value>
+			<value level="6">-707</value>
+			<value level="7">-710</value>
+			<value level="8">-713</value>
+			<value level="9">-716</value>
+			<value level="10">-719</value>
+			<value level="11">-722</value>
+		</effectPoint>
+		<isDebuff>true</isDebuff>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<trait>KNOCKDOWN</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">2681</value>
+					<value level="2">2771</value>
+					<value level="3">2952</value>
+					<value level="4">3133</value>
+					<value level="5">3313</value>
+					<value level="6">3494</value>
+					<value level="7">3675</value>
+					<value level="8">3855</value>
+					<value level="9">4063</value>
+					<value level="10">4239</value>
+					<value level="11">4415</value>
+				</power>
+				<overHit>true</overHit>
+				<criticalChance>5</criticalChance>
+			</effect>
 			<effect name="KnockBack">
-				<param speed="700" distance="50" />
+				<speed>500</speed>
+				<distance>100</distance>
 			</effect>
-		</for>
+			<effect name="DefenceTrait">
+				<KNOCKBACK>100</KNOCKBACK>
+				<HOLD>100</HOLD>
+				<SHOCK>100</SHOCK>
+				<AIRBIND>100</AIRBIND>
+				<SLEEP>100</SLEEP>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
-	<skill id="10762" levels="11" name="Quick Shot" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
-	<!-- Source: https://l2wiki.com/Quick_Shot_-_Yul_Trickster -->
-		<table name="#mpConsume"> 79 82 84 87 90 93 96 99 102 105 108 </table>
-		<table name="#ench1MpConsume"> 93 87 81 75 69 63 57 51 45 39 </table>
-		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 101 103 105 </table>
-		<table name="#power"> 19477 21035 22593 24151 25709 27267 28825 30383 39249 41163 43077 </table>
-		<table name="#enchelementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
-		<table name="#enchPower"> 31162 31941 32720 33499 34278 35057 35836 36615 37394 38173 </table>
-		<table name="#ench9Reuse"> 6900 6800 6700 6600 6500 6400 6300 6200 6100 6000 </table> <!-- Need verify -->
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="ONE" />
-		<set name="overHit" val="true" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="baseCritRate" val="15" />
-		<set name="nextActionAttack" val="true" />
-		<set name="hitTime" val="1800" />
-		<set name="coolTime" val="250" />
-		<set name="castRange" val="1100" />
-		<set name="reuseDelay" val="7000" />
-		<set name="effectPoint" val="-100" /> <!-- Need verify -->
-		<set name="effectRange" val="1600" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant1 name="power" val="#enchPower" />
-		<enchant2 name="pvpPower" val="#enchPower" />
-		<enchant3 name="element" val="0" />
-		<enchant3 name="elementPower" val="#enchelementPower" />
-		<enchant3 name="power" val="#enchPower" />
-		<enchant4 name="element" val="1" />
-		<enchant4 name="elementPower" val="#enchelementPower" />
-		<enchant4 name="power" val="#enchPower" />
-		<enchant5 name="element" val="2" />
-		<enchant5 name="elementPower" val="#enchelementPower" />
-		<enchant5 name="power" val="#enchPower" />
-		<enchant6 name="element" val="3" />
-		<enchant6 name="elementPower" val="#enchelementPower" />
-		<enchant6 name="power" val="#enchPower" />
-		<enchant7 name="element" val="4" />
-		<enchant7 name="elementPower" val="#enchelementPower" />
-		<enchant7 name="power" val="#enchPower" />
-		<enchant8 name="element" val="5" />
-		<enchant8 name="elementPower" val="#enchelementPower" />
-		<enchant8 name="power" val="#enchPower" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
-		<enchant9 name="power" val="#enchPower" />
-		<cond msgId="113" addName="1">
-			<using kind="BOW, CROSSBOW" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
-		</for>
+	<skill id="10762" toLevel="11" name="Quick Shot">
+		<!-- Glory Days confirmed -->
+		<!-- Attacks target with 19477 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
+		<table name="#power"> 22183 24401 26619 28837 31055 33273 35491 37709 39249 41163 43077 </table>
+		<icon>icon.skill10762</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">87</value>
+			<value level="3">89</value>
+			<value level="4">91</value>
+			<value level="5">93</value>
+			<value level="6">95</value>
+			<value level="7">97</value>
+			<value level="8">99</value>
+			<value level="9">101</value>
+			<value level="10">103</value>
+			<value level="11">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">79</value>
+			<value level="2">82</value>
+			<value level="3">84</value>
+			<value level="4">87</value>
+			<value level="5">90</value>
+			<value level="6">93</value>
+			<value level="7">96</value>
+			<value level="8">99</value>
+			<value level="9">102</value>
+			<value level="10">105</value>
+			<value level="11">108</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<castRange>1100</castRange>
+		<effectRange>1500</effectRange>
+		<hitTime>1800</hitTime>
+		<coolTime>250</coolTime>
+		<effectPoint>
+			<value level="1">-689</value>
+			<value level="2">-694</value>
+			<value level="3">-698</value>
+			<value level="4">-702</value>
+			<value level="5">-706</value>
+			<value level="6">-709</value>
+			<value level="7">-711</value>
+			<value level="8">-714</value>
+			<value level="9">-717</value>
+			<value level="10">-720</value>
+			<value level="11">-723</value>
+		</effectPoint>
+		<rideState>NONE</rideState>
+		<reuseDelay>5000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<!-- Disregards 30% of the target's P. Def -->
+				<power>
+					<value level="1">22183</value>
+					<value level="2">24401</value>
+					<value level="3">26619</value>
+					<value level="4">28837</value>
+					<value level="5">31055</value>
+					<value level="6">33273</value>
+					<value level="7">35491</value>
+					<value level="8">37709</value>
+					<value level="9">39249</value>
+					<value level="10">41163</value>
+					<value level="11">43077</value>
+				</power>
+				<criticalChance>5</criticalChance>
+				<pDefMod>0.70</pDefMod>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="10763" levels="11" name="Pinpoint Shot" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
-	<!-- Source: https://l2wiki.com/Pinpoint_Shot_-_Yul_Ghost_Sentinel -->
-		<table name="#mpConsume"> 117 119 123 128 132 136 140 144 148 152 156 </table>
-		<table name="#ench1MpConsume"> 135 126 118 109 100 92 83 74 66 57 </table>
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
-		<table name="#power"> 22198 22974 24524 26075 27625 29176 30726 53562 56259 59003 61747 </table>
-		<table name="#enchPower"> 33827 34602 35378 36153 36928 37703 38479 39254 40029 40804 </table>
-		<table name="#enchelementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
-		<table name="#ench9Reuse"> 6900 6800 6700 6600 6500 6400 6300 6200 6100 6000 </table> <!-- Need verify -->
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="baseCritRate" val="15" />
-		<set name="ignorePhysDefPercent" val="30" />
-		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="overHit" val="true" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="2200" />
-		<set name="coolTime" val="850" />
-		<set name="castRange" val="1100" />
-		<set name="effectRange" val="1600" />
-		<set name="reuseDelay" val="7000" />
-		<set name="effectPoint" val="-100" /> <!-- Need verify -->
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant1 name="power" val="#enchPower" />
-		<enchant1 name="magicLvl" val="99" />
-		<enchant2 name="pvpPower" val="#enchPower" />
-		<enchant2 name="magicLvl" val="99" />
-		<enchant3 name="element" val="0" />
-		<enchant3 name="elementPower" val="#enchelementPower" />
-		<enchant3 name="power" val="#enchPower" />
-		<enchant3 name="magicLvl" val="99" />
-		<enchant4 name="element" val="1" />
-		<enchant4 name="elementPower" val="#enchelementPower" />
-		<enchant4 name="power" val="#enchPower" />
-		<enchant4 name="magicLvl" val="99" />
-		<enchant5 name="element" val="2" />
-		<enchant5 name="elementPower" val="#enchelementPower" />
-		<enchant5 name="power" val="#enchPower" />
-		<enchant5 name="magicLvl" val="99" />
-		<enchant6 name="element" val="3" />
-		<enchant6 name="elementPower" val="#enchelementPower" />
-		<enchant6 name="power" val="#enchPower" />
-		<enchant6 name="magicLvl" val="99" />
-		<enchant7 name="element" val="4" />
-		<enchant7 name="elementPower" val="#enchelementPower" />
-		<enchant7 name="power" val="#enchPower" />
-		<enchant7 name="magicLvl" val="99" />
-		<enchant8 name="element" val="5" />
-		<enchant8 name="elementPower" val="#enchelementPower" />
-		<enchant8 name="power" val="#enchPower" />
-		<enchant8 name="magicLvl" val="99" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
-		<enchant9 name="power" val="#enchPower" />
-		<enchant9 name="magicLvl" val="99" />
-		<cond msgId="113" addName="1">
-			<using kind="BOW, CROSSBOW" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
+	<skill id="10763" toLevel="11" name="Pinpoint Shot">
+		<!-- Glory Days confirmed -->
+		<!-- Aims for target's weak points to attack with 32463 Power added to P. Atk. Disregards 30% of target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. Half-kill. -->
+		<table name="#power"> 32463 34086 37332 40578 43824 47070 50316 53562 56259 59003 61747 </table>
+		<icon>icon.skill10763</icon>
+		<operateType>A1</operateType>
+		<nextActionAttack>true</nextActionAttack>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+			<value level="9">101</value>
+			<value level="10">103</value>
+			<value level="11">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">117</value>
+			<value level="2">119</value>
+			<value level="3">123</value>
+			<value level="4">128</value>
+			<value level="5">132</value>
+			<value level="6">136</value>
+			<value level="7">140</value>
+			<value level="8">144</value>
+			<value level="9">148</value>
+			<value level="10">152</value>
+			<value level="11">156</value>
+		</mpConsume>
+		<castRange>1100</castRange>
+		<hitTime>2200</hitTime>
+		<coolTime>850</coolTime>
+		<effectPoint>
+			<value level="1">-689</value>
+			<value level="2">-692</value>
+			<value level="3">-696</value>
+			<value level="4">-700</value>
+			<value level="5">-704</value>
+			<value level="6">-707</value>
+			<value level="7">-710</value>
+			<value level="8">-713</value>
+			<value level="9">-716</value>
+			<value level="10">-719</value>
+			<value level="11">-722</value>
+		</effectPoint>
+		<rideState>NONE</rideState>
+		<effectRange>1500</effectRange>
+		<reuseDelay>7000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">32463</value>
+					<value level="2">34086</value>
+					<value level="3">37332</value>
+					<value level="4">40578</value>
+					<value level="5">43824</value>
+					<value level="6">47070</value>
+					<value level="7">50316</value>
+					<value level="8">53562</value>
+					<value level="9">56259</value>
+					<value level="10">59003</value>
+					<value level="11">61747</value>
+				</power>
+				<criticalChance>10</criticalChance>
+				<pDefMod>0.7</pDefMod>
+				<overHit>true</overHit>
+			</effect>
 			<effect name="Lethal">
-				<param halfLethal="10" />
+				<halfLethal>15</halfLethal>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="10764" levels="1" name="Knock Back">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="10764" toLevel="1" name="Knock Back">
+		<!-- Glory Days confirmed -->
 		<!-- Knock Back -->
-		<set name="icon" val="icon.skill0101" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="10765" levels="1" name="Knock Back">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Knock Back -->
-		<set name="icon" val="icon.skill0101" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="10766" levels="1" name="Additional Effect">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Critical Exposure -->
-		<set name="icon" val="icon.skill0522" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="10767" levels="1" name="Half-kill">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Half-kill. -->
-		<set name="icon" val="icon.skill0056" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="1100" />
-	</skill>
-	<skill id="10768" levels="1" name="Blink">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Evasion -->
-		<set name="icon" val="icon.skill10768" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="300" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="15000" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="10769" levels="9" name="Impact Shot" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
-	<!-- Source: https://l2wiki.com/Impact_Shot_-_Yul_Trickster -->
-		<table name="#mpConsume"> 98 103 108 114 119 124 129 134 139 </table>
-		<table name="#ench1MpConsume"> 111 104 97 90 83 76 69 61 54 47 </table>
-		<table name="#magicLvl"> 85 88 91 94 97 99 101 103 105 </table>
-		<table name="#power"> 19867 22249 24631 27013 29395 31777 34159 36541 38923 </table> <!-- Guessed -->
-		<table name="#ench2Chance"> 51 52 53 54 55 56 57 58 59 60 </table>
-		<table name="#enchelementPower">30 33 36 40 43 46 50 53 56 60 </table>
-		<table name="#enchPower"> 31777 32571 33365 34159 34953 35747 36541 37335 38129 38923 </table>
-		<table name="#ench9Reuse"> 59000 58000 57000 56000 55000 54000 53000 52000 51000 50000 </table> <!-- Need verify -->
-		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="STUN" />
-		<set name="abnormalVisualEffect" val="STUN" />
-		<set name="activateRate" val="50" />
-		<set name="basicProperty" val="CON" />
-		<set name="baseCritRate" val="15" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="ONE" />
-		<set name="nextActionAttack" val="true" />
-		<set name="overHit" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="isDebuff" val="true" />
-		<set name="hitTime" val="2200" />
-		<set name="coolTime" val="350" />
-		<set name="castRange" val="1100" />
-		<set name="reuseDelay" val="60000" />
-		<set name="effectRange" val="1600" />
-		<set name="effectPoint" val="-100" /> <!-- Need verify -->
-		<set name="trait" val="SHOCK" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant1 name="power" val="#enchPower" />
-		<enchant1 name="magicLvl" val="99" />
-		<enchant2 name="activateRate" val="#ench2Chance" />
-		<enchant2 name="power" val="#enchPower" />
-		<enchant2 name="magicLvl" val="99" />
-		<enchant3 name="element" val="0" />
-		<enchant3 name="elementPower" val="#enchelementPower" />
-		<enchant3 name="power" val="#enchPower" />
-		<enchant3 name="magicLvl" val="99" />
-		<enchant4 name="element" val="1" />
-		<enchant4 name="elementPower" val="#enchelementPower" />
-		<enchant4 name="power" val="#enchPower" />
-		<enchant4 name="magicLvl" val="99" />
-		<enchant5 name="element" val="2" />
-		<enchant5 name="elementPower" val="#enchelementPower" />
-		<enchant5 name="power" val="#enchPower" />
-		<enchant5 name="magicLvl" val="99" />
-		<enchant6 name="element" val="3" />
-		<enchant6 name="elementPower" val="#enchelementPower" />
-		<enchant6 name="power" val="#enchPower" />
-		<enchant6 name="magicLvl" val="99" />
-		<enchant7 name="element" val="4" />
-		<enchant7 name="elementPower" val="#enchelementPower" />
-		<enchant7 name="power" val="#enchPower" />
-		<enchant7 name="magicLvl" val="99" />
-		<enchant8 name="element" val="5" />
-		<enchant8 name="elementPower" val="#enchelementPower" />
-		<enchant8 name="power" val="#enchPower" />
-		<enchant8 name="magicLvl" val="99" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
-		<enchant9 name="power" val="#enchPower" />
-		<enchant9 name="magicLvl" val="99" />
-		<cond msgId="113" addName="1">
-			<using kind="BOW, CROSSBOW" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
-			<effect name="Stun" />
-		</for>
-	</skill>
-	<skill id="10770" levels="11" name="Recoil Shot" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
-	<!-- Source: https://l2wiki.com/Recoil_Shot_-_Yul_Trickster -->
-		<table name="#mpConsume"> 102 106 109 113 116 120 124 127 130 133 136 </table>
-		<table name="#ench1MpConsume"> 119 111 104 96 88 81 73 66 58 50 </table>
-		<table name="#enchelementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
-		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 101 103 105 </table>
-		<table name="#power"> 24888 25558 26229 26900 27571 28242 28912 43868 45432 47520 49608 </table>
-		<table name="#enchPower"> 29918 30254 30589 30925 31260 31595 31931 32266 32601 32937 </table>
-		<table name="#ench2Chance"> 61 62 63 64 65 66 67 68 69 70 </table>
-		<table name="#ench9Reuse"> 29000 28000 27000 26000 25000 24000 23000 22000 21000 20000 </table> <!-- Need verify -->
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="abnormalTime" val="1" />
-		<set name="abnormalType" val="KNOCK_DOWN" />
-		<set name="abnormalVisualEffect" val="KNOCK_BACK" />
-		<set name="activateRate" val="60" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="baseCritRate" val="15" />
-		<set name="targetType" val="ONE" />
-		<set name="overHit" val="true" />
-		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="isDebuff" val="true" />
-		<set name="hitTime" val="2200" />
-		<set name="coolTime" val="450" />
-		<set name="castRange" val="1100" />
-		<set name="reuseDelay" val="30000" />
-		<set name="effectPoint" val="-100" /> <!-- Need verify -->
-		<set name="effectRange" val="1600" />
-		<set name="trait" val="KNOCKBACK" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant1 name="power" val="#enchPower" />
-		<enchant2 name="activateRate" val="#ench2Chance" />
-		<enchant2 name="power" val="#enchPower" />
-		<enchant3 name="element" val="0" />
-		<enchant3 name="elementPower" val="#enchelementPower" />
-		<enchant3 name="power" val="#enchPower" />
-		<enchant4 name="element" val="1" />
-		<enchant4 name="elementPower" val="#enchelementPower" />
-		<enchant4 name="power" val="#enchPower" />
-		<enchant5 name="element" val="2" />
-		<enchant5 name="elementPower" val="#enchelementPower" />
-		<enchant5 name="power" val="#enchPower" />
-		<enchant6 name="element" val="3" />
-		<enchant6 name="elementPower" val="#enchelementPower" />
-		<enchant6 name="power" val="#enchPower" />
-		<enchant7 name="element" val="4" />
-		<enchant7 name="elementPower" val="#enchelementPower" />
-		<enchant7 name="power" val="#enchPower" />
-		<enchant8 name="element" val="5" />
-		<enchant8 name="elementPower" val="#enchelementPower" />
-		<enchant8 name="power" val="#enchPower" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
-		<enchant9 name="power" val="#enchPower" />
-		<cond msgId="113" addName="1">
-			<using kind="BOW, CROSSBOW" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<icon>icon.skill0101</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>97</magicLvl>
+		<operateType>A2</operateType>
+		<isDebuff>true</isDebuff>
+		<rideState>NONE</rideState>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="KnockBack">
-				<param speed="700" distance="50" />
+				<speed>200</speed>
+				<distance>100</distance>
 			</effect>
 			<effect name="TargetCancel" />
-		</for>
+		</effects>
 	</skill>
-	<skill id="10771" levels="11" name="Multiple Arrow" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
-	<!-- Source: https://l2wiki.com/Multiple_Arrow_-_Yul_Moonlight_Sentinel -->
-		<table name="#mpConsume"> 124 128 133 137 142 146 151 155 159 163 167 </table>
-		<table name="#ench1MpConsume"> 145 136 127 117 108 99 89 80 71 62 </table>
-		<table name="#enchelementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
-		<table name="#enchPower"> 35595 36408 37222 38035 38849 39662 40476 41290 42103 42917 </table>
-		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 101 103 105 </table>
+	<skill id="10765" toLevel="1" name="Knock Back">
+		<!-- Glory Days confirmed -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<affectRange>200</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<icon>icon.skill0101</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>97</magicLvl>
+		<operateType>A2</operateType>
+		<abnormalType>STUN</abnormalType>
+		<isDebuff>true</isDebuff>
+		<rideState>NONE</rideState>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="KnockBack">
+				<speed>200</speed>
+				<distance>100</distance>
+			</effect>
+			<effect name="TargetCancel" />
+		</effects>
+	</skill>
+	<skill id="10766" toLevel="1" name="Additional Effect">
+		<!-- Glory Days confirmed -->
+		<!-- Critical Exposure -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<icon>icon.skill0522</icon>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>97</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceCriticalRate">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10767" toLevel="1" name="Half-kill">
+		<!-- Glory Days confirmed -->
+		<!-- Half-kill. -->
+		<castRange>1100</castRange>
+		<effectRange>1500</effectRange>
+		<icon>icon.skill0056</icon>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>97</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE</rideState>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Lethal">
+				<halfLethal>100</halfLethal>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10768" toLevel="1" name="Blink">
+		<!-- Glory Days confirmed -->
+		<!-- Evasion -->
+		<affectRange>150</affectRange>
+		<coolTime>200</coolTime>
+		<effectPoint>-2</effectPoint>
+		<hitTime>300</hitTime>
+		<icon>icon.skill10768</icon>
+		<isDebuff>true</isDebuff>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>97</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>15000</reuseDelay>
+		<rideState>NONE</rideState>
+		<trait>SHOCK</trait>
+		<!-- TODO cond {op_blink;_back;300} -->
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="OpBlink">
+				<direction>BACK</direction>
+				<range>300</range>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
+		<selfEffects>
+			<effect name="Blink">
+				<!-- Teleport to Back -->
+				<angle>0</angle>
+				<range>300</range>
+			</effect>
+		</selfEffects>
+	</skill>
+	<skill id="10769" toLevel="9" name="Impact Shot">
+		<!-- Glory Days confirmed -->
+		<!-- Fires an arrow at the enemy with 19867 Power added to P. Atk. Stuns the enemy for 5 seconds. Requires a bow or crossbow to be equipped. Over-hit. -->
+		<table name="#power"> 24834 28557 32280 36003 39726 42208 43724 45734 47744 </table>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<nextActionAttack>true</nextActionAttack>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">88</value>
+			<value level="3">91</value>
+			<value level="4">94</value>
+			<value level="5">97</value>
+			<value level="6">99</value>
+			<value level="7">101</value>
+			<value level="8">103</value>
+			<value level="9">105</value>
+		</magicLvl>
+		<lvlBonusRate>20</lvlBonusRate>
+		<icon>icon.skill10769</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">98</value>
+			<value level="2">103</value>
+			<value level="3">108</value>
+			<value level="4">114</value>
+			<value level="5">119</value>
+			<value level="6">124</value>
+			<value level="7">129</value>
+			<value level="8">134</value>
+			<value level="9">139</value>
+		</mpConsume>
+		<castRange>1100</castRange>
+		<effectRange>1500</effectRange>
+		<hitTime>2200</hitTime>
+		<coolTime>350</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>
+			<value level="1">-713</value>
+			<value level="2">-696</value>
+			<value level="3">-702</value>
+			<value level="4">-707</value>
+			<value level="5">-711</value>
+			<value level="6">-711</value>
+			<value level="7">-719</value>
+			<value level="8">-723</value>
+			<value level="9">-727</value>
+		</effectPoint>
+		<isDebuff>true</isDebuff>
+		<rideState>NONE</rideState>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">24834</value>
+					<value level="2">28557</value>
+					<value level="3">32280</value>
+					<value level="4">36003</value>
+					<value level="5">39726</value>
+					<value level="6">42208</value>
+					<value level="7">43724</value>
+					<value level="8">45734</value>
+					<value level="9">47744</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10770" toLevel="11" name="Recoil Shot">
+		<!-- Glory Days confirmed -->
+		<!-- Shoots an arrow with 24888 Power added to P. Atk. to Knock Back target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Chance of canceling the enemy's target. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<nextActionAttack>true</nextActionAttack>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">87</value>
+			<value level="3">89</value>
+			<value level="4">91</value>
+			<value level="5">93</value>
+			<value level="6">95</value>
+			<value level="7">97</value>
+			<value level="8">99</value>
+			<value level="9">101</value>
+			<value level="10">103</value>
+			<value level="11">105</value>
+		</magicLvl>
+		<lvlBonusRate>20</lvlBonusRate>
+		<icon>icon.skill10770</icon>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">102</value>
+			<value level="2">106</value>
+			<value level="3">109</value>
+			<value level="4">113</value>
+			<value level="5">116</value>
+			<value level="6">120</value>
+			<value level="7">124</value>
+			<value level="8">127</value>
+			<value level="9">130</value>
+			<value level="10">133</value>
+			<value level="11">136</value>
+		</mpConsume>
+		<castRange>1100</castRange>
+		<effectRange>1500</effectRange>
+		<hitTime>2200</hitTime>
+		<coolTime>450</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>
+			<value level="1">-689</value>
+			<value level="2">-694</value>
+			<value level="3">-698</value>
+			<value level="4">-702</value>
+			<value level="5">-706</value>
+			<value level="6">-709</value>
+			<value level="7">-711</value>
+			<value level="8">-714</value>
+			<value level="9">-717</value>
+			<value level="10">-720</value>
+			<value level="11">-723</value>
+		</effectPoint>
+		<isDebuff>true</isDebuff>
+		<rideState>NONE</rideState>
+		<trait>KNOCKDOWN</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">25808</value>
+					<value level="2">28388</value>
+					<value level="3">30968</value>
+					<value level="4">33548</value>
+					<value level="5">36128</value>
+					<value level="6">38708</value>
+					<value level="7">41288</value>
+					<value level="8">43868</value>
+					<value level="9">45432</value>
+					<value level="10">47520</value>
+					<value level="11">49608</value>
+				</power>
+				<overHit>true</overHit>
+				<criticalChance>5</criticalChance>
+			</effect>
+			<effect name="KnockBack">
+				<speed>500</speed>
+				<distance>100</distance>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>40</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10771" toLevel="11" name="Multiple Arrow">
+		<!-- Glory Days confirmed -->
+		<!-- Attacks frontal enemies with 23391 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
 		<table name="#power"> 23391 25018 26645 28272 29900 31527 33154 34781 35966 37720 39474 </table>
-		<table name="#ench9Reuse"> 6900 6800 6700 6600 6500 6400 6300 6200 6100 6000 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="FRONT_AREA" />
-		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="250" />
-		<set name="baseCritRate" val="15" />
-		<set name="overHit" val="true" />
-		<set name="hitTime" val="2900" />
-		<set name="coolTime" val="350" />
-		<set name="castRange" val="1100" />
-		<set name="effectRange" val="1600" />
-		<set name="reuseDelay" val="7000" />
-		<set name="effectPoint" val="-100" /> <!-- Need verify -->
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="nextActionAttack" val="true" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant1 name="power" val="#enchPower" />
-		<enchant2 name="pvpPower" val="#enchPower" />
-		<enchant3 name="element" val="0" />
-		<enchant3 name="elementPower" val="#enchelementPower" />
-		<enchant3 name="power" val="#enchPower" />
-		<enchant4 name="element" val="1" />
-		<enchant4 name="elementPower" val="#enchelementPower" />
-		<enchant4 name="power" val="#enchPower" />
-		<enchant5 name="element" val="2" />
-		<enchant5 name="elementPower" val="#enchelementPower" />
-		<enchant5 name="power" val="#enchPower" />
-		<enchant6 name="element" val="3" />
-		<enchant6 name="elementPower" val="#enchelementPower" />
-		<enchant6 name="power" val="#enchPower" />
-		<enchant7 name="element" val="4" />
-		<enchant7 name="elementPower" val="#enchelementPower" />
-		<enchant7 name="power" val="#enchPower" />
-		<enchant8 name="element" val="5" />
-		<enchant8 name="elementPower" val="#enchelementPower" />
-		<enchant8 name="power" val="#enchPower" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
-		<enchant9 name="power" val="#enchPower" />
-		<cond msgId="113" addName="1">
-			<using kind="BOW, CROSSBOW" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
-		</for>
+		<icon>icon.skill10771</icon>
+		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>900</affectRange>
+		<fenRange>0,0,900,90</fenRange>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">87</value>
+			<value level="3">89</value>
+			<value level="4">91</value>
+			<value level="5">93</value>
+			<value level="6">95</value>
+			<value level="7">97</value>
+			<value level="8">99</value>
+			<value level="9">101</value>
+			<value level="10">103</value>
+			<value level="11">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">124</value>
+			<value level="2">128</value>
+			<value level="3">133</value>
+			<value level="4">137</value>
+			<value level="5">142</value>
+			<value level="6">146</value>
+			<value level="7">151</value>
+			<value level="8">155</value>
+			<value level="9">159</value>
+			<value level="10">163</value>
+			<value level="11">167</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<castRange>1100</castRange>
+		<effectRange>1500</effectRange>
+		<hitTime>2900</hitTime>
+		<coolTime>350</coolTime>
+		<effectPoint>
+			<value level="1">-689</value>
+			<value level="2">-694</value>
+			<value level="3">-698</value>
+			<value level="4">-702</value>
+			<value level="5">-706</value>
+			<value level="6">-709</value>
+			<value level="7">-711</value>
+			<value level="8">-714</value>
+			<value level="9">-717</value>
+			<value level="10">-720</value>
+			<value level="11">-723</value>
+		</effectPoint>
+		<reuseDelay>7000</reuseDelay>
+		<fanRange>0;0;900;90</fanRange>
+		<rideState>NONE</rideState>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">23391</value>
+					<value level="2">25018</value>
+					<value level="3">26645</value>
+					<value level="4">28272</value>
+					<value level="5">29900</value>
+					<value level="6">31527</value>
+					<value level="7">33154</value>
+					<value level="8">34781</value>
+					<value level="9">35966</value>
+					<value level="10">37720</value>
+					<value level="11">39474</value>
+				</power>
+				<overHit>true</overHit>
+				<criticalChance>5</criticalChance>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="10772" levels="11" name="Heavy Arrow Rain" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
-	<!-- Source: https://l2wiki.com/Heavy_Arrow_Rain_-_Yul_Sagittarius -->
-		<table name="#mpConsume"> 125 127 131 136 140 145 149 154 159 164 169 </table>
-		<table name="#ench1MpConsume"> 144 135 126 117 107 98 89 80 70 61 </table>
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
+	<skill id="10772" toLevel="11" name="Heavy Arrow Rain">
+		<!-- Glory Days confirmed -->
+		<!-- Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 22526 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
 		<table name="#power"> 22526 23310 24879 26448 28017 29586 31155 32724 33772 35526 37280 </table>
-		<table name="#enchelementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
-		<table name="#enchPower"> 34292 35077 35861 36646 37430 38215 38999 39784 40568 41353 </table>
-		<table name="#ench9Reuse"> 14000 13000 12000 11000 10000 9000 8000 7000 6000 5000 </table> <!-- Need verify -->
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="baseCritRate" val="15" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="AREA" />
-		<set name="overHit" val="true" />
-		<set name="reuseDelay" val="15000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="nextActionAttack" val="true" />
-		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="250" />
-		<set name="hitTime" val="2900" />
-		<set name="coolTime" val="350" />
-		<set name="castRange" val="1100" />
-		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="1600" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant1 name="power" val="#enchPower" />
-		<enchant2 name="pvpPower" val="#enchPower" />
-		<enchant3 name="element" val="0" />
-		<enchant3 name="elementPower" val="#enchelementPower" />
-		<enchant3 name="power" val="#enchPower" />
-		<enchant4 name="element" val="1" />
-		<enchant4 name="elementPower" val="#enchelementPower" />
-		<enchant4 name="power" val="#enchPower" />
-		<enchant5 name="element" val="2" />
-		<enchant5 name="elementPower" val="#enchelementPower" />
-		<enchant5 name="power" val="#enchPower" />
-		<enchant6 name="element" val="3" />
-		<enchant6 name="elementPower" val="#enchelementPower" />
-		<enchant6 name="power" val="#enchPower" />
-		<enchant7 name="element" val="4" />
-		<enchant7 name="elementPower" val="#enchelementPower" />
-		<enchant7 name="power" val="#enchPower" />
-		<enchant8 name="element" val="5" />
-		<enchant8 name="elementPower" val="#enchelementPower" />
-		<enchant8 name="power" val="#enchPower" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
-		<enchant9 name="power" val="#enchPower" />
-		<cond msgId="113" addName="1">
-			<using kind="BOW, CROSSBOW" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
-		</for>
+		<icon>icon.skill10772</icon>
+		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+			<value level="9">101</value>
+			<value level="10">103</value>
+			<value level="11">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">125</value>
+			<value level="2">127</value>
+			<value level="3">131</value>
+			<value level="4">136</value>
+			<value level="5">140</value>
+			<value level="6">145</value>
+			<value level="7">149</value>
+			<value level="8">154</value>
+			<value level="9">159</value>
+			<value level="10">164</value>
+			<value level="11">169</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<castRange>1100</castRange>
+		<effectRange>1500</effectRange>
+		<hitTime>2900</hitTime>
+		<coolTime>350</coolTime>
+		<effectPoint>
+			<value level="1">-689</value>
+			<value level="2">-692</value>
+			<value level="3">-696</value>
+			<value level="4">-700</value>
+			<value level="5">-704</value>
+			<value level="6">-707</value>
+			<value level="7">-710</value>
+			<value level="8">-713</value>
+			<value level="9">-716</value>
+			<value level="10">-719</value>
+			<value level="11">-722</value>
+		</effectPoint>
+		<reuseDelay>15000</reuseDelay>
+		<rideState>NONE</rideState>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">22526</value>
+					<value level="2">23310</value>
+					<value level="3">24879</value>
+					<value level="4">26448</value>
+					<value level="5">28017</value>
+					<value level="6">29586</value>
+					<value level="7">31155</value>
+					<value level="8">32724</value>
+					<value level="9">33772</value>
+					<value level="10">35526</value>
+					<value level="11">37280</value>
+				</power>
+				<overHit>true</overHit>
+				<criticalChance>5</criticalChance>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="10773" levels="1" name="Not in Use">
+	<skill id="10773" toLevel="1" name="Not in Use">
+		<!-- Glory Days confirmed -->
 		<!-- Not in use -->
-		<set name="icon" val="icon.skill0773" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="1" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="2200" />
-		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="15000" />
+		<icon>icon.skill0773</icon>
+		<operateType>A1</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>2200</hitTime>
+		<coolTime>300</coolTime>
+		<effectPoint>-709</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1400</effectRange>
+		<magicLvl>98</magicLvl>
+		<affectLimit>5-12</affectLimit>
+		<fanRange>0;0;900;100</fanRange>
+		<reuseDelay>15000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SQUARE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="10774" levels="4" name="Quick Evasion" enchantGroup1="10">
-		<table name="#mpConsume">27 32 33 33</table>
-		<table name="#castRange">300 350 400 450</table>
-		<table name="#magicLvl">85 90 95 99</table>
-		<table name="#flyRadius">300 350 400 450</table>
-		<table name="#ench1flyRadius">460 470 480 490 500 510 520 530 540 550</table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="flyCourse" val="0" />
-		<set name="flyRadius" val="#flyRadius" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="castRange" val="#castRange" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="15000" />
-		<set name="hitTime" val="700" />
-		<enchant1 name="flyRadius" val="#ench1flyRadius" />
-		<for>
-			<effect name="Blink" />
-		</for>
+	<skill id="10774" toLevel="4" name="Quick Evasion">
+		<!-- Glory Days confirmed -->
+		<!-- Momentarily teleports 300 backward. -->
+		<table name="#range"> 300 350 400 450 </table>
+		<icon>icon.skill10774</icon>
+		<operateType>DA3</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">27</value>
+			<value level="2">32</value>
+			<value level="3">33</value>
+			<value level="4">33</value>
+		</mpConsume>
+		<castRange>
+			<value level="1">300</value>
+			<value level="2">350</value>
+			<value level="3">400</value>
+			<value level="4">450</value>
+		</castRange>
+		<effectRange>
+			<value level="1">1000</value>
+			<value level="2">1100</value>
+			<value level="3">1200</value>
+			<value level="4">1300</value>
+		</effectRange>
+		<hitTime>700</hitTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>2</effectPoint>
+		<rideState>NONE</rideState>
+		<hitCancelTime>0</hitCancelTime>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpBlink">
+				<direction>BACK</direction>
+				<range>
+					<value level="1">300</value>
+					<value level="2">350</value>
+					<value level="3">400</value>
+					<value level="4">450</value>
+				</range>
+			</condition>
+		</conditions>
+		<startEffects>
+			<effect name="Blink">
+				<!-- Teleport to Back -->
+				<flyType>WARP_BACK</flyType>
+				<animationSpeed>333</animationSpeed>
+				<angle>0</angle>
+				<range>
+					<value level="1">300</value>
+					<value level="2">350</value>
+					<value level="3">400</value>
+					<value level="4">450</value>
+				</range>
+			</effect>
+		</startEffects>
 	</skill>
-	<skill id="10775" levels="6" name="Confusion Decoy">
-	<!-- Source: https://l2wiki.com/Confusion_Decoy_-_Yul_Trickster -->
-		<table name="#mpConsume"> 60 66 72 78 84 90</table>
-		<table name="#ench1MpConsume"> 69 66 63 60 57 54 51 48 46 43 </table>
-		<table name="#magicLvl"> 87 93 99 101 103 105 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="600000" />
-		<set name="targetType" val="SELF" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<for>
+	<skill id="10775" toLevel="6" name="Confusion Decoy">
+		<!-- Glory Days confirmed -->
+		<!-- Summons a decoy that receives attacks for you. -->
+		<icon>icon.skill10775</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">87</value>
+			<value level="2">93</value>
+			<value level="3">99</value>
+			<value level="4">101</value>
+			<value level="5">103</value>
+			<value level="6">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">60</value>
+			<value level="2">66</value>
+			<value level="3">72</value>
+			<value level="4">78</value>
+			<value level="5">84</value>
+			<value level="6">90</value>
+		</mpConsume>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<rideState>NONE</rideState>
+		<reuseDelay>600000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonNpc">
-				<param npcId="13328" npcCount="1" />
+				<npcId>13328</npcId>
+				<npcCount>1</npcCount>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="10776" levels="4" name="Final Ultimate Escape" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup9="10">
-		<table name="#mpConsume">58 63 68 72</table>
-		<table name="#ench1MpConsume">67 63 59 54 50 46 41 37 33 28</table>
-		<table name="#ench2abnormalTime">31 32 33 34 35 36 37 38 39 40</table>
-		<table name="#enchStat">1 2 3 4 5 6 7 8 9 10</table>
-		<table name="#magicLvl">85 90 95 99</table>
-		<table name="#rateEvas">60 70 80 90</table>
-		<table name="#rateEvasSkill">80 85 90 95</table>
-		<table name="#vuln">90 90 90 90</table>
-		<table name="#ench9Reuse"> 899 000 898000 897000 896000 895000 894000 893000 892000 891000 890000 </table> <!-- Need verify -->
-		<set name="icon" val="icon.skill10776" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="abnormalTime" val="30" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="900000" />
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="magicLvl" val="#magicLvl" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
-		<enchant9 name="reuseDelay" val="#ench9Reuse" />
-		<for>
-			<effect name="Buff">
-				<sub stat="debuffVuln" val="95" />
-				<mul stat="mDef" val="1.2" />
-				<add stat="rEvas" val="#rateEvas" />
-				<add stat="mEvas" val="#rateEvas" />
-				<add stat="pSkillEvas" val="#rateEvasSkill" />
+	<skill id="10776" toLevel="4" name="Final Ultimate Escape">
+		<!-- Glory Days confirmed -->
+		<!-- For 30 sec., P. Evasion + 60, M. Evasion + 60, M. Def. + 20%, Debuff Resistance + 95%, and P. Skill Evasion Rate + 80%. -->
+		<table name="#evas"> 60 70 80 90 </table>
+		<table name="#pSkillEvas"> 80 85 90 95 </table>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>AVOID_UP_SPECIAL</abnormalType>
+		<icon>icon.skill10776</icon>
+		<magicCriticalRate>5</magicCriticalRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">58</value>
+			<value level="2">63</value>
+			<value level="3">68</value>
+			<value level="4">72</value>
+		</mpConsume>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>2</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<reuseDelay>900000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SkillEvasion">
+				<magicType>0</magicType>
+				<amount>
+					<value level="1">80</value>
+					<value level="2">85</value>
+					<value level="3">90</value>
+					<value level="4">95</value>
+				</amount>
 			</effect>
-		</for>
-		<enchant2for>
-			<effect name="Buff">
-				<sub stat="debuffVuln" val="95" />
-				<mul stat="mDef" val="1.2" />
-				<add stat="rEvas" val="90" />
-				<add stat="mEvas" val="90" />
-				<add stat="pSkillEvas" val="95" />
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</enchant2for>
-		<enchant3for>
-			<effect name="Buff">
-				<sub stat="debuffVuln" val="95" />
-				<mul stat="mDef" val="1.2" />
-				<add stat="rEvas" val="90" />
-				<add stat="mEvas" val="90" />
-				<add stat="pSkillEvas" val="95" />
-				<add stat="runSpd" val="#enchStat" />
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">60</value>
+					<value level="2">70</value>
+					<value level="3">80</value>
+					<value level="4">90</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</enchant3for>
-		<enchant4for>
-			<effect name="Buff">
-				<sub stat="debuffVuln" val="95" />
-				<mul stat="mDef" val="1.2" />
-				<add stat="rEvas" val="90" />
-				<add stat="mEvas" val="90" />
-				<add stat="pSkillEvas" val="95" />
+			<effect name="MagicalEvasion">
+				<amount>
+					<value level="1">60</value>
+					<value level="2">70</value>
+					<value level="3">80</value>
+					<value level="4">90</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-			<effect name="AttackTrait">
-				<param SHOCK="#enchStat" />
+			<effect name="ResistDispelByCategory">
+				<amount>-95</amount>
+				<slot>BUFF</slot>
 			</effect>
-		</enchant4for>
+		</effects>
 	</skill>
-	<skill id="10777" levels="4" name="Lure Shot" enchantGroup1="10">
-	<!-- Source: https://l2wiki.com/Lure_Shot_-_Yul_Ghost_Sentinel -->
-		<table name="#magicLvl"> 85 101 103 105 </table>
-		<table name="#ench1mpConsume"> 73 70 67 64 61 58 55 52 49 46 </table>
-		<set name="icon" val="icon.skill10777" />
-		<set name="hitTime" val="1500" />
-		<set name="castRange" val="1100" />
-		<set name="reuseDelay" val="30000" />
-		<set name="abnormalTime" val="3" />
-		<set name="mpConsume" val="77" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="ONE" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="isDebuff" val="true" />
-		<set name="effectRange" val="1600" />
-		<set name="trait" val="DERANGEMENT" />
-		<enchant1 name="mpConsume" val="#ench1mpConsume" />
-		<cond msgId="113" addName="1">
-			<using kind="BOW, CROSSBOW" />
-		</cond>
-		<for>
+	<skill id="10777" toLevel="4" name="Lure Shot">
+		<!-- Glory Days confirmed -->
+		<!-- Draws in the enemy's attention. -->
+		<icon>icon.skill10777</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>TARGET_LOCK</abnormalType>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">101</value>
+			<value level="3">103</value>
+			<value level="4">105</value>
+		</magicLvl>
+		<mpConsume>77</mpConsume>
+		<castRange>1100</castRange>
+		<effectRange>1400</effectRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="TargetMe" />
+			<effect name="GetAgro" />
 			<effect name="AddHate">
-				<param power="1000" />
+				<power>500</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<!-- Level 1 : Transfer the aggression of nearby enemies around target to another party member. -->
-	<!-- Level 101 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<skill id="10778" levels="1" name="Diversion">
-		<table name="#ench1mpConsume">81 78 74 71 68 64 61 57 54 51</table>
-		<set name="icon" val="icon.skill10778" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="mpConsume" val="85" />
-		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="castRange" val="1100" />
-		<set name="reuseDelay" val="60000" />
-		<set name="targetType" val="PARTY_MEMBER" />
-		<enchant1 name="mpConsume" val="#ench1mpConsume"/>
-		<for>
-			<effect name="ShiftTarget" />
-		</for>
+	<skill id="10778" toLevel="1" name="Diversion">
+		<!-- Glory Days confirmed -->
+		<!-- Transfer the aggression of nearby enemies around target to another party member. -->
+		<affectRange>1000</affectRange>
+		<icon>icon.skill10778</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>91</magicLvl>
+		<mpConsume>85</mpConsume>
+		<castRange>1100</castRange>
+		<castRange>1400</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<rideState>NONE</rideState>
+		<effectRange>1400</effectRange>
+		<reuseDelay>60000</reuseDelay>
+		<targetType>TARGET</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="TargetMyParty">
+				<includeMe>false</includeMe>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="TransferHate" />
+		</effects>
 	</skill>
-	<skill id="10779" levels="4" name="Quick Fire">
-		<set name="hitTime" val="800" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="120000" />
-		<table name="#mpConsume">39 42 46 48</table>
-		<set name="abnormalTime" val="20" />
-		<set name="mpConsume" val="#mpConsume" />
-		<table name="#ench1MpConsume">45 42 39 36 33 30 27 24 22 19</table>
-		<table name="#ench3stunProf">1 2 3 4 5 6 7 8 9 10</table>
-		<table name="#magicLvl">85 90 95 99</table>
-		<table name="#pAtkSpd">1.2 1.3 1.4 1.5</table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="#pAtkSpd">
-					<using kind="CROSSBOW,BOW" />
-				</mul>
-				<mul stat="pAtk" val="0.85">
-					<using kind="CROSSBOW,BOW" />
-				</mul>
+	<skill id="10779" toLevel="4" name="Quick Fire">
+		<!-- Glory Days confirmed -->
+		<!-- For 30 sec., Atk. Spd. + 20% when equipped with a bow/crossbow. -->
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>SNIPE</abnormalType>
+		<icon>icon.skill10779</icon>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">39</value>
+			<value level="2">42</value>
+			<value level="3">46</value>
+			<value level="4">48</value>
+		</mpConsume>
+		<hitTime>800</hitTime>
+		<coolTime>200</coolTime>
+		<effectPoint>2</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
+		<reuseDelay>120000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">30</value>
+					<value level="3">40</value>
+					<value level="4">50</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
 			</effect>
-		</for>
-		<enchant2for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="3">
-					<using kind="CROSSBOW,BOW" />
-				</mul>
-				<mul stat="pAtk" val="0.85">
-					<using kind="CROSSBOW,BOW" />
-				</mul>
-			</effect>
-		</enchant2for>
-		<enchant3for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="3">
-					<using kind="CROSSBOW,BOW" />
-				</mul>
-				<mul stat="pAtk" val="0.85">
-					<using kind="CROSSBOW,BOW" />
-				</mul>
-				<!--<add stat="stunProf" val="#ench3stunProf" />-->
-			</effect>
-		</enchant3for>
+		</effects>
 	</skill>
-	<skill id="10780" levels="9" name="Slow Shot">
-	<!-- Source: https://l2wiki.com/Slow_Shot_-_Yul_Moonlight_Sentinel -->
-		<table name="#ench1MpConsume"> 109 102 95 88 81 74 67 60 53 46 </table>
-		<table name="#magicLvl"> 85 86 89 92 95 98 101 103 105 </table>
-		<table name="#mpConsume"> 94 96 101 106 111 116 121 126 131 </table>
-		<table name="#power"> 9338 9670 10669 11667 12666 13664 28632 28632 28632 </table> <!-- Need Confirm -->
-		<table name="#ench2Power"> 81 82 83 84 85 86 87 88 89 90 </table>
-		<table name="#enchelementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
-		<table name="#enchPower"> 14330 14663 14996 15328 15661 15994 15327 16660 16992 17325 </table>
-		<set name="hitTime" val="2100" />
-		<set name="coolTime" val="350" />
-		<set name="castRange" val="1100" />
-		<set name="reuseDelay" val="30000" />
-		<set name="abnormalTime" val="20" />
-		<set name="effectPoint" val="-1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="isDebuff" val="true" />
-		<set name="effectRange" val="1200" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant1 name="power" val="#enchPower" />
-		<enchant2 name="power" val="#enchPower" />
-		<enchant3 name="element" val="0" />
-		<enchant3 name="elementPower" val="#enchelementPower" />
-		<enchant3 name="power" val="#enchPower" />
-		<enchant4 name="element" val="1" />
-		<enchant4 name="elementPower" val="#enchelementPower" />
-		<enchant4 name="power" val="#enchPower" />
-		<enchant5 name="element" val="2" />
-		<enchant5 name="elementPower" val="#enchelementPower" />
-		<enchant5 name="power" val="#enchPower" />
-		<enchant6 name="element" val="3" />
-		<enchant6 name="elementPower" val="#enchelementPower" />
-		<enchant6 name="power" val="#enchPower" />
-		<enchant7 name="element" val="4" />
-		<enchant7 name="elementPower" val="#enchelementPower" />
-		<enchant7 name="power" val="#enchPower" />
-		<enchant8 name="element" val="5" />
-		<enchant8 name="elementPower" val="#enchelementPower" />
-		<enchant8 name="power" val="#enchPower" />
-		<for>
-			<effect name="Debuff">
-				<mul stat="runSpd" val="0.7" />
+	<skill id="10780" toLevel="9" name="Slow Shot">
+		<!-- Glory Days confirmed -->
+		<!-- Attacks target with 9338 Power added to P. Atk. For 10 sec., Speed - 70. Requires a bow or crossbow to be equipped. -->
+		<table name="#power"> 23860 25053 28632 32211 35790 39369 42001 43930 45960 </table>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>40</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<icon>icon.skill10780</icon>
+		<lvlBonusRate>20</lvlBonusRate>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">89</value>
+			<value level="4">92</value>
+			<value level="5">95</value>
+			<value level="6">98</value>
+			<value level="7">101</value>
+			<value level="8">103</value>
+			<value level="9">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">94</value>
+			<value level="2">96</value>
+			<value level="3">101</value>
+			<value level="4">106</value>
+			<value level="5">111</value>
+			<value level="6">116</value>
+			<value level="7">121</value>
+			<value level="8">126</value>
+			<value level="9">131</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<castRange>1100</castRange>
+		<effectRange>1500</effectRange>
+		<hitTime>2100</hitTime>
+		<coolTime>350</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>
+			<value level="1">-689</value>
+			<value level="2">-692</value>
+			<value level="3">-698</value>
+			<value level="4">-704</value>
+			<value level="5">-709</value>
+			<value level="6">-713</value>
+			<value level="7">-717</value>
+			<value level="8">-721</value>
+			<value level="9">-725</value>
+		</effectPoint>
+		<rideState>NONE</rideState>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">23860</value>
+					<value level="2">25053</value>
+					<value level="3">28632</value>
+					<value level="4">32211</value>
+					<value level="5">35790</value>
+					<value level="6">39369</value>
+					<value level="7">42001</value>
+					<value level="8">43930</value>
+					<value level="9">45960</value>
+				</power>
+				<criticalChance>5</criticalChance>
 			</effect>
-		</for>
-		<enchant2for>
-			<effect name="Debuff">
-				<mul stat="runSpd" val="0.7" />
+			<effect name="Speed">
+				<amount>-70</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</enchant2for>
+		</effects>
 	</skill>
-	<skill id="10781" levels="4" name="Phoenix Arrow">
-	<!-- Source: https://l2wiki.com/Phoenix_Arrow_-_Yul_Trickster -->
-		<table name="#magicLvl"> 95 101 103 105 </table>
-		<table name="#power"> 45215 56558 59316 62074 </table>
-		<table name="#enchPower"> 46273 47330 48388 49445 50503 51560 52618 53677 54733 65792 </table>
-		<table name="#ench1mpConsume"> 212 198 185 171 158 144 131 117 103 90 </table>
-		<set name="reuseDelay" val="30000" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="2510" />
-		<set name="mpConsume" val="219" />
-		<set name="coolTime" val="300" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="GROUND" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="staticReuse" val="true" />
-		<set name="baseCritRate" val="15" />
-		<set name="castRange" val="900" />
-		<set name="effectPoint" val="-686" />
-		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="200" />
-		<set name="mpConsume" val="160" />
-		<set name="overHit" val="true" />
-		<set name="rideState" val="NONE" />
-		<cond msgId="113" addName="1">
-			<using kind="BOW" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
-			<effect name="CallSkill">
-				<param skillId="10782" skillLevel="1" />
+	<skill id="10781" toLevel="4" name="Phoenix Arrow">
+		<!-- Glory Days confirmed -->
+		<!-- Shoots a magical arrow to obliterate an area. Attacks targets within the skill's range with 45215 power. -->
+		<icon>icon.skill10781</icon>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">95</value>
+			<value level="2">101</value>
+			<value level="3">103</value>
+			<value level="4">105</value>
+		</magicLvl>
+		<mpConsume>1067</mpConsume>
+		<castRange>1100</castRange>
+		<effectRange>1500</effectRange>
+		<hitTime>7500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-706</effectPoint>
+		<reuseDelay>30000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicLvl>93</magicLvl>
+		<isMagic>4</isMagic>
+		<staticReuse>true</staticReuse>
+		<targetType>GROUND</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">45215</value>
+					<value level="2">56558</value>
+					<value level="3">59316</value>
+					<value level="4">62074</value>
+				</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="10782" levels="1" name="Deadly Move 2">
-		<set name="icon" val="icon.skill10782" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="226" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="2200" />
-		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="isMagic" val="4" />
+	<skill id="10782" toLevel="1" name="Deadly Move 2">
+		<!-- Glory Days confirmed -->
+		<!-- Death blow! Please do not use. -->
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<icon>icon.skill10782</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>97</magicLvl>
+		<mpConsume>226</mpConsume>
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<hitTime>2200</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>3600000</reuseDelay>
+		<effectPoint>-709</effectPoint>
+		<isMagic>4</isMagic>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>74885</power>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="10783" levels="4" name="Mind's Eye">
-		<set name="hitTime" val="3000" />
-		<set name="coolTime" val="500" />
-		<table name="#reuseDelay">600000 600000 600000 600000</table>
-		<set name="abnormalTime" val="60" />
-		<set name="reuseDelay" val="#reuseDelay" />
-		<table name="#mpConsume">54 59 64 64</table>
-		<set name="mpConsume" val="#mpConsume" />
-		<table name="#ench1MpConsume">60 56 52 48 44 40 37</table>
-		<table name="#ench2abnormalTime">62 64 66 68 70 72 74</table>
-		<table name="#ench3stunProf">1 2 3 4 5 6 7</table>
-		<table name="#magicLvl">85 90 95 99</table>
-		<table name="#pCritRate">200 220 240 250</table>
-		<table name="#cAtk">1.7 1.9 2.1 2.3</table>
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="magicLvl" val="#magicLvl" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
-		<for>
-			<effect name="Buff">
-				<add stat="critRate" val="#pCritRate">
-					<using kind="CROSSBOW,BOW" />
-				</add>
-				<mul stat="critDmg" val="#cAtk">
-					<using kind="CROSSBOW,BOW" />
-				</mul>
+	<skill id="10783" toLevel="4" name="Mind's Eye">
+		<!-- Glory Days confirmed -->
+		<!-- For 1 minute, opens the eye of infinity to increase Accuracy + 25, Critical Rate + 200, and Critical Damage + 70%. -->
+		<table name="#accCombat"> 25 30 35 40 </table>
+		<table name="#rCrit"> 200 220 240 250 </table>
+		<table name="#cAtk"> 1.7 1.9 2.1 2.3 </table>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>POSSESSION</abnormalType>
+		<icon>icon.skill10783</icon>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">54</value>
+			<value level="2">59</value>
+			<value level="3">64</value>
+			<value level="4">64</value>
+		</mpConsume>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>2</effectPoint>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<isMagic>4</isMagic>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">25</value>
+					<value level="2">30</value>
+					<value level="3">35</value>
+					<value level="4">40</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
-		<enchant2for>
-			<effect name="Buff">
-				<add stat="critRate" val="250">
-					<using kind="CROSSBOW,BOW" />
-				</add>
-				<mul stat="critDmg" val="2.3">
-					<using kind="CROSSBOW,BOW" />
-				</mul>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">70</value>
+					<value level="2">90</value>
+					<value level="3">110</value>
+					<value level="4">130</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</enchant2for>
-		<enchant3for>
-			<effect name="Buff">
-				<add stat="critRate" val="250">
-					<using kind="CROSSBOW,BOW" />
-				</add>
-				<mul stat="critDmg" val="2.3">
-					<using kind="CROSSBOW,BOW" />
-				</mul>
-				<!--<add stat="stunProf" val="#ench3stunProf" />-->
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">220</value>
+					<value level="3">240</value>
+					<value level="4">250</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</enchant3for>
+		</effects>
 	</skill>
-	<skill id="10784" levels="1" name="Camouflage">
-		<set name="hitTime" val="200" />
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="HIDE" />
-		<set name="abnormalVisualEffect" val="STEALTH" />
-		<set name="effectPoint" val="679" />
-		<set name="icon" val="icon.skill10784" />
-		<set name="magicLvl" val="81" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="120000" />
-		<set name="rideState" val="NONE" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="SELF" />
-		<for>
+	<skill id="10784" toLevel="1" name="Camouflage">
+		<!-- Glory Days confirmed -->
+		<!-- For 30 sec., blends into the environment and hides. Decreases Speed by 30%. -->
+		<icon>icon.skill10784</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>HIDE</abnormalType>
+		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
+		<operateType>A2</operateType>
+		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
+		<removedOnDamage>true</removedOnDamage>
+		<staticReuse>true</staticReuse>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>93</magicLvl>
+		<mpConsume>9</mpConsume>
+		<hitTime>200</hitTime>
+		<effectPoint>2</effectPoint>
+		<reuseDelay>120000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="Hide">
-				<mul stat="runSpd" val="0.7" />
 			</effect>
-		</for>
-	</skill>
-	<skill id="10785" levels="5" name="Flare">
-	<!-- Source: https://l2wiki.com/Flare_-_Yul_Ghost_Sentinel -->
-		<table name="#magicLvl"> 85 99 101 103 105 </table>
-		<table name="#ench1mpConsume"> 67 64 61 58 56 53 50 47 44 42 </table>
-		<table name="#ench2skillRadius"> 310 320 330 340 350 360 370 380 390 400 </table>
-		<set name="hitTime" val="1200" />
-		<set name="abnormalTime" val="30" />
-		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="20000" />
-		<set name="mpConsume" val="70" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<enchant1 name="mpConsume" val="#ench1mpConsume" />
-		<enchant2 name="skillRadius" val="#ench2skillRadius" />
-	</skill>
-	<skill id="10786" levels="6" name="Time Bomb">
-	<!-- Source: https://l2wiki.com/Time_Bomb_-_Yul_Moonlight_Sentinel -->
-		<table name="#magicLvl"> 93 96 99 101 103 105 </table>
-		<table name="#mpConsume"> 66 69 72 75 78 81 </table>
-		<table name="#ench1MpConsume"> 60 56 52 48 44 40 37 33 29 25 </table>
-		<table name="#ench2Power"> 91 92 92 93 94 94 95 96 96 9 7</table>
-		<table name="#ench3Slow"> 0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.90 </table>
-		<set name="hitTime" val="1500" />
-		<set name="castRange" val="1100" />
-		<set name="reuseDelay" val="15000" />
-		<set name="abnormalTime" val="600" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="90" />
-		<set name="targetType" val="ONE" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="effectRange" val="1100" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant2 name="power" val="#ench2Power" />
-		<for>
-			<effect name="Buff">
-				<sub stat="rEvas" val="10" />
+			<effect name="Speed">
+				<amount>-30</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
-		<enchant3for>
-			<effect name="Buff">
-				<sub stat="rEvas" val="10" />
-				<mul stat="runSpd" val="#ench3Slow" />
-			</effect>
-		</enchant3for>
+		</effects>
 	</skill>
-	<skill id="10787" levels="8" name="Summon Thunder Hawk" enchantGroup1="10">
-		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
-		<table name="#enchMagicLvl"> 90 91 92 93 94 95 96 97 98 99 </table>
-		<table name="#mpConsume"> 123 127 132 136 140 145 149 154 </table>
+	<skill id="10785" toLevel="5" name="Flare">
+		<!-- Glory Days confirmed -->
+		<!-- Fires a Flare to reveal nearby hiding enemies or traps. Requires a bow or crossbow to be equipped. -->
+		<table name="#slot"> NONE NONE HIDE HIDE HIDE </table>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">1</value>
+			<value level="4">2</value>
+			<value level="5">3</value>
+		</abnormalTime>
+		<!-- TODO set name="abnormalType" val="" / -->
+		<icon>icon.skill10785</icon>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>500</affectRange>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">99</value>
+			<value level="3">101</value>
+			<value level="4">103</value>
+			<value level="5">105</value>
+		</magicLvl>
+		<mpConsume>70</mpConsume>
+		<hitTime>1200</hitTime>
+		<coolTime>300</coolTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<isDebuff>true</isDebuff>
+		<reuseDelay>20000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>INVISIBLE</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Detection" />
+			<effect name="TrapRemove">
+				<power>99</power>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,9</dispel>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>
+					<value level="1">NONE</value>
+					<value level="2">NONE</value>
+					<value level="3">HIDE</value>
+					<value level="4">HIDE</value>
+					<value level="5">HIDE</value>
+				</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10786" toLevel="6" name="Time Bomb">
+		<!-- Glory Days confirmed -->
+		<!-- Plants a bomb on target that detonates after 10 seconds to inflict damage with 30000 power. While the bomb is being installed, target's P. Accuracy decreases by 10. -->
+		<table name="#triggerLvl"> 1 1 1 2 3 4 </table>
+		<icon>icon.skill10786</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TIME_BOMB</abnormalType>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">93</value>
+			<value level="2">96</value>
+			<value level="3">99</value>
+			<value level="4">101</value>
+			<value level="5">103</value>
+			<value level="6">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">66</value>
+			<value level="2">69</value>
+			<value level="3">72</value>
+			<value level="4">75</value>
+			<value level="5">78</value>
+			<value level="6">81</value>
+		</mpConsume>
+		<castRange>1100</castRange>
+		<effectRange>1400</effectRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>
+			<value level="1">-706</value>
+			<value level="2">-710</value>
+			<value level="3">-714</value>
+			<value level="4">-718</value>
+			<value level="5">-722</value>
+			<value level="6">-726</value>
+		</effectPoint>
+		<basicProperty>PHYSICAL</basicProperty>
+		<rideState>NONE</rideState>
+		<lvlBonusRate>30</lvlBonusRate>
+		<activateRate>80</activateRate>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Accuracy">
+				<amount>-10</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+		<endEffects>
+			<effect name="CallSkill">
+				<!-- Time Bomb -->
+				<skillId>10803</skillId>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+				</skillLevel>
+			</effect>
+		</endEffects>
+	</skill>
+	<skill id="10787" toLevel="8" name="Summon Thunder Hawk">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- Summons a Thunder Hawk. -->
 		<table name="#npcIds"> 14932 14940 14941 14942 14986 14987 14988 14989 </table>
-		<table name="#ench1npcId">14990 14991 14992 14993 14994 14995 14996 14997 14998 14999</table>
-		<set name="icon" val="icon.skill10787" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="60000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<cond>
-			<and>
-				<player canSummonServitor="true" />
-				<player hasFreeSummonPoints="2" />
-			</and>
-		</cond>
-		<for>
+		<icon>icon.skill10787</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">87</value>
+			<value level="3">89</value>
+			<value level="4">91</value>
+			<value level="5">93</value>
+			<value level="6">95</value>
+			<value level="7">97</value>
+			<value level="8">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">123</value>
+			<value level="2">127</value>
+			<value level="3">132</value>
+			<value level="4">136</value>
+			<value level="5">140</value>
+			<value level="6">145</value>
+			<value level="7">149</value>
+			<value level="8">154</value>
+		</mpConsume>
+		<hitTime>3000</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanSummon" />
+		</conditions>
+		<effects>
 			<effect name="Summon">
-				<param npcId="#npcIds" />
-				<param lifeTime="3600" />
-				<param summonPoints="2" />
+				<npcId>
+					<value level="1">14932</value>
+					<value level="2">14940</value>
+					<value level="3">14941</value>
+					<value level="4">14942</value>
+					<value level="5">14986</value>
+					<value level="6">14987</value>
+					<value level="7">14988</value>
+					<value level="8">14989</value>
+				</npcId>
+				<lifeTime>-1</lifeTime>
 			</effect>
-		</for>
-		<enchant1for>
-			<effect name="Summon">
-				<param npcId="#ench1npcId" />
-				<param lifeTime="3600" />
-				<param summonPoints="2" />
-			</effect>
-		</enchant1for>
+		</effects>
 	</skill>
-	<!-- Level 1 : Remotely controls a trap to set it off. -->
-	<skill id="10788" levels="1" name="Remote Control">
-		<set name="icon" val="icon.skill10788" />
-		<set name="magicLvl" val="91" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="mpConsume" val="10" />
-		<set name="hitTime" val="800" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="10000" />
-		<set name="targetType" val="ONE" />
-		<cond addName="1" msgId="113">
-			<target active_effect_id="10786" />
-		</cond>
-		<for>
-			<effect name="RemoteControl" />
-			<!-- <effect chanceType="ON_START" name="ChanceSkillTrigger" triggeredId="10803" triggeredLevel="1" /> -->
-		</for>
-	</skill>
-	<skill id="10789" levels="1" name="Flash Trap">
+	<skill id="10788" toLevel="1" name="Remote Control">
 		<!-- AUTO GENERATED SKILL -->
+		<!-- Remotely controls a trap to set it off. -->
+		<icon>icon.skill10788</icon>
+		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<hitTime>800</hitTime>
+		<coolTime>200</coolTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>93</magicLvl>
+		<affectRange>300</affectRange>
+		<reuseDelay>10000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>INVISIBLE</affectObject>
+	</skill>
+	<skill id="10789" toLevel="1" name="Flash Trap">
+		<!-- Glory Days confirmed -->
 		<!-- Flash Trap -->
-		<set name="icon" val="icon.skill0517" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="47" />
-		<set name="hitTime" val="800" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="45000" />
+		<icon>icon.skill0517</icon>
+		<operateType>A1</operateType>
+		<magicLvl>97</magicLvl>
+		<mpConsume>47</mpConsume>
+		<hitTime>800</hitTime>
+		<coolTime>200</coolTime>
+		<effectPoint>-709</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>45000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpExistNpc">
+				<npcIds>
+					<item>13052</item>
+				</npcIds>
+				<range>150</range>
+				<isAround>false</isAround>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SummonTrap">
+				<npcId>13052</npcId>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="10790" levels="1" name="Explosion Trap">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="10790" toLevel="1" name="Explosion Trap">
+		<!-- Glory Days confirmed -->
 		<!-- Damage Trap -->
-		<set name="icon" val="icon.skill0514" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="39" />
-		<set name="hitTime" val="800" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="45000" />
-	</skill>
-	<skill id="10791" levels="4" name="Frost Trap">
-	<!-- Source: https://l2wiki.com/Frost_Trap_-_Yul_Sagittarius -->
-		<table name="#magicLvl"> 85 101 103 105 </table>
-		<table name="#npcId">13326 13326 13326 13326</table>
-		<set name="effectPoint" val="-1" />
-		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill0516" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="45000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="SELF" />
-		<set name="npcId" val="13037"/>
-		<for>
+		<icon>icon.skill0514</icon>
+		<operateType>A1</operateType>
+		<magicLvl>97</magicLvl>
+		<mpConsume>39</mpConsume>
+		<hitTime>800</hitTime>
+		<coolTime>200</coolTime>
+		<effectPoint>-709</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>45000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpExistNpc">
+				<npcIds>
+					<item>13037</item>
+				</npcIds>
+				<range>150</range>
+				<isAround>false</isAround>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="SummonTrap">
-				<param npcId="13037" />
+				<npcId>13037</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="10792" levels="4" name="Gravity Trap">
-	<!-- Source: https://l2wiki.com/Gravity_Trap_-_Yul_Ghost_Sentinel -->
-		<table name="#magicLvl"> 85 101 103 105 </table>
-		<table name="#npcId"> 13327 13327 13327 13327 </table>
-		<set name="effectPoint" val="-1" />
-		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill0518" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="40" />
-		<set name="mpInitialConsume" val="10" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="45000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="staticReuse" val="true" />
-		<set name="npcId" val="13041"/>
-		<set name="targetType" val="SELF" />
-		<for>
+	<skill id="10791" toLevel="4" name="Frost Trap">
+		<!-- Glory Days confirmed -->
+		<!-- Plants a Frost Trap, decreasing the enemy's Speed, Atk. Spd. and Casting Spd. -->
+		<!-- TODO: Find npcId for additional level -->
+		<!-- TODO: Correct it -->
+		<icon>icon.skill10791</icon>
+		<operateType>A1</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">101</value>
+			<value level="3">103</value>
+			<value level="4">105</value>
+		</magicLvl>
+		<mpConsume>39</mpConsume>
+		<hitTime>800</hitTime>
+		<coolTime>200</coolTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>45000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpExistNpc">
+				<npcIds>
+					<item>13057</item>
+				</npcIds>
+				<range>150</range>
+				<isAround>false</isAround>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="SummonTrap">
-				<param npcId="13041" />
+				<npcId>13326</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="10793" levels="1" name="Flash">
-		<set name="hitTime" val="800" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="60000" />
-		<set name="mpConsume" val="77" />
-		<set name="abnormalTime" val="5" />
-		<table name="#ench1MpConsume">73 70 67 64 61 58 55 52 49 46</table>
-		<table name="#enchProf">1 2 3 4 5 6 7 8 9 10</table>
-		<set name="targetType" val="AURA" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="magicLvl" val="85" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<for>
-			<effect name="Buff">
-				<add stat="runSpd" val="50" />
+	<skill id="10792" toLevel="4" name="Gravity Trap">
+		<!-- Glory Days confirmed -->
+		<!-- Plants a Gravity Trap, immobilizing the enemy. -->
+		<!-- TODO: Find npcId for additional level -->
+		<icon>icon.skill10792</icon>
+		<operateType>A1</operateType>
+		<magicLvl>85</magicLvl>
+		<mpConsume>39</mpConsume>
+		<hitTime>800</hitTime>
+		<coolTime>200</coolTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>45000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpExistNpc">
+				<npcIds>
+					<item>13057</item>
+				</npcIds>
+				<range>150</range>
+				<isAround>false</isAround>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SummonTrap">
+				<npcId>13327</npcId>
 			</effect>
-		</for>
-		<enchant2for>
-			<effect name="Buff">
-				<add stat="runSpd" val="50" />
-				<!--<add stat="stunProf" val="#enchProf" />-->
-			</effect>
-		</enchant2for>
-		<!--<enchant3for>
-			<effect abnormalLvl="1" abnormalTime="5" abnormalType="speed_up_special" name="TargetImmunity" self="1"
-					val="0">
-				<add stat="runSpd" val="50" />
-				<add stat="knockDownProf" val="#enchProf" />
-				<add stat="knockBackProf" val="#enchProf" />
-			</effect>
-		</enchant3for>-->
+		</effects>
 	</skill>
-	<skill id="10794" levels="8" name="Thunder Flight">
-		<table name="#mpConsume">71 78 84 86 86 86 86 86</table>
-		<table name="#ench1MpConsume">86 86 86 86 86 86 86 86 86 86</table>
-		<table name="#power">2065 2135 2206 2277 2347 2417 2488 2557</table>
-		<table name="#ench1power">2626 2695 2764 2833 2902 2971 3040 3109 3178 3247</table>
-		<table name="#magicLvl">85 87 89 91 93 95 97 99</table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="nextActionAttack" val="true" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="flyType" val="CHARGE" />
-		<set name="overHit" val="true" />
-		<set name="reuseDelay" val="10000" />
-		<set name="hitTime" val="800" />
-		<set name="coolTime" val="750" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="castRange" val="300" />
-		<set name="effectRange" val="300" />
-		<enchant1 name="power" val="#ench1power" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+	<skill id="10793" toLevel="1" name="Flash">
+		<!-- Glory Days confirmed -->
+		<!-- Cancels targets of nearby enemies. Increases Speed + 50 for 5 seconds and prevents enemies from targeting you. -->
+		<icon>icon.skill10793</icon>
+		<operateType>A3</operateType>
+		<mpConsume>77</mpConsume>
+		<hitTime>800</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>-689</effectPoint>
+		<abnormalType>MA_DOWN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>0</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<affectRange>300</affectRange>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="DeleteHate" />
+			<effect name="TargetCancel">
+				<chance>100</chance>
+			</effect>
+			<effect name="Speed">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Untargetable" />
+		</effects>
 	</skill>
-	<skill id="10795" levels="1" name="Thunder Purity">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="10794" toLevel="8" name="Thunder Flight">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- Flies straight into the enemy. -->
+		<icon>icon.skill6041</icon>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">87</value>
+			<value level="3">89</value>
+			<value level="4">91</value>
+			<value level="5">93</value>
+			<value level="6">95</value>
+			<value level="7">97</value>
+			<value level="8">99</value>
+		</magicLvl>
+		<nextActionAttack>true</nextActionAttack>
+		<operateType>DA1</operateType>
+		<castRange>400</castRange>
+		<effectRange>600</effectRange>
+		<flyType>CHARGE</flyType>
+		<hitTime>800</hitTime>
+		<coolTime>750</coolTime>
+		<effectPoint>
+			<value level="1">-687</value>
+			<value level="2">-698</value>
+			<value level="3">-707</value>
+			<value level="4">-709</value>
+			<value level="5">-709</value>
+			<value level="6">-709</value>
+			<value level="7">-709</value>
+			<value level="8">-709</value>
+		</effectPoint>
+		<rideState>NONE</rideState>
+		<reuseDelay>10000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCheckCastRange">
+				<distance>200</distance>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="EnemyCharge" />
+		</effects>
+	</skill>
+	<skill id="10795" toLevel="1" name="Thunder Purity">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
 		<!-- Purifies the master. -->
-		<set name="icon" val="icon.skill6042" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="96" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="2500" />
-		<set name="reuseDelay" val="180000" />
-		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="10796" levels="1" name="Hawk Gust">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pushes the enemies around the master. -->
-		<set name="icon" val="icon.skill0092" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="46" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="500" />
-		<set name="coolTime" val="100" />
-		<set name="reuseDelay" val="120000" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="10797" levels="8" name="Thunder Feather Blast">
-		<table name="#mpConsume">71 78 84 86 86 86 86 86</table>
-		<table name="#ench1MpConsume">86 86 86 86 86 86 86 86 86 86</table>
-		<table name="#power">2065 2135 2206 2277 2347 2417 2488 2557</table>
-		<table name="#ench1power">2626 2695 2764 2833 2902 2971 3040 3109 3178 3247</table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="effectPoint" val="-1" />
-		<set name="nextActionAttack" val="true" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="AREA" />
-		<set name="overHit" val="true" />
-		<set name="reuseDelay" val="15000" />
-		<set name="hitTime" val="1080" />
-		<set name="coolTime" val="770" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="castRange" val="200" />
-		<set name="effectRange" val="400" />
-		<enchant1 name="power" val="#ench1power" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-	</skill>
-	<skill id="10798" levels="8" name="Thunder Sharp Claw">
-		<table name="#mpConsume">71 78 84 86 86 86 86 86</table>
-		<table name="#ench1MpConsume">86 86 86 86 86 86 86 86 86 86</table>
-		<table name="#power">2065 2135 2206 2277 2347 2417 2488 2557</table>
-		<table name="#ench1power">2626 2695 2764 2833 2902 2971 3040 3109 3178 3247</table>
-		<table name="#dot">102 132 162 192 222 252 282 312</table>
-		<table name="#magicLvl">85 87 89 91 93 95 97 99</table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="effectPoint" val="-1" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="nextActionAttack" val="true" />
-		<set name="power" val="#power" />
-		<set name="abnormalLvl" val="9" />
-		<set name="targetType" val="AREA" />
-		<set name="abnormalTime" val="3" />
-		<set name="overHit" val="true" />
-		<set name="reuseDelay" val="25000" />
-		<set name="hitTime" val="1080" />
-		<set name="coolTime" val="770" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="isDebuff" val="true" />
-		<set name="castRange" val="200" />
-		<set name="effectRange" val="400" />
-		<set name="trait" val="BLEED" />
-		<enchant1 name="power" val="#ench1power" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-	</skill>
-	<skill id="10799" levels="7" name="Superior M. Def.">
-	<!-- Source: https://l2wiki.com/Superior_M._Def._-_Yul_Sagittarius -->
-		<table name="#mDef"> 776 878 993 1097 1237 1299 1365 </table>
-		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="mDef" val="#mDef" />
-				<add stat="STR" val="2" />
+		<icon>icon.skill6042</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<mpConsume>96</mpConsume>
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<hitTime>2500</hitTime>
+		<reuseDelay>180000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<isMagic>1</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>5</max>
 			</effect>
-		</for>
+		</effects>
+	</skill>
+	<skill id="10796" toLevel="1" name="Hawk Gust">
+		<!-- Glory Days confirmed -->
+		<!-- Pushes the enemies around the master. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalType>5</abnormalType>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<affectRate>150</affectRate>
+		<lvlBonusRate>30</lvlBonusRate>
+		<icon>icon.skill0092</icon>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<mpConsume>46</mpConsume>
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<hitTime>500</hitTime>
+		<coolTime>100</coolTime>
+		<reuseDelay>120000</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<abnormalTime>5</abnormalTime>
+		<affectRange>150</affectRange>
+		<isDebuff>true</isDebuff>
+		<targetType>TARGET</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="KnockBack">
+				<speed>400</speed>
+				<distance>500</distance>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SHOCK>100</SHOCK>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<SLEEP>100</SLEEP>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="10797" toLevel="8" name="Thunder Feather Blast">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- Hurls feathers toward the enemy. -->
+		<table name="#power"> 5555 5787 6029 6280 6541 6813 7095 7389 </table>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>20</attributeValue>
+		<icon>icon.skill6044</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">87</value>
+			<value level="3">89</value>
+			<value level="4">91</value>
+			<value level="5">93</value>
+			<value level="6">95</value>
+			<value level="7">97</value>
+			<value level="8">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">71</value>
+			<value level="2">78</value>
+			<value level="3">84</value>
+			<value level="4">86</value>
+			<value level="5">86</value>
+			<value level="6">86</value>
+			<value level="7">86</value>
+			<value level="8">86</value>
+		</mpConsume>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1080</hitTime>
+		<coolTime>770</coolTime>
+		<effectPoint>
+			<value level="1">-687</value>
+			<value level="2">-698</value>
+			<value level="3">-707</value>
+			<value level="4">-709</value>
+			<value level="5">-709</value>
+			<value level="6">-709</value>
+			<value level="7">-709</value>
+			<value level="8">-709</value>
+		</effectPoint>
+		<rideState>NONE</rideState>
+		<reuseDelay>15000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">5555</value>
+					<value level="2">5787</value>
+					<value level="3">6029</value>
+					<value level="4">6280</value>
+					<value level="5">6541</value>
+					<value level="6">6813</value>
+					<value level="7">7095</value>
+					<value level="8">7389</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10798" toLevel="8" name="Thunder Sharp Claw">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- Attacks the enemy with sharp talon to inflict bleed. -->
+		<table name="#power"> 2796 2912 3034 3160 3291 3427 3569 3717 </table>
+		<table name="#dot"> 71 72 73 74 75 76 77 78 </table>
+		<icon>icon.skill0096</icon>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<lvlBonusRate>30</lvlBonusRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<operateType>A2</operateType>
+		<trait>BLEED</trait>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">87</value>
+			<value level="3">89</value>
+			<value level="4">91</value>
+			<value level="5">93</value>
+			<value level="6">95</value>
+			<value level="7">97</value>
+			<value level="8">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">71</value>
+			<value level="2">78</value>
+			<value level="3">84</value>
+			<value level="4">86</value>
+			<value level="5">86</value>
+			<value level="6">86</value>
+			<value level="7">86</value>
+			<value level="8">86</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1080</hitTime>
+		<coolTime>770</coolTime>
+		<reuseDelay>25000</reuseDelay>
+		<effectPoint>
+			<value level="1">-687</value>
+			<value level="2">-698</value>
+			<value level="3">-707</value>
+			<value level="4">-709</value>
+			<value level="5">-709</value>
+			<value level="6">-709</value>
+			<value level="7">-709</value>
+			<value level="8">-709</value>
+		</effectPoint>
+		<rideState>NONE</rideState>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">2796</value>
+					<value level="2">2912</value>
+					<value level="3">3034</value>
+					<value level="4">3160</value>
+					<value level="5">3291</value>
+					<value level="6">3427</value>
+					<value level="7">3569</value>
+					<value level="8">3717</value>
+				</power>
+			</effect>
+			<effect name="DamOverTime">
+				<power>
+					<value level="1">71</value>
+					<value level="2">72</value>
+					<value level="3">73</value>
+					<value level="4">74</value>
+					<value level="5">75</value>
+					<value level="6">76</value>
+					<value level="7">77</value>
+					<value level="8">78</value>
+				</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10799" toLevel="10" name="Superior M. Def.">
+		<!-- Glory Days confirmed -->
+		<!-- M. Def. + 776, and M. Def. + 25%. STR + 2. -->
+		<table name="#mDef"> 776 878 993 1097 1237 1299 1365 1434 1507 1583 </table>
+		<icon>icon.skill10004</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">100</value>
+			<value level="6">102</value>
+			<value level="7">104</value>
+			<value level="8">106</value>
+			<value level="9">108</value>
+			<value level="10">110</value>
+		</magicLvl>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">776</value>
+					<value level="2">878</value>
+					<value level="3">993</value>
+					<value level="4">1097</value>
+					<value level="5">1237</value>
+					<value level="6">1299</value>
+					<value level="7">1365</value>
+					<value level="8">1434</value>
+					<value level="9">1507</value>
+					<value level="10">1583</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+		</effects>
 	</skill>
 </list>

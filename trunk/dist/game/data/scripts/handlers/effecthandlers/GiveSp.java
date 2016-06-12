@@ -17,9 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Give SP effect implementation.
@@ -29,10 +30,8 @@ public final class GiveSp extends AbstractEffect
 {
 	private final int _sp;
 	
-	public GiveSp(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public GiveSp(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_sp = params.getInt("sp", 0);
 	}
 	
@@ -43,13 +42,13 @@ public final class GiveSp extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isPlayer() || info.getEffected().isAlikeDead())
+		if (!effector.isPlayer() || !effected.isPlayer() || effected.isAlikeDead())
 		{
 			return;
 		}
 		
-		info.getEffector().getActingPlayer().addExpAndSp(0, _sp);
+		effector.getActingPlayer().addExpAndSp(0, _sp);
 	}
 }

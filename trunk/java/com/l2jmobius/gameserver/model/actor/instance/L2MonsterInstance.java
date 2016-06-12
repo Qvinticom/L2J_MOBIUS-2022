@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.concurrent.ScheduledFuture;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.knownlist.MonsterKnownList;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.util.MinionList;
 
@@ -35,8 +35,6 @@ import com.l2jmobius.gameserver.util.MinionList;
  */
 public class L2MonsterInstance extends L2Attackable
 {
-	private static final int MONSTER_MAINTENANCE_INTERVAL = 1000;
-	
 	protected boolean _enableMinions = true;
 	
 	private L2MonsterInstance _master = null;
@@ -44,9 +42,17 @@ public class L2MonsterInstance extends L2Attackable
 	
 	protected ScheduledFuture<?> _maintenanceTask = null;
 	
+	private static final int MONSTER_MAINTENANCE_INTERVAL = 1000;
+	
 	/**
-	 * Creates a monster.
-	 * @param template the monster NPC template
+	 * Constructor of L2MonsterInstance (use L2Character and L2NpcInstance constructor).<br>
+	 * <B><U> Actions</U> :</B>
+	 * <ul>
+	 * <li>Call the L2Character constructor to set the _template of the L2MonsterInstance (copy skills from template to object and link _calculators to NPC_STD_CALCULATOR)</li>
+	 * <li>Set the name of the L2MonsterInstance</li>
+	 * <li>Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it</li>
+	 * </ul>
+	 * @param template to apply to the NPC
 	 */
 	public L2MonsterInstance(L2NpcTemplate template)
 	{
@@ -55,31 +61,39 @@ public class L2MonsterInstance extends L2Attackable
 		setAutoAttackable(true);
 	}
 	
-	@Override
-	public final MonsterKnownList getKnownList()
-	{
-		return (MonsterKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new MonsterKnownList(this));
-	}
-	
 	/**
 	 * Return True if the attacker is not another L2MonsterInstance.
 	 */
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
-		return super.isAutoAttackable(attacker) && !isEventMob();
+		// Check if the L2MonsterInstance target is aggressive
+		if (Config.GUARD_ATTACK_AGGRO_MOB && isAggressive() && (attacker instanceof L2GuardInstance))
+		{
+			return true;
+		}
+		
+		if (attacker.isMonster())
+		{
+			return false;
+		}
+		
+		// Anything considers monsters friendly except Players, Attackables (Guards, Friendly NPC), Traps and EffectPoints.
+		if (!attacker.isPlayable() && !attacker.isAttackable() && !(attacker instanceof L2TrapInstance) && !(attacker instanceof L2EffectPointInstance))
+		{
+			return false;
+		}
+		
+		return super.isAutoAttackable(attacker);
 	}
 	
+	/**
+	 * Return True if the L2MonsterInstance is Aggressive (aggroRange > 0).
+	 */
 	@Override
 	public boolean isAggressive()
 	{
-		return getTemplate().isAggressive() && !isEventMob();
+		return getTemplate().isAggressive();
 	}
 	
 	@Override
@@ -89,7 +103,7 @@ public class L2MonsterInstance extends L2Attackable
 		{
 			if (getLeader() != null)
 			{
-				setIsNoRndWalk(true);
+				setRandomWalking(false);
 				setIsRaidMinion(getLeader().isRaid());
 				getLeader().getMinionList().onMinionSpawn(this);
 			}
@@ -193,7 +207,10 @@ public class L2MonsterInstance extends L2Attackable
 		{
 			synchronized (this)
 			{
-				_minionList = new MinionList(this);
+				if (_minionList == null)
+				{
+					_minionList = new MinionList(this);
+				}
 			}
 		}
 		return _minionList;
@@ -211,7 +228,7 @@ public class L2MonsterInstance extends L2Attackable
 	@Override
 	public boolean isWalker()
 	{
-		return (getLeader() == null) ? super.isWalker() : getLeader().isWalker();
+		return ((getLeader() == null) ? super.isWalker() : getLeader().isWalker());
 	}
 	
 	/**

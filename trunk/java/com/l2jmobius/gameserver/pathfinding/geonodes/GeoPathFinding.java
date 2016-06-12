@@ -25,11 +25,12 @@ import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -37,10 +38,10 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.pathfinding.AbstractNode;
 import com.l2jmobius.gameserver.pathfinding.AbstractNodeLoc;
 import com.l2jmobius.gameserver.pathfinding.PathFinding;
-import com.l2jmobius.gameserver.pathfinding.utils.FastNodeList;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -49,8 +50,8 @@ import com.l2jmobius.gameserver.util.Util;
 public class GeoPathFinding extends PathFinding
 {
 	private static Logger _log = Logger.getLogger(GeoPathFinding.class.getName());
-	private static Map<Short, ByteBuffer> _pathNodes = new HashMap<>();
-	private static Map<Short, IntBuffer> _pathNodesIndex = new HashMap<>();
+	private static Map<Short, ByteBuffer> _pathNodes = new ConcurrentHashMap<>();
+	private static Map<Short, IntBuffer> _pathNodesIndex = new ConcurrentHashMap<>();
 	
 	public static GeoPathFinding getInstance()
 	{
@@ -64,7 +65,7 @@ public class GeoPathFinding extends PathFinding
 	}
 	
 	@Override
-	public List<AbstractNodeLoc> findPath(int x, int y, int z, int tx, int ty, int tz, int instanceId, boolean playable)
+	public List<AbstractNodeLoc> findPath(int x, int y, int z, int tx, int ty, int tz, Instance instance, boolean playable)
 	{
 		final int gx = (x - L2World.MAP_MIN_X) >> 4;
 		final int gy = (y - L2World.MAP_MIN_Y) >> 4;
@@ -93,14 +94,14 @@ public class GeoPathFinding extends PathFinding
 		}
 		
 		// TODO: Find closest path node we CAN access. Now only checks if we can not reach the closest
-		Location temp = GeoData.getInstance().moveCheck(x, y, z, start.getLoc().getX(), start.getLoc().getY(), start.getLoc().getZ(), instanceId);
+		Location temp = GeoData.getInstance().moveCheck(x, y, z, start.getLoc().getX(), start.getLoc().getY(), start.getLoc().getZ(), instance);
 		if ((temp.getX() != start.getLoc().getX()) || (temp.getY() != start.getLoc().getY()))
 		{
 			return null; // cannot reach closest...
 		}
 		
 		// TODO: Find closest path node around target, now only checks if final location can be reached
-		temp = GeoData.getInstance().moveCheck(tx, ty, tz, end.getLoc().getX(), end.getLoc().getY(), end.getLoc().getZ(), instanceId);
+		temp = GeoData.getInstance().moveCheck(tx, ty, tz, end.getLoc().getX(), end.getLoc().getY(), end.getLoc().getZ(), instance);
 		if ((temp.getX() != end.getLoc().getX()) || (temp.getY() != end.getLoc().getY()))
 		{
 			return null; // cannot reach closest...
@@ -122,7 +123,7 @@ public class GeoPathFinding extends PathFinding
 		// load) level of intelligence though.
 		
 		// List of Visited Nodes
-		final FastNodeList visited = new FastNodeList(550);
+		final List<GeoNode> visited = new ArrayList<>(550);
 		
 		// List of Nodes to Visit
 		final LinkedList<GeoNode> to_visit = new LinkedList<>();
@@ -152,7 +153,7 @@ public class GeoPathFinding extends PathFinding
 			
 			i++;
 			visited.add(node);
-			node.attachNeighbors(readNeighbors(node));
+			node.attachNeighbors();
 			final GeoNode[] neighbors = node.getNeighbors();
 			if (neighbors == null)
 			{
@@ -160,7 +161,7 @@ public class GeoPathFinding extends PathFinding
 			}
 			for (GeoNode n : neighbors)
 			{
-				if (!visited.containsRev(n) && !to_visit.contains(n))
+				if ((visited.lastIndexOf(n) == -1) && !to_visit.contains(n))
 				{
 					added = false;
 					n.setParent(node);
@@ -213,15 +214,8 @@ public class GeoPathFinding extends PathFinding
 		return path;
 	}
 	
-	private GeoNode[] readNeighbors(GeoNode n)
+	public GeoNode[] readNeighbors(GeoNode n, int idx)
 	{
-		if (n.getLoc() == null)
-		{
-			return null;
-		}
-		
-		int idx = n.getNeighborsIdx();
-		
 		final int node_x = n.getLoc().getNodeX();
 		final int node_y = n.getLoc().getNodeY();
 		// short node_z = n.getLoc().getZ();
@@ -229,7 +223,7 @@ public class GeoPathFinding extends PathFinding
 		final short regoffset = getRegionOffset(getRegionX(node_x), getRegionY(node_y));
 		final ByteBuffer pn = _pathNodes.get(regoffset);
 		
-		final List<AbstractNode<GeoNodeLoc>> neighbors = new ArrayList<>(8);
+		final List<AbstractNode<GeoNodeLoc>> Neighbors = new ArrayList<>(8);
 		GeoNode newNode;
 		short new_node_x, new_node_y;
 		
@@ -243,7 +237,7 @@ public class GeoPathFinding extends PathFinding
 			newNode = readNode(new_node_x, new_node_y, neighbor);
 			if (newNode != null)
 			{
-				neighbors.add(newNode);
+				Neighbors.add(newNode);
 			}
 		}
 		neighbor = pn.get(idx++); // NE
@@ -255,7 +249,7 @@ public class GeoPathFinding extends PathFinding
 			newNode = readNode(new_node_x, new_node_y, neighbor);
 			if (newNode != null)
 			{
-				neighbors.add(newNode);
+				Neighbors.add(newNode);
 			}
 		}
 		neighbor = pn.get(idx++); // E
@@ -267,7 +261,7 @@ public class GeoPathFinding extends PathFinding
 			newNode = readNode(new_node_x, new_node_y, neighbor);
 			if (newNode != null)
 			{
-				neighbors.add(newNode);
+				Neighbors.add(newNode);
 			}
 		}
 		neighbor = pn.get(idx++); // SE
@@ -279,7 +273,7 @@ public class GeoPathFinding extends PathFinding
 			newNode = readNode(new_node_x, new_node_y, neighbor);
 			if (newNode != null)
 			{
-				neighbors.add(newNode);
+				Neighbors.add(newNode);
 			}
 		}
 		neighbor = pn.get(idx++); // S
@@ -291,7 +285,7 @@ public class GeoPathFinding extends PathFinding
 			newNode = readNode(new_node_x, new_node_y, neighbor);
 			if (newNode != null)
 			{
-				neighbors.add(newNode);
+				Neighbors.add(newNode);
 			}
 		}
 		neighbor = pn.get(idx++); // SW
@@ -303,7 +297,7 @@ public class GeoPathFinding extends PathFinding
 			newNode = readNode(new_node_x, new_node_y, neighbor);
 			if (newNode != null)
 			{
-				neighbors.add(newNode);
+				Neighbors.add(newNode);
 			}
 		}
 		neighbor = pn.get(idx++); // W
@@ -315,7 +309,7 @@ public class GeoPathFinding extends PathFinding
 			newNode = readNode(new_node_x, new_node_y, neighbor);
 			if (newNode != null)
 			{
-				neighbors.add(newNode);
+				Neighbors.add(newNode);
 			}
 		}
 		neighbor = pn.get(idx++); // NW
@@ -327,10 +321,11 @@ public class GeoPathFinding extends PathFinding
 			newNode = readNode(new_node_x, new_node_y, neighbor);
 			if (newNode != null)
 			{
-				neighbors.add(newNode);
+				Neighbors.add(newNode);
 			}
 		}
-		return neighbors.toArray(new GeoNode[neighbors.size()]);
+		final GeoNode[] result = new GeoNode[Neighbors.size()];
+		return Neighbors.toArray(result);
 	}
 	
 	// Private
@@ -395,7 +390,7 @@ public class GeoPathFinding extends PathFinding
 		{
 			_log.info("Path Engine: - Loading Path Nodes...");
 			//@formatter:off
-			Files.lines(Config.PATHNODE_PATH.resolve("pn_index.txt"), StandardCharsets.UTF_8)
+			Files.lines(Paths.get(Config.PATHNODE_DIR.getPath(), "pn_index.txt"), StandardCharsets.UTF_8)
 				.map(String::trim)
 				.filter(l -> !l.isEmpty())
 				.forEach(line -> {
@@ -409,7 +404,9 @@ public class GeoPathFinding extends PathFinding
 						return;
 					}
 					
-					LoadPathNodeFile(Byte.parseByte(parts[0]), Byte.parseByte(parts[1]));
+					final byte rx = Byte.parseByte(parts[0]);
+					final byte ry = Byte.parseByte(parts[1]);
+					LoadPathNodeFile(rx, ry);
 				});
 			//@formatter:on
 		}
@@ -428,7 +425,7 @@ public class GeoPathFinding extends PathFinding
 			return;
 		}
 		final short regionoffset = getRegionOffset(rx, ry);
-		final File file = new File(Config.PATHNODE_PATH.toString(), rx + "_" + ry + ".pn");
+		final File file = new File(Config.PATHNODE_DIR, rx + "_" + ry + ".pn");
 		_log.info("Path Engine: - Loading: " + file.getName() + " -> region offset: " + regionoffset + " X: " + rx + " Y: " + ry);
 		int node = 0, size, index = 0;
 		

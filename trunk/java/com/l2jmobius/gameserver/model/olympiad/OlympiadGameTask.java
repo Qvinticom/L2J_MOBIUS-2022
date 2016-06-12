@@ -21,7 +21,6 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.model.zone.type.L2OlympiadStadiumZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -31,7 +30,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public final class OlympiadGameTask implements Runnable
 {
 	protected static final Logger _log = Logger.getLogger(OlympiadGameTask.class.getName());
-	protected static final long BATTLE_PERIOD = Config.ALT_OLY_BATTLE; // 6 mins
 	
 	private static final int[] TELEPORT_TO_ARENA_TIMES =
 	{
@@ -47,9 +45,11 @@ public final class OlympiadGameTask implements Runnable
 		1,
 		0
 	};
+	
 	private static final int[] BATTLE_START_TIME_FIRST =
 	{
 		60,
+		55,
 		50,
 		40,
 		30,
@@ -57,6 +57,7 @@ public final class OlympiadGameTask implements Runnable
 		10,
 		0
 	};
+	
 	private static final int[] BATTLE_START_TIME_SECOND =
 	{
 		10,
@@ -67,6 +68,16 @@ public final class OlympiadGameTask implements Runnable
 		1,
 		0
 	};
+	
+	private static final int[] BATTLE_END_TIME_SECOND =
+	{
+		120,
+		60,
+		30,
+		10,
+		5
+	};
+	
 	private static final int[] TELEPORT_TO_TOWN_TIMES =
 	{
 		40,
@@ -81,13 +92,13 @@ public final class OlympiadGameTask implements Runnable
 		0
 	};
 	
-	private final L2OlympiadStadiumZone _zone;
+	private final OlympiadStadium _stadium;
 	private AbstractOlympiadGame _game;
 	private GameState _state = GameState.IDLE;
 	private boolean _needAnnounce = false;
 	private int _countDown = 0;
 	
-	private static enum GameState
+	private enum GameState
 	{
 		BEGIN,
 		TELEPORT_TO_ARENA,
@@ -96,17 +107,16 @@ public final class OlympiadGameTask implements Runnable
 		BATTLE_COUNTDOWN_SECOND,
 		BATTLE_STARTED,
 		BATTLE_IN_PROGRESS,
-		GAME_CANCELLED,
 		GAME_STOPPED,
 		TELEPORT_TO_TOWN,
 		CLEANUP,
 		IDLE
 	}
 	
-	public OlympiadGameTask(L2OlympiadStadiumZone zone)
+	public OlympiadGameTask(OlympiadStadium stadium)
 	{
-		_zone = zone;
-		zone.registerTask(this);
+		_stadium = stadium;
+		_stadium.registerTask(this);
 	}
 	
 	public final boolean isRunning()
@@ -139,9 +149,9 @@ public final class OlympiadGameTask implements Runnable
 		return false;
 	}
 	
-	public final L2OlympiadStadiumZone getZone()
+	public final OlympiadStadium getStadium()
 	{
-		return _zone;
+		return _stadium;
 	}
 	
 	public final AbstractOlympiadGame getGame()
@@ -153,7 +163,7 @@ public final class OlympiadGameTask implements Runnable
 	{
 		if ((game != null) && (_state != GameState.IDLE))
 		{
-			_log.log(Level.WARNING, "Attempt to overwrite non-finished game in state " + _state);
+			_log.warning("Attempt to overwrite non-finished game in state " + _state);
 			return;
 		}
 		
@@ -188,6 +198,11 @@ public final class OlympiadGameTask implements Runnable
 						_game.broadcastPacket(sm);
 					}
 					
+					if (_countDown == 1)
+					{
+						_game.untransformPlayers();
+					}
+					
 					delay = getDelay(TELEPORT_TO_ARENA_TIMES);
 					if (_countDown <= 0)
 					{
@@ -200,12 +215,13 @@ public final class OlympiadGameTask implements Runnable
 				{
 					if (!startGame())
 					{
-						_state = GameState.GAME_CANCELLED;
+						_state = GameState.GAME_STOPPED;
 						break;
 					}
 					
 					_state = GameState.BATTLE_COUNTDOWN_FIRST;
 					_countDown = BATTLE_START_TIME_FIRST[0];
+					_stadium.updateZoneInfoForObservers(); // TODO lion temp hack for remove old info from client about prevoius match
 					delay = 5;
 					break;
 				}
@@ -214,15 +230,23 @@ public final class OlympiadGameTask implements Runnable
 				{
 					if (_countDown > 0)
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S);
-						sm.addInt(_countDown);
-						_zone.broadcastPacket(sm);
+						if (_countDown == 55) // 55sec
+						{
+							_game.healPlayers();
+						}
+						else
+						{
+							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S);
+							sm.addInt(_countDown);
+							_stadium.broadcastPacket(sm);
+						}
 					}
 					
 					delay = getDelay(BATTLE_START_TIME_FIRST);
 					if (_countDown <= 0)
 					{
-						openDoors();
+						_game.resetDamage();
+						_stadium.openDoors();
 						
 						_state = GameState.BATTLE_COUNTDOWN_SECOND;
 						_countDown = BATTLE_START_TIME_SECOND[0];
@@ -238,7 +262,7 @@ public final class OlympiadGameTask implements Runnable
 					{
 						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S);
 						sm.addInt(_countDown);
-						_zone.broadcastPacket(sm);
+						_stadium.broadcastPacket(sm);
 					}
 					
 					delay = getDelay(BATTLE_START_TIME_SECOND);
@@ -258,25 +282,28 @@ public final class OlympiadGameTask implements Runnable
 					{
 						_state = GameState.GAME_STOPPED;
 					}
-					
 					break;
 				}
 				// Checks during battle
 				case BATTLE_IN_PROGRESS:
 				{
 					_countDown += 1000;
+					final int remaining = (int) ((Config.ALT_OLY_BATTLE - _countDown) / 1000l);
+					for (int announceTime : BATTLE_END_TIME_SECOND)
+					{
+						if (announceTime == remaining)
+						{
+							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_GAME_WILL_END_IN_S1_SECOND_S);
+							sm.addInt(announceTime);
+							_stadium.broadcastPacket(sm);
+							break;
+						}
+					}
+					
 					if (checkBattle() || (_countDown > Config.ALT_OLY_BATTLE))
 					{
 						_state = GameState.GAME_STOPPED;
 					}
-					
-					break;
-				}
-				// Battle cancelled before teleport participants to the stadium
-				case GAME_CANCELLED:
-				{
-					stopGame();
-					_state = GameState.CLEANUP;
 					break;
 				}
 				// End of the battle
@@ -303,7 +330,6 @@ public final class OlympiadGameTask implements Runnable
 					{
 						_state = GameState.CLEANUP;
 					}
-					
 					break;
 				}
 				// Removals
@@ -326,7 +352,7 @@ public final class OlympiadGameTask implements Runnable
 				case CLEANUP:
 				case IDLE:
 				{
-					_log.log(Level.WARNING, "Unable to return players back in town, exception: " + e.getMessage());
+					_log.warning("Unable to return players back in town, exception: " + e.getMessage());
 					_state = GameState.IDLE;
 					_game = null;
 					return;
@@ -339,7 +365,7 @@ public final class OlympiadGameTask implements Runnable
 		}
 	}
 	
-	private final int getDelay(int[] times)
+	private int getDelay(int[] times)
 	{
 		int time;
 		for (int i = 0; i < (times.length - 1); i++)
@@ -363,7 +389,7 @@ public final class OlympiadGameTask implements Runnable
 	 * Second stage: check for defaulted, port players to arena, announce game.
 	 * @return true if no participants defaulted.
 	 */
-	private final boolean startGame()
+	private boolean startGame()
 	{
 		try
 		{
@@ -373,13 +399,13 @@ public final class OlympiadGameTask implements Runnable
 				return false;
 			}
 			
-			_zone.closeDoors();
+			_stadium.closeDoors();
 			if (_game.needBuffers())
 			{
-				_zone.spawnBuffers();
+				_stadium.spawnBuffers();
 			}
 			
-			if (!_game.portPlayersToArena(_zone.getSpawns()))
+			if (!_game.portPlayersToArena(_stadium.getZone().getSpawns(), _stadium.getInstance()))
 			{
 				return false;
 			}
@@ -397,40 +423,24 @@ public final class OlympiadGameTask implements Runnable
 	}
 	
 	/**
-	 * Third stage: open doors.
-	 */
-	private final void openDoors()
-	{
-		try
-		{
-			_game.resetDamage();
-			_zone.openDoors();
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, e.getMessage(), e);
-		}
-	}
-	
-	/**
 	 * Fourth stage: last checks, remove buffers, start competition itself.
 	 * @return true if all participants online and ready on the stadium.
 	 */
-	private final boolean startBattle()
+	private boolean startBattle()
 	{
 		try
 		{
 			if (_game.needBuffers())
 			{
-				_zone.deleteBuffers();
+				_stadium.deleteBuffers();
 			}
 			
 			if (_game.checkBattleStatus() && _game.makeCompetitionStart())
 			{
 				// game successfully started
-				_game.broadcastOlympiadInfo(_zone);
-				_zone.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_HAS_STARTED_FIGHT));
-				_zone.updateZoneStatusForCharactersInside();
+				_game.broadcastOlympiadInfo(_stadium);
+				_stadium.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_HAS_STARTED_FIGHT));
+				_stadium.updateZoneStatusForCharactersInside();
 				return true;
 			}
 		}
@@ -445,7 +455,7 @@ public final class OlympiadGameTask implements Runnable
 	 * Fifth stage: battle is running, returns true if winner found.
 	 * @return
 	 */
-	private final boolean checkBattle()
+	private boolean checkBattle()
 	{
 		try
 		{
@@ -462,11 +472,11 @@ public final class OlympiadGameTask implements Runnable
 	/**
 	 * Sixth stage: winner's validations
 	 */
-	private final void stopGame()
+	private void stopGame()
 	{
 		try
 		{
-			_game.validateWinner(_zone);
+			_game.validateWinner(_stadium);
 		}
 		catch (Exception e)
 		{
@@ -475,7 +485,7 @@ public final class OlympiadGameTask implements Runnable
 		
 		try
 		{
-			_zone.updateZoneStatusForCharactersInside();
+			_stadium.updateZoneStatusForCharactersInside();
 		}
 		catch (Exception e)
 		{
@@ -495,7 +505,7 @@ public final class OlympiadGameTask implements Runnable
 	/**
 	 * Seventh stage: game cleanup (port players back, closing doors, etc)
 	 */
-	private final void cleanupGame()
+	private void cleanupGame()
 	{
 		try
 		{
@@ -526,7 +536,7 @@ public final class OlympiadGameTask implements Runnable
 		
 		try
 		{
-			_zone.closeDoors();
+			_stadium.closeDoors();
 		}
 		catch (Exception e)
 		{

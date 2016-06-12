@@ -16,13 +16,17 @@
  */
 package handlers.effecthandlers;
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -33,12 +37,25 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 public final class ResurrectionSpecial extends AbstractEffect
 {
 	private final int _power;
+	private final Set<Integer> _instanceId;
 	
-	public ResurrectionSpecial(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public ResurrectionSpecial(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_power = params.getInt("power", 0);
+		
+		final String instanceIds = params.getString("instanceId", null);
+		if ((instanceIds != null) && !instanceIds.isEmpty())
+		{
+			_instanceId = new HashSet<>();
+			for (String id : instanceIds.split(";"))
+			{
+				_instanceId.add(Integer.parseInt(id));
+			}
+		}
+		else
+		{
+			_instanceId = Collections.<Integer> emptySet();
+		}
 	}
 	
 	@Override
@@ -48,7 +65,7 @@ public final class ResurrectionSpecial extends AbstractEffect
 	}
 	
 	@Override
-	public int getEffectFlags()
+	public long getEffectFlags()
 	{
 		return EffectFlag.RESURRECTION_SPECIAL.getMask();
 	}
@@ -60,18 +77,24 @@ public final class ResurrectionSpecial extends AbstractEffect
 		{
 			return;
 		}
+		
 		final L2PcInstance caster = info.getEffector().getActingPlayer();
+		final Instance instance = caster.getInstanceWorld();
+		if (!_instanceId.isEmpty() && ((instance == null) || !_instanceId.contains(instance.getTemplateId())))
+		{
+			return;
+		}
 		
 		final Skill skill = info.getSkill();
 		
 		if (info.getEffected().isPlayer())
 		{
 			info.getEffected().getActingPlayer().reviveRequest(caster, skill, false, _power);
-			return;
 		}
-		if (info.getEffected().isPet())
+		else if (info.getEffected().isPet())
 		{
-			info.getEffected().getActingPlayer().reviveRequest(((L2PetInstance) info.getEffected()).getActingPlayer(), skill, true, _power);
+			final L2PetInstance pet = (L2PetInstance) info.getEffected();
+			info.getEffected().getActingPlayer().reviveRequest(pet.getActingPlayer(), skill, true, _power);
 		}
 	}
 }

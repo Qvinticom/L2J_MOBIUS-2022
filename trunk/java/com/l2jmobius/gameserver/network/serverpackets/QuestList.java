@@ -18,129 +18,66 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class QuestList extends L2GameServerPacket
+public class QuestList implements IClientOutgoingPacket
 {
-	@Override
-	protected final void writeImpl()
+	private final List<Quest> _quests;
+	private final L2PcInstance _player;
+	
+	public QuestList(L2PcInstance player)
 	{
-		/**
-		 * <pre>
-		 * This text was wrote by XaKa
-		 * QuestList packet structure:
-		 * {
-		 * 		1 byte - 0x80
-		 * 		2 byte - Number of Quests
-		 * 		for Quest in AvailibleQuests
-		 * 		{
-		 * 			4 byte - Quest ID
-		 * 			4 byte - Quest Status
-		 * 		}
-		 * }
-		 * 
-		 * NOTE: The following special constructs are true for the 4-byte Quest Status:
-		 * If the most significant bit is 0, this means that no progress-step got skipped.
-		 * In this case, merely passing the rank of the latest step gets the client to mark
-		 * it as current and mark all previous steps as complete.
-		 * If the most significant bit is 1, it means that some steps may have been skipped.
-		 * In that case, each bit represents a quest step (max 30) with 0 indicating that it was
-		 * skipped and 1 indicating that it either got completed or is currently active (the client
-		 * will automatically assume the largest step as active and all smaller ones as completed).
-		 * For example, the following bit sequences will yield the same results:
-		 * 1000 0000 0000 0000 0000 0011 1111 1111: Indicates some steps may be skipped but each of
-		 * the first 10 steps did not get skipped and current step is the 10th.
-		 * 0000 0000 0000 0000 0000 0000 0000 1010: Indicates that no steps were skipped and current is the 10th.
-		 * It is speculated that the latter will be processed faster by the client, so it is preferred when no
-		 * steps have been skipped.
-		 * However, the sequence "1000 0000 0000 0000 0000 0010 1101 1111" indicates that the current step is
-		 * the 10th but the 6th and 9th are not to be shown at all (not completed, either).
-		 * </pre>
-		 */
-		
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		_player = player;
+		_quests = player.getAllActiveQuests();
+	}
+	
+	@Override
+	public boolean write(PacketWriter packet)
+	{
+		OutgoingPackets.QUEST_LIST.writeId(packet);
+		packet.writeH(_quests.size());
+		for (Quest quest : _quests)
 		{
-			return;
-		}
-		
-		final List<Quest> activeQuests = activeChar.getAllActiveQuests();
-		final List<Quest> completedQuests = activeChar.getAllCompletedQuests();
-		final byte[] info = new byte[128];
-		
-		writeC(0x86);
-		writeH(activeQuests.size());
-		for (Quest q : activeQuests)
-		{
-			writeD(q.getId());
-			final QuestState qs = activeChar.getQuestState(q.getName());
+			packet.writeD(quest.getId());
+			
+			final QuestState qs = _player.getQuestState(quest.getName());
 			if (qs == null)
 			{
-				writeD(0);
+				packet.writeD(0);
 				continue;
 			}
 			
 			final int states = qs.getInt("__compltdStateFlags");
-			writeD(states != 0 ? states : qs.getInt("cond"));
+			if (states != 0)
+			{
+				packet.writeD(states);
+			}
+			else
+			{
+				packet.writeD(qs.getCond());
+			}
 		}
 		
-		for (Quest q : completedQuests)
+		final byte[] oneTimeQuestMask = new byte[128];
+		for (QuestState questState : _player.getAllQuestStates())
 		{
-			// add completed quests
-			int questId = q.getId();
-			if (questId > 10000)
+			if (questState.isCompleted())
 			{
-				questId -= 10000;
+				final int questId = questState.getQuest().getId();
+				if ((questId < 0) || ((questId > 255) && (questId < 10256)) || (questId > 11023))
+				{
+					continue;
+				}
+				
+				oneTimeQuestMask[(questId % 10000) / 8] |= 1 << (questId % 8);
 			}
-			final int pos = questId / 8;
-			int add = questId - (pos * 8);
-			switch (add)
-			{
-				case 0:
-				{
-					add = 0x01;
-					break;
-				}
-				case 1:
-				{
-					add = 0x02;
-					break;
-				}
-				case 2:
-				{
-					add = 0x04;
-					break;
-				}
-				case 3:
-				{
-					add = 0x08;
-					break;
-				}
-				case 4:
-				{
-					add = 0x10;
-					break;
-				}
-				case 5:
-				{
-					add = 0x20;
-					break;
-				}
-				case 6:
-				{
-					add = 0x40;
-					break;
-				}
-				case 7:
-				{
-					add = 0x80;
-					break;
-				}
-			}
-			info[pos] = (byte) (info[pos] + add);
 		}
-		writeB(info);
+		packet.writeB(oneTimeQuestMask);
+		
+		return true;
 	}
 }

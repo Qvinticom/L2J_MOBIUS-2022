@@ -20,7 +20,7 @@ import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -44,7 +44,7 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 	
 	public Q10287_StoryOfThoseLeft()
 	{
-		super(10287, Q10287_StoryOfThoseLeft.class.getSimpleName(), "Story of Those Left");
+		super(10287);
 		addStartNpc(RAFFORTY);
 		addTalkId(RAFFORTY, JINIA, KEGOR);
 	}
@@ -52,8 +52,8 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return null;
 		}
@@ -63,14 +63,14 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 		{
 			case "32020-02.htm":
 			{
-				qs.startQuest();
-				qs.setMemoState(1);
+				st.startQuest();
+				st.setMemoState(1);
 				htmltext = event;
 				break;
 			}
 			case "32020-08.html":
 			{
-				if (qs.isMemoState(2))
+				if (st.isMemoState(2))
 				{
 					htmltext = event;
 				}
@@ -78,7 +78,7 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 			}
 			case "32760-02.html":
 			{
-				if (qs.isMemoState(1))
+				if (st.isMemoState(1))
 				{
 					htmltext = event;
 				}
@@ -86,19 +86,19 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 			}
 			case "32760-03.html":
 			{
-				if (qs.isMemoState(1))
+				if (st.isMemoState(1))
 				{
-					qs.set("ex1", 1);
-					qs.setCond(3, true);
+					st.set("ex1", 1);
+					st.setCond(3, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32760-06.html":
 			{
-				if (qs.isMemoState(2))
+				if (st.isMemoState(2))
 				{
-					qs.setCond(5, true);
+					st.setCond(5, true);
 					player.teleToLocation(EXIT_LOC, 0);
 					htmltext = event; // TODO: missing "jinia_npc_q10287_06.htm"
 				}
@@ -106,7 +106,7 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 			}
 			case "32761-02.html":
 			{
-				if (qs.isMemoState(1) && (qs.getInt("ex1") == 1) && (qs.getInt("ex2") == 0))
+				if (st.isMemoState(1) && (st.getInt("ex1") == 1) && (st.getInt("ex2") == 0))
 				{
 					htmltext = event;
 				}
@@ -114,10 +114,10 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 			}
 			case "32761-03.html":
 			{
-				if (qs.isMemoState(1) && (qs.getInt("ex1") == 1) && (qs.getInt("ex2") == 0))
+				if (st.isMemoState(1) && (st.getInt("ex1") == 1) && (st.getInt("ex2") == 0))
 				{
-					qs.set("ex2", 1);
-					qs.setCond(4, true);
+					st.set("ex2", 1);
+					st.setCond(4, true);
 					htmltext = event;
 				}
 				break;
@@ -129,11 +129,11 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 			case "10553":
 			case "14219":
 			{
-				if (qs.isMemoState(2))
+				if (st.isMemoState(2))
 				{
 					rewardItems(player, Integer.valueOf(event), 1);
 					htmltext = "32020-09.html";
-					qs.exitQuest(false, true);
+					st.exitQuest(false, true);
 				}
 				break;
 			}
@@ -144,9 +144,9 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState qs = getQuestState(player, true);
+		QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		switch (qs.getState())
+		switch (st.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -160,8 +160,8 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 			{
 				if (npc.getId() == RAFFORTY)
 				{
-					qs = player.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted()) ? "32020-01.htm" : "32020-03.htm";
+					st = player.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
+					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "32020-01.htm" : "32020-03.htm";
 				}
 				break;
 			}
@@ -171,11 +171,11 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 				{
 					case RAFFORTY:
 					{
-						if (qs.isMemoState(1))
+						if (st.isMemoState(1))
 						{
 							htmltext = (player.getLevel() >= MIN_LEVEL) ? "32020-05.html" : "32020-06.html";
 						}
-						else if (qs.isMemoState(2))
+						else if (st.isMemoState(2))
 						{
 							htmltext = "32020-07.html";
 						}
@@ -183,10 +183,10 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 					}
 					case JINIA:
 					{
-						if (qs.isMemoState(1))
+						if (st.isMemoState(1))
 						{
-							final int state1 = qs.getInt("ex1");
-							final int state2 = qs.getInt("ex2");
+							final int state1 = st.getInt("ex1");
+							final int state2 = st.getInt("ex2");
 							if ((state1 == 0) && (state2 == 0))
 							{
 								htmltext = "32760-01.html";
@@ -197,13 +197,16 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 							}
 							else if ((state1 == 1) && (state2 == 1))
 							{
-								qs.setCond(5, true);
-								qs.setMemoState(2);
-								qs.unset("ex1");
-								qs.unset("ex2");
-								final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-								world.removeAllowed(player.getObjectId());
-								player.setInstanceId(0);
+								st.setCond(5, true);
+								st.setMemoState(2);
+								st.unset("ex1");
+								st.unset("ex2");
+								
+								final Instance world = InstanceManager.getInstance().getPlayerInstance(player, true);
+								if (world != null)
+								{
+									world.finishInstance(0);
+								}
 								htmltext = "32760-05.html";
 							}
 						}
@@ -211,10 +214,10 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 					}
 					case KEGOR:
 					{
-						if (qs.isMemoState(1))
+						if (st.isMemoState(1))
 						{
-							final int state1 = qs.getInt("ex1");
-							final int state2 = qs.getInt("ex2");
+							final int state1 = st.getInt("ex1");
+							final int state2 = st.getInt("ex2");
 							if ((state1 == 1) && (state2 == 0))
 							{
 								htmltext = "32761-01.html";

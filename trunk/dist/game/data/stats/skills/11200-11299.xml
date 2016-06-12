@@ -1,1406 +1,3264 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="11200" levels="1" name="Elemental Destruction: Water">
+	<skill id="11200" toLevel="1" name="Elemental Destruction: Water">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Water Attribute -->
-		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill11017</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="11201" levels="1" name="Elemental Destruction: Wind">
+	<skill id="11201" toLevel="1" name="Elemental Destruction: Wind">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Wind Attribute -->
-		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill11017</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="11202" levels="1" name="Elemental Destruction: Earth">
+	<skill id="11202" toLevel="1" name="Elemental Destruction: Earth">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Earth Attribute -->
-		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill11017</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="11203" levels="1" name="Elemental Destruction: Double Casting">
+	<skill id="11203" toLevel="1" name="Elemental Destruction: Double Casting">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- 4 Elements -->
-		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill11017</icon>
+		<operateType>P</operateType>
 	</skill>
-	<skill id="11224" levels="4" name="Gloomy Soul">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11224" toLevel="4" name="Gloomy Soul">
+		<!-- Updated to IO -->
 		<!-- Instantly paralyzes nearby enemies for 3 sec. and decreases their heal amount by 20%. -->
-		<table name="#mpConsumes"> 72 77 83 89 </table>
-		<set name="icon" val="icon.skill11868" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="hitTime" val="2780" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
+		<table name="#healAmount"> 0.80 0.70 0.60 0.50 </table>
+		<icon>icon.skill11868</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>90</activateRate> <!-- Guessed -->
+		<affectLimit>5-12</affectLimit> <!-- Guessed -->
+		<affectRange>150</affectRange> <!-- Guessed -->
+		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<trait>PARALYZE</trait>
+		<mpConsume>
+			<value level="1">72</value>
+			<value level="2">77</value>
+			<value level="3">83</value>
+			<value level="4">89</value>
+		</mpConsume>
+		<hitTime>2780</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="BlockActions">
+			</effect>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">-20</value>
+					<value level="2">-30</value>
+					<value level="3">-40</value>
+					<value level="4">-50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="11225" levels="7" name="Physical Soul Barrier">
-	<!-- Source: https://l2wiki.com/Physical_Soul_Barrier_-_Feoh_Soulhound -->
-		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+	<skill id="11225" toLevel="7" name="Physical Soul Barrier">
+		<!-- Updated to IO -->
+		<!-- For 20 sec., P. Def. + 5000. -->
 		<table name="#pDef"> 5000 5300 5600 6000 6400 6800 7300 </table>
-		<set name="icon" val="icon.skill11869" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="mpConsume" val="498" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="200000" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="pDef" val="#pDef" />
+		<icon>icon.skill11869</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>PD_UP_SPECIAL</abnormalType> <!-- Guessed -->
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
+		</magicLvl>
+		<mpConsume>498</mpConsume>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>204</effectPoint>
+		<reuseDelay>200000</reuseDelay>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">5000</value>
+					<value level="2">5300</value>
+					<value level="3">5600</value>
+					<value level="4">6000</value>
+					<value level="5">6400</value>
+					<value level="6">6800</value>
+					<value level="7">7300</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<!-- Level 1 : M. Critical Rate + 5% and PvP damage + 5%. -->
-	<!-- Level 2 : M. Critical Rate + 6% and PvP damage + 6%. -->
-	<!-- Level 3 : M. Critical Rate + 7% and PvP damage + 7%. -->
-	<!-- Level 4 : M. Critical Rate + 10% and PvP damage + 10%. -->
-	<skill id="11226" levels="4" name="Superior Wizardry">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#mCritRate"> 1.05 1.06 1.07 1.1 </table>
-		<set name="icon" val="icon.skill0945" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mCritRate" val="#mCritRate" />
+	<skill id="11226" toLevel="4" name="Superior Wizardry">
+		<!-- M. Critical Rate + 5% and PvP damage + 5%. -->
+		<table name="#inc"> 1.05 1.06 1.07 1.10 </table>
+		<icon>icon.skill0945</icon>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">10</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="11241" levels="1" name="Shadow Snare">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11241" toLevel="1" name="Shadow Snare">
+		<!-- Glory Days confirmed -->
 		<!-- Pulls nearby enemies to the center. -->
-		<set name="icon" val="icon.skill1469" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="21" />
-		<set name="castRange" val="1100" />
-		<set name="hitTime" val="1000" />
-		<set name="reuseDelay" val="15000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill1469</icon>
+		<operateType>A1</operateType>
+		<mpConsume>21</mpConsume>
+		<castRange>1100</castRange>
+		<hitTime>1000</hitTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-709</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>GROUND</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>13307</npcId>
+				<npcCount>1</npcCount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="11242" levels="1" name="Shadow Snare Zone">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11242" toLevel="1" name="Shadow Snare Zone">
+		<!-- Glory Days confirmed -->
 		<!-- Pulls nearby enemies to the center. -->
-		<set name="icon" val="icon.skill1469" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="true" />
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>COMBINATION</abnormalType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<icon>icon.skill1469</icon>
+		<operateType>A2</operateType>
+		<effectPoint>-709</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<activateRate>100</activateRate>
+		<magicLvl>97</magicLvl>
+		<trait>SHOCK</trait>
+		<isMagic>2</isMagic>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PullBack">
+				<speed>600</speed>
+				<delay>600</delay>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="11245" levels="1" name="Sampling">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11245" toLevel="1" name="Sampling">
+		<!-- Glory Days confirmed -->
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
-		<set name="icon" val="icon.skill11032" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="11247" levels="1" name="Heavy Hit">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts a powerful blow on target. -->
-		<set name="icon" val="icon.skill10317" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="3380" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="3000" />
-		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="11248" levels="1" name="Heavy Hit">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts a powerful blow on target. -->
-		<set name="icon" val="icon.skill10317" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="1830" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="3000" />
-		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="11249" levels="1" name="Heavy Hit">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts a powerful blow on target. -->
-		<set name="icon" val="icon.skill10317" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="3700" />
-		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="3000" />
-		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="11250" levels="1" name="Heavy Hit">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts a powerful blow on target. -->
-		<set name="icon" val="icon.skill10317" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="3700" />
-		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="3000" />
-		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="11251" levels="7" name="Superior Weapon Mastery">
-	<!-- Source: https://l2wiki.com/Superior_Weapon_Mastery_-_Wynn_Spectral_Master -->
-		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<table name="#pAtk"> 822 953 1105 1244 1409 1495 1586 </table>
-		<table name="#mAtk"> 1079 1252 1451 1633 1850 1963 2083 </table>
-		<set name="icon" val="icon.skill11251" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="INT" val="2" />
-				<add stat="pAtk" val="#pAtk" />
-				<mul stat="pAtk" val="1.05" />
-				<add stat="mAtk" val="#mAtk" />
-				<mul stat="mAtk" val="1.24" />
-				<mul stat="mCritRate" val="1.06" />
-				<mul stat="mAtkSpd" val="1.23" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<affectRange>300</affectRange>
+		<affectLimit>5-12</affectLimit>
+		<icon>icon.skill11032</icon>
+		<operateType>A4</operateType>
+		<isMagic>1</isMagic>
+		<effectPoint>-696</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<activateRate>100</activateRate>
+		<magicLvl>89</magicLvl>
+		<trait>SHOCK</trait>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>55</power>
+				<overHit>true</overHit>
 			</effect>
-		</for>
-	</skill>
-	<skill id="11252" levels="7" name="Superior Robe Mastery">
-	<!-- Source: https://l2wiki.com/Superior_Robe_Mastery_-_Wynn_Arcana_Lord -->
-		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<table name="#pDef"> 1212 1330 1462 1576 1767 1833 1903 </table>
-		<set name="icon" val="icon.skill11252" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="INT" val="2" />
-				<add stat="pDef" val="#pDef" />
-				<add stat="maxHp" val="4151" />
-				<mul stat="mDef" val="1.1" />
+			<effect name="Speed">
+				<amount>-5</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="11253" levels="1" name="Superior Magic Mastery">
-	<!-- Source: https://l2wiki.com/Superior_Magic_Mastery_-_Wynn_Elemental_Master -->
-		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<table name="#mDef"> 862 976 1104 1219 1374 1444 1517 </table>
-		<set name="icon" val="icon.skill11253" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="INT" val="2" />
-				<add stat="mDef" val="#mDef" />
-				<add stat="maxMp" val="313" />
+	<skill id="11247" toLevel="1" name="Heavy Hit">
+		<!-- Glory Days confirmed -->
+		<!-- Inflicts a powerful blow on target. -->
+		<attachToggleGroupId>1</attachToggleGroupId>
+		<icon>icon.skill10317</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<hitTime>3380</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>85</magicLvl>
+		<canDoubleCast>true</canDoubleCast>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>AIRBIND</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>320</power>
+				<overHit>true</overHit>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<!-- Level 1 : INT + 2. Can summon a servitor within 4 summon points. Use Rage to transfer the effects onto your servitor. -->
-	<!-- Level 2 : INT + 2. Can summon a servitor within 4 summon points. Use Rage to transfer the effects onto your servitor. -->
-	<!-- Level 3 : INT + 2. Can summon a servitor within 4 summon points. Use Rage to transfer the effects onto your servitor. -->
-	<!-- Level 4 : INT + 2. Can summon a servitor within 4 summon points. Use Rage to transfer the effects onto your servitor. -->
-	<skill id="11254" levels="4" name="Superior Summon Mastery">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<set name="icon" val="icon.skill11254" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<!-- Level 1 : INT + 2 and Hold/Sleep/Bleed/Poison/Mental Attack Resistance + 30. -->
-	<skill id="11255" levels="1" name="Superior Spirit Mastery">
-		<set name="icon" val="icon.skill11255" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="INT" val="2" />
-				<add stat="debuffVuln" val="30" />
-				<add stat="movementVuln" val="30" />
+	<skill id="11248" toLevel="1" name="Heavy Hit">
+		<!-- Glory Days confirmed -->
+		<!-- Inflicts a powerful blow on target. -->
+		<icon>icon.skill10317</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<hitTime>1830</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>85</magicLvl>
+		<canDoubleCast>true</canDoubleCast>
+		<attachToggleGroupId>1</attachToggleGroupId>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>KNOCKDOWN</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>320</power>
+				<overHit>true</overHit>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="11256" levels="8" name="Summon Cute Bear" enchantGroup1="10">
+	<skill id="11249" toLevel="1" name="Heavy Hit">
+		<!-- Glory Days confirmed -->
+		<!-- Inflicts a powerful blow on target. -->
+		<!-- Feoh Storm Screamer Hell Binding (11150) attack -->
+		<icon>icon.skill10317</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<hitTime>3700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>85</magicLvl>
+		<attachToggleGroupId>1</attachToggleGroupId>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>AIRBIND</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>320</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11250" toLevel="1" name="Heavy Hit">
+		<!-- Glory Days confirmed -->
+		<!-- Inflicts a powerful blow on target. -->
+		<icon>icon.skill10317</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<hitTime>3700</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>85</magicLvl>
+		<attachToggleGroupId>1</attachToggleGroupId>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>KNOCKDOWN</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>320</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11251" toLevel="10" name="Superior Weapon Mastery">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- M. Atk. + 24%, additional M. Atk. + 1079, Casting Spd. + 23%, M. Critical Rate + 6. P. Atk. + 105%, Additional P. Atk. + 822, P. Accuracy + 4 when a dual blunt weapon is equipped. INT + 2. Depending on your INT, the Cooldown resets or the duration increases by 2 times. -->
+		<table name="#mAtk"> 1079 1252 1451 1633 1850 1963 2083 2210 2344 2478 </table>
+		<table name="#pAtk"> 822 953 1105 1244 1409 1495 1586 1683 1786 1894 </table>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">100</value>
+			<value level="6">102</value>
+			<value level="7">104</value>
+			<value level="8">104</value>
+			<value level="9">104</value>
+			<value level="10">104</value>
+		</magicLvl>
+		<icon>icon.skill11251</icon>
+		<magicCriticalRate>5</magicCriticalRate>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCritical">
+				<stat>INT</stat>
+			</effect>
+			<effect name="PAtk">
+				<amount>105</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>24</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">822</value>
+					<value level="2">953</value>
+					<value level="3">1105</value>
+					<value level="4">1244</value>
+					<value level="5">1409</value>
+					<value level="6">1495</value>
+					<value level="7">1586</value>
+					<value level="8">1683</value>
+					<value level="9">1786</value>
+					<value level="10">1894</value>
+				</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>DUALBLUNT</item>
+				</weaponType>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">1079</value>
+					<value level="2">1252</value>
+					<value level="3">1451</value>
+					<value level="4">1633</value>
+					<value level="5">1850</value>
+					<value level="6">1963</value>
+					<value level="7">2083</value>
+					<value level="8">2210</value>
+					<value level="9">2344</value>
+					<value level="10">2478</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>DUALBLUNT</item>
+				</weaponType>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>23</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>6</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11252" toLevel="10" name="Superior Robe Mastery">
+		<!-- Glory Days confirmed -->
+		<!-- INT + 2. Max HP + 4151, P. Def. + 845, and Casting Spd. + 5% when equipped with a Robe. -->
+		<table name="#pDef"> 1212 1330 1462 1576 1767 1833 1903 1975 2058 2136 </table>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">100</value>
+			<value level="6">102</value>
+			<value level="7">104</value>
+			<value level="8">104</value>
+			<value level="9">104</value>
+			<value level="10">104</value>
+		</magicLvl>
+		<icon>icon.skill11252</icon>
+		<magicCriticalRate>5</magicCriticalRate>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>4151</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">1212</value>
+					<value level="2">1330</value>
+					<value level="3">1462</value>
+					<value level="4">1576</value>
+					<value level="5">1767</value>
+					<value level="6">1833</value>
+					<value level="7">1903</value>
+					<value level="8">1975</value>
+					<value level="9">2058</value>
+					<value level="10">2136</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11253" toLevel="10" name="Superior Magic Mastery">
+		<!-- Glory Days confirmed -->
+		<!-- M. Def. + 862, Magic Attack Resistance + 35%, Magic skill Cooldown - 25%, MP Consumption - 10%. INT +2 -->
+		<table name="#mDef"> 862 976 1104 1219 1374 1444 1517 1593 1674 1759 </table>
+		<skillType>BUFF</skillType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">100</value>
+			<value level="6">102</value>
+			<value level="7">104</value>
+			<value level="8">104</value>
+			<value level="9">104</value>
+			<value level="10">104</value>
+		</magicLvl>
+		<icon>icon.skill11253</icon>
+		<magicCriticalRate>5</magicCriticalRate>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">862</value>
+					<value level="2">976</value>
+					<value level="3">1104</value>
+					<value level="4">1219</value>
+					<value level="5">1374</value>
+					<value level="6">1444</value>
+					<value level="7">1517</value>
+					<value level="8">1593</value>
+					<value level="9">1674</value>
+					<value level="10">1759</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ResistDDMagic">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-25</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11254" toLevel="4" name="Superior Summon Mastery">
+		<!-- TODO : Check me -->
+		<!-- INT + 2. Can summon a servitor within 4 summon points. Use Rage to transfer the effects onto your servitor. -->
+		<icon>icon.skill11254</icon>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="CubicMastery">
+				<amount>3</amount>
+			</effect>
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>11351</skillId> <!-- Arcane Link -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<attackSkillId>11350</attackSkillId> <!-- Arcane Rage -->
+				<targetType>SUMMON</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>11354</skillId> <!-- Elemental Link -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<attackSkillId>11353</attackSkillId> <!-- Elemental Rage -->
+				<targetType>SUMMON</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>11357</skillId> <!-- Spectral Link -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<attackSkillId>11356</attackSkillId> <!-- Spectral Rage -->
+				<targetType>SUMMON</targetType>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="SummonPoints">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11255" toLevel="1" name="Superior Spirit Mastery">
+		<!-- Glory Days confirmed -->
+		<!-- INT + 2 and Hold/Sleep/Bleed/Poison/Mental Attack Resistance + 30. -->
+		<magicLvl>85</magicLvl>
+		<icon>icon.skill11255</icon>
+		<magicCriticalRate>5</magicCriticalRate>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<HOLD>30</HOLD>
+				<SLEEP>30</SLEEP>
+				<BLEED>30</BLEED>
+				<POISON>30</POISON>
+				<DERANGEMENT>30</DERANGEMENT>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11256" toLevel="8" name="Summon Cute Bear">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
 		<!-- Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points. -->
-		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
-		<table name="#enchMagicLvl"> 90 91 92 93 94 95 96 97 98 99 </table>
-		<table name="#mpConsume"> 351 361 376 391 406 421 436 456 </table>
 		<table name="#npcIds"> 14929 14947 14948 14949 14950 14951 14952 14953 </table>
-		<table name="#ench1npcId"> 15022 15023 15024 15025 15026 15027 15028 15029 15030 15031 </table>
-		<set name="icon" val="icon.skill11256" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3799" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<cond>
-			<and>
-				<player canSummonServitor="true" />
-				<player hasFreeSummonPoints="2" />
-			</and>
-		</cond>
-		<for>
-			<effect name="Summon">
-				<param npcId="#npcIds" />
-				<param lifeTime="3600" />
-				<param summonPoints="2" />
+		<icon>icon.skill11256</icon>
+		<operateType>A1</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">87</value>
+			<value level="3">89</value>
+			<value level="4">91</value>
+			<value level="5">93</value>
+			<value level="6">95</value>
+			<value level="7">97</value>
+			<value level="8">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">351</value>
+			<value level="2">361</value>
+			<value level="3">376</value>
+			<value level="4">391</value>
+			<value level="5">406</value>
+			<value level="6">421</value>
+			<value level="7">436</value>
+			<value level="8">456</value>
+		</mpConsume>
+		<hitTime>3800</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanSummonMulti">
+				<summonPoints>2</summonPoints>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SummonMulti">
+				<npcId>
+					<value level="1">14929</value>
+					<value level="2">14947</value>
+					<value level="3">14948</value>
+					<value level="4">14949</value>
+					<value level="5">14950</value>
+					<value level="6">14951</value>
+					<value level="7">14952</value>
+					<value level="8">14953</value>
+				</npcId>
+				<summonPoints>2</summonPoints>
+				<lifeTime>-1</lifeTime>
 			</effect>
-		</for>
-		<enchant1for>
-			<effect name="Summon">
-				<param npcId="#ench1npcId" />
-				<param lifeTime="3600" />
-				<param summonPoints="2" />
-			</effect>
-		</enchant1for>
+		</effects>
 	</skill>
-	<skill id="11257" levels="8" name="Summon Saber Tooth Cougar" enchantGroup1="10">
+	<skill id="11257" toLevel="8" name="Summon Saber Tooth Cougar">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
 		<!-- Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points. -->
-		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
-		<table name="#enchMagicLvl"> 90 91 92 93 94 95 96 97 98 99 </table>
-		<table name="#mpConsume"> 351 361 376 391 406 421 436 456 </table>
 		<table name="#npcIds"> 14930 14954 14955 14956 14957 14958 14959 14960 </table>
-		<table name="#ench1npcId"> 15032 15033 15034 15035 15036 15037 15038 15039 15040 15041 </table>
-		<set name="icon" val="icon.skill11257" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3799" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<cond>
-			<and>
-				<player canSummonServitor="true" />
-				<player hasFreeSummonPoints="2" />
-			</and>
-		</cond>
-		<for>
-			<effect name="Summon">
-				<param npcId="#npcIds" />
-				<param lifeTime="3600" />
-				<param summonPoints="2" />
+		<icon>icon.skill11257</icon>
+		<operateType>A1</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">87</value>
+			<value level="3">89</value>
+			<value level="4">91</value>
+			<value level="5">93</value>
+			<value level="6">95</value>
+			<value level="7">97</value>
+			<value level="8">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">351</value>
+			<value level="2">361</value>
+			<value level="3">376</value>
+			<value level="4">391</value>
+			<value level="5">406</value>
+			<value level="6">421</value>
+			<value level="7">436</value>
+			<value level="8">456</value>
+		</mpConsume>
+		<hitTime>3800</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanSummonMulti">
+				<summonPoints>2</summonPoints>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SummonMulti">
+				<npcId>
+					<value level="1">14930</value>
+					<value level="2">14954</value>
+					<value level="3">14955</value>
+					<value level="4">14956</value>
+					<value level="5">14957</value>
+					<value level="6">14958</value>
+					<value level="7">14959</value>
+					<value level="8">14960</value>
+				</npcId>
+				<summonPoints>2</summonPoints>
+				<lifeTime>-1</lifeTime>
 			</effect>
-		</for>
-		<enchant1for>
-			<effect name="Summon">
-				<param npcId="#ench1npcId" />
-				<param lifeTime="3600" />
-				<param summonPoints="2" />
-			</effect>
-		</enchant1for>
+		</effects>
 	</skill>
-	<skill id="11258" levels="8" name="Summon Grim Reaper" enchantGroup1="10">
+	<skill id="11258" toLevel="8" name="Summon Grim Reaper">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
 		<!-- Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points. -->
-		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
-		<table name="#enchMagicLvl"> 90 91 92 93 94 95 96 97 98 99 </table>
-		<table name="#mpConsume"> 351 361 376 391 406 421 436 456 </table>
 		<table name="#npcIds"> 14931 14961 14962 14963 14964 14965 14966 14967 </table>
-		<table name="#ench1npcId"> 15042 15043 15044 15045 15046 15047 15048 15049 15050 15051 </table>
-		<set name="icon" val="icon.skill11258" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3799" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<cond>
-			<and>
-				<player canSummonServitor="true" />
-				<player hasFreeSummonPoints="2" />
-			</and>
-		</cond>
-		<for>
-			<effect name="Summon">
-				<param npcId="#npcIds" />
-				<param lifeTime="3600" />
-				<param summonPoints="2" />
+		<icon>icon.skill11258</icon>
+		<operateType>A1</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">87</value>
+			<value level="3">89</value>
+			<value level="4">91</value>
+			<value level="5">93</value>
+			<value level="6">95</value>
+			<value level="7">97</value>
+			<value level="8">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">351</value>
+			<value level="2">361</value>
+			<value level="3">376</value>
+			<value level="4">391</value>
+			<value level="5">406</value>
+			<value level="6">421</value>
+			<value level="7">436</value>
+			<value level="8">456</value>
+		</mpConsume>
+		<hitTime>3800</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanSummonMulti">
+				<summonPoints>2</summonPoints>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SummonMulti">
+				<npcId>
+					<value level="1">14931</value>
+					<value level="2">14961</value>
+					<value level="3">14962</value>
+					<value level="4">14963</value>
+					<value level="5">14964</value>
+					<value level="6">14965</value>
+					<value level="7">14966</value>
+					<value level="8">14967</value>
+				</npcId>
+				<summonPoints>2</summonPoints>
+				<lifeTime>-1</lifeTime>
 			</effect>
-		</for>
-		<enchant1for>
-			<effect name="Summon">
-				<param npcId="#ench1npcId" />
-				<param lifeTime="3600" />
-				<param summonPoints="2" />
-			</effect>
-		</enchant1for>
+		</effects>
 	</skill>
-	<skill id="11259" levels="11" name="Mark of Weakness">
-	<!-- Source: https://l2wiki.com/Mark_of_Weakness_-_Wynn_Spectral_Master -->
-		<table name="#effectPoints"> -318 -323 -328 -333 -338 -343 -348 -343 -348 -353 -358 </table>
-		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 101 103 105 </table>
-		<table name="#mpConsume"> 54 58 62 66 70 74 78 82 86 90 94 </table>
-		<table name="#Dam"> 85 89 93 97 101 105 109 113 117 121 125 </table>
-		<set name="icon" val="icon.skill11259" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="effectRange" val="900" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="hitTime" val="1200" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="5000" />
-		<set name="abnormalTime" val="10" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Debuff">
-				<mul stat="mDef" val="0.9" />
-				<mul stat="pDef" val="0.9" />
+	<skill id="11259" toLevel="11" name="Mark of Weakness">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- For 10 sec., inflict damage with 85 Power added to M. Atk. Additionally, decrease target's P. Def./M. Def. -->
+		<icon>icon.skill11259</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
+			<value level="11">11</value>
+		</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>MARK_DEBUF_B</abnormalType>
+		<activateRate>100</activateRate>
+		<basicProperty>NONE</basicProperty>
+		<operateType>A2</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">87</value>
+			<value level="3">89</value>
+			<value level="4">91</value>
+			<value level="5">93</value>
+			<value level="6">95</value>
+			<value level="7">97</value>
+			<value level="8">99</value>
+			<value level="9">101</value>
+			<value level="10">103</value>
+			<value level="11">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">54</value>
+			<value level="2">58</value>
+			<value level="3">62</value>
+			<value level="4">66</value>
+			<value level="5">70</value>
+			<value level="6">74</value>
+			<value level="7">78</value>
+			<value level="8">82</value>
+			<value level="9">86</value>
+			<value level="10">90</value>
+			<value level="11">94</value>
+		</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>1200</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>
+			<value level="1">-687</value>
+			<value level="2">-694</value>
+			<value level="3">-700</value>
+			<value level="4">-705</value>
+			<value level="5">-709</value>
+			<value level="6">-709</value>
+			<value level="7">-709</value>
+			<value level="8">-709</value>
+			<value level="9">-709</value>
+			<value level="10">-709</value>
+			<value level="11">-709</value>
+		</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<lvlBonusRate>20</lvlBonusRate>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<alterSkill>
+			<item id="11500" level="1" chance="100" abnormalType="KNOCKDOWN" /> <!-- Heavy Hit -->
+			<item id="11499" level="1" chance="100" abnormalType="AIRBIND" /> <!-- Heavy Hit -->
+			<item id="14579" level="1" chance="100" abnormalType="EARTHWORM_DEBUFF" />
+		</alterSkill>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalDamOverTime">
+				<power>
+					<value level="1">85</value>
+					<value level="2">89</value>
+					<value level="3">93</value>
+					<value level="4">97</value>
+					<value level="5">101</value>
+					<value level="6">105</value>
+					<value level="7">109</value>
+					<value level="8">113</value>
+					<value level="9">117</value>
+					<value level="10">121</value>
+					<value level="11">125</value>
+				</power>
+				<ticks>1</ticks>
 			</effect>
-			<effect name="DamOverTime" ticks="1">
-				<param power="#Dam" />
- 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="11260" levels="8" name="Mark of Void">
-	<!-- Source: https://l2wiki.com/Mark_of_Void_-_Wynn_Elemental_Master -->
-		<table name="#effectPoints"> -333 -338 -343 -348 -343 -348 -353 -358 </table>
-		<table name="#magicLvl"> 91 93 95 97 99 101 103 105 </table>
-		<table name="#mpConsume"> 54 60 66 72 78 84 90 96 </table>
-		<set name="icon" val="icon.skill11260" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="mpConsume" val="#mpConsume" />
-		<table name="#Dam"> 85 91 97 103 109 117 121 125 </table>
-		<set name="effectRange" val="900" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="hitTime" val="1200" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="5000" />
-		<set name="abnormalTime" val="10" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="DamOverTime" ticks="1">
-				<param power="#Dam" />
-			</effect>
-		<!--
+	<skill id="11260" toLevel="8" name="Mark of Void">
+		<!-- Updated to IO -->
+		<!-- Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 326 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. -->
+		<icon>icon.skill11260</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+		</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>MARK_DEBUF_A</abnormalType>
+		<activateRate>90</activateRate>
+		<basicProperty>NONE</basicProperty>
+		<operateType>A3</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">88</value>
+			<value level="3">91</value>
+			<value level="4">94</value>
+			<value level="5">97</value>
+			<value level="6">101</value>
+			<value level="7">103</value>
+			<value level="8">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">54</value>
+			<value level="2">60</value>
+			<value level="3">66</value>
+			<value level="4">72</value>
+			<value level="5">78</value>
+			<value level="6">84</value>
+			<value level="7">90</value>
+			<value level="8">96</value>
+		</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>1490</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>
+			<value level="1">-692</value>
+			<value level="2">-698</value>
+			<value level="3">-704</value>
+			<value level="4">-708</value>
+			<value level="5">-709</value>
+			<value level="6">-709</value>
+			<value level="7">-709</value>
+			<value level="8">-709</value>
+		</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<lvlBonusRate>20</lvlBonusRate>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<selfEffects>
-			<effect name="HealOverTime" ticks="1">
-				<param power="#Dam" />
+			<effect name="HealPercent">
+				<power>3</power>
 			</effect>
-			<effect name="ManaHealOverTime" ticks="1">
-				<param power="#Dam" />
-			</effect>		
+			<effect name="ManaHealPercent">
+				<power>3</power>
+			</effect>
 		</selfEffects>
-		-->
-		</for>
-	</skill>
-	<skill id="11261" levels="9" name="Mark of Plague">
-	<!-- Source: https://l2wiki.com/Mark_of_Plague_-_Wynn_Arcana_Lord -->
-		<table name="#effectPoints"> -328 -333 -338 -343 -348 -343 -348 -353 -358 </table>
-		<table name="#magicLvl"> 89 91 93 95 97 99 101 103 105 </table>
-		<table name="#mpConsume"> 54 58 64 70 76 82 88 94 100 </table>
-		<table name="#Dam"> 85 89 95 101 107 113 117 121 125 </table>
-		<set name="icon" val="icon.skill11261" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="effectRange" val="900" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="5000" />
-		<set name="abnormalTime" val="10" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Debuff">
-				<mul stat="healEffect" val="0.8" /> <!-- Need Verify -->
+		<effects>
+			<effect name="MagicalDamOverTime">
+				<power>
+					<value level="1">85</value>
+					<value level="2">91</value>
+					<value level="3">97</value>
+					<value level="4">103</value>
+					<value level="5">109</value>
+					<value level="6">117</value>
+					<value level="7">121</value>
+					<value level="8">125</value>
+				</power>
+				<ticks>1</ticks>
 			</effect>
-			<effect name="DamOverTime" ticks="1">
-				<param power="#Dam" />
-			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="11262" levels="9" name="Mark of Trick">
-	<!-- Source: https://l2wiki.com/Mark_of_Trick_-_Wynn_Spectral_Master -->
-		<table name="#effectPoints"> -328 -333 -338 -343 -348 -343 -348 -353 -358 </table>
-		<table name="#magicLvl"> 89 91 93 95 97 99 101 103 105 </table>
-		<table name="#mpConsume"> 54 56 62 68 74 80 86 92 98 </table>
-		<table name="#Dam"> 85 89 95 101 107 113 117 121 125 </table>
-		<set name="icon" val="icon.skill11261" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="effectRange" val="900" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="hitTime" val="1200" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="5000" />
-		<set name="abnormalTime" val="10" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Mute" />
-			<effect name="DamOverTime" ticks="1">
-				<param power="#Dam" />
+	<skill id="11261" toLevel="9" name="Mark of Plague">
+		<!-- Updated to IO -->
+		<!-- Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 326 every second and decreases the power of incoming Heals. -->
+		<icon>icon.skill11261</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+		</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>MARK_DEBUF_C</abnormalType>
+		<activateRate>90</activateRate>
+		<basicProperty>NONE</basicProperty>
+		<operateType>A2</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">87</value>
+			<value level="3">90</value>
+			<value level="4">93</value>
+			<value level="5">96</value>
+			<value level="6">99</value>
+			<value level="7">101</value>
+			<value level="8">103</value>
+			<value level="9">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">54</value>
+			<value level="2">58</value>
+			<value level="3">64</value>
+			<value level="4">70</value>
+			<value level="5">76</value>
+			<value level="6">82</value>
+			<value level="7">88</value>
+			<value level="8">94</value>
+			<value level="9">100</value>
+		</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>
+			<value level="1">-692</value>
+			<value level="2">-698</value>
+			<value level="3">-704</value>
+			<value level="4">-708</value>
+			<value level="5">-709</value>
+			<value level="6">-709</value>
+			<value level="7">-709</value>
+			<value level="8">-709</value>
+			<value level="9">-709</value>
+		</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<lvlBonusRate>20</lvlBonusRate>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalDamOverTime">
+				<power>
+					<value level="1">85</value>
+					<value level="2">91</value>
+					<value level="3">97</value>
+					<value level="4">103</value>
+					<value level="5">109</value>
+					<value level="6">111</value>
+					<value level="7">117</value>
+					<value level="8">121</value>
+					<value level="9">125</value>
+				</power>
+				<ticks>1</ticks>
 			</effect>
-		</for>
+			<effect name="HealEffect">
+				<amount>-10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="11263" levels="10" name="Invoke">
-		<!-- https://l2wiki.com/Invoke_-_Wynn_Summoner -->
+	<skill id="11262" toLevel="9" name="Mark of Trick">
+		<!-- Updated to IO -->
+		<!-- Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 326 every second. Has a 25% of causing target to fail to use a skill. -->
+		<table name="#power"> 85 87 93 99 105 111 117 121 125 </table>
+		<icon>icon.skill11262</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+		</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>MARK_DEBUF_D</abnormalType>
+		<activateRate>50</activateRate>
+		<basicProperty>NONE</basicProperty>
+		<operateType>A2</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">89</value>
+			<value level="4">92</value>
+			<value level="5">95</value>
+			<value level="6">98</value>
+			<value level="7">101</value>
+			<value level="8">103</value>
+			<value level="9">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">54</value>
+			<value level="2">56</value>
+			<value level="3">62</value>
+			<value level="4">68</value>
+			<value level="5">74</value>
+			<value level="6">80</value>
+			<value level="7">86</value>
+			<value level="8">92</value>
+			<value level="9">98</value>
+		</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>
+			<value level="1">-692</value>
+			<value level="2">-698</value>
+			<value level="3">-704</value>
+			<value level="4">-708</value>
+			<value level="5">-709</value>
+			<value level="6">-709</value>
+			<value level="7">-709</value>
+			<value level="8">-709</value>
+			<value level="9">-709</value>
+		</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<lvlBonusRate>20</lvlBonusRate>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalDamOverTime">
+				<power>
+					<value level="1">85</value>
+					<value level="2">87</value>
+					<value level="3">93</value>
+					<value level="4">99</value>
+					<value level="5">105</value>
+					<value level="6">111</value>
+					<value level="7">117</value>
+					<value level="8">121</value>
+					<value level="9">125</value>
+				</power>
+				<ticks>1</ticks>
+			</effect>
+			<effect name="SkillTurningOverTime">
+				<chance>25</chance>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11263" toLevel="10" name="Invoke">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 147 power. -->
 		<table name="#power"> 147 151 156 160 164 168 172 198 204 210 </table>
-		<table name="#magicLvl"> 87 89 91 93 95 97 99 101 103 105 </table>
-		<table name="#mpConsume"> 227 236 245 255 265 276 286 296 306 316 </table>
-		<set name="icon" val="icon.skill11263" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="effectRange" val="600" />
-		<set name="hitTime" val="2559" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="15000" />
-		<set name="isMagic" val="1" />
-		<set name="castRange" val="600" />
-		<set name="targetType" val="AREA" />
-		<for>
-			<effect name="MagicalAttack" />
-		</for>
+		<icon>icon.skill11263</icon>
+		<operateType>A1</operateType>
+		<affectRange>200</affectRange>
+		<magicLvl>
+			<value level="1">87</value>
+			<value level="2">89</value>
+			<value level="3">91</value>
+			<value level="4">93</value>
+			<value level="5">95</value>
+			<value level="6">97</value>
+			<value level="7">99</value>
+			<value level="8">101</value>
+			<value level="9">103</value>
+			<value level="10">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">227</value>
+			<value level="2">236</value>
+			<value level="3">245</value>
+			<value level="4">255</value>
+			<value level="5">265</value>
+			<value level="6">276</value>
+			<value level="7">286</value>
+			<value level="8">296</value>
+			<value level="9">306</value>
+			<value level="10">316</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>2560</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>
+			<value level="1">-700</value>
+			<value level="2">-704</value>
+			<value level="3">-707</value>
+			<value level="4">-709</value>
+			<value level="5">-709</value>
+			<value level="6">-709</value>
+			<value level="7">-709</value>
+			<value level="8">-709</value>
+			<value level="9">-709</value>
+			<value level="10">-709</value>
+		</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>3</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<affectLimit>5-12</affectLimit>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">147</value>
+					<value level="2">151</value>
+					<value level="3">156</value>
+					<value level="4">160</value>
+					<value level="5">164</value>
+					<value level="6">168</value>
+					<value level="7">172</value>
+					<value level="8">198</value>
+					<value level="9">204</value>
+					<value level="10">210</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="11264" levels="4" name="Strong Will" enchantGroup1="10" enchantGroup2="10">
+	<skill id="11264" toLevel="4" name="Strong Will">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
 		<!-- Consume HP to recover 200 MP. Dispels debuffs and escapes immobility. -->
-		<table name="#dispelAbnormals"> POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 </table>
-		<table name="#effectPoints"> 235 438 582 720 </table>
-		<table name="#enchDispelAbnormals"> POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 </table>
-		<table name="#enchHpConsume"> 450 440 430 420 410 400 390 380 370 360 </table>
-		<table name="#enchMagicLvl"> 90 91 92 93 94 95 96 97 98 99 </table>
-		<table name="#enchManaHealOverTime"> 5 10 15 20 25 30 35 40 45 50 </table>
-		<table name="#hpConsume"> 400 420 440 460 </table>
-		<table name="#magicLvl"> 89 92 95 98 </table>
-		<table name="#manaHeal"> 200 210 220 230 </table>
-		<set name="coolTime" val="300" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="hitTime" val="1200" />
-		<set name="hpConsume" val="#hpConsume" />
-		<set name="icon" val="icon.skill11264" />
-		<set name="isMagic" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="60000" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<enchant1 name="hpConsume" val="#enchHpConsume" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant2 name="hpConsume" val="#enchHpConsume" />
-		<enchant2 name="magicLvl" val="#enchMagicLvl" />
-		<for>
+		<icon>icon.skill11264</icon>
+		<canCastWhleDisabled>true</canCastWhleDisabled>
+		<operateType>A1</operateType>
+		<hpConsume>
+			<value level="1">400</value>
+			<value level="2">420</value>
+			<value level="3">440</value>
+			<value level="4">460</value>
+		</hpConsume>
+		<magicLvl>
+			<value level="1">89</value>
+			<value level="2">92</value>
+			<value level="3">95</value>
+			<value level="4">98</value>
+		</magicLvl>
+		<hitTime>1200</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>
+			<value level="1">696</value>
+			<value level="2">702</value>
+			<value level="3">707</value>
+			<value level="4">709</value>
+		</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mp">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">210</value>
+					<value level="3">220</value>
+					<value level="4">230</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="DispelBySlot">
-				<param dispel="#dispelAbnormals" />
+				<dispel>ROOT_MAGICALLY,3;ROOT_PHYSICALLY,3</dispel>
 			</effect>
-			<effect name="ManaHeal">
-				<param power="#manaHeal" />
-			</effect>
-		</for>
-		<enchant1for>
-			<effect name="DispelBySlot">
-				<param dispel="#enchDispelAbnormals" />
-			</effect>
-			<effect name="ManaHeal">
-				<param power="230" />
-			</effect>
-		</enchant1for>
-		<enchant2for>
-			<effect name="DispelBySlot">
-				<param dispel="#enchDispelAbnormals" />
-			</effect>
-			<effect name="ManaHeal">
-				<param power="230" />
-			</effect>
-			<effect name="ManaHealOverTime" ticks="5">
-				<param power="#enchManaHealOverTime" />
-			</effect>
-		</enchant2for>
-	</skill>
-	<!-- Level 1 : Summons the selected party member to your location. -->
-	<skill id="11265" levels="1" name="Summon Team Mate">
-		<set name="icon" val="icon.skill11265" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="mpConsume" val="71" />
-		<set name="hitTime" val="1389" />
-		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="60000" />
-		<set name="isMagic" val="1" />
-		<set name="targetType" val="ONE" />
-		<cond>
-			<and>
-				<target myPartyExceptMe="true" />
-				<player callPc="true" />
-			</and>
-		</cond>
-		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
-		</cond>
-		<for>
-			<effect name="CallPc" />
-		</for>
-	</skill>
-	<skill id="11266" levels="4" name="Summon Death Gate">
-	<!-- Source: https://l2wiki.com/Summon_Death_Gate_-_Wynn_Elemental_Master -->
-		<table name="#magicLvl"> 99 101 103 105 </table>
-		<table name="#mpConsume"> 94 97 100 103 </table>
-		<set name="icon" val="icon.skill11266" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="effectRange" val="900" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="300000" />
-		<set name="isMagic" val="1" />
-		<set name="targetType" val="AREA" />
-	</skill>
-	<!-- Level 1 : Transform into Naviarope. For 5 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. -->
-	<!-- Level 2 : Transform into Naviarope. For 7 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. -->
-	<!-- Level 3 : Transform into Naviarope. For 10 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. -->
-	<!-- Level 101 : Transform into Naviarope. For 10 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : Transform into Naviarope. For 10 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : Transform into Naviarope. For 10 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : Transform into Naviarope. For 10 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : Transform into Naviarope. For 10 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : Transform into Naviarope. For 10 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : Transform into Naviarope. For 10 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : Transform into Naviarope. For 10 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : Transform into Naviarope. For 10 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : Transform into Naviarope. For 10 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<!-- Level 201 : Transform into Naviarope. For 10 minutes 20 seconds, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Time: Increases Duration. (+ 1 Time | Increases the effect's duration.) -->
-	<!-- Level 202 : Transform into Naviarope. For 10 minutes 40 seconds, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Time: Increases Duration. (+ 2 Time | Increases the effect's duration.) -->
-	<!-- Level 203 : Transform into Naviarope. For 11 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Time: Increases Duration. (+ 3 Time | Increases the effect's duration.) -->
-	<!-- Level 204 : Transform into Naviarope. For 11 minutes 20 seconds, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Time: Increases Duration. (+ 4 Time | Increases the effect's duration.) -->
-	<!-- Level 205 : Transform into Naviarope. For 11 minutes 40 seconds, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Time: Increases Duration. (+ 5 Time | Increases the effect's duration.) -->
-	<!-- Level 206 : Transform into Naviarope. For 12 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Time: Increases Duration. (+ 6 Time | Increases the effect's duration.) -->
-	<!-- Level 207 : Transform into Naviarope. For 12 minutes 20 seconds, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Time: Increases Duration. (+ 7 Time | Increases the effect's duration.) -->
-	<!-- Level 208 : Transform into Naviarope. For 12 minutes 40 seconds, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Time: Increases Duration. (+ 8 Time | Increases the effect's duration.) -->
-	<!-- Level 209 : Transform into Naviarope. For 13 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Time: Increases Duration. (+ 9 Time | Increases the effect's duration.) -->
-	<!-- Level 210 : Transform into Naviarope. For 13 minutes 20 seconds, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. Enchant Time: Increases Duration. (+ 10 Time | Increases the effect's duration.) -->
-	<skill id="11267" levels="3" name="Spirit of Naviarope" enchantGroup1="10" enchantGroup2="10">
-		<table name="#magicLvl"> 95 97 99 </table>
-		<table name="#ench1MpConsume"> 67 64 61 58 56 53 50 47 44 42 </table>
-		<table name="#ench2abnormalTime"> 620 640 660 680 720 740 760 780 800 820 </table>
-		<set name="icon" val="icon.skill11267" />
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="300" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="mpConsume" val="70" />
-		<set name="hitTime" val="4000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
-		<cond addName="1" msgId="113">
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Buff">
-				<set stat="STR" val="102" />
-				<set stat="DEX" val="55" />
-				<set stat="CON" val="82" />
-				<set stat="INT" val="107" />
-				<set stat="WIT" val="78" />
-				<set stat="MEN" val="78" />
-				<mul stat="pDef" val="1.50" />
-				<mul stat="mDef" val="1.50" />
-				<mul stat="rEvas" val="0.5" />
-			</effect>
-			<effect name="Transformation">
-				<param id="509" />
-			</effect>
-		</for>
-		<enchant2for>
-			<effect name="Buff">
-				<set stat="STR" val="102" />
-				<set stat="DEX" val="55" />
-				<set stat="CON" val="82" />
-				<set stat="INT" val="107" />
-				<set stat="WIT" val="78" />
-				<set stat="MEN" val="78" />
-				<mul stat="pDef" val="1.50" />
-				<mul stat="mDef" val="1.50" />
-				<mul stat="rEvas" val="0.5" />
-			</effect>
-			<effect name="Transformation">
-				<param id="509" />
-			</effect>
-		</enchant2for>
-	</skill>
-	<skill id="11268" levels="11" name="Summon Avenging Cubic">
-	<!-- Source: https://l2wiki.com/Summon_Avenging_Cubic_-_Wynn_Arcana_Lord -->
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
-		<table name="#mpConsume"> 70 72 75 78 81 84 87 91 84 87 91 </table>
-		<table name="#cubicPower"> 2106 2306 2506 2706 2906 3106 3306 3506 3506 3506 3506 </table>
-		<set name="icon" val="icon.skill11268" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="60000" />
-		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="SummonCubic">
-				<param cubicId="15" cubicDelay="10" cubicDuration="900" cubicMaxCount="30" cubicSkillChance="30" cubicPower="#cubicPower" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="11269" levels="7" name="Mass Servitor Heal" enchantGroup1="10" enchantGroup2="10">
-	<!-- Source: https://l2wiki.com/Mass_Servitor_Heal_-_Wynn_Arcana_Lord -->
-		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
-		<table name="#mpConsume"> 101 112 124 138 152 166 180 </table>
-		<table name="#ench1MpConsume"> 134 130 126 122 118 114 110 106 102 98 </table>
-		<table name="#ench1amount"> 1389 1397 1405 1413 1421 1429 1437 1445 1453 1461 </table>
-		<table name="#amount"> 1308 1336 1358 1381 1733 1747 1761 </table>
-		<table name="#aggro"> 655 665 685 696 707 718 729 </table>
-		<set name="icon" val="icon.skill11269" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="effectRange" val="900" />
-		<set name="hitTime" val="5000" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="6000" />
-		<set name="isMagic" val="1" />
-		<set name="targetType" val="SERVITOR" />
-		<set name="mpConsume" val="#mpConsume" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<for>
-			<effect name="Heal">
-				<param power="#amount" />
-			</effect>
-		</for>
-		<enchant1for>
-			<effect name="Heal">
-				<param power="#ench1amount" />
-			</effect>
-		</enchant1for>
-	</skill>
-	<!-- Level 1 : Transfers 70% of the damage received to your first summoned servitor. MP is continuously consumed according to your level. -->
-	<!-- Level 2 : Transfers 72% of the damage received to your first summoned servitor. MP is continuously consumed according to your level. -->
-	<!-- Level 3 : Transfers 74% of the damage received to your first summoned servitor. MP is continuously consumed according to your level. -->
-	<!-- Level 4 : Transfers 75% of the damage received to your first summoned servitor. MP is continuously consumed according to your level. -->
-	<skill id="11270" levels="4" name="Ultimate Transfer Pain">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#power"> 70 72 74 75 </table>
-		<set name="icon" val="icon.skill11270" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="mpConsume" val="70" />
-		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="MpConsumePerLevel" ticks="5">
-				<param power="0.2" />
-				<add stat="transDam" val="#power" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="11271" levels="11" name="Mark Retriever">
-	<!-- Source: https://l2wiki.com/Mark_Retriever_-_Wynn_Spectral_Master -->
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
-		<table name="#mpConsume"> 82 84 88 92 96 100 104 108 112 116 120 </table>
-		<table name="#effectPoints"> -318 -323 -328 -333 -338 -343 -348 -343 -348 -353 -358 </table>
-		<table name="#power"> 300 350 400 450 500 550 600 650 700 750 800 </table> <!-- Need Verify -->
-		<set name="icon" val="icon.skill11261" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="effectRange" val="900" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="power" val="#power" /> <!-- Need Verify -->
-		<set name="hitTime" val="1200" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="MarkRetriever" >
-				<param power="1" /> <!-- For Enchant -->
-			</effect>
-		</for>
-	</skill>
-	<!-- Level 1 : Switches locations with target servitor. -->
-	<!-- Level 101 : Trades places with targeted servitor. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : Trades places with targeted servitor. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : Trades places with targeted servitor. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : Trades places with targeted servitor. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : Trades places with targeted servitor. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : Trades places with targeted servitor. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : Trades places with targeted servitor. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : Trades places with targeted servitor. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : Trades places with targeted servitor. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : Trades places with targeted servitor. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<!-- Level 201 : Trades places with targeted servitor. Enchant Distance: Increases Effect. (+ 1 Distance | Increases the effect.) -->
-	<!-- Level 202 : Trades places with targeted servitor. Enchant Distance: Increases Effect. (+ 2 Distance | Increases the effect.) -->
-	<!-- Level 203 : Trades places with targeted servitor. Enchant Distance: Increases Effect. (+ 3 Distance | Increases the effect.) -->
-	<!-- Level 204 : Trades places with targeted servitor. Enchant Distance: Increases Effect. (+ 4 Distance | Increases the effect.) -->
-	<!-- Level 205 : Trades places with targeted servitor. Enchant Distance: Increases Effect. (+ 5 Distance | Increases the effect.) -->
-	<!-- Level 206 : Trades places with targeted servitor. Enchant Distance: Increases Effect. (+ 6 Distance | Increases the effect.) -->
-	<!-- Level 207 : Trades places with targeted servitor. Enchant Distance: Increases Effect. (+ 7 Distance | Increases the effect.) -->
-	<!-- Level 208 : Trades places with targeted servitor. Enchant Distance: Increases Effect. (+ 8 Distance | Increases the effect.) -->
-	<!-- Level 209 : Trades places with targeted servitor. Enchant Distance: Increases Effect. (+ 9 Distance | Increases the effect.) -->
-	<!-- Level 210 : Trades places with targeted servitor. Enchant Distance: Increases Effect. (+ 10 Distance | Increases the effect.) -->
-	<skill id="11272" levels="1" name="Replace">
-		<set name="icon" val="icon.skill11272" />
-		<set name="magicLvl" val="97" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="mpConsume" val="97" />
-		<set name="effectRange" val="600" />
-		<set name="hitTime" val="1200" />
-		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="60000" />
-		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
-	</skill>
-	<skill id="11273" levels="8" name="Exile">
-	<!-- Source: https://l2wiki.com/Exile_-_Wynn_Arcana_Lord -->
-		<table name="#effectPoints"> -333 -338 -343 -348 -343 -348 -353 -358 </table>
-		<table name="#magicLvl"> 85 88 91 94 97 101 103 105 </table>
-		<table name="#mpConsume"> 78 83 87 92 97 102 107 112 </table>
-		<table name="#Dam"> 353 364 374 385 395 409 416 423 </table>
-		<set name="icon" val="icon.skill11273" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="abnormalTime" val="10" /> <!-- Need Verify -->
-		<set name="activateRate" val="90" /> <!-- Need Verify -->
-		<set name="abnormalType" val="MD_DOWN" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="1400" />
-		<set name="effectRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="60000" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="DamOverTime" ticks="1">
-				<param power="#Dam" />
-			</effect>
-			<effect name="Paralyze" />
-		</for>
-	</skill>
-	<!-- Level 1 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. -->
-	<!-- Level 2 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. -->
-	<!-- Level 3 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. -->
-	<!-- Level 4 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. -->
-	<!-- Level 101 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<!-- Level 901 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. (+ 1 Recovery | Decreases Cooldown.) -->
-	<!-- Level 902 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. (+ 2 Recovery | Decreases Cooldown.) -->
-	<!-- Level 903 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. (+ 3 Recovery | Decreases Cooldown.) -->
-	<!-- Level 904 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. (+ 4 Recovery | Decreases Cooldown.) -->
-	<!-- Level 905 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. (+ 5 Recovery | Decreases Cooldown.) -->
-	<!-- Level 906 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. (+ 6 Recovery | Decreases Cooldown.) -->
-	<!-- Level 907 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. (+ 7 Recovery | Decreases Cooldown.) -->
-	<!-- Level 908 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. (+ 8 Recovery | Decreases Cooldown.) -->
-	<!-- Level 909 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. (+ 9 Recovery | Decreases Cooldown.) -->
-	<!-- Level 910 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. (+ 10 Recovery | Decreases Cooldown.) -->
-	<!-- Level 201 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Time: Increases duration. (+ 1 Time | Increases the effect's duration.) -->
-	<!-- Level 202 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Time: Increases duration. (+ 2 Time | Increases the effect's duration.) -->
-	<!-- Level 203 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Time: Increases duration. (+ 3 Time | Increases the effect's duration.) -->
-	<!-- Level 204 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Time: Increases duration. (+ 4 Time | Increases the effect's duration.) -->
-	<!-- Level 205 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Time: Increases duration. (+ 5 Time | Increases the effect's duration.) -->
-	<!-- Level 206 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Time: Increases duration. (+ 6 Time | Increases the effect's duration.) -->
-	<!-- Level 207 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Time: Increases duration. (+ 7 Time | Increases the effect's duration.) -->
-	<!-- Level 208 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Time: Increases duration. (+ 8 Time | Increases the effect's duration.) -->
-	<!-- Level 209 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Time: Increases duration. (+ 9 Time | Increases the effect's duration.) -->
-	<!-- Level 210 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Time: Increases duration. (+ 10 Time | Increases the effect's duration.) -->
-	<!-- Level 301 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Wind Walk: Increases Spd. By 2. (+ 1 Wind Walk | Increases Speed by 2.) -->
-	<!-- Level 302 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Wind Walk: Increases Spd. By 3. (+ 2 Wind Walk | Increases Speed by 3.) -->
-	<!-- Level 303 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Wind Walk: Increases Spd. By 4. (+ 3 Wind Walk | Increases Speed by 4.) -->
-	<!-- Level 304 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Wind Walk: Increases Spd. By 5. (+ 4 Wind Walk | Increases Speed by 5.) -->
-	<!-- Level 305 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Wind Walk: Increases Spd. By 6. (+ 5 Wind Walk | Increases Speed by 6.) -->
-	<!-- Level 306 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Wind Walk: Increases Spd. By 7. (+ 6 Wind Walk | Increases Speed by 7.) -->
-	<!-- Level 307 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Wind Walk: Increases Spd. By 8. (+ 7 Wind Walk | Increases Speed by 8.) -->
-	<!-- Level 308 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Wind Walk: Increases Spd. By 9. (+ 8 Wind Walk | Increases Speed by 9.) -->
-	<!-- Level 309 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Wind Walk: Increases Spd. By 10. (+ 9 Wind Walk | Increases Speed by 10.) -->
-	<!-- Level 310 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Wind Walk: Increases Spd. By 11. (+ 10 Wind Walk | Increases Speed by 11.) -->
-	<!-- Level 401 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power HP: Recovers 1% HP. (+ 1 Power HP | Recovers HP by 1%.) -->
-	<!-- Level 402 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power HP: Recovers 2% HP. (+ 2 Power HP | Recovers HP by 2%.) -->
-	<!-- Level 403 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power HP: Recovers 3% HP. (+ 3 Power HP | Recovers HP by 3%.) -->
-	<!-- Level 404 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power HP: Recovers 4% HP. (+ 4 Power HP | Recovers HP by 4%.) -->
-	<!-- Level 405 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power HP: Recovers 5% HP. (+ 5 Power HP | Recovers HP by 5%.) -->
-	<!-- Level 406 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power HP: Recovers 6% HP. (+ 6 Power HP | Recovers HP by 6%.) -->
-	<!-- Level 407 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power HP: Recovers 7% HP. (+ 7 Power HP | Recovers HP by 7%.) -->
-	<!-- Level 408 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power HP: Recovers 8% HP. (+ 8 Power HP | Recovers HP by 8%.) -->
-	<!-- Level 409 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power HP: Recovers 9% HP. (+ 9 Power HP | Recovers HP by 9%.) -->
-	<!-- Level 410 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power HP: Recovers 10% HP. (+ 10 Power HP | Recovers HP by 10%.) -->
-	<!-- Level 501 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power MP: Recovers 1% MP. (+ 1 Power MP | Recovers MP by 1%.) -->
-	<!-- Level 502 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power MP: Recovers 2% MP. (+ 2 Power MP | Recovers MP by 2%.) -->
-	<!-- Level 503 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power MP: Recovers 3% MP. (+ 3 Power MP | Recovers MP by 3%.) -->
-	<!-- Level 504 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power MP: Recovers 4% MP. (+ 4 Power MP | Recovers MP by 4%.) -->
-	<!-- Level 505 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power MP: Recovers 5% MP. (+ 5 Power MP | Recovers MP by 5%.) -->
-	<!-- Level 506 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power MP: Recovers 6% MP. (+ 6 Power MP | Recovers MP by 6%.) -->
-	<!-- Level 507 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power MP: Recovers 7% MP. (+ 7 Power MP | Recovers MP by 7%.) -->
-	<!-- Level 508 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power MP: Recovers 8% MP. (+ 8 Power MP | Recovers MP by 8%.) -->
-	<!-- Level 509 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power MP: Recovers 9% MP. (+ 9 Power MP | Recovers MP by 9%.) -->
-	<!-- Level 510 : Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. Enchant Power MP: Recovers 10% MP. (+ 10 Power MP | Recovers MP by 10%.) -->
-	<skill id="11274" levels="4" name="Summon Barrier">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#mpConsume"> 78 86 94 97 </table>
-		<set name="icon" val="icon.skill11274" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="abnormalTime" val="60" />		
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="300000" />
-		<set name="isMagic" val="1" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
 			<effect name="DispelByCategory">
-				<param slot="debuff" rate="100" max="10" />
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
 			</effect>
-			<effect name="BlockDamage">
-				<param block="HP"/>
-			</effect>
-			<effect name="BlockDamage">
-				<param block="MP"/>
-			</effect>
-			<effect name="BlockDebuff" />
-			<effect name="Buff">
-				<sub stat="cancelVuln" val="100" />
-			</effect>
-			<effect name="Buff">
-				<add stat="regHp" val="5" /> 		<!-- Need Verify -->
-			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="11275" levels="2" name="Mark Flare">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11265" toLevel="1" name="Summon Team Mate">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- Summons the selected party member to your location. -->
+		<icon>icon.skill11265</icon>
+		<effectRange>-2</effectRange>
+		<operateType>A1</operateType>
+		<magicLvl>85</magicLvl>
+		<mpConsume>71</mpConsume>
+		<castRange>-2</castRange>
+		<hitTime>1390</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>687</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>1</isMagic>
+		<targetType>OTHERS</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCallPc" />
+			<condition name="TargetMyParty">
+				<includeMe>false</includeMe>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CallPc">
+				<itemId>8615</itemId>
+				<itemCount>1</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11266" toLevel="4" name="Summon Death Gate">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- Summons a Death Gate. The summoned Death Gate continuously inflicts damage and Hold on nearby enemies. -->
+		<table name="#npcIds"> 14927 15200 15201 15202 </table>
+		<icon>icon.skill11266</icon>
+		<operateType>A1</operateType>
+		<magicLvl>
+			<value level="1">99</value>
+			<value level="2">101</value>
+			<value level="3">103</value>
+			<value level="4">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">90</value>
+			<value level="2">97</value>
+			<value level="3">100</value>
+			<value level="4">103</value>
+		</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>300000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<isMagic>2</isMagic>
+		<staticReuse>true</staticReuse>
+		<targetType>GROUND</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>
+					<value level="1">14927</value>
+					<value level="2">15200</value>
+					<value level="3">15201</value>
+					<value level="4">15202</value>
+				</npcId>
+				<npcCount>1</npcCount>
+				<despawnDelay>30000</despawnDelay>
+				<singleInstance>true</singleInstance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11267" toLevel="3" name="Spirit of Naviarope">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- Transform into Naviarope. For 5 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. -->
+		<icon>icon.skill11267</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>
+			<value level="1">300</value>
+			<value level="2">420</value>
+			<value level="3">600</value>
+		</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<operateType>A2</operateType>
+		<magicLvl>
+			<value level="1">95</value>
+			<value level="2">97</value>
+			<value level="3">99</value>
+		</magicLvl>
+		<mpConsume>70</mpConsume>
+		<hitTime>4000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3600000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<effectRange>1100</effectRange>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>509</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<!-- pDef +50% -->
+				<!-- mDef +50% -->
+				<transformationId>509</transformationId>
+			</effect>
+			<effect name="DefenceTrait">
+				<CROSSBOW>50</CROSSBOW>
+				<BOW>50</BOW>
+				<TWOHANDCROSSBOW>50</TWOHANDCROSSBOW>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>CHANGEBODY,-1;TURN_STONE,-1;BUFF_SPECIAL_MULTI,-1</dispel>
+			</effect>
+			<effect name="TargetCancel" />
+			<effect name="MagicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11268" toLevel="11" name="Summon Avenging Cubic">
+		<!-- Updated to IO -->
+		<!-- Summons an Avenging cubic. The summoned cubic cancels the summoner's debuffs. Additionally, it cancels the buffs of the summoner's target and inflicts Hold. -->
+		<icon>icon.skill11268</icon>
+		<operateType>A1</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+			<value level="9">101</value>
+			<value level="10">103</value>
+			<value level="11">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">70</value>
+			<value level="2">72</value>
+			<value level="3">75</value>
+			<value level="4">78</value>
+			<value level="5">81</value>
+			<value level="6">84</value>
+			<value level="7">87</value>
+			<value level="8">91</value>
+			<value level="9">84</value>
+			<value level="10">87</value>
+			<value level="11">91</value>
+		</mpConsume>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanSummonCubic" />
+		</conditions>
+		<effects>
+			<effect name="SummonCubic">
+				<cubicId>15</cubicId>
+				<cubicLvl>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+				</cubicLvl>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11269" toLevel="7" name="Mass Servitor Heal">
+		<!-- Updated to IO -->
+		<!-- Consumes your MP to restore servitors' HP by 1308. -->
+		<table name="#heal"> 1308 1336 1358 1381 1733 1747 1761 </table>
+		<icon>icon.skill11269</icon>
+		<operateType>A1</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">101</value>
+			<value level="2">112</value>
+			<value level="3">124</value>
+			<value level="4">138</value>
+			<value level="5">152</value>
+			<value level="6">166</value>
+			<value level="7">180</value>
+		</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>5000</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>6000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<affectRange>1000</affectRange>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="Heal">
+				<power>
+					<value level="1">1308</value>
+					<value level="2">1336</value>
+					<value level="3">1358</value>
+					<value level="4">1381</value>
+					<value level="5">1733</value>
+					<value level="6">1747</value>
+					<value level="7">1761</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11270" toLevel="4" name="Ultimate Transfer Pain">
+		<!-- Updated to IO -->
+		<!-- Transfers 70% of the damage received to your first summoned servitor. MP is continuously consumed according to your level. -->
+		<!-- TODO check if works only with first summoned. -->
+		<table name="#power"> 70 72 74 75 </table>
+		<icon>icon.skill11270</icon>
+		<operateType>T</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<mpConsume>70</mpConsume>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>1</isMagic>
+		<targetType>NONE</targetType>
+		<effects>
+			<effect name="MpConsumePerLevel">
+				<power>0.2</power>
+				<ticks>5</ticks>
+			</effect>
+			<effect name="TransferDamageToSummon">
+				<amount>
+					<value level="1">70</value>
+					<value level="2">72</value>
+					<value level="3">74</value>
+					<value level="4">75</value>
+				</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11271" toLevel="11" name="Mark Retriever">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. -->
+		<table name="#power">85 89 93 97 101 105 109 113 117 121 125 </table>
+		<table name="#power"> 204 214 223 233 242 252 262 271 281 290 300 </table> <!-- TODO Taken from Mark of Weakness x2.4 (because level 2 power calculated in retail seems to be 214) -->
+		<icon>icon.skill11271</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">82</value>
+			<value level="2">84</value>
+			<value level="3">88</value>
+			<value level="4">92</value>
+			<value level="5">96</value>
+			<value level="6">100</value>
+			<value level="7">104</value>
+			<value level="8">108</value>
+			<value level="9">112</value>
+			<value level="10">116</value>
+			<value level="11">120</value>
+		</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>1760</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>
+			<value level="1">-696</value>
+			<value level="2">-700</value>
+			<value level="3">-704</value>
+			<value level="4">-707</value>
+			<value level="5">-709</value>
+			<value level="6">-709</value>
+			<value level="7">-709</value>
+			<value level="8">-709</value>
+			<value level="9">-709</value>
+			<value level="10">-709</value>
+			<value level="11">-709</value>
+		</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+			<value level="9">101</value>
+			<value level="10">103</value>
+			<value level="11">105</value>
+		</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAbnormalDispelAttack">
+				<power>
+					<value level="1">188</value>
+					<value level="2">191</value>
+					<value level="3">196</value>
+					<value level="4">201</value>
+					<value level="5">207</value>
+					<value level="6">212</value>
+					<value level="7">218</value>
+					<value level="8">223</value>
+					<value level="9">228</value> <!-- Guessed -->
+					<value level="10">233</value> <!-- Guessed -->
+					<value level="11">238</value> <!-- Guessed -->
+				</power>
+				<abnormalType>MARK_DEBUF_B</abnormalType>
+			</effect>
+			<effect name="MagicalAbnormalDispelAttack">
+				<power>
+					<value level="1">236</value>
+					<value level="2">239</value>
+					<value level="3">246</value>
+					<value level="4">253</value>
+					<value level="5">260</value>
+					<value level="6">266</value>
+					<value level="7">273</value>
+					<value level="8">280</value>
+					<value level="9">287</value> <!-- Guessed -->
+					<value level="10">294</value> <!-- Guessed -->
+					<value level="11">300</value> <!-- Guessed -->
+				</power>
+				<abnormalType>MARK_DEBUF_C</abnormalType>
+			</effect>
+			<effect name="MagicalAbnormalDispelAttack">
+				<power>
+					<value level="1">204</value>
+					<value level="2">207</value>
+					<value level="3">213</value>
+					<value level="4">219</value>
+					<value level="5">224</value>
+					<value level="6">230</value>
+					<value level="7">236</value>
+					<value level="8">242</value>
+					<value level="9">248</value> <!-- Guessed -->
+					<value level="10">254</value> <!-- Guessed -->
+					<value level="11">260</value> <!-- Guessed -->
+				</power>
+				<abnormalType>MARK_DEBUF_D</abnormalType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11272" toLevel="1" name="Replace">
+		<!-- Updated to IO -->
+		<!-- Switches locations with target servitor. -->
+		<icon>icon.skill11272</icon>
+		<operateType>A1</operateType>
+		<mpConsume>97</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1200</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>709</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCompanion">
+				<type>MY_SUMMON</type>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="BlinkSwap" />
+		</effects>
+	</skill>
+	<skill id="11273" toLevel="8" name="Exile">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 353 per second. -->
+		<table name="#dot"> 353 364 374 385 395 409 416 423 </table>
+		<icon>icon.skill11273</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+		</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>DEPORT</abnormalType>
+		<abnormalVisualEffect>DEPORT</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<basicProperty>NONE</basicProperty>
+		<operateType>A2</operateType>
+		<trait>DEPORT</trait>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">88</value>
+			<value level="3">91</value>
+			<value level="4">94</value>
+			<value level="5">97</value>
+			<value level="6">101</value>
+			<value level="7">103</value>
+			<value level="8">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">78</value>
+			<value level="2">83</value>
+			<value level="3">87</value>
+			<value level="4">92</value>
+			<value level="5">97</value>
+			<value level="6">102</value>
+			<value level="7">107</value>
+			<value level="8">112</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>
+			<value level="1">-687</value>
+			<value level="2">-694</value>
+			<value level="3">-700</value>
+			<value level="4">-705</value>
+			<value level="5">-709</value>
+			<value level="6">-713</value>
+			<value level="7">-717</value>
+			<value level="8">-721</value>
+		</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>1</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+			<effect name="DamOverTime">
+				<power>
+					<value level="1">353</value>
+					<value level="2">364</value>
+					<value level="3">374</value>
+					<value level="4">385</value>
+					<value level="5">395</value>
+					<value level="6">409</value>
+					<value level="7">416</value>
+					<value level="8">423</value>
+				</power>
+				<ticks>1</ticks>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="BuffBlock" />
+			<effect name="DebuffBlock" />
+		</effects>
+	</skill>
+	<skill id="11274" toLevel="4" name="Summon Barrier">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. -->
+		<table name="#regHp"> 1.2 1.3 1.4 1.5 </table>
+		<icon>icon.skill11274</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>
+			<value level="1">6</value>
+			<value level="2">8</value>
+			<value level="3">10</value>
+			<value level="4">12</value>
+		</abnormalTime>
+		<abnormalType>INVINCIBILITY</abnormalType>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<isSharedWithSummon>false</isSharedWithSummon>
+		<operateType>A2</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">78</value>
+			<value level="2">86</value>
+			<value level="3">94</value>
+			<value level="4">97</value>
+		</mpConsume>
+		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
+		<hitTime>1500</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>300000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>1</isMagic>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpHaveSummon" />
+		</conditions>
+		<effects>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">30</value>
+					<value level="3">40</value>
+					<value level="4">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11275" toLevel="2" name="Mark Flare">
+		<!-- Glory Days confirmed -->
 		<!-- Inflicts powerful magic damage on target. -->
-		<table name="#mpConsumes"> 52 53 </table>
-		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="2500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="1000" />
-		<set name="isMagic" val="1" />
+		<table name="#power"> 100 150 </table>
+		<icon>icon.skill0003</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">52</value>
+			<value level="2">53</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>2500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>
+			<value level="1">-707</value>
+			<value level="2">-709</value>
+		</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>
+			<value level="1">95</value>
+			<value level="2">97</value>
+		</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">100</value>
+					<value level="2">150</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="11276" levels="6" name="Dimensional Binding">
-	<!-- Source: https://l2wiki.com/Dimensional_Binding_-_Wynn_Arcana_Lord -->
-		<table name="#effectPoints"> -343 -348 -343 -348 -353 -358 </table>
-		<table name="#magicLvl"> 93 96 99 101 103 105 </table>
-		<set name="icon" val="icon.skill11276" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="mpConsume" val="90" />
-		<set name="effectRange" val="900" />
-		<set name="abnormalTime" val="10" /> <!-- Need Verify -->
-		<set name="activateRate" val="90" /> <!-- Need Verify -->
-		<set name="hitTime" val="10000" />
-		<set name="reuseDelay" val="300000" />
-		<set name="isDebuff" val="true" />
-		<set name="abnormalType" val="MD_DOWN" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="1400" />
-		<set name="targetType" val="ONE" />
-		<for>
-			<effect name="Debuff">
-				<mul stat="mDef" val="0.7" />
-				<mul stat="pDef" val="0.7" />
+	<skill id="11276" toLevel="6" name="Dimensional Binding">
+		<!-- Glory Days confirmed -->
+		<!-- Binds target midair in another dimension. -->
+		<icon>icon.skill11276</icon>
+		<activateRate>100</activateRate>
+		<basicProperty>NONE</basicProperty>
+		<operateType>CA2</operateType>
+		<mpConsume>90</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>10000</hitTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>-707</effectPoint>
+		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1400</effectRange>
+		<magicLvl>
+			<value level="1">93</value>
+			<value level="2">96</value>
+			<value level="3">99</value>
+			<value level="4">101</value>
+			<value level="5">103</value>
+			<value level="6">105</value>
+		</magicLvl>
+		<channelingSkillId>11300</channelingSkillId>
+		<channelingTickInitialDelay>1200</channelingTickInitialDelay>
+		<channelingTickInterval>2000</channelingTickInterval>
+		<mpPerChanneling>15</mpPerChanneling>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic>
+		<staticReuse>true</staticReuse>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCheckCrtEffect" />
+		</conditions>
+	</skill>
+	<skill id="11277" toLevel="4" name="Sense of Loyalty">
+		<!-- Glory Days confirmed -->
+		<!-- Servitor's Fury. P. Atk. + 35%, M. Atk. + 75%, P. Critical Rate + 30%, and P. Critical Damage by 35%. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>SUMMON_CONDITION</abnormalType>
+		<icon>icon.skill11277</icon>
+		<operateType>A2</operateType>
+		<castRange>400</castRange>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>900</effectRange>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<affectRange>1000</affectRange>
+		<isMagic>4</isMagic>
+		<targetType>SUMMON</targetType>
+		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">35</value>
+					<value level="2">35</value>
+					<value level="3">40</value>
+					<value level="4">40</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">75</value>
+					<value level="2">75</value>
+					<value level="3">85</value>
+					<value level="4">85</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">35</value>
+					<value level="2">40</value>
+					<value level="3">40</value>
+					<value level="4">45</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">35</value>
+					<value level="3">35</value>
+					<value level="4">40</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11278" toLevel="9" name="Bear Claw">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- Provokes the enemy and inflicts damage. -->
+		<table name="#power"> 6277 6494 6930 7365 7800 8236 8671 9106 9324 </table>
+		<icon>icon.skill0028</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+		</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>TARGET_LOCK</abnormalType>
+		<activateRate>100</activateRate>
+		<operateType>A2</operateType>
+		<trait>HATE</trait>
+		<mpConsume>
+			<value level="1">79</value>
+			<value level="2">81</value>
+			<value level="3">84</value>
+			<value level="4">86</value>
+			<value level="5">89</value>
+			<value level="6">92</value>
+			<value level="7">95</value>
+			<value level="8">98</value>
+			<value level="9">99</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<castRange>50</castRange>
+		<hitTime>1560</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>
+			<value level="1">-687</value>
+			<value level="2">-690</value>
+			<value level="3">-694</value>
+			<value level="4">-698</value>
+			<value level="5">-702</value>
+			<value level="6">-705</value>
+			<value level="7">-708</value>
+			<value level="8">-709</value>
+			<value level="9">-709</value>
+		</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>400</effectRange>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+			<value level="9">99</value>
+		</magicLvl>
+		<isDebuff>true</isDebuff>
+		<staticReuse>true</staticReuse>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">6277</value>
+					<value level="2">6494</value>
+					<value level="3">6930</value>
+					<value level="4">7365</value>
+					<value level="5">7800</value>
+					<value level="6">8236</value>
+					<value level="7">8671</value>
+					<value level="8">9106</value>
+					<value level="9">9324</value>
+				</power>
+			</effect>
+			<effect name="TargetMe" />
+			<effect name="GetAgro" />
+		</effects>
+	</skill>
+	<skill id="11279" toLevel="9" name="Bear Tumbling">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- Rolls over at the same spot to give a shock to the ground and temporarily stops nearby targets from moving. -->
+		<table name="#power"> 5337 5521 5889 6258 6627 6995 7364 7732 7917 </table>
+		<icon>icon.skill0028</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+		</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect> <!-- TODO Verify skilldata have no AVE -->
+		<activateRate>80</activateRate>
+		<affectRange>150</affectRange>
+		<basicProperty>NONE</basicProperty>
+		<operateType>A2</operateType>
+		<trait>HOLD</trait>
+		<mpConsume>
+			<value level="1">332</value>
+			<value level="2">337</value>
+			<value level="3">349</value>
+			<value level="4">360</value>
+			<value level="5">372</value>
+			<value level="6">384</value>
+			<value level="7">396</value>
+			<value level="8">408</value>
+			<value level="9">414</value>
+		</mpConsume>
+		<hitTime>1660</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>7000</reuseDelay>
+		<effectPoint>
+			<value level="1">-687</value>
+			<value level="2">-690</value>
+			<value level="3">-694</value>
+			<value level="4">-698</value>
+			<value level="5">-702</value>
+			<value level="6">-705</value>
+			<value level="7">-708</value>
+			<value level="8">-709</value>
+			<value level="9">-709</value>
+		</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+			<value level="9">99</value>
+		</magicLvl>
+		<affectLimit>6-12</affectLimit>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">5337</value>
+					<value level="2">5521</value>
+					<value level="3">5889</value>
+					<value level="4">6258</value>
+					<value level="5">6627</value>
+					<value level="6">6995</value>
+					<value level="7">7364</value>
+					<value level="8">7732</value>
+					<value level="9">7917</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<criticalChance>15</criticalChance>
 			</effect>
 			<effect name="Root" />
-		</for>
+		</effects>
 	</skill>
-	<skill id="11277" levels="4" name="Sense of Loyalty">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Servitor's Fury. P. Atk. + 35%, M. Atk. + 75%, P. Critical Rate + 30%, and P. Critical Damage by 35%. -->
-		<set name="icon" val="icon.skill11277" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="400" />
-		<set name="isMagic" val="4" />
-	</skill>
-	<skill id="11278" levels="9" name="Bear Claw">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Provokes the enemy and inflicts damage. -->
-		<table name="#mpConsumes"> 79 81 84 86 89 92 95 98 99 </table>
-		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="50" />
-		<set name="hitTime" val="1560" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="15000" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="11279" levels="9" name="Bear Tumbling">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Rolls over at the same spot to give a shock to the ground and temporarily stops nearby targets from moving. -->
-		<table name="#mpConsumes"> 332 337 349 360 372 384 396 408 414 </table>
-		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="hitTime" val="1660" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="7000" />
-		<set name="isDebuff" val="true" />
-	</skill>
-	<skill id="11280" levels="9" name="Cougar Bite">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11280" toLevel="9" name="Cougar Bite">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
 		<!-- Bites target to inflict damage. -->
-		<table name="#mpConsumes"> 79 81 84 86 89 92 95 98 99 </table>
-		<set name="icon" val="icon.skill0121" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="50" />
-		<set name="hitTime" val="1560" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="5000" />
+		<table name="#power"> 6300 6518 6954 7391 7827 8264 8700 9137 9355 </table>
+		<icon>icon.skill0121</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">79</value>
+			<value level="2">81</value>
+			<value level="3">84</value>
+			<value level="4">86</value>
+			<value level="5">89</value>
+			<value level="6">92</value>
+			<value level="7">95</value>
+			<value level="8">98</value>
+			<value level="9">99</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<castRange>50</castRange>
+		<hitTime>1560</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>
+			<value level="1">-687</value>
+			<value level="2">-690</value>
+			<value level="3">-694</value>
+			<value level="4">-698</value>
+			<value level="5">-702</value>
+			<value level="6">-705</value>
+			<value level="7">-708</value>
+			<value level="8">-709</value>
+			<value level="9">-709</value>
+		</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>400</effectRange>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+			<value level="9">99</value>
+		</magicLvl>
+		<reuseDelay>5000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">6300</value>
+					<value level="2">6518</value>
+					<value level="3">6954</value>
+					<value level="4">7391</value>
+					<value level="5">7827</value>
+					<value level="6">8264</value>
+					<value level="7">8700</value>
+					<value level="8">9137</value>
+					<value level="9">9355</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="11281" levels="9" name="Cougar Pounce">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11281" toLevel="9" name="Cougar Pounce">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
 		<!-- Jumps to inflict damage on targets within a certain range. Speed - 100. Can be used when below 200 grids. -->
-		<table name="#mpConsumes"> 194 197 204 210 217 224 231 238 242 </table>
-		<set name="icon" val="icon.skill0121" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="660" />
-		<set name="coolTime" val="600" />
-		<set name="reuseDelay" val="7000" />
-		<set name="isDebuff" val="true" />
+		<table name="#power"> 2683 2780 2975 3170 3365 3560 3755 3950 4048 </table>
+		<icon>icon.skill0121</icon>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>90</activateRate>
+		<affectRange>150</affectRange>
+		<basicProperty>NONE</basicProperty>
+		<operateType>DA2</operateType>
+		<mpConsume>
+			<value level="1">194</value>
+			<value level="2">197</value>
+			<value level="3">204</value>
+			<value level="4">210</value>
+			<value level="5">217</value>
+			<value level="6">224</value>
+			<value level="7">231</value>
+			<value level="8">238</value>
+			<value level="9">242</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>660</hitTime>
+		<coolTime>600</coolTime>
+		<effectRange>800</effectRange>
+		<flyType>CHARGE</flyType>
+		<reuseDelay>7000</reuseDelay>
+		<effectPoint>
+			<value level="1">-687</value>
+			<value level="2">-690</value>
+			<value level="3">-694</value>
+			<value level="4">-698</value>
+			<value level="5">-702</value>
+			<value level="6">-705</value>
+			<value level="7">-708</value>
+			<value level="8">-709</value>
+			<value level="9">-709</value>
+		</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+			<value level="9">99</value>
+		</magicLvl>
+		<affectLimit>6-12</affectLimit>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="OpCheckCastRange">
+				<distance>200</distance>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack" />
+			<effect name="Speed">
+				<amount>-100</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="11282" levels="9" name="Reaper Touch">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11282" toLevel="9" name="Reaper Touch">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
 		<!-- Inflicts damage on the enemy and absorbs 20% of damage as HP. -->
-		<table name="#mpConsumes"> 56 57 59 61 64 66 69 71 73 </table>
-		<set name="icon" val="icon.skill1234" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="900" />
-		<set name="hitTime" val="2560" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="1" />
+		<table name="#power"> 125 127 131 134 138 141 145 149 150 </table>
+		<icon>icon.skill1234</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">56</value>
+			<value level="2">57</value>
+			<value level="3">59</value>
+			<value level="4">61</value>
+			<value level="5">64</value>
+			<value level="6">66</value>
+			<value level="7">69</value>
+			<value level="8">71</value>
+			<value level="9">73</value>
+		</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>2560</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>
+			<value level="1">-687</value>
+			<value level="2">-690</value>
+			<value level="3">-694</value>
+			<value level="4">-698</value>
+			<value level="5">-702</value>
+			<value level="6">-705</value>
+			<value level="7">-708</value>
+			<value level="8">-709</value>
+			<value level="9">-709</value>
+		</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1400</effectRange>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+			<value level="9">99</value>
+		</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpDrain">
+				<power>
+					<value level="1">125</value>
+					<value level="2">127</value>
+					<value level="3">131</value>
+					<value level="4">134</value>
+					<value level="5">138</value>
+					<value level="6">141</value>
+					<value level="7">145</value>
+					<value level="8">149</value>
+					<value level="9">150</value>
+				</power>
+				<percentage>20</percentage>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="11283" levels="9" name="Reaper Power">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11283" toLevel="9" name="Reaper Power">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
 		<!-- Creates a death space near the enemy to inflict damage. -->
-		<table name="#mpConsumes"> 218 222 231 241 250 260 270 281 286 </table>
-		<set name="icon" val="icon.skill1171" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="500" />
-		<set name="hitTime" val="2560" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="1" />
+		<table name="#power"> 100 102 104 107 110 113 116 119 120 </table>
+		<icon>icon.skill1171</icon>
+		<affectRange>150</affectRange>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">218</value>
+			<value level="2">222</value>
+			<value level="3">231</value>
+			<value level="4">241</value>
+			<value level="5">250</value>
+			<value level="6">260</value>
+			<value level="7">270</value>
+			<value level="8">281</value>
+			<value level="9">286</value>
+		</mpConsume>
+		<castRange>500</castRange>
+		<hitTime>2560</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>
+			<value level="1">-687</value>
+			<value level="2">-690</value>
+			<value level="3">-694</value>
+			<value level="4">-698</value>
+			<value level="5">-702</value>
+			<value level="6">-705</value>
+			<value level="7">-708</value>
+			<value level="8">-709</value>
+			<value level="9">-709</value>
+		</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1000</effectRange>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+			<value level="9">99</value>
+		</magicLvl>
+		<affectLimit>6-12</affectLimit>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">100</value>
+					<value level="2">102</value>
+					<value level="3">104</value>
+					<value level="4">107</value>
+					<value level="5">110</value>
+					<value level="6">113</value>
+					<value level="7">116</value>
+					<value level="8">119</value>
+					<value level="9">120</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="11284" levels="4" name="Naviarope Smash">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11284" toLevel="4" name="Naviarope Smash">
+		<!-- Glory Days confirmed -->
 		<!-- Inflicts a powerful attack on target. -->
-		<table name="#mpConsumes"> 93 96 99 99 </table>
-		<set name="icon" val="icon.skill0121" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="castRange" val="40" />
-		<set name="hitTime" val="1760" />
-		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="10000" />
+		<table name="#power"> 8690 9051 9392 9392 </table>
+		<icon>icon.skill0121</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">93</value>
+			<value level="2">96</value>
+			<value level="3">99</value>
+			<value level="4">99</value>
+		</mpConsume>
+		<nextActionAttack>true</nextActionAttack>
+		<castRange>40</castRange>
+		<hitTime>1760</hitTime>
+		<coolTime>300</coolTime>
+		<effectPoint>
+			<value level="1">-700</value>
+			<value level="2">-704</value>
+			<value level="3">-707</value>
+			<value level="4">-709</value>
+		</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>400</effectRange>
+		<magicLvl>
+			<value level="1">95</value>
+			<value level="2">97</value>
+			<value level="3">99</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<reuseDelay>10000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">8690</value>
+					<value level="2">9051</value>
+					<value level="3">9392</value>
+					<value level="4">9392</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="11285" levels="4" name="Naviarope Power">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11285" toLevel="4" name="Naviarope Power">
+		<!-- Glory Days confirmed -->
 		<!-- Uses the authority of Naviarope to inflict powerful damage on nearby targets. -->
-		<table name="#mpConsumes"> 372 383 395 395 </table>
-		<set name="icon" val="icon.skill0121" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="#mpConsumes" />
-		<set name="hitTime" val="1760" />
-		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="15000" />
+		<table name="#power"> 7183 7481 7757 7757 </table>
+		<icon>icon.skill0121</icon>
+		<affectRange>200</affectRange>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">372</value>
+			<value level="2">383</value>
+			<value level="3">395</value>
+			<value level="4">395</value>
+		</mpConsume>
+		<hitTime>1760</hitTime>
+		<coolTime>300</coolTime>
+		<effectPoint>
+			<value level="1">-700</value>
+			<value level="2">-704</value>
+			<value level="3">-707</value>
+			<value level="4">-709</value>
+		</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">95</value>
+			<value level="2">97</value>
+			<value level="3">99</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<affectLimit>6-12</affectLimit>
+		<reuseDelay>15000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">7183</value>
+					<value level="2">7481</value>
+					<value level="3">7757</value>
+					<value level="4">7757</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="11286" levels="1" name="Forced Summon">
+	<skill id="11286" toLevel="1" name="Forced Summon">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- (Not in Use) All servitors being summoned within a short period of time are doubled. -->
-		<set name="icon" val="icon.skill1349" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="2" />
-		<set name="hitTime" val="1000" />
-		<set name="reuseDelay" val="5000" />
+		<icon>icon.skill1349</icon>
+		<operateType>A2</operateType>
+		<mpConsume>2</mpConsume>
+		<hitTime>1000</hitTime>
+		<abnormalType>PA_UP_SPECIAL</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<activateRate>0</activateRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<reuseDelay>5000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="11287" levels="7" name="Superior Resistance">
-	<!-- Source: https://l2wiki.com/Superior_Resistance_-_Wynn_Spectral_Master -->
-		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 100 102 104 </table>
-		<table name="#resistance"> 20 22 24 26 30 32 34 </table>
-		<set name="icon" val="icon.skill10005" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="INT" val="2" />
-				<add stat="waterRes" val="#resistance" />
-				<add stat="fireRes" val="#resistance" />
-				<add stat="windRes" val="#resistance" />
-				<add stat="earthRes" val="#resistance" />
+	<skill id="11287" toLevel="10" name="Superior Resistance">
+		<!-- Glory Days confirmed -->
+		<!-- Fire/Water/Wind/Earth Resistance + 20. INT + 2. -->
+		<table name="#res"> 20 22 24 26 30 32 34 36 38 40 </table>
+		<icon>icon.skill10005</icon>
+		<operateType>P</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">100</value>
+			<value level="6">102</value>
+			<value level="7">104</value>
+			<value level="8">104</value>
+			<value level="9">104</value>
+			<value level="10">104</value>
+		</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">30</value>
+					<value level="6">32</value>
+					<value level="7">34</value>
+					<value level="8">36</value>
+					<value level="9">38</value>
+					<value level="10">40</value>
+				</amount>
+				<attribute>FIRE</attribute>
 			</effect>
-		</for>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">30</value>
+					<value level="6">32</value>
+					<value level="7">34</value>
+					<value level="8">36</value>
+					<value level="9">38</value>
+					<value level="10">40</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">30</value>
+					<value level="6">32</value>
+					<value level="7">34</value>
+					<value level="8">36</value>
+					<value level="9">38</value>
+					<value level="10">40</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">30</value>
+					<value level="6">32</value>
+					<value level="7">34</value>
+					<value level="8">36</value>
+					<value level="9">38</value>
+					<value level="10">40</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="11288" levels="4" name="Ultimate Servitor Share">
-	<!-- Source: https://l2wiki.com/Ultimate_Servitor_Share_-_Wynn_Spectral_Master -->
-		<table name="#magicLvl"> 85 90 95 101 </table>
-		<table name="#coolTime"> 200 0 0 0 </table>
-		<set name="icon" val="icon.skill11288" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="mpConsume" val="77" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="#coolTime" />
-		<set name="reuseDelay" val="60000" />
-		<set name="isMagic" val="1" />
-		<set name="abnormalTime" val="60" />
-		<cond msgId="113" addName="1">
-			<and>
-				<player hasServitor="true" />
-			</and>
-		</cond>
-		<for>
+	<skill id="11288" toLevel="4" name="Ultimate Servitor Share">
+		<!-- Glory Days confirmed -->
+		<!-- For 30 min., shares the following with your servitor (s): 60% of P. Atk., 50% of P. Def., 30% of M. Def., 15% of Max HP/MP, 10% of Atk. Spd., 30% of P. Critical Rate, 15% of P. Critical Damage. -->
+		<table name="#pAtk"> 0.60 0.65 0.70 0.70 </table>
+		<table name="#pDef"> 0.50 0.53 0.53 0.60 </table>
+		<table name="#mDef"> 0.30 0.35 0.35 0.50 </table>
+		<icon>icon.skill11288</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>ABILITY_CHANGE</abnormalType>
+		<canBeDispelled>false</canBeDispelled> <!-- In retail it cannot be dispelled with alt click -->
+		<isSharedWithSummon>false</isSharedWithSummon>
+		<operateType>A2</operateType>
+		<mpConsume>77</mpConsume>
+		<hitTime>1000</hitTime>
+		<coolTime>
+			<value level="1">200</value>
+			<value level="2">0</value>
+			<value level="3">0</value>
+			<value level="4">0</value>
+		</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpHaveSummon" />
+		</conditions>
+		<effects>
+			<!-- Note: 0.5 means 50% of owner's patk! -->
 			<effect name="ServitorShare">
-				<param pDef="1.6" />
-				<param pAtk="1.6" />
-				<param mDef="1.3" />
-				<param mAtk="1.3" />
-				<param maxMp="1.15" />
-				<param maxHp="1.15" />
-				<param critRate="1.3" />
-				<param pAtkSpd="1.1" />
-				<param mAtkSpd="1.03" />
+				<share stat="pAtk" val="#pAtk" />
+				<share stat="pDef" val="#pDef" />
+				<share stat="mDef" val="#mDef" />
+				<share stat="maxHp" val="0.15" />
+				<share stat="maxMp" val="0.15" />
+				<share stat="pAtkSpd" val="0.10" />
+				<share stat="rCrit" val="0.30" />
+				<share stat="cAtk" val="0.15" />
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="11289" levels="1" name="Gate Root">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11289" toLevel="4" name="Gate Root">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
 		<!-- Temporarily stops nearby enemies from moving. -->
-		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="70" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="4000" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill0028</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>150</affectRange>
+		<basicProperty>NONE</basicProperty>
+		<operateType>A2</operateType>
+		<trait>HOLD</trait>
+		<mpConsume>70</mpConsume>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="Root" />
+		</effects>
 	</skill>
-	<skill id="11290" levels="1" name="Summon Hodling">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11290" toLevel="1" name="Summon Hodling">
+		<!-- Glory Days confirmed -->
 		<!-- Summons Hodling. -->
-		<set name="icon" val="icon.skill1349" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="71" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="1" />
+		<icon>icon.skill1349</icon>
+		<operateType>A1</operateType>
+		<mpConsume>71</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonNpc">
+				<!-- Hodling -->
+				<npcId>14928</npcId>
+				<npcCount>3</npcCount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="11291" levels="1" name="Gate Vortex">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="11291" toLevel="4" name="Gate Vortex">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
 		<!-- Inflicts magic damage on nearby enemies. -->
-		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="70" />
-		<set name="hitTime" val="1200" />
-		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="4000" />
-		<set name="isMagic" val="1" />
-	</skill>
-	<skill id="11292" levels="8" name="Cubic Cleanse">
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
-		<set name="effectPoint" val="408" />
-		<set name="isMagic" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="DispelByCategory">
-				<param slot="debuff" rate="100" max="10" />
+		<table name="#power"> 58 60 61 63 </table> <!-- First level is retail, others are guessed -->
+		<icon>icon.skill0028</icon>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>150</affectRange>
+		<operateType>A1</operateType>
+		<mpConsume>70</mpConsume>
+		<hitTime>1200</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>4000</reuseDelay>
+		<effectPoint>-687</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">58</value>
+					<value level="2">60</value>
+					<value level="3">61</value>
+					<value level="4">63</value>
+				</power>
+				<overHit>true</overHit>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="11293" levels="8" name="Cubic Cancellation">
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
-		<set name="effectPoint" val="-700" />
-		<set name="isMagic" val="1" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<for>
+	<skill id="11292" toLevel="8" name="Cubic Cleanse">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- Cancels debuffs on you. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<effectPoint>687</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+		</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="DispelByCategory">
-				<param slot="buff" rate="25" max="5" />
+				<slot>DEBUFF</slot>
+				<rate>80</rate>
+				<max>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+					<value level="6">6</value>
+					<value level="7">8</value>
+					<value level="8">10</value>
+				</max>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="11294" levels="8" name="Cubic Root">
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
-		<set name="abnormalLvl" val="3" />
-		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="ROOT_MAGICALLY" />
-		<set name="abnormalVisualEffect" val="ROOT" />
-		<set name="activateRate" val="80" />
-		<set name="basicProperty" val="MEN" />
-		<set name="effectPoint" val="-700" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" />
-		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<set name="trait" val="HOLD" />
-		<for>
+	<skill id="11293" toLevel="8" name="Cubic Cancellation">
+		<!-- Glory Days confirmed -->
+		<!-- Cancels the enemy's buff. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<effectPoint>-687</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+		</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelByCategory">
+				<slot>BUFF</slot>
+				<rate>
+					<value level="1">20</value>
+					<value level="2">21</value>
+					<value level="3">22</value>
+					<value level="4">23</value>
+					<value level="5">24</value>
+					<value level="6">25</value>
+					<value level="7">26</value>
+					<value level="8">30</value>
+				</rate>
+				<max>1</max>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11294" toLevel="11" name="Cubic Root">
+		<!-- Glory Days confirmed -->
+		<!-- Temporarily stops the enemy from moving. -->
+		<icon>icon.skill1201</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>30</activateRate>
+		<basicProperty>NONE</basicProperty>
+		<operateType>A2</operateType>
+		<trait>HOLD</trait>
+		<castRange>600</castRange>
+		<isMagic>1</isMagic>
+		<effectPoint>-687</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+			<value level="9">101</value>
+			<value level="10">103</value>
+			<value level="11">105</value>
+		</magicLvl>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="Root" />
 			<effect name="DefenceTrait">
-				<param HOLD="100" />
+				<HOLD>100</HOLD>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="11295" levels="7" name="Superior Light Armor Mastery">
-	<!-- Source: https://l2wiki.com/Superior_Light_Armor_Mastery_-_Wynn_Spectral_Master -->
-		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<table name="#pDef"> 1205 1323 1453 1567 1756 1823 1892 </table>
-		<set name="icon" val="icon.skill10254" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="pDef" val="#pDef" />
-				<add stat="maxHp" val="4151" />
+	<skill id="11295" toLevel="10" name="Superior Light Armor Mastery">
+		<!-- Glory Days confirmed -->
+		<!-- INT + 2. Max HP + 4151 and P. Def. + 1155 when equipped with Light Armor. -->
+		<icon>icon.skill10254</icon>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">100</value>
+			<value level="6">102</value>
+			<value level="7">104</value>
+			<value level="8">104</value>
+			<value level="9">104</value>
+			<value level="10">104</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">1205</value>
+					<value level="2">1323</value>
+					<value level="3">1453</value>
+					<value level="4">1567</value>
+					<value level="5">1756</value>
+					<value level="6">1823</value>
+					<value level="7">1892</value>
+					<value level="8">1964</value>
+					<value level="9">2046</value>
+					<value level="10">2124</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
 			</effect>
-		</for>
-	</skill>
-	<skill id="11296" levels="9" name="Mass Exile">
-	<!-- Source: https://l2wiki.com/Mass_Exile_-_Wynn_Elemental_Master -->
-		<table name="#effectPoints"> -333 -338 -343 -348 -343 -348 -353 -358 -363 </table>
-		<table name="#magicLvl"> 85 87 90 93 96 99 101 103 105 </table>
-		<table name="#mpConsume"> 102 106 112 118 125 132 139 146 153 </table>
-		<table name="#Dam"> 282 288 296 305 313 322 336 343 350</table>
-		<set name="icon" val="icon.skill11296" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="abnormalType" val="MD_DOWN" />
-		<set name="abnormalTime" val="10" /> <!-- Need Verify -->
-		<set name="activateRate" val="90" /> <!-- Need Verify -->
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="effectRange" val="600" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="1400" />
-		<set name="hitTime" val="3000" />
-		<set name="coolTime" val="500" />
-		<set name="reuseDelay" val="300000" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
-		<for>
-			<effect name="DamOverTime" ticks="1">
-				<param power="#Dam" />
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
 			</effect>
-			<effect name="Paralyze" />
-		</for>
-	</skill>
-	<!-- Level 1 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30% and speed by 15%. -->
-	<!-- Level 2 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30% and speed by 10%. -->
-	<!-- Level 3 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30% and speed by 5%. -->
-	<!-- Level 4 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. -->
-	<!-- Level 101 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<!-- Level 901 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. (+ 1 Recovery | Decreases Cooldown.) -->
-	<!-- Level 902 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. (+ 2 Recovery | Decreases Cooldown.) -->
-	<!-- Level 903 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. (+ 3 Recovery | Decreases Cooldown.) -->
-	<!-- Level 904 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. (+ 4 Recovery | Decreases Cooldown.) -->
-	<!-- Level 905 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. (+ 5 Recovery | Decreases Cooldown.) -->
-	<!-- Level 906 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. (+ 6 Recovery | Decreases Cooldown.) -->
-	<!-- Level 907 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. (+ 7 Recovery | Decreases Cooldown.) -->
-	<!-- Level 908 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. (+ 8 Recovery | Decreases Cooldown.) -->
-	<!-- Level 909 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. (+ 9 Recovery | Decreases Cooldown.) -->
-	<!-- Level 910 : For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. (+ 10 Recovery | Decreases Cooldown.) -->
-	<!-- Level 201 : For 33 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Time: Increases duration. (+ 1 Time | Increases the effect's duration.) -->
-	<!-- Level 202 : For 36 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Time: Increases duration. (+ 2 Time | Increases the effect's duration.) -->
-	<!-- Level 203 : For 39 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Time: Increases duration. (+ 3 Time | Increases the effect's duration.) -->
-	<!-- Level 204 : For 42 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Time: Increases duration. (+ 4 Time | Increases the effect's duration.) -->
-	<!-- Level 205 : For 45 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Time: Increases duration. (+ 5 Time | Increases the effect's duration.) -->
-	<!-- Level 206 : For 48 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Time: Increases duration. (+ 6 Time | Increases the effect's duration.) -->
-	<!-- Level 207 : For 51 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Time: Increases duration. (+ 7 Time | Increases the effect's duration.) -->
-	<!-- Level 208 : For 54 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Time: Increases duration. (+ 8 Time | Increases the effect's duration.) -->
-	<!-- Level 209 : For 57 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Time: Increases duration. (+ 9 Time | Increases the effect's duration.) -->
-	<!-- Level 210 : For 60 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30%. Enchant Time: Increases duration. (+ 10 Time | Increases the effect's duration.) -->
-	<skill id="11297" levels="4" name="Blessing of the Giants">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#mpConsume"> 78 86 94 101 </table>
-		<set name="icon" val="icon.skill11297" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="abnormalTime" val="1800" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="effectRange" val="900" />
-		<set name="hitTime" val="3799" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="60000" />
-		<set name="targetType" val="SERVITOR" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.1" />
-				<mul stat="mAtk" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<mul stat="pDef" val="1.2" />
-				<mul stat="maxMp" val="1.2" />
-				<mul stat="regHp" val="1.2" />
-				<add stat="mCritRate" val="20" />
-				<mul stat="critDmg" val="1.2" />
-				<mul stat="pAtkSpd" val="1.2" />
-				<mul stat="mAtkSpd" val="1.2" />
-				<mul stat="debuffVuln" val="1.1" />
+			<effect name="MaxHp">
+				<amount>4151</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="11298" levels="11" name="Mark of Fire" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
-	<!-- Source: https://l2wiki.com/Mark_of_Fire_-_Wynn_Elemental_Master -->
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
-		<table name="#mpConsume"> 63 65 68 70 73 76 79 82 85 88 91 </table>
-		<table name="#ench1MpConsume"> 78 75 72 68 65 62 59 55 52 49 </table>
+	<skill id="11296" toLevel="9" name="Mass Exile">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 282 per second. -->
+		<table name="#dot"> 282 288 296 305 313 322 336 343 350 </table>
+		<icon>icon.skill11296</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+		</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>DEPORT</abnormalType>
+		<abnormalVisualEffect>DEPORT</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>150</affectRange>
+		<basicProperty>NONE</basicProperty>
+		<operateType>A2</operateType>
+		<trait>DEPORT</trait>
+		<mpConsume>
+			<value level="1">102</value>
+			<value level="2">106</value>
+			<value level="3">112</value>
+			<value level="4">118</value>
+			<value level="5">125</value>
+			<value level="6">132</value>
+			<value level="7">139</value>
+			<value level="8">146</value>
+			<value level="9">153</value>
+		</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>300000</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-687</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>1</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">87</value>
+			<value level="3">90</value>
+			<value level="4">93</value>
+			<value level="5">96</value>
+			<value level="6">99</value>
+			<value level="7">101</value>
+			<value level="8">103</value>
+			<value level="9">105</value>
+		</magicLvl>
+		<isDebuff>true</isDebuff>
+		<staticReuse>true</staticReuse>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+			<effect name="DamOverTime">
+				<power>
+					<value level="1">282</value>
+					<value level="2">288</value>
+					<value level="3">296</value>
+					<value level="4">305</value>
+					<value level="5">313</value>
+					<value level="6">322</value>
+					<value level="7">336</value>
+					<value level="8">343</value>
+					<value level="9">350</value>
+				</power>
+				<ticks>1</ticks>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="BuffBlock" />
+			<effect name="DebuffBlock" />
+		</effects>
+	</skill>
+	<skill id="11297" toLevel="4" name="Blessing of the Giants">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30% and speed by 15%. -->
+		<table name="#runSpd"> 0.85 0.90 0.95 1 </table>
+		<icon>icon.skill11297</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<abnormalTime>1800</abnormalTime>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">78</value>
+			<value level="2">86</value>
+			<value level="3">94</value>
+			<value level="4">101</value>
+		</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>3800</hitTime>
+		<coolTime>200</coolTime>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<affectRange>1000</affectRange>
+		<isMagic>2</isMagic>
+		<reuseDelay>60000</reuseDelay>
+		<targetType>SUMMON</targetType>
+		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">-15</value>
+					<value level="2">-10</value>
+					<value level="3">-5</value>
+					<value level="4">0</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11298" toLevel="11" name="Mark of Fire">
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- Carves a burning mark on target to inflict damage with 168 Power added to M. Atk. -->
 		<table name="#power"> 168 170 175 180 185 189 194 199 222 228 234 </table>
-		<table name="#enchPower"> 204 207 209 212 214 216 219 221 224 226 </table>
-		<table name="#enchElementPower"> 21 22 23 24 25 26 27 28 29 30 </table>
-		<set name="icon" val="icon.skill11298" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="abnormalTime" val="20" /> <!-- TODO: FIND ME -->
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="power" val="#power" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="effectRange" val="900" />
-		<set name="hitTime" val="3359" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="5000" />
-		<set name="isMagic" val="1" />
-		<set name="isDebuff" val="true" />
-		<set name="targetType" val="ONE" />
-		<set name="castRange" val="900" />
-		<enchant1 name="mpConsume" val="#ench1MpConsume" />
-		<enchant1 name="power" val="#enchPower" />
-		<enchant2 name="pvpPower" val="#enchPower" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
-		<enchant3 name="element" val="0" />
-		<enchant3 name="power" val="#enchPower" />
-		<enchant4 name="elementPower" val="#enchElementPower" />
-		<enchant4 name="element" val="1" />
-		<enchant4 name="power" val="#enchPower" />
-		<enchant5 name="elementPower" val="#enchElementPower" />
-		<enchant5 name="element" val="2" />
-		<enchant5 name="power" val="#enchPower" />
-		<enchant6 name="elementPower" val="#enchElementPower" />
-		<enchant6 name="element" val="3" />
-		<enchant6 name="power" val="#enchPower" />
-		<enchant7 name="elementPower" val="#enchElementPower" />
-		<enchant7 name="element" val="4" />
-		<enchant7 name="power" val="#enchPower" />
-		<enchant8 name="elementPower" val="#enchElementPower" />
-		<enchant8 name="element" val="5" />
-		<enchant8 name="power" val="#enchPower" />
-		<for>
-			<effect name="MagicalAttack" />
-			<effect name="Fear">
-				<sub stat="runSpd" val="300" />
+		<icon>icon.skill11298</icon>
+		<operateType>A1</operateType>
+		<mpConsume>
+			<value level="1">63</value>
+			<value level="2">65</value>
+			<value level="3">68</value>
+			<value level="4">70</value>
+			<value level="5">73</value>
+			<value level="6">76</value>
+			<value level="7">79</value>
+			<value level="8">82</value>
+			<value level="9">85</value>
+			<value level="10">88</value>
+			<value level="11">91</value>
+		</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>3360</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-500</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1400</effectRange>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+			<value level="9">101</value>
+			<value level="10">103</value>
+			<value level="11">105</value>
+		</magicLvl>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttackRange">
+				<power>
+					<value level="1">168</value>
+					<value level="2">170</value>
+					<value level="3">175</value>
+					<value level="4">180</value>
+					<value level="5">185</value>
+					<value level="6">189</value>
+					<value level="7">194</value>
+					<value level="8">199</value>
+					<value level="9">222</value>
+					<value level="10">228</value>
+					<value level="11">234</value>
+				</power>
+				<shieldDefPercent>40</shieldDefPercent>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<!-- Level 1 : Balances you and your servitor's HP. -->
-	<!-- Level 101 : Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<skill id="11299" levels="1" name="Servitor Balance Life">
-		<set name="icon" val="icon.skill11299" />
-		<table name="#ench1MpConsume"> 60 57 55 52 50 47 45 42 40 37 </table>
-		<set name="magicLvl" val="91" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="mpConsume" val="63" />
-		<set name="effectRange" val="900" />
-		<set name="hitTime" val="5000" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="30000" />
-		<set name="isMagic" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="targetType" val="SERVITOR" />
-		<for>
-			<effect name="RebalanceHP" /> <!--  make effect for pet? -->
-		</for>
+	<skill id="11299" toLevel="1" name="Servitor Balance Life">
+		<!-- Glory Days confirmed -->
+		<!-- Balances you and your servitor's HP. -->
+		<icon>icon.skill11299</icon>
+		<affectRange>1000</affectRange>
+		<operateType>A1</operateType>
+		<mpConsume>63</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>5000</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>398</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<magicLvl>85</magicLvl>
+		<abnormalTime>
+			<value level="1">0</value>
+			<value level="2">15</value>
+		</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SUMMON</targetType>
+		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="RebalanceHP" />
+		</effects>
 	</skill>
 </list>

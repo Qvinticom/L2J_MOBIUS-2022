@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -26,7 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameChangePoints;
 import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameExtendedChangePoints;
 import com.l2jmobius.gameserver.network.serverpackets.NpcInfo;
-import com.l2jmobius.util.Rnd;
 
 /**
  * @author BiggBoss
@@ -35,10 +35,6 @@ public class L2BlockInstance extends L2MonsterInstance
 {
 	private int _colorEffect;
 	
-	/**
-	 * Creates a block.
-	 * @param template the block NPC template
-	 */
 	public L2BlockInstance(L2NpcTemplate template)
 	{
 		super(template);
@@ -56,11 +52,22 @@ public class L2BlockInstance extends L2MonsterInstance
 		synchronized (this)
 		{
 			final BlockCheckerEngine event = holder.getEvent();
-			// Change color
-			_colorEffect = _colorEffect == 0x53 ? 0x00 : 0x53;
-			// BroadCast to all known players
-			broadcastPacket(new NpcInfo(this));
-			increaseTeamPointsAndSend(attacker, team, event);
+			if (_colorEffect == 0x53)
+			{
+				// Change color
+				_colorEffect = 0x00;
+				// BroadCast to all known players
+				broadcastPacket(new NpcInfo(this));
+				increaseTeamPointsAndSend(attacker, team, event);
+			}
+			else
+			{
+				// Change color
+				_colorEffect = 0x53;
+				// BroadCast to all known players
+				broadcastPacket(new NpcInfo(this));
+				increaseTeamPointsAndSend(attacker, team, event);
+			}
 			// 30% chance to drop the event items
 			final int random = Rnd.get(100);
 			// Bond
@@ -96,7 +103,11 @@ public class L2BlockInstance extends L2MonsterInstance
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
-		return !(attacker instanceof L2PcInstance) || ((attacker.getActingPlayer() != null) && (attacker.getActingPlayer().getBlockCheckerArena() > -1));
+		if (attacker instanceof L2PcInstance)
+		{
+			return (attacker.getActingPlayer() != null) && (attacker.getActingPlayer().getBlockCheckerArena() > -1);
+		}
+		return true;
 	}
 	
 	@Override

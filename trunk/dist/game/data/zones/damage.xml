@@ -22,18 +22,4 @@
 		<node X="-10033" Y="276448" />
 		<node X="-15016" Y="276448" />
 	</zone>
-	<!-- Labyrinth of Belis (Damage Zone) -->
-	<zone name="labyrinth_of_belis_damage_zone" id="10331" type="DamageZone" shape="NPoly" minZ="-9000" maxZ="-8000">
-		<stat name="dmgHPSec" val="67" />
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" />
-		<node X="-117832" Y="214584" />
-		<node X="-117832" Y="215000" />
-		<node X="-118120" Y="215304" />
-		<node X="-118536" Y="215304" />
-		<node X="-118840" Y="215000" />
-		<node X="-118840" Y="214584" />
-		<node X="-118552" Y="214280" />
-		<node X="-118120" Y="214280" />
-	</zone>
 </list>

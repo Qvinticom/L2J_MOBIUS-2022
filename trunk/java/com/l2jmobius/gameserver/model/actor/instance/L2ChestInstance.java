@@ -29,15 +29,11 @@ public final class L2ChestInstance extends L2MonsterInstance
 {
 	private volatile boolean _specialDrop;
 	
-	/**
-	 * Creates a chest.
-	 * @param template the chest NPC template
-	 */
 	public L2ChestInstance(L2NpcTemplate template)
 	{
 		super(template);
 		setInstanceType(InstanceType.L2ChestInstance);
-		setIsNoRndWalk(true);
+		setRandomWalking(false);
 		_specialDrop = false;
 	}
 	

@@ -23,8 +23,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
 /**
- * Sweet Whisper (15)<br>
- * Original jython script by disKret.
+ * Sweet Whispers (15)
  * @author nonom
  */
 public class Q00015_SweetWhispers extends Quest
@@ -33,20 +32,23 @@ public class Q00015_SweetWhispers extends Quest
 	private static final int VLADIMIR = 31302;
 	private static final int HIERARCH = 31517;
 	private static final int M_NECROMANCER = 31518;
+	// Misc
+	private static final int MIN_LEVEL = 60;
 	
 	public Q00015_SweetWhispers()
 	{
-		super(15, Q00015_SweetWhispers.class.getSimpleName(), "Sweet Whispers");
+		super(15);
 		addStartNpc(VLADIMIR);
 		addTalkId(VLADIMIR, HIERARCH, M_NECROMANCER);
+		addCondMinLevel(MIN_LEVEL, "31302-00a.html");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final String htmltext = event;
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return htmltext;
 		}
@@ -54,27 +56,21 @@ public class Q00015_SweetWhispers extends Quest
 		switch (event)
 		{
 			case "31302-01.html":
-			{
-				qs.startQuest();
+				st.startQuest();
 				break;
-			}
 			case "31518-01.html":
-			{
-				if (qs.isCond(1))
+				if (st.isCond(1))
 				{
-					qs.setCond(2);
+					st.setCond(2);
 				}
 				break;
-			}
 			case "31517-01.html":
-			{
-				if (qs.isCond(2))
+				if (st.isCond(2))
 				{
-					addExpAndSp(player, 350531, 28204);
-					qs.exitQuest(false, true);
+					addExpAndSp(player, 714215, 171);
+					st.exitQuest(false, true);
 				}
 				break;
-			}
 		}
 		return htmltext;
 	}
@@ -83,64 +79,52 @@ public class Q00015_SweetWhispers extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
+		final QuestState st = getQuestState(player, true);
+		if (st == null)
 		{
 			return htmltext;
 		}
 		
 		final int npcId = npc.getId();
-		switch (qs.getState())
+		switch (st.getState())
 		{
-			case State.COMPLETED:
-			{
-				htmltext = getAlreadyCompletedMsg(player);
-				break;
-			}
 			case State.CREATED:
-			{
 				if (npcId == VLADIMIR)
 				{
-					htmltext = (player.getLevel() >= 60) ? "31302-00.htm" : "31302-00a.html";
+					htmltext = "31302-00.htm";
 				}
 				break;
-			}
 			case State.STARTED:
-			{
 				switch (npcId)
 				{
 					case VLADIMIR:
-					{
-						if (qs.isCond(1))
+						if (st.isCond(1))
 						{
 							htmltext = "31302-01a.html";
 						}
 						break;
-					}
 					case M_NECROMANCER:
-					{
-						final int cond = qs.getCond();
-						if (cond == 1)
+						switch (st.getCond())
 						{
-							htmltext = "31518-00.html";
-						}
-						else if (cond == 2)
-						{
-							htmltext = "31518-01a.html";
+							case 1:
+								htmltext = "31518-00.html";
+								break;
+							case 2:
+								htmltext = "31518-01a.html";
+								break;
 						}
 						break;
-					}
 					case HIERARCH:
-					{
-						if (qs.isCond(2))
+						if (st.isCond(2))
 						{
 							htmltext = "31517-00.html";
 						}
 						break;
-					}
 				}
 				break;
-			}
+			case State.COMPLETED:
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
 		}
 		return htmltext;
 	}

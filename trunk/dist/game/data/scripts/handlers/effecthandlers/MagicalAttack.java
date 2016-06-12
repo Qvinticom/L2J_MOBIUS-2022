@@ -16,16 +16,17 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.Stats;
-import com.l2jmobius.util.Rnd;
 
 /**
  * Magical Attack effect implementation.
@@ -33,9 +34,15 @@ import com.l2jmobius.util.Rnd;
  */
 public final class MagicalAttack extends AbstractEffect
 {
-	public MagicalAttack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	private final double _power;
+	private final boolean _overHit;
+	private final double _debuffModifier;
+	
+	public MagicalAttack(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
+		_power = params.getDouble("power", 0);
+		_overHit = params.getBoolean("overHit", false);
+		_debuffModifier = params.getDouble("debuffModifier", 1);
 	}
 	
 	@Override
@@ -51,58 +58,51 @@ public final class MagicalAttack extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
-		
 		// TODO: Unhardcode Cubic Skill to avoid double damage
-		if (activeChar.isAlikeDead() || (info.getSkill().getId() == 4049))
+		if (effector.isAlikeDead() || (skill.getId() == 4049))
 		{
 			return;
 		}
 		
-		if (target.isPlayer() && target.getActingPlayer().isFakeDeath())
+		if (effected.isPlayer() && effected.getActingPlayer().isFakeDeath())
 		{
-			target.stopFakeDeath(true);
+			effected.stopFakeDeath(true);
 		}
 		
-		final boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-		final boolean bss = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill()));
-		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
-		int damage = (int) Formulas.calcMagicDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
-		
-		if (damage <= 0)
+		if (_overHit && effected.isAttackable())
 		{
-			return;
+			((L2Attackable) effected).overhitEnabled(true);
 		}
 		
-		// reduce damage if target has maxdamage buff
-		final double maxDamage = target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null);
-		if (maxDamage > 0)
+		final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
+		final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
+		double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), _power, effected.getMDef(), sps, bss, mcrit);
+		
+		// Apply debuff mod
+		if (effected.getEffectList().hasDebuffs())
 		{
-			damage = (int) maxDamage;
+			damage *= _debuffModifier;
 		}
 		
 		// Manage attack or cast break of the target (calculating rate, sending message...)
-		if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
+		if (!effected.isRaid() && Formulas.calcAtkBreak(effected, damage))
 		{
-			target.breakAttack();
-			target.breakCast();
+			effected.breakAttack();
+			effected.breakCast();
 		}
 		
 		// Shield Deflect Magic: Reflect all damage on caster.
-		if (target.getStat().calcStat(Stats.VENGEANCE_SKILL_MAGIC_DAMAGE, 0, target, info.getSkill()) > Rnd.get(100))
+		if (effected.getStat().getValue(Stats.VENGEANCE_SKILL_MAGIC_DAMAGE, 0) > Rnd.get(100))
 		{
-			activeChar.reduceCurrentHp(damage, target, info.getSkill());
-			activeChar.notifyDamageReceived(damage, target, info.getSkill(), mcrit, false);
+			effector.reduceCurrentHp(damage, effected, skill, false, false, mcrit, true);
 		}
 		else
 		{
-			target.reduceCurrentHp(damage, activeChar, info.getSkill());
-			target.notifyDamageReceived(damage, activeChar, info.getSkill(), mcrit, false);
-			activeChar.sendDamageMessage(target, damage, mcrit, false, false);
+			effected.reduceCurrentHp(damage, effector, skill, false, false, mcrit, false);
+			effector.sendDamageMessage(effected, skill, (int) damage, mcrit, false);
 		}
 	}
 }

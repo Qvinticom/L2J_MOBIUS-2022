@@ -1,1794 +1,2800 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="21100" levels="1" name="Great Wizard's Soul Power: Brilliance">
+	<skill id="21100" toLevel="1" name="Great Wizard's Soul Power: Brilliance">
 		<!-- For five minutes, the Great Spirit increases M.Atk. by 20%, M.Def. by 20% and casting speed by 20%. Decreases MP cost of skills by 5%. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_maid_hairband_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtk" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<mul stat="mAtkSpd" val="1.2" />
-				<mul stat="magicalMpConsumeRate" val="0.95" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.icon.br_maid_hairband_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21101" levels="1" name="Blessed Escape">
+	<skill id="21101" toLevel="1" name="Blessed Escape">
 		<!-- Can use the ability of Blessed Return. Reuse Delay 12 hours. -->
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="200" />
-		<set name="icon" val="BranchSys.icon.br_babypanda_cap_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="43200000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<and>
-				<player canEscape="true" />
-				<not>
-					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-				</not>
-			</and>
-		</cond>
-		<for>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>200</hitTime>
+		<icon>BranchSys.icon.br_babypanda_cap_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>43200000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
 			<effect name="Escape">
-				<param escapeType="TOWN" />
+				<escapeType>TOWN</escapeType>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21102" levels="1" name="Blessed Resurrection">
+	<skill id="21102" toLevel="1" name="Blessed Resurrection">
 		<!-- Can use the ability of Blessed Resurrection. Reuse Delay 12 hours. -->
-		<set name="blockedInOlympiad" val="true" />
-		<set name="castRange" val="400" />
-		<set name="effectPoint" val="1" />
-		<set name="effectRange" val="900" />
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="BranchSys.icon.br_sexypanda_cap_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="43200000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="PC_BODY" />
-		<cond>
-			<player canResurrect="true" />
-		</cond>
-		<for>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>3000</hitTime>
+		<icon>BranchSys.icon.br_sexypanda_cap_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>43200000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>PC_BODY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpResurrection" />
+		</conditions>
+		<effects>
 			<effect name="Resurrection">
-				<param power="100" />
+				<power>100</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21103" levels="1" name="Great Adventurer's Soul Power : Endless">
+	<skill id="21103" toLevel="1" name="Great Adventurer's Soul Power : Endless">
 		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, moving speed by 20%, and resistance against debuff by 10%. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_kungfupanda_cap_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.2" />
-				<mul stat="maxMp" val="1.2" />
-				<mul stat="runSpd" val="1.2" />
-				<sub stat="debuffVuln" val="10" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.icon.br_kungfupanda_cap_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21104" levels="1" name="Appetite for Destruction">
+	<skill id="21104" toLevel="1" name="Appetite for Destruction">
 		<!-- For 30 seconds, awakens destruction instinct and increases P.Atk./Critical rate/Critical damage by 50%. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="INSTINCT" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="2500" />
-		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>INSTINCT</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>2500</hitTime>
+		<icon>BranchSys.icon.br_gatekeeper_of_hat_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21105" levels="1" name="Release Agathion's Seal - Lucky Girl">
+	<skill id="21105" toLevel="1" name="Release Agathion's Seal - Lucky Girl">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1529" />
+				<npcId>1529</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21106" levels="1" name="Release Agathion's Seal - Lucky Boy">
+	<skill id="21106" toLevel="1" name="Release Agathion's Seal - Lucky Boy">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1530" />
+				<npcId>1530</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21107" levels="1" name="Release Agathion's Seal - Dancing Lucky Kid">
+	<skill id="21107" toLevel="1" name="Release Agathion's Seal - Dancing Lucky Kid">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1531" />
+				<npcId>1531</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21108" levels="1" name="Release Agathion's Seal - Monkey King">
+	<skill id="21108" toLevel="1" name="Release Agathion's Seal - Monkey King">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1532" />
+				<npcId>1532</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21109" levels="1" name="Release Agathion's Seal - Uthanka">
+	<skill id="21109" toLevel="1" name="Release Agathion's Seal - Uthanka">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1533" />
+				<npcId>1533</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21110" levels="1" name="Release Agathion's Seal - Bonus B">
+	<skill id="21110" toLevel="1" name="Release Agathion's Seal - Bonus B">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1534" />
+				<npcId>1534</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21111" levels="1" name="Great Adventurer's Soul Power: Resilience">
+	<skill id="21111" toLevel="1" name="Great Adventurer's Soul Power: Resilience">
 		<!-- Increase max HP 20%, max MP 20%, Spd. 20% with help of a spirit for 5 minutes. Increase resistance by 10% against debuff. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.2" />
-				<mul stat="maxMp" val="1.2" />
-				<mul stat="runSpd" val="1.2" />
-				<sub stat="debuffVuln" val="10" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.icon.br_headphone_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21112" levels="1" name="Great Warrior's Soul Power: Strength">
+	<skill id="21112" toLevel="1" name="Great Warrior's Soul Power: Strength">
 		<!-- Increase attack speed by 20%, P. Atk by 10%, P. Def. by 20% with help of a spirit for 5 minutes. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.2" />
-				<mul stat="pAtk" val="1.1" />
-				<mul stat="pDef" val="1.2" />
-				<add stat="absorbDam" val="5" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.icon.br_headphone_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>5</amount>
+				<chance>30</chance>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21113" levels="1" name="Great Wizard's Soul Power: Acuity">
+	<skill id="21113" toLevel="1" name="Great Wizard's Soul Power: Acuity">
 		<!-- Increase Casting Speed by 20%, Magic Power by 20%, Magic Def. by 20% with help of a spirit for 5 minutes. Reduce consumed MP for skill usage by 5%. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtkSpd" val="1.2" />
-				<mul stat="mAtk" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<mul stat="magicalMpConsumeRate" val="0.95" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.icon.br_headphone_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21114" levels="1" name="Great Adventurer's Soul Power: Resilience">
+	<skill id="21114" toLevel="1" name="Great Adventurer's Soul Power: Resilience">
 		<!-- Increase max HP 20%, max MP 20%, Spd. 20% with help of a spirit for 5 minutes. Increase resistance by 10% against debuff. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_spirit_skill_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.2" />
-				<mul stat="maxMp" val="1.2" />
-				<mul stat="runSpd" val="1.2" />
-				<sub stat="debuffVuln" val="10" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21115" levels="1" name="Great Warrior's Soul Power: Strength">
+	<skill id="21115" toLevel="1" name="Great Warrior's Soul Power: Strength">
 		<!-- Increase attack speed by 20%, P. Atk by 10%, P. Def. by 20% with help of a spirit for 5 minutes. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_spirit_skill_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.2" />
-				<mul stat="pAtk" val="1.2" />
-				<mul stat="pDef" val="1.2" />
-				<add stat="absorbDam" val="5" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>5</amount>
+				<chance>30</chance>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21116" levels="1" name="Great Wizard's Soul Power: Acuity">
+	<skill id="21116" toLevel="1" name="Great Wizard's Soul Power: Acuity">
 		<!-- Increase Casting Speed by 20%, Magic Power by 20%, Magic Def. by 20% with help of a spirit for 5 minutes. Reduce consumed MP for skill usage by 5%. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_spirit_skill_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtkSpd" val="1.2" />
-				<mul stat="mAtk" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<mul stat="magicalMpConsumeRate" val="0.95" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21117" levels="1" name="Great Adventurer's Soul Power : Immortality">
+	<skill id="21117" toLevel="1" name="Great Adventurer's Soul Power : Immortality">
 		<!-- Increase max HP 20%, max MP 20%, Spd. 20% with help of a spirit for 5 minutes. Increase HP recovery bonus by 20%, MP recovery bonus by 20%. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_spirit_skill_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.2" />
-				<mul stat="maxMp" val="1.2" />
-				<mul stat="runSpd" val="1.2" />
-				<mul stat="regHp" val="1.2" />
-				<mul stat="regMp" val="1.2" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21118" levels="1" name="Great Warrior's Soul Power: Destruction">
+	<skill id="21118" toLevel="1" name="Great Warrior's Soul Power: Destruction">
 		<!-- Increase attack speed by 20%, P. Atk by 10%, P. Def. by 20% with help of a spirit for 5 minutes. Increase power of Critical Attack by 20%, Chance of Critical Attack by 20%. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_spirit_skill_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.2" />
-				<mul stat="pAtk" val="1.1" />
-				<mul stat="pDef" val="1.2" />
-				<mul stat="critDmg" val="1.2" />
-				<mul stat="critRate" val="1.2" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21119" levels="1" name="Great Wizard's Soul Power: Brilliance">
+	<skill id="21119" toLevel="1" name="Great Wizard's Soul Power: Brilliance">
 		<!-- Increase Casting Speed by 20%, Magic Power by 20%, Magic Def. by 20% with help of a spirit for 5 minutes. Increase power of Prominent Damage caused with damage magic by 20%, chance of Prominent Damage caused with damage magic by 2. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_spirit_skill_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtkSpd" val="1.2" />
-				<mul stat="mAtk" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<add stat="mCritRate" val="2" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21120" levels="1" name="Jack O'Lantern Card">
+	<skill id="21120" toLevel="1" name="Jack O'Lantern Card">
 		<!-- Confirmed CT2.5 -->
-		<set name="castRange" val="400" />
-		<set name="effectPoint" val="-1" />
-		<set name="effectRange" val="500" />
-		<set name="icon" val="BranchSys.icon.br_jack_ghost_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<castRange>400</castRange>
+		<effectPoint>-1</effectPoint>
+		<effectRange>500</effectRange>
+		<icon>BranchSys.icon.br_jack_ghost_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21121" levels="1" name="Rotten Jack O'Lantern Card">
+	<skill id="21121" toLevel="1" name="Rotten Jack O'Lantern Card">
 		<!-- Confirmed CT2.5 -->
-		<set name="castRange" val="400" />
-		<set name="effectPoint" val="-1" />
-		<set name="effectRange" val="500" />
-		<set name="icon" val="BranchSys.icon.br_rotten_jack_ghost_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<castRange>400</castRange>
+		<effectPoint>-1</effectPoint>
+		<effectRange>500</effectRange>
+		<icon>BranchSys.icon.br_rotten_jack_ghost_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21122" levels="1" name="Blessing of Skooldy : Protection of Darkness">
+	<skill id="21122" toLevel="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="BR_EVENT_BUF1" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_scooldie_mask_i00" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.2" />
-				<mul stat="maxMp" val="1.2" />
-				<mul stat="pDef" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<add stat="darkRes" val="20" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21123" levels="1" name="Blessing of Skooldy : Protection of Darkness">
+	<skill id="21123" toLevel="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="BR_EVENT_BUF1" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_scooldie_mask_i00" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.2" />
-				<mul stat="maxMp" val="1.2" />
-				<mul stat="pDef" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<add stat="darkRes" val="20" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21124" levels="1" name="Blessing of Skooldy : Protection of Darkness">
+	<skill id="21124" toLevel="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="BR_EVENT_BUF1" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_scooldie_mask_i00" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.2" />
-				<mul stat="maxMp" val="1.2" />
-				<mul stat="pDef" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<add stat="darkRes" val="20" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21125" levels="1" name="Blessing of Skooldy : Protection of Darkness">
+	<skill id="21125" toLevel="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="BR_EVENT_BUF1" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_scooldie_mask_i00" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.2" />
-				<mul stat="maxMp" val="1.2" />
-				<mul stat="pDef" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<add stat="darkRes" val="20" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21126" levels="1" name="Blessing of Skooldy : Protection of Darkness">
+	<skill id="21126" toLevel="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="BR_EVENT_BUF1" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_scooldie_mask_i00" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.2" />
-				<mul stat="maxMp" val="1.2" />
-				<mul stat="pDef" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<add stat="darkRes" val="20" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21127" levels="1" name="Blessing of Halloween">
+	<skill id="21127" toLevel="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, attack speed by 20%, attack power by 10% for 1 hour.Increase dark attack resistance by 20. Reuse Delay 2 hours. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="BR_EVENT_BUF1" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill1528" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="7200000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.4" />
-				<mul stat="maxMp" val="1.4" />
-				<mul stat="pAtkSpd" val="1.2" />
-				<mul stat="pAtk" val="1.1" />
-				<add stat="darkRes" val="20" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1528</icon>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>7200000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>40</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21128" levels="1" name="Blessing of Halloween">
+	<skill id="21128" toLevel="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, chance of critical by 10%, critical damage by 10% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 2 hours. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="BR_EVENT_BUF1" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill1528" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="7200000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.4" />
-				<mul stat="maxMp" val="1.4" />
-				<mul stat="critRate" val="1.1" />
-				<mul stat="critDmg" val="1.1" />
-				<add stat="darkRes" val="20" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1528</icon>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>7200000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>40</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MaxMp">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21129" levels="1" name="Blessing of Halloween">
+	<skill id="21129" toLevel="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, speed by 10% for 1 hour. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Increase dark attack resistance by 20. Reuse Delay 2 hours. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="BR_EVENT_BUF1" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill1528" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="7200000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.4" />
-				<mul stat="maxMp" val="1.4" />
-				<mul stat="runSpd" val="1.1" />
-				<add stat="absorbDam" val="5" />
-				<add stat="darkRes" val="20" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1528</icon>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>7200000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>40</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="VampiricAttack">
+				<amount>5</amount>
+				<chance>30</chance>
+			</effect>
+			<effect name="Speed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21130" levels="1" name="Blessing of Halloween">
+	<skill id="21130" toLevel="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, speed by 20% for 1 hour. Reduce consumed MP for skill usage by 5%. Increase dark attack resistance by 20. Reuse Delay 2 hours. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="BR_EVENT_BUF1" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill1528" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="7200000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.4" />
-				<mul stat="maxMp" val="1.4" />
-				<mul stat="runSpd" val="1.2" />
-				<mul stat="magicalMpConsumeRate" val="0.95" />
-				<mul stat="physicalMpConsumeRate" val="0.95" />
-				<mul stat="danceMpConsumeRate" val="0.95" />
-				<add stat="darkRes" val="20" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1528</icon>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>7200000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>40</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21131" levels="1" name="Blessing of Halloween">
+	<skill id="21131" toLevel="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, casting speed by 20% for 1 hour. Increases chance of prominent damage by Damage Magic by 2. Increase dark attack resistance by 20. Reuse Delay 2 hours. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="BR_EVENT_BUF1" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill1528" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="7200000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.4" />
-				<mul stat="maxMp" val="1.4" />
-				<mul stat="mAtkSpd" val="1.2" />
-				<add stat="mCritRate" val="2" />
-				<add stat="darkRes" val="20" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1528</icon>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>7200000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>40</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21132" levels="1" name="Shadow Ability">
+	<skill id="21132" toLevel="1" name="Shadow Ability">
 		<!-- Decrease own speed by 30% and will not receive monster's preemptive attack for 2 minutes. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="STEALTH" />
-		<set name="abnormalVisualEffect" val="STEALTH" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill5739" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>STEALTH</abnormalType>
+		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill5739</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SilentMove">
-				<mul stat="runSpd" val="0.7" />
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21133" levels="1" name="Release Agathion's Seal - Zombie">
+	<skill id="21133" toLevel="1" name="Release Agathion's Seal - Zombie">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1535" />
+				<npcId>1535</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21134" levels="1" name="Release Agathion's Seal - Bluebird">
+	<skill id="21134" toLevel="1" name="Release Agathion's Seal - Bluebird">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1536" />
+				<npcId>1536</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21135" levels="1" name="Release Agathion's Seal - Hatbird">
+	<skill id="21135" toLevel="1" name="Release Agathion's Seal - Hatbird">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1537" />
+				<npcId>1537</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21136" levels="1" name="Authority of Golden Jack O'Lantern Mask">
+	<skill id="21136" toLevel="1" name="Authority of Golden Jack O'Lantern Mask">
 		<!-- Increase max HP 40%, max MP 40%, max CP 40%, Physical Def. 30%, Magic Def. 30%, Spd. 30% of party members for 10 minutes. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="BR_EVENT_BUF1" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="486" />
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="BranchSys.icon.br_golden_jack0_mask_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="PARTY" />
-		<set name="trait" val="ETC" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.4" />
-				<mul stat="maxMp" val="1.4" />
-				<mul stat="maxCp" val="1.4" />
-				<mul stat="pDef" val="1.3" />
-				<mul stat="mDef" val="1.3" />
-				<mul stat="runSpd" val="1.3" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>486</effectPoint>
+		<hitTime>3000</hitTime>
+		<icon>BranchSys.icon.br_golden_jack0_mask_i00</icon>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<affectRange>1000</affectRange>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<trait>ETC</trait>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="MaxHp">
+				<amount>40</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21137" levels="1" name="Blessing of Halloween">
+	<skill id="21137" toLevel="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, attack speed by 20%, attack power by 10% for 10 minutes.Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill1528" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.4" />
-				<mul stat="maxMp" val="1.4" />
-				<mul stat="pAtkSpd" val="1.2" />
-				<mul stat="pAtk" val="1.1" />
-				<add stat="darkRes" val="20" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1528</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>40</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21138" levels="1" name="Blessing of Halloween">
+	<skill id="21138" toLevel="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, chance of critical by 10%, critical damage by 10% for 10 minutes. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill1528" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.4" />
-				<mul stat="maxMp" val="1.4" />
-				<mul stat="critRate" val="1.1" />
-				<mul stat="critDmg" val="1.1" />
-				<add stat="darkRes" val="20" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1528</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>40</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MaxMp">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21139" levels="1" name="Blessing of Halloween">
+	<skill id="21139" toLevel="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, speed by 10% for 10 minutes. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill1528" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.4" />
-				<mul stat="maxMp" val="1.4" />
-				<mul stat="runSpd" val="1.1" />
-				<add stat="absorbDam" val="5" />
-				<add stat="darkRes" val="20" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1528</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>40</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="VampiricAttack">
+				<amount>5</amount>
+				<chance>30</chance>
+			</effect>
+			<effect name="Speed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21140" levels="1" name="Blessing of Halloween">
+	<skill id="21140" toLevel="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, speed by 20% for 10 minutes. Reduce consumed MP for skill usage by 5%. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill1528" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.4" />
-				<mul stat="maxMp" val="1.4" />
-				<mul stat="runSpd" val="1.2" />
-				<mul stat="magicalMpConsumeRate" val="0.95" />
-				<mul stat="physicalMpConsumeRate" val="0.95" />
-				<mul stat="danceMpConsumeRate" val="0.95" />
-				<add stat="darkRes" val="20" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1528</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>40</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21141" levels="1" name="Blessing of Halloween">
+	<skill id="21141" toLevel="1" name="Blessing of Halloween">
 		<!-- For 10 minutes, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Increases the rate of causing exceptional magic damage by 2. Increases Resistance to Dark by 20. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill1528" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.4" />
-				<mul stat="maxMp" val="1.4" />
-				<mul stat="mAtkSpd" val="1.2" />
-				<add stat="mCritRate" val="2" />
-				<add stat="darkRes" val="20" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>icon.skill1528</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>20</attributeValue>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>40</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21142" levels="1" name="Release Agathion's Seal - Guangong">
+	<skill id="21142" toLevel="1" name="Release Agathion's Seal - Guangong">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1551" />
+				<npcId>1551</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21143" levels="1" name="Release Agathion's Seal - Gwanseum Nyang Nyang">
+	<skill id="21143" toLevel="1" name="Release Agathion's Seal - Gwanseum Nyang Nyang">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1552" />
+				<npcId>1552</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21144" levels="1" name="Release Agathion's Seal - Blue Opera">
+	<skill id="21144" toLevel="1" name="Release Agathion's Seal - Blue Opera">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1553" />
+				<npcId>1553</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21145" levels="1" name="Release Agathion's Seal - Blue Opera">
+	<skill id="21145" toLevel="1" name="Release Agathion's Seal - Blue Opera">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1560" />
+				<npcId>1560</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21146" levels="1" name="Release Agathion's Seal - Red Opera">
+	<skill id="21146" toLevel="1" name="Release Agathion's Seal - Red Opera">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1554" />
+				<npcId>1554</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21147" levels="1" name="Release Agathion's Seal - Opera">
+	<skill id="21147" toLevel="1" name="Release Agathion's Seal - Opera">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1555" />
+				<npcId>1555</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21148" levels="1" name="Release Agathion's Seal - Miss Chipao">
+	<skill id="21148" toLevel="1" name="Release Agathion's Seal - Miss Chipao">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1556" />
+				<npcId>1556</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21149" levels="1" name="Release Agathion's Seal - Nepal Snow">
+	<skill id="21149" toLevel="1" name="Release Agathion's Seal - Nepal Snow">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1557" />
+				<npcId>1557</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21150" levels="1" name="Release Agathion's Seal - Round Ball Snow">
+	<skill id="21150" toLevel="1" name="Release Agathion's Seal - Round Ball Snow">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1558" />
+				<npcId>1558</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21151" levels="1" name="Release Agathion's Seal - Ladder Snow">
+	<skill id="21151" toLevel="1" name="Release Agathion's Seal - Ladder Snow">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1559" />
+				<npcId>1559</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21152" levels="1" name="Chain Fireworks">
-		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="300000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="21152" toLevel="1" name="Chain Fireworks">
+		<icon>BranchSys.icon.br_rocket_cap_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21153" levels="1" name="Blessed Body">
+	<skill id="21153" toLevel="1" name="Blessed Body">
 		<!-- Increases Max HP by 25% for 20 minutes. Reuse Delay 1 hours. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="MAX_HP_UP" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.25" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MAX_HP_UP</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<icon>BranchSys.icon.br_party_hat_gold_i00</icon>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21154" levels="1" name="Blessed Soul">
+	<skill id="21154" toLevel="1" name="Blessed Soul">
 		<!-- Increases Max MP by 25% for 20 minutes. Reuse Delay 1 hours. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="MAX_MP_UP" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxMp" val="1.25" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MAX_MP_UP</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<icon>BranchSys.icon.br_party_hat_mask_i00</icon>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxMp">
+				<amount>25</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21155" levels="1" name="Scent of Flavorful Cheese">
+	<skill id="21155" toLevel="1" name="Scent of Flavorful Cheese">
 		<!-- For 5 minutes, receives the soul's help to raise Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Increases Critical attack power by 20% and Critical attack rate by 20%. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_bigrat_cap_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.2" />
-				<mul stat="pAtk" val="1.1" />
-				<mul stat="pDef" val="1.3" />
-				<mul stat="critDmg" val="1.2" />
-				<mul stat="critRate" val="1.2" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.icon.br_bigrat_cap_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PhysicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21156" levels="1" name="Scent of Sweet Cheese">
+	<skill id="21156" toLevel="1" name="Scent of Sweet Cheese">
 		<!-- For 5 minutes, receives the soul's help to raise Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Raises Prominent Damage power via damage magic by 20% and the chance of Prominent Damage occurring via damage magic by 2. Reuse delay is 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="icon" val="BranchSys.icon.br_goldrat_cap_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mAtkSpd" val="1.2" />
-				<mul stat="mAtk" val="1.1" />
-				<mul stat="mDef" val="1.2" />
-				<add stat="mCritRate" val="2" />
-				<mul stat="mCritPower" val="1.2" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<icon>BranchSys.icon.br_goldrat_cap_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21157" levels="1" name="Release Agathion's Seal - Iken">
+	<skill id="21157" toLevel="1" name="Release Agathion's Seal - Iken">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1539" />
+				<npcId>1539</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21158" levels="1" name="Release Agathion's Seal - Lanya">
+	<skill id="21158" toLevel="1" name="Release Agathion's Seal - Lanya">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1540" />
+				<npcId>1540</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21159" levels="1" name="Release Agathion's Seal - Gnosian">
+	<skill id="21159" toLevel="1" name="Release Agathion's Seal - Gnosian">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1541" />
+				<npcId>1541</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21160" levels="1" name="Release Agathion's Seal - Orodriel">
+	<skill id="21160" toLevel="1" name="Release Agathion's Seal - Orodriel">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1542" />
+				<npcId>1542</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21161" levels="1" name="Release Agathion's Seal - Lakinos">
+	<skill id="21161" toLevel="1" name="Release Agathion's Seal - Lakinos">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1543" />
+				<npcId>1543</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21162" levels="1" name="Release Agathion's Seal - Mortia">
+	<skill id="21162" toLevel="1" name="Release Agathion's Seal - Mortia">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1544" />
+				<npcId>1544</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21163" levels="1" name="Release Agathion's Seal - Heintz">
+	<skill id="21163" toLevel="1" name="Release Agathion's Seal - Heintz">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1545" />
+				<npcId>1545</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21164" levels="1" name="Release Agathion's Seal - Meruril">
+	<skill id="21164" toLevel="1" name="Release Agathion's Seal - Meruril">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1546" />
+				<npcId>1546</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21165" levels="1" name="Release Agathion's Seal - Taman Zu Rapatui">
+	<skill id="21165" toLevel="1" name="Release Agathion's Seal - Taman Zu Rapatui">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1547" />
+				<npcId>1547</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21166" levels="1" name="Release Agathion's Seal - Kaurin">
+	<skill id="21166" toLevel="1" name="Release Agathion's Seal - Kaurin">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1548" />
+				<npcId>1548</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21167" levels="1" name="Release Agathion's Seal - Ahertbein">
+	<skill id="21167" toLevel="1" name="Release Agathion's Seal - Ahertbein">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1549" />
+				<npcId>1549</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21168" levels="1" name="Release Agathion's Seal - Naonin">
+	<skill id="21168" toLevel="1" name="Release Agathion's Seal - Naonin">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1550" />
+				<npcId>1550</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21169" levels="1" name="Transform Kadomas">
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform3" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
+	<skill id="21169" toLevel="1" name="Transform Kadomas">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skilltransform3</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>20000</transformId>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Transformation">
-				<param id="20000" />
+				<transformationId>20000</transformationId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21170" levels="1" name="Blessed Soul">
+	<skill id="21170" toLevel="1" name="Blessed Soul">
 		<!-- Increases Max MP by 25% for 20 minutes. Reuse delay is 1 hours. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="MAX_MP_UP" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxMp" val="1.25" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MAX_MP_UP</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>4000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<icon>BranchSys.icon.br_party_mask_purple_i00</icon>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxMp">
+				<amount>25</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21171" levels="1" name="Ride Jet Bike">
+	<skill id="21171" toLevel="1" name="Ride Jet Bike">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform3" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skilltransform3</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>20001</transformId>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Transformation">
-				<param id="20001" />
+				<transformationId>20001</transformationId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21172" levels="1" name="Enhanced Authority - CON+1 STR+1">
+	<skill id="21172" toLevel="1" name="Enhanced Authority - CON+1 STR+1">
 		<!-- Enhanced authority grants CON+1 / STR+1 for 2 minutes. Consumes 240 energy. Reuse delay 3 minutes. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="BR_EVENT_BUF10" />
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_stat_i00" />
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="180000" />
-		<set name="rideState" val="NONE" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="NONE" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>180000</reuseDelay>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<hitTime>1000</hitTime>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>240</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21173" levels="1" name="Enhanced Authority - WIT+1 INT+1">
+	<skill id="21173" toLevel="1" name="Enhanced Authority - WIT+1 INT+1">
 		<!-- Enhanced authority grants WIT+1 / INT+1 for 2 minutes. Consumes 240 energy. Reuse delay 3 minutes. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="BR_EVENT_BUF10" />
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_stat_i00" />
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="180000" />
-		<set name="rideState" val="NONE" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="NONE" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>180000</reuseDelay>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<hitTime>1000</hitTime>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>240</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21174" levels="1" name="Enhanced Authority - WIT+1 MEN+1">
+	<skill id="21174" toLevel="1" name="Enhanced Authority - WIT+1 MEN+1">
 		<!-- Enhanced authority grants WIT+1 / MEN+1 for 2 minutes. Consumes 240 energy. Reuse delay 3 minutes. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="BR_EVENT_BUF10" />
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_stat_i00" />
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="180000" />
-		<set name="rideState" val="NONE" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="NONE" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>180000</reuseDelay>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<hitTime>1000</hitTime>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>240</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21175" levels="1" name="Enhanced Authority - CON+1 DEX+1">
+	<skill id="21175" toLevel="1" name="Enhanced Authority - CON+1 DEX+1">
 		<!-- Enhanced authority grants CON+1 / DEX+1 for 2 minutes. Consumes 240 energy. Reuse delay 3 minutes. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="BR_EVENT_BUF10" />
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_stat_i00" />
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="180000" />
-		<set name="rideState" val="NONE" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="NONE" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>180000</reuseDelay>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<hitTime>1000</hitTime>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>240</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21176" levels="1" name="Divine Protection - Holy">
+	<skill id="21176" toLevel="1" name="Divine Protection - Holy">
 		<!-- Increases divinity type P. Atk. and P. Def. by 10 each. Continuously consumes energy. -->
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21177" levels="1" name="Divine Protection - Water">
+	<skill id="21177" toLevel="1" name="Divine Protection - Water">
 		<!-- Increases water type P. Atk. and P. Def. by 10 each. Continuously consumes energy. -->
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21178" levels="1" name="Divine Protection - Fire">
+	<skill id="21178" toLevel="1" name="Divine Protection - Fire">
 		<!-- Increases fire type P. Atk. and P. Def. by 10 each. Continuously consumes energy. -->
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21179" levels="1" name="Divine Protection - Wind">
+	<skill id="21179" toLevel="1" name="Divine Protection - Wind">
 		<!-- Increases wind type P. Atk. and P. Def. by 10 each. Continuously consumes energy. -->
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21180" levels="1" name="Divine Protection - Earth">
+	<skill id="21180" toLevel="1" name="Divine Protection - Earth">
 		<!-- Increases earth type P. Atk. and P. Def. by 10 each. Continuously consumes energy. -->
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21181" levels="1" name="Divine Protection - Dark">
+	<skill id="21181" toLevel="1" name="Divine Protection - Dark">
 		<!-- Increases darkness type P. Atk. and P. Def. by 10 each. Continuously consumes energy. -->
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21182" levels="1" name="Blessing of Resistance - Hold">
+	<skill id="21182" toLevel="1" name="Blessing of Resistance - Hold">
 		<!-- TODO: Implement me! -->
 		<!-- Raises resistance to hold by 40%. Continuously consumes energy. -->
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_resist_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
-		<for>
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
 			<effect name="DefenceTrait">
-				<param HOLD="40" />
+				<HOLD>40</HOLD>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21183" levels="1" name="Blessing of Resistance - Paralysis">
+	<skill id="21183" toLevel="1" name="Blessing of Resistance - Paralysis">
 		<!-- TODO: Implement me! -->
 		<!-- Raises resistance to paralysis by 40%. Continuously consumes energy. -->
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_resist_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
-		<for>
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
 			<effect name="DefenceTrait">
-				<param PARALYZE="40" />
+				<PARALYZE>40</PARALYZE>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21184" levels="1" name="Blessing of Resistance - Sleep">
+	<skill id="21184" toLevel="1" name="Blessing of Resistance - Sleep">
 		<!-- TODO: Implement me! -->
 		<!-- Raises resistance to sleep by 40%. Continuously consumes energy. -->
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_resist_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
-		<for>
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SLEEP="40" />
+				<SLEEP>40</SLEEP>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21185" levels="1" name="Blessing of Resistance - Decrease Speed">
+	<skill id="21185" toLevel="1" name="Blessing of Resistance - Decrease Speed">
 		<!-- Raises resistance to decreased moving speed by 40%. Continuously consumes energy. -->
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_resist_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21186" levels="1" name="Blessing of Resistance - Bleed">
+	<skill id="21186" toLevel="1" name="Blessing of Resistance - Bleed">
 		<!-- TODO: Implement me! -->
 		<!-- Raises resistance to bleed by 40%. Continuously consumes energy. -->
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_resist_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
-		<for>
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
 			<effect name="DefenceTrait">
-				<param BLEED="40" />
+				<BLEED>40</BLEED>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21187" levels="1" name="Blessing of Resistance - Stun">
+	<skill id="21187" toLevel="1" name="Blessing of Resistance - Stun">
 		<!-- TODO: Implement me! -->
 		<!-- Raises resistance to stun by 40%. Continuously consumes energy. -->
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_resist_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
-		<for>
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
 			<effect name="DefenceTrait">
-				<param SHOCK="40" />
+				<SHOCK>40</SHOCK>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21188" levels="1" name="Recovery Ability: HP">
+	<skill id="21188" toLevel="1" name="Recovery Ability: HP">
 		<!-- Increases HP recovery bonus by 20%. Continuously consumes energy. -->
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_regen_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_regen_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21189" levels="1" name="Recovery Ability: MP">
+	<skill id="21189" toLevel="1" name="Recovery Ability: MP">
 		<!-- Increases MP recovery bonus by 20%. Continuously consumes energy. -->
-		<set name="abnormalVisualEffect" val="SOUL_AVATAR" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_regen_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_regen_i00</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>T</operateType>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>NONE</targetType>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>2</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21190" levels="1" name="Soul's Shield">
+	<skill id="21190" toLevel="1" name="Soul's Shield">
 		<!-- Physical/Magic P. Def is increased by 60% for 10 seconds. Consumed 500 energy. Cooldown takes 20 minutes. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="PD_UP_SPECIAL" />
-		<set name="abnormalVisualEffect" val="ULTIMATE_DEFENCE" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_soulavatar_active_i00" />
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="1200000" />
-		<set name="rideState" val="NONE" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="NONE" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>PD_UP_SPECIAL</abnormalType>
+		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_soulavatar_active_i00</icon>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>1200000</reuseDelay>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAgathionEnergy">
+				<enegry>500</enegry>
+			</condition>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="21191" levels="1" name="Release Agathion's Seal - Phoenix">
+	<skill id="21191" toLevel="1" name="Release Agathion's Seal - Phoenix">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1574" />
+				<npcId>1574</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21192" levels="1" name="Silent Move">
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="STEALTH" />
-		<set name="abnormalVisualEffect" val="STEALTH" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="2000" />
-		<set name="icon" val="BranchSys2.icon.br_fox_japan_cap_i00" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="SELF" />
-		<for>
+	<skill id="21192" toLevel="1" name="Silent Move">
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>STEALTH</abnormalType>
+		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>2000</hitTime>
+		<icon>BranchSys2.icon.br_fox_japan_cap_i00</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SilentMove">
-				<mul stat="runSpd" val="0.6" />
 			</effect>
-		</for>
+			<effect name="Speed">
+				<amount>-40</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21193" levels="1" name="Power of Guardian Deity">
+	<skill id="21193" toLevel="1" name="Power of Guardian Deity">
 		<!-- Increases Critical attack power by 35% for 10 minutes. Cooldown takes 1 hour. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="CRITICAL_DMG_UP" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_paiwan_cap_i00" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="NONE" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>CRITICAL_DMG_UP</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_paiwan_cap_i00</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<hitTime>4000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21194" levels="1" name="Release Agathion's Seal - Three-headed Dragon">
+	<skill id="21194" toLevel="1" name="Release Agathion's Seal - Three-headed Dragon">
 		<!-- Confirmed CT2.5 -->
-		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="SummonAgathion">
-				<param npcId="1575" />
+				<npcId>1575</npcId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="21195" levels="1" name="Blessed Child Transformation Skill: Trejuo">
+	<skill id="21195" toLevel="1" name="Blessed Child Transformation Skill: Trejuo">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="hitTime" val="500" />
-		<set name="icon" val="icon.skilltransform3" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<icon>icon.skilltransform3</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanTransform">
+				<transformId>20002</transformId>
+			</condition>
+			<condition name="CanUseVitalityConsumeItem" />
+		</conditions>
+		<effects>
 			<effect name="Transformation">
-				<param id="20002" />
-				<sub stat="vitalityConsumeRate" val="1" />
+				<transformationId>20002</transformationId>
 			</effect>
-		</for>
+			<effect name="VitalityPointsRate">
+				<amount>-1</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21196" levels="1" name="Blessed Child Transformation Skill: Sujin">
+	<skill id="21196" toLevel="1" name="Blessed Child Transformation Skill: Sujin">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="hitTime" val="500" />
-		<set name="icon" val="icon.skilltransform3" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<icon>icon.skilltransform3</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanTransform">
+				<transformId>20003</transformId>
+			</condition>
+			<condition name="CanUseVitalityConsumeItem" />
+		</conditions>
+		<effects>
 			<effect name="Transformation">
-				<param id="20003" />
-				<sub stat="vitalityConsumeRate" val="1" />
+				<transformationId>20003</transformationId>
 			</effect>
-		</for>
+			<effect name="VitalityPointsRate">
+				<amount>-1</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="21197" levels="1" name="Induk's Buff">
+	<skill id="21197" toLevel="1" name="Induk's Buff">
 		<!-- Recovers all HP, MP, and CP with the power of virtue. Reuse delay 30 minutes. It can only be used when HP, MP, and CP are all below 30%. When you use the skill, 1 Proof of a Warrior is consumed. -->
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_a_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20976" /> <!-- Proof of a Warrior -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_pekingopera_mask_a_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>20976</itemConsumeId> <!-- Proof of a Warrior -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>1800000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>500</hitTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="RemainMpPer">
+				<amount>30</amount>
+				<percentType>LESS</percentType>
+			</condition>
+			<condition name="RemainHpPer">
+				<amount>30</amount>
+				<percentType>LESS</percentType>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="21198" levels="1" name="Silence of Loyalty">
+	<skill id="21198" toLevel="1" name="Silence of Loyalty">
 		<!-- Through the power of loyalty, raises party members' physical P. Def., M. Def. by 30%, physical P. Atk. by 20%, M. Atk. by 45%, and moving speed by 30 for 5 minutes. Reuse delay 30 minutes. Consumes 1 Proof of a Warrior upon skill use. -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="activateRate" val="0" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="486" />
-		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_b_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20976" /> <!-- Proof of a Warrior -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
-		<set name="trait" val="ETC" />
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<activateRate>0</activateRate>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>486</effectPoint>
+		<icon>BranchSys2.icon.br_pekingopera_mask_b_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>20976</itemConsumeId> <!-- Proof of a Warrior -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>1800000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>600</effectRange>
+		<irreplacableBuff>true</irreplacableBuff>
+		<affectRange>1000</affectRange>
+		<hitTime>3000</hitTime>
+		<castRange>600</castRange>
+		<staticReuse>true</staticReuse>
+		<trait>ETC</trait>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 	</skill>
-	<skill id="21199" levels="1" name="Vitality of Courage">
+	<skill id="21199" toLevel="1" name="Vitality of Courage">
 		<!-- Confirmed CT2.5 -->
-		<set name="abnormalLvl" val="26" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="VP_UP" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="hitTime" val="500" />
-		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_c_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20976" /> <!-- Proof of a Warrior -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<abnormalLvl>26</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>VP_KEEP</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<icon>BranchSys2.icon.br_pekingopera_mask_c_i00</icon>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>20976</itemConsumeId> <!-- Proof of a Warrior -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>1800000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+		</conditions>
+		<effects>
 			<effect name="VitalityPointUp">
-				<param value="20000" />
+				<value>20000</value>
 			</effect>
-			<effect name="Buff">
-				<sub stat="vitalityConsumeRate" val="0" />
+			<effect name="VitalityPointsRate">
+				<amount>-0</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
 </list>

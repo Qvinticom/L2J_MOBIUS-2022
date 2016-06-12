@@ -53,7 +53,26 @@ public class DropProtection implements Runnable
 	
 	public synchronized boolean tryPickUp(L2PcInstance actor)
 	{
-		return !_isProtected || (_owner == actor) || ((_owner.getParty() != null) && (_owner.getParty() == actor.getParty()));
+		if (!_isProtected)
+		{
+			return true;
+		}
+		
+		if (_owner == actor)
+		{
+			return true;
+		}
+		
+		if ((_owner.getParty() != null) && (_owner.getParty() == actor.getParty()))
+		{
+			return true;
+		}
+		
+		/*
+		 * if (_owner.getClan() != null && _owner.getClan() == actor.getClan()) return true;
+		 */
+		
+		return false;
 	}
 	
 	public boolean tryPickUp(L2PetInstance pet)

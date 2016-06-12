@@ -39,7 +39,12 @@ public class AdminGraciaSeeds implements IAdminCommandHandler
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken(); // Get actual command
 		
-		final String val = st.countTokens() >= 1 ? st.nextToken() : "";
+		String val = "";
+		if (st.countTokens() >= 1)
+		{
+			val = st.nextToken();
+		}
+		
 		if (actualCommand.equalsIgnoreCase("admin_kill_tiat"))
 		{
 			GraciaSeedsManager.getInstance().increaseSoDTiatKilled();
@@ -55,8 +60,8 @@ public class AdminGraciaSeeds implements IAdminCommandHandler
 	
 	private void showMenu(L2PcInstance activeChar)
 	{
-		final NpcHtmlMessage html = new NpcHtmlMessage();
-		html.setFile(activeChar.getHtmlPrefix(), "html/admin/graciaseeds.htm");
+		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
+		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/graciaseeds.htm");
 		html.replace("%sodstate%", String.valueOf(GraciaSeedsManager.getInstance().getSoDState()));
 		html.replace("%sodtiatkill%", String.valueOf(GraciaSeedsManager.getInstance().getSoDTiatKilled()));
 		if (GraciaSeedsManager.getInstance().getSoDTimeForNextStateChange() > 0)

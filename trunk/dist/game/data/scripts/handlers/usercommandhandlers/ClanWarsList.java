@@ -62,53 +62,57 @@ public class ClanWarsList implements IUserCommandHandler
 			return false;
 		}
 		
-		String query;
-		// Attack List
-		if (id == 88)
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
-			activeChar.sendPacket(SystemMessageId.CLANS_YOU_VE_DECLARED_WAR_ON);
-			query = ATTACK_LIST;
-		}
-		// Under Attack List
-		else if (id == 89)
-		{
-			activeChar.sendPacket(SystemMessageId.CLANS_THAT_HAVE_DECLARED_WAR_ON_YOU);
-			query = UNDER_ATTACK_LIST;
-		}
-		// War List
-		else
-		{
-			activeChar.sendPacket(SystemMessageId.CLAN_WAR_LIST);
-			query = WAR_LIST;
-		}
-		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement(query))
-		{
-			ps.setInt(1, clan.getId());
-			ps.setInt(2, clan.getId());
-			
-			SystemMessage sm;
-			try (ResultSet rs = ps.executeQuery())
+			String query;
+			// Attack List
+			if (id == 88)
 			{
-				while (rs.next())
+				activeChar.sendPacket(SystemMessageId.CLANS_YOU_VE_DECLARED_WAR_ON);
+				query = ATTACK_LIST;
+			}
+			// Under Attack List
+			else if (id == 89)
+			{
+				activeChar.sendPacket(SystemMessageId.CLANS_THAT_HAVE_DECLARED_WAR_ON_YOU);
+				query = UNDER_ATTACK_LIST;
+			}
+			// War List
+			else
+			{
+				activeChar.sendPacket(SystemMessageId.CLAN_WAR_LIST);
+				query = WAR_LIST;
+			}
+			
+			try (PreparedStatement ps = con.prepareStatement(query))
+			{
+				ps.setInt(1, clan.getId());
+				ps.setInt(2, clan.getId());
+				
+				SystemMessage sm;
+				try (ResultSet rs = ps.executeQuery())
 				{
-					final String clanName = rs.getString("clan_name");
-					final int allyId = rs.getInt("ally_id");
-					if (allyId > 0)
+					String clanName;
+					int ally_id;
+					while (rs.next())
 					{
-						// Target With Ally
-						sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_ALLIANCE);
-						sm.addString(clanName);
-						sm.addString(rs.getString("ally_name"));
+						clanName = rs.getString("clan_name");
+						ally_id = rs.getInt("ally_id");
+						if (ally_id > 0)
+						{
+							// Target With Ally
+							sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_ALLIANCE);
+							sm.addString(clanName);
+							sm.addString(rs.getString("ally_name"));
+						}
+						else
+						{
+							// Target Without Ally
+							sm = SystemMessage.getSystemMessage(SystemMessageId.S1_NO_ALLIANCE_EXISTS);
+							sm.addString(clanName);
+						}
+						activeChar.sendPacket(sm);
 					}
-					else
-					{
-						// Target Without Ally
-						sm = SystemMessage.getSystemMessage(SystemMessageId.S1_NO_ALLIANCE_EXISTS);
-						sm.addString(clanName);
-					}
-					activeChar.sendPacket(sm);
 				}
 			}
 			activeChar.sendPacket(SystemMessageId.EMPTY3);

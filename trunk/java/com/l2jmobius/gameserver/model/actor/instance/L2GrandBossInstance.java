@@ -17,13 +17,7 @@
 package com.l2jmobius.gameserver.model.actor.instance;
 
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.entity.Hero;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.Rnd;
 
 /**
  * This class manages all Grand Bosses.
@@ -35,8 +29,8 @@ public final class L2GrandBossInstance extends L2MonsterInstance
 	private boolean _useRaidCurse = true;
 	
 	/**
-	 * Creates a grand boss.
-	 * @param template the grand boss NPC template
+	 * Constructor for L2GrandBossInstance. This represent all grandbosses.
+	 * @param template L2NpcTemplate of the instance
 	 */
 	public L2GrandBossInstance(L2NpcTemplate template)
 	{
@@ -55,58 +49,14 @@ public final class L2GrandBossInstance extends L2MonsterInstance
 	@Override
 	public void onSpawn()
 	{
-		setIsNoRndWalk(true);
+		setRandomWalking(false);
 		super.onSpawn();
 	}
 	
 	@Override
-	public boolean doDie(L2Character killer)
+	public int getVitalityPoints(int level, long exp, boolean isBoss)
 	{
-		if (!super.doDie(killer))
-		{
-			return false;
-		}
-		L2PcInstance player = null;
-		
-		if (killer instanceof L2PcInstance)
-		{
-			player = (L2PcInstance) killer;
-		}
-		else if (killer instanceof L2Summon)
-		{
-			player = ((L2Summon) killer).getOwner();
-		}
-		
-		if (player != null)
-		{
-			broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
-			if (player.getParty() != null)
-			{
-				for (L2PcInstance member : player.getParty().getMembers())
-				{
-					member.setRaidPoints(member.getRaidPoints() + (getLevel() / 2) + Rnd.get(-5, 5));
-					if (member.isNoble())
-					{
-						Hero.getInstance().setRBkilled(member.getObjectId(), getId());
-					}
-				}
-			}
-			else
-			{
-				player.setRaidPoints(player.getRaidPoints() + (getLevel() / 2) + Rnd.get(-5, 5));
-				if (player.isNoble())
-				{
-					Hero.getInstance().setRBkilled(player.getObjectId(), getId());
-				}
-			}
-		}
-		return true;
-	}
-	
-	@Override
-	public int getVitalityPoints(int damage)
-	{
-		return -super.getVitalityPoints(damage) / 100;
+		return -super.getVitalityPoints(level, exp, isBoss);
 	}
 	
 	@Override

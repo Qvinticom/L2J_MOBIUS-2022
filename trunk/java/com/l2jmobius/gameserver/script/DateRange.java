@@ -43,7 +43,10 @@ public class DateRange
 		{
 			try
 			{
-				return new DateRange(format.parse(date[0]), format.parse(date[1]));
+				final Date start = format.parse(date[0]);
+				final Date end = format.parse(date[1]);
+				
+				return new DateRange(start, end);
 			}
 			catch (ParseException e)
 			{
@@ -60,8 +63,7 @@ public class DateRange
 	
 	public boolean isWithinRange(Date date)
 	{
-		return (date.equals(_startDate) || date.after(_startDate)) //
-			&& (date.equals(_endDate) || date.before(_endDate));
+		return date.after(_startDate) && date.before(_endDate);
 	}
 	
 	public Date getEndDate()

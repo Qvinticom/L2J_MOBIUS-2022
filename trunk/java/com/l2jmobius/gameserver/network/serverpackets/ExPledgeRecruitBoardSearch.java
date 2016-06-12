@@ -18,59 +18,61 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Sdw
  */
-public class ExPledgeRecruitBoardSearch extends L2GameServerPacket
+public class ExPledgeRecruitBoardSearch implements IClientOutgoingPacket
 {
 	final List<PledgeRecruitInfo> _clanList;
-	private final int _currentPage;
-	private final int _totalNumberOfPage;
-	private final int _clanOnCurrentPage;
-	private final int _startIndex;
-	private final int _endIndex;
+	final private int _currentPage;
+	final private int _totalNumberOfPage;
+	final private int _clanOnCurrentPage;
+	final private int _startIndex;
+	final private int _endIndex;
 	
-	static final int CLAN_PER_PAGE = 12;
+	final static int CLAN_PER_PAGE = 12;
 	
 	public ExPledgeRecruitBoardSearch(List<PledgeRecruitInfo> clanList, int currentPage)
 	{
 		_clanList = clanList;
 		_currentPage = currentPage;
-		_totalNumberOfPage = (int) Math.ceil(_clanList.size() / CLAN_PER_PAGE);
+		_totalNumberOfPage = (int) Math.ceil((double) _clanList.size() / CLAN_PER_PAGE);
 		_startIndex = (_currentPage - 1) * CLAN_PER_PAGE;
 		_endIndex = (_startIndex + CLAN_PER_PAGE) > _clanList.size() ? _clanList.size() : _startIndex + CLAN_PER_PAGE;
 		_clanOnCurrentPage = _endIndex - _startIndex;
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x141);
+		OutgoingPackets.EX_PLEDGE_RECRUIT_BOARD_SEARCH.writeId(packet);
 		
-		writeD(_currentPage);
-		writeD(_totalNumberOfPage);
-		writeD(_clanOnCurrentPage);
+		packet.writeD(_currentPage);
+		packet.writeD(_totalNumberOfPage);
+		packet.writeD(_clanOnCurrentPage);
 		
 		for (int i = _startIndex; i < _endIndex; i++)
 		{
-			writeD(_clanList.get(i).getClanId());
-			writeD(0x00); // find me
+			packet.writeD(_clanList.get(i).getClanId());
+			packet.writeD(_clanList.get(i).getClan().getAllyId());
 		}
 		for (int i = _startIndex; i < _endIndex; i++)
 		{
 			final L2Clan clan = _clanList.get(i).getClan();
-			writeD(clan.getAllyCrestId());
-			writeD(clan.getCrestId());
-			writeS(clan.getName());
-			writeS(clan.getLeaderName());
-			writeD(clan.getLevel());
-			writeD(clan.getMembersCount());
-			writeD(_clanList.get(i).getKarma());
-			writeS(_clanList.get(i).getInformation());
+			packet.writeD(clan.getAllyCrestId());
+			packet.writeD(clan.getCrestId());
+			packet.writeS(clan.getName());
+			packet.writeS(clan.getLeaderName());
+			packet.writeD(clan.getLevel());
+			packet.writeD(clan.getMembersCount());
+			packet.writeD(_clanList.get(i).getKarma());
+			packet.writeS(_clanList.get(i).getInformation());
 		}
+		return true;
 	}
 }

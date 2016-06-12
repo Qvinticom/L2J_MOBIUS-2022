@@ -59,7 +59,7 @@ public final class Q00382_KailsMagicCoin extends Quest
 	
 	public Q00382_KailsMagicCoin()
 	{
-		super(382, Q00382_KailsMagicCoin.class.getSimpleName(), "Kail's Magic Coin");
+		super(382);
 		addStartNpc(VERGARA);
 		addTalkId(VERGARA);
 		addKillId(FALLEN_ORC, FALLEN_ORC_ARCHER, FALLEN_ORC_SHAMAN, FALLEN_ORC_CAPTAIN);

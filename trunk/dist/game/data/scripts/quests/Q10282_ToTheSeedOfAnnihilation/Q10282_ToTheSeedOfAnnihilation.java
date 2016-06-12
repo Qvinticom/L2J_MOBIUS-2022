@@ -16,6 +16,7 @@
  */
 package quests.Q10282_ToTheSeedOfAnnihilation;
 
+import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -23,32 +24,35 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
 /**
- * To the Seed of Destruction (10269)<br>
- * Original Jython script by Gnacik 2010-08-13 Based on Freya PTS.
+ * To the Seed of Destruction (10269)
  * @author nonom
  */
-public class Q10282_ToTheSeedOfAnnihilation extends Quest
+public final class Q10282_ToTheSeedOfAnnihilation extends Quest
 {
 	// NPCs
 	private static final int KBALDIR = 32733;
 	private static final int KLEMIS = 32734;
 	// Item
 	private static final int SOA_ORDERS = 15512;
+	private static final int EAR = 17527; // Scroll: Enchant Armor (R-grade)
+	// Misc
+	private static final int MIN_LV = 85;
 	
 	public Q10282_ToTheSeedOfAnnihilation()
 	{
-		super(10282, Q10282_ToTheSeedOfAnnihilation.class.getSimpleName(), "To the Seed of Annihilation");
+		super(10282);
 		addStartNpc(KBALDIR);
 		addTalkId(KBALDIR, KLEMIS);
 		registerQuestItems(SOA_ORDERS);
+		addCondMinLevel(MIN_LV, "32733-00.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final String htmltext = event;
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return htmltext;
 		}
@@ -57,14 +61,16 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 		{
 			case "32733-07.htm":
 			{
-				qs.startQuest();
+				st.startQuest();
 				giveItems(player, SOA_ORDERS, 1);
 				break;
 			}
 			case "32734-02.htm":
 			{
-				addExpAndSp(player, 1148480, 99110);
-				qs.exitQuest(false);
+				giveAdena(player, 212182, true);
+				giveItems(player, EAR, 5);
+				addExpAndSp(player, 1148480, 275);
+				st.exitQuest(QuestType.ONE_TIME);
 				break;
 			}
 		}
@@ -75,14 +81,14 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
+		final QuestState st = getQuestState(player, true);
+		if (st == null)
 		{
 			return htmltext;
 		}
 		
 		final int npcId = npc.getId();
-		switch (qs.getState())
+		switch (st.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -98,12 +104,15 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 			}
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() < 84) ? "32733-00.htm" : "32733-01.htm";
+				if (npcId == KBALDIR)
+				{
+					htmltext = "32733-01.htm";
+				}
 				break;
 			}
 			case State.STARTED:
 			{
-				if (qs.isCond(1))
+				if (st.isCond(1))
 				{
 					if (npcId == KBALDIR)
 					{
@@ -114,8 +123,8 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 						htmltext = "32734-01.htm";
 					}
 				}
-				break;
 			}
+				break;
 		}
 		return htmltext;
 	}

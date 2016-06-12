@@ -20,7 +20,9 @@ import java.time.Instant;
 import java.util.Collections;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.commission.CommissionItem;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
 
 /**
@@ -59,35 +61,41 @@ public class ExResponseCommissionList extends AbstractItemPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xF7);
-		writeD(_replyType.getClientId());
+		OutgoingPackets.EX_RESPONSE_COMMISSION_LIST.writeId(packet);
+		
+		packet.writeD(_replyType.getClientId());
 		switch (_replyType)
 		{
 			case PLAYER_AUCTIONS:
 			case AUCTIONS:
 			{
-				writeD((int) Instant.now().getEpochSecond());
-				writeD(_chunkId);
+				packet.writeD((int) Instant.now().getEpochSecond());
+				packet.writeD(_chunkId);
 				
-				final int chunkSize = (_items.size() - _listIndexStart) > MAX_CHUNK_SIZE ? MAX_CHUNK_SIZE : _items.size() - _listIndexStart;
-				writeD(chunkSize);
+				int chunkSize = _items.size() - _listIndexStart;
+				if (chunkSize > MAX_CHUNK_SIZE)
+				{
+					chunkSize = MAX_CHUNK_SIZE;
+				}
+				
+				packet.writeD(chunkSize);
 				for (int i = _listIndexStart; i < (_listIndexStart + chunkSize); i++)
 				{
 					final CommissionItem commissionItem = _items.get(i);
-					writeQ(commissionItem.getCommissionId());
-					writeQ(commissionItem.getPricePerUnit());
-					writeD(0); // CommissionItemType seems client does not really need it.
-					writeD((commissionItem.getDurationInDays() - 1) / 2);
-					writeD((int) commissionItem.getEndTime().getEpochSecond());
-					writeS(null); // Seller Name its not displayed somewhere so i am not sending it to decrease traffic.
-					writeCommissionItem(commissionItem.getItemInfo());
+					packet.writeQ(commissionItem.getCommissionId());
+					packet.writeQ(commissionItem.getPricePerUnit());
+					packet.writeD(0); // CommissionItemType seems client does not really need it.
+					packet.writeD((commissionItem.getDurationInDays() - 1) / 2);
+					packet.writeD((int) commissionItem.getEndTime().getEpochSecond());
+					packet.writeS(null); // Seller Name its not displayed somewhere so i am not sending it to decrease traffic.
+					writeCommissionItem(packet, commissionItem.getItemInfo());
 				}
 				break;
 			}
 		}
+		return true;
 	}
 	
 	public enum CommissionListReplyType
@@ -99,7 +107,7 @@ public class ExResponseCommissionList extends AbstractItemPacket
 		
 		private final int _clientId;
 		
-		private CommissionListReplyType(int clientId)
+		CommissionListReplyType(int clientId)
 		{
 			_clientId = clientId;
 		}

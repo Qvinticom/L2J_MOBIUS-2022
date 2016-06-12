@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.events.impl.character.player;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * @author UnAfraid

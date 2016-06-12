@@ -1,1082 +1,1280 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="13300" levels="3" name="Magic One-handed Blunt Special Ability">
+	<skill id="13300" toLevel="3" name="Magic One-handed Blunt Special Ability">
+		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Critical Damage + 381 and M. Accuracy + 1. -->
-		<set name="icon" val="icon.weapon_vesper_caster_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="mCritPowerAdd" val="381" />
-				<add stat="accMagic" val="1.0" />
-			</effect>
-		</for>
+		<icon>icon.weapon_vesper_caster_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isDebuff>false</isDebuff>
 	</skill>
-	<skill id="13301" levels="3" name="Magic Two-handed Blunt Special Ability">
+	<skill id="13301" toLevel="3" name="Magic Two-handed Blunt Special Ability">
+		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. + 44, M. Critical Damage + 381, and Casting Spd. + 1%. -->
-		<set name="icon" val="icon.weapon_grangkaz_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="mAtk" val="44" />
-				<add stat="mCritPowerAdd" val="381" />
-				<mul stat="mAtkSpd" val="1.01" />
-			</effect>
-		</for>
+		<icon>icon.weapon_grangkaz_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isDebuff>false</isDebuff>
 	</skill>
-	<skill id="13302" levels="3" name="Magic Two-handed Blunt Special Ability">
+	<skill id="13302" toLevel="3" name="Magic Two-handed Blunt Special Ability">
+		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. + 44, M. Critical Damage + 381, and Casting Spd. + 1%. -->
-		<set name="icon" val="icon.weapon_herencia_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="mAtk" val="44" />
-				<add stat="mCritPowerAdd" val="381" />
-				<mul stat="mAtkSpd" val="1.01" />
-			</effect>
-		</for>
+		<icon>icon.weapon_herencia_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isDebuff>false</isDebuff>
 	</skill>
-	<skill id="13303" levels="3" name="Magic Two-handed Blunt Special Ability">
+	<skill id="13303" toLevel="3" name="Magic Two-handed Blunt Special Ability">
+		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. + 44, M. Critical Damage + 381, and Casting Spd. + 1%. -->
-		<set name="icon" val="icon.weapon_rupe_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="mAtk" val="44" />
-				<add stat="mCritPowerAdd" val="381" />
-				<mul stat="mAtkSpd" val="1.01" />
-			</effect>
-		</for>
+		<icon>icon.weapon_rupe_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isDebuff>false</isDebuff>
 	</skill>
-	<skill id="13304" levels="3" name="Magic Two-handed Blunt Special Ability">
+	<skill id="13304" toLevel="3" name="Magic Two-handed Blunt Special Ability">
+		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. + 44, M. Critical Damage + 381, and Casting Spd. + 1%. -->
-		<set name="icon" val="icon.weapon_shaelon_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="mAtk" val="44" />
-				<add stat="mCritPowerAdd" val="381" />
-				<mul stat="mAtkSpd" val="1.01" />
-			</effect>
-		</for>
+		<icon>icon.weapon_shaelon_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isDebuff>false</isDebuff>
 	</skill>
-	<skill id="13305" levels="3" name="Magic Two-handed Blunt Special Ability">
+	<skill id="13305" toLevel="3" name="Magic Two-handed Blunt Special Ability">
+		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. + 44, M. Critical Damage + 381, and Casting Spd. + 1%. -->
-		<set name="icon" val="icon.weapon_vesper_singer_i00" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="mAtk" val="44" />
-				<add stat="mCritPowerAdd" val="381" />
-				<mul stat="mAtkSpd" val="1.01" />
-			</effect>
-		</for>
+		<icon>icon.weapon_vesper_singer_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isDebuff>false</isDebuff>
 	</skill>
-	<skill id="13306" levels="1" name="Heavy Armor Top Special Ability">
+	<skill id="13306" toLevel="3" name="Heavy Armor Top Special Ability">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. + 34 and received P. Critical Damage by - 4.3%. -->
-		<set name="icon" val="icon.armor_t501_u_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<icon>icon.armor_t501_u_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isDebuff>false</isDebuff>
 	</skill>
-	<skill id="13307" levels="1" name="Heavy Armor Top Special Ability">
+	<skill id="13307" toLevel="3" name="Heavy Armor Top Special Ability">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. + 34 and received P. Critical Damage by - 4.3%. -->
-		<set name="icon" val="icon.armor_t601_u_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<icon>icon.armor_t601_u_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isDebuff>false</isDebuff>
 	</skill>
-	<skill id="13308" levels="1" name="Heavy Armor Top Special Ability">
+	<skill id="13308" toLevel="3" name="Heavy Armor Top Special Ability">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. + 34 and received P. Critical Damage by - 4.3%. -->
-		<set name="icon" val="icon.armor_t401_u_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<icon>icon.armor_t401_u_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isDebuff>false</isDebuff>
 	</skill>
-	<skill id="13309" levels="1" name="Heavy Armor Top Special Ability">
+	<skill id="13309" toLevel="3" name="Heavy Armor Top Special Ability">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. + 34 and received P. Critical Damage by - 4.3%. -->
-		<set name="icon" val="icon.armor_t701_u_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<icon>icon.armor_t701_u_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isDebuff>false</isDebuff>
 	</skill>
-	<skill id="13310" levels="1" name="Heavy Armor Top Special Ability">
+	<skill id="13310" toLevel="3" name="Heavy Armor Top Special Ability">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. + 34 and received P. Critical Damage by - 4.3%. -->
-		<set name="icon" val="icon.armor_t501_u_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<icon>icon.armor_t501_u_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isDebuff>false</isDebuff>
 	</skill>
-	<skill id="13311" levels="1" name="Light Armor Top Special Ability">
+	<skill id="13311" toLevel="3" name="Light Armor Top Special Ability">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Evasion + 2, Speed + 3, and P. Attribute Resistance + 5. Received P. Critical Rate - 3.4%. -->
-		<set name="icon" val="icon.armor_t502_u_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<icon>icon.armor_t502_u_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isDebuff>false</isDebuff>
 	</skill>
-	<skill id="13312" levels="1" name="Robe Upper Special Ability">
+	<skill id="13312" toLevel="3" name="Robe Upper Special Ability">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Evasion + 3, and M. Attribute Resistance + 9. Received P. Critical Damage - 2.1%, and Received P. Critical Rate - 1.7%. -->
-		<set name="icon" val="icon.armor_t503_u_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<set name="isDebuff" val="false" />
+		<icon>icon.armor_t503_u_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isDebuff>false</isDebuff>
 	</skill>
-	<skill id="13313" levels="1" name="Blessed Antharas' Earring">
-		<!-- Updated to Ertheia -->
+	<skill id="13313" toLevel="1" name="Blessed Antharas' Earring">
+		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Def./M. Def. Increases Holy/Dark Resistance and bleed/stun/mental attacks, bleed/stun/mental attack bonus, and the effectiveness of HP recovery magic. Decreases MP Consumption and restores HP by using some of the damage inflicted upon the enemy with a certain probability. CON+ 3, MEN+ 3 -->
-		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="mDef" val="1.15" />
-				<mul stat="pDef" val="1.15" />
-				<add stat="earthRes" val="30" />
-				<add stat="holyRes" val="15" />
-				<mul stat="healEffect" val="1.4" />
-				<mul stat="magicalMpConsumeRate" val="0.9" />
-				<mul stat="physicalMpConsumeRate" val="0.9" />
-				<add stat="absorbDam" val="4" />
-				<add stat="CON" val="3" />
-				<add stat="MEN" val="3" />
-			</effect>
-			<effect name="AttackTrait">
-				<param BLEED="50" />
-				<param SHOCK="40" />
-				<param DERANGEMENT="40" />
-			</effect>
-			<effect name="DefenceTrait">
-				<param BLEED="50" />
-				<param SHOCK="40" />
-				<param DERANGEMENT="40" />
-			</effect>
-		</for>
+		<icon>icon.accessory_earring_of_antaras_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13314" levels="1" name="Blessed Antharas' Earring">
-		<!-- Updated to Ertheia -->
+	<skill id="13314" toLevel="1" name="Blessed Antharas' Earring">
+		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 seconds, cancels stun and receives Stun Resistance. -->
-		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="abnormalTime" val="5" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="200" />
-		<set name="reuseDelay" val="7200000" />
-		<for>
-			<effect name="DispelBySlot">
-				<param dispel="STUN,10" />
-			</effect>
-			<effect name="DefenceTrait">
-				<param SHOCK="100" />
-			</effect>
-		</for>
+		<icon>icon.accessory_earring_of_antaras_i00</icon>
+		<operateType>A2</operateType>
+		<hitTime>200</hitTime>
+		<abnormalType>STUN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>10</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<staticReuse>true</staticReuse>
+		<reuseDelay>7200000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13315" levels="1" name="Blessed Valakas' Necklace">
-		<!-- Updated to Ertheia -->
+	<skill id="13315" toLevel="1" name="Blessed Valakas' Necklace">
+		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Fire/Dark Resistance, Sleep Resistance, sleep attack bonus, Max HP/ P. Atk./ M. Atk. and magic damage Critical Rate. Decreases skill Cooldown. Redirects some of the physical damage received back upon the enemy. STR+ 3, INT+ 3 -->
-		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="fireRes" val="30" />
-				<add stat="darkRes" val="20" />
-				<add stat="maxHp" val="625" />
-				<mul stat="pAtk" val="1.1" />
-				<mul stat="mAtk" val="1.2" />
-				<add stat="mCritRate" val="2" />
-				<mul stat="pReuse" val="0.9" />
-				<mul stat="mReuse" val="0.9" />
-				<mul stat="physicalSkillPower" val="1.05" />
-				<add stat="reflectDam" val="5" />
-				<add stat="STR" val="3" />
-				<add stat="INT" val="3" />
-			</effect>
-			<effect name="AttackTrait">
-				<param SLEEP="50" />
-			</effect>
-			<effect name="DefenceTrait">
-				<param SLEEP="50" />
-			</effect>
-		</for>
+		<icon>icon.accessory_necklace_of_valakas_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13316" levels="1" name="Blessed Valakas' Necklace">
-		<!-- Updated to Ertheia -->
+	<skill id="13316" toLevel="1" name="Blessed Valakas' Necklace">
+		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 seconds, cancels hold and receives hold resistance. -->
-		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="abnormalTime" val="5" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="200" />
-		<set name="reuseDelay" val="7200000" />
-		<for>
-			<effect name="DispelBySlot">
-				<param dispel="ROOT_PHYSICALLY,10" />
-			</effect>
-			<effect name="DispelBySlot">
-				<param dispel="ROOT_MAGICALLY,10" />
-			</effect>
-		</for>
+		<icon>icon.accessory_necklace_of_valakas_i00</icon>
+		<operateType>A2</operateType>
+		<hitTime>200</hitTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>10</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<staticReuse>true</staticReuse>
+		<reuseDelay>7200000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13317" levels="1" name="Earth Wyrm Heart Ring">
-		<!-- Updated to Ertheia -->
+	<skill id="13317" toLevel="1" name="Earth Wyrm Heart Ring">
+		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Wind/Water Resistance, Physical/Mental/Poison Resistance, Knock Back/Knock Down/Pulling Resistance, poison attack bonus, Critical Damage, Accuracy/Atk. Spd./Casting Spd./and MP recovery speed. -->
-		<set name="icon" val="icon.ring_earthworm_heart" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="waterRes" val="15" />
-				<add stat="windRes" val="15" />
-				<!-- <add stat="KnockBackRes" val="20" /> -->
-				<!-- <add stat="KnockDownRes" val="20" /> -->
-				<!-- <add stat="PullingRes" val="20" /> -->
-				<mul stat="pDef" val="1.15" />
-				<mul stat="regMp" val="1.05" />
-				<mul stat="critRate" val="1.15" />
-				<add stat="accCombat" val="4" />
-				<mul stat="pAtkSpd" val="1.05" />
-				<mul stat="mAtkSpd" val="1.05" />
-			</effect>
-			<effect name="AttackTrait">
-				<param POISON="50" />
-			</effect>
-			<effect name="DefenceTrait">
-				<param POISON="50" />
-				<param DERANGEMENT="50" />
-			</effect>
-		</for>
+		<icon>icon.ring_earthworm_heart</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13318" levels="1" name="Earth Wyrm Heart Ring">
-		<!-- Updated to Ertheia -->
+	<skill id="13318" toLevel="1" name="Earth Wyrm Heart Ring">
+		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases all party members' Atk. Spd./Casting Spd. by 5% for 5 minutes. In addition, 2% vampiric rate applies with a certain probability. -->
-		<set name="icon" val="icon.ring_earthworm_heart" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="affectRange" val="1000" />
-		<set name="abnormalTime" val="300" />
-		<set name="targetType" val="PARTY" />
-		<set name="hitTime" val="200" />
-		<set name="reuseDelay" val="7200000" />
-		<for>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.05" />
-				<mul stat="mAtkSpd" val="1.05" />
-				<add stat="absorbDam" val="2" />
-			</effect>
-		</for>
+		<icon>icon.ring_earthworm_heart</icon>
+		<operateType>A2</operateType>
+		<hitTime>200</hitTime>
+		<abnormalType>SIGNAL_A</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>10</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<affectRange>1000</affectRange>
+		<staticReuse>true</staticReuse>
+		<reuseDelay>7200000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 	</skill>
-	<skill id="13319" levels="1" name="Earth Wyrm Heart Ring">
-		<!-- Updated to Ertheia -->
+	<skill id="13319" toLevel="1" name="Earth Wyrm Heart Ring">
+		<!-- AUTO GENERATED SKILL -->
 		<!-- Removes poison effect. -->
-		<set name="icon" val="icon.ring_earthworm_heart" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="200" />
-		<set name="reuseDelay" val="7200000" />
-		<for>
-			<effect name="DispelBySlot">
-				<param dispel="POISON,10" />
-			</effect>
-		</for>
+		<icon>icon.ring_earthworm_heart</icon>
+		<operateType>A1</operateType>
+		<hitTime>200</hitTime>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<staticReuse>true</staticReuse>
+		<reuseDelay>7200000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13320" levels="1" name="Istina's Ring">
-		<!-- Updated to Ertheia -->
-		<!-- Boss Jewel Skill -->
-		<set name="icon" val="icon.istina_ring_i00" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="accCombat" val="3" />
-				<add stat="critRate" val="54.4" />
-				<add stat="waterRes" val="20" />
-			</effect>
-		</for>
+	<skill id="13320" toLevel="1" name="Istina's Ring">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Critical rate + 54.4, accuracy + 3, and Water Resistance + 20. -->
+		<icon>icon.istina_ring_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13321" levels="1" name="Istina's Earring">
-		<!-- Updated to Ertheia -->
-		<!-- Boss Jewel Skill -->
-		<set name="icon" val="icon.istina_earring_i00" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="absorbDam" val="5" />
-				<add stat="windRes" val="30" />
-			</effect>
-			<effect name="AttackTrait">
-				<param SHOCK="30" />
-			</effect>
-			<effect name="DefenceTrait">
-				<param SHOCK="30" />
-			</effect>
-		</for>
+	<skill id="13321" toLevel="1" name="Istina's Earring">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Wind Resistance + 30, Stun Resistance + 30%, stun attack bonus + 30%, and additional 5% vampiric rage with a certain probability. -->
+		<icon>icon.istina_earring_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13322" levels="1" name="Istina's Necklace">
-		<!-- Updated to Ertheia -->
-		<!-- Boss Jewel Skill -->
-		<set name="icon" val="icon.istina_necklace_i00" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="holyRes" val="35" />
-				<mul stat="mReuse" val="0.9" />
-				<mul stat="pReuse" val="0.9" />
-				<add stat="reflectDam" val="3" />
-			</effect>
-		</for>
+	<skill id="13322" toLevel="1" name="Istina's Necklace">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Holy Resistance + 35 and skill delay - 10%. Additionally, damage is incurred, 3% is reflected. -->
+		<icon>icon.istina_necklace_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13323" levels="1" name="Istina's Belt">
-		<set name="icon" val="icon.istina_belt_i00" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="regHp" val="1.0348" />
-				<add stat="inventoryLimit" val="6" />
-			</effect>
-		</for>
+	<skill id="13323" toLevel="1" name="Istina's Belt">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- HP recovery speed + 3.48 and item slot + 6. -->
+		<icon>icon.istina_belt_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13324" levels="1" name="Istina's Shirt">
-		<set name="icon" val="icon.istina_shirt_i00" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<add stat="DEX" val="1" />
-				<add stat="CON" val="2" />
-				<add stat="INT" val="2" />
-				<add stat="WIT" val="1" />
-				<add stat="MEN" val="2" />
-				<add stat="runSpd" val="7" />
-				<add stat="waterRes" val="30" />
-			</effect>
-		</for>
+	<skill id="13324" toLevel="1" name="Istina's Shirt">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- STR + 2, DEX + 1, CON + 2, INT + 2, WIT + 1, MEN + 2 , Speed + 7, and Water Resistance + 30. -->
+		<icon>icon.istina_shirt_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13325" levels="1" name="Octavis' Ring">
-		<!-- Updated to Ertheia -->
-		<!-- Boss Jewel Skill -->
-		<set name="icon" val="icon.octavis_ring_i00" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="critDmg" val="1.15" />
-				<add stat="fireRes" val="20" />
-			</effect>
-		</for>
+	<skill id="13325" toLevel="1" name="Octavis' Ring">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Fire Resistance + 20 and Critical Damage + 15%. -->
+		<icon>icon.octavis_ring_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13326" levels="1" name="Octavis' Earring">
-		<!-- Updated to Ertheia -->
-		<!-- Boss Jewel Skill -->
-		<set name="icon" val="icon.octavis_earring_i00" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="absorbDam" val="5" />
-				<add stat="earthRes" val="30" />
-			</effect>
-			<effect name="AttackTrait">
-				<param SLEEP="40" />
-				<param HOLD="40" />
-			</effect>
-			<effect name="DefenceTrait">
-				<param SLEEP="40" />
-				<param HOLD="40" />
-			</effect>
-		</for>
+	<skill id="13326" toLevel="1" name="Octavis' Earring">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Earth Resistance + 30, Hold/Sleep Resistance + 40%, hold/sleep attack bonus + 40%. -->
+		<icon>icon.octavis_earring_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13327" levels="1" name="Octavis' Necklace">
-		<!-- Updated to Ertheia -->
-		<!-- Boss Jewel Skill -->
-		<set name="icon" val="icon.octavis_necklace_i00" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="physicalSkillPower" val="1.05" />
-				<add stat="darkRes" val="35" />
-			</effect>
-		</for>
+	<skill id="13327" toLevel="1" name="Octavis' Necklace">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Dark Resistance + 35, Skill Power + 5%. -->
+		<icon>icon.octavis_necklace_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13328" levels="1" name="Octavis' Belt">
-		<set name="icon" val="icon.octavis_belt_i00" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="regMp" val="1.023" />
-				<add stat="weightPenalty" val="13000" />
-			</effect>
-		</for>
+	<skill id="13328" toLevel="1" name="Octavis' Belt">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- MP Recovery Rate + 2.3 and weight limit + 13000. -->
+		<icon>icon.octavis_belt_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13329" levels="1" name="Bestow Fire Weapon">
+	<skill id="13329" toLevel="1" name="Bestow Fire Weapon">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestow fire damage by 300. -->
-		<set name="icon" val="icon.skill4009" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4009</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13330" levels="1" name="Bestow Water Weapon">
+	<skill id="13330" toLevel="1" name="Bestow Water Weapon">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestow water damage by 300. -->
-		<set name="icon" val="icon.skill4010" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4010</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13331" levels="1" name="Bestow Wind Weapon">
+	<skill id="13331" toLevel="1" name="Bestow Wind Weapon">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestow wind damage by 300. -->
-		<set name="icon" val="icon.skill4011" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4011</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13332" levels="1" name="Bestow Earth Weapon">
+	<skill id="13332" toLevel="1" name="Bestow Earth Weapon">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestow earth damage by 300. -->
-		<set name="icon" val="icon.skill4012" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4012</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13333" levels="1" name="Bestow Holy Weapon">
+	<skill id="13333" toLevel="1" name="Bestow Holy Weapon">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestow holy damage by 300. -->
-		<set name="icon" val="icon.skill4337" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4337</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13334" levels="1" name="Bestow Darkness Weapon">
+	<skill id="13334" toLevel="1" name="Bestow Darkness Weapon">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestow darkness damage by 300. -->
-		<set name="icon" val="icon.skill4333" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4333</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13335" levels="1" name="Bestow Fire/Wind/Darkness Armor">
+	<skill id="13335" toLevel="1" name="Bestow Fire/Wind/Darkness Armor">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestow Fire/Wind/Dark Resistance by 120. -->
-		<set name="icon" val="icon.skill4337" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4337</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13336" levels="1" name="Bestow Water/Earth/Holy Armor">
+	<skill id="13336" toLevel="1" name="Bestow Water/Earth/Holy Armor">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestow Water/Earth/Holy Resistance by 120. -->
-		<set name="icon" val="icon.skill4333" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill4333</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13337" levels="1" name="Talisman (R-grade) - M. Def. (Active)">
+	<skill id="13337" toLevel="1" name="Talisman (R-grade) - M. Def. (Active)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 seconds, increases M. Def. + 50% through the power of the talisman. -->
-		<set name="icon" val="icon.r_talisman_mm_up_active" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="120000" />
+		<icon>icon.r_talisman_mm_up_active</icon>
+		<operateType>A2</operateType>
+		<mpConsume>50</mpConsume>
+		<hitTime>4000</hitTime>
+		<effectPoint>532</effectPoint>
+		<abnormalType>TALISMAN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>120000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13338" levels="1" name="Talisman (R-grade) - Ranged P. Def. (Active)">
+	<skill id="13338" toLevel="1" name="Talisman (R-grade) - Ranged P. Def. (Active)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 seconds, increases Bow/Crossbow Resistance + 80% through the power of Talisman. -->
-		<set name="icon" val="icon.r85_sp_talisman_ad_ex_passive" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="120000" />
+		<icon>icon.r85_sp_talisman_ad_ex_passive</icon>
+		<operateType>A2</operateType>
+		<mpConsume>50</mpConsume>
+		<hitTime>4000</hitTime>
+		<effectPoint>532</effectPoint>
+		<abnormalType>TALISMAN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>120000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13339" levels="3" name="Enchant Heavy Armor Set + 6 (R-grade)">
-		<table name="#addRegMp"> 1 1.32 1.32 </table>
-		<table name="#physSkillMpCost"> 1 0.93 0.93 </table>
-		<table name="#addPDef"> 1 1 1.11 </table>
-		<set name="icon" val="icon.skill0231" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="pDef" val="93" />
-				<mul stat="regMp" val="1.32">
-					<player resting="true" />
-				</mul>
-				<mul stat="regMp" val="#addRegMp">
-					<and>
-						<player standing="true" />
-						<or>
-							<player running="true" />
-						</or>
-					</and>
-				</mul>
-				<mul stat="physicalMpConsumeRate" val="#physSkillMpCost" />
-				<mul stat="pDef" val="#addPDef" />
-				<!-- reflect debuff 5% chance, NOT DONE -->
-			</effect>
-		</for>
+	<skill id="13339" toLevel="3" name="Enchant Heavy Armor Set + 6 (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Set item is enchanted. P. Def. + 93, and MP Recovery Bonus + 32 when standing/ sitting. -->
+		<icon>icon.skill0231</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="13340" levels="3" name="Enchant Light Armor Set + 6 (R-grade)">
-		<table name="#skillCritRate"> 1 1.14 1.14 </table>
-		<table name="#absorbDam"> 0 4 4 </table>
-		<table name="#reuse"> 1 1 0.9 </table>
-		<table name="#runSpd"> 0 0 7 </table>
-		<set name="icon" val="icon.skill0233" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="mDef" val="55" />
-				<add stat="rEvas" val="2" />
-				<mul stat="regMp" val="1.08">
-					<and>
-						<player resting="true" />
-						<or>
-							<player standing="true" />
-						</or>
-					</and>
-				</mul>
-				<sub stat="debuffVuln" val="10" />
-				<mul stat="skillCriticalProbability" val="#skillCritRate" />
-				<add stat="absorbDam" val="#absorbDam" />
-				<mul stat="pReuse" val="#reuse" />
-				<mul stat="mReuse" val="#reuse" />
-				<mul stat="dReuse" val="#reuse" />
-				<add stat="runSpd" val="#runSpd" />
-			</effect>
-		</for>
+	<skill id="13340" toLevel="3" name="Enchant Light Armor Set + 6 (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Set item is enchanted. M. Def. + 55, P. Evasion + 2, and Debuff Resistance + 10%. MP Recovery Bonus + 8 when standing/ sitting. -->
+		<icon>icon.skill0233</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="13341" levels="3" name="Enchant Robe Set + 6 (R-grade)">
-		<table name="#maxHp"> 0 4890 4890 </table>
-		<table name="#debuffVuln"> 0 0 11 </table>
-		<table name="#cancel"> 1 1 0.463 </table>
-		<set name="icon" val="icon.skill0234" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="weightLimit" val="1.3" />
-				<mul stat="regMp" val="1.08">
-					<and>
-						<player resting="true" />
-						<or>
-							<player standing="true" />
-						</or>
-					</and>
-				</mul>
-				<mul stat="pReuse" val="0.97" />
-				<mul stat="mReuse" val="0.97" />
-				<mul stat="dReuse" val="0.97" />
-				<add stat="maxHp" val="#maxHp" />
-				<sub stat="debuffVuln" val="#debuffVuln" />
-				<mul stat="cancel" val="#cancel" />
-			</effect>
-		</for>
+	<skill id="13341" toLevel="3" name="Enchant Robe Set + 6 (R-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Set item is enchanted. P. Def. + 60, Weight Limit + 30%, and Skill Cooldown - 3%. MP Recovery Bonus + 8 when standing/ sitting. -->
+		<icon>icon.skill0234</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="13342" levels="1" name="T-shirt of Destiny">
+	<skill id="13342" toLevel="1" name="T-shirt of Destiny">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 1, INT + 1 -->
-		<set name="icon" val="BranchSys2.icon.7anni_shirt_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>BranchSys2.icon.7anni_shirt_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="13343" levels="1" name="Belt of Destiny">
+	<skill id="13343" toLevel="1" name="Belt of Destiny">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Weight Gauge when wearing the belt. -->
-		<set name="icon" val="icon.skill0332" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.skill0332</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="13344" levels="1" name="Bracelet of Insolence">
+	<skill id="13344" toLevel="1" name="Bracelet of Insolence">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- 4 Talisman(s) can be equipped. -->
-		<set name="icon" val="icon.bracelet_of_oman" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.bracelet_of_oman</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>61</magicLvl>
 	</skill>
-	<skill id="13345" levels="1" name="Release Agathion's Seal - Tersi's Light">
+	<skill id="13345" toLevel="1" name="Release Agathion's Seal - Tersi's Light">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Removes the Agathion's seal. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13346" levels="1" name="Seal Agathion - Tersi's Light">
+	<skill id="13346" toLevel="1" name="Seal Agathion - Tersi's Light">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Dismisses a summoned Agathion. -->
-		<set name="icon" val="icon.etc_unsummon_aga_agit_i01" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
+		<icon>icon.etc_unsummon_aga_agit_i01</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>3000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13347" levels="1" name="Tersi's Hand">
+	<skill id="13347" toLevel="1" name="Tersi's Hand">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Pushes back a shard of light with Tersi's Hand. -->
-		<set name="icon" val="icon.skill13347" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="100" />
-		<set name="hitTime" val="700" />
-		<set name="coolTime" val="200" />
-		<set name="reuseDelay" val="1000" />
-		<set name="isDebuff" val="true" />
+		<icon>icon.skill13347</icon>
+		<operateType>A2</operateType>
+		<castRange>100</castRange>
+		<hitTime>700</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>-1</effectPoint>
+		<abnormalType>SIGNAL_A</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>400</effectRange>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpPeacezone" />
+			<condition name="OpTargetNpc">
+				<npcIds>
+					<item>13349</item>
+				</npcIds>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="13348" levels="1" name="Hand">
+	<skill id="13348" toLevel="1" name="Hand">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill13347" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="200" />
+		<icon>icon.skill13347</icon>
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<effectPoint>100</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<coolTime>200</coolTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpPeacezone" />
+		</conditions>
 	</skill>
-	<skill id="13349" levels="1" name="Talisman (R-grade) - Damage Reflect Resistance (Active)">
+	<skill id="13349" toLevel="1" name="Talisman (R-grade) - Damage Reflect Resistance (Active)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 seconds, increases Damage Reflect Resistance by 10 through the power of the talisman. -->
-		<set name="icon" val="icon.r85_talisman_md_up_passive" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="360000" />
+		<icon>icon.r85_talisman_md_up_passive</icon>
+		<operateType>A2</operateType>
+		<mpConsume>50</mpConsume>
+		<hitTime>4000</hitTime>
+		<effectPoint>532</effectPoint>
+		<abnormalType>TALISMAN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>360000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13350" levels="1" name="Talisman (R-grade) - Lethal Strike Resistance (Active)">
+	<skill id="13350" toLevel="1" name="Talisman (R-grade) - Lethal Strike Resistance (Active)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 seconds, increases lethal strike resistance by 30 through the power of the talisman. -->
-		<set name="icon" val="icon.r85_talisman_md_up_passive" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="360000" />
+		<icon>icon.r85_talisman_md_up_passive</icon>
+		<operateType>A2</operateType>
+		<mpConsume>50</mpConsume>
+		<hitTime>4000</hitTime>
+		<effectPoint>532</effectPoint>
+		<abnormalType>TALISMAN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>360000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13351" levels="1" name="Notifier">
+	<skill id="13351" toLevel="1" name="Notifier">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- When used, it informs of the number of currently received gifts and number of remaining gifts. The gift delivery time will reset every day at 6:30 AM. -->
-		<set name="icon" val="icon.skill5239" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="15000" />
+		<icon>icon.skill5239</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>15000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 	</skill>
-	<skill id="13352" levels="1" name="Increase Hair Accessory Weight Gauge">
+	<skill id="13352" toLevel="1" name="Increase Hair Accessory Weight Gauge">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Weight Gauge when wearing a hair accessory. -->
-		<set name="icon" val="icon.Accessory_angel_circlet_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.Accessory_angel_circlet_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="13353" levels="1" name="Talisman (R-grade) - M. Def. (Active)">
+	<skill id="13353" toLevel="1" name="Talisman (R-grade) - M. Def. (Active)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases M. Def. by 63 momentarily through the power of the talisman. -->
-		<set name="icon" val="icon.r85_talisman_md_up_active" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="360000" />
+		<icon>icon.r85_talisman_md_up_active</icon>
+		<operateType>A2</operateType>
+		<mpConsume>50</mpConsume>
+		<hitTime>4000</hitTime>
+		<effectPoint>532</effectPoint>
+		<abnormalType>TALISMAN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>360000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13354" levels="1" name="Player Commendation - Talisman - M. Def.">
+	<skill id="13354" toLevel="1" name="Player Commendation - Talisman - M. Def.">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases M. Def. by 21 when equipped. -->
-		<set name="icon" val="icon.r85_talisman_md_up_passive" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.r85_talisman_md_up_passive</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13355" levels="1" name="Player Commendation - Talisman - M. Atk. (Active)">
+	<skill id="13355" toLevel="1" name="Player Commendation - Talisman - M. Atk. (Active)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases M. Atk. by 111 momentarily through the power of the talisman. -->
-		<set name="icon" val="icon.r85_talisman_ma_up_active" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="360000" />
+		<icon>icon.r85_talisman_ma_up_active</icon>
+		<operateType>A2</operateType>
+		<mpConsume>50</mpConsume>
+		<hitTime>4000</hitTime>
+		<effectPoint>532</effectPoint>
+		<abnormalType>TALISMAN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>360000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13356" levels="1" name="Player Commendation - Talisman - M. Atk.">
+	<skill id="13356" toLevel="1" name="Player Commendation - Talisman - M. Atk.">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases M. Atk. by 37 when equipped. -->
-		<set name="icon" val="icon.r85_talisman_ma_up_passive" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.r85_talisman_ma_up_passive</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13357" levels="1" name="Player Commendation - Talisman - P. Atk. (Active)">
+	<skill id="13357" toLevel="1" name="Player Commendation - Talisman - P. Atk. (Active)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk. by 111 momentarily through the power of the talisman. -->
-		<set name="icon" val="icon.r85_talisman_pa_up_active" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="360000" />
+		<icon>icon.r85_talisman_pa_up_active</icon>
+		<operateType>A2</operateType>
+		<mpConsume>50</mpConsume>
+		<hitTime>4000</hitTime>
+		<effectPoint>532</effectPoint>
+		<abnormalType>TALISMAN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>360000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13358" levels="1" name="Player Commendation - Talisman - P. Atk.">
+	<skill id="13358" toLevel="1" name="Player Commendation - Talisman - P. Atk.">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk by 37 when equipped. -->
-		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.r85_talisman_pa_up_passive</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13359" levels="1" name="Player Commendation - Talisman - P. Def. (Active)">
+	<skill id="13359" toLevel="1" name="Player Commendation - Talisman - P. Def. (Active)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Def. by 114 momentarily through the power of the talisman. -->
-		<set name="icon" val="icon.r85_talisman_pd_up_active" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="360000" />
+		<icon>icon.r85_talisman_pd_up_active</icon>
+		<operateType>A2</operateType>
+		<mpConsume>50</mpConsume>
+		<hitTime>4000</hitTime>
+		<effectPoint>532</effectPoint>
+		<abnormalType>TALISMAN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>360000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13360" levels="1" name="Player Commendation - Talisman - P. Def.">
+	<skill id="13360" toLevel="1" name="Player Commendation - Talisman - P. Def.">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Def. by 38 when equipped. -->
-		<set name="icon" val="icon.r85_talisman_pd_up_passive" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.r85_talisman_pd_up_passive</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13361" levels="1" name="Player Commendation - Talisman - Max CP (Active)">
+	<skill id="13361" toLevel="1" name="Player Commendation - Talisman - Max CP (Active)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 297 momentarily through the power of the talisman. -->
-		<set name="icon" val="icon.r85_talisman_cp_up_active" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="360000" />
+		<icon>icon.r85_talisman_cp_up_active</icon>
+		<operateType>A2</operateType>
+		<mpConsume>50</mpConsume>
+		<hitTime>4000</hitTime>
+		<effectPoint>532</effectPoint>
+		<abnormalType>TALISMAN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>360000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13362" levels="1" name="Player Commendation - Talisman - Max CP">
+	<skill id="13362" toLevel="1" name="Player Commendation - Talisman - Max CP">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 99 when equipped. -->
-		<set name="icon" val="icon.r85_talisman_cp_up_passive" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.r85_talisman_cp_up_passive</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13363" levels="1" name="Player Commendation - Talisman - Max HP (Active)">
+	<skill id="13363" toLevel="1" name="Player Commendation - Talisman - Max HP (Active)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max HP by 657 momentarily through the power of the talisman. -->
-		<set name="icon" val="icon.r85_talisman_hp_up_active" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="360000" />
+		<icon>icon.r85_talisman_hp_up_active</icon>
+		<operateType>A2</operateType>
+		<mpConsume>50</mpConsume>
+		<hitTime>4000</hitTime>
+		<effectPoint>532</effectPoint>
+		<abnormalType>TALISMAN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>360000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13364" levels="1" name="Player Commendation - Talisman - Max HP">
+	<skill id="13364" toLevel="1" name="Player Commendation - Talisman - Max HP">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max HP by 219 when equipped. -->
-		<set name="icon" val="icon.r85_talisman_hp_up_passive" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.r85_talisman_hp_up_passive</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13365" levels="1" name="Player Commendation - Talisman - Max MP (Active)">
+	<skill id="13365" toLevel="1" name="Player Commendation - Talisman - Max MP (Active)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max MP by 327 momentarily through the power of the talisman. -->
-		<set name="icon" val="icon.r85_talisman_mp_up_active" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="360000" />
+		<icon>icon.r85_talisman_mp_up_active</icon>
+		<operateType>A2</operateType>
+		<mpConsume>50</mpConsume>
+		<hitTime>4000</hitTime>
+		<effectPoint>532</effectPoint>
+		<abnormalType>TALISMAN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>360000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13366" levels="1" name="Player Commendation - Talisman - Max MP">
+	<skill id="13366" toLevel="1" name="Player Commendation - Talisman - Max MP">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max MP by 119 when equipped. -->
-		<set name="icon" val="icon.r85_talisman_mp_up_passive" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.r85_talisman_mp_up_passive</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13367" levels="1" name="Talisman (R-grade) - Half-kill/Lethal Strike Resistance (Active)">
+	<skill id="13367" toLevel="1" name="Talisman (R-grade) - Half-kill/Lethal Strike Resistance (Active)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily increases Half-kill/Lethal Strike Resistance by 30 through the power of the talisman. -->
-		<set name="icon" val="icon.r85_talisman_md_up_passive" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="50" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="360000" />
+		<icon>icon.r85_talisman_md_up_passive</icon>
+		<operateType>A2</operateType>
+		<mpConsume>50</mpConsume>
+		<hitTime>4000</hitTime>
+		<effectPoint>532</effectPoint>
+		<abnormalType>TALISMAN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>360000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13368" levels="1" name="Talisman (R-grade) - Half-kill/Lethal Strike Resistance">
+	<skill id="13368" toLevel="1" name="Talisman (R-grade) - Half-kill/Lethal Strike Resistance">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Half-kill/Lethal Strike Resistance by 10 when a talisman is equipped. -->
-		<set name="icon" val="icon.r85_talisman_md_up_passive" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.r85_talisman_md_up_passive</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13369" levels="1" name="Squash Ring (Warrior)">
+	<skill id="13369" toLevel="1" name="Squash Ring (Warrior)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Critical attack power by 15% and P. Accuracy by 2. -->
-		<set name="icon" val="icon.accessory_ring_of_gourd_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.accessory_ring_of_gourd_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>75</magicLvl>
 	</skill>
-	<skill id="13370" levels="1" name="Squash Ring (Wizard)">
+	<skill id="13370" toLevel="1" name="Squash Ring (Wizard)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases M. Critical Rate by 2% and M. Accuracy by 2. -->
-		<set name="icon" val="icon.accessory_ring_of_gourd_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.accessory_ring_of_gourd_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>75</magicLvl>
 	</skill>
-	<skill id="13371" levels="1" name="Squash Earring (Warrior)">
+	<skill id="13371" toLevel="1" name="Squash Earring (Warrior)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk. Spd. by 4%. and Speed by 5. -->
-		<set name="icon" val="icon.accessory_earring_of_gourd_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.accessory_earring_of_gourd_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>75</magicLvl>
 	</skill>
-	<skill id="13372" levels="1" name="Squash Earring (Wizard)">
+	<skill id="13372" toLevel="1" name="Squash Earring (Wizard)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Casting Spd. by 4% and Speed by 5. -->
-		<set name="icon" val="icon.accessory_earring_of_gourd_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.accessory_earring_of_gourd_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>75</magicLvl>
 	</skill>
-	<skill id="13373" levels="1" name="Squash Necklace">
+	<skill id="13373" toLevel="1" name="Squash Necklace">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Sleep/Paralysis/Stun/Poison/Bleed resistance and attack rate by 20%. Decreases skill Cooldown by 5% and skill MP Consumption by 5%. -->
-		<set name="icon" val="icon.accessory_necklace_of_gourd_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.accessory_necklace_of_gourd_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>75</magicLvl>
 	</skill>
-	<skill id="13374" levels="1" name="Circlet of Earthquake">
+	<skill id="13374" toLevel="1" name="Circlet of Earthquake">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Earth resistance by 60. -->
-		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.armor_leather_helmet_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13375" levels="1" name="Release Agathion's Seal - XP Bottle">
+	<skill id="13375" toLevel="1" name="Release Agathion's Seal - XP Bottle">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Removes the seal on an Agathion - XP Bottle. Consumes 10 MP upon use. Can be used by main classes Lv. 85 or above. -->
-		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
-		<set name="reuseDelay" val="5000" />
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>5000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>85</minLevel>
+				<maxLevel>99</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpMainjob" />
+		</conditions>
 	</skill>
-	<skill id="13376" levels="1" name="XP Bottle's Divine Power">
+	<skill id="13376" toLevel="1" name="XP Bottle's Divine Power">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- When XP is acquired while receiving divine power, you can obtain an Agathion's gift. -->
-		<set name="icon" val="icon.exp_bottle_agathion" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="4" />
+		<icon>icon.exp_bottle_agathion</icon>
+		<operateType>A2</operateType>
+		<abnormalType>EXP_BOTTLE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13377" levels="1" name="Scroll: XP">
+	<skill id="13377" toLevel="1" name="Scroll: XP">
 		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="5000" />
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>5000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>76</minLevel>
+				<maxLevel>99</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpSubjob" />
+		</conditions>
 	</skill>
-	<skill id="13378" levels="1" name="Enhanced Istina's Bracelet">
-		<set name="icon" val="icon.istina_bangel" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="CON" val="1" />
-				<add stat="MEN" val="1" />
-			</effect>
-			<effect name="TalismanSlot">
-				<param slots="5" />
-			</effect>
-		</for>
+	<skill id="13378" toLevel="1" name="Enhanced Istina's Bracelet">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can equip 5 talismans. CON + 1, MEN + 1. -->
+		<icon>icon.istina_bangel</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13379" levels="1" name="Enhanced Octavis' Bracelet">
-		<set name="icon" val="icon.octavis_bangel" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<add stat="DEX" val="1" />
-				<add stat="WIT" val="1" />
-			</effect>
-			<effect name="TalismanSlot">
-				<param slots="5" />
-			</effect>
-		</for>
+	<skill id="13379" toLevel="1" name="Enhanced Octavis' Bracelet">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Can equip 5 talismans. DEX + 1, WIT + 1. -->
+		<icon>icon.octavis_bangel</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 	</skill>
-	<skill id="13380" levels="1" name="Seal Agathion - XP Bottle">
+	<skill id="13380" toLevel="1" name="Seal Agathion - XP Bottle">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Seals the Agathion - XP Bottle. Decreases remaining magic by 5 upon skill use. -->
-		<set name="icon" val="icon.etc_unsummon_aga_agit_i01" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="3000" />
-		<set name="reuseDelay" val="5000" />
+		<icon>icon.etc_unsummon_aga_agit_i01</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>5000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13381" levels="1" name="Hair Accessory Rabbit Ears: Campaign">
+	<skill id="13381" toLevel="1" name="Hair Accessory Rabbit Ears: Campaign">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 3, DEX + 1, CON + 1, P. Evasion + 1, and M. Evasion + 1 when the hair accessory is equipped. -->
-		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.accessory_rabbit_ear_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="13382" levels="1" name="Hair Accessory Angel Circlet - Campaign">
+	<skill id="13382" toLevel="1" name="Hair Accessory Angel Circlet - Campaign">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 3, WIT + 1, MEN + 1, P. Def. + 1, and M. Def. + 1 when the hair accessory is equipped. -->
-		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.Accessary_angel_circlet_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="13383" levels="1" name="Sealing Agathion">
+	<skill id="13383" toLevel="1" name="Sealing Agathion">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- When the Agathion Bracelet is un-equipped, the summoned Agathion is sealed, and for 10 seconds, cannot receive the XP Bottle's Divine Power. -->
-		<set name="icon" val="icon.exp_bottle_agathion" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.exp_bottle_agathion</icon>
+		<operateType>A2</operateType>
+		<abnormalType>EXP_BOTTLE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13384" levels="1" name="Equip Talisman - Infinity">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13384" toLevel="1" name="Equip Talisman - Infinity">
+		<!-- Glory Days confirmed -->
 		<!-- Talisman - Infinity burns with power. -->
-		<set name="icon" val="icon.accessory_immortal_talisman_i01" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="3" />
+		<icon>icon.accessory_immortal_talisman_i01</icon>
+		<operateType>A2</operateType>
+		<abnormalType>SEED_TALISMAN1</abnormalType>
+		<abnormalVisualEffect>SEED_TALISMAN1</abnormalVisualEffect>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<isMagic>3</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13385" levels="1" name="Equip Talisman - Destruction">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13385" toLevel="1" name="Equip Talisman - Destruction">
+		<!-- Glory Days confirmed -->
 		<!-- Talisman - Destruction burns with power. -->
-		<set name="icon" val="icon.accessory_destruction_talisman_i01" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="3" />
+		<icon>icon.accessory_destruction_talisman_i01</icon>
+		<operateType>A2</operateType>
+		<abnormalType>SEED_TALISMAN1</abnormalType>
+		<abnormalVisualEffect>SEED_TALISMAN2</abnormalVisualEffect>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<isMagic>3</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13386" levels="1" name="Equip Talisman - Annihilation">
+	<skill id="13386" toLevel="1" name="Equip Talisman - Annihilation">
+		<!-- Glory Days confirmed -->
 		<!-- Talisman - Annihilation burns with power. -->
-		<set name="icon" val="icon.accessory_extermination_talisman_i01" />
-		<set name="abnormalVisualEffect" val="TALISMAN_DECO_GOLD" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="3" />
+		<icon>icon.accessory_extermination_talisman_i01</icon>
+		<operateType>A2</operateType>
+		<abnormalType>SEED_TALISMAN1</abnormalType>
+		<abnormalVisualEffect>SEED_TALISMAN3</abnormalVisualEffect>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<isMagic>3</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13387" levels="1" name="Equip Talisman - Hellfire">
+	<skill id="13387" toLevel="1" name="Equip Talisman - Hellfire">
+		<!-- Glory Days confirmed -->
 		<!-- Talisman - Hellfire burns with power. -->
-		<set name="icon" val="icon.accessory_hellfire_talisman_i01" />
-		<set name="abnormalVisualEffect" val="TALISMAN_DECO_ORANGE" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="3" />
+		<icon>icon.accessory_hellfire_talisman_i01</icon>
+		<operateType>A2</operateType>
+		<abnormalType>SEED_TALISMAN1</abnormalType>
+		<abnormalVisualEffect>SEED_TALISMAN4</abnormalVisualEffect>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<isMagic>3</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13388" levels="1" name="Equip Talisman - Desire">
+	<skill id="13388" toLevel="1" name="Equip Talisman - Desire">
+		<!-- Glory Days confirmed -->
 		<!-- Talisman - Desire burns with power. -->
-		<set name="icon" val="icon.accessory_ocean_talisman_i01" />
-		<set name="abnormalVisualEffect" val="TALISMAN_DECO_BLUE" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="3" />
+		<icon>icon.accessory_ocean_talisman_i01</icon>
+		<operateType>A2</operateType>
+		<abnormalType>SEED_TALISMAN1</abnormalType>
+		<abnormalVisualEffect>SEED_TALISMAN5</abnormalVisualEffect>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<isMagic>3</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13389" levels="1" name="Equip Talisman - Longing">
+	<skill id="13389" toLevel="1" name="Equip Talisman - Longing">
+		<!-- Glory Days confirmed -->
 		<!-- Talisman - Longing burns with power. -->
-		<set name="icon" val="icon.accessory_longing_talisman_i01" />
-		<set name="abnormalVisualEffect" val="TALISMAN_DECO_LIGHT_PURPLE" />
-		<set name="operateType" val="TOGGLE" />
-		<set name="targetType" val="SELF" />
-		<set name="isMagic" val="3" />
+		<icon>icon.accessory_longing_talisman_i01</icon>
+		<operateType>A2</operateType>
+		<abnormalType>SEED_TALISMAN1</abnormalType>
+		<abnormalVisualEffect>SEED_TALISMAN6</abnormalVisualEffect>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>6</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
+		<isMagic>3</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13390" levels="1" name="Unequip Talisman - Infinity">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13390" toLevel="1" name="Unequip Talisman - Infinity">
+		<!-- Glory Days confirmed -->
 		<!-- Talisman - Infinity fades in power. -->
-		<set name="icon" val="icon.accessory_immortal_talisman_i01" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.accessory_immortal_talisman_i01</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<trait>HOLD</trait>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SEED_TALISMAN1,-1</dispel>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="13391" levels="1" name="Unequip Talisman - Destruction">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13391" toLevel="1" name="Unequip Talisman - Destruction">
+		<!-- Glory Days confirmed -->
 		<!-- Talisman - Destruction fades in power. -->
-		<set name="icon" val="icon.accessory_destruction_talisman_i01" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.accessory_destruction_talisman_i01</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<trait>HOLD</trait>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SEED_TALISMAN1,-1</dispel>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="13392" levels="1" name="Unequip Talisman - Annihilation">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13392" toLevel="1" name="Unequip Talisman - Annihilation">
+		<!-- Glory Days confirmed -->
 		<!-- Talisman - Annihilation fades in power. -->
-		<set name="icon" val="icon.accessory_extermination_talisman_i01" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.accessory_extermination_talisman_i01</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<trait>HOLD</trait>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SEED_TALISMAN1,-1</dispel>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="13393" levels="1" name="Unequip Talisman - Hellfire">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13393" toLevel="1" name="Unequip Talisman - Hellfire">
+		<!-- Glory Days confirmed -->
 		<!-- Talisman - Hellfire fades in power. -->
-		<set name="icon" val="icon.accessory_hellfire_talisman_i01" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.accessory_hellfire_talisman_i01</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<trait>HOLD</trait>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SEED_TALISMAN1,-1</dispel>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="13394" levels="1" name="Unequip Talisman - Desire">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13394" toLevel="1" name="Unequip Talisman - Desire">
+		<!-- Glory Days confirmed -->
 		<!-- Talisman - Desire fades in power. -->
-		<set name="icon" val="icon.accessory_ocean_talisman_i01" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.accessory_ocean_talisman_i01</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<trait>HOLD</trait>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SEED_TALISMAN1,-1</dispel>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="13395" levels="1" name="Unequip Talisman - Longing">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13395" toLevel="1" name="Unequip Talisman - Longing">
+		<!-- Glory Days confirmed -->
 		<!-- Talisman - Longing fades in power. -->
-		<set name="icon" val="icon.accessory_longing_talisman_i01" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.accessory_longing_talisman_i01</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<trait>HOLD</trait>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SEED_TALISMAN1,-1</dispel>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="13396" levels="1" name="Rabbit Ears: STR">
+	<skill id="13396" toLevel="1" name="Rabbit Ears: STR">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 1 -->
-		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.accessory_rabbit_ear_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="13397" levels="1" name="Rabbit Ears: DEX">
+	<skill id="13397" toLevel="1" name="Rabbit Ears: DEX">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- DEX + 1 -->
-		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.accessory_rabbit_ear_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="13398" levels="1" name="Rabbit Ears: WIT">
+	<skill id="13398" toLevel="1" name="Rabbit Ears: WIT">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- WIT + 1 -->
-		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.accessory_rabbit_ear_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="13399" levels="1" name="Rabbit Ears: INT">
+	<skill id="13399" toLevel="1" name="Rabbit Ears: INT">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 1 -->
-		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="SELF" />
+		<icon>icon.accessory_rabbit_ear_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 	</skill>
 </list>

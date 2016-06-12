@@ -16,35 +16,36 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutEnchantScrollItemResult;
 
 /**
  * @author Sdw
  */
-public class RequestExAddEnchantScrollItem extends L2GameClientPacket
+public class RequestExAddEnchantScrollItem implements IClientIncomingPacket
 {
-	private static final String _C__D0_E8_REQUESTEXADDENCHANTSCROLLITEM = "[C] D0:E8 RequestExAddEnchantScrollItem";
-	
 	private int _scrollObjectId;
 	private int _enchantObjectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_scrollObjectId = readD();
-		_enchantObjectId = readD();
+		_scrollObjectId = packet.readD();
+		_enchantObjectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -72,7 +73,7 @@ public class RequestExAddEnchantScrollItem extends L2GameClientPacket
 		}
 		
 		final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
-		if (scrollTemplate == null)
+		if ((scrollTemplate == null))
 		{
 			// message may be custom
 			activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
@@ -83,11 +84,5 @@ public class RequestExAddEnchantScrollItem extends L2GameClientPacket
 		
 		request.setTimestamp(System.currentTimeMillis());
 		activeChar.sendPacket(new ExPutEnchantScrollItemResult(_scrollObjectId));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_E8_REQUESTEXADDENCHANTSCROLLITEM;
 	}
 }

@@ -23,6 +23,7 @@ import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.model.actor.stat.ControllableAirShipStat;
 import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
+import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -42,11 +43,6 @@ public class L2ControllableAirShipInstance extends L2AirShipInstance
 	private Future<?> _consumeFuelTask;
 	private Future<?> _checkTask;
 	
-	/**
-	 * Creates a controllable air ship.
-	 * @param template the controllable air ship template
-	 * @param ownerId the owner ID
-	 */
 	public L2ControllableAirShipInstance(L2CharTemplate template, int ownerId)
 	{
 		super(template);
@@ -76,7 +72,12 @@ public class L2ControllableAirShipInstance extends L2AirShipInstance
 	@Override
 	public boolean isOwner(L2PcInstance player)
 	{
-		return (_ownerId != 0) && ((player.getClanId() == _ownerId) || (player.getObjectId() == _ownerId));
+		if (_ownerId == 0)
+		{
+			return false;
+		}
+		
+		return (player.getClanId() == _ownerId) || (player.getObjectId() == _ownerId);
 	}
 	
 	@Override
@@ -116,73 +117,76 @@ public class L2ControllableAirShipInstance extends L2AirShipInstance
 		{
 			_captain = null;
 		}
-		else if ((_captain == null) && (player.getAirShip() == this))
-		{
-			final int x = player.getInVehiclePosition().getX() - 0x16e;
-			final int y = player.getInVehiclePosition().getY();
-			final int z = player.getInVehiclePosition().getZ() - 0x6b;
-			if (((x * x) + (y * y) + (z * z)) > 2500)
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_BECAUSE_YOU_ARE_TOO_FAR);
-				return false;
-			}
-			// TODO: Missing message ID: 2739 Message: You cannot control the helm because you do not meet the requirements.
-			else if (player.isInCombat())
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_BATTLE);
-				return false;
-			}
-			else if (player.isSitting())
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_SITTING_POSITION);
-				return false;
-			}
-			else if (player.isParalyzed())
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_YOU_ARE_PETRIFIED);
-				return false;
-			}
-			else if (player.isCursedWeaponEquipped())
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_A_CURSED_WEAPON_IS_EQUIPPED);
-				return false;
-			}
-			else if (player.isFishing())
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_FISHING);
-				return false;
-			}
-			else if (player.isDead() || player.isFakeDeath())
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHEN_YOU_ARE_DEAD);
-				return false;
-			}
-			else if (player.isCastingNow())
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_USING_A_SKILL);
-				return false;
-			}
-			else if (player.isTransformed())
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_TRANSFORMED);
-				return false;
-			}
-			else if (player.isCombatFlagEquipped())
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_HOLDING_A_FLAG);
-				return false;
-			}
-			else if (player.isInDuel())
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_DUEL);
-				return false;
-			}
-			_captain = player;
-			player.broadcastUserInfo();
-		}
 		else
 		{
-			return false;
+			if ((_captain == null) && (player.getAirShip() == this))
+			{
+				final int x = player.getInVehiclePosition().getX() - 0x16e;
+				final int y = player.getInVehiclePosition().getY();
+				final int z = player.getInVehiclePosition().getZ() - 0x6b;
+				if (((x * x) + (y * y) + (z * z)) > 2500)
+				{
+					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_BECAUSE_YOU_ARE_TOO_FAR);
+					return false;
+				}
+				// TODO: Missing message ID: 2739 Message: You cannot control the helm because you do not meet the requirements.
+				else if (player.isInCombat())
+				{
+					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_BATTLE);
+					return false;
+				}
+				else if (player.isSitting())
+				{
+					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_SITTING_POSITION);
+					return false;
+				}
+				else if (player.hasBlockActions() && player.hasAbnormalType(AbnormalType.PARALYZE))
+				{
+					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_YOU_ARE_PETRIFIED);
+					return false;
+				}
+				else if (player.isCursedWeaponEquipped())
+				{
+					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_A_CURSED_WEAPON_IS_EQUIPPED);
+					return false;
+				}
+				else if (player.isFishing())
+				{
+					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_FISHING);
+					return false;
+				}
+				else if (player.isDead() || player.isFakeDeath())
+				{
+					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHEN_YOU_ARE_DEAD);
+					return false;
+				}
+				else if (player.isCastingNow())
+				{
+					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_USING_A_SKILL);
+					return false;
+				}
+				else if (player.isTransformed())
+				{
+					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_TRANSFORMED);
+					return false;
+				}
+				else if (player.isCombatFlagEquipped())
+				{
+					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_HOLDING_A_FLAG);
+					return false;
+				}
+				else if (player.isInDuel())
+				{
+					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_DUEL);
+					return false;
+				}
+				_captain = player;
+				player.broadcastUserInfo();
+			}
+			else
+			{
+				return false;
+			}
 		}
 		updateAbnormalVisualEffects();
 		return true;
@@ -197,6 +201,7 @@ public class L2ControllableAirShipInstance extends L2AirShipInstance
 	@Override
 	public void setFuel(int f)
 	{
+		
 		final int old = _fuel;
 		if (f < 0)
 		{
@@ -299,19 +304,17 @@ public class L2ControllableAirShipInstance extends L2AirShipInstance
 		public void run()
 		{
 			int fuel = getFuel();
-			if (fuel <= 0)
+			if (fuel > 0)
 			{
-				return;
+				fuel -= 10;
+				if (fuel < 0)
+				{
+					fuel = 0;
+				}
+				
+				setFuel(fuel);
+				updateAbnormalVisualEffects();
 			}
-			
-			fuel -= 10;
-			if (fuel < 0)
-			{
-				fuel = 0;
-			}
-			
-			setFuel(fuel);
-			updateAbnormalVisualEffects();
 		}
 	}
 	
@@ -320,7 +323,7 @@ public class L2ControllableAirShipInstance extends L2AirShipInstance
 		@Override
 		public void run()
 		{
-			if (isVisible() && isEmpty() && !isInDock())
+			if (isSpawned() && isEmpty() && !isInDock())
 			{
 				// deleteMe() can't be called from CheckTask because task should not cancel itself
 				ThreadPoolManager.getInstance().executeGeneral(new DecayTask());

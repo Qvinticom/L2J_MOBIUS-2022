@@ -17,48 +17,21 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
-import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
  * Silent Move effect implementation.
  */
 public final class SilentMove extends AbstractEffect
 {
-	private final double _power;
-	
-	public SilentMove(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public SilentMove(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
-		_power = params.getDouble("power", 0);
 	}
 	
 	@Override
-	public int getEffectFlags()
+	public long getEffectFlags()
 	{
 		return EffectFlag.SILENT_MOVE.getMask();
-	}
-	
-	@Override
-	public boolean onActionTime(BuffInfo info)
-	{
-		if (info.getEffected().isDead())
-		{
-			return false;
-		}
-		
-		final double manaDam = _power * getTicksMultiplier();
-		if (manaDam > info.getEffected().getCurrentMp())
-		{
-			info.getEffected().sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
-			return false;
-		}
-		
-		info.getEffected().reduceCurrentMp(manaDam);
-		return info.getSkill().isToggle();
 	}
 }

@@ -20,6 +20,8 @@ import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.datatables.MerchantPriceConfigTable;
 import com.l2jmobius.gameserver.datatables.MerchantPriceConfigTable.MerchantPriceConfig;
 import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.enums.TaxType;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.buylist.L2BuyList;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -34,14 +36,21 @@ public class L2MerchantInstance extends L2NpcInstance
 {
 	private MerchantPriceConfig _mpc;
 	
-	/**
-	 * Creates a merchant,
-	 * @param template the merchant NPC template
-	 */
 	public L2MerchantInstance(L2NpcTemplate template)
 	{
 		super(template);
 		setInstanceType(InstanceType.L2MerchantInstance);
+	}
+	
+	@Override
+	public boolean isAutoAttackable(L2Character attacker)
+	{
+		if (attacker.isMonster())
+		{
+			return true;
+		}
+		
+		return super.isAutoAttackable(attacker);
 	}
 	
 	@Override
@@ -54,7 +63,18 @@ public class L2MerchantInstance extends L2NpcInstance
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		return "html/merchant/" + (val == 0 ? "" + npcId : npcId + "-" + val) + ".htm";
+		String pom = "";
+		
+		if (val == 0)
+		{
+			pom = "" + npcId;
+		}
+		else
+		{
+			pom = npcId + "-" + val;
+		}
+		
+		return "data/html/merchant/" + pom + ".htm";
 	}
 	
 	/**
@@ -87,12 +107,13 @@ public class L2MerchantInstance extends L2NpcInstance
 			return;
 		}
 		
-		final double taxRate = applyTax ? getMpc().getTotalTaxRate() : 0;
+		final double buyTaxRate = (applyTax) ? getMpc().getTotalTaxRate(TaxType.BUY) : 0;
+		final double sellTaxRate = (applyTax) ? getMpc().getTotalTaxRate(TaxType.SELL) : 0;
 		
 		player.setInventoryBlockingStatus(true);
 		
-		player.sendPacket(new BuyList(buyList, player.getAdena(), taxRate));
-		player.sendPacket(new ExBuySellList(player, false));
+		player.sendPacket(new BuyList(buyList, player.getAdena(), buyTaxRate));
+		player.sendPacket(new ExBuySellList(player, false, sellTaxRate));
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 }

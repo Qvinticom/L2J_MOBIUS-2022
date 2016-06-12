@@ -16,10 +16,8 @@
  */
 package com.l2jmobius.gameserver.model.actor.status;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2ClanHallManagerInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 
 public class FolkStatus extends NpcStatus
@@ -38,17 +36,6 @@ public class FolkStatus extends NpcStatus
 	@Override
 	public final void reduceHp(double value, L2Character attacker, boolean awake, boolean isDOT, boolean isHpConsumption)
 	{
-	}
-	
-	@Override
-	public final void reduceMp(double value)
-	{
-		// If Clan Hall buff are free and it's a Clan Hall Manager MP won't get reduced.
-		if (Config.CH_BUFF_FREE && (getActiveChar() instanceof L2ClanHallManagerInstance))
-		{
-			return;
-		}
-		super.reduceMp(value);
 	}
 	
 	@Override

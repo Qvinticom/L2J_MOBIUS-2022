@@ -16,42 +16,38 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * @author ShanSoft
  * @structure chddSdS
  */
-public final class RequestModifyBookMarkSlot extends L2GameClientPacket
+public final class RequestModifyBookMarkSlot implements IClientIncomingPacket
 {
-	private static final String _C__D0_51_02_REQUESTMODIFYBOOKMARKSLOT = "[C] D0:51:02 RequestModifyBookMarkSlot";
-	
 	private int id, icon;
 	private String name, tag;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		id = readD();
-		name = readS();
-		icon = readD();
-		tag = readS();
+		id = packet.readD();
+		name = packet.readS();
+		icon = packet.readD();
+		tag = packet.readS();
+		return true;
+		
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		activeChar.teleportBookmarkModify(id, icon, tag, name);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_51_02_REQUESTMODIFYBOOKMARKSLOT;
 	}
 }

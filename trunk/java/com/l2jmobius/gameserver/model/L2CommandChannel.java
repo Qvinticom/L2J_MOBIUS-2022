@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class L2CommandChannel extends AbstractPlayerGroup
 {
 	private final List<L2Party> _parties = new CopyOnWriteArrayList<>();
-	private L2PcInstance _commandLeader;
+	private L2PcInstance _commandLeader = null;
 	private int _channelLvl;
 	
 	/**
@@ -99,7 +99,7 @@ public class L2CommandChannel extends AbstractPlayerGroup
 			}
 		}
 		party.setCommandChannel(null);
-		party.broadcastPacket(new ExCloseMPCC());
+		party.broadcastPacket(ExCloseMPCC.STATIC_PACKET);
 		if (_parties.size() < 2)
 		{
 			broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_HAS_BEEN_DISBANDED));
@@ -117,18 +117,17 @@ public class L2CommandChannel extends AbstractPlayerGroup
 	 */
 	public void disbandChannel()
 	{
-		if (_parties == null)
+		if (_parties != null)
 		{
-			return;
-		}
-		for (L2Party party : _parties)
-		{
-			if (party != null)
+			for (L2Party party : _parties)
 			{
-				removeParty(party);
+				if (party != null)
+				{
+					removeParty(party);
+				}
 			}
+			_parties.clear();
 		}
-		_parties.clear();
 	}
 	
 	/**
@@ -195,7 +194,11 @@ public class L2CommandChannel extends AbstractPlayerGroup
 	 */
 	public boolean meetRaidWarCondition(L2Object obj)
 	{
-		return (obj instanceof L2Character) && ((L2Character) obj).isRaid() && (getMemberCount() >= Config.LOOT_RAIDS_PRIVILEGE_CC_SIZE);
+		if (!((obj instanceof L2Character) && ((L2Character) obj).isRaid()))
+		{
+			return false;
+		}
+		return (getMemberCount() >= Config.LOOT_RAIDS_PRIVILEGE_CC_SIZE);
 	}
 	
 	/**
@@ -246,16 +249,5 @@ public class L2CommandChannel extends AbstractPlayerGroup
 			}
 		}
 		return true;
-	}
-	
-	/**
-	 * Check whether the leader of this command channel is the same as the leader of the specified command channel<br>
-	 * (which essentially means they're the same group).
-	 * @param cc the other command channel to check against
-	 * @return {@code true} if this command channel equals the specified command channel, {@code false} otherwise
-	 */
-	public boolean equals(L2CommandChannel cc)
-	{
-		return (cc != null) && (getLeaderObjectId() == cc.getLeaderObjectId());
 	}
 }

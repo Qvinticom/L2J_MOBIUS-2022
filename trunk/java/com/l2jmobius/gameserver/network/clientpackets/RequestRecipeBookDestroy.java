@@ -16,31 +16,34 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import com.l2jmobius.gameserver.model.L2RecipeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeBookItemList;
 
-public final class RequestRecipeBookDestroy extends L2GameClientPacket
+public final class RequestRecipeBookDestroy implements IClientIncomingPacket
 {
-	private static final String _C__B6_REQUESTRECIPEBOOKDESTROY = "[C] B6 RequestRecipeBookDestroy";
-	
 	private int _recipeID;
 	
-	/**
-	 * Unknown Packet:ad 0000: ad 02 00 00 00
-	 */
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_recipeID = readD();
+		_recipeID = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if ((activeChar == null) || !getClient().getFloodProtectors().getTransaction().tryPerformAction("RecipeDestroy"))
+		final L2PcInstance activeChar = client.getActiveChar();
+		if (activeChar == null)
+		{
+			return;
+		}
+		
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("RecipeDestroy"))
 		{
 			return;
 		}
@@ -63,11 +66,5 @@ public final class RequestRecipeBookDestroy extends L2GameClientPacket
 		}
 		
 		activeChar.sendPacket(response);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__B6_REQUESTRECIPEBOOKDESTROY;
 	}
 }

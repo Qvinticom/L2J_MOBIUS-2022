@@ -17,26 +17,34 @@
 package com.l2jmobius.gameserver.engines.items;
 
 import java.io.File;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.engines.DocumentBase;
+import com.l2jmobius.gameserver.enums.ItemSkillType;
+import com.l2jmobius.gameserver.model.L2ExtractableProduct;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
+import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.stats.Stats;
+import com.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
 
 /**
  * @author mkizub, JIV
  */
-public final class DocumentItem extends DocumentBase
+public final class DocumentItem extends DocumentBase implements IGameXmlReader
 {
 	private Item _currentItem = null;
-	private final List<L2Item> _itemsInFile = new ArrayList<>();
+	private final List<L2Item> _itemsInFile = new LinkedList<>();
 	
 	/**
 	 * @param file
@@ -71,6 +79,7 @@ public final class DocumentItem extends DocumentBase
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
 			{
+				
 				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 				{
 					if ("item".equalsIgnoreCase(d.getNodeName()))
@@ -97,14 +106,13 @@ public final class DocumentItem extends DocumentBase
 		final int itemId = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
 		final String className = n.getAttributes().getNamedItem("type").getNodeValue();
 		final String itemName = n.getAttributes().getNamedItem("name").getNodeValue();
-		final String additionalName = n.getAttributes().getNamedItem("additionalName") != null ? n.getAttributes().getNamedItem("additionalName").getNodeValue() : null;
+		
 		_currentItem.id = itemId;
 		_currentItem.name = itemName;
 		_currentItem.type = className;
 		_currentItem.set = new StatsSet();
 		_currentItem.set.set("item_id", itemId);
 		_currentItem.set.set("name", itemName);
-		_currentItem.set.set("additionalName", additionalName);
 		
 		final Node first = n.getFirstChild();
 		for (n = first; n != null; n = n.getNextSibling())
@@ -125,10 +133,63 @@ public final class DocumentItem extends DocumentBase
 				}
 				parseBeanSet(n, _currentItem.set, 1);
 			}
-			else if ("for".equalsIgnoreCase(n.getNodeName()))
+			else if ("stats".equalsIgnoreCase(n.getNodeName()))
 			{
 				makeItem();
-				parseTemplate(n, _currentItem.item);
+				for (Node b = n.getFirstChild(); b != null; b = b.getNextSibling())
+				{
+					if ("stat".equalsIgnoreCase(b.getNodeName()))
+					{
+						final Stats type = Stats.valueOfXml(b.getAttributes().getNamedItem("type").getNodeValue());
+						final double value = Double.valueOf(b.getTextContent());
+						_currentItem.item.addFunctionTemplate(new FuncTemplate(null, null, "add", 0x00, type, value));
+					}
+				}
+			}
+			else if ("skills".equalsIgnoreCase(n.getNodeName()))
+			{
+				makeItem();
+				for (Node b = n.getFirstChild(); b != null; b = b.getNextSibling())
+				{
+					if ("skill".equalsIgnoreCase(b.getNodeName()))
+					{
+						final int id = parseInteger(b.getAttributes(), "id");
+						final int level = parseInteger(b.getAttributes(), "level");
+						final ItemSkillType type = parseEnum(b.getAttributes(), ItemSkillType.class, "type", ItemSkillType.NORMAL);
+						final int chance = parseInteger(b.getAttributes(), "type_chance", 0);
+						final int value = parseInteger(b.getAttributes(), "type_value", 0);
+						_currentItem.item.addSkill(new ItemSkillHolder(id, level, type, chance, value));
+					}
+				}
+			}
+			else if ("capsuled_items".equalsIgnoreCase(n.getNodeName()))
+			{
+				makeItem();
+				for (Node b = n.getFirstChild(); b != null; b = b.getNextSibling())
+				{
+					if ("item".equals(b.getNodeName()))
+					{
+						final int id = parseInteger(b.getAttributes(), "id");
+						final int min = parseInteger(b.getAttributes(), "min");
+						final int max = parseInteger(b.getAttributes(), "max");
+						final double chance = parseDouble(b.getAttributes(), "chance");
+						_currentItem.item.addCapsuledItem(new L2ExtractableProduct(id, min, max, chance));
+					}
+				}
+			}
+			else if ("createItems".equalsIgnoreCase(n.getNodeName()))
+			{
+				makeItem();
+				for (Node b = n.getFirstChild(); b != null; b = b.getNextSibling())
+				{
+					if ("item".equals(b.getNodeName()))
+					{
+						final int id = parseInteger(b.getAttributes(), "id");
+						final int count = parseInteger(b.getAttributes(), "count");
+						final double chance = parseDouble(b.getAttributes(), "chance");
+						_currentItem.item.addCreateItem(new ItemChanceHolder(id, chance, count));
+					}
+				}
 			}
 			else if ("cond".equalsIgnoreCase(n.getNodeName()))
 			{
@@ -143,12 +204,13 @@ public final class DocumentItem extends DocumentBase
 				else if ((condition != null) && (msgId != null))
 				{
 					condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-					if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+					final Node addName = n.getAttributes().getNamedItem("addName");
+					if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 					{
 						condition.addName();
 					}
 				}
-				_currentItem.item.attach(condition);
+				_currentItem.item.attachCondition(condition);
 			}
 		}
 		// bah! in this point item doesn't have to be still created
@@ -157,13 +219,17 @@ public final class DocumentItem extends DocumentBase
 	
 	private void makeItem() throws InvocationTargetException
 	{
+		// If item exists just reload the data.
 		if (_currentItem.item != null)
 		{
-			return; // item is already created
+			_currentItem.item.set(_currentItem.set);
+			return;
 		}
+		
 		try
 		{
-			_currentItem.item = (L2Item) Class.forName("com.l2jmobius.gameserver.model.items.L2" + _currentItem.type).getConstructor(StatsSet.class).newInstance(_currentItem.set);
+			final Constructor<?> itemClass = Class.forName("com.l2jmobius.gameserver.model.items.L2" + _currentItem.type).getConstructor(StatsSet.class);
+			_currentItem.item = (L2Item) itemClass.newInstance(_currentItem.set);
 		}
 		catch (Exception e)
 		{
@@ -174,5 +240,15 @@ public final class DocumentItem extends DocumentBase
 	public List<L2Item> getItemList()
 	{
 		return _itemsInFile;
+	}
+	
+	@Override
+	public void load()
+	{
+	}
+	
+	@Override
+	public void parseDocument(Document doc, File f)
+	{
 	}
 }

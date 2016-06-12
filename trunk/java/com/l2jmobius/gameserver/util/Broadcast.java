@@ -27,7 +27,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 
 /**
@@ -47,17 +47,15 @@ public final class Broadcast
 	 * @param character
 	 * @param mov
 	 */
-	public static void toPlayersTargettingMyself(L2Character character, L2GameServerPacket mov)
+	public static void toPlayersTargettingMyself(L2Character character, IClientOutgoingPacket mov)
 	{
-		for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
+		L2World.getInstance().forEachVisibleObject(character, L2PcInstance.class, player ->
 		{
-			if (player.getTarget() != character)
+			if (player.getTarget() == character)
 			{
-				continue;
+				player.sendPacket(mov);
 			}
-			
-			player.sendPacket(mov);
-		}
+		});
 	}
 	
 	/**
@@ -69,21 +67,17 @@ public final class Broadcast
 	 * @param character
 	 * @param mov
 	 */
-	public static void toKnownPlayers(L2Character character, L2GameServerPacket mov)
+	public static void toKnownPlayers(L2Character character, IClientOutgoingPacket mov)
 	{
-		for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
+		L2World.getInstance().forEachVisibleObject(character, L2PcInstance.class, player ->
 		{
-			if (player == null)
-			{
-				continue;
-			}
 			try
 			{
 				player.sendPacket(mov);
-				if ((mov instanceof CharInfo) && character.isPlayer())
+				if ((mov instanceof CharInfo) && (character.isPlayer()))
 				{
 					final int relation = ((L2PcInstance) character).getRelation(player);
-					final Integer oldrelation = character.getKnownList().getKnownRelations().get(player.getObjectId());
+					final Integer oldrelation = character.getKnownRelations().get(player.getObjectId());
 					if ((oldrelation != null) && (oldrelation != relation))
 					{
 						final RelationChanged rc = new RelationChanged();
@@ -101,7 +95,7 @@ public final class Broadcast
 							}
 						}
 						player.sendPacket(rc);
-						character.getKnownList().getKnownRelations().put(player.getObjectId(), relation);
+						character.getKnownRelations().put(player.getObjectId(), relation);
 					}
 				}
 			}
@@ -109,7 +103,7 @@ public final class Broadcast
 			{
 				_log.log(Level.WARNING, e.getMessage(), e);
 			}
-		}
+		});
 	}
 	
 	/**
@@ -122,20 +116,14 @@ public final class Broadcast
 	 * @param mov
 	 * @param radius
 	 */
-	public static void toKnownPlayersInRadius(L2Character character, L2GameServerPacket mov, int radius)
+	public static void toKnownPlayersInRadius(L2Character character, IClientOutgoingPacket mov, int radius)
 	{
 		if (radius < 0)
 		{
 			radius = 1500;
 		}
 		
-		for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
-		{
-			if (character.isInsideRadius(player, radius, false, false))
-			{
-				player.sendPacket(mov);
-			}
-		}
+		L2World.getInstance().forEachVisibleObjectInRange(character, L2PcInstance.class, radius, mov::sendTo);
 	}
 	
 	/**
@@ -146,7 +134,7 @@ public final class Broadcast
 	 * @param character
 	 * @param mov
 	 */
-	public static void toSelfAndKnownPlayers(L2Character character, L2GameServerPacket mov)
+	public static void toSelfAndKnownPlayers(L2Character character, IClientOutgoingPacket mov)
 	{
 		if (character instanceof L2PcInstance)
 		{
@@ -157,7 +145,7 @@ public final class Broadcast
 	}
 	
 	// To improve performance we are comparing values of radius^2 instead of calculating sqrt all the time
-	public static void toSelfAndKnownPlayersInRadius(L2Character character, L2GameServerPacket mov, int radius)
+	public static void toSelfAndKnownPlayersInRadius(L2Character character, IClientOutgoingPacket mov, int radius)
 	{
 		if (radius < 0)
 		{
@@ -169,13 +157,7 @@ public final class Broadcast
 			character.sendPacket(mov);
 		}
 		
-		for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
-		{
-			if ((player != null) && Util.checkIfInRange(radius, character, player, false))
-			{
-				player.sendPacket(mov);
-			}
-		}
+		L2World.getInstance().forEachVisibleObjectInRange(character, L2PcInstance.class, radius, mov::sendTo);
 	}
 	
 	/**
@@ -185,7 +167,7 @@ public final class Broadcast
 	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T SEND Server->Client packet to this L2Character (to do this use method toSelfAndKnownPlayers)</B></FONT><BR>
 	 * @param packet
 	 */
-	public static void toAllOnlinePlayers(L2GameServerPacket packet)
+	public static void toAllOnlinePlayers(IClientOutgoingPacket packet)
 	{
 		for (L2PcInstance player : L2World.getInstance().getPlayers())
 		{
@@ -204,17 +186,6 @@ public final class Broadcast
 	public static void toAllOnlinePlayers(String text, boolean isCritical)
 	{
 		toAllOnlinePlayers(new CreatureSay(0, isCritical ? ChatType.CRITICAL_ANNOUNCE : ChatType.ANNOUNCEMENT, "", text));
-	}
-	
-	public static void toPlayersInInstance(L2GameServerPacket packet, int instanceId)
-	{
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
-		{
-			if (player.isOnline() && (player.getInstanceId() == instanceId))
-			{
-				player.sendPacket(packet);
-			}
-		}
 	}
 	
 	public static void toAllOnlinePlayersOnScreen(String text)

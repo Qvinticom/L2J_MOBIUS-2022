@@ -63,7 +63,7 @@ public class Q00134_TempleMissionary extends Quest
 	
 	public Q00134_TempleMissionary()
 	{
-		super(134, Q00134_TempleMissionary.class.getSimpleName(), "Temple Missionary");
+		super(134);
 		addStartNpc(GLYVKA);
 		addTalkId(GLYVKA, ROUKE);
 		addKillId(CRUMA_MARSHLANDS_TRAITOR);

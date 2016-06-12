@@ -16,11 +16,15 @@
  */
 package com.l2jmobius.gameserver.model;
 
+import java.util.Collection;
+import java.util.Collections;
+
+import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.model.buylist.Product;
+import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.L2WarehouseItem;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.clientpackets.ensoul.SoulCrystalOption;
 
 /**
  * Get all information from L2ItemInstance to generate ItemInfo.
@@ -61,7 +65,7 @@ public class ItemInfo
 	
 	private int _location;
 	
-	private int _elemAtkType = -2;
+	private byte _elemAtkType = -2;
 	private int _elemAtkPower = 0;
 	private final int[] _elemDefAttr =
 	{
@@ -74,11 +78,10 @@ public class ItemInfo
 	};
 	
 	private int[] _option;
+	private Collection<EnsoulOption> _soulCrystalOptions;
+	private Collection<EnsoulOption> _soulCrystalSpecialOptions;
 	private int _visualId;
 	private long _visualExpiration;
-	
-	private SoulCrystalOption[] _commonSoulCrystalOptions = new SoulCrystalOption[2];
-	private SoulCrystalOption _specialSoulCrystalOption;
 	
 	/**
 	 * Get all information from L2ItemInstance to generate ItemInfo.
@@ -100,8 +103,15 @@ public class ItemInfo
 		// Get the enchant level of the L2ItemInstance
 		_enchant = item.getEnchantLevel();
 		
-		// Get the augmentation bonus
-		_augmentation = item.isAugmented() ? item.getAugmentation().getAugmentationId() : 0;
+		// Get the augmentation boni
+		if (item.isAugmented())
+		{
+			_augmentation = item.getAugmentation().getId();
+		}
+		else
+		{
+			_augmentation = 0;
+		}
 		
 		// Get the quantity of the L2ItemInstance
 		_count = item.getCount();
@@ -116,17 +126,17 @@ public class ItemInfo
 		// Get the action to do clientside
 		switch (item.getLastChange())
 		{
-			case L2ItemInstance.ADDED:
+			case (L2ItemInstance.ADDED):
 			{
 				_change = 1;
 				break;
 			}
-			case L2ItemInstance.MODIFIED:
+			case (L2ItemInstance.MODIFIED):
 			{
 				_change = 2;
 				break;
 			}
-			case L2ItemInstance.REMOVED:
+			case (L2ItemInstance.REMOVED):
 			{
 				_change = 3;
 				break;
@@ -138,17 +148,16 @@ public class ItemInfo
 		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
 		_location = item.getLocationSlot();
 		
-		_elemAtkType = item.getAttackElementType();
-		_elemAtkPower = item.getAttackElementPower();
-		for (byte i = 0; i < 6; i++)
+		_elemAtkType = item.getAttackAttributeType().getClientId();
+		_elemAtkPower = item.getAttackAttributePower();
+		for (AttributeType type : AttributeType.ATTRIBUTE_TYPES)
 		{
-			_elemDefAttr[i] = item.getElementDefAttr(i);
+			_elemDefAttr[type.getClientId()] = item.getDefenceAttribute(type);
 		}
 		_option = item.getEnchantOptions();
+		_soulCrystalOptions = item.getSpecialAbilities();
+		_soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
 		_visualId = item.getVisualId();
-		
-		_commonSoulCrystalOptions = item.getCommonSoulCrystalOptions();
-		_specialSoulCrystalOption = item.getSpecialSoulCrystalOption();
 	}
 	
 	public ItemInfo(L2ItemInstance item, int change)
@@ -175,7 +184,7 @@ public class ItemInfo
 		_enchant = item.getEnchant();
 		
 		// Get the augmentation boni
-		_augmentation = item.isAugmented() ? item.getAugmentation().getAugmentationId() : 0;
+		_augmentation = 0;
 		
 		// Get the quantity of the L2ItemInstance
 		_count = item.getCount();
@@ -204,9 +213,9 @@ public class ItemInfo
 		}
 		
 		_option = item.getEnchantOptions();
+		_soulCrystalOptions = item.getSoulCrystalOptions();
+		_soulCrystalOptions = item.getSoulCrystalSpecialOptions();
 		_visualId = item.getVisualId();
-		_commonSoulCrystalOptions = item.getCommonSoulCrystalOptions();
-		_specialSoulCrystalOption = item.getSpecialSoulCrystalOption();
 	}
 	
 	public ItemInfo(Product item)
@@ -232,8 +241,8 @@ public class ItemInfo
 		_count = item.getCount();
 		
 		// Get custom item types (used loto, race tickets)
-		_type1 = 0;
-		_type2 = 0;
+		_type1 = item.getItem().getType1();
+		_type2 = item.getItem().getType2();
 		
 		// Verify if the L2ItemInstance is equipped
 		_equipped = 0;
@@ -246,6 +255,9 @@ public class ItemInfo
 		_time = -9999;
 		
 		_location = 0;
+		
+		_soulCrystalOptions = Collections.emptyList();
+		_soulCrystalSpecialOptions = Collections.emptyList();
 	}
 	
 	public ItemInfo(L2WarehouseItem item)
@@ -265,7 +277,14 @@ public class ItemInfo
 		_enchant = item.getEnchantLevel();
 		
 		// Get the augmentation boni
-		_augmentation = item.isAugmented() ? item.getAugmentationId() : 0;
+		if (item.isAugmented())
+		{
+			_augmentation = item.getAugmentationId();
+		}
+		else
+		{
+			_augmentation = 0;
+		}
 		
 		// Get the quantity of the L2ItemInstance
 		_count = item.getCount();
@@ -289,9 +308,8 @@ public class ItemInfo
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_option = item.getEnchantOptions();
-		
-		_commonSoulCrystalOptions = item.getCommonSoulCrystalOptions();
-		_specialSoulCrystalOption = item.getSpecialSoulCrystalOption();
+		_soulCrystalOptions = item.getSoulCrystalOptions();
+		_soulCrystalOptions = item.getSoulCrystalSpecialOptions();
 	}
 	
 	public int getObjectId()
@@ -312,16 +330,6 @@ public class ItemInfo
 	public int getAugmentationBonus()
 	{
 		return _augmentation;
-	}
-	
-	public int get1stAugmentationId()
-	{
-		return 0x0000FFFF & getAugmentationBonus();
-	}
-	
-	public int get2ndAugmentationId()
-	{
-		return getAugmentationBonus() >> 16;
 	}
 	
 	public long getCount()
@@ -394,28 +402,18 @@ public class ItemInfo
 		return _visualId;
 	}
 	
+	public Collection<EnsoulOption> getSoulCrystalOptions()
+	{
+		return _soulCrystalOptions;
+	}
+	
+	public Collection<EnsoulOption> getSoulCrystalSpecialOptions()
+	{
+		return _soulCrystalSpecialOptions;
+	}
+	
 	public long getVisualExpiration()
 	{
 		return _visualExpiration;
-	}
-	
-	public SoulCrystalOption[] getCommonSoulCrystalOptions()
-	{
-		return _commonSoulCrystalOptions;
-	}
-	
-	public void setSoulCrystalOptions(SoulCrystalOption[] options)
-	{
-		_commonSoulCrystalOptions = options;
-	}
-	
-	public SoulCrystalOption getSpecialSoulCrystalOption()
-	{
-		return _specialSoulCrystalOption;
-	}
-	
-	public void setSpecialSoulCrystalOption(SoulCrystalOption option)
-	{
-		_specialSoulCrystalOption = option;
 	}
 }

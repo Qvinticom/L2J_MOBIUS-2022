@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.model.zone.type;
 
 import java.util.concurrent.ScheduledFuture;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.util.Rnd;
 
 /**
  * Teleport residence zone for clan hall sieges
@@ -71,7 +71,12 @@ public class L2ResidenceHallTeleportZone extends L2ResidenceTeleportZone
 		@Override
 		public void run()
 		{
-			final int index = getSpawns().size() > 1 ? Rnd.get(getSpawns().size()) : 0;
+			int index = 0;
+			if (getSpawns().size() > 1)
+			{
+				index = Rnd.get(getSpawns().size());
+			}
+			
 			final Location loc = getSpawns().get(index);
 			if (loc == null)
 			{

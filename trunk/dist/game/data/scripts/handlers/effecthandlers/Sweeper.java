@@ -18,13 +18,15 @@ package handlers.effecthandlers;
 
 import java.util.Collection;
 
+import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Sweeper effect implementation.
@@ -32,9 +34,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class Sweeper extends AbstractEffect
 {
-	public Sweeper(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Sweeper(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -44,15 +45,15 @@ public final class Sweeper extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isAttackable())
+		if (!effector.isPlayer() || !effected.isAttackable())
 		{
 			return;
 		}
 		
-		final L2PcInstance player = info.getEffector().getActingPlayer();
-		final L2Attackable monster = (L2Attackable) info.getEffected();
+		final L2PcInstance player = effector.getActingPlayer();
+		final L2Attackable monster = (L2Attackable) effected;
 		if (!monster.checkSpoilOwner(player, false))
 		{
 			return;
@@ -66,15 +67,16 @@ public final class Sweeper extends AbstractEffect
 		final Collection<ItemHolder> items = monster.takeSweep();
 		if (items != null)
 		{
-			for (ItemHolder item : items)
+			for (ItemHolder sweepedItem : items)
 			{
-				if (player.isInParty())
+				final L2Party party = player.getParty();
+				if (party != null)
 				{
-					player.getParty().distributeItem(player, item, true, monster);
+					party.distributeItem(player, sweepedItem, true, monster);
 				}
 				else
 				{
-					player.addItem("Sweeper", item, info.getEffected(), true);
+					player.addItem("Sweeper", sweepedItem, effected, true);
 				}
 			}
 		}

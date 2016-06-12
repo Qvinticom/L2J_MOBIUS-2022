@@ -16,11 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
  * Opens the CommandChannel Information window
  * @author chris_00
  */
-public class ExOpenMPCC extends L2GameServerPacket
+public class ExOpenMPCC implements IClientOutgoingPacket
 {
 	public static final ExOpenMPCC STATIC_PACKET = new ExOpenMPCC();
 	
@@ -29,9 +32,10 @@ public class ExOpenMPCC extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x12);
+		OutgoingPackets.EX_OPEN_MPCC.writeId(packet);
+		
+		return true;
 	}
 }

@@ -1,2381 +1,2396 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="15100" level="89" type="L2Servitor" name="Wynn Spectral Lord">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15100" level="89" type="L2Servitor" name="Wynn Spectral Lord" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="16022" hpRegen="7.5" mp="1580" mpRegen="2.7" />
-			<attack physical="3056" magical="1620" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1771" magical="3398" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="9261" hpRegen="9.5" mp="1043" mpRegen="3.3" />
+			<speed>
+				<walk ground="160" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1272.6863844213" magical="317.81056986594" critical="14" attackSpeed="491" range="40" />
+			<defence physical="994.94382022472" magical="1259.6877665295" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="12.5" />
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="15101" level="91" type="L2Servitor" name="Wynn Spectral Lord">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15101" level="91" type="L2Servitor" name="Wynn Spectral Lord" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="16399" hpRegen="7.5" mp="1637" mpRegen="2.7" />
-			<attack physical="3280" magical="1756" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1863" magical="3608" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="9479" hpRegen="10.5" mp="1080" mpRegen="3.6" />
+			<speed>
+				<walk ground="160" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1350.7948274442" magical="336.89425376575" critical="14" attackSpeed="491" range="40" />
+			<defence physical="1035" magical="1322.6989365603" />
 			<attribute>
 				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="12.5" />
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="15102" level="93" type="L2Servitor" name="Wynn Spectral Lord">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15102" level="93" type="L2Servitor" name="Wynn Spectral Lord" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="16783" hpRegen="7.5" mp="1695" mpRegen="2.7" />
-			<attack physical="3519" magical="1906" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1961" magical="3834" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="9701" hpRegen="10.5" mp="1119" mpRegen="3.6" />
+			<speed>
+				<walk ground="160" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1432.8888309615" magical="357.88344830754" critical="14" attackSpeed="491" range="40" />
+			<defence physical="1076.9230769231" magical="1390.4906974214" />
 			<attribute>
 				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="12.5" />
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="15103" level="95" type="L2Servitor" name="Wynn Spectral Lord">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15103" level="95" type="L2Servitor" name="Wynn Spectral Lord" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="21140" hpRegen="7.5" mp="1753" mpRegen="2.7" />
-			<attack physical="5031" magical="3674" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2404" magical="4750" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="12220" hpRegen="10.5" mp="1157" mpRegen="3.6" />
+			<speed>
+				<walk ground="160" />
+				<run ground="198" />
+			</speed>
+			<attack physical="2026.8636993586" magical="674.93973844084" critical="14" attackSpeed="491" range="40" />
+			<defence physical="1306.5217391304" magical="1703.9747453006" />
 			<attribute>
 				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="12.5" />
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="15104" level="97" type="L2Servitor" name="Wynn Spectral Lord">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15104" level="97" type="L2Servitor" name="Wynn Spectral Lord" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="22395" hpRegen="7.5" mp="1814" mpRegen="2.7" />
-			<attack physical="5397" magical="3982" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2529" magical="5047" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="12945" hpRegen="10.5" mp="1197" mpRegen="3.6" />
+			<speed>
+				<walk ground="160" />
+				<run ground="198" />
+			</speed>
+			<attack physical="2150.9361773357" magical="715.87444622067" critical="14" attackSpeed="491" range="40" />
+			<defence physical="1359.6774193548" magical="1790.6951985521" />
 			<attribute>
 				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="12.5" />
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="15105" level="99" type="L2Servitor" name="Wynn Spectral Lord">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15105" level="99" type="L2Servitor" name="Wynn Spectral Lord" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="22617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
-			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2660" magical="5358" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="13073" hpRegen="10.5" mp="1236" mpRegen="3.6" />
+			<speed>
+				<walk ground="160" />
+				<run ground="198" />
+			</speed>
+			<attack physical="2281.8320899642" magical="758.971123285" critical="14" attackSpeed="491" range="40" />
+			<defence physical="1414.8936170213" magical="1880.8370198722" />
 			<attribute>
 				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="12.5" />
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="15106" level="85" type="L2Servitor" name="Wynn Soulless">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15106" level="85" type="L2Servitor" name="Wynn Soulless" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="10929" hpRegen="7.5" mp="1049" mpRegen="2.7" />
-			<attack physical="2653" magical="1368" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
-			<defence physical="1144" magical="2147" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6317" hpRegen="9.5" mp="692" mpRegen="3.3" />
+			<speed>
+				<walk ground="48" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1129.8279696327" magical="280.82224756717" critical="14" attackSpeed="343" range="1000" />
+			<defence physical="656.89655172414" magical="814.46075642047" />
 			<attribute>
 				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="7" />
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="15107" level="87" type="L2Servitor" name="Wynn Soulless">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15107" level="87" type="L2Servitor" name="Wynn Soulless" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="11182" hpRegen="7.5" mp="1087" mpRegen="2.7" />
-			<attack physical="2846" magical="1494" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
-			<defence physical="1202" magical="2283" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6464" hpRegen="9.5" mp="718" mpRegen="3.3" />
+			<speed>
+				<walk ground="48" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1198.6993732731" magical="299.97616921847" critical="14" attackSpeed="343" range="1000" />
+			<defence physical="682.95454545455" magical="856.21062106211" />
 			<attribute>
 				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="7" />
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="15108" level="89" type="L2Servitor" name="Wynn Soulless">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15108" level="89" type="L2Servitor" name="Wynn Soulless" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="11443" hpRegen="7.5" mp="1128" mpRegen="2.7" />
-			<attack physical="3054" magical="1620" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
-			<defence physical="1265" magical="2427" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6615" hpRegen="9.5" mp="745" mpRegen="3.3" />
+			<speed>
+				<walk ground="48" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1271.8534744838" magical="317.81056986594" critical="14" attackSpeed="343" range="1000" />
+			<defence physical="710.67415730337" magical="899.98887529202" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="7" />
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="15109" level="91" type="L2Servitor" name="Wynn Soulless">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15109" level="91" type="L2Servitor" name="Wynn Soulless" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="11713" hpRegen="7.5" mp="1170" mpRegen="2.7" />
-			<attack physical="3277" magical="1756" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
-			<defence physical="1331" magical="2577" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6771" hpRegen="10.5" mp="772" mpRegen="3.6" />
+			<speed>
+				<walk ground="48" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1349.5593443703" magical="336.89425376575" critical="14" attackSpeed="343" range="1000" />
+			<defence physical="738.88888888889" magical="944.99449944995" />
 			<attribute>
 				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="7" />
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="15110" level="93" type="L2Servitor" name="Wynn Soulless">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15110" level="93" type="L2Servitor" name="Wynn Soulless" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="11987" hpRegen="7.5" mp="1211" mpRegen="2.7" />
-			<attack physical="3516" magical="1906" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
-			<defence physical="1400" magical="2737" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6929" hpRegen="10.5" mp="799" mpRegen="3.6" />
+			<speed>
+				<walk ground="48" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1431.6669246247" magical="357.88344830754" critical="14" attackSpeed="343" range="1000" />
+			<defence physical="768.68131868132" magical="992.63772531099" />
 			<attribute>
 				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="7" />
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="15111" level="95" type="L2Servitor" name="Wynn Soulless">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15111" level="95" type="L2Servitor" name="Wynn Soulless" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="15101" hpRegen="7.5" mp="1252" mpRegen="2.7" />
-			<attack physical="5030" magical="3674" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
-			<defence physical="1718" magical="3395" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8729" hpRegen="10.5" mp="827" mpRegen="3.6" />
+			<speed>
+				<walk ground="48" />
+				<run ground="198" />
+			</speed>
+			<attack physical="2026.4608244432" magical="674.93973844084" critical="14" attackSpeed="343" range="1000" />
+			<defence physical="933.69565217391" magical="1217.8935284833" />
 			<attribute>
 				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="7" />
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="15112" level="97" type="L2Servitor" name="Wynn Soulless">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15112" level="97" type="L2Servitor" name="Wynn Soulless" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="15996" hpRegen="7.5" mp="1296" mpRegen="2.7" />
-			<attack physical="5393" magical="3982" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
-			<defence physical="1807" magical="3606" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="9246" hpRegen="10.5" mp="855" mpRegen="3.6" />
+			<speed>
+				<walk ground="48" />
+				<run ground="198" />
+			</speed>
+			<attack physical="2148.9434627004" magical="715.87444622067" critical="14" attackSpeed="343" range="1000" />
+			<defence physical="971.50537634409" magical="1279.3214805352" />
 			<attribute>
 				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="7" />
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="15113" level="99" type="L2Servitor" name="Wynn Soulless">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15113" level="99" type="L2Servitor" name="Wynn Soulless" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="16154" hpRegen="7.5" mp="1338" mpRegen="2.7" />
-			<attack physical="5782" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
-			<defence physical="1901" magical="3827" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="9338" hpRegen="10.5" mp="883" mpRegen="3.6" />
+			<speed>
+				<walk ground="48" />
+				<run ground="198" />
+			</speed>
+			<attack physical="2279.8605744208" magical="758.971123285" critical="14" attackSpeed="343" range="1000" />
+			<defence physical="1010.6382978723" magical="1343.65564216" />
 			<attribute>
 				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="7" />
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="15114" level="85" type="L2Servitor" name="Wynn Merrow">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15114" level="85" type="L2Servitor" name="Wynn Merrow" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="21857" hpRegen="7.5" mp="2097" mpRegen="2.7" />
-			<attack physical="1859" magical="1368" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2286" magical="4299" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="12634" hpRegen="9.5" mp="1384" mpRegen="3.3" />
+			<speed>
+				<walk ground="160" />
+				<run ground="198" />
+			</speed>
+			<attack physical="791.98725322291" magical="280.82224756717" critical="9" attackSpeed="343" range="40" />
+			<defence physical="1313.7931034483" magical="1630.4389059596" />
 			<attribute>
 				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="15115" level="87" type="L2Servitor" name="Wynn Merrow">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15115" level="87" type="L2Servitor" name="Wynn Merrow" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="22367" hpRegen="7.5" mp="2177" mpRegen="2.7" />
-			<attack physical="1995" magical="1494" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2406" magical="4568" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="12929" hpRegen="9.5" mp="1437" mpRegen="3.3" />
+			<speed>
+				<walk ground="160" />
+				<run ground="198" />
+			</speed>
+			<attack physical="839.84769863198" magical="299.97616921847" critical="9" attackSpeed="343" range="40" />
+			<defence physical="1366.4772727273" magical="1712.796279628" />
 			<attribute>
 				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="15116" level="89" type="L2Servitor" name="Wynn Merrow">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15116" level="89" type="L2Servitor" name="Wynn Merrow" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="22889" hpRegen="7.5" mp="2259" mpRegen="2.7" />
-			<attack physical="2139" magical="1620" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2531" magical="4855" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="13231" hpRegen="9.5" mp="1491" mpRegen="3.3" />
+			<speed>
+				<walk ground="160" />
+				<run ground="198" />
+			</speed>
+			<attack physical="890.79717810113" magical="317.81056986594" critical="9" attackSpeed="343" range="40" />
+			<defence physical="1421.9101123596" magical="1799.977750584" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="15117" level="91" type="L2Servitor" name="Wynn Merrow">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15117" level="91" type="L2Servitor" name="Wynn Merrow" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="23427" hpRegen="7.5" mp="2339" mpRegen="2.7" />
-			<attack physical="2295" magical="1756" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2663" magical="5158" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="13542" hpRegen="10.5" mp="1544" mpRegen="3.6" />
+			<speed>
+				<walk ground="160" />
+				<run ground="198" />
+			</speed>
+			<attack physical="944.73272382835" magical="336.89425376575" critical="9" attackSpeed="343" range="40" />
+			<defence physical="1478.8888888889" magical="1891.4558122479" />
 			<attribute>
 				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="15118" level="93" type="L2Servitor" name="Wynn Merrow">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15118" level="93" type="L2Servitor" name="Wynn Merrow" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="23977" hpRegen="7.5" mp="2423" mpRegen="2.7" />
-			<attack physical="2462" magical="1906" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2800" magical="5480" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="13859" hpRegen="10.5" mp="1599" mpRegen="3.6" />
+			<speed>
+				<walk ground="160" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1002.7778004057" magical="357.88344830754" critical="9" attackSpeed="343" range="40" />
+			<defence physical="1538.4615384615" magical="1987.451492402" />
 			<attribute>
 				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="15119" level="95" type="L2Servitor" name="Wynn Merrow">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15119" level="95" type="L2Servitor" name="Wynn Merrow" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="30202" hpRegen="7.5" mp="2506" mpRegen="2.7" />
-			<attack physical="3519" magical="3674" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3438" magical="6791" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="17458" hpRegen="10.5" mp="1654" mpRegen="3.6" />
+			<speed>
+				<walk ground="160" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1417.7168272795" magical="674.93973844084" critical="9" attackSpeed="343" range="40" />
+			<defence physical="1867.9347826087" magical="2435.7870569666" />
 			<attribute>
 				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="15120" level="97" type="L2Servitor" name="Wynn Merrow">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15120" level="97" type="L2Servitor" name="Wynn Merrow" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="31992" hpRegen="7.5" mp="2590" mpRegen="2.7" />
-			<attack physical="3777" magical="3982" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3615" magical="7211" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="18493" hpRegen="10.5" mp="1710" mpRegen="3.6" />
+			<speed>
+				<walk ground="160" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1504.8980925736" magical="715.87444622067" critical="9" attackSpeed="343" range="40" />
+			<defence physical="1943.5483870968" magical="2558.9978352674" />
 			<attribute>
 				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="15121" level="99" type="L2Servitor" name="Wynn Merrow">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15121" level="99" type="L2Servitor" name="Wynn Merrow" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="32312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
-			<attack physical="4050" magical="4313" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="7655" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="18677" hpRegen="10.5" mp="1766" mpRegen="3.6" />
+			<speed>
+				<walk ground="160" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1596.9275901771" magical="758.971123285" critical="9" attackSpeed="343" range="40" />
+			<defence physical="2021.8085106383" magical="2687.6623832596" />
 			<attribute>
 				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="15122" level="85" type="L2Servitor" name="Wynn Magnus">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15122" level="85" type="L2Servitor" name="Wynn Magnus" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="15298" hpRegen="7.5" mp="1467" mpRegen="2.7" />
-			<attack physical="2658" magical="1368" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1599" magical="3005" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8843" hpRegen="9.5" mp="968" mpRegen="3.3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1131.9581128635" magical="280.82224756717" critical="14" attackSpeed="491" range="40" />
+			<defence physical="918.96551724138" magical="1139.9415803649" />
 			<attribute>
 				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="22" />
+			<radius normal="13.5" />
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="15123" level="87" type="L2Servitor" name="Wynn Magnus">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15123" level="87" type="L2Servitor" name="Wynn Magnus" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="15657" hpRegen="7.5" mp="1522" mpRegen="2.7" />
-			<attack physical="2850" magical="1494" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1682" magical="3195" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="9050" hpRegen="9.5" mp="1005" mpRegen="3.3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1199.9629355078" magical="299.97616921847" critical="14" attackSpeed="491" range="40" />
+			<defence physical="955.68181818182" magical="1198.2448244824" />
 			<attribute>
 				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="22" />
+			<radius normal="13.5" />
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="15124" level="89" type="L2Servitor" name="Wynn Magnus">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15124" level="89" type="L2Servitor" name="Wynn Magnus" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="16022" hpRegen="7.5" mp="1580" mpRegen="2.7" />
-			<attack physical="3056" magical="1620" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1771" magical="3398" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="9261" hpRegen="9.5" mp="1043" mpRegen="3.3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1272.6863844213" magical="317.81056986594" critical="14" attackSpeed="491" range="40" />
+			<defence physical="994.94382022472" magical="1259.6877665295" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="22" />
+			<radius normal="13.5" />
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="15125" level="91" type="L2Servitor" name="Wynn Magnus">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15125" level="91" type="L2Servitor" name="Wynn Magnus" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="16399" hpRegen="7.5" mp="1637" mpRegen="2.7" />
-			<attack physical="3280" magical="1756" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1863" magical="3608" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="9479" hpRegen="10.5" mp="1080" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1350.7948274442" magical="336.89425376575" critical="14" attackSpeed="491" range="40" />
+			<defence physical="1035" magical="1322.6989365603" />
 			<attribute>
 				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="22" />
+			<radius normal="13.5" />
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="15126" level="93" type="L2Servitor" name="Wynn Magnus">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15126" level="93" type="L2Servitor" name="Wynn Magnus" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="16783" hpRegen="7.5" mp="1695" mpRegen="2.7" />
-			<attack physical="3519" magical="1906" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1961" magical="3834" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="9701" hpRegen="10.5" mp="1119" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1432.8888309615" magical="357.88344830754" critical="14" attackSpeed="491" range="40" />
+			<defence physical="1076.9230769231" magical="1390.4906974214" />
 			<attribute>
 				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="22" />
+			<radius normal="13.5" />
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="15127" level="95" type="L2Servitor" name="Wynn Magnus">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15127" level="95" type="L2Servitor" name="Wynn Magnus" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="21140" hpRegen="7.5" mp="1753" mpRegen="2.7" />
-			<attack physical="5031" magical="3674" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2404" magical="4750" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="12220" hpRegen="10.5" mp="1157" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+			<attack physical="2026.8636993586" magical="674.93973844084" critical="14" attackSpeed="491" range="40" />
+			<defence physical="1306.5217391304" magical="1703.9747453006" />
 			<attribute>
 				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="22" />
+			<radius normal="13.5" />
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="15128" level="97" type="L2Servitor" name="Wynn Magnus">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15128" level="97" type="L2Servitor" name="Wynn Magnus" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="22395" hpRegen="7.5" mp="1814" mpRegen="2.7" />
-			<attack physical="5397" magical="3982" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2529" magical="5047" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="12945" hpRegen="10.5" mp="1197" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+			<attack physical="2150.9361773357" magical="715.87444622067" critical="14" attackSpeed="491" range="40" />
+			<defence physical="1359.6774193548" magical="1790.6951985521" />
 			<attribute>
 				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="22" />
+			<radius normal="13.5" />
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="15129" level="99" type="L2Servitor" name="Wynn Magnus">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15129" level="99" type="L2Servitor" name="Wynn Magnus" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="22617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
-			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2660" magical="5358" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="13073" hpRegen="10.5" mp="1236" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+			<attack physical="2281.8320899642" magical="758.971123285" critical="14" attackSpeed="491" range="40" />
+			<defence physical="1414.8936170213" magical="1880.8370198722" />
 			<attribute>
 				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="22" />
+			<radius normal="13.5" />
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="15130" level="85" type="L2Servitor" name="Wynn Seraphim">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15130" level="85" type="L2Servitor" name="Wynn Seraphim" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="10929" hpRegen="7.5" mp="1049" mpRegen="2.7" />
-			<attack physical="2653" magical="1368" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
-			<defence physical="1144" magical="2147" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6317" hpRegen="9.5" mp="692" mpRegen="3.3" />
+			<speed>
+				<walk ground="27" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1129.8279696327" magical="280.82224756717" critical="14" attackSpeed="343" range="1000" />
+			<defence physical="656.89655172414" magical="814.46075642047" />
 			<attribute>
 				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="9" />
+			<radius normal="13.5" />
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="15131" level="87" type="L2Servitor" name="Wynn Seraphim">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15131" level="87" type="L2Servitor" name="Wynn Seraphim" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="11182" hpRegen="7.5" mp="1087" mpRegen="2.7" />
-			<attack physical="2846" magical="1494" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
-			<defence physical="1202" magical="2283" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6464" hpRegen="9.5" mp="718" mpRegen="3.3" />
+			<speed>
+				<walk ground="27" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1198.6993732731" magical="299.97616921847" critical="14" attackSpeed="343" range="1000" />
+			<defence physical="682.95454545455" magical="856.21062106211" />
 			<attribute>
 				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="9" />
+			<radius normal="13.5" />
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="15132" level="89" type="L2Servitor" name="Wynn Seraphim">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15132" level="89" type="L2Servitor" name="Wynn Seraphim" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="11443" hpRegen="7.5" mp="1128" mpRegen="2.7" />
-			<attack physical="3054" magical="1620" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
-			<defence physical="1265" magical="2427" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6615" hpRegen="9.5" mp="745" mpRegen="3.3" />
+			<speed>
+				<walk ground="27" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1271.8534744838" magical="317.81056986594" critical="14" attackSpeed="343" range="1000" />
+			<defence physical="710.67415730337" magical="899.98887529202" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="9" />
+			<radius normal="13.5" />
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="15133" level="91" type="L2Servitor" name="Wynn Seraphim">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15133" level="91" type="L2Servitor" name="Wynn Seraphim" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="11713" hpRegen="7.5" mp="1170" mpRegen="2.7" />
-			<attack physical="3277" magical="1756" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
-			<defence physical="1331" magical="2577" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6771" hpRegen="10.5" mp="772" mpRegen="3.6" />
+			<speed>
+				<walk ground="27" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1349.5593443703" magical="336.89425376575" critical="14" attackSpeed="343" range="1000" />
+			<defence physical="738.88888888889" magical="944.99449944995" />
 			<attribute>
 				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="9" />
+			<radius normal="13.5" />
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="15134" level="93" type="L2Servitor" name="Wynn Seraphim">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15134" level="93" type="L2Servitor" name="Wynn Seraphim" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="11987" hpRegen="7.5" mp="1211" mpRegen="2.7" />
-			<attack physical="3516" magical="1906" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
-			<defence physical="1400" magical="2737" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6929" hpRegen="10.5" mp="799" mpRegen="3.6" />
+			<speed>
+				<walk ground="27" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1431.6669246247" magical="357.88344830754" critical="14" attackSpeed="343" range="1000" />
+			<defence physical="768.68131868132" magical="992.63772531099" />
 			<attribute>
 				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="9" />
+			<radius normal="13.5" />
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="15135" level="95" type="L2Servitor" name="Wynn Seraphim">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15135" level="95" type="L2Servitor" name="Wynn Seraphim" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="15101" hpRegen="7.5" mp="1252" mpRegen="2.7" />
-			<attack physical="5030" magical="3674" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
-			<defence physical="1718" magical="3395" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8729" hpRegen="10.5" mp="827" mpRegen="3.6" />
+			<speed>
+				<walk ground="27" />
+				<run ground="198" />
+			</speed>
+			<attack physical="2026.4608244432" magical="674.93973844084" critical="14" attackSpeed="343" range="1000" />
+			<defence physical="933.69565217391" magical="1217.8935284833" />
 			<attribute>
 				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="9" />
+			<radius normal="13.5" />
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="15136" level="97" type="L2Servitor" name="Wynn Seraphim">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15136" level="97" type="L2Servitor" name="Wynn Seraphim" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="15996" hpRegen="7.5" mp="1296" mpRegen="2.7" />
-			<attack physical="5393" magical="3982" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
-			<defence physical="1807" magical="3606" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="9246" hpRegen="10.5" mp="855" mpRegen="3.6" />
+			<speed>
+				<walk ground="27" />
+				<run ground="198" />
+			</speed>
+			<attack physical="2148.9434627004" magical="715.87444622067" critical="14" attackSpeed="343" range="1000" />
+			<defence physical="971.50537634409" magical="1279.3214805352" />
 			<attribute>
 				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="9" />
+			<radius normal="13.5" />
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="15137" level="99" type="L2Servitor" name="Wynn Seraphim">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15137" level="99" type="L2Servitor" name="Wynn Seraphim" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="16154" hpRegen="7.5" mp="1338" mpRegen="2.7" />
-			<attack physical="5782" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
-			<defence physical="1901" magical="3827" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="9338" hpRegen="10.5" mp="883" mpRegen="3.6" />
+			<speed>
+				<walk ground="27" />
+				<run ground="198" />
+			</speed>
+			<attack physical="2279.8605744208" magical="758.971123285" critical="14" attackSpeed="343" range="1000" />
+			<defence physical="1010.6382978723" magical="1343.65564216" />
 			<attribute>
 				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="9" />
+			<radius normal="13.5" />
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="15138" level="85" type="L2Servitor" name="Blood Panther">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15138" level="85" type="L2Servitor" name="Blood Panther" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="15298" hpRegen="7.5" mp="1467" mpRegen="2.7" />
-			<attack physical="1952" magical="1368" random="30" critical="95" accuracy="95.25" attackSpeed="360" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1371" magical="1718" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8843" hpRegen="9.5" mp="968" mpRegen="3.3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+			<attack physical="831.18188867019" magical="280.82224756717" critical="9" attackSpeed="360" range="40" />
+			<defence physical="787.93103448276" magical="651.72034444824" />
 			<attribute>
 				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="10095" level="1" /> <!-- Blood Panther's Death Touch -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="20" />
 			<height normal="14.5" />
 		</collision>
 	</npc>
-	<npc id="15139" level="90" type="L2Servitor" name="Blood Panther">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15139" level="90" type="L2Servitor" name="Blood Panther" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="16399" hpRegen="7.5" mp="1637" mpRegen="2.7" />
-			<attack physical="2395" magical="1737" random="30" critical="95" accuracy="95.25" attackSpeed="360" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1588" magical="2051" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="9479" hpRegen="9.5" mp="1080" mpRegen="3.3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+			<attack physical="991.83752914429" magical="336.98079597286" critical="9" attackSpeed="360" range="40" />
+			<defence physical="886.59217877095" magical="755.9415159393" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="10095" level="1" /> <!-- Blood Panther's Death Touch -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="20" />
 			<height normal="14.5" />
 		</collision>
 	</npc>
-	<npc id="15140" level="95" type="L2Servitor" name="Blood Panther">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15140" level="95" type="L2Servitor" name="Blood Panther" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="21140" hpRegen="7.5" mp="1753" mpRegen="2.7" />
-			<attack physical="3695" magical="3674" random="30" critical="95" accuracy="95.25" attackSpeed="360" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2060" magical="2715" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="12220" hpRegen="10.5" mp="1157" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1488.6228123892" magical="674.93973844084" critical="9" attackSpeed="360" range="40" />
+			<defence physical="1119.5652173913" magical="973.9560912613" />
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="10095" level="1" /> <!-- Blood Panther's Death Touch -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="20" />
 			<height normal="14.5" />
 		</collision>
 	</npc>
-	<npc id="15141" level="99" type="L2Servitor" name="Blood Panther">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="15141" level="99" type="L2Servitor" name="Blood Panther" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
-		<stats>
-			<vitals hp="22617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
-			<attack physical="4252" magical="4313" random="30" critical="95" accuracy="95.25" attackSpeed="360" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2280" magical="3061" />
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="13073" hpRegen="10.5" mp="1236" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+			<attack physical="1676.5768181316" magical="758.971123285" critical="9" attackSpeed="360" range="40" />
+			<defence physical="1212.7659574468" magical="1074.7138543642" />
 			<attribute>
 				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
 			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skillList>
-			<skill id="11496" level="2" />
-		</skillList>
+		<skill_list>
+			<skill id="10095" level="1" /> <!-- Blood Panther's Death Touch -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
 			<radius normal="20" />
 			<height normal="14.5" />
 		</collision>
 	</npc>
-	<npc id="15142" level="77" type="L2Servitor" name="Cursed Man">
+	<npc id="15142" level="77" type="L2Servitor" name="Cursed Man" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="3099" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2985" hpRegen="8.5" mp="1777" mpRegen="3" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="160" />
 			</speed>
+			<attack physical="1234.9234747" magical="611.21496200028" critical="4" attackSpeed="199" range="40" />
+			<defence physical="341.56626506024" magical="250.10934828423" />
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="3" /> <!-- HP Medium-High -->
+			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4709" level="7" /> <!-- Cursed Blow -->
+			<skill id="4708" level="7" /> <!-- Cursed Strike -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+		</skill_list>
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="15143" level="80" type="L2Servitor" name="Cursed Man">
+	<npc id="15143" level="80" type="L2Servitor" name="Cursed Man" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="3185" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="3067" hpRegen="8.5" mp="1870" mpRegen="3" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="160" />
 			</speed>
+			<attack physical="1310.6223434462" magical="648.50417608589" critical="4" attackSpeed="199" range="40" />
+			<defence physical="354.43786982249" magical="258.94897182026" />
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="3" /> <!-- HP Medium-High -->
+			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4709" level="8" /> <!-- Cursed Blow -->
+			<skill id="4708" level="8" /> <!-- Cursed Strike -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+		</skill_list>
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="15144" level="85" type="L2Servitor" name="Cursed Man">
+	<npc id="15144" level="85" type="L2Servitor" name="Cursed Man" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="8159" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7859" hpRegen="9.5" mp="1936" mpRegen="3.3" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="160" />
 			</speed>
+			<attack physical="1659.589786306" magical="684.4913890957" critical="4" attackSpeed="283" range="900" />
+			<defence physical="729.31034482759" magical="467.7364288153" />
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="3" /> <!-- HP Medium-High -->
+			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4709" level="9" /> <!-- Cursed Blow -->
+			<skill id="4708" level="9" /> <!-- Cursed Strike -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+		</skill_list>
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="15145" level="90" type="L2Servitor" name="Cursed Man">
+	<npc id="15145" level="90" type="L2Servitor" name="Cursed Man" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="8856" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8531" hpRegen="9.5" mp="2160" mpRegen="3.3" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="160" />
 			</speed>
+			<attack physical="1923.6731458249" magical="793.5354227748" critical="4" attackSpeed="283" range="900" />
+			<defence physical="805.02793296089" magical="529.15906115751" />
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="3" /> <!-- HP Medium-High -->
+			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4709" level="10" /> <!-- Cursed Blow -->
+			<skill id="4708" level="10" /> <!-- Cursed Strike -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+		</skill_list>
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="15146" level="95" type="L2Servitor" name="Cursed Man">
+	<npc id="15146" level="95" type="L2Servitor" name="Cursed Man" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="11418" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10999" hpRegen="10.5" mp="2314" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="160" />
 			</speed>
+			<attack physical="2230.0489677799" magical="920.00495648114" critical="4" attackSpeed="283" range="900" />
+			<defence physical="889.13043478261" magical="598.72291576984" />
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="3" /> <!-- HP Medium-High -->
+			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4709" level="11" /> <!-- Cursed Blow -->
+			<skill id="4708" level="11" /> <!-- Cursed Strike -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+		</skill_list>
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="15147" level="99" type="L2Servitor" name="Cursed Man">
+	<npc id="15147" level="99" type="L2Servitor" name="Cursed Man" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="12214" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="11766" hpRegen="10.5" mp="2472" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="160" />
 			</speed>
+			<attack physical="2509.9023444611" magical="1035.4245512193" critical="4" attackSpeed="283" range="900" />
+			<defence physical="962.23404255319" magical="660.76820448002" />
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="3" /> <!-- HP Medium-High -->
+			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4709" level="12" /> <!-- Cursed Blow -->
+			<skill id="4708" level="12" /> <!-- Cursed Strike -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+		</skill_list>
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="15148" level="80" type="L2Servitor" name="Reanimated Man">
+	<npc id="15148" level="80" type="L2Servitor" name="Reanimated Man" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="3099" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2985" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<attack physical="1235.0601494593" magical="611.04859573439" critical="4" attackSpeed="199" range="40" />
+			<defence physical="341.4201183432" magical="249.96582498487" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="6" /> <!-- HP Very High -->
+			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+		</skill_list>
+		<collision>
+			<radius normal="11" grown="13" />
+			<height normal="25" grown="31" />
+		</collision>
+	</npc>
+	<npc id="15149" level="83" type="L2Servitor" name="Reanimated Man" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>UNDEAD</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="3067" hpRegen="9.5" mp="1870" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<attack physical="1310.4004119195" magical="648.57434758956" critical="4" attackSpeed="199" range="40" />
+			<defence physical="354.06976744186" magical="259.03753166014" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="6" /> <!-- HP Very High -->
+			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+		</skill_list>
+		<collision>
+			<radius normal="11" grown="13" />
+			<height normal="25" grown="31" />
+		</collision>
+	</npc>
+	<npc id="15150" level="85" type="L2Servitor" name="Reanimated Man" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>UNDEAD</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8843" hpRegen="9.5" mp="1870" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<attack physical="1659.3991813067" magical="684.4913890957" critical="4" attackSpeed="283" range="900" />
+			<defence physical="729.31034482759" magical="467.7364288153" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="6" /> <!-- HP Very High -->
+			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+		</skill_list>
+		<collision>
+			<radius normal="11" grown="13" />
+			<height normal="25" grown="31" />
+		</collision>
+	</npc>
+	<npc id="15151" level="90" type="L2Servitor" name="Reanimated Man" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>UNDEAD</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="9479" hpRegen="9.5" mp="1870" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<attack physical="1923.8146797978" magical="793.5354227748" critical="4" attackSpeed="283" range="900" />
+			<defence physical="805.02793296089" magical="529.15906115751" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="6" /> <!-- HP Very High -->
+			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+		</skill_list>
+		<collision>
+			<radius normal="11" grown="13" />
+			<height normal="25" grown="31" />
+		</collision>
+	</npc>
+	<npc id="15152" level="95" type="L2Servitor" name="Reanimated Man" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>UNDEAD</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="12220" hpRegen="10.5" mp="1870" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<attack physical="2230.1290771274" magical="920.00495648114" critical="4" attackSpeed="283" range="900" />
+			<defence physical="889.13043478261" magical="598.72291576984" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="6" /> <!-- HP Very High -->
+			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+		</skill_list>
+		<collision>
+			<radius normal="11" grown="13" />
+			<height normal="25" grown="31" />
+		</collision>
+	</npc>
+	<npc id="15153" level="99" type="L2Servitor" name="Reanimated Man" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>UNDEAD</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="13073" hpRegen="10.5" mp="1870" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+			<attack physical="2509.8533414028" magical="1035.4245512193" critical="4" attackSpeed="283" range="900" />
+			<defence physical="962.23404255319" magical="660.76820448002" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="6" /> <!-- HP Very High -->
+			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+		</skill_list>
+		<collision>
+			<radius normal="11" grown="13" />
+			<height normal="25" grown="31" />
+		</collision>
+	</npc>
+	<npc id="15154" level="101" type="L2Servitor" name="Mother Tree" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="s_tree_heal" id="19219" level="1" />
+		</parameters>
+		<race>PLANT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="36700" hpRegen="9" mp="1794" mpRegen="6.5" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
+			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="10" accuracy="4.75" />
+			<defence physical="962" magical="568" />
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" canMove="false" targetable="false" />
+		<skill_list>
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="4416" level="5" /> <!-- Plants -->
+		</skill_list>
 		<collision>
-			<radius normal="11" />
-			<height normal="25" />
+			<radius normal="18" />
+			<height normal="78" />
 		</collision>
 	</npc>
-	<npc id="15149" level="83" type="L2Servitor" name="Reanimated Man">
+	<npc id="15155" level="100" type="L2Servitor" name="Commando Cat" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="3185" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="13890" hpRegen="7.5" mp="1255" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="198" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="11" />
-			<height normal="25" />
+			<radius normal="12" />
+			<height normal="16.75" />
 		</collision>
 	</npc>
-	<npc id="15150" level="85" type="L2Servitor" name="Reanimated Man">
+	<npc id="15156" level="101" type="L2Servitor" name="Commando Cat" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="9180" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14027" hpRegen="7.5" mp="1275" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="198" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="11" />
-			<height normal="25" />
+			<radius normal="12" />
+			<height normal="16.75" />
 		</collision>
 	</npc>
-	<npc id="15151" level="90" type="L2Servitor" name="Reanimated Man">
+	<npc id="15157" level="102" type="L2Servitor" name="Commando Cat" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="9840" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14164" hpRegen="7.5" mp="1295" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="198" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="11" />
-			<height normal="25" />
+			<radius normal="12" />
+			<height normal="16.75" />
 		</collision>
 	</npc>
-	<npc id="15152" level="95" type="L2Servitor" name="Reanimated Man">
+	<npc id="15158" level="103" type="L2Servitor" name="Commando Cat" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="12685" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14301" hpRegen="7.5" mp="1316" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="198" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="11" />
-			<height normal="25" />
+			<radius normal="12" />
+			<height normal="16.75" />
 		</collision>
 	</npc>
-	<npc id="15153" level="99" type="L2Servitor" name="Reanimated Man">
+	<npc id="15159" level="104" type="L2Servitor" name="Commando Cat" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="13571" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14443" hpRegen="7.5" mp="1336" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="15155" level="107" type="L2Servitor" name="Commando Cat">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ANIMAL</race>
-		<stats>
-			<vitals hp="16928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
-			<attack physical="5649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="5104" />
-			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="4" />
-			<skill id="4121" level="9" />
-			<skill id="4415" level="3" />
-			<skill id="5038" level="15" />
-			<skill id="11315" level="1" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="6" />
-			<height normal="16.01" />
-		</collision>
-	</npc>
-	<npc id="15156" level="107" type="L2Servitor" name="Commando Cat">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ANIMAL</race>
-		<stats>
-			<vitals hp="17928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
-			<attack physical="5649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2802" magical="5104" />
-			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="4" />
-			<skill id="4121" level="9" />
-			<skill id="4415" level="3" />
-			<skill id="5038" level="15" />
-			<skill id="11315" level="1" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="6" />
-			<height normal="16.01" />
-		</collision>
-	</npc>
-	<npc id="15157" level="107" type="L2Servitor" name="Commando Cat">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ANIMAL</race>
-		<stats>
-			<vitals hp="18928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
-			<attack physical="5649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2802" magical="5104" />
-			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="4" />
-			<skill id="4121" level="9" />
-			<skill id="4415" level="3" />
-			<skill id="5038" level="15" />
-			<skill id="11315" level="1" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="6" />
-			<height normal="16.01" />
-		</collision>
-	</npc>
-	<npc id="15158" level="107" type="L2Servitor" name="Commando Cat">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ANIMAL</race>
-		<stats>
-			<vitals hp="20928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
-			<attack physical="5649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2802" magical="5104" />
-			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="4" />
-			<skill id="4121" level="9" />
-			<skill id="4415" level="3" />
-			<skill id="5038" level="15" />
-			<skill id="11315" level="1" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="6" />
-			<height normal="16.01" />
-		</collision>
-	</npc>
-	<npc id="15159" level="107" type="L2Servitor" name="Commando Cat">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ANIMAL</race>
-		<stats>
-			<vitals hp="22928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
-			<attack physical="6649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="5104" />
-			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="4" />
-			<skill id="4121" level="9" />
-			<skill id="4415" level="3" />
-			<skill id="5038" level="15" />
-			<skill id="11315" level="1" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="6" />
-			<height normal="16.01" />
-		</collision>
-	</npc>
-	<npc id="15160" level="107" type="L2Servitor" name="Commando Cat">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ANIMAL</race>
-		<stats>
-			<vitals hp="26928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
-			<attack physical="9649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="5104" />
-			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="4" />
-			<skill id="4121" level="9" />
-			<skill id="4415" level="3" />
-			<skill id="5038" level="15" />
-			<skill id="11315" level="1" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="6" />
-			<height normal="16.01" />
-		</collision>
-	</npc>
-	<npc id="15161" level="107" type="L2Servitor" name="Witch Cat">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ANIMAL</race>
-		<stats>
-			<vitals hp="16928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
-			<attack physical="5649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="5104" />
-			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="4" />
-			<skill id="4121" level="9" />
-			<skill id="4415" level="3" />
-			<skill id="5038" level="15" />
-			<skill id="11315" level="1" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="6" />
-			<height normal="16.01" />
-		</collision>
-	</npc>
-	<npc id="15162" level="107" type="L2Servitor" name="Witch Cat">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ANIMAL</race>
-		<stats>
-			<vitals hp="17928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
-			<attack physical="5649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2802" magical="5104" />
-			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="4" />
-			<skill id="4121" level="9" />
-			<skill id="4415" level="3" />
-			<skill id="5038" level="15" />
-			<skill id="11315" level="1" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="6" />
-			<height normal="16.01" />
-		</collision>
-	</npc>
-	<npc id="15163" level="107" type="L2Servitor" name="Witch Cat">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ANIMAL</race>
-		<stats>
-			<vitals hp="18928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
-			<attack physical="5649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2802" magical="5104" />
-			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="4" />
-			<skill id="4121" level="9" />
-			<skill id="4415" level="3" />
-			<skill id="5038" level="15" />
-			<skill id="11315" level="1" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="6" />
-			<height normal="16.01" />
-		</collision>
-	</npc>
-	<npc id="15164" level="107" type="L2Servitor" name="Witch Cat">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ANIMAL</race>
-		<stats>
-			<vitals hp="20928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
-			<attack physical="5649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2802" magical="5104" />
-			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="4" />
-			<skill id="4121" level="9" />
-			<skill id="4415" level="3" />
-			<skill id="5038" level="15" />
-			<skill id="11315" level="1" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="6" />
-			<height normal="16.01" />
-		</collision>
-	</npc>
-	<npc id="15165" level="107" type="L2Servitor" name="Witch Cat">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ANIMAL</race>
-		<stats>
-			<vitals hp="22928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
-			<attack physical="6649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="5104" />
-			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="4" />
-			<skill id="4121" level="9" />
-			<skill id="4415" level="3" />
-			<skill id="5038" level="15" />
-			<skill id="11315" level="1" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="6" />
-			<height normal="16.01" />
-		</collision>
-	</npc>
-	<npc id="15166" level="107" type="L2Servitor" name="Witch Cat">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ANIMAL</race>
-		<stats>
-			<vitals hp="26928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
-			<attack physical="9649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="5104" />
-			<attribute>
-				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="90" />
-				<run ground="180" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="4" />
-			<skill id="4121" level="9" />
-			<skill id="4415" level="3" />
-			<skill id="5038" level="15" />
-			<skill id="11315" level="1" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="6" />
-			<height normal="16.01" />
-		</collision>
-	</npc>
-	<npc id="15167" level="107" type="L2Servitor" name="Unicorn Lancer">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="12617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
-			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2660" magical="5358" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
 				<run ground="198" />
 			</speed>
-			<hitTime>398</hitTime>
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
 		<collision>
-			<radius normal="22" />
-			<height normal="23.5" />
+			<radius normal="12" />
+			<height normal="16.75" />
 		</collision>
 	</npc>
-	<npc id="15168" level="107" type="L2Servitor" name="Unicorn Lancer">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="12617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
-			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2660" magical="5358" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="22" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="15169" level="107" type="L2Servitor" name="Unicorn Lancer">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="12617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
-			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2660" magical="5358" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="22" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="15170" level="107" type="L2Servitor" name="Unicorn Lancer">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="12617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
-			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2660" magical="5358" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="22" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="15171" level="107" type="L2Servitor" name="Unicorn Lancer">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="22617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
-			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2660" magical="5358" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="22" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="15172" level="107" type="L2Servitor" name="Unicorn Lancer">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="25617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
-			<attack physical="7788" magical="6313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2660" magical="5358" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="22" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="15173" level="107" type="L2Servitor" name="Unicorn Cherub">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="12617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
-			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2660" magical="5358" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="22" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="15174" level="107" type="L2Servitor" name="Unicorn Cherub">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="12617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
-			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2660" magical="5358" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="22" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="15175" level="107" type="L2Servitor" name="Unicorn Cherub">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="12617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
-			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2660" magical="5358" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="22" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="15176" level="107" type="L2Servitor" name="Unicorn Cherub">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="12617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
-			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2660" magical="5358" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="22" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="15177" level="107" type="L2Servitor" name="Unicorn Cherub">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="22617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
-			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2660" magical="5358" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="22" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="15178" level="107" type="L2Servitor" name="Unicorn Cherub">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="25617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
-			<attack physical="7788" magical="6313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2660" magical="5358" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="22" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="151879" level="107" type="L2Servitor" name="Dark Crusader">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="32312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
-			<attack physical="4050" magical="4313" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="7655" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="35.5" />
-		</collision>
-	</npc>
-	<npc id="15180" level="107" type="L2Servitor" name="Dark Crusader">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="32312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
-			<attack physical="4050" magical="4313" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="7655" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="35.5" />
-		</collision>
-	</npc>
-	<npc id="15181" level="107" type="L2Servitor" name="Dark Crusader">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="32312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
-			<attack physical="4050" magical="4313" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="7655" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="35.5" />
-		</collision>
-	</npc>
-	<npc id="15182" level="107" type="L2Servitor" name="Dark Crusader">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="32312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
-			<attack physical="4050" magical="4313" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="7655" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="35.5" />
-		</collision>
-	</npc>
-	<npc id="15183" level="107" type="L2Servitor" name="Dark Crusader">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="32312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
-			<attack physical="4050" magical="4313" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="7655" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="35.5" />
-		</collision>
-	</npc>
-	<npc id="15184" level="107" type="L2Servitor" name="Dark Crusader">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="32312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
-			<attack physical="7550" magical="4313" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5802" magical="7655" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="35.5" />
-		</collision>
-	</npc>
-	<npc id="15185" level="107" type="L2Servitor" name="Banshee Queen">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="16312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
-			<attack physical="5050" magical="4313" random="30" critical="145" accuracy="95.25" attackSpeed="443" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="7655" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="35.5" />
-		</collision>
-	</npc>
-	<npc id="15186" level="107" type="L2Servitor" name="Banshee Queen">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="16312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
-			<attack physical="5050" magical="4313" random="30" critical="145" accuracy="95.25" attackSpeed="443" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="7655" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="35.5" />
-		</collision>
-	</npc>
-	<npc id="15187" level="107" type="L2Servitor" name="Banshee Queen">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="16312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
-			<attack physical="5050" magical="4313" random="30" critical="145" accuracy="95.25" attackSpeed="443" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="7655" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="35.5" />
-		</collision>
-	</npc>
-	<npc id="15188" level="107" type="L2Servitor" name="Banshee Queen">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="16312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
-			<attack physical="5050" magical="4313" random="30" critical="145" accuracy="95.25" attackSpeed="443" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="7655" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="35.5" />
-		</collision>
-	</npc>
-	<npc id="15189" level="107" type="L2Servitor" name="Banshee Queen">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="16312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
-			<attack physical="5050" magical="4313" random="30" critical="145" accuracy="95.25" attackSpeed="443" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="7655" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="35.5" />
-		</collision>
-	</npc>
-	<npc id="15190" level="107" type="L2Servitor" name="Banshee Queen">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ETC</race>
-		<stats>
-			<vitals hp="26312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
-			<attack physical="9050" magical="6313" random="30" critical="145" accuracy="95.25" attackSpeed="443" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3802" magical="7655" />
-			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
-			</attribute>
-			<speed>
-				<walk ground="99" />
-				<run ground="198" />
-			</speed>
-			<hitTime>398</hitTime>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5038" level="15" />
-			<skill id="11496" level="2" />
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="35.5" />
-		</collision>
-	</npc>
-	<npc id="15194" level="101" type="L2Servitor" name="Cursed Man">
+	<npc id="15160" level="105" type="L2Servitor" name="Commando Cat" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="12214" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14583" hpRegen="7.5" mp="1356" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="198" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="16.75" />
+		</collision>
+	</npc>
+	<npc id="15161" level="100" type="L2Servitor" name="Witch Cat" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="9921" hpRegen="7.5" mp="897" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="15.9" />
+		</collision>
+	</npc>
+	<npc id="15162" level="101" type="L2Servitor" name="Witch Cat" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10019" hpRegen="7.5" mp="911" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="15.9" />
+		</collision>
+	</npc>
+	<npc id="15163" level="102" type="L2Servitor" name="Witch Cat" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10117" hpRegen="7.5" mp="925" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="15.9" />
+		</collision>
+	</npc>
+	<npc id="15164" level="103" type="L2Servitor" name="Witch Cat" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10215" hpRegen="7.5" mp="940" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="15.9" />
+		</collision>
+	</npc>
+	<npc id="15165" level="104" type="L2Servitor" name="Witch Cat" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10317" hpRegen="7.5" mp="954" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="15.9" />
+		</collision>
+	</npc>
+	<npc id="15166" level="105" type="L2Servitor" name="Witch Cat" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10417" hpRegen="7.5" mp="969" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="15.9" />
+		</collision>
+	</npc>
+	<npc id="15167" level="100" type="L2Servitor" name="Unicorn Lancer" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="13890" hpRegen="7.5" mp="1255" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="15168" level="101" type="L2Servitor" name="Unicorn Lancer" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14027" hpRegen="7.5" mp="1275" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="15169" level="102" type="L2Servitor" name="Unicorn Lancer" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14164" hpRegen="7.5" mp="1295" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="15170" level="103" type="L2Servitor" name="Unicorn Lancer" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14301" hpRegen="7.5" mp="1316" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="15171" level="104" type="L2Servitor" name="Unicorn Lancer" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14443" hpRegen="7.5" mp="1336" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="15172" level="105" type="L2Servitor" name="Unicorn Lancer" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14583" hpRegen="7.5" mp="1356" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="15173" level="100" type="L2Servitor" name="Unicorn Cherub" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="9921" hpRegen="7.5" mp="897" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="15174" level="101" type="L2Servitor" name="Unicorn Cherub" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10019" hpRegen="7.5" mp="911" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="15175" level="102" type="L2Servitor" name="Unicorn Cherub" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10117" hpRegen="7.5" mp="925" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="15176" level="103" type="L2Servitor" name="Unicorn Cherub" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10215" hpRegen="7.5" mp="940" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="15177" level="104" type="L2Servitor" name="Unicorn Cherub" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10317" hpRegen="7.5" mp="954" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="15178" level="105" type="L2Servitor" name="Unicorn Cherub" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10417" hpRegen="7.5" mp="969" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="15179" level="100" type="L2Servitor" name="Soul Specter" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="13890" hpRegen="7.5" mp="1255" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="28.6" />
+		</collision>
+	</npc>
+	<npc id="15180" level="101" type="L2Servitor" name="Soul Specter" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14027" hpRegen="7.5" mp="1275" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="28.6" />
+		</collision>
+	</npc>
+	<npc id="15181" level="102" type="L2Servitor" name="Soul Specter" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14164" hpRegen="7.5" mp="1295" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="28.6" />
+		</collision>
+	</npc>
+	<npc id="15182" level="103" type="L2Servitor" name="Soul Specter" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14301" hpRegen="7.5" mp="1316" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="28.6" />
+		</collision>
+	</npc>
+	<npc id="15183" level="104" type="L2Servitor" name="Soul Specter" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14443" hpRegen="7.5" mp="1336" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="28.6" />
+		</collision>
+	</npc>
+	<npc id="15184" level="105" type="L2Servitor" name="Soul Specter" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14583" hpRegen="7.5" mp="1356" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="28.6" />
+		</collision>
+	</npc>
+	<npc id="15185" level="100" type="L2Servitor" name="Banshee Queen" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="9921" hpRegen="7.5" mp="897" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15186" level="101" type="L2Servitor" name="Banshee Queen" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10019" hpRegen="7.5" mp="911" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15187" level="102" type="L2Servitor" name="Banshee Queen" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10117" hpRegen="7.5" mp="925" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15188" level="103" type="L2Servitor" name="Banshee Queen" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10215" hpRegen="7.5" mp="940" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15189" level="104" type="L2Servitor" name="Banshee Queen" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10317" hpRegen="7.5" mp="954" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15190" level="105" type="L2Servitor" name="Banshee Queen" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10417" hpRegen="7.5" mp="969" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
+			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15191" level="101" type="L2Servitor" name="Blood Panther" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14027" hpRegen="7.5" mp="1275" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="10095" level="1" /> <!-- Blood Panther's Death Touch -->
+		</skill_list>
+		<collision>
+			<radius normal="20" />
+			<height normal="14.5" />
+		</collision>
+	</npc>
+	<npc id="15192" level="103" type="L2Servitor" name="Blood Panther" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14301" hpRegen="7.5" mp="1316" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="10095" level="1" /> <!-- Blood Panther's Death Touch -->
+		</skill_list>
+		<collision>
+			<radius normal="20" />
+			<height normal="14.5" />
+		</collision>
+	</npc>
+	<npc id="15193" level="105" type="L2Servitor" name="Blood Panther" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14583" hpRegen="7.5" mp="1356" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="198" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="10095" level="1" /> <!-- Blood Panther's Death Touch -->
+		</skill_list>
+		<collision>
+			<radius normal="20" />
+			<height normal="14.5" />
+		</collision>
+	</npc>
+	<npc id="15194" level="101" type="L2Servitor" name="Cursed Man" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14027" hpRegen="7.5" mp="1275" mpRegen="2.7" />
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skill_list>
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="15195" level="103" type="L2Servitor" name="Cursed Man">
+	<npc id="15195" level="103" type="L2Servitor" name="Cursed Man" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="12214" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14301" hpRegen="7.5" mp="1316" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="160" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skill_list>
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="15196" level="105" type="L2Servitor" name="Cursed Man">
+	<npc id="15196" level="105" type="L2Servitor" name="Cursed Man" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="12214" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14583" hpRegen="7.5" mp="1356" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="160" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skill_list>
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="15197" level="101" type="L2Servitor" name="Reanimated Man">
+	<npc id="15197" level="101" type="L2Servitor" name="Reanimated Man" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="13571" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14027" hpRegen="7.5" mp="1275" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="140" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skill_list>
 		<collision>
-			<radius normal="11" />
-			<height normal="25" />
+			<radius normal="11" grown="13" />
+			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="15198" level="103" type="L2Servitor" name="Reanimated Man">
+	<npc id="15198" level="103" type="L2Servitor" name="Reanimated Man" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="13571" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14301" hpRegen="7.5" mp="1316" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="140" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skill_list>
 		<collision>
-			<radius normal="11" />
-			<height normal="25" />
+			<radius normal="11" grown="13" />
+			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="15199" level="105" type="L2Servitor" name="Reanimated Man">
+	<npc id="15199" level="105" type="L2Servitor" name="Reanimated Man" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats>
-			<vitals hp="13571" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14583" hpRegen="7.5" mp="1356" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="140" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" hasSummoner="true" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skill_list>
 		<collision>
-			<radius normal="11" />
-			<height normal="25" />
+			<radius normal="11" grown="13" />
+			<height normal="25" grown="31" />
 		</collision>
 	</npc>
 </list>

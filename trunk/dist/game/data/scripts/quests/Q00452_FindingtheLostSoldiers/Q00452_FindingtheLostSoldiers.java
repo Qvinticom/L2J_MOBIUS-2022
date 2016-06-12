@@ -42,7 +42,7 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 	
 	public Q00452_FindingtheLostSoldiers()
 	{
-		super(452, Q00452_FindingtheLostSoldiers.class.getSimpleName(), "Finding the Lost Soldiers");
+		super(452);
 		addStartNpc(JAKAN);
 		addTalkId(JAKAN);
 		addTalkId(SOLDIER_CORPSES);

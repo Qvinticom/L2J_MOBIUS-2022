@@ -18,12 +18,14 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Set;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.NpcInfoType;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Sdw
@@ -135,18 +137,23 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType>
 			addComponentType(NpcInfoType.ENCHANT);
 		}
 		
-		if ((summon.getTransformation() != null) && (summon.getTransformation().getId() > 0))
+		if (summon.getTransformationDisplayId() > 0)
 		{
 			addComponentType(NpcInfoType.TRANSFORMATION);
 		}
 		
+		if (summon.isShowSummonAnimation())
+		{
+			addComponentType(NpcInfoType.SUMMONED);
+		}
+		
 		if (summon.getOwner().getClan() != null)
 		{
-			_clanId = summon.getOwner().getClanId();
-			_clanCrest = summon.getOwner().getClanCrestId();
-			_clanLargeCrest = summon.getOwner().getClanCrestLargeId();
-			_allyCrest = summon.getOwner().getAllyId();
-			_allyId = summon.getOwner().getAllyCrestId();
+			_clanId = summon.getOwner().getAppearance().getVisibleClanId();
+			_clanCrest = summon.getOwner().getAppearance().getVisibleClanCrestId();
+			_clanLargeCrest = summon.getOwner().getAppearance().getVisibleClanLargeCrestId();
+			_allyCrest = summon.getOwner().getAppearance().getVisibleAllyId();
+			_allyId = summon.getOwner().getAppearance().getVisibleAllyCrestId();
 			
 			addComponentType(NpcInfoType.CLAN);
 		}
@@ -216,173 +223,175 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType>
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x8B);
-		writeD(_summon.getObjectId());
-		writeC(_val); // 0=teleported 1=default 2=summoned
-		writeH(37); // mask_bits_37
-		writeB(_masks);
+		OutgoingPackets.SUMMON_INFO.writeId(packet);
+		
+		packet.writeD(_summon.getObjectId());
+		packet.writeC(_val); // 0=teleported 1=default 2=summoned
+		packet.writeH(37); // mask_bits_37
+		packet.writeB(_masks);
 		
 		// Block 1
-		writeC(_initSize);
+		packet.writeC(_initSize);
 		
 		if (containsMask(NpcInfoType.ATTACKABLE))
 		{
-			writeC(_summon.isAutoAttackable(_attacker) ? 0x01 : 0x00);
+			packet.writeC(_summon.isAutoAttackable(_attacker) ? 0x01 : 0x00);
 		}
 		if (containsMask(NpcInfoType.UNKNOWN1))
 		{
-			writeD(0x00); // unknown
+			packet.writeD(0x00); // unknown
 		}
 		if (containsMask(NpcInfoType.TITLE))
 		{
-			writeS(_title);
+			packet.writeS(_title);
 		}
 		
 		// Block 2
-		writeH(_blockSize);
+		packet.writeH(_blockSize);
 		if (containsMask(NpcInfoType.ID))
 		{
-			writeD(_summon.getTemplate().getDisplayId() + 1000000);
+			packet.writeD(_summon.getTemplate().getDisplayId() + 1000000);
 		}
 		if (containsMask(NpcInfoType.POSITION))
 		{
-			writeD(_summon.getX());
-			writeD(_summon.getY());
-			writeD(_summon.getZ());
+			packet.writeD(_summon.getX());
+			packet.writeD(_summon.getY());
+			packet.writeD(_summon.getZ());
 		}
 		if (containsMask(NpcInfoType.HEADING))
 		{
-			writeD(_summon.getHeading());
+			packet.writeD(_summon.getHeading());
 		}
 		if (containsMask(NpcInfoType.UNKNOWN2))
 		{
-			writeD(0x00); // Unknown
+			packet.writeD(0x00); // Unknown
 		}
 		if (containsMask(NpcInfoType.ATK_CAST_SPEED))
 		{
-			writeD((int) _summon.getPAtkSpd());
-			writeD(_summon.getMAtkSpd());
+			packet.writeD(_summon.getPAtkSpd());
+			packet.writeD(_summon.getMAtkSpd());
 		}
 		if (containsMask(NpcInfoType.SPEED_MULTIPLIER))
 		{
-			_buf.putFloat((float) _summon.getStat().getMovementSpeedMultiplier());
-			_buf.putFloat(_summon.getStat().getAttackSpeedMultiplier());
+			packet.writeE((float) _summon.getStat().getMovementSpeedMultiplier());
+			packet.writeE(_summon.getStat().getAttackSpeedMultiplier());
 		}
 		if (containsMask(NpcInfoType.EQUIPPED))
 		{
-			writeD(_summon.getWeapon());
-			writeD(_summon.getArmor()); // Armor id?
-			writeD(0x00);
+			packet.writeD(_summon.getWeapon());
+			packet.writeD(_summon.getArmor()); // Armor id?
+			packet.writeD(0x00);
 		}
 		if (containsMask(NpcInfoType.ALIVE))
 		{
-			writeC(_summon.isDead() ? 0x00 : 0x01);
+			packet.writeC(_summon.isDead() ? 0x00 : 0x01);
 		}
 		if (containsMask(NpcInfoType.RUNNING))
 		{
-			writeC(_summon.isRunning() ? 0x01 : 0x00);
+			packet.writeC(_summon.isRunning() ? 0x01 : 0x00);
 		}
 		if (containsMask(NpcInfoType.SWIM_OR_FLY))
 		{
-			writeC(_summon.isInsideZone(ZoneId.WATER) ? 0x01 : _summon.isFlying() ? 0x02 : 0x00);
+			packet.writeC(_summon.isInsideZone(ZoneId.WATER) ? 0x01 : _summon.isFlying() ? 0x02 : 0x00);
 		}
 		if (containsMask(NpcInfoType.TEAM))
 		{
-			writeC(_summon.getTeam().getId());
+			packet.writeC(_summon.getTeam().getId());
 		}
 		if (containsMask(NpcInfoType.ENCHANT))
 		{
-			writeD(_summon.getTemplate().getWeaponEnchant());
+			packet.writeD(_summon.getTemplate().getWeaponEnchant());
 		}
 		if (containsMask(NpcInfoType.FLYING))
 		{
-			writeD(_summon.isFlying() ? 0x01 : 00);
+			packet.writeD(_summon.isFlying() ? 0x01 : 00);
 		}
 		if (containsMask(NpcInfoType.CLONE))
 		{
-			writeD(0x00); // Player ObjectId with Decoy
+			packet.writeD(0x00); // Player ObjectId with Decoy
 		}
 		if (containsMask(NpcInfoType.UNKNOWN8))
 		{
 			// No visual effect
-			writeD(0x00); // Unknown
+			packet.writeD(0x00); // Unknown
 		}
 		if (containsMask(NpcInfoType.DISPLAY_EFFECT))
 		{
-			writeD(0x00);
+			packet.writeD(0x00);
 		}
 		if (containsMask(NpcInfoType.TRANSFORMATION))
 		{
-			writeD(0x00); // Transformation ID
+			packet.writeD(_summon.getTransformationDisplayId()); // Transformation ID
 		}
 		if (containsMask(NpcInfoType.CURRENT_HP))
 		{
-			writeD((int) _summon.getCurrentHp());
+			packet.writeD((int) _summon.getCurrentHp());
 		}
 		if (containsMask(NpcInfoType.CURRENT_MP))
 		{
-			writeD((int) _summon.getCurrentMp());
+			packet.writeD((int) _summon.getCurrentMp());
 		}
 		if (containsMask(NpcInfoType.MAX_HP))
 		{
-			writeD(_summon.getMaxHp());
+			packet.writeD(_summon.getMaxHp());
 		}
 		if (containsMask(NpcInfoType.MAX_MP))
 		{
-			writeD(_summon.getMaxMp());
+			packet.writeD(_summon.getMaxMp());
 		}
-		if (containsMask(NpcInfoType.UNKNOWN11))
+		if (containsMask(NpcInfoType.SUMMONED))
 		{
-			writeC(0x00); // 2 - do some animation on spawn
+			packet.writeC(_summon.isShowSummonAnimation() ? 0x02 : 00); // 2 - do some animation on spawn
 		}
 		if (containsMask(NpcInfoType.UNKNOWN12))
 		{
-			writeD(0x00);
-			writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
 		}
 		if (containsMask(NpcInfoType.NAME))
 		{
-			writeS(_summon.getName());
+			packet.writeS(_summon.getName());
 		}
 		if (containsMask(NpcInfoType.NAME_NPCSTRINGID))
 		{
-			writeD(-1); // NPCStringId for name
+			packet.writeD(-1); // NPCStringId for name
 		}
 		if (containsMask(NpcInfoType.TITLE_NPCSTRINGID))
 		{
-			writeD(-1); // NPCStringId for title
+			packet.writeD(-1); // NPCStringId for title
 		}
 		if (containsMask(NpcInfoType.PVP_FLAG))
 		{
-			writeC(_summon.getPvpFlag()); // PVP flag
+			packet.writeC(_summon.getPvpFlag()); // PVP flag
 		}
 		if (containsMask(NpcInfoType.NAME_COLOR))
 		{
-			writeD(0x00); // Name color
+			packet.writeD(0x00); // Name color
 		}
 		if (containsMask(NpcInfoType.CLAN))
 		{
-			writeD(_clanId);
-			writeD(_clanCrest);
-			writeD(_clanLargeCrest);
-			writeD(_allyId);
-			writeD(_allyCrest);
+			packet.writeD(_clanId);
+			packet.writeD(_clanCrest);
+			packet.writeD(_clanLargeCrest);
+			packet.writeD(_allyId);
+			packet.writeD(_allyCrest);
 		}
 		
 		if (containsMask(NpcInfoType.VISUAL_STATE))
 		{
-			writeC(_statusMask);
+			packet.writeC(_statusMask);
 		}
 		
 		if (containsMask(NpcInfoType.ABNORMALS))
 		{
-			writeH(_abnormalVisualEffects.size());
+			packet.writeH(_abnormalVisualEffects.size());
 			for (AbnormalVisualEffect abnormalVisualEffect : _abnormalVisualEffects)
 			{
-				writeH(abnormalVisualEffect.getClientId());
+				packet.writeH(abnormalVisualEffect.getClientId());
 			}
 		}
+		return true;
 	}
 }

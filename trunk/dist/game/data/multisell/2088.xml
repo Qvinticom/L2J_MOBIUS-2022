@@ -1,117 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
 	<npcs>
-		<npc>30298</npc> <!-- Pinter (Blacksmith) -->
-		<npc>30300</npc> <!-- Pushkin (Blacksmith) -->
-		<npc>30317</npc> <!-- Kluto (Blacksmith) -->
-		<npc>30458</npc> <!-- Poitan (Blacksmith) -->
-		<npc>30471</npc> <!-- Rupio (Blacksmith) -->
-		<npc>30678</npc> <!-- Helton (Blacksmith) -->
-		<npc>30688</npc> <!-- Duning (Blacksmith) -->
-		<npc>30846</npc> <!-- Wilbert (Blacksmith) -->
-		<npc>30898</npc> <!-- Morning (Blacksmith) -->
-		<npc>31271</npc> <!-- Hilda (Blacksmith) -->
-		<npc>31316</npc> <!-- Vincenz (Blacksmith) -->
-		<npc>31583</npc> <!-- Feynn (Blacksmith) -->
-		<npc>31960</npc> <!-- Buryun (Blacksmith) -->
-		<npc>31990</npc> <!-- Siger (Blacksmith) -->
-		<npc>33998</npc> <!-- Momet (Blacksmith) -->
-		<npc>34208</npc> <!-- Bartman (Blacksmith) -->
+		<npc>30688</npc> <!-- Duning -->
+		<npc>30300</npc> <!-- Pushkin -->
+		<npc>30846</npc> <!-- Wilbert -->
+		<npc>31271</npc> <!-- Hilda -->
+		<npc>31316</npc> <!-- Vincenz -->
+		<npc>30458</npc> <!-- Poitan -->
+		<npc>30678</npc> <!-- Helton -->
+		<npc>30298</npc> <!-- Pinter -->
+		<npc>30317</npc> <!-- Kluto -->
+		<npc>31960</npc> <!-- Buryun -->
+		<npc>30898</npc> <!-- Morning -->
 	</npcs>
 	<item>
-		<!-- Life Stone: Accessory - Lv. 46 -->
-		<ingredient count="108" id="12754" />
-		<!-- Spirit Stone: Accessory -->
-		<production count="1" id="45933" />
+		<ingredient id="12754" count="108"/> <!-- Life Stone: Accessory - Lv. 46 --> 
+		<production id="45933" count="1"/> <!-- Spirit Stone: Accessory --> 
 	</item>
 	<item>
-		<!-- Life Stone: Accessory - Lv. 49 -->
-		<ingredient count="90" id="12755" />
-		<!-- Spirit Stone: Accessory -->
-		<production count="1" id="45933" />
+		<ingredient id="12755" count="90"/> <!-- Life Stone: Accessory - Lv. 49 --> 
+		<production id="45933" count="1"/> <!-- Spirit Stone: Accessory --> 
 	</item>
 	<item>
-		<!-- Life Stone: Accessory - Lv. 52 -->
-		<ingredient count="75" id="12756" />
-		<!-- Spirit Stone: Accessory -->
-		<production count="1" id="45933" />
+		<ingredient id="12756" count="75"/> <!-- Life Stone: Accessory - Lv. 52 --> 
+		<production id="45933" count="1"/> <!-- Spirit Stone: Accessory --> 
 	</item>
 	<item>
-		<!-- Life Stone: Accessory - Lv. 55 -->
-		<ingredient count="63" id="12757" />
-		<!-- Spirit Stone: Accessory -->
-		<production count="1" id="45933" />
+		<ingredient id="12757" count="63"/> <!-- Life Stone: Accessory - Lv. 55 --> 
+		<production id="45933" count="1"/> <!-- Spirit Stone: Accessory --> 
 	</item>
 	<item>
-		<!-- Life Stone: Accessory - Lv. 58 -->
-		<ingredient count="54" id="12758" />
-		<!-- Spirit Stone: Accessory -->
-		<production count="1" id="45933" />
+		<ingredient id="12758" count="54"/> <!-- Life Stone: Accessory - Lv. 58 --> 
+		<production id="45933" count="1"/> <!-- Spirit Stone: Accessory --> 
 	</item>
 	<item>
-		<!-- Life Stone: Accessory - Lv. 61 -->
-		<ingredient count="45" id="12759" />
-		<!-- Spirit Stone: Accessory -->
-		<production count="1" id="45933" />
+		<ingredient id="12759" count="45"/> <!-- Life Stone: Accessory - Lv. 61 --> 
+		<production id="45933" count="1"/> <!-- Spirit Stone: Accessory --> 
 	</item>
 	<item>
-		<!-- Life Stone: Accessory - Lv. 64 -->
-		<ingredient count="36" id="12760" />
-		<!-- Spirit Stone: Accessory -->
-		<production count="1" id="45933" />
+		<ingredient id="12760" count="36"/> <!-- Life Stone: Accessory - Lv. 64 --> 
+		<production id="45933" count="1"/> <!-- Spirit Stone: Accessory --> 
 	</item>
 	<item>
-		<!-- Life Stone: Accessory - Lv. 67 -->
-		<ingredient count="30" id="12761" />
-		<!-- Spirit Stone: Accessory -->
-		<production count="1" id="45933" />
+		<ingredient id="12761" count="30"/> <!-- Life Stone: Accessory - Lv. 67 --> 
+		<production id="45933" count="1"/> <!-- Spirit Stone: Accessory --> 
 	</item>
 	<item>
-		<!-- Life Stone: Accessory - Lv. 76 -->
-		<ingredient count="23" id="12763" />
-		<!-- Spirit Stone: Accessory -->
-		<production count="1" id="45933" />
+		<ingredient id="12763" count="23"/> <!-- Life Stone: Accessory - Lv. 76 --> 
+		<production id="45933" count="1"/> <!-- Spirit Stone: Accessory --> 
 	</item>
 	<item>
-		<!-- Life Stone: Accessory - Lv. 80 -->
-		<ingredient count="19" id="12821" />
-		<!-- Spirit Stone: Accessory -->
-		<production count="1" id="45933" />
+		<ingredient id="12821" count="19"/> <!-- Life Stone: Accessory - Lv. 80 --> 
+		<production id="45933" count="1"/> <!-- Spirit Stone: Accessory --> 
 	</item>
 	<item>
-		<!-- Life Stone: Accessory - Lv. 84 -->
-		<ingredient count="13" id="14008" />
-		<!-- Spirit Stone: Accessory -->
-		<production count="1" id="45933" />
+		<ingredient id="14008" count="13"/> <!-- Life Stone: Accessory - Lv. 84 --> 
+		<production id="45933" count="1"/> <!-- Spirit Stone: Accessory --> 
 	</item>
 	<item>
-		<!-- Life Stone: Accessory - Lv. 85 -->
-		<ingredient count="11" id="16177" />
-		<!-- Spirit Stone: Accessory -->
-		<production count="1" id="45933" />
+		<ingredient id="16177" count="11"/> <!-- Life Stone: Accessory - Lv. 85 --> 
+		<production id="45933" count="1"/> <!-- Spirit Stone: Accessory --> 
 	</item>
 	<item>
-		<!-- Life Stone: Accessory - Lv. 86 -->
-		<ingredient count="9" id="16178" />
-		<!-- Spirit Stone: Accessory -->
-		<production count="1" id="45933" />
+		<ingredient id="16178" count="9"/> <!-- Life Stone: Accessory - Lv. 86 --> 
+		<production id="45933" count="1"/> <!-- Spirit Stone: Accessory --> 
 	</item>
 	<item>
-		<!-- Life Stone: Accessory - Lv. 84 -->
-		<ingredient count="51" id="14008" />
-		<!-- Life Stone: Accessory (R-grade) -->
-		<production count="1" id="19166" />
+		<ingredient id="19166" count="51"/> <!-- Life Stone: Accessory (R-grade) --> 
+		<production id="45934" count="1"/> <!-- Mid-grade Spirit Stone: Accessory --> 
 	</item>
 	<item>
-		<!-- Life Stone: Accessory (R95-grade) -->
-		<ingredient count="51" id="19167" />
-		<!-- High-grade Spirit Stone: Accessory -->
-		<production count="1" id="45935" />
+		<ingredient id="19167" count="51"/> <!-- Life Stone: Accessory (R95-grade) --> 
+		<production id="45935" count="1"/> <!-- High-grade Spirit Stone: Accessory --> 
 	</item>
 	<item>
-		<!-- Life Stone: Accessory (R99-grade) -->
-		<ingredient count="31" id="19168" />
-		<!-- Top-grade Spirit Stone: Accessory -->
-		<production count="1" id="45936" />
+		<ingredient id="19168" count="31"/> <!-- Life Stone: Accessory (R99-grade) --> 
+		<production id="45936" count="1"/> <!-- Top-grade Spirit Stone: Accessory --> 
 	</item>
 </list>

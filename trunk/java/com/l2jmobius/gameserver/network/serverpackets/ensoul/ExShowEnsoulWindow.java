@@ -16,20 +16,25 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets.ensoul;
 
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
-public class ExShowEnsoulWindow extends L2GameServerPacket
+/**
+ * @author UnAfraid
+ */
+public class ExShowEnsoulWindow implements IClientOutgoingPacket
 {
 	public static final ExShowEnsoulWindow STATIC_PACKET = new ExShowEnsoulWindow();
 	
-	public ExShowEnsoulWindow()
+	private ExShowEnsoulWindow()
 	{
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeD(0x17E);
+		OutgoingPackets.EX_SHOW_ENSOUL_WINDOW.writeId(packet);
+		return true;
 	}
 }

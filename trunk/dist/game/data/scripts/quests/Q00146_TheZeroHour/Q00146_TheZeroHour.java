@@ -39,11 +39,17 @@ public class Q00146_TheZeroHour extends Quest
 	
 	public Q00146_TheZeroHour()
 	{
-		super(146, Q00146_TheZeroHour.class.getSimpleName(), "The Zero Hour");
+		super(146);
 		addStartNpc(KAHMAN);
 		addTalkId(KAHMAN);
 		addKillId(QUEEN_SHYEED);
 		registerQuestItems(FANG);
+	}
+	
+	@Override
+	public int getNpcStringId()
+	{
+		return 640;
 	}
 	
 	@Override

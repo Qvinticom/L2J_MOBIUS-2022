@@ -22,8 +22,8 @@ import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.util.StringUtil;
-import com.l2jmobius.util.Util;
+import com.l2jmobius.commons.util.CommonUtil;
+import com.l2jmobius.commons.util.StringUtil;
 
 public class ConsoleLogFormatter extends Formatter
 {
@@ -39,7 +39,7 @@ public class ConsoleLogFormatter extends Formatter
 		{
 			try
 			{
-				StringUtil.append(output, Util.getStackTrace(record.getThrown()), Config.EOL);
+				StringUtil.append(output, CommonUtil.getStackTrace(record.getThrown()), Config.EOL);
 			}
 			catch (Exception ex)
 			{

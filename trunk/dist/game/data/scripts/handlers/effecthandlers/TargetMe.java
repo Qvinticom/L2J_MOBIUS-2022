@@ -18,8 +18,6 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 
@@ -29,9 +27,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class TargetMe extends AbstractEffect
 {
-	public TargetMe(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public TargetMe(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -50,13 +47,7 @@ public final class TargetMe extends AbstractEffect
 		{
 			if (info.getEffected().getTarget() != info.getEffector())
 			{
-				final L2PcInstance effector = info.getEffector().getActingPlayer();
-				// If effector is null, then its not a player, but NPC. If its not null, then it should check if the skill is pvp skill.
-				if ((effector == null) || effector.checkPvpSkill(info.getEffected(), info.getSkill()))
-				{
-					// Target is different
-					info.getEffected().setTarget(info.getEffector());
-				}
+				info.getEffected().setTarget(info.getEffector());
 			}
 			
 			((L2Playable) info.getEffected()).setLockedTarget(info.getEffector());

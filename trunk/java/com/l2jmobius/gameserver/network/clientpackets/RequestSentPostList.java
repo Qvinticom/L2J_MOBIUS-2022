@@ -17,26 +17,26 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowSentPostList;
 
 /**
  * @author Migi, DS
  */
-public final class RequestSentPostList extends L2GameClientPacket
+public final class RequestSentPostList implements IClientIncomingPacket
 {
-	private static final String _C__D0_6C_REQUESTSENTPOSTLIST = "[C] D0:6C RequestSentPostList";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger packet
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || !Config.ALLOW_MAIL)
 		{
 			return;
@@ -48,18 +48,6 @@ public final class RequestSentPostList extends L2GameClientPacket
 		// return;
 		// }
 		
-		activeChar.sendPacket(new ExShowSentPostList(activeChar.getObjectId()));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_6C_REQUESTSENTPOSTLIST;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
+		client.sendPacket(new ExShowSentPostList(activeChar.getObjectId()));
 	}
 }

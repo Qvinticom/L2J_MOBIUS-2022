@@ -17,23 +17,23 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
-import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.model.L2EnchantSkillGroup.EnchantSkillHolder;
 import com.l2jmobius.gameserver.model.L2EnchantSkillLearn;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author KenM
  */
-public class ExEnchantSkillInfoDetail extends L2GameServerPacket
+public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 {
 	private static final int TYPE_NORMAL_ENCHANT = 0;
 	private static final int TYPE_SAFE_ENCHANT = 1;
 	private static final int TYPE_UNTRAIN_ENCHANT = 2;
 	private static final int TYPE_CHANGE_ENCHANT = 3;
-	private static final int TYPE_IMMORTAL_ENCHANT = 4;
 	
 	private int bookId = 0;
 	private int reqCount = 0;
@@ -41,26 +41,21 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 	private final int _type;
 	private final int _skillid;
 	private final int _skilllvl;
-	private final int _maxlvl;
 	private final int _chance;
 	private int _sp;
 	private final int _adenacount;
 	
 	public ExEnchantSkillInfoDetail(int type, int skillid, int skilllvl, L2PcInstance ply)
 	{
-		_type = type;
-		_skillid = skillid;
-		_skilllvl = skilllvl;
-		_maxlvl = SkillData.getInstance().getMaxLevel(_skillid);
 		
 		final L2EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(skillid);
 		EnchantSkillHolder esd = null;
 		// do we have this skill?
 		if (enchantLearn != null)
 		{
-			if (_skilllvl > 1000)
+			if (skilllvl > 100)
 			{
-				esd = enchantLearn.getEnchantSkillHolder(_skilllvl);
+				esd = enchantLearn.getEnchantSkillHolder(skilllvl);
 			}
 			else
 			{
@@ -70,125 +65,48 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 		
 		if (esd == null)
 		{
-			throw new IllegalArgumentException("Skill " + skillid + " dont have enchant data for level " + _skilllvl);
+			throw new IllegalArgumentException("Skill " + skillid + " dont have enchant data for level " + skilllvl);
 		}
 		
 		if (type == 0)
 		{
-			multi = EnchantSkillGroupsData.NORMAL_ENCHANT_COST_MULTIPLIER;
+			multi = Config.NORMAL_ENCHANT_COST_MULTIPLIER;
 		}
 		else if (type == 1)
 		{
-			multi = EnchantSkillGroupsData.SAFE_ENCHANT_COST_MULTIPLIER;
+			multi = Config.SAFE_ENCHANT_COST_MULTIPLIER;
 		}
-		if (type != TYPE_IMMORTAL_ENCHANT)
+		_chance = esd.getRate(ply);
+		_sp = esd.getSpCost();
+		if (type == TYPE_UNTRAIN_ENCHANT)
 		{
-			_chance = esd.getRate(ply);
-			_sp = esd.getSpCost();
-			if (type == TYPE_UNTRAIN_ENCHANT)
-			{
-				_sp = (int) (0.8 * _sp);
-			}
-			_adenacount = esd.getAdenaCost() * multi;
+			_sp = (int) (0.8 * _sp);
 		}
-		else
-		{
-			_chance = 100;
-			_sp = 0;
-			_adenacount = 0;
-		}
+		_adenacount = esd.getAdenaCost() * multi;
+		_type = type;
+		_skillid = skillid;
+		_skilllvl = skilllvl;
 		
-		final int _elvl = ((_skilllvl % 100) - 1) / 10;
 		switch (type)
 		{
 			case TYPE_NORMAL_ENCHANT:
-			{
-				if (ply.getClassId().level() < 4)
-				{
-					bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_OLD;
-				}
-				else if (_elvl == 0)
-				{
-					bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
-				}
-				else if (_elvl == 1)
-				{
-					bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V2;
-				}
-				else
-				{
-					bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V3;
-				}
-				reqCount = 1;
+				bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
+				reqCount = (((_skilllvl % 100) > 1) ? 0 : 1);
 				break;
-			}
 			case TYPE_SAFE_ENCHANT:
-			{
-				if (ply.getClassId().level() < 4)
-				{
-					bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_OLD;
-				}
-				else if (_elvl == 0)
-				{
-					bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
-				}
-				else if (_elvl == 1)
-				{
-					bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V2;
-				}
-				else
-				{
-					bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V3;
-				}
+				bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
 				reqCount = 1;
 				break;
-			}
+			case TYPE_UNTRAIN_ENCHANT:
+				bookId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK;
+				reqCount = 1;
+				break;
 			case TYPE_CHANGE_ENCHANT:
-			{
-				if (ply.getClassId().level() < 4)
-				{
-					bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_OLD;
-				}
-				else if (_elvl == 0)
-				{
-					bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
-				}
-				else if (_elvl == 1)
-				{
-					bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V2;
-				}
-				else
-				{
-					bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V3;
-				}
+				bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
 				reqCount = 1;
 				break;
-			}
-			case TYPE_IMMORTAL_ENCHANT:
-			{
-				if (ply.getClassId().level() < 4)
-				{
-					bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
-				}
-				else if (_elvl == 0)
-				{
-					bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
-				}
-				else if (_elvl == 1)
-				{
-					bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V2;
-				}
-				else
-				{
-					bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V3;
-				}
-				reqCount = 1;
-				break;
-			}
 			default:
-			{
 				return;
-			}
 		}
 		
 		if ((type != TYPE_SAFE_ENCHANT) && !Config.ES_SP_BOOK_NEEDED)
@@ -198,21 +116,20 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x5F);
+		OutgoingPackets.EX_ENCHANT_SKILL_INFO_DETAIL.writeId(packet);
 		
-		writeD(_type);
-		writeD(_skillid);
-		writeH(_maxlvl);
-		writeH(_skilllvl);
-		writeQ(_sp * multi); // sp
-		writeD(_chance); // exp
-		writeD(0x02); // items count?
-		writeD(Inventory.ADENA_ID); // Adena
-		writeD(_adenacount); // Adena count
-		writeD(bookId); // ItemId Required
-		writeD(reqCount);
+		packet.writeD(_type);
+		packet.writeD(_skillid);
+		packet.writeD(_skilllvl);
+		packet.writeQ(_sp * multi); // sp
+		packet.writeD(_chance); // exp
+		packet.writeD(0x02); // items count?
+		packet.writeD(Inventory.ADENA_ID); // Adena
+		packet.writeD(_adenacount); // Adena count
+		packet.writeD(bookId); // ItemId Required
+		packet.writeD(reqCount);
+		return true;
 	}
 }

@@ -42,7 +42,7 @@ public final class Q00189_ContractCompletion extends Quest
 	
 	public Q00189_ContractCompletion()
 	{
-		super(189, Q00189_ContractCompletion.class.getSimpleName(), "Contract Completion");
+		super(189);
 		addStartNpc(BLUEPRINT_SELLER_LUKA);
 		addTalkId(BLUEPRINT_SELLER_LUKA, HEAD_BLACKSMITH_KUSTO, RESEARCHER_LORAIN, SHEGFIELD);
 		registerQuestItems(SCROLL_OF_DECODING);

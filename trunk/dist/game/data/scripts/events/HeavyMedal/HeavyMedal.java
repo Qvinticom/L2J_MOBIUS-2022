@@ -19,28 +19,28 @@ package events.HeavyMedal;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.event.LongTimeEvent;
+import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 
 /**
  * Heavy Medals event AI.
  * @author Gnacik
  */
-final class HeavyMedal extends LongTimeEvent
+public final class HeavyMedal extends LongTimeEvent
 {
-	private static final int CAT_ROY = 31228;
-	private static final int CAT_WINNIE = 31229;
-	private static final int GLITTERING_MEDAL = 6393;
+	private final static int CAT_ROY = 31228;
+	private final static int CAT_WINNIE = 31229;
+	private final static int GLITTERING_MEDAL = 6393;
 	
-	private static final int WIN_CHANCE = 50;
+	private final static int WIN_CHANCE = 50;
 	
-	private static final int[] MEDALS =
+	private final static int[] MEDALS =
 	{
 		5,
 		10,
 		20,
 		40
 	};
-	private static final int[] BADGES =
+	private final static int[] BADGES =
 	{
 		6399,
 		6400,
@@ -50,7 +50,6 @@ final class HeavyMedal extends LongTimeEvent
 	
 	private HeavyMedal()
 	{
-		super(HeavyMedal.class.getSimpleName(), "events");
 		addStartNpc(CAT_ROY);
 		addStartNpc(CAT_WINNIE);
 		addTalkId(CAT_ROY);

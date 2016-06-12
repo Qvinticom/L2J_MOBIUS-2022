@@ -16,41 +16,36 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
-public class RequestTutorialClientEvent extends L2GameClientPacket
+public class RequestTutorialClientEvent implements IClientIncomingPacket
 {
-	private static final String _C__88_REQUESTTUTORIALCLIENTEVENT = "[C] 88 RequestTutorialClientEvent";
-	
-	int eventId = 0;
+	int _eventId = 0;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		eventId = readD();
+		_eventId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
-		
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final QuestState qs = player.getQuestState("Q00255_Tutorial");
+		// TODO: UNHARDCODE ME!
+		final QuestState qs = player.getQuestState("255_Tutorial");
 		if (qs != null)
 		{
-			qs.getQuest().notifyEvent("CE" + eventId, null, player);
+			qs.getQuest().notifyEvent("CE" + _eventId + "", null, player);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__88_REQUESTTUTORIALCLIENTEVENT;
 	}
 }

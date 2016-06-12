@@ -52,13 +52,9 @@ public final class TransformLevelData
 		_stats.put(stat.ordinal(), val);
 	}
 	
-	public double getStats(Stats stats)
+	public double getStats(Stats stats, double defaultValue)
 	{
-		if ((_stats == null) || !_stats.containsKey(stats.ordinal()))
-		{
-			return 0;
-		}
-		return _stats.get(stats.ordinal());
+		return _stats == null ? defaultValue : _stats.getOrDefault(stats.ordinal(), defaultValue);
 	}
 	
 	public int getLevel()

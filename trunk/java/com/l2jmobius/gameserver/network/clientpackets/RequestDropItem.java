@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.PcCondOverride;
@@ -27,8 +28,7 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.ItemList;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.util.GMAudit;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -36,10 +36,8 @@ import com.l2jmobius.gameserver.util.Util;
  * This class ...
  * @version $Revision: 1.11.2.1.2.7 $ $Date: 2005/04/02 21:25:21 $
  */
-public final class RequestDropItem extends L2GameClientPacket
+public final class RequestDropItem implements IClientIncomingPacket
 {
-	private static final String _C__17_REQUESTDROPITEM = "[C] 17 RequestDropItem";
-	
 	private int _objectId;
 	private long _count;
 	private int _x;
@@ -47,37 +45,38 @@ public final class RequestDropItem extends L2GameClientPacket
 	private int _z;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_count = readQ();
-		_x = readD();
-		_y = readD();
-		_z = readD();
+		_objectId = packet.readD();
+		_count = packet.readQ();
+		_x = packet.readD();
+		_y = packet.readD();
+		_z = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || activeChar.isDead())
 		{
 			return;
 		}
 		// Flood protect drop to avoid packet lag
-		if (!getClient().getFloodProtectors().getDropItem().tryPerformAction("drop item"))
+		if (!client.getFloodProtectors().getDropItem().tryPerformAction("drop item"))
 		{
 			return;
 		}
 		
 		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
 		
-		if ((item == null) || (_count == 0) || !activeChar.validateItemManipulation(_objectId, "drop") || (!Config.ALLOW_DISCARDITEM && !activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) || (!item.isDropable() && (!activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS) || !Config.GM_TRADE_RESTRICTED_ITEMS)) || ((item.getItemType() == EtcItemType.PET_COLLAR) && activeChar.havePetInvItems()) || activeChar.isInsideZone(ZoneId.NO_ITEM_DROP))
+		if ((item == null) || (_count == 0) || !activeChar.validateItemManipulation(_objectId, "drop") || (!Config.ALLOW_DISCARDITEM && !activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) || (!item.isDropable() && !(activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS) && Config.GM_TRADE_RESTRICTED_ITEMS)) || ((item.getItemType() == EtcItemType.PET_COLLAR) && activeChar.havePetInvItems()) || activeChar.isInsideZone(ZoneId.NO_ITEM_DROP))
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
 			return;
 		}
-		if (item.isQuestItem() && (!activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS) || !Config.GM_TRADE_RESTRICTED_ITEMS))
+		if (item.isQuestItem() && !(activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS) && Config.GM_TRADE_RESTRICTED_ITEMS))
 		{
 			return;
 		}
@@ -127,7 +126,7 @@ public final class RequestDropItem extends L2GameClientPacket
 		if (activeChar.isFishing())
 		{
 			// You can't mount, dismount, break and drop items while fishing
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING);
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING2);
 			return;
 		}
 		if (activeChar.isFlying())
@@ -135,15 +134,14 @@ public final class RequestDropItem extends L2GameClientPacket
 			return;
 		}
 		
-		// Cannot discard item that the skill is consuming
-		if (activeChar.isCastingNow() && (activeChar.getCurrentSkill() != null) && (activeChar.getCurrentSkill().getSkill().getItemConsumeId() == item.getId()))
+		if (activeChar.hasItemRequest())
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DESTROY_OR_CRYSTALLIZE_ITEMS_WHILE_ENCHANTING_ATTRIBUTES);
 			return;
 		}
 		
 		// Cannot discard item that the skill is consuming
-		if (activeChar.isCastingSimultaneouslyNow() && (activeChar.getLastSimultaneousSkillCast() != null) && (activeChar.getLastSimultaneousSkillCast().getItemConsumeId() == item.getId()))
+		if (activeChar.isCastingNow(s -> s.getSkill().getItemConsumeId() == item.getId()))
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
 			return;
@@ -177,36 +175,32 @@ public final class RequestDropItem extends L2GameClientPacket
 		
 		if (Config.DEBUG)
 		{
-			_log.fine("requested drop item " + _objectId + "(" + item.getCount() + ") at " + _x + "/" + _y + "/" + _z);
+			_log.finer("requested drop item " + _objectId + "(" + item.getCount() + ") at " + _x + "/" + _y + "/" + _z);
 		}
 		
 		if (item.isEquipped())
 		{
 			final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot());
-			final InventoryUpdate iu = new InventoryUpdate();
 			for (L2ItemInstance itm : unequiped)
 			{
 				itm.unChargeAllShots();
-				iu.addModifiedItem(itm);
 			}
-			activeChar.sendPacket(iu);
 			activeChar.broadcastUserInfo();
-			
-			activeChar.sendPacket(new ItemList(activeChar, true));
+			activeChar.sendItemList(true);
 		}
 		
 		final L2ItemInstance dropedItem = activeChar.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);
 		
 		if (Config.DEBUG)
 		{
-			_log.fine("dropping " + _objectId + " item(" + _count + ") at: " + _x + " " + _y + " " + _z);
+			_log.finer("dropping " + _objectId + " item(" + _count + ") at: " + _x + " " + _y + " " + _z);
 		}
 		
 		// activeChar.broadcastUserInfo();
 		
 		if (activeChar.isGM())
 		{
-			final String target = activeChar.getTarget() != null ? activeChar.getTarget().getName() : "no-target";
+			final String target = (activeChar.getTarget() != null ? activeChar.getTarget().getName() : "no-target");
 			GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "Drop", target, "(id: " + dropedItem.getId() + " name: " + dropedItem.getItemName() + " objId: " + dropedItem.getObjectId() + " x: " + activeChar.getX() + " y: " + activeChar.getY() + " z: " + activeChar.getZ() + ")");
 		}
 		
@@ -216,17 +210,5 @@ public final class RequestDropItem extends L2GameClientPacket
 			_log.warning(msg);
 			AdminData.getInstance().broadcastMessageToGMs(msg);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__17_REQUESTDROPITEM;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

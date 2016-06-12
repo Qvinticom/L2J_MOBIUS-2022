@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -28,12 +28,12 @@ import com.l2jmobius.gameserver.model.L2SiegeClan;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
-import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author UnAfraid, Nos
  */
-public class Die extends L2GameServerPacket
+public class Die implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private boolean _toVillage;
@@ -43,7 +43,9 @@ public class Die extends L2GameServerPacket
 	private final boolean _isSweepable;
 	private boolean _useFeather;
 	private boolean _toFortress;
+	private boolean _hideAnimation;
 	private List<Integer> _items = null;
+	private boolean _itemsEnabled;
 	
 	public Die(L2Character activeChar)
 	{
@@ -57,7 +59,6 @@ public class Die extends L2GameServerPacket
 			L2SiegeClan siegeClan = null;
 			final Castle castle = CastleManager.getInstance().getCastle(activeChar);
 			final Fort fort = FortManager.getInstance().getFort(activeChar);
-			final SiegableHall hall = CHSiegeManager.getInstance().getNearbyClanHall(activeChar);
 			if ((castle != null) && castle.getSiege().isInProgress())
 			{
 				siegeClan = castle.getSiege().getAttackerClan(clan);
@@ -72,12 +73,17 @@ public class Die extends L2GameServerPacket
 			_toVillage = activeChar.canRevive() && !activeChar.isPendingRevive();
 			_toClanHall = (clan != null) && (clan.getHideoutId() > 0);
 			_toCastle = ((clan != null) && (clan.getCastleId() > 0)) || isInCastleDefense;
-			_toOutpost = ((siegeClan != null) && !isInCastleDefense && !isInFortDefense && !siegeClan.getFlag().isEmpty()) || ((hall != null) && hall.getSiege().checkIsAttacker(clan));
+			_toOutpost = ((siegeClan != null) && !isInCastleDefense && !isInFortDefense && !siegeClan.getFlag().isEmpty());
 			_useFeather = activeChar.getAccessLevel().allowFixedRes();
 			_toFortress = ((clan != null) && (clan.getFortId() > 0)) || isInFortDefense;
 		}
 		
 		_isSweepable = activeChar.isAttackable() && activeChar.isSweepActive();
+	}
+	
+	public void setHideAnimation(boolean val)
+	{
+		_hideAnimation = val;
 	}
 	
 	public void addItem(int itemId)
@@ -102,22 +108,31 @@ public class Die extends L2GameServerPacket
 		return _items != null ? _items : Collections.emptyList();
 	}
 	
-	@Override
-	protected final void writeImpl()
+	public void setItemsEnabled(boolean val)
 	{
-		writeC(0x00);
-		writeD(_objectId);
-		writeD(_toVillage ? 0x01 : 0x00);
-		writeD(_toClanHall ? 0x01 : 0x00);
-		writeD(_toCastle ? 0x01 : 0x00);
-		writeD(_toOutpost ? 0x01 : 0x00);
-		writeD(_isSweepable ? 0x01 : 0x00);
-		writeD(_useFeather ? 0x01 : 0x00);
-		writeD(_toFortress ? 0x01 : 0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeC(0x00);
-		writeD(0x00);
-		writeD(0x00);
+		_itemsEnabled = val;
+	}
+	
+	@Override
+	public boolean write(PacketWriter packet)
+	{
+		OutgoingPackets.DIE.writeId(packet);
+		
+		packet.writeD(_objectId);
+		packet.writeD(_toVillage ? 0x01 : 0x00);
+		packet.writeD(_toClanHall ? 0x01 : 0x00);
+		packet.writeD(_toCastle ? 0x01 : 0x00);
+		packet.writeD(_toOutpost ? 0x01 : 0x00);
+		packet.writeD(_isSweepable ? 0x01 : 0x00);
+		packet.writeD(_useFeather ? 0x01 : 0x00);
+		packet.writeD(_toFortress ? 0x01 : 0x00);
+		packet.writeD(0x00); // Disables use Feather button for X seconds
+		packet.writeD(0x00); // Adventure's Song
+		packet.writeC(_hideAnimation ? 0x01 : 0x00);
+		
+		packet.writeD(_itemsEnabled ? 0x01 : 0x00);
+		packet.writeD(getItems().size());
+		getItems().forEach(packet::writeD);
+		return true;
 	}
 }

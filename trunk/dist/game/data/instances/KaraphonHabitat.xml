@@ -1,17 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<instance name="Karaphon Habitat" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
-	<activityTime val="15" />
-	<allowSummon val="false" />
-	<emptyDestroyTime val="5" />
-	<exitPoint x="-82250" y="246406" z="-14152" />
+<!-- Karaphon Habitat -->
+<instance id="253" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+	<time empty="5" />
+	<locations>
+		<enter type="FIXED">
+			<location x="-82242" y="246404" z="-14152" />
+		</enter>
+		<exit type="FIXED">
+			<location x="-88282" y="237468" z="-2880" />
+		</exit>
+	</locations>
+	<conditions>
+		<condition type="Level">
+			<param name="min" value="17" />
+			<param name="max" value="25" />
+		</condition>
+		<condition type="Quest">
+			<param name="id" value="10745" />
+			<param name="cond" value="1" />
+		</condition>
+		<condition type="Reenter" />
+	</conditions>
+	<reenter>
+		<reset time="765" /> <!-- 12h 45min -->
+	</reenter>
 	<spawnlist>
-		<group name="general">
-			<!-- Karaphon -->
-			<spawn npcId="23459" x="-82384" y="245993" z="-14157" heading="0" respawn="0" />
-			<!-- Keen Honeybee -->
-			<spawn npcId="23460" x="-82484" y="246057" z="-14156" heading="0" respawn="0" />
-			<!-- Keen Growler -->
-			<spawn npcId="23461" x="-82280" y="246057" z="-14159" heading="0" respawn="0" />
+		<group>
+			<npc id="23459" x="-82358" y="246037" z="-14152" heading="12928" /> <!-- Karaphon -->
+			<npc id="23460" x="-82410" y="246063" z="-14152" heading="12928" /> <!-- Keen Honeybee -->
+			<npc id="23461" x="-82298" y="246047" z="-14152" heading="12928" /> <!-- Keen Growler -->
 		</group>
 	</spawnlist>
 </instance>

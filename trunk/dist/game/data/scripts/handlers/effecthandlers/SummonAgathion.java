@@ -17,11 +17,11 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
-import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoCubic;
 
 /**
@@ -32,10 +32,8 @@ public final class SummonAgathion extends AbstractEffect
 {
 	private final int _npcId;
 	
-	public SummonAgathion(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public SummonAgathion(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		if (params.isEmpty())
 		{
 			_log.warning(getClass().getSimpleName() + ": must have parameters.");
@@ -51,17 +49,17 @@ public final class SummonAgathion extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if ((info.getEffected() == null) || !info.getEffected().isPlayer())
+		if (!effected.isPlayer())
 		{
 			return;
 		}
 		
-		final L2PcInstance player = info.getEffected().getActingPlayer();
+		final L2PcInstance player = effected.getActingPlayer();
 		
 		player.setAgathionId(_npcId);
 		player.sendPacket(new ExUserInfoCubic(player));
-		player.broadcastPacket(new CharInfo(player));
+		player.broadcastCharInfo();
 	}
 }

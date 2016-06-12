@@ -16,34 +16,39 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class ExShowBaseAttributeCancelWindow extends L2GameServerPacket
+public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 {
-	private final L2ItemInstance[] _items;
+	private final Collection<L2ItemInstance> _items;
 	private long _price;
 	
 	public ExShowBaseAttributeCancelWindow(L2PcInstance player)
 	{
-		_items = player.getInventory().getElementItems();
+		_items = player.getInventory().getItems(L2ItemInstance::hasAttributes);
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x75);
-		writeD(_items.length);
+		OutgoingPackets.EX_SHOW_BASE_ATTRIBUTE_CANCEL_WINDOW.writeId(packet);
+		
+		packet.writeD(_items.size());
 		for (L2ItemInstance item : _items)
 		{
-			writeD(item.getObjectId());
-			writeQ(getPrice(item));
+			packet.writeD(item.getObjectId());
+			packet.writeQ(getPrice(item));
 		}
+		return true;
 	}
 	
 	/**
-	 * TODO: Update prices for Top/Mid/Low S80/S84
+	 * TODO: Unhardcode! Update prices for Top/Mid/Low S80/S84
 	 * @param item
 	 * @return
 	 */
@@ -84,42 +89,6 @@ public class ExShowBaseAttributeCancelWindow extends L2GameServerPacket
 				else
 				{
 					_price = 160000;
-				}
-				break;
-			}
-			case R:
-			{
-				if (item.isWeapon())
-				{
-					_price = 250000;
-				}
-				else
-				{
-					_price = 240000;
-				}
-				break;
-			}
-			case R95:
-			{
-				if (item.isWeapon())
-				{
-					_price = 300000;
-				}
-				else
-				{
-					_price = 280000;
-				}
-				break;
-			}
-			case R99:
-			{
-				if (item.isWeapon())
-				{
-					_price = 350000;
-				}
-				else
-				{
-					_price = 320000;
 				}
 				break;
 			}

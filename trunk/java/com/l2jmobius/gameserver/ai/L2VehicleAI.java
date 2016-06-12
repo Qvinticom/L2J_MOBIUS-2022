@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.ai;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Vehicle;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -28,11 +29,11 @@ public abstract class L2VehicleAI extends L2CharacterAI
 {
 	/**
 	 * Simple AI for vehicles
-	 * @param creature
+	 * @param vehicle
 	 */
-	public L2VehicleAI(L2Vehicle creature)
+	public L2VehicleAI(L2Vehicle vehicle)
 	{
-		super(creature);
+		super(vehicle);
 	}
 	
 	@Override
@@ -41,7 +42,7 @@ public abstract class L2VehicleAI extends L2CharacterAI
 	}
 	
 	@Override
-	protected void onIntentionCast(Skill skill, L2Object target)
+	protected void onIntentionCast(Skill skill, L2Object target, L2ItemInstance item, boolean forceUse, boolean dontMove)
 	{
 	}
 	
@@ -71,12 +72,7 @@ public abstract class L2VehicleAI extends L2CharacterAI
 	}
 	
 	@Override
-	protected void onEvtStunned(L2Character attacker)
-	{
-	}
-	
-	@Override
-	protected void onEvtSleeping(L2Character attacker)
+	protected void onEvtActionBlocked(L2Character attacker)
 	{
 	}
 	

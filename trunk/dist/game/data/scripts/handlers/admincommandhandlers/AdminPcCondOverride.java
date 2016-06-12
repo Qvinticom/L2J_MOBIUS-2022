@@ -25,11 +25,15 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
- * Handler provides ability to override server's conditions for admin.
- * @author UnAfraid
+ * Handler provides ability to override server's conditions for admin.<br>
+ * Note: //setparam command uses any XML value and ignores case sensitivity.<br>
+ * For best results by //setparam enable the maximum stats PcCondOverride here.
+ * @author UnAfraid, Nik
  */
 public class AdminPcCondOverride implements IAdminCommandHandler
 {
+	// private static final int SETPARAM_ORDER = 0x90;
+	
 	private static final String[] COMMANDS =
 	{
 		"admin_exceptions",
@@ -48,7 +52,7 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 				case "admin_exceptions":
 				{
 					final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
-					msg.setFile(activeChar.getHtmlPrefix(), "html/admin/cond_override.htm");
+					msg.setFile(activeChar.getHtmlPrefix(), "data/html/admin/cond_override.htm");
 					final StringBuilder sb = new StringBuilder();
 					for (PcCondOverride ex : PcCondOverride.values())
 					{

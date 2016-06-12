@@ -22,9 +22,9 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -36,14 +36,14 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 import com.l2jmobius.gameserver.util.GMAudit;
-import com.l2jmobius.util.StringUtil;
 
 public class AdminBuffs implements IAdminCommandHandler
 {
-	private static final int PAGE_LIMIT = 20;
+	private final static int PAGE_LIMIT = 20;
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
+		"admin_buff",
 		"admin_getbuffs",
 		"admin_getbuffs_ps",
 		"admin_stopbuff",
@@ -59,7 +59,47 @@ public class AdminBuffs implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		if (command.startsWith("admin_getbuffs"))
+		if (command.startsWith("admin_buff"))
+		{
+			if ((activeChar.getTarget() == null) || !activeChar.getTarget().isCharacter())
+			{
+				activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+				return false;
+			}
+			
+			final StringTokenizer st = new StringTokenizer(command, " ");
+			command = st.nextToken();
+			if (!st.hasMoreTokens())
+			{
+				activeChar.sendMessage("Skill Id and level are not specified.");
+				activeChar.sendMessage("Usage: //buff <skillId> <skillLevel>");
+				return false;
+			}
+			
+			try
+			{
+				final int skillId = Integer.parseInt(st.nextToken());
+				final int skillLevel = st.hasMoreTokens() ? Integer.parseInt(st.nextToken()) : SkillData.getInstance().getMaxLevel(skillId);
+				final L2Character target = (L2Character) activeChar.getTarget();
+				final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
+				if (skill == null)
+				{
+					activeChar.sendMessage("Skill with id: " + skillId + ", lvl: " + skillLevel + " not found.");
+					return false;
+				}
+				
+				activeChar.sendMessage("Admin buffing " + skill.getName() + " (" + skillId + "," + skillLevel + ")");
+				skill.applyEffects(activeChar, target);
+				return true;
+			}
+			catch (Exception e)
+			{
+				activeChar.sendMessage("Failed buffing: " + e.getMessage());
+				activeChar.sendMessage("Usage: //buff <skillId> <skillLevel>");
+				return false;
+			}
+		}
+		else if (command.startsWith("admin_getbuffs"))
 		{
 			final StringTokenizer st = new StringTokenizer(command, " ");
 			command = st.nextToken();
@@ -137,13 +177,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			{
 				final int radius = Integer.parseInt(val);
 				
-				for (L2Character knownChar : activeChar.getKnownList().getKnownCharactersInRadius(radius))
-				{
-					if (knownChar.isPlayer() && !knownChar.equals(activeChar))
-					{
-						knownChar.stopAllEffects();
-					}
-				}
+				L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2PcInstance.class, radius, L2Character::stopAllEffects);
 				
 				activeChar.sendMessage("All effects canceled within radius " + radius);
 				return true;
@@ -159,39 +193,47 @@ public class AdminBuffs implements IAdminCommandHandler
 			final StringTokenizer st = new StringTokenizer(command, " ");
 			command = st.nextToken();
 			
-			L2Character creature = null;
+			L2PcInstance player = null;
 			if (st.hasMoreTokens())
 			{
-				creature = L2World.getInstance().getPlayer(st.nextToken());
-				if (creature == null)
+				final String playername = st.nextToken();
+				
+				try
 				{
-					activeChar.sendMessage("The player " + creature + " is not online.");
+					player = L2World.getInstance().getPlayer(playername);
+				}
+				catch (Exception e)
+				{
+				}
+				
+				if (player == null)
+				{
+					activeChar.sendMessage("The player " + playername + " is not online.");
 					return false;
 				}
+			}
+			else if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
+			{
+				player = activeChar.getTarget().getActingPlayer();
 			}
 			else
 			{
-				final L2Object target = activeChar.getTarget();
-				if ((target != null) && target.isCharacter())
-				{
-					creature = (L2Character) target;
-				}
-				
-				if (creature == null)
-				{
-					activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
-					return false;
-				}
+				activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+				return false;
 			}
 			
-			creature.resetTimeStamps();
-			creature.resetDisabledSkills();
-			if (creature.isPlayer())
+			try
 			{
-				creature.sendPacket(new SkillCoolTime(creature.getActingPlayer()));
+				player.resetTimeStamps();
+				player.resetDisabledSkills();
+				player.sendPacket(new SkillCoolTime(player));
+				activeChar.sendMessage("Skill reuse was removed from " + player.getName() + ".");
+				return true;
 			}
-			activeChar.sendMessage("Skill reuse was removed from " + creature.getName() + ".");
-			return true;
+			catch (NullPointerException e)
+			{
+				return false;
+			}
 		}
 		else if (command.startsWith("admin_switch_gm_buffs"))
 		{
@@ -213,7 +255,7 @@ public class AdminBuffs implements IAdminCommandHandler
 	 * @param gmchar the player to switch the Game Master skills.
 	 * @param toAuraSkills if {@code true} it will remove "GM Aura" skills and add "GM regular" skills, vice versa if {@code false}.
 	 */
-	private static void switchSkills(L2PcInstance gmchar, boolean toAuraSkills)
+	public static void switchSkills(L2PcInstance gmchar, boolean toAuraSkills)
 	{
 		final Collection<Skill> skills = toAuraSkills ? SkillTreesData.getInstance().getGMSkillTree().values() : SkillTreesData.getInstance().getGMAuraSkillTree().values();
 		for (Skill skill : skills)
@@ -229,7 +271,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private static void showBuffs(L2PcInstance activeChar, L2Character target, int page, boolean passive)
+	public static void showBuffs(L2PcInstance activeChar, L2Character target, int page, boolean passive)
 	{
 		final List<BuffInfo> effects = new ArrayList<>();
 		if (!passive)
@@ -252,8 +294,12 @@ public class AdminBuffs implements IAdminCommandHandler
 			max++;
 		}
 		
-		final StringBuilder html = StringUtil.startAppend(500 + (effects.size() * 200), "<html><table width=\"100%\"><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center><font color=\"LEVEL\">Effects of ", target.getName(), "</font></td><td width=45><button value=\"Back\" action=\"bypass -h admin_current_player\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br><table width=\"100%\"><tr><td width=200>Skill</td><td width=30>Rem. Time</td><td width=70>Action</td></tr>");
-		final int start = (page - 1) * PAGE_LIMIT;
+		final StringBuilder html = new StringBuilder(500 + (effects.size() * 200));
+		html.append("<html><table width=\"100%\"><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center><font color=\"LEVEL\">Effects of ");
+		html.append(target.getName());
+		html.append("</font></td><td width=45><button value=\"Back\" action=\"bypass -h admin_current_player\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br><table width=\"100%\"><tr><td width=200>Skill</td><td width=30>Rem. Time</td><td width=70>Action</td></tr>");
+		
+		final int start = ((page - 1) * PAGE_LIMIT);
 		final int end = Math.min(((page - 1) * PAGE_LIMIT) + PAGE_LIMIT, effects.size());
 		int count = 0;
 		for (BuffInfo info : effects)
@@ -263,7 +309,22 @@ public class AdminBuffs implements IAdminCommandHandler
 				final Skill skill = info.getSkill();
 				for (AbstractEffect effect : info.getEffects())
 				{
-					StringUtil.append(html, "<tr><td>", (!info.isInUse() ? FONT_RED1 : "") + skill.getName(), " Lv ", String.valueOf(skill.getLevel()), " (", effect.getClass().getSimpleName(), ")" + (!info.isInUse() ? FONT_RED2 : ""), "</td><td>", skill.isToggle() ? "T (" + info.getTickCount(effect) + ")" : skill.isPassive() ? "P" : info.getTime() + "s", "</td><td><button value=\"X\" action=\"bypass -h admin_stopbuff ", Integer.toString(target.getObjectId()), " ", String.valueOf(skill.getId()), "\" width=30 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+					html.append("<tr><td>");
+					html.append(!info.isInUse() ? FONT_RED1 : "");
+					html.append(skill.getName());
+					html.append(" Lv ");
+					html.append(skill.getLevel());
+					html.append(" (");
+					html.append(effect.getClass().getSimpleName());
+					html.append(")");
+					html.append(!info.isInUse() ? FONT_RED2 : "");
+					html.append("</td><td>");
+					html.append(skill.isToggle() ? "T (" + info.getTickCount(effect) + ")" : skill.isPassive() ? "P" : info.getTime() + "s");
+					html.append("</td><td><button value=\"X\" action=\"bypass -h admin_stopbuff ");
+					html.append(target.getObjectId());
+					html.append(" ");
+					html.append(skill.getId());
+					html.append("\" width=30 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 				}
 			}
 			count++;
@@ -294,31 +355,43 @@ public class AdminBuffs implements IAdminCommandHandler
 		html.append("</tr></table>");
 		
 		// Buttons
-		StringUtil.append(html, "<br><center><button value=\"Refresh\" action=\"bypass -h admin_getbuffs", passive ? "_ps " : " ", target.getName(), "\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
-		StringUtil.append(html, "<button value=\"Remove All\" action=\"bypass -h admin_stopallbuffs ", Integer.toString(target.getObjectId()), "\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br>");
+		html.append("<br><center><button value=\"Refresh\" action=\"bypass -h admin_getbuffs");
+		html.append(passive ? "_ps " : " ");
+		html.append(target.getName());
+		html.append("\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+		html.append("<button value=\"Remove All\" action=\"bypass -h admin_stopallbuffs ");
+		html.append(target.getObjectId());
+		html.append("\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br>");
 		// Legend
 		if (!passive)
 		{
-			StringUtil.append(html, FONT_RED1, "Inactive buffs: ", String.valueOf(target.getEffectList().getHiddenBuffsCount()), FONT_RED2, "<br>");
+			html.append(FONT_RED1);
+			html.append("Inactive buffs: ");
+			html.append(target.getEffectList().getHiddenBuffsCount());
+			html.append(FONT_RED2);
+			html.append("<br>");
 		}
-		StringUtil.append(html, "Total", passive ? " passive" : "", " buff count: ", String.valueOf(effects.size()));
-		if ((target.getEffectList().getAllBlockedBuffSlots() != null) && !target.getEffectList().getAllBlockedBuffSlots().isEmpty())
+		html.append("Total");
+		html.append(passive ? " passive" : "");
+		html.append(" buff count: ");
+		html.append(effects.size());
+		if ((target.getEffectList().getBlockedAbnormalTypes() != null) && !target.getEffectList().getBlockedAbnormalTypes().isEmpty())
 		{
-			StringUtil.append(html, "<br>Blocked buff slots: ");
+			html.append("<br>Blocked buff slots: ");
 			String slots = "";
-			for (AbnormalType slot : target.getEffectList().getAllBlockedBuffSlots())
+			for (AbnormalType slot : target.getEffectList().getBlockedAbnormalTypes())
 			{
 				slots += slot.toString() + ", ";
 			}
 			
 			if (!slots.isEmpty() && (slots.length() > 3))
 			{
-				StringUtil.append(html, slots.substring(0, slots.length() - 2));
+				html.append(slots.substring(0, slots.length() - 2));
 			}
 		}
-		StringUtil.append(html, "</html>");
+		html.append("</html>");
 		// Send the packet
-		activeChar.sendPacket(new NpcHtmlMessage(html.toString()));
+		activeChar.sendPacket(new NpcHtmlMessage(0, 1, html.toString()));
 		
 		if (Config.GMAUDIT)
 		{

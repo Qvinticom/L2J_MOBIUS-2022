@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,14 +26,14 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.ActionKey;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * UI Data parser.
  * @author Zoey76
  */
-public class UIData implements IXmlReader
+public class UIData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(UIData.class.getName());
 	
@@ -49,12 +50,12 @@ public class UIData implements IXmlReader
 	{
 		_storedKeys.clear();
 		_storedCategories.clear();
-		parseDatapackFile("ui/ui_en.xml");
+		parseDatapackFile("data/ui/ui_en.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _storedKeys.size() + " keys " + _storedCategories.size() + " categories.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{

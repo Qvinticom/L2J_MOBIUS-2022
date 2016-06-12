@@ -16,59 +16,46 @@
  */
 package com.l2jmobius.gameserver.model.items;
 
-import java.util.Objects;
-
+import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.enums.ItemSkillType;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
-import com.l2jmobius.gameserver.model.conditions.ConditionGameChance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * This class is dedicated to the management of weapons.
  */
 public final class L2Weapon extends L2Item
 {
-	private final WeaponType _type;
-	private final boolean _isMagicWeapon;
-	private final int _rndDam;
-	private final int _soulShotCount;
-	private final int _spiritShotCount;
-	private final int _mpConsume;
-	private final int _baseAttackRange;
-	private final int _baseAttackAngle;
-	/**
-	 * Skill that activates when item is enchanted +4 (for duals).
-	 */
-	private SkillHolder _enchant4Skill = null;
-	private final int _changeWeaponId;
+	private WeaponType _type;
+	private boolean _isMagicWeapon;
+	private int _soulShotCount;
+	private int _spiritShotCount;
+	private int _mpConsume;
+	private int _baseAttackRange;
+	private int _baseAttackRadius;
+	private int _baseAttackAngle;
+	private int _changeWeaponId;
 	
-	// Attached skills for Special Abilities
-	private SkillHolder _skillsOnMagic;
-	private Condition _skillsOnMagicCondition = null;
-	private SkillHolder _skillsOnCrit;
-	private Condition _skillsOnCritCondition = null;
+	private int _reducedSoulshot;
+	private int _reducedSoulshotChance;
 	
-	private final int _reducedSoulshot;
-	private final int _reducedSoulshotChance;
+	private int _reducedMpConsume;
+	private int _reducedMpConsumeChance;
 	
-	private final int _reducedMpConsume;
-	private final int _reducedMpConsumeChance;
-	
-	private final boolean _isForceEquip;
-	private final boolean _isAttackWeapon;
-	private final boolean _useWeaponSkillsOnly;
+	private boolean _isForceEquip;
+	private boolean _isAttackWeapon;
+	private boolean _useWeaponSkillsOnly;
 	
 	/**
 	 * Constructor for Weapon.
@@ -77,17 +64,31 @@ public final class L2Weapon extends L2Item
 	public L2Weapon(StatsSet set)
 	{
 		super(set);
+	}
+	
+	@Override
+	public void set(StatsSet set)
+	{
+		super.set(set);
 		_type = WeaponType.valueOf(set.getString("weapon_type", "none").toUpperCase());
 		_type1 = L2Item.TYPE1_WEAPON_RING_EARRING_NECKLACE;
 		_type2 = L2Item.TYPE2_WEAPON;
 		_isMagicWeapon = set.getBoolean("is_magic_weapon", false);
 		_soulShotCount = set.getInt("soulshots", 0);
 		_spiritShotCount = set.getInt("spiritshots", 0);
-		_rndDam = set.getInt("random_damage", 0);
 		_mpConsume = set.getInt("mp_consume", 0);
 		_baseAttackRange = set.getInt("attack_range", 40);
 		final String[] damgeRange = set.getString("damage_range", "").split(";"); // 0?;0?;fan sector;base attack angle
-		_baseAttackAngle = (damgeRange.length > 1) && Util.isDigit(damgeRange[3]) ? Integer.parseInt(damgeRange[3]) : 120;
+		if ((damgeRange.length > 1) && Util.isDigit(damgeRange[2]) && Util.isDigit(damgeRange[3]))
+		{
+			_baseAttackRadius = Integer.parseInt(damgeRange[2]);
+			_baseAttackAngle = Integer.parseInt(damgeRange[3]);
+		}
+		else
+		{
+			_baseAttackRadius = 40;
+			_baseAttackAngle = 120;
+		}
 		
 		final String[] reduced_soulshots = set.getString("reduced_soulshot", "").split(",");
 		_reducedSoulshotChance = (reduced_soulshots.length == 2) ? Integer.parseInt(reduced_soulshots[0]) : 0;
@@ -96,86 +97,6 @@ public final class L2Weapon extends L2Item
 		final String[] reduced_mpconsume = set.getString("reduced_mp_consume", "").split(",");
 		_reducedMpConsumeChance = (reduced_mpconsume.length == 2) ? Integer.parseInt(reduced_mpconsume[0]) : 0;
 		_reducedMpConsume = (reduced_mpconsume.length == 2) ? Integer.parseInt(reduced_mpconsume[1]) : 0;
-		
-		String skill = set.getString("enchant4_skill", null);
-		if (skill != null)
-		{
-			final String[] info = skill.split("-");
-			
-			if ((info != null) && (info.length == 2))
-			{
-				int id = 0;
-				int level = 0;
-				try
-				{
-					id = Integer.parseInt(info[0]);
-					level = Integer.parseInt(info[1]);
-				}
-				catch (Exception nfe)
-				{
-					// Incorrect syntax, dont add new skill
-					_log.info(StringUtil.concat("> Couldnt parse ", skill, " in weapon enchant skills! item ", toString()));
-				}
-				if ((id > 0) && (level > 0))
-				{
-					_enchant4Skill = new SkillHolder(id, level);
-				}
-			}
-		}
-		
-		skill = set.getString("onmagic_skill", null);
-		if (skill != null)
-		{
-			final String[] info = skill.split("-");
-			final int chance = set.getInt("onmagic_chance", 100);
-			if ((info != null) && (info.length == 2))
-			{
-				int id = 0;
-				int level = 0;
-				try
-				{
-					id = Integer.parseInt(info[0]);
-					level = Integer.parseInt(info[1]);
-				}
-				catch (Exception nfe)
-				{
-					// Incorrect syntax, don't add new skill
-					_log.info(StringUtil.concat("> Couldnt parse ", skill, " in weapon onmagic skills! item ", toString()));
-				}
-				if ((id > 0) && (level > 0) && (chance > 0))
-				{
-					_skillsOnMagic = new SkillHolder(id, level);
-					_skillsOnMagicCondition = new ConditionGameChance(chance);
-				}
-			}
-		}
-		
-		skill = set.getString("oncrit_skill", null);
-		if (skill != null)
-		{
-			final String[] info = skill.split("-");
-			final int chance = set.getInt("oncrit_chance", 100);
-			if ((info != null) && (info.length == 2))
-			{
-				int id = 0;
-				int level = 0;
-				try
-				{
-					id = Integer.parseInt(info[0]);
-					level = Integer.parseInt(info[1]);
-				}
-				catch (Exception nfe)
-				{
-					// Incorrect syntax, don't add new skill
-					_log.info(StringUtil.concat("> Couldnt parse ", skill, " in weapon oncrit skills! item ", toString()));
-				}
-				if ((id > 0) && (level > 0) && (chance > 0))
-				{
-					_skillsOnCrit = new SkillHolder(id, level);
-					_skillsOnCritCondition = new ConditionGameChance(chance);
-				}
-			}
-		}
 		
 		_changeWeaponId = set.getInt("change_weaponId", 0);
 		_isForceEquip = set.getBoolean("isForceEquip", false);
@@ -243,14 +164,6 @@ public final class L2Weapon extends L2Item
 	}
 	
 	/**
-	 * @return the random damage inflicted by the weapon.
-	 */
-	public int getRandomDamage()
-	{
-		return _rndDam;
-	}
-	
-	/**
 	 * @return the MP consumption with the weapon.
 	 */
 	public int getMpConsume()
@@ -261,6 +174,11 @@ public final class L2Weapon extends L2Item
 	public int getBaseAttackRange()
 	{
 		return _baseAttackRange;
+	}
+	
+	public int getBaseAttackRadius()
+	{
+		return _baseAttackRadius;
 	}
 	
 	public int getBaseAttackAngle()
@@ -282,15 +200,6 @@ public final class L2Weapon extends L2Item
 	public int getReducedMpConsumeChance()
 	{
 		return _reducedMpConsumeChance;
-	}
-	
-	/**
-	 * @return the skill that player get when has equipped weapon +4 or more (for duals SA).
-	 */
-	@Override
-	public Skill getEnchant4Skill()
-	{
-		return _enchant4Skill == null ? null : _enchant4Skill.getSkill();
 	}
 	
 	/**
@@ -328,126 +237,71 @@ public final class L2Weapon extends L2Item
 	/**
 	 * @param caster the L2Character pointing out the caster
 	 * @param target the L2Character pointing out the target
+	 * @param trigger
+	 * @param type
 	 */
-	public void castOnCriticalSkill(L2Character caster, L2Character target)
+	public void applyConditionalSkills(L2Character caster, L2Character target, Skill trigger, ItemSkillType type)
 	{
-		if (_skillsOnCrit == null)
+		forEachSkill(type, holder ->
 		{
-			return;
-		}
-		
-		final Skill onCritSkill = _skillsOnCrit.getSkill();
-		if ((_skillsOnCritCondition != null) && !_skillsOnCritCondition.test(caster, target, onCritSkill))
-		{
-			// Chance not met
-			return;
-		}
-		
-		if (!onCritSkill.checkCondition(caster, target, false))
-		{
-			// Skill condition not met
-			return;
-		}
-		
-		onCritSkill.activateSkill(caster, target);
-	}
-	
-	/**
-	 * @param caster the L2Character pointing out the caster
-	 * @param target the L2Character pointing out the target
-	 * @param trigger the L2Skill pointing out the skill triggering this action
-	 */
-	public void castOnMagicSkill(L2Character caster, L2Character target, Skill trigger)
-	{
-		if (_skillsOnMagic == null)
-		{
-			return;
-		}
-		
-		final Skill onMagicSkill = _skillsOnMagic.getSkill();
-		
-		// Trigger only if both are good or bad magic.
-		if (trigger.isBad() != onMagicSkill.isBad())
-		{
-			return;
-		}
-		
-		// No Trigger if not Magic Skill
-		if (!trigger.isMagic() && !onMagicSkill.isMagic())
-		{
-			return;
-		}
-		
-		if (trigger.isToggle())
-		{
-			return;
-		}
-		
-		if (caster.getAI().getCastTarget() != target)
-		{
-			return;
-		}
-		
-		if ((_skillsOnMagicCondition != null) && !_skillsOnMagicCondition.test(caster, target, onMagicSkill))
-		{
-			// Chance not met
-			return;
-		}
-		
-		if (!onMagicSkill.checkCondition(caster, target, false))
-		{
-			// Skill condition not met
-			return;
-		}
-		
-		if (onMagicSkill.isBad() && (Formulas.calcShldUse(caster, target, onMagicSkill) == Formulas.SHIELD_DEFENSE_PERFECT_BLOCK))
-		{
-			return;
-		}
-		
-		// Launch the magic skill and calculate its effects
-		// Get the skill handler corresponding to the skill type
-		onMagicSkill.activateSkill(caster, target);
-		
-		// notify quests of a skill use
-		if (caster instanceof L2PcInstance)
-		{
-			final L2Character[] targets =
+			final Skill skill = holder.getSkill();
+			if (Rnd.get(100) >= holder.getChance())
 			{
-				target
-			};
+				return;
+			}
 			
-			//@formatter:off
-			caster.getKnownList().getKnownObjects().values().stream()
-				.filter(Objects::nonNull)
-				.filter(npc -> npc.isNpc())
-				.filter(npc -> Util.checkIfInRange(1000, npc, caster, false))
-				.forEach(npc -> 
+			if (type == ItemSkillType.ON_MAGIC_SKILL)
+			{
+				// Trigger only if both are good or bad magic.
+				if (trigger.isBad() != skill.isBad())
 				{
-					EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee((L2Npc) npc, caster.getActingPlayer(), onMagicSkill, targets, false), npc);
-				});
-			//@formatter:on
-		}
-		if (caster.isPlayer())
-		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ACTIVATED);
-			sm.addSkillName(onMagicSkill);
-			caster.sendPacket(sm);
-		}
-	}
-	
-	public boolean isRange()
-	{
-		return isBow() || isCrossBow();
-	}
-	
-	public boolean isBow()
-	{
-		return _type == WeaponType.BOW;
-	}
-	
-	public boolean isCrossBow()
-	{
-		return _type == WeaponType.CROSSBOW;
+					return;
+				}
+				
+				// No Trigger if not Magic Skill or is toggle
+				if (trigger.isMagic() != skill.isMagic())
+				{
+					return;
+				}
+				
+				// No Trigger if skill is toggle
+				if (trigger.isToggle())
+				{
+					return;
+				}
+				
+				if (skill.isBad() && (Formulas.calcShldUse(caster, target) == Formulas.SHIELD_DEFENSE_PERFECT_BLOCK))
+				{
+					return;
+				}
+			}
+			
+			// Skill condition not met
+			if (!skill.checkCondition(caster, target))
+			{
+				return;
+			}
+			
+			skill.activateSkill(caster, target);
+			
+			// TODO: Verify if this applies ONLY to ON_MAGIC_SKILL!
+			if (type == ItemSkillType.ON_MAGIC_SKILL)
+			{
+				// notify quests of a skill use
+				if (caster instanceof L2PcInstance)
+				{
+					L2World.getInstance().forEachVisibleObjectInRange(caster, L2Npc.class, 1000, npc ->
+					{
+						EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npc, caster.getActingPlayer(), skill, false, target), npc);
+					});
+				}
+				if (caster.isPlayer())
+				{
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ACTIVATED);
+					sm.addSkillName(skill);
+					caster.sendPacket(sm);
+				}
+			}
+		});
 	}
 }

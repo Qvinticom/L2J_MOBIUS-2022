@@ -16,72 +16,84 @@
  */
 package quests.Q10332_ToughRoad;
 
+import com.l2jmobius.gameserver.enums.Movie;
+import com.l2jmobius.gameserver.enums.Race;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
 import quests.Q10331_StartOfFate.Q10331_StartOfFate;
 
 /**
  * Tough Road (10332)
- * @author spider
+ * @author St3eT
  */
-public class Q10332_ToughRoad extends Quest
+public final class Q10332_ToughRoad extends Quest
 {
-	// Npcs
-	private static final int BATHIS = 30332;
+	// NPCs
 	private static final int KAKAI = 30565;
-	// Rewards
-	private static final int ADENA_REWARD = 700;
-	private static final int EXP_REWARD = 90000;
-	private static final int SP_REWARD = 21;
+	private static final int BATHIS = 30332;
+	// Misc
+	private static final int MIN_LEVEL = 20;
+	private static final int MAX_LEVEL = 40;
+	private static final int ZONE_ID = 12016;
+	private static final String MOVIE_VAR = "Q10332_MOVIE";
 	
 	public Q10332_ToughRoad()
 	{
-		super(10332, Q10332_ToughRoad.class.getSimpleName(), "Tough Road");
+		super(10332);
 		addStartNpc(KAKAI);
 		addTalkId(KAKAI, BATHIS);
-		addCondLevel(20, 40, "no_level.html");
-		addCondCompletedQuest(Q10331_StartOfFate.class.getSimpleName(), "no_level.htm");
+		addEnterZoneId(ZONE_ID);
+		addCondNotRace(Race.ERTHEIA, "30565-05.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "30565-04.htm");
+		addCondCompletedQuest(Q10331_StartOfFate.class.getSimpleName(), "30565-04.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		
+		if (st == null)
 		{
+			if (event.equals("SCREEN_MSG"))
+			{
+				showOnScreenMsg(player, NpcStringId.PA_AGRIO_LORD_KAKAI_IS_CALLING_FOR_YOU, ExShowScreenMessage.TOP_CENTER, 10000);
+			}
 			return null;
 		}
 		
 		String htmltext = null;
 		switch (event)
 		{
+			case "30332-02.htm":
+			{
+				htmltext = event;
+				break;
+			}
 			case "30565-02.htm":
 			{
-				qs.startQuest();
+				st.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "30565-03.html":
+			case "30332-03.htm":
 			{
-				htmltext = event;
-				break;
-			}
-			case "30332-02.html":
-			{
-				htmltext = event;
-				break;
-			}
-			case "30332-03.html":
-			{
-				giveAdena(player, ADENA_REWARD, true);
-				addExpAndSp(player, EXP_REWARD, SP_REWARD);
-				qs.exitQuest(false, true);
-				htmltext = event;
-				break;
+				if (st.isCond(1))
+				{
+					giveAdena(player, 700, true);
+					addExpAndSp(player, 90000, 21);
+					st.exitQuest(false, true);
+					player.getVariables().remove(MOVIE_VAR);
+					break;
+				}
 			}
 		}
 		return htmltext;
@@ -90,26 +102,60 @@ public class Q10332_ToughRoad extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, true);
-		String htmltext = null;
-		switch (qs.getState())
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = getQuestState(player, true);
+		
+		if (npc.getId() == KAKAI)
 		{
-			case State.CREATED:
+			switch (st.getState())
 			{
-				htmltext = npc.getId() == KAKAI ? "30565-01.htm" : getNoQuestMsg(player);
-				break;
+				case State.CREATED:
+				{
+					htmltext = "30565-01.htm";
+					break;
+				}
+				case State.STARTED:
+				{
+					htmltext = "30565-06.htm";
+					break;
+				}
+				case State.COMPLETED:
+				{
+					htmltext = "30565-03.htm";
+					break;
+				}
 			}
-			case State.STARTED:
+		}
+		else if (npc.getId() == BATHIS)
+		{
+			if (st.getState() == State.STARTED)
 			{
-				htmltext = npc.getId() == KAKAI ? "30565-03.html" : "30332-01.html";
-				break;
+				htmltext = "30332-01.htm";
 			}
-			case State.COMPLETED:
+			else if (st.getState() == State.COMPLETED)
 			{
-				htmltext = npc.getId() == KAKAI ? "30565-04.html" : "30332-04.html";
-				break;
+				htmltext = "30332-04.htm";
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onEnterZone(L2Character character, L2ZoneType zone)
+	{
+		if (character.isPlayer())
+		{
+			final L2PcInstance player = character.getActingPlayer();
+			final QuestState st = getQuestState(player, false);
+			final QuestState st10331 = player.getQuestState(Q10331_StartOfFate.class.getSimpleName());
+			
+			if (((st == null) || st.isCreated()) && (player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (st10331 != null) && st10331.isCompleted() && !player.getVariables().getBoolean(MOVIE_VAR, false))
+			{
+				player.getVariables().set(MOVIE_VAR, true);
+				playMovie(player, Movie.SI_ILLUSION_04_QUE);
+				startQuestTimer("SCREEN_MSG", 11000, null, player);
+			}
+		}
+		return super.onEnterZone(character, zone);
 	}
 }

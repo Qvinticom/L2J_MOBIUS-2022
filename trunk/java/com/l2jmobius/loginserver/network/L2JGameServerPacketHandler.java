@@ -18,6 +18,8 @@ package com.l2jmobius.loginserver.network;
 
 import java.util.logging.Logger;
 
+import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.network.BaseRecievePacket;
 import com.l2jmobius.loginserver.GameServerThread;
 import com.l2jmobius.loginserver.network.gameserverpackets.BlowFishKey;
 import com.l2jmobius.loginserver.network.gameserverpackets.ChangeAccessLevel;
@@ -28,10 +30,10 @@ import com.l2jmobius.loginserver.network.gameserverpackets.PlayerInGame;
 import com.l2jmobius.loginserver.network.gameserverpackets.PlayerLogout;
 import com.l2jmobius.loginserver.network.gameserverpackets.PlayerTracert;
 import com.l2jmobius.loginserver.network.gameserverpackets.ReplyCharacters;
+import com.l2jmobius.loginserver.network.gameserverpackets.RequestSendMail;
 import com.l2jmobius.loginserver.network.gameserverpackets.RequestTempBan;
 import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import com.l2jmobius.loginserver.network.loginserverpackets.LoginServerFail;
-import com.l2jmobius.util.network.BaseRecievePacket;
 
 /**
  * @author mrTJO
@@ -40,7 +42,7 @@ public class L2JGameServerPacketHandler
 {
 	protected static Logger _log = Logger.getLogger(L2JGameServerPacketHandler.class.getName());
 	
-	public static enum GameServerState
+	public enum GameServerState
 	{
 		CONNECTED,
 		BF_CONNECTED,
@@ -55,104 +57,71 @@ public class L2JGameServerPacketHandler
 		switch (state)
 		{
 			case CONNECTED:
-			{
 				switch (opcode)
 				{
 					case 0x00:
-					{
 						msg = new BlowFishKey(data, server);
 						break;
-					}
 					default:
-					{
 						_log.warning("Unknown Opcode (" + Integer.toHexString(opcode).toUpperCase() + ") in state " + state.name() + " from GameServer, closing connection.");
 						server.forceClose(LoginServerFail.NOT_AUTHED);
 						break;
-					}
 				}
 				break;
-			}
 			case BF_CONNECTED:
-			{
 				switch (opcode)
 				{
 					case 0x01:
-					{
 						msg = new GameServerAuth(data, server);
 						break;
-					}
 					default:
-					{
 						_log.warning("Unknown Opcode (" + Integer.toHexString(opcode).toUpperCase() + ") in state " + state.name() + " from GameServer, closing connection.");
 						server.forceClose(LoginServerFail.NOT_AUTHED);
 						break;
-					}
 				}
 				break;
-			}
 			case AUTHED:
-			{
 				switch (opcode)
 				{
 					case 0x02:
-					{
 						msg = new PlayerInGame(data, server);
 						break;
-					}
 					case 0x03:
-					{
 						msg = new PlayerLogout(data, server);
 						break;
-					}
 					case 0x04:
-					{
 						msg = new ChangeAccessLevel(data, server);
 						break;
-					}
 					case 0x05:
-					{
 						msg = new PlayerAuthRequest(data, server);
 						break;
-					}
 					case 0x06:
-					{
 						msg = new ServerStatus(data, server);
 						break;
-					}
 					case 0x07:
-					{
 						msg = new PlayerTracert(data);
 						break;
-					}
 					case 0x08:
-					{
 						msg = new ReplyCharacters(data, server);
 						break;
-					}
 					case 0x09:
-					{
-						// msg = new RequestSendMail(data);
+						if (Config.EMAIL_SYS_ENABLED)
+						{
+							msg = new RequestSendMail(data);
+						}
 						break;
-					}
 					case 0x0A:
-					{
 						msg = new RequestTempBan(data);
 						break;
-					}
 					case 0x0B:
-					{
 						new ChangePassword(data);
 						break;
-					}
 					default:
-					{
 						_log.warning("Unknown Opcode (" + Integer.toHexString(opcode).toUpperCase() + ") in state " + state.name() + " from GameServer, closing connection.");
 						server.forceClose(LoginServerFail.NOT_AUTHED);
 						break;
-					}
 				}
 				break;
-			}
 		}
 		return msg;
 	}

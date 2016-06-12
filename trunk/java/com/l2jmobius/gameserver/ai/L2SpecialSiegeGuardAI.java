@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2DefenderInstance;
 
 /**
  * @author BiggBoss
@@ -29,10 +28,7 @@ public final class L2SpecialSiegeGuardAI extends L2SiegeGuardAI
 {
 	private final List<Integer> _allied = new ArrayList<>();
 	
-	/**
-	 * @param creature
-	 */
-	public L2SpecialSiegeGuardAI(L2DefenderInstance creature)
+	public L2SpecialSiegeGuardAI(L2Character creature)
 	{
 		super(creature);
 	}

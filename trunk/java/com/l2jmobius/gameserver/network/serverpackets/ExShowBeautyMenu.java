@@ -16,18 +16,21 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Sdw
  */
-public class ExShowBeautyMenu extends L2GameServerPacket
+public class ExShowBeautyMenu implements IClientOutgoingPacket
 {
 	private final L2PcInstance _activeChar;
 	private final int _type;
 	
-	public static final int MODIFY_APPEARANCE = 0;
-	public static final int RESTORE_APPEARANCE = 1;
+	// TODO: Enum
+	public final static int MODIFY_APPEARANCE = 0;
+	public final static int RESTORE_APPEARANCE = 1;
 	
 	public ExShowBeautyMenu(L2PcInstance activeChar, int type)
 	{
@@ -36,14 +39,14 @@ public class ExShowBeautyMenu extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x134);
+		OutgoingPackets.EX_SHOW_BEAUTY_MENU.writeId(packet);
 		
-		writeD(_type);
-		writeD(_activeChar.getVisualHair());
-		writeD(_activeChar.getVisualHairColor());
-		writeD(_activeChar.getVisualFace());
+		packet.writeD(_type);
+		packet.writeD(_activeChar.getVisualHair());
+		packet.writeD(_activeChar.getVisualHairColor());
+		packet.writeD(_activeChar.getVisualFace());
+		return true;
 	}
 }

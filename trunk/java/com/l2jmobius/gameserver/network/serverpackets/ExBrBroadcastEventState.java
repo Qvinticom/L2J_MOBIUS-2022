@@ -16,12 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
  * Special event info packet.
  * @author Kerberos
  * @author mrTJO
  */
-public class ExBrBroadcastEventState extends L2GameServerPacket
+public class ExBrBroadcastEventState implements IClientOutgoingPacket
 {
 	private final int _eventId;
 	private final int _eventState;
@@ -59,18 +62,19 @@ public class ExBrBroadcastEventState extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xBD);
-		writeD(_eventId);
-		writeD(_eventState);
-		writeD(_param0);
-		writeD(_param1);
-		writeD(_param2);
-		writeD(_param3);
-		writeD(_param4);
-		writeS(_param5);
-		writeS(_param6);
+		OutgoingPackets.EX_BR_BROADCAST_EVENT_STATE.writeId(packet);
+		
+		packet.writeD(_eventId);
+		packet.writeD(_eventState);
+		packet.writeD(_param0);
+		packet.writeD(_param1);
+		packet.writeD(_param2);
+		packet.writeD(_param3);
+		packet.writeD(_param4);
+		packet.writeS(_param5);
+		packet.writeS(_param6);
+		return true;
 	}
 }

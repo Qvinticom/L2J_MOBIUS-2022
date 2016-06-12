@@ -60,7 +60,7 @@ public class Q00140_ShadowFoxPart2 extends Quest
 	
 	public Q00140_ShadowFoxPart2()
 	{
-		super(140, Q00140_ShadowFoxPart2.class.getSimpleName(), "Shadow Fox - 2");
+		super(140);
 		addStartNpc(KLUCK);
 		addTalkId(KLUCK, XENOVIA);
 		addKillId(MOBS.keySet());

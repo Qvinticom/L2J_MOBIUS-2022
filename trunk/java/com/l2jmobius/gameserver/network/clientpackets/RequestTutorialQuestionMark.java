@@ -16,44 +16,33 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ClassMasterInstance;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.events.EventDispatcher;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
-public class RequestTutorialQuestionMark extends L2GameClientPacket
+public class RequestTutorialQuestionMark implements IClientIncomingPacket
 {
-	private static final String _C__87_REQUESTTUTORIALQUESTIONMARK = "[C] 87 RequestTutorialQuestionMark";
-	
 	private int _number = 0;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_number = readD();
+		_number = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
-		
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
-		L2ClassMasterInstance.onTutorialQuestionMark(player, _number);
-		
-		final QuestState qs = player.getQuestState("Q00255_Tutorial");
-		if (qs != null)
-		{
-			qs.getQuest().notifyEvent("QM" + _number + "", null, player);
-		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__87_REQUESTTUTORIALQUESTIONMARK;
+		// Notify scripts
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPressTutorialMark(player, _number), player);
 	}
 }

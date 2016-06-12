@@ -23,12 +23,11 @@ public enum CompetitionType
 {
 	CLASSED("classed"),
 	NON_CLASSED("non-classed"),
-	TEAMS("teams"),
 	OTHER("other");
 	
 	private final String _name;
 	
-	private CompetitionType(String name)
+	CompetitionType(String name)
 	{
 		_name = name;
 	}

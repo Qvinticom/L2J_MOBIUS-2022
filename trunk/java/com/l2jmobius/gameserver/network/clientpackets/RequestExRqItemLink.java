@@ -16,53 +16,38 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExRpItemLink;
 
 /**
  * @author KenM
  */
-public class RequestExRqItemLink extends L2GameClientPacket
+public class RequestExRqItemLink implements IClientIncomingPacket
 {
-	private static final String _C__D0_1E_REQUESTEXRQITEMLINK = "[C] D0:1E RequestExRqItemLink";
 	private int _objectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
+		_objectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2GameClient client = getClient();
-		if (client == null)
-		{
-			return;
-		}
-		
 		final L2Object object = L2World.getInstance().findObject(_objectId);
 		if (object instanceof L2ItemInstance)
 		{
-			if (((L2ItemInstance) object).isPublished())
+			final L2ItemInstance item = (L2ItemInstance) object;
+			if (item.isPublished())
 			{
-				client.sendPacket(new ExRpItemLink((L2ItemInstance) object));
-			}
-			else if (Config.DEBUG)
-			{
-				_log.info(getClient() + " requested item link for item which wasnt published! ID:" + _objectId);
+				client.sendPacket(new ExRpItemLink(item));
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_1E_REQUESTEXRQITEMLINK;
 	}
 }

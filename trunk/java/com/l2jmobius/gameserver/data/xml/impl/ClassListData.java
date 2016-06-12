@@ -16,23 +16,27 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.base.ClassInfo;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * Loads the the list of classes and it's info.
  * @author Zoey76
  */
-public final class ClassListData implements IXmlReader
+public final class ClassListData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(ClassListData.class.getName());
+	
 	private final Map<ClassId, ClassInfo> _classData = new HashMap<>();
 	
 	/**
@@ -47,28 +51,34 @@ public final class ClassListData implements IXmlReader
 	public void load()
 	{
 		_classData.clear();
-		parseDatapackFile("stats/chars/classList.xml");
+		parseDatapackFile("data/stats/chars/classList.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _classData.size() + " Class data.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
+		NamedNodeMap attrs;
+		Node attr;
+		ClassId classId;
+		String className;
+		ClassId parentClassId;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equals(n.getNodeName()))
 			{
 				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 				{
-					final NamedNodeMap attrs = d.getAttributes();
+					attrs = d.getAttributes();
 					if ("class".equals(d.getNodeName()))
 					{
-						Node attr = attrs.getNamedItem("classId");
-						final ClassId classId = ClassId.getClassId(parseInteger(attr));
+						attr = attrs.getNamedItem("classId");
+						classId = ClassId.getClassId(parseInteger(attr));
 						attr = attrs.getNamedItem("name");
-						final String className = attr.getNodeValue();
+						className = attr.getNodeValue();
 						attr = attrs.getNamedItem("parentClassId");
-						_classData.put(classId, new ClassInfo(classId, className, ((attr != null) ? ClassId.getClassId(parseInteger(attr)) : null)));
+						parentClassId = (attr != null) ? ClassId.getClassId(parseInteger(attr)) : null;
+						_classData.put(classId, new ClassInfo(classId, className, parentClassId));
 					}
 				}
 			}
@@ -77,7 +87,7 @@ public final class ClassListData implements IXmlReader
 	
 	/**
 	 * Gets the class list.
-	 * @return the complete class list
+	 * @return the complete class list.
 	 */
 	public Map<ClassId, ClassInfo> getClassList()
 	{
@@ -86,8 +96,8 @@ public final class ClassListData implements IXmlReader
 	
 	/**
 	 * Gets the class info.
-	 * @param classId the class ID
-	 * @return the class info related to the given {@code classId}
+	 * @param classId the class Id.
+	 * @return the class info related to the given {@code classId}.
 	 */
 	public ClassInfo getClass(ClassId classId)
 	{
@@ -96,8 +106,8 @@ public final class ClassListData implements IXmlReader
 	
 	/**
 	 * Gets the class info.
-	 * @param classId the class Id as integer
-	 * @return the class info related to the given {@code classId}
+	 * @param classId the class Id as integer.
+	 * @return the class info related to the given {@code classId}.
 	 */
 	public ClassInfo getClass(int classId)
 	{

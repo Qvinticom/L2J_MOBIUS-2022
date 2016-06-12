@@ -18,30 +18,24 @@ package com.l2jmobius.gameserver.model;
 
 import java.lang.reflect.Constructor;
 import java.util.Deque;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentLinkedDeque;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.data.sql.impl.TerritoryTable;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
-import com.l2jmobius.gameserver.datatables.NpcPersonalAIData;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.model.interfaces.INamable;
 import com.l2jmobius.gameserver.model.interfaces.IPositionable;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.model.zone.type.NpcSpawnTerritory;
-import com.l2jmobius.util.Rnd;
+import com.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
 
 /**
  * This class manages the spawn and respawn of a group of L2NpcInstance that are in the same are and have the same type.<br>
@@ -52,7 +46,7 @@ import com.l2jmobius.util.Rnd;
  */
 public class L2Spawn implements IPositionable, IIdentifiable, INamable
 {
-	protected static final Logger _log = Logger.getLogger(L2Spawn.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(L2Spawn.class.getName());
 	
 	/** String identifier of this spawn */
 	private String _name;
@@ -67,9 +61,8 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	/** The identifier of the location area where L2NpcInstance can be spwaned */
 	private int _locationId;
 	/** The Location of this NPC spawn. */
-	private Location _location = new Location(0, 0, 0, 0, 0);
-	/** Link to NPC spawn territory */
-	private NpcSpawnTerritory _spawnTerritory = null;
+	private Location _location = new Location(0, 0, 0, 0);
+	private int _instanceId = 0;
 	/** Minimum respawn delay */
 	private int _respawnMinDelay;
 	/** Maximum respawn delay */
@@ -79,15 +72,9 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	/** If True a L2NpcInstance is respawned each time that another is killed */
 	private boolean _doRespawn;
 	/** If true then spawn is custom */
-	private boolean _customSpawn;
-	private static List<SpawnListener> _spawnListeners = new CopyOnWriteArrayList<>();
 	private final Deque<L2Npc> _spawnedNpcs = new ConcurrentLinkedDeque<>();
-	private Map<Integer, Location> _lastSpawnPoints;
-	private boolean _isNoRndWalk = false; // Is no random walk
-	private String _areaName;
-	private int _globalMapId;
-	
-	private final String _title = "";
+	private boolean _randomWalk = false; // Is no random walk
+	private NpcSpawnTemplate _spawnTemplate;
 	
 	/** The task launching the function doSpawn() */
 	class SpawnTask implements Runnable
@@ -109,7 +96,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "", e);
+				LOGGER.log(Level.WARNING, "", e);
 			}
 			
 			_scheduledCount--;
@@ -146,20 +133,28 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			return;
 		}
 		
-		_constructor = Class.forName("com.l2jmobius.gameserver.model.actor.instance." + _template.getType() + "Instance").asSubclass(L2Npc.class).getConstructor(L2NpcTemplate.class);
+		final String className = "com.l2jmobius.gameserver.model.actor.instance." + _template.getType() + "Instance";
+		
+		// Create the generic constructor of L2Npc managed by this L2Spawn
+		_constructor = Class.forName(className).asSubclass(L2Npc.class).getConstructor(L2NpcTemplate.class);
 	}
 	
 	/**
-	 * Creates a spawn.
+	 * Creates a new spawn.
 	 * @param npcId the NPC ID
-	 * @throws ClassCastException
-	 * @throws NoSuchMethodException
-	 * @throws ClassNotFoundException
 	 * @throws SecurityException
+	 * @throws ClassNotFoundException
+	 * @throws NoSuchMethodException
+	 * @throws ClassCastException
 	 */
 	public L2Spawn(int npcId) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException
 	{
-		this(NpcData.getInstance().getTemplate(npcId));
+		_template = Objects.requireNonNull(NpcData.getInstance().getTemplate(npcId), "NpcTemplate not found for NPC ID: " + npcId);
+		
+		final String className = "com.l2jmobius.gameserver.model.actor.instance." + _template.getType() + "Instance";
+		
+		// Create the generic constructor of L2Npc managed by this L2Spawn
+		_constructor = Class.forName(className).asSubclass(L2Npc.class).getConstructor(L2NpcTemplate.class);
 	}
 	
 	/**
@@ -202,24 +197,13 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		return _location;
 	}
 	
-	public Location getLocation(L2Object obj)
-	{
-		return ((_lastSpawnPoints == null) || (obj == null) || !_lastSpawnPoints.containsKey(obj.getObjectId())) ? _location : _lastSpawnPoints.get(obj.getObjectId());
-	}
-	
+	/**
+	 * @return the X position of the spawn point.
+	 */
 	@Override
 	public int getX()
 	{
 		return _location.getX();
-	}
-	
-	/**
-	 * @param obj object to check
-	 * @return the X position of the last spawn point of given NPC.
-	 */
-	public int getX(L2Object obj)
-	{
-		return getLocation(obj).getX();
 	}
 	
 	/**
@@ -232,19 +216,13 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		_location.setX(x);
 	}
 	
+	/**
+	 * @return the Y position of the spawn point.
+	 */
 	@Override
 	public int getY()
 	{
 		return _location.getY();
-	}
-	
-	/**
-	 * @param obj object to check
-	 * @return the Y position of the last spawn point of given NPC.
-	 */
-	public int getY(L2Object obj)
-	{
-		return getLocation(obj).getY();
 	}
 	
 	/**
@@ -257,19 +235,13 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		_location.setY(y);
 	}
 	
+	/**
+	 * @return the Z position of the spawn point.
+	 */
 	@Override
 	public int getZ()
 	{
 		return _location.getZ();
-	}
-	
-	/**
-	 * @param obj object to check
-	 * @return the Z position of the last spawn point of given NPC.
-	 */
-	public int getZ(L2Object obj)
-	{
-		return getLocation(obj).getZ();
 	}
 	
 	/**
@@ -304,6 +276,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	public void setXYZ(ILocational loc)
 	{
 		setXYZ(loc.getX(), loc.getY(), loc.getZ());
+		
 	}
 	
 	/**
@@ -398,23 +371,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	}
 	
 	/**
-	 * Set the spawn as custom.<BR>
-	 * @param custom
-	 */
-	public void setCustom(boolean custom)
-	{
-		_customSpawn = custom;
-	}
-	
-	/**
-	 * @return type of spawn.
-	 */
-	public boolean isCustom()
-	{
-		return _customSpawn;
-	}
-	
-	/**
 	 * Decrease the current number of L2NpcInstance of this L2Spawn and if necessary create a SpawnTask to launch after the respawn Delay. <B><U> Actions</U> :</B>
 	 * <li>Decrease the current number of L2NpcInstance of this L2Spawn</li>
 	 * <li>Check if respawn is possible to prevent multiple respawning caused by lag</li>
@@ -435,12 +391,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		
 		// Remove this NPC from list of spawned
 		_spawnedNpcs.remove(oldNpc);
-		
-		// Remove spawn point for old NPC
-		if (_lastSpawnPoints != null)
-		{
-			_lastSpawnPoints.remove(oldNpc.getObjectId());
-		}
 		
 		// Check if respawn is possible to prevent multiple respawning caused by lag
 		if (_doRespawn && ((_scheduledCount + _currentCount) < _maximumCount))
@@ -470,7 +420,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	}
 	
 	/**
-	 * Create a L2NpcInstance in this L2Spawn.
+	 * Create a {@link L2NpcInstance} in this L2Spawn.
 	 * @param val
 	 * @return
 	 */
@@ -543,32 +493,26 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			
 			// Call the constructor of the L2Npc
 			final L2Npc npc = _constructor.newInstance(_template);
-			npc.setInstanceId(getInstanceId()); // Must be done before object is spawned into visible world
+			npc.setInstanceById(_instanceId); // Must be done before object is spawned into visible world
 			if (isSummonSpawn)
 			{
 				npc.setShowSummonAnimation(isSummonSpawn);
-			}
-			
-			// Check for certain AI data, overriden in spawnlist
-			if (_name != null)
-			{
-				NpcPersonalAIData.getInstance().initializeNpcParameters(npc, this, _name);
 			}
 			
 			return initializeNpcInstance(npc);
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "NPC " + _template.getId() + " class not found", e);
+			LOGGER.log(Level.WARNING, "Error while spawning " + _template.getId(), e);
 		}
 		return null;
 	}
 	
 	/**
-	 * @param mob
+	 * @param npc
 	 * @return
 	 */
-	private L2Npc initializeNpcInstance(L2Npc mob)
+	private L2Npc initializeNpcInstance(L2Npc npc)
 	{
 		int newlocx = 0;
 		int newlocy = 0;
@@ -576,159 +520,73 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		
 		// If Locx and Locy are not defined, the L2NpcInstance must be spawned in an area defined by location or spawn territory
 		// New method
-		if (isTerritoryBased())
+		if (_spawnTemplate != null)
 		{
-			final int[] p = _spawnTerritory.getRandomPoint();
-			newlocx = p[0];
-			newlocy = p[1];
-			newlocz = p[2];
+			final Location loc = _spawnTemplate.getSpawnLocation();
+			newlocx = loc.getX();
+			newlocy = loc.getY();
+			newlocz = loc.getZ();
+			setLocation(loc);
 		}
-		// Old method (for backward compatibility)
 		else if ((getX() == 0) && (getY() == 0))
 		{
-			if (getLocationId() == 0)
-			{
-				return mob;
-			}
-			
-			// Calculate the random position in the location area
-			final Location location = TerritoryTable.getInstance().getRandomPoint(getLocationId());
-			
-			// Set the calculated position of the L2NpcInstance
-			if (location != null)
-			{
-				newlocx = location.getX();
-				newlocy = location.getY();
-				newlocz = location.getZ();
-			}
+			LOGGER.warning("NPC " + npc + " doesn't have spawn location!");
+			return null;
 		}
 		else
 		{
-			// The L2NpcInstance is spawned at a random position
+			// The L2NpcInstance is spawned at the exact position (Lox, Locy, Locz)
 			newlocx = getX();
 			newlocy = getY();
 			newlocz = getZ();
-			
-			// If random spawn system is enabled
-			if (Config.ENABLE_RANDOM_MONSTER_SPAWNS)
-			{
-				final int randX = newlocx + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
-				final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
-				
-				final boolean isQuestMonster = (mob.getTitle() != null) && mob.getTitle().contains("Quest");
-				if (mob.isMonster() && !isQuestMonster && !mob.isWalker() && !mob.isInsideZone(ZoneId.NO_BOOKMARK) && GeoData.getInstance().canSeeTarget(newlocx, newlocy, newlocz, randX, randY, newlocz) && (getInstanceId() == 0) && !getTemplate().isUndying() && !mob.isRaid() && !mob.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(mob.getId()))
-				{
-					newlocx = randX;
-					newlocy = randY;
-				}
-			}
 		}
 		
 		// don't correct z of flying npc's
-		if (!mob.isFlying())
+		if (!npc.isFlying())
 		{
 			newlocz = GeoData.getInstance().getSpawnHeight(newlocx, newlocy, newlocz);
 		}
 		
-		mob.stopAllEffects();
-		
-		mob.setIsDead(false);
-		// Reset decay info
-		mob.setDecayed(false);
-		// Set the HP and MP of the L2NpcInstance to the max
-		mob.setCurrentHpMp(mob.getMaxHp(), mob.getMaxMp());
-		// Clear script variables
-		if (mob.hasVariables())
-		{
-			mob.getVariables().getSet().clear();
-		}
 		// Set is not random walk default value
-		mob.setIsNoRndWalk(isNoRndWalk());
+		npc.setRandomWalking(getRandomWalking());
 		
 		// Set the heading of the L2NpcInstance (random heading if not defined)
 		if (getHeading() == -1)
 		{
-			mob.setHeading(Rnd.nextInt(61794));
+			npc.setHeading(Rnd.nextInt(61794));
 		}
 		else
 		{
-			mob.setHeading(getHeading());
-		}
-		
-		if (mob instanceof L2Attackable)
-		{
-			((L2Attackable) mob).setChampion(false);
-		}
-		
-		if (Config.L2JMOD_CHAMPION_ENABLE)
-		{
-			// Set champion on next spawn
-			if (mob.isMonster() && !getTemplate().isUndying() && !mob.isRaid() && !mob.isRaidMinion() && (Config.L2JMOD_CHAMPION_FREQUENCY > 0) && (mob.getLevel() >= Config.L2JMOD_CHAMP_MIN_LVL) && (mob.getLevel() <= Config.L2JMOD_CHAMP_MAX_LVL) && (Config.L2JMOD_CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
-			{
-				if (Rnd.get(100) < Config.L2JMOD_CHAMPION_FREQUENCY)
-				{
-					((L2Attackable) mob).setChampion(true);
-				}
-			}
+			npc.setHeading(getHeading());
 		}
 		
 		// Set custom Npc server side name and title
-		if (mob.getTemplate().isUsingServerSideName())
+		if (npc.getTemplate().isUsingServerSideName())
 		{
-			mob.setName(mob.getTemplate().getName());
+			npc.setName(npc.getTemplate().getName());
 		}
-		if (mob.getTemplate().isUsingServerSideTitle())
+		if (npc.getTemplate().isUsingServerSideTitle())
 		{
-			mob.setTitle(mob.getTemplate().getTitle());
-		}
-		else
-		{
-			mob.setTitle(_title);
+			npc.setTitle(npc.getTemplate().getTitle());
 		}
 		
-		// Reset summoner
-		mob.setSummoner(null);
-		// Reset summoned list
-		mob.resetSummonedNpcs();
+		// Reset some variables
+		npc.onRespawn();
+		
 		// Link the L2NpcInstance to this L2Spawn
-		mob.setSpawn(this);
+		npc.setSpawn(this);
 		
 		// Spawn NPC
-		mob.spawnMe(newlocx, newlocy, newlocz);
+		npc.spawnMe(newlocx, newlocy, newlocz);
 		
-		notifyNpcSpawned(mob);
-		
-		_spawnedNpcs.add(mob);
-		if (_lastSpawnPoints != null)
+		if (_spawnTemplate != null)
 		{
-			_lastSpawnPoints.put(mob.getObjectId(), new Location(newlocx, newlocy, newlocz));
+			_spawnTemplate.notifySpawnNpc(npc);
 		}
 		
-		if (Config.DEBUG)
-		{
-			_log.finest("Spawned Mob Id: " + _template.getId() + " , at: X: " + mob.getX() + " Y: " + mob.getY() + " Z: " + mob.getZ());
-		}
-		// Increase the current number of L2NpcInstance managed by this L2Spawn
+		_spawnedNpcs.add(npc);
 		_currentCount++;
-		return mob;
-	}
-	
-	public static void addSpawnListener(SpawnListener listener)
-	{
-		_spawnListeners.add(listener);
-	}
-	
-	public static void removeSpawnListener(SpawnListener listener)
-	{
-		_spawnListeners.remove(listener);
-	}
-	
-	public static void notifyNpcSpawned(L2Npc npc)
-	{
-		for (SpawnListener listener : _spawnListeners)
-		{
-			listener.npcSpawned(npc);
-		}
+		return npc;
 	}
 	
 	/**
@@ -742,7 +600,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		{
 			if (delay < 0)
 			{
-				_log.warning("respawn delay is negative for spawn:" + this);
+				LOGGER.warning("respawn delay is negative for spawn:" + this);
 			}
 			
 			final int minDelay = delay - randomInterval;
@@ -774,25 +632,19 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		return _respawnMinDelay != _respawnMaxDelay;
 	}
 	
-	public void setSpawnTerritory(NpcSpawnTerritory territory)
-	{
-		_spawnTerritory = territory;
-		_lastSpawnPoints = new ConcurrentHashMap<>();
-	}
-	
-	public NpcSpawnTerritory getSpawnTerritory()
-	{
-		return _spawnTerritory;
-	}
-	
-	public boolean isTerritoryBased()
-	{
-		return (_spawnTerritory != null) && (_location.getX() == 0) && (_location.getY() == 0);
-	}
-	
 	public L2Npc getLastSpawn()
 	{
-		return _spawnedNpcs.peekLast();
+		if (!_spawnedNpcs.isEmpty())
+		{
+			return _spawnedNpcs.peekLast();
+		}
+		
+		return null;
+	}
+	
+	public boolean deleteLastNpc()
+	{
+		return !_spawnedNpcs.isEmpty() && _spawnedNpcs.getLast().deleteMe();
 	}
 	
 	public final Deque<L2Npc> getSpawnedNpcs()
@@ -809,6 +661,13 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		{
 			oldNpc.refreshID();
 			initializeNpcInstance(oldNpc);
+			
+			// Register NPC back to instance world
+			final Instance instance = oldNpc.getInstanceWorld();
+			if (instance != null)
+			{
+				instance.addNpc(oldNpc);
+			}
 		}
 	}
 	
@@ -817,51 +676,39 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		return _template;
 	}
 	
-	@Override
 	public int getInstanceId()
 	{
-		return _location.getInstanceId();
+		return _instanceId;
 	}
 	
-	@Override
 	public void setInstanceId(int instanceId)
 	{
-		_location.setInstanceId(instanceId);
-	}
-	
-	public final boolean isNoRndWalk()
-	{
-		return _isNoRndWalk;
-	}
-	
-	public final void setIsNoRndWalk(boolean value)
-	{
-		_isNoRndWalk = value;
-	}
-	
-	public String getAreaName()
-	{
-		return _areaName;
-	}
-	
-	public void setAreaName(String areaName)
-	{
-		_areaName = areaName;
-	}
-	
-	public int getGlobalMapId()
-	{
-		return _globalMapId;
-	}
-	
-	public void setGlobalMapId(int globalMapId)
-	{
-		_globalMapId = globalMapId;
+		_instanceId = instanceId;
 	}
 	
 	@Override
 	public String toString()
 	{
 		return "L2Spawn ID: " + getId() + " " + getLocation();
+	}
+	
+	public final boolean getRandomWalking()
+	{
+		return _randomWalk;
+	}
+	
+	public final void setRandomWalking(boolean value)
+	{
+		_randomWalk = value;
+	}
+	
+	public void setSpawnTemplate(NpcSpawnTemplate npcSpawnTemplate)
+	{
+		_spawnTemplate = npcSpawnTemplate;
+	}
+	
+	public NpcSpawnTemplate getNpcSpawnTemplate()
+	{
+		return _spawnTemplate;
 	}
 }

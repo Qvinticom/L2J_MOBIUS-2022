@@ -16,19 +16,20 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
+import java.util.Collection;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.TradeItem;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 public class PrivateStoreManageListSell extends AbstractItemPacket
 {
 	private final int _objId;
 	private final long _playerAdena;
 	private final boolean _packageSale;
-	private final TradeItem[] _itemList;
+	private final Collection<TradeItem> _itemList;
 	private final TradeItem[] _sellList;
-	ArrayList<Integer> _sellListIds = new ArrayList<>();
 	
 	public PrivateStoreManageListSell(L2PcInstance player, boolean isPackageSale)
 	{
@@ -38,39 +39,31 @@ public class PrivateStoreManageListSell extends AbstractItemPacket
 		_packageSale = isPackageSale;
 		_itemList = player.getInventory().getAvailableItems(player.getSellList());
 		_sellList = player.getSellList().getItems();
-		for (TradeItem it : _sellList)
-		{
-			_sellListIds.add(it.getObjectId());
-		}
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xA0);
-		// section 1
-		writeD(_objId);
-		writeD(_packageSale ? 1 : 0); // Package sell
-		writeQ(_playerAdena);
+		OutgoingPackets.PRIVATE_STORE_MANAGE_LIST.writeId(packet);
 		
-		// section2
-		writeD(_itemList.length - _sellListIds.size()); // for potential sells
+		packet.writeD(_objId);
+		packet.writeD(_packageSale ? 1 : 0); // Package sell
+		packet.writeQ(_playerAdena);
+		
+		packet.writeD(_itemList.size()); // for potential sells
 		for (TradeItem item : _itemList)
 		{
-			if (_sellListIds.contains(item.getObjectId()))
-			{
-				continue;
-			}
-			writeItem(item);
-			writeQ(item.getItem().getReferencePrice() * 2);
+			writeItem(packet, item);
+			packet.writeQ(item.getItem().getReferencePrice() * 2);
 		}
-		// section 3
-		writeD(_sellList.length); // count for any items already added for sell
+		
+		packet.writeD(_sellList.length); // count for any items already added for sell
 		for (TradeItem item : _sellList)
 		{
-			writeItem(item);
-			writeQ(item.getPrice());
-			writeQ(item.getItem().getReferencePrice() * 2);
+			writeItem(packet, item);
+			packet.writeQ(item.getPrice());
+			packet.writeQ(item.getItem().getReferencePrice() * 2);
 		}
+		return true;
 	}
 }

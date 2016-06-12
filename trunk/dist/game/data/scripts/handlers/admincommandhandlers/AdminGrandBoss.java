@@ -31,8 +31,8 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.zone.type.L2NoRestartZone;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
-import ai.individual.Antharas.Antharas;
-import ai.individual.Baium.Baium;
+import ai.areas.LairOfAntharas.Antharas.Antharas;
+import ai.areas.TowerOfInsolence.Baium.Baium;
 
 /**
  * @author St3eT
@@ -68,12 +68,13 @@ public class AdminGrandBoss implements IAdminCommandHandler
 			{
 				if (st.hasMoreTokens())
 				{
-					manageHtml(activeChar, Integer.parseInt(st.nextToken()));
+					final int grandBossId = Integer.parseInt(st.nextToken());
+					manageHtml(activeChar, grandBossId);
 				}
 				else
 				{
 					final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-					html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/grandboss.htm"));
+					html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/grandboss.htm"));
 					activeChar.sendPacket(html);
 				}
 				break;
@@ -137,7 +138,9 @@ public class AdminGrandBoss implements IAdminCommandHandler
 			{
 				if (st.hasMoreTokens())
 				{
-					switch (Integer.parseInt(st.nextToken()))
+					final int grandBossId = Integer.parseInt(st.nextToken());
+					
+					switch (grandBossId)
 					{
 						case ANTHARAS:
 						{
@@ -213,33 +216,33 @@ public class AdminGrandBoss implements IAdminCommandHandler
 				case ANTHARAS:
 				{
 					bossZone = ZoneManager.getInstance().getZoneById(ANTHARAS_ZONE, L2NoRestartZone.class);
-					htmlPatch = "html/admin/grandboss_antharas.htm";
+					htmlPatch = "data/html/admin/grandboss_antharas.htm";
 					break;
 				}
 				case VALAKAS:
 				{
-					htmlPatch = "html/admin/grandboss_valakas.htm";
+					htmlPatch = "data/html/admin/grandboss_valakas.htm";
 					break;
 				}
 				case BAIUM:
 				{
 					bossZone = ZoneManager.getInstance().getZoneById(BAIUM_ZONE, L2NoRestartZone.class);
-					htmlPatch = "html/admin/grandboss_baium.htm";
+					htmlPatch = "data/html/admin/grandboss_baium.htm";
 					break;
 				}
 				case QUEENANT:
 				{
-					htmlPatch = "html/admin/grandboss_queenant.htm";
+					htmlPatch = "data/html/admin/grandboss_queenant.htm";
 					break;
 				}
 				case ORFEN:
 				{
-					htmlPatch = "html/admin/grandboss_orfen.htm";
+					htmlPatch = "data/html/admin/grandboss_orfen.htm";
 					break;
 				}
 				case CORE:
 				{
-					htmlPatch = "html/admin/grandboss_core.htm";
+					htmlPatch = "data/html/admin/grandboss_core.htm";
 					break;
 				}
 			}
@@ -273,6 +276,11 @@ public class AdminGrandBoss implements IAdminCommandHandler
 						text = "Dead";
 						break;
 					}
+					default:
+					{
+						textColor = "FFFFFF"; // White
+						text = "Unk " + bossStatus;
+					}
 				}
 			}
 			else
@@ -291,6 +299,11 @@ public class AdminGrandBoss implements IAdminCommandHandler
 						textColor = "FF0000"; // Red
 						text = "Dead";
 						break;
+					}
+					default:
+					{
+						textColor = "FFFFFF"; // White
+						text = "Unk " + bossStatus;
 					}
 				}
 			}

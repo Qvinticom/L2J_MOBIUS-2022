@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.model.holders;
 
 import java.time.DayOfWeek;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Simple class for storing Reenter Data for Instances.
@@ -24,28 +25,24 @@ import java.time.DayOfWeek;
  */
 public final class InstanceReenterTimeHolder
 {
-	private final DayOfWeek _day;
-	private final int _hour;
-	private final int _minute;
-	private final long _time;
+	private DayOfWeek _day = null;
+	private int _hour = -1;
+	private int _minute = -1;
+	private long _time = -1;
 	
-	public InstanceReenterTimeHolder(long time)
+	public InstanceReenterTimeHolder(int time)
 	{
-		_time = time;
-		_day = null;
-		_hour = -1;
-		_minute = -1;
+		_time = TimeUnit.MINUTES.toMillis(time);
 	}
 	
 	public InstanceReenterTimeHolder(DayOfWeek day, int hour, int minute)
 	{
-		_time = -1;
 		_day = day;
 		_hour = hour;
 		_minute = minute;
 	}
 	
-	public final Long getTime()
+	public final long getTime()
 	{
 		return _time;
 	}

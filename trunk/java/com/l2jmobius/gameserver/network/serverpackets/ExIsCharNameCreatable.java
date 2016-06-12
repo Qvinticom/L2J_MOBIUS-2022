@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
  * @author UnAfraid
  */
-public class ExIsCharNameCreatable extends L2GameServerPacket
+public class ExIsCharNameCreatable implements IClientOutgoingPacket
 {
 	private final int _allowed;
 	
@@ -29,10 +32,11 @@ public class ExIsCharNameCreatable extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x10B);
-		writeD(_allowed);
+		OutgoingPackets.EX_IS_CHAR_NAME_CREATABLE.writeId(packet);
+		
+		packet.writeD(_allowed);
+		return true;
 	}
 }

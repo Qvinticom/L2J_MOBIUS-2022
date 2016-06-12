@@ -18,15 +18,17 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Map;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeApplicantInfo;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Sdw
  */
-public class ExPledgeWaitingList extends L2GameServerPacket
+public class ExPledgeWaitingList implements IClientOutgoingPacket
 {
-	Map<Integer, PledgeApplicantInfo> pledgePlayerRecruitInfos;
+	private final Map<Integer, PledgeApplicantInfo> pledgePlayerRecruitInfos;
 	
 	public ExPledgeWaitingList(int clanId)
 	{
@@ -34,18 +36,18 @@ public class ExPledgeWaitingList extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x144);
+		OutgoingPackets.EX_PLEDGE_WAITING_LIST.writeId(packet);
 		
-		writeD(pledgePlayerRecruitInfos.size());
+		packet.writeD(pledgePlayerRecruitInfos.size());
 		for (PledgeApplicantInfo recruitInfo : pledgePlayerRecruitInfos.values())
 		{
-			writeD(recruitInfo.getPlayerId());
-			writeS(recruitInfo.getPlayerName());
-			writeD(recruitInfo.getClassId());
-			writeD(recruitInfo.getPlayerLvl());
+			packet.writeD(recruitInfo.getPlayerId());
+			packet.writeS(recruitInfo.getPlayerName());
+			packet.writeD(recruitInfo.getClassId());
+			packet.writeD(recruitInfo.getPlayerLvl());
 		}
+		return true;
 	}
 }

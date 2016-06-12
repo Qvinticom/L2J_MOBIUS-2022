@@ -41,6 +41,6 @@ public class ConditionTargetAbnormalType extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		return effected.getEffectList().getBuffInfoByAbnormalType(_abnormalType) != null;
+		return effected.hasAbnormalType(_abnormalType);
 	}
 }

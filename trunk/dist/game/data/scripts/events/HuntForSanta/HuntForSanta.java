@@ -18,8 +18,8 @@ package events.HuntForSanta;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.event.LongTimeEvent;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.util.Util;
  * Info - http://www.lineage2.com/en/news/events/hunt-for-santa.php
  * @author Mobius
  */
-final class HuntForSanta extends LongTimeEvent
+public final class HuntForSanta extends LongTimeEvent
 {
 	// NPC
 	private static final int NOELLE = 34008;
@@ -41,7 +41,6 @@ final class HuntForSanta extends LongTimeEvent
 	
 	private HuntForSanta()
 	{
-		super(HuntForSanta.class.getSimpleName(), "events");
 		addStartNpc(NOELLE);
 		addFirstTalkId(NOELLE);
 		addTalkId(NOELLE);
@@ -134,15 +133,15 @@ final class HuntForSanta extends LongTimeEvent
 		final BuffInfo buffSnowman = player.getEffectList().getBuffInfoBySkillId(BUFF_SNOWMAN.getSkillId());
 		if (buffStocking != null)
 		{
-			player.getEffectList().remove(true, buffStocking);
+			player.getEffectList().remove(true, buffStocking, null);
 		}
 		if (buffTree != null)
 		{
-			player.getEffectList().remove(true, buffTree);
+			player.getEffectList().remove(true, buffTree, null);
 		}
 		if (buffSnowman != null)
 		{
-			player.getEffectList().remove(true, buffSnowman);
+			player.getEffectList().remove(true, buffSnowman, null);
 		}
 	}
 	

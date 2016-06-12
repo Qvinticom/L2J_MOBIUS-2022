@@ -19,10 +19,11 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Get Agro effect implementation.
@@ -30,9 +31,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class GetAgro extends AbstractEffect
 {
-	public GetAgro(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public GetAgro(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -48,11 +48,11 @@ public final class GetAgro extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (info.getEffected() instanceof L2Attackable)
+		if (effected instanceof L2Attackable)
 		{
-			info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, info.getEffector());
+			effected.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effector);
 		}
 	}
 }

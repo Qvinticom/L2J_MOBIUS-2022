@@ -33,14 +33,14 @@ public enum CrystalType
 	R(8, 17371, 30, 500),
 	R95(9, 17371, 30, 500),
 	R99(10, 17371, 30, 500),
-	EVENT(0, 0, 0, 0);
+	EVENT(11, 0, 0, 0);
 	
 	private final int _id;
 	private final int _crystalId;
 	private final int _crystalEnchantBonusArmor;
 	private final int _crystalEnchantBonusWeapon;
 	
-	private CrystalType(int id, int crystalId, int crystalEnchantBonusArmor, int crystalEnchantBonusWeapon)
+	CrystalType(int id, int crystalId, int crystalEnchantBonusArmor, int crystalEnchantBonusWeapon)
 	{
 		_id = id;
 		_crystalId = crystalId;

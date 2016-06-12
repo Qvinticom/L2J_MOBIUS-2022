@@ -17,20 +17,13 @@
 package com.l2jmobius.gameserver.model.items;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.items.type.ArmorType;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * This class is dedicated to the management of armors.
  */
 public final class L2Armor extends L2Item
 {
-	/**
-	 * Skill that activates when armor is enchanted +4.
-	 */
-	private SkillHolder _enchant4Skill = null;
 	private ArmorType _type;
 	
 	/**
@@ -40,6 +33,12 @@ public final class L2Armor extends L2Item
 	public L2Armor(StatsSet set)
 	{
 		super(set);
+	}
+	
+	@Override
+	public void set(StatsSet set)
+	{
+		super.set(set);
 		_type = set.getEnum("armor_type", ArmorType.class, ArmorType.NONE);
 		
 		final int _bodyPart = getBodyPart();
@@ -56,35 +55,6 @@ public final class L2Armor extends L2Item
 			}
 			_type1 = L2Item.TYPE1_SHIELD_ARMOR;
 			_type2 = L2Item.TYPE2_SHIELD_ARMOR;
-		}
-		
-		final String skill = set.getString("enchant4_skill", null);
-		if (skill == null)
-		{
-			return;
-		}
-		
-		final String[] info = skill.split("-");
-		if ((info == null) || (info.length != 2))
-		{
-			return;
-		}
-		
-		int id = 0;
-		int level = 0;
-		try
-		{
-			id = Integer.parseInt(info[0]);
-			level = Integer.parseInt(info[1]);
-		}
-		catch (Exception nfe)
-		{
-			// Incorrect syntax, don't add new skill
-			_log.info(StringUtil.concat("> Couldnt parse ", skill, " in armor enchant skills! item ", toString()));
-		}
-		if ((id > 0) && (level > 0))
-		{
-			_enchant4Skill = new SkillHolder(id, level);
 		}
 	}
 	
@@ -104,14 +74,5 @@ public final class L2Armor extends L2Item
 	public final int getItemMask()
 	{
 		return getItemType().mask();
-	}
-	
-	/**
-	 * @return skill that player get when has equipped armor +4 or more
-	 */
-	@Override
-	public Skill getEnchant4Skill()
-	{
-		return _enchant4Skill == null ? null : _enchant4Skill.getSkill();
 	}
 }

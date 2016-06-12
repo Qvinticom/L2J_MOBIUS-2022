@@ -19,9 +19,8 @@ package handlers.chathandlers;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.handler.IChatHandler;
-import com.l2jmobius.gameserver.model.PartyMatchRoom;
-import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.matching.MatchingRoom;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
@@ -39,29 +38,28 @@ public class ChatPartyMatchRoom implements IChatHandler
 	@Override
 	public void handleChat(ChatType type, L2PcInstance activeChar, String target, String text)
 	{
-		if (!activeChar.isInPartyMatchRoom())
+		final MatchingRoom room = activeChar.getMatchingRoom();
+		if (room != null)
 		{
-			return;
-		}
-		final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getPlayerRoom(activeChar);
-		if (_room == null)
-		{
-			return;
-		}
-		if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
-		{
-			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
-			return;
-		}
-		
-		final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
-		for (L2PcInstance _member : _room.getPartyMembers())
-		{
-			if (Config.FACTION_SYSTEM_ENABLED)
+			if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
 			{
-				if (Config.FACTION_SPECIFIC_CHAT)
+				activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
+				return;
+			}
+			
+			final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
+			for (L2PcInstance _member : room.getMembers())
+			{
+				if (Config.FACTION_SYSTEM_ENABLED)
 				{
-					if ((activeChar.isGood() && _member.isGood()) || (activeChar.isEvil() && _member.isEvil()))
+					if (Config.FACTION_SPECIFIC_CHAT)
+					{
+						if ((activeChar.isGood() && _member.isGood()) || (activeChar.isEvil() && _member.isEvil()))
+						{
+							_member.sendPacket(cs);
+						}
+					}
+					else
 					{
 						_member.sendPacket(cs);
 					}
@@ -70,10 +68,6 @@ public class ChatPartyMatchRoom implements IChatHandler
 				{
 					_member.sendPacket(cs);
 				}
-			}
-			else
-			{
-				_member.sendPacket(cs);
 			}
 		}
 	}

@@ -16,10 +16,10 @@
  */
 package com.l2jmobius.gameserver.model.actor.status;
 
-import com.l2jmobius.gameserver.enums.DuelState;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.Duel;
 
 public class NpcStatus extends CharStatus
 {
@@ -47,7 +47,7 @@ public class NpcStatus extends CharStatus
 			final L2PcInstance attackerPlayer = attacker.getActingPlayer();
 			if ((attackerPlayer != null) && attackerPlayer.isInDuel())
 			{
-				attackerPlayer.setDuelState(DuelState.INTERRUPTED);
+				attackerPlayer.setDuelState(Duel.DUELSTATE_INTERRUPTED);
 			}
 			
 			// Add attackers to npc's attacker list

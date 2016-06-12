@@ -18,11 +18,11 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Betray effect implementation.
@@ -30,9 +30,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class Betray extends AbstractEffect
 {
-	public Betray(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Betray(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -42,26 +41,20 @@ public final class Betray extends AbstractEffect
 	}
 	
 	@Override
-	public int getEffectFlags()
+	public long getEffectFlags()
 	{
 		return EffectFlag.BETRAYED.getMask();
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		return L2EffectType.DEBUFF;
+		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effected.getActingPlayer());
 	}
 	
 	@Override
 	public void onExit(BuffInfo info)
 	{
 		info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-	}
-	
-	@Override
-	public void onStart(BuffInfo info)
-	{
-		info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, info.getEffected().getActingPlayer());
 	}
 }

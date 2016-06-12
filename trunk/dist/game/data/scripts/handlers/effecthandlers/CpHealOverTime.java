@@ -17,7 +17,6 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 
@@ -28,11 +27,10 @@ public final class CpHealOverTime extends AbstractEffect
 {
 	private final double _power;
 	
-	public CpHealOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public CpHealOverTime(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_power = params.getDouble("power", 0);
+		setTicks(params.getInt("ticks"));
 	}
 	
 	@Override
@@ -54,7 +52,8 @@ public final class CpHealOverTime extends AbstractEffect
 		
 		cp += _power * getTicksMultiplier();
 		cp = Math.min(cp, maxcp);
-		info.getEffected().setCurrentCp(cp);
+		info.getEffected().setCurrentCp(cp, false);
+		info.getEffected().broadcastStatusUpdate(info.getEffector());
 		return true;
 	}
 }

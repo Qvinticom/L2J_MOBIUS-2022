@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.zone.type;
 
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -40,7 +41,7 @@ public class L2WaterZone extends L2ZoneType
 		if (character.isPlayer())
 		{
 			final L2PcInstance player = character.getActingPlayer();
-			if (player.isTransformed() && !player.getTransformation().canSwim())
+			if (player.checkTransformed(transform -> !transform.canSwim()))
 			{
 				character.stopTransformation(true);
 			}
@@ -51,7 +52,7 @@ public class L2WaterZone extends L2ZoneType
 		}
 		else if (character.isNpc())
 		{
-			for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
+			L2World.getInstance().forEachVisibleObject(character, L2PcInstance.class, player ->
 			{
 				if (character.getRunSpeed() == 0)
 				{
@@ -61,7 +62,7 @@ public class L2WaterZone extends L2ZoneType
 				{
 					player.sendPacket(new NpcInfo((L2Npc) character));
 				}
-			}
+			});
 		}
 	}
 	
@@ -77,7 +78,7 @@ public class L2WaterZone extends L2ZoneType
 		}
 		else if (character.isNpc())
 		{
-			for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
+			L2World.getInstance().forEachVisibleObject(character, L2PcInstance.class, player ->
 			{
 				if (character.getRunSpeed() == 0)
 				{
@@ -87,7 +88,7 @@ public class L2WaterZone extends L2ZoneType
 				{
 					player.sendPacket(new NpcInfo((L2Npc) character));
 				}
-			}
+			});
 		}
 	}
 	

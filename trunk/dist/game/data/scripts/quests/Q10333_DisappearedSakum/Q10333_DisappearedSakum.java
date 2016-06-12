@@ -16,106 +16,100 @@
  */
 package quests.Q10333_DisappearedSakum;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import com.l2jmobius.gameserver.enums.QuestSound;
+import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Disappeared Sakum (10333)
- * @author spider
+ * @author St3eT
  */
-public class Q10333_DisappearedSakum extends Quest
+public final class Q10333_DisappearedSakum extends Quest
 {
-	// Npcs
+	// NPCs
 	private static final int BATHIS = 30332;
 	private static final int VENT = 33176;
 	private static final int SCHUNAIN = 33508;
-	// Monsters
-	private static final int LANGK_LIZARDMAN = 20030; // Langk Lizardman
-	private static final int VUKU_ORC_FIGHTER = 20017; // WARRIOR on l2wiki.com
-	private static final int LANGK_LIZARDMAN_REQUIRED = 7;
-	private static final int VUKU_ORC_FIGHTER_REQUIRED = 5;
-	private static final int POISONOUS_SPIDER = 23094;
-	private static final int VENOMOUS_SPIDER = 20038;
-	private static final int POISON_PREDATOR = 20050; // arachnid predator on l2wiki.com
-	private static final int SUSPICIOUS_BADGE = 17583; // suspicious mark on l2wiki.com
-	// Rewards
-	private static final long ADENA_REWARD = 80000;
-	private static final int EXP_REWARD = 180000;
-	private static final int SP_REWARD = 43;
-	// Other
-	private static final int SUSPICIOUS_BADGE_REQUIRED = 5;
+	private static final int LIZARDMEN = 20030;
+	private static final int VAKU_ORC = 20017;
+	private static final int[] SPIDERS =
+	{
+		23094, // Poisonous Spider
+		23021, // Giant Venomous Spider
+		23095, // Archnid Predator
+	};
+	// Items
+	private static final int BADGE = 17583;
+	// Misc
+	private static final int MIN_LEVEL = 18;
+	private static final int MAX_LEVEL = 40;
 	
 	public Q10333_DisappearedSakum()
 	{
-		super(10333, Q10333_DisappearedSakum.class.getSimpleName(), "Disappeared Sakum");
+		super(10333);
 		addStartNpc(BATHIS);
 		addTalkId(BATHIS, VENT, SCHUNAIN);
-		addKillId(LANGK_LIZARDMAN, VUKU_ORC_FIGHTER, POISONOUS_SPIDER, VENOMOUS_SPIDER, POISON_PREDATOR);
-		registerQuestItems(SUSPICIOUS_BADGE);
-		addCondLevel(18, 40, "no_level.html");
+		addKillId(LIZARDMEN, VAKU_ORC);
+		addKillId(SPIDERS);
+		registerQuestItems(BADGE);
+		addCondNotRace(Race.ERTHEIA, "30332-09.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "30332-10.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return null;
 		}
+		
 		String htmltext = null;
 		switch (event)
 		{
 			case "30332-02.htm":
 			case "30332-03.htm":
-			case "30332-04.htm": // just show the dialogs with rewards
+			case "30332-04.htm":
+			case "33176-02.htm":
+			case "33508-02.htm":
 			{
 				htmltext = event;
 				break;
 			}
-			case "30332-05.htm": // start the quest
+			case "30332-05.htm":
 			{
-				qs.startQuest();
-				qs.setCond(2);
-				qs.setCond(1); // arrow hack, required for that quest
+				st.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "33176-01.html":
-			case "33176-02.html":
+			case "33176-03.htm":
 			{
-				htmltext = event;
-				break;
-			}
-			case "33176-03.html":
-			{
-				qs.setCond(2);
-				qs.set(Integer.toString(LANGK_LIZARDMAN), 0);
-				qs.set(Integer.toString(VUKU_ORC_FIGHTER), 0);
-				htmltext = event;
-				break;
-			}
-			case "33508-01.html":
-			case "33508-02.html":
-			{
-				htmltext = event;
-				break;
-			}
-			case "33508-03.html":
-			{
-				if (qs.isCond(3))
+				if (st.isCond(1))
 				{
-					giveAdena(player, ADENA_REWARD, true);
-					addExpAndSp(player, EXP_REWARD, SP_REWARD);
-					qs.exitQuest(false);
 					htmltext = event;
-					break;
+					st.setCond(2, true);
 				}
+				break;
+			}
+			case "33508-03.htm":
+			{
+				if (st.isCond(3))
+				{
+					giveAdena(player, 800, true);
+					addExpAndSp(player, 180000, 43);
+					st.exitQuest(false, true);
+					htmltext = event;
+				}
+				break;
 			}
 		}
 		return htmltext;
@@ -124,30 +118,16 @@ public class Q10333_DisappearedSakum extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = null;
-		final QuestState qs = getQuestState(player, true);
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = getQuestState(player, true);
 		
-		switch (qs.getState())
+		switch (st.getState())
 		{
 			case State.CREATED:
 			{
-				switch (npc.getId())
+				if (npc.getId() == BATHIS)
 				{
-					case BATHIS:
-					{
-						htmltext = "30332-01.htm";
-						break;
-					}
-					case VENT:
-					{
-						htmltext = getNoQuestMsg(player);
-						break;
-					}
-					case SCHUNAIN:
-					{
-						htmltext = getNoQuestMsg(player);
-						break;
-					}
+					htmltext = "30332-01.htm";
 				}
 				break;
 			}
@@ -157,28 +137,30 @@ public class Q10333_DisappearedSakum extends Quest
 				{
 					case BATHIS:
 					{
-						htmltext = "30332-06.html";
+						htmltext = st.isCond(0) ? "30332-06.htm" : "30332-07.htm";
 						break;
 					}
 					case VENT:
-						if (qs.isCond(1))
+					{
+						if (st.isCond(1))
 						{
-							htmltext = "33176-01.html";
+							htmltext = "33176-01.htm";
 						}
-						else
+						else if (st.isCond(2))
 						{
-							htmltext = "33176-04.html";
+							htmltext = "33176-04.htm";
+						}
+						else if (st.isCond(3))
+						{
+							htmltext = "33176-05.htm";
 						}
 						break;
+					}
 					case SCHUNAIN:
 					{
-						if (qs.isCond(1) || qs.isCond(2))
+						if (st.isCond(3))
 						{
-							htmltext = getNoQuestMsg(player);
-						}
-						else if (qs.isCond(3))
-						{
-							htmltext = "33508-01.html";
+							htmltext = "33508-01.htm";
 						}
 						break;
 					}
@@ -191,17 +173,17 @@ public class Q10333_DisappearedSakum extends Quest
 				{
 					case BATHIS:
 					{
-						htmltext = "30332-07.html";
+						htmltext = "30332-08.htm";
 						break;
 					}
 					case VENT:
 					{
-						htmltext = "33176-05.html";
+						htmltext = "33176-06.htm";
 						break;
 					}
 					case SCHUNAIN:
 					{
-						htmltext = "33508-04.html";
+						htmltext = "33508-04.htm";
 						break;
 					}
 				}
@@ -214,53 +196,66 @@ public class Q10333_DisappearedSakum extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null) && qs.isCond(2) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
+		final QuestState st = getQuestState(killer, false);
+		
+		if ((st != null) && st.isStarted() && st.isCond(2))
 		{
+			int killedLizardmen = st.getInt("killed_" + LIZARDMEN);
+			int killedVakuOrc = st.getInt("killed_" + VAKU_ORC);
+			
 			switch (npc.getId())
 			{
-				case LANGK_LIZARDMAN:
+				case LIZARDMEN:
 				{
-					int kills = qs.getInt(Integer.toString(LANGK_LIZARDMAN));
-					if (kills < LANGK_LIZARDMAN_REQUIRED)
+					if (killedLizardmen < 7)
 					{
-						kills++;
-						qs.set(Integer.toString(LANGK_LIZARDMAN), kills);
+						killedLizardmen++;
+						st.set("killed_" + LIZARDMEN, killedLizardmen);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
 				}
-				case VUKU_ORC_FIGHTER:
+				case VAKU_ORC:
 				{
-					int kills = qs.getInt(Integer.toString(VUKU_ORC_FIGHTER));
-					if (kills < VUKU_ORC_FIGHTER_REQUIRED)
+					if (killedVakuOrc < 5)
 					{
-						kills++;
-						qs.set(Integer.toString(VUKU_ORC_FIGHTER), kills);
+						killedVakuOrc++;
+						st.set("killed_" + VAKU_ORC, killedVakuOrc);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
 				}
-				case POISONOUS_SPIDER:
-				case VENOMOUS_SPIDER:
-				case POISON_PREDATOR:
+				default:
 				{
-					if (getQuestItemsCount(qs.getPlayer(), SUSPICIOUS_BADGE) < SUSPICIOUS_BADGE_REQUIRED)
+					if ((getQuestItemsCount(killer, BADGE) < 5) && getRandomBoolean())
 					{
-						giveItemRandomly(qs.getPlayer(), npc, SUSPICIOUS_BADGE, 1, SUSPICIOUS_BADGE_REQUIRED, 0.5, true);
+						giveItems(killer, BADGE, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
 				}
 			}
 			
-			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
-			log.addNpc(LANGK_LIZARDMAN, qs.getInt(Integer.toString(LANGK_LIZARDMAN)));
-			log.addNpc(VUKU_ORC_FIGHTER, qs.getInt(Integer.toString(VUKU_ORC_FIGHTER)));
-			qs.getPlayer().sendPacket(log);
-			
-			if ((qs.getInt(Integer.toString(LANGK_LIZARDMAN)) >= LANGK_LIZARDMAN_REQUIRED) && (qs.getInt(Integer.toString(VUKU_ORC_FIGHTER)) >= VUKU_ORC_FIGHTER_REQUIRED) && (getQuestItemsCount(qs.getPlayer(), SUSPICIOUS_BADGE) >= SUSPICIOUS_BADGE_REQUIRED))
+			if ((getQuestItemsCount(killer, BADGE) == 5) && (killedLizardmen == 7) && (killedVakuOrc == 5))
 			{
-				qs.setCond(3);
+				st.setCond(3, true);
 			}
+			sendNpcLogList(killer);
 		}
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
+	{
+		final QuestState st = getQuestState(activeChar, false);
+		if ((st != null) && st.isStarted() && st.isCond(2))
+		{
+			final Set<NpcLogListHolder> npcLogList = new HashSet<>(2);
+			npcLogList.add(new NpcLogListHolder(LIZARDMEN, false, st.getInt("killed_" + LIZARDMEN)));
+			npcLogList.add(new NpcLogListHolder(VAKU_ORC, false, st.getInt("killed_" + VAKU_ORC)));
+			return npcLogList;
+		}
+		return super.getNpcLogList(activeChar);
 	}
 }

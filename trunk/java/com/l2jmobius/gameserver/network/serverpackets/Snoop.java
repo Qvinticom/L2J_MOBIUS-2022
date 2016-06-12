@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class Snoop extends L2GameServerPacket
+public class Snoop implements IClientOutgoingPacket
 {
 	private final int _convoId;
 	private final String _name;
@@ -36,15 +38,16 @@ public class Snoop extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xdb);
+		OutgoingPackets.SNOOP.writeId(packet);
 		
-		writeD(_convoId);
-		writeS(_name);
-		writeD(0x00); // ??
-		writeD(_type.getClientId());
-		writeS(_speaker);
-		writeS(_msg);
+		packet.writeD(_convoId);
+		packet.writeS(_name);
+		packet.writeD(0x00); // ??
+		packet.writeD(_type.getClientId());
+		packet.writeS(_speaker);
+		packet.writeS(_msg);
+		return true;
 	}
 }

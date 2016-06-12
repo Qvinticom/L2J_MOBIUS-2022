@@ -55,10 +55,13 @@ public class ShortCuts implements IRestorable
 	{
 		Shortcut sc = _shortCuts.get(slot + (page * MAX_SHORTCUTS_PER_BAR));
 		// Verify shortcut
-		if ((sc != null) && (sc.getType() == ShortcutType.ITEM) && (_owner.getInventory().getItemByObjectId(sc.getId()) == null))
+		if ((sc != null) && (sc.getType() == ShortcutType.ITEM))
 		{
-			deleteShortCut(sc.getSlot(), sc.getPage());
-			sc = null;
+			if (_owner.getInventory().getItemByObjectId(sc.getId()) == null)
+			{
+				deleteShortCut(sc.getSlot(), sc.getPage());
+				sc = null;
+			}
 		}
 		return sc;
 	}
@@ -75,7 +78,8 @@ public class ShortCuts implements IRestorable
 			}
 			shortcut.setSharedReuseGroup(item.getSharedReuseGroup());
 		}
-		registerShortCutInDb(shortcut, _shortCuts.put(shortcut.getSlot() + (shortcut.getPage() * MAX_SHORTCUTS_PER_BAR), shortcut));
+		final Shortcut oldShortCut = _shortCuts.put(shortcut.getSlot() + (shortcut.getPage() * MAX_SHORTCUTS_PER_BAR), shortcut);
+		registerShortCutInDb(shortcut, oldShortCut);
 	}
 	
 	private void registerShortCutInDb(Shortcut shortcut, Shortcut oldShortCut)
@@ -86,16 +90,16 @@ public class ShortCuts implements IRestorable
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("REPLACE INTO character_shortcuts (charId,slot,page,type,shortcut_id,level,class_index) values(?,?,?,?,?,?,?)"))
+			PreparedStatement statement = con.prepareStatement("REPLACE INTO character_shortcuts (charId,slot,page,type,shortcut_id,level,class_index) values(?,?,?,?,?,?,?)"))
 		{
-			ps.setInt(1, _owner.getObjectId());
-			ps.setInt(2, shortcut.getSlot());
-			ps.setInt(3, shortcut.getPage());
-			ps.setInt(4, shortcut.getType().ordinal());
-			ps.setInt(5, shortcut.getId());
-			ps.setInt(6, shortcut.getLevel());
-			ps.setInt(7, _owner.getClassIndex());
-			ps.execute();
+			statement.setInt(1, _owner.getObjectId());
+			statement.setInt(2, shortcut.getSlot());
+			statement.setInt(3, shortcut.getPage());
+			statement.setInt(4, shortcut.getType().ordinal());
+			statement.setInt(5, shortcut.getId());
+			statement.setInt(6, shortcut.getLevel());
+			statement.setInt(7, _owner.getClassIndex());
+			statement.execute();
 		}
 		catch (Exception e)
 		{
@@ -119,31 +123,11 @@ public class ShortCuts implements IRestorable
 		{
 			final L2ItemInstance item = _owner.getInventory().getItemByObjectId(old.getId());
 			
-			if ((item != null) && (item.getItemType() == EtcItemType.SHOT) && _owner.removeAutoSoulShot(item.getId()))
+			if ((item != null) && (item.getItemType() == EtcItemType.SOULSHOT))
 			{
-				switch (item.getEtcItem().getDefaultAction())
+				if (_owner.removeAutoSoulShot(item.getId()))
 				{
-					case SOULSHOT:
-					case FISHINGSHOT:
-					{
-						_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0, 0));
-						break;
-					}
-					case SPIRITSHOT:
-					{
-						_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0, 1));
-						break;
-					}
-					case SUMMON_SOULSHOT:
-					{
-						_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0, 2));
-						break;
-					}
-					case SUMMON_SPIRITSHOT:
-					{
-						_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0, 3));
-						break;
-					}
+					_owner.sendPacket(new ExAutoSoulShot(item.getId(), false, 0));
 				}
 			}
 		}
@@ -152,36 +136,7 @@ public class ShortCuts implements IRestorable
 		
 		for (int shotId : _owner.getAutoSoulShot())
 		{
-			final L2ItemInstance item = _owner.getInventory().getItemByObjectId(shotId);
-			if ((item == null) || (item.getEtcItem() == null) || (item.getEtcItem().getDefaultAction() == null))
-			{
-				continue;
-			}
-			
-			switch (item.getEtcItem().getDefaultAction())
-			{
-				case SOULSHOT:
-				case FISHINGSHOT:
-				{
-					_owner.sendPacket(new ExAutoSoulShot(shotId, 1, 0));
-					break;
-				}
-				case SPIRITSHOT:
-				{
-					_owner.sendPacket(new ExAutoSoulShot(shotId, 1, 1));
-					break;
-				}
-				case SUMMON_SOULSHOT:
-				{
-					_owner.sendPacket(new ExAutoSoulShot(shotId, 1, 2));
-					break;
-				}
-				case SUMMON_SPIRITSHOT:
-				{
-					_owner.sendPacket(new ExAutoSoulShot(shotId, 1, 3));
-					break;
-				}
-			}
+			_owner.sendPacket(new ExAutoSoulShot(shotId, true, 0));
 		}
 	}
 	
@@ -203,13 +158,13 @@ public class ShortCuts implements IRestorable
 	private void deleteShortCutFromDb(Shortcut shortcut)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=? AND slot=? AND page=? AND class_index=?"))
+			PreparedStatement statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=? AND slot=? AND page=? AND class_index=?"))
 		{
-			ps.setInt(1, _owner.getObjectId());
-			ps.setInt(2, shortcut.getSlot());
-			ps.setInt(3, shortcut.getPage());
-			ps.setInt(4, _owner.getClassIndex());
-			ps.execute();
+			statement.setInt(1, _owner.getObjectId());
+			statement.setInt(2, shortcut.getSlot());
+			statement.setInt(3, shortcut.getPage());
+			statement.setInt(4, _owner.getClassIndex());
+			statement.execute();
 		}
 		catch (Exception e)
 		{
@@ -233,7 +188,11 @@ public class ShortCuts implements IRestorable
 				{
 					final int slot = rset.getInt("slot");
 					final int page = rset.getInt("page");
-					_shortCuts.put(slot + (page * MAX_SHORTCUTS_PER_BAR), new Shortcut(slot, page, ShortcutType.values()[rset.getInt("type")], rset.getInt("shortcut_id"), rset.getInt("level"), 1));
+					final int type = rset.getInt("type");
+					final int id = rset.getInt("shortcut_id");
+					final int level = rset.getInt("level");
+					
+					_shortCuts.put(slot + (page * MAX_SHORTCUTS_PER_BAR), new Shortcut(slot, page, ShortcutType.values()[type], id, level, 1));
 				}
 			}
 		}
@@ -276,25 +235,6 @@ public class ShortCuts implements IRestorable
 			if ((sc.getId() == skillId) && (sc.getType() == ShortcutType.SKILL))
 			{
 				final Shortcut newsc = new Shortcut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), skillLevel, 1);
-				_owner.sendPacket(new ShortCutRegister(newsc));
-				_owner.registerShortCut(newsc);
-			}
-		}
-	}
-	
-	/**
-	 * Replace the shortcut icon with the new skill.
-	 * @param skillId the skill Id to search.
-	 * @param newSkillId the skill Id to replace.
-	 */
-	public void replaceShortCuts(int skillId, int newSkillId)
-	{
-		// Replace all the shortcuts with the new skill
-		for (Shortcut sc : _shortCuts.values())
-		{
-			if ((sc.getId() == skillId) && (sc.getType() == ShortcutType.SKILL))
-			{
-				final Shortcut newsc = new Shortcut(sc.getSlot(), sc.getPage(), sc.getType(), newSkillId, sc.getLevel(), 1);
 				_owner.sendPacket(new ShortCutRegister(newsc));
 				_owner.registerShortCut(newsc);
 			}

@@ -16,12 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets.commission;
 
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * @author NosBit
  */
-public class ExResponseCommissionInfo extends L2GameServerPacket
+public class ExResponseCommissionInfo implements IClientOutgoingPacket
 {
 	public static final ExResponseCommissionInfo EMPTY = new ExResponseCommissionInfo();
 	
@@ -50,14 +52,15 @@ public class ExResponseCommissionInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xF4);
-		writeD(_result);
-		writeD(_itemId);
-		writeQ(_presetPricePerUnit);
-		writeQ(_presetAmount);
-		writeD(_presetDurationType);
+		OutgoingPackets.EX_RESPONSE_COMMISSION_INFO.writeId(packet);
+		
+		packet.writeD(_result);
+		packet.writeD(_itemId);
+		packet.writeQ(_presetPricePerUnit);
+		packet.writeQ(_presetAmount);
+		packet.writeD(_presetDurationType);
+		return true;
 	}
 }

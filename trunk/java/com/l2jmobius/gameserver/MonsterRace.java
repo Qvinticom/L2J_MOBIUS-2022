@@ -16,17 +16,18 @@
  */
 package com.l2jmobius.gameserver;
 
+import java.lang.reflect.Constructor;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.util.Rnd;
 
 public class MonsterRace
 {
-	protected static final Logger _log = Logger.getLogger(MonsterRace.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(MonsterRace.class.getName());
 	
 	private final L2Npc[] _monsters;
 	private int[][] _speeds;
@@ -68,12 +69,14 @@ public class MonsterRace
 			try
 			{
 				final L2NpcTemplate template = NpcData.getInstance().getTemplate(id + random);
-				_monsters[i] = (L2Npc) Class.forName("com.l2jmobius.gameserver.model.actor.instance." + template.getType() + "Instance").getConstructors()[0].newInstance(template);
+				final Constructor<?> constructor = Class.forName("com.l2jmobius.gameserver.model.actor.instance." + template.getType() + "Instance").getConstructors()[0];
+				_monsters[i] = (L2Npc) constructor.newInstance(template);
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Unable to create monster!", e);
+				LOGGER.log(Level.WARNING, "", e);
 			}
+			// LOGGER.info("Monster "+i+" is id: "+(id+random));
 		}
 		newSpeeds();
 	}
@@ -89,7 +92,14 @@ public class MonsterRace
 			total = 0;
 			for (int j = 0; j < 20; j++)
 			{
-				_speeds[i][j] = j == 19 ? 100 : Rnd.get(60) + 65;
+				if (j == 19)
+				{
+					_speeds[i][j] = 100;
+				}
+				else
+				{
+					_speeds[i][j] = Rnd.get(60) + 65;
+				}
 				total += _speeds[i][j];
 			}
 			if (total >= _first[1])

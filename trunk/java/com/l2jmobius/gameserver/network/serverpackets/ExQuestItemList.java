@@ -16,11 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author JIV
@@ -28,30 +29,25 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 public class ExQuestItemList extends AbstractItemPacket
 {
 	private final L2PcInstance _activeChar;
-	private final List<L2ItemInstance> _items = new ArrayList<>();
+	private final Collection<L2ItemInstance> _items;
 	
 	public ExQuestItemList(L2PcInstance activeChar)
 	{
 		_activeChar = activeChar;
-		for (L2ItemInstance item : activeChar.getInventory().getItems())
-		{
-			if (item.isQuestItem())
-			{
-				_items.add(item);
-			}
-		}
+		_items = activeChar.getInventory().getItems(L2ItemInstance::isQuestItem);
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xC7);
-		writeH(_items.size());
+		OutgoingPackets.EX_QUEST_ITEM_LIST.writeId(packet);
+		
+		packet.writeH(_items.size());
 		for (L2ItemInstance item : _items)
 		{
-			writeItem(item);
+			writeItem(packet, item);
 		}
-		writeInventoryBlock(_activeChar.getInventory());
+		writeInventoryBlock(packet, _activeChar.getInventory());
+		return true;
 	}
 }

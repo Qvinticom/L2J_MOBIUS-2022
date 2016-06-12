@@ -18,10 +18,11 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -34,10 +35,8 @@ public final class ManaHealByLevel extends AbstractEffect
 {
 	private final double _power;
 	
-	public ManaHealByLevel(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public ManaHealByLevel(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_power = params.getDouble("power", 0);
 	}
 	
@@ -54,10 +53,14 @@ public final class ManaHealByLevel extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character target = info.getEffected();
-		if ((target == null) || target.isDead() || target.isDoor() || target.isInvul())
+		if (effected.isDead() || effected.isDoor() || effected.isMpBlocked())
+		{
+			return;
+		}
+		
+		if ((effected != effector) && effected.isAffected(EffectFlag.FACEOFF))
 		{
 			return;
 		}
@@ -66,10 +69,10 @@ public final class ManaHealByLevel extends AbstractEffect
 		
 		// recharged mp influenced by difference between target level and skill level
 		// if target is within 5 levels or lower then skill level there's no penalty.
-		amount = target.calcStat(Stats.MANA_CHARGE, amount, null, null);
-		if (target.getLevel() > info.getSkill().getMagicLevel())
+		amount = effected.getStat().getValue(Stats.MANA_CHARGE, amount);
+		if (effected.getLevel() > skill.getMagicLevel())
 		{
-			final int lvlDiff = target.getLevel() - info.getSkill().getMagicLevel();
+			final int lvlDiff = effected.getLevel() - skill.getMagicLevel();
 			// if target is too high compared to skill level, the amount of recharged mp gradually decreases.
 			if (lvlDiff == 6)
 			{
@@ -114,18 +117,20 @@ public final class ManaHealByLevel extends AbstractEffect
 		}
 		
 		// Prevents overheal and negative amount
-		amount = Math.max(Math.min(amount, target.getMaxRecoverableMp() - target.getCurrentMp()), 0);
+		amount = Math.max(Math.min(amount, effected.getMaxRecoverableMp() - effected.getCurrentMp()), 0);
 		if (amount != 0)
 		{
-			target.setCurrentMp(amount + target.getCurrentMp());
+			final double newMp = amount + effected.getCurrentMp();
+			effected.setCurrentMp(newMp, false);
+			effected.broadcastStatusUpdate(effector);
 		}
 		
-		final SystemMessage sm = SystemMessage.getSystemMessage(info.getEffector().getObjectId() != target.getObjectId() ? SystemMessageId.S2_MP_HAS_BEEN_RESTORED_BY_C1 : SystemMessageId.S1_MP_HAS_BEEN_RESTORED);
-		if (info.getEffector().getObjectId() != target.getObjectId())
+		final SystemMessage sm = SystemMessage.getSystemMessage(effector.getObjectId() != effected.getObjectId() ? SystemMessageId.S2_MP_HAS_BEEN_RESTORED_BY_C1 : SystemMessageId.S1_MP_HAS_BEEN_RESTORED);
+		if (effector.getObjectId() != effected.getObjectId())
 		{
-			sm.addCharName(info.getEffector());
+			sm.addCharName(effector);
 		}
 		sm.addInt((int) amount);
-		target.sendPacket(sm);
+		effected.sendPacket(sm);
 	}
 }

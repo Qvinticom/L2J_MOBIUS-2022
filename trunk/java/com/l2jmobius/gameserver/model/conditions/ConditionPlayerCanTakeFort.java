@@ -48,7 +48,12 @@ public class ConditionPlayerCanTakeFort extends Condition
 		}
 		
 		final L2PcInstance player = effector.getActingPlayer();
-		boolean canTakeFort = !player.isAlikeDead() && !player.isCursedWeaponEquipped() && player.isClanLeader();
+		boolean canTakeFort = true;
+		if (player.isAlikeDead() || player.isCursedWeaponEquipped() || !player.isClanLeader())
+		{
+			canTakeFort = false;
+		}
+		
 		final Fort fort = FortManager.getInstance().getFort(player);
 		final SystemMessage sm;
 		if ((fort == null) || (fort.getResidenceId() <= 0) || !fort.getSiege().isInProgress() || (fort.getSiege().getAttackerClan(player.getClan()) == null))
@@ -68,6 +73,6 @@ public class ConditionPlayerCanTakeFort extends Condition
 			player.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
 			canTakeFort = false;
 		}
-		return _val == canTakeFort;
+		return (_val == canTakeFort);
 	}
 }

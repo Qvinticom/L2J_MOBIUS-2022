@@ -16,61 +16,53 @@
  */
 package quests.Q10358_DividedSakumPoslof;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
+import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
-import com.l2jmobius.gameserver.util.Util;
+
+import quests.Q10337_SakumsImpact.Q10337_SakumsImpact;
 
 /**
  * Divided Sakum, Poslof (10358)
- * @author spider
+ * @author St3eT
  */
-public class Q10358_DividedSakumPoslof extends Quest
+public final class Q10358_DividedSakumPoslof extends Quest
 {
 	// NPCs
 	private static final int LEF = 33510;
-	private static final int ADV_GUILDSMAN = 31795;
-	// Monsters
-	private static final int POSLOF = 27452;
+	private static final int ADVENTURER_GUIDE = 31795;
 	private static final int ZOMBIE_WARRIOR = 20458;
-	private static final int VEELAN_BUGBEAR_WARRIOR = 20402;
-	private static final Map<Integer, Integer> MOBS_REQUIRED = new HashMap<>();
-	{
-		MOBS_REQUIRED.put(ZOMBIE_WARRIOR, 20);
-		MOBS_REQUIRED.put(VEELAN_BUGBEAR_WARRIOR, 23);
-		MOBS_REQUIRED.put(POSLOF, 0);
-	}
-	// Item
-	private static final int SAKUMS_SKETCH_B = 17585;
-	// Rewards
-	private static final int ADENA_REWARD = 105000;
-	private static final int EXP_REWARD = 750000;
-	private static final int SP_REWARD = 180;
-	// Others
+	private static final int VEELEAN = 20402; // Veelan Bugbear Warrior
+	private static final int POSLOF = 27452;
+	// Items
+	private static final int SAKUM_SKETCH = 17585;
+	// Misc
 	private static final int MIN_LEVEL = 33;
 	private static final int MAX_LEVEL = 40;
 	
 	public Q10358_DividedSakumPoslof()
 	{
-		super(10358, Q10358_DividedSakumPoslof.class.getSimpleName(), "Divided Sakum, Poslof");
+		super(10358);
 		addStartNpc(LEF);
-		addTalkId(LEF, ADV_GUILDSMAN);
-		addKillId(ZOMBIE_WARRIOR, VEELAN_BUGBEAR_WARRIOR, POSLOF);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.htm");
-		registerQuestItems(SAKUMS_SKETCH_B);
+		addTalkId(LEF, ADVENTURER_GUIDE);
+		addKillId(ZOMBIE_WARRIOR, VEELEAN, POSLOF);
+		registerQuestItems(SAKUM_SKETCH);
+		addCondCompletedQuest(Q10337_SakumsImpact.class.getSimpleName(), "33510-09.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33510-09.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return null;
 		}
@@ -78,37 +70,27 @@ public class Q10358_DividedSakumPoslof extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "31795-02.html":
-			{
-				htmltext = event;
-				break;
-			}
-			case "31795-03.html":
-			{
-				if (qs.isCond(4))
-				{
-					giveAdena(player, ADENA_REWARD, true);
-					addExpAndSp(player, EXP_REWARD, SP_REWARD);
-					qs.exitQuest(false, true);
-					qs.unset(Integer.toString(ZOMBIE_WARRIOR));
-					qs.unset(Integer.toString(VEELAN_BUGBEAR_WARRIOR));
-					qs.unset(Integer.toString(POSLOF));
-					// htmltext = null; // got nothing on retail, retail-like bug? :D
-				}
-				break;
-			}
 			case "33510-02.htm":
+			case "31795-04.htm":
 			{
 				htmltext = event;
 				break;
 			}
 			case "33510-03.htm":
 			{
-				qs.startQuest();
-				qs.set(Integer.toString(ZOMBIE_WARRIOR), 0);
-				qs.set(Integer.toString(VEELAN_BUGBEAR_WARRIOR), 0);
-				
+				st.startQuest();
 				htmltext = event;
+				break;
+			}
+			case "31795-05.htm":
+			{
+				if (st.isCond(4))
+				{
+					giveAdena(player, 1050, true);
+					addExpAndSp(player, 750000, 180);
+					st.exitQuest(false, true);
+					htmltext = event;
+				}
 				break;
 			}
 		}
@@ -116,50 +98,52 @@ public class Q10358_DividedSakumPoslof extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
-		final QuestState qs = getQuestState(player, true);
-		String htmltext = null;
-		switch (qs.getState())
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = getQuestState(player, true);
+		
+		switch (st.getState())
 		{
 			case State.CREATED:
 			{
-				htmltext = npc.getId() == LEF ? "33510-01.htm" : getNoQuestMsg(player);
+				htmltext = npc.getId() == LEF ? "33510-01.htm" : "31795-02.htm";
 				break;
 			}
 			case State.STARTED:
 			{
-				switch (npc.getId())
+				switch (st.getCond())
 				{
-					case LEF:
+					case 1:
 					{
-						if (qs.isCond(1))
+						htmltext = npc.getId() == LEF ? "33510-04.htm" : "31795-01.htm";
+						break;
+					}
+					case 2:
+					{
+						if (npc.getId() == LEF)
 						{
-							htmltext = "33510-03.htm";
+							if (!isSimulated)
+							{
+								st.setCond(3);
+								giveItems(player, SAKUM_SKETCH, 1);
+							}
+							htmltext = "33510-05.htm";
 						}
-						else if (qs.isCond(2)) // mobs killed
+						else if (npc.getId() == ADVENTURER_GUIDE)
 						{
-							qs.setCond(3);
-							giveItems(player, SAKUMS_SKETCH_B, 1);
-							qs.set(Integer.toString(POSLOF), 0);
-							htmltext = "33510-04.html";
-						}
-						else
-						{
-							htmltext = "33510-05.html";
+							htmltext = "31795-01.htm";
 						}
 						break;
 					}
-					case ADV_GUILDSMAN:
+					case 3:
 					{
-						if (qs.isCond(4)) // poslof defeated
-						{
-							htmltext = "31795-01.html";
-						}
-						else
-						{
-							htmltext = getNoQuestMsg(player);
-						}
+						htmltext = npc.getId() == LEF ? "33510-06.htm" : "31795-01.htm";
+						break;
+					}
+					case 4:
+					{
+						htmltext = npc.getId() == LEF ? "33510-07.htm" : "31795-03.htm";
 						break;
 					}
 				}
@@ -167,7 +151,7 @@ public class Q10358_DividedSakumPoslof extends Quest
 			}
 			case State.COMPLETED:
 			{
-				htmltext = getAlreadyCompletedMsg(player);
+				htmltext = npc.getId() == LEF ? "33510-08.htm" : "31795-06.htm";
 				break;
 			}
 		}
@@ -177,54 +161,69 @@ public class Q10358_DividedSakumPoslof extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
+		final QuestState st = getQuestState(killer, false);
+		
+		if ((st != null) && st.isStarted())
 		{
-			int kills = 0;
-			switch (npc.getId())
+			if (st.isCond(1))
 			{
-				case ZOMBIE_WARRIOR:
-				{
-					kills = qs.getInt(Integer.toString(ZOMBIE_WARRIOR));
-					kills++;
-					qs.set(Integer.toString(ZOMBIE_WARRIOR), kills);
-					break;
-				}
-				case VEELAN_BUGBEAR_WARRIOR:
-				{
-					kills = qs.getInt(Integer.toString(VEELAN_BUGBEAR_WARRIOR));
-					kills++;
-					qs.set(Integer.toString(VEELAN_BUGBEAR_WARRIOR), kills);
-					break;
-				}
-				case POSLOF:
-				{
-					if (qs.isCond(3))
-					{
-						qs.setCond(4);
-					}
-					break;
-				}
-			}
-			if (qs.isCond(1))
-			{
-				final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
-				log.addNpc(ZOMBIE_WARRIOR, qs.getInt(Integer.toString(ZOMBIE_WARRIOR)));
-				log.addNpc(VEELAN_BUGBEAR_WARRIOR, qs.getInt(Integer.toString(VEELAN_BUGBEAR_WARRIOR)));
-				killer.sendPacket(log);
+				int killedZombies = st.getInt("killed_" + ZOMBIE_WARRIOR);
+				int killedVeelans = st.getInt("killed_" + VEELEAN);
 				
-				if ((qs.getInt(Integer.toString(ZOMBIE_WARRIOR)) >= MOBS_REQUIRED.get(ZOMBIE_WARRIOR)) && (qs.getInt(Integer.toString(VEELAN_BUGBEAR_WARRIOR)) >= MOBS_REQUIRED.get(VEELAN_BUGBEAR_WARRIOR)))
+				if (npc.getId() == ZOMBIE_WARRIOR)
 				{
-					qs.setCond(2); // mobs killed
+					if (killedZombies < 20)
+					{
+						killedZombies++;
+						st.set("killed_" + ZOMBIE_WARRIOR, killedZombies);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
 				}
+				else
+				{
+					if (killedVeelans < 23)
+					{
+						killedVeelans++;
+						st.set("killed_" + VEELEAN, killedVeelans);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+				}
+				
+				if ((killedZombies == 20) && (killedVeelans == 23))
+				{
+					st.setCond(2, true);
+				}
+				sendNpcLogList(killer);
 			}
-			else if (qs.isCond(3))
+			else if (st.isCond(3))
 			{
-				final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
-				log.addNpc(POSLOF, qs.getInt(Integer.toString(POSLOF)));
-				killer.sendPacket(log);
+				st.set("killed_" + POSLOF, 1);
+				st.setCond(4);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
+	{
+		final QuestState st = getQuestState(activeChar, false);
+		if ((st != null) && st.isStarted())
+		{
+			if (st.isCond(1))
+			{
+				final Set<NpcLogListHolder> npcLogList = new HashSet<>(2);
+				npcLogList.add(new NpcLogListHolder(ZOMBIE_WARRIOR, false, st.getInt("killed_" + ZOMBIE_WARRIOR)));
+				npcLogList.add(new NpcLogListHolder(VEELEAN, false, st.getInt("killed_" + VEELEAN)));
+				return npcLogList;
+			}
+			else if (st.isCond(3))
+			{
+				final Set<NpcLogListHolder> npcLogList = new HashSet<>(1);
+				npcLogList.add(new NpcLogListHolder(POSLOF, false, st.getInt("killed_" + POSLOF)));
+				return npcLogList;
+			}
+		}
+		return super.getNpcLogList(activeChar);
 	}
 }

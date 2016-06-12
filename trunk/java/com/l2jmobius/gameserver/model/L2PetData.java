@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
 /**
@@ -188,7 +188,7 @@ public class L2PetData
 			{
 				if (petLvl < 70)
 				{
-					lvl = petLvl / 10;
+					lvl = (petLvl / 10);
 					if (lvl <= 0)
 					{
 						lvl = 1;
@@ -196,7 +196,7 @@ public class L2PetData
 				}
 				else
 				{
-					lvl = 7 + ((petLvl - 70) / 5);
+					lvl = (7 + ((petLvl - 70) / 5));
 				}
 				
 				// formula usable for skill that have 10 or more skill levels
@@ -207,9 +207,12 @@ public class L2PetData
 				}
 				break;
 			}
-			if ((temp.getMinLevel() <= petLvl) && (temp.getSkillLvl() > lvl))
+			else if (temp.getMinLevel() <= petLvl)
 			{
-				lvl = temp.getSkillLvl();
+				if (temp.getSkillLvl() > lvl)
+				{
+					lvl = temp.getSkillLvl();
+				}
 			}
 		}
 		return lvl;

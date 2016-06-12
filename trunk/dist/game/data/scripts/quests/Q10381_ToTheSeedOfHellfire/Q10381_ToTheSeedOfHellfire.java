@@ -16,64 +16,83 @@
  */
 package quests.Q10381_ToTheSeedOfHellfire;
 
-import com.l2jmobius.gameserver.enums.QuestType;
+import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.network.NpcStringId;
 
 /**
- * @author hlwrave
+ * To The Seed of Hellfire (10381)
+ * @author Gladicek
  */
-public class Q10381_ToTheSeedOfHellfire extends Quest
+
+public final class Q10381_ToTheSeedOfHellfire extends Quest
 {
-	// NPCS
+	// NPCs
 	private static final int KEUCEREUS = 32548;
 	private static final int KBALDIR = 32733;
 	private static final int SIZRAK = 33669;
-	// Items
-	private static final int KBALDIRS_LETTER = 34957;
+	// Item
+	private static final int KBALDIR_LETTER = 34957;
 	// Misc
 	private static final int MIN_LEVEL = 97;
 	
 	public Q10381_ToTheSeedOfHellfire()
 	{
-		super(10381, Q10381_ToTheSeedOfHellfire.class.getSimpleName(), "To the Seed of Hellfire");
+		super(10381);
 		addStartNpc(KEUCEREUS);
 		addTalkId(KEUCEREUS, KBALDIR, SIZRAK);
-		registerQuestItems(KBALDIRS_LETTER);
-		addCondMinLevel(MIN_LEVEL, "kserth_q10381_04.html");
+		addCondMinLevel(MIN_LEVEL, "32548-06.htm");
+		registerQuestItems(KBALDIR_LETTER);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return getNoQuestMsg(player);
+			return null;
 		}
+		
+		String htmltext = event;
 		
 		switch (event)
 		{
-			case "kserth_q10381_03.html":
+			case "32548-02.htm":
+			{
+				htmltext = event;
+				break;
+			}
+			case "32548-03.html":
 			{
 				qs.startQuest();
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HURRY_AND_GO_FIND_COMMANDER_KBALDIR);
 				break;
 			}
-			case "kbarldire_q10381_03.html":
+			case "32733-03.html":
 			{
-				qs.setCond(2);
-				giveItems(player, KBALDIRS_LETTER, 1);
+				if (qs.isCond(1))
+				{
+					qs.setCond(2, true);
+					giveItems(player, KBALDIR_LETTER, 1);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_CAN_REACH_THE_SEED_OF_HELLFIRE_THROUGH_THE_SEED_TELEPORT_DEVICE);
+				}
 				break;
 			}
-			case "sofa_sizraku_q10381_03.html":
+			case "33669-03.html":
 			{
-				takeItems(player, KBALDIRS_LETTER, -1);
-				addExpAndSp(player, 951127800, 435041400);
-				giveAdena(player, 3256740, true);
-				qs.exitQuest(QuestType.ONE_TIME, true);
+				if (qs.isCond(2))
+				{
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_WILL_LOOK_FORWARD_TO_YOUR_ACTIVITY);
+					giveAdena(player, 3_256_740, true);
+					addExpAndSp(player, 951_127_800, 228_270);
+					qs.exitQuest(false, true);
+					htmltext = event;
+				}
 				break;
 			}
 		}
@@ -86,42 +105,61 @@ public class Q10381_ToTheSeedOfHellfire extends Quest
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (npc.getId())
+		if (qs == null)
 		{
-			case KEUCEREUS:
+			return htmltext;
+		}
+		
+		switch (qs.getState())
+		{
+			case State.CREATED:
 			{
-				if (qs.isCreated())
+				if (npc.getId() == KEUCEREUS)
 				{
-					htmltext = "kserth_q10381_01.htm";
-				}
-				else if (qs.isStarted())
-				{
-					htmltext = "kserth_q10381_06.html";
-					
-				}
-				else if (qs.isCompleted())
-				{
-					htmltext = "kserth_q10381_05.html";
+					htmltext = "32548-01.htm";
 				}
 				break;
 			}
-			case KBALDIR:
+			case State.STARTED:
 			{
-				if (qs.isCond(1))
+				switch (npc.getId())
 				{
-					htmltext = "kbarldire_q10381_01.html";
-				}
-				else if (qs.isCond(2))
-				{
-					htmltext = "kbarldire_q10381_04.html";
+					case KEUCEREUS:
+					{
+						if (qs.isCond(1))
+						{
+							htmltext = "32548-04.html";
+						}
+						break;
+					}
+					case KBALDIR:
+					{
+						if (qs.isCond(1))
+						{
+							htmltext = "32733-01.html";
+						}
+						else if (qs.isCond(2))
+						{
+							htmltext = "32733-04.html";
+						}
+						break;
+					}
+					case SIZRAK:
+					{
+						if (qs.isCond(2))
+						{
+							htmltext = "33669-01.html";
+						}
+						break;
+					}
 				}
 				break;
 			}
-			case SIZRAK:
+			case State.COMPLETED:
 			{
-				if (qs.isCond(2))
+				if (npc.getId() == KEUCEREUS)
 				{
-					htmltext = "sofa_sizraku_q10381_01.html";
+					htmltext = "32548-05.html";
 				}
 				break;
 			}

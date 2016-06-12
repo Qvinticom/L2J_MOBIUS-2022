@@ -16,8 +16,9 @@
  */
 package com.l2jmobius.gameserver.model.conditions;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -49,39 +50,40 @@ public class ConditionPlayerCanSweep extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		boolean canSweep = false;
+		final AtomicBoolean canSweep = new AtomicBoolean(false);
 		if (effector.getActingPlayer() != null)
 		{
 			final L2PcInstance sweeper = effector.getActingPlayer();
 			if (skill != null)
 			{
-				final L2Object[] targets = skill.getTargetList(sweeper);
-				if (targets != null)
+				skill.forEachTargetAffected(sweeper, effected, o ->
 				{
-					L2Attackable target;
-					for (L2Object objTarget : targets)
+					if (o instanceof L2Attackable)
 					{
-						if (objTarget instanceof L2Attackable)
+						final L2Attackable target = (L2Attackable) o;
+						if (target.isDead())
 						{
-							target = (L2Attackable) objTarget;
-							if (target.isDead())
+							if (target.isSpoiled())
 							{
-								if (target.isSpoiled())
+								canSweep.set(target.checkSpoilOwner(sweeper, true));
+								if (canSweep.get())
 								{
-									canSweep = target.checkSpoilOwner(sweeper, true);
-									canSweep &= !target.isOldCorpse(sweeper, Config.CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY, true);
-									canSweep &= sweeper.getInventory().checkInventorySlotsAndWeight(target.getSpoilLootItems(), true, true);
+									canSweep.set(!target.isOldCorpse(sweeper, Config.CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY, true));
 								}
-								else
+								if (canSweep.get())
 								{
-									sweeper.sendPacket(SystemMessageId.SWEEPER_FAILED_TARGET_NOT_SPOILED);
+									canSweep.set(sweeper.getInventory().checkInventorySlotsAndWeight(target.getSpoilLootItems(), true, true));
 								}
+							}
+							else
+							{
+								sweeper.sendPacket(SystemMessageId.SWEEPER_FAILED_TARGET_NOT_SPOILED);
 							}
 						}
 					}
-				}
+				});
 			}
 		}
-		return _val == canSweep;
+		return (_val == canSweep.get());
 	}
 }

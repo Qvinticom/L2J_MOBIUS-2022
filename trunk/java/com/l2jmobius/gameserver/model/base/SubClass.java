@@ -33,8 +33,7 @@ public final class SubClass
 	private long _sp = 0;
 	private byte _level = Config.BASE_SUBCLASS_LEVEL;
 	private int _classIndex = 1;
-	
-	private int _vitalityPoints = 140000;
+	private int _vitalityPoints = 0;
 	private boolean _dualClass = false;
 	
 	public SubClass()
@@ -71,6 +70,11 @@ public final class SubClass
 	public int getVitalityPoints()
 	{
 		return _vitalityPoints;
+	}
+	
+	public void setVitalityPoints(int value)
+	{
+		_vitalityPoints = value;
 	}
 	
 	/**
@@ -131,8 +135,25 @@ public final class SubClass
 		_level = levelValue;
 	}
 	
-	public void setVitalityPoints(int vit)
+	public void incLevel()
 	{
-		_vitalityPoints = vit;
+		if (!_dualClass && (getLevel() == _maxLevel))
+		{
+			return;
+		}
+		
+		_level++;
+		setExp(ExperienceData.getInstance().getExpForLevel(getLevel()));
+	}
+	
+	public void decLevel()
+	{
+		if (getLevel() == Config.BASE_SUBCLASS_LEVEL)
+		{
+			return;
+		}
+		
+		_level--;
+		setExp(ExperienceData.getInstance().getExpForLevel(getLevel()));
 	}
 }

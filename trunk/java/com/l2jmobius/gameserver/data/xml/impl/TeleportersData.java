@@ -16,25 +16,28 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.teleporter.TeleportHolder;
 import com.l2jmobius.gameserver.model.teleporter.TeleportLocation;
 import com.l2jmobius.gameserver.model.teleporter.TeleportType;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * @author UnAfraid
  */
-public class TeleportersData implements IXmlReader
+public class TeleportersData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(TeleportersData.class.getName());
+	
 	private final Map<Integer, TeleportHolder> _teleporters = new HashMap<>();
 	
 	protected TeleportersData()
@@ -46,12 +49,12 @@ public class TeleportersData implements IXmlReader
 	public void load()
 	{
 		_teleporters.clear();
-		parseDatapackDirectory("teleporters", true);
-		LOGGER.log(Level.INFO, "Loaded: " + _teleporters.size() + " npc teleporters.");
+		parseDatapackDirectory("data/teleporters", true);
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _teleporters.size() + " npc teleporters.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node listNode = doc.getFirstChild(); listNode != null; listNode = listNode.getNextSibling())
 		{
@@ -84,8 +87,26 @@ public class TeleportersData implements IXmlReader
 									}
 								}
 							}
+							else if ("npcs".equals(tpNode.getNodeName()))
+							{
+								for (Node locNode = tpNode.getFirstChild(); locNode != null; locNode = locNode.getNextSibling())
+								{
+									if ("npc".equals(locNode.getNodeName()))
+									{
+										final int npcId = parseInteger(locNode.getAttributes(), "id");
+										if (_teleporters.putIfAbsent(npcId, holder) != null)
+										{
+											LOGGER.warning(getClass().getSimpleName() + ": Duplicate location entires for npc: " + npcId);
+										}
+									}
+								}
+							}
 						}
-						_teleporters.put(id, holder);
+						
+						if (_teleporters.putIfAbsent(id, holder) != null)
+						{
+							LOGGER.warning(getClass().getSimpleName() + ": Duplicate location entires for npc: " + id);
+						}
 					}
 				}
 			}

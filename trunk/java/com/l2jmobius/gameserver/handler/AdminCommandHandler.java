@@ -34,7 +34,8 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 	@Override
 	public void registerHandler(IAdminCommandHandler handler)
 	{
-		for (String id : handler.getAdminCommandList())
+		final String[] ids = handler.getAdminCommandList();
+		for (String id : ids)
 		{
 			_datatable.put(id, handler);
 		}
@@ -43,7 +44,8 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 	@Override
 	public synchronized void removeHandler(IAdminCommandHandler handler)
 	{
-		for (String id : handler.getAdminCommandList())
+		final String[] ids = handler.getAdminCommandList();
+		for (String id : ids)
 		{
 			_datatable.remove(id);
 		}
@@ -52,7 +54,12 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 	@Override
 	public IAdminCommandHandler getHandler(String adminCommand)
 	{
-		return _datatable.get(adminCommand.contains(" ") ? adminCommand.substring(0, adminCommand.indexOf(" ")) : adminCommand);
+		String command = adminCommand;
+		if (adminCommand.contains(" "))
+		{
+			command = adminCommand.substring(0, adminCommand.indexOf(" "));
+		}
+		return _datatable.get(command);
 	}
 	
 	@Override

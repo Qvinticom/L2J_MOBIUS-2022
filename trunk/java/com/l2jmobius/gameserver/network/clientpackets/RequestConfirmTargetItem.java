@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutItemResultForVariationMake;
 
 /**
@@ -27,19 +29,19 @@ import com.l2jmobius.gameserver.network.serverpackets.ExPutItemResultForVariatio
  */
 public final class RequestConfirmTargetItem extends AbstractRefinePacket
 {
-	private static final String _C__D0_26_REQUESTCONFIRMTARGETITEM = "[C] D0:26 RequestConfirmTargetItem";
 	private int _itemObjId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_itemObjId = readD();
+		_itemObjId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -56,20 +58,14 @@ public final class RequestConfirmTargetItem extends AbstractRefinePacket
 			// Different system message here
 			if (item.isAugmented())
 			{
-				activeChar.sendPacket(SystemMessageId.ONCE_AN_ITEM_IS_AUGMENTED_IT_CANNOT_BE_AUGMENTED_AGAIN);
+				client.sendPacket(SystemMessageId.ONCE_AN_ITEM_IS_AUGMENTED_IT_CANNOT_BE_AUGMENTED_AGAIN);
 				return;
 			}
 			
-			activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
+			client.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
 		
-		activeChar.sendPacket(new ExPutItemResultForVariationMake(_itemObjId, item.getId()));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_26_REQUESTCONFIRMTARGETITEM;
+		client.sendPacket(new ExPutItemResultForVariationMake(_itemObjId, item.getId()));
 	}
 }

@@ -32,11 +32,9 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.util.StringUtil;
 
 public class QuestLink implements IBypassHandler
 {
-	private static final int MAX_QUEST_COUNT = 40;
 	private static final String[] COMMANDS =
 	{
 		"Quest"
@@ -80,15 +78,12 @@ public class QuestLink implements IBypassHandler
 	 * @param npc The table containing quests of the L2NpcInstance
 	 * @param quests
 	 */
-	private static void showQuestChooseWindow(L2PcInstance player, L2Npc npc, Collection<Quest> quests)
+	public static void showQuestChooseWindow(L2PcInstance player, L2Npc npc, Collection<Quest> quests)
 	{
-		final StringBuilder sb = StringUtil.startAppend(150, "<html><body>");
-		final StringBuilder qStarted = StringUtil.startAppend(150, "");
-		final StringBuilder qCanStart = StringUtil.startAppend(150, "");
-		final StringBuilder qCannotstart = StringUtil.startAppend(150, "");
-		final StringBuilder qComplete = StringUtil.startAppend(150, "");
-		String state = "";
-		String color = "";
+		final StringBuilder sbStarted = new StringBuilder(128);
+		final StringBuilder sbCanStart = new StringBuilder(128);
+		final StringBuilder sbCantStart = new StringBuilder(128);
+		final StringBuilder sbCompleted = new StringBuilder(128);
 		
 		//@formatter:off
 		final Set<Quest> startingQuests = npc.getListeners(EventType.ON_NPC_QUEST_START).stream()
@@ -101,100 +96,76 @@ public class QuestLink implements IBypassHandler
 		
 		for (Quest quest : quests)
 		{
-			final QuestState qs = player.getQuestState(quest.getName());
-			if ((qs == null) || qs.isCreated())
+			final QuestState qs = player.getQuestState(quest.getScriptName());
+			if ((qs == null) || qs.isCreated() || (qs.isCompleted() && qs.isNowAvailable()))
 			{
-				state = quest.isCustomQuest() ? "" : "01";
-				if (startingQuests.contains(quest) && quest.canStartQuest(player))
+				final String startConditionHtml = quest.getStartConditionHtml(player, npc);
+				if (((startConditionHtml != null) && startConditionHtml.isEmpty()) || !startingQuests.contains(quest))
 				{
-					color = "bbaa88";
+					continue;
+				}
+				else if (startingQuests.contains(quest) && quest.canStartQuest(player))
+				{
+					sbCanStart.append("<font color=\"bbaa88\">");
+					sbCanStart.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
+					sbCanStart.append(quest.isCustomQuest() ? quest.getPath() : "<fstring>" + quest.getNpcStringId() + "01</fstring>");
+					sbCanStart.append("</button></font>");
 				}
 				else
 				{
-					color = "a62f31";
+					sbCantStart.append("<font color=\"a62f31\">");
+					sbCantStart.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
+					sbCantStart.append(quest.isCustomQuest() ? quest.getPath() : "<fstring>" + quest.getNpcStringId() + "01</fstring>");
+					sbCantStart.append("</button></font>");
 				}
+			}
+			else if (Quest.getNoQuestMsg(player).equals(quest.onTalk(npc, player, true)))
+			{
+				continue;
 			}
 			else if (qs.isStarted())
 			{
-				state = quest.isCustomQuest() ? " (In Progress)" : "02";
-				color = "ffdd66";
+				sbStarted.append("<font color=\"ffdd66\">");
+				sbStarted.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
+				sbStarted.append(quest.isCustomQuest() ? quest.getPath() + " (In Progress)" : "<fstring>" + quest.getNpcStringId() + "02</fstring>");
+				sbStarted.append("</button></font>");
 			}
 			else if (qs.isCompleted())
 			{
-				state = quest.isCustomQuest() ? " (Done)" : "03";
-				color = "787878";
-			}
-			
-			switch (color)
-			{
-				case "ffdd66": // started
-				{
-					StringUtil.append(qStarted, "<font color=\"" + color + "\">");
-					StringUtil.append(qStarted, "<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", quest.getName(), "\">");
-					appendToText(quest, qStarted, state);
-					break;
-				}
-				case "bbaa88": // can start
-				{
-					StringUtil.append(qCanStart, "<font color=\"" + color + "\">");
-					StringUtil.append(qCanStart, "<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", quest.getName(), "\">");
-					appendToText(quest, qCanStart, state);
-					break;
-				}
-				case "a62f31": // cannot start
-				{
-					StringUtil.append(qCannotstart, "<font color=\"" + color + "\">");
-					StringUtil.append(qCannotstart, "<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", quest.getName(), "\">");
-					appendToText(quest, qCannotstart, state);
-					break;
-				}
-				case "787878": // complete
-				{
-					StringUtil.append(qComplete, "<font color=\"" + color + "\">");
-					StringUtil.append(qComplete, "<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", quest.getName(), "\">");
-					appendToText(quest, qComplete, state);
-					break;
-				}
+				sbCompleted.append("<font color=\"787878\">");
+				sbCompleted.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
+				sbCompleted.append(quest.isCustomQuest() ? quest.getPath() + " (Done) " : "<fstring>" + quest.getNpcStringId() + "03</fstring>");
+				sbCompleted.append("</button></font>");
 			}
 		}
-		sb.append(qStarted);
-		sb.append(qCanStart);
-		sb.append(qCannotstart);
-		sb.append(qComplete);
-		sb.append("</body></html>");
 		
-		// Send a Server->Client packet NpcHtmlMessage to the L2PcInstance in order to display the message of the L2NpcInstance
-		npc.insertObjectIdAndShowChatWindow(player, sb.toString());
-	}
-	
-	private static void appendToText(Quest quest, StringBuilder sb, String state)
-	{
-		if (quest.isCustomQuest())
+		String content;
+		if ((sbStarted.length() > 0) || (sbCanStart.length() > 0) || (sbCantStart.length() > 0) || (sbCompleted.length() > 0))
 		{
-			StringUtil.append(sb, quest.getDescr(), state);
+			final StringBuilder sb = new StringBuilder(128);
+			sb.append("<html><body>");
+			sb.append(sbStarted.toString());
+			sb.append(sbCanStart.toString());
+			sb.append(sbCantStart.toString());
+			sb.append(sbCompleted.toString());
+			sb.append("</body></html>");
+			content = sb.toString();
 		}
 		else
 		{
-			int questId = quest.getId();
-			if (questId > 10000)
-			{
-				questId -= 5000;
-			}
-			else if (questId == 146)
-			{
-				questId = 640;
-			}
-			
-			StringUtil.append(sb, "<fstring>", String.valueOf(questId), state, "</fstring>");
+			content = Quest.getNoQuestMsg(player);
 		}
-		sb.append("</button></font>");
+		
+		// Send a Server->Client packet NpcHtmlMessage to the L2PcInstance in order to display the message of the L2NpcInstance
+		content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
+		player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), content));
 	}
 	
 	/**
 	 * Open a quest window on client with the text of the L2NpcInstance.<br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <ul>
-	 * <li>Get the text of the quest state in the folder scripts/quests/questId/stateId.htm</li>
+	 * <li>Get the text of the quest state in the folder data/scripts/quests/questId/stateId.htm</li>
 	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance</li>
 	 * <li>Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet</li>
 	 * </ul>
@@ -202,7 +173,7 @@ public class QuestLink implements IBypassHandler
 	 * @param npc the L2NpcInstance that chats with the {@code player}
 	 * @param questId the Id of the quest to display the message
 	 */
-	private static void showQuestWindow(L2PcInstance player, L2Npc npc, String questId)
+	public static void showQuestWindow(L2PcInstance player, L2Npc npc, String questId)
 	{
 		String content = null;
 		
@@ -213,21 +184,28 @@ public class QuestLink implements IBypassHandler
 		
 		if (q != null)
 		{
-			if ((q.getId() >= 1) && (q.getId() < 20000) && ((player.getWeightPenalty() >= 3) || !player.isInventoryUnder90(true)))
+			if (((q.getId() >= 1) && (q.getId() < 20000)) && ((player.getWeightPenalty() >= 3) || !player.isInventoryUnder90(true)))
 			{
 				player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
 				return;
 			}
 			
-			if ((qs == null) && (q.getId() >= 1) && (q.getId() < 20000) && (player.getAllActiveQuests().size() >= MAX_QUEST_COUNT))
+			if (qs == null)
 			{
-				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-				html.setFile(player.getHtmlPrefix(), "html/fullquest.html");
-				player.sendPacket(html);
-				return;
+				if ((q.getId() >= 1) && (q.getId() < 20000))
+				{
+					// Too many ongoing quests.
+					if (player.getAllActiveQuests().size() > 40)
+					{
+						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+						html.setFile(player.getHtmlPrefix(), "data/html/fullquest.html");
+						player.sendPacket(html);
+						return;
+					}
+				}
 			}
 			
-			q.notifyTalk(npc, player);
+			q.notifyTalk(npc, player, false);
 		}
 		else
 		{
@@ -237,7 +215,8 @@ public class QuestLink implements IBypassHandler
 		// Send a Server->Client packet NpcHtmlMessage to the L2PcInstance in order to display the message of the L2NpcInstance
 		if (content != null)
 		{
-			npc.insertObjectIdAndShowChatWindow(player, content);
+			content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
+			player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), content));
 		}
 		
 		// Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
@@ -257,6 +236,7 @@ public class QuestLink implements IBypassHandler
 			.filter(Quest.class::isInstance)
 			.map(Quest.class::cast)
 			.filter(quest -> (quest.getId() > 0) && (quest.getId() < 20000))
+			.filter(quest -> !Quest.getNoQuestMsg(player).equals(quest.onTalk(npc, player, true)))
 			.distinct()
 			.collect(Collectors.toSet());
 		//@formatter:on

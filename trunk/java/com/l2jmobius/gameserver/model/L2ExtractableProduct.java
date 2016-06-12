@@ -25,26 +25,20 @@ public class L2ExtractableProduct
 	private final int _min;
 	private final int _max;
 	private final int _chance;
-	private final int _minEnchant;
-	private final int _maxEnchant;
 	
 	/**
 	 * Create Extractable product
-	 * @param id create item id
+	 * @param id crete item id
 	 * @param min item count max
 	 * @param max item count min
 	 * @param chance chance for creating
-	 * @param minEnchant item min enchant
-	 * @param maxEnchant item max enchant
 	 */
-	public L2ExtractableProduct(int id, int min, int max, double chance, int minEnchant, int maxEnchant)
+	public L2ExtractableProduct(int id, int min, int max, double chance)
 	{
 		_id = id;
 		_min = min;
 		_max = max;
 		_chance = (int) (chance * 1000);
-		_minEnchant = minEnchant;
-		_maxEnchant = maxEnchant;
 	}
 	
 	public int getId()
@@ -65,15 +59,5 @@ public class L2ExtractableProduct
 	public int getChance()
 	{
 		return _chance;
-	}
-	
-	public int getMinEnchant()
-	{
-		return _minEnchant;
-	}
-	
-	public int getMaxEnchant()
-	{
-		return _maxEnchant;
 	}
 }

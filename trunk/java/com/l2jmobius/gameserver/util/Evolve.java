@@ -35,8 +35,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
-import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -49,7 +47,7 @@ public final class Evolve
 {
 	protected static final Logger _log = Logger.getLogger(Evolve.class.getName());
 	
-	public static boolean doEvolve(L2PcInstance player, L2Npc npc, int itemIdtake, int itemIdgive, int petminlvl)
+	public static final boolean doEvolve(L2PcInstance player, L2Npc npc, int itemIdtake, int itemIdgive, int petminlvl)
 	{
 		if ((itemIdtake == 0) || (itemIdgive == 0) || (petminlvl == 0))
 		{
@@ -160,7 +158,7 @@ public final class Evolve
 		return true;
 	}
 	
-	public static boolean doRestore(L2PcInstance player, L2Npc npc, int itemIdtake, int itemIdgive, int petminlvl)
+	public static final boolean doRestore(L2PcInstance player, L2Npc npc, int itemIdtake, int itemIdgive, int petminlvl)
 	{
 		if ((itemIdtake == 0) || (itemIdgive == 0) || (petminlvl == 0))
 		{
@@ -173,7 +171,12 @@ public final class Evolve
 			return false;
 		}
 		
-		final int oldpetlvl = item.getEnchantLevel() < petminlvl ? petminlvl : item.getEnchantLevel();
+		int oldpetlvl = item.getEnchantLevel();
+		if (oldpetlvl < petminlvl)
+		{
+			oldpetlvl = petminlvl;
+		}
+		
 		final L2PetData oldData = PetDataTable.getInstance().getPetDataByItemId(itemIdtake);
 		if (oldData == null)
 		{
@@ -232,10 +235,7 @@ public final class Evolve
 		// Inventory update
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addRemovedItem(removedItem);
-		player.sendPacket(iu);
-		
-		player.sendPacket(new ExUserInfoInvenWeight(player));
-		player.sendPacket(new ExAdenaInvenCount(player));
+		player.sendInventoryUpdate(iu);
 		
 		player.broadcastUserInfo();
 		

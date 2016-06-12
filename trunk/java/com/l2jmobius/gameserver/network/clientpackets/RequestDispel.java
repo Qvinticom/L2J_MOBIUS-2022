@@ -17,48 +17,40 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * @author KenM
  */
-public class RequestDispel extends L2GameClientPacket
+public class RequestDispel implements IClientIncomingPacket
 {
-	private static final String _C_D0_4B_REQUESTDISPEL = "[C] D0:4B RequestDispel";
-	
 	private int _objectId;
 	private int _skillId;
 	private int _skillLevel;
-	private int _fullLevel;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_skillId = readD();
-		_fullLevel = readD();
-		if (_fullLevel < 100)
-		{
-			_skillLevel = _fullLevel;
-		}
-		else
-		{
-			_skillLevel = _fullLevel >> 16;
-		}
+		_objectId = packet.readD();
+		_skillId = packet.readD();
+		_skillLevel = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		if ((_skillId <= 0) || (_skillLevel <= 0))
 		{
 			return;
 		}
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -68,7 +60,7 @@ public class RequestDispel extends L2GameClientPacket
 		{
 			return;
 		}
-		if (!skill.canBeDispeled() || skill.isStayAfterDeath() || skill.isDebuff())
+		if (!skill.canBeDispelled() || skill.isStayAfterDeath() || skill.isDebuff())
 		{
 			return;
 		}
@@ -97,11 +89,5 @@ public class RequestDispel extends L2GameClientPacket
 				activeChar.removeServitor(_objectId);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C_D0_4B_REQUESTDISPEL;
 	}
 }

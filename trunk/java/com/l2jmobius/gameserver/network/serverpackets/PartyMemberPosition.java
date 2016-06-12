@@ -19,14 +19,16 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author zabbix
  */
-public class PartyMemberPosition extends L2GameServerPacket
+public class PartyMemberPosition implements IClientOutgoingPacket
 {
 	private final Map<Integer, Location> locations = new HashMap<>();
 	
@@ -49,17 +51,19 @@ public class PartyMemberPosition extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xba);
-		writeD(locations.size());
+		OutgoingPackets.PARTY_MEMBER_POSITION.writeId(packet);
+		
+		packet.writeD(locations.size());
 		for (Map.Entry<Integer, Location> entry : locations.entrySet())
 		{
 			final Location loc = entry.getValue();
-			writeD(entry.getKey());
-			writeD(loc.getX());
-			writeD(loc.getY());
-			writeD(loc.getZ());
+			packet.writeD(entry.getKey());
+			packet.writeD(loc.getX());
+			packet.writeD(loc.getY());
+			packet.writeD(loc.getZ());
 		}
+		return true;
 	}
 }

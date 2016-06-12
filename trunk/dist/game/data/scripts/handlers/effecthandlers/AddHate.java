@@ -18,9 +18,10 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Add Hate effect implementation.
@@ -29,12 +30,12 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
 public final class AddHate extends AbstractEffect
 {
 	private final double _power;
+	private final boolean _affectSummoner;
 	
-	public AddHate(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public AddHate(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_power = params.getDouble("power", 0);
+		_affectSummoner = params.getBoolean("affectSummoner", false);
 	}
 	
 	@Override
@@ -44,9 +45,14 @@ public final class AddHate extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (!info.getEffected().isAttackable())
+		if (_affectSummoner && (effector.getSummoner() != null))
+		{
+			effector = effector.getSummoner();
+		}
+		
+		if (!effected.isAttackable())
 		{
 			return;
 		}
@@ -54,11 +60,11 @@ public final class AddHate extends AbstractEffect
 		final double val = _power;
 		if (val > 0)
 		{
-			((L2Attackable) info.getEffected()).addDamageHate(info.getEffector(), 0, (int) val);
+			((L2Attackable) effected).addDamageHate(effector, 0, (int) val);
 		}
 		else if (val < 0)
 		{
-			((L2Attackable) info.getEffected()).reduceHate(info.getEffector(), (int) -val);
+			((L2Attackable) effected).reduceHate(effector, (int) -val);
 		}
 	}
 }

@@ -18,13 +18,14 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Block Chat effect implementation.
@@ -32,9 +33,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class BlockChat extends AbstractEffect
 {
-	public BlockChat(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public BlockChat(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -44,20 +44,20 @@ public final class BlockChat extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public long getEffectFlags()
 	{
-		return L2EffectType.CHAT_BLOCK;
+		return EffectFlag.CHAT_BLOCK.getMask();
+	}
+	
+	@Override
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	{
+		PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, effected.getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, 0, "Chat banned bot report", "system", true));
 	}
 	
 	@Override
 	public void onExit(BuffInfo info)
 	{
 		PunishmentManager.getInstance().stopPunishment(info.getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN);
-	}
-	
-	@Override
-	public void onStart(BuffInfo info)
-	{
-		PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, info.getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, 0, "Chat banned bot report", "system", true));
 	}
 }

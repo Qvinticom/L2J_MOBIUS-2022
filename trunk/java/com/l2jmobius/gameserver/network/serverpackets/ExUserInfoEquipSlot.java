@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.InventorySlot;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Sdw
@@ -58,32 +60,26 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 	}
 	
 	@Override
-	protected void onNewMaskAdded(InventorySlot component)
+	public boolean write(PacketWriter packet)
 	{
-	}
-	
-	@Override
-	protected void writeImpl()
-	{
-		writeC(0xFE);
-		writeH(0x156);
+		OutgoingPackets.EX_USER_INFO_EQUIP_SLOT.writeId(packet);
 		
-		writeD(_activeChar.getObjectId());
-		writeH(InventorySlot.values().length);
-		writeB(_masks);
+		packet.writeD(_activeChar.getObjectId());
+		packet.writeH(InventorySlot.values().length);
+		packet.writeB(_masks);
 		
 		final PcInventory inventory = _activeChar.getInventory();
 		for (InventorySlot slot : InventorySlot.values())
 		{
 			if (containsMask(slot))
 			{
-				writeH(22); // 2 + 4 * 5
-				writeD(inventory.getPaperdollObjectId(slot.getSlot()));
-				writeD(inventory.getPaperdollItemId(slot.getSlot()));
-				writeD(inventory.getPaperdoll1stAugmentationId(slot.getSlot()));
-				writeD(inventory.getPaperdoll2ndAugmentationId(slot.getSlot()));
-				writeD(inventory.getPaperdollItemVisualId(slot.getSlot()));
+				packet.writeH(22); // 10 + 4 * 3
+				packet.writeD(inventory.getPaperdollObjectId(slot.getSlot()));
+				packet.writeD(inventory.getPaperdollItemId(slot.getSlot()));
+				packet.writeQ(inventory.getPaperdollAugmentationId(slot.getSlot()));
+				packet.writeD(inventory.getPaperdollItemVisualId(slot.getSlot()));
 			}
 		}
+		return true;
 	}
 }

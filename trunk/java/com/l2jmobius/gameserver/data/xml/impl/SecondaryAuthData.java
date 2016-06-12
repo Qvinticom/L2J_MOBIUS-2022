@@ -20,18 +20,20 @@ import java.io.File;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.util.data.xml.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 
 /**
- * Secondary Auth data.
  * @author NosBit
  */
-public class SecondaryAuthData implements IXmlReader
+public class SecondaryAuthData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(SecondaryAuthData.class.getName());
+	
 	private final Set<String> _forbiddenPasswords = new HashSet<>();
 	private boolean _enabled = false;
 	private int _maxAttempts = 5;
@@ -52,7 +54,7 @@ public class SecondaryAuthData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		try
 		{

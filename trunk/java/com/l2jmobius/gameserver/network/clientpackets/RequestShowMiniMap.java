@@ -16,43 +16,31 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ShowMiniMap;
 
 /**
  * sample format d
  * @version $Revision: 1 $ $Date: 2005/04/10 00:17:44 $
  */
-public final class RequestShowMiniMap extends L2GameClientPacket
+public final class RequestShowMiniMap implements IClientIncomingPacket
 {
-	private static final String _C__6C_REQUESTSHOWMINIMAP = "[C] 6C RequestShowMiniMap";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected final void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
-		activeChar.sendPacket(new ShowMiniMap(1665));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__6C_REQUESTSHOWMINIMAP;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
+		client.sendPacket(new ShowMiniMap(0));
 	}
 }

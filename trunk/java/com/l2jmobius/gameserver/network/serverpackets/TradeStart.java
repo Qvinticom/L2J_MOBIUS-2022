@@ -16,73 +16,76 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.MentorManager;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 public final class TradeStart extends AbstractItemPacket
 {
 	private final L2PcInstance _activeChar;
 	private final L2PcInstance _partner;
-	private final L2ItemInstance[] _itemList;
+	private final Collection<L2ItemInstance> _itemList;
 	private int _mask = 0;
 	
 	public TradeStart(L2PcInstance player)
 	{
 		_activeChar = player;
 		_partner = player.getActiveTradeList().getPartner();
-		_itemList = _activeChar.getInventory().getAvailableItems(true, _activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && Config.GM_TRADE_RESTRICTED_ITEMS, false);
+		_itemList = _activeChar.getInventory().getAvailableItems(true, (_activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && Config.GM_TRADE_RESTRICTED_ITEMS), false);
 		
-		if (_partner == null)
+		if (_partner != null)
 		{
-			return;
-		}
-		
-		if (player.getFriendList().containsKey(_partner.getObjectId()))
-		{
-			_mask |= 0x01;
-		}
-		if ((player.getClanId() > 0) && (_partner.getClanId() == _partner.getClanId()))
-		{
-			_mask |= 0x02;
-		}
-		if ((MentorManager.getInstance().getMentee(player.getObjectId(), _partner.getObjectId()) != null) || (MentorManager.getInstance().getMentee(_partner.getObjectId(), player.getObjectId()) != null))
-		{
-			_mask |= 0x04;
-		}
-		if ((player.getAllyId() > 0) && (player.getAllyId() == _partner.getAllyId()))
-		{
-			_mask |= 0x08;
-		}
-		
-		// Does not shows level
-		if (_partner.isGM())
-		{
-			_mask |= 0x10;
+			if (player.getFriendList().contains(_partner.getObjectId()))
+			{
+				_mask |= 0x01;
+			}
+			if ((player.getClanId() > 0) && (_partner.getClanId() == _partner.getClanId()))
+			{
+				_mask |= 0x02;
+			}
+			if ((MentorManager.getInstance().getMentee(player.getObjectId(), _partner.getObjectId()) != null) || (MentorManager.getInstance().getMentee(_partner.getObjectId(), player.getObjectId()) != null))
+			{
+				_mask |= 0x04;
+			}
+			if ((player.getAllyId() > 0) && (player.getAllyId() == _partner.getAllyId()))
+			{
+				_mask |= 0x08;
+			}
+			
+			// Does not shows level
+			if (_partner.isGM())
+			{
+				_mask |= 0x10;
+			}
 		}
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		if ((_activeChar.getActiveTradeList() == null) || (_partner == null))
 		{
-			return;
+			return false;
 		}
 		
-		writeC(0x14);
-		writeD(_partner.getObjectId());
-		writeC(_mask); // some kind of mask
+		OutgoingPackets.TRADE_START.writeId(packet);
+		packet.writeD(_partner.getObjectId());
+		packet.writeC(_mask); // some kind of mask
 		if ((_mask & 0x10) == 0)
 		{
-			writeC(_partner.getLevel());
+			packet.writeC(_partner.getLevel());
 		}
-		writeH(_itemList.length);
+		packet.writeH(_itemList.size());
 		for (L2ItemInstance item : _itemList)
 		{
-			writeItem(item);
+			writeItem(packet, item);
 		}
+		return true;
 	}
 }

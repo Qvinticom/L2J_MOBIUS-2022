@@ -16,36 +16,37 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.BeautyShopData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.beautyshop.BeautyData;
 import com.l2jmobius.gameserver.model.beautyshop.BeautyItem;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExResponseBeautyList;
 import com.l2jmobius.gameserver.network.serverpackets.ExResponseBeautyRegistReset;
 
 /**
  * @author Sdw
  */
-public class RequestRegistBeauty extends L2GameClientPacket
+public class RequestRegistBeauty implements IClientIncomingPacket
 {
-	private static final String _C__D0_CB_REQUESTREGISTBEAUTY = "[C] D0;CB RequestRegistBeauty";
-	
 	private int _hairId;
 	private int _faceId;
 	private int _colorId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_hairId = readD();
-		_faceId = readD();
-		_colorId = readD();
+		_hairId = packet.readD();
+		_faceId = packet.readD();
+		_colorId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -100,25 +101,31 @@ public class RequestRegistBeauty extends L2GameClientPacket
 			requiredBeautyShopTicket += face.getBeautyShopTicket();
 		}
 		
-		if ((player.getAdena() < requiredAdena) || (player.getBeautyTickets() < requiredBeautyShopTicket))
+		if ((player.getAdena() < requiredAdena) || ((player.getBeautyTickets() < requiredBeautyShopTicket)))
 		{
 			player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.CHANGE, ExResponseBeautyRegistReset.FAILURE));
 			player.sendPacket(new ExResponseBeautyList(player, ExResponseBeautyList.SHOW_FACESHAPE));
 			return;
 		}
 		
-		if ((requiredAdena > 0) && !player.reduceAdena(getClass().getSimpleName(), requiredAdena, null, true))
+		if (requiredAdena > 0)
 		{
-			player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.CHANGE, ExResponseBeautyRegistReset.FAILURE));
-			player.sendPacket(new ExResponseBeautyList(player, ExResponseBeautyList.SHOW_FACESHAPE));
-			return;
+			if (!player.reduceAdena(getClass().getSimpleName(), requiredAdena, null, true))
+			{
+				player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.CHANGE, ExResponseBeautyRegistReset.FAILURE));
+				player.sendPacket(new ExResponseBeautyList(player, ExResponseBeautyList.SHOW_FACESHAPE));
+				return;
+			}
 		}
 		
-		if ((requiredBeautyShopTicket > 0) && !player.reduceBeautyTickets(getClass().getSimpleName(), requiredBeautyShopTicket, null, true))
+		if (requiredBeautyShopTicket > 0)
 		{
-			player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.CHANGE, ExResponseBeautyRegistReset.FAILURE));
-			player.sendPacket(new ExResponseBeautyList(player, ExResponseBeautyList.SHOW_FACESHAPE));
-			return;
+			if (!player.reduceBeautyTickets(getClass().getSimpleName(), requiredBeautyShopTicket, null, true))
+			{
+				player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.CHANGE, ExResponseBeautyRegistReset.FAILURE));
+				player.sendPacket(new ExResponseBeautyList(player, ExResponseBeautyList.SHOW_FACESHAPE));
+				return;
+			}
 		}
 		
 		if (_hairId > 0)
@@ -139,9 +146,4 @@ public class RequestRegistBeauty extends L2GameClientPacket
 		player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.CHANGE, ExResponseBeautyRegistReset.SUCCESS));
 	}
 	
-	@Override
-	public String getType()
-	{
-		return _C__D0_CB_REQUESTREGISTBEAUTY;
-	}
 }

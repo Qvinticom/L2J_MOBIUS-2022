@@ -24,11 +24,10 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
 /**
- * Birthday Party Song (432)<br>
- * Original Jython script by CubicVirtuoso.
+ * Birthday Party Song (432)
  * @author malyelfik
  */
-public class Q00432_BirthdayPartySong extends Quest
+public final class Q00432_BirthdayPartySong extends Quest
 {
 	// NPC
 	private static final int OCTAVIA = 31043;
@@ -36,34 +35,36 @@ public class Q00432_BirthdayPartySong extends Quest
 	private static final int GOLEM = 21103;
 	// Item
 	private static final int RED_CRYSTAL = 7541;
-	// Reward
 	private static final int ECHO_CRYSTAL = 7061;
+	// Misc
+	private static final int MIN_LVL = 31;
 	
 	public Q00432_BirthdayPartySong()
 	{
-		super(432, Q00432_BirthdayPartySong.class.getSimpleName(), "Birthday Party Song");
+		super(432);
 		addStartNpc(OCTAVIA);
 		addTalkId(OCTAVIA);
 		addKillId(GOLEM);
 		registerQuestItems(RED_CRYSTAL);
+		addCondMinLevel(MIN_LVL, "31043-00.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
+		final QuestState st = getQuestState(player, false);
 		
-		if (qs == null)
+		if (st == null)
 		{
 			return null;
 		}
 		
-		String htmltext = event;
+		final String htmltext = event;
 		switch (event)
 		{
 			case "31043-02.htm":
 			{
-				qs.startQuest();
+				st.startQuest();
 				break;
 			}
 			case "31043-05.html":
@@ -73,12 +74,7 @@ public class Q00432_BirthdayPartySong extends Quest
 					return "31043-06.html";
 				}
 				giveItems(player, ECHO_CRYSTAL, 25);
-				qs.exitQuest(true, true);
-				break;
-			}
-			default:
-			{
-				htmltext = null;
+				st.exitQuest(true, true);
 				break;
 			}
 		}
@@ -88,14 +84,14 @@ public class Q00432_BirthdayPartySong extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(player, false);
+		final QuestState st = getQuestState(player, false);
 		
-		if ((qs != null) && qs.isCond(1) && getRandomBoolean())
+		if ((st != null) && st.isCond(1) && getRandomBoolean())
 		{
 			giveItems(player, RED_CRYSTAL, 1);
 			if (getQuestItemsCount(player, RED_CRYSTAL) == 50)
 			{
-				qs.setCond(2, true);
+				st.setCond(2, true);
 			}
 			else
 			{
@@ -109,23 +105,23 @@ public class Q00432_BirthdayPartySong extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, true);
+		final QuestState st = getQuestState(player, true);
 		
-		if (qs == null)
+		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		switch (qs.getState())
+		switch (st.getState())
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= 31) ? "31043-01.htm" : "31043-00.htm";
+				htmltext = "31043-01.htm";
 				break;
 			}
 			case State.STARTED:
 			{
-				htmltext = qs.isCond(1) ? "31043-03.html" : "31043-04.html";
+				htmltext = (st.isCond(1)) ? "31043-03.html" : "31043-04.html";
 				break;
 			}
 		}

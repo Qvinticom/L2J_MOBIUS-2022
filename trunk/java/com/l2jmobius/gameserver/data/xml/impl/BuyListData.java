@@ -24,6 +24,7 @@ import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -31,19 +32,21 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.file.filter.NumericNameFilter;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.buylist.L2BuyList;
 import com.l2jmobius.gameserver.model.buylist.Product;
 import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.util.data.xml.IXmlReader;
-import com.l2jmobius.util.file.filter.NumericNameFilter;
 
 /**
  * Loads buy lists for NPCs.
  * @author NosBit
  */
-public final class BuyListData implements IXmlReader
+public final class BuyListData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(BuyListData.class.getName());
+	
 	private final Map<Integer, L2BuyList> _buyLists = new HashMap<>();
 	private static final FileFilter NUMERIC_FILTER = new NumericNameFilter();
 	
@@ -56,10 +59,10 @@ public final class BuyListData implements IXmlReader
 	public synchronized void load()
 	{
 		_buyLists.clear();
-		parseDatapackDirectory("buylists", false);
+		parseDatapackDirectory("data/buylists", false);
 		if (Config.CUSTOM_BUYLIST_LOAD)
 		{
-			parseDatapackDirectory("buylists/custom", false);
+			parseDatapackDirectory("data/buylists/custom", false);
 		}
 		
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _buyLists.size() + " BuyLists.");

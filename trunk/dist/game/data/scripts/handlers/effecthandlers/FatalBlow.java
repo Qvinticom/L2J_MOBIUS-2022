@@ -16,16 +16,18 @@
  */
 package handlers.effecthandlers;
 
-import java.util.StringTokenizer;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -36,21 +38,41 @@ import com.l2jmobius.gameserver.model.stats.Stats;
  */
 public final class FatalBlow extends AbstractEffect
 {
-	private final String _targetAbnormalType;
-	private final double _skillAddPower;
+	private final double _power;
+	private final double _chance;
+	private final double _criticalChance;
+	private final boolean _overHit;
 	
-	public FatalBlow(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	private final Set<AbnormalType> _abnormals;
+	private final double _abnormalPower;
+	
+	public FatalBlow(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
+		_power = params.getDouble("power", 0);
+		_chance = params.getDouble("chance", 0);
+		_criticalChance = params.getDouble("criticalChance", 0);
+		_overHit = params.getBoolean("overHit", false);
 		
-		_targetAbnormalType = params.getString("targetAbnormalType", "NULL");
-		_skillAddPower = params.getDouble("skillAddPower", 1);
+		final String abnormals = params.getString("abnormalType", null);
+		if ((abnormals != null) && !abnormals.isEmpty())
+		{
+			_abnormals = new HashSet<>();
+			for (String slot : abnormals.split(";"))
+			{
+				_abnormals.add(AbnormalType.getAbnormalType(slot));
+			}
+		}
+		else
+		{
+			_abnormals = Collections.<AbnormalType> emptySet();
+		}
+		_abnormalPower = params.getDouble("abnormalPower", 1);
 	}
 	
 	@Override
-	public boolean calcSuccess(BuffInfo info)
+	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
-		return !Formulas.calcPhysicalSkillEvasion(info.getEffector(), info.getEffected(), info.getSkill()) && Formulas.calcBlowSuccess(info.getEffector(), info.getEffected(), info.getSkill());
+		return !Formulas.calcPhysicalSkillEvasion(effector, effected, skill) && Formulas.calcBlowSuccess(effector, effected, skill, _chance);
 	}
 	
 	@Override
@@ -66,63 +88,54 @@ public final class FatalBlow extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
-		final Skill skill = info.getSkill();
-		
-		if (activeChar.isAlikeDead())
+		if (effector.isAlikeDead())
 		{
 			return;
 		}
 		
-		final boolean ss = skill.useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		final byte shld = Formulas.calcShldUse(activeChar, target, skill);
-		double damage = Formulas.calcBlowDamage(activeChar, target, skill, shld, ss);
-		
-		if (_targetAbnormalType != "NULL")
+		if (_overHit && effected.isAttackable())
 		{
-			final StringTokenizer st = new StringTokenizer(_targetAbnormalType, ",");
-			while (st.hasMoreTokens())
-			{
-				if (target.getEffectList().getBuffInfoByAbnormalType(AbnormalType.valueOf(st.nextToken().trim())) != null)
-				{
-					damage *= _skillAddPower;
-					break;
-				}
-			}
+			((L2Attackable) effected).overhitEnabled(true);
 		}
 		
-		final boolean crit = Formulas.calcCrit(activeChar, target, skill);
+		double power = _power;
+		
+		// Check if we apply an abnormal modifier
+		if (_abnormals.stream().anyMatch(effected::hasAbnormalType))
+		{
+			power += _abnormalPower;
+		}
+		
+		final boolean ss = skill.useSoulShot() && effector.isChargedShot(ShotType.SOULSHOTS);
+		final byte shld = Formulas.calcShldUse(effector, effected);
+		double damage = Formulas.calcBlowDamage(effector, effected, skill, false, power, shld, ss);
+		final boolean crit = Formulas.calcCrit(_criticalChance, effector, effected, skill);
+		
 		if (crit)
 		{
 			damage *= 2;
 		}
 		
-		// reduce damage if target has maxdamage buff
-		final double maxDamage = target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null);
-		if (maxDamage > 0)
+		// Check if damage should be reflected
+		Formulas.calcDamageReflected(effector, effected, skill, true);
+		
+		final double damageCap = effected.getStat().getValue(Stats.DAMAGE_LIMIT);
+		if (damageCap > 0)
 		{
-			damage = (int) maxDamage;
+			damage = Math.min(damage, damageCap);
 		}
 		
-		target.reduceCurrentHp(damage, activeChar, skill);
-		target.notifyDamageReceived(damage, activeChar, skill, crit, false);
+		effected.reduceCurrentHp(damage, effector, skill, false, false, true, false);
 		
 		// Manage attack or cast break of the target (calculating rate, sending message...)
-		if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
+		if (!effected.isRaid() && Formulas.calcAtkBreak(effected, damage))
 		{
-			target.breakAttack();
-			target.breakCast();
+			effected.breakAttack();
+			effected.breakCast();
 		}
 		
-		if (activeChar.isPlayer())
-		{
-			activeChar.getActingPlayer().sendDamageMessage(target, (int) damage, false, true, false);
-		}
-		
-		// Check if damage should be reflected
-		Formulas.calcDamageReflected(activeChar, target, skill, true);
+		effector.sendDamageMessage(effected, skill, (int) damage, true, false);
 	}
 }

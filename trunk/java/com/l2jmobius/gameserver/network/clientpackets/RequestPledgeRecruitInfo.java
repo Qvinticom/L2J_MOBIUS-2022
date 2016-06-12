@@ -16,49 +16,43 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeRecruitInfo;
 
 /**
  * @author Sdw
  */
-public class RequestPledgeRecruitInfo extends L2GameClientPacket
+public class RequestPledgeRecruitInfo implements IClientIncomingPacket
 {
-	private static final String _C__D0_D3_REQUESTPLEDGERECRUITINFO = "[C] D0;D3 RequestPledgeRecruitInfo";
-	
 	private int _clanId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_clanId = readD();
+		_clanId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
 		final L2Clan clan = ClanTable.getInstance().getClan(_clanId);
-		
 		if (clan == null)
 		{
 			return;
 		}
 		
-		activeChar.sendPacket(new ExPledgeRecruitInfo(_clanId));
+		client.sendPacket(new ExPledgeRecruitInfo(_clanId));
 	}
 	
-	@Override
-	public String getType()
-	{
-		return _C__D0_D3_REQUESTPLEDGERECRUITINFO;
-	}
 }

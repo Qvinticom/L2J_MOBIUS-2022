@@ -63,7 +63,7 @@ public class Q00455_WingsOfSand extends Quest
 	
 	public Q00455_WingsOfSand()
 	{
-		super(455, Q00455_WingsOfSand.class.getSimpleName(), "Wings of Sand");
+		super(455);
 		addStartNpc(SEPARATED_SOULS);
 		addTalkId(SEPARATED_SOULS);
 		addKillId(EMERALD_HORN, DUST_RIDER, BLEEDING_FLY, BLACK_DAGGER_WING, SHADOW_SUMMONER, SPIKE_SLASHER, MUSCLE_BOMBER);

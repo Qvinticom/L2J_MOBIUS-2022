@@ -32,10 +32,13 @@ import ai.AbstractNpcAI;
  * Proof Of Justice implementation.
  * @author St3eT
  */
-final class ProofOfJustice extends AbstractNpcAI
+public final class ProofOfJustice extends AbstractNpcAI
 {
+	// Items
+	private static final int JUSTICE = 17822; // Proof of Justice
 	// Misc
 	private static final Map<Integer, List<ClassId>> CLASSLIST = new HashMap<>();
+	
 	static
 	{
 		CLASSLIST.put(30505, Arrays.asList(ClassId.DESTROYER, ClassId.TYRANT, ClassId.OVERLORD, ClassId.WARCRYER));
@@ -50,24 +53,27 @@ final class ProofOfJustice extends AbstractNpcAI
 	
 	private ProofOfJustice()
 	{
-		super(ProofOfJustice.class.getSimpleName(), "village_master");
 		addStartNpc(CLASSLIST.keySet());
 		addTalkId(CLASSLIST.keySet());
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (talker.getClassId().level() < 2)
+		if (player.getClassId().level() < 2)
 		{
 			return npc.getId() + "-noclass.html";
 		}
-		if (!CLASSLIST.get(npc.getId()).contains(talker.getClassId()))
+		else if (!hasAtLeastOneQuestItem(player, JUSTICE))
+		{
+			return npc.getId() + "-noitem.html";
+		}
+		else if (!CLASSLIST.get(npc.getId()).contains(player.getClassId()))
 		{
 			return npc.getId() + "-no.html";
 		}
-		MultisellData.getInstance().separateAndSend(718, talker, npc, false);
-		return super.onTalk(npc, talker);
+		MultisellData.getInstance().separateAndSend(718, player, npc, false);
+		return super.onTalk(npc, player);
 	}
 	
 	public static void main(String[] args)

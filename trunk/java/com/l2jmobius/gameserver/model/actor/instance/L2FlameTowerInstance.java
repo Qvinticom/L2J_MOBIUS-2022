@@ -34,10 +34,6 @@ public class L2FlameTowerInstance extends L2Tower
 	private int _upgradeLevel = 0;
 	private List<Integer> _zoneList;
 	
-	/**
-	 * Creates a flame tower.
-	 * @param template the flame tower NPC template
-	 */
 	public L2FlameTowerInstance(L2NpcTemplate template)
 	{
 		super(template);
@@ -62,7 +58,8 @@ public class L2FlameTowerInstance extends L2Tower
 	{
 		if ((_zoneList != null) && (_upgradeLevel != 0))
 		{
-			for (int i = 0; i < (_upgradeLevel * 2); i++)
+			final int maxIndex = _upgradeLevel * 2;
+			for (int i = 0; i < maxIndex; i++)
 			{
 				final L2ZoneType zone = ZoneManager.getInstance().getZoneById(_zoneList.get(i));
 				if (zone != null)

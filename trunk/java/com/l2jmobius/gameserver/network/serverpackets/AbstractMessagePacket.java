@@ -18,37 +18,26 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.io.PrintStream;
 import java.util.Arrays;
-import java.util.logging.Level;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.data.xml.impl.DoorData;
-import com.l2jmobius.gameserver.data.xml.impl.NpcData;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.datatables.SkillData;
-import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.Elementals;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.SystemMessageId.SMLocalisation;
 
 /**
- * @author UnAfraid
  * @param <T>
+ * @author UnAfraid
  */
 @SuppressWarnings("unchecked")
-public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>extends L2GameServerPacket
+public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> implements IClientOutgoingPacket
 {
 	private static final SMParam[] EMPTY_PARAM_ARRAY = new SMParam[0];
 	
@@ -66,11 +55,6 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 		public final byte getType()
 		{
 			return _type;
-		}
-		
-		public final Object getValue()
-		{
-			return _value;
 		}
 		
 		public final String getStringValue()
@@ -94,15 +78,22 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 		}
 	}
 	
+	// id 22 d (shared with 1-3,17,22
+	// id 21 h
+	// id 20 c
+	// id 19 c
+	// id 18 Q (read same as 6)
+	// id 17 shared with 1-3,17,22
+	private static final byte TYPE_BYTE = 20;
 	private static final byte TYPE_POPUP_ID = 16;
 	private static final byte TYPE_CLASS_ID = 15;
-	// id 14 unknown
+	// id 14 dSSSSS
 	private static final byte TYPE_SYSTEM_STRING = 13;
 	private static final byte TYPE_PLAYER_NAME = 12;
 	private static final byte TYPE_DOOR_NAME = 11;
 	private static final byte TYPE_INSTANCE_NAME = 10;
 	private static final byte TYPE_ELEMENT_NAME = 9;
-	// id 8 - same as 3
+	// id 8 - ddd
 	private static final byte TYPE_ZONE_NAME = 7;
 	private static final byte TYPE_LONG_NUMBER = 6;
 	private static final byte TYPE_CASTLE_NAME = 5;
@@ -136,13 +127,13 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 		return _smId;
 	}
 	
-	private final void append(SMParam param)
+	private void append(SMParam param)
 	{
 		if (_paramIndex >= _params.length)
 		{
 			_params = Arrays.copyOf(_params, _paramIndex + 1);
 			_smId.setParamCount(_paramIndex + 1);
-			_log.log(Level.INFO, "Wrong parameter count '" + (_paramIndex + 1) + "' for SystemMessageId: " + _smId);
+			_log.info("Wrong parameter count '" + (_paramIndex + 1) + "' for SystemMessageId: " + _smId);
 		}
 		
 		_params[_paramIndex++] = param;
@@ -327,7 +318,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 	 * @param type
 	 * @return
 	 */
-	public final T addElemental(int type)
+	public final T addAttribute(int type)
 	{
 		append(new SMParam(TYPE_ELEMENT_NAME, type));
 		return (T) this;
@@ -366,6 +357,12 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 		return (T) this;
 	}
 	
+	public final T addByte(int time)
+	{
+		append(new SMParam(TYPE_BYTE, time));
+		return (T) this;
+	}
+	
 	/**
 	 * Instance name from instantzonedata-e.dat
 	 * @param type id of instance
@@ -377,90 +374,81 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 		return (T) this;
 	}
 	
-	protected void writeParamsSize(int size)
+	protected void writeParamsSize(PacketWriter packet, int size)
 	{
-		writeC(size);
+		packet.writeC(size);
 	}
 	
-	protected void writeParamType(int type)
+	protected void writeParamType(PacketWriter packet, int type)
 	{
-		writeC(type);
+		packet.writeC(type);
 	}
 	
-	protected final void writeMe()
+	protected final void writeMe(PacketWriter packet)
 	{
-		writeParamsSize(_params.length);
+		writeParamsSize(packet, _params.length);
 		SMParam param;
 		for (int i = 0; i < _paramIndex; i++)
 		{
 			param = _params[i];
 			
-			writeParamType(param.getType());
+			writeParamType(packet, param.getType());
 			switch (param.getType())
 			{
-				case TYPE_TEXT:
-				case TYPE_PLAYER_NAME:
+				case TYPE_ELEMENT_NAME:
+				case TYPE_BYTE:
 				{
-					writeS(param.getStringValue());
+					packet.writeC(param.getIntValue());
 					break;
 				}
-				case TYPE_LONG_NUMBER:
+				
+				case TYPE_CASTLE_NAME:
+				case TYPE_SYSTEM_STRING:
+				case TYPE_INSTANCE_NAME:
+				case TYPE_CLASS_ID:
 				{
-					writeQ(param.getLongValue());
+					packet.writeH(param.getIntValue());
 					break;
 				}
+				
 				case TYPE_ITEM_NAME:
 				case TYPE_INT_NUMBER:
 				case TYPE_NPC_NAME:
 				case TYPE_DOOR_NAME:
 				{
-					writeD(param.getIntValue());
+					packet.writeD(param.getIntValue());
 					break;
 				}
+				
+				case TYPE_LONG_NUMBER:
+				{
+					packet.writeQ(param.getLongValue());
+					break;
+				}
+				
+				case TYPE_TEXT:
+				case TYPE_PLAYER_NAME:
+				{
+					packet.writeS(param.getStringValue());
+					break;
+				}
+				
 				case TYPE_SKILL_NAME:
 				{
 					final int[] array = param.getIntArrayValue();
-					final int _skillId = array[0];
-					final int _skillLevel = array[1];
-					writeD(_skillId); // SkillId
-					if (_skillLevel < 100)
-					{
-						writeH(_skillLevel); // SkillLevel
-						writeH(0);
-					}
-					else if (_skillLevel > 10000)
-					{
-						writeH((short) _skillLevel);
-						writeH(_skillLevel >> 16);
-					}
-					else
-					{
-						final int _maxLevel = SkillData.getInstance().getMaxLevel(_skillId);
-						writeH(_maxLevel);
-						writeH(_skillLevel);
-					}
+					packet.writeD(array[0]); // skill id
+					packet.writeH(array[1]); // skill level
+					packet.writeH(0x00); // skill sub level
 					break;
 				}
+				
 				case TYPE_POPUP_ID:
 				case TYPE_ZONE_NAME:
 				{
 					final int[] array = param.getIntArrayValue();
-					writeD(array[0]); // x
-					writeD(array[1]); // y
-					writeD(array[2]); // z
-					break;
-				}
-				case TYPE_CLASS_ID:
-				case TYPE_CASTLE_NAME:
-				case TYPE_INSTANCE_NAME:
-				case TYPE_SYSTEM_STRING:
-				{
-					writeH(param.getIntValue());
-					break;
-				}
-				case TYPE_ELEMENT_NAME:
-				{
-					writeC(param.getIntValue());
+					packet.writeD(array[0]); // x
+					packet.writeD(array[1]); // y
+					packet.writeD(array[2]); // z
 					break;
 				}
 			}
@@ -484,11 +472,13 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 					out.println(param.getStringValue());
 					break;
 				}
+				
 				case TYPE_LONG_NUMBER:
 				{
 					out.println(param.getLongValue());
 					break;
 				}
+				
 				case TYPE_ITEM_NAME:
 				case TYPE_CASTLE_NAME:
 				case TYPE_INT_NUMBER:
@@ -502,6 +492,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 					out.println(param.getIntValue());
 					break;
 				}
+				
 				case TYPE_POPUP_ID:
 				{
 					final int[] array = param.getIntArrayValue();
@@ -510,14 +501,15 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 					out.println(array[2]); // Value
 					break;
 				}
+				
 				case TYPE_SKILL_NAME:
 				{
 					final int[] array = param.getIntArrayValue();
 					out.println(array[0]); // SkillId
 					out.println(array[1]); // SkillLevel
-					out.println(array[2]);
 					break;
 				}
+				
 				case TYPE_ZONE_NAME:
 				{
 					final int[] array = param.getIntArrayValue();
@@ -528,117 +520,5 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 				}
 			}
 		}
-	}
-	
-	public final T getLocalizedMessage(String lang)
-	{
-		if (!Config.L2JMOD_MULTILANG_SM_ENABLE || (getSystemMessageId() == SystemMessageId.S13))
-		{
-			return (T) this;
-		}
-		
-		final SMLocalisation sml = getSystemMessageId().getLocalisation(lang);
-		if (sml == null)
-		{
-			return (T) this;
-		}
-		
-		final Object[] params = new Object[_paramIndex];
-		
-		SMParam param;
-		for (int i = 0; i < _paramIndex; i++)
-		{
-			param = _params[i];
-			switch (param.getType())
-			{
-				case TYPE_TEXT:
-				case TYPE_PLAYER_NAME:
-				{
-					params[i] = param.getValue();
-					break;
-				}
-				case TYPE_LONG_NUMBER:
-				{
-					params[i] = param.getValue();
-					break;
-				}
-				case TYPE_ITEM_NAME:
-				{
-					final L2Item item = ItemTable.getInstance().getTemplate(param.getIntValue());
-					params[i] = item == null ? "Unknown" : item.getName();
-					break;
-				}
-				case TYPE_CASTLE_NAME:
-				{
-					final Castle castle = CastleManager.getInstance().getCastleById(param.getIntValue());
-					params[i] = castle == null ? "Unknown" : castle.getName();
-					break;
-				}
-				case TYPE_INT_NUMBER:
-				{
-					params[i] = param.getValue();
-					break;
-				}
-				case TYPE_NPC_NAME:
-				{
-					final L2NpcTemplate template = NpcData.getInstance().getTemplate(param.getIntValue());
-					params[i] = template == null ? "Unknown" : template.getName();
-					break;
-				}
-				case TYPE_ELEMENT_NAME:
-				{
-					params[i] = Elementals.getElementName((byte) param.getIntValue());
-					break;
-				}
-				case TYPE_SYSTEM_STRING:
-				{
-					params[i] = "SYS-S-" + param.getIntValue(); // writeD(param.getIntValue());
-					break;
-				}
-				case TYPE_CLASS_ID:
-				{
-					params[i] = "CLASS_ID-N-" + param.getIntValue(); // writeD(param.getIntValue());
-					break;
-				}
-				case TYPE_INSTANCE_NAME:
-				{
-					final String instanceName = InstanceManager.getInstance().getInstanceIdName(param.getIntValue());
-					params[i] = instanceName == null ? "Unknown" : instanceName;
-					break;
-				}
-				case TYPE_DOOR_NAME:
-				{
-					final L2DoorInstance door = DoorData.getInstance().getDoor(param.getIntValue());
-					params[i] = door == null ? "Unknown" : door.getName();
-					break;
-				}
-				case TYPE_SKILL_NAME:
-				{
-					final int[] array = param.getIntArrayValue();
-					if (array[1] < 10000)
-					{
-						final Skill skill = SkillData.getInstance().getSkill(array[0], array[1]);
-						params[i] = skill == null ? "Unknown" : skill.getName();
-					}
-					else
-					{
-						final Skill skill = SkillData.getInstance().getSkill(array[0], array[1] >> 16);
-						params[i] = skill == null ? "Unknown" : skill.getName();
-					}
-					break;
-				}
-				case TYPE_ZONE_NAME:
-				{
-					final int[] array = param.getIntArrayValue();
-					final L2ZoneType zone = ZoneManager.getInstance().getZone(array[0], array[1], array[2], L2ZoneType.class);
-					params[i] = zone == null ? "Unknown ZONE-N-" + Arrays.toString(array) : zone.getName();
-					break;
-				}
-			}
-			i++;
-		}
-		
-		addString(sml.getLocalisation(params));
-		return (T) this;
 	}
 }

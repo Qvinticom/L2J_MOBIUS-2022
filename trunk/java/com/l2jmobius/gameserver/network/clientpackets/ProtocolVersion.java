@@ -16,73 +16,49 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.KeyPacket;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
 
 /**
  * This class ...
  * @version $Revision: 1.5.2.8.2.8 $ $Date: 2005/04/02 10:43:04 $
  */
-public final class ProtocolVersion extends L2GameClientPacket
+public final class ProtocolVersion implements IClientIncomingPacket
 {
-	private static final String _C__0E_PROTOCOLVERSION = "[C] 0E ProtocolVersion";
 	private static final Logger _logAccounting = Logger.getLogger("accounting");
 	
 	private int _version;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_version = readD();
+		_version = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		// this packet is never encrypted
 		if (_version == -2)
 		{
-			if (Config.DEBUG)
-			{
-				_log.info("Ping received");
-			}
 			// this is just a ping attempt from the new C2 client
-			getClient().close((L2GameServerPacket) null);
+			client.close(null);
 		}
 		else if (!Config.PROTOCOL_LIST.contains(_version))
 		{
-			final LogRecord record = new LogRecord(Level.WARNING, "Wrong protocol");
-			record.setParameters(new Object[]
-			{
-				_version,
-				getClient()
-			});
-			_logAccounting.log(record);
-			final KeyPacket pk = new KeyPacket(getClient().enableCrypt(), 0);
-			getClient().setProtocolOk(false);
-			getClient().close(pk);
+			_logAccounting.warning("Wrong protocol version " + _version + ", " + client);
+			client.setProtocolOk(false);
+			client.close(new KeyPacket(client.enableCrypt(), 0));
 		}
 		else
 		{
-			if (Config.DEBUG)
-			{
-				_log.fine("Client Protocol Revision is ok: " + _version);
-			}
-			
-			final KeyPacket pk = new KeyPacket(getClient().enableCrypt(), 1);
-			getClient().sendPacket(pk);
-			getClient().setProtocolOk(true);
+			client.sendPacket(new KeyPacket(client.enableCrypt(), 1));
+			client.setProtocolOk(true);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__0E_PROTOCOLVERSION;
 	}
 }

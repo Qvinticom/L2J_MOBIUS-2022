@@ -16,857 +16,814 @@
  */
 package instances.KartiasLabyrinth;
 
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.ai.npc.FighterAI;
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.commons.util.CommonUtil;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2QuestGuardInstance;
-import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
-import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
+import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
+import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.util.Util;
 
 import instances.AbstractInstance;
-import quests.Q00494_IncarnationOfGreedZellakaGroup.Q00494_IncarnationOfGreedZellakaGroup;
-import quests.Q00495_IncarnationOfJealousyPellineGroup.Q00495_IncarnationOfJealousyPellineGroup;
-import quests.Q00496_IncarnationOfGluttonyKaliosGroup.Q00496_IncarnationOfGluttonyKaliosGroup;
-import quests.Q00497_IncarnationOfGreedZellakaSolo.Q00497_IncarnationOfGreedZellakaSolo;
-import quests.Q00498_IncarnationOfJealousyPellineSolo.Q00498_IncarnationOfJealousyPellineSolo;
-import quests.Q00499_IncarnationOfGluttonyKaliosSolo.Q00499_IncarnationOfGluttonyKaliosSolo;
 
 /**
- * Kartia's Labyrinth
- * @author Mobius
+ * Kartia Labyrinth instance zone.
+ * @author St3eT
  */
 public final class KartiasLabyrinth extends AbstractInstance
 {
 	// NPCs
-	private static final int RESEARCHER = 33647;
-	private static final int ADOLPH = 33608;
-	private static final int BARTON = 33610;
-	private static final int HAYUK = 33612;
-	private static final int ELIYAH = 33614;
-	private static final int ELISE = 33616;
-	private static final int ADOLPH_88 = 33609;
-	private static final int BARTON_88 = 33611;
-	private static final int HAYUK_88 = 33613;
-	private static final int ELIYAH_88 = 33615;
-	private static final int ELISE_88 = 33617;
-	private static final int ADOLPH_93 = 33620;
-	private static final int BARTON_93 = 33622;
-	private static final int HAYUK_93 = 33624;
-	private static final int ELIYAH_93 = 33626;
-	private static final int ELISE_93 = 33628;
-	private static final int ADOLPH_98 = 33631;
-	private static final int BARTON_98 = 33633;
-	private static final int HAYUK_98 = 33635;
-	private static final int ELIYAH_98 = 33637;
-	private static final int ELISE_98 = 33639;
-	private static final List<Integer> BOSSES = new ArrayList<>();
-	static
+	private static final int KARTIA_RESEARCHER = 33647;
+	private static final int BOZ_ENERGY = 18830;
+	private static final int[] ADOLPH =
 	{
-		BOSSES.add(19253);
-		BOSSES.add(19254);
-		BOSSES.add(19255);
-		BOSSES.add(25882);
-		BOSSES.add(25883);
-		BOSSES.add(25884);
-	}
-	private static final List<Integer> MONSTERS = new ArrayList<>();
-	static
+		33608,
+		33619,
+		33630,
+	};
+	// @formatter:off
+	private static final int[] MONSTERS =
 	{
-		MONSTERS.add(19220);
-		MONSTERS.add(19221);
-		MONSTERS.add(19222);
-		MONSTERS.add(19223);
-		MONSTERS.add(19224);
-		MONSTERS.add(19225);
-		MONSTERS.add(19226);
-		MONSTERS.add(19227);
-		MONSTERS.add(19228);
-		MONSTERS.add(19229);
-		MONSTERS.add(19230);
-		MONSTERS.add(19231);
-		MONSTERS.add(19232);
-		MONSTERS.add(19233);
-		MONSTERS.add(19234);
-		MONSTERS.add(19235);
-		MONSTERS.add(19236);
-		MONSTERS.add(19237);
-	}
-	// Locations
-	private static final Location START_LOC = new Location(-107481, -10435, -12064);
-	private static final Location VANGUARD_SPAWN_LOC = new Location(-109032, -10440, -11949, 32800);
+		19220, 19221, 19222, // Solo 85
+		19223, 19224, 19225, // Solo 90
+		19226, 19227, 19228, // Solo 95
+		19229, 19230, 19231, // Group 85
+		19232, 19233, 19234, // Group 90
+		19235, 19236, 19237, // Group 95
+	};
+	// @formatter:on
+	private static final int[] BOSSES =
+	{
+		19253, // Zellaka (Solo 85)
+		25882, // Zellaka (Group 85)
+		19254, // Pelline (Solo 90)
+		25883, // Pelline (Group 90)
+		19255, // Kalios (Solo 95)
+		25884, // Kalios (Group 95)
+	};
+	private static final int[] MINI_BOSSES =
+	{
+		19222, // Kartia Dimensional Watchman (solo 85)
+		19225, // Kartia Dimensional Watchman (solo 90)
+		19228, // Kartia Dimensional Watchman (solo 95)
+		19231, // Kartia Dimensional Watchman (group 85)
+		19234, // Kartia Dimensional Watchman (group 90)
+		19237, // Kartia Dimensional Watchman (group 95)
+	};
+	private static final int[] MIRRORS =
+	{
+		33798, // Life Plunderer (85)
+		33799, // Life Plunderer (90)
+		33800, // Life Plunderer (95)
+	};
+	private static final int[] PRISONERS =
+	{
+		33641, // Kartia Prisoner (85)
+		33643, // Kartia Prisoner (90)
+		33645, // Kartia Prisoner (95)
+	};
+	// Skills
+	private static final SkillHolder MIRROR_SKILL_1 = new SkillHolder(15401, 1);
+	private static final SkillHolder MIRROR_SKILL_2 = new SkillHolder(14065, 1);
+	private static final SkillHolder BOSS_STONE = new SkillHolder(15155, 1);
+	private static final SkillHolder PRISONER_HOLD = new SkillHolder(14988, 1);
+	private static final SkillHolder PRISONER_CLEANSE = new SkillHolder(14992, 1);
+	// Zones
+	private static final int KARTIA_85_DETECT_1 = 12020;
+	private static final int KARTIA_85_DETECT_2 = 12021;
+	private static final int KARTIA_85_TELEPORT_1 = 12022;
+	private static final int KARTIA_85_TELEPORT_2 = 12023;
+	private static final int KARTIA_85_TELEPORT_3 = 12024;
+	private static final int KARTIA_90_DETECT_1 = 12025;
+	private static final int KARTIA_90_DETECT_2 = 12026;
+	private static final int KARTIA_90_TELEPORT_1 = 12027;
+	private static final int KARTIA_90_TELEPORT_2 = 12028;
+	private static final int KARTIA_90_TELEPORT_3 = 12029;
+	private static final int KARTIA_95_DETECT_1 = 12030;
+	private static final int KARTIA_95_DETECT_2 = 12031;
+	private static final int KARTIA_95_TELEPORT_1 = 12032;
+	private static final int KARTIA_95_TELEPORT_2 = 12033;
+	private static final int KARTIA_95_TELEPORT_3 = 12034;
 	// Misc
-	private static final int DOOR_1 = 16170002;
-	private static final int DOOR_2 = 16170003;
-	private static final int SOLO_85_TEMPLATE_ID = 205;
-	private static final int SOLO_90_TEMPLATE_ID = 206;
-	private static final int SOLO_95_TEMPLATE_ID = 207;
-	private static final int PARTY_85_TEMPLATE_ID = 208;
-	private static final int PARTY_90_TEMPLATE_ID = 209;
-	private static final int PARTY_95_TEMPLATE_ID = 210;
-	private static final int MIN_LVL_85 = 85;
-	private static final int MIN_LVL_90 = 90;
-	private static final int MIN_LVL_95 = 95;
-	private static final int MAX_LVL_85 = 89;
-	private static final int MAX_LVL_90 = 94;
-	private static final int MAX_LVL_95 = 99;
-	private static final String KARTIA_ENTRY_VAR = "Last_Kartia_entry";
-	private static final String KARTIA_PARTY_ENTRY_VAR = "Last_Kartia_party_entry";
-	
-	class KartiaWorld extends InstanceWorld
-	{
-		L2QuestGuardInstance adolph = null;
-		L2QuestGuardInstance barton = null;
-		L2QuestGuardInstance hayuk = null;
-		L2QuestGuardInstance eliyah = null;
-		L2QuestGuardInstance elise = null;
-		final List<L2PcInstance> playersInside = new ArrayList<>();
-		final List<L2Npc> savedSpawns = new CopyOnWriteArrayList<>();
-	}
+	private static final int TEMPLATE_ID_SOLO_85 = 205;
+	private static final int TEMPLATE_ID_SOLO_90 = 206;
+	private static final int TEMPLATE_ID_SOLO_95 = 207;
+	private static final int TEMPLATE_ID_GROUP_85 = 208;
+	private static final int TEMPLATE_ID_GROUP_90 = 209;
+	private static final int TEMPLATE_ID_GROUP_95 = 210;
 	
 	public KartiasLabyrinth()
 	{
-		super(KartiasLabyrinth.class.getSimpleName());
-		addStartNpc(RESEARCHER, ADOLPH);
-		addFirstTalkId(RESEARCHER, ADOLPH, BARTON, HAYUK, ELIYAH, ELISE);
-		addTalkId(RESEARCHER, ADOLPH, BARTON, HAYUK, ELIYAH, ELISE);
-		addKillId(MONSTERS);
+		addStartNpc(KARTIA_RESEARCHER);
+		addFirstTalkId(ADOLPH);
+		addTalkId(ADOLPH);
+		addSpawnId(BOZ_ENERGY);
+		addSpawnId(BOSSES);
+		addAttackId(MINI_BOSSES);
+		addAttackId(MIRRORS);
+		addMoveFinishedId(MINI_BOSSES);
+		addMoveFinishedId(PRISONERS);
+		addRouteFinishedId(MONSTERS);
+		setCreatureKillId(this::onCreatureKill, MONSTERS);
+		setCreatureKillId(this::onBossKill, BOSSES);
+		setCreatureSeeId(this::onCreatureSee, MONSTERS);
+		addEnterZoneId(KARTIA_85_DETECT_1, KARTIA_85_DETECT_2, KARTIA_85_TELEPORT_1, KARTIA_85_TELEPORT_2, KARTIA_85_TELEPORT_3);
+		addEnterZoneId(KARTIA_90_DETECT_1, KARTIA_90_DETECT_2, KARTIA_90_TELEPORT_1, KARTIA_90_TELEPORT_2, KARTIA_90_TELEPORT_3);
+		addEnterZoneId(KARTIA_95_DETECT_1, KARTIA_95_DETECT_2, KARTIA_95_TELEPORT_1, KARTIA_95_TELEPORT_2, KARTIA_95_TELEPORT_3);
+		addInstanceCreatedId(TEMPLATE_ID_SOLO_85, TEMPLATE_ID_SOLO_90, TEMPLATE_ID_SOLO_95, TEMPLATE_ID_GROUP_85, TEMPLATE_ID_GROUP_90, TEMPLATE_ID_GROUP_95);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = null;
 		switch (event)
 		{
-			case "33608-1.htm":
-			case "33608-2.htm":
-			case "33647-1.htm":
-			case "33647-2.htm":
-			case "33647-3.htm":
-			case "33647-4.htm":
+			case "enter_85_solo":
 			{
-				htmltext = event;
+				enterInstance(player, npc, TEMPLATE_ID_SOLO_85);
 				break;
 			}
-			case "request_zellaka_solo":
+			case "enter_90_solo":
 			{
-				if (!checkConditions(player, SOLO_85_TEMPLATE_ID))
-				{
-					htmltext = "33647-8.htm";
-				}
-				else if ((player.getLevel() >= MIN_LVL_85) && (player.getLevel() <= MAX_LVL_85))
-				{
-					enterInstance(player, new KartiaWorld(), "KartiasLabyrinthIncarnationOfGreedZellaka.xml", SOLO_85_TEMPLATE_ID);
-					htmltext = "33647-5.htm";
-				}
-				else
-				{
-					htmltext = "33647-6.htm";
-				}
+				enterInstance(player, npc, TEMPLATE_ID_SOLO_90);
 				break;
 			}
-			case "request_pelline_solo":
+			case "enter_95_solo":
 			{
-				if (!checkConditions(player, SOLO_90_TEMPLATE_ID))
-				{
-					htmltext = "33647-8.htm";
-				}
-				else if ((player.getLevel() >= MIN_LVL_90) && (player.getLevel() <= MAX_LVL_90))
-				{
-					enterInstance(player, new KartiaWorld(), "KartiasLabyrinthIncarnationOfJealousyPelline.xml", SOLO_90_TEMPLATE_ID);
-					htmltext = "33647-5.htm";
-				}
-				else
-				{
-					htmltext = "33647-6.htm";
-				}
+				enterInstance(player, npc, TEMPLATE_ID_SOLO_95);
 				break;
 			}
-			case "request_kalios_solo":
+			case "enter_85_group":
 			{
-				if (!checkConditions(player, SOLO_95_TEMPLATE_ID))
-				{
-					htmltext = "33647-8.htm";
-				}
-				else if ((player.getLevel() >= MIN_LVL_95) && (player.getLevel() <= MAX_LVL_95))
-				{
-					enterInstance(player, new KartiaWorld(), "KartiasLabyrinthIncarnationOfGluttonyKalios.xml", SOLO_95_TEMPLATE_ID);
-					htmltext = "33647-5.htm";
-				}
-				else
-				{
-					htmltext = "33647-6.htm";
-				}
+				enterInstance(player, npc, TEMPLATE_ID_GROUP_85);
 				break;
 			}
-			case "request_zellaka_party":
+			case "enter_90_group":
 			{
-				if ((player.getParty() == null) || !player.getParty().isLeader(player))
-				{
-					htmltext = "33647-7.htm";
-				}
-				else
-				{
-					for (L2PcInstance member : player.getParty().getMembers())
-					{
-						if (!checkConditions(member, PARTY_85_TEMPLATE_ID) || (member.getLevel() < MIN_LVL_85) || (member.getLevel() > MAX_LVL_85) || (Util.calculateDistance(player, member, false, false) > 500))
-						{
-							return "33647-8.htm";
-						}
-					}
-					final KartiaWorld world = new KartiaWorld();
-					enterInstance(player, world, "KartiasLabyrinthIncarnationOfGreedZellakaParty.xml", PARTY_85_TEMPLATE_ID);
-					for (L2PcInstance member : player.getParty().getMembers())
-					{
-						world.addAllowed(member.getObjectId());
-						member.teleToLocation(player, true);
-					}
-					htmltext = "33647-5.htm";
-				}
+				enterInstance(player, npc, TEMPLATE_ID_GROUP_90);
 				break;
 			}
-			case "request_pelline_party":
+			case "enter_95_group":
 			{
-				if ((player.getParty() == null) || !player.getParty().isLeader(player))
-				{
-					htmltext = "33647-7.htm";
-				}
-				else
-				{
-					for (L2PcInstance member : player.getParty().getMembers())
-					{
-						if (!checkConditions(member, PARTY_90_TEMPLATE_ID) || (member.getLevel() < MIN_LVL_90) || (member.getLevel() > MAX_LVL_90) || (Util.calculateDistance(player, member, false, false) > 500))
-						{
-							return "33647-8.htm";
-						}
-					}
-					final KartiaWorld world = new KartiaWorld();
-					enterInstance(player, world, "KartiasLabyrinthIncarnationOfJealousyPellineParty.xml", PARTY_90_TEMPLATE_ID);
-					for (L2PcInstance member : player.getParty().getMembers())
-					{
-						world.addAllowed(member.getObjectId());
-						member.teleToLocation(player, true);
-					}
-					htmltext = "33647-5.htm";
-				}
+				enterInstance(player, npc, TEMPLATE_ID_GROUP_95);
 				break;
 			}
-			case "request_kalios_party":
+			default:
 			{
-				if ((player.getParty() == null) || !player.getParty().isLeader(player))
+				final Instance instance = npc.getInstanceWorld();
+				if (instance != null)
 				{
-					htmltext = "33647-7.htm";
-				}
-				else
-				{
-					for (L2PcInstance member : player.getParty().getMembers())
+					switch (event)
 					{
-						if (!checkConditions(member, PARTY_95_TEMPLATE_ID) || (member.getLevel() < MIN_LVL_95) || (member.getLevel() > MAX_LVL_95) || (Util.calculateDistance(player, member, false, false) > 500))
+						case "adolph-01.html":
+						case "adolph-03.html":
 						{
-							return "33647-8.htm";
+							return event;
 						}
-					}
-					final KartiaWorld world = new KartiaWorld();
-					enterInstance(player, world, "KartiasLabyrinthIncarnationOfGluttonyKaliosParty.xml", PARTY_95_TEMPLATE_ID);
-					for (L2PcInstance member : player.getParty().getMembers())
-					{
-						world.addAllowed(member.getObjectId());
-						member.teleToLocation(player, true);
-					}
-					htmltext = "33647-5.htm";
-				}
-				break;
-			}
-			case "remove_barton":
-			{
-				htmltext = removeVanguard(player, BARTON);
-				break;
-			}
-			case "remove_hayuk":
-			{
-				htmltext = removeVanguard(player, HAYUK);
-				break;
-			}
-			case "remove_eliyah":
-			{
-				htmltext = removeVanguard(player, ELIYAH);
-				break;
-			}
-			case "remove_elise":
-			{
-				htmltext = removeVanguard(player, ELISE);
-				break;
-			}
-			case "checkStatus":
-			{
-				final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-				if ((world == null) || !(world instanceof KartiaWorld) || (world.getStatus() > 28))
-				{
-					cancelQuestTimers("checkStatus");
-					return null;
-				}
-				// Remove monsters killed by guards.
-				for (L2Npc spawn : ((KartiaWorld) world).savedSpawns)
-				{
-					if (spawn.isDead())
-					{
-						((KartiaWorld) world).savedSpawns.remove(spawn);
-					}
-				}
-				// Act according to world status.
-				switch (world.getStatus())
-				{
-					case 2:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
+						case "sendBarton":
+						case "sendHayuk":
+						case "sendEliyah":
+						case "sendElise":
 						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave2", world.getInstanceId()));
-						}
-						break;
-					}
-					case 3:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave3", world.getInstanceId()));
-						}
-						break;
-					}
-					case 4:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave4", world.getInstanceId()));
-						}
-						break;
-					}
-					case 5:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave5", world.getInstanceId()));
-						}
-						break;
-					}
-					case 6:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave6", world.getInstanceId()));
-						}
-						break;
-					}
-					case 7:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave7", world.getInstanceId()));
-						}
-						break;
-					}
-					case 8:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave8", world.getInstanceId()));
-						}
-						break;
-					}
-					case 9:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave9", world.getInstanceId()));
-						}
-						break;
-					}
-					case 10:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave10", world.getInstanceId()));
-						}
-						break;
-					}
-					case 11:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave11", world.getInstanceId()));
-						}
-						break;
-					}
-					case 12:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave12", world.getInstanceId()));
-						}
-						break;
-					}
-					case 13:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave13", world.getInstanceId()));
-						}
-						break;
-					}
-					case 14:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave14", world.getInstanceId()));
-						}
-						break;
-					}
-					case 15:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave15", world.getInstanceId()));
-						}
-						break;
-					}
-					case 16:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave16", world.getInstanceId()));
-						}
-						break;
-					}
-					case 17:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave17", world.getInstanceId()));
-						}
-						break;
-					}
-					case 18:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave18", world.getInstanceId()));
-						}
-						break;
-					}
-					case 19:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave19", world.getInstanceId()));
-							broadcastScreenMessage(player, NpcStringId.STAGE_2);
-							openDoor(DOOR_1, world.getInstanceId());
-						}
-						break;
-					}
-					case 20:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave20", world.getInstanceId()));
-							broadcastScreenMessage(player, NpcStringId.STAGE_3);
-							openDoor(DOOR_2, world.getInstanceId());
-						}
-						break;
-					}
-					case 21:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave21", world.getInstanceId()));
-						}
-						break;
-					}
-					case 22:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave22", world.getInstanceId()));
-						}
-						break;
-					}
-					case 23:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave23", world.getInstanceId()));
-						}
-						break;
-					}
-					case 24:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave24", world.getInstanceId()));
-						}
-						break;
-					}
-					case 25:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave25", world.getInstanceId()));
-						}
-						break;
-					}
-					case 26:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							world.incStatus();
-							((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave26", world.getInstanceId()));
-							for (L2Npc monster : ((KartiaWorld) world).savedSpawns)
+							if (npc.isScriptValue(0))
 							{
-								if (BOSSES.contains(monster.getId()))
-								{
-									monster.startAbnormalVisualEffect(AbnormalVisualEffect.FLESH_STONE);
-									monster.setIsImmobilized(true);
-									monster.setIsInvul(true);
-									monster.broadcastInfo();
-									break;
-								}
+								npc.setScriptValue(1);
+								instance.openCloseDoor(instance.getTemplateParameters().getInt("firstDoorId"), true);
+								instance.spawnGroup("HELPERS").stream().filter(n -> n.getId() == instance.getTemplateParameters().getInt(event.replace("send", "helper"))).forEach(n -> n.deleteMe());
+								getTimers().addTimer("TELEPORT_PLAYER", 3000, npc, player);
+								return "adolph-04.html";
 							}
+							return "adolph-02.html";
 						}
-						break;
-					}
-					case 27:
-					{
-						if (((KartiaWorld) world).savedSpawns.size() == 1)
-						{
-							world.incStatus();
-							final L2Character boss = ((KartiaWorld) world).savedSpawns.get(0);
-							boss.stopAbnormalVisualEffect(AbnormalVisualEffect.FLESH_STONE);
-							boss.setIsImmobilized(false);
-							boss.setIsInvul(false);
-							boss.broadcastInfo();
-						}
-						break;
-					}
-					case 28:
-					{
-						if (((KartiaWorld) world).savedSpawns.isEmpty())
-						{
-							// Check Instance Quests.
-							for (L2PcInstance plr : ((KartiaWorld) world).playersInside)
-							{
-								switch (world.getTemplateId())
-								{
-									case SOLO_85_TEMPLATE_ID:
-									{
-										if ((plr != null) && (plr.getInstanceId() == world.getInstanceId()))
-										{
-											final QuestState qs = player.getQuestState(Q00497_IncarnationOfGreedZellakaSolo.class.getSimpleName());
-											if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
-											{
-												qs.setCond(2, true);
-											}
-										}
-										break;
-									}
-									case SOLO_90_TEMPLATE_ID:
-									{
-										if ((plr != null) && (plr.getInstanceId() == world.getInstanceId()))
-										{
-											final QuestState qs = player.getQuestState(Q00498_IncarnationOfJealousyPellineSolo.class.getSimpleName());
-											if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
-											{
-												qs.setCond(2, true);
-											}
-										}
-										break;
-									}
-									case SOLO_95_TEMPLATE_ID:
-									{
-										if ((plr != null) && (plr.getInstanceId() == world.getInstanceId()))
-										{
-											final QuestState qs = player.getQuestState(Q00499_IncarnationOfGluttonyKaliosSolo.class.getSimpleName());
-											if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
-											{
-												qs.setCond(2, true);
-											}
-										}
-										break;
-									}
-									case PARTY_85_TEMPLATE_ID:
-									{
-										if ((plr != null) && (plr.getInstanceId() == world.getInstanceId()))
-										{
-											final QuestState qs = player.getQuestState(Q00494_IncarnationOfGreedZellakaGroup.class.getSimpleName());
-											if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
-											{
-												qs.setCond(2, true);
-											}
-										}
-										break;
-									}
-									case PARTY_90_TEMPLATE_ID:
-									{
-										if ((plr != null) && (plr.getInstanceId() == world.getInstanceId()))
-										{
-											final QuestState qs = player.getQuestState(Q00495_IncarnationOfJealousyPellineGroup.class.getSimpleName());
-											if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
-											{
-												qs.setCond(2, true);
-											}
-										}
-										break;
-									}
-									case PARTY_95_TEMPLATE_ID:
-									{
-										if ((plr != null) && (plr.getInstanceId() == world.getInstanceId()))
-										{
-											final QuestState qs = player.getQuestState(Q00496_IncarnationOfGluttonyKaliosGroup.class.getSimpleName());
-											if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
-											{
-												qs.setCond(2, true);
-											}
-										}
-										break;
-									}
-								}
-							}
-							// 5 minute exit timer.
-							InstanceManager.getInstance().getInstance(world.getInstanceId()).setDuration(Config.INSTANCE_FINISH_TIME);
-							InstanceManager.getInstance().getInstance(world.getInstanceId()).setEmptyDestroyTime(0);
-							// Stop quest timer.
-							world.incStatus();
-						}
-						break;
 					}
 				}
 				break;
 			}
 		}
-		return htmltext;
+		return super.onAdvEvent(event, npc, player);
+	}
+	
+	@Override
+	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	{
+		final Instance instance = (npc != null) ? npc.getInstanceWorld() : player.getInstanceWorld();
+		if (instance != null)
+		{
+			switch (event)
+			{
+				case "TELEPORT_PLAYER":
+				{
+					instance.openCloseDoor(instance.getTemplateParameters().getInt("firstDoorId"), false);
+					instance.setStatus(1); // Used for notify helper's AI
+					player.teleToLocation(instance.getTemplateParameters().getLocation("playerLoc"));
+					manageProgressInInstance(instance);
+					break;
+				}
+				case "MOVE_TO_MIDDLE":
+				{
+					if (npc != null)
+					{
+						if (npc.getInstanceWorld().getParameters().getInt("ROOM", 1) <= 2)
+						{
+							final Location loc = instance.getTemplateParameters().getLocation("middlePointRoom1");
+							final Location moveTo = new Location(loc.getX() + getRandom(-100, 100), loc.getY() + getRandom(-100, 100), loc.getZ());
+							npc.setIsRunning(true);
+							addMoveToDesire(npc, moveTo, 6);
+							getTimers().addTimer("START_MOVE", 15000, npc, null);
+						}
+						else if (npc.getInstanceWorld().getParameters().getInt("ROOM", 1) == 3)
+						{
+							final Location loc = instance.getTemplateParameters().getLocation("middlePointRoom3");
+							final Location moveTo = new Location(loc.getX() + getRandom(-200, 200), loc.getY() + getRandom(-200, 200), loc.getZ());
+							npc.setIsRunning(true);
+							addMoveToDesire(npc, moveTo, 23);
+						}
+					}
+					break;
+				}
+				case "START_MOVE":
+				{
+					if (npc != null)
+					{
+						WalkingManager.getInstance().startMoving(npc, instance.getTemplateParameters().getString(getRandomBoolean() ? "route1" : "route2"));
+						getTimers().addTimer("CHANGE_TARGETABLE_STATUS", 5000, npc, null);
+					}
+					break;
+				}
+				case "CHANGE_TARGETABLE_STATUS":
+				{
+					if (npc != null)
+					{
+						npc.setTargetable(true);
+					}
+					break;
+				}
+				case "START_3RD_ROOM":
+				{
+					instance.openCloseDoor(instance.getTemplateParameters().getInt("thirdDoorId"), false);
+					instance.getAliveNpcs(MONSTERS).forEach(n -> n.doDie(null));
+					getTimers().addTimer("CALL_PROGRESS", 1000, n -> manageProgressInInstance(instance));
+					instance.getParameters().set("TELEPORT_3_ENABLED", true);
+					break;
+				}
+				case "MIRROR_DESPAWN":
+				{
+					showOnScreenMsg(instance, NpcStringId.THE_LIFE_PLUNDERER_HAS_DISAPPEARED, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					manageProgressInInstance(instance);
+					break;
+				}
+			}
+		}
+	}
+	
+	@Override
+	public void onInstanceCreated(Instance instance, L2PcInstance player)
+	{
+		instance.spawnGroup("PRISONERS").forEach(npc ->
+		{
+			final SkillHolder poison = npc.getParameters().getSkillHolder("poison_skill");
+			poison.getSkill().applyEffects(npc, npc);
+			PRISONER_HOLD.getSkill().applyEffects(npc, npc);
+			
+		});
+		
+		instance.getParameters().set("TELEPORT_1_ENABLED", true);
+		if (!isSoloKartia(instance))
+		{
+			getTimers().addTimer("CALL_PROGRESS", 2500, n -> manageProgressInInstance(instance));
+		}
+	}
+	
+	public void onCreatureKill(OnCreatureDeath event)
+	{
+		final L2Npc npc = (L2Npc) event.getTarget();
+		final Instance instance = npc.getInstanceWorld();
+		
+		if (instance != null)
+		{
+			final StatsSet param = instance.getParameters();
+			if (param.getBoolean("BOSS_KILL_OPEN_DOOR", false) && CommonUtil.contains(MINI_BOSSES, npc.getId()))
+			{
+				instance.setParameter("BOSS_KILL_OPEN_DOOR", true);
+				instance.openCloseDoor(instance.getTemplateParameters().getInt("thirdDoorId"), true);
+				instance.setStatus(3); // Used for notify helper's AI
+			}
+			else if (param.getBoolean("CONTINUE_AFTER_KILL", false) && instance.getAliveNpcs(MONSTERS).isEmpty())
+			{
+				param.set("CONTINUE_AFTER_KILL", false);
+				getTimers().addTimer("CALL_PROGRESS", 5000, n -> manageProgressInInstance(instance));
+			}
+		}
+	}
+	
+	public void onBossKill(OnCreatureDeath event)
+	{
+		final L2Npc npc = (L2Npc) event.getTarget();
+		final Instance instance = npc.getInstanceWorld();
+		
+		if (instance != null)
+		{
+			if (isSoloKartia(instance))
+			{
+				final StatsSet tempParam = instance.getTemplateParameters();
+				final int xp = tempParam.getInt("soloEXP");
+				final int xp_rnd = tempParam.getInt("SoloEXP_Rand");
+				final int sp = tempParam.getInt("SoloSP");
+				final int sp_rnd = tempParam.getInt("SoloSP_Rand");
+				
+				instance.getPlayers().forEach(player ->
+				{
+					addExpAndSp(player, (xp + getRandom(xp_rnd)), (sp + getRandom(sp_rnd)));
+				});
+			}
+			instance.finishInstance();
+		}
+	}
+	
+	@Override
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	{
+		final Instance instance = npc.getInstanceWorld();
+		if (instance != null)
+		{
+			if (CommonUtil.contains(MINI_BOSSES, npc.getId()))
+			{
+				if (npc.isScriptValue(0) && (npc.getCurrentHpPercent() < 50) && instance.getParameters().getBoolean("BOSS_CAN_ESCAPE", false))
+				{
+					instance.setParameter("BOSS_CAN_ESCAPE", false);
+					npc.setScriptValue(1);
+					npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.NOT_BAD_FOR_A_BUNCH_OF_HUMANS_I_M_LEAVING);
+					npc.disableCoreAI(true);
+					addMoveToDesire(npc, instance.getTemplateParameters().getLocation("bossEscapeLoc1"), 23);
+				}
+			}
+			else
+			{
+				npc.setUndying(true);
+				if (npc.isScriptValue(0) && (npc.getCurrentHpPercent() < 10))
+				{
+					npc.setScriptValue(1);
+					showOnScreenMsg(instance, NpcStringId.BURNING_BLOOD_S_EFFECT_IS_FELT, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					MIRROR_SKILL_1.getSkill().applyEffects(attacker, attacker);
+					MIRROR_SKILL_2.getSkill().applyEffects(attacker, attacker);
+					manageProgressInInstance(instance);
+					getTimers().addTimer("SUICIDE", 5000, n -> npc.doDie(null));
+					getTimers().cancelTimer("MIRROR_DESPAWN", npc, null);
+				}
+			}
+		}
+		return super.onAttack(npc, attacker, damage, isSummon);
+	}
+	
+	@Override
+	public String onEnterZone(L2Character character, L2ZoneType zone)
+	{
+		final Instance instance = character.getInstanceWorld();
+		if ((instance != null) && character.isPlayer())
+		{
+			final L2PcInstance player = character.getActingPlayer();
+			switch (zone.getId())
+			{
+				case KARTIA_85_DETECT_1:
+				case KARTIA_90_DETECT_1:
+				case KARTIA_95_DETECT_1:
+				{
+					if (instance.getParameters().getBoolean("SECOND_ROOM_OPENED", true))
+					{
+						instance.getParameters().set("SECOND_ROOM_OPENED", false);
+						getTimers().addTimer("CLOSE_SECOND_DOORS", 20000, n ->
+						{
+							instance.openCloseDoor(instance.getTemplateParameters().getInt("secondDoorId"), false);
+							instance.getParameters().set("TELEPORT_2_ENABLED", true);
+						});
+					}
+					break;
+				}
+				case KARTIA_85_DETECT_2:
+				case KARTIA_90_DETECT_2:
+				case KARTIA_95_DETECT_2:
+				{
+					if (instance.getParameters().getBoolean("LAST_ROOM_OPENED", true))
+					{
+						instance.getParameters().set("LAST_ROOM_OPENED", false);
+						getTimers().addTimer("START_3RD_ROOM", 10000, null, character.getActingPlayer());
+					}
+					break;
+				}
+				case KARTIA_85_TELEPORT_1:
+				case KARTIA_90_TELEPORT_1:
+				case KARTIA_95_TELEPORT_1:
+				{
+					if (instance.getParameters().getBoolean("TELEPORT_1_ENABLED", false))
+					{
+						player.teleToLocation(instance.getTemplateParameters().getLocation("teleportZone1_loc"));
+					}
+					break;
+				}
+				case KARTIA_85_TELEPORT_2:
+				case KARTIA_90_TELEPORT_2:
+				case KARTIA_95_TELEPORT_2:
+				{
+					if (instance.getParameters().getBoolean("TELEPORT_2_ENABLED", false))
+					{
+						player.teleToLocation(instance.getTemplateParameters().getLocation("teleportZone2_loc"));
+					}
+					break;
+				}
+				case KARTIA_85_TELEPORT_3:
+				case KARTIA_90_TELEPORT_3:
+				case KARTIA_95_TELEPORT_3:
+				{
+					if (instance.getParameters().getBoolean("TELEPORT_3_ENABLED", false))
+					{
+						player.teleToLocation(instance.getTemplateParameters().getLocation("teleportZone3_loc"));
+					}
+					break;
+				}
+			}
+		}
+		return super.onEnterZone(character, zone);
+	}
+	
+	@Override
+	public void onMoveFinished(L2Npc npc)
+	{
+		final Instance instance = npc.getInstanceWorld();
+		if (instance != null)
+		{
+			if (CommonUtil.contains(PRISONERS, npc.getId()))
+			{
+				if (npc.isScriptValue(0))
+				{
+					npc.setScriptValue(1);
+					final Location moveTo = new Location(npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ());
+					addMoveToDesire(npc, moveTo, 23);
+				}
+				else
+				{
+					npc.deleteMe();
+				}
+			}
+			else // Mini bosses
+			{
+				if (npc.isScriptValue(1))
+				{
+					npc.setScriptValue(2);
+					addMoveToDesire(npc, instance.getTemplateParameters().getLocation("bossEscapeLoc2"), 23);
+				}
+				else if (npc.isScriptValue(2))
+				{
+					instance.setParameter("MINIBOSS_SURVIVED", true);
+					instance.openCloseDoor(instance.getTemplateParameters().getInt("thirdDoorId"), true);
+					instance.setStatus(3); // Used for notify helper's AI
+					npc.deleteMe();
+				}
+			}
+		}
+		super.onMoveFinished(npc);
+	}
+	
+	@Override
+	public void onRouteFinished(L2Npc npc)
+	{
+		final Instance instance = npc.getInstanceWorld();
+		if (instance != null)
+		{
+			final Location moveTo = new Location(npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ());
+			npc.setRandomWalking(true);
+			addMoveToDesire(npc, moveTo, 0);
+		}
+	}
+	
+	@Override
+	public String onSpawn(L2Npc npc)
+	{
+		final Instance instance = npc.getInstanceWorld();
+		if (instance != null)
+		{
+			if (npc.getId() == BOZ_ENERGY)
+			{
+				npc.setDisplayEffect(2);
+			}
+			else if (CommonUtil.contains(BOSSES, npc.getId()))
+			{
+				npc.setTarget(npc);
+				npc.doCast(BOSS_STONE.getSkill());
+				((L2Attackable) npc).setCanReturnToSpawnPoint(false);
+				npc.setRandomWalking(false);
+				npc.setTargetable(false);
+				npc.setIsInvul(true);
+			}
+		}
+		return super.onSpawn(npc);
+	}
+	
+	private void manageProgressInInstance(Instance instance)
+	{
+		final StatsSet param = instance.getParameters();
+		final int room = param.getInt("ROOM", 1);
+		final int stage = param.getInt("STAGE", 1);
+		final int wave = param.getInt("WAVE", 1);
+		
+		if (room == 1)
+		{
+			switch (stage)
+			{
+				case 1:
+					switch (wave)
+					{
+						case 1:
+							showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
+							moveMonsters(instance.spawnGroup("ROOM1_STAGE1_WAVE1"));
+							param.set("WAVE", 2);
+							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							break;
+						case 2:
+							moveMonsters(instance.spawnGroup("ROOM1_STAGE1_WAVE2"));
+							param.set("WAVE", 3);
+							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							break;
+						case 3:
+							moveMonsters(instance.spawnGroup("ROOM1_STAGE1_WAVE3"));
+							param.set("WAVE", 1);
+							param.set("STAGE", 2);
+							param.set("CONTINUE_AFTER_KILL", true);
+							break;
+					}
+					break;
+				case 2:
+					switch (wave)
+					{
+						case 1:
+							showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
+							moveMonsters(instance.spawnGroup("ROOM1_STAGE2_WAVE1"));
+							param.set("WAVE", 2);
+							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							break;
+						case 2:
+							moveMonsters(instance.spawnGroup("ROOM1_STAGE2_WAVE2"));
+							param.set("WAVE", 3);
+							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							break;
+						case 3:
+							moveMonsters(instance.spawnGroup("ROOM1_STAGE2_WAVE3"));
+							param.set("WAVE", 1);
+							param.set("STAGE", 3);
+							param.set("CONTINUE_AFTER_KILL", true);
+							break;
+					}
+					break;
+				case 3:
+					switch (wave)
+					{
+						case 1:
+							showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
+							moveMonsters(instance.spawnGroup("ROOM1_STAGE3_WAVE1"));
+							param.set("WAVE", 2);
+							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							break;
+						case 2:
+							moveMonsters(instance.spawnGroup("ROOM1_STAGE3_WAVE2"));
+							param.set("WAVE", 3);
+							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							break;
+						case 3:
+							moveMonsters(instance.spawnGroup("ROOM1_STAGE3_WAVE3"));
+							if (isSoloKartia(instance))
+							{
+								param.set("WAVE", 4);
+								
+								getTimers().addTimer("PRISONERS_ESCAPE", 5000, n ->
+								{
+									instance.getAliveNpcs(PRISONERS).forEach(prisoner ->
+									{
+										param.set("SURVIVOR_COUNT", param.getInt("SURVIVOR_COUNT", 0) + 1);
+										prisoner.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.I_AM_SAFE_THANKS_TO_YOU_I_WILL_BEGIN_SUPPORTING_AS_SOON_AS_PREPARATIONS_ARE_COMPLETE);
+										prisoner.setTargetable(false);
+										PRISONER_CLEANSE.getSkill().applyEffects(prisoner, prisoner);
+										final Location loc = instance.getTemplateParameters().getLocation("prisonerEscapeLoc");
+										addMoveToDesire(prisoner, loc, 23);
+									});
+								});
+							}
+							else
+							{
+								param.set("STAGE", 4);
+								param.set("WAVE", 1);
+							}
+							param.set("CONTINUE_AFTER_KILL", true);
+							break;
+						case 4:
+							showOnScreenMsg(instance, NpcStringId.THE_LIFE_PLUNDERER_S_TRUE_FORM_IS_REVEALED, ExShowScreenMessage.TOP_CENTER, 5000, true);
+							instance.spawnGroup("ROOM1_STAGE3_WAVE4");
+							instance.getAliveNpcs(BOZ_ENERGY).forEach(npc -> npc.deleteMe());
+							instance.getAliveNpcs(MIRRORS).forEach(npc -> getTimers().addTimer("MIRROR_DESPAWN", 180000, npc, null));
+							param.set("ROOM", 2);
+							param.set("STAGE", 1);
+							param.set("WAVE", 1);
+							break;
+					}
+					break;
+				case 4:
+					switch (wave)
+					{
+						case 1:
+							showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
+							moveMonsters(instance.spawnGroup("ROOM1_STAGE4_WAVE1"));
+							param.set("WAVE", 2);
+							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							break;
+						case 2:
+							moveMonsters(instance.spawnGroup("ROOM1_STAGE4_WAVE2"));
+							param.set("WAVE", 3);
+							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							break;
+						case 3:
+							moveMonsters(instance.spawnGroup("ROOM1_STAGE4_WAVE3"));
+							param.set("WAVE", 1);
+							param.set("STAGE", 5);
+							param.set("CONTINUE_AFTER_KILL", true);
+							break;
+					}
+					break;
+				case 5:
+					switch (wave)
+					{
+						case 1:
+							showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
+							moveMonsters(instance.spawnGroup("ROOM1_STAGE5_WAVE1"));
+							param.set("WAVE", 2);
+							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							break;
+						case 2:
+							moveMonsters(instance.spawnGroup("ROOM1_STAGE5_WAVE2"));
+							param.set("ROOM", 2);
+							param.set("STAGE", 1);
+							param.set("WAVE", 1);
+							param.set("CONTINUE_AFTER_KILL", true);
+							
+							getTimers().addTimer("PRISONERS_ESCAPE", 5000, n ->
+							{
+								instance.getAliveNpcs(PRISONERS).forEach(prisoner ->
+								{
+									param.set("SURVIVOR_COUNT", param.getInt("SURVIVOR_COUNT", 0) + 1);
+									prisoner.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.I_AM_SAFE_THANKS_TO_YOU_I_WILL_BEGIN_SUPPORTING_AS_SOON_AS_PREPARATIONS_ARE_COMPLETE);
+									prisoner.setTargetable(false);
+									PRISONER_CLEANSE.getSkill().applyEffects(prisoner, prisoner);
+									final Location loc = instance.getTemplateParameters().getLocation("prisonerEscapeLoc");
+									addMoveToDesire(prisoner, loc, 23);
+								});
+							});
+							break;
+					}
+					break;
+			}
+		}
+		else if (room == 2)
+		{
+			instance.getParameters().set("TELEPORT_1_ENABLED", false);
+			instance.setParameter("BOSS_CAN_ESCAPE", true);
+			instance.setParameter("BOSS_KILL_OPEN_DOOR", true);
+			instance.spawnGroup("ROOM2_STAGE1_WAVE1");
+			instance.openCloseDoor(instance.getTemplateParameters().getInt("secondDoorId"), true);
+			instance.setStatus(2); // Used for notify helper's AI
+			instance.getAliveNpcs(BOZ_ENERGY).forEach(npc -> npc.deleteMe());
+			param.set("ROOM", 3);
+			param.set("STAGE", 1);
+			param.set("WAVE", 1);
+		}
+		else if (room == 3)
+		{
+			switch (stage)
+			{
+				case 1:
+					showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
+					moveMonsters(instance.spawnGroup("ROOM3_STAGE1_WAVE1"));
+					param.set("STAGE", 2);
+					param.set("CONTINUE_AFTER_KILL", true);
+					
+					final Location survivorLoc = instance.getTemplateParameters().getLocation("middlePointRoom3");
+					final int survivorCount = param.getInt("SURVIVOR_COUNT");
+					for (int i = 0; i < survivorCount; i++)
+					{
+						final Location loc = new Location(survivorLoc.getX() + getRandom(-200, 200), survivorLoc.getY() + getRandom(-200, 200), survivorLoc.getZ(), 47595);
+						addSpawn(instance.getTemplateParameters().getInt("helperSurvivor"), loc, false, 0, false, instance.getId());
+					}
+					break;
+				case 2:
+					showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
+					moveMonsters(instance.spawnGroup("ROOM3_STAGE2_WAVE1"));
+					param.set("STAGE", 3);
+					param.set("CONTINUE_AFTER_KILL", true);
+					break;
+				case 3:
+					showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
+					moveMonsters(instance.spawnGroup("ROOM3_STAGE3_WAVE1"));
+					
+					if (isSoloKartia(instance))
+					{
+						instance.getAliveNpcs(BOSSES).forEach(npc ->
+						{
+							npc.stopSkillEffects(BOSS_STONE.getSkill());
+							npc.setTargetable(true);
+							npc.setIsInvul(false);
+							final Location loc = instance.getTemplateParameters().getLocation("middlePointRoom3");
+							final Location moveTo = new Location(loc.getX() + getRandom(-200, 200), loc.getY() + getRandom(-200, 200), loc.getZ());
+							addMoveToDesire(npc, moveTo, 23);
+						});
+					}
+					else
+					{
+						param.set("STAGE", 4);
+						param.set("CONTINUE_AFTER_KILL", true);
+					}
+					break;
+				case 4:
+					showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
+					moveMonsters(instance.spawnGroup("ROOM3_STAGE4_WAVE1"));
+					param.set("STAGE", 5);
+					param.set("CONTINUE_AFTER_KILL", true);
+					break;
+				case 5:
+					showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
+					moveMonsters(instance.spawnGroup("ROOM3_STAGE4_WAVE1"));
+					instance.getAliveNpcs(BOSSES).forEach(npc ->
+					{
+						npc.stopSkillEffects(BOSS_STONE.getSkill());
+						npc.setTargetable(true);
+						npc.setIsInvul(false);
+						npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.THE_RITUAL_IS_COMPLETE_NOW_I_WILL_SHOW_YOU_HELL);
+						final Location loc = instance.getTemplateParameters().getLocation("middlePointRoom3");
+						final Location moveTo = new Location(loc.getX() + getRandom(-200, 200), loc.getY() + getRandom(-200, 200), loc.getZ());
+						addMoveToDesire(npc, moveTo, 23);
+					});
+					break;
+			}
+		}
+	}
+	
+	private void moveMonsters(List<L2Npc> monsterList)
+	{
+		int delay = 500;
+		for (L2Npc npc : monsterList)
+		{
+			final Instance world = npc.getInstanceWorld();
+			if (npc.isAttackable() && (world != null))
+			{
+				if (world.getParameters().getInt("ROOM", 1) <= 2)
+				{
+					npc.setRandomWalking(false);
+					npc.setTargetable(false);
+					getTimers().addTimer("MOVE_TO_MIDDLE", delay, npc, null);
+					delay += 250;
+				}
+				else if (world.getParameters().getInt("ROOM", 1) == 3)
+				{
+					onTimerEvent("MOVE_TO_MIDDLE", null, npc, null);
+				}
+				((L2Attackable) npc).setCanReturnToSpawnPoint(false);
+				npc.initSeenCreatures();
+			}
+		}
+	}
+	
+	public void onCreatureSee(OnCreatureSee event)
+	{
+		final L2Character creature = event.getSeen();
+		final L2Npc npc = (L2Npc) event.getSeer();
+		final Instance world = npc.getInstanceWorld();
+		
+		if ((world != null) && creature.isPlayer() && npc.isScriptValue(0))
+		{
+			npc.setScriptValue(1);
+			addAttackDesire(npc, creature);
+		}
 	}
 	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return npc.getId() + ".htm";
+		return "adolph.html";
 	}
 	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	private boolean isSoloKartia(Instance instance)
 	{
-		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(killer);
-		if ((world == null) || !(world instanceof KartiaWorld))
-		{
-			return null;
-		}
-		((KartiaWorld) world).savedSpawns.remove(npc);
-		return super.onKill(npc, killer, isSummon);
+		return (instance.getTemplateId() == TEMPLATE_ID_SOLO_85) || (instance.getTemplateId() == TEMPLATE_ID_SOLO_90) || (instance.getTemplateId() == TEMPLATE_ID_SOLO_95);
 	}
 	
-	@Override
-	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
+	public static void main(String[] args)
 	{
-		if ((world.getTemplateId() == SOLO_85_TEMPLATE_ID) || (world.getTemplateId() == SOLO_90_TEMPLATE_ID) || (world.getTemplateId() == SOLO_95_TEMPLATE_ID))
-		{
-			player.getVariables().set(KARTIA_ENTRY_VAR, System.currentTimeMillis());
-		}
-		else
-		{
-			player.getVariables().set(KARTIA_PARTY_ENTRY_VAR, System.currentTimeMillis());
-		}
-		world.addAllowed(player.getObjectId());
-		((KartiaWorld) world).playersInside.add(player);
-		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
-	}
-	
-	@Override
-	protected boolean checkConditions(L2PcInstance player, int templateId)
-	{
-		long lastEntry = 0;
-		if ((templateId == SOLO_85_TEMPLATE_ID) || (templateId == SOLO_90_TEMPLATE_ID) || (templateId == SOLO_95_TEMPLATE_ID))
-		{
-			lastEntry = player.getVariables().getLong(KARTIA_ENTRY_VAR, 0);
-		}
-		else
-		{
-			lastEntry = player.getVariables().getLong(KARTIA_PARTY_ENTRY_VAR, 0);
-		}
-		final Calendar entryResetTime = Calendar.getInstance();
-		entryResetTime.set(Calendar.HOUR, 6);
-		entryResetTime.set(Calendar.MINUTE, 30);
-		entryResetTime.set(Calendar.AM_PM, Calendar.AM);
-		return lastEntry < entryResetTime.getTimeInMillis();
-	}
-	
-	private String removeVanguard(L2PcInstance player, int removedNpcId)
-	{
-		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		if ((world == null) || !(world instanceof KartiaWorld) || (world.getStatus() > 0))
-		{
-			return null;
-		}
-		world.setStatus(1);
-		switch (world.getTemplateId())
-		{
-			case SOLO_85_TEMPLATE_ID:
-			case PARTY_85_TEMPLATE_ID:
-			{
-				if (removedNpcId != BARTON)
-				{
-					((KartiaWorld) world).barton = (L2QuestGuardInstance) addSpawn(BARTON_88, VANGUARD_SPAWN_LOC, true, 0, false, world.getInstanceId());
-				}
-				if (removedNpcId != HAYUK)
-				{
-					((KartiaWorld) world).hayuk = (L2QuestGuardInstance) addSpawn(HAYUK_88, VANGUARD_SPAWN_LOC, true, 0, false, world.getInstanceId());
-				}
-				if (removedNpcId != ELIYAH)
-				{
-					((KartiaWorld) world).eliyah = (L2QuestGuardInstance) addSpawn(ELIYAH_88, VANGUARD_SPAWN_LOC, true, 0, false, world.getInstanceId());
-				}
-				if (removedNpcId != ELISE)
-				{
-					((KartiaWorld) world).elise = (L2QuestGuardInstance) addSpawn(ELISE_88, VANGUARD_SPAWN_LOC, true, 0, false, world.getInstanceId());
-				}
-				((KartiaWorld) world).adolph = (L2QuestGuardInstance) addSpawn(ADOLPH_88, VANGUARD_SPAWN_LOC, true, 0, false, world.getInstanceId());
-				break;
-			}
-			case SOLO_90_TEMPLATE_ID:
-			case PARTY_90_TEMPLATE_ID:
-			{
-				if (removedNpcId != BARTON)
-				{
-					((KartiaWorld) world).barton = (L2QuestGuardInstance) addSpawn(BARTON_93, VANGUARD_SPAWN_LOC, true, 0, false, world.getInstanceId());
-				}
-				if (removedNpcId != HAYUK)
-				{
-					((KartiaWorld) world).hayuk = (L2QuestGuardInstance) addSpawn(HAYUK_93, VANGUARD_SPAWN_LOC, true, 0, false, world.getInstanceId());
-				}
-				if (removedNpcId != ELIYAH)
-				{
-					((KartiaWorld) world).eliyah = (L2QuestGuardInstance) addSpawn(ELIYAH_93, VANGUARD_SPAWN_LOC, true, 0, false, world.getInstanceId());
-				}
-				if (removedNpcId != ELISE)
-				{
-					((KartiaWorld) world).elise = (L2QuestGuardInstance) addSpawn(ELISE_93, VANGUARD_SPAWN_LOC, true, 0, false, world.getInstanceId());
-				}
-				((KartiaWorld) world).adolph = (L2QuestGuardInstance) addSpawn(ADOLPH_93, VANGUARD_SPAWN_LOC, true, 0, false, world.getInstanceId());
-				break;
-			}
-			case SOLO_95_TEMPLATE_ID:
-			case PARTY_95_TEMPLATE_ID:
-			{
-				if (removedNpcId != BARTON)
-				{
-					((KartiaWorld) world).barton = (L2QuestGuardInstance) addSpawn(BARTON_98, VANGUARD_SPAWN_LOC, true, 0, false, world.getInstanceId());
-				}
-				if (removedNpcId != HAYUK)
-				{
-					((KartiaWorld) world).hayuk = (L2QuestGuardInstance) addSpawn(HAYUK_98, VANGUARD_SPAWN_LOC, true, 0, false, world.getInstanceId());
-				}
-				if (removedNpcId != ELIYAH)
-				{
-					((KartiaWorld) world).eliyah = (L2QuestGuardInstance) addSpawn(ELIYAH_98, VANGUARD_SPAWN_LOC, true, 0, false, world.getInstanceId());
-				}
-				if (removedNpcId != ELISE)
-				{
-					((KartiaWorld) world).elise = (L2QuestGuardInstance) addSpawn(ELISE_98, VANGUARD_SPAWN_LOC, true, 0, false, world.getInstanceId());
-				}
-				((KartiaWorld) world).adolph = (L2QuestGuardInstance) addSpawn(ADOLPH_98, VANGUARD_SPAWN_LOC, true, 0, false, world.getInstanceId());
-				break;
-			}
-		}
-		// Start combat.
-		world.incStatus();
-		if (player.getParty() != null)
-		{
-			for (L2PcInstance member : player.getParty().getMembers())
-			{
-				member.teleToLocation(VANGUARD_SPAWN_LOC, true);
-			}
-		}
-		else
-		{
-			player.teleToLocation(VANGUARD_SPAWN_LOC, true);
-		}
-		if (((KartiaWorld) world).adolph != null)
-		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new FighterAI(player, ((KartiaWorld) world).adolph), 1000);
-		}
-		if (((KartiaWorld) world).barton != null)
-		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new FighterAI(player, ((KartiaWorld) world).barton), 1000);
-		}
-		if (((KartiaWorld) world).hayuk != null)
-		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new FighterAI(player, ((KartiaWorld) world).hayuk), 1000);
-		}
-		if (((KartiaWorld) world).eliyah != null)
-		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new FighterAI(player, ((KartiaWorld) world).eliyah), 1000);
-		}
-		if (((KartiaWorld) world).elise != null)
-		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new FighterAI(player, ((KartiaWorld) world).elise), 1000);
-		}
-		((KartiaWorld) world).savedSpawns.addAll(spawnGroup("wave1", world.getInstanceId()));
-		startQuestTimer("checkStatus", 5000, null, player, true);
-		broadcastScreenMessage(player, NpcStringId.STAGE_1);
-		return "33608-1.htm";
-	}
-	
-	private void broadcastScreenMessage(L2PcInstance player, NpcStringId stringId)
-	{
-		if (player.getParty() != null)
-		{
-			for (L2PcInstance member : player.getParty().getMembers())
-			{
-				if (member == null)
-				{
-					continue;
-				}
-				member.sendPacket(new ExShowScreenMessage(2, -1, 2, 0, 0, 0, 0, true, 5000, false, null, stringId, null));
-			}
-		}
-		else
-		{
-			player.sendPacket(new ExShowScreenMessage(2, -1, 2, 0, 0, 0, 0, true, 5000, false, null, stringId, null));
-		}
+		new KartiasLabyrinth();
 	}
 }

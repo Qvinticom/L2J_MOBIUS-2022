@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
+import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -61,7 +62,7 @@ public class Q00509_AClansFame extends Quest
 	
 	public Q00509_AClansFame()
 	{
-		super(509, Q00509_AClansFame.class.getSimpleName(), "A Clan's Fame");
+		super(509);
 		addStartNpc(VALDIS);
 		addTalkId(VALDIS);
 		addKillId(RAID_BOSS);
@@ -172,7 +173,7 @@ public class Q00509_AClansFame extends Quest
 			{
 				if ((clan == null) || !player.isClanLeader())
 				{
-					qs.exitQuest(true);
+					qs.exitQuest(QuestType.REPEATABLE);
 					return "31331-6.html";
 				}
 				

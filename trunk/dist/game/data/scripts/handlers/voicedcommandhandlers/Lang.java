@@ -22,7 +22,6 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.util.StringUtil;
 
 public class Lang implements IVoicedCommandHandler
 {
@@ -42,13 +41,13 @@ public class Lang implements IVoicedCommandHandler
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
 		if (params == null)
 		{
-			final StringBuilder html = StringUtil.startAppend(100);
+			final StringBuilder html = new StringBuilder(100);
 			for (String lang : Config.L2JMOD_MULTILANG_ALLOWED)
 			{
-				StringUtil.append(html, "<button value=\"", lang.toUpperCase(), "\" action=\"bypass -h voice .lang ", lang, "\" width=60 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br>");
+				html.append("<button value=\"" + lang.toUpperCase() + "\" action=\"bypass -h voice .lang " + lang + "\" width=60 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br>");
 			}
 			
-			msg.setFile(activeChar.getHtmlPrefix(), "html/mods/Lang/LanguageSelect.htm");
+			msg.setFile(activeChar.getHtmlPrefix(), "data/html/mods/Lang/LanguageSelect.htm");
 			msg.replace("%list%", html.toString());
 			activeChar.sendPacket(msg);
 			return true;
@@ -60,11 +59,11 @@ public class Lang implements IVoicedCommandHandler
 			final String lang = st.nextToken().trim();
 			if (activeChar.setLang(lang))
 			{
-				msg.setFile(activeChar.getHtmlPrefix(), "html/mods/Lang/Ok.htm");
+				msg.setFile(activeChar.getHtmlPrefix(), "data/html/mods/Lang/Ok.htm");
 				activeChar.sendPacket(msg);
 				return true;
 			}
-			msg.setFile(activeChar.getHtmlPrefix(), "html/mods/Lang/Error.htm");
+			msg.setFile(activeChar.getHtmlPrefix(), "data/html/mods/Lang/Error.htm");
 			activeChar.sendPacket(msg);
 			return true;
 		}

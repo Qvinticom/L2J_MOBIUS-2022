@@ -16,14 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeApplicantInfo;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Sdw
  */
-public class ExPledgeWaitingListApplied extends L2GameServerPacket
+public class ExPledgeWaitingListApplied implements IClientOutgoingPacket
 {
 	private final PledgeApplicantInfo _pledgePlayerRecruitInfo;
 	private final PledgeRecruitInfo _pledgeRecruitInfo;
@@ -35,18 +37,18 @@ public class ExPledgeWaitingListApplied extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x143);
+		OutgoingPackets.EX_PLEDGE_WAITING_LIST_APPLIED.writeId(packet);
 		
-		writeD(_pledgeRecruitInfo.getClan().getId());
-		writeS(_pledgeRecruitInfo.getClan().getName());
-		writeS(_pledgeRecruitInfo.getClan().getLeaderName());
-		writeD(_pledgeRecruitInfo.getClan().getLevel());
-		writeD(_pledgeRecruitInfo.getClan().getMembersCount());
-		writeD(_pledgeRecruitInfo.getKarma());
-		writeS(_pledgeRecruitInfo.getInformation());
-		writeS(_pledgePlayerRecruitInfo.getMessage());
+		packet.writeD(_pledgeRecruitInfo.getClan().getId());
+		packet.writeS(_pledgeRecruitInfo.getClan().getName());
+		packet.writeS(_pledgeRecruitInfo.getClan().getLeaderName());
+		packet.writeD(_pledgeRecruitInfo.getClan().getLevel());
+		packet.writeD(_pledgeRecruitInfo.getClan().getMembersCount());
+		packet.writeD(_pledgeRecruitInfo.getKarma());
+		packet.writeS(_pledgeRecruitInfo.getInformation());
+		packet.writeS(_pledgePlayerRecruitInfo.getMessage());
+		return true;
 	}
 }

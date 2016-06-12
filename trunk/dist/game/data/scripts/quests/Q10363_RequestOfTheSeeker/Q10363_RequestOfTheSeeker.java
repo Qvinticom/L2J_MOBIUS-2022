@@ -16,10 +16,15 @@
  */
 package quests.Q10363_RequestOfTheSeeker;
 
-import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.commons.util.CommonUtil;
+import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.events.EventType;
+import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSocialAction;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -30,48 +35,38 @@ import quests.Q10362_CertificationOfTheSeeker.Q10362_CertificationOfTheSeeker;
 
 /**
  * Request of the Seeker (10363)
- * @author spider, gyo
+ * @author Gladicek
  */
-public class Q10363_RequestOfTheSeeker extends Quest
+public final class Q10363_RequestOfTheSeeker extends Quest
 {
 	// NPCs
 	private static final int NAGEL = 33450;
 	private static final int CELIN = 33451;
+	private static final int STALKER = 22992;
+	private static final int CRAWLER = 22991;
 	private static final int[] CORPSES =
 	{
 		32961,
 		32962,
 		32963,
-		32964
+		32964,
 	};
-	// Monsters
-	private static final int CRAWLER = 22991;
-	private static final int STALKER = 22992;
-	private static final int RESURRECTED_VENGEFUL_SPIRIT1 = 19157;
-	private static final int RESURRECTED_VENGEFUL_SPIRIT2 = 19158;
-	// Rewards
-	private static final int ADENA_REWARD = 48000;
-	private static final int EXP_REWARD = 72000;
-	private static final int SP_REWARD = 16;
-	private static final ItemHolder HEALING_POTIONS = new ItemHolder(1060, 100);
-	private static final ItemHolder WOODEN_HELMET = new ItemHolder(43, 1);
-	// Social Action IDs
-	private static final int LAUGH = 10;
-	private static final int DANCE = 12;
-	private static final int SORROW = 13;
-	// Others
+	// Items
+	private static final int WOODEN_HELMET = 43;
+	private static final int HEALING_POTION = 1060;
+	// Misc
 	private static final int MIN_LEVEL = 12;
 	private static final int MAX_LEVEL = 20;
-	private static final int distanceLimit = 70;
+	private static final int SOCIAL_SORROW = 13;
 	
 	public Q10363_RequestOfTheSeeker()
 	{
-		super(10363, Q10363_RequestOfTheSeeker.class.getSimpleName(), "Request of the Seeker");
+		super(10363);
 		addStartNpc(NAGEL);
 		addTalkId(NAGEL, CELIN);
-		addSocialActionSeeId(CORPSES);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33450-08.htm");
-		addCondCompletedQuest(Q10362_CertificationOfTheSeeker.class.getSimpleName(), "33450-08.htm");
+		addSpawnId(CORPSES);
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33450-07.htm");
+		addCondCompletedQuest(Q10362_CertificationOfTheSeeker.class.getSimpleName(), "33450-07.htm");
 	}
 	
 	@Override
@@ -87,48 +82,42 @@ public class Q10363_RequestOfTheSeeker extends Quest
 		switch (event)
 		{
 			case "33450-02.htm":
+			case "33451-02.htm":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33450-03.htm": // start quest
+			case "33450-03.htm":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "33450-06.html":
+			case "33450-06.htm":
 			{
-				if (qs.getCond() == 6)
+				if (qs.isCond(6))
 				{
-					qs.setCond(7);
-					showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_3, ExShowScreenMessage.TOP_CENTER, 10000);
+					showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_3, ExShowScreenMessage.TOP_CENTER, 4500);
+					qs.setCond(7, true);
 					htmltext = event;
+					break;
 				}
 				break;
 			}
-			case "33451-02.html":
-			{
-				htmltext = event;
-				break;
-			}
-			case "33451-03.html":
+			
+			case "33451-03.htm":
 			{
 				if (qs.isCond(7))
 				{
-					giveAdena(player, ADENA_REWARD, true);
-					addExpAndSp(player, EXP_REWARD, SP_REWARD);
-					giveItems(player, WOODEN_HELMET);
-					giveItems(player, HEALING_POTIONS);
+					giveItems(player, WOODEN_HELMET, 1);
+					giveAdena(player, 480, true);
+					giveItems(player, HEALING_POTION, 100);
+					addExpAndSp(player, 70200, 16);
 					qs.exitQuest(false, true);
 					htmltext = event;
+					break;
 				}
 				break;
-			}
-			case "life_over":
-			{
-				npc.deleteMe();
-				return null;
 			}
 		}
 		return htmltext;
@@ -139,34 +128,50 @@ public class Q10363_RequestOfTheSeeker extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
+		
 		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
-				htmltext = npc.getId() == NAGEL ? "33450-01.htm" : getNoQuestMsg(player);
+				if (npc.getId() == NAGEL)
+				{
+					htmltext = "33450-01.htm";
+					break;
+				}
 				break;
 			}
 			case State.STARTED:
 			{
-				switch (qs.getCond())
+				if (npc.getId() == NAGEL)
 				{
-					case 1:
-					case 2:
-					case 3:
-					case 4:
-					case 5:
+					switch (qs.getCond())
 					{
-						htmltext = npc.getId() == NAGEL ? "33450-04.html" : getNoQuestMsg(player);
-						break;
+						case 1:
+						case 2:
+						case 3:
+						case 4:
+						case 5:
+						{
+							htmltext = "33450-04.htm";
+							break;
+						}
+						case 6:
+						{
+							htmltext = "33450-05.htm";
+							break;
+						}
+						case 7:
+						{
+							htmltext = "33450-06.htm";
+							break;
+						}
 					}
-					case 6:
+				}
+				else if (npc.getId() == CELIN)
+				{
+					if (qs.isCond(7))
 					{
-						htmltext = npc.getId() == NAGEL ? "33450-05.html" : getNoQuestMsg(player);
-						break;
-					}
-					case 7:
-					{
-						htmltext = npc.getId() == NAGEL ? "33450-06.html" : "33451-01.html";
+						htmltext = "33451-01.htm";
 						break;
 					}
 				}
@@ -174,104 +179,98 @@ public class Q10363_RequestOfTheSeeker extends Quest
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == NAGEL ? "33450-07.html" : "33451-04.html";
+				htmltext = npc.getId() == NAGEL ? "33450-07.htm" : "33451-04.htm";
 				break;
 			}
 		}
 		return htmltext;
 	}
 	
-	@Override
-	public String onSocialActionSee(L2Npc npc, L2PcInstance caster, int actionId)
+	@RegisterEvent(EventType.ON_PLAYER_SOCIAL_ACTION)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void onPlayerSocialAction(OnPlayerSocialAction event)
 	{
-		if ((caster == null) || (npc == null) || (caster.getTarget() == null) || !caster.getTarget().isNpc())
-		{
-			return super.onSocialActionSee(npc, caster, actionId);
-		}
+		final L2PcInstance player = event.getActiveChar();
+		final QuestState qs = getQuestState(player, false);
 		
-		final double distance = caster.calculateDistance(caster.getTarget().getLocation(), true, false);
-		final QuestState qs = getQuestState(caster, false);
-		if (actionId == SORROW)
+		final L2Object target = player.getTarget();
+		
+		if ((target != null) && target.isNpc() && CommonUtil.contains(CORPSES, target.getId()))
 		{
-			if (distance > distanceLimit)
+			final L2Npc npc = (L2Npc) player.getTarget();
+			
+			if (!player.isInsideRadius(npc, 120, true, true))
 			{
-				showOnScreenMsg(caster, NpcStringId.YOU_ARE_TOO_FAR_FROM_THE_CORPSE_TO_SHOW_YOUR_CONDOLENCES, ExShowScreenMessage.TOP_CENTER, 10000);
+				showOnScreenMsg(player, NpcStringId.YOU_ARE_TOO_FAR_FROM_THE_CORPSE, ExShowScreenMessage.TOP_CENTER, 4500);
+				npc.deleteMe();
 			}
-			else if (qs != null)
+			else if (event.getSocialActionId() != SOCIAL_SORROW)
 			{
+				addSpawn((getRandomBoolean() ? CRAWLER : STALKER), npc, false, 0, true);
+				npc.deleteMe();
+			}
+			else if ((qs == null) || qs.isCompleted())
+			{
+				showOnScreenMsg(player, NpcStringId.GRUDGE_OF_YE_SAGIRA_VICTIMS_HAVE_BEEN_RELIEVED_WITH_YOUR_TEARS, ExShowScreenMessage.TOP_CENTER, 4500);
+				npc.deleteMe();
+			}
+			else
+			{
+				NpcStringId npcStringId = null;
+				
 				switch (qs.getCond())
 				{
 					case 1:
 					{
-						showOnScreenMsg(caster, NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_ONE_CORPSE, ExShowScreenMessage.TOP_CENTER, 10000);
+						npcStringId = NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_ONE_CORPSE;
 						qs.setCond(2, true);
 						break;
 					}
 					case 2:
 					{
-						showOnScreenMsg(caster, NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_A_SECOND_CORPSE, ExShowScreenMessage.TOP_CENTER, 10000);
+						npcStringId = NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_A_SECOND_CORPSE;
 						qs.setCond(3, true);
 						break;
 					}
 					case 3:
 					{
-						showOnScreenMsg(caster, NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_A_THIRD_CORPSE, ExShowScreenMessage.TOP_CENTER, 10000);
+						npcStringId = NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_A_THIRD_CORPSE;
 						qs.setCond(4, true);
 						break;
 					}
 					case 4:
 					{
-						showOnScreenMsg(caster, NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_A_FOURTH_CORPSE, ExShowScreenMessage.TOP_CENTER, 10000);
+						npcStringId = NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_A_FOURTH_CORPSE;
 						qs.setCond(5, true);
 						break;
 					}
 					case 5:
 					{
-						showOnScreenMsg(caster, NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_A_FIFTH_CORPSE, ExShowScreenMessage.TOP_CENTER, 10000);
+						npcStringId = NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_A_FIFTH_CORPSE;
 						qs.setCond(6, true);
 						break;
 					}
-					default:
+					case 6:
+					case 7:
 					{
-						showOnScreenMsg(caster, NpcStringId.GRUDGE_OF_YE_SAGIRA_VICTIMS_HAVE_BEEN_RELIEVED_WITH_YOUR_TEARS, ExShowScreenMessage.TOP_CENTER, 10000);
+						npcStringId = NpcStringId.GRUDGE_OF_YE_SAGIRA_VICTIMS_HAVE_BEEN_RELIEVED_WITH_YOUR_TEARS;
 						break;
 					}
 				}
-			}
-			else
-			{
-				showOnScreenMsg(caster, NpcStringId.GRUDGE_OF_YE_SAGIRA_VICTIMS_HAVE_BEEN_RELIEVED_WITH_YOUR_TEARS, ExShowScreenMessage.TOP_CENTER, 10000);
 				npc.deleteMe();
+				
+				if (npcStringId != null)
+				{
+					showOnScreenMsg(player, npcStringId, ExShowScreenMessage.TOP_CENTER, 4500);
+				}
 			}
 		}
-		else if ((actionId == LAUGH) || (actionId == DANCE))
-		{
-			if (distance > distanceLimit)
-			{
-				showOnScreenMsg(caster, NpcStringId.YOU_ARE_TOO_FAR_FROM_THE_CORPSE, ExShowScreenMessage.TOP_CENTER, 10000);
-			}
-			else if ((qs == null) || (qs.getState() != State.STARTED))
-			{
-				addSpawn(getRandom(1) == 0 ? CRAWLER : STALKER, npc.getLocation());
-			}
-			else
-			{
-				showOnScreenMsg(caster, NpcStringId.DON_T_TOY_WITH_THE_DEAD, ExShowScreenMessage.TOP_CENTER, 10000);
-				final L2Npc Spirit1 = addSpawn(RESURRECTED_VENGEFUL_SPIRIT1, new Location(caster.getX() - getRandom(100), caster.getY() - getRandom(100), caster.getZ(), 0));
-				Spirit1.setCurrentHp(Spirit1.getMaxHp() / 2);
-				addAttackDesire(Spirit1, caster);
-				startQuestTimer("life_over", 20000, Spirit1, caster);
-				final L2Npc Spirit2 = addSpawn(RESURRECTED_VENGEFUL_SPIRIT2, new Location(caster.getX() - getRandom(100), caster.getY() - getRandom(100), caster.getZ(), 0));
-				Spirit2.setCurrentHp(Spirit2.getMaxHp() / 2);
-				addAttackDesire(Spirit2, caster);
-				startQuestTimer("life_over", 20000, Spirit2, caster);
-			}
-		}
-		else
-		{
-			addSpawn(getRandom(1) == 0 ? CRAWLER : STALKER, ((L2Npc) caster.getTarget()).getLocation());
-		}
-		npc.deleteMe();
-		return super.onSocialActionSee(npc, caster, actionId);
+	}
+	
+	@Override
+	public String onSpawn(L2Npc npc)
+	{
+		npc.setRandomAnimation(false);
+		return super.onSpawn(npc);
 	}
 }

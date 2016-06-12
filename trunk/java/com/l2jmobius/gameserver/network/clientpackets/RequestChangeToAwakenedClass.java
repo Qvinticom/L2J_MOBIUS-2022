@@ -16,30 +16,31 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerChangeToAwakenedClass;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
  * @author Sdw
  */
-public class RequestChangeToAwakenedClass extends L2GameClientPacket
+public class RequestChangeToAwakenedClass implements IClientIncomingPacket
 {
-	private static final String _C__D0_A1_REQUESTCHANGETOAWAKENEDCLASS = "[C] D0;A2 RequestChangeToAwakenedClass";
-	
 	private boolean _change;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_change = readD() == 1;
+		_change = packet.readD() == 1;
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -53,11 +54,5 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_A1_REQUESTCHANGETOAWAKENEDCLASS;
 	}
 }

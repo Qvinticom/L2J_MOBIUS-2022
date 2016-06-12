@@ -61,7 +61,7 @@ public final class DecayTaskManager
 			delay = Config.DEFAULT_CORPSE_TIME;
 		}
 		
-		if ((character instanceof L2Attackable) && (((L2Attackable) character).isSpoiled() || ((L2Attackable) character).isSeeded()))
+		if (character.isAttackable() && (((L2Attackable) character).isSpoiled() || ((L2Attackable) character).isSeeded()))
 		{
 			delay += Config.SPOILED_CORPSE_EXTEND_TIME;
 		}
@@ -79,16 +79,21 @@ public final class DecayTaskManager
 	 */
 	public void add(L2Character character, long delay, TimeUnit timeUnit)
 	{
-		ScheduledFuture<?> decayTask = _decayTasks.put(character, _decayExecutor.schedule(new DecayTask(character), delay, TimeUnit.SECONDS));
+		ScheduledFuture<?> decayTask = _decayExecutor.schedule(new DecayTask(character), delay, TimeUnit.SECONDS);
 		
-		if ((decayTask == null) || decayTask.cancel(false))
-		{
-			return;
-		}
-		decayTask = _decayTasks.remove(character);
+		decayTask = _decayTasks.put(character, decayTask);
+		// if decay task already existed cancel it so we use the new time
 		if (decayTask != null)
 		{
-			decayTask.cancel(false);
+			if (!decayTask.cancel(false))
+			{
+				// old decay task was completed while canceling it remove and cancel the new one
+				decayTask = _decayTasks.remove(character);
+				if (decayTask != null)
+				{
+					decayTask.cancel(false);
+				}
+			}
 		}
 	}
 	

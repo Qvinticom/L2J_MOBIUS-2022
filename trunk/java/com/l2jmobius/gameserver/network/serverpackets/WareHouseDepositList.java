@@ -19,17 +19,19 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 public final class WareHouseDepositList extends AbstractItemPacket
 {
 	public static final int PRIVATE = 1;
 	public static final int CLAN = 2;
 	public static final int CASTLE = 3;
-	public static final int FREIGHT = 4;
+	public static final int FREIGHT = 1;
 	private final long _playerAdena;
-	private final L2ItemInstance[] _itemsInWarehouse;
+	private final int _invSize;
 	private final List<L2ItemInstance> _items = new ArrayList<>();
 	private final List<Integer> _itemsStackable = new ArrayList<>();
 	/**
@@ -46,23 +48,16 @@ public final class WareHouseDepositList extends AbstractItemPacket
 	{
 		_whType = type;
 		_playerAdena = player.getAdena();
-		_itemsInWarehouse = player.getActiveWarehouse().getItems();
+		_invSize = player.getInventory().getSize();
 		
 		final boolean isPrivate = _whType == PRIVATE;
 		for (L2ItemInstance temp : player.getInventory().getAvailableItems(true, isPrivate, false))
 		{
-			if (temp == null)
-			{
-				continue;
-			}
-			if (temp.isDepositable(isPrivate))
+			if ((temp != null) && temp.isDepositable(isPrivate))
 			{
 				_items.add(temp);
 			}
-		}
-		for (L2ItemInstance temp : _itemsInWarehouse)
-		{
-			if (temp.isStackable())
+			if ((temp != null) && temp.isDepositable(isPrivate) && temp.isStackable())
 			{
 				_itemsStackable.add(temp.getDisplayId());
 			}
@@ -70,25 +65,27 @@ public final class WareHouseDepositList extends AbstractItemPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x41);
-		writeH(_whType);
-		writeQ(_playerAdena);
-		writeD(_itemsInWarehouse.length);
-		writeH(_itemsStackable.size());
+		OutgoingPackets.WAREHOUSE_DEPOSIT_LIST.writeId(packet);
+		
+		packet.writeH(_whType);
+		packet.writeQ(_playerAdena);
+		packet.writeD(_invSize);
+		packet.writeH(_itemsStackable.size());
 		
 		for (int itemId : _itemsStackable)
 		{
-			writeD(itemId);
+			packet.writeD(itemId);
 		}
 		
-		writeH(_items.size());
+		packet.writeH(_items.size());
 		
 		for (L2ItemInstance item : _items)
 		{
-			writeItem(item);
-			writeD(item.getObjectId());
+			writeItem(packet, item);
+			packet.writeD(item.getObjectId());
 		}
+		return true;
 	}
 }

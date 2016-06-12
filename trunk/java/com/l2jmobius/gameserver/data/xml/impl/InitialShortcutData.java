@@ -16,15 +16,18 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.enums.MacroType;
 import com.l2jmobius.gameserver.enums.ShortcutType;
 import com.l2jmobius.gameserver.model.Macro;
@@ -34,15 +37,16 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * This class holds the Initial Shortcuts information.<br>
  * What shortcuts get each newly created character.
  * @author Zoey76
  */
-public final class InitialShortcutData implements IXmlReader
+public final class InitialShortcutData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(InitialShortcutData.class.getName());
+	
 	private final Map<ClassId, List<Shortcut>> _initialShortcutData = new HashMap<>();
 	private final List<Shortcut> _initialGlobalShortcutList = new ArrayList<>();
 	private final Map<Integer, Macro> _macroPresets = new HashMap<>();
@@ -61,7 +65,7 @@ public final class InitialShortcutData implements IXmlReader
 		_initialShortcutData.clear();
 		_initialGlobalShortcutList.clear();
 		
-		parseDatapackFile("stats/initialShortcuts.xml");
+		parseDatapackFile("data/stats/initialShortcuts.xml");
 		
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _initialGlobalShortcutList.size() + " Initial Global Shortcuts data.");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _initialShortcutData.size() + " Initial Shortcuts data.");
@@ -69,7 +73,7 @@ public final class InitialShortcutData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
@@ -216,7 +220,12 @@ public final class InitialShortcutData implements IXmlReader
 	private Shortcut createShortcut(int pageId, Node b)
 	{
 		final NamedNodeMap attrs = b.getAttributes();
-		return new Shortcut(parseInteger(attrs, "slotId"), pageId, parseEnum(attrs, ShortcutType.class, "shortcutType"), parseInteger(attrs, "shortcutId"), parseInteger(attrs, "shortcutLevel", 0), parseInteger(attrs, "characterType", 0));
+		final int slotId = parseInteger(attrs, "slotId");
+		final ShortcutType shortcutType = parseEnum(attrs, ShortcutType.class, "shortcutType");
+		final int shortcutId = parseInteger(attrs, "shortcutId");
+		final int shortcutLevel = parseInteger(attrs, "shortcutLevel", 0);
+		final int characterType = parseInteger(attrs, "characterType", 0);
+		return new Shortcut(slotId, pageId, shortcutType, shortcutId, shortcutLevel, characterType);
 	}
 	
 	/**

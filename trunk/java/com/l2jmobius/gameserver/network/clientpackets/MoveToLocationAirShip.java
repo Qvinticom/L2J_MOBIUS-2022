@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.instancemanager.AirShipManager;
 import com.l2jmobius.gameserver.model.L2World;
@@ -24,11 +25,10 @@ import com.l2jmobius.gameserver.model.VehiclePathPoint;
 import com.l2jmobius.gameserver.model.actor.instance.L2AirShipInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
-public class MoveToLocationAirShip extends L2GameClientPacket
+public class MoveToLocationAirShip implements IClientIncomingPacket
 {
-	private static final String _C__D0_38_MOVETOLOCATIONAIRSHIP = "[C] D0:38 MoveToLocationAirShip";
-	
 	public static final int MIN_Z = -895;
 	public static final int MAX_Z = 6105;
 	public static final int STEP = 300;
@@ -38,21 +38,27 @@ public class MoveToLocationAirShip extends L2GameClientPacket
 	private int _param2 = 0;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_command = readD();
-		_param1 = readD();
-		if (_buf.remaining() > 0)
+		_command = packet.readD();
+		_param1 = packet.readD();
+		if (packet.getReadableBytes() > 0)
 		{
-			_param2 = readD();
+			_param2 = packet.readD();
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if ((activeChar == null) || !activeChar.isInAirShip())
+		final L2PcInstance activeChar = client.getActiveChar();
+		if (activeChar == null)
+		{
+			return;
+		}
+		
+		if (!activeChar.isInAirShip())
 		{
 			return;
 		}
@@ -68,7 +74,6 @@ public class MoveToLocationAirShip extends L2GameClientPacket
 		switch (_command)
 		{
 			case 0:
-			{
 				if (!ship.canBeControlled())
 				{
 					return;
@@ -78,18 +83,14 @@ public class MoveToLocationAirShip extends L2GameClientPacket
 					ship.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_param1, _param2, z));
 				}
 				break;
-			}
 			case 1:
-			{
 				if (!ship.canBeControlled())
 				{
 					return;
 				}
 				ship.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				break;
-			}
 			case 2:
-			{
 				if (!ship.canBeControlled())
 				{
 					return;
@@ -100,9 +101,7 @@ public class MoveToLocationAirShip extends L2GameClientPacket
 					ship.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(ship.getX(), ship.getY(), z));
 				}
 				break;
-			}
 			case 3:
-			{
 				if (!ship.canBeControlled())
 				{
 					return;
@@ -113,9 +112,7 @@ public class MoveToLocationAirShip extends L2GameClientPacket
 					ship.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(ship.getX(), ship.getY(), z));
 				}
 				break;
-			}
 			case 4:
-			{
 				if (!ship.isInDock() || ship.isMoving())
 				{
 					return;
@@ -141,13 +138,6 @@ public class MoveToLocationAirShip extends L2GameClientPacket
 				
 				ship.executePath(dst);
 				break;
-			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_38_MOVETOLOCATIONAIRSHIP;
 	}
 }

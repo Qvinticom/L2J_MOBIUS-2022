@@ -20,7 +20,7 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.event.LongTimeEvent;
+import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.luckygame.ExStartLuckyGame;
@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
  * Info - http://www.lineage2.com/en/news/events/11182015-eve-the-fortune-teller-returns.php
  * @author Mobius
  */
-final class EveTheFortuneTeller extends LongTimeEvent
+public final class EveTheFortuneTeller extends LongTimeEvent
 {
 	// NPCs
 	private static final int EVE = 8542;
@@ -47,7 +47,6 @@ final class EveTheFortuneTeller extends LongTimeEvent
 	
 	private EveTheFortuneTeller()
 	{
-		super(EveTheFortuneTeller.class.getSimpleName(), "events");
 		addStartNpc(EVE);
 		addFirstTalkId(EVE);
 		addTalkId(EVE);
@@ -72,12 +71,12 @@ final class EveTheFortuneTeller extends LongTimeEvent
 			}
 			case "FortuneReadingGame":
 			{
-				player.sendPacket(new ExStartLuckyGame(1));
+				player.sendPacket(new ExStartLuckyGame(player, 1));
 				break;
 			}
 			case "LuxuryFortuneReadingGame":
 			{
-				player.sendPacket(new ExStartLuckyGame(2));
+				player.sendPacket(new ExStartLuckyGame(player, 2));
 				break;
 			}
 			case "JAYCE_SHOUT":

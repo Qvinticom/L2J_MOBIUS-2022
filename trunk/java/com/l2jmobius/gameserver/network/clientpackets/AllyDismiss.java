@@ -17,31 +17,33 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
-public final class AllyDismiss extends L2GameClientPacket
+public final class AllyDismiss implements IClientIncomingPacket
 {
-	private static final String _C__8F_ALLYDISMISS = "[C] 8F AllyDismiss";
-	
 	private String _clanName;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_clanName = readS();
+		_clanName = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (_clanName == null)
 		{
 			return;
 		}
-		final L2PcInstance player = getClient().getActiveChar();
+		
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -90,11 +92,5 @@ public final class AllyDismiss extends L2GameClientPacket
 		clan.updateClanInDB();
 		
 		player.sendPacket(SystemMessageId.YOU_HAVE_SUCCEEDED_IN_EXPELLING_THE_CLAN);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__8F_ALLYDISMISS;
 	}
 }

@@ -33,7 +33,7 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 	// NPC
 	private static final int OLF_ADAMS = 32612;
 	// Monster
-	private static final int FREYA = 29179;
+	private static final int FREYA = 29180;
 	// Items
 	private static final int FREYAS_SOUL_FRAGMENT = 21723;
 	private static final int SOUL_CLOAK_OF_FREYA = 21720;
@@ -43,7 +43,7 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 	
 	public Q10502_FreyaEmbroideredSoulCloak()
 	{
-		super(10502, Q10502_FreyaEmbroideredSoulCloak.class.getSimpleName(), "Freya Embroidered Soul Cloak");
+		super(10502);
 		addStartNpc(OLF_ADAMS);
 		addTalkId(OLF_ADAMS);
 		addKillId(FREYA);

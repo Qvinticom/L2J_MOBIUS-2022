@@ -34,6 +34,7 @@ import com.l2jmobius.Server;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.mmocore.SelectorConfig;
 import com.l2jmobius.commons.mmocore.SelectorThread;
+import com.l2jmobius.loginserver.mail.MailSystem;
 import com.l2jmobius.loginserver.network.L2LoginClient;
 import com.l2jmobius.loginserver.network.L2LoginPacketHandler;
 
@@ -64,6 +65,7 @@ public final class L2LoginServer
 	{
 		_instance = this;
 		Server.serverMode = Server.MODE_LOGINSERVER;
+		
 		// Local Constants
 		final String LOG_FOLDER = "log"; // Name of folder for log file
 		final String LOG_NAME = "./log.cfg"; // Name of log file
@@ -103,6 +105,11 @@ public final class L2LoginServer
 		GameServerTable.getInstance();
 		
 		loadBanFile();
+		
+		if (Config.EMAIL_SYS_ENABLED)
+		{
+			MailSystem.getInstance();
+		}
 		
 		InetAddress bindAddress = null;
 		if (!Config.LOGIN_BIND_ADDRESS.equals("*"))
@@ -151,7 +158,7 @@ public final class L2LoginServer
 		{
 			_selectorThread.openServerSocket(bindAddress, Config.PORT_LOGIN);
 			_selectorThread.start();
-			_log.log(Level.INFO, getClass().getSimpleName() + ": is now listening on: " + Config.LOGIN_BIND_ADDRESS + ":" + Config.PORT_LOGIN);
+			_log.info(getClass().getSimpleName() + ": is now listening on: " + Config.LOGIN_BIND_ADDRESS + ":" + Config.PORT_LOGIN);
 		}
 		catch (IOException e)
 		{

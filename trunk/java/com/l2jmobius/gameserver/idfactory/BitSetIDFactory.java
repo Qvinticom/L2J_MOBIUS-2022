@@ -20,7 +20,7 @@ import java.util.BitSet;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.util.PrimeFinder;
+import com.l2jmobius.gameserver.util.PrimeFinder;
 
 /**
  * This class ..
@@ -56,7 +56,7 @@ public class BitSetIDFactory extends IdFactory
 			ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
 			initialize();
 		}
-		_log.info(getClass().getSimpleName() + ": " + _freeIds.size() + " id's available.");
+		LOGGER.info(getClass().getSimpleName() + ": " + _freeIds.size() + " id's available.");
 	}
 	
 	public void initialize()
@@ -72,7 +72,7 @@ public class BitSetIDFactory extends IdFactory
 				final int objectID = usedObjectId - FIRST_OID;
 				if (objectID < 0)
 				{
-					_log.warning(getClass().getSimpleName() + ": Object ID " + usedObjectId + " in DB is less than minimum ID of " + FIRST_OID);
+					LOGGER.warning(getClass().getSimpleName() + ": Object ID " + usedObjectId + " in DB is less than minimum ID of " + FIRST_OID);
 					continue;
 				}
 				_freeIds.set(usedObjectId - FIRST_OID);
@@ -85,7 +85,7 @@ public class BitSetIDFactory extends IdFactory
 		catch (Exception e)
 		{
 			_initialized = false;
-			_log.severe(getClass().getSimpleName() + ": Could not be initialized properly: " + e.getMessage());
+			LOGGER.severe(getClass().getSimpleName() + ": Could not be initialized properly: " + e.getMessage());
 		}
 	}
 	
@@ -99,7 +99,7 @@ public class BitSetIDFactory extends IdFactory
 		}
 		else
 		{
-			_log.warning(getClass().getSimpleName() + ": Release objectID " + objectID + " failed (< " + FIRST_OID + ")");
+			LOGGER.warning(getClass().getSimpleName() + ": Release objectID " + objectID + " failed (< " + FIRST_OID + ")");
 		}
 	}
 	
@@ -110,15 +110,22 @@ public class BitSetIDFactory extends IdFactory
 		_freeIds.set(newID);
 		_freeIdCount.decrementAndGet();
 		
-		final int nextFree = _freeIds.nextClearBit(newID) < 0 ? _freeIds.nextClearBit(0) : _freeIds.nextClearBit(newID);
+		int nextFree = _freeIds.nextClearBit(newID);
 		
 		if (nextFree < 0)
 		{
-			if (_freeIds.size() >= FREE_OBJECT_ID_SIZE)
+			nextFree = _freeIds.nextClearBit(0);
+		}
+		if (nextFree < 0)
+		{
+			if (_freeIds.size() < FREE_OBJECT_ID_SIZE)
+			{
+				increaseBitSetCapacity();
+			}
+			else
 			{
 				throw new NullPointerException("Ran out of valid Id's.");
 			}
-			increaseBitSetCapacity();
 		}
 		
 		_nextFreeId.set(nextFree);

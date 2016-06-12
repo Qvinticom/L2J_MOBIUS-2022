@@ -16,13 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author UnAfraid
  */
-public class ExTeleportToLocationActivate extends L2GameServerPacket
+public class ExTeleportToLocationActivate implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final Location _loc;
@@ -34,14 +36,17 @@ public class ExTeleportToLocationActivate extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x14A);
-		writeD(_objectId);
-		writeLoc(_loc);
-		writeD(_loc.getInstanceId());
-		writeD(_loc.getHeading());
-		writeD(0); // Unknown
+		OutgoingPackets.EX_TELEPORT_TO_LOCATION_ACTIVATE.writeId(packet);
+		
+		packet.writeD(_objectId);
+		packet.writeD(_loc.getX());
+		packet.writeD(_loc.getY());
+		packet.writeD(_loc.getZ());
+		packet.writeD(0); // Unknown (this isn't instanceId)
+		packet.writeD(_loc.getHeading());
+		packet.writeD(0); // Unknown
+		return true;
 	}
 }

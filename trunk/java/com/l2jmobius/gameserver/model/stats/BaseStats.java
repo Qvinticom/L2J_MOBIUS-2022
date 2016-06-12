@@ -16,85 +16,130 @@
  */
 package com.l2jmobius.gameserver.model.stats;
 
+import java.io.File;
+import java.util.NoSuchElementException;
+import java.util.Optional;
+import java.util.logging.Logger;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+
+import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 
 /**
- * @author Sdw
+ * @author DS, Sdw, UnAfraid
  */
 public enum BaseStats
 {
-	STR // #TODO Check if correct
-	{
-		@Override
-		public double calcBonus(L2Character actor)
-		{
-			return Math.pow(1.009, actor.getSTR() - 49);
-		}
-	},
-	INT // @TODO Update
-	{
-		@Override
-		public double calcBonus(L2Character actor)
-		{
-			return Math.pow(1.01, actor.getINT() - 49.4);
-		}
-	},
-	DEX // Updated and better Formula to match Ertheia
-	{
-		@Override
-		public double calcBonus(L2Character actor)
-		{
-			return Math.pow(1.004558949443461, actor.getDEX() - 19.27356040917275);
-		}
-	},
-	WIT // Updated and better Formula to match Ertheia
-	{
-		@Override
-		public double calcBonus(L2Character actor)
-		{
-			return Math.pow(1.013832042738272, actor.getWIT() - 64.57078483041223);
-		}
-	},
-	CON // Updated and better Formula to match Ertheia
-	{
-		@Override
-		public double calcBonus(L2Character actor)
-		{
-			return Math.pow(1.011685289099497, actor.getCON() - 34.80273839854561);
-		}
-	},
-	MEN // Updated and better Formula to match Ertheia
-	{
-		@Override
-		public double calcBonus(L2Character actor)
-		{
-			return Math.pow(1.003687502032154, actor.getMEN() + 30.4505503162);
-		}
-	},
-	CHA // Addition for Ertheia
-	{
-		@Override
-		public double calcBonus(L2Character actor)
-		{
-			return Math.pow(1.001, actor.getCHA() - 43);
-		}
-	},
-	LUC // @TODO: Implement
-	{
-		@Override
-		public double calcBonus(L2Character actor)
-		{
-			return 1;
-		}
-	},
-	NONE
-	{
-		@Override
-		public double calcBonus(L2Character actor)
-		{
-			return 1;
-		}
-	};
+	STR(Stats.STAT_STR),
+	INT(Stats.STAT_INT),
+	DEX(Stats.STAT_DEX),
+	WIT(Stats.STAT_WIT),
+	CON(Stats.STAT_CON),
+	MEN(Stats.STAT_MEN),
+	CHA(Stats.STAT_CHA),
+	LUC(Stats.STAT_LUC);
 	
-	public abstract double calcBonus(L2Character actor);
+	public static final int MAX_STAT_VALUE = 201;
+	
+	private final double[] _bonus = new double[MAX_STAT_VALUE];
+	private final Stats _stat;
+	
+	BaseStats(Stats stat)
+	{
+		_stat = stat;
+	}
+	
+	public Stats getStat()
+	{
+		return _stat;
+	}
+	
+	public int calcValue(L2Character creature)
+	{
+		if ((creature != null) && (_stat != null))
+		{
+			return (int) Math.min(_stat.finalize(creature, Optional.empty()), MAX_STAT_VALUE - 1);
+		}
+		return 0;
+	}
+	
+	public double calcBonus(L2Character creature)
+	{
+		if (creature != null)
+		{
+			final int value = calcValue(creature);
+			if (value < 1)
+			{
+				return 1;
+			}
+			return _bonus[value];
+		}
+		
+		return 1;
+	}
+	
+	void setValue(int index, double value)
+	{
+		_bonus[index] = value;
+	}
+	
+	public double getValue(int index)
+	{
+		return _bonus[index];
+	}
+	
+	public static BaseStats valueOf(Stats stat)
+	{
+		for (BaseStats baseStat : values())
+		{
+			if (baseStat.getStat() == stat)
+			{
+				return baseStat;
+			}
+		}
+		throw new NoSuchElementException("Unknown base stat '" + stat + "' for enum BaseStats");
+	}
+	
+	static
+	{
+		new IGameXmlReader()
+		{
+			final Logger LOGGER = Logger.getLogger(BaseStats.class.getName());
+			
+			@Override
+			public void load()
+			{
+				parseDatapackFile("data/stats/statBonus.xml");
+			}
+			
+			@Override
+			public void parseDocument(Document doc, File f)
+			{
+				forEach(doc, "list", listNode -> forEach(listNode, IXmlReader::isNode, statNode ->
+				{
+					final BaseStats baseStat;
+					try
+					{
+						baseStat = valueOf(statNode.getNodeName());
+					}
+					catch (Exception e)
+					{
+						LOGGER.severe("Invalid base stats type: " + statNode.getNodeValue() + ", skipping");
+						return;
+					}
+					
+					forEach(statNode, "stat", statValue ->
+					{
+						final NamedNodeMap attrs = statValue.getAttributes();
+						final int val = parseInteger(attrs, "value");
+						final double bonus = parseDouble(attrs, "bonus");
+						baseStat.setValue(val, bonus);
+					});
+				}));
+			}
+		}.load();
+	}
 }

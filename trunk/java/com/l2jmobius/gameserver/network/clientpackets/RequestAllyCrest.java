@@ -16,52 +16,30 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.AllyCrest;
 
 /**
- * @author Mobius
+ * This class ...
+ * @version $Revision: 1.3.4.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestAllyCrest extends L2GameClientPacket
+public final class RequestAllyCrest implements IClientIncomingPacket
 {
-	private static final String _C__92_REQUESTALLYCREST = "[C] 92 RequestAllyCrest";
-	
 	private int _crestId;
-	private int _allyId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_crestId = readD();
-		_allyId = readD();
+		_crestId = packet.readD();
+		packet.readD(); // Ally ID
+		packet.readD(); // Server ID
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		if (_crestId == 0)
-		{
-			return;
-		}
-		
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if ((activeChar.getAllyId() > 0) && (activeChar.getAllyId() == _allyId))
-		{
-			return;
-		}
-		
-		sendPacket(new AllyCrest(_crestId));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__92_REQUESTALLYCREST;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
+		client.sendPacket(new AllyCrest(_crestId));
 	}
 }

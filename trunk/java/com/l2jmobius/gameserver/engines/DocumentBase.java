@@ -72,16 +72,19 @@ import com.l2jmobius.gameserver.model.conditions.ConditionPlayerCheckAbnormal;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerClassIdRestriction;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerCloakStatus;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerCp;
+import com.l2jmobius.gameserver.model.conditions.ConditionPlayerDualclass;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerFlyMounted;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerGrade;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerHasCastle;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerHasClanHall;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerHasFort;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerHasFreeSummonPoints;
+import com.l2jmobius.gameserver.model.conditions.ConditionPlayerHasFreeTeleportBookmarkSlots;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerHasPet;
-import com.l2jmobius.gameserver.model.conditions.ConditionPlayerHasServitor;
+import com.l2jmobius.gameserver.model.conditions.ConditionPlayerHasSummon;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerHp;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerImmobile;
+import com.l2jmobius.gameserver.model.conditions.ConditionPlayerInInstance;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerInsideZoneId;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerInstanceId;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerInvSize;
@@ -98,13 +101,14 @@ import com.l2jmobius.gameserver.model.conditions.ConditionPlayerPkCount;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerPledgeClass;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerRace;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerRangeFromNpc;
+import com.l2jmobius.gameserver.model.conditions.ConditionPlayerRangeFromSummonedNpc;
+import com.l2jmobius.gameserver.model.conditions.ConditionPlayerServitorNpcId;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerSex;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerSiegeSide;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerSouls;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerState;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerSubclass;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerTransformationId;
-import com.l2jmobius.gameserver.model.conditions.ConditionPlayerTvTEvent;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerVehicleMounted;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerWeight;
 import com.l2jmobius.gameserver.model.conditions.ConditionSiegeZone;
@@ -113,8 +117,8 @@ import com.l2jmobius.gameserver.model.conditions.ConditionTargetAbnormalType;
 import com.l2jmobius.gameserver.model.conditions.ConditionTargetActiveEffectId;
 import com.l2jmobius.gameserver.model.conditions.ConditionTargetActiveSkillId;
 import com.l2jmobius.gameserver.model.conditions.ConditionTargetAggro;
+import com.l2jmobius.gameserver.model.conditions.ConditionTargetCheckCrtEffect;
 import com.l2jmobius.gameserver.model.conditions.ConditionTargetClassIdRestriction;
-import com.l2jmobius.gameserver.model.conditions.ConditionTargetHp;
 import com.l2jmobius.gameserver.model.conditions.ConditionTargetInvSize;
 import com.l2jmobius.gameserver.model.conditions.ConditionTargetLevel;
 import com.l2jmobius.gameserver.model.conditions.ConditionTargetLevelRange;
@@ -122,6 +126,7 @@ import com.l2jmobius.gameserver.model.conditions.ConditionTargetMyPartyExceptMe;
 import com.l2jmobius.gameserver.model.conditions.ConditionTargetNpcId;
 import com.l2jmobius.gameserver.model.conditions.ConditionTargetNpcType;
 import com.l2jmobius.gameserver.model.conditions.ConditionTargetPlayable;
+import com.l2jmobius.gameserver.model.conditions.ConditionTargetPlayer;
 import com.l2jmobius.gameserver.model.conditions.ConditionTargetRace;
 import com.l2jmobius.gameserver.model.conditions.ConditionTargetUsesWeaponKind;
 import com.l2jmobius.gameserver.model.conditions.ConditionTargetWeight;
@@ -129,8 +134,6 @@ import com.l2jmobius.gameserver.model.conditions.ConditionUsingItemType;
 import com.l2jmobius.gameserver.model.conditions.ConditionUsingSkill;
 import com.l2jmobius.gameserver.model.conditions.ConditionUsingSlotType;
 import com.l2jmobius.gameserver.model.conditions.ConditionWithSkill;
-import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.type.ArmorType;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
@@ -148,11 +151,12 @@ public abstract class DocumentBase
 	protected final Logger _log = Logger.getLogger(getClass().getName());
 	
 	private final File _file;
-	protected final Map<String, String[]> _tables = new HashMap<>();
+	protected Map<String, String[]> _tables;
 	
 	protected DocumentBase(File pFile)
 	{
 		_file = pFile;
+		_tables = new HashMap<>();
 	}
 	
 	public Document parse()
@@ -216,7 +220,8 @@ public abstract class DocumentBase
 			else if ((condition != null) && (msgId != null))
 			{
 				condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-				if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+				final Node addName = n.getAttributes().getNamedItem("addName");
+				if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 				{
 					condition.addName();
 				}
@@ -229,15 +234,6 @@ public abstract class DocumentBase
 			
 			switch (name)
 			{
-				case "effect":
-				{
-					if (template instanceof AbstractEffect)
-					{
-						throw new RuntimeException("Nested effects");
-					}
-					attachEffect(n, template, condition, effectScope);
-					break;
-				}
 				case "add":
 				case "sub":
 				case "mul":
@@ -246,11 +242,6 @@ public abstract class DocumentBase
 				case "share":
 				case "enchant":
 				case "enchanthp":
-				case "enchantPAtk":
-				case "enchantMAtk":
-				case "enchantRunSpd":
-				case "enchantAccEvas":
-				case "enchantPMcritAtk":
 				{
 					attachFunc(n, template, name, condition);
 				}
@@ -269,98 +260,26 @@ public abstract class DocumentBase
 		}
 		
 		final String valueString = n.getAttributes().getNamedItem("val").getNodeValue();
-		final double value = valueString.charAt(0) == '#' ? Double.parseDouble(getTableValue(valueString)) : Double.parseDouble(valueString);
+		double value;
+		if (valueString.charAt(0) == '#')
+		{
+			value = Double.parseDouble(getTableValue(valueString));
+		}
+		else
+		{
+			value = Double.parseDouble(valueString);
+		}
+		
 		final Condition applayCond = parseCondition(n.getFirstChild(), template);
 		final FuncTemplate ft = new FuncTemplate(attachCond, applayCond, functionName, order, stat, value);
 		if (template instanceof L2Item)
 		{
-			((L2Item) template).attach(ft);
-		}
-		else if (template instanceof AbstractEffect)
-		{
-			((AbstractEffect) template).attach(ft);
+			((L2Item) template).addFunctionTemplate(ft);
 		}
 		else
 		{
-			throw new RuntimeException("Attaching stat to a non-effect template!!!");
+			throw new RuntimeException("Attaching stat to a non-effect template [" + template + "]!!!");
 		}
-	}
-	
-	protected void attachEffect(Node n, Object template, Condition attachCond)
-	{
-		attachEffect(n, template, attachCond, null);
-	}
-	
-	protected void attachEffect(Node n, Object template, Condition attachCond, EffectScope effectScope)
-	{
-		final NamedNodeMap attrs = n.getAttributes();
-		final StatsSet set = new StatsSet();
-		for (int i = 0; i < attrs.getLength(); i++)
-		{
-			final Node att = attrs.item(i);
-			set.set(att.getNodeName(), getValue(att.getNodeValue(), template));
-		}
-		
-		final StatsSet parameters = parseParameters(n.getFirstChild(), template);
-		final Condition applayCond = parseCondition(n.getFirstChild(), template);
-		
-		if (template instanceof IIdentifiable)
-		{
-			set.set("id", ((IIdentifiable) template).getId());
-		}
-		
-		final AbstractEffect effect = AbstractEffect.createEffect(attachCond, applayCond, set, parameters);
-		parseTemplate(n, effect);
-		if (template instanceof L2Item)
-		{
-			_log.severe("Item " + template + " with effects!!!");
-		}
-		else if (template instanceof Skill)
-		{
-			final Skill skill = (Skill) template;
-			if (effectScope != null)
-			{
-				skill.addEffect(effectScope, effect);
-			}
-			else if (skill.isPassive())
-			{
-				skill.addEffect(EffectScope.PASSIVE, effect);
-			}
-			else
-			{
-				skill.addEffect(EffectScope.GENERAL, effect);
-			}
-		}
-	}
-	
-	/**
-	 * Parse effect's parameters.
-	 * @param n the node to start the parsing
-	 * @param template the effect template
-	 * @return the list of parameters if any, {@code null} otherwise
-	 */
-	private StatsSet parseParameters(Node n, Object template)
-	{
-		StatsSet parameters = null;
-		while (n != null)
-		{
-			// Parse all parameters.
-			if ((n.getNodeType() == Node.ELEMENT_NODE) && "param".equals(n.getNodeName()))
-			{
-				if (parameters == null)
-				{
-					parameters = new StatsSet();
-				}
-				final NamedNodeMap params = n.getAttributes();
-				for (int i = 0; i < params.getLength(); i++)
-				{
-					final Node att = params.item(i);
-					parameters.set(att.getNodeName(), getValue(att.getNodeValue(), template));
-				}
-			}
-			n = n.getNextSibling();
-		}
-		return parameters == null ? StatsSet.EMPTY_STATSET : parameters;
 	}
 	
 	protected Condition parseCondition(Node n, Object template)
@@ -647,12 +566,6 @@ public abstract class DocumentBase
 					cond = joinAnd(cond, new ConditionPlayerIsClanLeader(val));
 					break;
 				}
-				case "ontvtevent":
-				{
-					final boolean val = Boolean.parseBoolean(a.getNodeValue());
-					cond = joinAnd(cond, new ConditionPlayerTvTEvent(val));
-					break;
-				}
 				case "pledgeclass":
 				{
 					final int pledgeClass = Integer.decode(getValue(a.getNodeValue(), null));
@@ -665,7 +578,8 @@ public abstract class DocumentBase
 					final ArrayList<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
-						array.add(Integer.decode(getValue(st.nextToken().trim(), template)));
+						final String item = st.nextToken().trim();
+						array.add(Integer.decode(getValue(item, template)));
 					}
 					cond = joinAnd(cond, new ConditionPlayerHasClanHall(array));
 					break;
@@ -740,7 +654,8 @@ public abstract class DocumentBase
 					final ArrayList<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
-						array.add(Integer.decode(getValue(st.nextToken().trim(), template)));
+						final String item = st.nextToken().trim();
+						array.add(Integer.decode(getValue(item, template)));
 					}
 					cond = joinAnd(cond, new ConditionPlayerClassIdRestriction(array));
 					break;
@@ -749,6 +664,12 @@ public abstract class DocumentBase
 				{
 					final boolean val = Boolean.parseBoolean(a.getNodeValue());
 					cond = joinAnd(cond, new ConditionPlayerSubclass(val));
+					break;
+				}
+				case "dualclass":
+				{
+					final boolean val = Boolean.parseBoolean(a.getNodeValue());
+					cond = joinAnd(cond, new ConditionPlayerDualclass(val));
 					break;
 				}
 				case "canswitchsubclass":
@@ -762,7 +683,8 @@ public abstract class DocumentBase
 					final ArrayList<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
-						array.add(Integer.decode(getValue(st.nextToken().trim(), template)));
+						final String item = st.nextToken().trim();
+						array.add(Integer.decode(getValue(item, template)));
 					}
 					cond = joinAnd(cond, new ConditionPlayerInstanceId(array));
 					break;
@@ -779,20 +701,34 @@ public abstract class DocumentBase
 					cond = joinAnd(cond, new ConditionPlayerCloakStatus(val));
 					break;
 				}
+				case "hassummon":
+				{
+					final boolean val = Boolean.parseBoolean(a.getNodeValue());
+					cond = joinAnd(cond, new ConditionPlayerHasSummon(val));
+					break;
+				}
 				case "haspet":
 				{
 					final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
 					final ArrayList<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
-						array.add(Integer.decode(getValue(st.nextToken().trim(), template)));
+						final String item = st.nextToken().trim();
+						array.add(Integer.decode(getValue(item, template)));
 					}
 					cond = joinAnd(cond, new ConditionPlayerHasPet(array));
 					break;
 				}
-				case "hasservitor":
+				case "servitornpcid":
 				{
-					cond = joinAnd(cond, new ConditionPlayerHasServitor());
+					final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
+					final ArrayList<Integer> array = new ArrayList<>(st.countTokens());
+					while (st.hasMoreTokens())
+					{
+						final String item = st.nextToken().trim();
+						array.add(Integer.decode(getValue(item, null)));
+					}
+					cond = joinAnd(cond, new ConditionPlayerServitorNpcId(array));
 					break;
 				}
 				case "npcidradius":
@@ -806,7 +742,26 @@ public abstract class DocumentBase
 						{
 							npcIds[index] = Integer.parseInt(getValue(ids[index], template));
 						}
-						cond = joinAnd(cond, new ConditionPlayerRangeFromNpc(npcIds, Integer.parseInt(st.nextToken()), Boolean.parseBoolean(st.nextToken())));
+						final int radius = Integer.parseInt(st.nextToken());
+						final boolean val = Boolean.parseBoolean(st.nextToken());
+						cond = joinAnd(cond, new ConditionPlayerRangeFromNpc(npcIds, radius, val));
+					}
+					break;
+				}
+				case "summonednpcidradius":
+				{
+					final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
+					if (st.countTokens() == 3)
+					{
+						final String[] ids = st.nextToken().split(";");
+						final int[] npcIds = new int[ids.length];
+						for (int index = 0; index < ids.length; index++)
+						{
+							npcIds[index] = Integer.parseInt(getValue(ids[index], template));
+						}
+						final int radius = Integer.parseInt(st.nextToken());
+						final boolean val = Boolean.parseBoolean(st.nextToken());
+						cond = joinAnd(cond, new ConditionPlayerRangeFromSummonedNpc(npcIds, radius, val));
 					}
 					break;
 				}
@@ -850,6 +805,11 @@ public abstract class DocumentBase
 					cond = joinAnd(cond, new ConditionPlayerHasFreeSummonPoints(Integer.parseInt(a.getNodeValue())));
 					break;
 				}
+				case "hasfreeteleportbookmarkslots":
+				{
+					cond = joinAnd(cond, new ConditionPlayerHasFreeTeleportBookmarkSlots(Integer.parseInt(a.getNodeValue())));
+					break;
+				}
 				case "cansummonsiegegolem":
 				{
 					cond = joinAnd(cond, new ConditionPlayerCanSummonSiegeGolem(Boolean.parseBoolean(a.getNodeValue())));
@@ -862,7 +822,7 @@ public abstract class DocumentBase
 				}
 				case "cantakecastle":
 				{
-					cond = joinAnd(cond, new ConditionPlayerCanTakeCastle());
+					cond = joinAnd(cond, new ConditionPlayerCanTakeCastle(Boolean.parseBoolean(a.getNodeValue())));
 					break;
 				}
 				case "cantakefort":
@@ -886,7 +846,8 @@ public abstract class DocumentBase
 					final List<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
-						array.add(Integer.decode(getValue(st.nextToken().trim(), template)));
+						final String item = st.nextToken().trim();
+						array.add(Integer.decode(getValue(item, template)));
 					}
 					cond = joinAnd(cond, new ConditionPlayerInsideZoneId(array));
 					break;
@@ -929,6 +890,11 @@ public abstract class DocumentBase
 				case "isonside":
 				{
 					cond = joinAnd(cond, new ConditionPlayerIsOnSide(Enum.valueOf(CastleSide.class, a.getNodeValue())));
+					break;
+				}
+				case "ininstance":
+				{
+					cond = joinAnd(cond, new ConditionPlayerInInstance(Boolean.parseBoolean(a.getNodeValue())));
 					break;
 				}
 			}
@@ -990,13 +956,19 @@ public abstract class DocumentBase
 					cond = joinAnd(cond, new ConditionTargetPlayable());
 					break;
 				}
+				case "player":
+				{
+					cond = joinAnd(cond, new ConditionTargetPlayer());
+					break;
+				}
 				case "class_id_restriction":
 				{
 					final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
 					final List<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
-						array.add(Integer.decode(getValue(st.nextToken().trim(), null)));
+						final String item = st.nextToken().trim();
+						array.add(Integer.decode(getValue(item, null)));
 					}
 					cond = joinAnd(cond, new ConditionTargetClassIdRestriction(array));
 					break;
@@ -1033,12 +1005,6 @@ public abstract class DocumentBase
 				{
 					final AbnormalType abnormalType = AbnormalType.getAbnormalType(getValue(a.getNodeValue(), template));
 					cond = joinAnd(cond, new ConditionTargetAbnormalType(abnormalType));
-					break;
-				}
-				case "hp":
-				{
-					final int hp = Integer.decode(getValue(a.getNodeValue(), template));
-					cond = joinAnd(cond, new ConditionTargetHp(hp));
 					break;
 				}
 				case "mindistance":
@@ -1085,7 +1051,8 @@ public abstract class DocumentBase
 					final List<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
-						array.add(Integer.decode(getValue(st.nextToken().trim(), null)));
+						final String item = st.nextToken().trim();
+						array.add(Integer.decode(getValue(item, null)));
 					}
 					cond = joinAnd(cond, new ConditionTargetNpcId(array));
 					break;
@@ -1118,6 +1085,11 @@ public abstract class DocumentBase
 				{
 					final int size = Integer.decode(getValue(a.getNodeValue(), null));
 					cond = joinAnd(cond, new ConditionTargetInvSize(size));
+					break;
+				}
+				case "checkcrteffect":
+				{
+					cond = joinAnd(cond, new ConditionTargetCheckCrtEffect(Boolean.parseBoolean(a.getNodeValue())));
 					break;
 				}
 			}
@@ -1179,9 +1151,9 @@ public abstract class DocumentBase
 					{
 						final int old = mask;
 						final String item = st.nextToken().trim();
-						if (ItemTable.SLOTS.containsKey(item))
+						if (ItemTable._slots.containsKey(item))
 						{
-							mask |= ItemTable.SLOTS.get(item);
+							mask |= ItemTable._slots.get(item);
 						}
 						
 						if (old == mask)
@@ -1203,7 +1175,11 @@ public abstract class DocumentBase
 					final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ";");
 					final int id = Integer.parseInt(st.nextToken().trim());
 					final int slot = Integer.parseInt(st.nextToken().trim());
-					final int enchant = st.hasMoreTokens() ? Integer.parseInt(st.nextToken().trim()) : 0;
+					int enchant = 0;
+					if (st.hasMoreTokens())
+					{
+						enchant = Integer.parseInt(st.nextToken().trim());
+					}
 					cond = joinAnd(cond, new ConditionSlotItemId(slot, id, enchant));
 					break;
 				}
@@ -1232,15 +1208,18 @@ public abstract class DocumentBase
 			final Node a = attrs.item(i);
 			if ("skill".equalsIgnoreCase(a.getNodeName()))
 			{
-				cond = joinAnd(cond, new ConditionWithSkill(Boolean.parseBoolean(a.getNodeValue())));
+				final boolean val = Boolean.parseBoolean(a.getNodeValue());
+				cond = joinAnd(cond, new ConditionWithSkill(val));
 			}
 			if ("night".equalsIgnoreCase(a.getNodeName()))
 			{
-				cond = joinAnd(cond, new ConditionGameTime(CheckGameTime.NIGHT, Boolean.parseBoolean(a.getNodeValue())));
+				final boolean val = Boolean.parseBoolean(a.getNodeValue());
+				cond = joinAnd(cond, new ConditionGameTime(CheckGameTime.NIGHT, val));
 			}
 			if ("chance".equalsIgnoreCase(a.getNodeName()))
 			{
-				cond = joinAnd(cond, new ConditionGameChance(Integer.decode(getValue(a.getNodeValue(), null))));
+				final int val = Integer.decode(getValue(a.getNodeValue(), null));
+				cond = joinAnd(cond, new ConditionGameChance(val));
 			}
 		}
 		if (cond == null)
@@ -1272,22 +1251,19 @@ public abstract class DocumentBase
 		final String name = n.getAttributes().getNamedItem("name").getNodeValue().trim();
 		final String value = n.getAttributes().getNamedItem("val").getNodeValue().trim();
 		final char ch = value.isEmpty() ? ' ' : value.charAt(0);
-		set.set(name, (ch == '#') || (ch == '-') || Character.isDigit(ch) ? String.valueOf(getValue(value, level)) : value);
+		if ((ch == '#') || (ch == '-') || Character.isDigit(ch))
+		{
+			set.set(name, String.valueOf(getValue(value, level)));
+		}
+		else
+		{
+			set.set(name, value);
+		}
 	}
 	
 	protected void setExtractableSkillData(StatsSet set, String value)
 	{
 		set.set("capsuled_items_skill", value);
-	}
-	
-	protected void setAlchemyTransmuteIngredientData(StatsSet set, String value)
-	{
-		set.set("alchemyTransmuteIngredients", value);
-	}
-	
-	protected void setAlchemyTransmuteProductData(StatsSet set, String value)
-	{
-		set.set("alchemyTransmuteProduction", value);
 	}
 	
 	protected String getValue(String value, Object template)

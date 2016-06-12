@@ -16,253 +16,140 @@
  */
 package quests.Q10736_ASpecialPower;
 
-import com.l2jmobius.gameserver.enums.QuestSound;
+import java.util.HashSet;
+import java.util.Set;
+
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 
 import quests.Q10734_DoOrDie.Q10734_DoOrDie;
 
 /**
+ * A Special Power (10736)
  * @author Sdw
  */
-public class Q10736_ASpecialPower extends Quest
+public final class Q10736_ASpecialPower extends Quest
 {
-	// NPC's
+	// NPC
 	private static final int KATALIN = 33943;
-	private static final int KATALIN_2 = 33945;
+	// Monsters
 	private static final int FLOATO = 27526;
+	private static final int FLOATO2 = 27531;
 	private static final int RATEL = 27527;
+	// Items
+	private static final ItemHolder SOULSHOTS_REWARD = new ItemHolder(1835, 500);
 	// Misc
 	private static final int MIN_LEVEL = 4;
 	private static final int MAX_LEVEL = 20;
-	// Items
-	private static final ItemHolder SOULSHOTS_TRAINING = new ItemHolder(1835, 150);
-	private static final ItemHolder SOULSHOTS_REWARD = new ItemHolder(1835, 500);
-	// Locations
-	private static final Location MOB_1 = new Location(-75112, 240760, -3615);
-	private static final Location MOB_2 = new Location(-75016, 240456, -3628);
-	
-	private static final int KILL_COUNT_ID = 0;
+	public static final int KILL_COUNT_VAR = 0;
 	
 	public Q10736_ASpecialPower()
 	{
-		super(10735, Q10736_ASpecialPower.class.getSimpleName(), "A Special Power");
+		super(10735);
 		addStartNpc(KATALIN);
-		addTalkId(KATALIN, KATALIN_2);
-		addKillId(FLOATO, RATEL);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_quest.html");
-		addCondRace(Race.ERTHEIA, "no_quest.html");
-		addCondClassId(ClassId.ERTHEIA_FIGHTER, "no_quest.html");
-		addCondCompletedQuest(Q10734_DoOrDie.class.getSimpleName(), "no_quest.html");
+		addTalkId(KATALIN);
+		
+		addCondRace(Race.ERTHEIA, "");
+		addCondClassId(ClassId.ERTHEIA_FIGHTER, "");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33943-00.htm");
+		addCondCompletedQuest(Q10734_DoOrDie.class.getSimpleName(), "33943-00.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		if ((qs != null) && event.equals("33943-02.htm"))
 		{
-			return null;
+			qs.startQuest();
+			return event;
 		}
-		
-		String htmltext = null;
-		switch (event)
-		{
-			case "33943-02.html":
-			{
-				qs.startQuest();
-				htmltext = event;
-				break;
-			}
-			case "33945-03.html":
-			{
-				htmltext = event;
-				showOnScreenMsg(player, NpcStringId.ATTACK_THE_MONSTER, ExShowScreenMessage.TOP_CENTER, 4500);
-				break;
-			}
-			case "showscreen_1":
-			{
-				showOnScreenMsg(player, NpcStringId.AUTOMATE_SOULSHOT_AS_SHOWN_IN_THE_TUTORIAL, ExShowScreenMessage.TOP_CENTER, 4500);
-				break;
-			}
-			case "33945-07.html":
-			{
-				if (qs.isCond(5))
-				{
-					qs.setCond(6);
-					showOnScreenMsg(player, NpcStringId.FIGHT_USING_SKILLS, ExShowScreenMessage.TOP_CENTER, 4500);
-					addSpawn(RATEL, MOB_1, false, 0, false, player.getInstanceId());
-					addSpawn(RATEL, MOB_2, false, 0, false, player.getInstanceId());
-					htmltext = event;
-				}
-				break;
-			}
-		}
-		return htmltext;
+		return null;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = qs.isCompleted() ? getAlreadyCompletedMsg(player) : getNoQuestMsg(player);
+		String htmltext = getNoQuestMsg(player);
 		
-		switch (npc.getId())
+		switch (qs.getState())
 		{
-			case KATALIN:
-			{
-				switch (qs.getState())
-				{
-					case State.CREATED:
-					{
-						htmltext = "33943-01.htm";
-						break;
-					}
-					case State.STARTED:
-					{
-						switch (qs.getCond())
-						{
-							case 1:
-							{
-								htmltext = "33943-02.html";
-								break;
-							}
-							case 2:
-							case 3:
-							case 4:
-							case 5:
-							case 6:
-							{
-								htmltext = "33943-04.html";
-								break;
-							}
-							case 7:
-							{
-								htmltext = "33943-03.html";
-								giveAdena(player, 900, true);
-								rewardItems(player, SOULSHOTS_REWARD);
-								addExpAndSp(player, 3154, 0);
-								qs.exitQuest(false, true);
-								break;
-							}
-						}
-						break;
-					}
-				}
+			case State.CREATED:
+				htmltext = "33943-01.htm";
 				break;
-			}
-			case KATALIN_2:
+			case State.STARTED:
 			{
 				switch (qs.getCond())
 				{
 					case 1:
 					{
-						showOnScreenMsg(player, NpcStringId.ATTACK_THE_MONSTER, ExShowScreenMessage.TOP_CENTER, 4500);
-						qs.setCond(2, true);
-						addSpawn(FLOATO, MOB_1, false, 0, false, player.getInstanceId());
-						addSpawn(FLOATO, MOB_2, false, 0, false, player.getInstanceId());
-						htmltext = "33945-01.html";
+						htmltext = "33943-03.html";
 						break;
 					}
 					case 2:
+					case 3:
 					case 4:
+					case 5:
 					case 6:
 					{
-						htmltext = "33945-02.html";
-						break;
-					}
-					case 3:
-					{
-						if (qs.getInt("ss") == 1)
-						{
-							addSpawn(FLOATO, MOB_1, false, 0, false, player.getInstanceId());
-							addSpawn(FLOATO, MOB_2, false, 0, false, player.getInstanceId());
-							showOnScreenMsg(player, NpcStringId.ATTACK_THE_MONSTER, ExShowScreenMessage.TOP_CENTER, 4500);
-							htmltext = "33945-05.html";
-							qs.setCond(4, true);
-						}
-						else
-						{
-							giveItems(player, SOULSHOTS_TRAINING);
-							showOnScreenMsg(player, NpcStringId.SOULSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
-							startQuestTimer("showscreen_1", 4500, npc, player);
-							player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_003_bullet_01.htm", TutorialShowHtml.LARGE_WINDOW));
-							htmltext = "33945-04.html";
-							qs.set("ss", 1);
-						}
-						break;
-					}
-					case 5:
-					{
-						htmltext = "33945-06.html";
-						player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_004_skill_01.htm", TutorialShowHtml.LARGE_WINDOW));
+						htmltext = "33943-04.html";
 						break;
 					}
 					case 7:
 					{
-						htmltext = "33945-08.html";
+						if (!isSimulated)
+						{
+							giveAdena(player, 900, true);
+							rewardItems(player, SOULSHOTS_REWARD);
+							addExpAndSp(player, 3154, 0);
+							qs.exitQuest(false, true);
+						}
+						htmltext = "33943-05.html";
 						break;
 					}
 				}
 				break;
 			}
+			case State.COMPLETED:
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
 		}
-		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(killer, false);
-		
+		final Set<NpcLogListHolder> holder = new HashSet<>();
+		final QuestState qs = getQuestState(player, false);
 		if (qs != null)
 		{
-			final int cond = qs.getCond();
-			if (npc.getId() == FLOATO)
+			int npcId = -1;
+			switch (qs.getCond())
 			{
-				if ((cond == 2) || (cond == 4))
-				{
-					final int value = qs.getMemoStateEx(KILL_COUNT_ID) + 1;
-					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					if (value >= 2)
-					{
-						qs.setCond(cond + 1, true);
-						qs.setMemoStateEx(KILL_COUNT_ID, 0);
-					}
-					else
-					{
-						qs.setMemoStateEx(KILL_COUNT_ID, value);
-					}
-				}
+				case 2:
+					npcId = FLOATO;
+					break;
+				case 4:
+					npcId = FLOATO2;
+					break;
+				case 6:
+					npcId = RATEL;
+					break;
 			}
-			else if ((npc.getId() == RATEL) && (cond == 6))
+			if (npcId != -1)
 			{
-				final int value = qs.getMemoStateEx(KILL_COUNT_ID) + 1;
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				if (value >= 2)
-				{
-					qs.setCond(cond + 1, true);
-					qs.setMemoStateEx(KILL_COUNT_ID, 0);
-					showOnScreenMsg(killer, NpcStringId.TALK_TO_AYANTHE_TO_LEAVE_THE_TRAINING_GROUNDS, ExShowScreenMessage.TOP_CENTER, 4500);
-				}
-				else
-				{
-					qs.setMemoStateEx(KILL_COUNT_ID, value);
-				}
+				holder.add(new NpcLogListHolder(npcId, false, qs.getMemoStateEx(KILL_COUNT_VAR)));
 			}
 		}
-		
-		return super.onKill(npc, killer, isSummon);
+		return holder;
 	}
 }

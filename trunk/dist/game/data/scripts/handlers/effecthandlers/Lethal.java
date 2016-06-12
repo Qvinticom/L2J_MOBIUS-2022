@@ -16,14 +16,17 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.effects.EffectFlag;
+import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
+import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.util.Rnd;
 
 /**
  * Lethal effect implementation.
@@ -31,15 +34,13 @@ import com.l2jmobius.util.Rnd;
  */
 public final class Lethal extends AbstractEffect
 {
-	private final int _fullLethal;
-	private final int _halfLethal;
+	private final double _fullLethal;
+	private final double _halfLethal;
 	
-	public Lethal(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Lethal(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
-		_fullLethal = params.getInt("fullLethal", 0);
-		_halfLethal = params.getInt("halfLethal", 0);
+		_fullLethal = params.getDouble("fullLethal", 0);
+		_halfLethal = params.getDouble("halfLethal", 0);
 	}
 	
 	@Override
@@ -49,62 +50,71 @@ public final class Lethal extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public L2EffectType getEffectType()
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
-		if (activeChar.isPlayer() && !activeChar.getAccessLevel().canGiveDamage())
+		return L2EffectType.LETHAL_ATTACK;
+	}
+	
+	@Override
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	{
+		if (effector.isPlayer() && !effector.getAccessLevel().canGiveDamage())
 		{
 			return;
 		}
 		
-		if (info.getSkill().getMagicLevel() < (target.getLevel() - 6))
+		if (skill.getMagicLevel() < (effected.getLevel() - 6))
 		{
 			return;
 		}
 		
-		if (!target.isLethalable() || target.isInvul())
+		if (!effected.isLethalable() || effected.isHpBlocked())
 		{
 			return;
 		}
 		
-		final double chanceMultiplier = Formulas.calcAttributeBonus(activeChar, target, info.getSkill()) * Formulas.calcGeneralTraitBonus(activeChar, target, info.getSkill().getTraitType(), false);
+		if (effector.isPlayer() && effected.isPlayer() && effected.isAffected(EffectFlag.FACEOFF) && (effected.getActingPlayer().getAttackerObjId() != effector.getObjectId()))
+		{
+			return;
+		}
+		
+		final double chanceMultiplier = Formulas.calcAttributeBonus(effector, effected, skill) * Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), false) * effected.getStat().getValue(Stats.INSTANT_KILL_RESIST, 1);
 		// Lethal Strike
 		if (Rnd.get(100) < (_fullLethal * chanceMultiplier))
 		{
 			// for Players CP and HP is set to 1.
-			if (target.isPlayer())
+			if (effected.isPlayer())
 			{
-				target.notifyDamageReceived(target.getCurrentHp() - 1, info.getEffector(), info.getSkill(), true, false);
-				target.setCurrentCp(1);
-				target.setCurrentHp(1);
-				target.sendPacket(SystemMessageId.LETHAL_STRIKE);
+				effected.setCurrentCp(1);
+				effected.setCurrentHp(1);
+				effected.sendPacket(SystemMessageId.LETHAL_STRIKE);
 			}
 			// for Monsters HP is set to 1.
-			else if (target.isMonster() || target.isSummon())
+			else if (effected.isMonster() || effected.isSummon())
 			{
-				target.notifyDamageReceived(target.getCurrentHp() - 1, info.getEffector(), info.getSkill(), true, false);
-				target.setCurrentHp(1);
+				effected.setCurrentHp(1);
 			}
-			activeChar.sendPacket(SystemMessageId.HIT_WITH_LETHAL_STRIKE);
+			effector.sendPacket(SystemMessageId.HIT_WITH_LETHAL_STRIKE);
 		}
 		// Half-Kill
 		else if (Rnd.get(100) < (_halfLethal * chanceMultiplier))
 		{
 			// for Players CP is set to 1.
-			if (target.isPlayer())
+			if (effected.isPlayer())
 			{
-				target.setCurrentCp(1);
-				target.sendPacket(SystemMessageId.HALF_KILL);
-				target.sendPacket(SystemMessageId.YOUR_CP_WAS_DRAINED_BECAUSE_YOU_WERE_HIT_WITH_A_HALF_KILL_SKILL);
+				effected.setCurrentCp(1);
+				effected.sendPacket(SystemMessageId.HALF_KILL);
+				effected.sendPacket(SystemMessageId.YOUR_CP_WAS_DRAINED_BECAUSE_YOU_WERE_HIT_WITH_A_HALF_KILL_SKILL);
 			}
 			// for Monsters HP is set to 50%.
-			else if (target.isMonster() || target.isSummon())
+			else if (effected.isMonster() || effected.isSummon())
 			{
-				target.notifyDamageReceived(target.getCurrentHp() * 0.5, info.getEffector(), info.getSkill(), true, false);
-				target.setCurrentHp(target.getCurrentHp() * 0.5);
+				effected.setCurrentHp(effected.getCurrentHp() * 0.5);
 			}
-			activeChar.sendPacket(SystemMessageId.HALF_KILL);
+			effector.sendPacket(SystemMessageId.HALF_KILL);
 		}
+		
+		// No matter if lethal succeeded or not, its reflected.
+		Formulas.calcDamageReflected(effector, effected, skill, false);
 	}
 }

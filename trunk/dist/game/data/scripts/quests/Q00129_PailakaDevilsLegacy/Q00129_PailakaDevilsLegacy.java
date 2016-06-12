@@ -20,8 +20,7 @@ import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.Instance;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -54,16 +53,13 @@ public final class Q00129_PailakaDevilsLegacy extends Quest
 	private static final int PAILAKA_KEY = 13150; // Pailaka All-Purpose Key
 	private static final int BRACELET = 13295; // Pailaka Bracelet
 	private static final int ESCAPE = 736; // Scroll of Escape
-	// Skills
-	private static final SkillHolder VITALITY_REPLENISHING = new SkillHolder(5774, 2); // Pailaka Reward Vitality Replenishing
 	// Misc
 	private static final int MIN_LEVEL = 61;
 	private static final int MAX_LEVEL = 67;
-	private static final int EXIT_TIME = 5;
 	
 	public Q00129_PailakaDevilsLegacy()
 	{
-		super(129, Q00129_PailakaDevilsLegacy.class.getSimpleName(), "Pailaka - Devil's Legacy");
+		super(129);
 		addStartNpc(SURVIVOR);
 		addFirstTalkId(SURVIVOR, SUPPORTER, ADVENTURER1, ADVENTURER2);
 		addTalkId(SURVIVOR, SUPPORTER, ADVENTURER1, ADVENTURER2);
@@ -165,7 +161,14 @@ public final class Q00129_PailakaDevilsLegacy extends Quest
 					}
 					case State.STARTED:
 					{
-						htmltext = qs.getCond() > 1 ? "32498-08.htm" : "32498-06.htm";
+						if (qs.getCond() > 1)
+						{
+							htmltext = "32498-08.htm";
+						}
+						else
+						{
+							htmltext = "32498-06.htm";
+						}
 						break;
 					}
 					case State.COMPLETED:
@@ -225,7 +228,6 @@ public final class Q00129_PailakaDevilsLegacy extends Quest
 				{
 					htmltext = "32508-00.htm";
 				}
-				
 				break;
 			}
 			case ADVENTURER2:
@@ -236,22 +238,17 @@ public final class Q00129_PailakaDevilsLegacy extends Quest
 				}
 				else
 				{
-					final Instance inst = InstanceManager.getInstance().getInstance(npc.getInstanceId());
-					qs.exitQuest(false, true);
-					inst.setDuration(EXIT_TIME * 60000);
-					inst.setEmptyDestroyTime(0);
-					if (inst.containsPlayer(player.getObjectId()))
+					final Instance inst = InstanceManager.getInstance().getPlayerInstance(player, true);
+					if (inst != null)
 					{
-						npc.setTarget(player);
-						npc.doCast(VITALITY_REPLENISHING.getSkill());
-						addExpAndSp(player, 10800000, 950000);
+						inst.finishInstance();
+						addExpAndSp(player, 4010000, 962);
+						giveAdena(player, 411500, true);
 						rewardItems(player, BRACELET, 1);
 						rewardItems(player, ESCAPE, 1);
 					}
-					else
-					{
-						htmltext = "32511-01.htm";
-					}
+					qs.exitQuest(false, true);
+					htmltext = "32511-01.htm";
 				}
 				break;
 			}

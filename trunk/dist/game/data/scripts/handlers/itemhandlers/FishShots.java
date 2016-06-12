@@ -16,14 +16,15 @@
  */
 package handlers.itemhandlers;
 
-import java.util.logging.Level;
+import java.util.List;
 
+import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.ActionType;
@@ -61,14 +62,6 @@ public class FishShots implements IItemHandler
 		}
 		
 		final long count = item.getCount();
-		final SkillHolder[] skills = item.getItem().getSkills();
-		
-		if (skills == null)
-		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
-			return false;
-		}
-		
 		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT) && (weaponInst.getItem().getCrystalTypePlus() == item.getItem().getCrystalTypePlus());
 		
 		if (!gradeCheck)
@@ -87,7 +80,15 @@ public class FishShots implements IItemHandler
 		final L2Object oldTarget = activeChar.getTarget();
 		activeChar.setTarget(activeChar);
 		
-		Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillUse(activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0));
+		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
+		
+		if (skills == null)
+		{
+			_log.warning(getClass().getSimpleName() + ": is missing skills!");
+			return false;
+		}
+		
+		skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, holder.getSkillId(), holder.getSkillLvl(), 0, 0), 600));
 		activeChar.setTarget(oldTarget);
 		return true;
 	}

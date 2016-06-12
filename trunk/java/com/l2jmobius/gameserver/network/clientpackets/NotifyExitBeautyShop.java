@@ -16,26 +16,27 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
  * @author Sdw
  */
-public class NotifyExitBeautyShop extends L2GameClientPacket
+public class NotifyExitBeautyShop implements IClientIncomingPacket
 {
-	private static final String _C__D0_E1_NOTIFYEXITBEAUTYSHOP = "[C] D0:E1 NotifyExitBeautyShop";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -43,12 +44,6 @@ public class NotifyExitBeautyShop extends L2GameClientPacket
 		
 		final UserInfo userInfo = new UserInfo(activeChar, false);
 		userInfo.addComponentType(UserInfoType.APPAREANCE);
-		sendPacket(userInfo);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_E1_NOTIFYEXITBEAUTYSHOP;
+		client.sendPacket(userInfo);
 	}
 }

@@ -19,22 +19,20 @@ package quests.Q00485_HotSpringWater;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
 
 /**
  * Hot Spring Water (485)
- * @URL https://l2wiki.com/Hot_Spring_Water
- * @author Gigi
+ * @author St3eT
  */
-public class Q00485_HotSpringWater extends Quest
+public final class Q00485_HotSpringWater extends Quest
 {
-	// NPC
-	private static final int ADVANTURES_GUIDE = 32327;
+	// NPCs
+	private static final int ADVENTURER = 32327;
 	private static final int WALDERAL = 30844;
-	// MONSTERS
-	private static final int[] MOBS =
+	private static final int[] MONSTERS =
 	{
 		21314, // Hot Springs Bandersnatchling
 		21315, // Hot Springs Buffalo
@@ -48,35 +46,32 @@ public class Q00485_HotSpringWater extends Quest
 		21323, // Hot Springs Grendel
 	};
 	// Items
-	private static final int HOT_SPRINGS_WATER_SAMPLE = 19497; // Hot Springs Water Sample
-	private static final ItemHolder ADENA = new ItemHolder(57, 247410); // Adena
+	private static final int WATER = 19497; // Hot Springs Water Sample
 	// Misc
 	private static final int MIN_LEVEL = 70;
 	private static final int MAX_LEVEL = 74;
-	// Reward
-	private static final int EXP_REWARD = 9483000;
-	private static final int SP_REWARD = 2275;
 	
 	public Q00485_HotSpringWater()
 	{
-		super(485, Q00485_HotSpringWater.class.getSimpleName(), "Hot Spring Water");
-		addStartNpc(ADVANTURES_GUIDE);
-		addTalkId(ADVANTURES_GUIDE, WALDERAL);
-		registerQuestItems(HOT_SPRINGS_WATER_SAMPLE);
-		addKillId(MOBS);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.html");
+		super(485);
+		addStartNpc(ADVENTURER);
+		addTalkId(ADVENTURER, WALDERAL);
+		addKillId(MONSTERS);
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "");
+		registerQuestItems(WATER);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		
+		if (st == null)
 		{
-			return getNoQuestMsg(player);
+			return null;
 		}
 		
+		String htmltext = null;
 		switch (event)
 		{
 			case "32327-02.htm":
@@ -87,7 +82,7 @@ public class Q00485_HotSpringWater extends Quest
 			}
 			case "32327-04.htm":
 			{
-				qs.startQuest();
+				st.startQuest();
 				htmltext = event;
 				break;
 			}
@@ -96,38 +91,62 @@ public class Q00485_HotSpringWater extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
-		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
+		final QuestState st = getQuestState(player, true);
 		
-		switch (npc.getId())
+		switch (st.getState())
 		{
-			case ADVANTURES_GUIDE:
+			case State.CREATED:
 			{
-				if (qs.isCreated())
+				if (npc.getId() == ADVENTURER)
 				{
-					htmltext = "32327-01.htm";
-				}
-				else if (qs.getCond() > 0)
-				{
-					htmltext = "32327-05.html";
-				}
-				else if (qs.isCompleted() && !qs.isNowAvailable())
-				{
-					htmltext = "32327-07.html";
+					htmltext = "32327-01.html";
 				}
 				break;
 			}
-			case WALDERAL:
+			case State.STARTED:
 			{
-				if (qs.isCond(2) && (getQuestItemsCount(player, HOT_SPRINGS_WATER_SAMPLE) >= 40))
+				if (st.isCond(1))
 				{
-					takeItems(player, HOT_SPRINGS_WATER_SAMPLE, -1);
-					giveItems(player, ADENA);
-					addExpAndSp(player, EXP_REWARD, SP_REWARD);
-					qs.exitQuest(QuestType.DAILY, true);
-					htmltext = "30844-01.html";
+					htmltext = npc.getId() == ADVENTURER ? "32327-05.html" : "30844-01.html";
+				}
+				else if (st.isCond(2))
+				{
+					if (npc.getId() == ADVENTURER)
+					{
+						htmltext = "32327-06.html";
+					}
+					else if (npc.getId() == WALDERAL)
+					{
+						if (!isSimulated)
+						{
+							st.exitQuest(QuestType.DAILY, true);
+							giveAdena(player, 371_745, true);
+							if (player.getLevel() >= MIN_LEVEL)
+							{
+								addExpAndSp(player, 9_483_000, 2_275);
+							}
+						}
+						htmltext = "30844-02.html";
+					}
+				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				if ((npc.getId() == ADVENTURER) && st.isNowAvailable())
+				{
+					if (!isSimulated)
+					{
+						st.setState(State.CREATED);
+					}
+					htmltext = "32327-01.html";
+				}
+				else if ((npc.getId() == WALDERAL) && st.isCompleted() && !st.isNowAvailable())
+				{
+					htmltext = "30844-03.html";
 				}
 				break;
 			}
@@ -138,10 +157,14 @@ public class Q00485_HotSpringWater extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, npc, HOT_SPRINGS_WATER_SAMPLE, 1, 40, 0.2, true))
+		final QuestState st = getQuestState(killer, false);
+		
+		if ((st != null) && st.isCond(1))
 		{
-			qs.setCond(2, true);
+			if (giveItemRandomly(killer, WATER, 1, 40, 0.4, true))
+			{
+				st.setCond(2, true);
+			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

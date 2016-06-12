@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.model;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
 public final class L2Radar
 {
 	private final L2PcInstance _player;
-	private final List<RadarMarker> _markers = new CopyOnWriteArrayList<>();
+	private final Set<RadarMarker> _markers = ConcurrentHashMap.newKeySet();
 	
 	public L2Radar(L2PcInstance player)
 	{
@@ -48,9 +48,13 @@ public final class L2Radar
 	// Remove a marker from player's radar
 	public void removeMarker(int x, int y, int z)
 	{
-		final RadarMarker newMarker = new RadarMarker(x, y, z);
-		
-		_markers.remove(newMarker);
+		for (RadarMarker rm : _markers)
+		{
+			if ((rm._x == x) && (rm._y == y) && (rm._z == z))
+			{
+				_markers.remove(rm);
+			}
+		}
 		_player.sendPacket(new RadarControl(1, 1, x, y, z));
 	}
 	
@@ -102,7 +106,8 @@ public final class L2Radar
 			result = (prime * result) + _type;
 			result = (prime * result) + _x;
 			result = (prime * result) + _y;
-			return result = (prime * result) + _z;
+			result = (prime * result) + _z;
+			return result;
 		}
 		
 		@Override
@@ -117,7 +122,11 @@ public final class L2Radar
 				return false;
 			}
 			final RadarMarker other = (RadarMarker) obj;
-			return (_type == other._type) && (_x == other._x) && (_y == other._y) && (_z == other._z);
+			if ((_type != other._type) || (_x != other._x) || (_y != other._y) || (_z != other._z))
+			{
+				return false;
+			}
+			return true;
 		}
 	}
 }

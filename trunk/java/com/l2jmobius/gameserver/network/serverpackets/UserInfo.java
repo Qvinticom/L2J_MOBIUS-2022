@@ -17,16 +17,15 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
+import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.UserInfoType;
-import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import com.l2jmobius.gameserver.model.Elementals;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Sdw, UnAfraid
@@ -88,10 +87,6 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		{
 			addComponentType(UserInfoType.values());
 		}
-		// Visual Fix
-		_activeChar.sendPacket(new ExUserInfoEquipSlot(_activeChar));
-		_activeChar.sendPacket(new ExUserInfoCubic(_activeChar));
-		_activeChar.sendPacket(new ExUserInfoAbnormalVisualEffect(_activeChar));
 	}
 	
 	@Override
@@ -112,7 +107,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		{
 			case BASIC_INFO:
 			{
-				_initSize += type.getBlockLength() + (_activeChar.getName().length() * 2);
+				_initSize += type.getBlockLength() + (_activeChar.getAppearance().getVisibleName().length() * 2);
 				break;
 			}
 			case CLAN:
@@ -129,266 +124,241 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x32);
+		OutgoingPackets.USER_INFO.writeId(packet);
 		
-		writeD(_activeChar.getObjectId());
-		writeD(_initSize);
-		writeH(23);
-		writeB(_masks);
+		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_initSize);
+		packet.writeH(23);
+		packet.writeB(_masks);
 		
 		if (containsMask(UserInfoType.RELATION))
 		{
-			writeD(_relation);
+			packet.writeD(_relation);
 		}
 		
 		if (containsMask(UserInfoType.BASIC_INFO))
 		{
-			writeH(16 + (_activeChar.getName().length() * 2));
-			writeString(_activeChar.getName());
-			writeC(_activeChar.isGM() ? 0x01 : 0x00);
-			writeC(_activeChar.getRace().ordinal());
-			writeC(_activeChar.getAppearance().getSex() ? 0x01 : 0x00);
-			writeD(_activeChar.getInitialClassId());
-			writeD(_activeChar.getClassId().getId());
-			writeC(_activeChar.getLevel());
+			packet.writeH(16 + (_activeChar.getAppearance().getVisibleName().length() * 2));
+			packet.writeString(_activeChar.getName());
+			packet.writeC(_activeChar.isGM() ? 0x01 : 0x00);
+			packet.writeC(_activeChar.getRace().ordinal());
+			packet.writeC(_activeChar.getAppearance().getSex() ? 0x01 : 0x00);
+			packet.writeD(_activeChar.getBaseClass());
+			packet.writeD(_activeChar.getClassId().getId());
+			packet.writeC(_activeChar.getLevel());
 		}
 		
 		if (containsMask(UserInfoType.BASE_STATS))
 		{
-			writeH(18);
-			writeH(_activeChar.getSTR());
-			writeH(_activeChar.getDEX());
-			writeH(_activeChar.getCON());
-			writeH(_activeChar.getINT());
-			writeH(_activeChar.getWIT());
-			writeH(_activeChar.getMEN());
-			writeH(_activeChar.getLUC());
-			writeH(_activeChar.getCHA());
+			packet.writeH(18);
+			packet.writeH(_activeChar.getSTR());
+			packet.writeH(_activeChar.getDEX());
+			packet.writeH(_activeChar.getCON());
+			packet.writeH(_activeChar.getINT());
+			packet.writeH(_activeChar.getWIT());
+			packet.writeH(_activeChar.getMEN());
+			packet.writeH(_activeChar.getLUC());
+			packet.writeH(_activeChar.getCHA());
 		}
 		
 		if (containsMask(UserInfoType.MAX_HPCPMP))
 		{
-			writeH(14);
-			writeD(_activeChar.getMaxHp());
-			writeD(_activeChar.getMaxMp());
-			writeD(_activeChar.getMaxCp());
+			packet.writeH(14);
+			packet.writeD(_activeChar.getMaxHp());
+			packet.writeD(_activeChar.getMaxMp());
+			packet.writeD(_activeChar.getMaxCp());
 		}
 		
 		if (containsMask(UserInfoType.CURRENT_HPMPCP_EXP_SP))
 		{
-			writeH(38);
-			writeD((int) Math.round(_activeChar.getCurrentHp()));
-			writeD((int) Math.round(_activeChar.getCurrentMp()));
-			writeD((int) Math.round(_activeChar.getCurrentCp()));
-			writeQ(_activeChar.getSp());
-			writeQ(_activeChar.getExp());
-			writeF((float) (_activeChar.getExp() - ExperienceData.getInstance().getExpForLevel(_activeChar.getLevel())) / (ExperienceData.getInstance().getExpForLevel(_activeChar.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(_activeChar.getLevel())));
+			packet.writeH(38);
+			packet.writeD((int) Math.round(_activeChar.getCurrentHp()));
+			packet.writeD((int) Math.round(_activeChar.getCurrentMp()));
+			packet.writeD((int) Math.round(_activeChar.getCurrentCp()));
+			packet.writeQ(_activeChar.getSp());
+			packet.writeQ(_activeChar.getExp());
+			packet.writeF((float) (_activeChar.getExp() - ExperienceData.getInstance().getExpForLevel(_activeChar.getLevel())) / (ExperienceData.getInstance().getExpForLevel(_activeChar.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(_activeChar.getLevel())));
 		}
 		
 		if (containsMask(UserInfoType.ENCHANTLEVEL))
 		{
-			writeH(4);
-			writeC(_enchantLevel);
-			writeC(_armorEnchant);
+			packet.writeH(4);
+			packet.writeC(_enchantLevel);
+			packet.writeC(_armorEnchant);
 		}
 		
 		if (containsMask(UserInfoType.APPAREANCE))
 		{
-			writeH(15);
-			writeD(_activeChar.getVisualHair());
-			writeD(_activeChar.getVisualHairColor());
-			writeD(_activeChar.getVisualFace());
-			writeC(_activeChar.isHairAccessoryEnabled() ? 0x01 : 0x00);
+			packet.writeH(15);
+			packet.writeD(_activeChar.getVisualHair());
+			packet.writeD(_activeChar.getVisualHairColor());
+			packet.writeD(_activeChar.getVisualFace());
+			packet.writeC(_activeChar.isHairAccessoryEnabled() ? 0x01 : 0x00);
 		}
 		
 		if (containsMask(UserInfoType.STATUS))
 		{
-			writeH(6);
-			writeC(_activeChar.getMountType().ordinal());
-			writeC(_activeChar.getPrivateStoreType().getId());
-			writeC(_activeChar.hasDwarvenCraft() || (_activeChar.getSkillLevel(248) > 0) ? 1 : 0);
-			writeC(_activeChar.getAbilityPointsUsed());
+			packet.writeH(6);
+			packet.writeC(_activeChar.getMountType().ordinal());
+			packet.writeC(_activeChar.getPrivateStoreType().getId());
+			packet.writeC(_activeChar.hasDwarvenCraft() || (_activeChar.getSkillLevel(248) > 0) ? 1 : 0);
+			packet.writeC(_activeChar.getAbilityPointsUsed());
 		}
 		
 		if (containsMask(UserInfoType.STATS))
 		{
-			writeH(56);
-			if (_activeChar.getActiveWeaponItem() != null)
-			{
-				final L2Weapon weaponItem = _activeChar.getActiveWeaponItem();
-				if (weaponItem.getItemType() == WeaponType.POLE)
-				{
-					writeH(80);
-				}
-				else if (weaponItem.getItemType() == WeaponType.BOW)
-				{
-					writeH(500);
-				}
-				else if (weaponItem.getItemType() == WeaponType.CROSSBOW)
-				{
-					writeH(400);
-				}
-				else
-				{
-					writeH(40);
-				}
-			}
-			else
-			{
-				writeH(0);
-			}
-			writeD((int) _activeChar.getPAtk(null));
-			writeD((int) _activeChar.getPAtkSpd());
-			writeD((int) _activeChar.getPDef(null));
-			writeD(_activeChar.getEvasionRate(null));
-			writeD(_activeChar.getAccuracy());
-			writeD(_activeChar.getCriticalHit(null, null));
-			writeD((int) _activeChar.getMAtk(null, null));
-			writeD(_activeChar.getMAtkSpd());
-			writeD((int) _activeChar.getPAtkSpd()); // Seems like atk speed - 1
-			writeD(_activeChar.getMagicEvasionRate(null));
-			writeD((int) _activeChar.getMDef(null, null));
-			writeD(_activeChar.getMagicAccuracy());
-			writeD(_activeChar.getMCriticalHit(null, null));
+			packet.writeH(56);
+			packet.writeH(_activeChar.getActiveWeaponItem() != null ? 40 : 20);
+			packet.writeD(_activeChar.getPAtk());
+			packet.writeD(_activeChar.getPAtkSpd());
+			packet.writeD(_activeChar.getPDef());
+			packet.writeD(_activeChar.getEvasionRate());
+			packet.writeD(_activeChar.getAccuracy());
+			packet.writeD(_activeChar.getCriticalHit());
+			packet.writeD(_activeChar.getMAtk());
+			packet.writeD(_activeChar.getMAtkSpd());
+			packet.writeD(_activeChar.getPAtkSpd()); // Seems like atk speed - 1
+			packet.writeD(_activeChar.getMagicEvasionRate());
+			packet.writeD(_activeChar.getMDef());
+			packet.writeD(_activeChar.getMagicAccuracy());
+			packet.writeD(_activeChar.getMCriticalHit());
 		}
 		
 		if (containsMask(UserInfoType.ELEMENTALS))
 		{
-			writeH(14);
-			writeH(_activeChar.getDefenseElementValue(Elementals.FIRE));
-			writeH(_activeChar.getDefenseElementValue(Elementals.WATER));
-			writeH(_activeChar.getDefenseElementValue(Elementals.WIND));
-			writeH(_activeChar.getDefenseElementValue(Elementals.EARTH));
-			writeH(_activeChar.getDefenseElementValue(Elementals.HOLY));
-			writeH(_activeChar.getDefenseElementValue(Elementals.DARK));
+			packet.writeH(14);
+			packet.writeH(_activeChar.getDefenseElementValue(AttributeType.FIRE));
+			packet.writeH(_activeChar.getDefenseElementValue(AttributeType.WATER));
+			packet.writeH(_activeChar.getDefenseElementValue(AttributeType.WIND));
+			packet.writeH(_activeChar.getDefenseElementValue(AttributeType.EARTH));
+			packet.writeH(_activeChar.getDefenseElementValue(AttributeType.HOLY));
+			packet.writeH(_activeChar.getDefenseElementValue(AttributeType.DARK));
 		}
 		
 		if (containsMask(UserInfoType.POSITION))
 		{
-			writeH(18);
-			writeD(_activeChar.getX());
-			writeD(_activeChar.getY());
-			writeD(_activeChar.getZ());
-			writeD(_activeChar.isInVehicle() ? _activeChar.getVehicle().getObjectId() : 0);
+			packet.writeH(18);
+			packet.writeD(_activeChar.getX());
+			packet.writeD(_activeChar.getY());
+			packet.writeD(_activeChar.getZ());
+			packet.writeD(_activeChar.isInVehicle() ? _activeChar.getVehicle().getObjectId() : 0);
 		}
 		
 		if (containsMask(UserInfoType.SPEED))
 		{
-			writeH(18);
-			writeH(_runSpd);
-			writeH(_walkSpd);
-			writeH(_swimRunSpd);
-			writeH(_swimWalkSpd);
-			writeH(_flRunSpd);
-			writeH(_flWalkSpd);
-			writeH(_flyRunSpd);
-			writeH(_flyWalkSpd);
+			packet.writeH(18);
+			packet.writeH(_runSpd);
+			packet.writeH(_walkSpd);
+			packet.writeH(_swimRunSpd);
+			packet.writeH(_swimWalkSpd);
+			packet.writeH(_flRunSpd);
+			packet.writeH(_flWalkSpd);
+			packet.writeH(_flyRunSpd);
+			packet.writeH(_flyWalkSpd);
 		}
 		
 		if (containsMask(UserInfoType.MULTIPLIER))
 		{
-			writeH(18);
-			writeF(_moveMultiplier);
-			writeF(_activeChar.getAttackSpeedMultiplier());
+			packet.writeH(18);
+			packet.writeF(_moveMultiplier);
+			packet.writeF(_activeChar.getAttackSpeedMultiplier());
 		}
 		
 		if (containsMask(UserInfoType.COL_RADIUS_HEIGHT))
 		{
-			writeH(18);
-			writeF(_activeChar.getCollisionRadius());
-			writeF(_activeChar.getCollisionHeight());
+			packet.writeH(18);
+			packet.writeF(_activeChar.getCollisionRadius());
+			packet.writeF(_activeChar.getCollisionHeight());
 		}
 		
 		if (containsMask(UserInfoType.ATK_ELEMENTAL))
 		{
-			writeH(5);
-			final byte attackAttribute = _activeChar.getAttackElement();
-			writeC(attackAttribute);
-			writeH(_activeChar.getAttackElementValue(attackAttribute));
+			packet.writeH(5);
+			final AttributeType attackAttribute = _activeChar.getAttackElement();
+			packet.writeC(attackAttribute.getClientId());
+			packet.writeH(_activeChar.getAttackElementValue(attackAttribute));
 		}
 		
 		if (containsMask(UserInfoType.CLAN))
 		{
-			writeH(32 + (_title.length() * 2));
-			writeString(_title);
-			writeH(_activeChar.getPledgeType());
-			writeD(_activeChar.getClanId());
-			writeD(_activeChar.getClanCrestLargeId());
-			writeD(_activeChar.getClanCrestId());
-			writeD(_activeChar.getClanPrivileges().getBitmask());
-			writeC(_activeChar.isClanLeader() ? 1 : 0);
-			writeD(_activeChar.getAllyId());
-			writeD(_activeChar.getAllyCrestId());
-			writeC(_activeChar.isInPartyMatchRoom() ? 0x01 : 0x00);
+			packet.writeH(32 + (_title.length() * 2));
+			packet.writeString(_title);
+			packet.writeH(_activeChar.getPledgeType());
+			packet.writeD(_activeChar.getClanId());
+			packet.writeD(_activeChar.getClanCrestLargeId());
+			packet.writeD(_activeChar.getClanCrestId());
+			packet.writeD(_activeChar.getClanPrivileges().getBitmask());
+			packet.writeC(_activeChar.isClanLeader() ? 0x01 : 0x00);
+			packet.writeD(_activeChar.getAllyId());
+			packet.writeD(_activeChar.getAllyCrestId());
+			packet.writeC(_activeChar.isInMatchingRoom() ? 0x01 : 0x00);
 		}
 		
 		if (containsMask(UserInfoType.SOCIAL))
 		{
-			writeH(22);
-			writeC(_activeChar.getPvpFlag());
-			writeD(_activeChar.getReputation());
-			writeC(_activeChar.isNoble() ? 0x01 : 0x00);
-			writeC(_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 1 : 0);
-			writeC(_activeChar.getPledgeClass());
-			writeD(_activeChar.getPkKills());
-			writeD(_activeChar.getPvpKills());
-			writeH(_activeChar.getRecomLeft());
-			writeH(_activeChar.getRecomHave());
+			packet.writeH(22);
+			packet.writeC(_activeChar.getPvpFlag());
+			packet.writeD(_activeChar.getReputation()); // Reputation
+			packet.writeC(_activeChar.isNoble() ? 0x01 : 0x00);
+			packet.writeC(_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 1 : 0);
+			packet.writeC(_activeChar.getPledgeClass());
+			packet.writeD(_activeChar.getPkKills());
+			packet.writeD(_activeChar.getPvpKills());
+			packet.writeH(_activeChar.getRecomLeft());
+			packet.writeH(_activeChar.getRecomHave());
 		}
 		
 		if (containsMask(UserInfoType.VITA_FAME))
 		{
-			writeH(15);
-			writeD(_activeChar.getVitalityPoints());
-			writeC(0x00); // Vita Bonus
-			writeD(_activeChar.getFame());
-			writeD(_activeChar.getRaidPoints());
+			packet.writeH(15);
+			packet.writeD(_activeChar.getVitalityPoints());
+			packet.writeC(0x00); // Vita Bonus
+			packet.writeD(_activeChar.getFame());
+			packet.writeD(_activeChar.getRaidbossPoints());
 		}
 		
 		if (containsMask(UserInfoType.SLOTS))
 		{
-			writeH(9);
-			writeC(_activeChar.getInventory().getTalismanSlots()); // Confirmed
-			writeC(_activeChar.getInventory().getBroochJewelSlots()); // Confirmed
-			writeC(_activeChar.getTeam().getId()); // Confirmed
-			writeC(0x00); // (1 = Red, 2 = White, 3 = White Pink) dotted ring on the floor
-			writeC(0x00);
-			writeC(0x00);
-			writeC(0x00);
+			packet.writeH(9);
+			packet.writeC(_activeChar.getInventory().getTalismanSlots()); // Confirmed
+			packet.writeC(_activeChar.getInventory().getBroochJewelSlots()); // Confirmed
+			packet.writeC(_activeChar.getTeam().getId()); // Confirmed
+			packet.writeD(0x00); // (1 = Red, 2 = White, 3 = White Pink, there is higher values (23, 50, 100 produces different aura) dotted / straight circle ring on the floor
 		}
 		
 		if (containsMask(UserInfoType.MOVEMENTS))
 		{
-			writeH(4);
-			writeC(_activeChar.isInsideZone(ZoneId.WATER) ? 1 : _activeChar.isFlyingMounted() ? 2 : 0);
-			writeC(_activeChar.isRunning() ? 0x01 : 0x00);
+			packet.writeH(4);
+			packet.writeC(_activeChar.isInsideZone(ZoneId.WATER) ? 1 : _activeChar.isFlyingMounted() ? 2 : 0);
+			packet.writeC(_activeChar.isRunning() ? 0x01 : 0x00);
 		}
 		
 		if (containsMask(UserInfoType.COLOR))
 		{
-			writeH(10);
-			writeD(_activeChar.getAppearance().getNameColor());
-			writeD(_activeChar.getAppearance().getTitleColor());
+			packet.writeH(10);
+			packet.writeD(_activeChar.getAppearance().getNameColor());
+			packet.writeD(_activeChar.getAppearance().getTitleColor());
 		}
 		
 		if (containsMask(UserInfoType.INVENTORY_LIMIT))
 		{
-			writeH(9);
-			writeH(0x00);
-			writeH(0x00);
-			writeH(_activeChar.getInventoryLimit());
-			writeC(_activeChar.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_activeChar.getCursedWeaponEquippedId()) : 0);
+			packet.writeH(9);
+			packet.writeD(0x00);
+			packet.writeH(_activeChar.getInventoryLimit());
+			packet.writeC(0x00); // if greater than 1 show the attack cursor when interacting, CoC or Cursed Weapon level ?
 		}
 		
 		if (containsMask(UserInfoType.UNK_3))
 		{
-			writeH(9);
-			writeC(0x01);
-			writeH(0x00);
-			writeD(0x00);
+			packet.writeH(9);
+			packet.writeD(0x00);
+			packet.writeH(0x00);
+			packet.writeC(_activeChar.isTrueHero() ? 100 : 0x00);
 		}
+		
+		return true;
 	}
 	
 	private int calculateRelation(L2PcInstance activeChar)

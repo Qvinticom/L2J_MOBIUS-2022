@@ -20,7 +20,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 
 /**
@@ -93,7 +92,7 @@ public enum ClassId implements IIdentifiable
 	ORC_MONK(47, false, Race.ORC, ORC_FIGHTER),
 	TYRANT(48, false, Race.ORC, ORC_MONK),
 	
-	ORC_MAGE(49, true, Race.ORC, null),
+	ORC_MAGE(49, false, Race.ORC, null),
 	ORC_SHAMAN(50, true, Race.ORC, ORC_MAGE),
 	OVERLORD(51, true, Race.ORC, ORC_SHAMAN),
 	WARCRYER(52, true, Race.ORC, ORC_SHAMAN),
@@ -227,7 +226,7 @@ public enum ClassId implements IIdentifiable
 	FEOH_SOULTAKER(167, true, Race.HUMAN, SOULTAKER),
 	FEOH_MYSTIC_MUSE(168, true, Race.ELF, MYSTIC_MUSE),
 	FEOH_STORM_SCREAMER(169, true, Race.DARK_ELF, STORM_SCREAMER),
-	FEOH_SOUL_HOUND(170, false, Race.KAMAEL, MALE_SOUL_HOUND),
+	FEOH_SOUL_HOUND(170, false, Race.KAMAEL, MALE_SOUL_HOUND), // fix me ?
 	ISS_HIEROPHANT(171, true, Race.HUMAN, HIEROPHANT),
 	ISS_SWORD_MUSE(172, false, Race.ELF, SWORD_MUSE),
 	ISS_SPECTRAL_DANCER(173, false, Race.DARK_ELF, SPECTRAL_DANCER),
@@ -364,6 +363,7 @@ public enum ClassId implements IIdentifiable
 		}
 		
 		return _parent.childOf(cid);
+		
 	}
 	
 	/**
@@ -376,16 +376,16 @@ public enum ClassId implements IIdentifiable
 	}
 	
 	/**
-	 * @return the level of this Class (0=initial, 4=awaken...)
+	 * @return the child level of this Class (0=root, 1=child leve 1...)
 	 */
 	public final int level()
 	{
-		if (_parent != null)
+		if (_parent == null)
 		{
-			return 1 + _parent.level();
+			return 0;
 		}
 		
-		return 0;
+		return 1 + _parent.level();
 	}
 	
 	/**
@@ -419,41 +419,5 @@ public enum ClassId implements IIdentifiable
 	private final void addNextClassId(ClassId cId)
 	{
 		_nextClassIds.add(cId);
-	}
-	
-	public static int getInitialClassId(L2PcInstance player)
-	{
-		switch (player.getBaseClass().getRace())
-		{
-			case HUMAN:
-			{
-				return player.getClassId().isMage() ? 10 : 0;
-			}
-			case ELF:
-			{
-				return player.getClassId().isMage() ? 25 : 18;
-			}
-			case DARK_ELF:
-			{
-				return player.getClassId().isMage() ? 38 : 31;
-			}
-			case ORC:
-			{
-				return player.getClassId().isMage() ? 49 : 44;
-			}
-			case DWARF:
-			{
-				return 53;
-			}
-			case KAMAEL:
-			{
-				return player.getAppearance().getSex() ? 124 : 123;
-			}
-			case ERTHEIA:
-			{
-				return player.getClassId().isMage() ? 183 : 182;
-			}
-		}
-		return 0;
 	}
 }

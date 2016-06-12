@@ -21,12 +21,11 @@ import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
 import quests.Q10285_MeetingSirra.Q10285_MeetingSirra;
 
@@ -50,7 +49,7 @@ public final class Q10286_ReunionWithSirra extends Quest
 	
 	public Q10286_ReunionWithSirra()
 	{
-		super(10286, Q10286_ReunionWithSirra.class.getSimpleName(), "Reunion with Sirra");
+		super(10286);
 		addStartNpc(RAFFORTY);
 		addTalkId(RAFFORTY, JINIA, SIRRA, JINIA2);
 		registerQuestItems(BLACK_FROZEN_CORE);
@@ -59,8 +58,8 @@ public final class Q10286_ReunionWithSirra extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return null;
 		}
@@ -70,8 +69,8 @@ public final class Q10286_ReunionWithSirra extends Quest
 		{
 			case "32020-02.htm":
 			{
-				qs.startQuest();
-				qs.setMemoState(1);
+				st.startQuest();
+				st.setMemoState(1);
 				htmltext = event;
 				break;
 			}
@@ -80,7 +79,7 @@ public final class Q10286_ReunionWithSirra extends Quest
 			case "32760-03.html":
 			case "32760-04.html":
 			{
-				if (qs.isMemoState(1))
+				if (st.isMemoState(1))
 				{
 					htmltext = event;
 				}
@@ -88,34 +87,36 @@ public final class Q10286_ReunionWithSirra extends Quest
 			}
 			case "32760-05.html":
 			{
-				if (qs.isMemoState(1))
+				if (st.isMemoState(1))
 				{
 					final L2Npc sirra = addSpawn(SIRRA, -23905, -8790, -5384, 56238, false, 0, false, npc.getInstanceId());
-					sirra.broadcastPacket(new NpcSay(sirra.getObjectId(), ChatType.NPC_GENERAL, sirra.getId(), NpcStringId.YOU_ADVANCED_BRAVELY_BUT_GOT_SUCH_A_TINY_RESULT_HOHOHO));
-					qs.set("ex", 1);
-					qs.setCond(3, true);
+					sirra.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_ADVANCED_BRAVELY_BUT_GOT_SUCH_A_TINY_RESULT_HOHOHO);
+					st.set("ex", 1);
+					st.setCond(3, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32760-07.html":
 			{
-				if (qs.isMemoState(1) && (qs.getInt("ex") == 2))
+				if (st.isMemoState(1) && (st.getInt("ex") == 2))
 				{
-					qs.unset("ex");
-					qs.setMemoState(2);
-					final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-					world.removeAllowed(player.getObjectId());
-					player.setInstanceId(0);
+					st.unset("ex");
+					st.setMemoState(2);
+					final Instance world = InstanceManager.getInstance().getPlayerInstance(player, true);
+					if (world != null)
+					{
+						world.finishInstance(0);
+					}
 					htmltext = event;
 				}
 				break;
 			}
 			case "32760-08.html":
 			{
-				if (qs.isMemoState(2))
+				if (st.isMemoState(2))
 				{
-					qs.setCond(5, true);
+					st.setCond(5, true);
 					player.teleToLocation(EXIT_LOC, 0);
 					htmltext = event; // TODO: missing "jinia_npc_q10286_10.htm"
 				}
@@ -124,7 +125,7 @@ public final class Q10286_ReunionWithSirra extends Quest
 			case "32762-02.html":
 			case "32762-03.html":
 			{
-				if (qs.isMemoState(1) && (qs.getInt("ex") == 1))
+				if (st.isMemoState(1) && (st.getInt("ex") == 1))
 				{
 					htmltext = event;
 				}
@@ -132,14 +133,14 @@ public final class Q10286_ReunionWithSirra extends Quest
 			}
 			case "32762-04.html":
 			{
-				if (qs.isMemoState(1) && (qs.getInt("ex") == 1))
+				if (st.isMemoState(1) && (st.getInt("ex") == 1))
 				{
 					if (!hasQuestItems(player, BLACK_FROZEN_CORE))
 					{
 						giveItems(player, BLACK_FROZEN_CORE, 5);
 					}
-					qs.set("ex", 2);
-					qs.setCond(4, true);
+					st.set("ex", 2);
+					st.setCond(4, true);
 					htmltext = event;
 				}
 				break;
@@ -147,7 +148,7 @@ public final class Q10286_ReunionWithSirra extends Quest
 			case "32781-02.html":
 			case "32781-03.html":
 			{
-				if (qs.isMemoState(2))
+				if (st.isMemoState(2))
 				{
 					htmltext = event;
 				}
@@ -160,9 +161,9 @@ public final class Q10286_ReunionWithSirra extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState qs = getQuestState(player, true);
+		QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		switch (qs.getState())
+		switch (st.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -176,8 +177,8 @@ public final class Q10286_ReunionWithSirra extends Quest
 			{
 				if (npc.getId() == RAFFORTY)
 				{
-					qs = player.getQuestState(Q10285_MeetingSirra.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted()) ? "32020-01.htm" : "32020-04.htm";
+					st = player.getQuestState(Q10285_MeetingSirra.class.getSimpleName());
+					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "32020-01.htm" : "32020-04.htm";
 				}
 				break;
 			}
@@ -187,11 +188,11 @@ public final class Q10286_ReunionWithSirra extends Quest
 				{
 					case RAFFORTY:
 					{
-						if (qs.isMemoState(1))
+						if (st.isMemoState(1))
 						{
 							htmltext = (player.getLevel() >= MIN_LEVEL) ? "32020-06.html" : "32020-08.html";
 						}
-						else if (qs.isMemoState(2))
+						else if (st.isMemoState(2))
 						{
 							htmltext = "32020-07.html";
 						}
@@ -199,9 +200,10 @@ public final class Q10286_ReunionWithSirra extends Quest
 					}
 					case JINIA:
 					{
-						if (qs.isMemoState(1))
+						if (st.isMemoState(1))
 						{
-							switch (qs.getInt("ex"))
+							final int state = st.getInt("ex");
+							switch (state)
 							{
 								case 0:
 								{
@@ -224,9 +226,9 @@ public final class Q10286_ReunionWithSirra extends Quest
 					}
 					case SIRRA:
 					{
-						if (qs.isMemoState(1))
+						if (st.isMemoState(1))
 						{
-							final int state = qs.getInt("ex");
+							final int state = st.getInt("ex");
 							if (state == 1)
 							{
 								htmltext = "32762-01.html";
@@ -240,10 +242,10 @@ public final class Q10286_ReunionWithSirra extends Quest
 					}
 					case JINIA2:
 					{
-						if (qs.isMemoState(10))
+						if (st.isMemoState(10))
 						{
 							addExpAndSp(player, 2152200, 181070);
-							qs.exitQuest(false, true);
+							st.exitQuest(false, true);
 							htmltext = "32781-01.html";
 						}
 						break;

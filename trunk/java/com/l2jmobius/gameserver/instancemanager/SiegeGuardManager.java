@@ -19,183 +19,242 @@ package com.l2jmobius.gameserver.instancemanager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.gameserver.data.xml.impl.CastleData;
+import com.l2jmobius.gameserver.data.xml.impl.NpcData;
+import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.instance.L2DefenderInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.entity.Castle;
+import com.l2jmobius.gameserver.model.holders.SiegeGuardHolder;
+import com.l2jmobius.gameserver.model.interfaces.IPositionable;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 
+/**
+ * Siege Guard Manager.
+ * @author St3eT
+ */
 public final class SiegeGuardManager
 {
-	private static Logger _log = Logger.getLogger(SiegeGuardManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SiegeGuardManager.class.getName());
+	private static final Set<L2ItemInstance> _droppedTickets = ConcurrentHashMap.newKeySet();
+	private static final Map<Integer, Set<L2Spawn>> _siegeGuardSpawn = new ConcurrentHashMap<>();
 	
-	private final Castle _castle;
-	private final List<L2Spawn> _siegeGuardSpawn = new ArrayList<>();
-	
-	public SiegeGuardManager(Castle castle)
+	protected SiegeGuardManager()
 	{
-		_castle = castle;
+		_droppedTickets.clear();
+		load();
 	}
 	
-	/**
-	 * Add guard.
-	 * @param activeChar
-	 * @param npcId
-	 */
-	public void addSiegeGuard(L2PcInstance activeChar, int npcId)
-	{
-		if (activeChar == null)
-		{
-			return;
-		}
-		addSiegeGuard(activeChar.getX(), activeChar.getY(), activeChar.getZ(), activeChar.getHeading(), npcId);
-	}
-	
-	/**
-	 * Add guard.
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @param heading
-	 * @param npcId
-	 */
-	public void addSiegeGuard(int x, int y, int z, int heading, int npcId)
-	{
-		saveSiegeGuard(x, y, z, heading, npcId, 0);
-	}
-	
-	/**
-	 * Hire merc.
-	 * @param activeChar
-	 * @param npcId
-	 */
-	public void hireMerc(L2PcInstance activeChar, int npcId)
-	{
-		if (activeChar == null)
-		{
-			return;
-		}
-		hireMerc(activeChar.getX(), activeChar.getY(), activeChar.getZ(), activeChar.getHeading(), npcId);
-	}
-	
-	/**
-	 * Hire merc.
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @param heading
-	 * @param npcId
-	 */
-	public void hireMerc(int x, int y, int z, int heading, int npcId)
-	{
-		saveSiegeGuard(x, y, z, heading, npcId, 1);
-	}
-	
-	/**
-	 * Remove a single mercenary, identified by the npcId and location. Presumably, this is used when a castle lord picks up a previously dropped ticket
-	 * @param npcId
-	 * @param x
-	 * @param y
-	 * @param z
-	 */
-	public void removeMerc(int npcId, int x, int y, int z)
+	private void load()
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("Delete From castle_siege_guards Where npcId = ? And x = ? AND y = ? AND z = ? AND isHired = 1"))
+			ResultSet rs = con.createStatement().executeQuery("SELECT * FROM castle_siege_guards Where isHired = 1"))
 		{
-			ps.setInt(1, npcId);
-			ps.setInt(2, x);
-			ps.setInt(3, y);
-			ps.setInt(4, z);
-			ps.execute();
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error deleting hired siege guard at " + x + ',' + y + ',' + z + ": " + e.getMessage(), e);
-		}
-	}
-	
-	/**
-	 * Remove mercs.
-	 */
-	public void removeMercs()
-	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("Delete From castle_siege_guards Where castleId = ? And isHired = 1"))
-		{
-			ps.setInt(1, getCastle().getResidenceId());
-			ps.execute();
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error deleting hired siege guard for castle " + getCastle().getName() + ": " + e.getMessage(), e);
-		}
-	}
-	
-	/**
-	 * Spawn guards.
-	 */
-	public void spawnSiegeGuard()
-	{
-		try
-		{
-			int hiredCount = 0;
-			final int hiredMax = MercTicketManager.getInstance().getMaxAllowedMerc(_castle.getResidenceId());
-			final boolean isHired = getCastle().getOwnerId() > 0;
-			loadSiegeGuard();
-			for (L2Spawn spawn : _siegeGuardSpawn)
+			while (rs.next())
 			{
-				if (spawn != null)
+				final int npcId = rs.getInt("npcId");
+				final int x = rs.getInt("x");
+				final int y = rs.getInt("y");
+				final int z = rs.getInt("z");
+				
+				final Castle castle = CastleManager.getInstance().getCastle(x, y, z);
+				if (castle == null)
 				{
-					spawn.init();
-					if (isHired)
-					{
-						spawn.stopRespawn();
-						if (++hiredCount > hiredMax)
-						{
-							return;
-						}
-					}
+					LOGGER.warning("Siege guard ticket cannot be placed! Castle is null at X: " + x + ", Y: " + y + ", Z: " + z);
+					continue;
+				}
+				
+				final SiegeGuardHolder holder = getSiegeGuardByNpc(castle.getResidenceId(), npcId);
+				if ((holder != null) && !castle.getSiege().isInProgress())
+				{
+					final L2ItemInstance dropticket = new L2ItemInstance(holder.getItemId());
+					dropticket.setItemLocation(ItemLocation.VOID);
+					dropticket.dropMe(null, x, y, z);
+					L2World.getInstance().storeObject(dropticket);
+					_droppedTickets.add(dropticket);
 				}
 			}
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _droppedTickets.size() + " siege guards tickets.");
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error spawning siege guards for castle " + getCastle().getName(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 	}
 	
 	/**
-	 * Unspawn guards.
+	 * Finds {@code SiegeGuardHolder} equals to castle id and npc id.
+	 * @param castleId the ID of the castle
+	 * @param itemId the ID of the item
+	 * @return the {@code SiegeGuardHolder} for this castle ID and item ID if any, otherwise {@code null}
 	 */
-	public void unspawnSiegeGuard()
+	public SiegeGuardHolder getSiegeGuardByItem(int castleId, int itemId)
 	{
-		for (L2Spawn spawn : _siegeGuardSpawn)
+		return CastleData.getInstance().getSiegeGuardsForCastle(castleId).stream().filter(g -> (g.getItemId() == itemId)).findFirst().orElse(null);
+	}
+	
+	/**
+	 * Finds {@code SiegeGuardHolder} equals to castle id and npc id.
+	 * @param castleId the ID of the castle
+	 * @param npcId the ID of the npc
+	 * @return the {@code SiegeGuardHolder} for this castle ID and npc ID if any, otherwise {@code null}
+	 */
+	public SiegeGuardHolder getSiegeGuardByNpc(int castleId, int npcId)
+	{
+		return CastleData.getInstance().getSiegeGuardsForCastle(castleId).stream().filter(g -> (g.getNpcId() == npcId)).findFirst().orElse(null);
+	}
+	
+	/**
+	 * Checks if {@code PlayerInstance} is too much close to another ticket.
+	 * @param player the PlayerInstance
+	 * @return {@code true} if {@code PlayerInstance} is too much close to another ticket, {@code false} otherwise
+	 */
+	public boolean isTooCloseToAnotherTicket(L2PcInstance player)
+	{
+		return _droppedTickets.stream().filter(g -> g.calculateDistance(player, true, false) < 25).findFirst().orElse(null) != null;
+	}
+	
+	/**
+	 * Checks if castle is under npc limit.
+	 * @param castleId the ID of the castle
+	 * @param itemId the ID of the item
+	 * @return {@code true} if castle is under npc limit, {@code false} otherwise
+	 */
+	public boolean isAtNpcLimit(int castleId, int itemId)
+	{
+		final long count = _droppedTickets.stream().filter(i -> i.getId() == itemId).count();
+		final SiegeGuardHolder holder = getSiegeGuardByItem(castleId, itemId);
+		return count >= holder.getMaxNpcAmout();
+	}
+	
+	/**
+	 * Adds ticket in current world.
+	 * @param itemId the ID of the item
+	 * @param player the PlayerInstance
+	 */
+	public void addTicket(int itemId, L2PcInstance player)
+	{
+		final Castle castle = CastleManager.getInstance().getCastle(player);
+		if (castle == null)
 		{
-			if ((spawn != null) && (spawn.getLastSpawn() != null))
-			{
-				spawn.stopRespawn();
-				spawn.getLastSpawn().doDie(spawn.getLastSpawn());
-			}
+			return;
 		}
 		
-		_siegeGuardSpawn.clear();
+		if (isAtNpcLimit(castle.getResidenceId(), itemId))
+		{
+			return;
+		}
+		
+		final SiegeGuardHolder holder = getSiegeGuardByItem(castle.getResidenceId(), itemId);
+		if (holder != null)
+		{
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
+				PreparedStatement statement = con.prepareStatement("Insert Into castle_siege_guards (castleId, npcId, x, y, z, heading, respawnDelay, isHired) Values (?, ?, ?, ?, ?, ?, ?, ?)"))
+			{
+				statement.setInt(1, castle.getResidenceId());
+				statement.setInt(2, holder.getNpcId());
+				statement.setInt(3, player.getX());
+				statement.setInt(4, player.getY());
+				statement.setInt(5, player.getZ());
+				statement.setInt(6, player.getHeading());
+				statement.setInt(7, 0);
+				statement.setInt(8, 1);
+				statement.execute();
+			}
+			catch (Exception e)
+			{
+				LOGGER.log(Level.WARNING, "Error adding siege guard for castle " + castle.getName() + ": " + e.getMessage(), e);
+			}
+			
+			spawnMercenary(player, holder);
+			final L2ItemInstance dropticket = new L2ItemInstance(itemId);
+			dropticket.setItemLocation(ItemLocation.VOID);
+			dropticket.dropMe(null, player.getX(), player.getY(), player.getZ());
+			L2World.getInstance().storeObject(dropticket);
+			_droppedTickets.add(dropticket);
+		}
 	}
 	
 	/**
-	 * Load guards.
+	 * Spawns Siege Guard in current world.
+	 * @param pos the object containing the spawn location coordinates
+	 * @param holder SiegeGuardHolder holder
 	 */
-	private void loadSiegeGuard()
+	private void spawnMercenary(IPositionable pos, SiegeGuardHolder holder)
+	{
+		final L2NpcTemplate template = NpcData.getInstance().getTemplate(holder.getNpcId());
+		if (template != null)
+		{
+			final L2DefenderInstance npc = new L2DefenderInstance(template);
+			npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
+			npc.setDecayed(false);
+			npc.setHeading(pos.getHeading());
+			npc.spawnMe(pos.getX(), pos.getY(), (pos.getZ() + 20));
+			npc.scheduleDespawn(3000);
+			npc.setIsImmobilized(holder.isStationary());
+		}
+	}
+	
+	/**
+	 * Delete all tickets from a castle.
+	 * @param castleId the ID of the castle
+	 */
+	public void deleteTickets(int castleId)
+	{
+		for (L2ItemInstance ticket : _droppedTickets)
+		{
+			if ((ticket != null) && (getSiegeGuardByItem(castleId, ticket.getId()) != null))
+			{
+				ticket.decayMe();
+				_droppedTickets.remove(ticket);
+			}
+		}
+	}
+	
+	/**
+	 * remove a single ticket and its associated spawn from the world (used when the castle lord picks up a ticket, for example).
+	 * @param item the item ID
+	 */
+	public void removeTicket(L2ItemInstance item)
+	{
+		final Castle castle = CastleManager.getInstance().getCastle(item);
+		if (castle == null)
+		{
+			return;
+		}
+		
+		final SiegeGuardHolder holder = getSiegeGuardByItem(castle.getResidenceId(), item.getId());
+		if (holder == null)
+		{
+			return;
+		}
+		
+		removeSiegeGuard(holder.getNpcId(), item);
+		_droppedTickets.remove(item);
+	}
+	
+	/**
+	 * Loads all siege guards for castle.
+	 * @param castle the castle instance
+	 */
+	private void loadSiegeGuard(Castle castle)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM castle_siege_guards Where castleId = ? And isHired = ?"))
 		{
-			ps.setInt(1, getCastle().getResidenceId());
-			ps.setInt(2, getCastle().getOwnerId() > 0 ? 1 : 0);
+			ps.setInt(1, castle.getResidenceId());
+			ps.setInt(2, castle.getOwnerId() > 0 ? 1 : 0);
+			
 			try (ResultSet rs = ps.executeQuery())
 			{
 				while (rs.next())
@@ -209,53 +268,126 @@ public final class SiegeGuardManager
 					spawn.setRespawnDelay(rs.getInt("respawnDelay"));
 					spawn.setLocationId(0);
 					
-					_siegeGuardSpawn.add(spawn);
+					getSpawnedGuards(castle.getResidenceId()).add(spawn);
 				}
 			}
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error loading siege guard for castle " + getCastle().getName() + ": " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error loading siege guard for castle " + castle.getName() + ": " + e.getMessage(), e);
 		}
 	}
 	
 	/**
-	 * Save guards.
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @param heading
-	 * @param npcId
-	 * @param isHire
+	 * Remove single siege guard.
+	 * @param npcId the ID of NPC
+	 * @param pos
 	 */
-	private void saveSiegeGuard(int x, int y, int z, int heading, int npcId, int isHire)
+	public void removeSiegeGuard(int npcId, IPositionable pos)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("Insert Into castle_siege_guards (castleId, npcId, x, y, z, heading, respawnDelay, isHired) Values (?, ?, ?, ?, ?, ?, ?, ?)"))
+			PreparedStatement ps = con.prepareStatement("Delete From castle_siege_guards Where npcId = ? And x = ? AND y = ? AND z = ? AND isHired = 1"))
 		{
-			ps.setInt(1, getCastle().getResidenceId());
-			ps.setInt(2, npcId);
-			ps.setInt(3, x);
-			ps.setInt(4, y);
-			ps.setInt(5, z);
-			ps.setInt(6, heading);
-			ps.setInt(7, isHire == 1 ? 0 : 600);
-			ps.setInt(8, isHire);
+			ps.setInt(1, npcId);
+			ps.setInt(2, pos.getX());
+			ps.setInt(3, pos.getY());
+			ps.setInt(4, pos.getZ());
 			ps.execute();
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error adding siege guard for castle " + getCastle().getName() + ": " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error deleting hired siege guard at " + pos + " : " + e.getMessage(), e);
 		}
 	}
 	
-	public final Castle getCastle()
+	/**
+	 * Remove all siege guards for castle.
+	 * @param castle the castle instance
+	 */
+	public void removeSiegeGuards(Castle castle)
 	{
-		return _castle;
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("Delete From castle_siege_guards Where castleId = ? And isHired = 1"))
+		{
+			ps.setInt(1, castle.getResidenceId());
+			ps.execute();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Error deleting hired siege guard for castle " + castle.getName() + ": " + e.getMessage(), e);
+		}
 	}
 	
-	public final List<L2Spawn> getSiegeGuardSpawn()
+	/**
+	 * Spawn all siege guards for castle.
+	 * @param castle the castle instance
+	 */
+	public void spawnSiegeGuard(Castle castle)
 	{
-		return _siegeGuardSpawn;
+		try
+		{
+			final boolean isHired = (castle.getOwnerId() > 0);
+			loadSiegeGuard(castle);
+			
+			for (L2Spawn spawn : getSpawnedGuards(castle.getResidenceId()))
+			{
+				if (spawn != null)
+				{
+					spawn.init();
+					if (isHired)
+					{
+						spawn.stopRespawn();
+					}
+					
+					final SiegeGuardHolder holder = getSiegeGuardByNpc(castle.getResidenceId(), spawn.getLastSpawn().getId());
+					if (holder == null)
+					{
+						continue;
+					}
+					
+					spawn.getLastSpawn().setIsImmobilized(holder.isStationary());
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Error spawning siege guards for castle " + castle.getName(), e);
+		}
+	}
+	
+	/**
+	 * Unspawn all siege guards for castle.
+	 * @param castle the castle instance
+	 */
+	public void unspawnSiegeGuard(Castle castle)
+	{
+		for (L2Spawn spawn : getSpawnedGuards(castle.getResidenceId()))
+		{
+			if ((spawn != null) && (spawn.getLastSpawn() != null))
+			{
+				spawn.stopRespawn();
+				spawn.getLastSpawn().doDie(spawn.getLastSpawn());
+			}
+		}
+		getSpawnedGuards(castle.getResidenceId()).clear();
+	}
+	
+	public Set<L2Spawn> getSpawnedGuards(int castleId)
+	{
+		return _siegeGuardSpawn.computeIfAbsent(castleId, key -> ConcurrentHashMap.newKeySet());
+	}
+	
+	/**
+	 * Gets the single instance of {@code MercTicketManager}.
+	 * @return single instance of {@code MercTicketManager}
+	 */
+	public static SiegeGuardManager getInstance()
+	{
+		return SingletonHolder._instance;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final SiegeGuardManager _instance = new SiegeGuardManager();
 	}
 }

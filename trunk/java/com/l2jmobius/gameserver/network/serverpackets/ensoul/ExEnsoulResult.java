@@ -16,67 +16,41 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets.ensoul;
 
-import com.l2jmobius.gameserver.network.clientpackets.ensoul.SoulCrystalOption;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author Mathael
+ * @author UnAfraid
  */
-public class ExEnsoulResult extends L2GameServerPacket
+public class ExEnsoulResult implements IClientOutgoingPacket
 {
-	public static final ExEnsoulResult FAILED = new ExEnsoulResult();
+	private final int _success;
+	private final L2ItemInstance _item;
 	
-	private final int _result;
-	private final SoulCrystalOption[] _commons;
-	private final SoulCrystalOption _special;
-	
-	public ExEnsoulResult()
+	public ExEnsoulResult(int success, L2ItemInstance item)
 	{
-		_result = 0;
-		_commons = null;
-		_special = null;
-	}
-	
-	public ExEnsoulResult(int result, SoulCrystalOption[] commons, SoulCrystalOption special)
-	{
-		_result = result;
-		_commons = commons;
-		_special = special;
+		_success = success;
+		_item = item;
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x17F);
-		
-		// Success (Yes or No)
-		writeC(_result);
-		
-		// Primary special abilities
-		int count = 0;
-		for (SoulCrystalOption sc : _commons)
+		OutgoingPackets.EX_ENSOUL_RESULT.writeId(packet);
+		packet.writeC(_success); // success / failure
+		packet.writeC(_item.getSpecialAbilities().size());
+		for (EnsoulOption option : _item.getSpecialAbilities())
 		{
-			if (sc != null)
-			{
-				count++;
-			}
+			packet.writeD(option.getId());
 		}
-		
-		writeC(count);
-		for (SoulCrystalOption sc : _commons)
+		packet.writeC(_item.getAdditionalSpecialAbilities().size());
+		for (EnsoulOption option : _item.getAdditionalSpecialAbilities())
 		{
-			if (sc != null)
-			{
-				writeD(sc.getEffect());
-			}
+			packet.writeD(option.getId());
 		}
-		
-		// Secondary special abilities
-		writeC(_special != null);
-		if (_special != null)
-		{
-			writeD(_special.getEffect());
-		}
+		return true;
 	}
 }

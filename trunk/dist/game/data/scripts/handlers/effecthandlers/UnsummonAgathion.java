@@ -17,11 +17,11 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
-import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoCubic;
 
 /**
@@ -30,9 +30,8 @@ import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoCubic;
  */
 public final class UnsummonAgathion extends AbstractEffect
 {
-	public UnsummonAgathion(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public UnsummonAgathion(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -42,14 +41,14 @@ public final class UnsummonAgathion extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2PcInstance player = info.getEffector().getActingPlayer();
+		final L2PcInstance player = effector.getActingPlayer();
 		if (player != null)
 		{
 			player.setAgathionId(0);
 			player.sendPacket(new ExUserInfoCubic(player));
-			player.broadcastPacket(new CharInfo(player));
+			player.broadcastCharInfo();
 		}
 	}
 }

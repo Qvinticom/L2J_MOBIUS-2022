@@ -17,9 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Enable Cloak effect implementation.
@@ -27,9 +28,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class EnableCloak extends AbstractEffect
 {
-	public EnableCloak(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public EnableCloak(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -39,15 +39,9 @@ public final class EnableCloak extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().getActingPlayer().getStat().setCloakSlotStatus(true);
-	}
-	
-	@Override
-	public boolean onActionTime(BuffInfo info)
-	{
-		return info.getSkill().isPassive();
+		effected.getActingPlayer().getStat().setCloakSlotStatus(true);
 	}
 	
 	@Override

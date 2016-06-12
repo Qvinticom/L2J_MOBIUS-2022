@@ -147,7 +147,7 @@ public class PunishmentTask implements Runnable
 		onStart();
 		if (_expirationTime > 0) // Has expiration?
 		{
-			_task = ThreadPoolManager.getInstance().scheduleGeneral(this, _expirationTime - System.currentTimeMillis());
+			_task = ThreadPoolManager.getInstance().scheduleGeneral(this, (_expirationTime - System.currentTimeMillis()));
 		}
 	}
 	
@@ -165,15 +165,14 @@ public class PunishmentTask implements Runnable
 	 */
 	private void abortTask()
 	{
-		if (_task == null)
+		if (_task != null)
 		{
-			return;
+			if (!_task.isCancelled() && !_task.isDone())
+			{
+				_task.cancel(false);
+			}
+			_task = null;
 		}
-		if (!_task.isCancelled() && !_task.isDone())
-		{
-			_task.cancel(false);
-		}
-		_task = null;
 	}
 	
 	/**
@@ -184,16 +183,16 @@ public class PunishmentTask implements Runnable
 		if (!_isStored)
 		{
 			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement ps = con.prepareStatement(INSERT_QUERY, Statement.RETURN_GENERATED_KEYS))
+				PreparedStatement st = con.prepareStatement(INSERT_QUERY, Statement.RETURN_GENERATED_KEYS))
 			{
-				ps.setString(1, _key);
-				ps.setString(2, _affect.name());
-				ps.setString(3, _type.name());
-				ps.setLong(4, _expirationTime);
-				ps.setString(5, _reason);
-				ps.setString(6, _punishedBy);
-				ps.execute();
-				try (ResultSet rset = ps.getGeneratedKeys())
+				st.setString(1, _key);
+				st.setString(2, _affect.name());
+				st.setString(3, _type.name());
+				st.setLong(4, _expirationTime);
+				st.setString(5, _reason);
+				st.setString(6, _punishedBy);
+				st.execute();
+				try (ResultSet rset = st.getGeneratedKeys())
 				{
 					if (rset.next())
 					{
@@ -223,11 +222,11 @@ public class PunishmentTask implements Runnable
 		if (_isStored)
 		{
 			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement ps = con.prepareStatement(UPDATE_QUERY))
+				PreparedStatement st = con.prepareStatement(UPDATE_QUERY))
 			{
-				ps.setLong(1, System.currentTimeMillis());
-				ps.setLong(2, _id);
-				ps.execute();
+				st.setLong(1, System.currentTimeMillis());
+				st.setLong(2, _id);
+				st.execute();
 			}
 			catch (SQLException e)
 			{

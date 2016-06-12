@@ -18,10 +18,11 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Teleport effect implementation.
@@ -31,10 +32,8 @@ public final class Teleport extends AbstractEffect
 {
 	private final Location _loc;
 	
-	public Teleport(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Teleport(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_loc = new Location(params.getInt("x", 0), params.getInt("y", 0), params.getInt("z", 0));
 	}
 	
@@ -51,8 +50,8 @@ public final class Teleport extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		info.getEffected().teleToLocation(_loc, true);
+		effected.teleToLocation(_loc, true, null);
 	}
 }

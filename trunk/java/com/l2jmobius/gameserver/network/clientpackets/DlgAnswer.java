@@ -17,9 +17,11 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.enums.PlayerAction;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
+import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerDlgAnswer;
@@ -27,30 +29,31 @@ import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.holders.DoorRequestHolder;
 import com.l2jmobius.gameserver.model.holders.SummonRequestHolder;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.util.GMAudit;
 
 /**
  * @author Dezmond_snz
  */
-public final class DlgAnswer extends L2GameClientPacket
+public final class DlgAnswer implements IClientIncomingPacket
 {
-	private static final String _C__C6_DLGANSWER = "[C] C6 DlgAnswer";
 	private int _messageId;
 	private int _answer;
 	private int _requesterId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_messageId = readD();
-		_answer = readD();
-		_requesterId = readD();
+		_messageId = packet.readD();
+		_answer = packet.readD();
+		_requesterId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -64,14 +67,7 @@ public final class DlgAnswer extends L2GameClientPacket
 		
 		if (_messageId == SystemMessageId.S13.getId())
 		{
-			if (activeChar.removeAction(PlayerAction.USER_ENGAGE))
-			{
-				if (Config.L2JMOD_ALLOW_WEDDING)
-				{
-					activeChar.engageAnswer(_answer);
-				}
-			}
-			else if (activeChar.removeAction(PlayerAction.ADMIN_COMMAND))
+			if (activeChar.removeAction(PlayerAction.ADMIN_COMMAND))
 			{
 				final String cmd = activeChar.getAdminConfirmCmd();
 				activeChar.setAdminConfirmCmd(null);
@@ -80,13 +76,14 @@ public final class DlgAnswer extends L2GameClientPacket
 					return;
 				}
 				final String command = cmd.split(" ")[0];
+				final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(command);
 				if (AdminData.getInstance().hasAccess(command, activeChar.getAccessLevel()))
 				{
 					if (Config.GMAUDIT)
 					{
-						GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", cmd, activeChar.getTarget() != null ? activeChar.getTarget().getName() : "no-target");
+						GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", cmd, (activeChar.getTarget() != null ? activeChar.getTarget().getName() : "no-target"));
 					}
-					AdminCommandHandler.getInstance().getHandler(command).useAdminCommand(cmd, activeChar);
+					ach.useAdminCommand(cmd, activeChar);
 				}
 			}
 		}
@@ -118,11 +115,5 @@ public final class DlgAnswer extends L2GameClientPacket
 				holder.getDoor().closeMe();
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__C6_DLGANSWER;
 	}
 }

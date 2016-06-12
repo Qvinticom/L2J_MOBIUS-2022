@@ -26,7 +26,6 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * This class handles following admin commands: - cw_info = displays cursed weapon status - cw_remove = removes a cursed weapon from the world, item id or name must be provided - cw_add = adds a cursed weapon into the world, item id or name must be provided. Target will be the weilder - cw_goto =
@@ -50,6 +49,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
+		
 		final CursedWeaponsManager cwm = CursedWeaponsManager.getInstance();
 		int id = 0;
 		
@@ -68,7 +68,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 					{
 						final L2PcInstance pl = cw.getPlayer();
 						activeChar.sendMessage("  Player holding: " + (pl == null ? "null" : pl.getName()));
-						activeChar.sendMessage("    Player karma: " + cw.getPlayerKarma());
+						activeChar.sendMessage("    Player Reputation: " + cw.getPlayerReputation());
 						activeChar.sendMessage("    Time Remaining: " + (cw.getTimeLeft() / 60000) + " min.");
 						activeChar.sendMessage("    Kills : " + cw.getNbKills());
 					}
@@ -89,26 +89,57 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 			{
 				final Collection<CursedWeapon> cws = cwm.getCursedWeapons();
 				final StringBuilder replyMSG = new StringBuilder(cws.size() * 300);
-				final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-				adminReply.setFile(activeChar.getHtmlPrefix(), "html/admin/cwinfo.htm");
+				final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
+				adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/cwinfo.htm");
 				for (CursedWeapon cw : cwm.getCursedWeapons())
 				{
 					itemId = cw.getItemId();
 					
-					StringUtil.append(replyMSG, "<table width=270><tr><td>Name:</td><td>", cw.getName(), "</td></tr>");
+					replyMSG.append("<table width=270><tr><td>Name:</td><td>");
+					replyMSG.append(cw.getName());
+					replyMSG.append("</td></tr>");
 					
 					if (cw.isActivated())
 					{
 						final L2PcInstance pl = cw.getPlayer();
-						StringUtil.append(replyMSG, "<tr><td>Weilder:</td><td>", pl == null ? "null" : pl.getName(), "</td></tr><tr><td>Karma:</td><td>", String.valueOf(cw.getPlayerKarma()), "</td></tr><tr><td>Kills:</td><td>", String.valueOf(cw.getPlayerPkKills()), "/", String.valueOf(cw.getNbKills()), "</td></tr><tr><td>Time remaining:</td><td>", String.valueOf(cw.getTimeLeft() / 60000), " min.</td></tr><tr><td><button value=\"Remove\" action=\"bypass -h admin_cw_remove ", String.valueOf(itemId), "\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"Go\" action=\"bypass -h admin_cw_goto ", String.valueOf(itemId), "\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+						replyMSG.append("<tr><td>Weilder:</td><td>");
+						replyMSG.append(pl == null ? "null" : pl.getName());
+						replyMSG.append("</td></tr>");
+						replyMSG.append("<tr><td>Karma:</td><td>");
+						replyMSG.append(cw.getPlayerReputation());
+						replyMSG.append("</td></tr>");
+						replyMSG.append("<tr><td>Kills:</td><td>");
+						replyMSG.append(cw.getPlayerPkKills());
+						replyMSG.append("/");
+						replyMSG.append(cw.getNbKills());
+						replyMSG.append("</td></tr><tr><td>Time remaining:</td><td>");
+						replyMSG.append(cw.getTimeLeft() / 60000);
+						replyMSG.append(" min.</td></tr>");
+						replyMSG.append("<tr><td><button value=\"Remove\" action=\"bypass -h admin_cw_remove ");
+						replyMSG.append(itemId);
+						replyMSG.append("\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>");
+						replyMSG.append("<td><button value=\"Go\" action=\"bypass -h admin_cw_goto ");
+						replyMSG.append(itemId);
+						replyMSG.append("\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 					}
 					else if (cw.isDropped())
 					{
-						StringUtil.append(replyMSG, "<tr><td>Position:</td><td>Lying on the ground</td></tr><tr><td>Time remaining:</td><td>", String.valueOf(cw.getTimeLeft() / 60000), " min.</td></tr><tr><td>Kills:</td><td>", String.valueOf(cw.getNbKills()), "</td></tr><tr><td><button value=\"Remove\" action=\"bypass -h admin_cw_remove ", String.valueOf(itemId), "\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"Go\" action=\"bypass -h admin_cw_goto ", String.valueOf(itemId), "\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+						replyMSG.append("<tr><td>Position:</td><td>Lying on the ground</td></tr><tr><td>Time remaining:</td><td>");
+						replyMSG.append(cw.getTimeLeft() / 60000);
+						replyMSG.append(" min.</td></tr><tr><td>Kills:</td><td>");
+						replyMSG.append(cw.getNbKills());
+						replyMSG.append("</td></tr><tr><td><button value=\"Remove\" action=\"bypass -h admin_cw_remove ");
+						replyMSG.append(itemId);
+						replyMSG.append("\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>");
+						replyMSG.append("<td><button value=\"Go\" action=\"bypass -h admin_cw_goto ");
+						replyMSG.append(itemId);
+						replyMSG.append("\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 					}
 					else
 					{
-						StringUtil.append(replyMSG, "<tr><td>Position:</td><td>Doesn't exist.</td></tr><tr><td><button value=\"Give to Target\" action=\"bypass -h admin_cw_add ", String.valueOf(itemId), "\" width=130 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td></td></tr>");
+						replyMSG.append("<tr><td>Position:</td><td>Doesn't exist.</td></tr><tr><td><button value=\"Give to Target\" action=\"bypass -h admin_cw_add ");
+						replyMSG.append(itemId);
+						replyMSG.append("\" width=130 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td></td></tr>");
 					}
 					
 					replyMSG.append("</table><br>");
@@ -119,7 +150,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_cw_reload"))
 		{
-			cwm.reload();
+			cwm.load();
 		}
 		else
 		{

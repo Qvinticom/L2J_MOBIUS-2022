@@ -16,16 +16,18 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
@@ -34,13 +36,14 @@ import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
 import com.l2jmobius.gameserver.model.shuttle.L2ShuttleData;
 import com.l2jmobius.gameserver.model.shuttle.L2ShuttleEngine;
 import com.l2jmobius.gameserver.model.shuttle.L2ShuttleStop;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * @author UnAfraid
  */
-public final class ShuttleData implements IXmlReader
+public final class ShuttleData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(ShuttleData.class.getName());
+	
 	private final Map<Integer, L2ShuttleData> _shuttles = new HashMap<>();
 	private final Map<Integer, L2ShuttleInstance> _shuttleInstances = new HashMap<>();
 	
@@ -60,13 +63,13 @@ public final class ShuttleData implements IXmlReader
 			}
 			_shuttleInstances.clear();
 		}
-		parseDatapackFile("ShuttleData.xml");
+		parseDatapackFile("data/ShuttleData.xml");
 		init();
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _shuttles.size() + " Shuttles.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _shuttles.size() + " Shuttles.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		NamedNodeMap attrs;
 		StatsSet set;

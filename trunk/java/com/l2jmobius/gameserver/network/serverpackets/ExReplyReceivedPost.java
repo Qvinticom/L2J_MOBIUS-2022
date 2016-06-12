@@ -16,11 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.MailType;
 import com.l2jmobius.gameserver.model.entity.Message;
 import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Migi, DS
@@ -28,7 +32,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 public class ExReplyReceivedPost extends AbstractItemPacket
 {
 	private final Message _msg;
-	private L2ItemInstance[] _items = null;
+	private Collection<L2ItemInstance> _items = null;
 	
 	public ExReplyReceivedPost(Message msg)
 	{
@@ -48,50 +52,51 @@ public class ExReplyReceivedPost extends AbstractItemPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xAC);
-		writeD(_msg.getMailType().ordinal()); // GOD
+		OutgoingPackets.EX_REPLY_RECEIVED_POST.writeId(packet);
+		
+		packet.writeD(_msg.getMailType().ordinal()); // GOD
 		if (_msg.getMailType() == MailType.COMMISSION_ITEM_RETURNED)
 		{
-			writeD(SystemMessageId.THE_REGISTRATION_PERIOD_FOR_THE_ITEM_YOU_REGISTERED_HAS_EXPIRED.getId());
-			writeD(SystemMessageId.THE_AUCTION_HOUSE_REGISTRATION_PERIOD_HAS_EXPIRED_AND_THE_CORRESPONDING_ITEM_IS_BEING_FORWARDED.getId());
+			packet.writeD(SystemMessageId.THE_REGISTRATION_PERIOD_FOR_THE_ITEM_YOU_REGISTERED_HAS_EXPIRED.getId());
+			packet.writeD(SystemMessageId.THE_AUCTION_HOUSE_REGISTRATION_PERIOD_HAS_EXPIRED_AND_THE_CORRESPONDING_ITEM_IS_BEING_FORWARDED.getId());
 		}
 		else if (_msg.getMailType() == MailType.COMMISSION_ITEM_SOLD)
 		{
-			writeD(_msg.getItemId());
-			writeD(_msg.getEnchantLvl());
+			packet.writeD(_msg.getItemId());
+			packet.writeD(_msg.getEnchantLvl());
 			for (int i = 0; i < 6; i++)
 			{
-				writeD(_msg.getElementals()[i]);
+				packet.writeD(_msg.getElementals()[i]);
 			}
-			writeD(SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD.getId());
-			writeD(SystemMessageId.S1_HAS_BEEN_SOLD.getId());
+			packet.writeD(SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD.getId());
+			packet.writeD(SystemMessageId.S1_HAS_BEEN_SOLD.getId());
 		}
-		writeD(_msg.getId());
-		writeD(_msg.isLocked() ? 1 : 0);
-		writeD(0x00); // Unknown
-		writeS(_msg.getSenderName());
-		writeS(_msg.getSubject());
-		writeS(_msg.getContent());
+		packet.writeD(_msg.getId());
+		packet.writeD(_msg.isLocked() ? 1 : 0);
+		packet.writeD(0x00); // Unknown
+		packet.writeS(_msg.getSenderName());
+		packet.writeS(_msg.getSubject());
+		packet.writeS(_msg.getContent());
 		
-		if ((_items != null) && (_items.length > 0))
+		if ((_items != null) && !_items.isEmpty())
 		{
-			writeD(_items.length);
+			packet.writeD(_items.size());
 			for (L2ItemInstance item : _items)
 			{
-				writeItem(item);
-				writeD(item.getObjectId());
+				writeItem(packet, item);
+				packet.writeD(item.getObjectId());
 			}
 		}
 		else
 		{
-			writeD(0x00);
+			packet.writeD(0x00);
 		}
 		
-		writeQ(_msg.getReqAdena());
-		writeD(_msg.hasAttachments() ? 1 : 0);
-		writeD(_msg.isReturned() ? 1 : 0);
+		packet.writeQ(_msg.getReqAdena());
+		packet.writeD(_msg.hasAttachments() ? 1 : 0);
+		packet.writeD(_msg.isReturned() ? 1 : 0);
+		return true;
 	}
 }

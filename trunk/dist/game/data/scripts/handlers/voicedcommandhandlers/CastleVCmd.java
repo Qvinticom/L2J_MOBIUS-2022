@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * @author Zoey76
  */
-final class CastleVCmd implements IVoicedCommandHandler
+public class CastleVCmd implements IVoicedCommandHandler
 {
 	private static final String[] VOICED_COMMANDS =
 	{
@@ -41,7 +41,6 @@ final class CastleVCmd implements IVoicedCommandHandler
 		switch (command)
 		{
 			case "opendoors":
-			{
 				if (!params.equals("castle"))
 				{
 					activeChar.sendMessage("Only Castle doors can be open.");
@@ -80,9 +79,7 @@ final class CastleVCmd implements IVoicedCommandHandler
 					door.openMe();
 				}
 				break;
-			}
 			case "closedoors":
-			{
 				if (!params.equals("castle"))
 				{
 					activeChar.sendMessage("Only Castle doors can be closed.");
@@ -118,15 +115,12 @@ final class CastleVCmd implements IVoicedCommandHandler
 					door2.closeMe();
 				}
 				break;
-			}
 			case "ridewyvern":
-			{
 				if (activeChar.isClanLeader() && (activeChar.getClan().getCastleId() > 0))
 				{
 					activeChar.mount(12621, 0, true);
 				}
 				break;
-			}
 		}
 		return true;
 	}

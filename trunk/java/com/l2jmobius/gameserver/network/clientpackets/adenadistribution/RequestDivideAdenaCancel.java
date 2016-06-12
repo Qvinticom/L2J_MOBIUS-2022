@@ -18,29 +18,32 @@ package com.l2jmobius.gameserver.network.clientpackets.adenadistribution;
 
 import java.util.Objects;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.request.AdenaDistributionRequest;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.adenadistribution.ExDivideAdenaCancel;
 
 /**
  * @author Sdw
  */
-public class RequestDivideAdenaCancel extends L2GameClientPacket
+public class RequestDivideAdenaCancel implements IClientIncomingPacket
 {
 	private boolean _cancel;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_cancel = readC() == 0;
+		_cancel = packet.readC() == 0;
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -48,18 +51,13 @@ public class RequestDivideAdenaCancel extends L2GameClientPacket
 		
 		if (_cancel)
 		{
-			player.getRequest(AdenaDistributionRequest.class).getPlayers().stream().filter(Objects::nonNull).forEach(p ->
+			final AdenaDistributionRequest request = player.getRequest(AdenaDistributionRequest.class);
+			request.getPlayers().stream().filter(Objects::nonNull).forEach(p ->
 			{
 				p.sendPacket(SystemMessageId.ADENA_DISTRIBUTION_HAS_BEEN_CANCELLED);
 				p.sendPacket(ExDivideAdenaCancel.STATIC_PACKET);
 				p.removeRequest(AdenaDistributionRequest.class);
 			});
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
 	}
 }

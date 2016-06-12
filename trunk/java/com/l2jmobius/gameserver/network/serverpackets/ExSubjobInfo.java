@@ -19,15 +19,17 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.SubclassInfoType;
 import com.l2jmobius.gameserver.enums.SubclassType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.SubClass;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Sdw
  */
-public class ExSubjobInfo extends L2GameServerPacket
+public class ExSubjobInfo implements IClientOutgoingPacket
 {
 	private final int _currClassId;
 	private final int _currRace;
@@ -67,7 +69,7 @@ public class ExSubjobInfo extends L2GameServerPacket
 		public SubInfo(L2PcInstance player)
 		{
 			_index = 0;
-			_classId = player.getBaseClassId();
+			_classId = player.getBaseClass();
 			_level = player.getStat().getBaseLevel();
 			_type = SubclassType.BASECLASS.ordinal();
 		}
@@ -94,20 +96,21 @@ public class ExSubjobInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xEA);
-		writeC(_type);
-		writeD(_currClassId);
-		writeD(_currRace);
-		writeD(_subs.size());
+		OutgoingPackets.EX_SUBJOB_INFO.writeId(packet);
+		
+		packet.writeC(_type);
+		packet.writeD(_currClassId);
+		packet.writeD(_currRace);
+		packet.writeD(_subs.size());
 		for (SubInfo sub : _subs)
 		{
-			writeD(sub.getIndex());
-			writeD(sub.getClassId());
-			writeD(sub.getLevel());
-			writeC(sub.getType());
+			packet.writeD(sub.getIndex());
+			packet.writeD(sub.getClassId());
+			packet.writeD(sub.getLevel());
+			packet.writeC(sub.getType());
 		}
+		return true;
 	}
 }

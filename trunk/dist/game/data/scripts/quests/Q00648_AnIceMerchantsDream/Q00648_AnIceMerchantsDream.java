@@ -91,7 +91,7 @@ public final class Q00648_AnIceMerchantsDream extends Quest
 	
 	public Q00648_AnIceMerchantsDream()
 	{
-		super(648, Q00648_AnIceMerchantsDream.class.getSimpleName(), "An Ice Merchants Dream");
+		super(648);
 		addStartNpc(RAFFORTY);
 		addTalkId(RAFFORTY, ICE_SHELF);
 		addKillId(MONSTERS.keySet());

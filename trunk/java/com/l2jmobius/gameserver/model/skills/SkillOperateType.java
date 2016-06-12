@@ -19,16 +19,16 @@ package com.l2jmobius.gameserver.model.skills;
 /**
  * This enum class holds the skill operative types:
  * <ul>
- * <li>ACTIVE_INSTANT</li>
- * <li>ACTIVE_CONTINUOUS</li>
- * <li>ACTIVE_WITH_TRIGGER</li>
- * <li>SPECIAL_HERB</li>
- * <li>CHANNELING_INSTANT</li>
- * <li>CHANNELING_CONTINUOUS</li>
- * <li>DIRECTIONAL_INSTANT</li>
- * <li>DIRECTIONAL_CONTINUOUS</li>
- * <li>PASSIVE</li>
- * <li>TOGGLE</li>
+ * <li>A1</li>
+ * <li>A2</li>
+ * <li>A3</li>
+ * <li>A4</li>
+ * <li>CA1</li>
+ * <li>CA5</li>
+ * <li>DA1</li>
+ * <li>DA2</li>
+ * <li>P</li>
+ * <li>T</li>
  * </ul>
  * @author Zoey76
  */
@@ -37,52 +37,82 @@ public enum SkillOperateType
 	/**
 	 * Active Skill with "Instant Effect" (for example damage skills heal/pdam/mdam/cpdam skills).
 	 */
-	ACTIVE_INSTANT,
+	A1,
 	
 	/**
 	 * Active Skill with "Continuous effect + Instant effect" (for example buff/debuff or damage/heal over time skills).
 	 */
-	ACTIVE_CONTINUOUS,
+	A2,
 	
 	/**
 	 * Active Skill with "Instant effect + Continuous effect"
 	 */
-	ACTIVE_WITH_TRIGGER,
+	A3,
 	
 	/**
-	 * Active Skill with "Instant effect + ?" used for special event herb (itemId 20903, skillId 22158).
+	 * Active Skill with "Instant effect + ?" used for special event herb.
 	 */
-	SPECIAL_HERB,
+	A4,
+	
+	/**
+	 * Aura Active Skill
+	 */
+	A5,
+	
+	/**
+	 * Synergy Active Skill
+	 */
+	A6,
 	
 	/**
 	 * Continuous Active Skill with "instant effect" (instant effect casted by ticks).
 	 */
-	CHANNELING_INSTANT,
+	CA1,
+	
+	/**
+	 * ?
+	 */
+	CA2,
 	
 	/**
 	 * Continuous Active Skill with "continuous effect" (continuous effect casted by ticks).
 	 */
-	CHANNELING_CONTINUOUS,
+	CA5,
 	
 	/**
 	 * Directional Active Skill with "Charge/Rush instant effect".
 	 */
-	DIRECTIONAL_INSTANT,
+	DA1,
 	
 	/**
 	 * Directional Active Skill with "Charge/Rush Continuous effect".
 	 */
-	DIRECTIONAL_CONTINUOUS,
+	DA2,
+	
+	/**
+	 * Directional Active Skill with Blink effect
+	 */
+	DA3,
 	
 	/**
 	 * Passive Skill.
 	 */
-	PASSIVE,
+	P,
 	
 	/**
 	 * Toggle Skill.
 	 */
-	TOGGLE;
+	T,
+	
+	/**
+	 * Toggle Skill with Group.
+	 */
+	TG,
+	
+	/**
+	 * Aura Skill.
+	 */
+	AU;
 	
 	/**
 	 * Verifies if the operative type correspond to an active skill.
@@ -92,21 +122,19 @@ public enum SkillOperateType
 	{
 		switch (this)
 		{
-			case ACTIVE_INSTANT:
-			case ACTIVE_CONTINUOUS:
-			case ACTIVE_WITH_TRIGGER:
-			case CHANNELING_INSTANT:
-			case CHANNELING_CONTINUOUS:
-			case DIRECTIONAL_INSTANT:
-			case DIRECTIONAL_CONTINUOUS:
-			case SPECIAL_HERB:
-			{
+			case A1:
+			case A2:
+			case A3:
+			case A4:
+			case A5:
+			case A6:
+			case CA1:
+			case CA5:
+			case DA1:
+			case DA2:
 				return true;
-			}
 			default:
-			{
 				return false;
-			}
 		}
 	}
 	
@@ -118,16 +146,14 @@ public enum SkillOperateType
 	{
 		switch (this)
 		{
-			case ACTIVE_CONTINUOUS:
-			case DIRECTIONAL_CONTINUOUS:
-			case SPECIAL_HERB:
-			{
+			case A2:
+			case A4:
+			case A5:
+			case A6:
+			case DA2:
 				return true;
-			}
 			default:
-			{
 				return false;
-			}
 		}
 	}
 	
@@ -137,7 +163,7 @@ public enum SkillOperateType
 	 */
 	public boolean isSelfContinuous()
 	{
-		return this == ACTIVE_WITH_TRIGGER;
+		return (this == A3);
 	}
 	
 	/**
@@ -146,7 +172,7 @@ public enum SkillOperateType
 	 */
 	public boolean isPassive()
 	{
-		return this == PASSIVE;
+		return (this == P);
 	}
 	
 	/**
@@ -155,7 +181,32 @@ public enum SkillOperateType
 	 */
 	public boolean isToggle()
 	{
-		return this == TOGGLE;
+		return (this == T) || (this == TG) || (this == AU);
+	}
+	
+	/**
+	 * Verifies if the operative type correspond to a active aura skill.
+	 * @return {@code true} if the operative skill type is active aura, {@code false} otherwise
+	 */
+	public boolean isAura()
+	{
+		return (this == A5) || (this == A6) || (this == AU);
+	}
+	
+	/**
+	 * @return {@code true} if the operate type skill type should not send messeges for start/finish, {@code false} otherwise
+	 */
+	public boolean isHidingMesseges()
+	{
+		return (this == A5) || (this == A6) || (this == TG);
+	}
+	
+	/**
+	 * @return {@code true} if the operate type skill type should not be broadcasted as MagicSkillUse, MagicSkillLaunched, {@code false} otherwise
+	 */
+	public boolean isNotBroadcastable()
+	{
+		return (this == A5) || (this == A6) || (this == AU) || (this == TG);
 	}
 	
 	/**
@@ -166,15 +217,21 @@ public enum SkillOperateType
 	{
 		switch (this)
 		{
-			case CHANNELING_INSTANT:
-			case CHANNELING_CONTINUOUS:
-			{
+			case CA1:
+			case CA2:
+			case CA5:
 				return true;
-			}
 			default:
-			{
 				return false;
-			}
 		}
+	}
+	
+	/**
+	 * Verifies if the operative type correspond to a synergy skill.
+	 * @return {@code true} if the operative skill type is synergy, {@code false} otherwise
+	 */
+	public boolean isSynergy()
+	{
+		return (this == A6);
 	}
 }

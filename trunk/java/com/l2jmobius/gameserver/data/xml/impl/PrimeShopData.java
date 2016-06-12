@@ -16,15 +16,18 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -32,13 +35,14 @@ import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import com.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
 import com.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRProductInfo;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * @author Gnacik, UnAfraid
  */
-public class PrimeShopData implements IXmlReader
+public class PrimeShopData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(PrimeShopData.class.getName());
+	
 	private final Map<Integer, PrimeShopGroup> _primeItems = new LinkedHashMap<>();
 	
 	protected PrimeShopData()
@@ -50,12 +54,20 @@ public class PrimeShopData implements IXmlReader
 	public void load()
 	{
 		_primeItems.clear();
-		parseDatapackFile("PrimeShop.xml");
-		LOGGER.info(_primeItems.size() > 0 ? getClass().getSimpleName() + ": Loaded " + _primeItems.size() + " items" : getClass().getSimpleName() + ": System is disabled.");
+		parseDatapackFile("data/PrimeShop.xml");
+		
+		if (!_primeItems.isEmpty())
+		{
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _primeItems.size() + " items");
+		}
+		else
+		{
+			LOGGER.info(getClass().getSimpleName() + ": System is disabled.");
+		}
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
@@ -116,7 +128,7 @@ public class PrimeShopData implements IXmlReader
 			return;
 		}
 		
-		player.sendPacket(new ExBRProductInfo(item));
+		player.sendPacket(new ExBRProductInfo(item, player));
 	}
 	
 	public PrimeShopGroup getItem(int brId)

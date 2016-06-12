@@ -16,25 +16,29 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * This class loads and holds all static object data.
  * @author UnAfraid
  */
-public final class StaticObjectData implements IXmlReader
+public final class StaticObjectData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(StaticObjectData.class.getName());
+	
 	private final Map<Integer, L2StaticObjectInstance> _staticObjects = new HashMap<>();
 	
 	/**
@@ -49,12 +53,12 @@ public final class StaticObjectData implements IXmlReader
 	public void load()
 	{
 		_staticObjects.clear();
-		parseDatapackFile("StaticObjects.xml");
+		parseDatapackFile("data/StaticObjects.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _staticObjects.size() + " static object templates.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{

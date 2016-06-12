@@ -17,10 +17,11 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Crystal Grade Modify effect implementation.
@@ -30,10 +31,8 @@ public final class CrystalGradeModify extends AbstractEffect
 {
 	private final int _grade;
 	
-	public CrystalGradeModify(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public CrystalGradeModify(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_grade = params.getInt("grade", 0);
 	}
 	
@@ -44,6 +43,12 @@ public final class CrystalGradeModify extends AbstractEffect
 	}
 	
 	@Override
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	{
+		effected.getActingPlayer().setExpertisePenaltyBonus(_grade);
+	}
+	
+	@Override
 	public void onExit(BuffInfo info)
 	{
 		final L2PcInstance player = info.getEffected().getActingPlayer();
@@ -51,11 +56,5 @@ public final class CrystalGradeModify extends AbstractEffect
 		{
 			player.setExpertisePenaltyBonus(0);
 		}
-	}
-	
-	@Override
-	public void onStart(BuffInfo info)
-	{
-		info.getEffected().getActingPlayer().setExpertisePenaltyBonus(_grade);
 	}
 }

@@ -56,7 +56,16 @@ public class ChatAdmin implements IVoicedCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String name = st.nextToken();
-				final long expirationTime = st.hasMoreTokens() && Util.isDigit(st.nextToken()) ? System.currentTimeMillis() + (Integer.parseInt(st.nextToken()) * 60 * 1000) : 0;
+				long expirationTime = 0;
+				if (st.hasMoreTokens())
+				{
+					final String token = st.nextToken();
+					if (Util.isDigit(token))
+					{
+						expirationTime = System.currentTimeMillis() + (Integer.parseInt(st.nextToken()) * 60 * 1000);
+					}
+				}
+				
 				final int objId = CharNameTable.getInstance().getIdByName(name);
 				if (objId > 0)
 				{

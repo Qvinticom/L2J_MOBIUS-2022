@@ -16,25 +16,32 @@
  */
 package com.l2jmobius.gameserver.util;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
+import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Date;
 import java.util.Locale;
-import java.util.StringJoiner;
-import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.commons.util.file.filter.ExtFilter;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.enums.HtmlActionScope;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
@@ -42,7 +49,6 @@ import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.network.serverpackets.AbstractHtmlPacket;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ShowBoard;
-import com.l2jmobius.util.file.filter.ExtFilter;
 
 /**
  * General Utility functions related to game server.
@@ -55,11 +61,6 @@ public final class Util
 	public static void handleIllegalPlayerAction(L2PcInstance actor, String message, IllegalActionPunishmentType punishment)
 	{
 		ThreadPoolManager.getInstance().scheduleGeneral(new IllegalPlayerActionTask(actor, message, punishment), 5000);
-	}
-	
-	public static String getRelativePath(File base, File file)
-	{
-		return file.toURI().getPath().substring(base.toURI().getPath().length());
 	}
 	
 	/**
@@ -89,9 +90,29 @@ public final class Util
 		return angleTarget;
 	}
 	
+	/**
+	 * Gets a random position around the specified location.
+	 * @param loc the center location
+	 * @param minRange the minimum range from the center to pick a point.
+	 * @param maxRange the maximum range from the center to pick a point.
+	 * @return a random location between minRange and maxRange of the center location.
+	 */
+	public static Location getRandomPosition(ILocational loc, int minRange, int maxRange)
+	{
+		final int randomX = Rnd.get(minRange, maxRange);
+		final int randomY = Rnd.get(minRange, maxRange);
+		final double rndAngle = Math.toRadians(Rnd.get(360));
+		
+		final int newX = (int) (loc.getX() + (randomX * Math.cos(rndAngle)));
+		final int newY = (int) (loc.getY() + (randomY * Math.sin(rndAngle)));
+		
+		return new Location(newX, newY, loc.getZ());
+	}
+	
 	public static double convertHeadingToDegree(int clientHeading)
 	{
-		return clientHeading / 182.044444444;
+		final double degree = clientHeading / 182.044444444;
+		return degree;
 	}
 	
 	public static int convertDegreeToClientHeading(double degree)
@@ -143,7 +164,7 @@ public final class Util
 	public static double calculateDistance(double x1, double y1, double z1, double x2, double y2, double z2, boolean includeZAxis, boolean squared)
 	{
 		final double distance = Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2) + (includeZAxis ? Math.pow(z1 - z2, 2) : 0);
-		return squared ? distance : Math.sqrt(distance);
+		return (squared) ? distance : Math.sqrt(distance);
 	}
 	
 	/**
@@ -160,59 +181,6 @@ public final class Util
 	}
 	
 	/**
-	 * @param str - the string whose first letter to capitalize
-	 * @return a string with the first letter of the {@code str} capitalized
-	 */
-	public static String capitalizeFirst(String str)
-	{
-		if ((str == null) || str.isEmpty())
-		{
-			return str;
-		}
-		final char[] arr = str.toCharArray();
-		final char c = arr[0];
-		
-		if (Character.isLetter(c))
-		{
-			arr[0] = Character.toUpperCase(c);
-		}
-		return new String(arr);
-	}
-	
-	/**
-	 * (Based on ucwords() function of PHP)<br>
-	 * DrHouse: still functional but must be rewritten to avoid += to concat strings
-	 * @param str - the string to capitalize
-	 * @return a string with the first letter of every word in {@code str} capitalized
-	 */
-	@Deprecated
-	public static String capitalizeWords(String str)
-	{
-		if ((str == null) || str.isEmpty())
-		{
-			return str;
-		}
-		
-		final char[] charArray = str.toCharArray();
-		final StringBuilder result = new StringBuilder();
-		
-		// Capitalize the first letter in the given string!
-		charArray[0] = Character.toUpperCase(charArray[0]);
-		
-		for (int i = 0; i < charArray.length; i++)
-		{
-			if (Character.isWhitespace(charArray[i]))
-			{
-				charArray[i + 1] = Character.toUpperCase(charArray[i + 1]);
-			}
-			
-			result.append(charArray[i]);
-		}
-		
-		return result.toString();
-	}
-	
-	/**
 	 * @param range
 	 * @param obj1
 	 * @param obj2
@@ -221,7 +189,7 @@ public final class Util
 	 */
 	public static boolean checkIfInRange(int range, L2Object obj1, L2Object obj2, boolean includeZAxis)
 	{
-		if ((obj1 == null) || (obj2 == null) || (obj1.getInstanceId() != obj2.getInstanceId()))
+		if ((obj1 == null) || (obj2 == null) || (obj1.getInstanceWorld() != obj2.getInstanceWorld()))
 		{
 			return false;
 		}
@@ -230,112 +198,83 @@ public final class Util
 			return true; // not limited
 		}
 		
-		int rad = obj1 instanceof L2Character ? 0 + ((L2Character) obj1).getTemplate().getCollisionRadius() : 0;
-		if (obj2 instanceof L2Character)
+		int radius = 0;
+		if (obj1.isCharacter())
 		{
-			rad += ((L2Character) obj2).getTemplate().getCollisionRadius();
+			radius += ((L2Character) obj1).getTemplate().getCollisionRadius();
+		}
+		if (obj2.isCharacter())
+		{
+			radius += ((L2Character) obj2).getTemplate().getCollisionRadius();
 		}
 		
-		final double dx = obj1.getX() - obj2.getX();
-		final double dy = obj1.getY() - obj2.getY();
-		double d = (dx * dx) + (dy * dy);
-		
-		if (includeZAxis)
-		{
-			final double dz = obj1.getZ() - obj2.getZ();
-			d += dz * dz;
-		}
-		return d <= ((range * range) + (2 * range * rad) + (rad * rad));
+		return calculateDistance(obj1, obj2, includeZAxis, false) <= (range + radius);
 	}
 	
 	/**
 	 * Checks if object is within short (sqrt(int.max_value)) radius, not using collisionRadius. Faster calculation than checkIfInRange if distance is short and collisionRadius isn't needed. Not for long distance checks (potential teleports, far away castles etc).
-	 * @param radius
+	 * @param range
 	 * @param obj1
 	 * @param obj2
 	 * @param includeZAxis if true, check also Z axis (3-dimensional check), otherwise only 2D
 	 * @return {@code true} if objects are within specified range between each other, {@code false} otherwise
 	 */
-	public static boolean checkIfInShortRadius(int radius, L2Object obj1, L2Object obj2, boolean includeZAxis)
+	public static boolean checkIfInShortRange(int range, L2Object obj1, L2Object obj2, boolean includeZAxis)
 	{
 		if ((obj1 == null) || (obj2 == null))
 		{
 			return false;
 		}
-		if (radius == -1)
+		if (range == -1)
 		{
 			return true; // not limited
 		}
 		
-		final int dx = obj1.getX() - obj2.getX();
-		final int dy = obj1.getY() - obj2.getY();
-		
-		if (!includeZAxis)
-		{
-			return ((dx * dx) + (dy * dy)) <= (radius * radius);
-		}
-		final int dz = obj1.getZ() - obj2.getZ();
-		return ((dx * dx) + (dy * dy) + (dz * dz)) <= (radius * radius);
+		return calculateDistance(obj1, obj2, includeZAxis, false) <= range;
 	}
 	
 	/**
-	 * @param str - the String to count
-	 * @return the number of "words" in a given string.
+	 * Checks if the cube intersects the sphere.
+	 * @param x1 the cube's first point x
+	 * @param y1 the cube's first point y
+	 * @param z1 the cube's first point z
+	 * @param x2 the cube's second point x
+	 * @param y2 the cube's second point y
+	 * @param z2 the cube's second point z
+	 * @param sX the sphere's middle x
+	 * @param sY the sphere's middle y
+	 * @param sZ the sphere's middle z
+	 * @param radius the sphere's radius
+	 * @return {@code true} if cube intersects sphere, {@code false} otherwise
 	 */
-	public static int countWords(String str)
+	public static boolean cubeIntersectsSphere(int x1, int y1, int z1, int x2, int y2, int z2, int sX, int sY, int sZ, int radius)
 	{
-		return str.trim().split("\\s+").length;
-	}
-	
-	/**
-	 * (Based on implode() in PHP)
-	 * @param strings an array of strings to concatenate
-	 * @param delimiter the delimiter to put between the strings
-	 * @return a delimited string for a given array of string elements.
-	 */
-	public static String implodeString(Iterable<String> strings, String delimiter)
-	{
-		final StringJoiner sj = new StringJoiner(delimiter);
-		strings.forEach(sj::add);
-		return sj.toString();
-	}
-	
-	/**
-	 * Based on implode() in PHP
-	 * @param <T>
-	 * @param array
-	 * @param delim
-	 * @return a delimited string for a given array of string elements.
-	 */
-	public static <T> String implode(T[] array, String delim)
-	{
-		String result = "";
-		for (T val : array)
+		double d = radius * radius;
+		if (sX < x1)
 		{
-			result += val.toString() + delim;
+			d -= Math.pow(sX - x1, 2);
 		}
-		if (!result.isEmpty())
+		else if (sX > x2)
 		{
-			result = result.substring(0, result.length() - 1);
+			d -= Math.pow(sX - x2, 2);
 		}
-		return result;
-	}
-	
-	/**
-	 * (Based on round() in PHP)
-	 * @param number - the number to round
-	 * @param numPlaces - how many digits after decimal point to leave intact
-	 * @return the value of {@code number} rounded to specified number of digits after the decimal point.
-	 */
-	public static float roundTo(float number, int numPlaces)
-	{
-		if (numPlaces <= 1)
+		if (sY < y1)
 		{
-			return Math.round(number);
+			d -= Math.pow(sY - y1, 2);
 		}
-		
-		final float exponent = (float) Math.pow(10, numPlaces);
-		return Math.round(number * exponent) / exponent;
+		else if (sY > y2)
+		{
+			d -= Math.pow(sY - y2, 2);
+		}
+		if (sZ < z1)
+		{
+			d -= Math.pow(sZ - z1, 2);
+		}
+		else if (sZ > z2)
+		{
+			d -= Math.pow(sZ - z2, 2);
+		}
+		return d > 0;
 	}
 	
 	/**
@@ -356,6 +295,91 @@ public final class Util
 			}
 		}
 		return true;
+	}
+	
+	/**
+	 * @param text - the text to check
+	 * @return {@code true} if {@code text} is integer, {@code false} otherwise
+	 */
+	public static boolean isInteger(String text)
+	{
+		if ((text == null) || text.isEmpty())
+		{
+			return false;
+		}
+		try
+		{
+			Integer.parseInt(text);
+			return true;
+		}
+		catch (Exception e)
+		{
+			return false;
+		}
+	}
+	
+	/**
+	 * @param text - the text to check
+	 * @return {@code true} if {@code text} is float, {@code false} otherwise
+	 */
+	public static boolean isFloat(String text)
+	{
+		if ((text == null) || text.isEmpty())
+		{
+			return false;
+		}
+		try
+		{
+			Float.parseFloat(text);
+			return true;
+		}
+		catch (Exception e)
+		{
+			return false;
+		}
+	}
+	
+	/**
+	 * @param text - the text to check
+	 * @return {@code true} if {@code text} is double, {@code false} otherwise
+	 */
+	public static boolean isDouble(String text)
+	{
+		if ((text == null) || text.isEmpty())
+		{
+			return false;
+		}
+		try
+		{
+			Double.parseDouble(text);
+			return true;
+		}
+		catch (Exception e)
+		{
+			return false;
+		}
+	}
+	
+	/**
+	 * @param <T>
+	 * @param name - the text to check
+	 * @param enumType
+	 * @return {@code true} if {@code text} is enum, {@code false} otherwise
+	 */
+	public static <T extends Enum<T>> boolean isEnum(String name, Class<T> enumType)
+	{
+		if ((name == null) || name.isEmpty())
+		{
+			return false;
+		}
+		try
+		{
+			return Enum.valueOf(enumType, name) != null;
+		}
+		catch (Exception e)
+		{
+			return false;
+		}
 	}
 	
 	/**
@@ -399,7 +423,8 @@ public final class Util
 	 */
 	public static String formatDouble(double val, String format)
 	{
-		return (new DecimalFormat(format, new DecimalFormatSymbols(Locale.ENGLISH))).format(val);
+		final DecimalFormat formatter = new DecimalFormat(format, new DecimalFormatSymbols(Locale.ENGLISH));
+		return formatter.format(val);
 	}
 	
 	/**
@@ -410,53 +435,28 @@ public final class Util
 	 */
 	public static String formatDate(Date date, String format)
 	{
-		return date == null ? null : (new SimpleDateFormat(format)).format(date);
-	}
-	
-	/**
-	 * @param <T>
-	 * @param array - the array to look into
-	 * @param obj - the object to search for
-	 * @return {@code true} if the {@code array} contains the {@code obj}, {@code false} otherwise.
-	 */
-	public static <T> boolean contains(T[] array, T obj)
-	{
-		for (T element : array)
+		if (date == null)
 		{
-			if (element == obj)
-			{
-				return true;
-			}
+			return null;
 		}
-		return false;
-	}
-	
-	/**
-	 * @param array - the array to look into
-	 * @param obj - the integer to search for
-	 * @return {@code true} if the {@code array} contains the {@code obj}, {@code false} otherwise
-	 */
-	public static boolean contains(int[] array, int obj)
-	{
-		for (int element : array)
-		{
-			if (element == obj)
-			{
-				return true;
-			}
-		}
-		return false;
+		final DateFormat dateFormat = new SimpleDateFormat(format);
+		return dateFormat.format(date);
 	}
 	
 	public static File[] getDatapackFiles(String dirname, String extention)
 	{
-		final File dir = new File(Config.DATAPACK_ROOT, "/" + dirname);
-		return !dir.exists() ? null : dir.listFiles(new ExtFilter(extention));
+		final File dir = new File(Config.DATAPACK_ROOT, "data/" + dirname);
+		if (!dir.exists())
+		{
+			return null;
+		}
+		return dir.listFiles(new ExtFilter(extention));
 	}
 	
 	public static String getDateString(Date date)
 	{
-		return (new SimpleDateFormat("yyyy-MM-dd")).format(date.getTime());
+		final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		return dateFormat.format(date.getTime());
 	}
 	
 	private static void buildHtmlBypassCache(L2PcInstance player, HtmlActionScope scope, String html)
@@ -475,7 +475,16 @@ public final class Util
 			}
 			
 			final int hParamPos = htmlLower.indexOf("-h ", bypassStartEnd);
-			String bypass = (hParamPos != -1) && (hParamPos < bypassEnd) ? html.substring(hParamPos + 3, bypassEnd).trim() : html.substring(bypassStartEnd, bypassEnd).trim();
+			String bypass;
+			if ((hParamPos != -1) && (hParamPos < bypassEnd))
+			{
+				bypass = html.substring(hParamPos + 3, bypassEnd).trim();
+			}
+			else
+			{
+				bypass = html.substring(bypassStartEnd, bypassEnd).trim();
+			}
+			
 			final int firstParameterStart = bypass.indexOf(AbstractHtmlPacket.VAR_PARAM_START_CHAR);
 			if (firstParameterStart != -1)
 			{
@@ -636,29 +645,32 @@ public final class Util
 			activeChar.sendPacket(new ShowBoard(html, "1001"));
 			fillMultiEditContent(activeChar, fillMultiEdit);
 		}
-		else if (html.length() < 16250)
-		{
-			activeChar.sendPacket(new ShowBoard(html, "101"));
-			activeChar.sendPacket(new ShowBoard(null, "102"));
-			activeChar.sendPacket(new ShowBoard(null, "103"));
-		}
-		else if (html.length() < (16250 * 2))
-		{
-			activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
-			activeChar.sendPacket(new ShowBoard(html.substring(16250), "102"));
-			activeChar.sendPacket(new ShowBoard(null, "103"));
-		}
-		else if (html.length() < (16250 * 3))
-		{
-			activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
-			activeChar.sendPacket(new ShowBoard(html.substring(16250, 16250 * 2), "102"));
-			activeChar.sendPacket(new ShowBoard(html.substring(16250 * 2), "103"));
-		}
 		else
 		{
-			activeChar.sendPacket(new ShowBoard("<html><body><br><center>Error: HTML was too long!</center></body></html>", "101"));
-			activeChar.sendPacket(new ShowBoard(null, "102"));
-			activeChar.sendPacket(new ShowBoard(null, "103"));
+			if (html.length() < 16250)
+			{
+				activeChar.sendPacket(new ShowBoard(html, "101"));
+				activeChar.sendPacket(new ShowBoard(null, "102"));
+				activeChar.sendPacket(new ShowBoard(null, "103"));
+			}
+			else if (html.length() < (16250 * 2))
+			{
+				activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
+				activeChar.sendPacket(new ShowBoard(html.substring(16250), "102"));
+				activeChar.sendPacket(new ShowBoard(null, "103"));
+			}
+			else if (html.length() < (16250 * 3))
+			{
+				activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
+				activeChar.sendPacket(new ShowBoard(html.substring(16250, 16250 * 2), "102"));
+				activeChar.sendPacket(new ShowBoard(html.substring(16250 * 2), "103"));
+			}
+			else
+			{
+				activeChar.sendPacket(new ShowBoard("<html><body><br><center>Error: HTML was too long!</center></body></html>", "101"));
+				activeChar.sendPacket(new ShowBoard(null, "102"));
+				activeChar.sendPacket(new ShowBoard(null, "103"));
+			}
 		}
 	}
 	
@@ -672,176 +684,30 @@ public final class Util
 		activeChar.sendPacket(new ShowBoard(Arrays.asList("0", "0", "0", "0", "0", "0", activeChar.getName(), Integer.toString(activeChar.getObjectId()), activeChar.getAccountName(), "9", " ", " ", text.replaceAll("<br>", Config.EOL), "0", "0", "0", "0")));
 	}
 	
-	/**
-	 * Return the number of playable characters in a defined radius around the specified object.
-	 * @param range : the radius in which to look for players
-	 * @param npc : the object whose knownlist to check
-	 * @param playable : if {@code true}, count summons and pets aswell
-	 * @param invisible : if {@code true}, count invisible characters aswell
-	 * @return the number of targets found
-	 */
-	public static int getPlayersCountInRadius(int range, L2Object npc, boolean playable, boolean invisible)
-	{
-		int count = 0;
-		final Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
-		for (L2Object obj : objs)
-		{
-			if ((obj != null) && playable && (obj.isPlayable() || obj.isPet()))
-			{
-				if (!invisible && obj.isInvisible())
-				{
-					continue;
-				}
-				
-				final L2Character cha = (L2Character) obj;
-				if (((cha.getZ() < (npc.getZ() - 100)) && (cha.getZ() > (npc.getZ() + 100))) || !GeoData.getInstance().canSeeTarget(cha.getX(), cha.getY(), cha.getZ(), npc.getX(), npc.getY(), npc.getZ()))
-				{
-					continue;
-				}
-				
-				if (Util.checkIfInRange(range, npc, obj, true) && !cha.isDead())
-				{
-					count++;
-				}
-			}
-		}
-		return count;
-	}
-	
 	public static boolean isInsideRangeOfObjectId(L2Object obj, int targetObjId, int radius)
 	{
-		final L2Object target = obj.getKnownList().getKnownObjects().get(targetObjId);
-		return (target != null) && (obj.calculateDistance(target, false, false) <= radius);
+		final L2Object target = L2World.getInstance().findObject(targetObjId);
+		return (target != null) && (obj.calculateDistance(target, true, false) <= radius);
 	}
 	
-	public static int min(int value1, int value2, int... values)
+	public static String readAllLines(File file, Charset cs, String newLineDelimiter) throws IOException
 	{
-		int min = Math.min(value1, value2);
-		for (int value : values)
+		final StringBuilder sb = new StringBuilder();
+		try (InputStream in = new FileInputStream(file);
+			final InputStreamReader reader = new InputStreamReader(in, cs);
+			final BufferedReader buffer = new BufferedReader(reader))
 		{
-			if (min > value)
+			String line;
+			while ((line = buffer.readLine()) != null)
 			{
-				min = value;
+				sb.append(line);
+				if (newLineDelimiter != null)
+				{
+					sb.append(newLineDelimiter);
+				}
 			}
 		}
-		return min;
-	}
-	
-	public static int max(int value1, int value2, int... values)
-	{
-		int max = Math.max(value1, value2);
-		for (int value : values)
-		{
-			if (max < value)
-			{
-				max = value;
-			}
-		}
-		return max;
-	}
-	
-	public static long min(long value1, long value2, long... values)
-	{
-		long min = Math.min(value1, value2);
-		for (long value : values)
-		{
-			if (min > value)
-			{
-				min = value;
-			}
-		}
-		return min;
-	}
-	
-	public static long max(long value1, long value2, long... values)
-	{
-		long max = Math.max(value1, value2);
-		for (long value : values)
-		{
-			if (max < value)
-			{
-				max = value;
-			}
-		}
-		return max;
-	}
-	
-	public static float min(float value1, float value2, float... values)
-	{
-		float min = Math.min(value1, value2);
-		for (float value : values)
-		{
-			if (min > value)
-			{
-				min = value;
-			}
-		}
-		return min;
-	}
-	
-	public static float max(float value1, float value2, float... values)
-	{
-		float max = Math.max(value1, value2);
-		for (float value : values)
-		{
-			if (max < value)
-			{
-				max = value;
-			}
-		}
-		return max;
-	}
-	
-	public static double min(double value1, double value2, double... values)
-	{
-		double min = Math.min(value1, value2);
-		for (double value : values)
-		{
-			if (min > value)
-			{
-				min = value;
-			}
-		}
-		return min;
-	}
-	
-	public static double max(double value1, double value2, double... values)
-	{
-		double max = Math.max(value1, value2);
-		for (double value : values)
-		{
-			if (max < value)
-			{
-				max = value;
-			}
-		}
-		return max;
-	}
-	
-	public static int getIndexOfMaxValue(int... array)
-	{
-		int index = 0;
-		for (int i = 1; i < array.length; i++)
-		{
-			if (array[i] > array[index])
-			{
-				index = i;
-			}
-		}
-		return index;
-	}
-	
-	public static int getIndexOfMinValue(int... array)
-	{
-		int index = 0;
-		for (int i = 1; i < array.length; i++)
-		{
-			if (array[i] < array[index])
-			{
-				index = i;
-			}
-		}
-		return index;
+		return sb.toString();
 	}
 	
 	/**
@@ -925,50 +791,4 @@ public final class Util
 		return (input < min) ? min : (input > max) ? max : input;
 	}
 	
-	/**
-	 * @param array - the array to look into
-	 * @param obj - the object to search for
-	 * @return {@code true} if the {@code array} contains the {@code obj}, {@code false} otherwise.
-	 */
-	public static boolean startsWith(String[] array, String obj)
-	{
-		for (String element : array)
-		{
-			if (element.startsWith(obj))
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	/**
-	 * @param array - the array to look into
-	 * @param obj - the object to search for
-	 * @param ignoreCase
-	 * @return {@code true} if the {@code array} contains the {@code obj}, {@code false} otherwise.
-	 */
-	public static boolean contains(String[] array, String obj, boolean ignoreCase)
-	{
-		for (String element : array)
-		{
-			if (element.equals(obj) || (ignoreCase && element.equalsIgnoreCase(obj)))
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	public static int parseNextInt(StringTokenizer st, int defaultVal)
-	{
-		try
-		{
-			return Integer.parseInt(st.nextToken().trim());
-		}
-		catch (Exception e)
-		{
-			return defaultVal;
-		}
-	}
 }

@@ -28,31 +28,29 @@ import com.l2jmobius.gameserver.network.serverpackets.VehicleStarted;
  */
 public class L2BoatAI extends L2VehicleAI
 {
-	public L2BoatAI(L2BoatInstance creature)
+	public L2BoatAI(L2BoatInstance boat)
 	{
-		super(creature);
+		super(boat);
 	}
 	
 	@Override
 	protected void moveTo(int x, int y, int z)
 	{
-		if (_actor.isMovementDisabled())
+		if (!_actor.isMovementDisabled())
 		{
-			return;
+			if (!_clientMoving)
+			{
+				_actor.broadcastPacket(new VehicleStarted(getActor(), 1));
+			}
+			
+			_clientMoving = true;
+			_actor.moveToLocation(x, y, z, 0);
+			_actor.broadcastPacket(new VehicleDeparture(getActor()));
 		}
-		
-		if (!_clientMoving)
-		{
-			_actor.broadcastPacket(new VehicleStarted(getActor(), 1));
-		}
-		
-		_clientMoving = true;
-		_actor.moveToLocation(x, y, z, 0);
-		_actor.broadcastPacket(new VehicleDeparture(getActor()));
 	}
 	
 	@Override
-	protected void clientStopMoving(Location loc)
+	public void clientStopMoving(Location loc)
 	{
 		if (_actor.isMoving())
 		{

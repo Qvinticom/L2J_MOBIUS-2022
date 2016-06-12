@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import com.l2jmobius.gameserver.model.L2PetData;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.holders.PetItemHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -36,11 +35,6 @@ public class SummonItems extends ItemSkillsTemplate
 		if (!playable.isPlayer())
 		{
 			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
-			return false;
-		}
-		
-		if (!TvTEvent.onItemSummon(playable.getObjectId()))
-		{
 			return false;
 		}
 		

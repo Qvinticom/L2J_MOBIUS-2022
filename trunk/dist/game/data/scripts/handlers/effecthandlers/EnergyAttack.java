@@ -16,21 +16,21 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.type.WeaponType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.Stats;
-import com.l2jmobius.util.Rnd;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Energy Attack effect implementation.
@@ -39,23 +39,25 @@ import com.l2jmobius.util.Rnd;
 public final class EnergyAttack extends AbstractEffect
 {
 	private final double _power;
+	private final int _chargeConsume;
 	private final int _criticalChance;
 	private final boolean _ignoreShieldDefence;
+	private final boolean _overHit;
 	
-	public EnergyAttack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public EnergyAttack(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_power = params.getDouble("power", 0);
 		_criticalChance = params.getInt("criticalChance", 0);
 		_ignoreShieldDefence = params.getBoolean("ignoreShieldDefence", false);
+		_overHit = params.getBoolean("overHit", false);
+		_chargeConsume = params.getInt("chargeConsume", 0);
 	}
 	
 	@Override
-	public boolean calcSuccess(BuffInfo info)
+	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
 		// TODO: Verify this on retail
-		return !Formulas.calcPhysicalSkillEvasion(info.getEffector(), info.getEffected(), info.getSkill());
+		return !Formulas.calcPhysicalSkillEvasion(effector, effected, skill);
 	}
 	
 	@Override
@@ -71,31 +73,46 @@ public final class EnergyAttack extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2PcInstance attacker = info.getEffector() instanceof L2PcInstance ? (L2PcInstance) info.getEffector() : null;
-		if (attacker == null)
+		if (!effector.isPlayer())
 		{
 			return;
 		}
 		
-		final L2Character target = info.getEffected();
-		final Skill skill = info.getSkill();
+		final L2PcInstance attacker = effector.getActingPlayer();
 		
-		double attack = attacker.getPAtk(target);
-		double defence = target.getPDef(attacker);
+		final int charge = Math.min(_chargeConsume, attacker.getCharges());
+		
+		if (!attacker.decreaseCharges(charge))
+		{
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+			sm.addSkillName(skill);
+			attacker.sendPacket(sm);
+			return;
+		}
+		
+		final double distance = attacker.calculateDistance(effected, true, false);
+		if (distance > effected.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, Integer.MAX_VALUE))
+		{
+			return;
+		}
+		
+		if (_overHit && effected.isAttackable())
+		{
+			((L2Attackable) effected).overhitEnabled(true);
+		}
+		
+		int defence = effected.getPDef();
 		
 		if (!_ignoreShieldDefence)
 		{
-			switch (Formulas.calcShldUse(attacker, target, skill, true))
+			final byte shield = Formulas.calcShldUse(attacker, effected);
+			switch (shield)
 			{
-				case Formulas.SHIELD_DEFENSE_FAILED:
-				{
-					break;
-				}
 				case Formulas.SHIELD_DEFENSE_SUCCEED:
 				{
-					defence += target.getShldDef();
+					defence += effected.getShldDef();
 					break;
 				}
 				case Formulas.SHIELD_DEFENSE_PERFECT_BLOCK:
@@ -107,82 +124,40 @@ public final class EnergyAttack extends AbstractEffect
 		}
 		
 		double damage = 1;
-		boolean critical = false;
+		final boolean critical = (_criticalChance > 0) && ((BaseStats.STR.calcBonus(attacker) * _criticalChance) > (Rnd.nextDouble() * 100));
 		
 		if (defence != -1)
 		{
-			final double damageMultiplier = Formulas.calcWeaponTraitBonus(attacker, target) * Formulas.calcAttributeBonus(attacker, target, skill) * Formulas.calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
+			// Trait, elements
+			final double weaponTraitMod = Formulas.calcWeaponTraitBonus(attacker, effected);
+			final double generalTraitMod = Formulas.calcGeneralTraitBonus(attacker, effected, skill.getTraitType(), false);
+			final double attributeMod = Formulas.calcAttributeBonus(attacker, effected, skill);
+			final double pvpPveMod = Formulas.calculatePvpPveBonus(attacker, effected, skill, true);
 			
-			final boolean ss = info.getSkill().useSoulShot() && attacker.isChargedShot(ShotType.SOULSHOTS);
-			final double ssBoost = ss ? 2 : 1.0;
+			// Skill specific mods.
+			final double energyChargesBoost = 1 + (charge * 0.1); // 10% bonus damage for each charge used.
+			final double critMod = critical ? Formulas.calcCritDamage(attacker, effected, skill) : 1;
+			final double ssmod = (skill.useSoulShot() && attacker.isChargedShot(ShotType.SOULSHOTS)) ? attacker.getStat().getValue(Stats.SHOTS_BONUS, 2) : 1; // 2.04 for dual weapon?
 			
-			double weaponTypeBoost;
-			final L2Weapon weapon = attacker.getActiveWeaponItem();
-			if ((weapon != null) && ((weapon.getItemType() == WeaponType.BOW) || (weapon.getItemType() == WeaponType.CROSSBOW)))
-			{
-				weaponTypeBoost = 70;
-			}
-			else
-			{
-				weaponTypeBoost = 77;
-			}
-			
-			double energyChargesBoost = 1;
-			if (attacker.getCharges() == 1)
-			{
-				energyChargesBoost = 1.1;
-				attacker.decreaseCharges(1);
-			}
-			else if (attacker.getCharges() == 2)
-			{
-				energyChargesBoost = 1.2;
-				attacker.decreaseCharges(2);
-			}
-			else if (attacker.getCharges() >= 3)
-			{
-				energyChargesBoost = 1.3;
-				attacker.decreaseCharges(3);
-			}
-			
-			final double addPower = attacker.getStat().calcStat(Stats.MOMENTUM_SKILL_POWER, 1, null, null);
-			
-			attack += _power;
-			attack *= addPower;
-			attack *= ssBoost;
-			attack *= energyChargesBoost;
-			attack *= weaponTypeBoost;
-			
-			damage = attack / defence;
-			damage *= damageMultiplier;
-			if (target instanceof L2PcInstance)
-			{
-				damage *= attacker.getStat().calcStat(Stats.PVP_PHYS_SKILL_DMG, 1.0);
-				damage *= target.getStat().calcStat(Stats.PVP_PHYS_SKILL_DEF, 1.0);
-				damage = attacker.getStat().calcStat(Stats.PHYSICAL_SKILL_POWER, damage);
-			}
-			
-			critical = (BaseStats.STR.calcBonus(attacker) * _criticalChance) > (Rnd.nextDouble() * 100);
-			if (critical)
-			{
-				damage *= 2;
-			}
+			// ...................________Initial Damage_________...__Charges Additional Damage__...____________________________________
+			// ATTACK CALCULATION ((77 * ((pAtk * lvlMod) + power) * (1 + (0.1 * chargesConsumed)) / pdef) * skillPower) + skillPowerAdd
+			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+			final double baseMod = (77 * ((attacker.getPAtk() * attacker.getLevelMod()) + _power)) / defence;
+			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * attributeMod * energyChargesBoost * pvpPveMod;
+			damage = attacker.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, damage);
 		}
 		
-		if (damage > 0)
+		damage = Math.max(0, damage);
+		
+		// Check if damage should be reflected
+		Formulas.calcDamageReflected(attacker, effected, skill, critical);
+		
+		final double damageCap = effected.getStat().getValue(Stats.DAMAGE_LIMIT);
+		if (damageCap > 0)
 		{
-			// reduce damage if target has maxdamage buff
-			final double maxDamage = target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null);
-			if (maxDamage > 0)
-			{
-				damage = (int) maxDamage;
-			}
-			
-			attacker.sendDamageMessage(target, (int) damage, false, critical, false);
-			target.reduceCurrentHp(damage, attacker, skill);
-			target.notifyDamageReceived(damage, attacker, skill, critical, false);
-			
-			// Check if damage should be reflected
-			Formulas.calcDamageReflected(attacker, target, skill, critical);
+			damage = Math.min(damage, damageCap);
 		}
+		effected.reduceCurrentHp(damage, effector, skill, false, false, critical, false);
+		attacker.sendDamageMessage(effected, skill, (int) damage, critical, false);
 	}
 }

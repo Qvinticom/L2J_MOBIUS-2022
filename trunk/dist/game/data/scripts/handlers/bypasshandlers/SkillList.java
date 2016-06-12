@@ -72,7 +72,8 @@ public class SkillList implements IBypassHandler
 					
 					if (!own_class)
 					{
-						text += "Skills of your class are the easiest to learn.<br>Skills of another class of your race are a little harder.<br>Skills for classes of another race are extremely difficult.<br>But the hardest of all to learn are the  " + (activeChar.getClassId().isMage() ? "fighter" : "mage") + "skills!<br>";
+						final String charType = activeChar.getClassId().isMage() ? "fighter" : "mage";
+						text += "Skills of your class are the easiest to learn.<br>Skills of another class of your race are a little harder.<br>Skills for classes of another race are extremely difficult.<br>But the hardest of all to learn are the  " + charType + "skills!<br>";
 					}
 					
 					// make a list of classes
@@ -108,9 +109,9 @@ public class SkillList implements IBypassHandler
 					}
 					text += "</body></html>";
 					
-					final NpcHtmlMessage html = new NpcHtmlMessage(((L2Npc) target).getObjectId());
+					final NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
 					html.setHtml(text);
-					html.replace("%objectId%", String.valueOf(((L2Npc) target).getObjectId()));
+					html.replace("%objectId%", String.valueOf(target.getObjectId()));
 					activeChar.sendPacket(html);
 					
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);

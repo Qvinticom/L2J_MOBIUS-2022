@@ -16,49 +16,41 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import com.l2jmobius.gameserver.model.L2EnchantSkillLearn;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfoDetail;
 
 /**
  * Format (ch) ddd c: (id) 0xD0 h: (subid) 0x31 d: type d: skill id d: skill lvl
  * @author -Wooden-
  */
-public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
+public final class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
 {
-	private static final String _C_D0_46_REQUESTEXENCHANTSKILLINFO = "[C] D0:46 RequestExEnchantSkillInfoDetail";
-	
 	private int _type;
 	private int _skillId;
 	private int _skillLvl;
-	private int _fullLvl;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_type = readD();
-		_skillId = readD();
-		_fullLvl = readD();
-		if (_fullLvl < 100)
-		{
-			_skillLvl = _fullLvl;
-		}
-		else
-		{
-			_skillLvl = _fullLvl >> 16;
-		}
+		_type = packet.readD();
+		_skillId = packet.readD();
+		_skillLvl = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		if ((_skillId <= 0) || (_skillLvl <= 0))
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		
 		if (activeChar == null)
 		{
@@ -73,7 +65,7 @@ public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
 		}
 		else if (_type == 2)
 		{
-			return;
+			reqSkillLvl = _skillLvl + 1; // untrain
 		}
 		else if (_type == 3)
 		{
@@ -89,7 +81,7 @@ public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
 		}
 		
 		// if reqlvl is 100,200,.. check base skill lvl enchant
-		if ((reqSkillLvl % 1000) == 0)
+		if ((reqSkillLvl % 100) == 0)
 		{
 			final L2EnchantSkillLearn esl = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId);
 			if (esl != null)
@@ -109,20 +101,13 @@ public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
 		else if (playerSkillLvl != reqSkillLvl)
 		{
 			// change route is different skill lvl but same enchant
-			if ((_type == 3) && ((playerSkillLvl % 1000) != (_skillLvl % 1000)))
+			if ((_type == 3) && ((playerSkillLvl % 100) != (_skillLvl % 100)))
 			{
 				return;
 			}
 		}
 		
 		// send skill enchantment detail
-		final ExEnchantSkillInfoDetail esd = new ExEnchantSkillInfoDetail(_type, _skillId, _skillLvl, activeChar);
-		activeChar.sendPacket(esd);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C_D0_46_REQUESTEXENCHANTSKILLINFO;
+		client.sendPacket(new ExEnchantSkillInfoDetail(_type, _skillId, _skillLvl, activeChar));
 	}
 }

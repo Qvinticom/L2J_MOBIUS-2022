@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.model;
 
 import com.l2jmobius.gameserver.enums.AttackType;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 
 /**
  * @author UnAfraid
@@ -50,7 +51,7 @@ public class Hit
 			addMask(AttackType.SHOT_USED);
 		}
 		
-		if (target.isInvul() || (shld > 0))
+		if ((target.isCharacter() && ((L2Character) target).isHpBlocked()) || (shld > 0))
 		{
 			addMask(AttackType.BLOCKED);
 		}

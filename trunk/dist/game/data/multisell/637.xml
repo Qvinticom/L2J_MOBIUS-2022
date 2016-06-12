@@ -1,2646 +1,1668 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+<list maintainEnchantment="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
 	<npcs>
 		<npc>31126</npc> <!-- Blacksmith of Mammon -->
 	</npcs>
 	<item>
-		<!-- Foundation Great Sword -->
-		<ingredient count="1" id="12375" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Great Sword - Lightning -->
-		<production count="1" id="10870" />
-	</item>
-	<item>
-		<!-- Foundation Great Axe -->
-		<ingredient count="1" id="12376" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Great Axe - Thunder -->
-		<production count="1" id="10874" />
-	</item>
-	<item>
-		<!-- Foundation Innominate Victory -->
-		<ingredient count="1" id="12377" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Innominate Victory - Lightning -->
-		<production count="1" id="10882" />
-	</item>
-	<item>
-		<!-- Foundation Dark Elven Long Bow -->
-		<ingredient count="1" id="12378" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Dark Elven Long Bow - Concentration -->
-		<production count="1" id="10886" />
-	</item>
-	<item>
-		<!-- Foundation Sword of Valhalla -->
-		<ingredient count="1" id="12379" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Sword of Valhalla - Nature -->
-		<production count="1" id="10893" />
-	</item>
-	<item>
-		<!-- Foundation Spell Breaker -->
-		<ingredient count="1" id="12380" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Spell Breaker - Hail -->
-		<production count="1" id="10898" />
-	</item>
-	<item>
-		<!-- Foundation Arthro Nail -->
-		<ingredient count="1" id="12381" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Arthro Nail - Destruction -->
-		<production count="1" id="10902" />
-	</item>
-	<item>
-		<!-- Foundation Ice Storm Hammer -->
-		<ingredient count="1" id="12382" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Ice Storm Hammer - Lightning -->
-		<production count="1" id="10906" />
-	</item>
-	<item>
-		<!-- Foundation Military Fleuret -->
-		<ingredient count="1" id="12383" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Military Fleuret - Destruction -->
-		<production count="1" id="10912" />
-	</item>
-	<item>
-		<!-- Foundation Sprite's Staff -->
-		<ingredient count="1" id="12384" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Sprite's Staff - Hail -->
-		<production count="1" id="10916" />
-	</item>
-	<item>
-		<!-- Foundation Kris -->
-		<ingredient count="1" id="12385" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Kris - Confusion -->
-		<production count="1" id="10926" />
-	</item>
-	<item>
-		<!-- Foundation Keshanberk -->
-		<ingredient count="1" id="12386" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Keshanberk - Destruction -->
-		<production count="1" id="10930" />
-	</item>
-	<item>
-		<!-- Foundation Peacemaker -->
-		<ingredient count="1" id="12387" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Peacemaker - Concentration -->
-		<production count="1" id="10934" />
+		<ingredient id="12375" count="1" /> <!-- Foundation Great Sword -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10870" count="1" /> <!-- Great Sword - Lightning -->
 	</item>
 	<item>
-		<!-- Foundation Heavy War Axe -->
-		<ingredient count="1" id="12388" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Heavy War Axe - Earth -->
-		<production count="1" id="10938" />
+		<ingredient id="12376" count="1" /> <!-- Foundation Great Axe -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10874" count="1" /> <!-- Great Axe - Thunder -->
 	</item>
 	<item>
-		<!-- Foundation Hell Knife -->
-		<ingredient count="1" id="12389" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Hell Knife - Confusion -->
-		<production count="1" id="10942" />
+		<ingredient id="12377" count="1" /> <!-- Foundation Innominate Victory -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10882" count="1" /> <!-- Innominate Victory - Lightning -->
 	</item>
 	<item>
-		<!-- Foundation Guardian Sword -->
-		<ingredient count="1" id="12390" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Guardian Sword - Great Gale -->
-		<production count="1" id="10955" />
+		<ingredient id="12378" count="1" /> <!-- Foundation Dark Elven Longbow -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10886" count="1" /> <!-- Dark Elven Longbow - Concentration -->
 	</item>
 	<item>
-		<!-- Foundation Sword of Damascus -->
-		<ingredient count="1" id="12391" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Sword of Damascus - Earth -->
-		<production count="1" id="10959" />
+		<ingredient id="12379" count="1" /> <!-- Foundation Sword of Valhalla -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10893" count="1" /> <!-- Sword of Valhalla - Nature -->
 	</item>
 	<item>
-		<!-- Foundation Dismantler -->
-		<ingredient count="1" id="12392" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Dismantler - Great Gale -->
-		<production count="1" id="10963" />
+		<ingredient id="12380" count="1" /> <!-- Foundation Spell Breaker -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10898" count="1" /> <!-- Spell Breaker - Tidal Wave -->
 	</item>
 	<item>
-		<!-- Foundation Lance -->
-		<ingredient count="1" id="12393" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Lance - Earth -->
-		<production count="1" id="10967" />
+		<ingredient id="12381" count="1" /> <!-- Foundation Arthro Nail -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10902" count="1" /> <!-- Arthro Nail - Destruction -->
 	</item>
 	<item>
-		<!-- Foundation Bellion Cestus -->
-		<ingredient count="1" id="12394" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Bellion Cestus - Great Gale -->
-		<production count="1" id="10971" />
+		<ingredient id="12382" count="1" /> <!-- Foundation Ice Storm Hammer -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10906" count="1" /> <!-- Ice Storm Hammer - Lightning -->
 	</item>
 	<item>
-		<!-- Foundation Staff of Evil Spirits -->
-		<ingredient count="1" id="12395" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Staff of Evil Spirits - Holy Spirit -->
-		<production count="1" id="10975" />
+		<ingredient id="12383" count="1" /> <!-- Foundation Military Fleuret -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10912" count="1" /> <!-- Military Fleuret - Destruction -->
 	</item>
 	<item>
-		<!-- Foundation Deadman's Glory -->
-		<ingredient count="1" id="12396" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Deadman's Glory - Landslide -->
-		<production count="1" id="10979" />
+		<ingredient id="12384" count="1" /> <!-- Foundation Spirit's Staff -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10916" count="1" /> <!-- Spirit's Staff - Hail -->
 	</item>
 	<item>
-		<!-- Foundation Star Buster -->
-		<ingredient count="1" id="12397" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Star Buster - Great Gale -->
-		<production count="1" id="10983" />
+		<ingredient id="12385" count="1" /> <!-- Foundation Kris -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10926" count="1" /> <!-- Kris - Confusion -->
 	</item>
 	<item>
-		<!-- Foundation Art of Battle Axe -->
-		<ingredient count="1" id="12398" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Art of Battle Axe - Landslide -->
-		<production count="1" id="10988" />
+		<ingredient id="12386" count="1" /> <!-- Foundation Keshanberk -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10930" count="1" /> <!-- Keshanberk - Destruction -->
 	</item>
 	<item>
-		<!-- Foundation Demon's Dagger -->
-		<ingredient count="1" id="12399" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Demon's Dagger - Great Gale -->
-		<production count="1" id="10992" />
+		<ingredient id="12387" count="1" /> <!-- Foundation Peacemaker -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10934" count="1" /> <!-- Peacemaker - Concentration -->
 	</item>
 	<item>
-		<!-- Foundation Kaim Vanul's Bones -->
-		<ingredient count="1" id="12400" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Kaim Vanul's Bones - Earth -->
-		<production count="1" id="10997" />
+		<ingredient id="12388" count="1" /> <!-- Foundation Heavy War Axe -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10938" count="1" /> <!-- Heavy War Axe - Earth -->
 	</item>
 	<item>
-		<!-- Foundation Colichemarde -->
-		<ingredient count="1" id="12401" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Colichemarde - Earth -->
-		<production count="1" id="11001" />
+		<ingredient id="12389" count="1" /> <!-- Foundation Twilight Knife -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10942" count="1" /> <!-- Twilight Knife - Confusion -->
 	</item>
 	<item>
-		<!-- Foundation Wizard's Tear -->
-		<ingredient count="1" id="12402" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Wizard's Tear - Cleverness -->
-		<production count="1" id="11005" />
+		<ingredient id="12390" count="1" /> <!-- Foundation Guardian's Sword -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10955" count="1" /> <!-- Guardian's Sword - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Bow of Peril -->
-		<ingredient count="1" id="12403" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Bow of Peril - Earth -->
-		<production count="1" id="11009" />
+		<ingredient id="12391" count="1" /> <!-- Foundation Damascus Sword -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10959" count="1" /> <!-- Damascus Sword (Earth) -->
 	</item>
 	<item>
-		<!-- Foundation Hell Hound -->
-		<ingredient count="1" id="12404" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Hell Hound - Earth -->
-		<production count="1" id="11013" />
+		<ingredient id="12392" count="1" /> <!-- Foundation Dismantler -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10963" count="1" /> <!-- Dismantler - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Dasparion's Staff -->
-		<ingredient count="1" id="12405" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Dasparion's Staff - Hail -->
-		<production count="1" id="11017" />
+		<ingredient id="12393" count="1" /> <!-- Foundation Lance -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10967" count="1" /> <!-- Lance (Earth) -->
 	</item>
 	<item>
-		<!-- Foundation Doomchanter -->
-		<ingredient count="1" id="12406" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Doomchanter - Concentration -->
-		<production count="1" id="11021" />
+		<ingredient id="12394" count="1" /> <!-- Foundation Bellion Cestus -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10971" count="1" /> <!-- Bellion Cestus - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation White Lightning -->
-		<ingredient count="1" id="12407" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- White Lightning - Destruction -->
-		<production count="1" id="11025" />
+		<ingredient id="12395" count="1" /> <!-- Foundation Staff of Evil Spirits -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10975" count="1" /> <!-- Staff of Evil Spirits - Holy Spirit -->
 	</item>
 	<item>
-		<!-- Foundation Meteor Shower -->
-		<ingredient count="1" id="12408" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Meteor Shower - Earth -->
-		<production count="1" id="11029" />
+		<ingredient id="12396" count="1" /> <!-- Foundation Deadman's Glory -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10979" count="1" /> <!-- Deadman's Glory - Landslide -->
 	</item>
 	<item>
-		<!-- Foundation Blood Tornado -->
-		<ingredient count="1" id="12409" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Blood Tornado - Destruction -->
-		<production count="1" id="11033" />
+		<ingredient id="12397" count="1" /> <!-- Foundation Star Buster -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10983" count="1" /> <!-- Star Buster - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Bloody Orchid -->
-		<ingredient count="1" id="12410" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Bloody Orchid - Confusion -->
-		<production count="1" id="11037" />
+		<ingredient id="12398" count="1" /> <!-- Foundation Art of Battle Axe -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10988" count="1" /> <!-- Art of Battle Axe - Landslide -->
 	</item>
 	<item>
-		<!-- Foundation Elemental Sword -->
-		<ingredient count="1" id="12411" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Elemental Sword - Hail -->
-		<production count="1" id="11041" />
+		<ingredient id="12399" count="1" /> <!-- Foundation Demon's Dagger -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10992" count="1" /> <!-- Demon's Dagger - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Spiritual Eye -->
-		<ingredient count="1" id="12412" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Spiritual Eye - Hail -->
-		<production count="1" id="11045" />
+		<ingredient id="12400" count="1" /> <!-- Foundation Kaim Vanul's Bones -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10997" count="1" /> <!-- Kaim Vanul's Bones - Earth -->
 	</item>
 	<item>
-		<!-- Foundation Infernal Master -->
-		<ingredient count="1" id="12413" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Infernal Master - Concentration -->
-		<production count="1" id="11049" />
+		<ingredient id="12401" count="1" /> <!-- Foundation Colichemarde -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11001" count="1" /> <!-- Colichemarde - Earth -->
 	</item>
 	<item>
-		<!-- Foundation Carnage Bow -->
-		<ingredient count="1" id="12414" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Carnage Bow - Concentration -->
-		<production count="1" id="11053" />
+		<ingredient id="12402" count="1" /> <!-- Foundation Wizard's Tear -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11005" count="1" /> <!-- Wizard's Tear - Cleverness -->
 	</item>
 	<item>
-		<!-- Foundation Tallum Blade -->
-		<ingredient count="1" id="12415" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Tallum Blade - Destruction -->
-		<production count="1" id="11058" />
+		<ingredient id="12403" count="1" /> <!-- Foundation Bow of Peril -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11009" count="1" /> <!-- Bow of Peril - Earth -->
 	</item>
 	<item>
-		<!-- Foundation Destroyer Hammer -->
-		<ingredient count="1" id="12416" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Destroyer Hammer - Lightning -->
-		<production count="1" id="11062" />
+		<ingredient id="12404" count="1" /> <!-- Foundation Hell Hound -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11013" count="1" /> <!-- Hell Hound - Earth -->
 	</item>
 	<item>
-		<!-- Foundation Divine Pain -->
-		<ingredient count="1" id="12417" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Divine Pain - Concentration -->
-		<production count="1" id="11066" />
+		<ingredient id="12405" count="1" /> <!-- Foundation Dasparion's Staff -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11017" count="1" /> <!-- Dasparion's Staff - Hail -->
 	</item>
 	<item>
-		<!-- Foundation Halberd -->
-		<ingredient count="1" id="12418" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Halberd - Lightning -->
-		<production count="1" id="11070" />
+		<ingredient id="12406" count="1" /> <!-- Foundation Doomchanter -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11021" count="1" /> <!-- Doomchanter - Concentration -->
 	</item>
 	<item>
-		<!-- Foundation Lacerator -->
-		<ingredient count="1" id="12419" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Lacerator - Thunder -->
-		<production count="1" id="11075" />
+		<ingredient id="12407" count="1" /> <!-- Foundation White Lightning -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11025" count="1" /> <!-- White Lightning - Destruction -->
 	</item>
 	<item>
-		<!-- Foundation Dark Legion's Edge -->
-		<ingredient count="1" id="12420" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Dark Legion's Edge - Thunder -->
-		<production count="1" id="11080" />
+		<ingredient id="12408" count="1" /> <!-- Foundation Meteor Shower -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11029" count="1" /> <!-- Meteor Shower - Earth -->
 	</item>
 	<item>
-		<!-- Foundation Undertaker -->
-		<ingredient count="1" id="12421" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Undertaker - Evil Spirit -->
-		<production count="1" id="11084" />
+		<ingredient id="12409" count="1" /> <!-- Foundation Blood Tornado -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11033" count="1" /> <!-- Blood Tornado - Destruction -->
 	</item>
 	<item>
-		<!-- Foundation Doom Crusher -->
-		<ingredient count="1" id="12422" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Doom Crusher - Thunder -->
-		<production count="1" id="11088" />
+		<ingredient id="12410" count="1" /> <!-- Foundation Bloody Orchid -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11037" count="1" /> <!-- Bloody Orchid - Confusion -->
 	</item>
 	<item>
-		<!-- Foundation Dragon Grinder -->
-		<ingredient count="1" id="12423" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Dragon Grinder - Earth -->
-		<production count="1" id="11092" />
+		<ingredient id="12411" count="1" /> <!-- Foundation Elemental Sword -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11041" count="1" /> <!-- Elemental Sword - Hail -->
 	</item>
 	<item>
-		<!-- Foundation Dragon Slayer -->
-		<ingredient count="1" id="12424" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Dragon Slayer - Evil Spirit -->
-		<production count="1" id="11096" />
+		<ingredient id="12412" count="1" /> <!-- Foundation Spiritual Eye -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11045" count="1" /> <!-- Spiritual Eye - Hail -->
 	</item>
 	<item>
-		<!-- Foundation Flaming Dragon Skull -->
-		<ingredient count="1" id="12425" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Flaming Dragon Skull - Wisdom -->
-		<production count="1" id="11100" />
+		<ingredient id="12413" count="1" /> <!-- Foundation Infernal Master -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11049" count="1" /> <!-- Infernal Master - Concentration -->
 	</item>
 	<item>
-		<!-- Foundation Branch of the Mother Tree -->
-		<ingredient count="1" id="12426" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Branch of the Mother Tree - Nature -->
-		<production count="1" id="11104" />
+		<ingredient id="12414" count="1" /> <!-- Foundation Carnage Bow -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11053" count="1" /> <!-- Carnage Bow - Concentration -->
 	</item>
 	<item>
-		<!-- Foundation Sword of Miracles -->
-		<ingredient count="1" id="12427" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Sword of Miracles - Holy Spirit -->
-		<production count="1" id="11108" />
+		<ingredient id="12415" count="1" /> <!-- Foundation Tallum Blade -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11058" count="1" /> <!-- Tallum Blade - Destruction -->
 	</item>
 	<item>
-		<!-- Foundation Reaper -->
-		<ingredient count="1" id="12428" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Reaper - Clairvoyance -->
-		<production count="1" id="11112" />
+		<ingredient id="12416" count="1" /> <!-- Foundation Destroyer Hammer -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11062" count="1" /> <!-- Destroyer Hammer - Lightning -->
 	</item>
 	<item>
-		<!-- Foundation Soul Separator -->
-		<ingredient count="1" id="12429" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Soul Separator - On Fire -->
-		<production count="1" id="11116" />
+		<ingredient id="12417" count="1" /> <!-- Foundation Divine Pain -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11066" count="1" /> <!-- Divine Pain - Concentration -->
 	</item>
 	<item>
-		<!-- Foundation Elysian -->
-		<ingredient count="1" id="12430" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Elysian - Great Gale -->
-		<production count="1" id="11120" />
+		<ingredient id="12418" count="1" /> <!-- Foundation Halberd -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11070" count="1" /> <!-- Halberd - Lightning -->
 	</item>
 	<item>
-		<!-- Foundation Soul Bow -->
-		<ingredient count="1" id="12431" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Soul Bow - Clairvoyance -->
-		<production count="1" id="11124" />
+		<ingredient id="12419" count="1" /> <!-- Foundation Lacerator -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11075" count="1" /> <!-- Lacerator - Thunder -->
 	</item>
 	<item>
-		<!-- Foundation Tallum Glaive -->
-		<ingredient count="1" id="12432" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Tallum Glaive - On Fire -->
-		<production count="1" id="11128" />
+		<ingredient id="12420" count="1" /> <!-- Foundation Dark Legion's Edge -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11080" count="1" /> <!-- Dark Legion's Edge - Thunder -->
 	</item>
 	<item>
-		<!-- Foundation Naga Storm -->
-		<ingredient count="1" id="12433" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Naga Storm - Molar -->
-		<production count="1" id="11133" />
+		<ingredient id="12421" count="1" /> <!-- Foundation Undertaker -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11084" count="1" /> <!-- Undertaker - Evil Spirit -->
 	</item>
 	<item>
-		<!-- Foundation Daimon Crystal -->
-		<ingredient count="1" id="12434" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Daimon Crystal - Wisdom -->
-		<production count="1" id="11137" />
+		<ingredient id="12422" count="1" /> <!-- Foundation Doom Crusher -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11088" count="1" /> <!-- Doom Crusher - Thunder -->
 	</item>
 	<item>
-		<!-- Foundation Barakiel's Axe -->
-		<ingredient count="1" id="12435" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Barakiel's Axe - On Fire -->
-		<production count="1" id="11141" />
+		<ingredient id="12423" count="1" /> <!-- Foundation Dragon Grinder -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11092" count="1" /> <!-- Dragon Grinder - Earth -->
 	</item>
 	<item>
-		<!-- Foundation Screaming Vengeance -->
-		<ingredient count="1" id="12436" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Screaming Vengeance - Concentration -->
-		<production count="1" id="11145" />
+		<ingredient id="12424" count="1" /> <!-- Foundation Dragon Slayer -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11096" count="1" /> <!-- Dragon Slayer - Evil Spirit -->
 	</item>
 	<item>
-		<!-- Foundation Behemoth's Tuning Fork -->
-		<ingredient count="1" id="12437" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Behemoth's Tuning Fork - Destruction -->
-		<production count="1" id="11149" />
+		<ingredient id="12425" count="1" /> <!-- Foundation Flaming Dragon Skull -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11100" count="1" /> <!-- Flaming Dragon Skull - Wisdom -->
 	</item>
 	<item>
-		<!-- Foundation Durendal -->
-		<ingredient count="1" id="12438" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Bultgang - Earth -->
-		<production count="1" id="11153" />
+		<ingredient id="12426" count="1" /> <!-- Foundation Branch of the Mother Tree -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11104" count="1" /> <!-- Branch of the Mother Tree - Nature -->
 	</item>
 	<item>
-		<!-- Foundation Shyeed's Bow -->
-		<ingredient count="1" id="12439" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Shyeed's Bow - Concentration -->
-		<production count="1" id="11157" />
+		<ingredient id="12427" count="1" /> <!-- Foundation Sword of Miracles -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11108" count="1" /> <!-- Sword of Miracles - Holy Spirit -->
 	</item>
 	<item>
-		<!-- Foundation Sword of Ipos -->
-		<ingredient count="1" id="12440" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Sword of Ipos - Earth -->
-		<production count="1" id="11161" />
+		<ingredient id="12428" count="1" /> <!-- Foundation Reaper -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11112" count="1" /> <!-- Reaper - Clairvoyance -->
 	</item>
 	<item>
-		<!-- Foundation Sobekk's Hurricane -->
-		<ingredient count="1" id="12441" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Sobekk's Hurricane - Landslide -->
-		<production count="1" id="11165" />
+		<ingredient id="12429" count="1" /> <!-- Foundation Soul Separator -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11116" count="1" /> <!-- Soul Separator - On Fire -->
 	</item>
 	<item>
-		<!-- Foundation Sirra's Blade -->
-		<ingredient count="1" id="12442" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Sirra's Blade - Landslide -->
-		<production count="1" id="11169" />
+		<ingredient id="12430" count="1" /> <!-- Foundation Elysian -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11120" count="1" /> <!-- Elysian - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Eclair Bijou -->
-		<ingredient count="1" id="12443" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Eclair Bijou - Landslide -->
-		<production count="1" id="11173" />
+		<ingredient id="12431" count="1" /> <!-- Foundation Soul Bow -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11124" count="1" /> <!-- Soul Bow - Clairvoyance -->
 	</item>
 	<item>
-		<!-- Foundation Tiphon's Spear -->
-		<ingredient count="1" id="12444" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Tiphon's Spear - Landslide -->
-		<production count="1" id="11177" />
+		<ingredient id="12432" count="1" /> <!-- Foundation Tallum Glaive -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11128" count="1" /> <!-- Tallum Glaive - On Fire -->
 	</item>
 	<item>
-		<!-- Foundation Themis' Tongue -->
-		<ingredient count="1" id="12445" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Themis' Tongue - Cleverness -->
-		<production count="1" id="11182" />
+		<ingredient id="12433" count="1" /> <!-- Foundation Naga Storm -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11133" count="1" /> <!-- Naga Storm - Molar -->
 	</item>
 	<item>
-		<!-- Foundation Cabrio's Hand -->
-		<ingredient count="1" id="12446" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Cabrio's Hand - Cleverness -->
-		<production count="1" id="11186" />
+		<ingredient id="12434" count="1" /> <!-- Foundation Daimon Crystal -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11137" count="1" /> <!-- Daimon Crystal - Wisdom -->
 	</item>
 	<item>
-		<!-- Foundation Gram -->
-		<ingredient count="1" id="12447" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Gram - Thunder -->
-		<production count="1" id="11190" />
+		<ingredient id="12435" count="1" /> <!-- Foundation Barakiel's Axe -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11141" count="1" /> <!-- Barakiel's Axe - Mild -->
 	</item>
 	<item>
-		<!-- Foundation Demon Splinter -->
-		<ingredient count="1" id="12448" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Demon Splinter - Thunder -->
-		<production count="1" id="11194" />
+		<ingredient id="12436" count="1" /> <!-- Foundation Screaming Vengeance -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11145" count="1" /> <!-- Screaming Vengeance - Concentration -->
 	</item>
 	<item>
-		<!-- Foundation Draconic Bow -->
-		<ingredient count="1" id="12449" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Draconic Bow - Earth -->
-		<production count="1" id="11198" />
+		<ingredient id="12437" count="1" /> <!-- Foundation Behemoth' Tuning Fork -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11149" count="1" /> <!-- Behemoth' Tuning Fork - Destruction -->
 	</item>
 	<item>
-		<!-- Foundation Dragon Hunter Axe -->
-		<ingredient count="1" id="12450" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Dragon Hunter Axe - Thunder -->
-		<production count="1" id="11202" />
+		<ingredient id="12438" count="1" /> <!-- Foundation Durendal -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11153" count="1" /> <!-- Durendal - Earth -->
 	</item>
 	<item>
-		<!-- Foundation Laevateinn -->
-		<ingredient count="1" id="12451" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Laevateinn - Lightning -->
-		<production count="1" id="11206" />
+		<ingredient id="12439" count="1" /> <!-- Foundation Shyeed's Bow -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11157" count="1" /> <!-- Shyeed's Bow - Concentration -->
 	</item>
 	<item>
-		<!-- Foundation Basalt Battlehammer -->
-		<ingredient count="1" id="12452" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Basalt Battlehammer - Concentration -->
-		<production count="1" id="11210" />
+		<ingredient id="12440" count="1" /> <!-- Foundation Sword of Ipos -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11161" count="1" /> <!-- Sword of Ipos - Earth -->
 	</item>
 	<item>
-		<!-- Foundation Sarunga -->
-		<ingredient count="1" id="12453" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sarunga - Earth -->
-		<production count="1" id="11214" />
+		<ingredient id="12441" count="1" /> <!-- Foundation Sobekk's Hurricane -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11165" count="1" /> <!-- Sobekk's Hurricane - Landslide -->
 	</item>
 	<item>
-		<!-- Foundation Saint Spear -->
-		<ingredient count="1" id="12454" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Saint Spear - Destruction -->
-		<production count="1" id="11218" />
+		<ingredient id="12442" count="1" /> <!-- Foundation Sirra's Blade -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11169" count="1" /> <!-- Sirra's Blade - Landslide -->
 	</item>
 	<item>
-		<!-- Foundation Arcana Mace -->
-		<ingredient count="1" id="12455" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Arcana Mace - Nature -->
-		<production count="1" id="11222" />
+		<ingredient id="12443" count="1" /> <!-- Foundation Éclair Bijou -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11173" count="1" /> <!-- Éclair Bijou - Landslide -->
 	</item>
 	<item>
-		<!-- Foundation Angel Slayer -->
-		<ingredient count="1" id="12456" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Angel Slayer - Concentration -->
-		<production count="1" id="11226" />
+		<ingredient id="12444" count="1" /> <!-- Foundation Tiphon's Spear -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11177" count="1" /> <!-- Tiphon's Spear - Landslide -->
 	</item>
 	<item>
-		<!-- Foundation Imperial Staff -->
-		<ingredient count="1" id="12457" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Imperial Staff - Nature -->
-		<production count="1" id="11230" />
+		<ingredient id="12445" count="1" /> <!-- Foundation Themis' Tongue -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11182" count="1" /> <!-- Themis' Tongue - Cleverness -->
 	</item>
 	<item>
-		<!-- Foundation Forgotten Blade -->
-		<ingredient count="1" id="12458" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Forgotten Blade - Lightning -->
-		<production count="1" id="11235" />
+		<ingredient id="12446" count="1" /> <!-- Foundation Cabrio's Hand -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11186" count="1" /> <!-- Cabrio's Hand - Cleverness -->
 	</item>
 	<item>
-		<!-- Foundation Heaven's Divider -->
-		<ingredient count="1" id="12459" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Heaven's Divider - Thunder -->
-		<production count="1" id="11239" />
+		<ingredient id="12447" count="1" /> <!-- Foundation Gram -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11190" count="1" /> <!-- Gram - Thunder -->
 	</item>
 	<item>
-		<!-- Foundation Dynasty Ancient Sword -->
-		<ingredient count="1" id="12460" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="12" id="12374" />
-		<!-- Dynasty Ancient Sword - Great Gale -->
-		<production count="1" id="11243" />
+		<ingredient id="12448" count="1" /> <!-- Foundation Demon Splinter -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11194" count="1" /> <!-- Demon Splinter - Thunder -->
 	</item>
 	<item>
-		<!-- Foundation Dynasty Knife -->
-		<ingredient count="1" id="12461" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="12" id="12374" />
-		<!-- Dynasty Knife - Great Gale -->
-		<production count="1" id="11247" />
+		<ingredient id="12449" count="1" /> <!-- Foundation Draconic Bow -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11198" count="1" /> <!-- Draconic Bow - Earth -->
 	</item>
 	<item>
-		<!-- Foundation Dynasty Rapier -->
-		<ingredient count="1" id="12462" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="12" id="12374" />
-		<!-- Dynasty Rapier - Earth -->
-		<production count="1" id="11252" />
+		<ingredient id="12450" count="1" /> <!-- Foundation Dragon Hunter Axe -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11202" count="1" /> <!-- Dragon Hunter Axe - Thunder -->
 	</item>
 	<item>
-		<!-- Foundation Dynasty Mace -->
-		<ingredient count="1" id="12463" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="12" id="12374" />
-		<!-- Dynasty Mace - Earth -->
-		<production count="1" id="11256" />
+		<ingredient id="12451" count="1" /> <!-- Foundation Laevateinn -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11206" count="1" /> <!-- Laevateinn - Lightning -->
 	</item>
 	<item>
-		<!-- Foundation Dynasty Bagh-Nakh -->
-		<ingredient count="1" id="12464" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="12" id="12374" />
-		<!-- Dynasty Bagh-Nakh - Great Gale -->
-		<production count="1" id="11260" />
+		<ingredient id="12452" count="1" /> <!-- Foundation Basalt Battlehammer -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11210" count="1" /> <!-- Basalt Battlehammer - Concentration -->
 	</item>
 	<item>
-		<!-- Foundation Dynasty Bow -->
-		<ingredient count="1" id="12465" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="12" id="12374" />
-		<!-- Dynasty Bow - Great Gale -->
-		<production count="1" id="11264" />
+		<ingredient id="12453" count="1" /> <!-- Foundation Sarunga -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11214" count="1" /> <!-- Sarunga - Earth -->
 	</item>
 	<item>
-		<!-- Foundation Dynasty Blade -->
-		<ingredient count="1" id="12466" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="12" id="12374" />
-		<!-- Dynasty Blade - Great Gale -->
-		<production count="1" id="11268" />
+		<ingredient id="12454" count="1" /> <!-- Foundation Saint Spear -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11218" count="1" /> <!-- Saint Spear - Destruction -->
 	</item>
 	<item>
-		<!-- Foundation Dynasty Sword -->
-		<ingredient count="1" id="12467" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="12" id="12374" />
-		<!-- Dynasty Sword - Earth -->
-		<production count="1" id="11272" />
+		<ingredient id="12455" count="1" /> <!-- Foundation Arcana Mace -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11222" count="1" /> <!-- Arcana Mace - Nature -->
 	</item>
 	<item>
-		<!-- Foundation Dynasty Staff -->
-		<ingredient count="1" id="12468" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="12" id="12374" />
-		<!-- Dynasty Staff - Holy Spirit -->
-		<production count="1" id="11276" />
+		<ingredient id="12456" count="1" /> <!-- Foundation Angel Slayer -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11226" count="1" /> <!-- Angel Slayer - Concentration -->
 	</item>
 	<item>
-		<!-- Foundation Dynasty Cudgel -->
-		<ingredient count="1" id="12469" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="12" id="12374" />
-		<!-- Dynasty Cudgel - Landslide -->
-		<production count="1" id="11280" />
+		<ingredient id="12457" count="1" /> <!-- Foundation Imperial Staff -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11230" count="1" /> <!-- Imperial Staff - Nature -->
 	</item>
 	<item>
-		<!-- Foundation Dynasty Crusher -->
-		<ingredient count="1" id="12470" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="12" id="12374" />
-		<!-- Dynasty Crusher - Great Gale -->
-		<production count="1" id="11284" />
+		<ingredient id="12458" count="1" /> <!-- Foundation Forgotten Blade -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11235" count="1" /> <!-- Forgotten Blade - Lightning -->
 	</item>
 	<item>
-		<!-- Foundation Dynasty Crossbow -->
-		<ingredient count="1" id="12471" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="12" id="12374" />
-		<!-- Dynasty Crossbow - Great Gale -->
-		<production count="1" id="11288" />
+		<ingredient id="12459" count="1" /> <!-- Foundation Heaven's Divider -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11239" count="1" /> <!-- Heaven's Divider - Thunder -->
 	</item>
 	<item>
-		<!-- Foundation Dynasty Phantom -->
-		<ingredient count="1" id="12472" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="12" id="12374" />
-		<!-- Dynasty Phantom - Nature -->
-		<production count="1" id="11292" />
+		<ingredient id="12460" count="1" /> <!-- Foundation Dynasty Ancient Sword -->
+		<ingredient id="12374" count="12" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11243" count="1" /> <!-- Dynasty Ancient Sword - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Dynasty Halberd -->
-		<ingredient count="1" id="12473" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="12" id="12374" />
-		<!-- Dynasty Halberd - Earth -->
-		<production count="1" id="11296" />
+		<ingredient id="12461" count="1" /> <!-- Foundation Dynasty Knife -->
+		<ingredient id="12374" count="12" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11247" count="1" /> <!-- Dynasty Knife - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Icarus Disperser -->
-		<ingredient count="1" id="12474" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="14" id="12374" />
-		<!-- Icarus Disperser - Confusion -->
-		<production count="1" id="11301" />
+		<ingredient id="12462" count="1" /> <!-- Foundation Dynasty Rapier -->
+		<ingredient id="12374" count="12" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11252" count="1" /> <!-- Dynasty Rapier - Earth -->
 	</item>
 	<item>
-		<!-- Foundation Icarus Sawsword -->
-		<ingredient count="1" id="12475" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="14" id="12374" />
-		<!-- Icarus Sawsword - Destruction -->
-		<production count="1" id="11305" />
+		<ingredient id="12463" count="1" /> <!-- Foundation Dynasty Mace -->
+		<ingredient id="12374" count="12" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11256" count="1" /> <!-- Dynasty Mace - Earth -->
 	</item>
 	<item>
-		<!-- Foundation Icarus Shooter -->
-		<ingredient count="1" id="12476" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="14" id="12374" />
-		<!-- Icarus Shooter - Concentration -->
-		<production count="1" id="11309" />
+		<ingredient id="12464" count="1" /> <!-- Foundation Dynasty Bagh-Nakh -->
+		<ingredient id="12374" count="12" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11260" count="1" /> <!-- Dynasty Bagh-Nakh - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Icarus Stinger -->
-		<ingredient count="1" id="12477" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="14" id="12374" />
-		<!-- Icarus Stinger - Destruction -->
-		<production count="1" id="11313" />
+		<ingredient id="12465" count="1" /> <!-- Foundation Dynasty Bow -->
+		<ingredient id="12374" count="12" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11264" count="1" /> <!-- Dynasty Bow - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Icarus Spirit -->
-		<ingredient count="1" id="12478" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="14" id="12374" />
-		<!-- Icarus Spirit - Nature -->
-		<production count="1" id="11317" />
+		<ingredient id="12466" count="1" /> <!-- Foundation Dynasty Blade -->
+		<ingredient id="12374" count="12" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11268" count="1" /> <!-- Dynasty Blade - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Icarus Spitter -->
-		<ingredient count="1" id="12479" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="14" id="12374" />
-		<!-- Icarus Spitter - Concentration -->
-		<production count="1" id="11321" />
+		<ingredient id="12467" count="1" /> <!-- Foundation Dynasty Sword -->
+		<ingredient id="12374" count="12" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11272" count="1" /> <!-- Dynasty Sword - Earth -->
 	</item>
 	<item>
-		<!-- Foundation Icarus Wingblade -->
-		<ingredient count="1" id="12480" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="14" id="12374" />
-		<!-- Icarus Wingblade - Lightning -->
-		<production count="1" id="11325" />
+		<ingredient id="12468" count="1" /> <!-- Foundation Dynasty Staff -->
+		<ingredient id="12374" count="12" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11276" count="1" /> <!-- Dynasty Staff - Holy Spirit -->
 	</item>
 	<item>
-		<!-- Foundation Icarus Trident -->
-		<ingredient count="1" id="12481" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="14" id="12374" />
-		<!-- Icarus Trident - Thunder -->
-		<production count="1" id="11329" />
+		<ingredient id="12469" count="1" /> <!-- Foundation Dynasty Cudgel -->
+		<ingredient id="12374" count="12" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11280" count="1" /> <!-- Dynasty Cudgel - Landslide -->
 	</item>
 	<item>
-		<!-- Foundation Icarus Hammer -->
-		<ingredient count="1" id="12482" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="14" id="12374" />
-		<!-- Icarus Hammer - Earth -->
-		<production count="1" id="11333" />
+		<ingredient id="12470" count="1" /> <!-- Foundation Dynasty Crusher -->
+		<ingredient id="12374" count="12" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11284" count="1" /> <!-- Dynasty Crusher - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Icarus Hand -->
-		<ingredient count="1" id="12483" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="14" id="12374" />
-		<!-- Icarus Hand - Destruction -->
-		<production count="1" id="11337" />
+		<ingredient id="12471" count="1" /> <!-- Foundation Dynasty Crossbow -->
+		<ingredient id="12374" count="12" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11288" count="1" /> <!-- Dynasty Crossbow - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Icarus Heavy Arms -->
-		<ingredient count="1" id="12484" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="14" id="12374" />
-		<!-- Icarus Heavy Arms - Lightning -->
-		<production count="1" id="11341" />
+		<ingredient id="12472" count="1" /> <!-- Foundation Dynasty Phantom -->
+		<ingredient id="12374" count="12" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11292" count="1" /> <!-- Dynasty Phantom - Nature -->
 	</item>
 	<item>
-		<!-- Foundation Icarus Hall -->
-		<ingredient count="1" id="12485" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="14" id="12374" />
-		<!-- Icarus Hall - Hail -->
-		<production count="1" id="11345" />
+		<ingredient id="12473" count="1" /> <!-- Foundation Dynasty Halberd -->
+		<ingredient id="12374" count="12" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11296" count="1" /> <!-- Dynasty Halberd - Earth -->
 	</item>
 	<item>
-		<!-- Vesper Cutter of Chaos -->
-		<ingredient count="1" id="16028" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="16" id="12374" />
-		<!-- Vesper Cutter - Thunder -->
-		<production count="1" id="16042" />
+		<ingredient id="12474" count="1" /> <!-- Foundation Icarus Disperser -->
+		<ingredient id="12374" count="14" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11301" count="1" /> <!-- Icarus Disperser - Confusion -->
 	</item>
 	<item>
-		<!-- Vesper Slasher of Chaos -->
-		<ingredient count="1" id="16029" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="16" id="12374" />
-		<!-- Vesper Slasher - Gale -->
-		<production count="1" id="16043" />
+		<ingredient id="12475" count="1" /> <!-- Foundation Icarus Sawsword -->
+		<ingredient id="12374" count="14" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11305" count="1" /> <!-- Icarus Sawsword - Destruction -->
 	</item>
 	<item>
-		<!-- Vesper Buster of Chaos -->
-		<ingredient count="1" id="16030" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="16" id="12374" />
-		<!-- Vesper Buster - Cleverness -->
-		<production count="1" id="16044" />
+		<ingredient id="12476" count="1" /> <!-- Foundation Icarus Shooter -->
+		<ingredient id="12374" count="14" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11309" count="1" /> <!-- Icarus Shooter - Concentration -->
 	</item>
 	<item>
-		<!-- Vesper Shaper of Chaos -->
-		<ingredient count="1" id="16031" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="16" id="12374" />
-		<!-- Vesper Shaper - Gale -->
-		<production count="1" id="16045" />
+		<ingredient id="12477" count="1" /> <!-- Foundation Icarus Stinger -->
+		<ingredient id="12374" count="14" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11313" count="1" /> <!-- Icarus Stinger - Destruction -->
 	</item>
 	<item>
-		<!-- Vesper Fighter of Chaos -->
-		<ingredient count="1" id="16032" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="16" id="12374" />
-		<!-- Vesper Fighter - Gale -->
-		<production count="1" id="16046" />
+		<ingredient id="12478" count="1" /> <!-- Foundation Icarus Spirit -->
+		<ingredient id="12374" count="14" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11317" count="1" /> <!-- Icarus Spirit - Nature -->
 	</item>
 	<item>
-		<!-- Vesper Stormer of Chaos -->
-		<ingredient count="1" id="16033" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="16" id="12374" />
-		<!-- Vesper Stormer - Thunder -->
-		<production count="1" id="16047" />
+		<ingredient id="12479" count="1" /> <!-- Foundation Icarus Spitter -->
+		<ingredient id="12374" count="14" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11321" count="1" /> <!-- Icarus Spitter - Concentration -->
 	</item>
 	<item>
-		<!-- Vesper Avenger of Chaos -->
-		<ingredient count="1" id="16034" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="16" id="12374" />
-		<!-- Vesper Avenger - Landslide -->
-		<production count="1" id="16048" />
+		<ingredient id="12480" count="1" /> <!-- Foundation Icarus Wingblade -->
+		<ingredient id="12374" count="14" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11325" count="1" /> <!-- Icarus Wingblade - Lightning -->
 	</item>
 	<item>
-		<!-- Vesper Retributer of Chaos -->
-		<ingredient count="1" id="16035" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="16" id="12374" />
-		<!-- Vesper Retributer - Gale -->
-		<production count="1" id="16049" />
+		<ingredient id="12481" count="1" /> <!-- Foundation Icarus Trident -->
+		<ingredient id="12374" count="14" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11329" count="1" /> <!-- Icarus Trident - Thunder -->
 	</item>
 	<item>
-		<!-- Vesper Caster of Chaos -->
-		<ingredient count="1" id="16036" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="16" id="12374" />
-		<!-- Vesper Caster - Cleverness -->
-		<production count="1" id="16050" />
+		<ingredient id="12482" count="1" /> <!-- Foundation Icarus Hammer -->
+		<ingredient id="12374" count="14" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11333" count="1" /> <!-- Icarus Hammer - Earth -->
 	</item>
 	<item>
-		<!-- Vesper Singer of Chaos -->
-		<ingredient count="1" id="16037" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="16" id="12374" />
-		<!-- Vesper Singer - Hail -->
-		<production count="1" id="16051" />
+		<ingredient id="12483" count="1" /> <!-- Foundation Icarus Hand -->
+		<ingredient id="12374" count="14" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11337" count="1" /> <!-- Icarus Hand - Destruction -->
 	</item>
 	<item>
-		<!-- Vesper Thrower of Chaos -->
-		<ingredient count="1" id="16038" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="16" id="12374" />
-		<!-- Vesper Thrower - Clairvoyance -->
-		<production count="1" id="16052" />
+		<ingredient id="12484" count="1" /> <!-- Foundation Icarus Heavy Arms -->
+		<ingredient id="12374" count="14" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11341" count="1" /> <!-- Icarus Heavy Arms - Lightning -->
 	</item>
 	<item>
-		<!-- Vesper Pincer of Chaos -->
-		<ingredient count="1" id="16039" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="16" id="12374" />
-		<!-- Vesper Pincer - Thunder -->
-		<production count="1" id="16053" />
+		<ingredient id="12485" count="1" /> <!-- Foundation Icarus Hall -->
+		<ingredient id="12374" count="14" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11345" count="1" /> <!-- Icarus Hall - Hail -->
 	</item>
 	<item>
-		<!-- Vesper Shooter of Chaos -->
-		<ingredient count="1" id="16040" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="16" id="12374" />
-		<!-- Vesper Shooter - Clairvoyance -->
-		<production count="1" id="16054" />
+		<ingredient id="16028" count="1" /> <!-- Foundation Vesper Cutter -->
+		<ingredient id="12374" count="16" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16042" count="1" /> <!-- Vesper Cutter - Thunder -->
 	</item>
 	<item>
-		<!-- Vesper Nagan of Chaos -->
-		<ingredient count="1" id="16041" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="16" id="12374" />
-		<!-- Vesper Nagan - Gale -->
-		<production count="1" id="16055" />
+		<ingredient id="16029" count="1" /> <!-- Foundation Vesper Slasher -->
+		<ingredient id="12374" count="16" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16043" count="1" /> <!-- Vesper Slasher - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Zubei's Gauntlet -->
-		<ingredient count="1" id="12486" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Sealed Zubei's Gauntlet -->
-		<production count="1" id="11349" />
+		<ingredient id="16030" count="1" /> <!-- Foundation Vesper Buster -->
+		<ingredient id="12374" count="16" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16044" count="1" /> <!-- Vesper Buster - Cleverness -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Zubei's Boots -->
-		<ingredient count="1" id="12487" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Sealed Zubei's Boots -->
-		<production count="1" id="11350" />
+		<ingredient id="16031" count="1" /> <!-- Foundation Vesper Shaper -->
+		<ingredient id="12374" count="16" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16045" count="1" /> <!-- Vesper Shaper - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Avadon Gloves -->
-		<ingredient count="1" id="12488" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Sealed Avadon Gloves -->
-		<production count="1" id="11351" />
+		<ingredient id="16032" count="1" /> <!-- Foundation Vesper Fighter -->
+		<ingredient id="12374" count="16" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16046" count="1" /> <!-- Vesper Fighter - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Avadon Boots -->
-		<ingredient count="1" id="12489" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Sealed Avadon Boots -->
-		<production count="1" id="11352" />
+		<ingredient id="16033" count="1" /> <!-- Foundation Vesper Stormer -->
+		<ingredient id="12374" count="16" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16047" count="1" /> <!-- Vesper Stormer - Thunder -->
 	</item>
 	<item>
-		<!-- Foundation Zubei's Leather Gaiters -->
-		<ingredient count="1" id="12490" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Zubei's Leather Gaiters -->
-		<production count="1" id="11353" />
+		<ingredient id="16034" count="1" /> <!-- Foundation Vesper Avenger -->
+		<ingredient id="12374" count="16" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16048" count="1" /> <!-- Vesper Avenger - Landslide -->
 	</item>
 	<item>
-		<!-- Foundation Zubei's Leather Shirt -->
-		<ingredient count="1" id="12491" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Zubei's Leather Shirt -->
-		<production count="1" id="11354" />
+		<ingredient id="16035" count="1" /> <!-- Foundation Vesper Retributer -->
+		<ingredient id="12374" count="16" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16049" count="1" /> <!-- Vesper Retributer - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Zubei's Gaiters -->
-		<ingredient count="1" id="12492" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Zubei's Gaiters -->
-		<production count="1" id="11355" />
+		<ingredient id="16036" count="1" /> <!-- Foundation Vesper Caster -->
+		<ingredient id="12374" count="16" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16050" count="1" /> <!-- Vesper Caster - Cleverness -->
 	</item>
 	<item>
-		<!-- Foundation Zubei's Shield -->
-		<ingredient count="1" id="12499" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Zubei's Shield -->
-		<production count="1" id="11362" />
+		<ingredient id="16037" count="1" /> <!-- Foundation Vesper Singer -->
+		<ingredient id="12374" count="16" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16051" count="1" /> <!-- Vesper Singer - Hail -->
 	</item>
 	<item>
-		<!-- Foundation Zubei's Breastplate -->
-		<ingredient count="1" id="12501" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Zubei's Breastplate -->
-		<production count="1" id="11364" />
+		<ingredient id="16038" count="1" /> <!-- Foundation Vesper Thrower -->
+		<ingredient id="12374" count="16" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16052" count="1" /> <!-- Vesper Thrower - Clairvoyance -->
 	</item>
 	<item>
-		<!-- Foundation Avadon Leather Armor -->
-		<ingredient count="1" id="12505" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Avadon Leather Armor -->
-		<production count="1" id="11368" />
+		<ingredient id="16039" count="1" /> <!-- Foundation Vesper Pincer -->
+		<ingredient id="12374" count="16" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16053" count="1" /> <!-- Vesper Pincer - Thunder -->
 	</item>
 	<item>
-		<!-- Foundation Avadon Robe -->
-		<ingredient count="1" id="12506" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Avadon Robe -->
-		<production count="1" id="11369" />
+		<ingredient id="16040" count="1" /> <!-- Foundation Vesper Shooter -->
+		<ingredient id="12374" count="16" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16054" count="1" /> <!-- Vesper Shooter - Clairvoyance -->
 	</item>
 	<item>
-		<!-- Foundation Avadon Shield -->
-		<ingredient count="1" id="12511" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Avadon Shield -->
-		<production count="1" id="11374" />
+		<ingredient id="16041" count="1" /> <!-- Foundation Vesper Nagan -->
+		<ingredient id="12374" count="16" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16055" count="1" /> <!-- Vesper Nagan - Great Gale -->
 	</item>
 	<item>
-		<!-- Foundation Avadon Gaiters -->
-		<ingredient count="1" id="12512" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Avadon Gaiters -->
-		<production count="1" id="11375" />
+		<ingredient id="12486" count="1" /> <!-- Foundation Sealed Zubei's Gauntlets -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11349" count="1" /> <!-- Sealed Zubei's Gauntlets -->
 	</item>
 	<item>
-		<!-- Foundation Avadon Breastplate -->
-		<ingredient count="1" id="12513" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Avadon Breastplate -->
-		<production count="1" id="11376" />
+		<ingredient id="12487" count="1" /> <!-- Foundation Sealed Zubei's Boots -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11350" count="1" /> <!-- Sealed Zubei's Boots -->
 	</item>
 	<item>
-		<!-- Foundation Tunic of Zubei -->
-		<ingredient count="1" id="12514" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Tunic of Zubei -->
-		<production count="1" id="11377" />
+		<ingredient id="12488" count="1" /> <!-- Foundation Sealed Avadon Gloves -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11351" count="1" /> <!-- Sealed Avadon Gloves -->
 	</item>
 	<item>
-		<!-- Foundation Stockings of Zubei -->
-		<ingredient count="1" id="12515" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Stockings of Zubei -->
-		<production count="1" id="11378" />
+		<ingredient id="12489" count="1" /> <!-- Foundation Sealed Avadon Boots -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11352" count="1" /> <!-- Sealed Avadon Boots -->
 	</item>
 	<item>
-		<!-- Foundation Doom Shield -->
-		<ingredient count="1" id="12522" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Doom Shield -->
-		<production count="1" id="11385" />
+		<ingredient id="12490" count="1" /> <!-- Foundation Zubei's Leather Gaiters -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11353" count="1" /> <!-- Zubei's Leather Gaiters -->
 	</item>
 	<item>
-		<!-- Foundation Doom Plate Armor -->
-		<ingredient count="1" id="12523" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Doom Plate Armor -->
-		<production count="1" id="11386" />
+		<ingredient id="12491" count="1" /> <!-- Foundation Zubei's Leather Shirt -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11354" count="1" /> <!-- Zubei's Leather Shirt -->
 	</item>
 	<item>
-		<!-- Foundation Leather Armor of Doom -->
-		<ingredient count="1" id="12525" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Leather Armor of Doom -->
-		<production count="1" id="11388" />
+		<ingredient id="12492" count="1" /> <!-- Foundation Zubei's Gaiters -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11355" count="1" /> <!-- Zubei's Gaiters -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Doom Gloves -->
-		<ingredient count="1" id="12526" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Sealed Doom Gloves -->
-		<production count="1" id="11389" />
+		<ingredient id="12499" count="1" /> <!-- Foundation Zubei's Shield -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11362" count="1" /> <!-- Zubei's Shield -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Doom Boots -->
-		<ingredient count="1" id="12527" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Sealed Doom Boots -->
-		<production count="1" id="11390" />
+		<ingredient id="12501" count="1" /> <!-- Foundation Zubei's Breastplate -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11364" count="1" /> <!-- Zubei's Breastplate -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Blue Wolf Boots -->
-		<ingredient count="1" id="12528" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Sealed Blue Wolf Boots -->
-		<production count="1" id="11391" />
+		<ingredient id="12505" count="1" /> <!-- Foundation Avadon Leather Armor -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11368" count="1" /> <!-- Avadon Leather Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Blue Wolf Gloves -->
-		<ingredient count="1" id="12529" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Sealed Blue Wolf Gloves -->
-		<production count="1" id="11392" />
+		<ingredient id="12506" count="1" /> <!-- Foundation Avadon Robe -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11369" count="1" /> <!-- Avadon Robe -->
 	</item>
 	<item>
-		<!-- Foundation Tunic of Doom -->
-		<ingredient count="1" id="12530" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Tunic of Doom -->
-		<production count="1" id="11393" />
+		<ingredient id="12511" count="1" /> <!-- Foundation Avadon Shield -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11374" count="1" /> <!-- Avadon Shield -->
 	</item>
 	<item>
-		<!-- Foundation Blue Wolf Gaiters -->
-		<ingredient count="1" id="12531" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Blue Wolf Gaiters -->
-		<production count="1" id="11394" />
+		<ingredient id="12512" count="1" /> <!-- Foundation Avadon Gaiters -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11375" count="1" /> <!-- Avadon Gaiters -->
 	</item>
 	<item>
-		<!-- Foundation Blue Wolf Leather Armor -->
-		<ingredient count="1" id="12532" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Blue Wolf Leather Armor -->
-		<production count="1" id="11395" />
+		<ingredient id="12513" count="1" /> <!-- Foundation Avadon Breastplate -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11376" count="1" /> <!-- Avadon Breastplate -->
 	</item>
 	<item>
-		<!-- Foundation Blue Wolf Tunic -->
-		<ingredient count="1" id="12539" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Blue Wolf Tunic -->
-		<production count="1" id="11402" />
+		<ingredient id="12514" count="1" /> <!-- Foundation Tunic of Zubei -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11377" count="1" /> <!-- Tunic of Zubei -->
 	</item>
 	<item>
-		<!-- Foundation Blue Wolf Stockings -->
-		<ingredient count="1" id="12541" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Blue Wolf Stockings -->
-		<production count="1" id="11404" />
+		<ingredient id="12515" count="1" /> <!-- Foundation Stockings of Zubei -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11378" count="1" /> <!-- Stockings of Zubei -->
 	</item>
 	<item>
-		<!-- Foundation Blue Wolf Breastplate -->
-		<ingredient count="1" id="12542" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Blue Wolf Breastplate -->
-		<production count="1" id="11405" />
+		<ingredient id="12522" count="1" /> <!-- Foundation Doom Shield -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11385" count="1" /> <!-- Doom Shield -->
 	</item>
 	<item>
-		<!-- Foundation Stockings of Doom -->
-		<ingredient count="1" id="12543" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Stockings of Doom -->
-		<production count="1" id="11406" />
+		<ingredient id="12523" count="1" /> <!-- Foundation Doom Plate Armor -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11386" count="1" /> <!-- Doom Plate Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dark Crystal Gaiters -->
-		<ingredient count="1" id="12557" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Dark Crystal Gaiters -->
-		<production count="1" id="11420" />
+		<ingredient id="12525" count="1" /> <!-- Foundation Leather Armor of Doom -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11388" count="1" /> <!-- Leather Armor of Doom -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dark Crystal Gloves -->
-		<ingredient count="1" id="12558" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Dark Crystal Gloves -->
-		<production count="1" id="11421" />
+		<ingredient id="12526" count="1" /> <!-- Foundation Sealed Doom Gloves -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11389" count="1" /> <!-- Sealed Doom Gloves -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dark Crystal Leather Armor -->
-		<ingredient count="1" id="12559" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Dark Crystal Leather Armor -->
-		<production count="1" id="11422" />
+		<ingredient id="12527" count="1" /> <!-- Foundation Sealed Doom Boots -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11390" count="1" /> <!-- Sealed Doom Boots -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dark Crystal Robe -->
-		<ingredient count="1" id="12560" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Dark Crystal Robe -->
-		<production count="1" id="11423" />
+		<ingredient id="12528" count="1" /> <!-- Foundation Sealed Blue Wolf Boots -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11391" count="1" /> <!-- Sealed Blue Wolf Boots -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dark Crystal Boots -->
-		<ingredient count="1" id="12561" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Dark Crystal Boots -->
-		<production count="1" id="11424" />
+		<ingredient id="12529" count="1" /> <!-- Foundation Sealed Blue Wolf Gloves -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11392" count="1" /> <!-- Sealed Blue Wolf Gloves -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dark Crystal Shield -->
-		<ingredient count="1" id="12562" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Dark Crystal Shield -->
-		<production count="1" id="11425" />
+		<ingredient id="12530" count="1" /> <!-- Foundation Tunic of Doom -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11393" count="1" /> <!-- Tunic of Doom -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dark Crystal Breastplate -->
-		<ingredient count="1" id="12564" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Dark Crystal breastplate -->
-		<production count="1" id="11427" />
+		<ingredient id="12531" count="1" /> <!-- Foundation Blue Wolf Gaiters -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11394" count="1" /> <!-- Blue Wolf Gaiters -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dark Crystal Leggings -->
-		<ingredient count="1" id="12565" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Dark Crystal Leggings -->
-		<production count="1" id="11428" />
+		<ingredient id="12532" count="1" /> <!-- Foundation Blue Wolf Leather Armor -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11395" count="1" /> <!-- Blue Wolf Leather Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Tallum Gloves -->
-		<ingredient count="1" id="12566" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Tallum Gloves -->
-		<production count="1" id="11429" />
+		<ingredient id="12539" count="1" /> <!-- Foundation Blue Wolf Tunic -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11402" count="1" /> <!-- Blue Wolf Tunic -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Tallum Leather Armor -->
-		<ingredient count="1" id="12567" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Tallum Leather Armor -->
-		<production count="1" id="11430" />
+		<ingredient id="12541" count="1" /> <!-- Foundation Blue Wolf Stockings -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11404" count="1" /> <!-- Blue Wolf Stockings -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Tallum Boots -->
-		<ingredient count="1" id="12568" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Tallum Boots -->
-		<production count="1" id="11431" />
+		<ingredient id="12542" count="1" /> <!-- Foundation Blue Wolf Breastplate -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11405" count="1" /> <!-- Blue Wolf Breastplate -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Tallum Tunic -->
-		<ingredient count="1" id="12569" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Tallum Tunic -->
-		<production count="1" id="11432" />
+		<ingredient id="12543" count="1" /> <!-- Foundation Stockings of Doom -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11406" count="1" /> <!-- Stockings of Doom -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Tallum Plate Armor -->
-		<ingredient count="1" id="12570" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Tallum Plate Armor -->
-		<production count="1" id="11433" />
+		<ingredient id="12557" count="1" /> <!-- Foundation Sealed Dark Crystal Gaiters -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11420" count="1" /> <!-- Sealed Dark Crystal Gaiters -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Tallum Stockings -->
-		<ingredient count="1" id="12572" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Tallum Stockings -->
-		<production count="1" id="11435" />
+		<ingredient id="12558" count="1" /> <!-- Foundation Sealed Dark Crystal Gloves -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11421" count="1" /> <!-- Sealed Dark Crystal Gloves -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Majestic Gauntlet -->
-		<ingredient count="1" id="12595" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Majestic Gauntlet -->
-		<production count="1" id="11458" />
+		<ingredient id="12559" count="1" /> <!-- Foundation Sealed Dark Crystal Leather Armor -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11422" count="1" /> <!-- Sealed Dark Crystal Leather Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Majestic Leather Armor -->
-		<ingredient count="1" id="12596" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Majestic Leather Armor -->
-		<production count="1" id="11459" />
+		<ingredient id="12560" count="1" /> <!-- Foundation Sealed Dark Crystal Robe -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11423" count="1" /> <!-- Sealed Dark Crystal Robe -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Majestic Robe -->
-		<ingredient count="1" id="12597" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Majestic Robe -->
-		<production count="1" id="11460" />
+		<ingredient id="12561" count="1" /> <!-- Foundation Sealed Dark Crystal Boots -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11424" count="1" /> <!-- Sealed Dark Crystal Boots -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Majestic Boots -->
-		<ingredient count="1" id="12598" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Majestic Boots -->
-		<production count="1" id="11461" />
+		<ingredient id="12562" count="1" /> <!-- Foundation Sealed Dark Crystal Shield -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11425" count="1" /> <!-- Sealed Dark Crystal Shield -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Majestic Plate Armor -->
-		<ingredient count="1" id="12600" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Majestic Plate Armor -->
-		<production count="1" id="11463" />
+		<ingredient id="12564" count="1" /> <!-- Foundation Sealed Dark Crystal Breastplate -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11427" count="1" /> <!-- Sealed Dark Crystal breastplate -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Armor of Nightmare -->
-		<ingredient count="1" id="12601" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Armor of Nightmare -->
-		<production count="1" id="11464" />
+		<ingredient id="12565" count="1" /> <!-- Foundation Sealed Dark Crystal Leggings -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11428" count="1" /> <!-- Sealed Dark Crystal Leggings -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Gauntlet of Nightmare -->
-		<ingredient count="1" id="12602" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Gauntlet of Nightmare -->
-		<production count="1" id="11465" />
+		<ingredient id="12566" count="1" /> <!-- Foundation Sealed Tallum Gloves -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11429" count="1" /> <!-- Sealed Tallum Gloves -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Leather Armor of Nightmare -->
-		<ingredient count="1" id="12603" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Leather Armor of Nightmare -->
-		<production count="1" id="11466" />
+		<ingredient id="12567" count="1" /> <!-- Foundation Sealed Tallum Leather Armor -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11430" count="1" /> <!-- Sealed Tallum Leather Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Robe of Nightmare -->
-		<ingredient count="1" id="12604" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Robe of Nightmare -->
-		<production count="1" id="11467" />
+		<ingredient id="12568" count="1" /> <!-- Foundation Sealed Tallum Boots -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11431" count="1" /> <!-- Sealed Tallum Boots -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Boots of Nightmare -->
-		<ingredient count="1" id="12605" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Boots of Nightmare -->
-		<production count="1" id="11468" />
+		<ingredient id="12569" count="1" /> <!-- Foundation Sealed Tallum Tunic -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11432" count="1" /> <!-- Sealed Tallum Tunic -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Shield of Nightmare -->
-		<ingredient count="1" id="12606" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Shield of Nightmare -->
-		<production count="1" id="11469" />
+		<ingredient id="12570" count="1" /> <!-- Foundation Sealed Tallum Plate Armor -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11433" count="1" /> <!-- Sealed Tallum Plate Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Draconic Leather Gloves -->
-		<ingredient count="1" id="12627" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="4" id="12374" />
-		<!-- Sealed Draconic Leather Gloves -->
-		<production count="1" id="11491" />
+		<ingredient id="12572" count="1" /> <!-- Foundation Sealed Tallum Stockings -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11435" count="1" /> <!-- Sealed Tallum Stockings -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Draconic Leather Boots -->
-		<ingredient count="1" id="12628" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="4" id="12374" />
-		<!-- Sealed Draconic Leather Boots -->
-		<production count="1" id="11492" />
+		<ingredient id="12595" count="1" /> <!-- Foundation Sealed Majestic Gauntlets -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11458" count="1" /> <!-- Sealed Majestic Gauntlets -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Draconic Leather Armor -->
-		<ingredient count="1" id="12629" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="4" id="12374" />
-		<!-- Sealed Draconic Leather Armor -->
-		<production count="1" id="11493" />
+		<ingredient id="12596" count="1" /> <!-- Foundation Sealed Majestic Leather Armor -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11459" count="1" /> <!-- Sealed Majestic Leather Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Draconic Leather Helmet -->
-		<ingredient count="1" id="12630" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="4" id="12374" />
-		<!-- Sealed Draconic Leather Helmet -->
-		<production count="1" id="11494" />
+		<ingredient id="12597" count="1" /> <!-- Foundation Sealed Majestic Robe -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11460" count="1" /> <!-- Sealed Majestic Robe -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Major Arcana Gloves -->
-		<ingredient count="1" id="12631" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="4" id="12374" />
-		<!-- Sealed Major Arcana Gloves -->
-		<production count="1" id="11495" />
+		<ingredient id="12598" count="1" /> <!-- Foundation Sealed Majestic Boots -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11461" count="1" /> <!-- Sealed Majestic Boots -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Major Arcana Robe -->
-		<ingredient count="1" id="12632" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="4" id="12374" />
-		<!-- Sealed Major Arcana Robe -->
-		<production count="1" id="11496" />
+		<ingredient id="12600" count="1" /> <!-- Foundation Sealed Majestic Plate Armor -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11463" count="1" /> <!-- Sealed Majestic Plate Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Major Arcana Boots -->
-		<ingredient count="1" id="12633" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="4" id="12374" />
-		<!-- Sealed Major Arcana Boots -->
-		<production count="1" id="11497" />
+		<ingredient id="12601" count="1" /> <!-- Foundation Sealed Armor of Nightmare -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11464" count="1" /> <!-- Sealed Armor of Nightmare -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Major Arcana Circlet -->
-		<ingredient count="1" id="12634" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="4" id="12374" />
-		<!-- Sealed Major Arcana Circlet -->
-		<production count="1" id="11498" />
+		<ingredient id="12602" count="1" /> <!-- Foundation Sealed Gauntlets of Nightmare -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11465" count="1" /> <!-- Sealed Gauntlets of Nightmare -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Imperial Crusader Gaiters -->
-		<ingredient count="1" id="12635" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="4" id="12374" />
-		<!-- Sealed Imperial Crusader Gaiters -->
-		<production count="1" id="11499" />
+		<ingredient id="12603" count="1" /> <!-- Foundation Sealed Leather Armor of Nightmare -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11466" count="1" /> <!-- Sealed Leather Armor of Nightmare -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Imperial Crusader Gauntlet -->
-		<ingredient count="1" id="12636" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="4" id="12374" />
-		<!-- Sealed Imperial Crusader Gauntlet -->
-		<production count="1" id="11500" />
+		<ingredient id="12604" count="1" /> <!-- Foundation Sealed Robe of Nightmare -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11467" count="1" /> <!-- Sealed Robe of Nightmare -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Imperial Crusader Boots -->
-		<ingredient count="1" id="12637" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="4" id="12374" />
-		<!-- Sealed Imperial Crusader Boots -->
-		<production count="1" id="11501" />
+		<ingredient id="12605" count="1" /> <!-- Foundation Sealed Boots of Nightmare -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11468" count="1" /> <!-- Sealed Boots of Nightmare -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Imperial Crusader Shield -->
-		<ingredient count="1" id="12638" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="4" id="12374" />
-		<!-- Sealed Imperial Crusader Shield -->
-		<production count="1" id="11502" />
+		<ingredient id="12606" count="1" /> <!-- Foundation Sealed Shield of Nightmare -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11469" count="1" /> <!-- Sealed Shield of Nightmare -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Imperial Crusader Helmet -->
-		<ingredient count="1" id="12639" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="4" id="12374" />
-		<!-- Sealed Imperial Crusader Helmet -->
-		<production count="1" id="11503" />
+		<ingredient id="12627" count="1" /> <!-- Foundation Sealed Draconic Leather Gloves -->
+		<ingredient id="12374" count="4" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11491" count="1" /> <!-- Sealed Draconic Leather Gloves -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Imperial Crusader Breastplate -->
-		<ingredient count="1" id="12640" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="4" id="12374" />
-		<!-- Sealed Imperial Crusader Breastplate -->
-		<production count="1" id="11504" />
+		<ingredient id="12628" count="1" /> <!-- Foundation Sealed Draconic Leather Boots -->
+		<ingredient id="12374" count="4" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11492" count="1" /> <!-- Sealed Draconic Leather Boots -->
 	</item>
 	<item>
-		<!-- Chaotic Sealed Arcana Sigil -->
-		<ingredient count="1" id="13102" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="4" id="12374" />
-		<!-- Sealed Arcana Sigil -->
-		<production count="1" id="10121" />
+		<ingredient id="12629" count="1" /> <!-- Foundation Sealed Draconic Leather Armor -->
+		<ingredient id="12374" count="4" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11493" count="1" /> <!-- Sealed Draconic Leather Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Gaiters -->
-		<ingredient count="1" id="12694" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Gaiters -->
-		<production count="1" id="11559" />
+		<ingredient id="12630" count="1" /> <!-- Foundation Sealed Draconic Leather Helmet -->
+		<ingredient id="12374" count="4" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11494" count="1" /> <!-- Sealed Draconic Leather Helmet -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Gauntlet -->
-		<ingredient count="1" id="12695" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Gauntlet -->
-		<production count="1" id="11560" />
+		<ingredient id="12631" count="1" /> <!-- Foundation Sealed Major Arcana Gloves -->
+		<ingredient id="12374" count="4" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11495" count="1" /> <!-- Sealed Major Arcana Gloves -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Gloves -->
-		<ingredient count="1" id="12696" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Gloves -->
-		<production count="1" id="11561" />
+		<ingredient id="12632" count="1" /> <!-- Foundation Sealed Major Arcana Robe -->
+		<ingredient id="12374" count="4" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11496" count="1" /> <!-- Sealed Major Arcana Robe -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Leather Gloves -->
-		<ingredient count="1" id="12697" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Leather Gloves -->
-		<production count="1" id="11562" />
+		<ingredient id="12633" count="1" /> <!-- Foundation Sealed Major Arcana Boots -->
+		<ingredient id="12374" count="4" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11497" count="1" /> <!-- Sealed Major Arcana Boots -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Leather Leggings -->
-		<ingredient count="1" id="12698" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Leather Leggings -->
-		<production count="1" id="11563" />
+		<ingredient id="12634" count="1" /> <!-- Foundation Sealed Major Arcana Circlet -->
+		<ingredient id="12374" count="4" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11498" count="1" /> <!-- Sealed Major Arcana Circlet -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Leather Armor -->
-		<ingredient count="1" id="12699" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Leather Armor -->
-		<production count="1" id="11564" />
+		<ingredient id="12635" count="1" /> <!-- Foundation Sealed Imperial Crusader Gaiters -->
+		<ingredient id="12374" count="4" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11499" count="1" /> <!-- Sealed Imperial Crusader Gaiters -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Leather Boots -->
-		<ingredient count="1" id="12700" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Leather Boots -->
-		<production count="1" id="11565" />
+		<ingredient id="12636" count="1" /> <!-- Foundation Sealed Imperial Crusader Gauntlets -->
+		<ingredient id="12374" count="4" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11500" count="1" /> <!-- Sealed Imperial Crusader Gauntlets -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Leather Helmet -->
-		<ingredient count="1" id="12701" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Leather Helmet -->
-		<production count="1" id="11566" />
+		<ingredient id="12637" count="1" /> <!-- Foundation Sealed Imperial Crusader Boots -->
+		<ingredient id="12374" count="4" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11501" count="1" /> <!-- Sealed Imperial Crusader Boots -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Boots -->
-		<ingredient count="1" id="12702" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Boots -->
-		<production count="1" id="11567" />
+		<ingredient id="12638" count="1" /> <!-- Foundation Sealed Imperial Crusader Shield -->
+		<ingredient id="12374" count="4" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11502" count="1" /> <!-- Sealed Imperial Crusader Shield -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Breastplate -->
-		<ingredient count="1" id="12703" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Breastplate -->
-		<production count="1" id="11568" />
+		<ingredient id="12639" count="1" /> <!-- Foundation Sealed Imperial Crusader Helmet -->
+		<ingredient id="12374" count="4" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11503" count="1" /> <!-- Sealed Imperial Crusader Helmet -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Shield -->
-		<ingredient count="1" id="12704" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Shield -->
-		<production count="1" id="11569" />
+		<ingredient id="12640" count="1" /> <!-- Foundation Sealed Imperial Crusader Breastplate -->
+		<ingredient id="12374" count="4" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11504" count="1" /> <!-- Sealed Imperial Crusader Breastplate -->
 	</item>
 	<item>
-		<!-- Chaotic Sealed Dynasty Sigil -->
-		<ingredient count="1" id="10117" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Sigil -->
-		<production count="1" id="10120" />
+		<ingredient id="13102" count="1" /> <!-- Foundation Sealed Arcana Sigil -->
+		<ingredient id="12374" count="4" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10121" count="1" /> <!-- Sealed Arcana Sigil -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Shoes -->
-		<ingredient count="1" id="12705" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Shoes -->
-		<production count="1" id="11570" />
+		<ingredient id="12694" count="1" /> <!-- Foundation Sealed Dynasty Gaiters -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11559" count="1" /> <!-- Sealed Dynasty Gaiters -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Circlet -->
-		<ingredient count="1" id="12706" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Circlet -->
-		<production count="1" id="11571" />
+		<ingredient id="12695" count="1" /> <!-- Foundation Sealed Dynasty Gauntlets -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11560" count="1" /> <!-- Sealed Dynasty Gauntlets -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Tunic -->
-		<ingredient count="1" id="12707" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Tunic -->
-		<production count="1" id="11572" />
+		<ingredient id="12696" count="1" /> <!-- Foundation Sealed Dynasty Gloves -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11561" count="1" /> <!-- Sealed Dynasty Gloves -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Helmet -->
-		<ingredient count="1" id="12708" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Helmet -->
-		<production count="1" id="11573" />
+		<ingredient id="12697" count="1" /> <!-- Foundation Sealed Dynasty Leather Gloves -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11562" count="1" /> <!-- Sealed Dynasty Leather Gloves -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Stockings -->
-		<ingredient count="1" id="12709" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Dynasty Stockings -->
-		<production count="1" id="11574" />
+		<ingredient id="12698" count="1" /> <!-- Foundation Sealed Dynasty Leather Leggings -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11563" count="1" /> <!-- Sealed Dynasty Leather Leggings -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Helmet of Chaos -->
-		<ingredient count="1" id="16221" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Helmet -->
-		<production count="1" id="16323" />
+		<ingredient id="12699" count="1" /> <!-- Foundation Sealed Dynasty Leather Armor -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11564" count="1" /> <!-- Sealed Dynasty Leather Armor -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Leather Helmet of Chaos -->
-		<ingredient count="1" id="16222" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Leather Helmet -->
-		<production count="1" id="16324" />
+		<ingredient id="12700" count="1" /> <!-- Foundation Sealed Dynasty Leather Boots -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11565" count="1" /> <!-- Sealed Dynasty Leather Boots -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Circlet of Chaos -->
-		<ingredient count="1" id="16223" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Circlet -->
-		<production count="1" id="16325" />
+		<ingredient id="12701" count="1" /> <!-- Foundation Sealed Dynasty Leather Helmet -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11566" count="1" /> <!-- Sealed Dynasty Leather Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Breastplate of Chaos -->
-		<ingredient count="1" id="16224" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Breastplate -->
-		<production count="1" id="16326" />
+		<ingredient id="12702" count="1" /> <!-- Foundation Sealed Dynasty Boots -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11567" count="1" /> <!-- Sealed Dynasty Boots -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Leather Breastplate of Chaos -->
-		<ingredient count="1" id="16225" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Leather Breastplate -->
-		<production count="1" id="16327" />
+		<ingredient id="12703" count="1" /> <!-- Foundation Sealed Dynasty Breastplate -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11568" count="1" /> <!-- Sealed Dynasty Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Tunic of Chaos -->
-		<ingredient count="1" id="16226" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Tunic -->
-		<production count="1" id="16328" />
+		<ingredient id="12704" count="1" /> <!-- Foundation Sealed Dynasty Shield -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11569" count="1" /> <!-- Sealed Dynasty Shield -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Gaiter of Chaos -->
-		<ingredient count="1" id="16227" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Gaiter -->
-		<production count="1" id="16329" />
+		<ingredient id="10117" count="1" /> <!-- Foundation Sealed Dynasty Sigil -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="10120" count="1" /> <!-- Sealed Dynasty Sigil -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Leather Legging of Chaos -->
-		<ingredient count="1" id="16228" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Leather Legging -->
-		<production count="1" id="16330" />
+		<ingredient id="12705" count="1" /> <!-- Foundation Sealed Dynasty Shoes -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11570" count="1" /> <!-- Sealed Dynasty Shoes -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Stockings of Chaos -->
-		<ingredient count="1" id="16229" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Stockings -->
-		<production count="1" id="16331" />
+		<ingredient id="12706" count="1" /> <!-- Foundation Sealed Dynasty Circlet -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11571" count="1" /> <!-- Sealed Dynasty Circlet -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Gauntlet of Chaos -->
-		<ingredient count="1" id="16230" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Gauntlet -->
-		<production count="1" id="16332" />
+		<ingredient id="12707" count="1" /> <!-- Foundation Sealed Dynasty Tunic -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11572" count="1" /> <!-- Sealed Dynasty Tunic -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Leather Gloves of Chaos -->
-		<ingredient count="1" id="16231" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Leather Gloves -->
-		<production count="1" id="16333" />
+		<ingredient id="12708" count="1" /> <!-- Foundation Sealed Dynasty Helmet -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11573" count="1" /> <!-- Sealed Dynasty Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Gloves of Chaos -->
-		<ingredient count="1" id="16232" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Gloves -->
-		<production count="1" id="16334" />
+		<ingredient id="12709" count="1" /> <!-- Foundation Sealed Dynasty Stockings -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11574" count="1" /> <!-- Sealed Dynasty Stockings -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Boots of Chaos -->
-		<ingredient count="1" id="16233" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Boots -->
-		<production count="1" id="16335" />
+		<ingredient id="16221" count="1" /> <!-- Sealed Foundation Moirai Helmet -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16323" count="1" /> <!-- Sealed Moirai Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Leather Boots of Chaos -->
-		<ingredient count="1" id="16234" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Leather Boots -->
-		<production count="1" id="16336" />
+		<ingredient id="16222" count="1" /> <!-- Sealed Foundation Moirai Leather Helmet -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16324" count="1" /> <!-- Sealed Moirai Leather Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Shoes of Chaos -->
-		<ingredient count="1" id="16235" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Shoes -->
-		<production count="1" id="16337" />
+		<ingredient id="16223" count="1" /> <!-- Sealed Foundation Moirai Circlet -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16325" count="1" /> <!-- Sealed Moirai Circlet -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Shield of Chaos -->
-		<ingredient count="1" id="16236" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Shield -->
-		<production count="1" id="16338" />
+		<ingredient id="16224" count="1" /> <!-- Sealed Foundation Moirai Breastplate -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16326" count="1" /> <!-- Sealed Moirai Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Sigil of Chaos -->
-		<ingredient count="1" id="16237" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Moirai Sigil -->
-		<production count="1" id="16339" />
+		<ingredient id="16225" count="1" /> <!-- Sealed Foundation Moirai Leather Breastplate -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16327" count="1" /> <!-- Sealed Moirai Leather Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Helmet of Chaos -->
-		<ingredient count="1" id="16238" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Helmet -->
-		<production count="1" id="16340" />
+		<ingredient id="16226" count="1" /> <!-- Sealed Foundation Moirai Tunic -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16328" count="1" /> <!-- Sealed Moirai Tunic -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Leather Helmet of Chaos -->
-		<ingredient count="1" id="16239" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Leather Helmet -->
-		<production count="1" id="16341" />
+		<ingredient id="16227" count="1" /> <!-- Sealed Foundation Moirai Gaiters -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16329" count="1" /> <!-- Sealed Moirai Gaiters -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Circlet of Chaos -->
-		<ingredient count="1" id="16240" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Circlet -->
-		<production count="1" id="16342" />
+		<ingredient id="16228" count="1" /> <!-- Sealed Foundation Moirai Leather Leggings -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16330" count="1" /> <!-- Sealed Moirai Leather Leggings -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Breastplate of Chaos -->
-		<ingredient count="1" id="16241" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Breastplate -->
-		<production count="1" id="16343" />
+		<ingredient id="16229" count="1" /> <!-- Sealed Foundation Moirai Stockings -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16331" count="1" /> <!-- Sealed Moirai Stockings -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Leather Breastplate of Chaos -->
-		<ingredient count="1" id="16242" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Leather Leather Breastplate -->
-		<production count="1" id="16344" />
+		<ingredient id="16230" count="1" /> <!-- Sealed Foundation Moirai Gauntlets -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16332" count="1" /> <!-- Sealed Moirai Gauntlets -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Tunic of Chaos -->
-		<ingredient count="1" id="16243" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Tunic -->
-		<production count="1" id="16345" />
+		<ingredient id="16231" count="1" /> <!-- Sealed Foundation Moirai Leather Gloves -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16333" count="1" /> <!-- Sealed Moirai Leather Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Gaiter of Chaos -->
-		<ingredient count="1" id="16244" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Gaiter -->
-		<production count="1" id="16346" />
+		<ingredient id="16232" count="1" /> <!-- Sealed Foundation Moirai Gloves -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16334" count="1" /> <!-- Sealed Moirai Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Leather Legging of Chaos -->
-		<ingredient count="1" id="16245" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Leather Legging -->
-		<production count="1" id="16347" />
+		<ingredient id="16233" count="1" /> <!-- Sealed Foundation Moirai Boots -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16335" count="1" /> <!-- Sealed Moirai Boots -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Stockings of Chaos -->
-		<ingredient count="1" id="16246" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Stockings -->
-		<production count="1" id="16348" />
+		<ingredient id="16234" count="1" /> <!-- Sealed Foundation Moirai Leather Boots -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16336" count="1" /> <!-- Sealed Moirai Leather Boots -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Gauntlet of Chaos -->
-		<ingredient count="1" id="16247" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Gauntlet -->
-		<production count="1" id="16349" />
+		<ingredient id="16235" count="1" /> <!-- Sealed Foundation Moirai Shoes -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16337" count="1" /> <!-- Sealed Moirai Shoes -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Leather Gloves of Chaos -->
-		<ingredient count="1" id="16248" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Leather Gloves -->
-		<production count="1" id="16350" />
+		<ingredient id="16236" count="1" /> <!-- Sealed Foundation Moirai Shield -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16338" count="1" /> <!-- Sealed Moirai Shield -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Gloves of Chaos -->
-		<ingredient count="1" id="16249" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Gloves -->
-		<production count="1" id="16351" />
+		<ingredient id="16237" count="1" /> <!-- Sealed Foundation Moirai Sigil -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16339" count="1" /> <!-- Sealed Moirai Sigil -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Boots of Chaos -->
-		<ingredient count="1" id="16250" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Boots -->
-		<production count="1" id="16352" />
+		<ingredient id="16238" count="1" /> <!-- Sealed Foundation Vesper Helmet -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16340" count="1" /> <!-- Sealed Vesper Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Leather Boots of Chaos -->
-		<ingredient count="1" id="16251" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Leather Boots -->
-		<production count="1" id="16353" />
+		<ingredient id="16239" count="1" /> <!-- Sealed Foundation Vesper Leather Helmet -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16341" count="1" /> <!-- Sealed Vesper Leather Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Shoes of Chaos -->
-		<ingredient count="1" id="16252" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Shoes -->
-		<production count="1" id="16354" />
+		<ingredient id="16240" count="1" /> <!-- Sealed Foundation Vesper Circlet -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16342" count="1" /> <!-- Sealed Vesper Circlet -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Shield of Chaos -->
-		<ingredient count="1" id="16253" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Shield -->
-		<production count="1" id="16355" />
+		<ingredient id="16241" count="1" /> <!-- Sealed Foundation Vesper Breastplate -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16343" count="1" /> <!-- Sealed Vesper Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Sigil of Chaos -->
-		<ingredient count="1" id="16254" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="11" id="12374" />
-		<!-- Sealed Vesper Sigil -->
-		<production count="1" id="16356" />
+		<ingredient id="16242" count="1" /> <!-- Sealed Foundation Vesper Leather Breastplate -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16344" count="1" /> <!-- Sealed Vesper Leather Breastplate -->
 	</item>
 	<item>
-		<!-- Foundation Zubei's Helmet -->
-		<ingredient count="1" id="12500" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Zubei's Helmet - Heavy Armor -->
-		<production count="1" id="11363" />
+		<ingredient id="16243" count="1" /> <!-- Sealed Foundation Vesper Tunic -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16345" count="1" /> <!-- Sealed Vesper Tunic -->
 	</item>
 	<item>
-		<!-- Foundation Zubei's Helmet -->
-		<ingredient count="1" id="12500" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Zubei's Helmet - Light Armor Use -->
-		<production count="1" id="12978" />
+		<ingredient id="16244" count="1" /> <!-- Sealed Foundation Vesper Gaiters -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16346" count="1" /> <!-- Sealed Vesper Gaiters -->
 	</item>
 	<item>
-		<!-- Foundation Zubei's Helmet -->
-		<ingredient count="1" id="12500" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Zubei's Helmet - Robe -->
-		<production count="1" id="12979" />
+		<ingredient id="16245" count="1" /> <!-- Sealed Foundation Vesper Leather Leggings -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16347" count="1" /> <!-- Sealed Vesper Leather Leggings -->
 	</item>
 	<item>
-		<!-- Foundation Avadon Circlet -->
-		<ingredient count="1" id="12510" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Avadon Circlet - Heavy Armor -->
-		<production count="1" id="11373" />
+		<ingredient id="16246" count="1" /> <!-- Sealed Foundation Vesper Stockings -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16348" count="1" /> <!-- Sealed Vesper Stockings -->
 	</item>
 	<item>
-		<!-- Foundation Avadon Circlet -->
-		<ingredient count="1" id="12510" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Avadon Circlet - Light Armor Use -->
-		<production count="1" id="12980" />
+		<ingredient id="16247" count="1" /> <!-- Sealed Foundation Vesper Gauntlets -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16349" count="1" /> <!-- Sealed Vesper Gauntlets -->
 	</item>
 	<item>
-		<!-- Foundation Avadon Circlet -->
-		<ingredient count="1" id="12510" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Avadon Circlet - Robe -->
-		<production count="1" id="12981" />
+		<ingredient id="16248" count="1" /> <!-- Sealed Foundation Vesper Leather Gloves -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16350" count="1" /> <!-- Sealed Vesper Leather Gloves -->
 	</item>
 	<item>
-		<!-- Foundation Doom Helmet -->
-		<ingredient count="1" id="12524" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Doom Helmet - Heavy Armor -->
-		<production count="1" id="11387" />
+		<ingredient id="16249" count="1" /> <!-- Sealed Foundation Vesper Gloves -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16351" count="1" /> <!-- Sealed Vesper Gloves -->
 	</item>
 	<item>
-		<!-- Foundation Doom Helmet -->
-		<ingredient count="1" id="12524" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Doom Helmet - Light Armor Use -->
-		<production count="1" id="12982" />
+		<ingredient id="16250" count="1" /> <!-- Sealed Foundation Vesper Boots -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16352" count="1" /> <!-- Sealed Vesper Boots -->
 	</item>
 	<item>
-		<!-- Foundation Doom Helmet -->
-		<ingredient count="1" id="12524" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Doom Helmet - Robe -->
-		<production count="1" id="12983" />
+		<ingredient id="16251" count="1" /> <!-- Sealed Foundation Vesper Leather Boots -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16353" count="1" /> <!-- Sealed Vesper Leather Boots -->
 	</item>
 	<item>
-		<!-- Foundation Blue Wolf Helmet -->
-		<ingredient count="1" id="12540" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Blue Wolf Helmet - Heavy Armor -->
-		<production count="1" id="11403" />
+		<ingredient id="16252" count="1" /> <!-- Sealed Foundation Vesper Shoes -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16354" count="1" /> <!-- Sealed Vesper Shoes -->
 	</item>
 	<item>
-		<!-- Foundation Blue Wolf Helmet -->
-		<ingredient count="1" id="12540" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Blue Wolf Helmet - Light Armor Use -->
-		<production count="1" id="12984" />
+		<ingredient id="16253" count="1" /> <!-- Sealed Foundation Vesper Shield -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16355" count="1" /> <!-- Sealed Vesper Shield -->
 	</item>
 	<item>
-		<!-- Foundation Blue Wolf Helmet -->
-		<ingredient count="1" id="12540" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Blue Wolf Helmet - Robe -->
-		<production count="1" id="12985" />
+		<ingredient id="16254" count="1" /> <!-- Sealed Foundation Vesper Sigil -->
+		<ingredient id="12374" count="11" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16356" count="1" /> <!-- Sealed Vesper Sigil -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dark Crystal Helmet -->
-		<ingredient count="1" id="12563" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Dark Crystal Helmet - Heavy Armor -->
-		<production count="1" id="11426" />
+		<ingredient id="12500" count="1" /> <!-- Foundation Zubei's Helmet -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11363" count="1" /> <!-- Zubei's Helmet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dark Crystal Helmet -->
-		<ingredient count="1" id="12563" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Dark Crystal Helmet - Light Armor Use -->
-		<production count="1" id="12994" />
+		<ingredient id="12500" count="1" /> <!-- Foundation Zubei's Helmet -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="12978" count="1" /> <!-- Zubei's Helmet - Light Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dark Crystal Helmet -->
-		<ingredient count="1" id="12563" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Dark Crystal Helmet - Robe -->
-		<production count="1" id="12995" />
+		<ingredient id="12500" count="1" /> <!-- Foundation Zubei's Helmet -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="12979" count="1" /> <!-- Zubei's Helmet - Robe -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Tallum Helmet -->
-		<ingredient count="1" id="12571" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Tallum Helmet - Heavy Armor -->
-		<production count="1" id="11434" />
+		<ingredient id="12510" count="1" /> <!-- Foundation Avadon Circlet -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11373" count="1" /> <!-- Avadon Circlet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Tallum Helmet -->
-		<ingredient count="1" id="12571" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Tallum Helmet - Light Armor Use -->
-		<production count="1" id="12996" />
+		<ingredient id="12510" count="1" /> <!-- Foundation Avadon Circlet -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="12980" count="1" /> <!-- Avadon Circlet - Light Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Tallum Helmet -->
-		<ingredient count="1" id="12571" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Tallum Helmet - Robe -->
-		<production count="1" id="12997" />
+		<ingredient id="12510" count="1" /> <!-- Foundation Avadon Circlet -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="12981" count="1" /> <!-- Avadon Circlet - Robe -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Majestic Circlet -->
-		<ingredient count="1" id="12599" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Majestic Circlet - Heavy Armor -->
-		<production count="1" id="11462" />
+		<ingredient id="12524" count="1" /> <!-- Foundation Doom Helmet -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11387" count="1" /> <!-- Doom Helmet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Majestic Circlet -->
-		<ingredient count="1" id="12599" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Majestic Circlet - Light Armor Use -->
-		<production count="1" id="12998" />
+		<ingredient id="12524" count="1" /> <!-- Foundation Doom Helmet -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="12982" count="1" /> <!-- Doom Helmet - Light Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Majestic Circlet -->
-		<ingredient count="1" id="12599" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Majestic Circlet - Robe -->
-		<production count="1" id="12999" />
+		<ingredient id="12524" count="1" /> <!-- Foundation Doom Helmet -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="12983" count="1" /> <!-- Doom Helmet - Robe -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Helm of Nightmare -->
-		<ingredient count="1" id="12607" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Helm of Nightmare - Heavy Armor -->
-		<production count="1" id="11470" />
+		<ingredient id="12540" count="1" /> <!-- Foundation Blue Wolf Helmet -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11403" count="1" /> <!-- Blue Wolf Helmet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Helm of Nightmare -->
-		<ingredient count="1" id="12607" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Helm of Nightmare - Light Armor Use -->
-		<production count="1" id="13000" />
+		<ingredient id="12540" count="1" /> <!-- Foundation Blue Wolf Helmet -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="12984" count="1" /> <!-- Blue Wolf Helmet - Light Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Helm of Nightmare -->
-		<ingredient count="1" id="12607" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Helm of Nightmare - Robe -->
-		<production count="1" id="13001" />
+		<ingredient id="12540" count="1" /> <!-- Foundation Blue Wolf Helmet -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="12985" count="1" /> <!-- Blue Wolf Helmet - Robe -->
 	</item>
 	<item>
-		<!-- Foundation Adamantite Earring -->
-		<ingredient count="1" id="12710" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Adamantite Earring -->
-		<production count="1" id="11575" />
+		<ingredient id="12563" count="1" /> <!-- Foundation Sealed Dark Crystal Helmet -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11426" count="1" /> <!-- Sealed Dark Crystal Helmet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Foundation Adamantite Necklace -->
-		<ingredient count="1" id="12711" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Adamantite Necklace -->
-		<production count="1" id="11576" />
+		<ingredient id="12563" count="1" /> <!-- Foundation Sealed Dark Crystal Helmet -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="12994" count="1" /> <!-- Sealed Dark Crystal Helmet - Light Armor -->
 	</item>
 	<item>
-		<!-- Foundation Adamantite Ring -->
-		<ingredient count="1" id="12712" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Adamantite Ring -->
-		<production count="1" id="11577" />
+		<ingredient id="12563" count="1" /> <!-- Foundation Sealed Dark Crystal Helmet -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="12995" count="1" /> <!-- Sealed Dark Crystal Helmet - Robe -->
 	</item>
 	<item>
-		<!-- Foundation Earring of Black Ore -->
-		<ingredient count="1" id="12713" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Earring of Black Ore -->
-		<production count="1" id="11578" />
+		<ingredient id="12571" count="1" /> <!-- Foundation Sealed Tallum Helmet -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11434" count="1" /> <!-- Sealed Tallum Helmet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Foundation Necklace of Black Ore -->
-		<ingredient count="1" id="12714" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Necklace of Black Ore -->
-		<production count="1" id="11579" />
+		<ingredient id="12571" count="1" /> <!-- Foundation Sealed Tallum Helmet -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="12996" count="1" /> <!-- Sealed Tallum Helmet - Light Armor -->
 	</item>
 	<item>
-		<!-- Foundation Ring of Black Ore -->
-		<ingredient count="1" id="12715" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="1" id="12374" />
-		<!-- Ring of Black Ore -->
-		<production count="1" id="11580" />
+		<ingredient id="12571" count="1" /> <!-- Foundation Sealed Tallum Helmet -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="12997" count="1" /> <!-- Sealed Tallum Helmet - Robe -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Phoenix Necklace -->
-		<ingredient count="1" id="12716" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Phoenix Necklace -->
-		<production count="1" id="11581" />
+		<ingredient id="12599" count="1" /> <!-- Foundation Sealed Majestic Circlet -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11462" count="1" /> <!-- Sealed Majestic Circlet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Phoenix Ring -->
-		<ingredient count="1" id="12717" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Phoenix Ring -->
-		<production count="1" id="11582" />
+		<ingredient id="12599" count="1" /> <!-- Foundation Sealed Majestic Circlet -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="12998" count="1" /> <!-- Sealed Majestic Circlet - Light Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Phoenix Earring -->
-		<ingredient count="1" id="12718" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Phoenix Earring -->
-		<production count="1" id="11583" />
+		<ingredient id="12599" count="1" /> <!-- Foundation Sealed Majestic Circlet -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="12999" count="1" /> <!-- Sealed Majestic Circlet - Robe -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Majestic Necklace -->
-		<ingredient count="1" id="12725" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Majestic Necklace -->
-		<production count="1" id="11590" />
+		<ingredient id="12607" count="1" /> <!-- Foundation Sealed Helm of Nightmare -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11470" count="1" /> <!-- Sealed Helm of Nightmare - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Majestic Ring -->
-		<ingredient count="1" id="12726" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Majestic Ring -->
-		<production count="1" id="11591" />
+		<ingredient id="12607" count="1" /> <!-- Foundation Sealed Helm of Nightmare -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="13000" count="1" /> <!-- Sealed Helm of Nightmare - Light Armor -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Majestic Earring -->
-		<ingredient count="1" id="12727" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="2" id="12374" />
-		<!-- Sealed Majestic Earring -->
-		<production count="1" id="11592" />
+		<ingredient id="12607" count="1" /> <!-- Foundation Sealed Helm of Nightmare -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="13001" count="1" /> <!-- Sealed Helm of Nightmare - Robe -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Tateossian Necklace -->
-		<ingredient count="1" id="12728" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Sealed Tateossian Necklace -->
-		<production count="1" id="11593" />
+		<ingredient id="12710" count="1" /> <!-- Foundation Adamantite Earring -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11575" count="1" /> <!-- Adamantite Earring -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Tateossian Ring -->
-		<ingredient count="1" id="12729" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Sealed Tateossian Ring -->
-		<production count="1" id="11594" />
+		<ingredient id="12711" count="1" /> <!-- Foundation Adamantite Necklace -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11576" count="1" /> <!-- Adamantite Necklace -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Tateossian Earring -->
-		<ingredient count="1" id="12730" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="3" id="12374" />
-		<!-- Sealed Tateossian Earring -->
-		<production count="1" id="11595" />
+		<ingredient id="12712" count="1" /> <!-- Foundation Adamantite Ring -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11577" count="1" /> <!-- Adamantite Ring -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Necklace -->
-		<ingredient count="1" id="12737" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="5" id="12374" />
-		<!-- Sealed Dynasty Necklace -->
-		<production count="1" id="11602" />
+		<ingredient id="12713" count="1" /> <!-- Foundation Black Ore Earring -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11578" count="1" /> <!-- Black Ore Earring -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Ring -->
-		<ingredient count="1" id="12738" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="5" id="12374" />
-		<!-- Sealed Dynasty Ring -->
-		<production count="1" id="11603" />
+		<ingredient id="12714" count="1" /> <!-- Foundation Black Ore Necklace -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11579" count="1" /> <!-- Black Ore Necklace -->
 	</item>
 	<item>
-		<!-- Foundation Sealed Dynasty Earring -->
-		<ingredient count="1" id="12739" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="5" id="12374" />
-		<!-- Sealed Dynasty Earring -->
-		<production count="1" id="11604" />
+		<ingredient id="12715" count="1" /> <!-- Foundation Black Ore Ring -->
+		<ingredient id="12374" count="1" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11580" count="1" /> <!-- Black Ore Ring -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Ring of Chaos -->
-		<ingredient count="1" id="16360" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Moirai Ring -->
-		<production count="1" id="16372" />
+		<ingredient id="12716" count="1" /> <!-- Foundation Sealed Phoenix Necklace -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11581" count="1" /> <!-- Sealed Phoenix Necklace -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Earring of Chaos -->
-		<ingredient count="1" id="16361" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Moirai Earring -->
-		<production count="1" id="16373" />
+		<ingredient id="12717" count="1" /> <!-- Foundation Sealed Phoenix Ring -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11582" count="1" /> <!-- Sealed Phoenix Ring -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Necklace of Chaos -->
-		<ingredient count="1" id="16362" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="7" id="12374" />
-		<!-- Sealed Moirai Necklace -->
-		<production count="1" id="16374" />
+		<ingredient id="12718" count="1" /> <!-- Foundation Sealed Phoenix Earring -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11583" count="1" /> <!-- Sealed Phoenix Earring -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Ring of Chaos -->
-		<ingredient count="1" id="16357" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Vesper Ring -->
-		<production count="1" id="16369" />
+		<ingredient id="12725" count="1" /> <!-- Foundation Sealed Majestic Necklace -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11590" count="1" /> <!-- Sealed Majestic Necklace -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Earring of Chaos -->
-		<ingredient count="1" id="16358" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Vesper Earring -->
-		<production count="1" id="16370" />
+		<ingredient id="12726" count="1" /> <!-- Foundation Sealed Majestic Ring -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11591" count="1" /> <!-- Sealed Majestic Ring -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Necklace of Chaos -->
-		<ingredient count="1" id="16359" />
-		<!-- Mammon's Varnish Enhancer -->
-		<ingredient count="9" id="12374" />
-		<!-- Sealed Vesper Necklace -->
-		<production count="1" id="16371" />
+		<ingredient id="12727" count="1" /> <!-- Foundation Sealed Majestic Earring -->
+		<ingredient id="12374" count="2" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11592" count="1" /> <!-- Sealed Majestic Earring -->
 	</item>
 	<item>
-		<!-- Zubei's Helmet - Light Armor Use -->
-		<ingredient count="1" id="12978" />
-		<!-- Zubei's Helmet - Heavy Armor -->
-		<production count="1" id="11363" />
+		<ingredient id="12728" count="1" /> <!-- Foundation Sealed Tateossian Necklace -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11593" count="1" /> <!-- Sealed Tateossian Necklace -->
 	</item>
 	<item>
-		<!-- Zubei's Helmet - Robe -->
-		<ingredient count="1" id="12979" />
-		<!-- Zubei's Helmet - Heavy Armor -->
-		<production count="1" id="11363" />
+		<ingredient id="12729" count="1" /> <!-- Foundation Sealed Tateossian Ring -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11594" count="1" /> <!-- Sealed Tateossian Ring -->
 	</item>
 	<item>
-		<!-- Zubei's Helmet - Heavy Armor -->
-		<ingredient count="1" id="11363" />
-		<!-- Zubei's Helmet - Light Armor Use -->
-		<production count="1" id="12978" />
+		<ingredient id="12730" count="1" /> <!-- Foundation Sealed Tateossian Earring -->
+		<ingredient id="12374" count="3" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11595" count="1" /> <!-- Sealed Tateossian Earring -->
 	</item>
 	<item>
-		<!-- Zubei's Helmet - Robe -->
-		<ingredient count="1" id="12979" />
-		<!-- Zubei's Helmet - Light Armor Use -->
-		<production count="1" id="12978" />
+		<ingredient id="12737" count="1" /> <!-- Foundation Sealed Dynasty Necklace -->
+		<ingredient id="12374" count="5" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11602" count="1" /> <!-- Sealed Dynasty Necklace -->
 	</item>
 	<item>
-		<!-- Zubei's Helmet - Heavy Armor -->
-		<ingredient count="1" id="11363" />
-		<!-- Zubei's Helmet - Robe -->
-		<production count="1" id="12979" />
+		<ingredient id="12738" count="1" /> <!-- Foundation Sealed Dynasty Ring -->
+		<ingredient id="12374" count="5" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11603" count="1" /> <!-- Sealed Dynasty Ring -->
 	</item>
 	<item>
-		<!-- Zubei's Helmet - Light Armor Use -->
-		<ingredient count="1" id="12978" />
-		<!-- Zubei's Helmet - Robe -->
-		<production count="1" id="12979" />
+		<ingredient id="12739" count="1" /> <!-- Foundation Sealed Dynasty Earring -->
+		<ingredient id="12374" count="5" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="11604" count="1" /> <!-- Sealed Dynasty Earring -->
 	</item>
 	<item>
-		<!-- Avadon Circlet - Light Armor Use -->
-		<ingredient count="1" id="12980" />
-		<!-- Avadon Circlet - Heavy Armor -->
-		<production count="1" id="11373" />
+		<ingredient id="16360" count="1" /> <!-- Sealed Foundation Moirai Ring -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16372" count="1" /> <!-- Sealed Moirai Ring -->
 	</item>
 	<item>
-		<!-- Avadon Circlet - Robe -->
-		<ingredient count="1" id="12981" />
-		<!-- Avadon Circlet - Heavy Armor -->
-		<production count="1" id="11373" />
+		<ingredient id="16361" count="1" /> <!-- Sealed Foundation Moirai Earring -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16373" count="1" /> <!-- Sealed Moirai Earring -->
 	</item>
 	<item>
-		<!-- Avadon Circlet - Heavy Armor -->
-		<ingredient count="1" id="11373" />
-		<!-- Avadon Circlet - Light Armor Use -->
-		<production count="1" id="12980" />
+		<ingredient id="16362" count="1" /> <!-- Sealed Foundation Moirai Necklace -->
+		<ingredient id="12374" count="7" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16374" count="1" /> <!-- Sealed Moirai Necklace -->
 	</item>
 	<item>
-		<!-- Avadon Circlet - Robe -->
-		<ingredient count="1" id="12981" />
-		<!-- Avadon Circlet - Light Armor Use -->
-		<production count="1" id="12980" />
+		<ingredient id="16357" count="1" /> <!-- Sealed Foundation Vesper Ring -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16369" count="1" /> <!-- Sealed Vesper Ring -->
 	</item>
 	<item>
-		<!-- Avadon Circlet - Heavy Armor -->
-		<ingredient count="1" id="11373" />
-		<!-- Avadon Circlet - Robe -->
-		<production count="1" id="12981" />
+		<ingredient id="16358" count="1" /> <!-- Sealed Foundation Vesper Earring -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16370" count="1" /> <!-- Sealed Vesper Earring -->
 	</item>
 	<item>
-		<!-- Avadon Circlet - Light Armor Use -->
-		<ingredient count="1" id="12980" />
-		<!-- Avadon Circlet - Robe -->
-		<production count="1" id="12981" />
+		<ingredient id="16359" count="1" /> <!-- Sealed Foundation Vesper Necklace -->
+		<ingredient id="12374" count="9" /> <!-- Mammon's Varnish Enhancer -->
+		<production id="16371" count="1" /> <!-- Sealed Vesper Necklace -->
 	</item>
 	<item>
-		<!-- Doom Helmet - Light Armor Use -->
-		<ingredient count="1" id="12982" />
-		<!-- Doom Helmet - Heavy Armor -->
-		<production count="1" id="11387" />
+		<ingredient id="12978" count="1" /> <!-- Zubei's Helmet - Light Armor -->
+		<production id="11363" count="1" /> <!-- Zubei's Helmet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Doom Helmet - Robe -->
-		<ingredient count="1" id="12983" />
-		<!-- Doom Helmet - Heavy Armor -->
-		<production count="1" id="11387" />
+		<ingredient id="12979" count="1" /> <!-- Zubei's Helmet - Robe -->
+		<production id="11363" count="1" /> <!-- Zubei's Helmet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Doom Helmet - Heavy Armor -->
-		<ingredient count="1" id="11387" />
-		<!-- Doom Helmet - Light Armor Use -->
-		<production count="1" id="12982" />
+		<ingredient id="11363" count="1" /> <!-- Zubei's Helmet - Heavy Armor -->
+		<production id="12978" count="1" /> <!-- Zubei's Helmet - Light Armor -->
 	</item>
 	<item>
-		<!-- Doom Helmet - Robe -->
-		<ingredient count="1" id="12983" />
-		<!-- Doom Helmet - Light Armor Use -->
-		<production count="1" id="12982" />
+		<ingredient id="12979" count="1" /> <!-- Zubei's Helmet - Robe -->
+		<production id="12978" count="1" /> <!-- Zubei's Helmet - Light Armor -->
 	</item>
 	<item>
-		<!-- Doom Helmet - Heavy Armor -->
-		<ingredient count="1" id="11387" />
-		<!-- Doom Helmet - Robe -->
-		<production count="1" id="12983" />
+		<ingredient id="11363" count="1" /> <!-- Zubei's Helmet - Heavy Armor -->
+		<production id="12979" count="1" /> <!-- Zubei's Helmet - Robe -->
 	</item>
 	<item>
-		<!-- Doom Helmet - Light Armor Use -->
-		<ingredient count="1" id="12982" />
-		<!-- Doom Helmet - Robe -->
-		<production count="1" id="12983" />
+		<ingredient id="12978" count="1" /> <!-- Zubei's Helmet - Light Armor -->
+		<production id="12979" count="1" /> <!-- Zubei's Helmet - Robe -->
 	</item>
 	<item>
-		<!-- Blue Wolf Helmet - Light Armor Use -->
-		<ingredient count="1" id="12984" />
-		<!-- Blue Wolf Helmet - Heavy Armor -->
-		<production count="1" id="11403" />
+		<ingredient id="12980" count="1" /> <!-- Avadon Circlet - Light Armor -->
+		<production id="11373" count="1" /> <!-- Avadon Circlet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Blue Wolf Helmet - Robe -->
-		<ingredient count="1" id="12985" />
-		<!-- Blue Wolf Helmet - Heavy Armor -->
-		<production count="1" id="11403" />
+		<ingredient id="12981" count="1" /> <!-- Avadon Circlet - Robe -->
+		<production id="11373" count="1" /> <!-- Avadon Circlet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Blue Wolf Helmet - Heavy Armor -->
-		<ingredient count="1" id="11403" />
-		<!-- Blue Wolf Helmet - Light Armor Use -->
-		<production count="1" id="12984" />
+		<ingredient id="11373" count="1" /> <!-- Avadon Circlet - Heavy Armor -->
+		<production id="12980" count="1" /> <!-- Avadon Circlet - Light Armor -->
 	</item>
 	<item>
-		<!-- Blue Wolf Helmet - Robe -->
-		<ingredient count="1" id="12985" />
-		<!-- Blue Wolf Helmet - Light Armor Use -->
-		<production count="1" id="12984" />
+		<ingredient id="12981" count="1" /> <!-- Avadon Circlet - Robe -->
+		<production id="12980" count="1" /> <!-- Avadon Circlet - Light Armor -->
 	</item>
 	<item>
-		<!-- Blue Wolf Helmet - Heavy Armor -->
-		<ingredient count="1" id="11403" />
-		<!-- Blue Wolf Helmet - Robe -->
-		<production count="1" id="12985" />
+		<ingredient id="11373" count="1" /> <!-- Avadon Circlet - Heavy Armor -->
+		<production id="12981" count="1" /> <!-- Avadon Circlet - Robe -->
 	</item>
 	<item>
-		<!-- Blue Wolf Helmet - Light Armor Use -->
-		<ingredient count="1" id="12984" />
-		<!-- Blue Wolf Helmet - Robe -->
-		<production count="1" id="12985" />
+		<ingredient id="12980" count="1" /> <!-- Avadon Circlet - Light Armor -->
+		<production id="12981" count="1" /> <!-- Avadon Circlet - Robe -->
 	</item>
 	<item>
-		<!-- Sealed Dark Crystal Helmet - Light Armor Use -->
-		<ingredient count="1" id="12994" />
-		<!-- Sealed Dark Crystal Helmet - Heavy Armor -->
-		<production count="1" id="11426" />
+		<ingredient id="12982" count="1" /> <!-- Doom Helmet - Light Armor -->
+		<production id="11387" count="1" /> <!-- Doom Helmet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Sealed Dark Crystal Helmet - Robe -->
-		<ingredient count="1" id="12995" />
-		<!-- Sealed Dark Crystal Helmet - Heavy Armor -->
-		<production count="1" id="11426" />
+		<ingredient id="12983" count="1" /> <!-- Doom Helmet - Robe -->
+		<production id="11387" count="1" /> <!-- Doom Helmet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Sealed Dark Crystal Helmet - Heavy Armor -->
-		<ingredient count="1" id="11426" />
-		<!-- Sealed Dark Crystal Helmet - Light Armor Use -->
-		<production count="1" id="12994" />
+		<ingredient id="11387" count="1" /> <!-- Doom Helmet - Heavy Armor -->
+		<production id="12982" count="1" /> <!-- Doom Helmet - Light Armor -->
 	</item>
 	<item>
-		<!-- Sealed Dark Crystal Helmet - Robe -->
-		<ingredient count="1" id="12995" />
-		<!-- Sealed Dark Crystal Helmet - Light Armor Use -->
-		<production count="1" id="12994" />
+		<ingredient id="12983" count="1" /> <!-- Doom Helmet - Robe -->
+		<production id="12982" count="1" /> <!-- Doom Helmet - Light Armor -->
 	</item>
 	<item>
-		<!-- Sealed Dark Crystal Helmet - Heavy Armor -->
-		<ingredient count="1" id="11426" />
-		<!-- Sealed Dark Crystal Helmet - Robe -->
-		<production count="1" id="12995" />
+		<ingredient id="11387" count="1" /> <!-- Doom Helmet - Heavy Armor -->
+		<production id="12983" count="1" /> <!-- Doom Helmet - Robe -->
 	</item>
 	<item>
-		<!-- Sealed Dark Crystal Helmet - Light Armor Use -->
-		<ingredient count="1" id="12994" />
-		<!-- Sealed Dark Crystal Helmet - Robe -->
-		<production count="1" id="12995" />
+		<ingredient id="12982" count="1" /> <!-- Doom Helmet - Light Armor -->
+		<production id="12983" count="1" /> <!-- Doom Helmet - Robe -->
 	</item>
 	<item>
-		<!-- Sealed Tallum Helmet - Light Armor Use -->
-		<ingredient count="1" id="12996" />
-		<!-- Sealed Tallum Helmet - Heavy Armor -->
-		<production count="1" id="11434" />
+		<ingredient id="12984" count="1" /> <!-- Blue Wolf Helmet - Light Armor -->
+		<production id="11403" count="1" /> <!-- Blue Wolf Helmet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Sealed Tallum Helmet - Robe -->
-		<ingredient count="1" id="12997" />
-		<!-- Sealed Tallum Helmet - Heavy Armor -->
-		<production count="1" id="11434" />
+		<ingredient id="12985" count="1" /> <!-- Blue Wolf Helmet - Robe -->
+		<production id="11403" count="1" /> <!-- Blue Wolf Helmet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Sealed Tallum Helmet - Heavy Armor -->
-		<ingredient count="1" id="11434" />
-		<!-- Sealed Tallum Helmet - Light Armor Use -->
-		<production count="1" id="12996" />
+		<ingredient id="11403" count="1" /> <!-- Blue Wolf Helmet - Heavy Armor -->
+		<production id="12984" count="1" /> <!-- Blue Wolf Helmet - Light Armor -->
 	</item>
 	<item>
-		<!-- Sealed Tallum Helmet - Robe -->
-		<ingredient count="1" id="12997" />
-		<!-- Sealed Tallum Helmet - Light Armor Use -->
-		<production count="1" id="12996" />
+		<ingredient id="12985" count="1" /> <!-- Blue Wolf Helmet - Robe -->
+		<production id="12984" count="1" /> <!-- Blue Wolf Helmet - Light Armor -->
 	</item>
 	<item>
-		<!-- Sealed Tallum Helmet - Heavy Armor -->
-		<ingredient count="1" id="11434" />
-		<!-- Sealed Tallum Helmet - Robe -->
-		<production count="1" id="12997" />
+		<ingredient id="11403" count="1" /> <!-- Blue Wolf Helmet - Heavy Armor -->
+		<production id="12985" count="1" /> <!-- Blue Wolf Helmet - Robe -->
 	</item>
 	<item>
-		<!-- Sealed Tallum Helmet - Light Armor Use -->
-		<ingredient count="1" id="12996" />
-		<!-- Sealed Tallum Helmet - Robe -->
-		<production count="1" id="12997" />
+		<ingredient id="12984" count="1" /> <!-- Blue Wolf Helmet - Light Armor -->
+		<production id="12985" count="1" /> <!-- Blue Wolf Helmet - Robe -->
 	</item>
 	<item>
-		<!-- Sealed Majestic Circlet - Light Armor Use -->
-		<ingredient count="1" id="12998" />
-		<!-- Sealed Majestic Circlet - Heavy Armor -->
-		<production count="1" id="11462" />
+		<ingredient id="12994" count="1" /> <!-- Sealed Dark Crystal Helmet - Light Armor -->
+		<production id="11426" count="1" /> <!-- Sealed Dark Crystal Helmet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Sealed Majestic Circlet - Robe -->
-		<ingredient count="1" id="12999" />
-		<!-- Sealed Majestic Circlet - Heavy Armor -->
-		<production count="1" id="11462" />
+		<ingredient id="12995" count="1" /> <!-- Sealed Dark Crystal Helmet - Robe -->
+		<production id="11426" count="1" /> <!-- Sealed Dark Crystal Helmet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Sealed Majestic Circlet - Heavy Armor -->
-		<ingredient count="1" id="11462" />
-		<!-- Sealed Majestic Circlet - Light Armor Use -->
-		<production count="1" id="12998" />
+		<ingredient id="11426" count="1" /> <!-- Sealed Dark Crystal Helmet - Heavy Armor -->
+		<production id="12994" count="1" /> <!-- Sealed Dark Crystal Helmet - Light Armor -->
 	</item>
 	<item>
-		<!-- Sealed Majestic Circlet - Robe -->
-		<ingredient count="1" id="12999" />
-		<!-- Sealed Majestic Circlet - Light Armor Use -->
-		<production count="1" id="12998" />
+		<ingredient id="12995" count="1" /> <!-- Sealed Dark Crystal Helmet - Robe -->
+		<production id="12994" count="1" /> <!-- Sealed Dark Crystal Helmet - Light Armor -->
 	</item>
 	<item>
-		<!-- Sealed Majestic Circlet - Heavy Armor -->
-		<ingredient count="1" id="11462" />
-		<!-- Sealed Majestic Circlet - Robe -->
-		<production count="1" id="12999" />
+		<ingredient id="11426" count="1" /> <!-- Sealed Dark Crystal Helmet - Heavy Armor -->
+		<production id="12995" count="1" /> <!-- Sealed Dark Crystal Helmet - Robe -->
 	</item>
 	<item>
-		<!-- Sealed Majestic Circlet - Light Armor Use -->
-		<ingredient count="1" id="12998" />
-		<!-- Sealed Majestic Circlet - Robe -->
-		<production count="1" id="12999" />
+		<ingredient id="12994" count="1" /> <!-- Sealed Dark Crystal Helmet - Light Armor -->
+		<production id="12995" count="1" /> <!-- Sealed Dark Crystal Helmet - Robe -->
 	</item>
 	<item>
-		<!-- Sealed Helm of Nightmare - Light Armor Use -->
-		<ingredient count="1" id="13000" />
-		<!-- Sealed Helm of Nightmare - Heavy Armor -->
-		<production count="1" id="11470" />
+		<ingredient id="12996" count="1" /> <!-- Sealed Tallum Helmet - Light Armor -->
+		<production id="11434" count="1" /> <!-- Sealed Tallum Helmet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Sealed Helm of Nightmare - Robe -->
-		<ingredient count="1" id="13001" />
-		<!-- Sealed Helm of Nightmare - Heavy Armor -->
-		<production count="1" id="11470" />
+		<ingredient id="12997" count="1" /> <!-- Sealed Tallum Helmet - Robe -->
+		<production id="11434" count="1" /> <!-- Sealed Tallum Helmet - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Sealed Helm of Nightmare - Heavy Armor -->
-		<ingredient count="1" id="11470" />
-		<!-- Sealed Helm of Nightmare - Light Armor Use -->
-		<production count="1" id="13000" />
+		<ingredient id="11434" count="1" /> <!-- Sealed Tallum Helmet - Heavy Armor -->
+		<production id="12996" count="1" /> <!-- Sealed Tallum Helmet - Light Armor -->
 	</item>
 	<item>
-		<!-- Sealed Helm of Nightmare - Robe -->
-		<ingredient count="1" id="13001" />
-		<!-- Sealed Helm of Nightmare - Light Armor Use -->
-		<production count="1" id="13000" />
+		<ingredient id="12997" count="1" /> <!-- Sealed Tallum Helmet - Robe -->
+		<production id="12996" count="1" /> <!-- Sealed Tallum Helmet - Light Armor -->
 	</item>
 	<item>
-		<!-- Sealed Helm of Nightmare - Heavy Armor -->
-		<ingredient count="1" id="11470" />
-		<!-- Sealed Helm of Nightmare - Robe -->
-		<production count="1" id="13001" />
+		<ingredient id="11434" count="1" /> <!-- Sealed Tallum Helmet - Heavy Armor -->
+		<production id="12997" count="1" /> <!-- Sealed Tallum Helmet - Robe -->
 	</item>
 	<item>
-		<!-- Sealed Helm of Nightmare - Light Armor Use -->
-		<ingredient count="1" id="13000" />
-		<!-- Sealed Helm of Nightmare - Robe -->
-		<production count="1" id="13001" />
+		<ingredient id="12996" count="1" /> <!-- Sealed Tallum Helmet - Light Armor -->
+		<production id="12997" count="1" /> <!-- Sealed Tallum Helmet - Robe -->
+	</item>
+	<item>
+		<ingredient id="12998" count="1" /> <!-- Sealed Majestic Circlet - Light Armor -->
+		<production id="11462" count="1" /> <!-- Sealed Majestic Circlet - Heavy Armor -->
+	</item>
+	<item>
+		<ingredient id="12999" count="1" /> <!-- Sealed Majestic Circlet - Robe -->
+		<production id="11462" count="1" /> <!-- Sealed Majestic Circlet - Heavy Armor -->
+	</item>
+	<item>
+		<ingredient id="11462" count="1" /> <!-- Sealed Majestic Circlet - Heavy Armor -->
+		<production id="12998" count="1" /> <!-- Sealed Majestic Circlet - Light Armor -->
+	</item>
+	<item>
+		<ingredient id="12999" count="1" /> <!-- Sealed Majestic Circlet - Robe -->
+		<production id="12998" count="1" /> <!-- Sealed Majestic Circlet - Light Armor -->
+	</item>
+	<item>
+		<ingredient id="11462" count="1" /> <!-- Sealed Majestic Circlet - Heavy Armor -->
+		<production id="12999" count="1" /> <!-- Sealed Majestic Circlet - Robe -->
+	</item>
+	<item>
+		<ingredient id="12998" count="1" /> <!-- Sealed Majestic Circlet - Light Armor -->
+		<production id="12999" count="1" /> <!-- Sealed Majestic Circlet - Robe -->
+	</item>
+	<item>
+		<ingredient id="13000" count="1" /> <!-- Sealed Helm of Nightmare - Light Armor -->
+		<production id="11470" count="1" /> <!-- Sealed Helm of Nightmare - Heavy Armor -->
+	</item>
+	<item>
+		<ingredient id="13001" count="1" /> <!-- Sealed Helm of Nightmare - Robe -->
+		<production id="11470" count="1" /> <!-- Sealed Helm of Nightmare - Heavy Armor -->
+	</item>
+	<item>
+		<ingredient id="11470" count="1" /> <!-- Sealed Helm of Nightmare - Heavy Armor -->
+		<production id="13000" count="1" /> <!-- Sealed Helm of Nightmare - Light Armor -->
+	</item>
+	<item>
+		<ingredient id="13001" count="1" /> <!-- Sealed Helm of Nightmare - Robe -->
+		<production id="13000" count="1" /> <!-- Sealed Helm of Nightmare - Light Armor -->
+	</item>
+	<item>
+		<ingredient id="11470" count="1" /> <!-- Sealed Helm of Nightmare - Heavy Armor -->
+		<production id="13001" count="1" /> <!-- Sealed Helm of Nightmare - Robe -->
+	</item>
+	<item>
+		<ingredient id="13000" count="1" /> <!-- Sealed Helm of Nightmare - Light Armor -->
+		<production id="13001" count="1" /> <!-- Sealed Helm of Nightmare - Robe -->
 	</item>
 </list>

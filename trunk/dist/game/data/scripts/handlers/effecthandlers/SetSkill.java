@@ -16,11 +16,11 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -32,10 +32,8 @@ public final class SetSkill extends AbstractEffect
 	private final int _skillId;
 	private final int _skillLvl;
 	
-	public SetSkill(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public SetSkill(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_skillId = params.getInt("skillId", 0);
 		_skillLvl = params.getInt("skillLvl", 1);
 	}
@@ -47,20 +45,19 @@ public final class SetSkill extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if ((info.getEffected() == null) || !info.getEffected().isPlayer())
+		if (!effected.isPlayer())
 		{
 			return;
 		}
 		
-		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLvl);
-		if (skill == null)
+		final Skill setSkill = SkillData.getInstance().getSkill(_skillId, _skillLvl);
+		if (setSkill == null)
 		{
 			return;
 		}
 		
-		info.getEffected().getActingPlayer().addSkill(skill, true);
-		info.getEffected().getActingPlayer().sendSkillList();
+		effected.getActingPlayer().addSkill(setSkill, true);
 	}
 }

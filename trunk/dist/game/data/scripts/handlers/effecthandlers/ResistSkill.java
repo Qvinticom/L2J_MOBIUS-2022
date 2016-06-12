@@ -21,11 +21,10 @@ import java.util.List;
 
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Resist Skill effect implementaion.
@@ -35,10 +34,8 @@ public final class ResistSkill extends AbstractEffect
 {
 	private final List<SkillHolder> _skills = new ArrayList<>();
 	
-	public ResistSkill(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public ResistSkill(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		for (int i = 1;; i++)
 		{
 			final int skillId = params.getInt("skillId" + i, 0);
@@ -57,12 +54,11 @@ public final class ResistSkill extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		final L2Character effected = info.getEffected();
 		for (SkillHolder holder : _skills)
 		{
-			effected.addInvulAgainst(holder);
+			effected.addIgnoreSkillEffects(holder);
 			effected.sendDebugMessage("Applying invul against " + holder.getSkill());
 		}
 	}
@@ -73,14 +69,8 @@ public final class ResistSkill extends AbstractEffect
 		final L2Character effected = info.getEffected();
 		for (SkillHolder holder : _skills)
 		{
-			info.getEffected().removeInvulAgainst(holder);
+			info.getEffected().removeIgnoreSkillEffects(holder);
 			effected.sendDebugMessage("Removing invul against " + holder.getSkill());
 		}
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.BUFF;
 	}
 }

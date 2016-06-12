@@ -98,7 +98,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 	public void run()
 	{
 		final L2LoginClient client = getClient();
-		byte[] decrypted = new byte[_newAuthMethod ? 256 : 128];
+		final byte[] decrypted = new byte[_newAuthMethod ? 256 : 128];
 		try
 		{
 			final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");

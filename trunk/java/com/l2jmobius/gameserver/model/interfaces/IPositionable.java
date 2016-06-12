@@ -63,12 +63,6 @@ public interface IPositionable extends ILocational
 	void setHeading(int heading);
 	
 	/**
-	 * Changes the instance zone ID of this object.
-	 * @param instanceId the ID of the instance zone to put this object in (0 - not in any instance)
-	 */
-	void setInstanceId(int instanceId);
-	
-	/**
 	 * Changes the location of this object.
 	 * @param loc the new location
 	 */

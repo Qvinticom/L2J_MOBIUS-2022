@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.model.actor.tasks.npc.trap;
 
 import java.util.logging.Logger;
 
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -53,25 +54,12 @@ public class TrapTask implements Runnable
 					}
 					if (_trap.getRemainingTime() <= 0)
 					{
-						switch (_trap.getSkill().getTargetType())
-						{
-							case AURA:
-							case FRONT_AURA:
-							case BEHIND_AURA:
-							{
-								_trap.triggerTrap(_trap);
-								break;
-							}
-							default:
-							{
-								_trap.unSummon();
-							}
-						}
+						_trap.triggerTrap(_trap);
 						return;
 					}
 				}
 				
-				for (L2Character target : _trap.getKnownList().getKnownCharacters())
+				for (L2Character target : L2World.getInstance().getVisibleObjects(_trap, L2Character.class))
 				{
 					if (_trap.checkTarget(target))
 					{

@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.loginserver.network.gameserverpackets;
 
+import com.l2jmobius.commons.util.network.BaseRecievePacket;
 import com.l2jmobius.loginserver.GameServerThread;
 import com.l2jmobius.loginserver.LoginController;
-import com.l2jmobius.util.network.BaseRecievePacket;
 
 /**
  * Thanks to mochitto.

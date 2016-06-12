@@ -16,6 +16,7 @@
  */
 package quests.Q00197_SevenSignsTheSacredBookOfSeal;
 
+import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -25,7 +26,6 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
 import quests.Q00196_SevenSignsSealOfTheEmperor.Q00196_SevenSignsSealOfTheEmperor;
 
@@ -51,7 +51,7 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 	
 	public Q00197_SevenSignsTheSacredBookOfSeal()
 	{
-		super(197, Q00197_SevenSignsTheSacredBookOfSeal.class.getSimpleName(), "Seven Signs, the Sacred Book of Seal");
+		super(197);
 		addStartNpc(WOOD);
 		addTalkId(WOOD, ORVEN, LEOPARD, LAWRENCE, SOPHIA);
 		addKillId(SHILENS_EVIL_THOUGHTS);
@@ -66,14 +66,14 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			if (!npc.isDead())
 			{
 				isBusy = false;
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.NEXT_TIME_YOU_WILL_NOT_ESCAPE));
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.NEXT_TIME_YOU_WILL_NOT_ESCAPE);
 				npc.deleteMe();
 			}
 			return super.onAdvEvent(event, npc, player);
 		}
 		
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return null;
 		}
@@ -89,13 +89,13 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			}
 			case "32593-04.html":
 			{
-				qs.startQuest();
+				st.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "32593-08.html":
 			{
-				if (qs.isCond(6) && hasQuestItems(player, MYSTERIOUS_HAND_WRITTEN_TEXT, SCULPTURE_OF_DOUBT))
+				if (st.isCond(6) && hasQuestItems(player, MYSTERIOUS_HAND_WRITTEN_TEXT, SCULPTURE_OF_DOUBT))
 				{
 					htmltext = event;
 				}
@@ -103,12 +103,12 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			}
 			case "32593-09.html":
 			{
-				if (qs.isCond(6))
+				if (st.isCond(6))
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 52518015, 5817677);
-						qs.exitQuest(false, true);
+						st.exitQuest(false, true);
 						htmltext = event;
 					}
 					else
@@ -121,7 +121,7 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			case "30857-02.html":
 			case "30857-03.html":
 			{
-				if (qs.isCond(1))
+				if (st.isCond(1))
 				{
 					htmltext = event;
 				}
@@ -129,16 +129,16 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			}
 			case "30857-04.html":
 			{
-				if (qs.isCond(1))
+				if (st.isCond(1))
 				{
-					qs.setCond(2, true);
+					st.setCond(2, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32594-02.html":
 			{
-				if (qs.isCond(2))
+				if (st.isCond(2))
 				{
 					htmltext = event;
 				}
@@ -146,9 +146,9 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			}
 			case "32594-03.html":
 			{
-				if (qs.isCond(2))
+				if (st.isCond(2))
 				{
-					qs.setCond(3, true);
+					st.setCond(3, true);
 					htmltext = event;
 				}
 				break;
@@ -156,7 +156,7 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			case "32595-02.html":
 			case "32595-03.html":
 			{
-				if (qs.isCond(3))
+				if (st.isCond(3))
 				{
 					htmltext = event;
 				}
@@ -164,13 +164,15 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			}
 			case "32595-04.html":
 			{
-				if (qs.isCond(3))
+				if (st.isCond(3))
 				{
 					isBusy = true;
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.S1_THAT_STRANGER_MUST_BE_DEFEATED_HERE_IS_THE_ULTIMATE_HELP).addStringParameter(player.getName()));
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.S1_THAT_STRANGER_MUST_BE_DEFEATED_HERE_IS_THE_ULTIMATE_HELP, player.getName());
 					final L2MonsterInstance monster = (L2MonsterInstance) addSpawn(SHILENS_EVIL_THOUGHTS, 152520, -57502, -3408, 0, false, 0, false);
-					monster.broadcastPacket(new NpcSay(monster.getObjectId(), ChatType.NPC_GENERAL, monster.getId(), NpcStringId.YOU_ARE_NOT_THE_OWNER_OF_THAT_ITEM));
-					addAttackDesire(monster, player);
+					monster.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_ARE_NOT_THE_OWNER_OF_THAT_ITEM);
+					monster.setRunning();
+					monster.addDamageHate(player, 0, 999);
+					monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 					startQuestTimer("despawn", 300000, monster, null);
 				}
 				break;
@@ -179,7 +181,7 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			case "32595-07.html":
 			case "32595-08.html":
 			{
-				if (qs.isCond(4) && hasQuestItems(player, SCULPTURE_OF_DOUBT))
+				if (st.isCond(4) && hasQuestItems(player, SCULPTURE_OF_DOUBT))
 				{
 					htmltext = event;
 				}
@@ -187,9 +189,9 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			}
 			case "32595-09.html":
 			{
-				if (qs.isCond(4) && hasQuestItems(player, SCULPTURE_OF_DOUBT))
+				if (st.isCond(4) && hasQuestItems(player, SCULPTURE_OF_DOUBT))
 				{
-					qs.setCond(5, true);
+					st.setCond(5, true);
 					htmltext = event;
 				}
 				break;
@@ -197,7 +199,7 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			case "32596-02.html":
 			case "32596-03.html":
 			{
-				if (qs.isCond(5) && hasQuestItems(player, SCULPTURE_OF_DOUBT))
+				if (st.isCond(5) && hasQuestItems(player, SCULPTURE_OF_DOUBT))
 				{
 					htmltext = event;
 				}
@@ -205,10 +207,10 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			}
 			case "32596-04.html":
 			{
-				if (qs.isCond(5) && hasQuestItems(player, SCULPTURE_OF_DOUBT))
+				if (st.isCond(5) && hasQuestItems(player, SCULPTURE_OF_DOUBT))
 				{
 					giveItems(player, MYSTERIOUS_HAND_WRITTEN_TEXT, 1);
-					qs.setCond(6, true);
+					st.setCond(6, true);
 					htmltext = event;
 				}
 				break;
@@ -226,26 +228,26 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			return null;
 		}
 		
-		final QuestState qs = getQuestState(partyMember, false);
+		final QuestState st = getQuestState(partyMember, false);
 		if (npc.isInsideRadius(partyMember, 1500, true, false))
 		{
-			giveItems(player, SCULPTURE_OF_DOUBT, 1);
-			playSound(player, QuestSound.ITEMSOUND_QUEST_FINISH);
-			qs.setCond(4);
+			giveItems(partyMember, SCULPTURE_OF_DOUBT, 1);
+			playSound(partyMember, QuestSound.ITEMSOUND_QUEST_FINISH);
+			st.setCond(4);
 		}
 		
 		isBusy = false;
 		cancelQuestTimers("despawn");
-		npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU).addStringParameter(partyMember.getName()));
+		npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU, partyMember.getName());
 		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState qs = getQuestState(player, true);
+		QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		switch (qs.getState())
+		switch (st.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -256,8 +258,8 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			{
 				if (npc.getId() == WOOD)
 				{
-					qs = player.getQuestState(Q00196_SevenSignsSealOfTheEmperor.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted()) ? "32593-01.htm" : "32593-05.html";
+					st = player.getQuestState(Q00196_SevenSignsSealOfTheEmperor.class.getSimpleName());
+					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "32593-01.htm" : "32593-05.html";
 				}
 				break;
 			}
@@ -267,23 +269,26 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 				{
 					case WOOD:
 					{
-						if ((qs.getCond() > 0) && (qs.getCond() < 6))
+						if ((st.getCond() > 0) && (st.getCond() < 6))
 						{
 							htmltext = "32593-06.html";
 						}
-						else if (qs.isCond(6) && hasQuestItems(player, MYSTERIOUS_HAND_WRITTEN_TEXT, SCULPTURE_OF_DOUBT))
+						else if (st.isCond(6))
 						{
-							htmltext = "32593-07.html";
+							if (hasQuestItems(player, MYSTERIOUS_HAND_WRITTEN_TEXT, SCULPTURE_OF_DOUBT))
+							{
+								htmltext = "32593-07.html";
+							}
 						}
 						break;
 					}
 					case ORVEN:
 					{
-						if (qs.isCond(1))
+						if (st.isCond(1))
 						{
 							htmltext = "30857-01.html";
 						}
-						else if (qs.getCond() >= 2)
+						else if (st.getCond() >= 2)
 						{
 							htmltext = "30857-05.html";
 						}
@@ -291,11 +296,11 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 					}
 					case LEOPARD:
 					{
-						if (qs.isCond(2))
+						if (st.isCond(2))
 						{
 							htmltext = "32594-01.html";
 						}
-						else if (qs.getCond() >= 3)
+						else if (st.getCond() >= 3)
 						{
 							htmltext = "32594-04.html";
 						}
@@ -303,35 +308,48 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 					}
 					case LAWRENCE:
 					{
-						if (qs.isCond(3))
+						if (st.isCond(3))
 						{
-							htmltext = isBusy ? "32595-05.html" : "32595-01.html";
+							if (isBusy)
+							{
+								htmltext = "32595-05.html";
+							}
+							else
+							{
+								htmltext = "32595-01.html";
+							}
 						}
-						else if (qs.isCond(4))
+						else if (st.isCond(4))
 						{
 							if (hasQuestItems(player, SCULPTURE_OF_DOUBT))
 							{
 								htmltext = "32595-06.html";
 							}
 						}
-						else if ((qs.getCond() >= 5) && hasQuestItems(player, SCULPTURE_OF_DOUBT))
+						else if (st.getCond() >= 5)
 						{
-							htmltext = "32595-10.html";
+							if (hasQuestItems(player, SCULPTURE_OF_DOUBT))
+							{
+								htmltext = "32595-10.html";
+							}
 						}
 						break;
 					}
 					case SOPHIA:
 					{
-						if (qs.isCond(5))
+						if (st.isCond(5))
 						{
 							if (hasQuestItems(player, SCULPTURE_OF_DOUBT))
 							{
 								htmltext = "32596-01.html";
 							}
 						}
-						else if ((qs.getCond() >= 6) && hasQuestItems(player, SCULPTURE_OF_DOUBT, MYSTERIOUS_HAND_WRITTEN_TEXT))
+						else if (st.getCond() >= 6)
 						{
-							htmltext = "32596-05.html";
+							if (hasQuestItems(player, SCULPTURE_OF_DOUBT, MYSTERIOUS_HAND_WRITTEN_TEXT))
+							{
+								htmltext = "32596-05.html";
+							}
 						}
 						break;
 					}

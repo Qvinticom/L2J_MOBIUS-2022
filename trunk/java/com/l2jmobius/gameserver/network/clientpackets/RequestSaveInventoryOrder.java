@@ -19,51 +19,53 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * Format:(ch) d[dd]
  * @author -Wooden-
  */
-public final class RequestSaveInventoryOrder extends L2GameClientPacket
+public final class RequestSaveInventoryOrder implements IClientIncomingPacket
 {
-	private static final String _C__D0_24_REQUESTSAVEINVENTORYORDER = "[C] D0:24 RequestSaveInventoryOrder";
-	
 	private List<InventoryOrder> _order;
 	
 	/** client limit */
 	private static final int LIMIT = 125;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		final int sz = Math.min(readD(), LIMIT);
+		int sz = packet.readD();
+		sz = Math.min(sz, LIMIT);
 		_order = new ArrayList<>(sz);
 		for (int i = 0; i < sz; i++)
 		{
-			_order.add(new InventoryOrder(readD(), readD()));
+			final int objectId = packet.readD();
+			final int order = packet.readD();
+			_order.add(new InventoryOrder(objectId, order));
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		final L2PcInstance player = client.getActiveChar();
+		if (player != null)
 		{
-			return;
-		}
-		
-		final Inventory inventory = player.getInventory();
-		for (InventoryOrder order : _order)
-		{
-			final L2ItemInstance item = inventory.getItemByObjectId(order.objectID);
-			if ((item != null) && (item.getItemLocation() == ItemLocation.INVENTORY))
+			final Inventory inventory = player.getInventory();
+			for (InventoryOrder order : _order)
 			{
-				item.setItemLocation(ItemLocation.INVENTORY, order.order);
+				final L2ItemInstance item = inventory.getItemByObjectId(order.objectID);
+				if ((item != null) && (item.getItemLocation() == ItemLocation.INVENTORY))
+				{
+					item.setItemLocation(ItemLocation.INVENTORY, order.order);
+				}
 			}
 		}
 	}
@@ -79,17 +81,5 @@ public final class RequestSaveInventoryOrder extends L2GameClientPacket
 			objectID = id;
 			order = ord;
 		}
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_24_REQUESTSAVEINVENTORYORDER;
 	}
 }

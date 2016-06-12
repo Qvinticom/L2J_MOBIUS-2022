@@ -33,6 +33,7 @@ public class CharmOfCourage implements IItemHandler
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
+		
 		if (!playable.isPlayer())
 		{
 			return false;

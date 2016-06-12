@@ -16,97 +16,53 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.PartyMatchRoom;
-import com.l2jmobius.gameserver.model.PartyMatchRoomList;
-import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.matching.MatchingRoom;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExManagePartyRoomMember;
-import com.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
-import com.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * Format: (ch) d
  * @author -Wooden-, Tryskell
  */
-public final class AnswerJoinPartyRoom extends L2GameClientPacket
+public final class AnswerJoinPartyRoom implements IClientIncomingPacket
 {
-	private static final String _C__D0_30_ANSWERJOINPARTYROOM = "[C] D0:30 AnswerJoinPartyRoom";
-	private int _answer; // 1 or 0
+	private boolean _answer;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_answer = readD();
+		_answer = packet.readD() == 1;
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
 		final L2PcInstance partner = player.getActiveRequester();
-		// Partner hasn't been found, cancel the invitation
-		if ((partner == null) || (L2World.getInstance().getPlayer(partner.getObjectId()) == null))
+		if (partner == null)
 		{
-			// Partner hasn't been found, cancel the invitation
 			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 			player.setActiveRequester(null);
 			return;
 		}
 		
-		if (Config.FACTION_SYSTEM_ENABLED && ((player.isEvil() && partner.isGood()) || (player.isGood() && partner.isEvil())))
+		if (_answer && !partner.isRequestExpired())
 		{
-			player.sendMessage("You cannot party with different team members.");
-			player.setActiveRequester(null);
-			return;
-		}
-		
-		// If answer is positive, join the requester's PartyRoom.
-		if ((_answer == 1) && !partner.isRequestExpired())
-		{
-			final PartyMatchRoom room = PartyMatchRoomList.getInstance().getRoom(partner.getPartyRoom());
+			final MatchingRoom room = partner.getMatchingRoom();
 			if (room == null)
 			{
 				return;
 			}
 			
-			if ((player.getLevel() >= room.getMinLvl()) && (player.getLevel() <= room.getMaxLvl()))
-			{
-				// Remove from waiting list
-				PartyMatchWaitingList.getInstance().removePlayer(player);
-				
-				player.setPartyRoom(partner.getPartyRoom());
-				
-				player.sendPacket(new PartyMatchDetail(player, room));
-				player.sendPacket(new ExPartyRoomMember(player, room, 0));
-				
-				for (L2PcInstance member : room.getPartyMembers())
-				{
-					if (member == null)
-					{
-						continue;
-					}
-					
-					member.sendPacket(new ExManagePartyRoomMember(player, room, 0));
-					member.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ENTERED_THE_PARTY_ROOM).addPcName(player));
-				}
-				room.addMember(player);
-				
-				// Info Broadcast
-				player.broadcastUserInfo();
-			}
-			else
-			{
-				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_ENTER_THAT_PARTY_ROOM);
-			}
+			room.addMember(player);
 		}
 		else
 		{
@@ -116,11 +72,5 @@ public final class AnswerJoinPartyRoom extends L2GameClientPacket
 		// reset transaction timers
 		player.setActiveRequester(null);
 		partner.onTransactionResponse();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_30_ANSWERJOINPARTYROOM;
 	}
 }

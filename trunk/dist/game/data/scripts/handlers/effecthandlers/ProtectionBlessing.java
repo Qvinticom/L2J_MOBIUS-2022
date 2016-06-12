@@ -17,7 +17,6 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -28,9 +27,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class ProtectionBlessing extends AbstractEffect
 {
-	public ProtectionBlessing(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public ProtectionBlessing(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -40,7 +38,7 @@ public final class ProtectionBlessing extends AbstractEffect
 	}
 	
 	@Override
-	public int getEffectFlags()
+	public long getEffectFlags()
 	{
 		return EffectFlag.PROTECTION_BLESSING.getMask();
 	}

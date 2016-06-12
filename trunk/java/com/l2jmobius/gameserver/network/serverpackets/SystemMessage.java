@@ -16,7 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Forsaiken, UnAfraid
@@ -79,10 +81,12 @@ public final class SystemMessage extends AbstractMessagePacket<SystemMessage>
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x62);
-		writeH(getId());
-		writeMe();
+		OutgoingPackets.SYSTEM_MESSAGE.writeId(packet);
+		
+		packet.writeH(getId());
+		writeMe(packet);
+		return true;
 	}
 }

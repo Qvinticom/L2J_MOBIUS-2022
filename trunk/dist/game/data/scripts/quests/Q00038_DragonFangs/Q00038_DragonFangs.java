@@ -53,11 +53,12 @@ public final class Q00038_DragonFangs extends Quest
 	
 	public Q00038_DragonFangs()
 	{
-		super(38, Q00038_DragonFangs.class.getSimpleName(), "Dragon Fangs");
+		super(38);
 		addStartNpc(GUARD_LUIS);
 		addTalkId(GUARD_LUIS, IRIS, MAGISTER_ROHMER);
 		addKillId(LIZARDMAN_SENTINEL, LIZARDMAN_SHAMAN, LIZARDMAN_LEADER, LIZARDMAN_SUB_LEADER);
 		registerQuestItems(FEATHER.getId(), TOTEM_TOOTH_1ST, TOTEM_TOOTH_2ND.getId(), LETTER_1ST, LETTER_2ND);
+		addCondMinLevel(MIN_LVL, "30386-02.htm");
 	}
 	
 	@Override
@@ -73,11 +74,8 @@ public final class Q00038_DragonFangs extends Quest
 		{
 			case "30386-03.htm":
 			{
-				if (qs.isCreated())
-				{
-					qs.startQuest();
-					htmltext = event;
-				}
+				qs.startQuest();
+				htmltext = event;
 				break;
 			}
 			case "30386-06.html":
@@ -96,7 +94,6 @@ public final class Q00038_DragonFangs extends Quest
 						htmltext = "30386-07.html";
 					}
 				}
-				
 				break;
 			}
 			case "30034-02.html":
@@ -140,17 +137,17 @@ public final class Q00038_DragonFangs extends Quest
 				{
 					if (hasItem(player, TOTEM_TOOTH_2ND))
 					{
-						addExpAndSp(player, 435117, 23977);
+						addExpAndSp(player, 435117, 104);
 						final int chance = getRandom(1000);
 						if (chance < 250)
 						{
 							rewardItems(player, BONE_HELMET, 1);
-							giveAdena(player, 5200, true);
+							giveAdena(player, 3200, true);
 						}
 						else if (chance < 500)
 						{
 							rewardItems(player, ASPIS, 1);
-							giveAdena(player, 1500, true);
+							giveAdena(player, 3200, true);
 						}
 						else if (chance < 750)
 						{
@@ -252,7 +249,7 @@ public final class Q00038_DragonFangs extends Quest
 			{
 				if (qs.isCreated())
 				{
-					htmltext = (talker.getLevel() >= MIN_LVL) ? "30386-01.htm" : "30386-02.htm";
+					htmltext = "30386-01.htm";
 				}
 				else if (qs.isStarted())
 				{

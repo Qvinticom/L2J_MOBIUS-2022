@@ -22,10 +22,10 @@ import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.StringUtil;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.util.StringUtil;
 
 public class EnchantFormatter extends Formatter
 {
@@ -54,7 +54,7 @@ public class EnchantFormatter extends Formatter
 					StringUtil.append(output, "Character:", player.getName(), " [" + String.valueOf(player.getObjectId()) + "] Account:", player.getAccountName());
 					if ((player.getClient() != null) && !player.getClient().isDetached())
 					{
-						StringUtil.append(output, " IP:", player.getClient().getConnection().getInetAddress().getHostAddress());
+						StringUtil.append(output, " IP:", player.getClient().getConnectionAddress().getHostAddress());
 					}
 				}
 				else if (p instanceof L2ItemInstance)

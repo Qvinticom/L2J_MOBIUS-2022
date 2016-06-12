@@ -19,38 +19,35 @@ package handlers.actionhandlers;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.handler.IActionHandler;
-import com.l2jmobius.gameserver.instancemanager.MercTicketManager;
+import com.l2jmobius.gameserver.instancemanager.CastleManager;
+import com.l2jmobius.gameserver.instancemanager.SiegeGuardManager;
+import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.Castle;
+import com.l2jmobius.gameserver.network.SystemMessageId;
 
 public class L2ItemInstanceAction implements IActionHandler
 {
 	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
-		// this causes the validate position handler to do the pickup if the location is reached.
-		// mercenary tickets can only be picked up by the castle owner.
-		final int castleId = MercTicketManager.getInstance().getTicketCastleId(target.getId());
-		
-		if ((castleId > 0) && (!activeChar.isCastleLord(castleId) || activeChar.isInParty()))
+		final Castle castle = CastleManager.getInstance().getCastle(target);
+		if ((castle != null) && (SiegeGuardManager.getInstance().getSiegeGuardByItem(castle.getResidenceId(), target.getId()) != null))
 		{
-			if (activeChar.isInParty())
+			if ((activeChar.getClan() == null) || (castle.getOwnerId() != activeChar.getClanId()) || !activeChar.hasClanPrivilege(ClanPrivilege.CS_MERCENARIES))
 			{
-				activeChar.sendMessage("You cannot pickup mercenaries while in a party.");
+				activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_AUTHORITY_TO_CANCEL_MERCENARY_POSITIONING);
+				activeChar.setTarget(target);
+				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				return false;
 			}
-			else
-			{
-				activeChar.sendMessage("Only the castle lord can pickup mercenaries.");
-			}
-			
-			activeChar.setTarget(target);
-			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
-		else if (!activeChar.isFlying())
+		
+		if (!activeChar.isFlying())
 		{
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, target);
 		}
-		
 		return true;
 	}
 	

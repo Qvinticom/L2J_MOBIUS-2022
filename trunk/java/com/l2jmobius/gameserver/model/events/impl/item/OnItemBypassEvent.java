@@ -57,4 +57,5 @@ public class OnItemBypassEvent implements IBaseEvent
 	{
 		return EventType.ON_ITEM_BYPASS_EVENT;
 	}
+	
 }

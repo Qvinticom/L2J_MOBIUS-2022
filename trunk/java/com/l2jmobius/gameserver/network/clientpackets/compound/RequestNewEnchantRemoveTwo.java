@@ -16,11 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.compound;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.request.CompoundRequest;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.compound.ExEnchantOneFail;
 import com.l2jmobius.gameserver.network.serverpackets.compound.ExEnchantTwoRemoveFail;
 import com.l2jmobius.gameserver.network.serverpackets.compound.ExEnchantTwoRemoveOK;
@@ -28,52 +30,53 @@ import com.l2jmobius.gameserver.network.serverpackets.compound.ExEnchantTwoRemov
 /**
  * @author UnAfraid
  */
-public class RequestNewEnchantRemoveTwo extends L2GameClientPacket
+public class RequestNewEnchantRemoveTwo implements IClientIncomingPacket
 {
 	private int _objectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
+		_objectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
-		if (activeChar.isInStoreMode())
+		else if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
-			activeChar.sendPacket(ExEnchantOneFail.STATIC_PACKET);
+			client.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
+			client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			return;
 		}
-		if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest())
+		else if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
-			activeChar.sendPacket(ExEnchantOneFail.STATIC_PACKET);
+			client.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
+			client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			return;
 		}
 		
 		final CompoundRequest request = activeChar.getRequest(CompoundRequest.class);
 		if ((request == null) || request.isProcessing())
 		{
-			activeChar.sendPacket(ExEnchantTwoRemoveFail.STATIC_PACKET);
+			client.sendPacket(ExEnchantTwoRemoveFail.STATIC_PACKET);
 			return;
 		}
 		
 		final L2ItemInstance item = request.getItemTwo();
 		if ((item == null) || (item.getObjectId() != _objectId))
 		{
-			activeChar.sendPacket(ExEnchantTwoRemoveFail.STATIC_PACKET);
+			client.sendPacket(ExEnchantTwoRemoveFail.STATIC_PACKET);
 			return;
 		}
 		request.setItemTwo(0);
 		
-		activeChar.sendPacket(ExEnchantTwoRemoveOK.STATIC_PACKET);
+		client.sendPacket(ExEnchantTwoRemoveOK.STATIC_PACKET);
 	}
 }

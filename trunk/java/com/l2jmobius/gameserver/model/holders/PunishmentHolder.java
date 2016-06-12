@@ -37,7 +37,8 @@ public final class PunishmentHolder
 	{
 		if (!task.isExpired())
 		{
-			_holder.computeIfAbsent(String.valueOf(task.getKey()), k -> new ConcurrentHashMap<>()).put(task.getType(), task);
+			final String key = String.valueOf(task.getKey());
+			_holder.computeIfAbsent(key, k -> new ConcurrentHashMap<>()).put(task.getType(), task);
 		}
 	}
 	
@@ -48,17 +49,31 @@ public final class PunishmentHolder
 	public void stopPunishment(PunishmentTask task)
 	{
 		final String key = String.valueOf(task.getKey());
-		if (!_holder.containsKey(key))
+		if (_holder.containsKey(key))
 		{
-			return;
+			task.stopPunishment();
+			final Map<PunishmentType, PunishmentTask> punishments = _holder.get(key);
+			punishments.remove(task.getType());
+			if (punishments.isEmpty())
+			{
+				_holder.remove(key);
+			}
 		}
-		task.stopPunishment();
-		final Map<PunishmentType, PunishmentTask> punishments = _holder.get(key);
-		punishments.remove(task.getType());
-		if (punishments.isEmpty())
+	}
+	
+	public void stopPunishment(PunishmentType type)
+	{
+		_holder.values().stream().flatMap(p -> p.values().stream()).filter(p -> p.getType() == type).forEach(t ->
 		{
-			_holder.remove(key);
-		}
+			t.stopPunishment();
+			final String key = String.valueOf(t.getKey());
+			final Map<PunishmentType, PunishmentTask> punishments = _holder.get(key);
+			punishments.remove(t.getType());
+			if (punishments.isEmpty())
+			{
+				_holder.remove(key);
+			}
+		});
 	}
 	
 	/**
@@ -78,6 +93,10 @@ public final class PunishmentHolder
 	 */
 	public PunishmentTask getPunishment(String key, PunishmentType type)
 	{
-		return _holder.containsKey(key) ? _holder.get(key).get(type) : null;
+		if (_holder.containsKey(key))
+		{
+			return _holder.get(key).get(type);
+		}
+		return null;
 	}
 }

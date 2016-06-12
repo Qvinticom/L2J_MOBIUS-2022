@@ -16,21 +16,25 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
  * @author Sdw
  */
-public class ExRemoveEnchantSupportItemResult extends L2GameServerPacket
+public class ExRemoveEnchantSupportItemResult implements IClientOutgoingPacket
 {
 	public static final ExRemoveEnchantSupportItemResult STATIC_PACKET = new ExRemoveEnchantSupportItemResult();
 	
-	public ExRemoveEnchantSupportItemResult()
+	private ExRemoveEnchantSupportItemResult()
 	{
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x153);
+		OutgoingPackets.EX_REMOVE_ENCHANT_SUPPORT_ITEM_RESULT.writeId(packet);
+		
+		return true;
 	}
 }

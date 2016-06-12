@@ -33,9 +33,9 @@ import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Clan.SubPledge;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.base.AcquireSkillType;
-import com.l2jmobius.gameserver.model.base.PlayerClass;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
@@ -57,10 +57,6 @@ public class L2VillageMasterInstance extends L2NpcInstance
 {
 	private static Logger _log = Logger.getLogger(L2VillageMasterInstance.class.getName());
 	
-	/**
-	 * Creates a village master.
-	 * @param template the village master NPC template
-	 */
 	public L2VillageMasterInstance(L2NpcTemplate template)
 	{
 		super(template);
@@ -68,9 +64,31 @@ public class L2VillageMasterInstance extends L2NpcInstance
 	}
 	
 	@Override
+	public boolean isAutoAttackable(L2Character attacker)
+	{
+		if (attacker.isMonster())
+		{
+			return true;
+		}
+		
+		return super.isAutoAttackable(attacker);
+	}
+	
+	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		return "html/villagemaster/" + (val == 0 ? "" + npcId : npcId + "-" + val) + ".htm";
+		String pom = "";
+		
+		if (val == 0)
+		{
+			pom = "" + npcId;
+		}
+		else
+		{
+			pom = npcId + "-" + val;
+		}
+		
+		return "data/html/villagemaster/" + pom + ".htm";
 	}
 	
 	@Override
@@ -158,13 +176,13 @@ public class L2VillageMasterInstance extends L2NpcInstance
 				return;
 			}
 			
-			if (player.getClan() != null)
+			if (player.getClan() == null)
 			{
-				player.getClan().createAlly(player, cmdParams);
+				player.sendPacket(SystemMessageId.ONLY_CLAN_LEADERS_MAY_CREATE_ALLIANCES);
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.ONLY_CLAN_LEADERS_MAY_CREATE_ALLIANCES);
+				player.getClan().createAlly(player, cmdParams);
 			}
 		}
 		else if (actualCommand.equalsIgnoreCase("dissolve_ally"))
@@ -226,11 +244,11 @@ public class L2VillageMasterInstance extends L2NpcInstance
 				if (clan.getNewLeaderId() == 0)
 				{
 					clan.setNewLeaderId(member.getObjectId(), true);
-					msg.setFile(player.getHtmlPrefix(), "scripts/village_master/Clan/9000-07-success.htm");
+					msg.setFile(player.getHtmlPrefix(), "data/scripts/village_master/Clan/9000-07-success.htm");
 				}
 				else
 				{
-					msg.setFile(player.getHtmlPrefix(), "scripts/village_master/Clan/9000-07-in-progress.htm");
+					msg.setFile(player.getHtmlPrefix(), "data/scripts/village_master/Clan/9000-07-in-progress.htm");
 				}
 				player.sendPacket(msg);
 			}
@@ -248,7 +266,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 			if (clan.getNewLeaderId() != 0)
 			{
 				clan.setNewLeaderId(0, true);
-				msg.setFile(player.getHtmlPrefix(), "scripts/village_master/Clan/9000-07-canceled.htm");
+				msg.setFile(player.getHtmlPrefix(), "data/scripts/village_master/Clan/9000-07-canceled.htm");
 			}
 			else
 			{
@@ -277,36 +295,6 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		{
 			super.onBypassFeedback(player, command);
 		}
-	}
-	
-	protected boolean checkVillageMasterRace(PlayerClass pclass)
-	{
-		return true;
-	}
-	
-	protected boolean checkVillageMasterTeachType(PlayerClass pclass)
-	{
-		return true;
-	}
-	
-	/**
-	 * Returns true if this classId allowed for master
-	 * @param classId
-	 * @return
-	 */
-	public final boolean checkVillageMaster(int classId)
-	{
-		return checkVillageMaster(PlayerClass.values()[classId]);
-	}
-	
-	/**
-	 * Returns true if this PlayerClass is allowed for master
-	 * @param pclass
-	 * @return
-	 */
-	public final boolean checkVillageMaster(PlayerClass pclass)
-	{
-		return checkVillageMasterRace(pclass) && checkVillageMasterTeachType(pclass);
 	}
 	
 	private static void dissolveClan(L2PcInstance player, int clanId)
@@ -366,7 +354,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		clan.updateClanInDB();
 		
 		// The clan leader should take the XP penalty of a full death.
-		player.calculateDeathExpPenalty(null, false);
+		player.calculateDeathExpPenalty(null);
 		ClanTable.getInstance().scheduleRemoveClan(clan.getId());
 	}
 	
@@ -593,7 +581,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		if (!player.isClanLeader())
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage();
-			html.setFile(player.getHtmlPrefix(), "html/villagemaster/NotClanLeader.htm");
+			html.setFile(player.getHtmlPrefix(), "data/html/villagemaster/NotClanLeader.htm");
 			player.sendPacket(html);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -619,7 +607,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 			else
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage();
-				html.setFile(player.getHtmlPrefix(), "html/villagemaster/NoMoreSkills.htm");
+				html.setFile(player.getHtmlPrefix(), "data/html/villagemaster/NoMoreSkills.htm");
 				player.sendPacket(html);
 			}
 		}

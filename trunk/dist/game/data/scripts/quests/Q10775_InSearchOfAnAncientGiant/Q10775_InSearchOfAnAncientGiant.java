@@ -19,90 +19,86 @@ package quests.Q10775_InSearchOfAnAncientGiant;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
 
 /**
  * In Search of an Ancient Giant (10775)
- * @URL https://l2wiki.com/In_Search_of_an_Ancient_Giant
- * @author Gigi
+ * @author malyelfik
  */
-public class Q10775_InSearchOfAnAncientGiant extends Quest
+public final class Q10775_InSearchOfAnAncientGiant extends Quest
 {
 	// NPCs
-	private static final int RAMBEL = 30487;
 	private static final int BELKADHI = 30485;
+	private static final int ROMBEL = 30487;
 	// Monsters
 	private static final int[] MONSTERS =
 	{
+		20221, // Perum
 		20753, // Dark Lord
 		20754, // Dark Knight
 		21040, // Soldier of Darkness
 		21037, // Ossiud
-		20221, // Perum
 		21038, // Liangma
 		23153, // Achelando
 		23154, // Styrindo
 		23155, // Ashende
 	};
 	// Items
-	private static final ItemHolder STEEL_DOOR_GUILD = new ItemHolder(37045, 46);
-	private static final ItemHolder EAC = new ItemHolder(952, 9);
 	private static final int ENERGY_OF_REGENERATION = 39715;
-	// Reward
-	private static final int EXP_REWARD = 2342300;
-	private static final int SP_REWARD = 562;
+	private static final int ENCHANT_ARMOR_C = 952;
 	// Misc
 	private static final int MIN_LEVEL = 46;
 	
 	public Q10775_InSearchOfAnAncientGiant()
 	{
-		super(10775, Q10775_InSearchOfAnAncientGiant.class.getSimpleName(), "In Search of an Ancient Giant");
-		addStartNpc(RAMBEL);
-		addTalkId(RAMBEL, BELKADHI);
-		registerQuestItems(ENERGY_OF_REGENERATION);
+		super(10775);
+		addStartNpc(ROMBEL);
+		addTalkId(ROMBEL, BELKADHI);
 		addKillId(MONSTERS);
-		addCondMinLevel(MIN_LEVEL, "noLevel.html");
-		addCondRace(Race.ERTHEIA, "noErtheia.html");
+		
+		addCondRace(Race.ERTHEIA, "30487-00.htm");
+		addCondMinLevel(MIN_LEVEL, "30487-00.htm");
+		registerQuestItems(ENERGY_OF_REGENERATION);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return getNoQuestMsg(player);
+			return null;
 		}
+		
+		String htmltext = event;
 		switch (event)
 		{
 			case "30487-02.htm":
 			case "30487-03.htm":
 			case "30487-04.htm":
-			case "30485-02.htm":
-			case "30485-03.htm":
-			{
-				htmltext = event;
+			case "30485-02.html":
+			case "30485-03.html":
 				break;
-			}
-			case "30487-05.html":
+			case "30487-05.htm":
 			{
 				qs.startQuest();
-				htmltext = event;
-				qs.set(Integer.toString(ENERGY_OF_REGENERATION), 0);
 				break;
 			}
 			case "30485-04.html":
 			{
-				addExpAndSp(player, EXP_REWARD, SP_REWARD);
-				giveItems(player, STEEL_DOOR_GUILD);
-				giveItems(player, EAC);
-				qs.exitQuest(false, true);
-				htmltext = event;
+				if (qs.isCond(2))
+				{
+					giveItems(player, ENCHANT_ARMOR_C, 9);
+					giveStoryQuestReward(player, 46);
+					addExpAndSp(player, 4443600, 1066);
+					qs.exitQuest(false, true);
+				}
 				break;
 			}
+			default:
+				htmltext = null;
 		}
 		return htmltext;
 	}
@@ -113,35 +109,27 @@ public class Q10775_InSearchOfAnAncientGiant extends Quest
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (npc.getId())
+		if (npc.getId() == ROMBEL)
 		{
-			case RAMBEL:
+			switch (qs.getState())
 			{
-				if (qs.isCreated())
-				{
+				case State.CREATED:
 					htmltext = "30487-01.htm";
-				}
-				else if (qs.isStarted())
-				{
-					if (qs.getCond() > 0)
+					break;
+				case State.STARTED:
+					if (qs.isCond(1))
 					{
 						htmltext = "30487-06.html";
 					}
-				}
-				else if (qs.isCompleted())
-				{
+					break;
+				case State.COMPLETED:
 					htmltext = getAlreadyCompletedMsg(player);
-				}
-				break;
+					break;
 			}
-			case BELKADHI:
-			{
-				if (qs.isCond(2))
-				{
-					htmltext = "30485-01.html";
-				}
-				break;
-			}
+		}
+		else if (qs.isStarted() && qs.isCond(2))
+		{
+			htmltext = "30485-01.html";
 		}
 		return htmltext;
 	}
@@ -150,10 +138,13 @@ public class Q10775_InSearchOfAnAncientGiant extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
-		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, npc, ENERGY_OF_REGENERATION, 1, 20, 0.2, true))
+		if ((qs != null) && qs.isCond(1))
 		{
-			qs.setCond(2, true);
+			giveItems(killer, ENERGY_OF_REGENERATION, 1);
+			if (getQuestItemsCount(killer, ENERGY_OF_REGENERATION) >= 20)
+			{
+				qs.setCond(2, true);
+			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.model.itemcontainer;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.stats.Stats;
 
 /**
  * @author UnAfraid
@@ -69,7 +68,8 @@ public class PcFreight extends ItemContainer
 	@Override
 	public boolean validateCapacity(long slots)
 	{
-		return (getSize() + slots) <= (_owner == null ? Config.ALT_FREIGHT_SLOTS : Config.ALT_FREIGHT_SLOTS + (int) _owner.getStat().calcStat(Stats.FREIGHT_LIM, 0, null, null));
+		final int curSlots = _owner == null ? Config.ALT_FREIGHT_SLOTS : Config.ALT_FREIGHT_SLOTS;
+		return ((getSize() + slots) <= curSlots);
 	}
 	
 	@Override

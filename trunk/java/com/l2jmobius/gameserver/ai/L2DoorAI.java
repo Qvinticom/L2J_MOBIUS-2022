@@ -18,10 +18,12 @@ package com.l2jmobius.gameserver.ai;
 
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2DefenderInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -29,9 +31,9 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public class L2DoorAI extends L2CharacterAI
 {
-	public L2DoorAI(L2DoorInstance creature)
+	public L2DoorAI(L2DoorInstance door)
 	{
-		super(creature);
+		super(door);
 	}
 	
 	@Override
@@ -55,7 +57,7 @@ public class L2DoorAI extends L2CharacterAI
 	}
 	
 	@Override
-	protected void onIntentionCast(Skill skill, L2Object target)
+	protected void onIntentionCast(Skill skill, L2Object target, L2ItemInstance item, boolean forceUse, boolean dontMove)
 	{
 	}
 	
@@ -96,12 +98,7 @@ public class L2DoorAI extends L2CharacterAI
 	}
 	
 	@Override
-	protected void onEvtStunned(L2Character attacker)
-	{
-	}
-	
-	@Override
-	protected void onEvtSleeping(L2Character attacker)
+	protected void onEvtActionBlocked(L2Character attacker)
 	{
 	}
 	
@@ -112,11 +109,6 @@ public class L2DoorAI extends L2CharacterAI
 	
 	@Override
 	protected void onEvtReadyToAct()
-	{
-	}
-	
-	@Override
-	protected void onEvtUserCmd(Object arg0, Object arg1)
 	{
 	}
 	
@@ -164,13 +156,13 @@ public class L2DoorAI extends L2CharacterAI
 		@Override
 		public void run()
 		{
-			for (L2DefenderInstance guard : _door.getKnownDefenders())
+			L2World.getInstance().forEachVisibleObject(_door, L2DefenderInstance.class, guard ->
 			{
-				if (_actor.isInsideRadius(guard, guard.getTemplate().getClanHelpRange(), false, true) && (Math.abs(_attacker.getZ() - guard.getZ()) < 200))
+				if (_actor.isInsideRadius(guard, guard.getTemplate().getClanHelpRange(), true, true))
 				{
 					guard.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _attacker, 15);
 				}
-			}
+			});
 		}
 	}
 }

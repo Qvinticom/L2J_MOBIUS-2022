@@ -48,13 +48,15 @@ public class GeoNode extends AbstractNode<GeoNodeLoc>
 		return _neighbors;
 	}
 	
-	public void attachNeighbors(GeoNode[] neighbors)
+	public void attachNeighbors()
 	{
-		_neighbors = neighbors;
-	}
-	
-	public int getNeighborsIdx()
-	{
-		return _neighborsIdx;
+		if (getLoc() == null)
+		{
+			_neighbors = null;
+		}
+		else
+		{
+			_neighbors = GeoPathFinding.getInstance().readNeighbors(this, _neighborsIdx);
+		}
 	}
 }

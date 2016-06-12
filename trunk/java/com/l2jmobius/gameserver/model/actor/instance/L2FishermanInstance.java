@@ -18,25 +18,17 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.List;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.base.AcquireSkillType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class L2FishermanInstance extends L2MerchantInstance
 {
-	/**
-	 * Creates a fisherman.
-	 * @param template the fisherman NPC template
-	 */
 	public L2FishermanInstance(L2NpcTemplate template)
 	{
 		super(template);
@@ -46,7 +38,18 @@ public final class L2FishermanInstance extends L2MerchantInstance
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		return "html/fisherman/" + (val == 0 ? "" + npcId : npcId + "-" + val) + ".htm";
+		String pom = "";
+		
+		if (val == 0)
+		{
+			pom = "" + npcId;
+		}
+		else
+		{
+			pom = npcId + "-" + val;
+		}
+		
+		return "data/html/fisherman/" + pom + ".htm";
 	}
 	
 	@Override
@@ -55,35 +58,6 @@ public final class L2FishermanInstance extends L2MerchantInstance
 		if (command.equalsIgnoreCase("FishSkillList"))
 		{
 			showFishSkillList(player);
-		}
-		else if (command.startsWith("FishingChampionship"))
-		{
-			if (Config.ALT_FISH_CHAMPIONSHIP_ENABLED)
-			{
-				FishingChampionshipManager.getInstance().showChampScreen(player, this);
-			}
-			else
-			{
-				sendHtml(player, this, "no_fish_event001.htm");
-			}
-		}
-		else if (command.startsWith("FishingReward"))
-		{
-			if (Config.ALT_FISH_CHAMPIONSHIP_ENABLED)
-			{
-				if (FishingChampionshipManager.getInstance().isWinner(player.getName()))
-				{
-					FishingChampionshipManager.getInstance().getReward(player);
-				}
-				else
-				{
-					sendHtml(player, this, "no_fish_event_reward001.htm");
-				}
-			}
-			else
-			{
-				sendHtml(player, this, "no_fish_event001.htm");
-			}
 		}
 		else
 		{
@@ -113,12 +87,5 @@ public final class L2FishermanInstance extends L2MerchantInstance
 		{
 			player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.FISHING));
 		}
-	}
-	
-	private static void sendHtml(L2PcInstance player, L2Npc npc, String htmlName)
-	{
-		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-		html.setFile(player.getHtmlPrefix(), "html/fisherman/championship/" + htmlName);
-		player.sendPacket(html);
 	}
 }

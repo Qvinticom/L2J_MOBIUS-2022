@@ -29,6 +29,7 @@ public class TeleportLocation extends Location
 	private final int _id;
 	private final String _name;
 	private final NpcStringId _npcStringId;
+	private final int _questZoneId;
 	private final int _feeId;
 	private final long _feeCount;
 	
@@ -38,6 +39,7 @@ public class TeleportLocation extends Location
 		_id = id;
 		_name = set.getString("name", null);
 		_npcStringId = NpcStringId.getNpcStringIdOrDefault(set.getInt("npcStringId", -1), null);
+		_questZoneId = set.getInt("questZoneId", 0);
 		_feeId = set.getInt("feeId", Inventory.ADENA_ID);
 		_feeCount = set.getLong("feeCount", 0);
 	}
@@ -55,6 +57,11 @@ public class TeleportLocation extends Location
 	public NpcStringId getNpcStringId()
 	{
 		return _npcStringId;
+	}
+	
+	public int getQuestZoneId()
+	{
+		return _questZoneId;
 	}
 	
 	public int getFeeId()

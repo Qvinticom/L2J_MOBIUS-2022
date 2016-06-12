@@ -20,17 +20,18 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author Sdw
  */
-public class AcquireSkillList extends L2GameServerPacket
+public class AcquireSkillList implements IClientOutgoingPacket
 {
 	final L2PcInstance _activeChar;
 	final List<L2SkillLearn> _learnable;
@@ -38,45 +39,39 @@ public class AcquireSkillList extends L2GameServerPacket
 	public AcquireSkillList(L2PcInstance activeChar)
 	{
 		_activeChar = activeChar;
-		_learnable = SkillTreesData.getInstance().getAvailableSkillsList(activeChar, activeChar.getClassId(), false, false);
+		_learnable = SkillTreesData.getInstance().getAvailableSkills(activeChar, activeChar.getClassId(), false, false);
+		_learnable.addAll(SkillTreesData.getInstance().getNextAvailableSkills(activeChar, activeChar.getClassId(), false, false));
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x90);
-		writeH(_learnable.size());
+		OutgoingPackets.ACQUIRE_SKILL_LIST.writeId(packet);
+		
+		packet.writeH(_learnable.size());
 		for (L2SkillLearn skill : _learnable)
 		{
-			writeD(skill.getSkillId());
-			writeD(skill.getSkillLevel());
-			writeQ(skill.getLevelUpSp());
-			writeC(skill.getGetLevel());
-			writeC(skill.getDualClassLevel());
-			writeC(skill.getRequiredItems().size());
+			packet.writeD(skill.getSkillId());
+			packet.writeD(skill.getSkillLevel());
+			packet.writeQ(skill.getLevelUpSp());
+			packet.writeC(skill.getGetLevel());
+			packet.writeC(skill.getDualClassLevel());
+			packet.writeC(skill.getRequiredItems().size());
 			for (ItemHolder item : skill.getRequiredItems())
 			{
-				writeD(item.getId());
-				writeQ(item.getCount());
+				packet.writeD(item.getId());
+				packet.writeQ(item.getCount());
 			}
 			
 			final List<Skill> skillRem = skill.getRemoveSkills().stream().map(_activeChar::getKnownSkill).filter(Objects::nonNull).collect(Collectors.toList());
 			
-			writeC(skillRem.size());
+			packet.writeC(skillRem.size());
 			for (Skill skillRemove : skillRem)
 			{
-				writeD(skillRemove.getId());
-				if (skillRemove.getLevel() < 100)
-				{
-					writeD(skillRemove.getLevel());
-				}
-				else
-				{
-					final int maxLevel = SkillData.getInstance().getMaxLevel(skillRemove.getId());
-					writeH(maxLevel);
-					writeH(skillRemove.getLevel());
-				}
+				packet.writeD(skillRemove.getId());
+				packet.writeD(skillRemove.getLevel());
 			}
 		}
+		return true;
 	}
 }

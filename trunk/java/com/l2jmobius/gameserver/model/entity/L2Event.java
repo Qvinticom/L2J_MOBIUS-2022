@@ -21,13 +21,14 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -41,14 +42,11 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.PlayerEventHolder;
-import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
- * @author Nik
- * @Since 2011/05/17 21:51:39
+ * @since $Revision: 1.3.4.1 $ $Date: 2005/03/27 15:29:32 $ This ancient thingie got reworked by Nik at $Date: 2011/05/17 21:51:39 $ Yeah, for 6 years no one bothered reworking this buggy event engine.
  */
 public class L2Event
 {
@@ -59,8 +57,8 @@ public class L2Event
 	public static String _eventInfo = "";
 	public static int _teamsNumber = 0;
 	public static final Map<Integer, String> _teamNames = new ConcurrentHashMap<>();
-	public static final List<L2PcInstance> _registeredPlayers = new CopyOnWriteArrayList<>();
-	public static final Map<Integer, List<L2PcInstance>> _teams = new ConcurrentHashMap<>();
+	public static final Set<L2PcInstance> _registeredPlayers = ConcurrentHashMap.newKeySet();
+	public static final Map<Integer, Set<L2PcInstance>> _teams = new ConcurrentHashMap<>();
 	public static int _npcId = 0;
 	private static final Map<L2PcInstance, PlayerEventHolder> _connectionLossData = new ConcurrentHashMap<>();
 	
@@ -82,7 +80,7 @@ public class L2Event
 			return -1;
 		}
 		
-		for (Entry<Integer, List<L2PcInstance>> team : _teams.entrySet())
+		for (Entry<Integer, Set<L2PcInstance>> team : _teams.entrySet())
 		{
 			if (team.getValue().contains(player))
 			{
@@ -96,7 +94,7 @@ public class L2Event
 	public static List<L2PcInstance> getTopNKillers(int n)
 	{
 		final Map<L2PcInstance, Integer> tmp = new HashMap<>();
-		for (List<L2PcInstance> teamList : _teams.values())
+		for (Set<L2PcInstance> teamList : _teams.values())
 		{
 			for (L2PcInstance player : teamList)
 			{
@@ -109,7 +107,15 @@ public class L2Event
 		}
 		
 		sortByValue(tmp);
-		return tmp.size() <= n ? new ArrayList<>(tmp.keySet()) : (new ArrayList<>(tmp.keySet())).subList(1, n);
+		
+		// If the map size is less than "n", n will be as much as the map size
+		if (tmp.size() <= n)
+		{
+			return new ArrayList<>(tmp.keySet());
+		}
+		
+		final List<L2PcInstance> toReturn = new ArrayList<>(tmp.keySet());
+		return toReturn.subList(1, n);
 	}
 	
 	public static void showEventHtml(L2PcInstance player, String objectid)
@@ -124,11 +130,11 @@ public class L2Event
 				
 				if (_registeredPlayers.contains(player))
 				{
-					htmContent = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/mods/EventEngine/Participating.htm");
+					htmContent = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/mods/EventEngine/Participating.htm");
 				}
 				else
 				{
-					htmContent = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/mods/EventEngine/Participation.htm");
+					htmContent = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/mods/EventEngine/Participation.htm");
 				}
 				
 				if (htmContent != null)
@@ -158,6 +164,7 @@ public class L2Event
 		try
 		{
 			final L2Spawn spawn = new L2Spawn(_npcId);
+			
 			spawn.setX(target.getX() + 50);
 			spawn.setY(target.getY() + 50);
 			spawn.setZ(target.getZ());
@@ -169,18 +176,21 @@ public class L2Event
 			spawn.init();
 			spawn.getLastSpawn().setCurrentHp(999999999);
 			spawn.getLastSpawn().setTitle(_eventName);
-			spawn.getLastSpawn().setEventMob(true);
+			spawn.getLastSpawn().getVariables().set("eventmob", true);
+			spawn.getLastSpawn().setIsInvul(true);
 			// spawn.getLastSpawn().decayMe();
 			// spawn.getLastSpawn().spawnMe(spawn.getLastSpawn().getX(), spawn.getLastSpawn().getY(), spawn.getLastSpawn().getZ());
 			
 			spawn.getLastSpawn().broadcastPacket(new MagicSkillUse(spawn.getLastSpawn(), spawn.getLastSpawn(), 1034, 1, 1, 1));
 			
 			// _npcs.add(spawn.getLastSpawn());
+			
 		}
 		catch (Exception e)
 		{
 			_log.log(Level.WARNING, "Exception on spawn(): " + e.getMessage(), e);
 		}
+		
 	}
 	
 	/**
@@ -191,7 +201,7 @@ public class L2Event
 		SpawnTable.getInstance().forEachSpawn(spawn ->
 		{
 			final L2Npc npc = spawn.getLastSpawn();
-			if ((npc != null) && npc.isEventMob())
+			if ((npc != null) && npc.getVariables().getBoolean("eventmob", false))
 			{
 				npc.deleteMe();
 				spawn.stopRespawn();
@@ -215,25 +225,20 @@ public class L2Event
 		switch (eventState)
 		{
 			case OFF:
-			{
 				return false;
-			}
 			case STANDBY:
-			{
 				return _registeredPlayers.contains(player);
-			}
 			case ON:
-			{
-				for (List<L2PcInstance> teamList : _teams.values())
+				for (Set<L2PcInstance> teamList : _teams.values())
 				{
 					if (teamList.contains(player))
 					{
 						return true;
 					}
 				}
-			}
 		}
 		return false;
+		
 	}
 	
 	/**
@@ -255,7 +260,6 @@ public class L2Event
 		else
 		{
 			player.sendMessage("You have reached the maximum allowed participants per IP.");
-			return;
 		}
 	}
 	
@@ -265,6 +269,7 @@ public class L2Event
 	 */
 	public static void removeAndResetPlayer(L2PcInstance player)
 	{
+		
 		try
 		{
 			if (isParticipant(player))
@@ -280,10 +285,7 @@ public class L2Event
 				player.getPoly().setPolyInfo(null, "1");
 				player.decayMe();
 				player.spawnMe(player.getX(), player.getY(), player.getZ());
-				final CharInfo info1 = new CharInfo(player);
-				player.broadcastPacket(info1);
-				final UserInfo info2 = new UserInfo(player);
-				player.sendPacket(info2);
+				player.broadcastUserInfo();
 				
 				player.stopTransformation(true);
 			}
@@ -341,18 +343,12 @@ public class L2Event
 			switch (eventState)
 			{
 				case ON:
-				{
 					return "Cannot start event, it is already on.";
-				}
 				case STANDBY:
-				{
 					return "Cannot start event, it is on standby mode.";
-				}
 				case OFF: // Event is off, so no problem turning it on.
-				{
 					eventState = EventState.STANDBY;
 					break;
-				}
 			}
 			
 			// Register the event at AntiFeedManager and clean it for just in case if the event is already registered.
@@ -369,14 +365,14 @@ public class L2Event
 				return "Cannot start event, invalid npc id.";
 			}
 			
-			try (FileReader fr = new FileReader(Config.DATAPACK_ROOT + "/events/" + _eventName);
+			try (FileReader fr = new FileReader(Config.DATAPACK_ROOT + "/data/events/" + _eventName);
 				BufferedReader br = new BufferedReader(fr))
 			{
 				_eventCreator = br.readLine();
 				_eventInfo = br.readLine();
 			}
 			
-			final List<L2PcInstance> temp = new LinkedList<>();
+			final Set<L2PcInstance> temp = new HashSet<>();
 			for (L2PcInstance player : L2World.getInstance().getPlayers())
 			{
 				if (!player.isOnline())
@@ -389,13 +385,8 @@ public class L2Event
 					spawnEventNpc(player);
 					temp.add(player);
 				}
-				for (L2PcInstance playertemp : player.getKnownList().getKnownPlayers().values())
-				{
-					if ((Math.abs(playertemp.getX() - player.getX()) < 1000) && (Math.abs(playertemp.getY() - player.getY()) < 1000) && (Math.abs(playertemp.getZ() - player.getZ()) < 1000))
-					{
-						temp.add(playertemp);
-					}
-				}
+				
+				L2World.getInstance().forEachVisibleObjectInRange(player, L2PcInstance.class, 1000, temp::add);
 			}
 		}
 		catch (Exception e)
@@ -418,18 +409,12 @@ public class L2Event
 			switch (eventState)
 			{
 				case ON:
-				{
 					return "Cannot start event, it is already on.";
-				}
 				case STANDBY:
-				{
 					eventState = EventState.ON;
 					break;
-				}
 				case OFF: // Event is off, so no problem turning it on.
-				{
 					return "Cannot start event, it is off. Participation start is required.";
-				}
 			}
 			
 			// Clean the things we will use, just in case.
@@ -440,7 +425,7 @@ public class L2Event
 			// Insert empty lists at _teams.
 			for (int i = 0; i < _teamsNumber; i++)
 			{
-				_teams.put(i + 1, new CopyOnWriteArrayList<L2PcInstance>());
+				_teams.put(i + 1, ConcurrentHashMap.newKeySet());
 			}
 			
 			int i = 0;
@@ -473,6 +458,7 @@ public class L2Event
 				biggestLvlPlayer.setEventStatus();
 				i = (i + 1) % _teamsNumber;
 			}
+			
 		}
 		catch (Exception e)
 		{
@@ -492,11 +478,8 @@ public class L2Event
 		switch (eventState)
 		{
 			case OFF:
-			{
 				return "Cannot finish event, it is already off.";
-			}
 			case STANDBY:
-			{
 				for (L2PcInstance player : _registeredPlayers)
 				{
 					removeAndResetPlayer(player);
@@ -511,10 +494,8 @@ public class L2Event
 				_eventName = "";
 				eventState = EventState.OFF;
 				return "The event has been stopped at STANDBY mode, all players unregistered and all event npcs unspawned.";
-			}
 			case ON:
-			{
-				for (List<L2PcInstance> teamList : _teams.values())
+				for (Set<L2PcInstance> teamList : _teams.values())
 				{
 					for (L2PcInstance player : teamList)
 					{
@@ -535,7 +516,6 @@ public class L2Event
 				_eventCreator = "";
 				_eventInfo = "";
 				return "The event has been stopped, all players unregistered and all event npcs unspawned.";
-			}
 		}
 		
 		return "The event has been successfully finished.";

@@ -16,40 +16,26 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author ShanSoft
  */
 public class ExBuySellList extends AbstractItemPacket
 {
-	private final List<L2ItemInstance> _items = new ArrayList<>();
-	private final List<L2ItemInstance> _sellList = new ArrayList<>();
-	private L2ItemInstance[] _refundList = null;
+	private Collection<L2ItemInstance> _sellList = null;
+	private Collection<L2ItemInstance> _refundList = null;
 	private final boolean _done;
+	private double _taxRate = 1;
 	
 	public ExBuySellList(L2PcInstance player, boolean done)
 	{
-		for (L2ItemInstance item : player.getInventory().getItems())
-		{
-			if (!item.isQuestItem())
-			{
-				_items.add(item);
-			}
-		}
-		
-		for (L2ItemInstance item : player.getInventory().getAvailableItems(false, false, false))
-		{
-			if (item.isSellable())
-			{
-				_sellList.add(item);
-			}
-		}
-		
+		_sellList = player.getInventory().getAvailableItems(false, false, false);
 		if (player.hasRefund())
 		{
 			_refundList = player.getRefund().getItems();
@@ -57,44 +43,51 @@ public class ExBuySellList extends AbstractItemPacket
 		_done = done;
 	}
 	
-	@Override
-	protected final void writeImpl()
+	public ExBuySellList(L2PcInstance player, boolean done, double taxRate)
 	{
-		writeC(0xFE);
-		writeH(0xB8);
-		writeD(0x01);
-		writeD(_items.size());
+		this(player, done);
+		_taxRate = 1 - taxRate;
+	}
+	
+	@Override
+	public boolean write(PacketWriter packet)
+	{
+		OutgoingPackets.EX_BUY_SELL_LIST.writeId(packet);
 		
-		if (_sellList.size() > 0)
+		packet.writeD(0x01); // Type SELL
+		packet.writeD(0x00); // TODO: inventory count
+		
+		if ((_sellList != null))
 		{
-			writeH(_sellList.size());
+			packet.writeH(_sellList.size());
 			for (L2ItemInstance item : _sellList)
 			{
-				writeItem(item);
-				writeQ(item.getItem().getReferencePrice() / 2);
+				writeItem(packet, item);
+				packet.writeQ((long) ((item.getItem().getReferencePrice() / 2) * _taxRate));
 			}
 		}
 		else
 		{
-			writeH(0x00);
+			packet.writeH(0x00);
 		}
 		
-		if ((_refundList != null) && (_refundList.length > 0))
+		if ((_refundList != null) && !_refundList.isEmpty())
 		{
-			writeH(_refundList.length);
+			packet.writeH(_refundList.size());
 			int i = 0;
 			for (L2ItemInstance item : _refundList)
 			{
-				writeItem(item);
-				writeD(i++);
-				writeQ((item.getItem().getReferencePrice() / 2) * item.getCount());
+				writeItem(packet, item);
+				packet.writeD(i++);
+				packet.writeQ((item.getItem().getReferencePrice() / 2) * item.getCount());
 			}
 		}
 		else
 		{
-			writeH(0x00);
+			packet.writeH(0x00);
 		}
 		
-		writeC(_done ? 0x01 : 0x00);
+		packet.writeC(_done ? 0x01 : 0x00);
+		return true;
 	}
 }

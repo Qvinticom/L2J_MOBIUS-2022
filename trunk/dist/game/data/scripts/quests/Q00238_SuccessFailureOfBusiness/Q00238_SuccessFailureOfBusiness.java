@@ -27,8 +27,7 @@ import quests.Q00237_WindsOfChange.Q00237_WindsOfChange;
 import quests.Q00239_WontYouJoinUs.Q00239_WontYouJoinUs;
 
 /**
- * Success/Failure Of Business (238)<br>
- * Original Jython script by Bloodshed.
+ * Success/Failure Of Business (238)
  * @author Joxit
  */
 public class Q00238_SuccessFailureOfBusiness extends Quest
@@ -51,7 +50,7 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 	
 	public Q00238_SuccessFailureOfBusiness()
 	{
-		super(238, Q00238_SuccessFailureOfBusiness.class.getSimpleName(), "Success/Failure Of Business");
+		super(238);
 		addStartNpc(HELVETICA);
 		addTalkId(HELVETICA);
 		addKillId(BRAZIER_OF_PURITY, EVIL_SPIRITS, GUARDIAN_SPIRITS);
@@ -61,8 +60,8 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return null;
 		}
@@ -71,25 +70,19 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 		switch (event)
 		{
 			case "32461-02.htm":
-			{
 				htmltext = event;
 				break;
-			}
 			case "32461-03.html":
-			{
-				qs.startQuest();
+				st.startQuest();
 				htmltext = event;
 				break;
-			}
 			case "32461-06.html":
-			{
-				if (qs.isCond(2))
+				if (st.isCond(2))
 				{
-					qs.setCond(3, true);
+					st.setCond(3, true);
 					htmltext = event;
 				}
 				break;
-			}
 		}
 		return htmltext;
 	}
@@ -102,18 +95,18 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 			final L2PcInstance partyMember = getRandomPartyMember(killer, 1);
 			if (partyMember != null)
 			{
-				final QuestState qs = getQuestState(partyMember, false);
-				if (getQuestItemsCount(killer, BROKEN_PIECE_OF_MAGIC_FORCE) < BROKEN_PIECE_OF_MAGIC_FORCE_NEEDED)
+				final QuestState st = getQuestState(partyMember, false);
+				if (getQuestItemsCount(partyMember, BROKEN_PIECE_OF_MAGIC_FORCE) < BROKEN_PIECE_OF_MAGIC_FORCE_NEEDED)
 				{
-					giveItems(killer, BROKEN_PIECE_OF_MAGIC_FORCE, 1);
+					giveItems(partyMember, BROKEN_PIECE_OF_MAGIC_FORCE, 1);
 				}
-				if (getQuestItemsCount(killer, BROKEN_PIECE_OF_MAGIC_FORCE) == BROKEN_PIECE_OF_MAGIC_FORCE_NEEDED)
+				if (getQuestItemsCount(partyMember, BROKEN_PIECE_OF_MAGIC_FORCE) == BROKEN_PIECE_OF_MAGIC_FORCE_NEEDED)
 				{
-					qs.setCond(2, true);
+					st.setCond(2, true);
 				}
 				else
 				{
-					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
@@ -122,18 +115,18 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 			final L2PcInstance partyMember = getRandomPartyMember(killer, 3);
 			if ((partyMember != null) && (getRandom(100) < CHANCE_FOR_FRAGMENT))
 			{
-				final QuestState qs = getQuestState(partyMember, false);
-				if (getQuestItemsCount(killer, GUARDIAN_SPIRIT_FRAGMENT) < GUARDIAN_SPIRIT_FRAGMENT_NEEDED)
+				final QuestState st = getQuestState(partyMember, false);
+				if (getQuestItemsCount(partyMember, GUARDIAN_SPIRIT_FRAGMENT) < GUARDIAN_SPIRIT_FRAGMENT_NEEDED)
 				{
-					giveItems(killer, GUARDIAN_SPIRIT_FRAGMENT, 1);
+					giveItems(partyMember, GUARDIAN_SPIRIT_FRAGMENT, 1);
 				}
-				if (getQuestItemsCount(killer, GUARDIAN_SPIRIT_FRAGMENT) == GUARDIAN_SPIRIT_FRAGMENT_NEEDED)
+				if (getQuestItemsCount(partyMember, GUARDIAN_SPIRIT_FRAGMENT) == GUARDIAN_SPIRIT_FRAGMENT_NEEDED)
 				{
-					qs.setCond(4, true);
+					st.setCond(4, true);
 				}
 				else
 				{
-					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
@@ -141,31 +134,28 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
+		String htmltext = getNoQuestMsg(talker);
+		final QuestState st = getQuestState(talker, true);
+		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		switch (qs.getState())
+		switch (st.getState())
 		{
 			case State.COMPLETED:
-			{
 				htmltext = "32461-09.html";
 				break;
-			}
 			case State.CREATED:
-			{
-				final QuestState q237 = qs.getPlayer().getQuestState(Q00237_WindsOfChange.class.getSimpleName());
-				final QuestState q239 = qs.getPlayer().getQuestState(Q00239_WontYouJoinUs.class.getSimpleName());
+				final QuestState q237 = st.getPlayer().getQuestState(Q00237_WindsOfChange.class.getSimpleName());
+				final QuestState q239 = st.getPlayer().getQuestState(Q00239_WontYouJoinUs.class.getSimpleName());
 				if ((q239 != null) && q239.isCompleted())
 				{
 					htmltext = "32461-10.html";
 				}
-				else if ((q237 != null) && q237.isCompleted() && (player.getLevel() >= MIN_LEVEL) && hasQuestItems(player, VICINITY_OF_FOS))
+				else if ((q237 != null) && q237.isCompleted() && (talker.getLevel() >= MIN_LEVEL) && hasQuestItems(talker, VICINITY_OF_FOS))
 				{
 					htmltext = "32461-01.htm";
 				}
@@ -174,45 +164,34 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 					htmltext = "32461-00.html";
 				}
 				break;
-			}
 			case State.STARTED:
-			{
-				switch (qs.getCond())
+				switch (st.getCond())
 				{
 					case 1:
-					{
 						htmltext = "32461-04.html";
 						break;
-					}
 					case 2:
-					{
-						if (getQuestItemsCount(player, BROKEN_PIECE_OF_MAGIC_FORCE) == BROKEN_PIECE_OF_MAGIC_FORCE_NEEDED)
+						if (getQuestItemsCount(talker, BROKEN_PIECE_OF_MAGIC_FORCE) == BROKEN_PIECE_OF_MAGIC_FORCE_NEEDED)
 						{
 							htmltext = "32461-05.html";
-							takeItems(player, BROKEN_PIECE_OF_MAGIC_FORCE, -1);
+							takeItems(talker, BROKEN_PIECE_OF_MAGIC_FORCE, -1);
 						}
 						break;
-					}
 					case 3:
-					{
 						htmltext = "32461-07.html";
 						break;
-					}
 					case 4:
-					{
-						if (getQuestItemsCount(player, GUARDIAN_SPIRIT_FRAGMENT) == GUARDIAN_SPIRIT_FRAGMENT_NEEDED)
+						if (getQuestItemsCount(talker, GUARDIAN_SPIRIT_FRAGMENT) == GUARDIAN_SPIRIT_FRAGMENT_NEEDED)
 						{
 							htmltext = "32461-08.html";
-							giveAdena(player, 283346, true);
-							takeItems(player, VICINITY_OF_FOS, 1);
-							addExpAndSp(player, 1319736, 103553);
-							qs.exitQuest(false, true);
+							giveAdena(talker, 283346, true);
+							takeItems(talker, VICINITY_OF_FOS, 1);
+							addExpAndSp(talker, 1319736, 103553);
+							st.exitQuest(false, true);
 						}
 						break;
-					}
 				}
 				break;
-			}
 		}
 		return htmltext;
 	}

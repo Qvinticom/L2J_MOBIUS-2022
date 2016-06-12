@@ -16,11 +16,16 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.data.xml.impl.TransformData;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Transformation effect implementation.
@@ -28,30 +33,43 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class Transformation extends AbstractEffect
 {
-	private final int _id;
+	private final List<Integer> _id;
 	
-	public Transformation(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Transformation(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
-		_id = params.getInt("id", 0);
+		final String ids = params.getString("transformationId", null);
+		if ((ids != null) && !ids.isEmpty())
+		{
+			_id = new ArrayList<>();
+			for (String id : ids.split(";"))
+			{
+				_id.add(Integer.parseInt(id));
+			}
+		}
+		else
+		{
+			_id = Collections.emptyList();
+		}
 	}
 	
 	@Override
 	public boolean canStart(BuffInfo info)
 	{
-		return info.getEffected().isPlayer();
+		return !info.getEffected().isDoor();
+	}
+	
+	@Override
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	{
+		if (!_id.isEmpty())
+		{
+			effected.transform(_id.get(Rnd.get(_id.size())), true);
+		}
 	}
 	
 	@Override
 	public void onExit(BuffInfo info)
 	{
 		info.getEffected().stopTransformation(false);
-	}
-	
-	@Override
-	public void onStart(BuffInfo info)
-	{
-		TransformData.getInstance().transformPlayer(_id, info.getEffected().getActingPlayer());
 	}
 }

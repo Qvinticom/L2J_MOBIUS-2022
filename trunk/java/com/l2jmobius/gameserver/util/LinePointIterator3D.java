@@ -75,7 +75,7 @@ public final class LinePointIterator3D
 			_first = false;
 			return true;
 		}
-		if ((_dx >= _dy) && (_dx >= _dz))
+		else if ((_dx >= _dy) && (_dx >= _dz))
 		{
 			if (_srcX != _dstX)
 			{
@@ -121,25 +121,28 @@ public final class LinePointIterator3D
 				return true;
 			}
 		}
-		else if (_srcZ != _dstZ)
+		else
 		{
-			_srcZ += _sz;
-			
-			_error += _dx;
-			if (_error >= _dz)
+			if (_srcZ != _dstZ)
 			{
-				_srcX += _sx;
-				_error -= _dz;
+				_srcZ += _sz;
+				
+				_error += _dx;
+				if (_error >= _dz)
+				{
+					_srcX += _sx;
+					_error -= _dz;
+				}
+				
+				_error2 += _dy;
+				if (_error2 >= _dz)
+				{
+					_srcY += _sy;
+					_error2 -= _dz;
+				}
+				
+				return true;
 			}
-			
-			_error2 += _dy;
-			if (_error2 >= _dz)
-			{
-				_srcY += _sy;
-				_error2 -= _dz;
-			}
-			
-			return true;
 		}
 		
 		return false;
@@ -158,5 +161,11 @@ public final class LinePointIterator3D
 	public int z()
 	{
 		return _srcZ;
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "[" + _srcX + ", " + _srcY + ", " + _srcZ + "]";
 	}
 }

@@ -35,7 +35,12 @@ public class ChannelInfo implements IUserCommandHandler
 	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
-		if ((id != COMMAND_IDS[0]) || (activeChar.getParty() == null) || (activeChar.getParty().getCommandChannel() == null))
+		if (id != COMMAND_IDS[0])
+		{
+			return false;
+		}
+		
+		if ((activeChar.getParty() == null) || (activeChar.getParty().getCommandChannel() == null))
 		{
 			return false;
 		}

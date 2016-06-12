@@ -18,29 +18,31 @@ package com.l2jmobius.gameserver.network.clientpackets.adenadistribution;
 
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2CommandChannel;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.request.AdenaDistributionRequest;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.adenadistribution.ExDivideAdenaStart;
 
 /**
  * @author Sdw
  */
-public class RequestDivideAdenaStart extends L2GameClientPacket
+public class RequestDivideAdenaStart implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// Nothing to read
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -61,8 +63,7 @@ public class RequestDivideAdenaStart extends L2GameClientPacket
 			player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_YOU_ARE_NOT_AN_ALLIANCE_LEADER_OR_PARTY_LEADER);
 			return;
 		}
-		
-		if (!party.isLeader(player))
+		else if (!party.isLeader(player))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_YOU_ARE_NOT_A_PARTY_LEADER);
 			return;
@@ -91,11 +92,5 @@ public class RequestDivideAdenaStart extends L2GameClientPacket
 		});
 		
 		player.sendPacket(ExDivideAdenaStart.STATIC_PACKET);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
 	}
 }

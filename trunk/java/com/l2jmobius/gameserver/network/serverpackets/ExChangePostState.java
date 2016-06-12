@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
 /**
  * @author Migi
  */
-public class ExChangePostState extends L2GameServerPacket
+public class ExChangePostState implements IClientOutgoingPacket
 {
 	private final boolean _receivedBoard;
 	private final int[] _changedMsgIds;
@@ -43,16 +46,17 @@ public class ExChangePostState extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xB4);
-		writeD(_receivedBoard ? 1 : 0);
-		writeD(_changedMsgIds.length);
+		OutgoingPackets.EX_CHANGE_POST_STATE.writeId(packet);
+		
+		packet.writeD(_receivedBoard ? 1 : 0);
+		packet.writeD(_changedMsgIds.length);
 		for (int postId : _changedMsgIds)
 		{
-			writeD(postId); // postId
-			writeD(_changeId); // state
+			packet.writeD(postId); // postId
+			packet.writeD(_changeId); // state
 		}
+		return true;
 	}
 }

@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExAskJoinPartyRoom;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -26,20 +28,21 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Format: (ch) S
  * @author -Wooden-, Tryskell
  */
-public class RequestAskJoinPartyRoom extends L2GameClientPacket
+public class RequestAskJoinPartyRoom implements IClientIncomingPacket
 {
 	private String _name;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_name = readS();
+		_name = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -63,11 +66,5 @@ public class RequestAskJoinPartyRoom extends L2GameClientPacket
 		{
 			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return "[C] D0:14 RequestAskJoinPartyRoom";
 	}
 }

@@ -46,6 +46,10 @@ public class ConditionTargetAggro extends Condition
 		{
 			return ((L2MonsterInstance) effected).isAggressive() == _isAggro;
 		}
-		return (effected instanceof L2PcInstance) && (((L2PcInstance) effected).getReputation() < 0);
+		if (effected instanceof L2PcInstance)
+		{
+			return ((L2PcInstance) effected).getReputation() < 0;
+		}
+		return false;
 	}
 }

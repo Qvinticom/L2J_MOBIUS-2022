@@ -39,7 +39,7 @@ public class ItemFilter implements Filter
 	static
 	{
 		EXCLUDED_ITEM_TYPES.add(EtcItemType.ARROW);
-		EXCLUDED_ITEM_TYPES.add(EtcItemType.SHOT);
+		EXCLUDED_ITEM_TYPES.add(EtcItemType.SOULSHOT);
 	}
 	
 	@Override

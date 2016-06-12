@@ -19,7 +19,6 @@ package quests.Q00344_1000YearsTheEndOfLamentation;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -79,7 +78,7 @@ public final class Q00344_1000YearsTheEndOfLamentation extends Quest
 	
 	public Q00344_1000YearsTheEndOfLamentation()
 	{
-		super(344, Q00344_1000YearsTheEndOfLamentation.class.getSimpleName(), "1000 years, the End of Lamentation");
+		super(344);
 		addStartNpc(GILMORE);
 		addTalkId(KAIEN, GARVARENTZ, GILMORE, RODEMAI, ORVEN);
 		addKillId(MONSTER_CHANCES.keySet());
@@ -128,7 +127,6 @@ public final class Q00344_1000YearsTheEndOfLamentation extends Quest
 						if (getRandom(1000) >= count)
 						{
 							giveAdena(player, count * 60, true);
-							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							htmltext = event;
 						}
 						else

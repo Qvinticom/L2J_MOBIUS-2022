@@ -16,28 +16,32 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.L2RecipeInstance;
 import com.l2jmobius.gameserver.model.L2RecipeList;
 import com.l2jmobius.gameserver.model.L2RecipeStatInstance;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * The Class RecipeData.
  * @author Zoey76
  */
-public class RecipeData implements IXmlReader
+public class RecipeData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(RecipeData.class.getName());
+	
 	private final Map<Integer, L2RecipeList> _recipes = new HashMap<>();
 	
 	/**
@@ -52,12 +56,12 @@ public class RecipeData implements IXmlReader
 	public void load()
 	{
 		_recipes.clear();
-		parseDatapackFile("Recipes.xml");
+		parseDatapackFile("data/recipes.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _recipes.size() + " recipes.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		// TODO: Cleanup checks enforced by XSD.
 		final List<L2RecipeInstance> recipePartList = new ArrayList<>();
@@ -161,7 +165,9 @@ public class RecipeData implements IXmlReader
 							}
 							else if ("ingredient".equalsIgnoreCase(c.getNodeName()))
 							{
-								recipePartList.add(new L2RecipeInstance(Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue()), Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue())));
+								final int ingId = Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue());
+								final int ingCount = Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue());
+								recipePartList.add(new L2RecipeInstance(ingId, ingCount));
 							}
 							else if ("production".equalsIgnoreCase(c.getNodeName()))
 							{
@@ -251,7 +257,7 @@ public class RecipeData implements IXmlReader
 		final L2RecipeList recipeList = _recipes.get(id);
 		if ((recipeList == null) || (recipeList.getRecipes().length == 0))
 		{
-			player.sendMessage(getClass().getSimpleName() + ": No recipe for: " + id);
+			player.sendMessage("No recipe for: " + id);
 			player.isInCraftMode(false);
 			return null;
 		}

@@ -16,14 +16,15 @@
  */
 package ai;
 
-import com.l2jmobius.gameserver.enums.ChatType;
+import java.util.logging.Logger;
+
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.MinionHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
+import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
@@ -32,9 +33,11 @@ import com.l2jmobius.gameserver.util.Broadcast;
  */
 public abstract class AbstractNpcAI extends Quest
 {
-	public AbstractNpcAI(String name, String descr)
+	protected final Logger _log = Logger.getLogger(getClass().getName());
+	
+	public AbstractNpcAI()
 	{
-		super(-1, name, descr);
+		super(-1);
 	}
 	
 	/**
@@ -71,62 +74,29 @@ public abstract class AbstractNpcAI extends Quest
 	}
 	
 	/**
-	 * Broadcasts NpcSay packet to all known players with custom string.
-	 * @param npc
-	 * @param type
-	 * @param text
+	 * Broadcasts SocialAction packet to self and known players.
+	 * @param character
+	 * @param actionId
 	 */
-	protected void broadcastNpcSay(L2Npc npc, ChatType type, String text)
+	protected void broadcastSocialAction(L2Character character, int actionId)
 	{
-		Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getDisplayId(), text));
+		Broadcast.toSelfAndKnownPlayers(character, new SocialAction(character.getObjectId(), actionId));
 	}
 	
 	/**
-	 * Broadcasts NpcSay packet to all known players with npc string id.
-	 * @param npc
-	 * @param type
-	 * @param stringId
-	 */
-	protected void broadcastNpcSay(L2Npc npc, ChatType type, NpcStringId stringId)
-	{
-		Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getDisplayId(), stringId));
-	}
-	
-	/**
-	 * Broadcasts NpcSay packet to all known players with npc string id.
-	 * @param npc
-	 * @param type
-	 * @param stringId
-	 * @param parameters
-	 */
-	protected void broadcastNpcSay(L2Npc npc, ChatType type, NpcStringId stringId, String... parameters)
-	{
-		final NpcSay say = new NpcSay(npc.getObjectId(), type, npc.getTemplate().getDisplayId(), stringId);
-		if (parameters != null)
-		{
-			for (String parameter : parameters)
-			{
-				say.addStringParameter(parameter);
-			}
-		}
-		Broadcast.toKnownPlayers(npc, say);
-	}
-	
-	/**
-	 * Broadcasts NpcSay packet to all known players with npc string id in specific radius.
-	 * @param npc
-	 * @param type
-	 * @param stringId
+	 * Broadcasts SocialAction packet to self and known players in specific radius.
+	 * @param character
+	 * @param actionId
 	 * @param radius
 	 */
-	protected void broadcastNpcSay(L2Npc npc, ChatType type, NpcStringId stringId, int radius)
+	protected void broadcastSocialAction(L2Character character, int actionId, int radius)
 	{
-		Broadcast.toKnownPlayersInRadius(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getDisplayId(), stringId), radius);
+		Broadcast.toSelfAndKnownPlayersInRadius(character, new SocialAction(character.getObjectId(), actionId), radius);
 	}
 	
 	public void spawnMinions(L2Npc npc, String spawnName)
 	{
-		for (MinionHolder is : npc.getTemplate().getParameters().getMinionList(spawnName))
+		for (MinionHolder is : npc.getParameters().getMinionList(spawnName))
 		{
 			addMinion((L2MonsterInstance) npc, is.getId());
 		}

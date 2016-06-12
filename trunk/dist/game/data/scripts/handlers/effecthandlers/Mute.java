@@ -18,24 +18,23 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Mute effect implementation.
  */
 public final class Mute extends AbstractEffect
 {
-	public Mute(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Mute(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public int getEffectFlags()
+	public long getEffectFlags()
 	{
 		return EffectFlag.MUTED.getMask();
 	}
@@ -47,9 +46,9 @@ public final class Mute extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().abortCast();
-		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_MUTED);
+		effected.abortCast();
+		effected.getAI().notifyEvent(CtrlEvent.EVT_MUTED);
 	}
 }

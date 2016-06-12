@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.loginserverpackets;
 
-import com.l2jmobius.util.network.BaseRecievePacket;
+import com.l2jmobius.commons.util.network.BaseRecievePacket;
 
 public class InitLS extends BaseRecievePacket
 {
@@ -43,4 +43,5 @@ public class InitLS extends BaseRecievePacket
 		final int size = readD();
 		_key = readB(size);
 	}
+	
 }

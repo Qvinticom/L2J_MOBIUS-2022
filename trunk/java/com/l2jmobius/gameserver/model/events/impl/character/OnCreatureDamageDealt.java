@@ -33,8 +33,9 @@ public class OnCreatureDamageDealt implements IBaseEvent
 	private final Skill _skill;
 	private final boolean _crit;
 	private final boolean _damageOverTime;
+	private final boolean _reflect;
 	
-	public OnCreatureDamageDealt(L2Character attacker, L2Character target, double damage, Skill skill, boolean crit, boolean damageOverTime)
+	public OnCreatureDamageDealt(L2Character attacker, L2Character target, double damage, Skill skill, boolean crit, boolean damageOverTime, boolean reflect)
 	{
 		_attacker = attacker;
 		_target = target;
@@ -42,6 +43,7 @@ public class OnCreatureDamageDealt implements IBaseEvent
 		_skill = skill;
 		_crit = crit;
 		_damageOverTime = damageOverTime;
+		_reflect = reflect;
 	}
 	
 	public final L2Character getAttacker()
@@ -72,6 +74,11 @@ public class OnCreatureDamageDealt implements IBaseEvent
 	public boolean isDamageOverTime()
 	{
 		return _damageOverTime;
+	}
+	
+	public boolean isReflect()
+	{
+		return _reflect;
 	}
 	
 	@Override

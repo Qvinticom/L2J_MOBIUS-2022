@@ -40,26 +40,27 @@ public final class Q00298_LizardmensConspiracy extends Quest
 	private static final int SHINING_RED_GEM = 7184;
 	// Monsters
 	private static final Map<Integer, ItemChanceHolder> MONSTERS = new HashMap<>();
+	
 	static
 	{
-		MONSTERS.put(20922, new ItemChanceHolder(SHINING_GEM, 0.49, 1)); // Maille Lizardman Warrio
-		MONSTERS.put(20923, new ItemChanceHolder(SHINING_GEM, 0.70, 1)); // Maille Lizardman Shaman
-		MONSTERS.put(20924, new ItemChanceHolder(SHINING_GEM, 0.75, 1)); // Maille Lizardman Matriarch
-		MONSTERS.put(20926, new ItemChanceHolder(SHINING_RED_GEM, 0.54, 1)); // Giant Araneid
-		MONSTERS.put(20927, new ItemChanceHolder(SHINING_RED_GEM, 0.64, 1)); // King Araneid
+		MONSTERS.put(20922, new ItemChanceHolder(SHINING_GEM, 0.49, 1));
+		MONSTERS.put(20924, new ItemChanceHolder(SHINING_GEM, 0.75, 1));
+		MONSTERS.put(20926, new ItemChanceHolder(SHINING_RED_GEM, 0.54, 1));
+		MONSTERS.put(20927, new ItemChanceHolder(SHINING_RED_GEM, 0.54, 1));
+		MONSTERS.put(20922, new ItemChanceHolder(SHINING_GEM, 0.70, 1));
 	}
-	// Reward
-	private static final int SP_REWARD = 10;
+	
 	// Misc
-	private static final int MIN_LVL = 25;
+	private static final int MIN_LEVEL = 25;
 	
 	public Q00298_LizardmensConspiracy()
 	{
-		super(298, Q00298_LizardmensConspiracy.class.getSimpleName(), "Lizardmen's Conspiracy");
+		super(298);
 		addStartNpc(GUARD_PRAGA);
 		addTalkId(GUARD_PRAGA, MAGISTER_ROHMER);
 		addKillId(MONSTERS.keySet());
 		registerQuestItems(PATROLS_REPORT, SHINING_GEM, SHINING_RED_GEM);
+		addCondMinLevel(MIN_LEVEL, "30333-02.htm");
 	}
 	
 	@Override
@@ -76,12 +77,9 @@ public final class Q00298_LizardmensConspiracy extends Quest
 		{
 			case "30333-03.htm":
 			{
-				if (qs.isCreated())
-				{
-					qs.startQuest();
-					giveItems(player, PATROLS_REPORT, 1);
-					htmltext = event;
-				}
+				qs.startQuest();
+				giveItems(player, PATROLS_REPORT, 1);
+				htmltext = event;
 				break;
 			}
 			case "30344-04.html":
@@ -96,15 +94,18 @@ public final class Q00298_LizardmensConspiracy extends Quest
 			}
 			case "30344-06.html":
 			{
-				if (qs.isCond(3))
+				if (qs.isStarted())
 				{
-					addExpAndSp(player, 0, SP_REWARD);
-					qs.exitQuest(true, true);
-					htmltext = event;
-				}
-				else
-				{
-					htmltext = "30344-07.html";
+					if (qs.isCond(3))
+					{
+						addExpAndSp(player, 0, 10);
+						qs.exitQuest(true, true);
+						htmltext = event;
+					}
+					else
+					{
+						htmltext = "30344-07.html";
+					}
 				}
 				break;
 			}
@@ -136,7 +137,7 @@ public final class Q00298_LizardmensConspiracy extends Quest
 		String htmltext = getNoQuestMsg(talker);
 		if (qs.isCreated() && (npc.getId() == GUARD_PRAGA))
 		{
-			htmltext = (talker.getLevel() >= MIN_LVL) ? "30333-01.htm" : "30333-02.htm";
+			htmltext = "30333-01.htm";
 		}
 		else if (qs.isStarted())
 		{

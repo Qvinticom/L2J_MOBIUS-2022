@@ -28,8 +28,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 
 /**
- * Collecting in the Air (10274)<br>
- * Original Jython script by Kerberos v1.0 on 2009/04/26.
+ * Collecting in the Air (10274)
  * @author nonom
  */
 public class Q10274_CollectingInTheAir extends Quest
@@ -57,7 +56,7 @@ public class Q10274_CollectingInTheAir extends Quest
 	
 	public Q10274_CollectingInTheAir()
 	{
-		super(10274, Q10274_CollectingInTheAir.class.getSimpleName(), "Collecting in the Air");
+		super(10274);
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
 		addSkillSeeId(MOBS);

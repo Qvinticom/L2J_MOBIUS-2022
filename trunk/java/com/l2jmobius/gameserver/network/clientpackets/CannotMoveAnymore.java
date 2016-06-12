@@ -17,36 +17,37 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * This class ...
  * @version $Revision: 1.1.2.1.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class CannotMoveAnymore extends L2GameClientPacket
+public final class CannotMoveAnymore implements IClientIncomingPacket
 {
-	private static final String _C__47_STOPMOVE = "[C] 47 CannotMoveAnymore";
-	
 	private int _x;
 	private int _y;
 	private int _z;
 	private int _heading;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_x = readD();
-		_y = readD();
-		_z = readD();
-		_heading = readD();
+		_x = packet.readD();
+		_y = packet.readD();
+		_z = packet.readD();
+		_heading = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -54,7 +55,7 @@ public final class CannotMoveAnymore extends L2GameClientPacket
 		
 		if (Config.DEBUG)
 		{
-			_log.fine("client: x:" + _x + " y:" + _y + " z:" + _z + " server x:" + player.getX() + " y:" + player.getY() + " z:" + player.getZ());
+			_log.finer("client: x:" + _x + " y:" + _y + " z:" + _z + " server x:" + player.getX() + " y:" + player.getY() + " z:" + player.getZ());
 		}
 		if (player.getAI() != null)
 		{
@@ -67,21 +68,15 @@ public final class CannotMoveAnymore extends L2GameClientPacket
 		// player.stopMove();
 		//
 		// if (Config.DEBUG)
-		// _log.fine("client: x:"+_x+" y:"+_y+" z:"+_z+
+		// LOGGER.finer("client: x:"+_x+" y:"+_y+" z:"+_z+
 		// " server x:"+player.getX()+" y:"+player.getZ()+" z:"+player.getZ());
 		// StopMove smwl = new StopMove(player);
-		// getClient().getActiveChar().sendPacket(smwl);
-		// getClient().getActiveChar().broadcastPacket(smwl);
+		// client.getActiveChar().sendPacket(smwl);
+		// client.getActiveChar().broadcastPacket(smwl);
 		//
-		// StopRotation sr = new StopRotation(getClient().getActiveChar(),
+		// StopRotation sr = new StopRotation(client.getActiveChar(),
 		// _heading);
-		// getClient().getActiveChar().sendPacket(sr);
-		// getClient().getActiveChar().broadcastPacket(sr);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__47_STOPMOVE;
+		// client.getActiveChar().sendPacket(sr);
+		// client.getActiveChar().broadcastPacket(sr);
 	}
 }

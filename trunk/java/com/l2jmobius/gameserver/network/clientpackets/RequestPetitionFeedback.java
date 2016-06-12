@@ -19,18 +19,17 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.logging.Level;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * @author Plim
  */
-public class RequestPetitionFeedback extends L2GameClientPacket
+public class RequestPetitionFeedback implements IClientIncomingPacket
 {
-	private static final String _C__C9_REQUESTPETITIONFEEDBACK = "[C] C9 RequestPetitionFeedback";
-	
 	private static final String INSERT_FEEDBACK = "INSERT INTO petition_feedback VALUES (?,?,?,?,?)";
 	
 	// cdds
@@ -39,18 +38,19 @@ public class RequestPetitionFeedback extends L2GameClientPacket
 	private String _message;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		// _unknown =
-		readD(); // unknown
-		_rate = readD();
-		_message = readS();
+		packet.readD(); // unknown
+		_rate = packet.readD();
+		_message = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		
 		if ((player == null) || (player.getLastPetitionGmName() == null))
 		{
@@ -74,13 +74,8 @@ public class RequestPetitionFeedback extends L2GameClientPacket
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.SEVERE, "Error while saving petition feedback");
+			_log.severe("Error while saving petition feedback");
 		}
 	}
 	
-	@Override
-	public String getType()
-	{
-		return _C__C9_REQUESTPETITIONFEEDBACK;
-	}
 }

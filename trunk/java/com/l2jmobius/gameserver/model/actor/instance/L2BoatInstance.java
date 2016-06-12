@@ -34,10 +34,6 @@ public class L2BoatInstance extends L2Vehicle
 {
 	protected static final Logger _logBoat = Logger.getLogger(L2BoatInstance.class.getName());
 	
-	/**
-	 * Creates a boat.
-	 * @param template the boat template
-	 */
 	public L2BoatInstance(L2CharTemplate template)
 	{
 		super(template);
@@ -86,9 +82,9 @@ public class L2BoatInstance extends L2Vehicle
 	}
 	
 	@Override
-	public void stopMove(Location loc, boolean updateKnownObjects)
+	public void stopMove(Location loc)
 	{
-		super.stopMove(loc, updateKnownObjects);
+		super.stopMove(loc);
 		
 		broadcastPacket(new VehicleStarted(this, 0));
 		broadcastPacket(new VehicleInfo(this));

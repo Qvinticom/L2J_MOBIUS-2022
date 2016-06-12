@@ -20,8 +20,8 @@ import java.util.Date;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.event.LongTimeEvent;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Master of Enchanting event AI.
  * @author Gnacik
  */
-final class MasterOfEnchanting extends LongTimeEvent
+public final class MasterOfEnchanting extends LongTimeEvent
 {
 	// NPC
 	private static final int MASTER_YOGI = 32599;
@@ -67,7 +67,6 @@ final class MasterOfEnchanting extends LongTimeEvent
 	
 	private MasterOfEnchanting()
 	{
-		super(MasterOfEnchanting.class.getSimpleName(), "events");
 		addStartNpc(MASTER_YOGI);
 		addFirstTalkId(MASTER_YOGI);
 		addTalkId(MASTER_YOGI);

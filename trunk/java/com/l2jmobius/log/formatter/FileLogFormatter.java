@@ -22,7 +22,7 @@ import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.util.StringUtil;
+import com.l2jmobius.commons.util.StringUtil;
 
 /**
  * This class ...

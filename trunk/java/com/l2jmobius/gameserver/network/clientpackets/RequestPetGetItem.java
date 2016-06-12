@@ -16,69 +16,68 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
-import com.l2jmobius.gameserver.instancemanager.MercTicketManager;
+import com.l2jmobius.gameserver.instancemanager.SiegeGuardManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public final class RequestPetGetItem extends L2GameClientPacket
+public final class RequestPetGetItem implements IClientIncomingPacket
 {
-	private static final String _C__98_REQUESTPETGETITEM = "[C] 98 RequestPetGetItem";
-	
 	private int _objectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
+		_objectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		final L2World world = L2World.getInstance();
 		final L2ItemInstance item = (L2ItemInstance) world.findObject(_objectId);
-		if ((item == null) || (getActiveChar() == null) || !getActiveChar().hasPet())
+		if ((item == null) || (client.getActiveChar() == null) || !client.getActiveChar().hasPet())
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (MercTicketManager.getInstance().getTicketCastleId(item.getId()) > 0)
+		final Castle castle = CastleManager.getInstance().getCastle(item);
+		if ((castle != null) && (SiegeGuardManager.getInstance().getSiegeGuardByItem(castle.getResidenceId(), item.getId()) != null))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (FortSiegeManager.getInstance().isCombat(item.getId()))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final L2PetInstance pet = (L2PetInstance) getClient().getActiveChar().getPet();
-		if (pet.isDead() || pet.isOutOfControl())
+		final L2PetInstance pet = client.getActiveChar().getPet();
+		if (pet.isDead() || pet.isControlBlocked())
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (pet.isUncontrollable())
 		{
-			sendPacket(SystemMessageId.WHEN_YOUR_PET_S_HUNGER_GAUGE_IS_AT_0_YOU_CANNOT_USE_YOUR_PET);
+			client.sendPacket(SystemMessageId.WHEN_YOUR_PET_S_HUNGER_GAUGE_IS_AT_0_YOU_CANNOT_USE_YOUR_PET);
 			return;
 		}
 		
 		pet.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, item);
 	}
 	
-	@Override
-	public String getType()
-	{
-		return _C__98_REQUESTPETGETITEM;
-	}
 }

@@ -24,21 +24,20 @@ import com.l2jmobius.gameserver.network.serverpackets.shuttle.ExShuttleMove;
  */
 public class L2ShuttleAI extends L2VehicleAI
 {
-	public L2ShuttleAI(L2ShuttleInstance actor)
+	public L2ShuttleAI(L2ShuttleInstance shuttle)
 	{
-		super(actor);
+		super(shuttle);
 	}
 	
 	@Override
 	public void moveTo(int x, int y, int z)
 	{
-		if (_actor.isMovementDisabled())
+		if (!_actor.isMovementDisabled())
 		{
-			return;
+			_clientMoving = true;
+			_actor.moveToLocation(x, y, z, 0);
+			_actor.broadcastPacket(new ExShuttleMove(getActor(), x, y, z));
 		}
-		_clientMoving = true;
-		_actor.moveToLocation(x, y, z, 0);
-		_actor.broadcastPacket(new ExShuttleMove(getActor(), x, y, z));
 	}
 	
 	@Override

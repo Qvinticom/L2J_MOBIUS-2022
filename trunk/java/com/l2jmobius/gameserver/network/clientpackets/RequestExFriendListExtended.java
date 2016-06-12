@@ -17,42 +17,36 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.friend.FriendList;
 
 /**
  * @author mrTJO & UnAfraid
  */
-public final class RequestExFriendListExtended extends L2GameClientPacket
+public final class RequestExFriendListExtended implements IClientIncomingPacket
 {
-	private static final String _C__D0_87_REQUESTEXFRIENDLISTEXTENDED = "[C] D0:87 RequestExFriendListExtended";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger packet
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (!Config.ALLOW_MAIL)
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		activeChar.sendPacket(new FriendList(activeChar));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_87_REQUESTEXFRIENDLISTEXTENDED;
+		client.sendPacket(new FriendList(activeChar));
 	}
 }

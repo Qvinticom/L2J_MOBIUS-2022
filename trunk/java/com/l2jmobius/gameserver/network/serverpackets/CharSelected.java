@@ -16,10 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class CharSelected extends L2GameServerPacket
+public class CharSelected implements IClientOutgoingPacket
 {
 	private final L2PcInstance _activeChar;
 	private final int _sessionId;
@@ -35,49 +37,50 @@ public class CharSelected extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x0B);
+		OutgoingPackets.CHARACTER_SELECTED.writeId(packet);
 		
-		writeS(_activeChar.getName());
-		writeD(_activeChar.getObjectId());
-		writeS(_activeChar.getTitle());
-		writeD(_sessionId);
-		writeD(_activeChar.getClanId());
-		writeD(0x00); // ??
-		writeD(_activeChar.getAppearance().getSex() ? 1 : 0);
-		writeD(_activeChar.getRace().ordinal());
-		writeD(_activeChar.getClassId().getId());
-		writeD(0x01); // active ??
-		writeD(_activeChar.getX());
-		writeD(_activeChar.getY());
-		writeD(_activeChar.getZ());
-		writeF(_activeChar.getCurrentHp());
-		writeF(_activeChar.getCurrentMp());
-		writeQ(_activeChar.getSp());
-		writeQ(_activeChar.getExp());
-		writeD(_activeChar.getLevel());
-		writeD(_activeChar.getReputation());
-		writeD(_activeChar.getPkKills());
-		writeD(GameTimeController.getInstance().getGameTime() % (24 * 60)); // "reset" on 24th hour
-		writeD(0x00);
-		writeD(_activeChar.getClassId().getId());
+		packet.writeS(_activeChar.getName());
+		packet.writeD(_activeChar.getObjectId());
+		packet.writeS(_activeChar.getTitle());
+		packet.writeD(_sessionId);
+		packet.writeD(_activeChar.getClanId());
+		packet.writeD(0x00); // ??
+		packet.writeD(_activeChar.getAppearance().getSex() ? 1 : 0);
+		packet.writeD(_activeChar.getRace().ordinal());
+		packet.writeD(_activeChar.getClassId().getId());
+		packet.writeD(0x01); // active ??
+		packet.writeD(_activeChar.getX());
+		packet.writeD(_activeChar.getY());
+		packet.writeD(_activeChar.getZ());
+		packet.writeF(_activeChar.getCurrentHp());
+		packet.writeF(_activeChar.getCurrentMp());
+		packet.writeQ(_activeChar.getSp());
+		packet.writeQ(_activeChar.getExp());
+		packet.writeD(_activeChar.getLevel());
+		packet.writeD(_activeChar.getReputation());
+		packet.writeD(_activeChar.getPkKills());
+		packet.writeD(GameTimeController.getInstance().getGameTime() % (24 * 60)); // "reset" on 24th hour
+		packet.writeD(0x00);
+		packet.writeD(_activeChar.getClassId().getId());
 		
-		writeB(new byte[16]);
+		packet.writeB(new byte[16]);
 		
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
 		
-		writeD(0x00);
+		packet.writeD(0x00);
 		
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
 		
-		writeB(new byte[28]);
-		writeD(0x00);
+		packet.writeB(new byte[28]);
+		packet.writeD(0x00);
+		return true;
 	}
 }

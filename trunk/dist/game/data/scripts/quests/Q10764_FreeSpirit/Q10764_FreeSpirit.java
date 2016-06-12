@@ -17,46 +17,49 @@
 package quests.Q10764_FreeSpirit;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
-import com.l2jmobius.gameserver.util.Broadcast;
 
 import quests.Q10763_TerrifyingChertuba.Q10763_TerrifyingChertuba;
 
 /**
  * Free Spirit (10764)
- * @author Gigi
+ * @author malyelfik
  */
-public class Q10764_FreeSpirit extends Quest
+public final class Q10764_FreeSpirit extends Quest
 {
-	// NPCs
+	// NPC
 	private static final int VORBOS = 33966;
-	private static final int CAPTURED_TREE = 33964;
-	private static final int CAPTURED_WIND = 33965;
+	private static final int TREE_SPIRIT = 33964;
+	private static final int WIND_SPIRIT = 33965;
+	private static final int SYLPH = 33967;
 	private static final int LIBERATED_WIND_SPIRIT = 33968;
 	private static final int LIBERATED_TREE_SPIRIT = 33969;
 	// Items
+	private static final int MAGIC_CHAIN_KEY_BUNDLE = 39490;
 	private static final int LOOSENED_CHAIN = 39518;
-	// Reward
-	private static final int STEEL_DOOR_GUILD = 37045;
-	// Other
+	// Location
+	private static final Location SYLPH_LOCATION = new Location(-85001, 106057, -3592);
+	// Misc
 	private static final int MIN_LEVEL = 38;
 	
 	public Q10764_FreeSpirit()
 	{
-		super(10764, Q10764_FreeSpirit.class.getSimpleName(), "Free Spirit");
+		super(10764);
 		addStartNpc(VORBOS);
-		addTalkId(VORBOS, CAPTURED_TREE, CAPTURED_WIND);
-		registerQuestItems(LOOSENED_CHAIN);
-		addCondRace(Race.ERTHEIA, "33966-no.html");
-		addCondMinLevel(MIN_LEVEL, "33966-noLevel.html");
-		addCondCompletedQuest(Q10763_TerrifyingChertuba.class.getSimpleName(), "restriction.html");
+		addTalkId(VORBOS, TREE_SPIRIT, WIND_SPIRIT);
+		addSpawnId(LIBERATED_TREE_SPIRIT, LIBERATED_WIND_SPIRIT, SYLPH);
+		
+		addCondRace(Race.ERTHEIA, "33966-00.htm");
+		addCondMinLevel(MIN_LEVEL, "33966-00.htm");
+		addCondCompletedQuest(Q10763_TerrifyingChertuba.class.getSimpleName(), "33966-00.htm");
+		registerQuestItems(MAGIC_CHAIN_KEY_BUNDLE, LOOSENED_CHAIN);
 	}
 	
 	@Override
@@ -67,48 +70,31 @@ public class Q10764_FreeSpirit extends Quest
 		{
 			return null;
 		}
-		String htmltext = null;
+		
+		String htmltext = event;
 		switch (event)
 		{
-			case "start":
-			{
-				if (qs.isStarted() && qs.isCond(1))
-				{
-					if (getQuestItemsCount(player, LOOSENED_CHAIN) < 10)
-					{
-						giveItems(player, LOOSENED_CHAIN, 1);
-						playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-						npc.deleteMe();
-					}
-					if (getQuestItemsCount(player, LOOSENED_CHAIN) >= 10)
-					{
-						qs.setCond(2);
-					}
-				}
-				break;
-			}
 			case "33966-02.htm":
-			{
-				htmltext = event;
 				break;
-			}
-			case "33966-03.htm": // start the quest
+			case "33966-03.htm":
 			{
 				qs.startQuest();
+				giveItems(player, MAGIC_CHAIN_KEY_BUNDLE, 10);
 				break;
 			}
-			case "33966-05.htm":
+			case "33966-06.html":
 			{
 				if (qs.isCond(2))
 				{
-					takeItems(player, LOOSENED_CHAIN, -1);
-					giveItems(player, STEEL_DOOR_GUILD, 10);
+					addSpawn(SYLPH, SYLPH_LOCATION, false, 4000);
+					giveStoryQuestReward(player, 10);
 					addExpAndSp(player, 1312934, 315);
 					qs.exitQuest(false, true);
-					htmltext = event;
 				}
 				break;
 			}
+			default:
+				htmltext = null;
 		}
 		return htmltext;
 	}
@@ -117,88 +103,58 @@ public class Q10764_FreeSpirit extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = null;
-		if (qs == null)
-		{
-			return htmltext;
-		}
-		if (player.getRace() != Race.ERTHEIA)
-		{
-			return "33966-no.html";
-		}
+		String htmltext = getNoQuestMsg(player);
 		
-		switch (npc.getId())
+		if (npc.getId() == VORBOS)
 		{
-			case VORBOS:
+			switch (qs.getState())
 			{
-				if (qs.isCreated() && (player.getLevel() >= MIN_LEVEL))
-				{
+				case State.CREATED:
 					htmltext = "33966-01.htm";
-				}
-				else if (qs.isStarted())
-				{
-					switch (qs.getCond())
-					{
-						case 1:
-						{
-							htmltext = "33966-06.html";
-							break;
-						}
-						case 2:
-						{
-							htmltext = "33966-04.htm";
-							break;
-						}
-					}
-				}
-				else if (qs.isCompleted())
-				{
+					break;
+				case State.STARTED:
+					htmltext = (qs.isCond(1)) ? "33966-04.html" : "33966-05.html";
+					break;
+				case State.COMPLETED:
 					htmltext = getAlreadyCompletedMsg(player);
-				}
-				break;
-			}
-			case CAPTURED_TREE:
-			{
-				if (qs.isStarted())
-				{
-					htmltext = "33964-01.html";
-				}
-				if (getQuestItemsCount(player, LOOSENED_CHAIN) < 10)
-				{
-					final L2Npc newSpawn = addSpawn(LIBERATED_TREE_SPIRIT, npc.getX() + 20, npc.getY() + 20, npc.getZ(), npc.getHeading(), false, 5000);
-					Broadcast.toKnownPlayers(newSpawn, new NpcSay(newSpawn.getObjectId(), ChatType.NPC_GENERAL, newSpawn.getId(), NpcStringId.THANK_YOU_THANK_YOU_FOR_HELPING));
-					giveItems(player, LOOSENED_CHAIN, 1);
-					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-					npc.deleteMe();
-				}
-				if (getQuestItemsCount(player, LOOSENED_CHAIN) >= 10)
-				{
-					qs.setCond(2);
-				}
-				break;
-			}
-			case CAPTURED_WIND:
-			{
-				if (qs.isStarted())
-				{
-					htmltext = "33965-01.html";
-				}
-				if (getQuestItemsCount(player, LOOSENED_CHAIN) < 10)
-				{
-					final L2Npc newSpawn = addSpawn(LIBERATED_WIND_SPIRIT, npc.getX() + 20, npc.getY() + 20, npc.getZ(), npc.getHeading(), false, 5000);
-					Broadcast.toKnownPlayers(newSpawn, new NpcSay(newSpawn.getObjectId(), ChatType.NPC_GENERAL, newSpawn.getId(), NpcStringId.THANK_YOU_THANK_YOU_FOR_HELPING));
-					giveItems(player, LOOSENED_CHAIN, 1);
-					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-					npc.deleteMe();
-				}
-				if (getQuestItemsCount(player, LOOSENED_CHAIN) >= 10)
-				{
-					qs.setCond(2);
-				}
-				break;
+					break;
 			}
 		}
-		
+		else
+		{
+			if (qs.isStarted() && qs.isCond(1))
+			{
+				final int npcId = (npc.getId() == WIND_SPIRIT) ? LIBERATED_WIND_SPIRIT : LIBERATED_TREE_SPIRIT;
+				
+				giveItems(player, LOOSENED_CHAIN, 1);
+				addSpawn(npcId, npc, false, 2500);
+				npc.deleteMe();
+				
+				if (getQuestItemsCount(player, LOOSENED_CHAIN) >= 10)
+				{
+					qs.setCond(2, true);
+				}
+				htmltext = null;
+			}
+			else
+			{
+				htmltext = npc.getId() + "-01.html";
+			}
+		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onSpawn(L2Npc npc)
+	{
+		if (npc.getId() == SYLPH)
+		{
+			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THANK_YOU_YOU_ARE_KIND);
+		}
+		else
+		{
+			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THANK_YOU_THANK_YOU_FOR_HELPING);
+		}
+		return super.onSpawn(npc);
 	}
 }

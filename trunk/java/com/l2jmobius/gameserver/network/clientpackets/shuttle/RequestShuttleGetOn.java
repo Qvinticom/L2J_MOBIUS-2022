@@ -16,60 +16,51 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.shuttle;
 
-import java.util.logging.Level;
-
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2ShuttleInstance;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 
 /**
  * @author UnAfraid
  */
-public class RequestShuttleGetOn extends L2GameClientPacket
+public class RequestShuttleGetOn implements IClientIncomingPacket
 {
 	private int _x;
 	private int _y;
 	private int _z;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		readD(); // charId
-		_x = readD();
-		_y = readD();
-		_z = readD();
+		packet.readD(); // charId
+		_x = packet.readD();
+		_y = packet.readD();
+		_z = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
 		// TODO: better way?
-		for (L2Object obj : activeChar.getKnownList().getKnownObjects().values())
+		for (L2ShuttleInstance shuttle : L2World.getInstance().getVisibleObjects(activeChar, L2ShuttleInstance.class))
 		{
-			if (obj instanceof L2ShuttleInstance)
+			if (shuttle.calculateDistance(activeChar, true, false) < 1000)
 			{
-				final L2ShuttleInstance shuttle = (L2ShuttleInstance) obj;
-				if (shuttle.calculateDistance(activeChar, false, false) < 1000)
-				{
-					shuttle.addPassenger(activeChar);
-					activeChar.getInVehiclePosition().setXYZ(_x, _y, _z);
-					break;
-				}
-				_log.log(Level.INFO, getClass().getSimpleName() + ": range between char and shuttle: " + shuttle.calculateDistance(activeChar, false, false));
+				shuttle.addPassenger(activeChar);
+				activeChar.getInVehiclePosition().setXYZ(_x, _y, _z);
+				break;
 			}
+			_log.info(getClass().getSimpleName() + ": range between char and shuttle: " + shuttle.calculateDistance(activeChar, true, false));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
 	}
 }

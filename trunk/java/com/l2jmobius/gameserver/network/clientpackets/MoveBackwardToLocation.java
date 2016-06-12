@@ -16,28 +16,37 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.nio.BufferUnderflowException;
+import java.util.Arrays;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.instancemanager.JumpManager;
-import com.l2jmobius.gameserver.instancemanager.JumpManager.JumpWay;
+import com.l2jmobius.gameserver.enums.AdminTeleportType;
+import com.l2jmobius.gameserver.enums.SayuneType;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.SayuneEntry;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.events.EventDispatcher;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerMoveRequest;
+import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.ExFlyMove;
+import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
+import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
+import com.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
+import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.StopMove;
-import com.l2jmobius.gameserver.util.Util;
+import com.l2jmobius.gameserver.network.serverpackets.sayune.ExFlyMove;
+import com.l2jmobius.gameserver.network.serverpackets.sayune.ExFlyMoveBroadcast;
+import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * This class ...
  * @version $Revision: 1.11.2.4.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public class MoveBackwardToLocation extends L2GameClientPacket
+public class MoveBackwardToLocation implements IClientIncomingPacket
 {
-	private static final String _C__0F_MOVEBACKWARDTOLOC = "[C] 0F MoveBackwardToLoc";
-	
 	// cdddddd
 	private int _targetX;
 	private int _targetY;
@@ -45,37 +54,31 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 	private int _originX;
 	private int _originY;
 	private int _originZ;
-	
-	@SuppressWarnings("unused")
 	private int _moveMovement;
 	
+	// For geodata
+	private int _curX;
+	private int _curY;
+	@SuppressWarnings("unused")
+	private int _curZ;
+	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_targetX = readD();
-		_targetY = readD();
-		_targetZ = readD();
-		_originX = readD();
-		_originY = readD();
-		_originZ = readD();
-		try
-		{
-			_moveMovement = readD(); // is 0 if cursor keys are used 1 if mouse is used
-		}
-		catch (BufferUnderflowException e)
-		{
-			if (Config.L2WALKER_PROTECTION)
-			{
-				final L2PcInstance activeChar = getClient().getActiveChar();
-				Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " is trying to use L2Walker and got kicked.", Config.DEFAULT_PUNISH);
-			}
-		}
+		_targetX = packet.readD();
+		_targetY = packet.readD();
+		_targetZ = packet.readD();
+		_originX = packet.readD();
+		_originY = packet.readD();
+		_originZ = packet.readD();
+		_moveMovement = packet.readD(); // is 0 if cursor keys are used 1 if mouse is used
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -102,51 +105,59 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 		// Validate position packets sends head level.
 		_targetZ += activeChar.getTemplate().getCollisionHeight();
 		
-		if (activeChar.getTeleMode() > 0)
+		if (_moveMovement == 1)
 		{
-			// Sayune
-			if ((activeChar.getTeleMode() == 3) || (activeChar.getTeleMode() == 4))
+			final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerMoveRequest(activeChar, new Location(_targetX, _targetY, _targetZ)), activeChar, TerminateReturn.class);
+			if ((terminate != null) && terminate.terminate())
 			{
-				if (activeChar.getTeleMode() == 3)
-				{
-					activeChar.setTeleMode(0);
-				}
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				activeChar.stopMove(null, false);
-				activeChar.abortAttack();
-				activeChar.abortCast();
-				activeChar.setTarget(null);
-				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-				final JumpWay jw = JumpManager.getInstance().new JumpWay();
-				jw.add(JumpManager.getInstance().new JumpNode(_targetX, _targetY, _targetZ, -1));
-				activeChar.sendPacket(new ExFlyMove(activeChar.getObjectId(), -1, jw));
-				activeChar.setXYZ(_targetX, _targetY, _targetZ);
 				return;
 			}
-			
-			if (activeChar.getTeleMode() == 1)
-			{
-				activeChar.setTeleMode(0);
-			}
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			activeChar.teleToLocation(new Location(_targetX, _targetY, _targetZ));
-			return;
 		}
 		
-		final double dx = _targetX - activeChar.getX();
-		final double dy = _targetY - activeChar.getY();
-		// Can't move if character is confused, or trying to move a huge distance
-		if (activeChar.isOutOfControl() || (((dx * dx) + (dy * dy)) > 98010000)) // 9900*9900
+		_curX = activeChar.getX();
+		_curY = activeChar.getY();
+		_curZ = activeChar.getZ();
+		
+		switch (activeChar.getTeleMode())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+			case DEMONIC:
+			{
+				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+				activeChar.teleToLocation(new Location(_targetX, _targetY, _targetZ));
+				activeChar.setTeleMode(AdminTeleportType.NORMAL);
+				break;
+			}
+			case SAYUNE:
+			{
+				activeChar.sendPacket(new ExFlyMove(activeChar, SayuneType.ONE_WAY_LOC, -1, Arrays.asList(new SayuneEntry(false, -1, _targetX, _targetY, _targetZ))));
+				activeChar.setXYZ(_targetX, _targetY, _targetZ);
+				Broadcast.toKnownPlayers(activeChar, new ExFlyMoveBroadcast(activeChar, SayuneType.ONE_WAY_LOC, -1, new Location(_targetX, _targetY, _targetZ)));
+				activeChar.setTeleMode(AdminTeleportType.NORMAL);
+				break;
+			}
+			case CHARGE:
+			{
+				activeChar.setXYZ(_targetX, _targetY, _targetZ);
+				Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillUse(activeChar, 30012, 10, 500, 0));
+				Broadcast.toSelfAndKnownPlayers(activeChar, new FlyToLocation(activeChar, _targetX, _targetY, _targetZ, FlyType.CHARGE));
+				Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillLaunched(activeChar, 30012, 10));
+				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+				break;
+			}
+			default:
+			{
+				final double dx = _targetX - _curX;
+				final double dy = _targetY - _curY;
+				// Can't move if character is confused, or trying to move a huge distance
+				if (activeChar.isControlBlocked() || (((dx * dx) + (dy * dy)) > 98010000)) // 9900*9900
+				{
+					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
+				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_targetX, _targetY, _targetZ));
+				break;
+			}
 		}
-		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_targetX, _targetY, _targetZ));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__0F_MOVEBACKWARDTOLOC;
 	}
 }

@@ -16,13 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.model.CursedWeapon;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation;
 import com.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation.CursedWeaponInfo;
 
@@ -30,26 +32,24 @@ import com.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation.Cur
  * Format: (ch)
  * @author -Wooden-
  */
-public final class RequestCursedWeaponLocation extends L2GameClientPacket
+public final class RequestCursedWeaponLocation implements IClientIncomingPacket
 {
-	private static final String _C__D0_2B_REQUESTCURSEDWEAPONLOCATION = "[C] D0:2B RequestCursedWeaponLocation";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// nothing to read it's just a trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2Character activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		final List<CursedWeaponInfo> list = new ArrayList<>();
+		final List<CursedWeaponInfo> list = new LinkedList<>();
 		for (CursedWeapon cw : CursedWeaponsManager.getInstance().getCursedWeapons())
 		{
 			if (!cw.isActive())
@@ -67,19 +67,7 @@ public final class RequestCursedWeaponLocation extends L2GameClientPacket
 		// send the ExCursedWeaponLocation
 		if (!list.isEmpty())
 		{
-			activeChar.sendPacket(new ExCursedWeaponLocation(list));
+			client.sendPacket(new ExCursedWeaponLocation(list));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_2B_REQUESTCURSEDWEAPONLOCATION;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

@@ -17,10 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Passive effect implementation.
@@ -28,16 +28,8 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class Passive extends AbstractEffect
 {
-	public Passive(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Passive(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-	}
-	
-	@Override
-	public void onExit(BuffInfo info)
-	{
-		info.getEffected().enableAllSkills();
-		info.getEffected().setIsImmobilized(false);
 	}
 	
 	@Override
@@ -47,12 +39,18 @@ public final class Passive extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		final L2Attackable target = (L2Attackable) info.getEffected();
-		target.abortAttack();
-		target.abortCast();
-		target.disableAllSkills();
-		target.setIsImmobilized(true);
+		effected.abortAttack();
+		effected.abortCast();
+		effected.disableAllSkills();
+		effected.setIsImmobilized(true);
+	}
+	
+	@Override
+	public void onExit(BuffInfo info)
+	{
+		info.getEffected().enableAllSkills();
+		info.getEffected().setIsImmobilized(false);
 	}
 }

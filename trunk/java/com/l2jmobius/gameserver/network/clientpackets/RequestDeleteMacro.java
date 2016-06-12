@@ -16,31 +16,29 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-public final class RequestDeleteMacro extends L2GameClientPacket
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+
+public final class RequestDeleteMacro implements IClientIncomingPacket
 {
-	private static final String _C__CE_REQUESTDELETEMACRO = "[C] CE RequestDeleteMacro";
-	
 	private int _id;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_id = readD();
+		_id = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		if (getClient().getActiveChar() == null)
+		final L2PcInstance activeChar = client.getActiveChar();
+		if (activeChar == null)
 		{
 			return;
 		}
-		getClient().getActiveChar().deleteMacro(_id);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__CE_REQUESTDELETEMACRO;
+		activeChar.deleteMacro(_id);
 	}
 }

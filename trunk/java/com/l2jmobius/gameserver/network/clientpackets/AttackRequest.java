@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
@@ -25,12 +26,11 @@ import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public final class AttackRequest extends L2GameClientPacket
+public final class AttackRequest implements IClientIncomingPacket
 {
-	private static final String _C__32_ATTACKREQUEST = "[C] 32 AttackRequest";
-	
 	// cddddc
 	private int _objectId;
 	@SuppressWarnings("unused")
@@ -43,19 +43,20 @@ public final class AttackRequest extends L2GameClientPacket
 	private int _attackId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_originX = readD();
-		_originY = readD();
-		_originZ = readD();
-		_attackId = readC(); // 0 for simple click 1 for shift-click
+		_objectId = packet.readD();
+		_originX = packet.readD();
+		_originY = packet.readD();
+		_originZ = packet.readD();
+		_attackId = packet.readC(); // 0 for simple click 1 for shift-click
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -76,29 +77,34 @@ public final class AttackRequest extends L2GameClientPacket
 		}
 		
 		// avoid using expensive operations if not needed
-		final L2Object target = activeChar.getTargetId() == _objectId ? activeChar.getTarget() : L2World.getInstance().findObject(_objectId);
+		final L2Object target;
+		if (activeChar.getTargetId() == _objectId)
+		{
+			target = activeChar.getTarget();
+		}
+		else
+		{
+			target = L2World.getInstance().findObject(_objectId);
+		}
+		
 		if (target == null)
 		{
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		
-		else if (!target.isTargetable() && !activeChar.canOverrideCond(PcCondOverride.TARGET_ALL))
+		else if ((!target.isTargetable() || activeChar.isTargetingDisabled()) && !activeChar.canOverrideCond(PcCondOverride.TARGET_ALL))
 		{
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		
 		// Players can't attack objects in the other instances
-		// except from multiverse
-		if ((target.getInstanceId() != activeChar.getInstanceId()) && (activeChar.getInstanceId() != -1))
+		else if (target.getInstanceWorld() != activeChar.getInstanceWorld())
 		{
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		
 		// Only GMs can directly attack invisible characters
-		if (!target.isVisibleFor(activeChar))
+		else if (!target.isVisibleFor(activeChar))
 		{
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -108,19 +114,16 @@ public final class AttackRequest extends L2GameClientPacket
 		{
 			target.onAction(activeChar);
 		}
-		else if ((target.getObjectId() != activeChar.getObjectId()) && (activeChar.getPrivateStoreType() == PrivateStoreType.NONE) && (activeChar.getActiveRequester() == null))
-		{
-			target.onForcedAttack(activeChar);
-		}
 		else
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			if ((target.getObjectId() != activeChar.getObjectId()) && (activeChar.getPrivateStoreType() == PrivateStoreType.NONE) && (activeChar.getActiveRequester() == null))
+			{
+				target.onForcedAttack(activeChar);
+			}
+			else
+			{
+				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__32_ATTACKREQUEST;
 	}
 }

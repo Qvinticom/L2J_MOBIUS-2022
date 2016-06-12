@@ -52,6 +52,21 @@ public class ItemHolder implements IIdentifiable
 	}
 	
 	@Override
+	public boolean equals(Object obj)
+	{
+		if (!(obj instanceof ItemHolder))
+		{
+			return false;
+		}
+		else if (obj == this)
+		{
+			return true;
+		}
+		final ItemHolder objInstance = (ItemHolder) obj;
+		return (_id == objInstance.getId()) && (_count == objInstance.getCount());
+	}
+	
+	@Override
 	public String toString()
 	{
 		return "[" + getClass().getSimpleName() + "] ID: " + _id + ", count: " + _count;

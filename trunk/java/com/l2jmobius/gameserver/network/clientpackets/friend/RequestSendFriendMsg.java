@@ -16,47 +16,52 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.friend;
 
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.L2FriendSay;
 
 /**
  * Recieve Private (Friend) Message - 0xCC Format: c SS S: Message S: Receiving Player
  * @author Tempy
  */
-public final class RequestSendFriendMsg extends L2GameClientPacket
+public final class RequestSendFriendMsg implements IClientIncomingPacket
 {
-	private static final String _C__6B_REQUESTSENDMSG = "[C] 6B RequestSendFriendMsg";
 	private static Logger _logChat = Logger.getLogger("chat");
 	
 	private String _message;
 	private String _reciever;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_message = readS();
-		_reciever = readS();
+		_message = packet.readS();
+		_reciever = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if ((activeChar == null) || (_message == null) || _message.isEmpty() || (_message.length() > 300))
+		final L2PcInstance activeChar = client.getActiveChar();
+		if (activeChar == null)
+		{
+			return;
+		}
+		
+		if ((_message == null) || _message.isEmpty() || (_message.length() > 300))
 		{
 			return;
 		}
 		
 		final L2PcInstance targetPlayer = L2World.getInstance().getPlayer(_reciever);
-		if ((targetPlayer == null) || !targetPlayer.getFriendList().containsKey(activeChar.getObjectId()))
+		if ((targetPlayer == null) || !targetPlayer.getFriendList().contains(activeChar.getObjectId()))
 		{
 			activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 			return;
@@ -64,23 +69,9 @@ public final class RequestSendFriendMsg extends L2GameClientPacket
 		
 		if (Config.LOG_CHAT)
 		{
-			final LogRecord record = new LogRecord(Level.INFO, _message);
-			record.setLoggerName("chat");
-			record.setParameters(new Object[]
-			{
-				"PRIV_MSG",
-				"[" + activeChar.getName() + " to " + _reciever + "]"
-			});
-			
-			_logChat.log(record);
+			_logChat.info("PRIV_MSG [" + activeChar + " to " + targetPlayer + "] " + _message);
 		}
 		
 		targetPlayer.sendPacket(new L2FriendSay(activeChar.getName(), _reciever, _message));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__6B_REQUESTSENDMSG;
 	}
 }

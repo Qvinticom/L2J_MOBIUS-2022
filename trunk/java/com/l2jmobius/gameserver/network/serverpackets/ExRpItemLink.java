@@ -16,7 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author KenM
@@ -31,10 +33,11 @@ public final class ExRpItemLink extends AbstractItemPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x6D);
-		writeItem(_item);
+		OutgoingPackets.EX_RP_ITEM_LINK.writeId(packet);
+		
+		writeItem(packet, _item);
+		return true;
 	}
 }

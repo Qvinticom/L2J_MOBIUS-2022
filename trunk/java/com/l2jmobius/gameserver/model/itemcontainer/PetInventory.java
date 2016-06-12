@@ -67,7 +67,7 @@ public class PetInventory extends Inventory
 	{
 		int slots = 0;
 		
-		if ((!item.isStackable() || (getItemByItemId(item.getId()) == null)) && !item.getItem().hasExImmediateEffect())
+		if (!(item.isStackable() && (getItemByItemId(item.getId()) != null)) && !item.getItem().hasExImmediateEffect())
 		{
 			slots++;
 		}
@@ -78,7 +78,7 @@ public class PetInventory extends Inventory
 	@Override
 	public boolean validateCapacity(long slots)
 	{
-		return (_items.size() + slots) <= _owner.getInventoryLimit();
+		return ((_items.size() + slots) <= _owner.getInventoryLimit());
 	}
 	
 	public boolean validateWeight(L2ItemInstance item, long count)
@@ -96,7 +96,7 @@ public class PetInventory extends Inventory
 	@Override
 	public boolean validateWeight(long weight)
 	{
-		return (_totalWeight + weight) <= _owner.getMaxLoad();
+		return ((_totalWeight + weight) <= _owner.getMaxLoad());
 	}
 	
 	@Override
@@ -116,18 +116,21 @@ public class PetInventory extends Inventory
 	{
 		super.restore();
 		// check for equiped items from other pets
-		for (L2ItemInstance item : _items)
+		for (L2ItemInstance item : _items.values())
 		{
-			if (item.isEquipped() && !item.getItem().checkCondition(getOwner(), getOwner(), false))
+			if (item.isEquipped())
 			{
-				unEquipItemInSlot(item.getLocationSlot());
+				if (!item.getItem().checkCondition(getOwner(), getOwner(), false))
+				{
+					unEquipItemInSlot(item.getLocationSlot());
+				}
 			}
 		}
 	}
 	
 	public void transferItemsToOwner()
 	{
-		for (L2ItemInstance item : _items)
+		for (L2ItemInstance item : _items.values())
 		{
 			getOwner().transferItem("return", item.getObjectId(), item.getCount(), getOwner().getOwner().getInventory(), getOwner().getOwner(), getOwner());
 		}

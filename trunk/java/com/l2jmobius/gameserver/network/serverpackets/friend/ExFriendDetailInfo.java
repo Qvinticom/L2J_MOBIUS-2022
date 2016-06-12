@@ -18,72 +18,72 @@ package com.l2jmobius.gameserver.network.serverpackets.friend;
 
 import java.util.Calendar;
 
-import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.Friend;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * @author Sdw
  */
-public class ExFriendDetailInfo extends L2GameServerPacket
+public class ExFriendDetailInfo implements IClientOutgoingPacket
 {
-	private final L2PcInstance _player;
+	private final int _objectId;
+	private final L2PcInstance _friend;
 	private final String _name;
+	private final int _lastAccess;
 	
 	public ExFriendDetailInfo(L2PcInstance player, String name)
 	{
-		_player = player;
+		_objectId = player.getObjectId();
 		_name = name;
+		_friend = L2World.getInstance().getPlayer(_name);
+		_lastAccess = _friend.isBlocked(player) ? 0 : _friend.isOnline() ? (int) System.currentTimeMillis() : (int) (System.currentTimeMillis() - _friend.getLastAccess()) / 1000;
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xEC);
+		OutgoingPackets.EX_FRIEND_DETAIL_INFO.writeId(packet);
 		
-		writeD(_player.getObjectId());
-		final Friend friend = _player.getFriend(CharNameTable.getInstance().getIdByName(_name));
+		packet.writeD(_objectId);
 		
-		final L2PcInstance player = friend.getFriend();
-		if (player == null)
+		if (_friend == null)
 		{
-			writeS(_name);
-			writeD(0x00);
-			writeD(0x00);
-			writeH(friend.getLevel());
-			writeH(friend.getClassId());
-			writeD(friend.getClanId());
-			writeD(friend.getClanCrestId());
-			writeS(friend.getClanName());
-			writeD(friend.getAllyId());
-			writeD(friend.getAllyCrestId());
-			writeS(friend.getAllyName());
-			final Calendar createDate = Calendar.getInstance();
-			createDate.setTimeInMillis(friend.getCreateDate());
-			writeC(createDate.get(Calendar.MONTH) + 1);
-			writeC(createDate.get(Calendar.DAY_OF_MONTH));
-			writeD((int) ((System.currentTimeMillis() - friend.getLastLogin()) / 1000));
+			packet.writeS(_name);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeS("");
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeS("");
+			packet.writeD(1);
+			packet.writeS(""); // memo
 		}
 		else
 		{
-			writeS(player.getName());
-			writeD(player.isOnlineInt());
-			writeD(player.getObjectId());
-			writeH(player.getLevel());
-			writeH(player.getClassId().getId());
-			writeD(player.getClanId());
-			writeD(player.getClanCrestId());
-			writeS(player.getClan() != null ? player.getClan().getName() : "");
-			writeD(player.getAllyId());
-			writeD(player.getAllyCrestId());
-			writeS(player.getClan() != null ? player.getClan().getAllyName() : "");
-			final Calendar createDate = player.getCreateDate();
-			writeC(createDate.get(Calendar.MONTH) + 1);
-			writeC(createDate.get(Calendar.DAY_OF_MONTH));
-			writeD(player.isOnline() ? -1 : (int) ((System.currentTimeMillis() - player.getLastAccess()) / 1000));
+			packet.writeS(_friend.getName());
+			packet.writeD(_friend.isOnlineInt());
+			packet.writeD(_friend.getObjectId());
+			packet.writeH(_friend.getLevel());
+			packet.writeH(_friend.getClassId().getId());
+			packet.writeD(_friend.getClanId());
+			packet.writeD(_friend.getClanCrestId());
+			packet.writeS(_friend.getClan() != null ? _friend.getClan().getName() : "");
+			packet.writeD(_friend.getAllyId());
+			packet.writeD(_friend.getAllyCrestId());
+			packet.writeS(_friend.getClan() != null ? _friend.getClan().getAllyName() : "");
+			final Calendar createDate = _friend.getCreateDate();
+			packet.writeC(createDate.get(Calendar.MONTH) + 1);
+			packet.writeC(createDate.get(Calendar.DAY_OF_MONTH));
+			packet.writeD(_lastAccess);
+			packet.writeS(""); // memo
 		}
-		writeS(friend.getMemo()); // memo
+		return true;
 	}
 }

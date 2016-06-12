@@ -619,7 +619,7 @@ INSERT INTO `teleport` VALUES
 ('Fantasy Isle -> Krateis Cube',12108,-70293,-71029,-1416,0,0,57),
 ('Krateis Cube -> Fantasy Isle',12109,-59224,-56837,-2032,0,0,57),
 ('Gludio -> Airship dock',12118,-149406,255247,-80,0,0,57),
-('Airship dock -> Talking Island',12119,-112156,257222,-1408,0,0,57),
+('Airship dock -> Talking Island',12119,-113525,256531,-1508,0,0,57),
 ('Talking Island -> Airship dock',12120,-149406,255247,-80,0,0,57),
 ('Fantasy Isle -> Handys Block',12121,-57328,-60566,-2360,0,0,57),
 ('Keucereus -> Heart of Infinity',12122,-204288,242026,1744,0,0,57),
@@ -1027,96 +1027,3 @@ INSERT INTO `teleport` VALUES
 ('Monastic Fortress -> Den of Evil',20178,68693,-110438,-1946,500,0,57), -- retail
 ('Monastic Fortress -> Ice Merchant Cabin',20179,113903,-108752,-860,500,0,57), -- retail
 ('Monastic Fortress -> Shyeed\'s Cavern',20180,76911,-55295,-5824,500,0,57); -- retail
-
--- Ye Sagira
-INSERT INTO `teleport` VALUES
-('Ye Sagira Explorarion Observatory -> The 1st Exploration Zone',3318001, -115005, 237383, -3088,0,0,57),
-('Ye Sagira Explorarion Observatory -> Exit to the East',3318101, -109294, 237397, -2928,0,0,57),
-('Ye Sagira Explorarion Observatory -> Exit to the West',3318102, -122189, 241009, -2328,0,0,57),
-('Ye Sagira Explorarion Observatory -> Return to village',3318103, -114413, 252159, -1592,0,0,57),
-('Ruins of Ye Sagira Exploration Observatory', 3318004, -114675, 230171, -1648, 0, 0, 57),
-('The 2nd Exploration Zone Blue', 3318005, -118350, 233992, -2904, 0, 0, 57),
-('The 3rd Exploration Zone Blue', 3318006, -116303, 239062, -2736, 0, 0, 57),
-('The 4th Exploration Zone Blue', 3318007, -112382, 238710, -2904, 0, 0, 57),
-('The 5th Exploration Zone Blue', 3318008, -110980, 233774, -3200, 0, 0, 57),
-('The 2nd Exploration Zone Red', 3318009, -116777, 233958, -2896, 0, 0, 57),
-('The 3rd Exploration Zone Red', 3318010, -118123, 239306, -2736, 0, 0, 57),
-('The 4th Exploration Zone Red', 3318011, -112314, 240190, -2920, 0, 0, 57);
-
--- Reliquary of the Giants
-INSERT INTO `teleport` VALUES ('Reliquary of the Giants', 3334401, -114562, 227307, -2864, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('Reliquary of the Giants -> Talking Island', 3320501, -112529, 256741, -1456, 0, 0, 57);
-
--- Magmeld
-INSERT INTO `teleport` VALUES ('Arms of Timiniel', 3291201, 214432, 79857, 816, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('Garden of Genesis', 3291202, 207548, 112214, -2064, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('Prison of Darkness', 3291203, 175314, 148011, -11648, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('Prison of Darkness -> Arcan', 3294601, 207509, 86654, -1006, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('Orbis Temple Entrance', 3291204, 198703, 86034, -192, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('Orbis Temple 1st floor', 3291205, 213023, 52487, -8416, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('Orbis Temple 2nd floor', 3291206, 213025, 50424, -14640, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('Orbis Temple 3rd floor', 3291207, 214292, 115551, -12736, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('Arcan -> Garden of Genesis', 3308901, 207637, 112584, -2057, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('Garden of Genesis -> Arcan', 3309001, 210803, 89448, -1148, 0, 0, 57);
-
--- Hunters Village to Anghel Waterfall
-INSERT INTO `teleport` VALUES ('Hunters Village -> Anghel Waterfall', 3023301, 172458, 90314, -1984, 6300, 1, 57);
-INSERT INTO `teleport` VALUES ('Hunters Village -> Anghel Waterfall', 3023302, 172458, 90314, -1984, 0, 1, 57);
-INSERT INTO `teleport` VALUES ('Hunters Village -> Anghel Waterfall', 3023303, 172458, 90314, -1984, 3150, 1, 57);
-
--- Wastelands
-INSERT INTO `teleport` (`Description`, `id`, `loc_x`, `loc_y`, `loc_z`, `price`, `fornoble`, `itemId`) VALUES
-('Wastelands Merchant Entrance', 3319001, -17151, 208992, -3664, 0, 0, 57),
-('Elder Casian', 3319002, -16832, 194491, -4208, 0, 0, 57),
-('Ant Nest Entrance', 3319003, -9570, 176327, -4144, 0, 0, 57),
-('Near Wasteland Basilisk', 3319004, -16415, 174003, -3304, 0, 0, 57),
-('Gargoyle Lord Sirocco', 3319005, -16516, 182801, -3872, 0, 0, 57),
-('Ragraman', 3319006, -53027, 172265, -3680, 0, 0, 57),
-('Iris', 3319007, -31348, 169552, -3840, 0, 0, 57),
-('Thorn', 3319008, -28460, 183596, -3760, 0, 0, 57);
-
-INSERT INTO `teleport` VALUES
-('Isle of Souls Harbor -> Gludin', 1140, -80684, 149770, -3040, 7300, 0, 57),
-('Isle of Souls Harbor -> Rune Township', 1141, 43835, -47749, -792, 10000, 0, 57);
-
-INSERT INTO `teleport` VALUES
-('Dragon Valley - Town of Giran', 3317001, 83497, 148015, -3400, 0, 0, 57),
-('Namo - Dragon Valley Junction', 3317002, 80012, 115911, -3672, 1900, 0, 57),
-('Whirling Vortex Junction', 3317003, 102278, 113038, -3720, 1900, 0, 57),
-('Namo - Entrance to Antharas Lair', 3317004, 131116, 114333, -3704, 1900, 0, 57),
-('Northern Dragon Valley', 3317005, 87712, 106060, -3176, 0, 0, 57),
-('Southern Dragon Valley', 3317006, 88016, 118852, -3056, 0, 0, 57),
-('Northern Whirling Vortex', 3317007, 108064, 112432, -3008, 0, 0, 57),
-('Southern Dragon Valley', 3317008, 109918, 121266, -3720, 0, 0, 57),
-('Deep in Whirling Vortex', 3317009, 119506, 112331, -3688, 0, 0, 57),
-('Antharas Lair - Barrier Bridge', 3317010, 146129, 111232, -3568, 0, 0, 57),
-('Deep in Anthars'' Lair', 3317011, 148447, 110582, -3944, 0, 0, 57);
-
-INSERT INTO `teleport` VALUES
-('Windmill Hill -> Gludio', '3319009', '-14557', '123809', '-3104', '0', '0', '57');
-
--- 3rd Floor Cruma Tower
-UPDATE `teleport` SET `Description`='Cruma Tower 2nd floor -> Cruma Tower 3rd floor',`loc_x`=17720,`loc_y`=114863,`loc_z`=-11710 WHERE id=24;
-
--- Gracia
-INSERT INTO `teleport` VALUES ('HellfireTeleport1', 990001, -147856, 250651, -14024, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('HellfireTeleport2', 990002, -147728, 152787, -14048, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('HellfireTeleport3', 990003, -150131, 143145, -11960, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('HellfireTeleport4', 990004, -150169, 241022, -11928, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('DevicetoHellfire', 999001, -147642, 152827, -14059, 0, 0, 57);
-
--- Enchnated Valley
-UPDATE `teleport` SET `Description`='Hunters -> Enchanted Valley',`loc_x`=114681,`loc_y`=48255,`loc_z`=4576 WHERE `Id`=100;
-INSERT INTO `teleport` VALUES ('Herb Collector -> Enchanted Valley ', '3408701', '116703', '53018', '-3632', '0', '0', '57');
-
--- Whispering Woods
-INSERT INTO `teleport` VALUES ('Dolkin -> Whispering Woods', '3400201', '-88295', '237404', '-2880', '0', '0', '57');
-
--- Harnak Underground Ruins
-INSERT INTO `teleport` VALUES ('UndergroundLevel1', 990008, -114700, 147909, -7720, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('UndergroundLevel2', 990005, -114715, 149146, -10786, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('UndergroundLevel3', 990006, -114713, 183251, -13845, 0, 0, 57);
-INSERT INTO `teleport` VALUES ('UndergroundOutside', 990007, -116160, 236370, -3088, 0, 0, 57);
-
--- Shuttgart to Frozen Labyrinth
-INSERT INTO `teleport` VALUES ('Shuttgart', '200929', '123521', '-126591', '-2448', '500', '0', '57');

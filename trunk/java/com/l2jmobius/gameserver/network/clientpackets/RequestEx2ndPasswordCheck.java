@@ -16,37 +16,32 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordCheck;
 
 /**
  * Format: (ch)
  * @author mrTJO
  */
-public class RequestEx2ndPasswordCheck extends L2GameClientPacket
+public class RequestEx2ndPasswordCheck implements IClientIncomingPacket
 {
-	private static final String _C__D0_AD_REQUESTEX2NDPASSWORDCHECK = "[C] D0:AD RequestEx2ndPasswordCheck";
-	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		if (!SecondaryAuthData.getInstance().isEnabled() || getClient().getSecondaryAuth().isAuthed())
+		if (!SecondaryAuthData.getInstance().isEnabled() || client.getSecondaryAuth().isAuthed())
 		{
-			sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_OK));
+			client.sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_OK));
 			return;
 		}
 		
-		getClient().getSecondaryAuth().openDialog();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_AD_REQUESTEX2NDPASSWORDCHECK;
+		client.getSecondaryAuth().openDialog();
 	}
 }

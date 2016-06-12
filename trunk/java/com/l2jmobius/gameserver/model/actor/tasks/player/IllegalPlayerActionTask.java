@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.tasks.player;
 
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
@@ -57,7 +55,7 @@ public final class IllegalPlayerActionTask implements Runnable
 			{
 				if (!_actor.isGM())
 				{
-					_actor.setAccessLevel(-1, false);
+					_actor.setAccessLevel(-1, false, true);
 					_actor.setAccountAccesslevel(-1);
 				}
 				_actor.sendMessage("You are banned for illegal action, GM informed.");
@@ -75,12 +73,7 @@ public final class IllegalPlayerActionTask implements Runnable
 	@Override
 	public void run()
 	{
-		final LogRecord record = new LogRecord(Level.INFO, "AUDIT:" + _message);
-		record.setLoggerName("audit");
-		//@formatter:off
-		record.setParameters(new Object[] { _actor, _punishment	});
-		//@formatter:on
-		_log.log(record);
+		_log.info("AUDIT, " + _message + ", " + _actor + ", " + _punishment);
 		
 		AdminData.getInstance().broadcastMessageToGMs(_message);
 		if (!_actor.isGM())

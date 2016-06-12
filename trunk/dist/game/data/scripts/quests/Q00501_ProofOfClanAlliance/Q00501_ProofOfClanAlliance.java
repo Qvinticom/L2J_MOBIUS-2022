@@ -21,6 +21,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -33,7 +34,6 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -97,7 +97,7 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 	
 	public Q00501_ProofOfClanAlliance()
 	{
-		super(501, Q00501_ProofOfClanAlliance.class.getSimpleName(), "Proof of Clan Alliance");
+		super(501);
 		addStartNpc(SIR_KRISTOF_RODEMAI, STATUE_OF_OFFERING);
 		addTalkId(SIR_KRISTOF_RODEMAI, STATUE_OF_OFFERING, ATHREA, KALIS);
 		addKillId(OEL_MAHUM_WITCH_DOCTOR, HARIT_LIZARDMAN_SHAMAN, VANOR_SILENOS_SHAMAN, BOX_OF_ATHREA_1, BOX_OF_ATHREA_2, BOX_OF_ATHREA_3, BOX_OF_ATHREA_4, BOX_OF_ATHREA_5);
@@ -171,7 +171,7 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 						{
 							final L2Npc box = addSpawn(npc, getRandom(BOX_OF_ATHREA_1, BOX_OF_ATHREA_5), loc, false, 300000);
 							box.disableCoreAI(true);
-							box.setIsNoRndWalk(true);
+							box.setRandomWalking(true);
 						}
 						htmltext = event;
 					}
@@ -188,7 +188,7 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 				{
 					if (npc.getSummonedNpcCount() < 4)
 					{
-						takeItems(player, Inventory.ADENA_ID, ADENA_TO_RESTART_GAME);
+						takeItems(player, ADENA_TO_RESTART_GAME, Inventory.ADENA_ID);
 					}
 					htmltext = event;
 				}
@@ -287,27 +287,30 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 						if ((lqs.getInt("flag") == 3) && arthea.isScriptValue(15))
 						{
 							lqs.set("flag", lqs.getInt("flag") + 1);
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.BINGO);
 						}
 						else if ((lqs.getInt("flag") == 2) && arthea.isScriptValue(14))
 						{
 							lqs.set("flag", lqs.getInt("flag") + 1);
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.BINGO);
 						}
 						else if ((lqs.getInt("flag") == 1) && arthea.isScriptValue(13))
 						{
 							lqs.set("flag", lqs.getInt("flag") + 1);
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.BINGO);
 						}
 						else if ((lqs.getInt("flag") == 0) && arthea.isScriptValue(12))
 						{
 							lqs.set("flag", lqs.getInt("flag") + 1);
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.BINGO);
 						}
-						else if ((lqs.getInt("flag") < 4) && (getRandom(4) == 0))
+						else if (lqs.getInt("flag") < 4)
 						{
-							lqs.set("flag", lqs.getInt("flag") + 1);
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
+							if (getRandom(4) == 0)
+							{
+								lqs.set("flag", lqs.getInt("flag") + 1);
+								npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.BINGO);
+							}
 						}
 						arthea.setScriptValue(arthea.getScriptValue() + 1);
 					}
@@ -369,7 +372,7 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 							takeItems(player, VOUCHER_OF_FAITH, -1);
 							giveItems(player, ALLIANCE_MANIFESTO, 1);
 							addExpAndSp(player, 0, 120000);
-							qs.exitQuest(false);
+							qs.exitQuest(QuestType.ONE_TIME);
 							htmltext = "30756-09.html";
 						}
 						else
@@ -503,7 +506,7 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 	 */
 	private static boolean hasAbnormal(L2PcInstance player)
 	{
-		return player.getEffectList().getBuffInfoByAbnormalType(AbnormalType.FATAL_POISON) != null;
+		return player.hasAbnormalType(AbnormalType.FATAL_POISON);
 	}
 	
 	/**

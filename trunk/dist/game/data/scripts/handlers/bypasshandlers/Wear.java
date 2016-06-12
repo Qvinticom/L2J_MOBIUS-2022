@@ -68,7 +68,7 @@ public class Wear implements IBypassHandler
 		return false;
 	}
 	
-	private static void showWearWindow(L2PcInstance player, int val)
+	private static final void showWearWindow(L2PcInstance player, int val)
 	{
 		final L2BuyList buyList = BuyListData.getInstance().getBuyList(val);
 		if (buyList == null)

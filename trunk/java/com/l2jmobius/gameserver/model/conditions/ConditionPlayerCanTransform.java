@@ -49,7 +49,7 @@ public class ConditionPlayerCanTransform extends Condition
 			player.sendPacket(SystemMessageId.YOU_CANNOT_TRANSFORM_WHILE_SITTING);
 			canTransform = false;
 		}
-		else if (player.isTransformed() || player.isInStance())
+		else if (player.isTransformed())
 		{
 			player.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 			canTransform = false;
@@ -64,6 +64,6 @@ public class ConditionPlayerCanTransform extends Condition
 			player.sendPacket(SystemMessageId.YOU_CANNOT_TRANSFORM_WHILE_RIDING_A_PET);
 			canTransform = false;
 		}
-		return _val == canTransform;
+		return (_val == canTransform);
 	}
 }

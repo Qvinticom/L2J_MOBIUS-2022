@@ -17,49 +17,47 @@
 package quests.Q10771_VolatilePower;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
+import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
+
+import quests.Q10770_InSearchOfTheGrail.Q10770_InSearchOfTheGrail;
 
 /**
  * Volatile Power (10771)
- * @URL https://l2wiki.com/Volatile_Power
- * @author Gigi
+ * @author malyelfik
  */
-public class Q10771_VolatilePower extends Quest
+public final class Q10771_VolatilePower extends Quest
 {
 	// NPCs
 	private static final int JANSSEN = 30484;
 	private static final int HIDDEN_CRUSHER = 33990;
-	// Monster
+	// Monsters
 	private static final int FRAGMENT_EATER = 27533;
 	// Items
-	private static final ItemHolder STEEL_DOOR_GUILD = new ItemHolder(37045, 20);
-	private static final ItemHolder EAC = new ItemHolder(952, 2);
-	private static final int SHINING_MYSTERIUS_FRAGMENT = 39713;
+	private static final int SHINING_MYSTERIOUS_FRAGMENT = 39713;
 	private static final int NORMAL_FRAGMENT_DUST = 39714;
-	// Reward
-	private static final int EXP_REWARD = 2708350;
-	private static final int SP_REWARD = 650;
+	private static final int ENCHANT_ARMOR_C = 952;
 	// Misc
 	private static final int MIN_LEVEL = 44;
 	
 	public Q10771_VolatilePower()
 	{
-		super(10771, Q10771_VolatilePower.class.getSimpleName(), "Volatile Power");
+		super(10771);
 		addStartNpc(JANSSEN);
+		addFirstTalkId(HIDDEN_CRUSHER);
 		addTalkId(JANSSEN, HIDDEN_CRUSHER);
-		registerQuestItems(SHINING_MYSTERIUS_FRAGMENT, NORMAL_FRAGMENT_DUST);
-		addKillId(FRAGMENT_EATER);
-		addCondMinLevel(MIN_LEVEL, "no_level.htm");
-		addCondRace(Race.ERTHEIA, "noErtheya.html");
+		
+		addCondRace(Race.ERTHEIA, "30484-00.htm");
+		addCondMinLevel(MIN_LEVEL, "30484-00.htm");
+		addCondCompletedQuest(Q10770_InSearchOfTheGrail.class.getSimpleName(), "30484-00.htm");
+		registerQuestItems(SHINING_MYSTERIOUS_FRAGMENT, NORMAL_FRAGMENT_DUST);
 	}
 	
 	@Override
@@ -70,55 +68,41 @@ public class Q10771_VolatilePower extends Quest
 		{
 			return null;
 		}
-		String htmltext = null;
+		
+		String htmltext = event;
 		switch (event)
 		{
 			case "30484-02.htm":
 			case "30484-03.htm":
 			case "30484-04.htm":
-			{
-				htmltext = event;
 				break;
-			}
 			case "30484-05.htm":
 			{
 				qs.startQuest();
-				htmltext = event;
-				giveItems(player, SHINING_MYSTERIUS_FRAGMENT, 20);
-				qs.set(Integer.toString(NORMAL_FRAGMENT_DUST), 0);
-				qs.setCond(2);
+				giveItems(player, SHINING_MYSTERIOUS_FRAGMENT, 20);
 				break;
 			}
 			case "30484-08.html":
 			{
-				takeItems(player, NORMAL_FRAGMENT_DUST, 20);
-				addExpAndSp(player, EXP_REWARD, SP_REWARD);
-				giveItems(player, STEEL_DOOR_GUILD);
-				giveItems(player, EAC);
-				qs.exitQuest(false, true);
-				htmltext = event;
-				break;
-			}
-			case "attack":
-			{
-				if ((getQuestItemsCount(player, SHINING_MYSTERIUS_FRAGMENT) > 0) && qs.isCond(2))
+				if (qs.isCond(3))
 				{
-					final L2Npc mob1 = addSpawn(FRAGMENT_EATER, qs.getPlayer().getX() + getRandom(-150, 150), qs.getPlayer().getY() + getRandom(-150, 150), qs.getPlayer().getZ(), getRandom(64000), false, 180000);
-					npc.broadcastPacket(new NpcSay(mob1.getObjectId(), ChatType.NPC_GENERAL, FRAGMENT_EATER, NpcStringId.KILL_THEM_DON_T_LET_THEM_GET_AWAY_WITH_THE_FRAGMENT));
-					addAttackDesire(mob1, qs.getPlayer());
-					final L2Npc mob2 = addSpawn(FRAGMENT_EATER, qs.getPlayer().getX() + getRandom(-150, 150), qs.getPlayer().getY() + getRandom(-150, 150), qs.getPlayer().getZ(), getRandom(64000), false, 180000);
-					npc.broadcastPacket(new NpcSay(mob2.getObjectId(), ChatType.NPC_GENERAL, FRAGMENT_EATER, NpcStringId.KILL_THEM_DON_T_LET_THEM_GET_AWAY_WITH_THE_FRAGMENT));
-					addAttackDesire(mob2, qs.getPlayer());
-					final L2Npc mob3 = addSpawn(FRAGMENT_EATER, qs.getPlayer().getX() + getRandom(-150, 150), qs.getPlayer().getY() + getRandom(-150, 150), qs.getPlayer().getZ(), getRandom(64000), false, 180000);
-					npc.broadcastPacket(new NpcSay(mob3.getObjectId(), ChatType.NPC_GENERAL, FRAGMENT_EATER, NpcStringId.KILL_THEM_DON_T_LET_THEM_GET_AWAY_WITH_THE_FRAGMENT));
-					addAttackDesire(mob3, qs.getPlayer());
-					showOnScreenMsg(player, NpcStringId.THE_DEVICE_RAN_OUT_OF_MAGIC_TRY_LOOKING_FOR_ANOTHER, ExShowScreenMessage.TOP_CENTER, 4500);
-					npc.deleteMe();
+					giveItems(player, ENCHANT_ARMOR_C, 5);
+					giveStoryQuestReward(player, 20);
+					addExpAndSp(player, 2708350, 650);
+					qs.exitQuest(false, true);
 				}
 				break;
 			}
+			default:
+				htmltext = null;
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		return "33990.html";
 	}
 	
 	@Override
@@ -127,65 +111,103 @@ public class Q10771_VolatilePower extends Quest
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (npc.getId())
+		if (npc.getId() == JANSSEN)
 		{
-			case JANSSEN:
+			switch (qs.getState())
 			{
-				if (qs.isCreated())
-				{
+				case State.CREATED:
 					htmltext = "30484-01.htm";
-				}
-				else if (qs.isStarted())
-				{
-					if (qs.isCond(2))
-					{
-						htmltext = "30484-06.html";
-					}
-				}
-				else if (qs.isCond(3))
-				{
-					htmltext = "30484-07.html";
-				}
-				else if (qs.isCompleted())
-				{
+					break;
+				case State.STARTED:
+					htmltext = (qs.isCond(1)) ? "30484-06.html" : "30484-07.html";
+					break;
+				case State.COMPLETED:
 					htmltext = getAlreadyCompletedMsg(player);
-				}
-				break;
+					break;
 			}
-			case HIDDEN_CRUSHER:
+		}
+		else
+		{
+			if (qs.isStarted())
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(1))
 				{
-					htmltext = "33990-01.html";
+					final int itemCount = (int) getQuestItemsCount(player, SHINING_MYSTERIOUS_FRAGMENT);
+					int reduceCount = getRandom(1, 3);
+					if (reduceCount > itemCount)
+					{
+						reduceCount = itemCount;
+					}
+					
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_CRUSHER_IS_ACTIVATED);
+					npc.setScriptValue(reduceCount);
+					
+					for (int i = 0; i < 3; i++)
+					{
+						final L2Npc mob = addSpawn(FRAGMENT_EATER, player, true, 70000);
+						mob.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.KILL_THEM_DON_T_LET_THEM_GET_AWAY_WITH_THE_FRAGMENT);
+						addAttackPlayerDesire(mob, player);
+					}
+					takeItems(player, SHINING_MYSTERIOUS_FRAGMENT, reduceCount);
+					giveItems(player, NORMAL_FRAGMENT_DUST, reduceCount);
+					getTimers().addTimer("DESTROY_COUNT", 2000, npc, player);
+					
+					if (getQuestItemsCount(player, NORMAL_FRAGMENT_DUST) >= 20)
+					{
+						qs.setCond(3, true); // Looks like cond 2 is skipped.
+					}
+					htmltext = null;
 				}
-				else if (qs.isCompleted())
+				else
 				{
 					htmltext = "33990-02.html";
 				}
-				break;
+			}
+			else
+			{
+				htmltext = "33990-01.html";
 			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(killer, false);
-		final long count = getQuestItemsCount(killer, SHINING_MYSTERIUS_FRAGMENT);
-		if ((qs != null) && qs.isCond(2) && (count > 0))
+		switch (event)
 		{
-			if (getRandom(10) < 5)
+			case "DESTROY_COUNT":
 			{
-				takeItems(killer, SHINING_MYSTERIUS_FRAGMENT, 1);
-				giveItems(killer, NORMAL_FRAGMENT_DUST, 1);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				if ((npc != null) && (npc.getId() == HIDDEN_CRUSHER))
+				{
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.S1_OBJECT_S_DESTROYED, String.valueOf(npc.getScriptValue()));
+					getTimers().addTimer("DESPAWN_MSG", 2000, npc, player);
+				}
+				break;
 			}
-			if (getQuestItemsCount(killer, NORMAL_FRAGMENT_DUST) >= 20)
+			case "DESPAWN_MSG":
 			{
-				qs.setCond(3, true);
+				if ((npc != null) && (npc.getId() == HIDDEN_CRUSHER))
+				{
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_DEVICE_RAN_OUT_OF_MAGIC);
+					showOnScreenMsg(player, NpcStringId.THE_DEVICE_RAN_OUT_OF_MAGIC_TRY_LOOKING_FOR_ANOTHER, ExShowScreenMessage.TOP_CENTER, 5000);
+					if (!getTimers().hasTimer("DESPAWN", npc, null))
+					{
+						getTimers().addTimer("DESPAWN", 1000, npc, null);
+					}
+				}
+				break;
 			}
+			case "DESPAWN":
+			{
+				if ((npc != null) && (npc.getId() == HIDDEN_CRUSHER))
+				{
+					npc.deleteMe();
+				}
+				break;
+			}
+			default:
+				super.onTimerEvent(event, params, npc, player);
 		}
-		return super.onKill(npc, killer, isSummon);
 	}
 }

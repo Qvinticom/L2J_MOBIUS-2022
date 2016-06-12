@@ -20,10 +20,10 @@ import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.ADENA_ID;
 import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.instancemanager.FactionManager;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
 import com.l2jmobius.gameserver.model.BlockList;
 import com.l2jmobius.gameserver.model.L2AccessLevel;
@@ -33,20 +33,16 @@ import com.l2jmobius.gameserver.model.itemcontainer.Mail;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExNoticePostSent;
-import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * @author Migi, DS
  */
-public final class RequestSendPost extends L2GameClientPacket
+public final class RequestSendPost implements IClientIncomingPacket
 {
-	private static final String _C__D0_66_REQUESTSENDPOST = "[C] D0:66 RequestSendPost";
-	
 	private static final int BATCH_LENGTH = 12; // length of the one item
 	
 	private static final int MAX_RECV_LENGTH = 16;
@@ -71,17 +67,17 @@ public final class RequestSendPost extends L2GameClientPacket
 	}
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_receiver = readS();
-		_isCod = readD() != 0;
-		_subject = readS();
-		_text = readS();
+		_receiver = packet.readS();
+		_isCod = packet.readD() != 0;
+		_subject = packet.readS();
+		_text = packet.readS();
 		
-		final int attachCount = readD();
-		if ((attachCount < 0) || (attachCount > Config.MAX_ITEM_IN_PACKET) || (((attachCount * BATCH_LENGTH) + 8) != _buf.remaining()))
+		final int attachCount = packet.readD();
+		if ((attachCount < 0) || (attachCount > Config.MAX_ITEM_IN_PACKET) || (((attachCount * BATCH_LENGTH) + 8) != packet.getReadableBytes()))
 		{
-			return;
+			return false;
 		}
 		
 		if (attachCount > 0)
@@ -89,29 +85,30 @@ public final class RequestSendPost extends L2GameClientPacket
 			_items = new AttachmentItem[attachCount];
 			for (int i = 0; i < attachCount; i++)
 			{
-				final int objectId = readD();
-				final long count = readQ();
+				final int objectId = packet.readD();
+				final long count = packet.readQ();
 				if ((objectId < 1) || (count < 0))
 				{
 					_items = null;
-					return;
+					return false;
 				}
 				_items[i] = new AttachmentItem(objectId, count);
 			}
 		}
 		
-		_reqAdena = readQ();
+		_reqAdena = packet.readQ();
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (!Config.ALLOW_MAIL)
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -214,7 +211,7 @@ public final class RequestSendPost extends L2GameClientPacket
 		final int level = CharNameTable.getInstance().getAccessLevelById(receiverId);
 		final L2AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
 		
-		if (accessLevel.isGm() && !activeChar.getAccessLevel().isGm())
+		if ((accessLevel != null) && accessLevel.isGm() && !activeChar.getAccessLevel().isGm())
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_MESSAGE_TO_C1_DID_NOT_REACH_ITS_RECIPIENT_YOU_CANNOT_SEND_MAIL_TO_THE_GM_STAFF);
 			sm.addString(_receiver);
@@ -248,13 +245,7 @@ public final class RequestSendPost extends L2GameClientPacket
 			return;
 		}
 		
-		if (Config.FACTION_SYSTEM_ENABLED && (FactionManager.getInstance().getFactionByCharId(activeChar.getObjectId()) != FactionManager.getInstance().getFactionByCharId(receiverId)))
-		{
-			activeChar.sendMessage("You cannot send mails to the opposing faction.");
-			return;
-		}
-		
-		if (!getClient().getFloodProtectors().getSendMail().tryPerformAction("sendmail"))
+		if (!client.getFloodProtectors().getSendMail().tryPerformAction("sendmail"))
 		{
 			activeChar.sendPacket(SystemMessageId.THE_PREVIOUS_MAIL_WAS_FORWARDED_LESS_THAN_1_MINUTE_AGO_AND_THIS_CANNOT_BE_FORWARDED);
 			return;
@@ -269,7 +260,7 @@ public final class RequestSendPost extends L2GameClientPacket
 		}
 	}
 	
-	private final boolean removeItems(L2PcInstance player, Message msg)
+	private boolean removeItems(L2PcInstance player, Message msg)
 	{
 		long currentAdena = player.getAdena();
 		long fee = MESSAGE_FEE;
@@ -315,10 +306,6 @@ public final class RequestSendPost extends L2GameClientPacket
 			return false;
 		}
 		
-		final StringBuilder recv = new StringBuilder(32);
-		StringUtil.append(recv, msg.getReceiverName(), "[", String.valueOf(msg.getReceiverId()), "]");
-		final String receiver = recv.toString();
-		
 		// Proceed to the transfer
 		final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 		for (AttachmentItem i : _items)
@@ -331,7 +318,7 @@ public final class RequestSendPost extends L2GameClientPacket
 				return false;
 			}
 			
-			final L2ItemInstance newItem = player.getInventory().transferItem("SendMail", i.getObjectId(), i.getCount(), attachments, player, receiver);
+			final L2ItemInstance newItem = player.getInventory().transferItem("SendMail", i.getObjectId(), i.getCount(), attachments, player, msg.getReceiverName() + "[" + msg.getReceiverId() + "]");
 			if (newItem == null)
 			{
 				_log.warning("Error adding attachment for char " + player.getName() + " (newitem == null)");
@@ -355,15 +342,12 @@ public final class RequestSendPost extends L2GameClientPacket
 		// Send updated item list to the player
 		if (playerIU != null)
 		{
-			player.sendPacket(playerIU);
+			player.sendInventoryUpdate(playerIU);
 		}
 		else
 		{
-			player.sendPacket(new ItemList(player, false));
+			player.sendItemList(false);
 		}
-		
-		// Update current load status on player
-		player.sendPacket(new ExUserInfoInvenWeight(player));
 		
 		return true;
 	}
@@ -388,17 +372,5 @@ public final class RequestSendPost extends L2GameClientPacket
 		{
 			return _count;
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_66_REQUESTSENDPOST;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

@@ -16,12 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.datatables.AugmentationData;
 import com.l2jmobius.gameserver.model.L2Augmentation;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExVariationResult;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 
@@ -31,25 +32,25 @@ import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
  */
 public final class RequestRefine extends AbstractRefinePacket
 {
-	private static final String _C__D0_41_REQUESTREFINE = "[C] D0:41 RequestRefine";
 	private int _targetItemObjId;
 	private int _refinerItemObjId;
 	private int _gemStoneItemObjId;
 	private long _gemStoneCount;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_targetItemObjId = readD();
-		_refinerItemObjId = readD();
-		_gemStoneItemObjId = readD();
-		_gemStoneCount = readQ();
+		_targetItemObjId = packet.readD();
+		_refinerItemObjId = packet.readD();
+		_gemStoneItemObjId = packet.readD();
+		_gemStoneCount = packet.readQ();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -101,7 +102,7 @@ public final class RequestRefine extends AbstractRefinePacket
 			{
 				iu.addModifiedItem(itm);
 			}
-			activeChar.sendPacket(iu);
+			activeChar.sendInventoryUpdate(iu);
 			activeChar.broadcastUserInfo();
 		}
 		
@@ -120,20 +121,13 @@ public final class RequestRefine extends AbstractRefinePacket
 		final L2Augmentation aug = AugmentationData.getInstance().generateRandomAugmentation(lifeStoneLevel, lifeStoneGrade, targetItem.getItem().getBodyPart(), refinerItem.getId(), targetItem);
 		targetItem.setAugmentation(aug);
 		
-		final int stat12 = 0x0000FFFF & aug.getAugmentationId();
-		final int stat34 = aug.getAugmentationId() >> 16;
+		final int stat12 = 0x0000FFFF & aug.getId();
+		final int stat34 = aug.getId() >> 16;
 		activeChar.sendPacket(new ExVariationResult(stat12, stat34, 1));
 		
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(targetItem);
-		activeChar.sendPacket(iu);
-		
-		activeChar.sendPacket(new ExUserInfoInvenWeight(activeChar));
+		activeChar.sendInventoryUpdate(iu);
 	}
 	
-	@Override
-	public String getType()
-	{
-		return _C__D0_41_REQUESTREFINE;
-	}
 }

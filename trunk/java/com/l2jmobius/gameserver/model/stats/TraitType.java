@@ -59,15 +59,22 @@ public enum TraitType
 	TURN_STONE(35, 3),
 	GUST(36, 3),
 	PHYSICAL_BLOCKADE(37, 3),
-	UNK_38(38, 3),
-	UNK_39(39, 3),
-	UNK_40(40, 3),
+	TARGET(38, 3),
+	PHYSICAL_WEAKNESS(39, 3),
+	MAGICAL_WEAKNESS(40, 3),
 	DUALDAGGER(41, 1),
 	DUALBLUNT(42, 1),
 	KNOCKBACK(43, 3),
 	KNOCKDOWN(44, 3),
-	MUTE(45, 3),
-	NONE(46, 0);
+	PULL(45, 3),
+	HATE(46, 3),
+	AGGRESSION(47, 3),
+	AIRBIND(48, 3),
+	DISARM(49, 3),
+	DEPORT(50, 3),
+	CHANGEBODY(51, 3),
+	TWOHANDCROSSBOW(52, 1),
+	NONE(53, 0);
 	
 	private final int _id;
 	private final int _type; // 1 = weapon, 2 = weakness, 3 = resistance

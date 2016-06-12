@@ -17,9 +17,11 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
@@ -30,11 +32,15 @@ public final class VitalityPointUp extends AbstractEffect
 {
 	private final int _value;
 	
-	public VitalityPointUp(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public VitalityPointUp(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
-		
 		_value = params.getInt("value", 0);
+	}
+	
+	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return (info.getEffected() != null) && info.getEffected().isPlayer();
 	}
 	
 	@Override
@@ -44,12 +50,9 @@ public final class VitalityPointUp extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if ((info.getEffected() != null) && info.getEffected().isPlayer())
-		{
-			info.getEffected().getActingPlayer().updateVitalityPoints(_value, false, false);
-			info.getEffected().getActingPlayer().sendPacket(new UserInfo(info.getEffected().getActingPlayer()));
-		}
+		effected.getActingPlayer().updateVitalityPoints(_value, false, false);
+		effected.getActingPlayer().sendPacket(new UserInfo(effected.getActingPlayer()));
 	}
 }

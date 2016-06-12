@@ -16,45 +16,46 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.PetItemList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestPetUseItem extends L2GameClientPacket
+public final class RequestPetUseItem implements IClientIncomingPacket
 {
-	private static final String _C__8A_REQUESTPETUSEITEM = "[C] 8A RequestPetUseItem";
-	
 	private int _objectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
+		_objectId = packet.readD();
 		// TODO: implement me properly
-		// readQ();
-		// readD();
+		// packet.readQ();
+		// packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || !activeChar.hasPet())
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getUseItem().tryPerformAction("pet use item"))
+		if (!client.getFloodProtectors().getUseItem().tryPerformAction("pet use item"))
 		{
 			return;
 		}
 		
-		final L2PetInstance pet = (L2PetInstance) activeChar.getPet();
+		final L2PetInstance pet = activeChar.getPet();
 		final L2ItemInstance item = pet.getInventory().getItemByObjectId(_objectId);
 		if (item == null)
 		{
@@ -78,9 +79,13 @@ public final class RequestPetUseItem extends L2GameClientPacket
 		// If the item has reuse time and it has not passed.
 		// Message from reuse delay must come from item.
 		final int reuseDelay = item.getReuseDelay();
-		if ((reuseDelay > 0) && (pet.getItemRemainingReuseTime(item.getObjectId()) > 0))
+		if (reuseDelay > 0)
 		{
-			return;
+			final long reuse = pet.getItemRemainingReuseTime(item.getObjectId());
+			if (reuse > 0)
+			{
+				return;
+			}
 		}
 		
 		if (!item.isEquipped() && !item.getItem().checkCondition(pet, pet, true))
@@ -134,11 +139,5 @@ public final class RequestPetUseItem extends L2GameClientPacket
 				_log.warning("No item handler registered for itemId: " + item.getId());
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__8A_REQUESTPETUSEITEM;
 	}
 }

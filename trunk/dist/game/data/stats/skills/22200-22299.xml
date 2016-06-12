@@ -1,1098 +1,3368 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="22200" levels="1" name="Transformation Scroll - Veil Master Event">
+	<skill id="22200" toLevel="1" name="Transformation Scroll: Veil Master">
 		<!-- Transformed into a Veil Master. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform1" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21181" /> <!-- Transformation Scroll: Veil Master Event -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="14400000" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="4" />
-			</effect>
-		</for>
+		<abnormalTime>1800</abnormalTime>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skilltransform1</icon>
+		<operateType>A2</operateType>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>4</transformId>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="22201" levels="1" name="Transformation Scroll - Saber Tooth Tiger Event">
+	<skill id="22201" toLevel="1" name="Transformation Scroll: Saber Tooth Tiger">
 		<!-- Transformed into a Saber Tooth Tiger. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform1" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21182" /> <!-- Transformation Scroll: Saber Tooth Tiger Event -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="14400000" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="5" />
-			</effect>
-		</for>
+		<abnormalTime>1800</abnormalTime>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skilltransform1</icon>
+		<operateType>A2</operateType>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>5</transformId>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="22202" levels="1" name="Transformation Scroll - Ol Mahum Event">
+	<skill id="22202" toLevel="1" name="Transformation Scroll: Oel Mahum">
 		<!-- Transformed into an Ol Mahum. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform1" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21183" /> <!-- Transformation Scroll: Ol Mahum Event -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="14400000" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="6" />
-			</effect>
-		</for>
+		<abnormalTime>1800</abnormalTime>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skilltransform1</icon>
+		<operateType>A2</operateType>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>6</transformId>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="22203" levels="1" name="Transformation Scroll - Doll Blader Event">
+	<skill id="22203" toLevel="1" name="Transformation Scroll: Doll Blader">
 		<!-- Transformed into a Doll Blader. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform1" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21184" /> <!-- Transformation Scroll: Doll Blader Event -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="14400000" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="7" />
-			</effect>
-		</for>
+		<abnormalTime>1800</abnormalTime>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skilltransform1</icon>
+		<operateType>A2</operateType>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>7</transformId>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="22204" levels="1" name="Transformation Scroll - Zaken Event">
+	<skill id="22204" toLevel="1" name="Transformation Scroll: Zaken">
 		<!-- Transformed into Zaken. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform1" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21185" /> <!-- Transformation Scroll: Zaken Event -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="14400000" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="305" />
-			</effect>
-		</for>
+		<abnormalTime>1800</abnormalTime>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skilltransform1</icon>
+		<operateType>A2</operateType>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>305</transformId>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="22205" levels="1" name="Transformation Scroll - Anakim Event">
+	<skill id="22205" toLevel="1" name="Transformation Scroll: Anakim">
 		<!-- Transformed into Anakim. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform1" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21186" /> <!-- Transformation Scroll: Anakim Event -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="14400000" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="306" />
-			</effect>
-		</for>
+		<abnormalTime>1800</abnormalTime>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skilltransform1</icon>
+		<operateType>A2</operateType>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>306</transformId>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="22206" levels="1" name="Transformation Scroll - Venom Event">
+	<skill id="22206" toLevel="1" name="Transformation Scroll: Venom">
 		<!-- Transformed into Venom. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform1" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21187" /> <!-- Transformation Scroll: Venom Event -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="14400000" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="307" />
-			</effect>
-		</for>
+		<abnormalTime>1800</abnormalTime>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skilltransform1</icon>
+		<operateType>A2</operateType>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>307</transformId>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="22207" levels="1" name="Transformation Scroll - Gordon Event">
+	<skill id="22207" toLevel="1" name="Transformation Scroll: Gordon">
 		<!-- Transformed into Gordon. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform1" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21188" /> <!-- Transformation Scroll: Gordon Event -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="14400000" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="308" />
-			</effect>
-		</for>
+		<abnormalTime>1800</abnormalTime>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skilltransform1</icon>
+		<operateType>A2</operateType>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>308</transformId>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="22208" levels="1" name="Transformation Scroll - Ranku Event">
+	<skill id="22208" toLevel="1" name="Transformation Scroll: Ranku">
 		<!-- Transformed into Ranku. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform1" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21189" /> <!-- Transformation Scroll: Ranku Event -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="14400000" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="309" />
-			</effect>
-		</for>
+		<abnormalTime>1800</abnormalTime>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skilltransform1</icon>
+		<operateType>A2</operateType>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>309</transformId>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="22209" levels="1" name="Transformation Scroll - Kechi Event">
-		<!-- Transformed into Kechi. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform1" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21190" /> <!-- Transformation Scroll: Kechi Event -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="14400000" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="310" />
-			</effect>
-		</for>
+	<skill id="22209" toLevel="1" name="Transformation Scroll: Kechi">
+		<!-- Transformed into Kietch. -->
+		<abnormalTime>1800</abnormalTime>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skilltransform1</icon>
+		<operateType>A2</operateType>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>310</transformId>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="22210" levels="1" name="Transformation Scroll - Demon Prince Event">
-		<!-- Transformed into Demon Prince. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform1" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21191" /> <!-- Transformation Scroll: Demon Prince Event -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="14400000" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
-			<effect name="Transformation">
-				<param id="311" />
-			</effect>
-		</for>
+	<skill id="22210" toLevel="1" name="Transformation Scroll: Demon Prince">
+		<!-- Transformed into Duke Devil. -->
+		<abnormalTime>1800</abnormalTime>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skilltransform1</icon>
+		<operateType>A2</operateType>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>311</transformId>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="22211" levels="1" name="Blessed Scroll of Escape">
+	<skill id="22211" toLevel="1" name="Blessed Scroll of Escape">
 		<!-- none -->
-		<set name="blockedInOlympiad" val="true" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<reuseDelay>4000</reuseDelay>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
 	</skill>
-	<skill id="22212" levels="1" name="Superior Quick Healing Potion">
+	<skill id="22212" toLevel="1" name="Superior Quick Healing Potion">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Hp">
+				<amount>870</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22213" levels="1" name="Mysterious Scroll: Drum Melody">
+	<skill id="22213" toLevel="1" name="Mysterious Scroll: Drum Melody">
 		<!-- "For 60 minutes, receives help from a great spirit to increase Max HP by 20%, rate of critical attack by 20%, rate of Prominent Damage through magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buff by 10%. Decreases Speed by 20%. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on an enemy." -->
-		<set name="abnormalLvl" val="4" />
-		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="icon.skill1357" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21200" /> <!-- Mysterious Scroll - Prophecy of Wind -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="10000" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="maxHp" val="1.2" />
-				<mul stat="critRate" val="1.2" />
-				<mul stat="critDmg" val="1.2" />
-				<mul stat="pAtk" val="1.1" />
-				<mul stat="pDef" val="1.2" />
-				<mul stat="pAtkSpd" val="1.2" />
-				<mul stat="mAtk" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<mul stat="mAtkSpd" val="1.2" />
-				<sub stat="debuffVuln" val="10" />
-				<mul stat="runSpd" val="0.8" />
-				<add stat="absorbDam" val="5" />
+		<abnormalLvl>25</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>icon.skill1357</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>21200</itemConsumeId> <!-- Mysterious Scroll - Prophecy of Wind -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
-		</for>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22214" levels="1" name="MP Recovery Potion">
+	<skill id="22214" toLevel="1" name="MP Recovery Potion">
 		<!-- Magic potion that quickly recovers MP by 50% when used. -->
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="icon.skill0000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21210" /> <!-- MP Recovery Potion -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="300000" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>21210</itemConsumeId> <!-- MP Recovery Potion -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="ManaHealPercent">
-				<param power="50" />
+				<power>50</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22215" levels="1" name="Vitality Recovering Potion">
+	<skill id="22215" toLevel="1" name="Vitality Recovering Potion">
 		<!-- "For 30 minute(s), energy is replenished when Exp. is acquired through hunting." -->
-		<set name="abnormalLvl" val="3" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="VP_UP" />
-		<set name="abnormalVisualEffect" val="VP_UP" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="100" />
-		<set name="hitTime" val="100" />
-		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21212" /> <!-- Vitality Replenishing Herb Tea -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<sub stat="vitalityConsumeRate" val="10" />
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>VP_UP</abnormalType>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<icon>icon.etc_hot_spring_mineral_i00</icon>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>21212</itemConsumeId> <!-- Vitality Replenishing Herb Tea -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-10</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22216" levels="1" name="Transformation Scroll: Anakim">
+	<skill id="22216" toLevel="1" name="Transformation Scroll: Anakim">
 		<!-- Transformed into Anakim. -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="effectPoint" val="1" />
-		<set name="icon" val="icon.skilltransform1" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21224" /> <!-- Transformation Scroll: Anakim -->
-		<set name="magicLvl" val="-1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="600000" />
-		<set name="targetType" val="SELF" />
-		<cond>
-			<player canTransform="true" />
-		</cond>
-		<for>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skilltransform1</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>21224</itemConsumeId> <!-- Transformation Scroll: Anakim -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>306</transformId>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="Transformation">
-				<param id="306" />
+				<transformationId>306</transformationId>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22217" levels="1" name="Super Healthy Juice (HP)">
+	<skill id="22217" toLevel="1" name="Super Healthy Juice (HP)">
 		<!-- Magic juice that instantly fully recovers HP. -->
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="icon.skill0000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21239" /> <!-- Super Healthy Juice (HP) -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="300000" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>21239</itemConsumeId> <!-- Super Healthy Juice (HP) -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="HealPercent">
-				<param power="100" />
+				<power>100</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22218" levels="1" name="Super Healthy Juice (HP)">
+	<skill id="22218" toLevel="1" name="Super Healthy Juice (HP)">
 		<!-- Magic juice that instantly fully recovers HP. -->
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="icon.skill0000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21240" /> <!-- Super Healthy Juice (HP) - Event -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="300000" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>21240</itemConsumeId> <!-- Super Healthy Juice (HP) - Event -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="HealPercent">
-				<param power="100" />
+				<power>100</power>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22219" levels="1" name="Super Healthy Juice (CP)">
+	<skill id="22219" toLevel="1" name="Super Healthy Juice (CP)">
 		<!-- Magic juice that temporarily recovers CP in full. -->
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="icon.skill0000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21243" /> <!-- Super Healthy Juice (CP) -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="300000" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="CpHealPercent">
-				<param power="100" />
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>21243</itemConsumeId> <!-- Super Healthy Juice (CP) -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Cp">
+				<amount>20000</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22220" levels="1" name="Super Healthy Juice (CP)">
+	<skill id="22220" toLevel="1" name="Super Healthy Juice (CP)">
 		<!-- Magic juice that temporarily recovers CP in full. -->
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="icon.skill0000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21244" /> <!-- Super Healthy Juice (CP) - Event -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="300000" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="CpHealPercent">
-				<param power="100" />
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>21244</itemConsumeId> <!-- Super Healthy Juice (CP) - Event -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Cp">
+				<amount>20000</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22221" levels="1" name="Vitality Replenishing Potion">
+	<skill id="22221" toLevel="1" name="Vitality Replenishing Potion">
 		<!-- Vitality is replenished to 100% upon use. -->
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="icon.skill0000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21247" /> <!-- Vitality Replenishing Beverage -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>21247</itemConsumeId> <!-- Vitality Replenishing Beverage -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+		</conditions>
+		<effects>
 			<effect name="VitalityPointUp">
-				<param value="20000" />
+				<value>20000</value>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22222" levels="1" name="Vitality Replenishing Potion">
+	<skill id="22222" toLevel="1" name="Vitality Replenishing Potion">
 		<!-- Vitality is replenished to 100% upon use. -->
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="icon.skill0000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21248" /> <!-- Vitality Replenishing Beverage - Event -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>21248</itemConsumeId> <!-- Vitality Replenishing Beverage - Event -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+		</conditions>
+		<effects>
 			<effect name="VitalityPointUp">
-				<param value="20000" />
+				<value>20000</value>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22223" levels="1" name="Vitality Maintaining Potion">
+	<skill id="22223" toLevel="1" name="Vitality Maintaining Potion">
 		<!-- Energy is maintained for 30 minutes. -->
-		<set name="abnormalLvl" val="3" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="VP_UP" />
-		<set name="abnormalVisualEffect" val="VP_UP" />
-		<set name="effectPoint" val="100" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_essence_rose_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21251" /> <!-- Vitality Maintainig Potion (30 Minutes) -->
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="vitalityConsumeRate" val="0" />
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>VP_KEEP</abnormalType>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<effectPoint>100</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_essence_rose_i00</icon>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>21251</itemConsumeId> <!-- Vitality Maintainig Potion (30 Minutes) -->
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22224" levels="1" name="Vitality Maintaining Potion">
+	<skill id="22224" toLevel="1" name="Vitality Maintaining Potion">
 		<!-- Energy is maintained for 30 minutes. -->
-		<set name="abnormalLvl" val="3" />
-		<set name="abnormalTime" val="1800" />
-		<set name="abnormalType" val="VP_UP" />
-		<set name="abnormalVisualEffect" val="VP_UP" />
-		<set name="effectPoint" val="100" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.br_essence_rose_i00" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21252" /> <!-- Vitality Maintainig Potion (30 Minutes) - Event -->
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="targetType" val="SELF" />
-		<for>
-			<effect name="Buff">
-				<mul stat="vitalityConsumeRate" val="0" />
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>VP_KEEP</abnormalType>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<effectPoint>100</effectPoint>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>BranchSys2.icon.br_essence_rose_i00</icon>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>21252</itemConsumeId> <!-- Vitality Maintainig Potion (30 Minutes) - Event -->
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22225" levels="1" name="Gludio Homemade Cookie">
+	<skill id="22225" toLevel="1" name="Gludio Homemade Cookie">
 		<!-- Increases P. Atk. by 10% for 60 minutes. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>PA_PD_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22226" levels="1" name="Gludio Homemade Cookie">
+	<skill id="22226" toLevel="1" name="Gludio Homemade Cookie">
 		<!-- Increases P. Atk. by 10% for 60 minutes. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>PA_PD_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22227" levels="1" name="Dion Homemade Cookie">
+	<skill id="22227" toLevel="1" name="Dion Homemade Cookie">
 		<!-- Increases P. Def. by 15% for 60 minutes. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>PA_PD_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22228" levels="1" name="Dion Homemade Cookie">
+	<skill id="22228" toLevel="1" name="Dion Homemade Cookie">
 		<!-- Increases P. Def. by 15% for 60 minutes. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>PA_PD_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22229" levels="1" name="Aden Homemade Cookie">
+	<skill id="22229" toLevel="1" name="Aden Homemade Cookie">
 		<!-- "For 60 minutes, receives help from a great spirit to recover 20% of HP, and to increase Max HP by 20%, the chance of prominent magic damage by 2, Critical Attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, resistance to de-buffs by 10%, and Accuracy by 4. Decreases Speed by 20%." -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>25</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22230" levels="1" name="Aden Homemade Cookie">
+	<skill id="22230" toLevel="1" name="Aden Homemade Cookie">
 		<!-- "For 60 minutes, receives help from a great spirit to recover 20% of HP, and to increase Max HP by 20%, the chance of prominent magic damage by 2, Critical Attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, resistance to de-buffs by 10%, and Accuracy by 4. Decreases Speed by 20%." -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>25</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22231" levels="1" name="Giran Homemade Cookie">
+	<skill id="22231" toLevel="1" name="Giran Homemade Cookie">
 		<!-- "Increases P. Def. against Critical by 30% for 60 minutes. When the target receives an attack above a certain amount of damage, the Critical Damage of general short-range physical attack is increased for 8 seconds." -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>25</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22232" levels="1" name="Giran Homemade Cookie">
+	<skill id="22232" toLevel="1" name="Giran Homemade Cookie">
 		<!-- "Increases P. Def. against Critical by 30% for 60 minutes. When the target receives an attack above a certain amount of damage, the Critical Damage of general short-range physical attack is increased for 8 seconds." -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>25</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22233" levels="1" name="Rune Homemade Cookie">
+	<skill id="22233" toLevel="1" name="Rune Homemade Cookie">
 		<!-- Greatly increases the power of recharge received for 60 minutes. The amount of recovered MP may differ according to the level. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>RECHARGE_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22234" levels="1" name="Rune Homemade Cookie">
+	<skill id="22234" toLevel="1" name="Rune Homemade Cookie">
 		<!-- Greatly increases the power of recharge received for 60 minutes. The amount of recovered MP may differ according to the level. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>RECHARGE_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22235" levels="1" name="Crystal of Fortune Treasure Sack">
+	<skill id="22235" toLevel="1" name="Crystal of Fortune Treasure Sack">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21303</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<reuseDelay>2000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="3.3333">
+						<item id="9552" count="1" />
+					</item>
+					<item chance="3.3333">
+						<item id="9553" count="1" />
+					</item>
+					<item chance="3.3333">
+						<item id="9555" count="1" />
+					</item>
+					<item chance="3.3333">
+						<item id="9554" count="1" />
+					</item>
+					<item chance="3.3333">
+						<item id="9556" count="1" />
+					</item>
+					<item chance="3.3337">
+						<item id="9557" count="1" />
+					</item>
+					<item chance="13.3333">
+						<item id="9546" count="1" />
+					</item>
+					<item chance="13.3333">
+						<item id="9547" count="1" />
+					</item>
+					<item chance="13.3333">
+						<item id="9549" count="1" />
+					</item>
+					<item chance="13.3333">
+						<item id="9548" count="1" />
+					</item>
+					<item chance="13.3333">
+						<item id="9550" count="1" />
+					</item>
+					<item chance="13.3333">
+						<item id="9551" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22236" levels="1" name="Crystal of Fortune Treasure Sack">
+	<skill id="22236" toLevel="1" name="Crystal of Fortune Treasure Sack">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21304</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<reuseDelay>2000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="3.3333">
+						<item id="9552" count="1" />
+					</item>
+					<item chance="3.3333">
+						<item id="9553" count="1" />
+					</item>
+					<item chance="3.3333">
+						<item id="9555" count="1" />
+					</item>
+					<item chance="3.3333">
+						<item id="9554" count="1" />
+					</item>
+					<item chance="3.3333">
+						<item id="9556" count="1" />
+					</item>
+					<item chance="3.3337">
+						<item id="9557" count="1" />
+					</item>
+					<item chance="13.3333">
+						<item id="9546" count="1" />
+					</item>
+					<item chance="13.3333">
+						<item id="9547" count="1" />
+					</item>
+					<item chance="13.3333">
+						<item id="9549" count="1" />
+					</item>
+					<item chance="13.3333">
+						<item id="9548" count="1" />
+					</item>
+					<item chance="13.3333">
+						<item id="9550" count="1" />
+					</item>
+					<item chance="13.3333">
+						<item id="9551" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22237" levels="1" name="Enchant Scroll of Fortune Treasure Sack">
+	<skill id="22237" toLevel="1" name="Enchant Scroll of Fortune Treasure Sack">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21307</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<reuseDelay>2000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5">
+						<item id="6577" count="1" />
+					</item>
+					<item chance="5">
+						<item id="6578" count="1" />
+					</item>
+					<item chance="5">
+						<item id="6569" count="1" />
+					</item>
+					<item chance="5">
+						<item id="6570" count="1" />
+					</item>
+					<item chance="15">
+						<item id="959" count="1" />
+					</item>
+					<item chance="15">
+						<item id="960" count="1" />
+					</item>
+					<item chance="15">
+						<item id="729" count="1" />
+					</item>
+					<item chance="15">
+						<item id="730" count="1" />
+					</item>
+					<item chance="5">
+						<item id="6571" count="1" />
+					</item>
+					<item chance="5">
+						<item id="6572" count="1" />
+					</item>
+					<item chance="5">
+						<item id="6573" count="1" />
+					</item>
+					<item chance="5">
+						<item id="6574" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22238" levels="1" name="Enchant Scroll of Fortune Treasure Sack">
+	<skill id="22238" toLevel="1" name="Enchant Scroll of Fortune Treasure Sack">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21308</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<reuseDelay>2000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5">
+						<item id="6577" count="1" />
+					</item>
+					<item chance="5">
+						<item id="6578" count="1" />
+					</item>
+					<item chance="5">
+						<item id="6569" count="1" />
+					</item>
+					<item chance="5">
+						<item id="6570" count="1" />
+					</item>
+					<item chance="15">
+						<item id="959" count="1" />
+					</item>
+					<item chance="15">
+						<item id="960" count="1" />
+					</item>
+					<item chance="15">
+						<item id="729" count="1" />
+					</item>
+					<item chance="15">
+						<item id="730" count="1" />
+					</item>
+					<item chance="5">
+						<item id="6571" count="1" />
+					</item>
+					<item chance="5">
+						<item id="6572" count="1" />
+					</item>
+					<item chance="5">
+						<item id="6573" count="1" />
+					</item>
+					<item chance="5">
+						<item id="6574" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22239" levels="1" name="Bead of Fortune Treasure Sack">
+	<skill id="22239" toLevel="1" name="Bead of Fortune Treasure Sack">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21311</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<reuseDelay>2000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="0.5">
+						<item id="21579" count="1" />
+					</item>
+					<item chance="0.5">
+						<item id="14681" count="1" />
+					</item>
+					<item chance="4">
+						<item id="14680" count="1" />
+					</item>
+					<item chance="23.75">
+						<item id="14679" count="1" />
+					</item>
+					<item chance="23.75">
+						<item id="14678" count="1" />
+					</item>
+					<item chance="23.75">
+						<item id="21247" count="1" />
+					</item>
+					<item chance="23.75">
+						<item id="21279" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22240" levels="1" name="Bead of Fortune Treasure Sack">
+	<skill id="22240" toLevel="1" name="Bead of Fortune Treasure Sack">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21312</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<reuseDelay>2000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="0.5">
+						<item id="21579" count="1" />
+					</item>
+					<item chance="0.5">
+						<item id="14681" count="1" />
+					</item>
+					<item chance="4">
+						<item id="14680" count="1" />
+					</item>
+					<item chance="23.75">
+						<item id="14679" count="1" />
+					</item>
+					<item chance="23.75">
+						<item id="14678" count="1" />
+					</item>
+					<item chance="23.75">
+						<item id="21247" count="1" />
+					</item>
+					<item chance="23.75">
+						<item id="21279" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22241" levels="1" name="Rider Pouch">
+	<skill id="22241" toLevel="1" name="Rider Pouch">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21315</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<reuseDelay>2000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2.5">
+						<item id="21383" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="21395" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="21407" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="21419" count="1" />
+					</item>
+					<item chance="15">
+						<item id="21381" count="1" />
+					</item>
+					<item chance="15">
+						<item id="21393" count="1" />
+					</item>
+					<item chance="15">
+						<item id="21405" count="1" />
+					</item>
+					<item chance="15">
+						<item id="21417" count="1" />
+					</item>
+					<item chance="7.5">
+						<item id="21379" count="1" />
+					</item>
+					<item chance="7.5">
+						<item id="21391" count="1" />
+					</item>
+					<item chance="7.5">
+						<item id="21403" count="1" />
+					</item>
+					<item chance="7.5">
+						<item id="21415" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22242" levels="1" name="Rider Pouch">
+	<skill id="22242" toLevel="1" name="Rider Pouch">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21316</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<reuseDelay>2000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2.5">
+						<item id="21383" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="21395" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="21407" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="21419" count="1" />
+					</item>
+					<item chance="15">
+						<item id="21381" count="1" />
+					</item>
+					<item chance="15">
+						<item id="21393" count="1" />
+					</item>
+					<item chance="15">
+						<item id="21405" count="1" />
+					</item>
+					<item chance="15">
+						<item id="21417" count="1" />
+					</item>
+					<item chance="7.5">
+						<item id="21379" count="1" />
+					</item>
+					<item chance="7.5">
+						<item id="21391" count="1" />
+					</item>
+					<item chance="7.5">
+						<item id="21403" count="1" />
+					</item>
+					<item chance="7.5">
+						<item id="21415" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22243" levels="1" name="Fashion Pouch">
+	<skill id="22243" toLevel="1" name="Fashion Pouch">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21319</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<reuseDelay>2000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="3.4333">
+						<item id="21553" count="1" />
+					</item>
+					<item chance="3.3333">
+						<item id="21565" count="1" />
+					</item>
+					<item chance="3.3333">
+						<item id="21577" count="1" />
+					</item>
+					<item chance="20">
+						<item id="21551" count="1" />
+					</item>
+					<item chance="20">
+						<item id="21563" count="1" />
+					</item>
+					<item chance="20">
+						<item id="21575" count="1" />
+					</item>
+					<item chance="10">
+						<item id="21549" count="1" />
+					</item>
+					<item chance="10">
+						<item id="21561" count="1" />
+					</item>
+					<item chance="10">
+						<item id="21573" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22244" levels="1" name="Fashion Pouch">
+	<skill id="22244" toLevel="1" name="Fashion Pouch">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21320</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<reuseDelay>2000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="3.4333">
+						<item id="21553" count="1" />
+					</item>
+					<item chance="3.3333">
+						<item id="21565" count="1" />
+					</item>
+					<item chance="3.3333">
+						<item id="21577" count="1" />
+					</item>
+					<item chance="20">
+						<item id="21551" count="1" />
+					</item>
+					<item chance="20">
+						<item id="21563" count="1" />
+					</item>
+					<item chance="20">
+						<item id="21575" count="1" />
+					</item>
+					<item chance="10">
+						<item id="21549" count="1" />
+					</item>
+					<item chance="10">
+						<item id="21561" count="1" />
+					</item>
+					<item chance="10">
+						<item id="21573" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22245" levels="1" name="Buff Pouch">
+	<skill id="22245" toLevel="1" name="Buff Pouch">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21323</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<reuseDelay>2000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="4">
+						<item id="21255" count="25" />
+					</item>
+					<item chance="4">
+						<item id="21259" count="25" />
+					</item>
+					<item chance="4">
+						<item id="21263" count="15" />
+					</item>
+					<item chance="4">
+						<item id="21267" count="15" />
+					</item>
+					<item chance="4">
+						<item id="21271" count="15" />
+					</item>
+					<item chance="25">
+						<item id="21239" count="9" />
+					</item>
+					<item chance="25">
+						<item id="21243" count="15" />
+					</item>
+					<item chance="10">
+						<item id="21227" count="3" />
+					</item>
+					<item chance="10">
+						<item id="21231" count="3" />
+					</item>
+					<item chance="10">
+						<item id="21235" count="3" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22246" levels="1" name="Buff Pouch">
+	<skill id="22246" toLevel="1" name="Buff Pouch">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21324</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<reuseDelay>2000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="4">
+						<item id="21255" count="25" />
+					</item>
+					<item chance="4">
+						<item id="21259" count="25" />
+					</item>
+					<item chance="4">
+						<item id="21263" count="15" />
+					</item>
+					<item chance="4">
+						<item id="21267" count="15" />
+					</item>
+					<item chance="4">
+						<item id="21271" count="15" />
+					</item>
+					<item chance="25">
+						<item id="21239" count="9" />
+					</item>
+					<item chance="25">
+						<item id="21243" count="15" />
+					</item>
+					<item chance="10">
+						<item id="21227" count="3" />
+					</item>
+					<item chance="10">
+						<item id="21231" count="3" />
+					</item>
+					<item chance="10">
+						<item id="21235" count="3" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22247" levels="1" name="Olf's T-shirt Enchant Scroll">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="22247" toLevel="1" name="Olf's T-shirt Enchant Scroll">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22248" levels="1" name="Blessed Olf's T-shirt Enchant Scroll">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="22248" toLevel="1" name="Blessed Olf's T-shirt Enchant Scroll">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22249" levels="1" name="Birthday Cake">
+	<skill id="22249" toLevel="1" name="Birthday Cake">
 		<!-- High Five Skill -->
 		<!-- Birthday Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<effectPoint>1</effectPoint>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<reuseDelay>10000</reuseDelay>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+			<condition name="OpCheckAbnormal">
+				<type>TRANSFORM</type>
+				<level>0</level>
+				<hasAbnormal>false</hasAbnormal>
+			</condition>
+		</conditions>
+		<effects>
 			<effect name="SummonNpc">
-				<param npcId="139" npcCount="1" despawnDelay="1200000" />
+				<npcId>139</npcId>
+				<npcCount>1</npcCount>
+				<despawnDelay>1200000</despawnDelay>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22250" levels="1" name="Birthday Cake Vitality Buff">
+	<skill id="22250" toLevel="1" name="Birthday Cake Vitality Buff">
 		<!-- Confirmed CT2.5 -->
 		<!-- Birthday Skill -->
-		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="VP_UP" />
-		<set name="affectRange" val="200" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
-		<for>
-			<effect name="Buff">
-				<mul stat="vitalityConsumeRate" val="0" />
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>VP_KEEP</abnormalType>
+		<affectRange>200</affectRange>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>500</effectRange>
+		<magicLvl>1</magicLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_birthday_cake_i00</icon>
+		<isMagic>4</isMagic>
+		<castRange>500</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22251" levels="1" name="Honey Rice Cakes">
+	<skill id="22251" toLevel="1" name="Honey Rice Cakes">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<reuseDelay>300000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22252" levels="1" name="Vitality Replenishing Potion">
+	<skill id="22252" toLevel="1" name="Vitality Replenishing Potion">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+		</conditions>
 	</skill>
-	<skill id="22253" levels="1" name="Prophecy of Water">
+	<skill id="22253" toLevel="1" name="Prophecy of Water">
 		<!-- "For 60 minute(s), increases Max MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20%, the chance of prominent damage occurring through magic damage by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buffs by 10%. Decreases Speed by 20% and MP consumption needed for skill use by 5%." -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22254" levels="1" name="Blessed Olf's T-shirt Enchant Scroll">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+	<skill id="22254" toLevel="1" name="Blessed Olf's T-shirt Enchant Scroll">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22255" levels="1" name="Honey Rice Cakes">
+	<skill id="22255" toLevel="1" name="Honey Rice Cakes">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<reuseDelay>300000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22256" levels="1" name="Might">
+	<skill id="22256" toLevel="1" name="Might">
 		<!-- Increases P. Atk. by 15% for 60 minutes. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>PA_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22257" levels="1" name="Wind Walk">
+	<skill id="22257" toLevel="1" name="Wind Walk">
 		<!-- Increases Speed by 33 for 60 minutes. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>SPEED_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22258" levels="1" name="Haste">
+	<skill id="22258" toLevel="1" name="Haste">
 		<!-- Increases Atk. Spd. by 33% for 60 minutes. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22259" levels="1" name="Vampiric Rage">
+	<skill id="22259" toLevel="1" name="Vampiric Rage">
 		<!-- "For 60 minutes, 9% of the standard short-range physical damage inflicted on an enemy is recovered as HP." -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22260" levels="1" name="Berserker Spirit">
+	<skill id="22260" toLevel="1" name="Berserker Spirit">
 		<!-- "Decreases P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 60 minutes." -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>BERSERKER</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22261" levels="1" name="Empower">
+	<skill id="22261" toLevel="1" name="Empower">
 		<!-- Increases M. Atk. power by 75% for 60 minutes. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>MA_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22262" levels="1" name="Acumen">
+	<skill id="22262" toLevel="1" name="Acumen">
 		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>CASTING_TIME_DOWN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22263" levels="1" name="Shield">
+	<skill id="22263" toLevel="1" name="Shield">
 		<!-- Increases P. Def. by 15% for 60 minutes. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>PD_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22264" levels="1" name="Focus">
+	<skill id="22264" toLevel="1" name="Focus">
 		<!-- Increases Critical Rate by 30% for 60 minutes. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>CRITICAL_PROB_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22265" levels="1" name="Death Whisper">
+	<skill id="22265" toLevel="1" name="Death Whisper">
 		<!-- Increases Critical Damage by 35% for 60 minutes. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>CRITICAL_DMG_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22266" levels="1" name="Guidance">
+	<skill id="22266" toLevel="1" name="Guidance">
 		<!-- Increases Accuracy by 4 for 60 minutes. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>HIT_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22267" levels="1" name="Clarity">
+	<skill id="22267" toLevel="1" name="Clarity">
 		<!-- "For 60 minutes, decreases physical skill exhaustion MP by 20%, magic skill exhaustion MP By 10%, and song/dance skill exhaustion MP by 20%." -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>CHEAP_MAGIC</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22268" levels="1" name="Wild Magic">
+	<skill id="22268" toLevel="1" name="Wild Magic">
 		<!-- "For 60 minutes, increases by 2 the damage rate of magic." -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22269" levels="6" name="Concentration">
+	<skill id="22269" toLevel="6" name="Concentration">
 		<!-- Decreases magic cancel damage by 53 for 60 minutes. -->
 		<!-- This skill only has one level, 6. -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<basicProperty>NONE</basicProperty>
+		<magicLvl>1</magicLvl>
+		<abnormalLvl>7</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22270" levels="1" name="Letter Collector's Gift">
+	<skill id="22270" toLevel="1" name="Letter Collector's Gift">
 		<!-- "For 2 hours, increases Atk. Spd. by 15%, Casting Spd. by 15%, and Speed by 20." -->
-		<set name="abnormalTime" val="7200" />
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys.icon.br_shield_bread_i01" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<abnormalTime>7200</abnormalTime>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<icon>icon.shield_bread_i01</icon>
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-3</specialLevel>
+		<magicLvl>-3</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>4</isMagic>
+		<staticReuse>true</staticReuse>
+		<abnormalVisualEffect>CHANGE_7ANNIVERSARY</abnormalVisualEffect>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22271" levels="1" name="Maestro's Key">
+	<skill id="22271" toLevel="1" name="Maestro's Key">
 		<!-- High Five Skill -->
-		<set name="blockedInOlympiad" val="true" />
-		<set name="castRange" val="40" />
-		<set name="effectPoint" val="-8" />
-		<set name="effectRange" val="400" />
-		<set name="hitTime" val="500" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
-		<cond msgId="109">
-			<target npcType="L2ChestInstance" />
-		</cond>
-		<for>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<castRange>40</castRange>
+		<effectPoint>-1</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>DOOR_TREASURE</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
 			<effect name="OpenChest" />
-		</for>
+		</effects>
 	</skill>
-	<skill id="22272" levels="1" name="Beginner Adventurer's Treasure Sack">
+	<skill id="22272" toLevel="1" name="Beginner Adventurer's Treasure Sack">
 		<!-- High Five Skill -->
-		<table name="#extractableItems">71,1,3.76;72,1,3.76;73,1,3.76;74,1,3.76;75,1,3.76;76,1,3.76;77,1,3.76;84,1,3.76;88,1,4.76;89,1,3.76;90,1,4.76;93,1,4.76;94,1,3.76;95,1,3.76;96,1,3.76;123,1,4.76;129,1,4.76;131,1,3.76;132,1,3.76;133,1,3.76;134,1,3.76;135,1,3.76;145,1,3.76;156,1,4.76;158,1,4.76;160,1,3.76;161,1,3.76;162,1,3.76;166,1,4.76;167,1,4.76;169,1,4.76;172,1,4.76;173,1,3.76;174,1,3.76;178,1,4.76;191,1,3.76;192,1,3.76;193,1,3.76;194,1,3.76;195,1,3.76;196,1,3.76;197,1,3.76;198,1,3.76;199,1,3.76;200,1,3.76;201,1,3.76;202,1,3.76;203,1,3.76;204,1,3.76;205,1,3.76;206,1,3.76;220,1,4.76;221,1,4.76;224,1,4.76;226,1,3.76;227,1,3.76;228,1,3.76;230,1,3.76;231,1,3.76;232,1,3.76;233,1,3.76;242,1,3.76;258,1,4.76;261,1,4.76;263,1,3.76;265,1,3.76;266,1,3.76;274,1,4.76;279,1,4.76;281,1,3.76;282,1,3.76;283,1,3.76;285,1,3.76;286,1,3.76;291,1,4.76;294,1,4.76;298,1,3.76;299,1,3.76;301,1,3.76;302,1,3.76;303,1,3.76;312,1,4.76;318,1,4.76;324,1,3.76;325,1,3.76;326,1,3.76;327,1,3.76;328,1,3.76;329,1,3.76;330,1,3.76;331,1,3.76;332,1,3.76;333,1,3.76;334,1,3.76;2502,1,3.76;2503,1,3.76;4233,1,3.76;5286,1,3.76;7882,1,3.76;7887,1,3.76;7888,1,3.76;7891,1,3.76;7897,1,3.76;7898,1,3.76;9228,1,3.76;9232,1,3.76;9236,1,3.76;9240,1,3.76;9244,1,3.76;9248,1,3.76;9252,1,3.76;9256,1,3.76;9260,1,3.76;9264,1,3.76;9268,1,3.76;9272,1,3.76;9276,1,3.76;9280,1,3.76;9284,1,3.76;9288,1,3.76;9292,1,3.76;9296,1,3.76;9300,1,3.76</table>
-		<set name="blockedInOlympiad" val="true" />
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<itemConsumeId>21747</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5.1274">
+						<item id="123" count="1" />
+					</item>
+					<item chance="5.1274">
+						<item id="156" count="1" />
+					</item>
+					<item chance="5.1274">
+						<item id="166" count="1" />
+					</item>
+					<item chance="5.1274">
+						<item id="167" count="1" />
+					</item>
+					<item chance="5.1274">
+						<item id="178" count="1" />
+					</item>
+					<item chance="5.1274">
+						<item id="220" count="1" />
+					</item>
+					<item chance="5.1274">
+						<item id="221" count="1" />
+					</item>
+					<item chance="5.1274">
+						<item id="258" count="1" />
+					</item>
+					<item chance="5.1274">
+						<item id="274" count="1" />
+					</item>
+					<item chance="5.1274">
+						<item id="291" count="1" />
+					</item>
+					<item chance="5.1274">
+						<item id="312" count="1" />
+					</item>
+					<item chance="2.8634">
+						<item id="88" count="1" />
+					</item>
+					<item chance="2.8634">
+						<item id="90" count="1" />
+					</item>
+					<item chance="2.8634">
+						<item id="93" count="1" />
+					</item>
+					<item chance="2.8634">
+						<item id="129" count="1" />
+					</item>
+					<item chance="2.8634">
+						<item id="158" count="1" />
+					</item>
+					<item chance="2.8634">
+						<item id="169" count="1" />
+					</item>
+					<item chance="2.8634">
+						<item id="172" count="1" />
+					</item>
+					<item chance="2.8634">
+						<item id="224" count="1" />
+					</item>
+					<item chance="2.8634">
+						<item id="261" count="1" />
+					</item>
+					<item chance="2.8634">
+						<item id="279" count="1" />
+					</item>
+					<item chance="2.8634">
+						<item id="294" count="1" />
+					</item>
+					<item chance="2.8634">
+						<item id="318" count="1" />
+					</item>
+					<item chance="0.7698">
+						<item id="72" count="1" />
+					</item>
+					<item chance="0.7698">
+						<item id="160" count="1" />
+					</item>
+					<item chance="0.7698">
+						<item id="191" count="1" />
+					</item>
+					<item chance="0.7698">
+						<item id="193" count="1" />
+					</item>
+					<item chance="0.7698">
+						<item id="226" count="1" />
+					</item>
+					<item chance="0.7698">
+						<item id="263" count="1" />
+					</item>
+					<item chance="0.7698">
+						<item id="281" count="1" />
+					</item>
+					<item chance="0.7698">
+						<item id="298" count="1" />
+					</item>
+					<item chance="0.7698">
+						<item id="2524" count="1" />
+					</item>
+					<item chance="0.7698">
+						<item id="192" count="1" />
+					</item>
+					<item chance="0.7698">
+						<item id="7887" count="1" />
+					</item>
+					<item chance="0.7698">
+						<item id="71" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22273" levels="1" name="Experienced Adventurer's Treasure Sack">
+	<skill id="22273" toLevel="1" name="Experienced Adventurer's Treasure Sack">
 		<!-- High Five Skill -->
-		<table name="#extractableItems">78,1,4.16;79,1,4.16;80,1,2.5;81,1,2.5;82,1,0.45;85,1,2.5;91,1,4.16;92,1,4.16;97,1,4.16;98,1,2.5;142,1,4.16;146,1,4.16;147,1,2.5;148,1,4.16;149,1,2.5;150,1,2.5;151,1,2.5;164,1,2.5;171,1,4.16;175,1,4.16;207,1,4.16;208,1,4.16;209,1,4.16;210,1,4.16;211,1,4.16;212,1,2.5;213,1,2.5;229,1,4.16;234,1,4.16;235,1,2.5;236,1,2.5;243,1,4.16;264,1,4.16;267,1,4.16;268,1,4.16;269,1,2.5;270,1,2.5;284,1,4.16;287,1,4.16;288,1,2.5;289,1,2.5;300,1,4.16;304,1,2.5;305,1,2.5;335,1,4.16;336,1,4.16;337,1,4.16;338,1,4.16;339,1,4.16;340,1,4.16;341,1,2.5;342,1,2.5;343,1,2.5;344,1,2.5;345,1,2.5;346,1,0.45;2500,1,2.5;2504,1,2.5;6364,1,0.45;6365,1,0.45;6366,1,0.45;6367,1,0.45;6368,1,0.45;6369,1,0.45;6370,1,0.45;6371,1,0.45;6372,1,0.45;6579,1,0.45;7575,1,0.45;7883,1,4.16;7884,1,2.5;7889,1,4.16;7892,1,4.16;7893,1,4.16;7894,1,2.5;7895,1,2.5;7899,1,2.5;7900,1,4.16;7901,1,4.16;7902,1,2.5;8678,1,2.5;8682,1,2.5;8683,1,2.5;8684,1,2.5;8685,1,2.5;8686,1,2.5;8688,1,2.5;9304,1,4.16;9308,1,4.16;9312,1,4.16;9316,1,4.16;9320,1,4.16;9324,1,4.16;9328,1,2.5;9332,1,2.5;9336,1,2.5;9340,1,2.5;9344,1,2.5;9348,1,2.5;9352,1,2.5;9356,1,2.5;9360,1,2.5;9364,1,0.45;9368,1,0.45;9372,1,0.45</table>
-		<set name="blockedInOlympiad" val="true" />
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<itemConsumeId>21748</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5.6081">
+						<item id="78" count="1" />
+					</item>
+					<item chance="5.6081">
+						<item id="91" count="1" />
+					</item>
+					<item chance="5.6081">
+						<item id="92" count="1" />
+					</item>
+					<item chance="5.6081">
+						<item id="142" count="1" />
+					</item>
+					<item chance="5.6081">
+						<item id="148" count="1" />
+					</item>
+					<item chance="5.6081">
+						<item id="229" count="1" />
+					</item>
+					<item chance="5.6081">
+						<item id="243" count="1" />
+					</item>
+					<item chance="5.6081">
+						<item id="267" count="1" />
+					</item>
+					<item chance="5.6081">
+						<item id="284" count="1" />
+					</item>
+					<item chance="5.6081">
+						<item id="300" count="1" />
+					</item>
+					<item chance="5.6081">
+						<item id="2571" count="1" />
+					</item>
+					<item chance="5.6081">
+						<item id="7892" count="1" />
+					</item>
+					<item chance="1.849">
+						<item id="80" count="1" />
+					</item>
+					<item chance="1.849">
+						<item id="98" count="1" />
+					</item>
+					<item chance="1.849">
+						<item id="150" count="1" />
+					</item>
+					<item chance="1.849">
+						<item id="212" count="1" />
+					</item>
+					<item chance="1.849">
+						<item id="235" count="1" />
+					</item>
+					<item chance="1.849">
+						<item id="269" count="1" />
+					</item>
+					<item chance="1.849">
+						<item id="288" count="1" />
+					</item>
+					<item chance="1.849">
+						<item id="2504" count="1" />
+					</item>
+					<item chance="1.849">
+						<item id="5233" count="1" />
+					</item>
+					<item chance="1.849">
+						<item id="212" count="1" />
+					</item>
+					<item chance="1.849">
+						<item id="7884" count="1" />
+					</item>
+					<item chance="1.849">
+						<item id="7899" count="1" />
+					</item>
+					<item chance="0.9558">
+						<item id="6364" count="1" />
+					</item>
+					<item chance="0.9558">
+						<item id="6365" count="1" />
+					</item>
+					<item chance="0.9558">
+						<item id="6366" count="1" />
+					</item>
+					<item chance="0.9558">
+						<item id="6367" count="1" />
+					</item>
+					<item chance="0.9558">
+						<item id="6369" count="1" />
+					</item>
+					<item chance="0.9558">
+						<item id="6370" count="1" />
+					</item>
+					<item chance="0.9558">
+						<item id="6371" count="1" />
+					</item>
+					<item chance="0.9558">
+						<item id="6372" count="1" />
+					</item>
+					<item chance="0.9558">
+						<item id="6579" count="1" />
+					</item>
+					<item chance="0.9558">
+						<item id="6580" count="1" />
+					</item>
+					<item chance="0.9558">
+						<item id="7575" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22274" levels="1" name="Great Adventurer's Treasure Sack">
+	<skill id="22274" toLevel="1" name="Great Adventurer's Treasure Sack">
 		<!-- High Five Skill -->
-		<table name="#extractableItems">9442,1,3.33;9443,1,3.33;9444,1,3.33;9445,1,3.33;9446,1,3.33;9447,1,3.33;9448,1,3.33;9449,1,3.33;9450,1,3.33;9376,1,3.33;9380,1,3.33;9384,1,3.33;10253,1,3.33;10252,1,3.33;10215,1,2.3;10216,1,2.3;10217,1,2.3;10218,1,2.3;10219,1,2.3;10220,1,2.3;10221,1,2.3;10222,1,2.3;10223,1,2.3;10224,1,2.3;10225,1,2.3;10226,1,2.3;13457,1,1.33;13458,1,1.33;13459,1,1.33;13460,1,1.33;13461,1,1.33;13462,1,1.33;13463,1,1.33;13464,1,1.33;13465,1,1.33;13466,1,1.33;13467,1,1.33;13468,1,1.33;13469,1,1.33;13470,1,1.33</table>
-		<set name="blockedInOlympiad" val="true" />
-		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="129">
-			<and>
-				<player invSize="10" />
-				<player weight="80" />
-			</and>
-		</cond>
-		<for>
-			<effect name="RestorationRandom" />
-		</for>
+		<itemConsumeId>21749</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2.97">
+						<item id="9376" count="1" />
+					</item>
+					<item chance="2.97">
+						<item id="9380" count="1" />
+					</item>
+					<item chance="2.97">
+						<item id="9384" count="1" />
+					</item>
+					<item chance="2.97">
+						<item id="10004" count="1" />
+					</item>
+					<item chance="2.97">
+						<item id="10252" count="1" />
+					</item>
+					<item chance="2.97">
+						<item id="10253" count="1" />
+					</item>
+					<item chance="2.97">
+						<item id="9442" count="1" />
+					</item>
+					<item chance="2.97">
+						<item id="9443" count="1" />
+					</item>
+					<item chance="2.97">
+						<item id="9444" count="1" />
+					</item>
+					<item chance="2.97">
+						<item id="9445" count="1" />
+					</item>
+					<item chance="2.97">
+						<item id="9446" count="1" />
+					</item>
+					<item chance="2.97">
+						<item id="9447" count="1" />
+					</item>
+					<item chance="2.97">
+						<item id="9448" count="1" />
+					</item>
+					<item chance="2.97">
+						<item id="9449" count="1" />
+					</item>
+					<item chance="2.97">
+						<item id="9450" count="1" />
+					</item>
+					<item chance="2.47">
+						<item id="10215" count="1" />
+					</item>
+					<item chance="2.47">
+						<item id="10216" count="1" />
+					</item>
+					<item chance="2.47">
+						<item id="10217" count="1" />
+					</item>
+					<item chance="2.47">
+						<item id="10218" count="1" />
+					</item>
+					<item chance="2.47">
+						<item id="10219" count="1" />
+					</item>
+					<item chance="2.47">
+						<item id="10220" count="1" />
+					</item>
+					<item chance="2.47">
+						<item id="10221" count="1" />
+					</item>
+					<item chance="2.47">
+						<item id="10222" count="1" />
+					</item>
+					<item chance="2.47">
+						<item id="10223" count="1" />
+					</item>
+					<item chance="2.47">
+						<item id="10224" count="1" />
+					</item>
+					<item chance="2.47">
+						<item id="10225" count="1" />
+					</item>
+					<item chance="2.47">
+						<item id="10226" count="1" />
+					</item>
+					<item chance="2.47">
+						<item id="10415" count="1" />
+					</item>
+					<item chance="1.56">
+						<item id="52" count="1" />
+					</item>
+					<item chance="1.56">
+						<item id="13457" count="1" />
+					</item>
+					<item chance="1.56">
+						<item id="13458" count="1" />
+					</item>
+					<item chance="1.56">
+						<item id="13459" count="1" />
+					</item>
+					<item chance="1.56">
+						<item id="13460" count="1" />
+					</item>
+					<item chance="1.56">
+						<item id="13461" count="1" />
+					</item>
+					<item chance="1.56">
+						<item id="13462" count="1" />
+					</item>
+					<item chance="1.56">
+						<item id="13463" count="1" />
+					</item>
+					<item chance="1.56">
+						<item id="13464" count="1" />
+					</item>
+					<item chance="1.56">
+						<item id="13465" count="1" />
+					</item>
+					<item chance="1.56">
+						<item id="13466" count="1" />
+					</item>
+					<item chance="1.56">
+						<item id="13467" count="1" />
+					</item>
+					<item chance="1.56">
+						<item id="13468" count="1" />
+					</item>
+					<item chance="1.56">
+						<item id="13469" count="1" />
+					</item>
+					<item chance="1.56">
+						<item id="13470" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22275" levels="1" name="Rune Jewelry Box - Crystal">
+	<skill id="22275" toLevel="1" name="Rune Jewelry Box - Crystal">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21751</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="20">
+						<item id="9814" count="15" />
+					</item>
+					<item chance="20">
+						<item id="9815" count="15" />
+					</item>
+					<item chance="20">
+						<item id="9816" count="15" />
+					</item>
+					<item chance="20">
+						<item id="9817" count="15" />
+					</item>
+					<item chance="20">
+						<item id="9818" count="15" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22276" levels="1" name="Rune Jewelry Box - Talisman">
+	<skill id="22276" toLevel="1" name="Rune Jewelry Box - Talisman">
 		<!-- none -->
-		<set name="blockedInOlympiad" val="true" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21752</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="1.1236">
+						<item id="9914" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9915" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9916" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9917" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9918" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9919" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9920" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9921" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9922" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9923" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9924" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9925" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9926" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9927" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9928" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9929" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9930" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9931" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9932" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9933" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9934" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9935" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9936" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9937" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9938" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9939" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9940" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9941" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9942" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9943" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9944" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9945" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9946" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9947" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9948" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9949" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9950" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9951" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9952" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9953" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9954" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9955" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9956" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9957" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9958" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9959" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9960" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9961" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9962" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9963" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9964" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9965" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="9966" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10141" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10142" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10158" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10416" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10417" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10418" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10419" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10420" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10421" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10422" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10423" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10424" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10518" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10519" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10533" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10534" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10535" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10536" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10537" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10538" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10539" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10540" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10541" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10542" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="10543" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="12815" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="12816" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="12817" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="12818" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="14604" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="14605" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="14810" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="14811" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="14812" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="14813" count="1" />
+					</item>
+					<item chance="1.1236">
+						<item id="14814" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22277" levels="1" name="Pablo's Box">
+	<skill id="22277" toLevel="1" name="Pablo's Box">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21753</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="14.3">
+						<item id="21114" count="1" />
+					</item>
+					<item chance="14.3">
+						<item id="21116" count="1" />
+					</item>
+					<item chance="14.3">
+						<item id="21120" count="1" />
+					</item>
+					<item chance="14.3">
+						<item id="21118" count="1" />
+					</item>
+					<item chance="14.3">
+						<item id="21112" count="1" />
+					</item>
+					<item chance="17.9">
+						<item id="21122" count="1" />
+					</item>
+					<item chance="10.7">
+						<item id="21126" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22278" levels="1" name="Large Ancient Weapon">
+	<skill id="22278" toLevel="1" name="Large Ancient Weapon">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22279" levels="1" name="Giant Ancient Weapon">
+	<skill id="22279" toLevel="1" name="Giant Ancient Weapon">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22280" levels="1" name="Small Ancient Jewel">
+	<skill id="22280" toLevel="1" name="Small Ancient Jewel">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22281" levels="1" name="Large Ancient Jewel">
+	<skill id="22281" toLevel="1" name="Large Ancient Jewel">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22282" levels="1" name="Giant Ancient Jewel">
+	<skill id="22282" toLevel="1" name="Giant Ancient Jewel">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22283" levels="1" name="Player Commendation - Blessing">
+	<skill id="22283" toLevel="1" name="Player Commendation - Blessing">
 		<!-- "For 20 minute(s), recovers energy when Exp. is acquired through hunting." -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>VP_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<affectRange>1000</affectRange>
+		<icon>BranchSys.icon.br_flag_of_bookmark_i00</icon>
+		<hitTime>100</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>4</isMagic>
+		<staticReuse>true</staticReuse>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 	</skill>
-	<skill id="22284" levels="1" name="PC Vitality">
+	<skill id="22284" toLevel="1" name="PC Vitality">
 		<!-- "For 60 minute(s), energy is replenished when Exp. is acquired through hunting." -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>VP_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>icon.etc_pccafe_point_i00</icon>
+		<hitTime>100</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>4</isMagic>
+		<staticReuse>true</staticReuse>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="CheckLevel">
+				<minLevel>1</minLevel>
+				<maxLevel>75</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="22285" levels="1" name="PC Vitality">
+	<skill id="22285" toLevel="1" name="PC Vitality">
 		<!-- "For 2 hours, recovers energy when Exp. is acquired through hunting." -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>VP_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>7200</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>icon.etc_pccafe_point_i00</icon>
+		<hitTime>100</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>4</isMagic>
+		<staticReuse>true</staticReuse>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="CheckLevel">
+				<minLevel>1</minLevel>
+				<maxLevel>75</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="22286" levels="1" name="PC Vitality">
+	<skill id="22286" toLevel="1" name="PC Vitality">
 		<!-- "For 3 hours, recovers energy when Exp. is acquired through hunting." -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>VP_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>10800</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>icon.etc_pccafe_point_i00</icon>
+		<hitTime>100</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>4</isMagic>
+		<staticReuse>true</staticReuse>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="CheckLevel">
+				<minLevel>1</minLevel>
+				<maxLevel>75</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="22287" levels="1" name="PC Vitality">
+	<skill id="22287" toLevel="1" name="PC Vitality">
 		<!-- "For 4 hours, recovers energy when Exp. is acquired through hunting." -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>VP_UP</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<magicLvl>-2</magicLvl>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>14400</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<icon>icon.etc_pccafe_point_i00</icon>
+		<hitTime>100</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>4</isMagic>
+		<staticReuse>true</staticReuse>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="CheckLevel">
+				<minLevel>1</minLevel>
+				<maxLevel>75</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
 	</skill>
-	<skill id="22288" levels="1" name="Player Commendation - Vitality Pack">
+	<skill id="22288" toLevel="1" name="Player Commendation - Vitality Pack">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21862</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25">
+						<item id="21861" count="3" />
+					</item>
+					<item chance="25">
+						<item id="21865" count="3" />
+					</item>
+					<item chance="25">
+						<item id="21866" count="3" />
+					</item>
+					<item chance="25">
+						<item id="21867" count="3" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22289" levels="1" name="Santa Claus's Treasure Box">
+	<skill id="22289" toLevel="1" name="Santa Claus's Treasure Box">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<itemConsumeId>21873</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="50">
+						<item id="21711" count="1" />
+					</item>
+					<item chance="10">
+						<item id="5561" count="2" />
+						<item id="3936" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="6570" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="6578" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="6569" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="6577" count="1" />
+					</item>
+					<item chance="5">
+						<item id="9552" count="1" />
+					</item>
+					<item chance="5">
+						<item id="9553" count="1" />
+					</item>
+					<item chance="5">
+						<item id="9554" count="1" />
+					</item>
+					<item chance="5">
+						<item id="9555" count="1" />
+					</item>
+					<item chance="5">
+						<item id="9556" count="1" />
+					</item>
+					<item chance="5">
+						<item id="9557" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="52" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="13457" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="13458" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="13459" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="13460" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="13461" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="13462" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="13463" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="13464" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="13465" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="13466" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="13467" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="13468" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="13884" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="13143" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="13144" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="13145" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="14105" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="14106" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="14107" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="14108" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="14109" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="14110" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="14112" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="14113" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="14114" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="14115" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="14116" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="14117" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="13887" count="1" />
+					</item>
+					<item chance="0.0001142">
+						<item id="14111" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="15541" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="15542" count="1" />
+					</item>
+					<item chance="0.0000571">
+						<item id="15543" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22290" levels="1" name="Scroll: Valakas Call">
+	<skill id="22290" toLevel="1" name="Scroll: Valakas Call">
 		<!-- One-time use scroll that teleports you to Watcher of Valakas Klein in the Hall of Flames. -->
-		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<and>
-				<player canEscape="true" />
-				<not>
-					<player insideZoneId="10501, 10502, 10503" />
-				</not>
-			</and>
-		</cond>
-		<for>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<effectPoint>100</effectPoint>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<icon>BranchSys2.icon.call_of_fire_dragon</icon>
+		<reuseDelay>10000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
 			<effect name="Teleport">
-				<param x="183624" y="-114891" z="-3340" />
+				<x>183624</x>
+				<y>-114891</y>
+				<z>-3340</z>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22291" levels="1" name="Jewel of Valakas">
+	<skill id="22291" toLevel="1" name="Jewel of Valakas">
 		<!-- Mysterious jewel that teleports you to Watcher of Valakas Klein in the Hall of Flames. Re-use time is 60 minutes. -->
-		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<and>
-				<player canEscape="true" />
-				<not>
-					<player insideZoneId="10501, 10502, 10503" />
-				</not>
-			</and>
-		</cond>
-		<for>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<effectPoint>100</effectPoint>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<icon>BranchSys2.icon.orb_of_fire_dragon</icon>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
 			<effect name="Teleport">
-				<param x="183624" y="-114891" z="-3340" />
+				<x>183624</x>
+				<y>-114891</y>
+				<z>-3340</z>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22292" levels="1" name="Scroll: Antharas Call">
+	<skill id="22292" toLevel="1" name="Scroll: Antharas Call">
 		<!-- One-time use scroll that teleports you to the entrance to Antharas's Lair. -->
-		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<and>
-				<player canEscape="true" />
-				<not>
-					<player insideZoneId="10501, 10502, 10503" />
-				</not>
-			</and>
-		</cond>
-		<for>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<effectPoint>100</effectPoint>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<icon>BranchSys2.icon.call_of_earth_dragon</icon>
+		<reuseDelay>10000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
 			<effect name="Teleport">
-				<param x="154596" y="121127" z="-3812" />
+				<x>154596</x>
+				<y>121127</y>
+				<z>-3812</z>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22293" levels="1" name="Jewel of Antharas">
+	<skill id="22293" toLevel="1" name="Jewel of Antharas">
 		<!-- Mysterious jewel that teleports you to the entrance to Antharas's Lair. Re-use time is 60 minutes. -->
-		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<and>
-				<player canEscape="true" />
-				<not>
-					<player insideZoneId="10501, 10502, 10503" />
-				</not>
-			</and>
-		</cond>
-		<for>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<effectPoint>100</effectPoint>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<icon>BranchSys2.icon.orb_of_earth_dragon</icon>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
 			<effect name="Teleport">
-				<param x="154596" y="121127" z="-3812" />
+				<x>154596</x>
+				<y>121127</y>
+				<z>-3812</z>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22294" levels="1" name="Totem of Body">
-		<set name="blockedInOlympiad" val="true" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="600" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
+	<skill id="22294" toLevel="1" name="Totem of Body">
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitTime>2000</hitTime>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanUseInDragonLair" />
+		</conditions>
+		<effects>
 			<effect name="SummonNpc">
-				<param npcId="143" npcCount="1" despawnDelay="1800000" />
+				<npcId>143</npcId>
+				<npcCount>1</npcCount>
+				<despawnDelay>1800000</despawnDelay>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22295" levels="1" name="Totem of Spirit">
-		<set name="blockedInOlympiad" val="true" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="600" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
+	<skill id="22295" toLevel="1" name="Totem of Spirit">
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitTime>2000</hitTime>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanUseInDragonLair" />
+		</conditions>
+		<effects>
 			<effect name="SummonNpc">
-				<param npcId="144" npcCount="1" despawnDelay="1800000" />
+				<npcId>144</npcId>
+				<npcCount>1</npcCount>
+				<despawnDelay>1800000</despawnDelay>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22296" levels="1" name="Totem of Courage">
-		<set name="blockedInOlympiad" val="true" />
-		<set name="despawnDelay" val="1800000" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="600" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
+	<skill id="22296" toLevel="1" name="Totem of Courage">
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<despawnDelay>1800000</despawnDelay>
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitTime>2000</hitTime>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanUseInDragonLair" />
+		</conditions>
+		<effects>
 			<effect name="SummonNpc">
-				<param npcId="145" npcCount="1" despawnDelay="1800000" />
+				<npcId>145</npcId>
+				<npcCount>1</npcCount>
+				<despawnDelay>1800000</despawnDelay>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22297" levels="1" name="Totem of Fortitude">
-		<set name="blockedInOlympiad" val="true" />
-		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="reuseDelay" val="600" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="SELF" />
-		<for>
+	<skill id="22297" toLevel="1" name="Totem of Fortitude">
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitTime>2000</hitTime>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanUseInDragonLair" />
+		</conditions>
+		<effects>
 			<effect name="SummonNpc">
-				<param npcId="146" npcCount="1" despawnDelay="1800000" />
+				<npcId>146</npcId>
+				<npcCount>1</npcCount>
+				<despawnDelay>1800000</despawnDelay>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22298" levels="1" name="Refined Red Dragon Blood">
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.refined_red_blood_of_dragon" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21903" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="PARTY" />
-		<for>
-			<effect name="Heal">
-				<param power="1000" /> <!-- TODO: Custom. -->
+	<skill id="22298" toLevel="1" name="Refined Red Dragon Blood">
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<icon>BranchSys2.icon.refined_red_blood_of_dragon</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>21903</itemConsumeId>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<affectRange>1000</affectRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>300000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<conditions>
+			<condition name="CanUseInDragonLair" />
+		</conditions>
+		<effects>
+			<effect name="Hp">
+				<amount>1100</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
-	<skill id="22299" levels="1" name="Refined Blue Dragon Blood">
-		<set name="blockedInOlympiad" val="true" />
-		<set name="icon" val="BranchSys2.icon.refined_blue_blood_of_dragon" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21904" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="PARTY" />
-		<for>
-			<effect name="ManaHeal">
-				<param power="1000" /> <!-- TODO: Custom. -->
+	<skill id="22299" toLevel="1" name="Refined Blue Dragon Blood">
+		<!-- Glory Days Confirmed -->
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<icon>BranchSys2.icon.refined_blue_blood_of_dragon</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>21904</itemConsumeId>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<affectRange>1000</affectRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>300000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<conditions>
+			<condition name="CanUseInDragonLair" />
+		</conditions>
+		<effects>
+			<effect name="Mp">
+				<amount>360</amount>
+				<mode>DIFF</mode>
 			</effect>
-		</for>
+		</effects>
 	</skill>
 </list>

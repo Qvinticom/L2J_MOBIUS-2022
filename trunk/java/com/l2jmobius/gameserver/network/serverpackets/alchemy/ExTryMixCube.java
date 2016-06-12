@@ -16,38 +16,46 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets.alchemy;
 
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import java.util.ArrayList;
+import java.util.List;
 
-public class ExTryMixCube extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.enums.TryMixCubeType;
+import com.l2jmobius.gameserver.model.holders.AlchemyResult;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+
+/**
+ * @author Sdw
+ */
+public class ExTryMixCube implements IClientOutgoingPacket
 {
-	public static final L2GameServerPacket FAIL = new ExTryMixCube(6);
-	private final int _result;
-	private final int _itemId;
-	private final long _itemCount;
+	private final TryMixCubeType _type;
+	private final List<AlchemyResult> _items = new ArrayList<>();
 	
-	public ExTryMixCube(int result)
+	public ExTryMixCube(TryMixCubeType type)
 	{
-		_result = result;
-		_itemId = 0;
-		_itemCount = 0;
+		_type = type;
 	}
 	
-	public ExTryMixCube(int itemId, long itemCount)
+	public void addItem(AlchemyResult item)
 	{
-		_result = 0;
-		_itemId = itemId;
-		_itemCount = itemCount;
+		_items.add(item);
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x175);
-		writeC(_result);
-		writeC(0x01);
-		writeD(0x00); // 1=show bonus card, but cant't understand bonus count
-		writeD(_itemId);
-		writeQ(_itemCount);
+		OutgoingPackets.EX_TRY_MIX_CUBE.writeId(packet);
+		
+		packet.writeC(_type.ordinal());
+		packet.writeD(_items.size());
+		for (AlchemyResult holder : _items)
+		{
+			packet.writeC(holder.getType().ordinal());
+			packet.writeD(holder.getId());
+			packet.writeQ(holder.getCount());
+		}
+		return true;
 	}
 }

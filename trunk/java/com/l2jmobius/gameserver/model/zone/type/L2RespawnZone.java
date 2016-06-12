@@ -22,13 +22,13 @@ import java.util.Map;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.L2ZoneRespawn;
 
 /**
  * Respawn zone implementation.
  * @author Nyaran
  */
-public class L2RespawnZone extends L2ZoneType
+public class L2RespawnZone extends L2ZoneRespawn
 {
 	private final Map<Race, String> _raceRespawnPoint = new HashMap<>();
 	

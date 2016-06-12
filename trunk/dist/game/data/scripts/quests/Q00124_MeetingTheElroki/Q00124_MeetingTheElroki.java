@@ -39,7 +39,7 @@ public class Q00124_MeetingTheElroki extends Quest
 	
 	public Q00124_MeetingTheElroki()
 	{
-		super(124, Q00124_MeetingTheElroki.class.getSimpleName(), "Meeting the Elroki");
+		super(124);
 		addStartNpc(MARQUEZ);
 		addTalkId(MARQUEZ, MUSHIKA, ASAMAH, KARAKAWEI, MANTARASA);
 		registerQuestItems(MANTARASA_EGG);

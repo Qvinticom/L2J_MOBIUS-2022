@@ -32,41 +32,41 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
+import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
-import com.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
+import com.l2jmobius.gameserver.model.ClanWar;
+import com.l2jmobius.gameserver.model.ClanWar.ClanWarState;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.Auction;
+import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.entity.FortSiege;
 import com.l2jmobius.gameserver.model.entity.Siege;
-import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.clan.OnPlayerClanCreate;
-import com.l2jmobius.gameserver.model.events.impl.character.player.clan.OnPlayerClanDestroy;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerClanCreate;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerClanDestroy;
 import com.l2jmobius.gameserver.model.events.impl.clan.OnClanWarFinish;
-import com.l2jmobius.gameserver.model.events.impl.clan.OnClanWarStart;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.util.EnumIntBitmask;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.EnumIntBitmask;
 
 /**
  * This class loads the clan related data.
  */
 public class ClanTable
 {
-	private static final Logger _log = Logger.getLogger(ClanTable.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ClanTable.class.getName());
+	
 	private final Map<Integer, L2Clan> _clans = new ConcurrentHashMap<>();
 	
 	protected ClanTable()
@@ -98,9 +98,9 @@ public class ClanTable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Error restoring ClanTable.", e);
+			LOGGER.log(Level.SEVERE, "Error restoring ClanTable.", e);
 		}
-		_log.info(getClass().getSimpleName() + ": Restored " + clanCount + " clans from the database.");
+		LOGGER.info(getClass().getSimpleName() + ": Restored " + clanCount + " clans from the database.");
 		allianceCheck();
 		restorewars();
 	}
@@ -148,11 +148,6 @@ public class ClanTable
 		if (null == player)
 		{
 			return null;
-		}
-		
-		if (Config.DEBUG)
-		{
-			_log.info(getClass().getSimpleName() + ": " + player.getObjectId() + "(" + player.getName() + ") requested a clan creation.");
 		}
 		
 		if (10 > player.getLevel())
@@ -203,7 +198,7 @@ public class ClanTable
 		
 		// should be update packet only
 		player.sendPacket(new PledgeShowInfoUpdate(clan));
-		player.sendPacket(new PledgeShowMemberListAll(clan));
+		PledgeShowMemberListAll.sendAllTo(player);
 		player.sendPacket(new PledgeShowMemberListUpdate(player));
 		player.sendPacket(SystemMessageId.YOUR_CLAN_HAS_BEEN_CREATED);
 		player.broadcastUserInfo(UserInfoType.RELATION, UserInfoType.CLAN);
@@ -240,23 +235,21 @@ public class ClanTable
 			}
 		}
 		
-		final int hallId = clan.getHideoutId();
-		if (hallId == 0)
+		final ClanHall hall = ClanHallData.getInstance().getClanHallByClan(clan);
+		if (hall != null)
 		{
-			for (SiegableHall hall : CHSiegeManager.getInstance().getConquerableHalls().values())
-			{
-				hall.removeAttacker(clan);
-			}
-		}
-		
-		final Auction auction = ClanHallAuctionManager.getInstance().getAuction(clan.getAuctionBiddedAt());
-		if (auction != null)
-		{
-			auction.cancelBid(clan.getId());
+			hall.setOwner(null);
 		}
 		
 		final L2ClanMember leaderMember = clan.getLeader();
-		clan.getWarehouse().destroyAllItems("ClanRemove", leaderMember == null ? null : clan.getLeader().getPlayerInstance(), null);
+		if (leaderMember == null)
+		{
+			clan.getWarehouse().destroyAllItems("ClanRemove", null, null);
+		}
+		else
+		{
+			clan.getWarehouse().destroyAllItems("ClanRemove", clan.getLeader().getPlayerInstance(), null);
+		}
 		
 		for (L2ClanMember member : clan.getMembers())
 		{
@@ -317,24 +310,19 @@ public class ClanTable
 			if (fortId != 0)
 			{
 				final Fort fort = FortManager.getInstance().getFortById(fortId);
-				if ((fort != null) && (clan == fort.getOwnerClan()))
+				if (fort != null)
 				{
-					fort.removeOwner(true);
-				}
-			}
-			
-			if (hallId != 0)
-			{
-				final SiegableHall hall = CHSiegeManager.getInstance().getSiegableHall(hallId);
-				if ((hall != null) && (hall.getOwnerId() == clanId))
-				{
-					hall.free();
+					final L2Clan owner = fort.getOwnerClan();
+					if (clan == owner)
+					{
+						fort.removeOwner(true);
+					}
 				}
 			}
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error removing clan from DB.", e);
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error removing clan from DB.", e);
 		}
 		
 		// Notify to scripts
@@ -368,56 +356,36 @@ public class ClanTable
 		return false;
 	}
 	
-	public void storeclanswars(int clanId1, int clanId2)
+	public void storeclanswars(ClanWar war)
 	{
-		final L2Clan clan1 = getClan(clanId1);
-		final L2Clan clan2 = getClan(clanId2);
-		
-		EventDispatcher.getInstance().notifyEventAsync(new OnClanWarStart(clan1, clan2));
-		
-		clan1.setEnemyClan(clan2);
-		clan2.setAttackerClan(clan1);
-		clan1.broadcastClanStatus();
-		clan2.broadcastClanStatus();
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("REPLACE INTO clan_wars (clan1, clan2, wantspeace1, wantspeace2) VALUES(?,?,?,?)"))
+			PreparedStatement ps = con.prepareStatement("REPLACE INTO clan_wars (clan1, clan2, clan1Kill, clan2Kill, winnerClan, startTime, endTime, state) VALUES(?,?,?,?,?,?,?)"))
 		{
-			ps.setInt(1, clanId1);
-			ps.setInt(2, clanId2);
-			ps.setInt(3, 0);
-			ps.setInt(4, 0);
+			ps.setInt(1, war.getAttackerClanId());
+			ps.setInt(2, war.getAttackedClanId());
+			ps.setInt(3, war.getAttackerKillCount());
+			ps.setInt(4, war.getAttackedKillCount());
+			ps.setInt(5, war.getWinnerClanId());
+			ps.setLong(6, war.getStartTime());
+			ps.setLong(7, war.getEndTime());
+			ps.setInt(8, war.getState().ordinal());
 			ps.execute();
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error storing clan wars data.", e);
+			LOGGER.severe("Error storing clan wars data: " + e);
 		}
-		
-		// SystemMessage msg =
-		// SystemMessage.getSystemMessage(SystemMessageId.A_CLAN_WAR_WITH_CLAN_S1_HAS_STARTED_THE_CLAN_THAT_CANCELS_THE_WAR_FIRST_WILL_LOSE_5_000_CLAN_REPUTATION_ANY_CLAN_THAT_CANCELS_THE_WAR_WILL_BE_UNABLE_TO_DECLARE_A_WAR_FOR_1_WEEK_IF_YOUR_CLAN_MEMBER_GETS_KILLED_BY_THE_OTHER_CLAN_XP_DECREASES_BY_1_4_OF_THE_AMOUNT_THAT_DECREASES_IN_THE_HUNTING_GROUND);
-		//
-		SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DECLARED_A_CLAN_WAR_WITH_S1);
-		msg.addString(clan2.getName());
-		clan1.broadcastToOnlineMembers(msg);
-		// msg =
-		// SystemMessage.getSystemMessage(SystemMessageId.A_CLAN_WAR_WITH_CLAN_S1_HAS_STARTED_THE_CLAN_THAT_CANCELS_THE_WAR_FIRST_WILL_LOSE_5_000_CLAN_REPUTATION_ANY_CLAN_THAT_CANCELS_THE_WAR_WILL_BE_UNABLE_TO_DECLARE_A_WAR_FOR_1_WEEK_IF_YOUR_CLAN_MEMBER_GETS_KILLED_BY_THE_OTHER_CLAN_XP_DECREASES_BY_1_4_OF_THE_AMOUNT_THAT_DECREASES_IN_THE_HUNTING_GROUND);
-		// msg.addString(clan1.getName());
-		// clan2.broadcastToOnlineMembers(msg);
-		// clan1 declared clan war.
-		msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DECLARED_A_CLAN_WAR_THE_WAR_WILL_AUTOMATICALLY_START_IF_YOU_KILL_S1_CLAN_MEMBERS_5_TIMES_WITHIN_A_WEEK);
-		msg.addString(clan1.getName());
-		clan2.broadcastToOnlineMembers(msg);
 	}
 	
 	public void deleteclanswars(int clanId1, int clanId2)
 	{
-		final L2Clan clan1 = getClan(clanId1);
-		final L2Clan clan2 = getClan(clanId2);
+		final L2Clan clan1 = ClanTable.getInstance().getClan(clanId1);
+		final L2Clan clan2 = ClanTable.getInstance().getClan(clanId2);
 		
 		EventDispatcher.getInstance().notifyEventAsync(new OnClanWarFinish(clan1, clan2));
 		
-		clan1.deleteEnemyClan(clan2);
-		clan2.deleteAttackerClan(clan1);
+		clan1.deleteWar(clan2.getId());
+		clan2.deleteWar(clan1.getId());
 		clan1.broadcastClanStatus();
 		clan2.broadcastClanStatus();
 		
@@ -430,61 +398,37 @@ public class ClanTable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error removing clan wars data.", e);
-		}
-		
-		// SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.WAR_WITH_THE_S1_CLAN_HAS_ENDED);
-		SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.THE_WAR_AGAINST_S1_CLAN_HAS_BEEN_STOPPED);
-		msg.addString(clan2.getName());
-		clan1.broadcastToOnlineMembers(msg);
-		msg = SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_S1_HAS_DECIDED_TO_STOP_THE_WAR);
-		msg.addString(clan1.getName());
-		clan2.broadcastToOnlineMembers(msg);
-	}
-	
-	public void checkSurrender(L2Clan clan1, L2Clan clan2)
-	{
-		int count = 0;
-		for (L2ClanMember player : clan1.getMembers())
-		{
-			if ((player != null) && (player.getPlayerInstance().getWantsPeace() == 1))
-			{
-				count++;
-			}
-		}
-		if (count == (clan1.getMembers().size() - 1))
-		{
-			clan1.deleteEnemyClan(clan2);
-			clan2.deleteEnemyClan(clan1);
-			deleteclanswars(clan1.getId(), clan2.getId());
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error removing clan wars data.", e);
 		}
 	}
 	
 	private void restorewars()
 	{
-		L2Clan clan1, clan2;
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement statement = con.createStatement();
-			ResultSet rset = statement.executeQuery("SELECT clan1, clan2 FROM clan_wars"))
+			ResultSet rset = statement.executeQuery("SELECT clan1, clan2, clan1Kill, clan2Kill, winnerClan, startTime, endTime, state FROM clan_wars"))
 		{
 			while (rset.next())
 			{
-				clan1 = getClan(rset.getInt("clan1"));
-				clan2 = getClan(rset.getInt("clan2"));
-				if ((clan1 != null) && (clan2 != null))
+				final L2Clan attacker = getClan(rset.getInt("clan1"));
+				final L2Clan attacked = getClan(rset.getInt("clan2"));
+				if ((attacker != null) && (attacked != null))
 				{
-					clan1.setEnemyClan(rset.getInt("clan2"));
-					clan2.setAttackerClan(rset.getInt("clan1"));
+					final ClanWarState state = ClanWarState.values()[rset.getInt("state")];
+					
+					final ClanWar clanWar = new ClanWar(attacker, attacked, rset.getInt("clan1Kill"), rset.getInt("clan2Kill"), rset.getInt("winnerClan"), rset.getLong("startTime"), rset.getLong("endTime"), state);
+					attacker.addWar(attacked.getId(), clanWar);
+					attacked.addWar(attacker.getId(), clanWar);
 				}
 				else
 				{
-					_log.log(Level.WARNING, getClass().getSimpleName() + ": restorewars one of clans is null clan1:" + clan1 + " clan2:" + clan2);
+					LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Restorewars one of clans is null attacker:" + attacker + " attacked:" + attacked);
 				}
 			}
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error restoring clan wars data.", e);
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error restoring clan wars data.", e);
 		}
 	}
 	
@@ -496,13 +440,16 @@ public class ClanTable
 		for (L2Clan clan : _clans.values())
 		{
 			final int allyId = clan.getAllyId();
-			if ((allyId != 0) && (clan.getId() != allyId) && !_clans.containsKey(allyId))
+			if ((allyId != 0) && (clan.getId() != allyId))
 			{
-				clan.setAllyId(0);
-				clan.setAllyName(null);
-				clan.changeAllyCrest(0, true);
-				clan.updateClanInDB();
-				_log.info(getClass().getSimpleName() + ": Removed alliance from clan: " + clan);
+				if (!_clans.containsKey(allyId))
+				{
+					clan.setAllyId(0);
+					clan.setAllyName(null);
+					clan.changeAllyCrest(0, true);
+					clan.updateClanInDB();
+					LOGGER.info(getClass().getSimpleName() + ": Removed alliance from clan: " + clan);
+				}
 			}
 		}
 	}
@@ -523,11 +470,11 @@ public class ClanTable
 		return clanAllies;
 	}
 	
-	public void storeClanScore()
+	public void shutdown()
 	{
 		for (L2Clan clan : _clans.values())
 		{
-			clan.updateClanScoreInDB();
+			clan.updateInDB();
 		}
 	}
 	

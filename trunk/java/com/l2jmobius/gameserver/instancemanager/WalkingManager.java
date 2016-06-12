@@ -16,15 +16,18 @@
  */
 package com.l2jmobius.gameserver.instancemanager;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
@@ -40,23 +43,20 @@ import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMoveNodeArrived;
 import com.l2jmobius.gameserver.model.holders.NpcRoutesHolder;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
-import com.l2jmobius.gameserver.util.Broadcast;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * This class manages walking monsters.
  * @author GKR
  */
-public final class WalkingManager implements IXmlReader
+public final class WalkingManager implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(WalkingManager.class.getName());
+	
 	// Repeat style:
-	// -1 - no repeat
 	// 0 - go back
 	// 1 - go to first point (circle style)
 	// 2 - teleport to first point (conveyor style)
 	// 3 - random walking between points.
-	public static final byte NO_REPEAT = -1;
 	public static final byte REPEAT_GO_BACK = 0;
 	public static final byte REPEAT_GO_FIRST = 1;
 	public static final byte REPEAT_TELE_FIRST = 2;
@@ -74,49 +74,41 @@ public final class WalkingManager implements IXmlReader
 	@Override
 	public final void load()
 	{
-		parseDatapackFile("Routes.xml");
+		parseDatapackFile("data/Routes.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _routes.size() + " walking routes.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
-		for (Node d = doc.getFirstChild().getFirstChild(); d != null; d = d.getNextSibling())
+		final Node n = doc.getFirstChild();
+		for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 		{
 			if (d.getNodeName().equals("route"))
 			{
 				final String routeName = parseString(d.getAttributes(), "name");
 				final boolean repeat = parseBoolean(d.getAttributes(), "repeat");
-				final String repeatStyle = d.getAttributes().getNamedItem("repeatStyle").getNodeValue().toLowerCase();
-				
-				final byte repeatType;
-				switch (repeatStyle)
+				final String repeatStyle = d.getAttributes().getNamedItem("repeatStyle").getNodeValue();
+				byte repeatType;
+				if (repeatStyle.equalsIgnoreCase("back"))
 				{
-					case "back":
-					{
-						repeatType = REPEAT_GO_BACK;
-						break;
-					}
-					case "cycle":
-					{
-						repeatType = REPEAT_GO_FIRST;
-						break;
-					}
-					case "conveyor":
-					{
-						repeatType = REPEAT_TELE_FIRST;
-						break;
-					}
-					case "random":
-					{
-						repeatType = REPEAT_RANDOM;
-						break;
-					}
-					default:
-					{
-						repeatType = NO_REPEAT;
-						break;
-					}
+					repeatType = REPEAT_GO_BACK;
+				}
+				else if (repeatStyle.equalsIgnoreCase("cycle"))
+				{
+					repeatType = REPEAT_GO_FIRST;
+				}
+				else if (repeatStyle.equalsIgnoreCase("conveyor"))
+				{
+					repeatType = REPEAT_TELE_FIRST;
+				}
+				else if (repeatStyle.equalsIgnoreCase("random"))
+				{
+					repeatType = REPEAT_RANDOM;
+				}
+				else
+				{
+					repeatType = -1;
 				}
 				
 				final List<L2NpcWalkerNode> list = new ArrayList<>();
@@ -198,14 +190,31 @@ public final class WalkingManager implements IXmlReader
 	 */
 	public boolean isOnWalk(L2Npc npc)
 	{
-		final L2MonsterInstance monster = npc.isMonster() ? ((L2MonsterInstance) npc).getLeader() == null ? (L2MonsterInstance) npc : ((L2MonsterInstance) npc).getLeader() : null;
+		L2MonsterInstance monster = null;
+		
+		if (npc.isMonster())
+		{
+			if (((L2MonsterInstance) npc).getLeader() == null)
+			{
+				monster = (L2MonsterInstance) npc;
+			}
+			else
+			{
+				monster = ((L2MonsterInstance) npc).getLeader();
+			}
+		}
+		
 		if (((monster != null) && !isRegistered(monster)) || !isRegistered(npc))
 		{
 			return false;
 		}
 		
 		final WalkInfo walk = monster != null ? _activeRoutes.get(monster.getObjectId()) : _activeRoutes.get(npc.getObjectId());
-		return !walk.isStoppedByAttack() && !walk.isSuspended();
+		if (walk.isStoppedByAttack() || walk.isSuspended())
+		{
+			return false;
+		}
+		return true;
 	}
 	
 	public L2WalkRoute getRoute(String route)
@@ -265,7 +274,7 @@ public final class WalkingManager implements IXmlReader
 					if (!npc.isInsideRadius(node, 3000, true, false))
 					{
 						final String message = "Route '" + routeName + "': NPC (id=" + npc.getId() + ", x=" + npc.getX() + ", y=" + npc.getY() + ", z=" + npc.getZ() + ") is too far from starting point (node x=" + node.getX() + ", y=" + node.getY() + ", z=" + node.getZ() + ", range=" + npc.calculateDistance(node, true, true) + "), walking will not start";
-						LOGGER.warning(getClass().getSimpleName() + ": " + message);
+						LOGGER.warning(message);
 						npc.sendDebugMessage(message);
 						return;
 					}
@@ -275,8 +284,6 @@ public final class WalkingManager implements IXmlReader
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, node);
 					walk.setWalkCheckTask(ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000)); // start walk check task, for resuming walk after fight
 					
-					npc.getKnownList().startTrackingTask();
-					
 					_activeRoutes.put(npc.getObjectId(), walk); // register route
 				}
 				else
@@ -285,33 +292,36 @@ public final class WalkingManager implements IXmlReader
 					ThreadPoolManager.getInstance().scheduleGeneral(new StartMovingTask(npc, routeName), 60000);
 				}
 			}
-			// walk was stopped due to some reason (arrived to node, script action, fight or something else), resume it
-			else if (_activeRoutes.containsKey(npc.getObjectId()) && ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) || (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)))
-			{
-				final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
-				if (walk == null)
-				{
-					return;
-				}
-				
-				// Prevent call simultaneously from scheduled task and onArrived() or temporarily stop walking for resuming in future
-				if (walk.isBlocked() || walk.isSuspended())
-				{
-					npc.sendDebugMessage("Failed to continue moving along route '" + routeName + "' (operation is blocked)");
-					return;
-				}
-				
-				walk.setBlocked(true);
-				final L2NpcWalkerNode node = walk.getCurrentNode();
-				npc.sendDebugMessage("Route '" + routeName + "', continuing to node " + walk.getCurrentNodeId());
-				npc.setIsRunning(node.runToLocation());
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, node);
-				walk.setBlocked(false);
-				walk.setStoppedByAttack(false);
-			}
 			else
+			// walk was stopped due to some reason (arrived to node, script action, fight or something else), resume it
 			{
-				npc.sendDebugMessage("Failed to continue moving along route '" + routeName + "' (wrong AI state - " + npc.getAI().getIntention() + ")");
+				if (_activeRoutes.containsKey(npc.getObjectId()) && ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) || (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)))
+				{
+					final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
+					if (walk == null)
+					{
+						return;
+					}
+					
+					// Prevent call simultaneously from scheduled task and onArrived() or temporarily stop walking for resuming in future
+					if (walk.isBlocked() || walk.isSuspended())
+					{
+						npc.sendDebugMessage("Failed to continue moving along route '" + routeName + "' (operation is blocked)");
+						return;
+					}
+					
+					walk.setBlocked(true);
+					final L2NpcWalkerNode node = walk.getCurrentNode();
+					npc.sendDebugMessage("Route '" + routeName + "', continuing to node " + walk.getCurrentNodeId());
+					npc.setIsRunning(node.runToLocation());
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, node);
+					walk.setBlocked(false);
+					walk.setStoppedByAttack(false);
+				}
+				else
+				{
+					npc.sendDebugMessage("Failed to continue moving along route '" + routeName + "' (wrong AI state - " + npc.getAI().getIntention() + ")");
+				}
 			}
 		}
 	}
@@ -323,12 +333,10 @@ public final class WalkingManager implements IXmlReader
 	public synchronized void cancelMoving(L2Npc npc)
 	{
 		final WalkInfo walk = _activeRoutes.remove(npc.getObjectId());
-		if (walk == null)
+		if (walk != null)
 		{
-			return;
+			walk.getWalkCheckTask().cancel(true);
 		}
-		walk.getWalkCheckTask().cancel(true);
-		npc.getKnownList().stopTrackingTask();
 	}
 	
 	/**
@@ -338,13 +346,12 @@ public final class WalkingManager implements IXmlReader
 	public void resumeMoving(L2Npc npc)
 	{
 		final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
-		if (walk == null)
+		if (walk != null)
 		{
-			return;
+			walk.setSuspended(false);
+			walk.setStoppedByAttack(false);
+			startMoving(npc, walk.getRoute().getName());
 		}
-		walk.setSuspended(false);
-		walk.setStoppedByAttack(false);
-		startMoving(npc, walk.getRoute().getName());
 	}
 	
 	/**
@@ -355,7 +362,19 @@ public final class WalkingManager implements IXmlReader
 	 */
 	public void stopMoving(L2Npc npc, boolean suspend, boolean stoppedByAttack)
 	{
-		final L2MonsterInstance monster = npc.isMonster() ? ((L2MonsterInstance) npc).getLeader() == null ? (L2MonsterInstance) npc : ((L2MonsterInstance) npc).getLeader() : null;
+		L2MonsterInstance monster = null;
+		
+		if (npc.isMonster())
+		{
+			if (((L2MonsterInstance) npc).getLeader() == null)
+			{
+				monster = (L2MonsterInstance) npc;
+			}
+			else
+			{
+				monster = ((L2MonsterInstance) npc).getLeader();
+			}
+		}
 		
 		if (((monster != null) && !isRegistered(monster)) || !isRegistered(npc))
 		{
@@ -385,46 +404,58 @@ public final class WalkingManager implements IXmlReader
 	 */
 	public void onArrived(L2Npc npc)
 	{
-		if (!_activeRoutes.containsKey(npc.getObjectId()))
+		if (_activeRoutes.containsKey(npc.getObjectId()))
 		{
-			return;
+			// Notify quest
+			EventDispatcher.getInstance().notifyEventAsync(new OnNpcMoveNodeArrived(npc), npc);
+			
+			final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
+			
+			// Opposite should not happen... but happens sometime
+			if ((walk.getCurrentNodeId() >= 0) && (walk.getCurrentNodeId() < walk.getRoute().getNodesCount()))
+			{
+				final L2NpcWalkerNode node = walk.getRoute().getNodeList().get(walk.getCurrentNodeId());
+				if (npc.isInsideRadius(node, 10, false, false))
+				{
+					npc.sendDebugMessage("Route '" + walk.getRoute().getName() + "', arrived to node " + walk.getCurrentNodeId());
+					npc.sendDebugMessage("Done in " + ((System.currentTimeMillis() - walk.getLastAction()) / 1000) + " s");
+					
+					if (!walk.calculateNextNode(npc))
+					{
+						return;
+					}
+					
+					walk.setBlocked(true); // prevents to be ran from walk check task, if there is delay in this node.
+					
+					if (node.getNpcString() != null)
+					{
+						npc.broadcastSay(ChatType.NPC_GENERAL, node.getNpcString());
+					}
+					else if (!node.getChatText().isEmpty())
+					{
+						npc.broadcastSay(ChatType.NPC_GENERAL, node.getChatText());
+					}
+					
+					if (npc.isDebug())
+					{
+						walk.setLastAction(System.currentTimeMillis());
+					}
+					
+					if (_activeRoutes.containsKey(npc.getObjectId()))
+					{
+						if (node.getDelay() > 0)
+						{
+							ThreadPoolManager.getInstance().scheduleGeneral(new ArrivedTask(npc, walk), node.getDelay() * 1000L);
+						}
+						else
+						{
+							walk.setBlocked(false);
+							WalkingManager.getInstance().startMoving(npc, walk.getRoute().getName());
+						}
+					}
+				}
+			}
 		}
-		
-		// Notify quest
-		EventDispatcher.getInstance().notifyEventAsync(new OnNpcMoveNodeArrived(npc), npc);
-		
-		final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
-		// Opposite should not happen... but happens sometime
-		if ((walk.getCurrentNodeId() < 0) || (walk.getCurrentNodeId() >= walk.getRoute().getNodesCount()))
-		{
-			return;
-		}
-		
-		final L2NpcWalkerNode node = walk.getRoute().getNodeList().get(walk.getCurrentNodeId());
-		if (!npc.isInsideRadius(node, 10, false, false))
-		{
-			return;
-		}
-		
-		npc.sendDebugMessage("Route '" + walk.getRoute().getName() + "', arrived to node " + walk.getCurrentNodeId());
-		npc.sendDebugMessage("Done in " + ((System.currentTimeMillis() - walk.getLastAction()) / 1000) + " s");
-		walk.calculateNextNode(npc);
-		walk.setBlocked(true); // prevents to be ran from walk check task, if there is delay in this node.
-		
-		if (node.getNpcString() != null)
-		{
-			Broadcast.toKnownPlayers(npc, new NpcSay(npc, ChatType.NPC_GENERAL, node.getNpcString()));
-		}
-		else if (!node.getChatText().isEmpty())
-		{
-			Broadcast.toKnownPlayers(npc, new NpcSay(npc, ChatType.NPC_GENERAL, node.getChatText()));
-		}
-		
-		if (npc.isDebug())
-		{
-			walk.setLastAction(System.currentTimeMillis());
-		}
-		ThreadPoolManager.getInstance().scheduleGeneral(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000L));
 	}
 	
 	/**

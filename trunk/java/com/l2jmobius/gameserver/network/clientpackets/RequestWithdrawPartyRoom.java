@@ -16,69 +16,46 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.PartyMatchRoom;
-import com.l2jmobius.gameserver.model.PartyMatchRoomList;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.enums.MatchingRoomType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
+import com.l2jmobius.gameserver.model.matching.MatchingRoom;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * @author Gnacik
  */
-public final class RequestWithdrawPartyRoom extends L2GameClientPacket
+public final class RequestWithdrawPartyRoom implements IClientIncomingPacket
 {
-	private static final String _C__D0_0B_REQUESTWITHDRAWPARTYROOM = "[C] D0:0B RequestWithdrawPartyRoom";
-	
-	private int _roomid;
-	@SuppressWarnings("unused")
-	private int _unk1;
+	private int _roomId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_roomid = readD();
-		_unk1 = readD();
+		_roomId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
-		
-		if (_activeChar == null)
+		final L2PcInstance activeChar = client.getActiveChar();
+		if (activeChar == null)
 		{
 			return;
 		}
 		
-		final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
-		if (_room == null)
+		final MatchingRoom room = activeChar.getMatchingRoom();
+		if (room == null)
 		{
 			return;
 		}
 		
-		if (_activeChar.isInParty() && _room.getOwner().isInParty() && (_activeChar.getParty().getLeaderObjectId() == _room.getOwner().getParty().getLeaderObjectId()))
+		if ((room.getId() != _roomId) || (room.getRoomType() != MatchingRoomType.PARTY))
 		{
-			// If user is in party with Room Owner
-			// is not removed from Room
-			
-			// _activeChar.setPartyMatching(0);
-			_activeChar.broadcastUserInfo();
+			return;
 		}
-		else
-		{
-			_room.deleteMember(_activeChar);
-			
-			_activeChar.setPartyRoom(0);
-			// _activeChar.setPartyMatching(0);
-			
-			_activeChar.sendPacket(new ExClosePartyRoom());
-			_activeChar.sendPacket(SystemMessageId.YOU_HAVE_EXITED_THE_PARTY_ROOM);
-		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_0B_REQUESTWITHDRAWPARTYROOM;
+		
+		room.deleteMember(activeChar, false);
 	}
 }

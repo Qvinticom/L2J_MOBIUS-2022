@@ -75,7 +75,7 @@ public final class ChatWorld implements IChatHandler
 				final Instant instant = REUSE.getOrDefault(activeChar.getObjectId(), null);
 				if ((instant != null) && instant.isAfter(now))
 				{
-					final Duration timeDiff = Duration.between(instant, now);
+					final Duration timeDiff = Duration.between(now, instant);
 					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_S1_SEC_UNTIL_YOU_ARE_ABLE_TO_USE_WORLD_CHAT);
 					msg.addInt((int) timeDiff.getSeconds());
 					activeChar.sendPacket(msg);

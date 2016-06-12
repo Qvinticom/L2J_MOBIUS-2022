@@ -22,14 +22,14 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.AnnouncementsTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.PageResult;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.announce.Announcement;
 import com.l2jmobius.gameserver.model.announce.AnnouncementType;
 import com.l2jmobius.gameserver.model.announce.AutoAnnouncement;
 import com.l2jmobius.gameserver.model.announce.IAnnouncement;
+import com.l2jmobius.gameserver.model.html.PageBuilder;
+import com.l2jmobius.gameserver.model.html.PageResult;
 import com.l2jmobius.gameserver.util.Broadcast;
-import com.l2jmobius.gameserver.util.HtmlUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -83,13 +83,14 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			}
 			case "admin_announces":
 			{
-				switch (st.hasMoreTokens() ? st.nextToken() : "")
+				final String subCmd = st.hasMoreTokens() ? st.nextToken() : "";
+				switch (subCmd)
 				{
 					case "add":
 					{
 						if (!st.hasMoreTokens())
 						{
-							final String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/announces-add.htm");
+							final String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/announces-add.htm");
 							Util.sendCBHtml(activeChar, content);
 							break;
 						}
@@ -190,7 +191,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 						}
 						if (!st.hasMoreTokens())
 						{
-							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/announces-edit.htm");
+							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/announces-edit.htm");
 							final String announcementId = "" + announce.getId();
 							final String announcementType = announce.getType().name();
 							String announcementInital = "0";
@@ -416,7 +417,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 						final IAnnouncement announce = AnnouncementsTable.getInstance().getAnnounce(id);
 						if (announce != null)
 						{
-							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/announces-show.htm");
+							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/announces-show.htm");
 							final String announcementId = "" + announce.getId();
 							final String announcementType = announce.getType().name();
 							String announcementInital = "0";
@@ -456,13 +457,9 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							}
 						}
 						
-						String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/announces-list.htm");
-						final PageResult result = HtmlUtil.createPage(AnnouncementsTable.getInstance().getAllAnnouncements(), page, 8, currentPage ->
+						String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/announces-list.htm");
+						final PageResult result = PageBuilder.newBuilder(AnnouncementsTable.getInstance().getAllAnnouncements(), 8, "bypass admin_announces list").currentPage(page).bodyHandler((pages, announcement, sb) ->
 						{
-							return "<td align=center><button action=\"bypass admin_announces list " + currentPage + "\" value=\"" + (currentPage + 1) + "\" width=35 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>";
-						}, announcement ->
-						{
-							final StringBuilder sb = new StringBuilder();
 							sb.append("<tr>");
 							sb.append("<td width=5></td>");
 							sb.append("<td width=80>" + announcement.getId() + "</td>");
@@ -489,8 +486,8 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							sb.append("<td width=60><button action=\"bypass -h admin_announces remove " + announcement.getId() + "\" value=\"Remove\" width=\"60\" height=\"21\" back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 							sb.append("<td width=5></td>");
 							sb.append("</tr>");
-							return sb.toString();
-						});
+						}).build();
+						
 						content = content.replaceAll("%pages%", result.getPagerTemplate().toString());
 						content = content.replaceAll("%announcements%", result.getBodyTemplate().toString());
 						Util.sendCBHtml(activeChar, content);

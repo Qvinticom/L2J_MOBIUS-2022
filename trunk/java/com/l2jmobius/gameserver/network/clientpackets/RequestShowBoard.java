@@ -17,40 +17,29 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * RequestShowBoard client packet implementation.
  * @author Zoey76
  */
-public final class RequestShowBoard extends L2GameClientPacket
+public final class RequestShowBoard implements IClientIncomingPacket
 {
-	private static final String _C__5E_REQUESTSHOWBOARD = "[C] 5E RequestShowBoard";
-	
 	@SuppressWarnings("unused")
 	private int _unknown;
 	
 	@Override
-	protected final void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_unknown = readD();
+		_unknown = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		CommunityBoardHandler.getInstance().handleParseCommand(Config.BBS_DEFAULT, getActiveChar());
-	}
-	
-	@Override
-	public final String getType()
-	{
-		return _C__5E_REQUESTSHOWBOARD;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
+		CommunityBoardHandler.getInstance().handleParseCommand(Config.BBS_DEFAULT, client.getActiveChar());
 	}
 }

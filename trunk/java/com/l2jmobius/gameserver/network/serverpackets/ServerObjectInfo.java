@@ -16,13 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * @author devScarlet, mrTJO
  */
-public final class ServerObjectInfo extends L2GameServerPacket
+public final class ServerObjectInfo implements IClientOutgoingPacket
 {
 	private final L2Npc _activeChar;
 	private final int _x, _y, _z, _heading;
@@ -46,24 +48,26 @@ public final class ServerObjectInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x92);
-		writeD(_activeChar.getObjectId());
-		writeD(_idTemplate + 1000000);
-		writeS(_name); // name
-		writeD(_isAttackable ? 1 : 0);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
-		writeD(_heading);
-		writeF(1.0); // movement multiplier
-		writeF(1.0); // attack speed multiplier
-		writeF(_collisionRadius);
-		writeF(_collisionHeight);
-		writeD((int) (_isAttackable ? _activeChar.getCurrentHp() : 0));
-		writeD(_isAttackable ? _activeChar.getMaxHp() : 0);
-		writeD(0x01); // object type
-		writeD(0x00); // special effects
+		OutgoingPackets.SERVER_OBJECT_INFO.writeId(packet);
+		
+		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_idTemplate + 1000000);
+		packet.writeS(_name); // name
+		packet.writeD(_isAttackable ? 1 : 0);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		packet.writeD(_heading);
+		packet.writeF(1.0); // movement multiplier
+		packet.writeF(1.0); // attack speed multiplier
+		packet.writeF(_collisionRadius);
+		packet.writeF(_collisionHeight);
+		packet.writeD((int) (_isAttackable ? _activeChar.getCurrentHp() : 0));
+		packet.writeD(_isAttackable ? _activeChar.getMaxHp() : 0);
+		packet.writeD(0x01); // object type
+		packet.writeD(0x00); // special effects
+		return true;
 	}
 }

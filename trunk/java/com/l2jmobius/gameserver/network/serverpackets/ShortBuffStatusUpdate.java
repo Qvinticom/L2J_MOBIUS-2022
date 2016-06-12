@@ -16,7 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class ShortBuffStatusUpdate extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
+public class ShortBuffStatusUpdate implements IClientOutgoingPacket
 {
 	public static final ShortBuffStatusUpdate RESET_SHORT_BUFF = new ShortBuffStatusUpdate(0, 0, 0);
 	
@@ -32,11 +35,13 @@ public class ShortBuffStatusUpdate extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfa);
-		writeD(_skillId);
-		writeD(_skillLvl);
-		writeD(_duration);
+		OutgoingPackets.SHORT_BUFF_STATUS_UPDATE.writeId(packet);
+		
+		packet.writeD(_skillId);
+		packet.writeD(_skillLvl);
+		packet.writeD(_duration);
+		return true;
 	}
 }

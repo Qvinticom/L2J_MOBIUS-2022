@@ -69,11 +69,6 @@ public class NodeLoc extends AbstractNodeLoc
 		return _goWest;
 	}
 	
-	public boolean canGoNone()
-	{
-		return !canGoNorth() && !canGoEast() && !canGoSouth() && !canGoWest();
-	}
-	
 	public boolean canGoAll()
 	{
 		return canGoNorth() && canGoEast() && canGoSouth() && canGoWest();
@@ -95,12 +90,6 @@ public class NodeLoc extends AbstractNodeLoc
 	public int getZ()
 	{
 		return _geoHeight;
-	}
-	
-	@Override
-	public void setZ(short z)
-	{
-		//
 	}
 	
 	@Override
@@ -162,6 +151,34 @@ public class NodeLoc extends AbstractNodeLoc
 			return false;
 		}
 		final NodeLoc other = (NodeLoc) obj;
-		return (_x == other._x) && (_y == other._y) && (!_goNorth == !other._goNorth) && (!_goEast == !other._goEast) && (!_goSouth == !other._goSouth) && (!_goWest == !other._goWest) && (_geoHeight == other._geoHeight);
+		if (_x != other._x)
+		{
+			return false;
+		}
+		if (_y != other._y)
+		{
+			return false;
+		}
+		if (_goNorth != other._goNorth)
+		{
+			return false;
+		}
+		if (_goEast != other._goEast)
+		{
+			return false;
+		}
+		if (_goSouth != other._goSouth)
+		{
+			return false;
+		}
+		if (_goWest != other._goWest)
+		{
+			return false;
+		}
+		if (_geoHeight != other._geoHeight)
+		{
+			return false;
+		}
+		return true;
 	}
 }

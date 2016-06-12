@@ -16,32 +16,34 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.primeshop;
 
-import java.util.logging.Level;
-
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRProductList;
 
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRProductList extends L2GameClientPacket
+public final class RequestBRProductList implements IClientIncomingPacket
 {
 	private int _type;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_type = readD();
+		_type = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player != null)
 		{
+			
 			switch (_type)
 			{
 				case 0: // Home page
@@ -59,16 +61,10 @@ public final class RequestBRProductList extends L2GameClientPacket
 				}
 				default:
 				{
-					_log.log(Level.WARNING, player + " send unhandled product list type: " + _type);
+					_log.warning(player + " send unhandled product list type: " + _type);
 					break;
 				}
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
 	}
 }

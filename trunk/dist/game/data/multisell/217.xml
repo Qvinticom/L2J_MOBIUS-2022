@@ -4,1451 +4,908 @@
 		<npc>31126</npc> <!-- Blacksmith of Mammon -->
 	</npcs>
 	<item>
-		<!-- Sealed Dynasty Breastplate -->
-		<ingredient count="1" id="9514" />
-		<!-- Ancient Adena -->
-		<ingredient count="1830000" id="5575" />
-		<!-- Dynasty Breastplate -->
-		<production count="1" id="9416" />
-	</item>
-	<item>
-		<!-- Sealed Dynasty Gaiters -->
-		<ingredient count="1" id="9515" />
-		<!-- Ancient Adena -->
-		<ingredient count="1144000" id="5575" />
-		<!-- Dynasty Gaiters -->
-		<production count="1" id="9421" />
-	</item>
-	<item>
-		<!-- Sealed Dynasty Helmet -->
-		<ingredient count="1" id="9516" />
-		<!-- Ancient Adena -->
-		<ingredient count="686000" id="5575" />
-		<!-- Dynasty Helmet -->
-		<production count="1" id="9422" />
-	</item>
-	<item>
-		<!-- Sealed Dynasty Gauntlets -->
-		<ingredient count="1" id="9517" />
-		<!-- Ancient Adena -->
-		<ingredient count="457000" id="5575" />
-		<!-- Dynasty Gauntlets -->
-		<production count="1" id="9423" />
-	</item>
-	<item>
-		<!-- Sealed Dynasty Boots -->
-		<ingredient count="1" id="9518" />
-		<!-- Ancient Adena -->
-		<ingredient count="457000" id="5575" />
-		<!-- Dynasty Boots -->
-		<production count="1" id="9424" />
-	</item>
-	<item>
-		<!-- Sealed Dynasty Leather Armor -->
-		<ingredient count="1" id="9519" />
-		<!-- Ancient Adena -->
-		<ingredient count="1372000" id="5575" />
-		<!-- Dynasty Leather Armor -->
-		<production count="1" id="9425" />
-	</item>
-	<item>
-		<!-- Sealed Dynasty Leather Leggings -->
-		<ingredient count="1" id="9520" />
-		<!-- Ancient Adena -->
-		<ingredient count="858000" id="5575" />
-		<!-- Dynasty Leather Leggings -->
-		<production count="1" id="9428" />
-	</item>
-	<item>
-		<!-- Sealed Dynasty Leather Helmet -->
-		<ingredient count="1" id="9521" />
-		<!-- Ancient Adena -->
-		<ingredient count="686000" id="5575" />
-		<!-- Dynasty Leather Helmet -->
-		<production count="1" id="9429" />
-	</item>
-	<item>
-		<!-- Sealed Dynasty Leather Gloves -->
-		<ingredient count="1" id="9522" />
-		<!-- Ancient Adena -->
-		<ingredient count="457000" id="5575" />
-		<!-- Dynasty Leather Gloves -->
-		<production count="1" id="9430" />
-	</item>
-	<item>
-		<!-- Sealed Dynasty Leather Boots -->
-		<ingredient count="1" id="9523" />
-		<!-- Ancient Adena -->
-		<ingredient count="457000" id="5575" />
-		<!-- Dynasty Leather Boots -->
-		<production count="1" id="9431" />
-	</item>
-	<item>
-		<!-- Sealed Dynasty Tunic -->
-		<ingredient count="1" id="9524" />
-		<!-- Ancient Adena -->
-		<ingredient count="1372000" id="5575" />
-		<!-- Dynasty Tunic -->
-		<production count="1" id="9432" />
-	</item>
-	<item>
-		<!-- Sealed Dynasty Stockings -->
-		<ingredient count="1" id="9525" />
-		<!-- Ancient Adena -->
-		<ingredient count="858000" id="5575" />
-		<!-- Dynasty Stockings -->
-		<production count="1" id="9437" />
-	</item>
-	<item>
-		<!-- Sealed Dynasty Circlet -->
-		<ingredient count="1" id="9526" />
-		<!-- Ancient Adena -->
-		<ingredient count="686000" id="5575" />
-		<!-- Dynasty Circlet -->
-		<production count="1" id="9438" />
+		<ingredient id="9514" count="1" /> <!-- Sealed Dynasty Breastplate -->
+		<ingredient id="57" count="1830000" /> <!-- Adena -->
+		<production id="9416" count="1" /> <!-- Dynasty Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Gloves -->
-		<ingredient count="1" id="9527" />
-		<!-- Ancient Adena -->
-		<ingredient count="457000" id="5575" />
-		<!-- Dynasty Gloves -->
-		<production count="1" id="9439" />
+		<ingredient id="9515" count="1" /> <!-- Sealed Dynasty Gaiters -->
+		<ingredient id="57" count="1144000" /> <!-- Adena -->
+		<production id="9421" count="1" /> <!-- Dynasty Gaiters -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Shoes -->
-		<ingredient count="1" id="9528" />
-		<!-- Ancient Adena -->
-		<ingredient count="457000" id="5575" />
-		<!-- Dynasty Shoes -->
-		<production count="1" id="9440" />
+		<ingredient id="9516" count="1" /> <!-- Sealed Dynasty Helmet -->
+		<ingredient id="57" count="686000" /> <!-- Adena -->
+		<production id="9422" count="1" /> <!-- Dynasty Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Shield -->
-		<ingredient count="1" id="9529" />
-		<!-- Ancient Adena -->
-		<ingredient count="480000" id="5575" />
-		<!-- Dynasty Shield -->
-		<production count="1" id="9441" />
+		<ingredient id="9517" count="1" /> <!-- Sealed Dynasty Gauntlets -->
+		<ingredient id="57" count="457000" /> <!-- Adena -->
+		<production id="9423" count="1" /> <!-- Dynasty Gauntlets - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Sigil -->
-		<ingredient count="1" id="13886" />
-		<!-- Ancient Adena -->
-		<ingredient count="480000" id="5575" />
-		<!-- Dynasty Sigil -->
-		<production count="1" id="12812" />
+		<ingredient id="9518" count="1" /> <!-- Sealed Dynasty Boots -->
+		<ingredient id="57" count="457000" /> <!-- Adena -->
+		<production id="9424" count="1" /> <!-- Dynasty Boots - Heavy Armor -->
 	</item>
 	<item>
-		<!-- Sealed Imperial Crusader Breastplate -->
-		<ingredient count="1" id="6674" />
-		<!-- Ancient Adena -->
-		<ingredient count="1072500" id="5575" />
-		<!-- Imperial Crusader Breastplate -->
-		<production count="1" id="6373" />
+		<ingredient id="9519" count="1" /> <!-- Sealed Dynasty Leather Armor -->
+		<ingredient id="57" count="1372000" /> <!-- Adena -->
+		<production id="9425" count="1" /> <!-- Dynasty Leather Armor -->
 	</item>
 	<item>
-		<!-- Sealed Imperial Crusader Gaiters -->
-		<ingredient count="1" id="6675" />
-		<!-- Ancient Adena -->
-		<ingredient count="672000" id="5575" />
-		<!-- Imperial Crusader Gaiters -->
-		<production count="1" id="6374" />
+		<ingredient id="9520" count="1" /> <!-- Sealed Dynasty Leather Leggings -->
+		<ingredient id="57" count="858000" /> <!-- Adena -->
+		<production id="9428" count="1" /> <!-- Dynasty Leather Leggings -->
 	</item>
 	<item>
-		<!-- Sealed Imperial Crusader Gauntlets -->
-		<ingredient count="1" id="6676" />
-		<!-- Ancient Adena -->
-		<ingredient count="268500" id="5575" />
-		<!-- Imperial Crusader Gauntlets -->
-		<production count="1" id="6375" />
+		<ingredient id="9521" count="1" /> <!-- Sealed Dynasty Leather Helmet -->
+		<ingredient id="57" count="686000" /> <!-- Adena -->
+		<production id="9429" count="1" /> <!-- Dynasty Leather Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Imperial Crusader Boots -->
-		<ingredient count="1" id="6677" />
-		<!-- Ancient Adena -->
-		<ingredient count="268500" id="5575" />
-		<!-- Imperial Crusader Boots -->
-		<production count="1" id="6376" />
+		<ingredient id="9522" count="1" /> <!-- Sealed Dynasty Leather Gloves -->
+		<ingredient id="57" count="457000" /> <!-- Adena -->
+		<production id="9430" count="1" /> <!-- Dynasty Leather Gloves - Light Armor -->
 	</item>
 	<item>
-		<!-- Sealed Imperial Crusader Shield -->
-		<ingredient count="1" id="6678" />
-		<!-- Ancient Adena -->
-		<ingredient count="282000" id="5575" />
-		<!-- Imperial Crusader Shield -->
-		<production count="1" id="6377" />
+		<ingredient id="9523" count="1" /> <!-- Sealed Dynasty Leather Boots -->
+		<ingredient id="57" count="457000" /> <!-- Adena -->
+		<production id="9431" count="1" /> <!-- Dynasty Leather Boots - Light Armor -->
 	</item>
 	<item>
-		<!-- Sealed Arcana Sigil -->
-		<ingredient count="1" id="13885" />
-		<!-- Ancient Adena -->
-		<ingredient count="282000" id="5575" />
-		<!-- Arcana Sigil -->
-		<production count="1" id="12811" />
+		<ingredient id="9524" count="1" /> <!-- Sealed Dynasty Tunic -->
+		<ingredient id="57" count="1372000" /> <!-- Adena -->
+		<production id="9432" count="1" /> <!-- Dynasty Tunic -->
 	</item>
 	<item>
-		<!-- Sealed Imperial Crusader Helmet -->
-		<ingredient count="1" id="6679" />
-		<!-- Ancient Adena -->
-		<ingredient count="402750" id="5575" />
-		<!-- Imperial Crusader Helmet -->
-		<production count="1" id="6378" />
+		<ingredient id="9525" count="1" /> <!-- Sealed Dynasty Stockings -->
+		<ingredient id="57" count="858000" /> <!-- Adena -->
+		<production id="9437" count="1" /> <!-- Dynasty Stockings -->
 	</item>
 	<item>
-		<!-- Sealed Draconic Leather Armor -->
-		<ingredient count="1" id="6680" />
-		<!-- Ancient Adena -->
-		<ingredient count="1305000" id="5575" />
-		<!-- Draconic Leather Armor -->
-		<production count="1" id="6379" />
+		<ingredient id="9526" count="1" /> <!-- Sealed Dynasty Circlet -->
+		<ingredient id="57" count="686000" /> <!-- Adena -->
+		<production id="9438" count="1" /> <!-- Dynasty Circlet -->
 	</item>
 	<item>
-		<!-- Sealed Draconic Leather Gloves -->
-		<ingredient count="1" id="6681" />
-		<!-- Ancient Adena -->
-		<ingredient count="268500" id="5575" />
-		<!-- Draconic Leather Gloves -->
-		<production count="1" id="6380" />
+		<ingredient id="9527" count="1" /> <!-- Sealed Dynasty Gloves -->
+		<ingredient id="57" count="457000" /> <!-- Adena -->
+		<production id="9439" count="1" /> <!-- Dynasty Gloves - Robe -->
 	</item>
 	<item>
-		<!-- Sealed Draconic Leather Boots -->
-		<ingredient count="1" id="6682" />
-		<!-- Ancient Adena -->
-		<ingredient count="268500" id="5575" />
-		<!-- Draconic Leather Boots -->
-		<production count="1" id="6381" />
+		<ingredient id="9528" count="1" /> <!-- Sealed Dynasty Shoes -->
+		<ingredient id="57" count="457000" /> <!-- Adena -->
+		<production id="9440" count="1" /> <!-- Dynasty Shoes - Robe -->
 	</item>
 	<item>
-		<!-- Sealed Draconic Leather Helmet -->
-		<ingredient count="1" id="6683" />
-		<!-- Ancient Adena -->
-		<ingredient count="402750" id="5575" />
-		<!-- Draconic Leather Helmet -->
-		<production count="1" id="6382" />
+		<ingredient id="9529" count="1" /> <!-- Sealed Dynasty Shield -->
+		<ingredient id="57" count="480000" /> <!-- Adena -->
+		<production id="9441" count="1" /> <!-- Dynasty Shield -->
 	</item>
 	<item>
-		<!-- Sealed Major Arcana Robe -->
-		<ingredient count="1" id="6684" />
-		<!-- Ancient Adena -->
-		<ingredient count="1305000" id="5575" />
-		<!-- Major Arcana Robe -->
-		<production count="1" id="6383" />
+		<ingredient id="13886" count="1" /> <!-- Sealed Dynasty Sigil -->
+		<ingredient id="57" count="480000" /> <!-- Adena -->
+		<production id="12812" count="1" /> <!-- Dynasty Sigil -->
 	</item>
 	<item>
-		<!-- Sealed Major Arcana Gloves -->
-		<ingredient count="1" id="6685" />
-		<!-- Ancient Adena -->
-		<ingredient count="268500" id="5575" />
-		<!-- Major Arcana Gloves -->
-		<production count="1" id="6384" />
+		<ingredient id="6674" count="1" /> <!-- Sealed Imperial Crusader Breastplate -->
+		<ingredient id="57" count="1072500" /> <!-- Adena -->
+		<production id="6373" count="1" /> <!-- Imperial Crusader Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Major Arcana Boots -->
-		<ingredient count="1" id="6686" />
-		<!-- Ancient Adena -->
-		<ingredient count="268500" id="5575" />
-		<!-- Major Arcana Boots -->
-		<production count="1" id="6385" />
+		<ingredient id="6675" count="1" /> <!-- Sealed Imperial Crusader Gaiters -->
+		<ingredient id="57" count="672000" /> <!-- Adena -->
+		<production id="6374" count="1" /> <!-- Imperial Crusader Gaiters -->
 	</item>
 	<item>
-		<!-- Sealed Major Arcana Circlet -->
-		<ingredient count="1" id="6687" />
-		<!-- Ancient Adena -->
-		<ingredient count="402750" id="5575" />
-		<!-- Major Arcana Circlet -->
-		<production count="1" id="6386" />
+		<ingredient id="6676" count="1" /> <!-- Sealed Imperial Crusader Gauntlets -->
+		<ingredient id="57" count="268500" /> <!-- Adena -->
+		<production id="6375" count="1" /> <!-- Imperial Crusader Gauntlets -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Breastplate -->
-		<ingredient count="1" id="11568" />
-		<!-- Ancient Adena -->
-		<ingredient count="1830000" id="5575" />
-		<!-- Dynasty Breastplate -->
-		<production count="1" id="11527" />
+		<ingredient id="6677" count="1" /> <!-- Sealed Imperial Crusader Boots -->
+		<ingredient id="57" count="268500" /> <!-- Adena -->
+		<production id="6376" count="1" /> <!-- Imperial Crusader Boots -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Gaiters -->
-		<ingredient count="1" id="11559" />
-		<!-- Ancient Adena -->
-		<ingredient count="1144000" id="5575" />
-		<!-- Dynasty Gaiters -->
-		<production count="1" id="11512" />
+		<ingredient id="6678" count="1" /> <!-- Sealed Imperial Crusader Shield -->
+		<ingredient id="57" count="282000" /> <!-- Adena -->
+		<production id="6377" count="1" /> <!-- Imperial Crusader Shield -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Helmet -->
-		<ingredient count="1" id="11573" />
-		<!-- Ancient Adena -->
-		<ingredient count="686000" id="5575" />
-		<!-- Dynasty Helmet -->
-		<production count="1" id="11557" />
+		<ingredient id="13885" count="1" /> <!-- Sealed Arcana Sigil -->
+		<ingredient id="57" count="282000" /> <!-- Adena -->
+		<production id="12811" count="1" /> <!-- Arcana Sigil -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Gauntlets -->
-		<ingredient count="1" id="11560" />
-		<!-- Ancient Adena -->
-		<ingredient count="457000" id="5575" />
-		<!-- Dynasty Gauntlets -->
-		<production count="1" id="11513" />
+		<ingredient id="6679" count="1" /> <!-- Sealed Imperial Crusader Helmet -->
+		<ingredient id="57" count="402750" /> <!-- Adena -->
+		<production id="6378" count="1" /> <!-- Imperial Crusader Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Boots -->
-		<ingredient count="1" id="11567" />
-		<!-- Ancient Adena -->
-		<ingredient count="457000" id="5575" />
-		<!-- Dynasty Boots -->
-		<production count="1" id="11526" />
+		<ingredient id="6680" count="1" /> <!-- Sealed Draconic Leather Armor -->
+		<ingredient id="57" count="1305000" /> <!-- Adena -->
+		<production id="6379" count="1" /> <!-- Draconic Leather Armor -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Leather Armor -->
-		<ingredient count="1" id="11564" />
-		<!-- Ancient Adena -->
-		<ingredient count="1372000" id="5575" />
-		<!-- Dynasty Leather Armor -->
-		<production count="1" id="11517" />
+		<ingredient id="6681" count="1" /> <!-- Sealed Draconic Leather Gloves -->
+		<ingredient id="57" count="268500" /> <!-- Adena -->
+		<production id="6380" count="1" /> <!-- Draconic Leather Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Leather Leggings -->
-		<ingredient count="1" id="11563" />
-		<!-- Ancient Adena -->
-		<ingredient count="858000" id="5575" />
-		<!-- Dynasty Leather Leggings -->
-		<production count="1" id="11516" />
+		<ingredient id="6682" count="1" /> <!-- Sealed Draconic Leather Boots -->
+		<ingredient id="57" count="268500" /> <!-- Adena -->
+		<production id="6381" count="1" /> <!-- Draconic Leather Boots -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Leather Helmet -->
-		<ingredient count="1" id="11566" />
-		<!-- Ancient Adena -->
-		<ingredient count="686000" id="5575" />
-		<!-- Dynasty Leather Helmet -->
-		<production count="1" id="11525" />
+		<ingredient id="6683" count="1" /> <!-- Sealed Draconic Leather Helmet -->
+		<ingredient id="57" count="402750" /> <!-- Adena -->
+		<production id="6382" count="1" /> <!-- Draconic Leather Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Leather Gloves -->
-		<ingredient count="1" id="11562" />
-		<!-- Ancient Adena -->
-		<ingredient count="457000" id="5575" />
-		<!-- Dynasty Leather Gloves -->
-		<production count="1" id="11515" />
+		<ingredient id="6684" count="1" /> <!-- Sealed Major Arcana Robe -->
+		<ingredient id="57" count="1305000" /> <!-- Adena -->
+		<production id="6383" count="1" /> <!-- Major Arcana Robe -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Leather Boots -->
-		<ingredient count="1" id="11565" />
-		<!-- Ancient Adena -->
-		<ingredient count="457000" id="5575" />
-		<!-- Dynasty Leather Boots -->
-		<production count="1" id="11524" />
+		<ingredient id="6685" count="1" /> <!-- Sealed Major Arcana Gloves -->
+		<ingredient id="57" count="268500" /> <!-- Adena -->
+		<production id="6384" count="1" /> <!-- Major Arcana Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Tunic -->
-		<ingredient count="1" id="11572" />
-		<!-- Ancient Adena -->
-		<ingredient count="1372000" id="5575" />
-		<!-- Dynasty Tunic -->
-		<production count="1" id="11547" />
+		<ingredient id="6686" count="1" /> <!-- Sealed Major Arcana Boots -->
+		<ingredient id="57" count="268500" /> <!-- Adena -->
+		<production id="6385" count="1" /> <!-- Major Arcana Boots -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Stockings -->
-		<ingredient count="1" id="11574" />
-		<!-- Ancient Adena -->
-		<ingredient count="858000" id="5575" />
-		<!-- Dynasty Stockings -->
-		<production count="1" id="11558" />
+		<ingredient id="6687" count="1" /> <!-- Sealed Major Arcana Circlet -->
+		<ingredient id="57" count="402750" /> <!-- Adena -->
+		<production id="6386" count="1" /> <!-- Major Arcana Circlet -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Circlet -->
-		<ingredient count="1" id="11571" />
-		<!-- Ancient Adena -->
-		<ingredient count="686000" id="5575" />
-		<!-- Dynasty Circlet -->
-		<production count="1" id="11539" />
+		<ingredient id="11568" count="1" /> <!-- Sealed Dynasty Breastplate -->
+		<ingredient id="57" count="1830000" /> <!-- Adena -->
+		<production id="11527" count="1" /> <!-- Dynasty Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Gloves -->
-		<ingredient count="1" id="11561" />
-		<!-- Ancient Adena -->
-		<ingredient count="457000" id="5575" />
-		<!-- Dynasty Gloves -->
-		<production count="1" id="11514" />
+		<ingredient id="11559" count="1" /> <!-- Sealed Dynasty Gaiters -->
+		<ingredient id="57" count="1144000" /> <!-- Adena -->
+		<production id="11512" count="1" /> <!-- Dynasty Gaiters -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Shoes -->
-		<ingredient count="1" id="11570" />
-		<!-- Ancient Adena -->
-		<ingredient count="457000" id="5575" />
-		<!-- Dynasty Shoes -->
-		<production count="1" id="11533" />
+		<ingredient id="11573" count="1" /> <!-- Sealed Dynasty Helmet -->
+		<ingredient id="57" count="686000" /> <!-- Adena -->
+		<production id="11557" count="1" /> <!-- Dynasty Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Shield -->
-		<ingredient count="1" id="11569" />
-		<!-- Ancient Adena -->
-		<ingredient count="480000" id="5575" />
-		<!-- Dynasty Shield -->
-		<production count="1" id="11532" />
+		<ingredient id="11560" count="1" /> <!-- Sealed Dynasty Gauntlets -->
+		<ingredient id="57" count="457000" /> <!-- Adena -->
+		<production id="11513" count="1" /> <!-- Dynasty Gauntlets -->
 	</item>
 	<item>
-		<!-- Sealed Dynasty Sigil -->
-		<ingredient count="1" id="10120" />
-		<!-- Ancient Adena -->
-		<ingredient count="480000" id="5575" />
-		<!-- Dynasty Sigil -->
-		<production count="1" id="10119" />
+		<ingredient id="11567" count="1" /> <!-- Sealed Dynasty Boots -->
+		<ingredient id="57" count="457000" /> <!-- Adena -->
+		<production id="11526" count="1" /> <!-- Dynasty Boots -->
 	</item>
 	<item>
-		<!-- Sealed Imperial Crusader Breastplate -->
-		<ingredient count="1" id="11504" />
-		<!-- Ancient Adena -->
-		<ingredient count="1072500" id="5575" />
-		<!-- Imperial Crusader Breastplate -->
-		<production count="1" id="11510" />
+		<ingredient id="11564" count="1" /> <!-- Sealed Dynasty Leather Armor -->
+		<ingredient id="57" count="1372000" /> <!-- Adena -->
+		<production id="11517" count="1" /> <!-- Dynasty Leather Armor -->
 	</item>
 	<item>
-		<!-- Sealed Imperial Crusader Gaiters -->
-		<ingredient count="1" id="11499" />
-		<!-- Ancient Adena -->
-		<ingredient count="672000" id="5575" />
-		<!-- Imperial Crusader Gaiters -->
-		<production count="1" id="11505" />
+		<ingredient id="11563" count="1" /> <!-- Sealed Dynasty Leather Leggings -->
+		<ingredient id="57" count="858000" /> <!-- Adena -->
+		<production id="11516" count="1" /> <!-- Dynasty Leather Leggings -->
 	</item>
 	<item>
-		<!-- Sealed Imperial Crusader Gauntlets -->
-		<ingredient count="1" id="11500" />
-		<!-- Ancient Adena -->
-		<ingredient count="268500" id="5575" />
-		<!-- Imperial Crusader Gauntlets -->
-		<production count="1" id="11506" />
+		<ingredient id="11566" count="1" /> <!-- Sealed Dynasty Leather Helmet -->
+		<ingredient id="57" count="686000" /> <!-- Adena -->
+		<production id="11525" count="1" /> <!-- Dynasty Leather Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Imperial Crusader Boots -->
-		<ingredient count="1" id="11501" />
-		<!-- Ancient Adena -->
-		<ingredient count="268500" id="5575" />
-		<!-- Imperial Crusader Boots -->
-		<production count="1" id="11507" />
+		<ingredient id="11562" count="1" /> <!-- Sealed Dynasty Leather Gloves -->
+		<ingredient id="57" count="457000" /> <!-- Adena -->
+		<production id="11515" count="1" /> <!-- Dynasty Leather Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Imperial Crusader Shield -->
-		<ingredient count="1" id="11502" />
-		<!-- Ancient Adena -->
-		<ingredient count="282000" id="5575" />
-		<!-- Imperial Crusader Shield -->
-		<production count="1" id="11508" />
+		<ingredient id="11565" count="1" /> <!-- Sealed Dynasty Leather Boots -->
+		<ingredient id="57" count="457000" /> <!-- Adena -->
+		<production id="11524" count="1" /> <!-- Dynasty Leather Boots -->
 	</item>
 	<item>
-		<!-- Sealed Imperial Crusader Helmet -->
-		<ingredient count="1" id="11503" />
-		<!-- Ancient Adena -->
-		<ingredient count="402750" id="5575" />
-		<!-- Imperial Crusader Helmet -->
-		<production count="1" id="11509" />
+		<ingredient id="11572" count="1" /> <!-- Sealed Dynasty Tunic -->
+		<ingredient id="57" count="1372000" /> <!-- Adena -->
+		<production id="11547" count="1" /> <!-- Dynasty Tunic -->
 	</item>
 	<item>
-		<!-- Sealed Arcana Sigil -->
-		<ingredient count="1" id="10121" />
-		<!-- Ancient Adena -->
-		<ingredient count="282000" id="5575" />
-		<!-- Arcana Sigil -->
-		<production count="1" id="13078" />
+		<ingredient id="11574" count="1" /> <!-- Sealed Dynasty Stockings -->
+		<ingredient id="57" count="858000" /> <!-- Adena -->
+		<production id="11558" count="1" /> <!-- Dynasty Stockings -->
 	</item>
 	<item>
-		<!-- Sealed Draconic Leather Armor -->
-		<ingredient count="1" id="11493" />
-		<!-- Ancient Adena -->
-		<ingredient count="1305000" id="5575" />
-		<!-- Draconic Leather Armor -->
-		<production count="1" id="11485" />
+		<ingredient id="11571" count="1" /> <!-- Sealed Dynasty Circlet -->
+		<ingredient id="57" count="686000" /> <!-- Adena -->
+		<production id="11539" count="1" /> <!-- Dynasty Circlet -->
 	</item>
 	<item>
-		<!-- Sealed Draconic Leather Gloves -->
-		<ingredient count="1" id="11491" />
-		<!-- Ancient Adena -->
-		<ingredient count="268500" id="5575" />
-		<!-- Draconic Leather Gloves -->
-		<production count="1" id="11483" />
+		<ingredient id="11561" count="1" /> <!-- Sealed Dynasty Gloves -->
+		<ingredient id="57" count="457000" /> <!-- Adena -->
+		<production id="11514" count="1" /> <!-- Dynasty Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Draconic Leather Boots -->
-		<ingredient count="1" id="11492" />
-		<!-- Ancient Adena -->
-		<ingredient count="268500" id="5575" />
-		<!-- Draconic Leather Boots -->
-		<production count="1" id="11484" />
+		<ingredient id="11570" count="1" /> <!-- Sealed Dynasty Shoes -->
+		<ingredient id="57" count="457000" /> <!-- Adena -->
+		<production id="11533" count="1" /> <!-- Dynasty Shoes -->
 	</item>
 	<item>
-		<!-- Sealed Draconic Leather Helmet -->
-		<ingredient count="1" id="11494" />
-		<!-- Ancient Adena -->
-		<ingredient count="402750" id="5575" />
-		<!-- Draconic Leather Helmet -->
-		<production count="1" id="11486" />
+		<ingredient id="11569" count="1" /> <!-- Sealed Dynasty Shield -->
+		<ingredient id="57" count="480000" /> <!-- Adena -->
+		<production id="11532" count="1" /> <!-- Dynasty Shield -->
 	</item>
 	<item>
-		<!-- Sealed Major Arcana Robe -->
-		<ingredient count="1" id="11496" />
-		<!-- Ancient Adena -->
-		<ingredient count="1305000" id="5575" />
-		<!-- Major Arcana Robe -->
-		<production count="1" id="11488" />
+		<ingredient id="10120" count="1" /> <!-- Sealed Dynasty Sigil -->
+		<ingredient id="57" count="480000" /> <!-- Adena -->
+		<production id="10119" count="1" /> <!-- Dynasty Sigil -->
 	</item>
 	<item>
-		<!-- Sealed Major Arcana Gloves -->
-		<ingredient count="1" id="11495" />
-		<!-- Ancient Adena -->
-		<ingredient count="268500" id="5575" />
-		<!-- Major Arcana Gloves -->
-		<production count="1" id="11487" />
+		<ingredient id="11504" count="1" /> <!-- Sealed Imperial Crusader Breastplate -->
+		<ingredient id="57" count="1072500" /> <!-- Adena -->
+		<production id="11510" count="1" /> <!-- Imperial Crusader Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Major Arcana Boots -->
-		<ingredient count="1" id="11497" />
-		<!-- Ancient Adena -->
-		<ingredient count="268500" id="5575" />
-		<!-- Major Arcana Boots -->
-		<production count="1" id="11489" />
+		<ingredient id="11499" count="1" /> <!-- Sealed Imperial Crusader Gaiters -->
+		<ingredient id="57" count="672000" /> <!-- Adena -->
+		<production id="11505" count="1" /> <!-- Imperial Crusader Gaiters -->
 	</item>
 	<item>
-		<!-- Sealed Major Arcana Circlet -->
-		<ingredient count="1" id="11498" />
-		<!-- Ancient Adena -->
-		<ingredient count="402750" id="5575" />
-		<!-- Major Arcana Circlet -->
-		<production count="1" id="11490" />
+		<ingredient id="11500" count="1" /> <!-- Sealed Imperial Crusader Gauntlets -->
+		<ingredient id="57" count="268500" /> <!-- Adena -->
+		<production id="11506" count="1" /> <!-- Imperial Crusader Gauntlets -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Sigil -->
-		<ingredient count="1" id="13887" />
-		<!-- Ancient Adena -->
-		<ingredient count="3062500" id="5575" />
-		<!-- Vesper Sigil -->
-		<production count="1" id="12813" />
+		<ingredient id="11501" count="1" /> <!-- Sealed Imperial Crusader Boots -->
+		<ingredient id="57" count="268500" /> <!-- Adena -->
+		<production id="11507" count="1" /> <!-- Imperial Crusader Boots -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Shield -->
-		<ingredient count="1" id="14111" />
-		<!-- Ancient Adena -->
-		<ingredient count="3062500" id="5575" />
-		<!-- Vesper Shield -->
-		<production count="1" id="13471" />
+		<ingredient id="11502" count="1" /> <!-- Sealed Imperial Crusader Shield -->
+		<ingredient id="57" count="282000" /> <!-- Adena -->
+		<production id="11508" count="1" /> <!-- Imperial Crusader Shield -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Helmet -->
-		<ingredient count="1" id="13143" />
-		<!-- Ancient Adena -->
-		<ingredient count="4375000" id="5575" />
-		<!-- Vesper Helmet -->
-		<production count="1" id="13137" />
+		<ingredient id="11503" count="1" /> <!-- Sealed Imperial Crusader Helmet -->
+		<ingredient id="57" count="402750" /> <!-- Adena -->
+		<production id="11509" count="1" /> <!-- Imperial Crusader Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Leather Helmet -->
-		<ingredient count="1" id="13144" />
-		<!-- Ancient Adena -->
-		<ingredient count="4375000" id="5575" />
-		<!-- Vesper Leather Helmet -->
-		<production count="1" id="13138" />
+		<ingredient id="10121" count="1" /> <!-- Sealed Arcana Sigil -->
+		<ingredient id="57" count="282000" /> <!-- Adena -->
+		<production id="13078" count="1" /> <!-- Arcana Sigil -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Circlet -->
-		<ingredient count="1" id="13145" />
-		<!-- Ancient Adena -->
-		<ingredient count="4375000" id="5575" />
-		<!-- Vesper Circlet -->
-		<production count="1" id="13139" />
+		<ingredient id="11493" count="1" /> <!-- Sealed Draconic Leather Armor -->
+		<ingredient id="57" count="1305000" /> <!-- Adena -->
+		<production id="11485" count="1" /> <!-- Draconic Leather Armor -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Breastplate -->
-		<ingredient count="1" id="14105" />
-		<!-- Ancient Adena -->
-		<ingredient count="11667000" id="5575" />
-		<!-- Vesper Breastplate -->
-		<production count="1" id="13432" />
+		<ingredient id="11491" count="1" /> <!-- Sealed Draconic Leather Gloves -->
+		<ingredient id="57" count="268500" /> <!-- Adena -->
+		<production id="11483" count="1" /> <!-- Draconic Leather Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Leather Breastplate -->
-		<ingredient count="1" id="14106" />
-		<!-- Ancient Adena -->
-		<ingredient count="8750000" id="5575" />
-		<!-- Vesper Leather Breastplate -->
-		<production count="1" id="13433" />
+		<ingredient id="11492" count="1" /> <!-- Sealed Draconic Leather Boots -->
+		<ingredient id="57" count="268500" /> <!-- Adena -->
+		<production id="11484" count="1" /> <!-- Draconic Leather Boots -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Tunic -->
-		<ingredient count="1" id="14107" />
-		<!-- Ancient Adena -->
-		<ingredient count="8750000" id="5575" />
-		<!-- Vesper Tunic -->
-		<production count="1" id="13434" />
+		<ingredient id="11494" count="1" /> <!-- Sealed Draconic Leather Helmet -->
+		<ingredient id="57" count="402750" /> <!-- Adena -->
+		<production id="11486" count="1" /> <!-- Draconic Leather Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Gaiters -->
-		<ingredient count="1" id="14108" />
-		<!-- Ancient Adena -->
-		<ingredient count="7292000" id="5575" />
-		<!-- Vesper Gaiters -->
-		<production count="1" id="13438" />
+		<ingredient id="11496" count="1" /> <!-- Sealed Major Arcana Robe -->
+		<ingredient id="57" count="1305000" /> <!-- Adena -->
+		<production id="11488" count="1" /> <!-- Major Arcana Robe -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Gauntlets -->
-		<ingredient count="1" id="14109" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Gauntlets -->
-		<production count="1" id="13439" />
+		<ingredient id="11495" count="1" /> <!-- Sealed Major Arcana Gloves -->
+		<ingredient id="57" count="268500" /> <!-- Adena -->
+		<production id="11487" count="1" /> <!-- Major Arcana Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Boots -->
-		<ingredient count="1" id="14110" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Boots -->
-		<production count="1" id="13440" />
+		<ingredient id="11497" count="1" /> <!-- Sealed Major Arcana Boots -->
+		<ingredient id="57" count="268500" /> <!-- Adena -->
+		<production id="11489" count="1" /> <!-- Major Arcana Boots -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Leather Leggings -->
-		<ingredient count="1" id="14112" />
-		<!-- Ancient Adena -->
-		<ingredient count="5469000" id="5575" />
-		<!-- Vesper Leather Leggings -->
-		<production count="1" id="13441" />
+		<ingredient id="11498" count="1" /> <!-- Sealed Major Arcana Circlet -->
+		<ingredient id="57" count="402750" /> <!-- Adena -->
+		<production id="11490" count="1" /> <!-- Major Arcana Circlet -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Leather Gloves -->
-		<ingredient count="1" id="14113" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Leather Gloves -->
-		<production count="1" id="13442" />
+		<ingredient id="13887" count="1" /> <!-- Sealed Vesper Sigil -->
+		<ingredient id="57" count="3062500" /> <!-- Adena -->
+		<production id="12813" count="1" /> <!-- Vesper Sigil -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Leather Boots -->
-		<ingredient count="1" id="14114" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Leather Boots -->
-		<production count="1" id="13443" />
+		<ingredient id="14111" count="1" /> <!-- Sealed Vesper Shield -->
+		<ingredient id="57" count="3062500" /> <!-- Adena -->
+		<production id="13471" count="1" /> <!-- Vesper Shield -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Stockings -->
-		<ingredient count="1" id="14115" />
-		<!-- Ancient Adena -->
-		<ingredient count="5469000" id="5575" />
-		<!-- Vesper Stockings -->
-		<production count="1" id="13444" />
+		<ingredient id="13143" count="1" /> <!-- Sealed Vesper Helmet -->
+		<ingredient id="57" count="4375000" /> <!-- Adena -->
+		<production id="13137" count="1" /> <!-- Vesper Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Gloves -->
-		<ingredient count="1" id="14116" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Gloves -->
-		<production count="1" id="13445" />
+		<ingredient id="13144" count="1" /> <!-- Sealed Vesper Leather Helmet -->
+		<ingredient id="57" count="4375000" /> <!-- Adena -->
+		<production id="13138" count="1" /> <!-- Vesper Leather Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Shoes -->
-		<ingredient count="1" id="14117" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Shoes -->
-		<production count="1" id="13446" />
+		<ingredient id="13145" count="1" /> <!-- Sealed Vesper Circlet -->
+		<ingredient id="57" count="4375000" /> <!-- Adena -->
+		<production id="13139" count="1" /> <!-- Vesper Circlet -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Sigil -->
-		<ingredient count="1" id="16356" />
-		<!-- Ancient Adena -->
-		<ingredient count="3062500" id="5575" />
-		<!-- Vesper Sigil -->
-		<production count="1" id="16322" />
+		<ingredient id="14105" count="1" /> <!-- Sealed Vesper Breastplate -->
+		<ingredient id="57" count="11667000" /> <!-- Adena -->
+		<production id="13432" count="1" /> <!-- Vesper Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Shield -->
-		<ingredient count="1" id="16355" />
-		<!-- Ancient Adena -->
-		<ingredient count="3062500" id="5575" />
-		<!-- Vesper Shield -->
-		<production count="1" id="16321" />
+		<ingredient id="14106" count="1" /> <!-- Sealed Vesper Leather Breastplate -->
+		<ingredient id="57" count="8750000" /> <!-- Adena -->
+		<production id="13433" count="1" /> <!-- Vesper Leather Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Helmet -->
-		<ingredient count="1" id="16340" />
-		<!-- Ancient Adena -->
-		<ingredient count="4375000" id="5575" />
-		<!-- Vesper Helmet -->
-		<production count="1" id="16306" />
+		<ingredient id="14107" count="1" /> <!-- Sealed Vesper Tunic -->
+		<ingredient id="57" count="8750000" /> <!-- Adena -->
+		<production id="13434" count="1" /> <!-- Vesper Tunic -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Leather Helmet -->
-		<ingredient count="1" id="16341" />
-		<!-- Ancient Adena -->
-		<ingredient count="4375000" id="5575" />
-		<!-- Vesper Leather Helmet -->
-		<production count="1" id="16307" />
+		<ingredient id="14108" count="1" /> <!-- Sealed Vesper Gaiters -->
+		<ingredient id="57" count="7292000" /> <!-- Adena -->
+		<production id="13438" count="1" /> <!-- Vesper Gaiters -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Circlet -->
-		<ingredient count="1" id="16342" />
-		<!-- Ancient Adena -->
-		<ingredient count="4375000" id="5575" />
-		<!-- Vesper Circlet -->
-		<production count="1" id="16308" />
+		<ingredient id="14109" count="1" /> <!-- Sealed Vesper Gauntlets -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="13439" count="1" /> <!-- Vesper Gauntlets -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Breastplate -->
-		<ingredient count="1" id="16343" />
-		<!-- Ancient Adena -->
-		<ingredient count="11667000" id="5575" />
-		<!-- Vesper Breastplate -->
-		<production count="1" id="16309" />
+		<ingredient id="14110" count="1" /> <!-- Sealed Vesper Boots -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="13440" count="1" /> <!-- Vesper Boots -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Leather Breastplate -->
-		<ingredient count="1" id="16344" />
-		<!-- Ancient Adena -->
-		<ingredient count="8750000" id="5575" />
-		<!-- Vesper Leather Breastplate -->
-		<production count="1" id="16310" />
+		<ingredient id="14112" count="1" /> <!-- Sealed Vesper Leather Leggings -->
+		<ingredient id="57" count="5469000" /> <!-- Adena -->
+		<production id="13441" count="1" /> <!-- Vesper Leather Leggings -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Tunic -->
-		<ingredient count="1" id="16345" />
-		<!-- Ancient Adena -->
-		<ingredient count="8750000" id="5575" />
-		<!-- Vesper Tunic -->
-		<production count="1" id="16311" />
+		<ingredient id="14113" count="1" /> <!-- Sealed Vesper Leather Gloves -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="13442" count="1" /> <!-- Vesper Leather Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Gaiters -->
-		<ingredient count="1" id="16346" />
-		<!-- Ancient Adena -->
-		<ingredient count="7292000" id="5575" />
-		<!-- Vesper Gaiters -->
-		<production count="1" id="16312" />
+		<ingredient id="14114" count="1" /> <!-- Sealed Vesper Leather Boots -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="13443" count="1" /> <!-- Vesper Leather Boots -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Gauntlets -->
-		<ingredient count="1" id="16349" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Gauntlets -->
-		<production count="1" id="16315" />
+		<ingredient id="14115" count="1" /> <!-- Sealed Vesper Stockings -->
+		<ingredient id="57" count="5469000" /> <!-- Adena -->
+		<production id="13444" count="1" /> <!-- Vesper Stockings -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Boots -->
-		<ingredient count="1" id="16352" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Boots -->
-		<production count="1" id="16318" />
+		<ingredient id="14116" count="1" /> <!-- Sealed Vesper Gloves -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="13445" count="1" /> <!-- Vesper Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Leather Leggings -->
-		<ingredient count="1" id="16347" />
-		<!-- Ancient Adena -->
-		<ingredient count="5469000" id="5575" />
-		<!-- Vesper Leather Leggings -->
-		<production count="1" id="16313" />
+		<ingredient id="14117" count="1" /> <!-- Sealed Vesper Shoes -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="13446" count="1" /> <!-- Vesper Shoes -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Leather Gloves -->
-		<ingredient count="1" id="16350" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Leather Gloves -->
-		<production count="1" id="16316" />
+		<ingredient id="16356" count="1" /> <!-- Sealed Vesper Sigil -->
+		<ingredient id="57" count="3062500" /> <!-- Adena -->
+		<production id="16322" count="1" /> <!-- Vesper Sigil -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Leather Boots -->
-		<ingredient count="1" id="16353" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Leather Boots -->
-		<production count="1" id="16319" />
+		<ingredient id="16355" count="1" /> <!-- Sealed Vesper Shield -->
+		<ingredient id="57" count="3062500" /> <!-- Adena -->
+		<production id="16321" count="1" /> <!-- Vesper Shield -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Stockings -->
-		<ingredient count="1" id="16348" />
-		<!-- Ancient Adena -->
-		<ingredient count="5469000" id="5575" />
-		<!-- Vesper Stockings -->
-		<production count="1" id="16314" />
+		<ingredient id="16340" count="1" /> <!-- Sealed Vesper Helmet -->
+		<ingredient id="57" count="4375000" /> <!-- Adena -->
+		<production id="16306" count="1" /> <!-- Vesper Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Gloves -->
-		<ingredient count="1" id="16351" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Gloves -->
-		<production count="1" id="16317" />
+		<ingredient id="16341" count="1" /> <!-- Sealed Vesper Leather Helmet -->
+		<ingredient id="57" count="4375000" /> <!-- Adena -->
+		<production id="16307" count="1" /> <!-- Vesper Leather Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Shoes -->
-		<ingredient count="1" id="16354" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Shoes -->
-		<production count="1" id="16320" />
+		<ingredient id="16342" count="1" /> <!-- Sealed Vesper Circlet -->
+		<ingredient id="57" count="4375000" /> <!-- Adena -->
+		<production id="16308" count="1" /> <!-- Vesper Circlet -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Noble Helmet -->
-		<ingredient count="1" id="13146" />
-		<!-- Ancient Adena -->
-		<ingredient count="4375000" id="5575" />
-		<!-- Vesper Noble Helmet -->
-		<production count="1" id="13140" />
+		<ingredient id="16343" count="1" /> <!-- Sealed Vesper Breastplate -->
+		<ingredient id="57" count="11667000" /> <!-- Adena -->
+		<production id="16309" count="1" /> <!-- Vesper Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Noble Leather Helmet -->
-		<ingredient count="1" id="13147" />
-		<!-- Ancient Adena -->
-		<ingredient count="4375000" id="5575" />
-		<!-- Vesper Noble Leather Helmet -->
-		<production count="1" id="13141" />
+		<ingredient id="16344" count="1" /> <!-- Sealed Vesper Leather Breastplate -->
+		<ingredient id="57" count="8750000" /> <!-- Adena -->
+		<production id="16310" count="1" /> <!-- Vesper Leather Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Noble Circlet -->
-		<ingredient count="1" id="13148" />
-		<!-- Ancient Adena -->
-		<ingredient count="4375000" id="5575" />
-		<!-- Vesper Noble Circlet -->
-		<production count="1" id="13142" />
+		<ingredient id="16345" count="1" /> <!-- Sealed Vesper Tunic -->
+		<ingredient id="57" count="8750000" /> <!-- Adena -->
+		<production id="16311" count="1" /> <!-- Vesper Tunic -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Noble Breastplate -->
-		<ingredient count="1" id="17006" />
-		<!-- Ancient Adena -->
-		<ingredient count="11667000" id="5575" />
-		<!-- Vesper Noble Breastplate -->
-		<production count="1" id="13435" />
+		<ingredient id="16346" count="1" /> <!-- Sealed Vesper Gaiters -->
+		<ingredient id="57" count="7292000" /> <!-- Adena -->
+		<production id="16312" count="1" /> <!-- Vesper Gaiters -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Noble Leather Breastplate -->
-		<ingredient count="1" id="17007" />
-		<!-- Ancient Adena -->
-		<ingredient count="8750000" id="5575" />
-		<!-- Vesper Noble Leather Breastplate -->
-		<production count="1" id="13436" />
+		<ingredient id="16349" count="1" /> <!-- Sealed Vesper Gauntlets -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="16315" count="1" /> <!-- Vesper Gauntlets -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Noble Tunic -->
-		<ingredient count="1" id="17008" />
-		<!-- Ancient Adena -->
-		<ingredient count="8750000" id="5575" />
-		<!-- Vesper Noble Tunic -->
-		<production count="1" id="13437" />
+		<ingredient id="16352" count="1" /> <!-- Sealed Vesper Boots -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="16318" count="1" /> <!-- Vesper Boots -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Noble Gaiters -->
-		<ingredient count="1" id="17009" />
-		<!-- Ancient Adena -->
-		<ingredient count="7292000" id="5575" />
-		<!-- Vesper Noble Gaiters -->
-		<production count="1" id="13448" />
+		<ingredient id="16347" count="1" /> <!-- Sealed Vesper Leather Leggings -->
+		<ingredient id="57" count="5469000" /> <!-- Adena -->
+		<production id="16313" count="1" /> <!-- Vesper Leather Leggings -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Noble Gauntlets -->
-		<ingredient count="1" id="17010" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Noble Gauntlets -->
-		<production count="1" id="13449" />
+		<ingredient id="16350" count="1" /> <!-- Sealed Vesper Leather Gloves -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="16316" count="1" /> <!-- Vesper Leather Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Noble Boots -->
-		<ingredient count="1" id="17011" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Noble Boots -->
-		<production count="1" id="13450" />
+		<ingredient id="16353" count="1" /> <!-- Sealed Vesper Leather Boots -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="16319" count="1" /> <!-- Vesper Leather Boots -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Noble Leather Leggings -->
-		<ingredient count="1" id="17012" />
-		<!-- Ancient Adena -->
-		<ingredient count="5469000" id="5575" />
-		<!-- Vesper Noble Leather Leggings -->
-		<production count="1" id="13451" />
+		<ingredient id="16348" count="1" /> <!-- Sealed Vesper Stockings -->
+		<ingredient id="57" count="5469000" /> <!-- Adena -->
+		<production id="16314" count="1" /> <!-- Vesper Stockings -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Noble Leather Gloves -->
-		<ingredient count="1" id="17013" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Noble Leather Gloves -->
-		<production count="1" id="13452" />
+		<ingredient id="16351" count="1" /> <!-- Sealed Vesper Gloves -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="16317" count="1" /> <!-- Vesper Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Noble Leather Boots -->
-		<ingredient count="1" id="17014" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Noble Leather Boots -->
-		<production count="1" id="13453" />
+		<ingredient id="16354" count="1" /> <!-- Sealed Vesper Shoes -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="16320" count="1" /> <!-- Vesper Shoes -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Noble Stockings -->
-		<ingredient count="1" id="17015" />
-		<!-- Ancient Adena -->
-		<ingredient count="5469000" id="5575" />
-		<!-- Vesper Noble Stockings -->
-		<production count="1" id="13454" />
+		<ingredient id="13146" count="1" /> <!-- Sealed Vesper Noble Helmet -->
+		<ingredient id="57" count="4375000" /> <!-- Adena -->
+		<production id="13140" count="1" /> <!-- Vesper Noble Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Noble Gloves -->
-		<ingredient count="1" id="17016" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Noble Gloves -->
-		<production count="1" id="13455" />
+		<ingredient id="13147" count="1" /> <!-- Sealed Vesper Noble Leather Helmet -->
+		<ingredient id="57" count="4375000" /> <!-- Adena -->
+		<production id="13141" count="1" /> <!-- Vesper Noble Leather Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Vesper Noble Shoes -->
-		<ingredient count="1" id="17017" />
-		<!-- Ancient Adena -->
-		<ingredient count="2916750" id="5575" />
-		<!-- Vesper Noble Shoes -->
-		<production count="1" id="13456" />
+		<ingredient id="13148" count="1" /> <!-- Sealed Vesper Noble Circlet -->
+		<ingredient id="57" count="4375000" /> <!-- Adena -->
+		<production id="13142" count="1" /> <!-- Vesper Noble Circlet -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Sigil -->
-		<ingredient count="1" id="15709" />
-		<!-- Ancient Adena -->
-		<ingredient count="663000" id="5575" />
-		<!-- Moirai Sigil -->
-		<production count="1" id="15622" />
+		<ingredient id="17006" count="1" /> <!-- Sealed Vesper Noble Breastplate -->
+		<ingredient id="57" count="11667000" /> <!-- Adena -->
+		<production id="13435" count="1" /> <!-- Vesper Noble Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Shield -->
-		<ingredient count="1" id="15710" />
-		<!-- Ancient Adena -->
-		<ingredient count="663000" id="5575" />
-		<!-- Moirai Shield -->
-		<production count="1" id="15621" />
+		<ingredient id="17007" count="1" /> <!-- Sealed Vesper Noble Leather Breastplate -->
+		<ingredient id="57" count="8750000" /> <!-- Adena -->
+		<production id="13436" count="1" /> <!-- Vesper Noble Leather Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Helmet -->
-		<ingredient count="1" id="15694" />
-		<!-- Ancient Adena -->
-		<ingredient count="947000" id="5575" />
-		<!-- Moirai Helmet -->
-		<production count="1" id="15606" />
+		<ingredient id="17008" count="1" /> <!-- Sealed Vesper Noble Tunic -->
+		<ingredient id="57" count="8750000" /> <!-- Adena -->
+		<production id="13437" count="1" /> <!-- Vesper Noble Tunic -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Leather Helmet -->
-		<ingredient count="1" id="15695" />
-		<!-- Ancient Adena -->
-		<ingredient count="947000" id="5575" />
-		<!-- Moirai Leather Helmet -->
-		<production count="1" id="15607" />
+		<ingredient id="17009" count="1" /> <!-- Sealed Vesper Noble Gaiters -->
+		<ingredient id="57" count="7292000" /> <!-- Adena -->
+		<production id="13448" count="1" /> <!-- Vesper Noble Gaiters -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Circlet -->
-		<ingredient count="1" id="15696" />
-		<!-- Ancient Adena -->
-		<ingredient count="947000" id="5575" />
-		<!-- Moirai Circlet -->
-		<production count="1" id="15608" />
+		<ingredient id="17010" count="1" /> <!-- Sealed Vesper Noble Gauntlets -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="13449" count="1" /> <!-- Vesper Noble Gauntlets -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Breastplate -->
-		<ingredient count="1" id="15697" />
-		<!-- Ancient Adena -->
-		<ingredient count="2525000" id="5575" />
-		<!-- Moirai Breastplate -->
-		<production count="1" id="15609" />
+		<ingredient id="17011" count="1" /> <!-- Sealed Vesper Noble Boots -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="13450" count="1" /> <!-- Vesper Noble Boots -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Leather Breastplate -->
-		<ingredient count="1" id="15698" />
-		<!-- Ancient Adena -->
-		<ingredient count="1894000" id="5575" />
-		<!-- Moirai Leather Breastplate -->
-		<production count="1" id="15610" />
+		<ingredient id="17012" count="1" /> <!-- Sealed Vesper Noble Leather Leggings -->
+		<ingredient id="57" count="5469000" /> <!-- Adena -->
+		<production id="13451" count="1" /> <!-- Vesper Noble Leather Leggings -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Tunic -->
-		<ingredient count="1" id="15699" />
-		<!-- Ancient Adena -->
-		<ingredient count="1894000" id="5575" />
-		<!-- Moirai Tunic -->
-		<production count="1" id="15611" />
+		<ingredient id="17013" count="1" /> <!-- Sealed Vesper Noble Leather Gloves -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="13452" count="1" /> <!-- Vesper Noble Leather Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Gaiters -->
-		<ingredient count="1" id="15700" />
-		<!-- Ancient Adena -->
-		<ingredient count="1578000" id="5575" />
-		<!-- Moirai Gaiters -->
-		<production count="1" id="15612" />
+		<ingredient id="17014" count="1" /> <!-- Sealed Vesper Noble Leather Boots -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="13453" count="1" /> <!-- Vesper Noble Leather Boots -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Gauntlets -->
-		<ingredient count="1" id="15703" />
-		<!-- Ancient Adena -->
-		<ingredient count="631000" id="5575" />
-		<!-- Moirai Gauntlets -->
-		<production count="1" id="15615" />
+		<ingredient id="17015" count="1" /> <!-- Sealed Vesper Noble Stockings -->
+		<ingredient id="57" count="5469000" /> <!-- Adena -->
+		<production id="13454" count="1" /> <!-- Vesper Noble Stockings -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Boots -->
-		<ingredient count="1" id="15706" />
-		<!-- Ancient Adena -->
-		<ingredient count="631000" id="5575" />
-		<!-- Moirai Boots -->
-		<production count="1" id="15618" />
+		<ingredient id="17016" count="1" /> <!-- Sealed Vesper Noble Gloves -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="13455" count="1" /> <!-- Vesper Noble Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Leather Leggings -->
-		<ingredient count="1" id="15701" />
-		<!-- Ancient Adena -->
-		<ingredient count="1184000" id="5575" />
-		<!-- Moirai Leather Leggings -->
-		<production count="1" id="15613" />
+		<ingredient id="17017" count="1" /> <!-- Sealed Vesper Noble Shoes -->
+		<ingredient id="57" count="2916750" /> <!-- Adena -->
+		<production id="13456" count="1" /> <!-- Vesper Noble Shoes -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Leather Gloves -->
-		<ingredient count="1" id="15704" />
-		<!-- Ancient Adena -->
-		<ingredient count="631000" id="5575" />
-		<!-- Moirai Leather Gloves -->
-		<production count="1" id="15616" />
+		<ingredient id="15709" count="1" /> <!-- Sealed Moirai Sigil -->
+		<ingredient id="57" count="663000" /> <!-- Adena -->
+		<production id="15622" count="1" /> <!-- Moirai Sigil -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Leather Boots -->
-		<ingredient count="1" id="15707" />
-		<!-- Ancient Adena -->
-		<ingredient count="631000" id="5575" />
-		<!-- Moirai Leather Boots -->
-		<production count="1" id="15619" />
+		<ingredient id="15710" count="1" /> <!-- Sealed Moirai Shield -->
+		<ingredient id="57" count="663000" /> <!-- Adena -->
+		<production id="15621" count="1" /> <!-- Moirai Shield -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Stockings -->
-		<ingredient count="1" id="15702" />
-		<!-- Ancient Adena -->
-		<ingredient count="1184000" id="5575" />
-		<!-- Moirai Stockings -->
-		<production count="1" id="15614" />
+		<ingredient id="15694" count="1" /> <!-- Sealed Moirai Helmet -->
+		<ingredient id="57" count="947000" /> <!-- Adena -->
+		<production id="15606" count="1" /> <!-- Moirai Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Gloves -->
-		<ingredient count="1" id="15705" />
-		<!-- Ancient Adena -->
-		<ingredient count="631000" id="5575" />
-		<!-- Moirai Gloves -->
-		<production count="1" id="15617" />
+		<ingredient id="15695" count="1" /> <!-- Sealed Moirai Leather Helmet -->
+		<ingredient id="57" count="947000" /> <!-- Adena -->
+		<production id="15607" count="1" /> <!-- Moirai Leather Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Shoes -->
-		<ingredient count="1" id="15708" />
-		<!-- Ancient Adena -->
-		<ingredient count="631000" id="5575" />
-		<!-- Moirai Shoes -->
-		<production count="1" id="15620" />
+		<ingredient id="15696" count="1" /> <!-- Sealed Moirai Circlet -->
+		<ingredient id="57" count="947000" /> <!-- Adena -->
+		<production id="15608" count="1" /> <!-- Moirai Circlet -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Sigil -->
-		<ingredient count="1" id="16339" />
-		<!-- Ancient Adena -->
-		<ingredient count="663000" id="5575" />
-		<!-- Moirai Sigil -->
-		<production count="1" id="16305" />
+		<ingredient id="15697" count="1" /> <!-- Sealed Moirai Breastplate -->
+		<ingredient id="57" count="2525000" /> <!-- Adena -->
+		<production id="15609" count="1" /> <!-- Moirai Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Shield -->
-		<ingredient count="1" id="16338" />
-		<!-- Ancient Adena -->
-		<ingredient count="663000" id="5575" />
-		<!-- Moirai Shield -->
-		<production count="1" id="16304" />
+		<ingredient id="15698" count="1" /> <!-- Sealed Moirai Leather Breastplate -->
+		<ingredient id="57" count="1894000" /> <!-- Adena -->
+		<production id="15610" count="1" /> <!-- Moirai Leather Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Helmet -->
-		<ingredient count="1" id="16323" />
-		<!-- Ancient Adena -->
-		<ingredient count="947000" id="5575" />
-		<!-- Moirai Helmet -->
-		<production count="1" id="16289" />
+		<ingredient id="15699" count="1" /> <!-- Sealed Moirai Tunic -->
+		<ingredient id="57" count="1894000" /> <!-- Adena -->
+		<production id="15611" count="1" /> <!-- Moirai Tunic -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Leather Helmet -->
-		<ingredient count="1" id="16324" />
-		<!-- Ancient Adena -->
-		<ingredient count="947000" id="5575" />
-		<!-- Moirai Leather Helmet -->
-		<production count="1" id="16290" />
+		<ingredient id="15700" count="1" /> <!-- Sealed Moirai Gaiters -->
+		<ingredient id="57" count="1578000" /> <!-- Adena -->
+		<production id="15612" count="1" /> <!-- Moirai Gaiters -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Circlet -->
-		<ingredient count="1" id="16325" />
-		<!-- Ancient Adena -->
-		<ingredient count="947000" id="5575" />
-		<!-- Moirai Circlet -->
-		<production count="1" id="16291" />
+		<ingredient id="15703" count="1" /> <!-- Sealed Moirai Gauntlets -->
+		<ingredient id="57" count="631000" /> <!-- Adena -->
+		<production id="15615" count="1" /> <!-- Moirai Gauntlets -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Breastplate -->
-		<ingredient count="1" id="16326" />
-		<!-- Ancient Adena -->
-		<ingredient count="2525000" id="5575" />
-		<!-- Moirai Breastplate -->
-		<production count="1" id="16292" />
+		<ingredient id="15706" count="1" /> <!-- Sealed Moirai Boots -->
+		<ingredient id="57" count="631000" /> <!-- Adena -->
+		<production id="15618" count="1" /> <!-- Moirai Boots -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Leather Breastplate -->
-		<ingredient count="1" id="16327" />
-		<!-- Ancient Adena -->
-		<ingredient count="1894000" id="5575" />
-		<!-- Moirai Leather Breastplate -->
-		<production count="1" id="16293" />
+		<ingredient id="15701" count="1" /> <!-- Sealed Moirai Leather Leggings -->
+		<ingredient id="57" count="1184000" /> <!-- Adena -->
+		<production id="15613" count="1" /> <!-- Moirai Leather Leggings -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Tunic -->
-		<ingredient count="1" id="16328" />
-		<!-- Ancient Adena -->
-		<ingredient count="1894000" id="5575" />
-		<!-- Moirai Tunic -->
-		<production count="1" id="16294" />
+		<ingredient id="15704" count="1" /> <!-- Sealed Moirai Leather Gloves -->
+		<ingredient id="57" count="631000" /> <!-- Adena -->
+		<production id="15616" count="1" /> <!-- Moirai Leather Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Gaiters -->
-		<ingredient count="1" id="16329" />
-		<!-- Ancient Adena -->
-		<ingredient count="1578000" id="5575" />
-		<!-- Moirai Gaiters -->
-		<production count="1" id="16295" />
+		<ingredient id="15707" count="1" /> <!-- Sealed Moirai Leather Boots -->
+		<ingredient id="57" count="631000" /> <!-- Adena -->
+		<production id="15619" count="1" /> <!-- Moirai Leather Boots -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Gauntlets -->
-		<ingredient count="1" id="16332" />
-		<!-- Ancient Adena -->
-		<ingredient count="631000" id="5575" />
-		<!-- Moirai Gauntlets -->
-		<production count="1" id="16298" />
+		<ingredient id="15702" count="1" /> <!-- Sealed Moirai Stockings -->
+		<ingredient id="57" count="1184000" /> <!-- Adena -->
+		<production id="15614" count="1" /> <!-- Moirai Stockings -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Boots -->
-		<ingredient count="1" id="16335" />
-		<!-- Ancient Adena -->
-		<ingredient count="631000" id="5575" />
-		<!-- Moirai Boots -->
-		<production count="1" id="16301" />
+		<ingredient id="15705" count="1" /> <!-- Sealed Moirai Gloves -->
+		<ingredient id="57" count="631000" /> <!-- Adena -->
+		<production id="15617" count="1" /> <!-- Moirai Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Leather Leggings -->
-		<ingredient count="1" id="16330" />
-		<!-- Ancient Adena -->
-		<ingredient count="1184000" id="5575" />
-		<!-- Moirai Leather Leggings -->
-		<production count="1" id="16296" />
+		<ingredient id="15708" count="1" /> <!-- Sealed Moirai Shoes -->
+		<ingredient id="57" count="631000" /> <!-- Adena -->
+		<production id="15620" count="1" /> <!-- Moirai Shoes -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Leather Gloves -->
-		<ingredient count="1" id="16333" />
-		<!-- Ancient Adena -->
-		<ingredient count="631000" id="5575" />
-		<!-- Moirai Leather Gloves -->
-		<production count="1" id="16299" />
+		<ingredient id="16339" count="1" /> <!-- Sealed Moirai Sigil -->
+		<ingredient id="57" count="663000" /> <!-- Adena -->
+		<production id="16305" count="1" /> <!-- Moirai Sigil -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Leather Boots -->
-		<ingredient count="1" id="16336" />
-		<!-- Ancient Adena -->
-		<ingredient count="631000" id="5575" />
-		<!-- Moirai Leather Boots -->
-		<production count="1" id="16302" />
+		<ingredient id="16338" count="1" /> <!-- Sealed Moirai Shield -->
+		<ingredient id="57" count="663000" /> <!-- Adena -->
+		<production id="16304" count="1" /> <!-- Moirai Shield -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Stockings -->
-		<ingredient count="1" id="16331" />
-		<!-- Ancient Adena -->
-		<ingredient count="1184000" id="5575" />
-		<!-- Moirai Stockings -->
-		<production count="1" id="16297" />
+		<ingredient id="16323" count="1" /> <!-- Sealed Moirai Helmet -->
+		<ingredient id="57" count="947000" /> <!-- Adena -->
+		<production id="16289" count="1" /> <!-- Moirai Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Gloves -->
-		<ingredient count="1" id="16334" />
-		<!-- Ancient Adena -->
-		<ingredient count="631000" id="5575" />
-		<!-- Moirai Gloves -->
-		<production count="1" id="16300" />
+		<ingredient id="16324" count="1" /> <!-- Sealed Moirai Leather Helmet -->
+		<ingredient id="57" count="947000" /> <!-- Adena -->
+		<production id="16290" count="1" /> <!-- Moirai Leather Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Moirai Shoes -->
-		<ingredient count="1" id="16337" />
-		<!-- Ancient Adena -->
-		<ingredient count="631000" id="5575" />
-		<!-- Moirai Shoes -->
-		<production count="1" id="16303" />
+		<ingredient id="16325" count="1" /> <!-- Sealed Moirai Circlet -->
+		<ingredient id="57" count="947000" /> <!-- Adena -->
+		<production id="16291" count="1" /> <!-- Moirai Circlet -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Sigil -->
-		<ingredient count="1" id="15742" />
-		<!-- Ancient Adena -->
-		<ingredient count="4393000" id="5575" />
-		<!-- Elegia Sigil -->
-		<production count="1" id="15588" />
+		<ingredient id="16326" count="1" /> <!-- Sealed Moirai Breastplate -->
+		<ingredient id="57" count="2525000" /> <!-- Adena -->
+		<production id="16292" count="1" /> <!-- Moirai Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Shield -->
-		<ingredient count="1" id="15741" />
-		<!-- Ancient Adena -->
-		<ingredient count="4393000" id="5575" />
-		<!-- Elegia Shield -->
-		<production count="1" id="15587" />
+		<ingredient id="16327" count="1" /> <!-- Sealed Moirai Leather Breastplate -->
+		<ingredient id="57" count="1894000" /> <!-- Adena -->
+		<production id="16293" count="1" /> <!-- Moirai Leather Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Helmet -->
-		<ingredient count="1" id="15726" />
-		<!-- Ancient Adena -->
-		<ingredient count="6276000" id="5575" />
-		<!-- Elegia Helmet -->
-		<production count="1" id="15572" />
+		<ingredient id="16328" count="1" /> <!-- Sealed Moirai Tunic -->
+		<ingredient id="57" count="1894000" /> <!-- Adena -->
+		<production id="16294" count="1" /> <!-- Moirai Tunic -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Leather Helmet -->
-		<ingredient count="1" id="15727" />
-		<!-- Ancient Adena -->
-		<ingredient count="6276000" id="5575" />
-		<!-- Elegia Leather Helmet -->
-		<production count="1" id="15573" />
+		<ingredient id="16329" count="1" /> <!-- Sealed Moirai Gaiters -->
+		<ingredient id="57" count="1578000" /> <!-- Adena -->
+		<production id="16295" count="1" /> <!-- Moirai Gaiters -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Circlet -->
-		<ingredient count="1" id="15728" />
-		<!-- Ancient Adena -->
-		<ingredient count="6276000" id="5575" />
-		<!-- Elegia Circlet -->
-		<production count="1" id="15574" />
+		<ingredient id="16332" count="1" /> <!-- Sealed Moirai Gauntlets -->
+		<ingredient id="57" count="631000" /> <!-- Adena -->
+		<production id="16298" count="1" /> <!-- Moirai Gauntlets -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Breastplate -->
-		<ingredient count="1" id="15729" />
-		<!-- Ancient Adena -->
-		<ingredient count="16736000" id="5575" />
-		<!-- Elegia Breastplate -->
-		<production count="1" id="15575" />
+		<ingredient id="16335" count="1" /> <!-- Sealed Moirai Boots -->
+		<ingredient id="57" count="631000" /> <!-- Adena -->
+		<production id="16301" count="1" /> <!-- Moirai Boots -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Leather Breastplate -->
-		<ingredient count="1" id="15730" />
-		<!-- Ancient Adena -->
-		<ingredient count="12553000" id="5575" />
-		<!-- Elegia Leather Breastplate -->
-		<production count="1" id="15576" />
+		<ingredient id="16330" count="1" /> <!-- Sealed Moirai Leather Leggings -->
+		<ingredient id="57" count="1184000" /> <!-- Adena -->
+		<production id="16296" count="1" /> <!-- Moirai Leather Leggings -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Tunic -->
-		<ingredient count="1" id="15731" />
-		<!-- Ancient Adena -->
-		<ingredient count="12553000" id="5575" />
-		<!-- Elegia Tunic -->
-		<production count="1" id="15577" />
+		<ingredient id="16333" count="1" /> <!-- Sealed Moirai Leather Gloves -->
+		<ingredient id="57" count="631000" /> <!-- Adena -->
+		<production id="16299" count="1" /> <!-- Moirai Leather Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Gaiters -->
-		<ingredient count="1" id="15732" />
-		<!-- Ancient Adena -->
-		<ingredient count="10461000" id="5575" />
-		<!-- Elegia Gaiters -->
-		<production count="1" id="15578" />
+		<ingredient id="16336" count="1" /> <!-- Sealed Moirai Leather Boots -->
+		<ingredient id="57" count="631000" /> <!-- Adena -->
+		<production id="16302" count="1" /> <!-- Moirai Leather Boots -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Gauntlets -->
-		<ingredient count="1" id="15735" />
-		<!-- Ancient Adena -->
-		<ingredient count="4184000" id="5575" />
-		<!-- Elegia Gauntlets -->
-		<production count="1" id="15581" />
+		<ingredient id="16331" count="1" /> <!-- Sealed Moirai Stockings -->
+		<ingredient id="57" count="1184000" /> <!-- Adena -->
+		<production id="16297" count="1" /> <!-- Moirai Stockings -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Boots -->
-		<ingredient count="1" id="15738" />
-		<!-- Ancient Adena -->
-		<ingredient count="4184000" id="5575" />
-		<!-- Elegia Boots -->
-		<production count="1" id="15584" />
+		<ingredient id="16334" count="1" /> <!-- Sealed Moirai Gloves -->
+		<ingredient id="57" count="631000" /> <!-- Adena -->
+		<production id="16300" count="1" /> <!-- Moirai Gloves -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Leather Leggings -->
-		<ingredient count="1" id="15733" />
-		<!-- Ancient Adena -->
-		<ingredient count="7846000" id="5575" />
-		<!-- Elegia Leather Leggings -->
-		<production count="1" id="15579" />
+		<ingredient id="16337" count="1" /> <!-- Sealed Moirai Shoes -->
+		<ingredient id="57" count="631000" /> <!-- Adena -->
+		<production id="16303" count="1" /> <!-- Moirai Shoes -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Leather Gloves -->
-		<ingredient count="1" id="15736" />
-		<!-- Ancient Adena -->
-		<ingredient count="4184000" id="5575" />
-		<!-- Elegia Leather Gloves -->
-		<production count="1" id="15582" />
+		<ingredient id="15742" count="1" /> <!-- Sealed Elegia Sigil -->
+		<ingredient id="57" count="4393000" /> <!-- Adena -->
+		<production id="15588" count="1" /> <!-- Elegia Sigil -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Leather Boots -->
-		<ingredient count="1" id="15739" />
-		<!-- Ancient Adena -->
-		<ingredient count="4184000" id="5575" />
-		<!-- Elegia Leather Boots -->
-		<production count="1" id="15585" />
+		<ingredient id="15741" count="1" /> <!-- Sealed Elegia Shield -->
+		<ingredient id="57" count="4393000" /> <!-- Adena -->
+		<production id="15587" count="1" /> <!-- Elegia Shield -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Stockings -->
-		<ingredient count="1" id="15734" />
-		<!-- Ancient Adena -->
-		<ingredient count="7846000" id="5575" />
-		<!-- Elegia Stockings -->
-		<production count="1" id="15580" />
+		<ingredient id="15726" count="1" /> <!-- Sealed Elegia Helmet -->
+		<ingredient id="57" count="6276000" /> <!-- Adena -->
+		<production id="15572" count="1" /> <!-- Elegia Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Gloves -->
-		<ingredient count="1" id="15737" />
-		<!-- Ancient Adena -->
-		<ingredient count="4184000" id="5575" />
-		<!-- Elegia Gloves -->
-		<production count="1" id="15583" />
+		<ingredient id="15727" count="1" /> <!-- Sealed Elegia Leather Helmet -->
+		<ingredient id="57" count="6276000" /> <!-- Adena -->
+		<production id="15573" count="1" /> <!-- Elegia Leather Helmet -->
 	</item>
 	<item>
-		<!-- Sealed Elegia Shoes -->
-		<ingredient count="1" id="15740" />
-		<!-- Ancient Adena -->
-		<ingredient count="4184000" id="5575" />
-		<!-- Elegia Shoes -->
-		<production count="1" id="15586" />
+		<ingredient id="15728" count="1" /> <!-- Sealed Elegia Circlet -->
+		<ingredient id="57" count="6276000" /> <!-- Adena -->
+		<production id="15574" count="1" /> <!-- Elegia Circlet -->
 	</item>
 	<item>
-		<!-- Sealed Vorpal Sigil -->
-		<ingredient count="1" id="15759" />
-		<!-- Ancient Adena -->
-		<ingredient count="3664000" id="5575" />
-		<!-- Vorpal Sigil -->
-		<production count="1" id="15605" />
+		<ingredient id="15729" count="1" /> <!-- Sealed Elegia Breastplate -->
+		<ingredient id="57" count="16736000" /> <!-- Adena -->
+		<production id="15575" count="1" /> <!-- Elegia Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Vorpal Shield -->
-		<ingredient count="1" id="15758" />
-		<!-- Ancient Adena -->
-		<ingredient count="3664000" id="5575" />
-		<!-- Vorpal Shield -->
-		<production count="1" id="15604" />
+		<ingredient id="15730" count="1" /> <!-- Sealed Elegia Leather Breastplate -->
+		<ingredient id="57" count="12553000" /> <!-- Adena -->
+		<production id="15576" count="1" /> <!-- Elegia Leather Breastplate -->
 	</item>
 	<item>
-		<!-- Sealed Vorpal Helmet -->
-		<ingredient count="1" id="15743" />
-		<!-- Ancient Adena -->
-		<ingredient count="5235000" id="5575" />
-		<!-- Vorpal Helmet -->
-		<production count="1" id="15589" />
+		<ingredient id="15731" count="1" /> <!-- Sealed Elegia Tunic -->
+		<ingredient id="57" count="12553000" /> <!-- Adena -->
+		<production id="15577" count="1" /> <!-- Elegia Tunic -->
 	</item>
 	<item>
-		<!-- Sealed Vorpal Leather Helmet -->
-		<ingredient count="1" id="15744" />
-		<!-- Ancient Adena -->
-		<ingredient count="5235000" id="5575" />
-		<!-- Vorpal Leather Helmet -->
-		<production count="1" id="15590" />
+		<ingredient id="15732" count="1" /> <!-- Sealed Elegia Gaiters -->
+		<ingredient id="57" count="10461000" /> <!-- Adena -->
+		<production id="15578" count="1" /> <!-- Elegia Gaiters -->
 	</item>
 	<item>
-		<!-- Sealed Vorpal Circlet -->
-		<ingredient count="1" id="15745" />
-		<!-- Ancient Adena -->
-		<ingredient count="5235000" id="5575" />
-		<!-- Vorpal Circlet -->
-		<production count="1" id="15591" />
-	</item>
-	<item>
-		<!-- Sealed Vorpal Breastplate -->
-		<ingredient count="1" id="15746" />
-		<!-- Ancient Adena -->
-		<ingredient count="13960000" id="5575" />
-		<!-- Vorpal Breastplate -->
-		<production count="1" id="15592" />
-	</item>
-	<item>
-		<!-- Sealed Vorpal Leather Breastplate -->
-		<ingredient count="1" id="15747" />
-		<!-- Ancient Adena -->
-		<ingredient count="10470000" id="5575" />
-		<!-- Vorpal Leather Breastplate -->
-		<production count="1" id="15593" />
-	</item>
-	<item>
-		<!-- Sealed Vorpal Tunic -->
-		<ingredient count="1" id="15748" />
-		<!-- Ancient Adena -->
-		<ingredient count="10470000" id="5575" />
-		<!-- Vorpal Tunic -->
-		<production count="1" id="15594" />
-	</item>
-	<item>
-		<!-- Sealed Vorpal Gaiters -->
-		<ingredient count="1" id="15749" />
-		<!-- Ancient Adena -->
-		<ingredient count="8725000" id="5575" />
-		<!-- Vorpal Gaiters -->
-		<production count="1" id="15595" />
-	</item>
-	<item>
-		<!-- Sealed Vorpal Gauntlets -->
-		<ingredient count="1" id="15752" />
-		<!-- Ancient Adena -->
-		<ingredient count="3490000" id="5575" />
-		<!-- Vorpal Gauntlets -->
-		<production count="1" id="15598" />
-	</item>
-	<item>
-		<!-- Sealed Vorpal Boots -->
-		<ingredient count="1" id="15755" />
-		<!-- Ancient Adena -->
-		<ingredient count="3490000" id="5575" />
-		<!-- Vorpal Boots -->
-		<production count="1" id="15601" />
-	</item>
-	<item>
-		<!-- Sealed Vorpal Leather Leggings -->
-		<ingredient count="1" id="15750" />
-		<!-- Ancient Adena -->
-		<ingredient count="6543000" id="5575" />
-		<!-- Vorpal Leather Leggings -->
-		<production count="1" id="15596" />
-	</item>
-	<item>
-		<!-- Sealed Vorpal Leather Gloves -->
-		<ingredient count="1" id="15753" />
-		<!-- Ancient Adena -->
-		<ingredient count="3490000" id="5575" />
-		<!-- Vorpal Leather Gloves -->
-		<production count="1" id="15599" />
-	</item>
-	<item>
-		<!-- Sealed Vorpal Leather Boots -->
-		<ingredient count="1" id="15756" />
-		<!-- Ancient Adena -->
-		<ingredient count="3490000" id="5575" />
-		<!-- Vorpal Leather Boots -->
-		<production count="1" id="15602" />
-	</item>
-	<item>
-		<!-- Sealed Vorpal Stockings -->
-		<ingredient count="1" id="15751" />
-		<!-- Ancient Adena -->
-		<ingredient count="6543000" id="5575" />
-		<!-- Vorpal Stockings -->
-		<production count="1" id="15597" />
-	</item>
-	<item>
-		<!-- Sealed Vorpal Gloves -->
-		<ingredient count="1" id="15754" />
-		<!-- Ancient Adena -->
-		<ingredient count="3490000" id="5575" />
-		<!-- Vorpal Gloves -->
-		<production count="1" id="15600" />
-	</item>
-	<item>
-		<!-- Sealed Vorpal Shoes -->
-		<ingredient count="1" id="15757" />
-		<!-- Ancient Adena -->
-		<ingredient count="3490000" id="5575" />
-		<!-- Vorpal Shoes -->
-		<production count="1" id="15603" />
+		<ingredient id="15735" count="1" /> <!-- Sealed Elegia Gauntlets -->
+		<ingredient id="57" count="4184000" /> <!-- Adena -->
+		<production id="15581" count="1" /> <!-- Elegia Gauntlets -->
+	</item>
+	<item>
+		<ingredient id="15738" count="1" /> <!-- Sealed Elegia Boots -->
+		<ingredient id="57" count="4184000" /> <!-- Adena -->
+		<production id="15584" count="1" /> <!-- Elegia Boots -->
+	</item>
+	<item>
+		<ingredient id="15733" count="1" /> <!-- Sealed Elegia Leather Leggings -->
+		<ingredient id="57" count="7846000" /> <!-- Adena -->
+		<production id="15579" count="1" /> <!-- Elegia Leather Leggings -->
+	</item>
+	<item>
+		<ingredient id="15736" count="1" /> <!-- Sealed Elegia Leather Gloves -->
+		<ingredient id="57" count="4184000" /> <!-- Adena -->
+		<production id="15582" count="1" /> <!-- Elegia Leather Gloves -->
+	</item>
+	<item>
+		<ingredient id="15739" count="1" /> <!-- Sealed Elegia Leather Boots -->
+		<ingredient id="57" count="4184000" /> <!-- Adena -->
+		<production id="15585" count="1" /> <!-- Elegia Leather Boots -->
+	</item>
+	<item>
+		<ingredient id="15734" count="1" /> <!-- Sealed Elegia Stockings -->
+		<ingredient id="57" count="7846000" /> <!-- Adena -->
+		<production id="15580" count="1" /> <!-- Elegia Stockings -->
+	</item>
+	<item>
+		<ingredient id="15737" count="1" /> <!-- Sealed Elegia Gloves -->
+		<ingredient id="57" count="4184000" /> <!-- Adena -->
+		<production id="15583" count="1" /> <!-- Elegia Gloves -->
+	</item>
+	<item>
+		<ingredient id="15740" count="1" /> <!-- Sealed Elegia Shoes -->
+		<ingredient id="57" count="4184000" /> <!-- Adena -->
+		<production id="15586" count="1" /> <!-- Elegia Shoes -->
+	</item>
+	<item>
+		<ingredient id="15759" count="1" /> <!-- Sealed Vorpal Sigil -->
+		<ingredient id="57" count="3664000" /> <!-- Adena -->
+		<production id="15605" count="1" /> <!-- Vorpal Sigil -->
+	</item>
+	<item>
+		<ingredient id="15758" count="1" /> <!-- Sealed Vorpal Shield -->
+		<ingredient id="57" count="3664000" /> <!-- Adena -->
+		<production id="15604" count="1" /> <!-- Vorpal Shield -->
+	</item>
+	<item>
+		<ingredient id="15743" count="1" /> <!-- Sealed Vorpal Helmet -->
+		<ingredient id="57" count="5235000" /> <!-- Adena -->
+		<production id="15589" count="1" /> <!-- Vorpal Helmet -->
+	</item>
+	<item>
+		<ingredient id="15744" count="1" /> <!-- Sealed Vorpal Leather Helmet -->
+		<ingredient id="57" count="5235000" /> <!-- Adena -->
+		<production id="15590" count="1" /> <!-- Vorpal Leather Helmet -->
+	</item>
+	<item>
+		<ingredient id="15745" count="1" /> <!-- Sealed Vorpal Circlet -->
+		<ingredient id="57" count="5235000" /> <!-- Adena -->
+		<production id="15591" count="1" /> <!-- Vorpal Circlet -->
+	</item>
+	<item>
+		<ingredient id="15746" count="1" /> <!-- Sealed Vorpal Breastplate -->
+		<ingredient id="57" count="13960000" /> <!-- Adena -->
+		<production id="15592" count="1" /> <!-- Vorpal Breastplate -->
+	</item>
+	<item>
+		<ingredient id="15747" count="1" /> <!-- Sealed Vorpal Leather Breastplate -->
+		<ingredient id="57" count="10470000" /> <!-- Adena -->
+		<production id="15593" count="1" /> <!-- Vorpal Leather Breastplate -->
+	</item>
+	<item>
+		<ingredient id="15748" count="1" /> <!-- Sealed Vorpal Tunic -->
+		<ingredient id="57" count="10470000" /> <!-- Adena -->
+		<production id="15594" count="1" /> <!-- Vorpal Tunic -->
+	</item>
+	<item>
+		<ingredient id="15749" count="1" /> <!-- Sealed Vorpal Gaiters -->
+		<ingredient id="57" count="8725000" /> <!-- Adena -->
+		<production id="15595" count="1" /> <!-- Vorpal Gaiters -->
+	</item>
+	<item>
+		<ingredient id="15752" count="1" /> <!-- Sealed Vorpal Gauntlets -->
+		<ingredient id="57" count="3490000" /> <!-- Adena -->
+		<production id="15598" count="1" /> <!-- Vorpal Gauntlets -->
+	</item>
+	<item>
+		<ingredient id="15755" count="1" /> <!-- Sealed Vorpal Boots -->
+		<ingredient id="57" count="3490000" /> <!-- Adena -->
+		<production id="15601" count="1" /> <!-- Vorpal Boots -->
+	</item>
+	<item>
+		<ingredient id="15750" count="1" /> <!-- Sealed Vorpal Leather Leggings -->
+		<ingredient id="57" count="6543000" /> <!-- Adena -->
+		<production id="15596" count="1" /> <!-- Vorpal Leather Leggings -->
+	</item>
+	<item>
+		<ingredient id="15753" count="1" /> <!-- Sealed Vorpal Leather Gloves -->
+		<ingredient id="57" count="3490000" /> <!-- Adena -->
+		<production id="15599" count="1" /> <!-- Vorpal Leather Gloves -->
+	</item>
+	<item>
+		<ingredient id="15756" count="1" /> <!-- Sealed Vorpal Leather Boots -->
+		<ingredient id="57" count="3490000" /> <!-- Adena -->
+		<production id="15602" count="1" /> <!-- Vorpal Leather Boots -->
+	</item>
+	<item>
+		<ingredient id="15751" count="1" /> <!-- Sealed Vorpal Stockings -->
+		<ingredient id="57" count="6543000" /> <!-- Adena -->
+		<production id="15597" count="1" /> <!-- Vorpal Stockings -->
+	</item>
+	<item>
+		<ingredient id="15754" count="1" /> <!-- Sealed Vorpal Gloves -->
+		<ingredient id="57" count="3490000" /> <!-- Adena -->
+		<production id="15600" count="1" /> <!-- Vorpal Gloves -->
+	</item>
+	<item>
+		<ingredient id="15757" count="1" /> <!-- Sealed Vorpal Shoes -->
+		<ingredient id="57" count="3490000" /> <!-- Adena -->
+		<production id="15603" count="1" /> <!-- Vorpal Shoes -->
 	</item>
 </list>

@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.model.actor.status;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -26,8 +27,12 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.stat.CharStat;
+import com.l2jmobius.gameserver.model.events.EventDispatcher;
+import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureHpChange;
+import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.stats.Formulas;
-import com.l2jmobius.util.Rnd;
+import com.l2jmobius.gameserver.model.stats.Stats;
 
 public class CharStatus
 {
@@ -39,7 +44,7 @@ public class CharStatus
 	private double _currentMp = 0; // Current MP of the L2Character
 	
 	/** Array containing all clients that need to be notified about hp/mp updates of the L2Character */
-	private Set<L2Character> _statusListener;
+	private Set<L2Character> _StatusListener;
 	
 	private Future<?> _regTask;
 	
@@ -48,6 +53,8 @@ public class CharStatus
 	protected static final byte REGEN_FLAG_CP = 4;
 	private static final byte REGEN_FLAG_HP = 1;
 	private static final byte REGEN_FLAG_MP = 2;
+	
+	private final AtomicInteger _previousHpPercent = new AtomicInteger();
 	
 	public CharStatus(L2Character activeChar)
 	{
@@ -103,11 +110,11 @@ public class CharStatus
 	 */
 	public final Set<L2Character> getStatusListener()
 	{
-		if (_statusListener == null)
+		if (_StatusListener == null)
 		{
-			_statusListener = ConcurrentHashMap.newKeySet();
+			_StatusListener = ConcurrentHashMap.newKeySet();
 		}
-		return _statusListener;
+		return _StatusListener;
 	}
 	
 	// place holder, only PcStatus has CP
@@ -132,13 +139,14 @@ public class CharStatus
 	
 	public void reduceHp(double value, L2Character attacker, boolean awake, boolean isDOT, boolean isHPConsumption)
 	{
-		if (getActiveChar().isDead())
+		final L2Character activeChar = getActiveChar();
+		if (activeChar.isDead())
 		{
 			return;
 		}
 		
 		// invul handling
-		if ((getActiveChar().isInvul() || getActiveChar().isHpBlocked()) && !isDOT && !isHPConsumption)
+		if (activeChar.isHpBlocked() && !(isDOT || isHPConsumption))
 		{
 			return;
 		}
@@ -154,29 +162,31 @@ public class CharStatus
 		
 		if (!isDOT && !isHPConsumption)
 		{
-			getActiveChar().stopEffectsOnDamage(awake);
-			if (getActiveChar().isStunned() && (Rnd.get(10) == 0))
+			if (awake)
 			{
-				getActiveChar().stopStunning(true);
+				activeChar.stopEffectsOnDamage();
+			}
+			if (Formulas.calcStunBreak(activeChar))
+			{
+				activeChar.stopStunning(true);
+			}
+			if (Formulas.calcRealTargetBreak())
+			{
+				getActiveChar().getEffectList().stopSkillEffects(true, AbnormalType.REAL_TARGET);
 			}
 		}
 		
 		if (value > 0)
 		{
-			setCurrentHp(Math.max(getCurrentHp() - value, 0));
+			final double oldHp = getCurrentHp();
+			final double newHp = Math.max(getCurrentHp() - value, activeChar.isUndying() ? 1 : 0);
+			setCurrentHp(newHp);
+			EventDispatcher.getInstance().notifyEventAsync(new OnCreatureHpChange(activeChar, oldHp, newHp), activeChar);
 		}
 		
-		if ((getActiveChar().getCurrentHp() < 0.5) && getActiveChar().isMortal()) // Die
+		if ((activeChar.getCurrentHp() < 0.5)) // Die
 		{
-			getActiveChar().abortAttack();
-			getActiveChar().abortCast();
-			
-			if (Config.DEBUG)
-			{
-				_log.fine("char is dead.");
-			}
-			
-			getActiveChar().doDie(attacker);
+			activeChar.doDie(attacker);
 		}
 	}
 	
@@ -199,7 +209,7 @@ public class CharStatus
 		{
 			if (Config.DEBUG)
 			{
-				_log.fine("HP/MP regen started");
+				_log.finer("HP/MP regen started");
 			}
 			
 			// Get the Regeneration period
@@ -224,7 +234,7 @@ public class CharStatus
 		{
 			if (Config.DEBUG)
 			{
-				_log.fine("HP/MP regen stop");
+				_log.finer("HP/MP regen stop");
 			}
 			
 			// Stop the HP/MP/CP Regeneration task
@@ -247,6 +257,12 @@ public class CharStatus
 	{
 	}
 	
+	// place holder, only PcStatus has CP
+	public void setCurrentCp(double newCp, boolean broadcastPacket)
+	{
+		
+	}
+	
 	public final double getCurrentHp()
 	{
 		return _currentHp;
@@ -267,7 +283,7 @@ public class CharStatus
 	{
 		// Get the Max HP of the L2Character
 		final int currentHp = (int) getCurrentHp();
-		final double maxHp = getActiveChar().getMaxHp();
+		final double maxHp = getActiveChar().getStat().getMaxHp();
 		
 		synchronized (this)
 		{
@@ -302,9 +318,27 @@ public class CharStatus
 		final boolean hpWasChanged = currentHp != _currentHp;
 		
 		// Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform
-		if (hpWasChanged && broadcastPacket)
+		if (hpWasChanged)
 		{
-			getActiveChar().broadcastStatusUpdate();
+			final int lastHpPercent = _previousHpPercent.get();
+			final int currentHpPercent = (int) ((_currentHp * 100) / maxHp);
+			//@formatter:off
+			if (((lastHpPercent >= 60) && (currentHpPercent <= 60))
+				|| ((currentHpPercent >= 60) && (lastHpPercent <= 60))
+				|| ((lastHpPercent >= 30) && (currentHpPercent <= 30))
+				|| ((currentHpPercent >= 30) && (lastHpPercent <= 30)))
+			//@formatter:on
+			{
+				if (_previousHpPercent.compareAndSet(lastHpPercent, currentHpPercent))
+				{
+					_activeChar.getStat().recalculateStats(true);
+				}
+			}
+			
+			if (broadcastPacket)
+			{
+				getActiveChar().broadcastStatusUpdate();
+			}
 		}
 		
 		return hpWasChanged;
@@ -312,7 +346,9 @@ public class CharStatus
 	
 	public final void setCurrentHpMp(double newHp, double newMp)
 	{
-		if (setCurrentHp(newHp, false) | setCurrentMp(newMp, false))
+		boolean hpOrMpWasChanged = setCurrentHp(newHp, false);
+		hpOrMpWasChanged |= setCurrentMp(newMp, false);
+		if (hpOrMpWasChanged)
 		{
 			getActiveChar().broadcastStatusUpdate();
 		}
@@ -338,7 +374,7 @@ public class CharStatus
 	{
 		// Get the Max MP of the L2Character
 		final int currentMp = (int) getCurrentMp();
-		final int maxMp = getActiveChar().getMaxMp();
+		final int maxMp = getActiveChar().getStat().getMaxMp();
 		
 		synchronized (this)
 		{
@@ -383,26 +419,32 @@ public class CharStatus
 	
 	protected void doRegeneration()
 	{
+		final CharStat charstat = getActiveChar().getStat();
+		
 		// Modify the current HP of the L2Character and broadcast Server->Client packet StatusUpdate
-		if (getCurrentHp() < getActiveChar().getMaxRecoverableHp())
+		if (getCurrentHp() < charstat.getMaxRecoverableHp())
 		{
-			setCurrentHp(getCurrentHp() + Formulas.calcHpRegen(getActiveChar()), false);
+			setCurrentHp(getCurrentHp() + getActiveChar().getStat().getValue(Stats.REGENERATE_HP_RATE), false);
 		}
 		
 		// Modify the current MP of the L2Character and broadcast Server->Client packet StatusUpdate
-		if (getCurrentMp() < getActiveChar().getMaxRecoverableMp())
+		if (getCurrentMp() < charstat.getMaxRecoverableMp())
 		{
-			setCurrentMp(getCurrentMp() + Formulas.calcMpRegen(getActiveChar()), false);
+			setCurrentMp(getCurrentMp() + getActiveChar().getStat().getValue(Stats.REGENERATE_MP_RATE), false);
 		}
 		
-		if ((getCurrentHp() >= getActiveChar().getMaxRecoverableHp()) && (getCurrentMp() >= getActiveChar().getMaxMp()))
+		if (!getActiveChar().isInActiveRegion())
 		{
-			stopHpMpRegeneration();
+			// no broadcast necessary for characters that are in inactive regions.
+			// stop regeneration for characters who are filled up and in an inactive region.
+			if ((getCurrentHp() == charstat.getMaxRecoverableHp()) && (getCurrentMp() == charstat.getMaxMp()))
+			{
+				stopHpMpRegeneration();
+			}
 		}
-		
-		if (getActiveChar().isInActiveRegion())
+		else
 		{
-			getActiveChar().broadcastStatusUpdate();
+			getActiveChar().broadcastStatusUpdate(); // send the StatusUpdate packet
 		}
 	}
 	

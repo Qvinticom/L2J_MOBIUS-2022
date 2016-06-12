@@ -30,7 +30,7 @@ public class AdminSummon implements IAdminCommandHandler
 {
 	private static final Logger _log = Logger.getLogger(AdminSummon.class.getName());
 	
-	private static final String[] ADMIN_COMMANDS =
+	public static final String[] ADMIN_COMMANDS =
 	{
 		"admin_summon"
 	};
@@ -38,6 +38,7 @@ public class AdminSummon implements IAdminCommandHandler
 	@Override
 	public String[] getAdminCommandList()
 	{
+		
 		return ADMIN_COMMANDS;
 	}
 	
@@ -71,7 +72,8 @@ public class AdminSummon implements IAdminCommandHandler
 				_log.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
 				return false;
 			}
-			AdminCommandHandler.getInstance().getHandler(subCommand).useAdminCommand(subCommand + " " + id + " " + count, activeChar);
+			final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
+			ach.useAdminCommand(subCommand + " " + id + " " + count, activeChar);
 		}
 		else
 		{

@@ -16,40 +16,48 @@
  */
 package quests.Q10772_ReportsFromCrumaTowerPart1;
 
+import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Race;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.network.NpcStringId;
+
+import quests.Q10771_VolatilePower.Q10771_VolatilePower;
 
 /**
  * Reports from Cruma Tower, Part 1 (10772)
- * @URL https://l2wiki.com/Reports_from_Cruma_Tower,_Part_1
- * @author Gigi
+ * @author malyelfik
  */
-public class Q10772_ReportsFromCrumaTowerPart1 extends Quest
+public final class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 {
 	// NPCs
 	private static final int JANSSEN = 30484;
 	private static final int MAGIC_OWL = 33991;
 	// Items
-	private static final ItemHolder STEEL_DOOR_GUILD = new ItemHolder(37045, 4);
-	private static final ItemHolder EAC = new ItemHolder(952, 2);
-	// Reward
-	private static final int EXP_REWARD = 127575;
-	private static final int SP_REWARD = 30;
+	private static final int ENCHANT_ARMOR_C = 952;
+	// Location
+	private static final Location OWL_LOC = new Location(17698, 115064, -11736);
+	// Skill
+	private static final SkillHolder OWL_TELEPORT = new SkillHolder(2588, 1);
 	// Misc
 	private static final int MIN_LEVEL = 45;
 	
 	public Q10772_ReportsFromCrumaTowerPart1()
 	{
-		super(10772, Q10772_ReportsFromCrumaTowerPart1.class.getSimpleName(), "Reports from Cruma Tower, Part 1");
+		super(10772);
 		addStartNpc(JANSSEN);
 		addTalkId(JANSSEN, MAGIC_OWL);
-		addCondMinLevel(MIN_LEVEL, "no_level.htm");
-		addCondRace(Race.ERTHEIA, "noErtheya.html");
+		
+		addCondRace(Race.ERTHEIA, "30484-00.htm");
+		addCondMinLevel(MIN_LEVEL, "30484-00.htm");
+		addCondCompletedQuest(Q10771_VolatilePower.class.getSimpleName(), "30484-00.htm");
 	}
 	
 	@Override
@@ -60,7 +68,8 @@ public class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 		{
 			return null;
 		}
-		String htmltext = null;
+		
+		String htmltext = event;
 		switch (event)
 		{
 			case "30484-02.htm":
@@ -68,40 +77,46 @@ public class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 			case "30484-04.htm":
 			case "30484-05.htm":
 			case "33991-02.html":
-			{
-				htmltext = event;
 				break;
-			}
 			case "30484-06.htm":
 			{
 				qs.startQuest();
-				htmltext = event;
 				break;
 			}
-			case "30484-08.html":
+			case "spawn_owl":
 			{
-				addExpAndSp(player, EXP_REWARD, SP_REWARD);
-				giveItems(player, STEEL_DOOR_GUILD);
-				giveItems(player, EAC);
-				qs.exitQuest(false, true);
-				htmltext = event;
-				break;
-			}
-			case "close":
-			{
-				npc.broadcastPacket(new MagicSkillUse(npc, npc, 2036, 1, 1000, 0));
-				qs.setCond(2, true);
-				npc.deleteMe();
-				break;
-			}
-			case "summon":
-			{
-				if (qs.isCond(1))
+				if (qs.isCond(1) && !L2World.getInstance().getVisibleObjects(player, L2Npc.class, 700).stream().anyMatch(n -> n.getId() == MAGIC_OWL))
 				{
-					addSpawn(MAGIC_OWL, qs.getPlayer().getX(), qs.getPlayer().getY() + getRandom(50, 400), qs.getPlayer().getZ(), getRandom(64000), false, 60000);
+					addSpawn(MAGIC_OWL, OWL_LOC, true, 20000);
+				}
+				htmltext = null;
+				break;
+			}
+			case "despawn_owl":
+			{
+				if (qs.isCond(1) && (npc != null))
+				{
+					getTimers().addTimer("DESPAWN_OWL", 4000, npc, null);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TO_QUEEN_NAVARI_OF_FAERON);
+					npc.doCast(OWL_TELEPORT.getSkill());
+					qs.setCond(2, true);
+				}
+				htmltext = null;
+				break;
+			}
+			case "30484-09.html":
+			{
+				if (qs.isCond(2))
+				{
+					giveItems(player, ENCHANT_ARMOR_C, 2);
+					giveStoryQuestReward(player, 4);
+					addExpAndSp(player, 127575, 30);
+					qs.exitQuest(false, true);
 				}
 				break;
 			}
+			default:
+				htmltext = null;
 		}
 		return htmltext;
 	}
@@ -112,37 +127,38 @@ public class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (npc.getId())
+		if (npc.getId() == JANSSEN)
 		{
-			case JANSSEN:
+			switch (qs.getState())
 			{
-				if (qs.isCreated())
-				{
+				case State.CREATED:
 					htmltext = "30484-01.htm";
-				}
-				else if (qs.isStarted() && qs.isCond(1))
-				{
-					htmltext = "30484-06.htm";
-				}
-				if (qs.isCond(2))
-				{
-					htmltext = "30484-07.html";
-				}
-				if (qs.isCompleted())
-				{
+					break;
+				case State.STARTED:
+					htmltext = (qs.isCond(1)) ? "30484-07.html" : "30484-08.html";
+					break;
+				case State.COMPLETED:
 					htmltext = getAlreadyCompletedMsg(player);
-				}
-				break;
-			}
-			case MAGIC_OWL:
-			{
-				if (qs.isCond(1))
-				{
-					htmltext = "33990-01.html";
-				}
-				break;
+					break;
 			}
 		}
+		else if (qs.isStarted() && qs.isCond(1))
+		{
+			htmltext = "33991-01.html";
+		}
 		return htmltext;
+	}
+	
+	@Override
+	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	{
+		if (event.equals("DESPAWN_OWL") && (npc != null) && (npc.getId() == MAGIC_OWL))
+		{
+			npc.deleteMe();
+		}
+		else
+		{
+			super.onTimerEvent(event, params, npc, player);
+		}
 	}
 }

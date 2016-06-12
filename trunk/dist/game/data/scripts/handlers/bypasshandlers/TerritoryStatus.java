@@ -17,6 +17,7 @@
 package handlers.bypasshandlers;
 
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import com.l2jmobius.gameserver.enums.TaxType;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -44,18 +45,18 @@ public class TerritoryStatus implements IBypassHandler
 		{
 			if (npc.getCastle().getOwnerId() > 0)
 			{
-				html.setFile(activeChar.getHtmlPrefix(), "html/territorystatus.htm");
+				html.setFile(activeChar.getHtmlPrefix(), "data/html/territorystatus.htm");
 				final L2Clan clan = ClanTable.getInstance().getClan(npc.getCastle().getOwnerId());
 				html.replace("%clanname%", clan.getName());
 				html.replace("%clanleadername%", clan.getLeaderName());
 			}
 			else
 			{
-				html.setFile(activeChar.getHtmlPrefix(), "html/territorynoclan.htm");
+				html.setFile(activeChar.getHtmlPrefix(), "data/html/territorynoclan.htm");
 			}
 		}
 		html.replace("%castlename%", npc.getCastle().getName());
-		html.replace("%taxpercent%", "" + npc.getCastle().getTaxPercent());
+		html.replace("%taxpercent%", "" + npc.getCastle().getTaxPercent(TaxType.BUY));
 		html.replace("%objectId%", String.valueOf(npc.getObjectId()));
 		{
 			if (npc.getCastle().getResidenceId() > 6)

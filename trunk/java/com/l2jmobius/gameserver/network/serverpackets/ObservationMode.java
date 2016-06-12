@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
-public class ObservationMode extends L2GameServerPacket
+public class ObservationMode implements IClientOutgoingPacket
 {
 	private final Location _loc;
 	
@@ -28,11 +30,15 @@ public class ObservationMode extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xEB);
-		writeLoc(_loc);
-		writeD(0x00); // TODO: Find me
-		writeD(0xc0); // TODO: Find me
+		OutgoingPackets.OBSERVER_START.writeId(packet);
+		
+		packet.writeD(_loc.getX());
+		packet.writeD(_loc.getY());
+		packet.writeD(_loc.getZ());
+		packet.writeD(0x00); // TODO: Find me
+		packet.writeD(0xc0); // TODO: Find me
+		return true;
 	}
 }

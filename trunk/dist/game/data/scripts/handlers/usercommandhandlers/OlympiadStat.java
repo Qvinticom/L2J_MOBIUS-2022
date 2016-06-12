@@ -42,21 +42,9 @@ public class OlympiadStat implements IUserCommandHandler
 			return false;
 		}
 		
-		int nobleObjId = activeChar.getObjectId();
+		final int nobleObjId = activeChar.getObjectId();
 		final L2Object target = activeChar.getTarget();
-		if (target != null)
-		{
-			if (target.isPlayer() && target.getActingPlayer().isNoble())
-			{
-				nobleObjId = target.getObjectId();
-			}
-			else
-			{
-				activeChar.sendPacket(SystemMessageId.THIS_COMMAND_CAN_ONLY_BE_USED_WHEN_THE_TARGET_IS_AN_AWAKENED_NOBLESSE_EXALTED);
-				return false;
-			}
-		}
-		else if (!activeChar.isNoble())
+		if ((target == null) || !target.isPlayer() || !target.getActingPlayer().isNoble())
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_COMMAND_CAN_ONLY_BE_USED_WHEN_THE_TARGET_IS_AN_AWAKENED_NOBLESSE_EXALTED);
 			return false;
@@ -66,7 +54,7 @@ public class OlympiadStat implements IUserCommandHandler
 		sm.addInt(Olympiad.getInstance().getCompetitionDone(nobleObjId));
 		sm.addInt(Olympiad.getInstance().getCompetitionWon(nobleObjId));
 		sm.addInt(Olympiad.getInstance().getCompetitionLost(nobleObjId));
-		sm.addInt(Olympiad.getInstance().getNoblePoints(nobleObjId));
+		sm.addInt(Olympiad.getInstance().getNoblePoints((L2PcInstance) target));
 		activeChar.sendPacket(sm);
 		
 		final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.THE_MATCHES_THIS_WEEK_ARE_ALL_CLASS_BATTLES_THE_NUMBER_OF_MATCHES_THAT_ARE_ALLOWED_TO_PARTICIPATE_IS_S1);

@@ -16,6 +16,8 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
+import java.util.List;
+
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -29,16 +31,12 @@ import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
 public class L2FortCommanderInstance extends L2DefenderInstance
 {
+	
 	private boolean _canTalk;
 	
-	/**
-	 * Creates a fort commander.
-	 * @param template the fort commander NPC template
-	 */
 	public L2FortCommanderInstance(L2NpcTemplate template)
 	{
 		super(template);
@@ -53,7 +51,13 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
-		return (attacker instanceof L2PcInstance) && (getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress() && !getFort().getSiege().checkIsDefender(((L2PcInstance) attacker).getClan());
+		if ((attacker == null) || !(attacker instanceof L2PcInstance))
+		{
+			return false;
+		}
+		
+		// Attackable during siege by all except defenders
+		return ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress() && !getFort().getSiege().checkIsDefender(attacker.getClan()));
 	}
 	
 	@Override
@@ -81,6 +85,7 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 		if (getFort().getSiege().isInProgress())
 		{
 			getFort().getSiege().killedCommander(this);
+			
 		}
 		
 		return true;
@@ -92,19 +97,19 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 	@Override
 	public void returnHome()
 	{
-		if (isInsideRadius(getSpawn(), 200, false, false))
+		if (!isInsideRadius(getSpawn(), 200, false, false))
 		{
-			return;
-		}
-		if (Config.DEBUG)
-		{
-			_log.info(getObjectId() + ": moving home");
-		}
-		setisReturningToSpawnPoint(true);
-		clearAggroList();
-		if (hasAI())
-		{
-			getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, getSpawn().getLocation());
+			if (Config.DEBUG)
+			{
+				_log.info(getObjectId() + ": moving home");
+			}
+			setisReturningToSpawnPoint(true);
+			clearAggroList();
+			
+			if (hasAI())
+			{
+				getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, getSpawn().getLocation());
+			}
 		}
 	}
 	
@@ -114,7 +119,8 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 		final L2Spawn spawn = getSpawn();
 		if ((spawn != null) && canTalk())
 		{
-			for (FortSiegeSpawn spawn2 : FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId()))
+			final List<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId());
+			for (FortSiegeSpawn spawn2 : commanders)
 			{
 				if (spawn2.getId() == spawn.getId())
 				{
@@ -122,33 +128,22 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 					switch (spawn2.getMessageId())
 					{
 						case 1:
-						{
 							npcString = NpcStringId.ATTACKING_THE_ENEMY_S_REINFORCEMENTS_IS_NECESSARY_TIME_TO_DIE;
 							break;
-						}
 						case 2:
-						{
-							if (attacker instanceof L2Summon)
+							if (attacker.isSummon())
 							{
 								attacker = ((L2Summon) attacker).getOwner();
 							}
 							npcString = NpcStringId.EVERYONE_CONCENTRATE_YOUR_ATTACKS_ON_S1_SHOW_THE_ENEMY_YOUR_RESOLVE;
 							break;
-						}
 						case 3:
-						{
 							npcString = NpcStringId.FIRE_SPIRIT_UNLEASH_YOUR_POWER_BURN_THE_ENEMY;
 							break;
-						}
 					}
 					if (npcString != null)
 					{
-						final NpcSay ns = new NpcSay(getObjectId(), ChatType.NPC_SHOUT, getId(), npcString);
-						if (npcString.getParamCount() == 1)
-						{
-							ns.addStringParameter(attacker.getName());
-						}
-						broadcastPacket(ns);
+						broadcastSay(ChatType.NPC_SHOUT, npcString, npcString.getParamCount() == 1 ? attacker.getName() : null);
 						setCanTalk(false);
 						ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleTalkTask(), 10000);
 					}
@@ -160,6 +155,7 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 	
 	private class ScheduleTalkTask implements Runnable
 	{
+		
 		public ScheduleTalkTask()
 		{
 		}

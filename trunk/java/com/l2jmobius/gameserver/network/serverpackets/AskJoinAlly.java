@@ -16,31 +16,33 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class AskJoinAlly extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
+public class AskJoinAlly implements IClientOutgoingPacket
 {
 	private final String _requestorName;
 	private final int _requestorObjId;
-	private final String _requestorAllyName;
 	
 	/**
 	 * @param requestorObjId
-	 * @param requestorAllyName
 	 * @param requestorName
 	 */
-	public AskJoinAlly(int requestorObjId, String requestorAllyName, String requestorName)
+	public AskJoinAlly(int requestorObjId, String requestorName)
 	{
 		_requestorName = requestorName;
 		_requestorObjId = requestorObjId;
-		_requestorAllyName = requestorAllyName;
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xbb);
-		writeD(_requestorObjId);
-		writeS(_requestorAllyName);
-		writeS(null); // TODO: Find me!
-		writeS(_requestorName);
+		OutgoingPackets.ASK_JOIN_ALLIANCE.writeId(packet);
+		
+		packet.writeD(_requestorObjId);
+		packet.writeS(null); // Ally Name ?
+		packet.writeS(null); // TODO: Find me!
+		packet.writeS(_requestorName);
+		return true;
 	}
 }

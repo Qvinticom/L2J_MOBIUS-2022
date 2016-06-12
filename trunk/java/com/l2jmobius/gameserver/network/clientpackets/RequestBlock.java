@@ -16,16 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.model.BlockList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.friend.BlockListPacket;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
-public final class RequestBlock extends L2GameClientPacket
+public final class RequestBlock implements IClientIncomingPacket
 {
-	private static final String _C__A9_REQUESTBLOCK = "[C] A9 RequestBlock";
-	
 	private static final int BLOCK = 0;
 	private static final int UNBLOCK = 1;
 	private static final int BLOCKLIST = 2;
@@ -36,20 +35,20 @@ public final class RequestBlock extends L2GameClientPacket
 	private Integer _type;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_type = readD(); // 0x00 - block, 0x01 - unblock, 0x03 - allblock, 0x04 - allunblock
-		
+		_type = packet.readD(); // 0x00 - block, 0x01 - unblock, 0x03 - allblock, 0x04 - allunblock
 		if ((_type == BLOCK) || (_type == UNBLOCK))
 		{
-			_name = readS();
+			_name = packet.readS();
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		final int targetId = CharNameTable.getInstance().getIdByName(_name);
 		final int targetAL = CharNameTable.getInstance().getAccessLevelById(targetId);
 		
@@ -62,7 +61,6 @@ public final class RequestBlock extends L2GameClientPacket
 		{
 			case BLOCK:
 			case UNBLOCK:
-			{
 				// can't use block/unblock for locating invisible characters
 				if (targetId <= 0)
 				{
@@ -91,36 +89,20 @@ public final class RequestBlock extends L2GameClientPacket
 				{
 					BlockList.removeFromBlockList(activeChar, targetId);
 				}
-				activeChar.sendPacket(new BlockListPacket(activeChar));
 				break;
-			}
 			case BLOCKLIST:
-			{
 				BlockList.sendListToOwner(activeChar);
 				break;
-			}
 			case ALLBLOCK:
-			{
 				activeChar.sendPacket(SystemMessageId.MESSAGE_REFUSAL_MODE);
 				BlockList.setBlockAll(activeChar, true);
 				break;
-			}
 			case ALLUNBLOCK:
-			{
 				activeChar.sendPacket(SystemMessageId.MESSAGE_ACCEPTANCE_MODE);
 				BlockList.setBlockAll(activeChar, false);
 				break;
-			}
 			default:
-			{
 				_log.info("Unknown 0xA9 block type: " + _type);
-			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__A9_REQUESTBLOCK;
 	}
 }

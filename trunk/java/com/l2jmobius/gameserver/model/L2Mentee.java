@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * @author UnAfraid
@@ -50,16 +50,16 @@ public class L2Mentee
 		if (player == null) // Only if player is offline
 		{
 			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement ps = con.prepareStatement("SELECT char_name, level, base_class FROM characters WHERE charId = ?"))
+				PreparedStatement statement = con.prepareStatement("SELECT char_name, level, base_class FROM characters WHERE charId = ?"))
 			{
-				ps.setInt(1, getObjectId());
-				try (ResultSet rs = ps.executeQuery())
+				statement.setInt(1, getObjectId());
+				try (ResultSet rset = statement.executeQuery())
 				{
-					if (rs.next())
+					if (rset.next())
 					{
-						_name = rs.getString("char_name");
-						_classId = rs.getInt("base_class");
-						_currentLevel = rs.getInt("level");
+						_name = rset.getString("char_name");
+						_classId = rset.getInt("base_class");
+						_currentLevel = rset.getInt("level");
 					}
 				}
 			}
@@ -71,7 +71,7 @@ public class L2Mentee
 		else
 		{
 			_name = player.getName();
-			_classId = player.getBaseClassId();
+			_classId = player.getBaseClass();
 			_currentLevel = player.getLevel();
 		}
 	}
@@ -88,18 +88,24 @@ public class L2Mentee
 	
 	public int getClassId()
 	{
-		if (isOnline() && (getPlayerInstance().getClassId().getId() != _classId))
+		if (isOnline())
 		{
-			_classId = getPlayerInstance().getClassId().getId();
+			if (getPlayerInstance().getClassId().getId() != _classId)
+			{
+				_classId = getPlayerInstance().getClassId().getId();
+			}
 		}
 		return _classId;
 	}
 	
 	public int getLevel()
 	{
-		if (isOnline() && (getPlayerInstance().getLevel() != _currentLevel))
+		if (isOnline())
 		{
-			_currentLevel = getPlayerInstance().getLevel();
+			if (getPlayerInstance().getLevel() != _currentLevel)
+			{
+				_currentLevel = getPlayerInstance().getLevel();
+			}
 		}
 		return _currentLevel;
 	}
@@ -119,7 +125,7 @@ public class L2Mentee
 		return isOnline() ? getPlayerInstance().isOnlineInt() : 0;
 	}
 	
-	public void sendPacket(L2GameServerPacket packet)
+	public void sendPacket(IClientOutgoingPacket packet)
 	{
 		if (isOnline())
 		{

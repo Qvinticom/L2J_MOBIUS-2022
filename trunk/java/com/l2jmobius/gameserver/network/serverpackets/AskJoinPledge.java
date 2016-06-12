@@ -16,37 +16,39 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public final class AskJoinPledge extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+
+public final class AskJoinPledge implements IClientOutgoingPacket
 {
 	private final int _requestorObjId;
 	private final String _subPledgeName;
 	private final int _pledgeType;
 	private final String _pledgeName;
-	private final String _askjoinName;
 	
-	public AskJoinPledge(int requestorObjId, String subPledgeName, int pledgeType, String pledgeName, String askjoinName)
+	public AskJoinPledge(int requestorObjId, String subPledgeName, int pledgeType, String pledgeName)
 	{
 		_requestorObjId = requestorObjId;
 		_subPledgeName = subPledgeName;
 		_pledgeType = pledgeType;
 		_pledgeName = pledgeName;
-		_askjoinName = askjoinName;
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x2c);
-		writeD(_requestorObjId);
-		writeS(_askjoinName);
-		writeS(_pledgeName);
-		if (_pledgeType != 0)
-		{
-			writeD(_pledgeType);
-		}
+		OutgoingPackets.ASK_JOIN_PLEDGE.writeId(packet);
+		
+		packet.writeD(_requestorObjId);
 		if (_subPledgeName != null)
 		{
-			writeS(_pledgeType > 0 ? _subPledgeName : _pledgeName);
+			packet.writeS(_pledgeType > 0 ? _subPledgeName : _pledgeName);
 		}
+		packet.writeS(_pledgeName);
+		if (_pledgeType != 0)
+		{
+			packet.writeD(_pledgeType);
+		}
+		return true;
 	}
 }

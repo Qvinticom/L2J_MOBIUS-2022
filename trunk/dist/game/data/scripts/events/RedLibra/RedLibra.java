@@ -18,14 +18,14 @@ package events.RedLibra;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.event.LongTimeEvent;
+import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 
 /**
  * Red Libra<br>
  * Info - http://www.lineage2.com/en/news/events/01202016-red-libra.php
  * @author Mobius
  */
-final class RedLibra extends LongTimeEvent
+public final class RedLibra extends LongTimeEvent
 {
 	// NPCs
 	private static final int RED = 34210;
@@ -36,7 +36,6 @@ final class RedLibra extends LongTimeEvent
 	
 	private RedLibra()
 	{
-		super(RedLibra.class.getSimpleName(), "events");
 		addStartNpc(RED, GREEN, BLACK, PINK, BLUE);
 		addFirstTalkId(RED, GREEN, BLACK, PINK, BLUE);
 		addTalkId(RED, GREEN, BLACK, PINK, BLUE);

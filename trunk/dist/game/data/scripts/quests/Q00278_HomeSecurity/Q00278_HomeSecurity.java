@@ -42,7 +42,7 @@ public class Q00278_HomeSecurity extends Quest
 	
 	public Q00278_HomeSecurity()
 	{
-		super(278, Q00278_HomeSecurity.class.getSimpleName(), "Home Security");
+		super(278);
 		addStartNpc(TUNATUN);
 		addTalkId(TUNATUN);
 		addKillId(MONSTER);

@@ -95,7 +95,8 @@ public class AdminMobGroup implements IAdminCommandHandler
 		{
 			if (activeChar.getTarget() instanceof L2Character)
 			{
-				attack(command, activeChar, (L2Character) activeChar.getTarget());
+				final L2Character target = (L2Character) activeChar.getTarget();
+				attack(command, activeChar, target);
 			}
 		}
 		else if (command.startsWith("admin_mobgroup_rnd"))
@@ -140,7 +141,8 @@ public class AdminMobGroup implements IAdminCommandHandler
 	 */
 	private void showMainPage(L2PcInstance activeChar, String command)
 	{
-		AdminHtml.showAdminHtml(activeChar, "mobgroup.htm");
+		final String filename = "mobgroup.htm";
+		AdminHtml.showAdminHtml(activeChar, filename);
 	}
 	
 	private void returnToChar(String command, L2PcInstance activeChar)
@@ -493,7 +495,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 	private void doAnimation(L2PcInstance activeChar)
 	{
 		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, 1008, 1, 4000, 0), 1500);
-		activeChar.sendPacket(new SetupGauge(0, 4000));
+		activeChar.sendPacket(new SetupGauge(activeChar.getObjectId(), 0, 4000));
 	}
 	
 	private void attackGrp(String command, L2PcInstance activeChar)

@@ -14,11 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -26,21 +27,21 @@ import com.l2jmobius.gameserver.util.Util;
  * Lets drink to code!
  * @author zabbix, HorridoJoho
  */
-public final class RequestLinkHtml extends L2GameClientPacket
+public final class RequestLinkHtml implements IClientIncomingPacket
 {
-	private static final String _C__22_REQUESTLINKHTML = "[C] 22 RequestLinkHtml";
 	private String _link;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_link = readS();
+		_link = packet.readS();
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance actor = getClient().getActiveChar();
+		final L2PcInstance actor = client.getActiveChar();
 		if (actor == null)
 		{
 			return;
@@ -71,15 +72,14 @@ public final class RequestLinkHtml extends L2GameClientPacket
 			return;
 		}
 		
-		final String filename = "html/" + _link;
+		final String filename = "data/html/" + _link;
 		final NpcHtmlMessage msg = new NpcHtmlMessage(htmlObjectId);
 		msg.setFile(actor.getHtmlPrefix(), filename);
-		sendPacket(msg);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__22_REQUESTLINKHTML;
+		actor.sendPacket(msg);
+		
+		if (actor.isGM() && actor.isDebug())
+		{
+			actor.sendMessage("HTML: " + filename);
+		}
 	}
 }

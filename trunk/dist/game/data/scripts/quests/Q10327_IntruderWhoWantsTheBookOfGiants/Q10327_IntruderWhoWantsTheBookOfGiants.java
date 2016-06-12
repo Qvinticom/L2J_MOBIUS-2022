@@ -28,21 +28,21 @@ import quests.Q10326_RespectYourElders.Q10326_RespectYourElders;
 
 /**
  * Intruder Who Wants the Book of Giants (10327)
- * @author Mobius
+ * @author Gladicek
  */
-public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
+public final class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
 {
-	// Npc
+	// NPCs
 	private static final int PANTHEON = 32972;
 	// Items
 	private static final int THE_WAR_OF_GODS_AND_GIANTS = 17575;
-	private static final int APPRENTICE_EARRING = 112;
-	// Other
+	// Misc
 	private static final int MAX_LEVEL = 20;
+	private static final int APPRENTICE_EARRING = 112;
 	
 	public Q10327_IntruderWhoWantsTheBookOfGiants()
 	{
-		super(10327, Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName(), "Intruder Who Wants the Book of Giants");
+		super(10327);
 		addStartNpc(PANTHEON);
 		addTalkId(PANTHEON);
 		registerQuestItems(THE_WAR_OF_GODS_AND_GIANTS);
@@ -73,16 +73,15 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32972-07.html":
+			case "32972-07.htm":
 			{
 				if (qs.isCond(3))
 				{
-					giveAdena(player, 159, true);
+					showOnScreenMsg(player, NpcStringId.ACCESSORIES_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
+					giveAdena(player, 160, true);
 					giveItems(player, APPRENTICE_EARRING, 2);
 					addExpAndSp(player, 7800, 5);
-					showOnScreenMsg(player, NpcStringId.ACCESSORIES_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 5000);
 					qs.exitQuest(false, true);
-					htmltext = event;
 				}
 				break;
 			}
@@ -105,33 +104,28 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (qs.getCond())
+				if (qs.isCond(1))
 				{
-					case 1:
-					{
-						htmltext = "32972-04.html";
-						break;
-					}
-					case 2:
-					{
-						htmltext = "32972-05.html";
-						break;
-					}
-					case 3:
-					{
-						htmltext = "32972-06.html";
-						break;
-					}
+					htmltext = "32972-04.htm";
+					break;
 				}
-				break;
+				else if (qs.isCond(2))
+				{
+					htmltext = "32972-05.htm";
+					break;
+				}
+				else if (qs.isCond(3))
+				{
+					htmltext = "32972-06.htm";
+					break;
+				}
 			}
 			case State.COMPLETED:
 			{
-				htmltext = "32972-08.html";
+				htmltext = "32972-08.htm";
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 }

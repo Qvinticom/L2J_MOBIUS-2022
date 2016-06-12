@@ -77,7 +77,7 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 	
 	public Q00111_ElrokianHuntersProof()
 	{
-		super(111, Q00111_ElrokianHuntersProof.class.getSimpleName(), "Elrokian Hunter's Proof");
+		super(111);
 		addStartNpc(MARQUEZ);
 		addTalkId(MARQUEZ, MUSHIKA, ASAMAH, KIRIKACHIN);
 		addKillId(MOBS_DROP_CHANCES.keySet());

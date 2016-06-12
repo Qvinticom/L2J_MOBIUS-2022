@@ -62,6 +62,6 @@ public class ConditionPlayerCanSummonPet extends Condition
 		{
 			canSummon = false;
 		}
-		return _val == canSummon;
+		return (_val == canSummon);
 	}
 }

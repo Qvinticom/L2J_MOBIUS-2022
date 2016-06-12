@@ -16,17 +16,17 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeRecruitBoardSearch;
 
 /**
  * @author Sdw
  */
-public class RequestPledgeRecruitBoardSearch extends L2GameClientPacket
+public class RequestPledgeRecruitBoardSearch implements IClientIncomingPacket
 {
-	private static final String _C__D0_D4_REQUESTPLEDGERECRUITBOARDSEARCH = "[C] D0;D4 RequestPledgeRecruitBoardSearch";
-	
 	private int _clanLevel;
 	private int _karma;
 	private int _type;
@@ -36,21 +36,22 @@ public class RequestPledgeRecruitBoardSearch extends L2GameClientPacket
 	private int _page;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_clanLevel = readD();
-		_karma = readD();
-		_type = readD();
-		_query = readS();
-		_sort = readD();
-		_descending = readD() == 2;
-		_page = readD();
+		_clanLevel = packet.readD();
+		_karma = packet.readD();
+		_type = packet.readD();
+		_query = packet.readS();
+		_sort = packet.readD();
+		_descending = packet.readD() == 2;
+		_page = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		
 		if (activeChar == null)
 		{
@@ -74,9 +75,4 @@ public class RequestPledgeRecruitBoardSearch extends L2GameClientPacket
 		}
 	}
 	
-	@Override
-	public String getType()
-	{
-		return _C__D0_D4_REQUESTPLEDGERECRUITBOARDSEARCH;
-	}
 }

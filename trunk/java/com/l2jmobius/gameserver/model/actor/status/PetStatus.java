@@ -47,19 +47,17 @@ public class PetStatus extends SummonStatus
 		
 		super.reduceHp(value, attacker, awake, isDOT, isHpConsumption);
 		
-		if (attacker == null)
+		if (attacker != null)
 		{
-			return;
+			if (!isDOT && (getActiveChar().getOwner() != null))
+			{
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_RECEIVED_S2_DAMAGE_BY_C1);
+				sm.addCharName(attacker);
+				sm.addInt((int) value);
+				getActiveChar().sendPacket(sm);
+			}
+			getActiveChar().getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, attacker);
 		}
-		
-		if (!isDOT && (getActiveChar().getOwner() != null))
-		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_RECEIVED_S2_DAMAGE_BY_C1);
-			sm.addCharName(attacker);
-			sm.addInt((int) value);
-			getActiveChar().sendPacket(sm);
-		}
-		getActiveChar().getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, attacker);
 	}
 	
 	public int getCurrentFed()

@@ -18,11 +18,12 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Root effect implementation.
@@ -30,13 +31,12 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
  */
 public final class Root extends AbstractEffect
 {
-	public Root(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public Root(StatsSet params)
 	{
-		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public int getEffectFlags()
+	public long getEffectFlags()
 	{
 		return EffectFlag.ROOTED.getMask();
 	}
@@ -57,9 +57,9 @@ public final class Root extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().stopMove(null);
-		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_ROOTED);
+		effected.stopMove(null);
+		effected.getAI().notifyEvent(CtrlEvent.EVT_ROOTED);
 	}
 }

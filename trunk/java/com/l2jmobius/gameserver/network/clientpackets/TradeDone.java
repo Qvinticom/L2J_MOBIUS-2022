@@ -17,34 +17,37 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.TradeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 /**
  * This packet manages the trade response.
  */
-public final class TradeDone extends L2GameClientPacket
+public final class TradeDone implements IClientIncomingPacket
 {
 	private int _response;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_response = readD();
+		_response = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("trade"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("trade"))
 		{
 			player.sendMessage("You are trading too fast.");
 			return;
@@ -55,7 +58,7 @@ public final class TradeDone extends L2GameClientPacket
 		{
 			if (Config.DEBUG)
 			{
-				_log.warning("player.getTradeList == null in " + getType() + " for player " + player.getName());
+				_log.warning("player.getTradeList == null in " + getClass().getSimpleName() + " for player " + player.getName());
 			}
 			return;
 		}
@@ -75,7 +78,7 @@ public final class TradeDone extends L2GameClientPacket
 				return;
 			}
 			
-			if (trade.getOwner().hasItemRequest() || trade.getPartner().hasItemRequest())
+			if ((trade.getOwner().hasItemRequest()) || (trade.getPartner().hasItemRequest()))
 			{
 				return;
 			}
@@ -87,7 +90,7 @@ public final class TradeDone extends L2GameClientPacket
 				return;
 			}
 			
-			if ((player.getInstanceId() != trade.getPartner().getInstanceId()) && (player.getInstanceId() != -1))
+			if (player.getInstanceWorld() != trade.getPartner().getInstanceWorld())
 			{
 				player.cancelActiveTrade();
 				return;
@@ -104,11 +107,5 @@ public final class TradeDone extends L2GameClientPacket
 		{
 			player.cancelActiveTrade();
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return "[C] 1C TradeDone";
 	}
 }

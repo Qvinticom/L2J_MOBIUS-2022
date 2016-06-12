@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.model.punishment.PunishmentType;
  */
 public final class PunishmentManager
 {
-	private static final Logger _log = Logger.getLogger(PunishmentManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(PunishmentManager.class.getName());
 	
 	private final Map<PunishmentAffect, PunishmentHolder> _tasks = new ConcurrentHashMap<>();
 	
@@ -67,6 +67,8 @@ public final class PunishmentManager
 				final PunishmentAffect affect = PunishmentAffect.getByName(rset.getString("affect"));
 				final PunishmentType type = PunishmentType.getByName(rset.getString("type"));
 				final long expirationTime = rset.getLong("expiration");
+				final String reason = rset.getString("reason");
+				final String punishedBy = rset.getString("punishedBy");
 				if ((type != null) && (affect != null))
 				{
 					if ((expirationTime > 0) && (System.currentTimeMillis() > expirationTime)) // expired task.
@@ -76,22 +78,31 @@ public final class PunishmentManager
 					else
 					{
 						initiated++;
-						_tasks.get(affect).addPunishment(new PunishmentTask(id, key, affect, type, expirationTime, rset.getString("reason"), rset.getString("punishedBy"), true));
+						_tasks.get(affect).addPunishment(new PunishmentTask(id, key, affect, type, expirationTime, reason, punishedBy, true));
 					}
 				}
 			}
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error while loading punishments: ", e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while loading punishments: ", e);
 		}
 		
-		_log.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + initiated + " active and " + expired + " expired punishments.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + initiated + " active and " + expired + " expired punishments.");
 	}
 	
 	public void startPunishment(PunishmentTask task)
 	{
 		_tasks.get(task.getAffect()).addPunishment(task);
+	}
+	
+	public void stopPunishment(PunishmentAffect affect, PunishmentType type)
+	{
+		final PunishmentHolder holder = _tasks.get(affect);
+		if (holder != null)
+		{
+			holder.stopPunishment(type);
+		}
 	}
 	
 	public void stopPunishment(Object key, PunishmentAffect affect, PunishmentType type)
@@ -105,7 +116,8 @@ public final class PunishmentManager
 	
 	public boolean hasPunishment(Object key, PunishmentAffect affect, PunishmentType type)
 	{
-		return _tasks.get(affect).hasPunishment(String.valueOf(key), type);
+		final PunishmentHolder holder = _tasks.get(affect);
+		return holder.hasPunishment(String.valueOf(key), type);
 	}
 	
 	public long getPunishmentExpiration(Object key, PunishmentAffect affect, PunishmentType type)

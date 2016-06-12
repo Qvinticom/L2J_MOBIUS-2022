@@ -20,10 +20,14 @@ import java.util.StringTokenizer;
 
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import com.l2jmobius.gameserver.handler.IItemHandler;
+import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
+import com.l2jmobius.gameserver.network.serverpackets.GMViewItemList;
 
 /**
  * This class handles following admin commands: - itemcreate = show menu - create_item <id> [num] = creates num items with respective id, if num is not specified, assumes 1.
@@ -37,7 +41,9 @@ public class AdminCreateItem implements IAdminCommandHandler
 		"admin_create_item",
 		"admin_create_coin",
 		"admin_give_item_target",
-		"admin_give_item_to_all"
+		"admin_give_item_to_all",
+		"admin_delete_item",
+		"admin_use_item"
 	};
 	
 	@Override
@@ -187,7 +193,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			}
 			for (L2PcInstance onlinePlayer : L2World.getInstance().getPlayers())
 			{
-				if ((activeChar != onlinePlayer) && onlinePlayer.isOnline() && (onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached())
+				if ((activeChar != onlinePlayer) && onlinePlayer.isOnline() && ((onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached()))
 				{
 					onlinePlayer.getInventory().addItem("Admin", idval, numval, onlinePlayer, activeChar);
 					onlinePlayer.sendMessage("Admin spawned " + numval + " " + template.getName() + " in your inventory.");
@@ -195,6 +201,87 @@ public class AdminCreateItem implements IAdminCommandHandler
 				}
 			}
 			activeChar.sendMessage(counter + " players rewarded with " + template.getName());
+		}
+		else if (command.startsWith("admin_delete_item"))
+		{
+			final String val = command.substring(18);
+			final StringTokenizer st = new StringTokenizer(val);
+			int idval = 0;
+			long numval = 0;
+			if (st.countTokens() == 2)
+			{
+				final String id = st.nextToken();
+				idval = Integer.parseInt(id);
+				final String num = st.nextToken();
+				numval = Long.parseLong(num);
+			}
+			else if (st.countTokens() == 1)
+			{
+				final String id = st.nextToken();
+				idval = Integer.parseInt(id);
+				numval = 1;
+			}
+			final L2ItemInstance item = (L2ItemInstance) L2World.getInstance().findObject(idval);
+			final int ownerId = item.getOwnerId();
+			if (ownerId > 0)
+			{
+				final L2PcInstance player = L2World.getInstance().getPlayer(ownerId);
+				if (player == null)
+				{
+					activeChar.sendMessage("Player is not online.");
+					return false;
+				}
+				
+				if (numval == 0)
+				{
+					numval = item.getCount();
+				}
+				
+				player.getInventory().destroyItem("AdminDelete", idval, numval, activeChar, null);
+				activeChar.sendPacket(new GMViewItemList(player));
+				activeChar.sendMessage("Item deleted.");
+			}
+			else
+			{
+				activeChar.sendMessage("Item doesn't have owner.");
+				return false;
+			}
+		}
+		else if (command.startsWith("admin_use_item"))
+		{
+			final String val = command.substring(15);
+			final int idval = Integer.parseInt(val);
+			final L2ItemInstance item = (L2ItemInstance) L2World.getInstance().findObject(idval);
+			final int ownerId = item.getOwnerId();
+			if (ownerId > 0)
+			{
+				final L2PcInstance player = L2World.getInstance().getPlayer(ownerId);
+				if (player == null)
+				{
+					activeChar.sendMessage("Player is not online.");
+					return false;
+				}
+				
+				// equip
+				if (item.isEquipable())
+				{
+					player.useEquippableItem(item, false);
+				}
+				else
+				{
+					final IItemHandler ih = ItemHandler.getInstance().getHandler(item.getEtcItem());
+					if (ih != null)
+					{
+						ih.useItem(player, item, false);
+					}
+				}
+				activeChar.sendPacket(new GMViewItemList(player));
+			}
+			else
+			{
+				activeChar.sendMessage("Item doesn't have owner.");
+				return false;
+			}
 		}
 		return true;
 	}

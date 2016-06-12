@@ -16,66 +16,70 @@
  */
 package quests.Q00490_DutyOfTheSurvivor;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
+import com.l2jmobius.commons.util.CommonUtil;
+import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
+import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
 /**
- * Duty of the Survivor (10490)
- * @author Stayway
+ * Duty of the Survivor (400)
+ * @author St3eT
  */
-public class Q00490_DutyOfTheSurvivor extends Quest
+public final class Q00490_DutyOfTheSurvivor extends Quest
 {
-	// NPC
+	// NPCs
 	private static final int VOLLODOS = 30137;
-	// Items
-	private static final int PUTRIFIED_EXTRACT = 34059;
-	private static final int ROTTEN_BLOOD = 34060;
-	
-	private static final Map<Integer, ItemChanceHolder> MONSTERS = new HashMap<>();
-	static
+	private static final int[] EXTRACT_MONSTERS =
 	{
-		MONSTERS.put(23162, new ItemChanceHolder(PUTRIFIED_EXTRACT, 0.59, 1)); // Corpse Devourer
-		MONSTERS.put(23163, new ItemChanceHolder(PUTRIFIED_EXTRACT, 0.59, 1)); // Corpse Absorber
-		MONSTERS.put(23164, new ItemChanceHolder(PUTRIFIED_EXTRACT, 0.59, 1)); // Corpse Shredder
-		MONSTERS.put(23165, new ItemChanceHolder(PUTRIFIED_EXTRACT, 0.70, 1)); // Plagueworm
-		MONSTERS.put(23166, new ItemChanceHolder(PUTRIFIED_EXTRACT, 0.64, 1)); // Contaminated Rottenroot
-		MONSTERS.put(23167, new ItemChanceHolder(PUTRIFIED_EXTRACT, 0.64, 1)); // Decayed Spore
-		MONSTERS.put(23168, new ItemChanceHolder(ROTTEN_BLOOD, 0.70, 1)); // Swamp Tracker
-		MONSTERS.put(23169, new ItemChanceHolder(ROTTEN_BLOOD, 0.70, 1)); // Swamp Assassin
-		MONSTERS.put(23170, new ItemChanceHolder(ROTTEN_BLOOD, 0.70, 1)); // Swamp Watcher
-		MONSTERS.put(23171, new ItemChanceHolder(ROTTEN_BLOOD, 0.54, 1)); // Corpse Collector
-		MONSTERS.put(23172, new ItemChanceHolder(ROTTEN_BLOOD, 0.54, 1)); // Delegate of Blood
-		MONSTERS.put(23173, new ItemChanceHolder(ROTTEN_BLOOD, 0.54, 1)); // Blood Aide
-	}
-	// Rewards
-	private static final int EXP_REWARD = 145557000;
-	private static final int SP_REWARD = 34933;
-	// Others
+		23162, // Corpse Devourer
+		23163, // Corpse Absorber
+		23164, // Corpse Shredder
+		23165, // Plagueworm
+		23166, // Contaminated Rotten Root
+		23167, // Decayed Spore
+	
+	};
+	private static final int[] BLOOD_MONSTERS =
+	{
+		23168, // Swamp Tracker
+		23169, // Swamp Assassin
+		23170, // Swamp Watcher
+		23171, // Corpse Collector
+		23172, // Delegate of Blood
+		23173, // Blood Aide
+	};
+	// Items
+	private static final int EXTRACT = 34059; // Putrefied Extract
+	private static final int BLOOD = 34060; // Rotten Blood
+	// Misc
+	private static final int DROP_CHANCE = 65; // Guessed
 	private static final int MIN_LEVEL = 85;
-	private static final int MAX_LEVEL = 89;
 	
 	public Q00490_DutyOfTheSurvivor()
 	{
-		super(490, Q00490_DutyOfTheSurvivor.class.getSimpleName(), "Duty Of The Survivor");
+		super(490);
 		addStartNpc(VOLLODOS);
 		addTalkId(VOLLODOS);
-		addKillId(MONSTERS.keySet());
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.html");
+		addKillId(EXTRACT_MONSTERS);
+		addKillId(BLOOD_MONSTERS);
+		registerQuestItems(EXTRACT, BLOOD);
+		addCondMinLevel(MIN_LEVEL, "30137-09.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		
+		if (st == null)
 		{
 			return null;
 		}
@@ -90,21 +94,10 @@ public class Q00490_DutyOfTheSurvivor extends Quest
 				htmltext = event;
 				break;
 			}
-			case "30137-05.htm": // start the quest
+			case "30137-05.htm":
 			{
-				qs.startQuest();
+				st.startQuest();
 				htmltext = event;
-				break;
-			}
-			case "30137-06.html":
-			{
-				if (qs.isCond(2))
-				{
-					giveAdena(player, 505062, true);
-					addExpAndSp(player, EXP_REWARD, SP_REWARD);
-					qs.exitQuest(QuestType.DAILY, true);
-					htmltext = event;
-				}
 				break;
 			}
 		}
@@ -114,73 +107,100 @@ public class Q00490_DutyOfTheSurvivor extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, true);
-		String htmltext = null;
-		switch (qs.getState())
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = getQuestState(player, true);
+		
+		if (st == null)
 		{
-			case State.CREATED:
+			return htmltext;
+		}
+		
+		if (npc.getId() == VOLLODOS)
+		{
+			switch (st.getState())
 			{
-				if ((player.getLevel() < MIN_LEVEL) && (player.getLevel() > MAX_LEVEL))
-				{
-					htmltext = "no_level.html";
-				}
-				else
+				case State.CREATED:
 				{
 					htmltext = "30137-01.htm";
+					break;
 				}
-				break;
-			}
-			
-			case State.STARTED:
-			{
-				if (qs.isCond(1))
+				case State.STARTED:
 				{
-					htmltext = "30137-07.html";
+					if (st.isCond(1))
+					{
+						htmltext = "30137-06.htm";
+					}
+					else
+					{
+						giveAdena(player, 505_062, true);
+						st.exitQuest(QuestType.DAILY, true);
+						if (player.getLevel() >= MIN_LEVEL)
+						{
+							addExpAndSp(player, 145_557_000, 34_933);
+						}
+						htmltext = "30137-07.htm";
+					}
+					break;
 				}
-				if (qs.isCond(2))
+				case State.COMPLETED:
 				{
-					htmltext = "30137-06.html";
-					giveAdena(player, 505062, true);
-					addExpAndSp(player, EXP_REWARD, SP_REWARD);
-					qs.exitQuest(QuestType.DAILY, true);
+					if (st.isNowAvailable())
+					{
+						st.setState(State.CREATED);
+						htmltext = "30137-01.htm";
+					}
+					else
+					{
+						htmltext = "30137-08.htm";
+					}
+					break;
 				}
-				break;
-			}
-			case State.COMPLETED:
-			{
-				if ((player.getLevel() < MIN_LEVEL) && (player.getLevel() > MAX_LEVEL))
-				{
-					htmltext = "no_level.html";
-				}
-				else if (!qs.isNowAvailable())
-				{
-					htmltext = "30137-08.html";
-				}
-				else
-				{
-					qs.setState(State.CREATED);
-					htmltext = "30137-01.htm";
-				}
-				break;
 			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if (qs != null)
+		final L2PcInstance member = getRandomPartyMember(player, 1);
+		if (member != null)
 		{
-			final ItemChanceHolder item = MONSTERS.get(npc.getId());
-			if (giveItemRandomly(qs.getPlayer(), npc, item.getId(), item.getCount(), 20, item.getChance(), true) //
-				&& (getQuestItemsCount(qs.getPlayer(), PUTRIFIED_EXTRACT) >= 20) //
-				&& (getQuestItemsCount(qs.getPlayer(), ROTTEN_BLOOD) >= 20))
+			final QuestState st = getQuestState(member, false);
+			if (st.isCond(1) && (getRandom(100) < DROP_CHANCE))
 			{
-				qs.setCond(2, true);
+				final int itemId = CommonUtil.contains(EXTRACT_MONSTERS, npc.getId()) ? EXTRACT : BLOOD;
+				if (getQuestItemsCount(player, itemId) < 20)
+				{
+					giveItems(player, itemId, 1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
+				
+				if ((getQuestItemsCount(player, EXTRACT) == 20) && (getQuestItemsCount(player, BLOOD) == 20))
+				{
+					st.setCond(2);
+				}
+				else
+				{
+					sendNpcLogList(player);
+				}
+				
 			}
 		}
-		return super.onKill(npc, killer, isSummon);
+		return super.onKill(npc, player, isSummon);
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance player)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if (qs != null)
+		{
+			final Set<NpcLogListHolder> npcLogList = new HashSet<>(2);
+			npcLogList.add(new NpcLogListHolder(EXTRACT, false, (int) getQuestItemsCount(player, EXTRACT)));
+			npcLogList.add(new NpcLogListHolder(BLOOD, false, (int) getQuestItemsCount(player, BLOOD)));
+			return npcLogList;
+		}
+		return super.getNpcLogList(player);
 	}
 }

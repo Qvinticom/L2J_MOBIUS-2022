@@ -55,7 +55,7 @@ public final class ConditionPlayerHasClanHall extends Condition
 		final L2Clan clan = effector.getActingPlayer().getClan();
 		if (clan == null)
 		{
-			return (_clanHall.size() == 1) && (_clanHall.get(0) == 0);
+			return ((_clanHall.size() == 1) && (_clanHall.get(0) == 0));
 		}
 		
 		// All Clan Hall

@@ -16,29 +16,25 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.primeshop;
 
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 
 /**
  * @author Gnacik, UnAfraid
  */
-public final class RequestBRRecentProductList extends L2GameClientPacket
+public final class RequestBRRecentProductList implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// Nothing to read
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		// L2PcInstance player = getClient().getActiveChar();
+		// L2PcInstance player = client.getActiveChar();
 		// TODO: Implement it.
-	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
 	}
 }

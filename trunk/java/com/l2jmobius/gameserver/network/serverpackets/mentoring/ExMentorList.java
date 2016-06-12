@@ -20,16 +20,18 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.instancemanager.MentorManager;
 import com.l2jmobius.gameserver.model.L2Mentee;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * @author UnAfraid
  */
-public class ExMentorList extends L2GameServerPacket
+public class ExMentorList implements IClientOutgoingPacket
 {
 	private final int _type;
 	private final Collection<L2Mentee> _mentees;
@@ -59,20 +61,21 @@ public class ExMentorList extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x11B);
-		writeD(_type);
-		writeD(0x00);
-		writeD(_mentees.size());
+		OutgoingPackets.EX_MENTOR_LIST.writeId(packet);
+		
+		packet.writeD(_type);
+		packet.writeD(0x00);
+		packet.writeD(_mentees.size());
 		for (L2Mentee mentee : _mentees)
 		{
-			writeD(mentee.getObjectId());
-			writeS(mentee.getName());
-			writeD(mentee.getClassId());
-			writeD(mentee.getLevel());
-			writeD(mentee.isOnlineInt());
+			packet.writeD(mentee.getObjectId());
+			packet.writeS(mentee.getName());
+			packet.writeD(mentee.getClassId());
+			packet.writeD(mentee.getLevel());
+			packet.writeD(mentee.isOnlineInt());
 		}
+		return true;
 	}
 }

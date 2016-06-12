@@ -16,14 +16,16 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.holders.RangeChanceHolder;
 import com.l2jmobius.gameserver.model.items.L2Item;
@@ -31,13 +33,14 @@ import com.l2jmobius.gameserver.model.items.enchant.EnchantItemGroup;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantRateItem;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantScrollGroup;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * @author UnAfraid
  */
-public final class EnchantItemGroupsData implements IXmlReader
+public final class EnchantItemGroupsData implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(EnchantItemGroupsData.class.getName());
+	
 	private final Map<String, EnchantItemGroup> _itemGroups = new HashMap<>();
 	private final Map<Integer, EnchantScrollGroup> _scrollGroups = new HashMap<>();
 	
@@ -51,13 +54,13 @@ public final class EnchantItemGroupsData implements IXmlReader
 	{
 		_itemGroups.clear();
 		_scrollGroups.clear();
-		parseDatapackFile("EnchantItemGroups.xml");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _itemGroups.size() + " item group templates.");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _scrollGroups.size() + " scroll group templates.");
+		parseDatapackFile("data/EnchantItemGroups.xml");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _itemGroups.size() + " item group templates.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _scrollGroups.size() + " scroll group templates.");
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
@@ -115,7 +118,7 @@ public final class EnchantItemGroupsData implements IXmlReader
 										final NamedNodeMap attrs = z.getAttributes();
 										if (attrs.getNamedItem("slot") != null)
 										{
-											rateGroup.addSlot(ItemTable.SLOTS.get(parseString(attrs, "slot")));
+											rateGroup.addSlot(ItemTable._slots.get(parseString(attrs, "slot")));
 										}
 										if (attrs.getNamedItem("magicWeapon") != null)
 										{

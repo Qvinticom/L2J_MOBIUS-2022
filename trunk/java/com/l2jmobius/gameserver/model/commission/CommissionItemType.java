@@ -88,7 +88,7 @@ public enum CommissionItemType
 	
 	private final int _clientId;
 	
-	private CommissionItemType(int clientId)
+	CommissionItemType(int clientId)
 	{
 		_clientId = clientId;
 	}

@@ -18,12 +18,10 @@ package com.l2jmobius.gameserver.model;
 
 import java.util.logging.Level;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.data.sql.impl.TerritoryTable;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2ControllableMobInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.util.Rnd;
 
 /**
  * @author littlecrow A special spawn implementation to spawn controllable mob
@@ -60,39 +58,33 @@ public class L2GroupSpawn extends L2Spawn
 					return null;
 				}
 				
-				final Location location = TerritoryTable.getInstance().getRandomPoint(getLocationId());
-				if (location != null)
-				{
-					newlocx = location.getX();
-					newlocy = location.getY();
-					newlocz = location.getZ();
-				}
+				return null;
 			}
-			else
-			{
-				newlocx = getX();
-				newlocy = getY();
-				newlocz = getZ();
-			}
+			
+			newlocx = getX();
+			newlocy = getY();
+			newlocz = getZ();
 			
 			final L2Npc mob = new L2ControllableMobInstance(_template);
 			mob.setCurrentHpMp(mob.getMaxHp(), mob.getMaxMp());
 			
-			mob.setHeading(getHeading() == -1 ? Rnd.nextInt(61794) : getHeading());
+			if (getHeading() == -1)
+			{
+				mob.setHeading(Rnd.nextInt(61794));
+			}
+			else
+			{
+				mob.setHeading(getHeading());
+			}
 			
 			mob.setSpawn(this);
 			mob.spawnMe(newlocx, newlocy, newlocz);
-			mob.onSpawn();
-			
-			if (Config.DEBUG)
-			{
-				_log.finest("Spawned Mob Id: " + _template.getId() + " ,at: X: " + mob.getX() + " Y: " + mob.getY() + " Z: " + mob.getZ());
-			}
 			return mob;
+			
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "NPC class not found: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "NPC class not found: " + e.getMessage(), e);
 			return null;
 		}
 	}

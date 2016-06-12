@@ -19,12 +19,13 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.TradeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreManageListBuy;
 import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgBuy;
@@ -35,81 +36,51 @@ import com.l2jmobius.gameserver.util.Util;
  * This class ...
  * @version $Revision: 1.2.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $ CPU Disasm Packets: ddhhQQ cddb
  */
-public final class SetPrivateStoreListBuy extends L2GameClientPacket
+public final class SetPrivateStoreListBuy implements IClientIncomingPacket
 {
-	private static final String _C__9A_SETPRIVATESTORELISTBUY = "[C] 9A SetPrivateStoreListBuy";
-	
-	private static final int BATCH_LENGTH = 46; // length of the one item
+	private static final int BATCH_LENGTH = 44; // length of the one item
 	
 	private Item[] _items = null;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		final int count = packet.readD();
+		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
-			return;
-		}
-		final int count = readD();
-		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
-		{
-			return;
+			return false;
 		}
 		
 		_items = new Item[count];
 		for (int i = 0; i < count; i++)
 		{
-			final int itemId = readD();
-			int enchantLevel = readD();
+			final int itemId = packet.readD();
 			
-			final long cnt = readQ();
-			final long price = readQ();
+			packet.readH(); // TODO analyse this
+			packet.readH(); // TODO analyse this
+			
+			final long cnt = packet.readQ();
+			final long price = packet.readQ();
 			
 			if ((itemId < 1) || (cnt < 1) || (price < 0))
 			{
 				_items = null;
-				return;
+				return false;
 			}
-			int attackAttribute = readH(); // Attack Attribute Type
-			int attackAttributeValue = readH(); // Attack Attribute Value
-			final int defenseAttributes[] = new int[6];
-			for (int h = 0; h < 6; h++)
-			{
-				defenseAttributes[i] = readH(); // Defense attributes
-			}
-			int appearanceId = readD(); // Appearance ID
-			readH(); // ?
-			boolean canUse = false;
-			for (L2ItemInstance item : player.getInventory().getItemsByItemId(itemId))
-			{
-				if ((enchantLevel == item.getEnchantLevel()) && (attackAttribute == item.getAttackElementType()) && (attackAttributeValue == item.getAttackElementPower()) && (appearanceId == item.getVisualId()) && (item.getElementDefAttr((byte) 0) == defenseAttributes[0]) && (item.getElementDefAttr((byte) 1) == defenseAttributes[1]) && (item.getElementDefAttr((byte) 2) == defenseAttributes[2]) && (item.getElementDefAttr((byte) 3) == defenseAttributes[3]) && (item.getElementDefAttr((byte) 4) == defenseAttributes[4]) && (item.getElementDefAttr((byte) 5) == defenseAttributes[5]))
-				{
-					canUse = true;
-					break;
-				}
-			}
-			if (!canUse)
-			{
-				enchantLevel = 0;
-				attackAttribute = -1;
-				attackAttributeValue = 0;
-				defenseAttributes[0] = 0;
-				defenseAttributes[1] = 0;
-				defenseAttributes[2] = 0;
-				defenseAttributes[3] = 0;
-				defenseAttributes[4] = 0;
-				defenseAttributes[5] = 0;
-				appearanceId = 0;
-			}
-			_items[i] = new Item(itemId, cnt, price, enchantLevel, attackAttribute, attackAttributeValue, defenseAttributes, appearanceId);
+			packet.readD(); // Unk
+			packet.readD(); // Unk
+			packet.readD(); // Unk
+			packet.readD(); // Unk
+			
+			_items[i] = new Item(itemId, cnt, price);
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -140,13 +111,6 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 		{
 			player.sendPacket(new PrivateStoreManageListBuy(player));
 			player.sendPacket(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE);
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		if (!player.canOpenPrivateStore())
-		{
-			player.sendPacket(new PrivateStoreManageListBuy(player));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -198,22 +162,12 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 		private final int _itemId;
 		private final long _count;
 		private final long _price;
-		private final int _enchantLevel;
-		private final int _attackAttribute;
-		private final int _attackAttributeValue;
-		private final int _defenseAttributes[];
-		private final int _appearanceId;
 		
-		public Item(int itemId, long cnt, long price, int enchantLevel, int attackAttribute, int attackAttributeValue, int defenseAttributes[], int appearanceId)
+		public Item(int id, long num, long pri)
 		{
-			_itemId = itemId;
-			_count = cnt;
-			_price = price;
-			_enchantLevel = enchantLevel;
-			_attackAttribute = attackAttribute;
-			_attackAttributeValue = attackAttributeValue;
-			_defenseAttributes = defenseAttributes;
-			_appearanceId = appearanceId;
+			_itemId = id;
+			_count = num;
+			_price = pri;
 		}
 		
 		public boolean addToTradeList(TradeList list)
@@ -223,7 +177,7 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 				return false;
 			}
 			
-			list.addItemByItemId(_itemId, _count, _price, _enchantLevel, _attackAttribute, _attackAttributeValue, _defenseAttributes, _appearanceId);
+			list.addItemByItemId(_itemId, _count, _price);
 			return true;
 		}
 		
@@ -231,11 +185,5 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 		{
 			return _count * _price;
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__9A_SETPRIVATESTORELISTBUY;
 	}
 }
