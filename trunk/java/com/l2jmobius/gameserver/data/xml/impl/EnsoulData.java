@@ -107,7 +107,7 @@ public class EnsoulData implements IGameXmlReader
 					parseFee(feeNode, fee, 2);
 					break;
 				}
-				case "reFirst":
+				case "reNormal":
 				{
 					parseReFee(feeNode, fee, 0);
 					break;

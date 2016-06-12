@@ -32,7 +32,7 @@
 							<xs:element name="secondary" minOccurs="0" type="fee" />
 							<xs:element name="third" minOccurs="0" type="fee" />
 							<xs:element name="reNormal" minOccurs="0" type="fee" />
-							<xs:element name="reSeconday" minOccurs="0" type="fee" />
+							<xs:element name="reSecondary" minOccurs="0" type="fee" />
 							<xs:element name="reThird" minOccurs="0" type="fee" />
 						</xs:sequence>
 						<xs:attribute type="crystalType" name="crystalType" use="required" />

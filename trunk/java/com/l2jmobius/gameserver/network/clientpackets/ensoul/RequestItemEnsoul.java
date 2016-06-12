@@ -185,7 +185,7 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 				continue;
 			}
 			
-			final ItemHolder fee;
+			ItemHolder fee;
 			if (itemOption.getType() == 1)
 			{
 				fee = EnsoulData.getInstance().getEnsoulFee(item.getItem().getCrystalType(), position);
@@ -193,8 +193,8 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 				{
 					if (item.getSpecialAbility(position) != null)
 					{
-						LOGGER.warning("Player: " + player + " attempting to ensoul item option add but he's actually trying to replace!");
-						continue;
+						//LOGGER.warning("Player: " + player + " attempting to ensoul item option add but he's actually trying to replace!");
+						fee = EnsoulData.getInstance().getResoulFee(item.getItem().getCrystalType(), position);
 					}
 				}
 				else if (itemOption.getPosition() == 3)
