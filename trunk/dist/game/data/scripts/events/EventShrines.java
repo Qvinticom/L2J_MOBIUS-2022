@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.group;
+package events;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
  * @author hlwrave, Mobius
  * @Add in event config.xml enableShrines="true" after event name to enable them.
  */
-final public class EventShrines extends Quest
+public final class EventShrines extends Quest
 {
 	private static final Map<Integer, Integer> ZONE_TRIGGERS = new HashMap<>();
 	static
