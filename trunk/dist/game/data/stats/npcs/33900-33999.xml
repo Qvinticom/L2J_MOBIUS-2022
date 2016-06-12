@@ -1851,9 +1851,9 @@
 		</collision>
 	</npc>
 	<npc id="33982" level="99" type="L2Guard" name="Tahlia" title="Guard">
-		<!-- TODO: Confirm me -->
 		<race>ERTHEIA</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="148" /> <!-- rhand: Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1874,9 +1874,9 @@
 		</collision>
 	</npc>
 	<npc id="33983" level="99" type="L2Guard" name="Lenoa" title="Guard">
-		<!-- TODO: Confirm me -->
 		<race>ERTHEIA</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="288" /> <!-- rhand: Carnage Bow -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
@@ -1897,9 +1897,9 @@
 		</collision>
 	</npc>
 	<npc id="33984" level="99" type="L2Guard" name="Nairu" title="Guard">
-		<!-- TODO: Confirm me -->
 		<race>ERTHEIA</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="148" /> <!-- rhand: Sword of Valhalla -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1920,9 +1920,9 @@
 		</collision>
 	</npc>
 	<npc id="33985" level="99" type="L2Guard" name="Namee" title="Guard">
-		<!-- TODO: Confirm me -->
 		<race>ERTHEIA</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="288" /> <!-- rhand: Carnage Bow -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
