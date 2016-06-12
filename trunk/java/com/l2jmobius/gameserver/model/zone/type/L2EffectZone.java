@@ -250,7 +250,10 @@ public final class L2EffectZone extends L2ZoneType
 							final Skill skill = SkillData.getInstance().getSkill(e.getKey(), e.getValue());
 							if ((skill != null) && (_bypassConditions || skill.checkCondition(character, character)))
 							{
-								skill.activateSkill(character, character);
+								if (!character.isAffectedBySkill(skill.getId()))
+								{
+									skill.activateSkill(character, character);
+								}
 							}
 						}
 					}

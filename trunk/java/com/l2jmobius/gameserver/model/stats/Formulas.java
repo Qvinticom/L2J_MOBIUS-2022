@@ -724,7 +724,7 @@ public final class Formulas
 			Debug.sendSkillDebug(attacker, target, skill, set);
 		}
 		
-		if (finalRate <= Rnd.get(100))
+		if ((finalRate <= Rnd.get(100)) && (target != attacker))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2);
 			sm.addCharName(target);
@@ -805,7 +805,7 @@ public final class Formulas
 			Debug.sendSkillDebug(attacker.getOwner(), target, skill, set);
 		}
 		
-		return (Rnd.get(100) < finalRate);
+		return Rnd.get(100) < finalRate;
 	}
 	
 	public static boolean calcMagicSuccess(L2Character attacker, L2Character target, Skill skill)
