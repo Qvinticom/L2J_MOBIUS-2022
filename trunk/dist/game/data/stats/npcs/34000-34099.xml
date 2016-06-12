@@ -1,94 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="34000" level="99" type="L2Npc" name="Ferin" title="">
+	<npc id="34000" level="99" type="L2Npc" name="Ferin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ERTHEIA</race>
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
-				<walk ground="64" />
-				<run ground="190" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="26" /> <!-- Ertheia -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
 		<collision>
-			<radius normal="8" />
-			<height normal="16" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="34001" level="85" type="L2Npc" name="Ferin" title="">
+	<npc id="34001" level="85" type="L2Npc" name="Ferin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ERTHEIA</race>
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4234" hpRegen="9.5" mp="1846" mpRegen="3.3" />
+			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
-				<walk ground="64" />
-				<run ground="190" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
-			<attack physical="1189.0459514498" magical="811.85773400546" critical="4" attackSpeed="253" range="40" />
-			<defence physical="362.06896551724" magical="264.78509919958" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="26" /> <!-- Ertheia -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
 		<collision>
-			<radius normal="8" />
-			<height normal="16" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="34002" level="99" type="L2Npc" name="Dolkin" title="Maestro">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DWARF</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="1" />
+				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
 		<collision>
-			<radius normal="8" />
-			<height normal="17" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="34003" level="99" type="L2Npc" name="Victri" title="">
+	<npc id="34003" level="99" type="L2Npc" name="Victri">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="1" />
+				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
 		<collision>
-			<radius normal="12" />
-			<height normal="33.5" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="34004" level="99" type="L2Npc" name="Sayha's Herald" title="Victorious">
@@ -96,1504 +72,820 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
 		<collision>
-			<radius normal="8" />
-			<height normal="22.5" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="34005" level="99" type="L2Npc" name="Dia" title="">
+	<npc id="34005" level="99" type="L2Npc" name="Dia">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ERTHEIA</race>
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="64" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="26" /> <!-- Ertheia -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="34006" level="99" type="L2Npc" name="" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="200" />
+				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34006" level="99" type="L2Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
 		</stats>
 		<status attackable="false" talkable="false" targetable="false" showName="false" />
-		<skill_list>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
 		<collision>
-			<radius normal="8" />
-			<height normal="12" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="34007" level="70" type="L2Npc" name="Nomi" title="Unlicensed Buff Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="1" />
-			</speed>
-			<attack physical="689.07320120658" magical="470.63282486066" critical="4" attackSpeed="253" range="40" />
-			<defence physical="296.22641509434" magical="216.70091537456" />
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="19" /> <!-- Misc. -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<collision>
-			<radius normal="10" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="34008" level="99" type="L2Npc" name="Noelle" title="Event Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="4228" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
-				<walk ground="64" />
-				<run ground="100" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
 		<collision>
-			<radius normal="12" />
-			<height normal="22.5" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34008" level="99" type="L2Npc" name="Noelle" title="Event Manager">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="34009" level="99" type="L2Npc" name="Holiday Tree" title="Holiday Spirit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>PLANT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39" hpRegen="10.5" mp="40" mpRegen="3.6" />
+			<vitals hp="68" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
-				<walk ground="1" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		<status attackable="false" targetable="false" showName="false" />
 		<collision>
-			<radius normal="110" />
-			<height normal="140" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="34010" level="99" type="L2Npc" name="Galup" title="High Horse">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ANIMAL</race>
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
-				<walk ground="41" />
-				<run ground="100" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
 		<collision>
-			<radius normal="12" />
-			<height normal="14" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="34011" level="99" type="L2Npc" name="Dandy" title="Dreaming">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="100" />
+				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
 		<collision>
-			<radius normal="20" />
-			<height normal="30" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="34012" level="99" type="L2Npc" name="Dandy" title="Dreaming">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="100" />
+				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
 		<collision>
-			<radius normal="20" />
-			<height normal="30" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="34013" level="99" type="L2Npc" name="Infinite Chest" title="">
+	<npc id="34013" level="99" type="L2Npc" name="Infinite Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="30" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<collision>
-			<radius normal="22" />
-			<height normal="16" />
-		</collision>
-	</npc>
-	<npc id="34014" level="99" type="L2Npc" name="Harp Zu Hestui" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ORC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8768" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="100" />
+				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="17" /> <!-- Orcs -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
 		<collision>
-			<radius normal="8" />
-			<height normal="29" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34014" level="99" type="L2Npc" name="Harp Zu Hestui">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="34015" level="99" type="L2Npc" name="Bora" title="GM Helper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8768" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
 		<collision>
-			<radius normal="20" />
-			<height normal="45" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
 	<npc id="34016" level="99" type="L2Npc" name="Goldeen" title="Event Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8768" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34017" level="99" type="L2Npc" name="Yuna" title="Maphr's Agent">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8768" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34018" level="99" type="L2Npc" name="Merlot">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8768" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34019" level="99" type="L2Npc" name="Merlot" title="Dimensional Guide">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34020" level="99" type="L2Npc" name="Coni" title="Troupe Leader">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34021" level="99" type="L2Npc" name="Airi" title="Happy Bride">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34022" level="99" type="L2Npc" name="Taeyo" title="Happy Groom">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34023" level="99" type="L2Npc" name="Jan" title="Beer Artisan">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34024" level="99" type="L2Npc" name="Gibbs" title="Nostra">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34025" level="99" type="L2Npc" name="Kabaleon" title="Talkative">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34026" level="99" type="L2Npc" name="Transformer" title="Transformation Expert">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34027" level="99" type="L2Npc" name="Kableon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34028" level="99" type="L2Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34029" level="99" type="L2Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34030" level="99" type="L2Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34031" level="99" type="L2Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34032" level="99" type="L2Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34033" level="99" type="L2Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34034" level="99" type="L2Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34035" level="99" type="L2Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34036" level="99" type="L2Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34037" level="99" type="L2Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34038" level="99" type="L2Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34039" level="99" type="L2Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34040" level="99" type="L2Npc" name="Festi">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34041" level="99" type="L2Npc" name="Stival">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34042" level="99" type="L2Npc" name="Town of Aden Herald">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34043" level="99" type="L2Npc" name="Town of Giran Herald">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34044" level="99" type="L2Npc" name="Town of Goddard Herald">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34045" level="99" type="L2Npc" name="Town of Gludio Herald">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34046" level="99" type="L2Npc" name="Gludin Village Herald">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34047" level="99" type="L2Npc" name="Town of Schuttgart Herald">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34048" level="99" type="L2Npc" name="Town of Oren Herald">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34049" level="99" type="L2Npc" name="Gainak Herald">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34050" level="99" type="L2Npc" name="Treasure Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34051" level="99" type="L2Npc" name="Kaysia" title="Shadai's Disciple">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34052" level="99" type="L2Teleporter" name="Teleport Device" title="Atelia Castle">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<collision>
-			<radius normal="12" />
-			<height normal="27.5" />
-		</collision>
-	</npc>
-	<npc id="34017" level="85" type="L2Npc" name="Yuna" title="Maphr's Agent">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="1" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="7" />
-			<height normal="18.5" />
-		</collision>
-	</npc>
-	<npc id="34018" level="85" type="L2Npc" name="Merlot" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="23" />
-		</collision>
-	</npc>
-	<npc id="34019" level="85" type="L2Npc" name="Merlot" title="Dimensional Guide">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="23" />
-		</collision>
-	</npc>
-	<npc id="34020" level="85" type="L2Npc" name="Coni" title="Troupe Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="40" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<collision>
-			<radius normal="7" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="34021" level="85" type="L2Npc" name="Airi" title="Happy Bride">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="40" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<collision>
-			<radius normal="7" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="34022" level="85" type="L2Npc" name="Taeyo" title="Happy Groom">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="40" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<collision>
-			<radius normal="7" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="34023" level="85" type="L2Npc" name="Jan" title="Beer Artisan">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-		</skill_list>
-		<collision>
-			<radius normal="22" />
-			<height normal="18" />
-		</collision>
-	</npc>
-	<npc id="34024" level="85" type="L2Npc" name="Gibbs" title="Nostra">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="40" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<collision>
-			<radius normal="22" />
-			<height normal="21.5" />
-		</collision>
-	</npc>
-	<npc id="34025" level="85" type="L2Npc" name="Kabaleon" title="Talkative">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="40" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<collision>
-			<radius normal="12" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="34026" level="85" type="L2Npc" name="Transformer" title="Transformation Expert">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="21.3" />
-		</collision>
-	</npc>
-	<npc id="34027" level="85" type="L2Npc" name="Kableon" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="40" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<collision>
-			<radius normal="12" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="34028" level="85" type="L2Npc" name="" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39" hpRegen="7.5" mp="40" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="12" />
-			<height normal="17" />
-		</collision>
-	</npc>
-	<npc id="34029" level="85" type="L2Npc" name="" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39" hpRegen="7.5" mp="40" mpRegen="2.7" />
-			<speed>
-				<walk ground="40" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="7.5" />
-			<height normal="26.5" />
-		</collision>
-	</npc>
-	<npc id="34030" level="85" type="L2Npc" name="" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39" hpRegen="7.5" mp="40" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="34" />
-			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="34031" level="85" type="L2Npc" name="" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39" hpRegen="7.5" mp="40" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="34" />
-			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="34032" level="85" type="L2Npc" name="" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39" hpRegen="7.5" mp="40" mpRegen="2.7" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="10" />
-		</collision>
-	</npc>
-	<npc id="34033" level="85" type="L2Npc" name="" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39" hpRegen="7.5" mp="40" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="30" />
-			<height normal="60" />
-		</collision>
-	</npc>
-	<npc id="34034" level="85" type="L2Npc" name="" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39" hpRegen="7.5" mp="40" mpRegen="2.7" />
-			<speed>
-				<walk ground="40" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="10" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="34035" level="85" type="L2Npc" name="" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39" hpRegen="7.5" mp="40" mpRegen="2.7" />
-			<speed>
-				<walk ground="4" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="9" />
-			<height normal="28.3" />
-		</collision>
-	</npc>
-	<npc id="34036" level="85" type="L2Npc" name="" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39" hpRegen="7.5" mp="40" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="10" />
-			<height normal="45" />
-		</collision>
-	</npc>
-	<npc id="34037" level="85" type="L2Npc" name="" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39" hpRegen="7.5" mp="40" mpRegen="2.7" />
-			<speed>
-				<walk ground="40" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="10" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="34038" level="85" type="L2Npc" name="" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39" hpRegen="7.5" mp="40" mpRegen="2.7" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="30" />
-			<height normal="26" />
-		</collision>
-	</npc>
-	<npc id="34039" level="85" type="L2Npc" name="" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39" hpRegen="7.5" mp="40" mpRegen="2.7" />
-			<speed>
-				<walk ground="1" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="40" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="34040" level="85" type="L2Npc" name="Festi" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="19" />
-		</collision>
-	</npc>
-	<npc id="34041" level="85" type="L2Npc" name="Stival" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="13" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
-		<collision>
-			<radius normal="28" />
-			<height normal="62" />
-		</collision>
-	</npc>
-	<npc id="34042" level="85" type="L2Npc" name="Town of Aden Herald" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="34043" level="85" type="L2Npc" name="Town of Giran Herald" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="34044" level="85" type="L2Npc" name="Town of Goddard Herald" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="34045" level="85" type="L2Npc" name="Town of Gludio Herald" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="34046" level="85" type="L2Npc" name="Gludin Village Herald" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="34047" level="85" type="L2Npc" name="Town of Schuttgart Herald" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="34048" level="85" type="L2Npc" name="Town of Oren Herald" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="34049" level="85" type="L2Npc" name="Gainak Herald" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="34050" level="85" type="L2Npc" name="Treasure Chest" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="19" /> <!-- Misc. -->
-		</skill_list>
-		<collision>
-			<radius normal="12" />
-			<height normal="9.5" />
-		</collision>
-	</npc>
-	<npc id="34051" level="85" type="L2Npc" name="Kaysia" title="Shadai's Disciple">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="64" />
-				<run ground="1" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="26" /> <!-- Ertheia -->
-		</skill_list>
-		<collision>
-			<radius normal="9" />
-			<height normal="19.5" />
-		</collision>
-	</npc>
-	<npc id="34052" level="85" type="L2Npc" name="Teleport Device" title="Atelia Castle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="1" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="65" />
-			<height normal="140" />
-		</collision>
-	</npc>
-	<npc id="34053" level="85" type="L2Npc" name="Teleport Device" title="Atelia Fortress">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="9" />
-			<height normal="33.5" />
-		</collision>
-	</npc>
-	<npc id="34054" level="85" type="L2Npc" name="Ferin" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="64" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="26" /> <!-- Ertheia -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="16" />
-		</collision>
-	</npc>
-	<npc id="34055" level="85" type="L2Npc" name="Cyphona" title="Master">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="64" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="26" /> <!-- Ertheia -->
-		</skill_list>
-		<collision>
-			<radius normal="9" />
-			<height normal="19.5" />
-		</collision>
-	</npc>
-	<npc id="34056" level="85" type="L2Npc" name="Belas" title="Magister">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="64" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="26" /> <!-- Ertheia -->
-		</skill_list>
-		<collision>
-			<radius normal="9" />
-			<height normal="21.5" />
-		</collision>
-	</npc>
-	<npc id="34057" level="85" type="L2Npc" name="Elikia" title="Verdure Elder">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skill_list>
-		<collision>
-			<radius normal="7" />
-			<height normal="22.2" />
-		</collision>
-	</npc>
-	<npc id="34058" level="85" type="L2Npc" name="Adolph" title="Aden Vanguard Captain">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="36.48" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="12" />
-			<height normal="24.5" />
-		</collision>
-	</npc>
-	<npc id="34059" level="85" type="L2Npc" name="Barton" title="Aden Vanguard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="40" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="17" /> <!-- Orcs -->
-		</skill_list>
-		<collision>
-			<radius normal="14.5" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="34060" level="85" type="L2Npc" name="Hayuk" title="Aden Vanguard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="30" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skill_list>
-		<collision>
-			<radius normal="10" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="34061" level="85" type="L2Npc" name="Elise" title="Aden Vanguard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="23" />
-		</collision>
-	</npc>
-	<npc id="34062" level="85" type="L2Npc" name="Eliyah" title="Aden Vanguard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="28" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="9" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="34063" level="85" type="L2Npc" name="Glenkinchie" title="Blackbird Clan Member">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="70" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="10" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="34064" level="85" type="L2Npc" name="Hurak" title="Blackbird Clan Member">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="17" /> <!-- Orcs -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="34065" level="85" type="L2Npc" name="Laffian" title="Blackbird Clan Member">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="16" /> <!-- Dark Elves -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="21.5" />
-		</collision>
-	</npc>
-	<npc id="34066" level="85" type="L2Npc" name="Sherry" title="Blackbird Clan Member">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="64" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="13" />
-			<height normal="22.5" />
-		</collision>
-	</npc>
-	<npc id="34067" level="85" type="L2Npc" name="Treasure Chest" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="19" /> <!-- Misc. -->
-		</skill_list>
-		<collision>
-			<radius normal="12" />
-			<height normal="9.5" />
-		</collision>
-	</npc>
-	<npc id="34068" level="85" type="L2Npc" name="Treasure Chest" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="19" /> <!-- Misc. -->
-		</skill_list>
-		<collision>
-			<radius normal="12" />
-			<height normal="9.5" />
-		</collision>
-	</npc>
-	<npc id="34069" level="85" type="L2Npc" name="Treasure Chest" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="19" /> <!-- Misc. -->
-		</skill_list>
-		<collision>
-			<radius normal="12" />
-			<height normal="9.5" />
-		</collision>
-	</npc>
-	<npc id="34070" level="85" type="L2Npc" name="Treasure Chest" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="19" /> <!-- Misc. -->
-		</skill_list>
-		<collision>
-			<radius normal="12" />
-			<height normal="9.5" />
-		</collision>
-	</npc>
-	<npc id="34071" level="85" type="L2Npc" name="Treasure Chest" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="19" /> <!-- Misc. -->
-		</skill_list>
-		<collision>
-			<radius normal="12" />
-			<height normal="9.5" />
-		</collision>
-	</npc>
-	<npc id="34072" level="85" type="L2Npc" name="Secret Teleport Device" title="Atelia Castle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="9" />
-			<height normal="33.5" />
-		</collision>
-	</npc>
-	<npc id="34073" level="85" type="L2Npc" name="Atelia Control Device" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="42" />
-			<height normal="51" />
-		</collision>
-	</npc>
-	<npc id="34074" level="85" type="L2Npc" name="Julia" title="Warehouse Keeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skill_list>
-		<collision>
-			<radius normal="7" />
-			<height normal="25.5" />
-		</collision>
-	</npc>
-	<npc id="34075" level="85" type="L2Npc" name="Saylem" title="Warehouse Keeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-		</skill_list>
-		<collision>
-			<radius normal="7" />
-			<height normal="18" />
-		</collision>
-	</npc>
-	<npc id="34076" level="85" type="L2Npc" name="Mion" title="Grocer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-		</skill_list>
-		<collision>
-			<radius normal="7" />
-			<height normal="18" />
-		</collision>
-	</npc>
-	<npc id="34077" level="85" type="L2Npc" name="Nika" title="Grocer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="20" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="25" /> <!-- Kamael -->
-		</skill_list>
-		<collision>
-			<radius normal="11" />
-			<height normal="22.5" />
-		</collision>
-	</npc>
-	<npc id="34078" level="85" type="L2Npc" name="Training Soldier" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1601,53 +893,15 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="8" />
-			<height normal="23.5" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="34079" level="85" type="L2Npc" name="Goody" title="Equipment Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="34053" level="99" type="L2Teleporter" name="Teleport Device" title="Atelia Fortress">
+		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-		</skill_list>
-		<collision>
-			<radius normal="11" />
-			<height normal="17" />
-		</collision>
-	</npc>
-	<npc id="34080" level="85" type="L2Npc" name="Pritty" title="Beauty Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="160" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="10" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="34081" level="85" type="L2Npc" name="Supree" title="Grocer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1655,121 +909,16 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="6.5" />
-			<height normal="17.7" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="34082" level="85" type="L2Npc" name="Tyke" title="Rewards Manager">
+	<npc id="34054" level="99" type="L2Npc" name="Ferin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="8" />
-			<height normal="19" />
-		</collision>
-	</npc>
-	<npc id="34083" level="85" type="L2Npc" name="Eleven" title="Event Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="150" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="9" />
-			<height normal="22.25" />
-		</collision>
-	</npc>
-	<npc id="34084" level="85" type="L2Npc" name="Piero" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="1" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="9" />
-			<height normal="15" />
-		</collision>
-	</npc>
-	<npc id="34085" level="85" type="L2Monster" name="Eleveny" title="Group Reward Box">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="57803468" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="1" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="54" />
-			<height normal="52.8" />
-		</collision>
-	</npc>
-	<npc id="34086" level="85" type="L2Npc" name="Eleveny" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="1" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="54" />
-			<height normal="110.4" />
-		</collision>
-	</npc>
-	<npc id="34087" level="85" type="L2Npc" name="Herb Collector" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="12" />
-			<height normal="21.5" />
-		</collision>
-	</npc>
-	<npc id="34088" level="85" type="L2Npc" name="Santa Claus" title="Event Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1777,228 +926,767 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="12" />
-			<height normal="25" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="34089" level="85" type="L2Npc" name="Devianne" title="Truth Seeker">
+	<npc id="34055" level="99" type="L2Npc" name="Cyphona" title="Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="64" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
-		<collision>
-			<radius normal="13" />
-			<height normal="22.5" />
-		</collision>
-	</npc>
-	<npc id="34090" level="85" type="L2Monster" name="Adolph" title="Aden Vanguard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="512263" hpRegen="7.5" mp="25074" mpRegen="2.7" />
-			<speed>
-				<walk ground="36.48" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
-		<collision>
-			<radius normal="12" />
-			<height normal="24.5" />
-		</collision>
-	</npc>
-	<npc id="34091" level="85" type="L2Monster" name="Barton" title="Aden Vanguard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="512263" hpRegen="7.5" mp="25074" mpRegen="2.7" />
-			<speed>
-				<walk ground="40" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
-		<collision>
-			<radius normal="14.5" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="34092" level="85" type="L2Monster" name="Hayuk" title="Aden Vanguard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="512263" hpRegen="7.5" mp="25074" mpRegen="2.7" />
-			<speed>
-				<walk ground="30" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
-		<collision>
-			<radius normal="10" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="34093" level="85" type="L2Monster" name="Elise" title="Aden Vanguard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="512263" hpRegen="7.5" mp="25074" mpRegen="2.7" />
-			<speed>
-				<walk ground="36" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
-		<collision>
-			<radius normal="8" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="34094" level="85" type="L2Monster" name="Eliyah" title="Aden Vanguard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="512263" hpRegen="7.5" mp="25074" mpRegen="2.7" />
-			<speed>
-				<walk ground="28" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
-		<collision>
-			<radius normal="9" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="34095" level="85" type="L2Npc" name="Neti" title="Refugee">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
 		<collision>
-			<radius normal="8" />
-			<height normal="21.5" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="34096" level="85" type="L2Npc" name="Sir Klaus Vasper" title="">
+	<npc id="34056" level="99" type="L2Npc" name="Belas" title="Magister">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="17300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
 		<collision>
-			<radius normal="7" />
-			<height normal="24" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="34097" level="85" type="L2Npc" name="Adonius" title="Priest">
+	<npc id="34057" level="99" type="L2Npc" name="Elikia" title="Verdure Elder">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skill_list>
 		<collision>
-			<radius normal="7" />
-			<height normal="22.2" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="34098" level="85" type="L2Npc" name="Kluto" title="Blacksmith">
+	<npc id="34058" level="99" type="L2Npc" name="Adolph" title="Aden Vanguard Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<equipment rhand="17383" lhand="17401" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-		</skill_list>
 		<collision>
-			<radius normal="7" />
-			<height normal="16.5" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="34099" level="85" type="L2Npc" name="Yeniche" title="Grand Master">
+	<npc id="34059" level="99" type="L2Npc" name="Barton" title="Aden Vanguard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
-				<walk ground="28" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="25" /> <!-- Kamael -->
-		</skill_list>
 		<collision>
-			<radius normal="11" />
-			<height normal="22.25" />
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34060" level="99" type="L2Npc" name="Hayuk" title="Aden Vanguard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34061" level="99" type="L2Npc" name="Elise" title="Aden Vanguard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34062" level="99" type="L2Npc" name="Eliyah" title="Aden Vanguard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34063" level="99" type="L2Npc" name="Glenkinchie" title="Blackbird Clan Member">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34064" level="99" type="L2Npc" name="Hurak" title="Blackbird Clan Member">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34065" level="99" type="L2Npc" name="Laffian" title="Blackbird Clan Member">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34066" level="99" type="L2Npc" name="Sherry" title="Blackbird Clan Member">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34067" level="99" type="L2Npc" name="Treasure Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34068" level="99" type="L2Npc" name="Treasure Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34069" level="99" type="L2Npc" name="Treasure Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34070" level="99" type="L2Npc" name="Treasure Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34071" level="99" type="L2Npc" name="Treasure Chest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34072" level="99" type="L2Npc" name="Secret Teleport Device" title="Atelia Castle">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34073" level="99" type="L2Npc" name="Atelia Control Device">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34074" level="99" type="L2Warehouse" name="Julia" title="Warehouse Keeper">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34075" level="99" type="L2Warehouse" name="Saylem" title="Warehouse Keeper">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34076" level="99" type="L2Merchant" name="Mion" title="Grocer">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34077" level="99" type="L2Merchant" name="Nika" title="Grocer">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34078" level="99" type="L2Npc" name="Training Soldier">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+	<status attackable="false" targetable="false" showName="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34079" level="99" type="L2Merchant" name="Goody" title="Equipment Merchant">
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34080" level="99" type="L2Merchant" name="Pritty" title="Beauty Merchant">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34081" level="99" type="L2Merchant" name="Supree" title="Grocer">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34082" level="99" type="L2Npc" name="Tyke" title="Rewards Manager">
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34083" level="99" type="L2Npc" name="Nevele" title="Event Manager">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34084" level="99" type="L2Npc" name="Piero">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34085" level="99" type="L2Npc" name="Eleveny" title="Group Reward Box">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34086" level="99" type="L2Npc" name="Eleveny">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34087" level="99" type="L2Teleporter" name="Herb Collector">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34088" level="99" type="L2Npc" name="Santa Claus" title="Event Manager">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34089" level="99" type="L2Npc" name="Devianne" title="Truth Seeker">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34090" level="99" type="L2Npc" name="Adolph" title="Aden Vanguard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34091" level="99" type="L2Npc" name="Barton" title="Aden Vanguard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34092" level="99" type="L2Npc" name="Hayuk" title="Aden Vanguard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34093" level="99" type="L2Npc" name="Elise" title="Aden Vanguard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34094" level="99" type="L2Npc" name="Eliyah" title="Aden Vanguard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34095" level="99" type="L2Npc" name="Neti" title="Refugee">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34096" level="99" type="L2Npc" name="Sir Klaus Vasper">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34097" level="99" type="L2Npc" name="Adonius" title="Priest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34098" level="99" type="L2Npc" name="Kluto" title="Blacksmith">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="34099" level="99" type="L2Npc" name="Yeniche" title="Grand Master">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
 		</collision>
 	</npc>
 </list>
