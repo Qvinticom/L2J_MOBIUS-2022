@@ -19,7 +19,7 @@ package cron;
 import com.l2jmobius.gameserver.scripting.annotations.Disabled;
 
 @Disabled
-public class Example
+public class example
 {
 	public static void main(String[] args)
 	{
