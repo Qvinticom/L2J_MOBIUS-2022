@@ -18,8 +18,10 @@ package ai.areas.Wasteland;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -79,9 +81,10 @@ public final class QueenAnt extends AbstractNpcAI
 	private static SkillHolder HEAL1 = new SkillHolder(4020, 1);
 	private static SkillHolder HEAL2 = new SkillHolder(4024, 1);
 	
-	private L2MonsterInstance _queen = null;
+	L2MonsterInstance _queen = null;
 	private L2MonsterInstance _larva = null;
 	private final Set<L2MonsterInstance> _nurses = ConcurrentHashMap.newKeySet();
+	ScheduledFuture<?> _task = null;
 	
 	private QueenAnt()
 	{
@@ -230,19 +233,30 @@ public final class QueenAnt extends AbstractNpcAI
 		switch (npc.getId())
 		{
 			case LARVA:
+			{
 				mob.setIsImmobilized(true);
 				mob.setUndying(true);
 				mob.setIsRaidMinion(true);
 				break;
+			}
 			case NURSE:
+			{
 				mob.disableCoreAI(true);
 				mob.setIsRaidMinion(true);
 				_nurses.add(mob);
 				break;
+			}
 			case ROYAL:
 			case GUARD:
+			{
 				mob.setIsRaidMinion(true);
 				break;
+			}
+			case QUEEN:
+			{
+				_task = ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new QueenAntTask(), 5 * 1000, 5 * 1000);
+				break;
+			}
 		}
 		
 		return super.onSpawn(npc);
@@ -333,8 +347,7 @@ public final class QueenAnt extends AbstractNpcAI
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 			GrandBossManager.getInstance().setBossStatus(QUEEN, DEAD);
 			// Calculate Min and Max respawn times randomly.
-			long respawnTime = Config.QUEEN_ANT_SPAWN_INTERVAL + getRandom(-Config.QUEEN_ANT_SPAWN_RANDOM, Config.QUEEN_ANT_SPAWN_RANDOM);
-			respawnTime *= 3600000;
+			final long respawnTime = (Config.QUEEN_ANT_SPAWN_INTERVAL + getRandom(-Config.QUEEN_ANT_SPAWN_RANDOM, Config.QUEEN_ANT_SPAWN_RANDOM)) * 3600000;
 			startQuestTimer("queen_unlock", respawnTime, null, null);
 			cancelQuestTimer("action", npc, null);
 			cancelQuestTimer("heal", null, null);
@@ -346,6 +359,11 @@ public final class QueenAnt extends AbstractNpcAI
 			_larva.deleteMe();
 			_larva = null;
 			_queen = null;
+			if (_task != null)
+			{
+				_task.cancel(false);
+				_task = null;
+			}
 		}
 		else if ((_queen != null) && !_queen.isAlikeDead())
 		{
@@ -368,6 +386,29 @@ public final class QueenAnt extends AbstractNpcAI
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	private class QueenAntTask implements Runnable
+	{
+		public QueenAntTask()
+		{
+			// Constructor stub
+		}
+		
+		@Override
+		public void run()
+		{
+			if ((_queen == null) || _queen.isDead())
+			{
+				_task.cancel(false);
+				_task = null;
+			}
+			else if (_queen.calculateDistance(QUEEN_X, QUEEN_Y, QUEEN_Z, false, false) > 2000.)
+			{
+				_queen.clearAggroList();
+				_queen.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(QUEEN_X, QUEEN_Y, QUEEN_Z, 0));
+			}
+		}
 	}
 	
 	public static void main(String[] args)
