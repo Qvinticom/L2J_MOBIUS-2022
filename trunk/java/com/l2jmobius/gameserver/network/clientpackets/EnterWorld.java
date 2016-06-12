@@ -546,6 +546,16 @@ public class EnterWorld implements IClientIncomingPacket
 			activeChar.teleToLocation(TeleportWhereType.TOWN);
 		}
 		
+		// Remove demonic weapon if character is not cursed weapon equipped.
+		if ((activeChar.getInventory().getItemByItemId(8190) != null) && !activeChar.isCursedWeaponEquipped())
+		{
+			activeChar.destroyItem("Zariche", activeChar.getInventory().getItemByItemId(8190), null, true);
+		}
+		if ((activeChar.getInventory().getItemByItemId(8689) != null) && !activeChar.isCursedWeaponEquipped())
+		{
+			activeChar.destroyItem("Akamanah", activeChar.getInventory().getItemByItemId(8689), null, true);
+		}
+		
 		if (Config.ALLOW_MAIL)
 		{
 			if (MailManager.getInstance().hasUnreadPost(activeChar))
