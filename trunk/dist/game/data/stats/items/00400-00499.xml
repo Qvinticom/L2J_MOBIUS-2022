@@ -497,7 +497,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF,ERTHEIA" />
 		</cond>
 		<stats>
 			<stat type="pDef">17</stat>
@@ -1307,7 +1307,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF,ERTHEIA" />
 		</cond>
 		<stats>
 			<stat type="pDef">10</stat>
