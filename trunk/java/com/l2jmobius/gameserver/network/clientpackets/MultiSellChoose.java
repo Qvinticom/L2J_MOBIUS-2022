@@ -100,7 +100,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 		}
 		
 		final L2Npc npc = player.getLastFolkNPC();
-		if (!isAllowedToUse(player, npc, list))
+		if (!list.isNpcAllowed(-1) && !isAllowedToUse(player, npc, list))
 		{
 			player.setMultiSell(null);
 			return;
