@@ -52,7 +52,7 @@ public final class L2World
 	public static final int SHIFT_BY = 11;
 	public static final int SHIFT_BY_Z = 10;
 	
-	private static final int TILE_SIZE = 32768;
+	public static final int TILE_SIZE = 32768;
 	
 	/** Map dimensions */
 	public static final int TILE_X_MIN = 11;

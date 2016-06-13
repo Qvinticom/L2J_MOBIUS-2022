@@ -134,7 +134,7 @@ public class AdminGeodata implements IAdminCommandHandler
 			{
 				final int x = ((activeChar.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
 				final int y = ((activeChar.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
-				activeChar.sendMessage("GeoMap: " + x + "_" + y);
+				activeChar.sendMessage("GeoMap: " + x + "_" + y + " (" + ((x - L2World.TILE_ZERO_COORD_X) * L2World.TILE_SIZE) + "," + ((y - L2World.TILE_ZERO_COORD_Y) * L2World.TILE_SIZE) + " to " + ((((x - L2World.TILE_ZERO_COORD_X) * L2World.TILE_SIZE) + L2World.TILE_SIZE) - 1) + "," + ((((y - L2World.TILE_ZERO_COORD_Y) * L2World.TILE_SIZE) + L2World.TILE_SIZE) - 1) + ")");
 				break;
 			}
 		}
