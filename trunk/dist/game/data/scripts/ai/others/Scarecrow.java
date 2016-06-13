@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.areas.TalkingIsland;
+package ai.others;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 
@@ -27,12 +27,14 @@ import ai.AbstractNpcAI;
 public final class Scarecrow extends AbstractNpcAI
 {
 	// NPCs
-	private static final int SCARECROW = 27457;
 	private static final int TRAINING_DUMMY = 19546;
+	private static final int SCARECROW = 27457;
+	private static final int PHYSICAL_PUNCH_MACHINE = 33752;
+	private static final int MAGICAL_PUNCH_MACHINE = 33753;
 	
 	private Scarecrow()
 	{
-		addSpawnId(SCARECROW, TRAINING_DUMMY);
+		addSpawnId(TRAINING_DUMMY, SCARECROW, PHYSICAL_PUNCH_MACHINE, MAGICAL_PUNCH_MACHINE);
 	}
 	
 	@Override
