@@ -53,7 +53,7 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 			_options = new EnsoulItemOption[options];
 			for (int i = 0; i < options; i++)
 			{
-				final int type = packet.readC();
+				final int type = packet.readC(); // 1 = normal ; 2 = mystic
 				final int position = packet.readC();
 				final int soulCrystalObjectId = packet.readD();
 				final int soulCrystalOption = packet.readD();
@@ -188,41 +188,25 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 			ItemHolder fee;
 			if (itemOption.getType() == 1)
 			{
+				// Normal Soul Crystal
 				fee = EnsoulData.getInstance().getEnsoulFee(item.getItem().getCrystalType(), position);
 				if ((itemOption.getPosition() == 1) || (itemOption.getPosition() == 2))
 				{
 					if (item.getSpecialAbility(position) != null)
 					{
-						//LOGGER.warning("Player: " + player + " attempting to ensoul item option add but he's actually trying to replace!");
 						fee = EnsoulData.getInstance().getResoulFee(item.getItem().getCrystalType(), position);
-					}
-				}
-				else if (itemOption.getPosition() == 3)
-				{
-					if (item.getAdditionalSpecialAbility(position) != null)
-					{
-						LOGGER.warning("Player: " + player + " attempting to ensoul special item option add but he's actually trying to replace!");
-						continue;
 					}
 				}
 			}
 			else if (itemOption.getType() == 2)
 			{
-				fee = EnsoulData.getInstance().getResoulFee(item.getItem().getCrystalType(), position);
-				if ((itemOption.getPosition() == 1) || (itemOption.getPosition() == 2))
+				// Mystic Soul Crystal
+				fee = EnsoulData.getInstance().getEnsoulFee(item.getItem().getCrystalType(), position);
+				if (itemOption.getPosition() == 1)
 				{
-					if (item.getSpecialAbility(position) == null)
+					if (item.getAdditionalSpecialAbility(position) != null)
 					{
-						LOGGER.warning("Player: " + player + " attempting to ensoul item option replace but he's actually trying to add!");
-						continue;
-					}
-				}
-				else if (itemOption.getPosition() == 3)
-				{
-					if (item.getAdditionalSpecialAbility(position) == null)
-					{
-						LOGGER.warning("Player: " + player + " attempting to ensoul special item option replace but he's actually trying to add!");
-						continue;
+						fee = EnsoulData.getInstance().getResoulFee(item.getItem().getCrystalType(), position);
 					}
 				}
 			}
@@ -234,7 +218,7 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 			
 			if (fee == null)
 			{
-				LOGGER.warning("Player: " + player + " attempting to ensoul item option that doesn't exists!");
+				LOGGER.warning("Player: " + player + " attempting to ensoul item option that doesn't exists! (unknown fee)");
 				continue;
 			}
 			
