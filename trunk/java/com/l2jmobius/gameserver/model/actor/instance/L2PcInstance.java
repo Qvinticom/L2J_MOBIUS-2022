@@ -3221,18 +3221,6 @@ public final class L2PcInstance extends L2Playable
 			// Add the item to inventory
 			final L2ItemInstance newitem = _inventory.addItem(process, item, this, reference);
 			
-			// Send inventory update packet
-			if (!Config.FORCE_INVENTORY_UPDATE)
-			{
-				final InventoryUpdate playerIU = new InventoryUpdate();
-				playerIU.addItem(newitem);
-				sendInventoryUpdate(playerIU);
-			}
-			else
-			{
-				sendItemList(false);
-			}
-			
 			// If over capacity, drop the item
 			if (!canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !_inventory.validateCapacity(0, item.isQuestItem()) && newitem.isDropable() && (!newitem.isStackable() || (newitem.getLastChange() != L2ItemInstance.MODIFIED)))
 			{
@@ -4450,7 +4438,7 @@ public final class L2PcInstance extends L2Playable
 		getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		
 		// Check if the L2Object to pick up is a L2ItemInstance
-		if (!(object instanceof L2ItemInstance))
+		if (!object.isItem())
 		{
 			// dont try to pickup anything that is not an item :)
 			_log.warning(this + " trying to pickup wrong target." + getTarget());
