@@ -131,6 +131,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 		switch (item.getItem().getCrystalType())
 		{
 			case S:
+			{
 				if (item.getItem() instanceof L2Weapon)
 				{
 					_price = 50000;
@@ -140,7 +141,9 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 					_price = 40000;
 				}
 				break;
+			}
 			case S80:
+			{
 				if (item.getItem() instanceof L2Weapon)
 				{
 					_price = 100000;
@@ -150,7 +153,9 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 					_price = 80000;
 				}
 				break;
+			}
 			case S84:
+			{
 				if (item.getItem() instanceof L2Weapon)
 				{
 					_price = 200000;
@@ -160,6 +165,43 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 					_price = 160000;
 				}
 				break;
+			}
+			case R:
+			{
+				if (item.getItem() instanceof L2Weapon)
+				{
+					_price = 400000;
+				}
+				else
+				{
+					_price = 320000;
+				}
+				break;
+			}
+			case R95:
+			{
+				if (item.getItem() instanceof L2Weapon)
+				{
+					_price = 800000;
+				}
+				else
+				{
+					_price = 640000;
+				}
+				break;
+			}
+			case R99:
+			{
+				if (item.getItem() instanceof L2Weapon)
+				{
+					_price = 3200000;
+				}
+				else
+				{
+					_price = 2560000;
+				}
+				break;
+			}
 		}
 		
 		return _price;

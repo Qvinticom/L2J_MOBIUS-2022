@@ -123,6 +123,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	private int _itemId;
 	private int _displayId;
 	private String _name;
+	private String _additionalName;
 	private String _icon;
 	private int _weight;
 	private boolean _stackable;
@@ -190,6 +191,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		_itemId = set.getInt("item_id");
 		_displayId = set.getInt("displayId", _itemId);
 		_name = set.getString("name");
+		_additionalName = set.getString("additionalName", null);
 		_icon = set.getString("icon", null);
 		_weight = set.getInt("weight", 0);
 		_materialType = set.getEnum("material", MaterialType.class, MaterialType.STEEL);
@@ -377,12 +379,18 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		{
 			case S80:
 			case S84:
+			{
 				return CrystalType.S;
+			}
 			case R95:
 			case R99:
+			{
 				return CrystalType.R;
+			}
 			default:
+			{
 				return _crystalType;
+			}
 		}
 	}
 	
@@ -438,6 +446,14 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	public final String getName()
 	{
 		return _name;
+	}
+	
+	/**
+	 * @return the item's additional name.
+	 */
+	public String getAdditionalName()
+	{
+		return _additionalName;
 	}
 	
 	public Collection<AttributeHolder> getAttributes()
@@ -601,17 +617,17 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	
 	public boolean isPotion()
 	{
-		return (getItemType() == EtcItemType.POTION);
+		return getItemType() == EtcItemType.POTION;
 	}
 	
 	public boolean isElixir()
 	{
-		return (getItemType() == EtcItemType.ELIXIR);
+		return getItemType() == EtcItemType.ELIXIR;
 	}
 	
 	public boolean isScroll()
 	{
-		return (getItemType() == EtcItemType.SCROLL);
+		return getItemType() == EtcItemType.SCROLL;
 	}
 	
 	public List<FuncTemplate> getFunctionTemplates()

@@ -74,6 +74,7 @@ public final class RequestRefineCancel implements IClientIncomingPacket
 		switch (targetItem.getItem().getCrystalType())
 		{
 			case C:
+			{
 				if (targetItem.getCrystalCount() < 1720)
 				{
 					price = 95000;
@@ -87,7 +88,9 @@ public final class RequestRefineCancel implements IClientIncomingPacket
 					price = 210000;
 				}
 				break;
+			}
 			case B:
+			{
 				if (targetItem.getCrystalCount() < 1746)
 				{
 					price = 240000;
@@ -97,7 +100,9 @@ public final class RequestRefineCancel implements IClientIncomingPacket
 					price = 270000;
 				}
 				break;
+			}
 			case A:
+			{
 				if (targetItem.getCrystalCount() < 2160)
 				{
 					price = 330000;
@@ -111,17 +116,39 @@ public final class RequestRefineCancel implements IClientIncomingPacket
 					price = 420000;
 				}
 				break;
+			}
 			case S:
+			{
 				price = 480000;
 				break;
+			}
 			case S80:
 			case S84:
+			{
 				price = 920000;
 				break;
+			}
+			case R:
+			{
+				price = 1560000;
+				break;
+			}
+			case R95:
+			{
+				price = 5400000;
+				break;
+			}
+			case R99:
+			{
+				price = 14160000;
+				break;
+			}
 			// any other item type is not augmentable
 			default:
+			{
 				client.sendPacket(new ExVariationCancelResult(0));
 				return;
+			}
 		}
 		
 		// try to reduce the players adena

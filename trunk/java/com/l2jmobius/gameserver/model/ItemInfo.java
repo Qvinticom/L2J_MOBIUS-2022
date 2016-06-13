@@ -126,17 +126,17 @@ public class ItemInfo
 		// Get the action to do clientside
 		switch (item.getLastChange())
 		{
-			case (L2ItemInstance.ADDED):
+			case L2ItemInstance.ADDED:
 			{
 				_change = 1;
 				break;
 			}
-			case (L2ItemInstance.MODIFIED):
+			case L2ItemInstance.MODIFIED:
 			{
 				_change = 2;
 				break;
 			}
-			case (L2ItemInstance.REMOVED):
+			case L2ItemInstance.REMOVED:
 			{
 				_change = 3;
 				break;
@@ -183,8 +183,8 @@ public class ItemInfo
 		// Get the enchant level of the L2ItemInstance
 		_enchant = item.getEnchant();
 		
-		// Get the augmentation boni
-		_augmentation = 0;
+		// Get the augmentation bonus
+		_augmentation = item.getAugmentId();
 		
 		// Get the quantity of the L2ItemInstance
 		_count = item.getCount();
@@ -330,6 +330,16 @@ public class ItemInfo
 	public int getAugmentationBonus()
 	{
 		return _augmentation;
+	}
+	
+	public int get1stAugmentationId()
+	{
+		return 0x0000FFFF & getAugmentationBonus();
+	}
+	
+	public int get2ndAugmentationId()
+	{
+		return getAugmentationBonus() >> 16;
 	}
 	
 	public long getCount()

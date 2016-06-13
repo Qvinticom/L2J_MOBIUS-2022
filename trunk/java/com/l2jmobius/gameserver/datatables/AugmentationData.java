@@ -84,6 +84,7 @@ public class AugmentationData
 	private final List<List<Integer>> _blueSkills = new ArrayList<>();
 	private final List<List<Integer>> _purpleSkills = new ArrayList<>();
 	private final List<List<Integer>> _redSkills = new ArrayList<>();
+	private final List<List<Integer>> _yellowSkills = new ArrayList<>();
 	
 	private final List<AugmentationChance> _augmentationChances = new ArrayList<>();
 	private final List<augmentationChanceAcc> _augmentationChancesAcc = new ArrayList<>();
@@ -97,6 +98,7 @@ public class AugmentationData
 			_blueSkills.add(new ArrayList<>());
 			_purpleSkills.add(new ArrayList<>());
 			_redSkills.add(new ArrayList<>());
+			_yellowSkills.add(new ArrayList<>());
 		}
 		
 		load();
@@ -275,12 +277,7 @@ public class AugmentationData
 										type = attrs.getNamedItem("val").getNodeValue();
 									}
 								}
-								if (skillId == 0)
-								{
-									badAugmantData++;
-									continue;
-								}
-								else if (skillLvL == 0)
+								if ((skillId == 0) || (skillLvL == 0))
 								{
 									badAugmantData++;
 									continue;
@@ -656,21 +653,30 @@ public class AugmentationData
 				switch (lifeStoneGrade)
 				{
 					case AbstractRefinePacket.GRADE_NONE:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_NG_CHANCE;
 						break;
+					}
 					case AbstractRefinePacket.GRADE_MID:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_MID_CHANCE;
 						break;
+					}
 					case AbstractRefinePacket.GRADE_HIGH:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_HIGH_CHANCE;
 						break;
+					}
 					case AbstractRefinePacket.GRADE_TOP:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_TOP_CHANCE;
 						break;
+					}
 					default:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_NG_CHANCE;
+					}
 				}
-				
 				int c = Rnd.get(100);
 				if (c < gradeChance[0])
 				{
@@ -702,7 +708,7 @@ public class AugmentationData
 				{
 					if (s > r)
 					{
-						s -= (ac.getAugmentChance() * 100);
+						s -= ac.getAugmentChance() * 100;
 						stat34 = ac.getAugmentId();
 					}
 				}

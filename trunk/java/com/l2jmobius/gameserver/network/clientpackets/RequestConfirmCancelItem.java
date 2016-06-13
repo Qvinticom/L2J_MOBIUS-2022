@@ -76,6 +76,7 @@ public final class RequestConfirmCancelItem implements IClientIncomingPacket
 		switch (item.getItem().getCrystalType())
 		{
 			case C:
+			{
 				if (item.getCrystalCount() < 1720)
 				{
 					price = 95000;
@@ -89,7 +90,9 @@ public final class RequestConfirmCancelItem implements IClientIncomingPacket
 					price = 210000;
 				}
 				break;
+			}
 			case B:
+			{
 				if (item.getCrystalCount() < 1746)
 				{
 					price = 240000;
@@ -99,7 +102,9 @@ public final class RequestConfirmCancelItem implements IClientIncomingPacket
 					price = 270000;
 				}
 				break;
+			}
 			case A:
+			{
 				if (item.getCrystalCount() < 2160)
 				{
 					price = 330000;
@@ -113,17 +118,59 @@ public final class RequestConfirmCancelItem implements IClientIncomingPacket
 					price = 420000;
 				}
 				break;
+			}
 			case S:
-				price = 480000;
+			{
+				if (item.getCrystalCount() <= 2052)
+				{
+					price = 480000;
+				}
+				else
+				{
+					price = 920000;
+				}
 				break;
+			}
 			case S80:
 			case S84:
-				price = 920000;
+			{
+				if (item.getCrystalCount() <= 4965)
+				{
+					price = 920000;
+				}
+				else if (item.getCrystalCount() <= 7050)
+				{
+					price = 2800000;
+				}
+				else if (item.getCrystalCount() <= 8233)
+				{
+					price = 2800000;
+				}
+				else
+				{
+					price = 3200000;
+				}
 				break;
-			// TODO: S84 TOP price 3.2M
-			// any other item type is not augmentable
+			}
+			case R:
+			{
+				price = 3492800;
+				break;
+			}
+			case R95:
+			{
+				price = 2943200;
+				break;
+			}
+			case R99:
+			{
+				price = 6485800;
+				break;
+			}
 			default:
+			{
 				return;
+			}
 		}
 		
 		activeChar.sendPacket(new ExPutItemResultForVariationCancel(item, price));

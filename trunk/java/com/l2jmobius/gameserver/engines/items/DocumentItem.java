@@ -106,13 +106,14 @@ public final class DocumentItem extends DocumentBase implements IGameXmlReader
 		final int itemId = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
 		final String className = n.getAttributes().getNamedItem("type").getNodeValue();
 		final String itemName = n.getAttributes().getNamedItem("name").getNodeValue();
-		
+		final String additionalName = n.getAttributes().getNamedItem("additionalName") != null ? n.getAttributes().getNamedItem("additionalName").getNodeValue() : null;
 		_currentItem.id = itemId;
 		_currentItem.name = itemName;
 		_currentItem.type = className;
 		_currentItem.set = new StatsSet();
 		_currentItem.set.set("item_id", itemId);
 		_currentItem.set.set("name", itemName);
+		_currentItem.set.set("additionalName", additionalName);
 		
 		final Node first = n.getFirstChild();
 		for (n = first; n != null; n = n.getNextSibling())
