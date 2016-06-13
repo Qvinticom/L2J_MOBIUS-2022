@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.model.stats;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.function.BiFunction;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.util.MathUtil;
@@ -325,7 +324,7 @@ public enum Stats
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Exception during finalization for : " + creature + " stat: " + toString() + " : ", e);
+			// LOGGER.log(Level.WARNING, "Exception during finalization for : " + creature + " stat: " + toString() + " : ", e);
 			return defaultValue(creature, baseValue, this);
 		}
 	}
