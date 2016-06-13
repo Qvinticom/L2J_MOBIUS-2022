@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="17400" name="Seraph Boots" name_additional="Heavy Armor" type="Armor">
+	<item id="17400" name="Seraph Boots" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -19,7 +19,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="17401" name="Seraph Shield" name_additional="Heavy Armor" type="Weapon">
+	<item id="17401" name="Seraph Shield" additionalName="Heavy Armor" type="Weapon">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.beranka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -39,7 +39,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="17402" name="Seraph Leather Helmet" name_additional="Light Armor" type="Armor">
+	<item id="17402" name="Seraph Leather Helmet" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -57,7 +57,7 @@
 			<stat type="pDef">141</stat>
 		</stats>
 	</item>
-	<item id="17403" name="Seraph Leather Armor" name_additional="Light Armor" type="Armor">
+	<item id="17403" name="Seraph Leather Armor" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -83,7 +83,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="17404" name="Seraph Leather Leggings" name_additional="Light Armor" type="Armor">
+	<item id="17404" name="Seraph Leather Leggings" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t402_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -105,7 +105,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="17405" name="Seraph Leather Gloves" name_additional="Light Armor" type="Armor">
+	<item id="17405" name="Seraph Leather Gloves" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t402_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -124,7 +124,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="17406" name="Seraph Leather Boots" name_additional="Light Armor" type="Armor">
+	<item id="17406" name="Seraph Leather Boots" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t402_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -143,7 +143,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="17407" name="Seraph Circlet" name_additional="Robe" type="Armor">
+	<item id="17407" name="Seraph Circlet" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -161,7 +161,7 @@
 			<stat type="pDef">141</stat>
 		</stats>
 	</item>
-	<item id="17408" name="Seraph Tunic" name_additional="Robe" type="Armor">
+	<item id="17408" name="Seraph Tunic" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -186,7 +186,7 @@
 			<stat type="mDef">47</stat>
 		</stats>
 	</item>
-	<item id="17409" name="Seraph Stockings" name_additional="Robe" type="Armor">
+	<item id="17409" name="Seraph Stockings" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t403_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -207,7 +207,7 @@
 			<stat type="mDef">31</stat>
 		</stats>
 	</item>
-	<item id="17410" name="Seraph Gloves" name_additional="Robe" type="Armor">
+	<item id="17410" name="Seraph Gloves" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t403_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -226,7 +226,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="17411" name="Seraph Shoes" name_additional="Robe" type="Armor">
+	<item id="17411" name="Seraph Shoes" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t403_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -245,7 +245,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="17412" name="Seraph Sigil" name_additional="Robe" type="Armor">
+	<item id="17412" name="Seraph Sigil" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.airtoil_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />
@@ -763,7 +763,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17430" name="Eternal Helmet" name_additional="Heavy Armor" type="Armor">
+	<item id="17430" name="Eternal Helmet" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -781,7 +781,7 @@
 			<stat type="pDef">150</stat>
 		</stats>
 	</item>
-	<item id="17431" name="Eternal Breastplate" name_additional="Heavy Armor" type="Armor">
+	<item id="17431" name="Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -805,7 +805,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="17432" name="Eternal Gaiters" name_additional="Heavy Armor" type="Armor">
+	<item id="17432" name="Eternal Gaiters" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t701_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -825,7 +825,7 @@
 			<stat type="pDef">250</stat>
 		</stats>
 	</item>
-	<item id="17433" name="Eternal Gauntlets" name_additional="Heavy Armor" type="Armor">
+	<item id="17433" name="Eternal Gauntlets" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t701_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -844,7 +844,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="17434" name="Eternal Boots" name_additional="Heavy Armor" type="Armor">
+	<item id="17434" name="Eternal Boots" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t701_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -863,7 +863,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="17435" name="Eternal Shield" name_additional="Heavy Armor" type="Weapon">
+	<item id="17435" name="Eternal Shield" additionalName="Heavy Armor" type="Weapon">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.weapon_akra_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -883,7 +883,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="17436" name="Eternal Leather Helmet" name_additional="Light Armor" type="Armor">
+	<item id="17436" name="Eternal Leather Helmet" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -901,7 +901,7 @@
 			<stat type="pDef">150</stat>
 		</stats>
 	</item>
-	<item id="17437" name="Eternal Leather Armor" name_additional="Light Armor" type="Armor">
+	<item id="17437" name="Eternal Leather Armor" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -927,7 +927,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="17438" name="Eternal Leather Leggings" name_additional="Light Armor" type="Armor">
+	<item id="17438" name="Eternal Leather Leggings" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t702_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -949,7 +949,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="17439" name="Eternal Leather Gloves" name_additional="Light Armor" type="Armor">
+	<item id="17439" name="Eternal Leather Gloves" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t702_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -968,7 +968,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="17440" name="Eternal Leather Boots" name_additional="Light Armor" type="Armor">
+	<item id="17440" name="Eternal Leather Boots" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t702_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -987,7 +987,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="17441" name="Eternal Circlet" name_additional="Robe" type="Armor">
+	<item id="17441" name="Eternal Circlet" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1005,7 +1005,7 @@
 			<stat type="pDef">150</stat>
 		</stats>
 	</item>
-	<item id="17442" name="Eternal Tunic" name_additional="Robe" type="Armor">
+	<item id="17442" name="Eternal Tunic" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1030,7 +1030,7 @@
 			<stat type="mDef">49</stat>
 		</stats>
 	</item>
-	<item id="17443" name="Eternal Stockings" name_additional="Robe" type="Armor">
+	<item id="17443" name="Eternal Stockings" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t703_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1051,7 +1051,7 @@
 			<stat type="mDef">33</stat>
 		</stats>
 	</item>
-	<item id="17444" name="Eternal Gloves" name_additional="Robe" type="Armor">
+	<item id="17444" name="Eternal Gloves" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t703_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1070,7 +1070,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="17445" name="Eternal Shoes" name_additional="Robe" type="Armor">
+	<item id="17445" name="Eternal Shoes" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t703_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1089,7 +1089,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="17446" name="Eternal Sigil" name_additional="Robe" type="Armor">
+	<item id="17446" name="Eternal Sigil" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.elos_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />
@@ -1607,7 +1607,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17464" name="Blessed Durandia Helmet" name_additional="Heavy Armor" type="Armor">
+	<item id="17464" name="Blessed Durandia Helmet" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1627,7 +1627,7 @@
 			<stat type="mEvas">1.2</stat>
 		</stats>
 	</item>
-	<item id="17465" name="Blessed Durandia Breastplate" name_additional="Heavy Armor" type="Armor">
+	<item id="17465" name="Blessed Durandia Breastplate" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t97_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1652,7 +1652,7 @@
 			<stat type="pAtk">41</stat>
 		</stats>
 	</item>
-	<item id="17466" name="Blessed Durandia Gaiters" name_additional="Heavy Armor" type="Armor">
+	<item id="17466" name="Blessed Durandia Gaiters" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t97_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1674,7 +1674,7 @@
 			<stat type="mCritRate">2.9</stat>
 		</stats>
 	</item>
-	<item id="17467" name="Blessed Durandia Gauntlets" name_additional="Heavy Armor" type="Armor">
+	<item id="17467" name="Blessed Durandia Gauntlets" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t97_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1695,7 +1695,7 @@
 			<stat type="accMagic">1.15</stat>
 		</stats>
 	</item>
-	<item id="17468" name="Blessed Durandia Boots" name_additional="Heavy Armor" type="Armor">
+	<item id="17468" name="Blessed Durandia Boots" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t97_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1715,7 +1715,7 @@
 			<stat type="moveSpeed">30</stat>
 		</stats>
 	</item>
-	<item id="17469" name="Blessed Durandia Shield" name_additional="Heavy Armor" type="Weapon">
+	<item id="17469" name="Blessed Durandia Shield" additionalName="Heavy Armor" type="Weapon">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1735,7 +1735,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="17470" name="Blessed Durandia Leather Helmet" name_additional="Light Armor" type="Armor">
+	<item id="17470" name="Blessed Durandia Leather Helmet" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1755,7 +1755,7 @@
 			<stat type="mEvas">1.2</stat>
 		</stats>
 	</item>
-	<item id="17471" name="Blessed Durandia Leather Armor" name_additional="Light Armor" type="Armor">
+	<item id="17471" name="Blessed Durandia Leather Armor" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t98_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1782,7 +1782,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="17472" name="Blessed Durandia Leather Leggings" name_additional="Light Armor" type="Armor">
+	<item id="17472" name="Blessed Durandia Leather Leggings" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t98_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1806,7 +1806,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="17473" name="Blessed Durandia Leather Gloves" name_additional="Light Armor" type="Armor">
+	<item id="17473" name="Blessed Durandia Leather Gloves" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t98_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1827,7 +1827,7 @@
 			<stat type="accMagic">1.15</stat>
 		</stats>
 	</item>
-	<item id="17474" name="Blessed Durandia Leather Boots" name_additional="Light Armor" type="Armor">
+	<item id="17474" name="Blessed Durandia Leather Boots" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t98_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1847,7 +1847,7 @@
 			<stat type="moveSpeed">30</stat>
 		</stats>
 	</item>
-	<item id="17475" name="Blessed Durandia Circlet" name_additional="Robe" type="Armor">
+	<item id="17475" name="Blessed Durandia Circlet" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1867,7 +1867,7 @@
 			<stat type="mEvas">1.2</stat>
 		</stats>
 	</item>
-	<item id="17476" name="Blessed Durandia Tunic" name_additional="Robe" type="Armor">
+	<item id="17476" name="Blessed Durandia Tunic" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t99_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1893,7 +1893,7 @@
 			<stat type="pAtk">41</stat>
 		</stats>
 	</item>
-	<item id="17477" name="Blessed Durandia Stockings" name_additional="Robe" type="Armor">
+	<item id="17477" name="Blessed Durandia Stockings" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t99_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1916,7 +1916,7 @@
 			<stat type="mCritRate">2.9</stat>
 		</stats>
 	</item>
-	<item id="17478" name="Blessed Durandia Gloves" name_additional="Robe" type="Armor">
+	<item id="17478" name="Blessed Durandia Gloves" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t99_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1937,7 +1937,7 @@
 			<stat type="accMagic">1.15</stat>
 		</stats>
 	</item>
-	<item id="17479" name="Blessed Durandia Shoes" name_additional="Robe" type="Armor">
+	<item id="17479" name="Blessed Durandia Shoes" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t99_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1957,7 +1957,7 @@
 			<stat type="moveSpeed">30</stat>
 		</stats>
 	</item>
-	<item id="17480" name="Blessed Durandia Sigil" name_additional="Robe" type="Armor">
+	<item id="17480" name="Blessed Durandia Sigil" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.verper_sigil_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />

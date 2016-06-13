@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="13200" name="Player Commendation - Bellion Cestus" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13200" name="Player Commendation - Bellion Cestus" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -37,7 +37,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13201" name="Player Commendation - Bow of Peril" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13201" name="Player Commendation - Bow of Peril" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -73,7 +73,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="13202" name="Player Commendation - Samurai Long Sword*Samurai Long Sword" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13202" name="Player Commendation - Samurai Long Sword*Samurai Long Sword" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -109,7 +109,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13203" name="Player Commendation - Guardian's Sword" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13203" name="Player Commendation - Guardian's Sword" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_guardians_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -145,7 +145,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13204" name="Player Commendation - Wizard's Tear" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13204" name="Player Commendation - Wizard's Tear" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -182,7 +182,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13205" name="Player Commendation - Kaim Vanul's Bones" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13205" name="Player Commendation - Kaim Vanul's Bones" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -220,7 +220,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13206" name="Player Commendation - Star Buster" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13206" name="Player Commendation - Star Buster" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_star_buster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -257,7 +257,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13207" name="Player Commendation - Colichemarde" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13207" name="Player Commendation - Colichemarde" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_colichemarde_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -298,7 +298,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13208" name="Player Commendation - Dismantler" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13208" name="Player Commendation - Dismantler" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_dismantler_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -338,7 +338,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13209" name="Player Commendation - Hell Hound" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13209" name="Player Commendation - Hell Hound" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_hell_hound_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -379,7 +379,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="13210" name="Player Commendation - Sirra's Blade" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13210" name="Player Commendation - Sirra's Blade" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_sirr_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -415,7 +415,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13211" name="Player Commendation - Sword of Ipos" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13211" name="Player Commendation - Sword of Ipos" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -451,7 +451,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13212" name="Player Commendation - Barakiel's Axe" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13212" name="Player Commendation - Barakiel's Axe" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -488,7 +488,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13213" name="Player Commendation - Behemoth' Tuning Fork" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13213" name="Player Commendation - Behemoth' Tuning Fork" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -525,7 +525,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13214" name="Player Commendation - Naga Storm" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13214" name="Player Commendation - Naga Storm" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_naga_storm_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -562,7 +562,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13215" name="Player Commendation - Tiphon's Spear" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13215" name="Player Commendation - Tiphon's Spear" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_tiphon_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -599,7 +599,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="13216" name="Player Commendation - Shyeed's Bow" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13216" name="Player Commendation - Shyeed's Bow" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_shyid_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -638,7 +638,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="13217" name="Player Commendation - Sobekk's Hurricane" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13217" name="Player Commendation - Sobekk's Hurricane" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -675,7 +675,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13218" name="Player Commendation - Themis' Tongue" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13218" name="Player Commendation - Themis' Tongue" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -712,7 +712,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13219" name="Player Commendation - Cabrio's Hand" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13219" name="Player Commendation - Cabrio's Hand" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -750,7 +750,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13220" name="Player Commendation - Daimon Crystal" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13220" name="Player Commendation - Daimon Crystal" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -788,7 +788,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13221" name="Player Commendation - Tallum Blade*Damascus" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13221" name="Player Commendation - Tallum Blade*Damascus" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -824,7 +824,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13222" name="Player Commendation - Éclair Bijou" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13222" name="Player Commendation - Éclair Bijou" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -865,7 +865,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13223" name="Player Commendation - Durendal" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13223" name="Player Commendation - Durendal" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -905,7 +905,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13224" name="Player Commendation - Screaming Vengeance" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="13224" name="Player Commendation - Screaming Vengeance" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1225,7 +1225,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13239" name="Kat the Cat Hat" name_additional="7-day" type="Armor">
+	<item id="13239" name="Kat the Cat Hat" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1243,7 +1243,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13240" name="Feline Queen Hat" name_additional="7-day" type="Armor">
+	<item id="13240" name="Feline Queen Hat" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_queen_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1261,7 +1261,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13241" name="Monster Eye Hat" name_additional="7-day" type="Armor">
+	<item id="13241" name="Monster Eye Hat" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_monstereye_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1279,7 +1279,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13242" name="Brown Bear Hat" name_additional="7-day" type="Armor">
+	<item id="13242" name="Brown Bear Hat" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_brown_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1297,7 +1297,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13243" name="Fungus Hat" name_additional="7-day" type="Armor">
+	<item id="13243" name="Fungus Hat" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_fungus_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1315,7 +1315,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13244" name="Skull Hat" name_additional="7-day" type="Armor">
+	<item id="13244" name="Skull Hat" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_skeleton_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1333,7 +1333,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13245" name="Ornithomimus Hat" name_additional="7-day" type="Armor">
+	<item id="13245" name="Ornithomimus Hat" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_ornithomimus_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1351,7 +1351,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13246" name="Feline King Hat" name_additional="7-day" type="Armor">
+	<item id="13246" name="Feline King Hat" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_king_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1369,7 +1369,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13247" name="Kai the Cat Hat" name_additional="7-day" type="Armor">
+	<item id="13247" name="Kai the Cat Hat" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_chi_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1387,7 +1387,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13248" name="O Stick" name_additional="7-day" type="Weapon">
+	<item id="13248" name="O Stick" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_o_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1414,7 +1414,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13249" name="X Stick" name_additional="7-day" type="Weapon">
+	<item id="13249" name="X Stick" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_x_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1441,7 +1441,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13250" name="Scissors Stick" name_additional="7-day" type="Weapon">
+	<item id="13250" name="Scissors Stick" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_scissors_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1468,7 +1468,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13251" name="Rock Stick" name_additional="7-day" type="Weapon">
+	<item id="13251" name="Rock Stick" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_rock_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1495,7 +1495,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13252" name="Paper Stick" name_additional="7-day" type="Weapon">
+	<item id="13252" name="Paper Stick" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_diver_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1522,7 +1522,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13253" name="Pumpkin Transformation Stick" name_additional="7-day" type="Weapon">
+	<item id="13253" name="Pumpkin Transformation Stick" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_pumpkin_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1553,7 +1553,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13254" name="Agathion - Love" name_additional="7-day" type="Armor">
+	<item id="13254" name="Agathion - Love" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1677,7 +1677,7 @@
 			<skill id="2596" level="1" /> <!-- Gran Kain's Blessed Scroll of Resurrection -->
 		</skills>
 	</item>
-	<item id="13260" name="Gran Kain's Squeaking Shoes" name_additional="10-hour" type="Armor">
+	<item id="13260" name="Gran Kain's Squeaking Shoes" additionalName="10-hour" type="Armor">
 		<set name="icon" val="icon.armor_t02_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />

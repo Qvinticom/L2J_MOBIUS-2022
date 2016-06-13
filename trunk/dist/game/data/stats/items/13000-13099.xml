@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="13000" name="Sealed Helm of Nightmare" name_additional="Light Armor" type="Armor">
+	<item id="13000" name="Sealed Helm of Nightmare" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -17,7 +17,7 @@
 			<stat type="pDef">73</stat>
 		</stats>
 	</item>
-	<item id="13001" name="Sealed Helm of Nightmare" name_additional="Robe" type="Armor">
+	<item id="13001" name="Sealed Helm of Nightmare" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -399,7 +399,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="handler" val="NicknameColor" />
 	</item>
-	<item id="13022" name="Mount - Darkmane Pacer" name_additional="7-day" type="Armor">
+	<item id="13022" name="Mount - Darkmane Pacer" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -421,7 +421,7 @@
 			<skill id="8247" level="1" /> <!-- Ride Darkmane Pacer -->
 		</skills>
 	</item>
-	<item id="13023" name="Agathion - Love" name_additional="30-day" type="Armor">
+	<item id="13023" name="Agathion - Love" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -444,7 +444,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="13024" name="Agathion - Angry Devil" name_additional="30-day" type="Armor">
+	<item id="13024" name="Agathion - Angry Devil" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -467,7 +467,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="13025" name="Agathion - Shiny" name_additional="30-day" type="Armor">
+	<item id="13025" name="Agathion - Shiny" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -490,7 +490,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="13026" name="Agathion - Sobbing" name_additional="30-day" type="Armor">
+	<item id="13026" name="Agathion - Sobbing" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -513,7 +513,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="13027" name="Gran Kain's Gift Box" name_additional="30-day" type="EtcItem">
+	<item id="13027" name="Gran Kain's Gift Box" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />

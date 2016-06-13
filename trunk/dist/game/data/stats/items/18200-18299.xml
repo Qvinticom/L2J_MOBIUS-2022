@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="18200" name="Unidentified Seraph Shoes" name_additional="Robe" type="EtcItem">
+	<item id="18200" name="Unidentified Seraph Shoes" additionalName="Robe" type="EtcItem">
 		<!-- Seraph Shoes in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Boots / robe) -->
 		<set name="icon" val="icon.armor_t403_b_i00" />
 		<set name="is_freightable" val="false" />
@@ -18,7 +18,7 @@
 			<skill id="12109" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18201" name="Unidentified Seraph Sigil" name_additional="Robe" type="EtcItem">
+	<item id="18201" name="Unidentified Seraph Sigil" additionalName="Robe" type="EtcItem">
 		<!-- A Seraph Sigil in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Shield / robe) -->
 		<set name="icon" val="icon.airtoil_i00" />
 		<set name="is_freightable" val="false" />
@@ -342,7 +342,7 @@
 			<skill id="12127" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18219" name="Unidentified Eternal Helmet" name_additional="Heavy Armor" type="EtcItem">
+	<item id="18219" name="Unidentified Eternal Helmet" additionalName="Heavy Armor" type="EtcItem">
 		<!-- An Eternal Helmet in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Helmet / heavy armor) -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="is_freightable" val="false" />
@@ -360,7 +360,7 @@
 			<skill id="12128" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18220" name="Unidentified Eternal Breastplate" name_additional="Heavy Armor" type="EtcItem">
+	<item id="18220" name="Unidentified Eternal Breastplate" additionalName="Heavy Armor" type="EtcItem">
 		<!-- An Eternal Breastplate in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: upper / heavy armor) -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="is_freightable" val="false" />
@@ -378,7 +378,7 @@
 			<skill id="12129" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18221" name="Unidentified Eternal Gaiters" name_additional="Heavy Armor" type="EtcItem">
+	<item id="18221" name="Unidentified Eternal Gaiters" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Eternal Gaiters in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: lower / heavy armor) -->
 		<set name="icon" val="icon.armor_t701_l_i00" />
 		<set name="is_freightable" val="false" />
@@ -396,7 +396,7 @@
 			<skill id="12130" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18222" name="Unidentified Eternal Gauntlets" name_additional="Heavy Armor" type="EtcItem">
+	<item id="18222" name="Unidentified Eternal Gauntlets" additionalName="Heavy Armor" type="EtcItem">
 		<!-- An Eternal Gauntlets in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Gloves / heavy armor) -->
 		<set name="icon" val="icon.armor_t701_g_i00" />
 		<set name="is_freightable" val="false" />
@@ -414,7 +414,7 @@
 			<skill id="12131" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18223" name="Unidentified Eternal Boots" name_additional="Heavy Armor" type="EtcItem">
+	<item id="18223" name="Unidentified Eternal Boots" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Eternal Boots in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Boots / heavy armor) -->
 		<set name="icon" val="icon.armor_t701_b_i00" />
 		<set name="is_freightable" val="false" />
@@ -432,7 +432,7 @@
 			<skill id="12132" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18224" name="Unidentified Eternal Shield" name_additional="Heavy Armor" type="EtcItem">
+	<item id="18224" name="Unidentified Eternal Shield" additionalName="Heavy Armor" type="EtcItem">
 		<!-- An Eternal Shield in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Shield / heavy armor) -->
 		<set name="icon" val="icon.weapon_akra_i00" />
 		<set name="is_freightable" val="false" />
@@ -450,7 +450,7 @@
 			<skill id="12133" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18225" name="Unidentified Eternal Leather Helmet" name_additional="Light Armor" type="EtcItem">
+	<item id="18225" name="Unidentified Eternal Leather Helmet" additionalName="Light Armor" type="EtcItem">
 		<!-- An Eternal Leather Helmet in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Helmet / light armor) -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="is_freightable" val="false" />
@@ -468,7 +468,7 @@
 			<skill id="12134" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18226" name="Unidentified Eternal Leather Armor" name_additional="Light Armor" type="EtcItem">
+	<item id="18226" name="Unidentified Eternal Leather Armor" additionalName="Light Armor" type="EtcItem">
 		<!-- An Eternal Leather Armor in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: upper / light armor) -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="is_freightable" val="false" />
@@ -486,7 +486,7 @@
 			<skill id="12135" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18227" name="Unidentified Eternal Leather Leggings" name_additional="Light Armor" type="EtcItem">
+	<item id="18227" name="Unidentified Eternal Leather Leggings" additionalName="Light Armor" type="EtcItem">
 		<!-- Eternal Leather Leggings in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: lower / light armor) -->
 		<set name="icon" val="icon.armor_t702_l_i00" />
 		<set name="is_freightable" val="false" />
@@ -504,7 +504,7 @@
 			<skill id="12136" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18228" name="Unidentified Eternal Leather Gloves" name_additional="Light Armor" type="EtcItem">
+	<item id="18228" name="Unidentified Eternal Leather Gloves" additionalName="Light Armor" type="EtcItem">
 		<!-- Eternal Leather Gloves in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Gloves / light armor) -->
 		<set name="icon" val="icon.armor_t702_g_i00" />
 		<set name="is_freightable" val="false" />
@@ -522,7 +522,7 @@
 			<skill id="12137" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18229" name="Unidentified Eternal Leather Boots" name_additional="Light Armor" type="EtcItem">
+	<item id="18229" name="Unidentified Eternal Leather Boots" additionalName="Light Armor" type="EtcItem">
 		<!-- Eternal Leather Boots in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Boots / light armor) -->
 		<set name="icon" val="icon.armor_t702_b_i00" />
 		<set name="is_freightable" val="false" />
@@ -540,7 +540,7 @@
 			<skill id="12138" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18230" name="Unidentified Eternal Circlet" name_additional="Robe" type="EtcItem">
+	<item id="18230" name="Unidentified Eternal Circlet" additionalName="Robe" type="EtcItem">
 		<!-- An Eternal Circlet in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Helmet / robe) -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="is_freightable" val="false" />
@@ -558,7 +558,7 @@
 			<skill id="12139" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18231" name="Unidentified Eternal Tunic" name_additional="Robe" type="EtcItem">
+	<item id="18231" name="Unidentified Eternal Tunic" additionalName="Robe" type="EtcItem">
 		<!-- An Eternal Tunic in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: upper / robe) -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
 		<set name="is_freightable" val="false" />
@@ -576,7 +576,7 @@
 			<skill id="12140" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18232" name="Unidentified Eternal Stockings" name_additional="Robe" type="EtcItem">
+	<item id="18232" name="Unidentified Eternal Stockings" additionalName="Robe" type="EtcItem">
 		<!-- Eternal Stockings in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: lower / robe) -->
 		<set name="icon" val="icon.armor_t703_l_i00" />
 		<set name="is_freightable" val="false" />
@@ -594,7 +594,7 @@
 			<skill id="12141" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18233" name="Unidentified Eternal Gloves" name_additional="Robe" type="EtcItem">
+	<item id="18233" name="Unidentified Eternal Gloves" additionalName="Robe" type="EtcItem">
 		<!-- Eternal Gloves in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Gloves / robe) -->
 		<set name="icon" val="icon.armor_t703_g_i00" />
 		<set name="is_freightable" val="false" />
@@ -612,7 +612,7 @@
 			<skill id="12142" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18234" name="Unidentified Eternal Shoes" name_additional="Robe" type="EtcItem">
+	<item id="18234" name="Unidentified Eternal Shoes" additionalName="Robe" type="EtcItem">
 		<!-- Eternal Shoes in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Boots / robe) -->
 		<set name="icon" val="icon.armor_t703_b_i00" />
 		<set name="is_freightable" val="false" />
@@ -630,7 +630,7 @@
 			<skill id="12143" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18235" name="Unidentified Eternal Sigil" name_additional="Robe" type="EtcItem">
+	<item id="18235" name="Unidentified Eternal Sigil" additionalName="Robe" type="EtcItem">
 		<!-- An Eternal Sigil in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Shield / robe) -->
 		<set name="icon" val="icon.elos_i00" />
 		<set name="is_freightable" val="false" />
@@ -926,7 +926,7 @@
 			<skill id="12161" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18253" name="Unidentified Durandia Helmet" name_additional="Heavy Armor" type="EtcItem">
+	<item id="18253" name="Unidentified Durandia Helmet" additionalName="Heavy Armor" type="EtcItem">
 		<!-- A Durandia Helmet in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Helmet / heavy armor) -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="is_freightable" val="false" />
@@ -942,7 +942,7 @@
 			<skill id="12162" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18254" name="Unidentified Durandia Breastplate" name_additional="Heavy Armor" type="EtcItem">
+	<item id="18254" name="Unidentified Durandia Breastplate" additionalName="Heavy Armor" type="EtcItem">
 		<!-- A Durandia Breastplate in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: upper / heavy armor) -->
 		<set name="icon" val="icon.armor_t97_u_i00" />
 		<set name="is_freightable" val="false" />
@@ -958,7 +958,7 @@
 			<skill id="12163" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18255" name="Unidentified Durandia Gaiters" name_additional="Heavy Armor" type="EtcItem">
+	<item id="18255" name="Unidentified Durandia Gaiters" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Durandia Gaiters in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: lower / heavy armor) -->
 		<set name="icon" val="icon.armor_t97_l_i00" />
 		<set name="is_freightable" val="false" />
@@ -974,7 +974,7 @@
 			<skill id="12164" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18256" name="Unidentified Durandia Gauntlets" name_additional="Heavy Armor" type="EtcItem">
+	<item id="18256" name="Unidentified Durandia Gauntlets" additionalName="Heavy Armor" type="EtcItem">
 		<!-- A Durandia Gauntlets in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Gloves / heavy armor) -->
 		<set name="icon" val="icon.armor_t97_g_i00" />
 		<set name="is_freightable" val="false" />
@@ -990,7 +990,7 @@
 			<skill id="12165" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18257" name="Unidentified Durandia Boots" name_additional="Heavy Armor" type="EtcItem">
+	<item id="18257" name="Unidentified Durandia Boots" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Durandia Boots in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Boots / heavy armor) -->
 		<set name="icon" val="icon.armor_t97_b_i00" />
 		<set name="is_freightable" val="false" />
@@ -1006,7 +1006,7 @@
 			<skill id="12166" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18258" name="Unidentified Durandia Shield" name_additional="Heavy Armor" type="EtcItem">
+	<item id="18258" name="Unidentified Durandia Shield" additionalName="Heavy Armor" type="EtcItem">
 		<!-- A Durandia Shield in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Shield / heavy armor) -->
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i01" />
 		<set name="is_freightable" val="false" />
@@ -1022,7 +1022,7 @@
 			<skill id="12167" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18259" name="Unidentified Durandia Leather Helmet" name_additional="Light Armor" type="EtcItem">
+	<item id="18259" name="Unidentified Durandia Leather Helmet" additionalName="Light Armor" type="EtcItem">
 		<!-- A Durandia leather Helmet in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Helmet / light armor) -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="is_freightable" val="false" />
@@ -1038,7 +1038,7 @@
 			<skill id="12168" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18260" name="Unidentified Durandia Leather Armor" name_additional="Light Armor" type="EtcItem">
+	<item id="18260" name="Unidentified Durandia Leather Armor" additionalName="Light Armor" type="EtcItem">
 		<!-- A Durandia leather armor in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: upper / light armor) -->
 		<set name="icon" val="icon.armor_t98_u_i00" />
 		<set name="is_freightable" val="false" />
@@ -1054,7 +1054,7 @@
 			<skill id="12169" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18261" name="Unidentified Durandia Leather Leggings" name_additional="Light Armor" type="EtcItem">
+	<item id="18261" name="Unidentified Durandia Leather Leggings" additionalName="Light Armor" type="EtcItem">
 		<!-- Durandia leather Leggings in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: lower / light armor) -->
 		<set name="icon" val="icon.armor_t98_l_i00" />
 		<set name="is_freightable" val="false" />
@@ -1070,7 +1070,7 @@
 			<skill id="12170" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18262" name="Unidentified Durandia Leather Gloves" name_additional="Light Armor" type="EtcItem">
+	<item id="18262" name="Unidentified Durandia Leather Gloves" additionalName="Light Armor" type="EtcItem">
 		<!-- Immortal Leather Gloves in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Gloves / light armor) -->
 		<set name="icon" val="icon.armor_t98_g_i00" />
 		<set name="is_freightable" val="false" />
@@ -1086,7 +1086,7 @@
 			<skill id="12171" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18263" name="Unidentified Durandia Leather Boots" name_additional="Light Armor" type="EtcItem">
+	<item id="18263" name="Unidentified Durandia Leather Boots" additionalName="Light Armor" type="EtcItem">
 		<!-- Durandia leather Boots in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Boots / light armor) -->
 		<set name="icon" val="icon.armor_t98_b_i00" />
 		<set name="is_freightable" val="false" />
@@ -1102,7 +1102,7 @@
 			<skill id="12172" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18264" name="Unidentified Durandia Circlet" name_additional="Robe" type="EtcItem">
+	<item id="18264" name="Unidentified Durandia Circlet" additionalName="Robe" type="EtcItem">
 		<!-- A Durandia Circlet in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Helmet / robe) -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="is_freightable" val="false" />
@@ -1118,7 +1118,7 @@
 			<skill id="12173" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18265" name="Unidentified Durandia Tunic" name_additional="Robe" type="EtcItem">
+	<item id="18265" name="Unidentified Durandia Tunic" additionalName="Robe" type="EtcItem">
 		<!-- A Durandia Tunic in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: upper / robe) -->
 		<set name="icon" val="icon.armor_t99_u_i00" />
 		<set name="is_freightable" val="false" />
@@ -1134,7 +1134,7 @@
 			<skill id="12174" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18266" name="Unidentified Durandia Stockings" name_additional="Robe" type="EtcItem">
+	<item id="18266" name="Unidentified Durandia Stockings" additionalName="Robe" type="EtcItem">
 		<!-- Durandia Stockings in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: lower / robe) -->
 		<set name="icon" val="icon.armor_t99_l_i00" />
 		<set name="is_freightable" val="false" />
@@ -1150,7 +1150,7 @@
 			<skill id="12175" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18267" name="Unidentified Durandia Gloves" name_additional="Robe" type="EtcItem">
+	<item id="18267" name="Unidentified Durandia Gloves" additionalName="Robe" type="EtcItem">
 		<!-- Durandia Gloves in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Gloves / robe) -->
 		<set name="icon" val="icon.armor_t99_g_i00" />
 		<set name="is_freightable" val="false" />
@@ -1166,7 +1166,7 @@
 			<skill id="12176" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18268" name="Unidentified Durandia Shoes" name_additional="Robe" type="EtcItem">
+	<item id="18268" name="Unidentified Durandia Shoes" additionalName="Robe" type="EtcItem">
 		<!-- Durandia Shoes in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Boots / robe) -->
 		<set name="icon" val="icon.armor_t99_b_i00" />
 		<set name="is_freightable" val="false" />
@@ -1182,7 +1182,7 @@
 			<skill id="12177" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="18269" name="Unidentified Durandia Sigil" name_additional="Robe" type="EtcItem">
+	<item id="18269" name="Unidentified Durandia Sigil" additionalName="Robe" type="EtcItem">
 		<!-- Durandia Sigil in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Shield / robe) -->
 		<set name="icon" val="icon.verper_sigil_i00" />
 		<set name="is_freightable" val="false" />

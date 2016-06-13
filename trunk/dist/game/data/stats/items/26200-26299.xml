@@ -1431,14 +1431,14 @@
 			<stat type="pDef">150</stat>
 		</stats>
 	</item>
-	<item id="26291" name="Kaliel's Energy" name_additional="Longing" type="EtcItem">
+	<item id="26291" name="Kaliel's Energy" additionalName="Longing" type="EtcItem">
 		<!-- Use Kaliel's Energy to enchant a Talisman - Desire into a Talisman - Insanity. The Talisman - Desire will remain intact even if it fails. -->
 		<set name="icon" val="icon.etc_spirit_kalie_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26292" name="Agathion - Minion Eye" name_additional="7-day" type="Armor">
+	<item id="26292" name="Agathion - Minion Eye" additionalName="7-day" type="Armor">
 		<!-- Can summon Agathion - Minion Eye. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1453,7 +1453,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="26293" name="Agathion - Matryoshka" name_additional="7-day" type="Armor">
+	<item id="26293" name="Agathion - Matryoshka" additionalName="7-day" type="Armor">
 		<!-- Can summon Agathion - Matryoshka. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1468,7 +1468,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="26294" name="Agathion - Minion Eye" name_additional="30-day" type="Armor">
+	<item id="26294" name="Agathion - Minion Eye" additionalName="30-day" type="Armor">
 		<!-- Can summon Agathion - Minion Eye. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1483,7 +1483,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="26295" name="Agathion - Matryoshka" name_additional="30-day" type="Armor">
+	<item id="26295" name="Agathion - Matryoshka" additionalName="30-day" type="Armor">
 		<!-- Can summon Agathion - Matryoshka. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />

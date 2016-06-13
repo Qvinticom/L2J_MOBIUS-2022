@@ -33,7 +33,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9301" name="Sharpshooter" name_additional="Guidance" type="Weapon">
+	<item id="9301" name="Sharpshooter" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -69,7 +69,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9302" name="Sharpshooter" name_additional="Miser" type="Weapon">
+	<item id="9302" name="Sharpshooter" additionalName="Miser" type="Weapon">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -103,7 +103,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9303" name="Sharpshooter" name_additional="Cheap Shot" type="Weapon">
+	<item id="9303" name="Sharpshooter" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -174,7 +174,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9305" name="Military Fleuret" name_additional="Guidance" type="Weapon">
+	<item id="9305" name="Military Fleuret" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_assult_fleuret_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -210,7 +210,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9306" name="Military Fleuret" name_additional="Focus" type="Weapon">
+	<item id="9306" name="Military Fleuret" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_assult_fleuret_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -246,7 +246,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9307" name="Military Fleuret" name_additional="Back Blow" type="Weapon">
+	<item id="9307" name="Military Fleuret" additionalName="Back Blow" type="Weapon">
 		<set name="icon" val="icon.weapon_assult_fleuret_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -314,7 +314,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9309" name="Innominate Victory" name_additional="Health" type="Weapon">
+	<item id="9309" name="Innominate Victory" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_nameless_victory_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -349,7 +349,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9310" name="Innominate Victory" name_additional="Critical Damage" type="Weapon">
+	<item id="9310" name="Innominate Victory" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_nameless_victory_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -384,7 +384,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9311" name="Innominate Victory" name_additional="Focus" type="Weapon">
+	<item id="9311" name="Innominate Victory" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_nameless_victory_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -452,7 +452,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9313" name="Peacemaker" name_additional="Evasion" type="Weapon">
+	<item id="9313" name="Peacemaker" additionalName="Evasion" type="Weapon">
 		<set name="icon" val="icon.weapon_peace_maker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -488,7 +488,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9314" name="Peacemaker" name_additional="Critical Bleed" type="Weapon">
+	<item id="9314" name="Peacemaker" additionalName="Critical Bleed" type="Weapon">
 		<set name="icon" val="icon.weapon_peace_maker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -524,7 +524,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9315" name="Peacemaker" name_additional="Miser" type="Weapon">
+	<item id="9315" name="Peacemaker" additionalName="Miser" type="Weapon">
 		<set name="icon" val="icon.weapon_peace_maker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -593,7 +593,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9317" name="Colichemarde" name_additional="Focus" type="Weapon">
+	<item id="9317" name="Colichemarde" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -629,7 +629,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9318" name="Colichemarde" name_additional="Critical Damage" type="Weapon">
+	<item id="9318" name="Colichemarde" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -665,7 +665,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9319" name="Colichemarde" name_additional="Haste" type="Weapon">
+	<item id="9319" name="Colichemarde" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -733,7 +733,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9321" name="Dismantler" name_additional="Critical Drain" type="Weapon">
+	<item id="9321" name="Dismantler" additionalName="Critical Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_dismantler_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -768,7 +768,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9322" name="Dismantler" name_additional="Health" type="Weapon">
+	<item id="9322" name="Dismantler" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dismantler_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -803,7 +803,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9323" name="Dismantler" name_additional="Critical Bleed" type="Weapon">
+	<item id="9323" name="Dismantler" additionalName="Critical Bleed" type="Weapon">
 		<set name="icon" val="icon.weapon_dismantler_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -871,7 +871,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9325" name="Hell Hound" name_additional="Guidance" type="Weapon">
+	<item id="9325" name="Hell Hound" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -907,7 +907,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9326" name="Hell Hound" name_additional="Quick Recovery" type="Weapon">
+	<item id="9326" name="Hell Hound" additionalName="Quick Recovery" type="Weapon">
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -940,7 +940,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9327" name="Hell Hound" name_additional="Cheap Shot" type="Weapon">
+	<item id="9327" name="Hell Hound" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1011,7 +1011,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9329" name="White Lightning" name_additional="Critical Poison" type="Weapon">
+	<item id="9329" name="White Lightning" additionalName="Critical Poison" type="Weapon">
 		<set name="icon" val="icon.weapon_lightning_blaze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1049,7 +1049,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9330" name="White Lightning" name_additional="Haste" type="Weapon">
+	<item id="9330" name="White Lightning" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_lightning_blaze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1085,7 +1085,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9331" name="White Lightning" name_additional="Anger" type="Weapon">
+	<item id="9331" name="White Lightning" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_lightning_blaze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1153,7 +1153,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9333" name="Divine Pain" name_additional="Haste" type="Weapon">
+	<item id="9333" name="Divine Pain" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1188,7 +1188,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9334" name="Divine Pain" name_additional="Critical Damage" type="Weapon">
+	<item id="9334" name="Divine Pain" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1223,7 +1223,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9335" name="Divine Pain" name_additional="Focus" type="Weapon">
+	<item id="9335" name="Divine Pain" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1291,7 +1291,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9337" name="Doomchanter" name_additional="Light Armor" type="Weapon">
+	<item id="9337" name="Doomchanter" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1328,7 +1328,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9338" name="Doomchanter" name_additional="Critical Bleed" type="Weapon">
+	<item id="9338" name="Doomchanter" additionalName="Critical Bleed" type="Weapon">
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1365,7 +1365,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9339" name="Doomchanter" name_additional="Mana Up" type="Weapon">
+	<item id="9339" name="Doomchanter" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1436,7 +1436,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9341" name="Lacerator" name_additional="Critical Damage" type="Weapon">
+	<item id="9341" name="Lacerator" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1472,7 +1472,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9342" name="Lacerator" name_additional="Health" type="Weapon">
+	<item id="9342" name="Lacerator" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1508,7 +1508,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9343" name="Lacerator" name_additional="Rsk. Focus" type="Weapon">
+	<item id="9343" name="Lacerator" additionalName="Rsk. Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1576,7 +1576,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9345" name="Undertaker" name_additional="Health" type="Weapon">
+	<item id="9345" name="Undertaker" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1611,7 +1611,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9346" name="Undertaker" name_additional="Critical Bleed" type="Weapon">
+	<item id="9346" name="Undertaker" additionalName="Critical Bleed" type="Weapon">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1647,7 +1647,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9347" name="Undertaker" name_additional="Critical Drain" type="Weapon">
+	<item id="9347" name="Undertaker" additionalName="Critical Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1716,7 +1716,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9349" name="Reaper" name_additional="Cheap Shot" type="Weapon">
+	<item id="9349" name="Reaper" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1753,7 +1753,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9350" name="Reaper" name_additional="Quick Recovery" type="Weapon">
+	<item id="9350" name="Reaper" additionalName="Quick Recovery" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1789,7 +1789,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9351" name="Reaper" name_additional="Critical Poison" type="Weapon">
+	<item id="9351" name="Reaper" additionalName="Critical Poison" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1861,7 +1861,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9353" name="Éclair Bijou" name_additional="Haste" type="Weapon">
+	<item id="9353" name="Éclair Bijou" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1897,7 +1897,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9354" name="Éclair Bijou" name_additional="Health" type="Weapon">
+	<item id="9354" name="Éclair Bijou" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1933,7 +1933,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9355" name="Éclair Bijou" name_additional="Critical Poison" type="Weapon">
+	<item id="9355" name="Éclair Bijou" additionalName="Critical Poison" type="Weapon">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2003,7 +2003,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9357" name="Durendal" name_additional="Focus" type="Weapon">
+	<item id="9357" name="Durendal" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2038,7 +2038,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9358" name="Durendal" name_additional="Haste" type="Weapon">
+	<item id="9358" name="Durendal" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2073,7 +2073,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9359" name="Durendal" name_additional="Health" type="Weapon">
+	<item id="9359" name="Durendal" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2141,7 +2141,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9361" name="Screaming Vengeance" name_additional="Cheap Shot" type="Weapon">
+	<item id="9361" name="Screaming Vengeance" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2178,7 +2178,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9362" name="Screaming Vengeance" name_additional="Focus" type="Weapon">
+	<item id="9362" name="Screaming Vengeance" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2214,7 +2214,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9363" name="Screaming Vengeance" name_additional="Quick Recovery" type="Weapon">
+	<item id="9363" name="Screaming Vengeance" additionalName="Quick Recovery" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2286,7 +2286,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9365" name="Laevateinn" name_additional="Haste" type="Weapon">
+	<item id="9365" name="Laevateinn" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2323,7 +2323,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9366" name="Laevateinn" name_additional="Health" type="Weapon">
+	<item id="9366" name="Laevateinn" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2360,7 +2360,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9367" name="Laevateinn" name_additional="Focus" type="Weapon">
+	<item id="9367" name="Laevateinn" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2430,7 +2430,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9369" name="Gram" name_additional="Haste" type="Weapon">
+	<item id="9369" name="Gram" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2466,7 +2466,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9370" name="Gram" name_additional="Health" type="Weapon">
+	<item id="9370" name="Gram" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2502,7 +2502,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9371" name="Gram" name_additional="Focus" type="Weapon">
+	<item id="9371" name="Gram" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2572,7 +2572,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9373" name="Sarunga" name_additional="Cheap Shot" type="Weapon">
+	<item id="9373" name="Sarunga" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2610,7 +2610,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9374" name="Sarunga" name_additional="Focus" type="Weapon">
+	<item id="9374" name="Sarunga" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2647,7 +2647,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9375" name="Sarunga" name_additional="Critical Slow" type="Weapon">
+	<item id="9375" name="Sarunga" additionalName="Critical Slow" type="Weapon">
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2721,7 +2721,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9377" name="Dynasty Rapier" name_additional="Focus" type="Weapon">
+	<item id="9377" name="Dynasty Rapier" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2758,7 +2758,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9378" name="Dynasty Rapier" name_additional="Health" type="Weapon">
+	<item id="9378" name="Dynasty Rapier" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2795,7 +2795,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9379" name="Dynasty Rapier" name_additional="Light Armor" type="Weapon">
+	<item id="9379" name="Dynasty Rapier" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2866,7 +2866,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9381" name="Dynasty Ancient Sword" name_additional="Focus" type="Weapon">
+	<item id="9381" name="Dynasty Ancient Sword" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2902,7 +2902,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9382" name="Dynasty Ancient Sword" name_additional="Health" type="Weapon">
+	<item id="9382" name="Dynasty Ancient Sword" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2938,7 +2938,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9383" name="Dynasty Ancient Sword" name_additional="Light Armor" type="Weapon">
+	<item id="9383" name="Dynasty Ancient Sword" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -3009,7 +3009,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9385" name="Dynasty Crossbow" name_additional="Cheap Shot" type="Weapon">
+	<item id="9385" name="Dynasty Crossbow" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3047,7 +3047,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9386" name="Dynasty Crossbow" name_additional="Guidance" type="Weapon">
+	<item id="9386" name="Dynasty Crossbow" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3084,7 +3084,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9387" name="Dynasty Crossbow" name_additional="Focus" type="Weapon">
+	<item id="9387" name="Dynasty Crossbow" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />

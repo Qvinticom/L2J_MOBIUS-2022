@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="38000" name="Twilight Leather Leggings Crafting Pack" name_additional="Light Armor" type="EtcItem">
+	<item id="38000" name="Twilight Leather Leggings Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Leather Leggings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -19,7 +19,7 @@
 			<item id="36553" min="6" max="6" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38001" name="Twilight Leather Gloves Crafting Pack" name_additional="Light Armor" type="EtcItem">
+	<item id="38001" name="Twilight Leather Gloves Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Leather Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -38,7 +38,7 @@
 			<item id="36553" min="3" max="3" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38002" name="Twilight Leather Boots Crafting Pack" name_additional="Light Armor" type="EtcItem">
+	<item id="38002" name="Twilight Leather Boots Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Leather Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
@@ -56,7 +56,7 @@
 			<item id="36553" min="3" max="3" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38003" name="Twilight Circlet Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38003" name="Twilight Circlet Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Circlet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -75,7 +75,7 @@
 			<item id="36553" min="4" max="4" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38004" name="Twilight Tunic Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38004" name="Twilight Tunic Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Tunic. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
@@ -93,7 +93,7 @@
 			<item id="36553" min="9" max="9" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38005" name="Twilight Stockings Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38005" name="Twilight Stockings Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Stockings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -112,7 +112,7 @@
 			<item id="36553" min="6" max="6" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38006" name="Twilight Gloves Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38006" name="Twilight Gloves Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -131,7 +131,7 @@
 			<item id="36553" min="3" max="3" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38007" name="Twilight Shoes Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38007" name="Twilight Shoes Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Shoes. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -150,7 +150,7 @@
 			<item id="36553" min="3" max="3" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38008" name="Twilight Sigil Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38008" name="Twilight Sigil Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
@@ -422,7 +422,7 @@
 			<item id="35306" min="10" max="10" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38023" name="Seraph Helmet Crafting Pack" name_additional="Heavy Armor" type="EtcItem">
+	<item id="38023" name="Seraph Helmet Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -441,7 +441,7 @@
 			<item id="36554" min="3" max="3" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38024" name="Seraph Breastplate Crafting Pack" name_additional="Heavy Armor" type="EtcItem">
+	<item id="38024" name="Seraph Breastplate Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -460,7 +460,7 @@
 			<item id="36554" min="7" max="7" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38025" name="Seraph Gaiters Crafting Pack" name_additional="Heavy Armor" type="EtcItem">
+	<item id="38025" name="Seraph Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Gaiter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -479,7 +479,7 @@
 			<item id="36554" min="4" max="4" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38026" name="Seraph Gauntlets Crafting Pack" name_additional="Heavy Armor" type="EtcItem">
+	<item id="38026" name="Seraph Gauntlets Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -498,7 +498,7 @@
 			<item id="36554" min="2" max="2" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38027" name="Seraph Boots Crafting Pack" name_additional="Heavy Armor" type="EtcItem">
+	<item id="38027" name="Seraph Boots Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -517,7 +517,7 @@
 			<item id="36554" min="2" max="2" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38028" name="Seraph Shield Crafting Pack" name_additional="Heavy Armor" type="EtcItem">
+	<item id="38028" name="Seraph Shield Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -536,7 +536,7 @@
 			<item id="36554" min="2" max="2" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38029" name="Seraph Leather Helmet Crafting Pack" name_additional="Light Armor" type="EtcItem">
+	<item id="38029" name="Seraph Leather Helmet Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
@@ -554,7 +554,7 @@
 			<item id="36554" min="3" max="3" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38030" name="Seraph Leather Armor Crafting Pack" name_additional="Light Armor" type="EtcItem">
+	<item id="38030" name="Seraph Leather Armor Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
@@ -572,7 +572,7 @@
 			<item id="36554" min="7" max="7" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38031" name="Seraph Leather Leggings Crafting Pack" name_additional="Light Armor" type="EtcItem">
+	<item id="38031" name="Seraph Leather Leggings Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Leather Leggings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -591,7 +591,7 @@
 			<item id="36554" min="4" max="4" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38032" name="Seraph Leather Gloves Crafting Pack" name_additional="Light Armor" type="EtcItem">
+	<item id="38032" name="Seraph Leather Gloves Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Leather Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
@@ -609,7 +609,7 @@
 			<item id="36554" min="2" max="2" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38033" name="Seraph Leather Boots Crafting Pack" name_additional="Light Armor" type="EtcItem">
+	<item id="38033" name="Seraph Leather Boots Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Leather Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
@@ -627,7 +627,7 @@
 			<item id="36554" min="2" max="2" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38034" name="Seraph Circlet Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38034" name="Seraph Circlet Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Circlet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -646,7 +646,7 @@
 			<item id="36554" min="3" max="3" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38035" name="Seraph Tunic Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38035" name="Seraph Tunic Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Tunic. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -665,7 +665,7 @@
 			<item id="36554" min="7" max="7" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38036" name="Seraph Stockings Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38036" name="Seraph Stockings Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Stockings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -684,7 +684,7 @@
 			<item id="36554" min="4" max="4" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38037" name="Seraph Gloves Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38037" name="Seraph Gloves Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -703,7 +703,7 @@
 			<item id="36554" min="2" max="2" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38038" name="Seraph Shoes Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38038" name="Seraph Shoes Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Shoes. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -722,7 +722,7 @@
 			<item id="36554" min="2" max="2" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38039" name="Seraph Sigil Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38039" name="Seraph Sigil Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -990,7 +990,7 @@
 			<item id="35337" min="10" max="10" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38054" name="Eternal Helmet Crafting Pack" name_additional="Heavy Armor" type="EtcItem">
+	<item id="38054" name="Eternal Helmet Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1009,7 +1009,7 @@
 			<item id="36554" min="6" max="6" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38055" name="Eternal Breastplate Crafting Pack" name_additional="Heavy Armor" type="EtcItem">
+	<item id="38055" name="Eternal Breastplate Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1028,7 +1028,7 @@
 			<item id="36554" min="14" max="14" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38056" name="Eternal Gaiters Crafting Pack" name_additional="Heavy Armor" type="EtcItem">
+	<item id="38056" name="Eternal Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Gaiter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
@@ -1046,7 +1046,7 @@
 			<item id="36554" min="9" max="9" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38057" name="Eternal Gauntlets Crafting Pack" name_additional="Heavy Armor" type="EtcItem">
+	<item id="38057" name="Eternal Gauntlets Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1065,7 +1065,7 @@
 			<item id="36554" min="4" max="4" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38058" name="Eternal Boots Crafting Pack" name_additional="Heavy Armor" type="EtcItem">
+	<item id="38058" name="Eternal Boots Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1084,7 +1084,7 @@
 			<item id="36554" min="4" max="4" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38059" name="Eternal Shield Crafting Pack" name_additional="Heavy Armor" type="EtcItem">
+	<item id="38059" name="Eternal Shield Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
@@ -1102,7 +1102,7 @@
 			<item id="36554" min="4" max="4" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38060" name="Eternal Leather Helmet Crafting Pack" name_additional="Light Armor" type="EtcItem">
+	<item id="38060" name="Eternal Leather Helmet Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1121,7 +1121,7 @@
 			<item id="36554" min="6" max="6" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38061" name="Eternal Leather Armor Crafting Pack" name_additional="Light Armor" type="EtcItem">
+	<item id="38061" name="Eternal Leather Armor Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1140,7 +1140,7 @@
 			<item id="36554" min="14" max="14" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38062" name="Eternal Leather Leggings Crafting Pack" name_additional="Light Armor" type="EtcItem">
+	<item id="38062" name="Eternal Leather Leggings Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Leather Leggings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
@@ -1158,7 +1158,7 @@
 			<item id="36554" min="9" max="9" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38063" name="Eternal Leather Gloves Crafting Pack" name_additional="Light Armor" type="EtcItem">
+	<item id="38063" name="Eternal Leather Gloves Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Leather Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
@@ -1176,7 +1176,7 @@
 			<item id="36554" min="4" max="4" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38064" name="Eternal Leather Boots Crafting Pack" name_additional="Light Armor" type="EtcItem">
+	<item id="38064" name="Eternal Leather Boots Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Leather Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1195,7 +1195,7 @@
 			<item id="36554" min="4" max="4" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38065" name="Eternal Circlet Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38065" name="Eternal Circlet Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Circlet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1214,7 +1214,7 @@
 			<item id="36554" min="6" max="6" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38066" name="Eternal Tunic Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38066" name="Eternal Tunic Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Tunic. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1233,7 +1233,7 @@
 			<item id="36554" min="14" max="14" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38067" name="Eternal Stockings Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38067" name="Eternal Stockings Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Stockings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1252,7 +1252,7 @@
 			<item id="36554" min="9" max="9" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38068" name="Eternal Gloves Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38068" name="Eternal Gloves Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1271,7 +1271,7 @@
 			<item id="36554" min="4" max="4" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38069" name="Eternal Shoes Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38069" name="Eternal Shoes Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Shoes. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1290,7 +1290,7 @@
 			<item id="36554" min="4" max="4" chance="100" />
 		</capsuled_items>
 	</item>
-	<item id="38070" name="Eternal Sigil Crafting Pack" name_additional="Robe" type="EtcItem">
+	<item id="38070" name="Eternal Sigil Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1533,7 +1533,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38095" name="Leona's Cube" name_additional="30-day" type="EtcItem">
+	<item id="38095" name="Leona's Cube" additionalName="30-day" type="EtcItem">
 		<!-- Double-click for a chance to obtain either Emperor's Rune (2-hour), Emperor's Vitality Tonic, Scroll: 1,000,000 SP, Scroll: 5,000,000 SP, or Scroll: 10,000,000 SP. Once a day. 30-day. -->
 		<set name="icon" val="icon.etc_violet_crystal_cube_pc_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1547,7 +1547,7 @@
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="38096" name="Emperor's Rune" name_additional="2-hour" type="EtcItem">
+	<item id="38096" name="Emperor's Rune" additionalName="2-hour" type="EtcItem">
 		<!-- While possessed, character's XP/SP gained + 30%. 2-hour. Only one effect applies if used with Emperor's Rune (8-hour). -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />

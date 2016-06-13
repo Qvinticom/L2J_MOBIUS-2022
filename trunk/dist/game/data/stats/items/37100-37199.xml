@@ -408,7 +408,7 @@
 			<skill id="9929" level="1" /> <!-- Scroll of Escape: Heine -->
 		</skills>
 	</item>
-	<item id="37128" name="Lindvior Support Box" name_additional="Event" type="EtcItem">
+	<item id="37128" name="Lindvior Support Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive 1 Bloody Amaranthine Pack, 1 Bloody Eternal Pack, 1 Istina/ Octavis Accessory Pack, 1 Top-grade Enchantment Pack, 1 Talisman - Longing, 1 Enhanced Tauti's Bracelet, 2 billion Adena, 10 Scrolls: 100,000,000 SP, 1 Hair Accessory/ Pendant Pack, 1 Returning Hero's Shirt, 1 Nurka's Belt, 1 Lv. 5 Legendary Dye Pack, and 100 Blessed Scrolls of Resurrection. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -422,7 +422,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37129" name="Bloody Amaranthine Pack" name_additional="Event" type="EtcItem">
+	<item id="37129" name="Bloody Amaranthine Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive 1 of each Bloody Amaranthine Weapon with Double Crystal Enhancement. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -436,7 +436,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37130" name="Bloody Eternal Pack" name_additional="Event" type="EtcItem">
+	<item id="37130" name="Bloody Eternal Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive 1 of each Bloody Eternal Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -450,7 +450,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37131" name="Istina/ Octavis Accessory Pack" name_additional="Event" type="EtcItem">
+	<item id="37131" name="Istina/ Octavis Accessory Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive 1 Istina's Necklace, 1 Octavis' Ring, 1 Istina's Ring, 1 Istina's Earring, and 1 Octavis' Earring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -464,7 +464,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37132" name="Top-grade Enchantment Pack" name_additional="Event" type="EtcItem">
+	<item id="37132" name="Top-grade Enchantment Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive 20 Scrolls: Enchant Weapon of Destruction (R-grade), 220 Scrolls: Enchant Armor of Destruction (R-grade), 3 Scrolls: Enchant Weapon (R-grade), 33 Scrolls: Enchant Armor (R-grade), each of the 12 Super Attribute Stones and 1 Life Stone Instilled with Giants' Power. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -478,7 +478,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37133" name="Hair Accessory/ Pendant Pack" name_additional="Event" type="EtcItem">
+	<item id="37133" name="Hair Accessory/ Pendant Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive 1 of each Hair Accessory and Hair Accessory Pendant. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -492,7 +492,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37134" name="Lv. 5 Legendary Dye Pack" name_additional="Event" type="EtcItem">
+	<item id="37134" name="Lv. 5 Legendary Dye Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive 3 of each Lv. 5 Legendary Dye Pack. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />

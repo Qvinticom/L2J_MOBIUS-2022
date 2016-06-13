@@ -381,7 +381,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30613" name="Bound Tallum Blade" name_additional="Critical Poison" type="Weapon">
+	<item id="30613" name="Bound Tallum Blade" additionalName="Critical Poison" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nHas a 10% chance of casting Poison on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -417,7 +417,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30614" name="Bound Tallum Blade" name_additional="Haste" type="Weapon">
+	<item id="30614" name="Bound Tallum Blade" additionalName="Haste" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -452,7 +452,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30615" name="Bound Tallum Blade" name_additional="Anger" type="Weapon">
+	<item id="30615" name="Bound Tallum Blade" additionalName="Anger" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nDecreases Max HP by 15%. P. Atk. + 31. Inflicts additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -487,7 +487,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30616" name="Bound Tallum Boots" name_additional="Heavy Armor" type="Armor">
+	<item id="30616" name="Bound Tallum Boots" additionalName="Heavy Armor" type="Armor">
 		<!-- Part of the heavy tallum set. -->
 		<set name="icon" val="icon.armor_t77_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -510,7 +510,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="30617" name="Bound Tallum Boots" name_additional="Light Armor" type="Armor">
+	<item id="30617" name="Bound Tallum Boots" additionalName="Light Armor" type="Armor">
 		<!-- Part of the light tallum set. -->
 		<set name="icon" val="icon.armor_t78_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -533,7 +533,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="30618" name="Bound Tallum Boots" name_additional="Robe" type="Armor">
+	<item id="30618" name="Bound Tallum Boots" additionalName="Robe" type="Armor">
 		<!-- Part of the robe tallum set. -->
 		<set name="icon" val="icon.armor_t79_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -580,7 +580,7 @@
 			<stat type="pDef">209</stat>
 		</stats>
 	</item>
-	<item id="30620" name="Bound Tallum Gloves" name_additional="Heavy Armor" type="Armor">
+	<item id="30620" name="Bound Tallum Gloves" additionalName="Heavy Armor" type="Armor">
 		<!-- Part of the heavy tallum set. -->
 		<set name="icon" val="icon.armor_t77_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -603,7 +603,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="30621" name="Bound Tallum Gloves" name_additional="Light Armor" type="Armor">
+	<item id="30621" name="Bound Tallum Gloves" additionalName="Light Armor" type="Armor">
 		<!-- Part of the light tallum set. -->
 		<set name="icon" val="icon.armor_t78_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -626,7 +626,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="30622" name="Bound Tallum Gloves" name_additional="Robe" type="Armor">
+	<item id="30622" name="Bound Tallum Gloves" additionalName="Robe" type="Armor">
 		<!-- Part of the robe tallum set. -->
 		<set name="icon" val="icon.armor_t79_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -685,7 +685,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30624" name="Bound Tallum Glaive" name_additional="Guidance" type="Weapon">
+	<item id="30624" name="Bound Tallum Glaive" additionalName="Guidance" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Accuracy by about 4. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -721,7 +721,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30625" name="Bound Tallum Glaive" name_additional="Health" type="Weapon">
+	<item id="30625" name="Bound Tallum Glaive" additionalName="Health" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -757,7 +757,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30626" name="Bound Tallum Glaive" name_additional="Wide Blow" type="Weapon">
+	<item id="30626" name="Bound Tallum Glaive" additionalName="Wide Blow" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nBroadens the angle of attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -963,7 +963,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="30634" name="Bound Tathlum" name_additional="Guidance" type="Weapon">
+	<item id="30634" name="Bound Tathlum" additionalName="Guidance" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Akat Longbow\n(Soul Crystal Enhancement)\nIncreases Accuracy by4. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1000,7 +1000,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="30635" name="Bound Tathlum" name_additional="Evasion" type="Weapon">
+	<item id="30635" name="Bound Tathlum" additionalName="Evasion" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Akat Longbow\n(Soul Crystal Enhancement)\nIncreases Evasion by 2. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1037,7 +1037,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="30636" name="Bound Tathlum" name_additional="Miser" type="Weapon">
+	<item id="30636" name="Bound Tathlum" additionalName="Miser" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Akat Longbow\n(Soul Crystal Enhancement)\nHas a 32% chance of reducing the number of Soulshots consumed to 4 during an attack. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1173,7 +1173,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30640" name="Bound Big Hammer" name_additional="Health" type="Weapon">
+	<item id="30640" name="Bound Big Hammer" additionalName="Health" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_big_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1209,7 +1209,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30641" name="Bound Big Hammer" name_additional="Rsk. Focus" type="Weapon">
+	<item id="30641" name="Bound Big Hammer" additionalName="Rsk. Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 138 when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_big_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1245,7 +1245,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30642" name="Bound Big Hammer" name_additional="Haste" type="Weapon">
+	<item id="30642" name="Bound Big Hammer" additionalName="Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 8%. -->
 		<set name="icon" val="icon.weapon_big_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1383,7 +1383,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30646" name="Bound Keshanberk" name_additional="Guidance" type="Weapon">
+	<item id="30646" name="Bound Keshanberk" additionalName="Guidance" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Accuracy by 5. -->
 		<set name="icon" val="icon.weapon_kshanberk_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1418,7 +1418,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30647" name="Bound Keshanberk" name_additional="Focus" type="Weapon">
+	<item id="30647" name="Bound Keshanberk" additionalName="Focus" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Critical by 68. -->
 		<set name="icon" val="icon.weapon_kshanberk_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1453,7 +1453,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30648" name="Bound Keshanberk" name_additional="Back Blow" type="Weapon">
+	<item id="30648" name="Bound Keshanberk" additionalName="Back Blow" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases P. Critical Rate by 56 when attacking the target from behind. -->
 		<set name="icon" val="icon.weapon_kshanberk_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1690,7 +1690,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30655" name="Bound Crystal Staff" name_additional="Rsk. Evasion" type="Weapon">
+	<item id="30655" name="Bound Crystal Staff" additionalName="Rsk. Evasion" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Evasion by 7 when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_crystal_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1726,7 +1726,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30656" name="Bound Crystal Staff" name_additional="Mana Up" type="Weapon">
+	<item id="30656" name="Bound Crystal Staff" additionalName="Mana Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Max MP by 30%. -->
 		<set name="icon" val="icon.weapon_crystal_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1762,7 +1762,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30657" name="Bound Crystal Staff" name_additional="Blessed Body" type="Weapon">
+	<item id="30657" name="Bound Crystal Staff" additionalName="Blessed Body" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 20% chance of casting Blessed Body on the target during magic use. -->
 		<set name="icon" val="icon.weapon_crystal_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1832,7 +1832,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30659" name="Bound Crystal Dagger" name_additional="Critical Bleed" type="Weapon">
+	<item id="30659" name="Bound Crystal Dagger" additionalName="Critical Bleed" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 14% chance of casting Bleed on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1868,7 +1868,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30660" name="Bound Crystal Dagger" name_additional="Critical Poison" type="Weapon">
+	<item id="30660" name="Bound Crystal Dagger" additionalName="Critical Poison" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 7% chance of casting Poison on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1904,7 +1904,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30661" name="Bound Crystal Dagger" name_additional="Mortal Strike" type="Weapon">
+	<item id="30661" name="Bound Crystal Dagger" additionalName="Mortal Strike" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases the success rate of Mortal Blow and Deadly Blow by 44%. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1973,7 +1973,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30663" name="Bound Kris" name_additional="Evasion" type="Weapon">
+	<item id="30663" name="Bound Kris" additionalName="Evasion" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Evasion by 2. -->
 		<set name="icon" val="icon.weapon_kris_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2009,7 +2009,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30664" name="Bound Kris" name_additional="Focus" type="Weapon">
+	<item id="30664" name="Bound Kris" additionalName="Focus" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Critical by 71. -->
 		<set name="icon" val="icon.weapon_kris_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2045,7 +2045,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30665" name="Bound Kris" name_additional="Back Blow" type="Weapon">
+	<item id="30665" name="Bound Kris" additionalName="Back Blow" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases P. Critical Rate by 40% when attacking the target from behind. -->
 		<set name="icon" val="icon.weapon_kris_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2221,7 +2221,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30670" name="Bound Colichemarde" name_additional="Focus" type="Weapon">
+	<item id="30670" name="Bound Colichemarde" additionalName="Focus" type="Weapon">
 		<!-- Bound Item.\nKamael-exclusive Weapon: Damascus sword conversion\n(Soul Crystal Enhancement)\nIncreases Critical by 64. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2258,7 +2258,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30671" name="Bound Colichemarde" name_additional="Critical Damage" type="Weapon">
+	<item id="30671" name="Bound Colichemarde" additionalName="Critical Damage" type="Weapon">
 		<!-- Bound Item.\nKamael-exclusive Weapon: Damascus sword conversion\n(Soul Crystal Enhancement)\nP. Atk. + 262 during a Critical Attack.\nWhen enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2295,7 +2295,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30672" name="Bound Colichemarde" name_additional="Haste" type="Weapon">
+	<item id="30672" name="Bound Colichemarde" additionalName="Haste" type="Weapon">
 		<!-- Bound Item.\nKamael-exclusive Weapon: Damascus sword conversion\n(Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 6%.\n When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2638,7 +2638,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30683" name="Bound Katana" name_additional="Focus" type="Weapon">
+	<item id="30683" name="Bound Katana" additionalName="Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 82. -->
 		<set name="icon" val="icon.weapon_katana_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2673,7 +2673,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30684" name="Bound Katana" name_additional="Critical Damage" type="Weapon">
+	<item id="30684" name="Bound Katana" additionalName="Critical Damage" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 194 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_katana_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2708,7 +2708,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30685" name="Bound Katana" name_additional="Haste" type="Weapon">
+	<item id="30685" name="Bound Katana" additionalName="Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 7%. -->
 		<set name="icon" val="icon.weapon_katana_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2810,7 +2810,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30688" name="Bound Kaim Vanul's Bones" name_additional="Mana Up" type="Weapon">
+	<item id="30688" name="Bound Kaim Vanul's Bones" additionalName="Mana Up" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Max MP by 30%. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2846,7 +2846,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30689" name="Bound Kaim Vanul's Bones" name_additional="Magic Silence" type="Weapon">
+	<item id="30689" name="Bound Kaim Vanul's Bones" additionalName="Magic Silence" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nHas a 10% chance of casting Silence on the target during magic use. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2882,7 +2882,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30690" name="Bound Kaim Vanul's Bones" name_additional="Conversion" type="Weapon">
+	<item id="30690" name="Bound Kaim Vanul's Bones" additionalName="Conversion" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Max MP by 60% and Max HP by 40%. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2978,7 +2978,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30693" name="Bound Karik Horn" name_additional="Focus" type="Weapon">
+	<item id="30693" name="Bound Karik Horn" additionalName="Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 77. -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3014,7 +3014,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30694" name="Bound Karik Horn" name_additional="Haste" type="Weapon">
+	<item id="30694" name="Bound Karik Horn" additionalName="Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 7%. -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3050,7 +3050,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30695" name="Bound Karik Horn" name_additional="Critical Drain" type="Weapon">
+	<item id="30695" name="Bound Karik Horn" additionalName="Critical Drain" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nAbsorbs 9 HP from the target during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3119,7 +3119,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30697" name="Bound Caliburs" name_additional="Guidance" type="Weapon">
+	<item id="30697" name="Bound Caliburs" additionalName="Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 5. -->
 		<set name="icon" val="icon.weapon_caliburs_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3154,7 +3154,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30698" name="Bound Caliburs" name_additional="Focus" type="Weapon">
+	<item id="30698" name="Bound Caliburs" additionalName="Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 77. -->
 		<set name="icon" val="icon.weapon_caliburs_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3189,7 +3189,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30699" name="Bound Caliburs" name_additional="Critical Damage" type="Weapon">
+	<item id="30699" name="Bound Caliburs" additionalName="Critical Damage" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 213 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_caliburs_i01" />
 		<set name="default_action" val="EQUIP" />

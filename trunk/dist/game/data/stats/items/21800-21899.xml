@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="21800" name="Dynasty Leather Armor of Fortune" name_additional="90-day" type="Armor">
+	<item id="21800" name="Dynasty Leather Armor of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -24,7 +24,7 @@
 			<stat type="pDef">170</stat>
 		</stats>
 	</item>
-	<item id="21801" name="Dynasty Leather Leggings of Fortune" name_additional="90-day" type="Armor">
+	<item id="21801" name="Dynasty Leather Leggings of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t92_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -48,7 +48,7 @@
 			<stat type="pDef">106</stat>
 		</stats>
 	</item>
-	<item id="21802" name="Dynasty Leather Helmet of Fortune" name_additional="90-day" type="Armor">
+	<item id="21802" name="Dynasty Leather Helmet of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -71,7 +71,7 @@
 			<stat type="pDef">92</stat>
 		</stats>
 	</item>
-	<item id="21803" name="Dynasty Leather Gloves of Fortune" name_additional="90-day" type="Armor">
+	<item id="21803" name="Dynasty Leather Gloves of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t92_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -94,7 +94,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="21804" name="Dynasty Leather Boots of Fortune" name_additional="90-day" type="Armor">
+	<item id="21804" name="Dynasty Leather Boots of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t92_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -117,7 +117,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="21805" name="Dynasty Leather Armor of Fortune Set Pack (S-grade)" name_additional="90-day" type="EtcItem">
+	<item id="21805" name="Dynasty Leather Armor of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">
 		<!-- Description: When used, you acquire a Dynasty Leather Mail of Fortune Set. Expires after 90 days if not used. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="material" val="STEEL" />
@@ -139,7 +139,7 @@
 			<item id="21804" min="1" max="1" chance="100" /> <!-- Dynasty Leather Boots of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="21806" name="Dynasty Tunic of Fortune" name_additional="90-day" type="Armor">
+	<item id="21806" name="Dynasty Tunic of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t93_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -167,7 +167,7 @@
 			<stat type="maxMp">592</stat>
 		</stats>
 	</item>
-	<item id="21807" name="Dynasty Stockings of Fortune" name_additional="90-day" type="Armor">
+	<item id="21807" name="Dynasty Stockings of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t93_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -195,7 +195,7 @@
 			<stat type="maxMp">370</stat>
 		</stats>
 	</item>
-	<item id="21808" name="Dynasty Circlet of Fortune" name_additional="90-day" type="Armor">
+	<item id="21808" name="Dynasty Circlet of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -218,7 +218,7 @@
 			<stat type="pDef">92</stat>
 		</stats>
 	</item>
-	<item id="21809" name="Dynasty Gloves of Fortune" name_additional="90-day" type="Armor">
+	<item id="21809" name="Dynasty Gloves of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t93_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -241,7 +241,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="21810" name="Dynasty Shoes of Fortune" name_additional="90-day" type="Armor">
+	<item id="21810" name="Dynasty Shoes of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t93_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -264,7 +264,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="21811" name="Dynasty Sigil of Fortune" name_additional="90-day" type="Armor">
+	<item id="21811" name="Dynasty Sigil of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.dynasty_sigil_i00" />
 		<set name="armor_type" val="SIGIL" />
@@ -289,7 +289,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="21812" name="Dynasty Tunic of Fortune Set Pack (S-grade)" name_additional="90-day" type="EtcItem">
+	<item id="21812" name="Dynasty Tunic of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">
 		<!-- Description: When used, you acquire a Dynasty Robe of Fortune Set. Expires after 90 days if not used. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="material" val="STEEL" />
@@ -312,7 +312,7 @@
 			<item id="21811" min="1" max="1" chance="100" /> <!-- Dynasty Sigil of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="21813" name="Tateossian Earring of Fortune" name_additional="90-day" type="Armor">
+	<item id="21813" name="Tateossian Earring of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: The effect is MP +31. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_tateossian_earring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -335,7 +335,7 @@
 			<stat type="maxMp">31</stat>
 		</stats>
 	</item>
-	<item id="21814" name="Tateossian Ring of Fortune" name_additional="90-day" type="Armor">
+	<item id="21814" name="Tateossian Ring of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: The effect is MP +21. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_tateossian_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -358,7 +358,7 @@
 			<stat type="maxMp">21</stat>
 		</stats>
 	</item>
-	<item id="21815" name="Tateossian Necklace of Fortune" name_additional="90-day" type="Armor">
+	<item id="21815" name="Tateossian Necklace of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: The effect is MP +42. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_tateossian_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -381,7 +381,7 @@
 			<stat type="maxMp">42</stat>
 		</stats>
 	</item>
-	<item id="21816" name="Tateossian Accessory of Fortune Pack (S-grade)" name_additional="90-day" type="EtcItem">
+	<item id="21816" name="Tateossian Accessory of Fortune Pack (S-grade)" additionalName="90-day" type="EtcItem">
 		<!-- Description: When used, you acquire a Tateossian Accessory Set. Expires after 90 days if not used. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="STEEL" />
@@ -401,7 +401,7 @@
 			<item id="21815" min="1" max="1" chance="100" /> <!-- Tateossian Necklace of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="21817" name="Dynasty Earring of Fortune" name_additional="90-day" type="Armor">
+	<item id="21817" name="Dynasty Earring of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: The effect is MP +35. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -424,7 +424,7 @@
 			<stat type="maxMp">35</stat>
 		</stats>
 	</item>
-	<item id="21818" name="Dynasty Necklace of Fortune" name_additional="90-day" type="Armor">
+	<item id="21818" name="Dynasty Necklace of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: The effect is MP +46. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -447,7 +447,7 @@
 			<stat type="maxMp">46</stat>
 		</stats>
 	</item>
-	<item id="21819" name="Dynasty Ring of Fortune" name_additional="90-day" type="Armor">
+	<item id="21819" name="Dynasty Ring of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: The effect is MP +23. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -470,7 +470,7 @@
 			<stat type="maxMp">23</stat>
 		</stats>
 	</item>
-	<item id="21820" name="Dynasty Accessory of Fortune Pack (S-grade)" name_additional="90-day" type="EtcItem">
+	<item id="21820" name="Dynasty Accessory of Fortune Pack (S-grade)" additionalName="90-day" type="EtcItem">
 		<!-- Description: When used, you acquire a Dynasty Accessory Set. Expires after 90 days if not used. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="STEEL" />
@@ -490,7 +490,7 @@
 			<item id="21818" min="1" max="1" chance="100" /> <!-- Dynasty Necklace of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="21821" name="Arcana Mace of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21821" name="Arcana Mace of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Increases Magic Casting Spd. by 15%, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -528,7 +528,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21822" name="Angel Slayer of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21822" name="Angel Slayer of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: During Critical, increases P. Atk. by 265, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -566,7 +566,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21823" name="Draconic Bow of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21823" name="Draconic Bow of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Increases Critical by 88, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -605,7 +605,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="21824" name="Basalt Battlehammer of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21824" name="Basalt Battlehammer of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Increases Maximum HP by 25%, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -643,7 +643,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21825" name="Forgotten Blade of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21825" name="Forgotten Blade of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Increases Critical by 84, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -679,7 +679,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21826" name="Heaven's Divider of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21826" name="Heaven's Divider of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Increases Critical by 84, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -715,7 +715,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21827" name="Demon Splinter of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21827" name="Demon Splinter of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Increases Critical by 80, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -753,7 +753,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21828" name="Tallum Blade*Dark Legion's Edge of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21828" name="Tallum Blade*Dark Legion's Edge of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Increases Max HP +15%, Max MP +20%, and Max CP +30%. Increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -790,7 +790,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21829" name="Saint Spear of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21829" name="Saint Spear of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Increases Atk. Spd. by about 7%, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -828,7 +828,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="21830" name="Gram of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21830" name="Gram of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Kamael exclusive weapon. Increases Critical by 84, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -869,7 +869,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21831" name="Laevateinn of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21831" name="Laevateinn of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Kamael exclusive weapon. Increases Critical by 84. Increases damage inflicted during PvP. During Critical, party members including yourself will receive increased attack power, magic power, and healing capacity by a fixed rate. But decreased MP consumption per skill during a critical attack. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -908,7 +908,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21832" name="Sarunga of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21832" name="Sarunga of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Kamael exclusive weapon. Increases Critical by 88, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -947,7 +947,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="21833" name="Dynasty Phantom of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21833" name="Dynasty Phantom of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Increases Magic Casting Spd. by 15%, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -983,7 +983,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21834" name="Dynasty Knife of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21834" name="Dynasty Knife of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Increases Critical by 116, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1021,7 +1021,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21835" name="Dynasty Bow of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21835" name="Dynasty Bow of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Increases Critical by 116, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1060,7 +1060,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="21836" name="Dynasty Cudgel of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21836" name="Dynasty Cudgel of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Increases Maximum HP by 25%, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1098,7 +1098,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21837" name="Dynasty Sword of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21837" name="Dynasty Sword of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Increases Critical by 111, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1134,7 +1134,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21838" name="Dynasty Blade of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21838" name="Dynasty Blade of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Increases Critical by 111, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1170,7 +1170,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21839" name="Dynasty Bagh-Nakh of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21839" name="Dynasty Bagh-Nakh of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Increases Critical by 106, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1208,7 +1208,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21840" name="Dynasty Dualsword of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21840" name="Dynasty Dualsword of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Increases Critical by 109, Maximum HP by 10%, and damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1245,7 +1245,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21841" name="Dynasty Halberd of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21841" name="Dynasty Halberd of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: During Critical, increases stun effect with 48% rate and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1284,7 +1284,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="21842" name="Dynasty Ancient Sword of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21842" name="Dynasty Ancient Sword of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Kamael exclusive weapon. Increases Critical by 111, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1325,7 +1325,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21843" name="Dynasty Rapier of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21843" name="Dynasty Rapier of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Kamael exclusive weapon. Increases Critical by 111. Increases damage inflicted during PvP. During Critical, party members including yourself will receive increased attack power, magic power, and healing capacity by a fixed rate. But decreased MP consumption per skill during a critical attack. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1364,7 +1364,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21844" name="Dynasty Crossbow of Fortune" name_additional="90-day" type="Weapon">
+	<item id="21844" name="Dynasty Crossbow of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Description: Kamael exclusive weapon. Increases Critical by 116, and increases damage inflicted during PvP. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1677,7 +1677,7 @@
 			<skill id="2164" level="1" /> <!-- Blessed Spiritshot (S-grade) -->
 		</skills>
 	</item>
-	<item id="21857" name="Hero's Gold Chest" name_additional="90-day" type="EtcItem">
+	<item id="21857" name="Hero's Gold Chest" additionalName="90-day" type="EtcItem">
 		<!-- Description: Hero's Gold Chest. Gift box containing 1 each of a Hero's Treasure Box, Dimensional Support Pack, Potion Support Pack, and Supplies Support Pack. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="material" val="STEEL" />
@@ -1700,7 +1700,7 @@
 			<item id="21860" min="1" max="1" chance="100" /> <!-- Supplies Support Pack - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="21858" name="Dimensional Support Pack" name_additional="90-day" type="EtcItem">
+	<item id="21858" name="Dimensional Support Pack" additionalName="90-day" type="EtcItem">
 		<!-- Description: Dimensional support pack. Gift box containing 2 high quality hunting helper exchange coupon, 3 feathers of blessing, 5 Kamaloka (Near Kamaloka, Hall of the Abyss, Labyrinth of the Abyss) entrance passes, and 3 Vitality Replenishing Beverages. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -1725,7 +1725,7 @@
 			<item id="14055" min="3" max="3" chance="100" /> <!-- Vitality Replenishing Potion -->
 		</capsuled_items>
 	</item>
-	<item id="21859" name="Potion Support Pack" name_additional="90-day" type="EtcItem">
+	<item id="21859" name="Potion Support Pack" additionalName="90-day" type="EtcItem">
 		<!-- Description: Potion support pack. Gift box containing 20 highest power temporary healing potion, 50 greater healing potions, 5 fresh milks, and 5 energy of sprouts. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -1748,7 +1748,7 @@
 			<item id="17163" min="5" max="5" chance="100" /> <!-- Event - Leaf of Appreciation -->
 		</capsuled_items>
 	</item>
-	<item id="21860" name="Supplies Support Pack" name_additional="90-day" type="EtcItem">
+	<item id="21860" name="Supplies Support Pack" additionalName="90-day" type="EtcItem">
 		<!-- Description: Supplies support pack. Gift box containing 200,000 mysterious soulshots and spirits according to grade. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -1956,7 +1956,7 @@
 			<item id="21857" min="1" max="1" chance="100" /> <!-- Hero's Gold Chest - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="21870" name="Agathion - Neolithica" name_additional="14-day" type="Armor">
+	<item id="21870" name="Agathion - Neolithica" additionalName="14-day" type="Armor">
 		<!-- Description: A bracelet that can summon a Neolithic Agathion. Requires room in inventory and weight limit to receive a New Year gift from a Neolithic Agathion. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2015,7 +2015,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="21873" name="Santa's Gift Box" name_additional="Event" type="EtcItem">
+	<item id="21873" name="Santa's Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Description: Santa Claus's treasure box. When used, you can receive Santa Claus's gift. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -2087,7 +2087,7 @@
 			<item id="21882" min="1" max="1" chance="100" /> <!-- Shiny Party Hat - Blessed Body (90-day) -->
 		</capsuled_items>
 	</item>
-	<item id="21877" name="Pa'agrio's Christmas Package" name_additional="Event" type="EtcItem">
+	<item id="21877" name="Pa'agrio's Christmas Package" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. Gift box containing 1 each of Pa'agrio's Warm Breeze - 4 hour pack, Nevit's Hourglass - 4 hour pack, party cake, and shiny party hat. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -2188,7 +2188,7 @@
 			<skill id="22301" level="1" /> <!-- Party Cake -->
 		</skills>
 	</item>
-	<item id="21882" name="Shiny Party Hat" name_additional="Blessed Body (90-day)" type="Armor">
+	<item id="21882" name="Shiny Party Hat" additionalName="Blessed Body (90-day)" type="Armor">
 		<!-- Description: Dimensional item. Shiny party hat. When equipped, can use the Blessed Body skill. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_party_hat_gold_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2342,7 +2342,7 @@
 			<skill id="22302" level="1" /> <!-- Sweet Chocolate (4-hour) -->
 		</skills>
 	</item>
-	<item id="21890" name="Rose Spirit Coupon Pack" name_additional="Event" type="EtcItem">
+	<item id="21890" name="Rose Spirit Coupon Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 2 improved rose spirit exchange tickets. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -2362,7 +2362,7 @@
 			<item id="20914" min="2" max="2" chance="100" /> <!-- Enhanced Rose Spirit Coupon (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="21891" name="Rose Spirit Set Pack" name_additional="Event" type="EtcItem">
+	<item id="21891" name="Rose Spirit Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. Gift box containing 1 Valentine's Day Rose Spirit Exchange Coupon and 1 Sweet Chocolate Box. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />

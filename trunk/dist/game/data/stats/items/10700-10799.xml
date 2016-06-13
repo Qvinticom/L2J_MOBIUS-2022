@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="10700" name="Éclair Bijou {PvP}" name_additional="Haste" type="Weapon">
+	<item id="10700" name="Éclair Bijou {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -42,7 +42,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10701" name="Éclair Bijou {PvP}" name_additional="Health" type="Weapon">
+	<item id="10701" name="Éclair Bijou {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -84,7 +84,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10702" name="Éclair Bijou {PvP}" name_additional="Critical Poison" type="Weapon">
+	<item id="10702" name="Éclair Bijou {PvP}" additionalName="Critical Poison" type="Weapon">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -126,7 +126,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10703" name="Durendal {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10703" name="Durendal {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -167,7 +167,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10704" name="Durendal {PvP}" name_additional="Haste" type="Weapon">
+	<item id="10704" name="Durendal {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -208,7 +208,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10705" name="Durendal {PvP}" name_additional="Health" type="Weapon">
+	<item id="10705" name="Durendal {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -249,7 +249,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10706" name="Screaming Vengeance {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="10706" name="Screaming Vengeance {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -291,7 +291,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="10707" name="Screaming Vengeance {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10707" name="Screaming Vengeance {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -333,7 +333,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="10708" name="Screaming Vengeance {PvP}" name_additional="Quick Recovery" type="Weapon">
+	<item id="10708" name="Screaming Vengeance {PvP}" additionalName="Quick Recovery" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -411,7 +411,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10710" name="Forgotten Blade {PvP}" name_additional="Haste" type="Weapon">
+	<item id="10710" name="Forgotten Blade {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -448,7 +448,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10711" name="Forgotten Blade {PvP}" name_additional="Health" type="Weapon">
+	<item id="10711" name="Forgotten Blade {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -485,7 +485,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10712" name="Forgotten Blade {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10712" name="Forgotten Blade {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -522,7 +522,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10713" name="Heaven's Divider {PvP}" name_additional="Haste" type="Weapon">
+	<item id="10713" name="Heaven's Divider {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -559,7 +559,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10714" name="Heaven's Divider {PvP}" name_additional="Health" type="Weapon">
+	<item id="10714" name="Heaven's Divider {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -596,7 +596,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10715" name="Heaven's Divider {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10715" name="Heaven's Divider {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -633,7 +633,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10716" name="Basalt Battlehammer {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="10716" name="Basalt Battlehammer {PvP}" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -671,7 +671,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10717" name="Basalt Battlehammer {PvP}" name_additional="Health" type="Weapon">
+	<item id="10717" name="Basalt Battlehammer {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -709,7 +709,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10718" name="Basalt Battlehammer {PvP}" name_additional="HP Regeneration" type="Weapon">
+	<item id="10718" name="Basalt Battlehammer {PvP}" additionalName="HP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -747,7 +747,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10719" name="Dragon Hunter Axe {PvP}" name_additional="HP Regeneration" type="Weapon">
+	<item id="10719" name="Dragon Hunter Axe {PvP}" additionalName="HP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -785,7 +785,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10720" name="Dragon Hunter Axe {PvP}" name_additional="Health" type="Weapon">
+	<item id="10720" name="Dragon Hunter Axe {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -823,7 +823,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10721" name="Dragon Hunter Axe {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="10721" name="Dragon Hunter Axe {PvP}" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -861,7 +861,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10722" name="Angel Slayer {PvP}" name_additional="Critical Damage" type="Weapon">
+	<item id="10722" name="Angel Slayer {PvP}" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -900,7 +900,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10723" name="Angel Slayer {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="10723" name="Angel Slayer {PvP}" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -939,7 +939,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10724" name="Angel Slayer {PvP}" name_additional="Haste" type="Weapon">
+	<item id="10724" name="Angel Slayer {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -978,7 +978,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10725" name="Saint Spear {PvP}" name_additional="Health" type="Weapon">
+	<item id="10725" name="Saint Spear {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1016,7 +1016,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10726" name="Saint Spear {PvP}" name_additional="Guidance" type="Weapon">
+	<item id="10726" name="Saint Spear {PvP}" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1054,7 +1054,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10727" name="Saint Spear {PvP}" name_additional="Haste" type="Weapon">
+	<item id="10727" name="Saint Spear {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1092,7 +1092,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10728" name="Demon Splinter {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10728" name="Demon Splinter {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1131,7 +1131,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10729" name="Demon Splinter {PvP}" name_additional="Health" type="Weapon">
+	<item id="10729" name="Demon Splinter {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1170,7 +1170,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10730" name="Demon Splinter {PvP}" name_additional="Critical Stun" type="Weapon">
+	<item id="10730" name="Demon Splinter {PvP}" additionalName="Critical Stun" type="Weapon">
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1209,7 +1209,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10731" name="Arcana Mace {PvP}" name_additional="Acumen" type="Weapon">
+	<item id="10731" name="Arcana Mace {PvP}" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1248,7 +1248,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10732" name="Arcana Mace {PvP}" name_additional="MP Regeneration" type="Weapon">
+	<item id="10732" name="Arcana Mace {PvP}" additionalName="MP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1287,7 +1287,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10733" name="Arcana Mace {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="10733" name="Arcana Mace {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1326,7 +1326,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10734" name="Imperial Staff {PvP}" name_additional="Empower" type="Weapon">
+	<item id="10734" name="Imperial Staff {PvP}" additionalName="Empower" type="Weapon">
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1365,7 +1365,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10735" name="Imperial Staff {PvP}" name_additional="MP Regeneration" type="Weapon">
+	<item id="10735" name="Imperial Staff {PvP}" additionalName="MP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1404,7 +1404,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10736" name="Imperial Staff {PvP}" name_additional="Magic Hold" type="Weapon">
+	<item id="10736" name="Imperial Staff {PvP}" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1443,7 +1443,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10737" name="Draconic Bow {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="10737" name="Draconic Bow {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1483,7 +1483,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="10738" name="Draconic Bow {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10738" name="Draconic Bow {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1523,7 +1523,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="10739" name="Draconic Bow {PvP}" name_additional="Critical Slow" type="Weapon">
+	<item id="10739" name="Draconic Bow {PvP}" additionalName="Critical Slow" type="Weapon">
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1563,7 +1563,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="10740" name="Laevateinn {PvP}" name_additional="Haste" type="Weapon">
+	<item id="10740" name="Laevateinn {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1605,7 +1605,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10741" name="Laevateinn {PvP}" name_additional="Health" type="Weapon">
+	<item id="10741" name="Laevateinn {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1647,7 +1647,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10742" name="Laevateinn {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10742" name="Laevateinn {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1689,7 +1689,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10743" name="Gram {PvP}" name_additional="Haste" type="Weapon">
+	<item id="10743" name="Gram {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1730,7 +1730,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10744" name="Gram {PvP}" name_additional="Health" type="Weapon">
+	<item id="10744" name="Gram {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1771,7 +1771,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10745" name="Gram {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10745" name="Gram {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1812,7 +1812,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10746" name="Sarunga {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="10746" name="Sarunga {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1854,7 +1854,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="10747" name="Sarunga {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10747" name="Sarunga {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1896,7 +1896,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="10748" name="Sarunga {PvP}" name_additional="Critical Slow" type="Weapon">
+	<item id="10748" name="Sarunga {PvP}" additionalName="Critical Slow" type="Weapon">
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1975,7 +1975,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10750" name="Dynasty Sword {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10750" name="Dynasty Sword {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2012,7 +2012,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10751" name="Dynasty Sword {PvP}" name_additional="Health" type="Weapon">
+	<item id="10751" name="Dynasty Sword {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2049,7 +2049,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10752" name="Dynasty Sword {PvP}" name_additional="Light Armor" type="Weapon">
+	<item id="10752" name="Dynasty Sword {PvP}" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2086,7 +2086,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10753" name="Dynasty Blade {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10753" name="Dynasty Blade {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2123,7 +2123,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10754" name="Dynasty Blade {PvP}" name_additional="Health" type="Weapon">
+	<item id="10754" name="Dynasty Blade {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2160,7 +2160,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10755" name="Dynasty Blade {PvP}" name_additional="Light Armor" type="Weapon">
+	<item id="10755" name="Dynasty Blade {PvP}" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2197,7 +2197,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10756" name="Dynasty Cudgel {PvP}" name_additional="Anger" type="Weapon">
+	<item id="10756" name="Dynasty Cudgel {PvP}" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2235,7 +2235,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10757" name="Dynasty Cudgel {PvP}" name_additional="Health" type="Weapon">
+	<item id="10757" name="Dynasty Cudgel {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2273,7 +2273,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10758" name="Dynasty Cudgel {PvP}" name_additional="Rsk. Focus" type="Weapon">
+	<item id="10758" name="Dynasty Cudgel {PvP}" additionalName="Rsk. Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2311,7 +2311,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10759" name="Dynasty Crusher {PvP}" name_additional="Anger" type="Weapon">
+	<item id="10759" name="Dynasty Crusher {PvP}" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2349,7 +2349,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10760" name="Dynasty Crusher {PvP}" name_additional="Health" type="Weapon">
+	<item id="10760" name="Dynasty Crusher {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2387,7 +2387,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10761" name="Dynasty Crusher {PvP}" name_additional="Rsk. Focus" type="Weapon">
+	<item id="10761" name="Dynasty Crusher {PvP}" additionalName="Rsk. Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2425,7 +2425,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10762" name="Dynasty Knife {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10762" name="Dynasty Knife {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2464,7 +2464,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10763" name="Dynasty Knife {PvP}" name_additional="Evasion" type="Weapon">
+	<item id="10763" name="Dynasty Knife {PvP}" additionalName="Evasion" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2503,7 +2503,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10764" name="Dynasty Knife {PvP}" name_additional="Critical Damage" type="Weapon">
+	<item id="10764" name="Dynasty Knife {PvP}" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2542,7 +2542,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10765" name="Dynasty Halberd {PvP}" name_additional="Anger" type="Weapon">
+	<item id="10765" name="Dynasty Halberd {PvP}" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2580,7 +2580,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10766" name="Dynasty Halberd {PvP}" name_additional="Critical Stun" type="Weapon">
+	<item id="10766" name="Dynasty Halberd {PvP}" additionalName="Critical Stun" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2618,7 +2618,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10767" name="Dynasty Halberd {PvP}" name_additional="Light Armor" type="Weapon">
+	<item id="10767" name="Dynasty Halberd {PvP}" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2656,7 +2656,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10768" name="Dynasty Bagh-Nakh {PvP}" name_additional="Rsk. Evasion" type="Weapon">
+	<item id="10768" name="Dynasty Bagh-Nakh {PvP}" additionalName="Rsk. Evasion" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2695,7 +2695,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10769" name="Dynasty Bagh-Nakh {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10769" name="Dynasty Bagh-Nakh {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2734,7 +2734,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10770" name="Dynasty Bagh-Nakh {PvP}" name_additional="Haste" type="Weapon">
+	<item id="10770" name="Dynasty Bagh-Nakh {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2773,7 +2773,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10771" name="Dynasty Phantom {PvP}" name_additional="Acumen" type="Weapon">
+	<item id="10771" name="Dynasty Phantom {PvP}" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2811,7 +2811,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10772" name="Dynasty Phantom {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="10772" name="Dynasty Phantom {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2849,7 +2849,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10773" name="Dynasty Phantom {PvP}" name_additional="Conversion" type="Weapon">
+	<item id="10773" name="Dynasty Phantom {PvP}" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2887,7 +2887,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10774" name="Dynasty Mace {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="10774" name="Dynasty Mace {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2926,7 +2926,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10775" name="Dynasty Mace {PvP}" name_additional="Conversion" type="Weapon">
+	<item id="10775" name="Dynasty Mace {PvP}" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2965,7 +2965,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10776" name="Dynasty Mace {PvP}" name_additional="Acumen" type="Weapon">
+	<item id="10776" name="Dynasty Mace {PvP}" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3004,7 +3004,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10777" name="Dynasty Staff {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="10777" name="Dynasty Staff {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3043,7 +3043,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10778" name="Dynasty Staff {PvP}" name_additional="Conversion" type="Weapon">
+	<item id="10778" name="Dynasty Staff {PvP}" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3082,7 +3082,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10779" name="Dynasty Staff {PvP}" name_additional="Acumen" type="Weapon">
+	<item id="10779" name="Dynasty Staff {PvP}" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3121,7 +3121,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10780" name="Dynasty Bow {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="10780" name="Dynasty Bow {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -3161,7 +3161,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="10781" name="Dynasty Bow {PvP}" name_additional="Guidance" type="Weapon">
+	<item id="10781" name="Dynasty Bow {PvP}" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -3201,7 +3201,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="10782" name="Dynasty Bow {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10782" name="Dynasty Bow {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -3241,7 +3241,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="10783" name="Dynasty Rapier {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10783" name="Dynasty Rapier {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -3283,7 +3283,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10784" name="Dynasty Rapier {PvP}" name_additional="Health" type="Weapon">
+	<item id="10784" name="Dynasty Rapier {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -3325,7 +3325,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10785" name="Dynasty Rapier {PvP}" name_additional="Light Armor" type="Weapon">
+	<item id="10785" name="Dynasty Rapier {PvP}" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -3367,7 +3367,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10786" name="Dynasty Ancient Sword {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10786" name="Dynasty Ancient Sword {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -3408,7 +3408,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10787" name="Dynasty Ancient Sword {PvP}" name_additional="Health" type="Weapon">
+	<item id="10787" name="Dynasty Ancient Sword {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -3449,7 +3449,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10788" name="Dynasty Ancient Sword {PvP}" name_additional="Light Armor" type="Weapon">
+	<item id="10788" name="Dynasty Ancient Sword {PvP}" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -3490,7 +3490,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10789" name="Dynasty Crossbow {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="10789" name="Dynasty Crossbow {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3532,7 +3532,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="10790" name="Dynasty Crossbow {PvP}" name_additional="Guidance" type="Weapon">
+	<item id="10790" name="Dynasty Crossbow {PvP}" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3574,7 +3574,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="10791" name="Dynasty Crossbow {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10791" name="Dynasty Crossbow {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="40200" name="Sayha's Cloak" name_additional="Eviscerator" type="Armor">
+	<item id="40200" name="Sayha's Cloak" additionalName="Eviscerator" type="Armor">
 		<!-- Cloak for those that carry the power of Sayha. M. Def. + 40. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -21,7 +21,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="40201" name="Sayha's Cloak" name_additional="Sayha's Seer" type="Armor">
+	<item id="40201" name="Sayha's Cloak" additionalName="Sayha's Seer" type="Armor">
 		<!-- Cloak for those that carry the power of Sayha. M. Def. + 40. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -89,13 +89,13 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40208" name="Throwaway Item 1" name_additional="Not in Use" type="EtcItem">
+	<item id="40208" name="Throwaway Item 1" additionalName="Not in Use" type="EtcItem">
 		<!-- Unidentified Amaranthine weapon. Double-click to see whether you got a normal or blessed weapon. -->
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="R" />
 		<set name="icon" val="icon.weapon_aspeda_i00" />
 	</item>
-	<item id="40209" name="Throwaway Item 1" name_additional="Not in Use" type="EtcItem">
+	<item id="40209" name="Throwaway Item 1" additionalName="Not in Use" type="EtcItem">
 		<!-- Unidentified Eternal armor. Double-click to see whether you got normal or blessed armor. -->
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="R" />
@@ -136,7 +136,7 @@
 		<set name="recipe_id" val="4297" /> <!-- mk_rp_r99_equip_ep1 -->
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="40213" name="Ertheia's Rare Accessory Pack" name_additional="7-day" type="EtcItem">
+	<item id="40213" name="Ertheia's Rare Accessory Pack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Antharas Earring, Blessed Valakas Necklace, Tauti's Ring, Earth Wyrm Heart Ring, and Blessed Zaken's Earring (7-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -151,7 +151,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="40214" name="Blessed Antharas' Earring  Pack" name_additional="7-day" type="EtcItem">
+	<item id="40214" name="Blessed Antharas' Earring  Pack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Antharas Earring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_5_i00" />
 		<set name="is_stackable" val="true" />
@@ -166,7 +166,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="40215" name="Blessed Valakas' Necklace Pack" name_additional="7-day" type="EtcItem">
+	<item id="40215" name="Blessed Valakas' Necklace Pack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Valakas Necklace (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_stackable" val="true" />
@@ -181,7 +181,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="40216" name="Tauti's Ring Pack" name_additional="7-day" type="EtcItem">
+	<item id="40216" name="Tauti's Ring Pack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain a Tauti's Ring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_stackable" val="true" />
@@ -196,7 +196,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="40217" name="Earth Wyrm Heart Ring Pack" name_additional="7-day" type="EtcItem">
+	<item id="40217" name="Earth Wyrm Heart Ring Pack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain an Earth Wyrm Heart Ring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_stackable" val="true" />
@@ -211,7 +211,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="40218" name="Blessed Zaken's Earring" name_additional="7-day" type="EtcItem">
+	<item id="40218" name="Blessed Zaken's Earring" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Zaken's Earring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="is_stackable" val="true" />
@@ -226,7 +226,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="40219" name="Appearance Stone: Cat Fighter (Ertheia Only)" name_additional="90-day" type="EtcItem">
+	<item id="40219" name="Appearance Stone: Cat Fighter (Ertheia Only)" additionalName="90-day" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon into that of a Cat Fighter. 90-day.\n\n(Note) Modified items can only be equipped by Ertheia. -->
 		<set name="icon" val="icon.shape_shifting_dualfist_i00" />
 		<set name="is_stackable" val="true" />
@@ -240,7 +240,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="7776000" />
 	</item>
-	<item id="40220" name="Appearance Stone: Cat Staff (Ertheia Only)" name_additional="90-day" type="EtcItem">
+	<item id="40220" name="Appearance Stone: Cat Staff (Ertheia Only)" additionalName="90-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed magic blunt weapon into that of a Cat Staff. 90-day.\n\n(Note) Modified items can only be equipped by Ertheia. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -358,7 +358,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40231" name="Freya's Frozen Scroll" name_additional="Event" type="EtcItem">
+	<item id="40231" name="Freya's Frozen Scroll" additionalName="Event" type="EtcItem">
 		<!-- Vitality consumption x 2 and XP/SP acquisition + 100% while hunting. Remains after death. Duration is 10 min. Cooldown is 10 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="is_clan_depositable" val="false" />
@@ -422,7 +422,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40237" name="Agathion - Freya" name_additional="30-day" type="Armor">
+	<item id="40237" name="Agathion - Freya" additionalName="30-day" type="Armor">
 		<!-- Summons Freya agathion. 30-day. Cannot be used in the Olymipad.\n(Active Skill)\n1. Freya's Scroll of Escape: Town of Aden / Town of Rune / Talking Island Village. Cooldown is 30 min.\n\n(Passive SKill)\n1. Freya's Mind: Mental/Paralysis Resistance + 10%, Water Resistance + 10.\n\n2. Freya's Strength: STR/INT/CON/DEX/WIT/MEN + 1.\n\n3. Freya's Magic: P./M. Skill MP Consumption - 3%. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -476,7 +476,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="40241" name="Freya's Frozen Lamp" name_additional="Event" type="EtcItem">
+	<item id="40241" name="Freya's Frozen Lamp" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a Freya's Frozen Scroll. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_lamp" />
 		<set name="is_clan_depositable" val="false" />
@@ -500,7 +500,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40243" name="Greater Abelius Cloak (20-day)" name_additional="Sigel Knight" type="Armor">
+	<item id="40243" name="Greater Abelius Cloak (20-day)" additionalName="Sigel Knight" type="Armor">
 		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -521,7 +521,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="40244" name="Greater Sapyros Cloak (20-day)" name_additional="Tyrr Warrior" type="Armor">
+	<item id="40244" name="Greater Sapyros Cloak (20-day)" additionalName="Tyrr Warrior" type="Armor">
 		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -542,7 +542,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="40245" name="Greater Ashagen Cloak (20-day)" name_additional="Othell Rogue" type="Armor">
+	<item id="40245" name="Greater Ashagen Cloak (20-day)" additionalName="Othell Rogue" type="Armor">
 		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -563,7 +563,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="40246" name="Greater Cranigg Cloak (20-day)" name_additional="Yul Archer" type="Armor">
+	<item id="40246" name="Greater Cranigg Cloak (20-day)" additionalName="Yul Archer" type="Armor">
 		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -584,7 +584,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="40247" name="Greater Soltkreig Cloak (20-day)" name_additional="Feoh Wizard" type="Armor">
+	<item id="40247" name="Greater Soltkreig Cloak (20-day)" additionalName="Feoh Wizard" type="Armor">
 		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -605,7 +605,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="40248" name="Greater Naviarope Cloak (20-day)" name_additional="Wynn Summoner" type="Armor">
+	<item id="40248" name="Greater Naviarope Cloak (20-day)" additionalName="Wynn Summoner" type="Armor">
 		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -626,7 +626,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="40249" name="Greater Leister Cloak (20-day)" name_additional="Iss Enchanter" type="Armor">
+	<item id="40249" name="Greater Leister Cloak (20-day)" additionalName="Iss Enchanter" type="Armor">
 		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -647,7 +647,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="40250" name="Greater Lakcis Cloak (20-day)" name_additional="Aeore Healer" type="Armor">
+	<item id="40250" name="Greater Lakcis Cloak (20-day)" additionalName="Aeore Healer" type="Armor">
 		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -668,7 +668,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="40251" name="Greater Sayha Cloak (20-day)" name_additional="Eviscerator" type="Armor">
+	<item id="40251" name="Greater Sayha Cloak (20-day)" additionalName="Eviscerator" type="Armor">
 		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -689,7 +689,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="40252" name="Greater Sayha Cloak (20-day)" name_additional="Sayha's Seer" type="Armor">
+	<item id="40252" name="Greater Sayha Cloak (20-day)" additionalName="Sayha's Seer" type="Armor">
 		<!-- M. Def. + 40, STR/INT/CON/MEN + 1. 20-day. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -710,7 +710,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="40253" name="Potion of Protection: Stun" name_additional="Top-grade" type="EtcItem">
+	<item id="40253" name="Potion of Protection: Stun" additionalName="Top-grade" type="EtcItem">
 		<!-- Stun Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="weight" val="10" />
@@ -719,7 +719,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="commissionItemType" val="POTION" />
 	</item>
-	<item id="40254" name="Potion of Protection: Hold" name_additional="Top-grade" type="EtcItem">
+	<item id="40254" name="Potion of Protection: Hold" additionalName="Top-grade" type="EtcItem">
 		<!-- Hold Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="weight" val="10" />
@@ -727,7 +727,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40255" name="Potion of Protection: Bleed" name_additional="Top-grade" type="EtcItem">
+	<item id="40255" name="Potion of Protection: Bleed" additionalName="Top-grade" type="EtcItem">
 		<!-- Bleed Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="weight" val="10" />
@@ -735,7 +735,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40256" name="Potion of Protection: Paralyze" name_additional="Top-grade" type="EtcItem">
+	<item id="40256" name="Potion of Protection: Paralyze" additionalName="Top-grade" type="EtcItem">
 		<!-- Paralyze Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="weight" val="10" />
@@ -743,7 +743,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40257" name="Potion of Protection: Mental" name_additional="Top-grade" type="EtcItem">
+	<item id="40257" name="Potion of Protection: Mental" additionalName="Top-grade" type="EtcItem">
 		<!-- Mental Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="weight" val="10" />
@@ -752,7 +752,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="commissionItemType" val="POTION" />
 	</item>
-	<item id="40258" name="Potion of Protection: Sleep" name_additional="Top-grade" type="EtcItem">
+	<item id="40258" name="Potion of Protection: Sleep" additionalName="Top-grade" type="EtcItem">
 		<!-- Sleep Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="weight" val="10" />
@@ -760,7 +760,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40259" name="Potion of Protection: Poison" name_additional="Top-grade" type="EtcItem">
+	<item id="40259" name="Potion of Protection: Poison" additionalName="Top-grade" type="EtcItem">
 		<!-- Poison Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="weight" val="10" />
@@ -768,7 +768,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40260" name="Potion of Protection: Knock Back / Knock Down" name_additional="Top-grade" type="EtcItem">
+	<item id="40260" name="Potion of Protection: Knock Back / Knock Down" additionalName="Top-grade" type="EtcItem">
 		<!-- Knock Back / Knock Down Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="weight" val="10" />
@@ -776,7 +776,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40261" name="Potion of Protection: Aerial Yoke" name_additional="Top-grade" type="EtcItem">
+	<item id="40261" name="Potion of Protection: Aerial Yoke" additionalName="Top-grade" type="EtcItem">
 		<!-- Aerial Yoke Resistance + 5%, and damage received in PvP - 3%. Cannot be used in the Olympiad or Ceremony of Chaos. Does not stack with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="weight" val="10" />
@@ -784,7 +784,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40262" name="Faeron Support Box" name_additional="Ertheia Fighter" type="EtcItem">
+	<item id="40262" name="Faeron Support Box" additionalName="Ertheia Fighter" type="EtcItem">
 		<!-- Karla's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
@@ -806,7 +806,7 @@
 			<item chance="100.0" id="12079" max="1" min="1" /> <!-- Common Item - Plate Helmet -->
 		</capsuled_items>
 	</item>
-	<item id="40263" name="Faeron Support Box" name_additional="Ertheia Wizard" type="EtcItem">
+	<item id="40263" name="Faeron Support Box" additionalName="Ertheia Wizard" type="EtcItem">
 		<!-- Karla's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
@@ -828,7 +828,7 @@
 			<item chance="100.0" id="12082" max="1" min="1" /> <!-- Common Item - Sage's Worn Gloves -->
 		</capsuled_items>
 	</item>
-	<item id="40264" name="Emissary's Support Box" name_additional="Ertheia Fighter" type="EtcItem">
+	<item id="40264" name="Emissary's Support Box" additionalName="Ertheia Fighter" type="EtcItem">
 		<!-- Venir's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
@@ -851,7 +851,7 @@
 			<item chance="100.0" id="22082" max="1500" min="1500" /> <!-- Soulshot (D-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="40265" name="Emissary's Support Box" name_additional="Ertheia Wizard" type="EtcItem">
+	<item id="40265" name="Emissary's Support Box" additionalName="Ertheia Wizard" type="EtcItem">
 		<!-- Venir's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
@@ -874,7 +874,7 @@
 			<item chance="100.0" id="22072" max="500" min="500" /> <!-- Blessed Spiritshot (D-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="40266" name="Navari's Support Box" name_additional="Marauder" type="EtcItem">
+	<item id="40266" name="Navari's Support Box" additionalName="Marauder" type="EtcItem">
 		<!-- Queen Navari's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
@@ -902,7 +902,7 @@
 			<item chance="100.0" id="22083" max="1500" min="1500" /> <!-- Soulshot (C-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="40267" name="Navari's Support Box" name_additional="Cloud Breaker" type="EtcItem">
+	<item id="40267" name="Navari's Support Box" additionalName="Cloud Breaker" type="EtcItem">
 		<!-- Queen Navari's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
@@ -929,7 +929,7 @@
 			<item chance="100.0" id="22073" max="500" min="500" /> <!-- Blessed Spiritshot (C-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="40268" name="Sayha's Box" name_additional="Eviscerator" type="EtcItem">
+	<item id="40268" name="Sayha's Box" additionalName="Eviscerator" type="EtcItem">
 		<!-- Box containing Sayha's power. Double-click to use. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
@@ -944,7 +944,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40269" name="Sayha's Box" name_additional="Sayha's Seer" type="EtcItem">
+	<item id="40269" name="Sayha's Box" additionalName="Sayha's Seer" type="EtcItem">
 		<!-- Box containing Sayha's power. Double-click to use. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
@@ -1011,7 +1011,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40275" name="Buff Helmet" name_additional="STR" type="Armor">
+	<item id="40275" name="Buff Helmet" additionalName="STR" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. STR + 3. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1019,7 +1019,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40276" name="Buff Helmet" name_additional="DEX" type="Armor">
+	<item id="40276" name="Buff Helmet" additionalName="DEX" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. DEX + 3. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1027,7 +1027,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40277" name="Buff Helmet" name_additional="CON" type="Armor">
+	<item id="40277" name="Buff Helmet" additionalName="CON" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. CON + 3. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1035,7 +1035,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40278" name="Buff Helmet" name_additional="MEN" type="Armor">
+	<item id="40278" name="Buff Helmet" additionalName="MEN" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. MEN + 3. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1043,7 +1043,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40279" name="Buff Helmet" name_additional="INT" type="Armor">
+	<item id="40279" name="Buff Helmet" additionalName="INT" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. INT + 3. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1051,7 +1051,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40280" name="Buff Helmet" name_additional="WIT" type="Armor">
+	<item id="40280" name="Buff Helmet" additionalName="WIT" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. WIT + 3. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1059,7 +1059,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40281" name="Buff Helmet" name_additional="Critical Rate" type="Armor">
+	<item id="40281" name="Buff Helmet" additionalName="Critical Rate" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. Critical Rate + 50. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1067,7 +1067,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40282" name="Buff Helmet" name_additional="Critical Damage" type="Armor">
+	<item id="40282" name="Buff Helmet" additionalName="Critical Damage" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. P. Critical Damage + 90, M. Critical Damage + 68. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1075,7 +1075,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40283" name="Buff Helmet" name_additional="P. Def." type="Armor">
+	<item id="40283" name="Buff Helmet" additionalName="P. Def." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. P. Def. + 5%. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1083,7 +1083,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40284" name="Buff Helmet" name_additional="M. Def." type="Armor">
+	<item id="40284" name="Buff Helmet" additionalName="M. Def." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. M. Def. + 5%. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1091,7 +1091,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40285" name="Buff Helmet" name_additional="Evasion" type="Armor">
+	<item id="40285" name="Buff Helmet" additionalName="Evasion" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. Evasion + 5. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1099,7 +1099,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40286" name="Buff Helmet" name_additional="P. Atk." type="Armor">
+	<item id="40286" name="Buff Helmet" additionalName="P. Atk." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. P. Atk. + 5%. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1107,7 +1107,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40287" name="Buff Helmet" name_additional="M. Atk." type="Armor">
+	<item id="40287" name="Buff Helmet" additionalName="M. Atk." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. M. Atk. + 10%. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1115,7 +1115,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40288" name="Buff Helmet" name_additional="Accuracy" type="Armor">
+	<item id="40288" name="Buff Helmet" additionalName="Accuracy" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. Accuracy + 5. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1123,7 +1123,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40289" name="NC Magazine" name_additional="Event" type="EtcItem">
+	<item id="40289" name="NC Magazine" additionalName="Event" type="EtcItem">
 		<!-- Go to Tiffany in town for a special gift. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1136,7 +1136,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="icon" val="icon.nc_magazine" />
 	</item>
-	<item id="40290" name="Lara the Cat's Card Key Pack" name_additional="Normal" type="EtcItem">
+	<item id="40290" name="Lara the Cat's Card Key Pack" additionalName="Normal" type="EtcItem">
 		<!-- Double-click to obtain Lara the Cat's Card Key. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1150,7 +1150,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40291" name="Steel Demon's Staff" name_additional="Magic Chaos" type="Weapon">
+	<item id="40291" name="Steel Demon's Staff" additionalName="Magic Chaos" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nHas a 7% chance of inflicting Curse Chaos on target when using a magical skill on them. -->
 		<set name="icon" val="icon.weapon_demons_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1177,7 +1177,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="40292" name="Steel Spirit's Staff" name_additional="Magic Mental Shield" type="Weapon">
+	<item id="40292" name="Steel Spirit's Staff" additionalName="Magic Mental Shield" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nHas a 50% chance of inflicting Mental Shield on target when using a magical skill on them. -->
 		<set name="icon" val="icon.weapon_sprites_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1204,7 +1204,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="40293" name="Steel Dasparion's Staff" name_additional="Acumen" type="Weapon">
+	<item id="40293" name="Steel Dasparion's Staff" additionalName="Acumen" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCasting Spd. + 15%. PvP damage increased. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1231,7 +1231,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="40294" name="Steel Imperial Staff" name_additional="Empower" type="Weapon">
+	<item id="40294" name="Steel Imperial Staff" additionalName="Empower" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nM. Atk. + 60. PvP damage increased. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1258,7 +1258,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="40295" name="Steel Dynasty Staff" name_additional="Acumen" type="Weapon">
+	<item id="40295" name="Steel Dynasty Staff" additionalName="Acumen" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCasting Spd. + 15%. PvP damage increased. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="14400" name="Icarus Hand {PvP}" name_additional="Rsk. Evasion" type="Weapon">
+	<item id="14400" name="Icarus Hand {PvP}" additionalName="Rsk. Evasion" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -39,7 +39,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14401" name="Icarus Hand {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14401" name="Icarus Hand {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -78,7 +78,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14402" name="Icarus Hand {PvP}" name_additional="Haste" type="Weapon">
+	<item id="14402" name="Icarus Hand {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -117,7 +117,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14403" name="Icarus Stinger {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14403" name="Icarus Stinger {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -159,7 +159,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14404" name="Icarus Stinger {PvP}" name_additional="Health" type="Weapon">
+	<item id="14404" name="Icarus Stinger {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -201,7 +201,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14405" name="Icarus Stinger {PvP}" name_additional="Light Armor" type="Weapon">
+	<item id="14405" name="Icarus Stinger {PvP}" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -243,7 +243,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14406" name="Icarus Wingblade {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14406" name="Icarus Wingblade {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -284,7 +284,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14407" name="Icarus Wingblade {PvP}" name_additional="Health" type="Weapon">
+	<item id="14407" name="Icarus Wingblade {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -325,7 +325,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14408" name="Icarus Wingblade {PvP}" name_additional="Light Armor" type="Weapon">
+	<item id="14408" name="Icarus Wingblade {PvP}" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -365,7 +365,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14409" name="Icarus Shooter {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="14409" name="Icarus Shooter {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -407,7 +407,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="14410" name="Icarus Shooter {PvP}" name_additional="Guidance" type="Weapon">
+	<item id="14410" name="Icarus Shooter {PvP}" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -449,7 +449,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="14411" name="Icarus Shooter {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14411" name="Icarus Shooter {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -568,7 +568,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14414" name="Icarus Disperser - Confusion {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14414" name="Icarus Disperser - Confusion {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -608,7 +608,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14415" name="Icarus Disperser - Confusion {PvP}" name_additional="Evasion" type="Weapon">
+	<item id="14415" name="Icarus Disperser - Confusion {PvP}" additionalName="Evasion" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -648,7 +648,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14416" name="Icarus Disperser - Confusion {PvP}" name_additional="Critical Damage" type="Weapon">
+	<item id="14416" name="Icarus Disperser - Confusion {PvP}" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -725,7 +725,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14418" name="Icarus Sawsword - Destruction {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14418" name="Icarus Sawsword - Destruction {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -763,7 +763,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14419" name="Icarus Sawsword - Destruction {PvP}" name_additional="Health" type="Weapon">
+	<item id="14419" name="Icarus Sawsword - Destruction {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -801,7 +801,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14420" name="Icarus Sawsword - Destruction {PvP}" name_additional="Light Armor" type="Weapon">
+	<item id="14420" name="Icarus Sawsword - Destruction {PvP}" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -881,7 +881,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="14422" name="Icarus Shooter - Concentration {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="14422" name="Icarus Shooter - Concentration {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -924,7 +924,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="14423" name="Icarus Shooter - Concentration {PvP}" name_additional="Guidance" type="Weapon">
+	<item id="14423" name="Icarus Shooter - Concentration {PvP}" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -967,7 +967,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="14424" name="Icarus Shooter - Concentration {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14424" name="Icarus Shooter - Concentration {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1052,7 +1052,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14426" name="Icarus Stinger - Destruction {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14426" name="Icarus Stinger - Destruction {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1095,7 +1095,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14427" name="Icarus Stinger - Destruction {PvP}" name_additional="Health" type="Weapon">
+	<item id="14427" name="Icarus Stinger - Destruction {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1138,7 +1138,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14428" name="Icarus Stinger - Destruction {PvP}" name_additional="Light Armor" type="Weapon">
+	<item id="14428" name="Icarus Stinger - Destruction {PvP}" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1219,7 +1219,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14430" name="Icarus Spirit - Nature {PvP}" name_additional="Acumen" type="Weapon">
+	<item id="14430" name="Icarus Spirit - Nature {PvP}" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1258,7 +1258,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14431" name="Icarus Spirit - Nature {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="14431" name="Icarus Spirit - Nature {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1297,7 +1297,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14432" name="Icarus Spirit - Nature {PvP}" name_additional="Conversion" type="Weapon">
+	<item id="14432" name="Icarus Spirit - Nature {PvP}" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1376,7 +1376,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="14434" name="Icarus Spitter - Concentration {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="14434" name="Icarus Spitter - Concentration {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1417,7 +1417,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="14435" name="Icarus Spitter - Concentration {PvP}" name_additional="Guidance" type="Weapon">
+	<item id="14435" name="Icarus Spitter - Concentration {PvP}" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1458,7 +1458,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="14436" name="Icarus Spitter - Concentration {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14436" name="Icarus Spitter - Concentration {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1540,7 +1540,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14438" name="Icarus Wingblade - Lightning {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14438" name="Icarus Wingblade - Lightning {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1582,7 +1582,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14439" name="Icarus Wingblade - Lightning {PvP}" name_additional="Health" type="Weapon">
+	<item id="14439" name="Icarus Wingblade - Lightning {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1624,7 +1624,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14440" name="Icarus Wingblade - Lightning {PvP}" name_additional="Light Armor" type="Weapon">
+	<item id="14440" name="Icarus Wingblade - Lightning {PvP}" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1705,7 +1705,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="14442" name="Icarus Trident - Thunder {PvP}" name_additional="Anger" type="Weapon">
+	<item id="14442" name="Icarus Trident - Thunder {PvP}" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1744,7 +1744,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="14443" name="Icarus Trident - Thunder {PvP}" name_additional="Critical Stun" type="Weapon">
+	<item id="14443" name="Icarus Trident - Thunder {PvP}" additionalName="Critical Stun" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1783,7 +1783,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="14444" name="Icarus Trident - Thunder {PvP}" name_additional="Light Armor" type="Weapon">
+	<item id="14444" name="Icarus Trident - Thunder {PvP}" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1860,7 +1860,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14446" name="Icarus Hammer - Earth {PvP}" name_additional="Anger" type="Weapon">
+	<item id="14446" name="Icarus Hammer - Earth {PvP}" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1899,7 +1899,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14447" name="Icarus Hammer - Earth {PvP}" name_additional="Health" type="Weapon">
+	<item id="14447" name="Icarus Hammer - Earth {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1938,7 +1938,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14448" name="Icarus Hammer - Earth {PvP}" name_additional="Rsk. Focus" type="Weapon">
+	<item id="14448" name="Icarus Hammer - Earth {PvP}" additionalName="Rsk. Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2016,7 +2016,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14450" name="Icarus Hand - Destruction {PvP}" name_additional="Rsk. Evasion" type="Weapon">
+	<item id="14450" name="Icarus Hand - Destruction {PvP}" additionalName="Rsk. Evasion" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2056,7 +2056,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14451" name="Icarus Hand - Destruction {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14451" name="Icarus Hand - Destruction {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2096,7 +2096,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14452" name="Icarus Hand - Destruction {PvP}" name_additional="Haste" type="Weapon">
+	<item id="14452" name="Icarus Hand - Destruction {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2173,7 +2173,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14454" name="Icarus Heavy Arms - Lightning {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14454" name="Icarus Heavy Arms - Lightning {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2211,7 +2211,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14455" name="Icarus Heavy Arms - Lightning {PvP}" name_additional="Health" type="Weapon">
+	<item id="14455" name="Icarus Heavy Arms - Lightning {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2249,7 +2249,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14456" name="Icarus Heavy Arms - Lightning {PvP}" name_additional="Light Armor" type="Weapon">
+	<item id="14456" name="Icarus Heavy Arms - Lightning {PvP}" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2326,7 +2326,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14458" name="Icarus Hall - Hail {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="14458" name="Icarus Hall - Hail {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2366,7 +2366,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14459" name="Icarus Hall - Hail {PvP}" name_additional="Conversion" type="Weapon">
+	<item id="14459" name="Icarus Hall - Hail {PvP}" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2406,7 +2406,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14460" name="Icarus Hall - Hail {PvP}" name_additional="Acumen" type="Weapon">
+	<item id="14460" name="Icarus Hall - Hail {PvP}" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3109,7 +3109,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14478" name="Vesper Cutter {PvP}" name_additional="Haste" type="Weapon">
+	<item id="14478" name="Vesper Cutter {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -3146,7 +3146,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14479" name="Vesper Cutter {PvP}" name_additional="Health" type="Weapon">
+	<item id="14479" name="Vesper Cutter {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -3183,7 +3183,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14480" name="Vesper Cutter {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14480" name="Vesper Cutter {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -3220,7 +3220,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14481" name="Vesper Slasher {PvP}" name_additional="Haste" type="Weapon">
+	<item id="14481" name="Vesper Slasher {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -3257,7 +3257,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14482" name="Vesper Slasher {PvP}" name_additional="Health" type="Weapon">
+	<item id="14482" name="Vesper Slasher {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -3294,7 +3294,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14483" name="Vesper Slasher {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14483" name="Vesper Slasher {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -3331,7 +3331,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14484" name="Vesper Buster {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="14484" name="Vesper Buster {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -3369,7 +3369,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14485" name="Vesper Buster {PvP}" name_additional="Acumen" type="Weapon">
+	<item id="14485" name="Vesper Buster {PvP}" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -3407,7 +3407,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14486" name="Vesper Buster {PvP}" name_additional="Magic Hold" type="Weapon">
+	<item id="14486" name="Vesper Buster {PvP}" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -3445,7 +3445,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14487" name="Vesper Shaper {PvP}" name_additional="Critical Damage" type="Weapon">
+	<item id="14487" name="Vesper Shaper {PvP}" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -3484,7 +3484,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14488" name="Vesper Shaper {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="14488" name="Vesper Shaper {PvP}" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -3523,7 +3523,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14489" name="Vesper Shaper {PvP}" name_additional="Haste" type="Weapon">
+	<item id="14489" name="Vesper Shaper {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -3562,7 +3562,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14490" name="Vesper Fighter {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14490" name="Vesper Fighter {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -3601,7 +3601,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14491" name="Vesper Fighter {PvP}" name_additional="Health" type="Weapon">
+	<item id="14491" name="Vesper Fighter {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -3640,7 +3640,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14492" name="Vesper Fighter {PvP}" name_additional="Critical Stun" type="Weapon">
+	<item id="14492" name="Vesper Fighter {PvP}" additionalName="Critical Stun" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -3679,7 +3679,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14493" name="Vesper Stormer {PvP}" name_additional="Health" type="Weapon">
+	<item id="14493" name="Vesper Stormer {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -3717,7 +3717,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="14494" name="Vesper Stormer {PvP}" name_additional="Guidance" type="Weapon">
+	<item id="14494" name="Vesper Stormer {PvP}" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -3755,7 +3755,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="14495" name="Vesper Stormer {PvP}" name_additional="Haste" type="Weapon">
+	<item id="14495" name="Vesper Stormer {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -3793,7 +3793,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="14496" name="Vesper Avenger {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="14496" name="Vesper Avenger {PvP}" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3831,7 +3831,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14497" name="Vesper Avenger {PvP}" name_additional="Health" type="Weapon">
+	<item id="14497" name="Vesper Avenger {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3869,7 +3869,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14498" name="Vesper Avenger {PvP}" name_additional="HP Regeneration" type="Weapon">
+	<item id="14498" name="Vesper Avenger {PvP}" additionalName="HP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3907,7 +3907,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14499" name="Vesper Retributer {PvP}" name_additional="HP Regeneration" type="Weapon">
+	<item id="14499" name="Vesper Retributer {PvP}" additionalName="HP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

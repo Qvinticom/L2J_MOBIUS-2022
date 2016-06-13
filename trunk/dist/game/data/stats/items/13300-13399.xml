@@ -157,7 +157,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="NicknameColor" />
 	</item>
-	<item id="13308" name="Mount - Darkmane Pacer (Event)" name_additional="7-day" type="Armor">
+	<item id="13308" name="Mount - Darkmane Pacer (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -179,7 +179,7 @@
 			<skill id="8247" level="1" /> <!-- Ride Darkmane Pacer -->
 		</skills>
 	</item>
-	<item id="13309" name="Agathion - Love (Event)" name_additional="30-day" type="Armor">
+	<item id="13309" name="Agathion - Love (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -202,7 +202,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="13310" name="Kat the Cat Hat (Event)" name_additional="30-day" type="Armor">
+	<item id="13310" name="Kat the Cat Hat (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -220,7 +220,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13311" name="Feline Queen Hat (Event)" name_additional="30-day" type="Armor">
+	<item id="13311" name="Feline Queen Hat (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.accessory_queen_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -238,7 +238,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13312" name="Monster Eye Hat (Event)" name_additional="30-day" type="Armor">
+	<item id="13312" name="Monster Eye Hat (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.accessory_monstereye_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -256,7 +256,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13313" name="Brown Bear Hat (Event)" name_additional="30-day" type="Armor">
+	<item id="13313" name="Brown Bear Hat (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.accessory_brown_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -274,7 +274,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13314" name="Fungus Hat (Event)" name_additional="30-day" type="Armor">
+	<item id="13314" name="Fungus Hat (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.accessory_fungus_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -292,7 +292,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13315" name="Skull Hat (Event)" name_additional="30-day" type="Armor">
+	<item id="13315" name="Skull Hat (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.accessory_skeleton_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -310,7 +310,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13316" name="Ornithomimus Hat (Event)" name_additional="30-day" type="Armor">
+	<item id="13316" name="Ornithomimus Hat (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.accessory_ornithomimus_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -328,7 +328,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13317" name="Feline King Hat (Event)" name_additional="30-day" type="Armor">
+	<item id="13317" name="Feline King Hat (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.accessory_king_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -346,7 +346,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13318" name="Kai the Cat Hat (Event)" name_additional="30-day" type="Armor">
+	<item id="13318" name="Kai the Cat Hat (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.accessory_chi_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -364,7 +364,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13319" name="O Stick (Event)" name_additional="30-day" type="Weapon">
+	<item id="13319" name="O Stick (Event)" additionalName="30-day" type="Weapon">
 		<set name="icon" val="icon.weapon_o_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -391,7 +391,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13320" name="X Stick (Event)" name_additional="30-day" type="Weapon">
+	<item id="13320" name="X Stick (Event)" additionalName="30-day" type="Weapon">
 		<set name="icon" val="icon.weapon_x_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -418,7 +418,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13321" name="Scissors Stick (Event)" name_additional="30-day" type="Weapon">
+	<item id="13321" name="Scissors Stick (Event)" additionalName="30-day" type="Weapon">
 		<set name="icon" val="icon.weapon_scissors_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -445,7 +445,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13322" name="Rock Stick (Event)" name_additional="30-day" type="Weapon">
+	<item id="13322" name="Rock Stick (Event)" additionalName="30-day" type="Weapon">
 		<set name="icon" val="icon.weapon_rock_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -472,7 +472,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13323" name="Paper Stick (Event)" name_additional="30-day" type="Weapon">
+	<item id="13323" name="Paper Stick (Event)" additionalName="30-day" type="Weapon">
 		<set name="icon" val="icon.weapon_diver_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -499,7 +499,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13324" name="Pumpkin Transformation Stick (Event)" name_additional="30-day" type="Weapon">
+	<item id="13324" name="Pumpkin Transformation Stick (Event)" additionalName="30-day" type="Weapon">
 		<set name="icon" val="icon.weapon_pumpkin_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -530,7 +530,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13325" name="Kat the Cat Hat (Event)" name_additional="7-day" type="Armor">
+	<item id="13325" name="Kat the Cat Hat (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -548,7 +548,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13326" name="Feline Queen Hat (Event)" name_additional="7-day" type="Armor">
+	<item id="13326" name="Feline Queen Hat (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_queen_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -566,7 +566,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13327" name="Monster Eye Hat (Event)" name_additional="7-day" type="Armor">
+	<item id="13327" name="Monster Eye Hat (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_monstereye_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -584,7 +584,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13328" name="Brown Bear Hat (Event)" name_additional="7-day" type="Armor">
+	<item id="13328" name="Brown Bear Hat (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_brown_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -602,7 +602,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13329" name="Fungus Hat (Event)" name_additional="7-day" type="Armor">
+	<item id="13329" name="Fungus Hat (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_fungus_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -620,7 +620,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13330" name="Skull Hat (Event)" name_additional="7-day" type="Armor">
+	<item id="13330" name="Skull Hat (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_skeleton_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -638,7 +638,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13331" name="Ornithomimus Hat (Event)" name_additional="7-day" type="Armor">
+	<item id="13331" name="Ornithomimus Hat (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_ornithomimus_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -656,7 +656,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13332" name="Feline King Hat (Event)" name_additional="7-day" type="Armor">
+	<item id="13332" name="Feline King Hat (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_king_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -674,7 +674,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13333" name="Kai the Cat Hat (Event)" name_additional="7-day" type="Armor">
+	<item id="13333" name="Kai the Cat Hat (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.accessory_chi_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -692,7 +692,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13334" name="O Stick (Event)" name_additional="7-day" type="Weapon">
+	<item id="13334" name="O Stick (Event)" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_o_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -719,7 +719,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13335" name="X Stick (Event)" name_additional="7-day" type="Weapon">
+	<item id="13335" name="X Stick (Event)" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_x_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -746,7 +746,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13336" name="Scissors Stick (Event)" name_additional="7-day" type="Weapon">
+	<item id="13336" name="Scissors Stick (Event)" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_scissors_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -773,7 +773,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13337" name="Rock Stick (Event)" name_additional="7-day" type="Weapon">
+	<item id="13337" name="Rock Stick (Event)" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_rock_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -800,7 +800,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13338" name="Paper Stick (Event)" name_additional="7-day" type="Weapon">
+	<item id="13338" name="Paper Stick (Event)" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_diver_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -827,7 +827,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13339" name="Pumpkin Transformation Stick (Event)" name_additional="7-day" type="Weapon">
+	<item id="13339" name="Pumpkin Transformation Stick (Event)" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_pumpkin_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -858,7 +858,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="13340" name="Agathion - Love (Event)" name_additional="7-day" type="Armor">
+	<item id="13340" name="Agathion - Love (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1750,7 +1750,7 @@
 			<item id="13338" min="1" max="1" chance="100" /> <!-- Paper Stick (Event) - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="13382" name="Gran Kain's Gift Box (Event)" name_additional="30-day" type="EtcItem">
+	<item id="13382" name="Gran Kain's Gift Box (Event)" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1893,7 +1893,7 @@
 			<skill id="2608" level="3" /> <!-- Fantasy Red Crystal -->
 		</skills>
 	</item>
-	<item id="13389" name="Kratei Scale Shirt" name_additional="CP" type="Armor">
+	<item id="13389" name="Kratei Scale Shirt" additionalName="CP" type="Armor">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1917,7 +1917,7 @@
 			<stat type="pDef">23</stat>
 		</stats>
 	</item>
-	<item id="13390" name="Kratei Mithril Shirt" name_additional="CP" type="Armor">
+	<item id="13390" name="Kratei Mithril Shirt" additionalName="CP" type="Armor">
 		<set name="icon" val="icon.etc_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1941,7 +1941,7 @@
 			<stat type="pDef">28</stat>
 		</stats>
 	</item>
-	<item id="13391" name="Kratei Striped Scale Shirt" name_additional="CP" type="Armor">
+	<item id="13391" name="Kratei Striped Scale Shirt" additionalName="CP" type="Armor">
 		<set name="icon" val="icon.etc_stripe_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1965,7 +1965,7 @@
 			<stat type="pDef">26</stat>
 		</stats>
 	</item>
-	<item id="13392" name="Kratei Striped Mithril Shirt" name_additional="CP" type="Armor">
+	<item id="13392" name="Kratei Striped Mithril Shirt" additionalName="CP" type="Armor">
 		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />

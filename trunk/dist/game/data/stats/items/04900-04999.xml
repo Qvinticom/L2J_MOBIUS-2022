@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="4900" name="Staff of Evil Spirits" name_additional="Magic Focus" type="Weapon">
+	<item id="4900" name="Staff of Evil Spirits" additionalName="Magic Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -32,7 +32,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4901" name="Staff of Evil Spirits" name_additional="Blessed Body" type="Weapon">
+	<item id="4901" name="Staff of Evil Spirits" additionalName="Blessed Body" type="Weapon">
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -64,7 +64,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4902" name="Staff of Evil Spirits" name_additional="Magic Poison" type="Weapon">
+	<item id="4902" name="Staff of Evil Spirits" additionalName="Magic Poison" type="Weapon">
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

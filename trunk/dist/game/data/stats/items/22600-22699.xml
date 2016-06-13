@@ -360,7 +360,7 @@
 			<item id="21818" min="1" max="1" chance="100" /> <!-- Dynasty Necklace of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="22620" name="Miracle of the Tree - Vitality Recovery" name_additional="Event" type="EtcItem">
+	<item id="22620" name="Miracle of the Tree - Vitality Recovery" additionalName="Event" type="EtcItem">
 		<!-- Item acquired upon completion of the Holiday Tree. When used, Vitality is restored as XP is acquired. Cooldown is 4 hours. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
 		<set name="is_depositable" val="false" />
@@ -380,7 +380,7 @@
 			<skill id="21277" level="1" /> <!-- Miracle of the Tree - Vitality Recovery -->
 		</skills>
 	</item>
-	<item id="22621" name="Vitality Recovery Potion" name_additional="1-hour" type="EtcItem">
+	<item id="22621" name="Vitality Recovery Potion" additionalName="1-hour" type="EtcItem">
 		<!-- Premium user exclusive item\nWhen the Vitality recovery potion is used, for 60 minutes, Vitality is restored as XP is acquired. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="is_depositable" val="false" />
@@ -401,7 +401,7 @@
 			<skill id="21278" level="1" /> <!-- Vitality Recovery Potion -->
 		</skills>
 	</item>
-	<item id="22622" name="Blessed Scroll of Escape" name_additional="1-day" type="EtcItem">
+	<item id="22622" name="Blessed Scroll of Escape" additionalName="1-day" type="EtcItem">
 		<!-- Premium user exclusive item\nMagic scroll that teleports you to the nearest village. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="is_depositable" val="false" />
@@ -422,7 +422,7 @@
 			<skill id="22501" level="1" /> <!-- Blessed Scroll of Escape -->
 		</skills>
 	</item>
-	<item id="22623" name="Blessed Scroll of Resurrection" name_additional="1-day" type="EtcItem">
+	<item id="22623" name="Blessed Scroll of Resurrection" additionalName="1-day" type="EtcItem">
 		<!-- Premium user exclusive item\nMagic scroll that resurrects a dead player and completely restores XP. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="weight" val="120" />
@@ -444,7 +444,7 @@
 			<skill id="22502" level="1" /> <!-- Blessed Scroll of Resurrection -->
 		</skills>
 	</item>
-	<item id="22624" name="Elixir of Life" name_additional="1-day" type="EtcItem">
+	<item id="22624" name="Elixir of Life" additionalName="1-day" type="EtcItem">
 		<!-- Premium user exclusive item\nRestores HP. Can only be used at level 85 or above upon themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i02" />
 		<set name="weight" val="5" />
@@ -471,7 +471,7 @@
 			<skill id="22503" level="7" /> <!-- Superior Elixir of Life (R-grade) -->
 		</skills>
 	</item>
-	<item id="22625" name="Elixir of Mind" name_additional="1-day" type="EtcItem">
+	<item id="22625" name="Elixir of Mind" additionalName="1-day" type="EtcItem">
 		<!-- Premium user exclusive item\nRestores MP. Can only be used at level 85 or above upon themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i00" />
 		<set name="weight" val="5" />
@@ -498,7 +498,7 @@
 			<skill id="22504" level="7" /> <!-- Superior Elixir of Mind (R-grade) -->
 		</skills>
 	</item>
-	<item id="22626" name="Elixir of CP" name_additional="1-day" type="EtcItem">
+	<item id="22626" name="Elixir of CP" additionalName="1-day" type="EtcItem">
 		<!-- Premium user exclusive item\nRestores CP. Can only be used at level 85 or above upon themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i01" />
 		<set name="weight" val="5" />
@@ -953,7 +953,7 @@
 			<skill id="22521" level="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 		</skills>
 	</item>
-	<item id="22649" name="Blessed Three-headed Dragon's Egg" name_additional="1-day" type="EtcItem">
+	<item id="22649" name="Blessed Three-headed Dragon's Egg" additionalName="1-day" type="EtcItem">
 		<!-- Using a Blessed Three-headed Dragon's Egg will give you great strength. -->
 		<set name="icon" val="BranchSys3.Icon.g_threehead_source" />
 		<set name="is_clan_depositable" val="false" />

@@ -1670,7 +1670,7 @@
 			<skill id="13128" level="1" /> <!-- Special Talisman - Casting Spd. -->
 		</skills>
 	</item>
-	<item id="32194" name="Blessed Twilight Helmet" name_additional="Attack Type" type="Armor">
+	<item id="32194" name="Blessed Twilight Helmet" additionalName="Attack Type" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1690,7 +1690,7 @@
 			<stat type="mEvas">1.05</stat>
 		</stats>
 	</item>
-	<item id="32195" name="Blessed Twilight Breastplate" name_additional="Attack Type" type="Armor">
+	<item id="32195" name="Blessed Twilight Breastplate" additionalName="Attack Type" type="Armor">
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1714,7 +1714,7 @@
 			<stat type="pAtk">26</stat>
 		</stats>
 	</item>
-	<item id="32196" name="Blessed Twilight Gaiters" name_additional="Attack Type" type="Armor">
+	<item id="32196" name="Blessed Twilight Gaiters" additionalName="Attack Type" type="Armor">
 		<set name="icon" val="icon.armor_t401_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1736,7 +1736,7 @@
 			<stat type="mCritRate">2.6</stat>
 		</stats>
 	</item>
-	<item id="32197" name="Blessed Twilight Gauntlets" name_additional="Attack Type" type="Armor">
+	<item id="32197" name="Blessed Twilight Gauntlets" additionalName="Attack Type" type="Armor">
 		<set name="icon" val="icon.armor_t401_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1757,7 +1757,7 @@
 			<stat type="accMagic">1</stat>
 		</stats>
 	</item>
-	<item id="32198" name="Blessed Twilight Boots" name_additional="Attack Type" type="Armor">
+	<item id="32198" name="Blessed Twilight Boots" additionalName="Attack Type" type="Armor">
 		<set name="icon" val="icon.armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1777,7 +1777,7 @@
 			<stat type="moveSpeed">15</stat>
 		</stats>
 	</item>
-	<item id="32199" name="Blessed Twilight Shield" name_additional="Attack Type" type="Weapon">
+	<item id="32199" name="Blessed Twilight Shield" additionalName="Attack Type" type="Weapon">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.kratere_i00" />
 		<set name="default_action" val="EQUIP" />

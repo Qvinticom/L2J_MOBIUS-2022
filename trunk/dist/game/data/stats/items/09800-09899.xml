@@ -364,7 +364,7 @@
 			<stat type="pDef">158</stat>
 		</stats>
 	</item>
-	<item id="9822" name="Shadow Item: Clan Oath Gauntlets" name_additional="Heavy Armor" type="Armor">
+	<item id="9822" name="Shadow Item: Clan Oath Gauntlets" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1001_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -393,7 +393,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="9823" name="Shadow Item: Clan Oath Sabaton" name_additional="Heavy Armor" type="Armor">
+	<item id="9823" name="Shadow Item: Clan Oath Sabaton" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1001_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -445,7 +445,7 @@
 			<stat type="pDef">119</stat>
 		</stats>
 	</item>
-	<item id="9825" name="Shadow Item: Clan Oath Leather Gloves" name_additional="Light Armor" type="Armor">
+	<item id="9825" name="Shadow Item: Clan Oath Leather Gloves" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1002_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -467,7 +467,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="9826" name="Shadow Item: Clan Oath Boots" name_additional="Light Armor" type="Armor">
+	<item id="9826" name="Shadow Item: Clan Oath Boots" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1002_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -520,7 +520,7 @@
 			<stat type="maxMp">239</stat>
 		</stats>
 	</item>
-	<item id="9828" name="Shadow Item: Clan Oath Padded Gloves" name_additional="Robe" type="Armor">
+	<item id="9828" name="Shadow Item: Clan Oath Padded Gloves" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t1003_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -549,7 +549,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="9829" name="Shadow Item: Clan Oath Sandals" name_additional="Robe" type="Armor">
+	<item id="9829" name="Shadow Item: Clan Oath Sandals" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t1003_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -623,7 +623,7 @@
 			<stat type="pDef">293</stat>
 		</stats>
 	</item>
-	<item id="9832" name="Enhanced Apella Gauntlets" name_additional="Heavy Armor" type="Armor">
+	<item id="9832" name="Enhanced Apella Gauntlets" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1004_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -647,7 +647,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="9833" name="Enhanced Apella Solleret" name_additional="Heavy Armor" type="Armor">
+	<item id="9833" name="Enhanced Apella Solleret" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1004_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -693,7 +693,7 @@
 			<stat type="pDef">220</stat>
 		</stats>
 	</item>
-	<item id="9835" name="Enhanced Apella Leather Gloves" name_additional="Light Armor" type="Armor">
+	<item id="9835" name="Enhanced Apella Leather Gloves" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1005_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -714,7 +714,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="9836" name="Enhanced Apella Boots" name_additional="Light Armor" type="Armor">
+	<item id="9836" name="Enhanced Apella Boots" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1005_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -761,7 +761,7 @@
 			<stat type="maxMp">718</stat>
 		</stats>
 	</item>
-	<item id="9838" name="Enhanced Apella Silk Gloves" name_additional="Robe" type="Armor">
+	<item id="9838" name="Enhanced Apella Silk Gloves" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t1006_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -785,7 +785,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="9839" name="Enhanced Apella Sandals" name_additional="Robe" type="Armor">
+	<item id="9839" name="Enhanced Apella Sandals" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t1006_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1186,7 +1186,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="9854" name="Dynasty Sword" name_additional="Focus" type="Weapon">
+	<item id="9854" name="Dynasty Sword" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1218,7 +1218,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9855" name="Dynasty Sword" name_additional="Health" type="Weapon">
+	<item id="9855" name="Dynasty Sword" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1250,7 +1250,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9856" name="Dynasty Sword" name_additional="Light Armor" type="Weapon">
+	<item id="9856" name="Dynasty Sword" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1283,7 +1283,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9857" name="Dynasty Blade" name_additional="Focus" type="Weapon">
+	<item id="9857" name="Dynasty Blade" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1315,7 +1315,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9858" name="Dynasty Blade" name_additional="Health" type="Weapon">
+	<item id="9858" name="Dynasty Blade" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1347,7 +1347,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9859" name="Dynasty Blade" name_additional="Light Armor" type="Weapon">
+	<item id="9859" name="Dynasty Blade" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1380,7 +1380,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9860" name="Dynasty Phantom" name_additional="Acumen" type="Weapon">
+	<item id="9860" name="Dynasty Phantom" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1412,7 +1412,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9861" name="Dynasty Phantom" name_additional="Mana Up" type="Weapon">
+	<item id="9861" name="Dynasty Phantom" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1444,7 +1444,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9862" name="Dynasty Phantom" name_additional="Conversion" type="Weapon">
+	<item id="9862" name="Dynasty Phantom" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1476,7 +1476,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9863" name="Dynasty Bow" name_additional="Cheap Shot" type="Weapon">
+	<item id="9863" name="Dynasty Bow" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1512,7 +1512,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="9864" name="Dynasty Bow" name_additional="Guidance" type="Weapon">
+	<item id="9864" name="Dynasty Bow" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1547,7 +1547,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="9865" name="Dynasty Bow" name_additional="Focus" type="Weapon">
+	<item id="9865" name="Dynasty Bow" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1582,7 +1582,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="9866" name="Dynasty Knife" name_additional="Focus" type="Weapon">
+	<item id="9866" name="Dynasty Knife" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1614,7 +1614,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9867" name="Dynasty Knife" name_additional="Evasion" type="Weapon">
+	<item id="9867" name="Dynasty Knife" additionalName="Evasion" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1647,7 +1647,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9868" name="Dynasty Knife" name_additional="Critical Damage" type="Weapon">
+	<item id="9868" name="Dynasty Knife" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1679,7 +1679,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9869" name="Dynasty Halberd" name_additional="Anger" type="Weapon">
+	<item id="9869" name="Dynasty Halberd" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1711,7 +1711,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="9870" name="Dynasty Halberd" name_additional="Critical Stun" type="Weapon">
+	<item id="9870" name="Dynasty Halberd" additionalName="Critical Stun" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1744,7 +1744,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="9871" name="Dynasty Halberd" name_additional="Light Armor" type="Weapon">
+	<item id="9871" name="Dynasty Halberd" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1777,7 +1777,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="9872" name="Dynasty Cudgel" name_additional="Anger" type="Weapon">
+	<item id="9872" name="Dynasty Cudgel" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1809,7 +1809,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9873" name="Dynasty Cudgel" name_additional="Health" type="Weapon">
+	<item id="9873" name="Dynasty Cudgel" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1841,7 +1841,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9874" name="Dynasty Cudgel" name_additional="Rsk. Focus" type="Weapon">
+	<item id="9874" name="Dynasty Cudgel" additionalName="Rsk. Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1873,7 +1873,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9875" name="Dynasty Mace" name_additional="Mana Up" type="Weapon">
+	<item id="9875" name="Dynasty Mace" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1906,7 +1906,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9876" name="Dynasty Mace" name_additional="Conversion" type="Weapon">
+	<item id="9876" name="Dynasty Mace" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1939,7 +1939,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9877" name="Dynasty Mace" name_additional="Acumen" type="Weapon">
+	<item id="9877" name="Dynasty Mace" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1972,7 +1972,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9878" name="Dynasty Bagh-Nakh" name_additional="Rsk. Evasion" type="Weapon">
+	<item id="9878" name="Dynasty Bagh-Nakh" additionalName="Rsk. Evasion" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2005,7 +2005,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9879" name="Dynasty Bagh-Nakh" name_additional="Focus" type="Weapon">
+	<item id="9879" name="Dynasty Bagh-Nakh" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2037,7 +2037,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9880" name="Dynasty Bagh-Nakh" name_additional="Haste" type="Weapon">
+	<item id="9880" name="Dynasty Bagh-Nakh" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2104,7 +2104,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="9883" name="Teddy Bear Hat" name_additional="Big Head" type="Armor">
+	<item id="9883" name="Teddy Bear Hat" additionalName="Big Head" type="Armor">
 		<set name="icon" val="icon.accessory_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2119,7 +2119,7 @@
 			<skill id="3404" level="1" /> <!-- Mysterious Effect -->
 		</skills>
 	</item>
-	<item id="9884" name="Piggy Hat" name_additional="Big Head" type="Armor">
+	<item id="9884" name="Piggy Hat" additionalName="Big Head" type="Armor">
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2134,7 +2134,7 @@
 			<skill id="3404" level="1" /> <!-- Mysterious Effect -->
 		</skills>
 	</item>
-	<item id="9885" name="Jester Hat" name_additional="Big Head" type="Armor">
+	<item id="9885" name="Jester Hat" additionalName="Big Head" type="Armor">
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2149,7 +2149,7 @@
 			<skill id="3404" level="1" /> <!-- Mysterious Effect -->
 		</skills>
 	</item>
-	<item id="9886" name="Wizard Hat" name_additional="Big Head" type="Armor">
+	<item id="9886" name="Wizard Hat" additionalName="Big Head" type="Armor">
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2164,7 +2164,7 @@
 			<skill id="3404" level="1" /> <!-- Mysterious Effect -->
 		</skills>
 	</item>
-	<item id="9887" name="Dapper Cap" name_additional="Big Head" type="Armor">
+	<item id="9887" name="Dapper Cap" additionalName="Big Head" type="Armor">
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2179,7 +2179,7 @@
 			<skill id="3404" level="1" /> <!-- Mysterious Effect -->
 		</skills>
 	</item>
-	<item id="9888" name="Romantic Chapeau" name_additional="Big Head" type="Armor">
+	<item id="9888" name="Romantic Chapeau" additionalName="Big Head" type="Armor">
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2194,7 +2194,7 @@
 			<skill id="3404" level="1" /> <!-- Mysterious Effect -->
 		</skills>
 	</item>
-	<item id="9889" name="Iron Circlet" name_additional="Big Head" type="Armor">
+	<item id="9889" name="Iron Circlet" additionalName="Big Head" type="Armor">
 		<set name="icon" val="icon.accessory_iron_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2209,7 +2209,7 @@
 			<skill id="3404" level="1" /> <!-- Mysterious Effect -->
 		</skills>
 	</item>
-	<item id="9890" name="Teddy Bear Hat" name_additional="Firework" type="Armor">
+	<item id="9890" name="Teddy Bear Hat" additionalName="Firework" type="Armor">
 		<set name="icon" val="icon.accessory_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2224,7 +2224,7 @@
 			<skill id="3405" level="1" /> <!-- Large Firecracker Effect -->
 		</skills>
 	</item>
-	<item id="9891" name="Piggy Hat" name_additional="Firework" type="Armor">
+	<item id="9891" name="Piggy Hat" additionalName="Firework" type="Armor">
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2239,7 +2239,7 @@
 			<skill id="3405" level="1" /> <!-- Large Firecracker Effect -->
 		</skills>
 	</item>
-	<item id="9892" name="Jester Hat" name_additional="Firework" type="Armor">
+	<item id="9892" name="Jester Hat" additionalName="Firework" type="Armor">
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2254,7 +2254,7 @@
 			<skill id="3405" level="1" /> <!-- Large Firecracker Effect -->
 		</skills>
 	</item>
-	<item id="9893" name="Wizard Hat" name_additional="Firework" type="Armor">
+	<item id="9893" name="Wizard Hat" additionalName="Firework" type="Armor">
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2269,7 +2269,7 @@
 			<skill id="3405" level="1" /> <!-- Large Firecracker Effect -->
 		</skills>
 	</item>
-	<item id="9894" name="Dapper Cap" name_additional="Firework" type="Armor">
+	<item id="9894" name="Dapper Cap" additionalName="Firework" type="Armor">
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2284,7 +2284,7 @@
 			<skill id="3405" level="1" /> <!-- Large Firecracker Effect -->
 		</skills>
 	</item>
-	<item id="9895" name="Romantic Chapeau" name_additional="Firework" type="Armor">
+	<item id="9895" name="Romantic Chapeau" additionalName="Firework" type="Armor">
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2299,7 +2299,7 @@
 			<skill id="3405" level="1" /> <!-- Large Firecracker Effect -->
 		</skills>
 	</item>
-	<item id="9896" name="Iron Circlet" name_additional="Firework" type="Armor">
+	<item id="9896" name="Iron Circlet" additionalName="Firework" type="Armor">
 		<set name="icon" val="icon.accessory_iron_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />

@@ -77,7 +77,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6307" name="Ultimate Sword" name_additional="Guidance" type="Weapon">
+	<item id="6307" name="Ultimate Sword" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -108,7 +108,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6308" name="Ultimate Sword" name_additional="Critical Drain" type="Weapon">
+	<item id="6308" name="Ultimate Sword" additionalName="Critical Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -139,7 +139,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6309" name="Ultimate Sword" name_additional="Health" type="Weapon">
+	<item id="6309" name="Ultimate Sword" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -170,7 +170,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6310" name="Sword of Whispering Death" name_additional="Empower" type="Weapon">
+	<item id="6310" name="Sword of Whispering Death" additionalName="Empower" type="Weapon">
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -201,7 +201,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6311" name="Sword of Whispering Death" name_additional="M. Atk." type="Weapon">
+	<item id="6311" name="Sword of Whispering Death" additionalName="M. Atk." type="Weapon">
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -232,7 +232,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6312" name="Sword of Whispering Death" name_additional="Magic Silence" type="Weapon">
+	<item id="6312" name="Sword of Whispering Death" additionalName="Magic Silence" type="Weapon">
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -263,7 +263,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6313" name="Homunkulus' Sword" name_additional="Acumen" type="Weapon">
+	<item id="6313" name="Homunkulus' Sword" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -294,7 +294,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6314" name="Homunkulus' Sword" name_additional="Conversion" type="Weapon">
+	<item id="6314" name="Homunkulus' Sword" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -325,7 +325,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6315" name="Homunkulus' Sword" name_additional="Magic Paralyze" type="Weapon">
+	<item id="6315" name="Homunkulus' Sword" additionalName="Magic Paralyze" type="Weapon">
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -792,7 +792,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6347" name="Berserker Blade" name_additional="Focus" type="Weapon">
+	<item id="6347" name="Berserker Blade" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -823,7 +823,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6348" name="Berserker Blade" name_additional="Critical Damage" type="Weapon">
+	<item id="6348" name="Berserker Blade" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -854,7 +854,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6349" name="Berserker Blade" name_additional="Haste" type="Weapon">
+	<item id="6349" name="Berserker Blade" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -987,7 +987,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6356" name="Dark Elven Dagger" name_additional="Rsk. Haste" type="Weapon">
+	<item id="6356" name="Dark Elven Dagger" additionalName="Rsk. Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_darkelven_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1018,7 +1018,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6357" name="Stiletto" name_additional="Rsk. Haste" type="Weapon">
+	<item id="6357" name="Stiletto" additionalName="Rsk. Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_stiletto_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1049,7 +1049,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6358" name="Crystal Dagger" name_additional="Critical Damage" type="Weapon">
+	<item id="6358" name="Crystal Dagger" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_crystal_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1080,7 +1080,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6359" name="Demon's Dagger" name_additional="Critical Damage" type="Weapon">
+	<item id="6359" name="Demon's Dagger" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_demons_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />

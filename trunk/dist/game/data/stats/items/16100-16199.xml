@@ -1839,7 +1839,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="16179" name="Vesper Cutter - Thunder {PvP}" name_additional="Haste" type="Weapon">
+	<item id="16179" name="Vesper Cutter - Thunder {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1877,7 +1877,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16180" name="Vesper Cutter - Thunder {PvP}" name_additional="Health" type="Weapon">
+	<item id="16180" name="Vesper Cutter - Thunder {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1915,7 +1915,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16181" name="Vesper Cutter - Thunder {PvP}" name_additional="Focus" type="Weapon">
+	<item id="16181" name="Vesper Cutter - Thunder {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1953,7 +1953,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16182" name="Vesper Slasher - Great Gale {PvP}" name_additional="Haste" type="Weapon">
+	<item id="16182" name="Vesper Slasher - Great Gale {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1991,7 +1991,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16183" name="Vesper Slasher - Great Gale {PvP}" name_additional="Health" type="Weapon">
+	<item id="16183" name="Vesper Slasher - Great Gale {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2029,7 +2029,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16184" name="Vesper Slasher - Great Gale {PvP}" name_additional="Focus" type="Weapon">
+	<item id="16184" name="Vesper Slasher - Great Gale {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2067,7 +2067,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16185" name="Vesper Buster - Cleverness {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="16185" name="Vesper Buster - Cleverness {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2106,7 +2106,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16186" name="Vesper Buster - Cleverness {PvP}" name_additional="Acumen" type="Weapon">
+	<item id="16186" name="Vesper Buster - Cleverness {PvP}" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2145,7 +2145,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16187" name="Vesper Buster - Cleverness {PvP}" name_additional="Magic Hold" type="Weapon">
+	<item id="16187" name="Vesper Buster - Cleverness {PvP}" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2184,7 +2184,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16188" name="Vesper Shaper - Great Gale {PvP}" name_additional="Critical Damage" type="Weapon">
+	<item id="16188" name="Vesper Shaper - Great Gale {PvP}" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2224,7 +2224,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16189" name="Vesper Shaper - Great Gale {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="16189" name="Vesper Shaper - Great Gale {PvP}" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2264,7 +2264,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16190" name="Vesper Shaper - Great Gale {PvP}" name_additional="Haste" type="Weapon">
+	<item id="16190" name="Vesper Shaper - Great Gale {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2304,7 +2304,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16191" name="Vesper Fighter - Great Gale {PvP}" name_additional="Focus" type="Weapon">
+	<item id="16191" name="Vesper Fighter - Great Gale {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2344,7 +2344,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16192" name="Vesper Fighter - Great Gale {PvP}" name_additional="Health" type="Weapon">
+	<item id="16192" name="Vesper Fighter - Great Gale {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2384,7 +2384,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16193" name="Vesper Fighter - Great Gale {PvP}" name_additional="Critical Stun" type="Weapon">
+	<item id="16193" name="Vesper Fighter - Great Gale {PvP}" additionalName="Critical Stun" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2424,7 +2424,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16194" name="Vesper Stormer - Thunder {PvP}" name_additional="Health" type="Weapon">
+	<item id="16194" name="Vesper Stormer - Thunder {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2463,7 +2463,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="16195" name="Vesper Stormer - Thunder {PvP}" name_additional="Guidance" type="Weapon">
+	<item id="16195" name="Vesper Stormer - Thunder {PvP}" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2502,7 +2502,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="16196" name="Vesper Stormer - Thunder {PvP}" name_additional="Haste" type="Weapon">
+	<item id="16196" name="Vesper Stormer - Thunder {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2541,7 +2541,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="16197" name="Vesper Avenger - Landslide {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="16197" name="Vesper Avenger - Landslide {PvP}" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2580,7 +2580,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16198" name="Vesper Avenger - Landslide {PvP}" name_additional="Health" type="Weapon">
+	<item id="16198" name="Vesper Avenger - Landslide {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2619,7 +2619,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16199" name="Vesper Avenger - Landslide {PvP}" name_additional="HP Regeneration" type="Weapon">
+	<item id="16199" name="Vesper Avenger - Landslide {PvP}" additionalName="HP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

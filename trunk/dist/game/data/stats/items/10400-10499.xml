@@ -581,7 +581,7 @@
 			<skill id="2486" level="1" /> <!-- Herb of Mana -->
 		</skills>
 	</item>
-	<item id="10434" name="Icarus Sawsword" name_additional="Focus" type="Weapon">
+	<item id="10434" name="Icarus Sawsword" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -613,7 +613,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10435" name="Icarus Sawsword" name_additional="Health" type="Weapon">
+	<item id="10435" name="Icarus Sawsword" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -645,7 +645,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10436" name="Icarus Sawsword" name_additional="Light Armor" type="Weapon">
+	<item id="10436" name="Icarus Sawsword" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -678,7 +678,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10437" name="Icarus Heavy Arms" name_additional="Focus" type="Weapon">
+	<item id="10437" name="Icarus Heavy Arms" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -710,7 +710,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10438" name="Icarus Heavy Arms" name_additional="Health" type="Weapon">
+	<item id="10438" name="Icarus Heavy Arms" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -742,7 +742,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10439" name="Icarus Heavy Arms" name_additional="Light Armor" type="Weapon">
+	<item id="10439" name="Icarus Heavy Arms" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -775,7 +775,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10440" name="Icarus Spirit" name_additional="Acumen" type="Weapon">
+	<item id="10440" name="Icarus Spirit" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -807,7 +807,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10441" name="Icarus Spirit" name_additional="Mana Up" type="Weapon">
+	<item id="10441" name="Icarus Spirit" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -839,7 +839,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10442" name="Icarus Spirit" name_additional="Conversion" type="Weapon">
+	<item id="10442" name="Icarus Spirit" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -871,7 +871,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10443" name="Icarus Spitter" name_additional="Cheap Shot" type="Weapon">
+	<item id="10443" name="Icarus Spitter" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -907,7 +907,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="10444" name="Icarus Spitter" name_additional="Guidance" type="Weapon">
+	<item id="10444" name="Icarus Spitter" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -942,7 +942,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="10445" name="Icarus Spitter" name_additional="Focus" type="Weapon">
+	<item id="10445" name="Icarus Spitter" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -977,7 +977,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="10446" name="Icarus Disperser" name_additional="Focus" type="Weapon">
+	<item id="10446" name="Icarus Disperser" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1009,7 +1009,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10447" name="Icarus Disperser" name_additional="Evasion" type="Weapon">
+	<item id="10447" name="Icarus Disperser" additionalName="Evasion" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1042,7 +1042,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10448" name="Icarus Disperser" name_additional="Critical Damage" type="Weapon">
+	<item id="10448" name="Icarus Disperser" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1074,7 +1074,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10449" name="Icarus Trident" name_additional="Anger" type="Weapon">
+	<item id="10449" name="Icarus Trident" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1106,7 +1106,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10450" name="Icarus Trident" name_additional="Critical Stun" type="Weapon">
+	<item id="10450" name="Icarus Trident" additionalName="Critical Stun" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1139,7 +1139,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10451" name="Icarus Trident" name_additional="Light Armor" type="Weapon">
+	<item id="10451" name="Icarus Trident" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1172,7 +1172,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10452" name="Icarus Hammer" name_additional="Anger" type="Weapon">
+	<item id="10452" name="Icarus Hammer" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1204,7 +1204,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10453" name="Icarus Hammer" name_additional="Health" type="Weapon">
+	<item id="10453" name="Icarus Hammer" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1236,7 +1236,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10454" name="Icarus Hammer" name_additional="Rsk. Focus" type="Weapon">
+	<item id="10454" name="Icarus Hammer" additionalName="Rsk. Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1268,7 +1268,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10455" name="Icarus Hall" name_additional="Mana Up" type="Weapon">
+	<item id="10455" name="Icarus Hall" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1301,7 +1301,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10456" name="Icarus Hall" name_additional="Conversion" type="Weapon">
+	<item id="10456" name="Icarus Hall" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1334,7 +1334,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10457" name="Icarus Hall" name_additional="Acumen" type="Weapon">
+	<item id="10457" name="Icarus Hall" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1367,7 +1367,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10458" name="Icarus Hand" name_additional="Rsk. Evasion" type="Weapon">
+	<item id="10458" name="Icarus Hand" additionalName="Rsk. Evasion" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1400,7 +1400,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10459" name="Icarus Hand" name_additional="Focus" type="Weapon">
+	<item id="10459" name="Icarus Hand" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1432,7 +1432,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10460" name="Icarus Hand" name_additional="Haste" type="Weapon">
+	<item id="10460" name="Icarus Hand" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1464,7 +1464,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10461" name="Icarus Stinger" name_additional="Focus" type="Weapon">
+	<item id="10461" name="Icarus Stinger" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1501,7 +1501,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10462" name="Icarus Stinger" name_additional="Health" type="Weapon">
+	<item id="10462" name="Icarus Stinger" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1538,7 +1538,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10463" name="Icarus Stinger" name_additional="Light Armor" type="Weapon">
+	<item id="10463" name="Icarus Stinger" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1576,7 +1576,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10464" name="Icarus Wingblade" name_additional="Focus" type="Weapon">
+	<item id="10464" name="Icarus Wingblade" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1612,7 +1612,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10465" name="Icarus Wingblade" name_additional="Health" type="Weapon">
+	<item id="10465" name="Icarus Wingblade" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1648,7 +1648,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10466" name="Icarus Wingblade" name_additional="Light Armor" type="Weapon">
+	<item id="10466" name="Icarus Wingblade" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1685,7 +1685,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10467" name="Icarus Shooter" name_additional="Cheap Shot" type="Weapon">
+	<item id="10467" name="Icarus Shooter" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1723,7 +1723,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="10468" name="Icarus Shooter" name_additional="Guidance" type="Weapon">
+	<item id="10468" name="Icarus Shooter" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1760,7 +1760,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="10469" name="Icarus Shooter" name_additional="Focus" type="Weapon">
+	<item id="10469" name="Icarus Shooter" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2177,7 +2177,7 @@
 			<player level="82" />
 		</cond>
 	</item>
-	<item id="10487" name="Dynasty Jewel Leather Armor" name_additional="Force Master" type="Armor">
+	<item id="10487" name="Dynasty Jewel Leather Armor" additionalName="Force Master" type="Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2200,7 +2200,7 @@
 			<stat type="pDef">170</stat>
 		</stats>
 	</item>
-	<item id="10488" name="Dynasty Jewel Leather Armor" name_additional="Weapon Master" type="Armor">
+	<item id="10488" name="Dynasty Jewel Leather Armor" additionalName="Weapon Master" type="Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2223,7 +2223,7 @@
 			<stat type="pDef">170</stat>
 		</stats>
 	</item>
-	<item id="10489" name="Dynasty Jewel Leather Armor" name_additional="Enchanter" type="Armor">
+	<item id="10489" name="Dynasty Jewel Leather Armor" additionalName="Enchanter" type="Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2246,7 +2246,7 @@
 			<stat type="pDef">170</stat>
 		</stats>
 	</item>
-	<item id="10490" name="Dynasty Jewel Leather Armor" name_additional="Summoner" type="Armor">
+	<item id="10490" name="Dynasty Jewel Leather Armor" additionalName="Summoner" type="Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2269,7 +2269,7 @@
 			<stat type="pDef">170</stat>
 		</stats>
 	</item>
-	<item id="10491" name="Silk Shirt" name_additional="HP" type="Armor">
+	<item id="10491" name="Silk Shirt" additionalName="HP" type="Armor">
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2289,7 +2289,7 @@
 			<stat type="pDef">17</stat>
 		</stats>
 	</item>
-	<item id="10492" name="Silk Shirt" name_additional="MP" type="Armor">
+	<item id="10492" name="Silk Shirt" additionalName="MP" type="Armor">
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2309,7 +2309,7 @@
 			<stat type="pDef">17</stat>
 		</stats>
 	</item>
-	<item id="10493" name="Silk Shirt" name_additional="CP" type="Armor">
+	<item id="10493" name="Silk Shirt" additionalName="CP" type="Armor">
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2329,7 +2329,7 @@
 			<stat type="pDef">17</stat>
 		</stats>
 	</item>
-	<item id="10494" name="Thin Leather Shirt" name_additional="HP" type="Armor">
+	<item id="10494" name="Thin Leather Shirt" additionalName="HP" type="Armor">
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2349,7 +2349,7 @@
 			<stat type="pDef">21</stat>
 		</stats>
 	</item>
-	<item id="10495" name="Thin Leather Shirt" name_additional="MP" type="Armor">
+	<item id="10495" name="Thin Leather Shirt" additionalName="MP" type="Armor">
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2369,7 +2369,7 @@
 			<stat type="pDef">21</stat>
 		</stats>
 	</item>
-	<item id="10496" name="Thin Leather Shirt" name_additional="CP" type="Armor">
+	<item id="10496" name="Thin Leather Shirt" additionalName="CP" type="Armor">
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2389,7 +2389,7 @@
 			<stat type="pDef">21</stat>
 		</stats>
 	</item>
-	<item id="10497" name="Scale Shirt" name_additional="HP" type="Armor">
+	<item id="10497" name="Scale Shirt" additionalName="HP" type="Armor">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2409,7 +2409,7 @@
 			<stat type="pDef">23</stat>
 		</stats>
 	</item>
-	<item id="10498" name="Scale Shirt" name_additional="MP" type="Armor">
+	<item id="10498" name="Scale Shirt" additionalName="MP" type="Armor">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2429,7 +2429,7 @@
 			<stat type="pDef">23</stat>
 		</stats>
 	</item>
-	<item id="10499" name="Scale Shirt" name_additional="CP" type="Armor">
+	<item id="10499" name="Scale Shirt" additionalName="CP" type="Armor">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />

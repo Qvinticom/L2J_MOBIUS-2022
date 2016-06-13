@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="35700" name="Santa Girl's Golden Gift Box" name_additional="Event" type="EtcItem">
+	<item id="35700" name="Santa Girl's Golden Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Cloak Box and Hat Box (3-day). If you are lucky, you can acquire an additional reward. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
@@ -22,7 +22,7 @@
 			<item id="18576" min="1" max="1" chance="5.6" /> <!-- Top-grade Life Stone (R99-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="35701" name="Santa Girl's Red Stockings" name_additional="Event" type="EtcItem">
+	<item id="35701" name="Santa Girl's Red Stockings" additionalName="Event" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Gift Box. If you are lucky, you can acquire Santa Girl's Golden Gift Box. -->
 		<set name="icon" val="icon.xmas_present_i00" />
 		<set name="is_freightable" val="false" />
@@ -181,7 +181,7 @@
 			<skill id="9503" level="1" /> <!-- Zofan's Supply Box -->
 		</skills>
 	</item>
-	<item id="35710" name="Santa Girl's Cloak Box" name_additional="1-day (Event)" type="EtcItem">
+	<item id="35710" name="Santa Girl's Cloak Box" additionalName="1-day (Event)" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Cloak (1-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -195,7 +195,7 @@
 			<item id="35693" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak - 1-day (Event) -->
 		</capsuled_items>
 	</item>
-	<item id="35711" name="Santa Girl's Cloak Box" name_additional="3-day (Event)" type="EtcItem">
+	<item id="35711" name="Santa Girl's Cloak Box" additionalName="3-day (Event)" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Cloak (3-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -209,7 +209,7 @@
 			<item id="35694" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak - 3-day (Event) -->
 		</capsuled_items>
 	</item>
-	<item id="35712" name="Refined Romantic Chapeau containing the GM's Sincerity" name_additional="Warriors Only" type="Armor">
+	<item id="35712" name="Refined Romantic Chapeau containing the GM's Sincerity" additionalName="Warriors Only" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's sincerity. It uses 2 hair accessory slots. P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -229,7 +229,7 @@
 			<skill id="8872" level="1" /> <!-- Refined Romantic Chapeau containing the GM's Sincerity -->
 		</skills>
 	</item>
-	<item id="35713" name="Refined Romantic Chapeau containing the GM's Sincerity" name_additional="Wizards Only" type="Armor">
+	<item id="35713" name="Refined Romantic Chapeau containing the GM's Sincerity" additionalName="Wizards Only" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's sincerity. It uses 2 hair accessory slots. M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -249,7 +249,7 @@
 			<skill id="8873" level="1" /> <!-- Refined Romantic Chapeau containing the GM's Sincerity -->
 		</skills>
 	</item>
-	<item id="35714" name="Refined Romantic Chapeau containing the GM's Sincerity" name_additional="Healers Only" type="Armor">
+	<item id="35714" name="Refined Romantic Chapeau containing the GM's Sincerity" additionalName="Healers Only" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's sincerity. It uses 2 hair accessory slots. WIT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -269,7 +269,7 @@
 			<skill id="8874" level="1" /> <!-- Refined Romantic Chapeau containing the GM's Sincerity -->
 		</skills>
 	</item>
-	<item id="35715" name="Refined Romantic Chapeau containing the GM's Blessing" name_additional="Warriors Only" type="Armor">
+	<item id="35715" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Warriors Only" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's blessing. It uses 2 hair accessory slots. P. Atk. + 5% and Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -289,7 +289,7 @@
 			<skill id="8875" level="1" /> <!-- Refined Romantic Chapeau containing the GM's Blessing -->
 		</skills>
 	</item>
-	<item id="35716" name="Refined Romantic Chapeau containing the GM's Blessing" name_additional="Wizards Only" type="Armor">
+	<item id="35716" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Wizards Only" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's blessing. It uses 2 hair accessory slots. M. Atk. + 10% and INT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -309,7 +309,7 @@
 			<skill id="8876" level="1" /> <!-- Refined Romantic Chapeau containing the GM's Blessing -->
 		</skills>
 	</item>
-	<item id="35717" name="Refined Romantic Chapeau containing the GM's Blessing" name_additional="Healers Only" type="Armor">
+	<item id="35717" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Healers Only" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's blessing. It uses 2 hair accessory slots. WIT + 3 and MEN + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -329,7 +329,7 @@
 			<skill id="8877" level="1" /> <!-- Refined Romantic Chapeau containing the GM's Blessing -->
 		</skills>
 	</item>
-	<item id="35718" name="Santa Hat" name_additional="1-day (Event)" type="Armor">
+	<item id="35718" name="Santa Hat" additionalName="1-day (Event)" type="Armor">
 		<!-- The hat brings Christmas cheer. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -347,7 +347,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="1440" />
 	</item>
-	<item id="35719" name="Santa Hat" name_additional="3-day (Event)" type="Armor">
+	<item id="35719" name="Santa Hat" additionalName="3-day (Event)" type="Armor">
 		<!-- The hat brings Christmas cheer. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -365,7 +365,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="4320" />
 	</item>
-	<item id="35720" name="Santa Girl's Hat Box" name_additional="1-day (Event)" type="EtcItem">
+	<item id="35720" name="Santa Girl's Hat Box" additionalName="1-day (Event)" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Hat (1-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -379,7 +379,7 @@
 			<item id="35718" min="1" max="1" chance="100" /> <!-- Santa Hat - 1-day (Event) -->
 		</capsuled_items>
 	</item>
-	<item id="35721" name="Santa Girl's Hat Box" name_additional="3-day (Event)" type="EtcItem">
+	<item id="35721" name="Santa Girl's Hat Box" additionalName="3-day (Event)" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Hat (3-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -393,7 +393,7 @@
 			<item id="35719" min="1" max="1" chance="100" /> <!-- Santa Hat - 3-day (Event) -->
 		</capsuled_items>
 	</item>
-	<item id="35722" name="Draco's Hat" name_additional="Event" type="Armor">
+	<item id="35722" name="Draco's Hat" additionalName="Event" type="Armor">
 		<!-- Draco's Hat -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -579,7 +579,7 @@
 			<item id="30275" min="40" max="40" chance="100" /> <!-- Scroll: 1,000,000 SP -->
 		</capsuled_items>
 	</item>
-	<item id="35729" name="Fire Stone (+ 60)" name_additional="Event" type="EtcItem">
+	<item id="35729" name="Fire Stone (+ 60)" additionalName="Event" type="EtcItem">
 		<!-- Increases fire attribute by 60 at once. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="weight" val="1" />
@@ -596,7 +596,7 @@
 			<skill id="12875" level="3" /> <!-- Fire Stone -->
 		</skills>
 	</item>
-	<item id="35730" name="Water Stone (+ 60)" name_additional="Event" type="EtcItem">
+	<item id="35730" name="Water Stone (+ 60)" additionalName="Event" type="EtcItem">
 		<!-- Increases water attribute by 60 at once. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="weight" val="1" />
@@ -613,7 +613,7 @@
 			<skill id="12876" level="3" /> <!-- Water Stone -->
 		</skills>
 	</item>
-	<item id="35731" name="Earth Stone (+ 60)" name_additional="Event" type="EtcItem">
+	<item id="35731" name="Earth Stone (+ 60)" additionalName="Event" type="EtcItem">
 		<!-- Increases earth attribute by 60 at once. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="weight" val="1" />
@@ -630,7 +630,7 @@
 			<skill id="12878" level="3" /> <!-- Earth Stone -->
 		</skills>
 	</item>
-	<item id="35732" name="Wind Stone (+ 60)" name_additional="Event" type="EtcItem">
+	<item id="35732" name="Wind Stone (+ 60)" additionalName="Event" type="EtcItem">
 		<!-- Increases wind attribute by 60 at once. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
 		<set name="weight" val="1" />
@@ -647,7 +647,7 @@
 			<skill id="12877" level="3" /> <!-- Wind Stone -->
 		</skills>
 	</item>
-	<item id="35733" name="Dark Stone (+ 60)" name_additional="Event" type="EtcItem">
+	<item id="35733" name="Dark Stone (+ 60)" additionalName="Event" type="EtcItem">
 		<!-- Increases dark attribute by 60 at once. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
 		<set name="weight" val="1" />
@@ -664,7 +664,7 @@
 			<skill id="12880" level="3" /> <!-- Dark Stone -->
 		</skills>
 	</item>
-	<item id="35734" name="Holy Stone (+ 60)" name_additional="Event" type="EtcItem">
+	<item id="35734" name="Holy Stone (+ 60)" additionalName="Event" type="EtcItem">
 		<!-- Increases holy attribute by 60 at once. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="weight" val="1" />
@@ -681,7 +681,7 @@
 			<skill id="12879" level="3" /> <!-- Holy Stone -->
 		</skills>
 	</item>
-	<item id="35735" name="Fire Stone (+ 150)" name_additional="Event" type="EtcItem">
+	<item id="35735" name="Fire Stone (+ 150)" additionalName="Event" type="EtcItem">
 		<!-- Increases fire attribute by 150 at once. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="weight" val="1" />
@@ -698,7 +698,7 @@
 			<skill id="12875" level="1" /> <!-- Fire Stone -->
 		</skills>
 	</item>
-	<item id="35736" name="Water Stone (+ 150)" name_additional="Event" type="EtcItem">
+	<item id="35736" name="Water Stone (+ 150)" additionalName="Event" type="EtcItem">
 		<!-- Increases water attribute by 150 at once. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="weight" val="1" />
@@ -715,7 +715,7 @@
 			<skill id="12876" level="1" /> <!-- Water Stone -->
 		</skills>
 	</item>
-	<item id="35737" name="Earth Stone (+ 150)" name_additional="Event" type="EtcItem">
+	<item id="35737" name="Earth Stone (+ 150)" additionalName="Event" type="EtcItem">
 		<!-- Increases earth attribute by 150 at once. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="weight" val="1" />
@@ -732,7 +732,7 @@
 			<skill id="12878" level="1" /> <!-- Earth Stone -->
 		</skills>
 	</item>
-	<item id="35738" name="Wind Stone (+ 150)" name_additional="Event" type="EtcItem">
+	<item id="35738" name="Wind Stone (+ 150)" additionalName="Event" type="EtcItem">
 		<!-- Increases wind attribute by 150 at once. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
 		<set name="weight" val="1" />
@@ -749,7 +749,7 @@
 			<skill id="12877" level="1" /> <!-- Wind Stone -->
 		</skills>
 	</item>
-	<item id="35739" name="Dark Stone (+ 150)" name_additional="Event" type="EtcItem">
+	<item id="35739" name="Dark Stone (+ 150)" additionalName="Event" type="EtcItem">
 		<!-- Increases dark attribute by 150 at once. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
 		<set name="weight" val="1" />
@@ -766,7 +766,7 @@
 			<skill id="12880" level="1" /> <!-- Dark Stone -->
 		</skills>
 	</item>
-	<item id="35740" name="Holy Stone (+ 150)" name_additional="Event" type="EtcItem">
+	<item id="35740" name="Holy Stone (+ 150)" additionalName="Event" type="EtcItem">
 		<!-- Increases holy attribute by 150 at once. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="weight" val="1" />
@@ -815,7 +815,7 @@
 			<skill id="9508" level="1" /> <!-- Scroll: Reputation (Low-grade) -->
 		</skills>
 	</item>
-	<item id="35743" name="Draco's Health Potion" name_additional="Event" type="EtcItem">
+	<item id="35743" name="Draco's Health Potion" additionalName="Event" type="EtcItem">
 		<!-- Upon use, it restores 3000 HP and the remaining power restores CP instantly. Instant effect with no duration. -->
 		<set name="icon" val="icon.etc_ev_draco_hp_bottle" />
 		<set name="weight" val="10" />
@@ -835,7 +835,7 @@
 			<skill id="9513" level="1" /> <!-- Draco's Health Potion -->
 		</skills>
 	</item>
-	<item id="35744" name="Draco's Mana Potion" name_additional="Event" type="EtcItem">
+	<item id="35744" name="Draco's Mana Potion" additionalName="Event" type="EtcItem">
 		<!-- Magical potion that restores MP by 100. Instant effect with no duration. Can be exchanged and dropped. Can use a private store. Cannot be used when MP is full. -->
 		<set name="icon" val="icon.etc_ev_draco_mp_bottle" />
 		<set name="weight" val="10" />
@@ -855,7 +855,7 @@
 			<skill id="9514" level="1" /> <!-- Draco's Mana Potion -->
 		</skills>
 	</item>
-	<item id="35745" name="Draco's Hat Box" name_additional="Event (Not in Use)" type="EtcItem">
+	<item id="35745" name="Draco's Hat Box" additionalName="Event (Not in Use)" type="EtcItem">
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
@@ -866,7 +866,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="35746" name="Draco's Hat: Warrior (7-day)" name_additional="Event" type="Armor">
+	<item id="35746" name="Draco's Hat: Warrior (7-day)" additionalName="Event" type="Armor">
 		<!-- A cute Draco's Hat. 7-day. STR + 2, DEX + 2, CON + 2. Can use the blessed resurrection skill (1 hour cooldown). Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -887,7 +887,7 @@
 			<skill id="9515" level="1" /> <!-- Draco's Warrior Hat -->
 		</skills>
 	</item>
-	<item id="35747" name="Draco's Hat: Wizard (7-day)" name_additional="Event" type="Armor">
+	<item id="35747" name="Draco's Hat: Wizard (7-day)" additionalName="Event" type="Armor">
 		<!-- A cute Draco's Hat. 7-day. INT + 2, WIT + 2, MEN + 2. Can use the blessed resurrection skill (1 hour cooldown). Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -908,7 +908,7 @@
 			<skill id="9516" level="1" /> <!-- Draco's Hat: Wizard -->
 		</skills>
 	</item>
-	<item id="35748" name="Draco's Hat" name_additional="Event" type="Armor">
+	<item id="35748" name="Draco's Hat" additionalName="Event" type="Armor">
 		<!-- A cute Draco's Hat. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -921,7 +921,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="35749" name="Weapon Attribute Change Crystal (R-grade)" name_additional="Event" type="EtcItem">
+	<item id="35749" name="Weapon Attribute Change Crystal (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to change the attribute of R, R95, and R99-grade weapons. It can be used when there is an R-grade weapon bestowed in the inventory. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="is_stackable" val="true" />
@@ -937,7 +937,7 @@
 			<skill id="12881" level="1" /> <!-- Change Attribute -->
 		</skills>
 	</item>
-	<item id="35750" name="Draco's Blessing (30-minute)" name_additional="Event" type="EtcItem">
+	<item id="35750" name="Draco's Blessing (30-minute)" additionalName="Event" type="EtcItem">
 		<!-- For 30 minutes, increases XP and SP acquired in hunt by 200% when used by characters level 85 - 90. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_freightable" val="false" />
@@ -952,7 +952,7 @@
 			<skill id="9518" level="1" /> <!-- Draco's Blessing (30-minute) -->
 		</skills>
 	</item>
-	<item id="35751" name="Draco's Shiny Accessory Pack" name_additional="Event" type="EtcItem">
+	<item id="35751" name="Draco's Shiny Accessory Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to acquire one of the following:ﾠAntharas' Earring, Valakas' Necklace, Earth Wyrm Heart Ring, Bottle of Antharas' Soul, or Bottle of Valakas' Soul. -->
 		<set name="icon" val="icon.etc_ev_draco_gift_box" />
 		<set name="is_freightable" val="false" />
@@ -1062,7 +1062,7 @@
 			<skill id="9511" level="1" /> <!-- Scroll: Reputation (Top-grade) -->
 		</skills>
 	</item>
-	<item id="35758" name="Draco's Blessing (1-hour)" name_additional="Event" type="EtcItem">
+	<item id="35758" name="Draco's Blessing (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- For 1 hour, increases XP and SP acquired in hunt by 200% when used by characters level 85 - 90. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_freightable" val="false" />
@@ -1077,7 +1077,7 @@
 			<skill id="9519" level="1" /> <!-- Draco's Blessing (1-hour) -->
 		</skills>
 	</item>
-	<item id="35759" name="Draco's Blessing (1-hour)" name_additional="Event" type="EtcItem">
+	<item id="35759" name="Draco's Blessing (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- For 1 hour, increases XP and SP acquired in hunt by 100% when used by characters level 1 - 95. Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_stackable" val="true" />
@@ -1092,7 +1092,7 @@
 			<skill id="9520" level="1" /> <!-- Draco's Blessing (1-hour) -->
 		</skills>
 	</item>
-	<item id="35760" name="Draco's Blessing (3-hour)" name_additional="Event" type="EtcItem">
+	<item id="35760" name="Draco's Blessing (3-hour)" additionalName="Event" type="EtcItem">
 		<!-- For 3 hours, increases XP and SP acquired in hunt by 200% when used by characters level 85 - 90. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_freightable" val="false" />
@@ -1107,7 +1107,7 @@
 			<skill id="9521" level="1" /> <!-- Draco's Blessing (3-hour) -->
 		</skills>
 	</item>
-	<item id="35761" name="Rabbit Ears" name_additional="CON" type="Armor">
+	<item id="35761" name="Rabbit Ears" additionalName="CON" type="Armor">
 		<!-- CON + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1122,7 +1122,7 @@
 			<skill id="9556" level="1" /> <!-- Hair Accessory: CON -->
 		</skills>
 	</item>
-	<item id="35762" name="Rabbit Ears" name_additional="MEN" type="Armor">
+	<item id="35762" name="Rabbit Ears" additionalName="MEN" type="Armor">
 		<!-- MEN + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1137,7 +1137,7 @@
 			<skill id="9557" level="1" /> <!-- Hair Accessory: MEN -->
 		</skills>
 	</item>
-	<item id="35763" name="Rabbit Ears" name_additional="INT" type="Armor">
+	<item id="35763" name="Rabbit Ears" additionalName="INT" type="Armor">
 		<!-- INT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1152,7 +1152,7 @@
 			<skill id="9558" level="1" /> <!-- Hair Accessory: INT -->
 		</skills>
 	</item>
-	<item id="35764" name="Rabbit Ears" name_additional="WIT" type="Armor">
+	<item id="35764" name="Rabbit Ears" additionalName="WIT" type="Armor">
 		<!-- WIT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1167,7 +1167,7 @@
 			<skill id="9559" level="1" /> <!-- Hair Accessory: WIT -->
 		</skills>
 	</item>
-	<item id="35765" name="Rabbit Ears" name_additional="Critical Rate" type="Armor">
+	<item id="35765" name="Rabbit Ears" additionalName="Critical Rate" type="Armor">
 		<!-- P. Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1182,7 +1182,7 @@
 			<skill id="9560" level="1" /> <!-- Hair Accessory: Critical Rate -->
 		</skills>
 	</item>
-	<item id="35766" name="Rabbit Ears" name_additional="Critical Damage" type="Armor">
+	<item id="35766" name="Rabbit Ears" additionalName="Critical Damage" type="Armor">
 		<!-- P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1197,7 +1197,7 @@
 			<skill id="9561" level="1" /> <!-- Hair Accessory: Critical Damage -->
 		</skills>
 	</item>
-	<item id="35767" name="Rabbit Ears" name_additional="P. Def." type="Armor">
+	<item id="35767" name="Rabbit Ears" additionalName="P. Def." type="Armor">
 		<!-- P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1212,7 +1212,7 @@
 			<skill id="9562" level="1" /> <!-- Hair Accessory Circlet: P. Def. -->
 		</skills>
 	</item>
-	<item id="35768" name="Rabbit Ears" name_additional="M. Def." type="Armor">
+	<item id="35768" name="Rabbit Ears" additionalName="M. Def." type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1227,7 +1227,7 @@
 			<skill id="9563" level="1" /> <!-- Hair Accessory: M. Def. -->
 		</skills>
 	</item>
-	<item id="35769" name="Rabbit Ears" name_additional="Evasion" type="Armor">
+	<item id="35769" name="Rabbit Ears" additionalName="Evasion" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1242,7 +1242,7 @@
 			<skill id="9564" level="1" /> <!-- Hair Accessory: Evasion -->
 		</skills>
 	</item>
-	<item id="35770" name="Rabbit Ears" name_additional="P. Atk." type="Armor">
+	<item id="35770" name="Rabbit Ears" additionalName="P. Atk." type="Armor">
 		<!-- P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1257,7 +1257,7 @@
 			<skill id="9565" level="1" /> <!-- Hair Accessory: P. Atk. -->
 		</skills>
 	</item>
-	<item id="35771" name="Rabbit Ears" name_additional="M. Atk." type="Armor">
+	<item id="35771" name="Rabbit Ears" additionalName="M. Atk." type="Armor">
 		<!-- M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1272,7 +1272,7 @@
 			<skill id="9566" level="1" /> <!-- Hair Accessory: M. Atk. -->
 		</skills>
 	</item>
-	<item id="35772" name="Rabbit Ears" name_additional="Accuracy" type="Armor">
+	<item id="35772" name="Rabbit Ears" additionalName="Accuracy" type="Armor">
 		<!-- Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1287,7 +1287,7 @@
 			<skill id="9567" level="1" /> <!-- Hair Accessory: Accuracy -->
 		</skills>
 	</item>
-	<item id="35773" name="Raccoon Ears" name_additional="STR" type="Armor">
+	<item id="35773" name="Raccoon Ears" additionalName="STR" type="Armor">
 		<!-- STR + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1302,7 +1302,7 @@
 			<skill id="9554" level="1" /> <!-- Hair Accessory: STR -->
 		</skills>
 	</item>
-	<item id="35774" name="Raccoon Ears" name_additional="DEX" type="Armor">
+	<item id="35774" name="Raccoon Ears" additionalName="DEX" type="Armor">
 		<!-- DEX + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1317,7 +1317,7 @@
 			<skill id="9555" level="1" /> <!-- Hair Accessory: DEX -->
 		</skills>
 	</item>
-	<item id="35775" name="Raccoon Ears" name_additional="INT" type="Armor">
+	<item id="35775" name="Raccoon Ears" additionalName="INT" type="Armor">
 		<!-- INT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1332,7 +1332,7 @@
 			<skill id="9558" level="1" /> <!-- Hair Accessory: INT -->
 		</skills>
 	</item>
-	<item id="35776" name="Raccoon Ears" name_additional="WIT" type="Armor">
+	<item id="35776" name="Raccoon Ears" additionalName="WIT" type="Armor">
 		<!-- WIT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1347,7 +1347,7 @@
 			<skill id="9559" level="1" /> <!-- Hair Accessory: WIT -->
 		</skills>
 	</item>
-	<item id="35777" name="Raccoon Ears" name_additional="Critical Rate" type="Armor">
+	<item id="35777" name="Raccoon Ears" additionalName="Critical Rate" type="Armor">
 		<!-- P. Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1362,7 +1362,7 @@
 			<skill id="9560" level="1" /> <!-- Hair Accessory: Critical Rate -->
 		</skills>
 	</item>
-	<item id="35778" name="Raccoon Ears" name_additional="Critical Damage" type="Armor">
+	<item id="35778" name="Raccoon Ears" additionalName="Critical Damage" type="Armor">
 		<!-- P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1377,7 +1377,7 @@
 			<skill id="9561" level="1" /> <!-- Hair Accessory: Critical Damage -->
 		</skills>
 	</item>
-	<item id="35779" name="Raccoon Ears" name_additional="P. Def." type="Armor">
+	<item id="35779" name="Raccoon Ears" additionalName="P. Def." type="Armor">
 		<!-- P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1392,7 +1392,7 @@
 			<skill id="9562" level="1" /> <!-- Hair Accessory Circlet: P. Def. -->
 		</skills>
 	</item>
-	<item id="35780" name="Raccoon Ears" name_additional="M. Def." type="Armor">
+	<item id="35780" name="Raccoon Ears" additionalName="M. Def." type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1407,7 +1407,7 @@
 			<skill id="9563" level="1" /> <!-- Hair Accessory: M. Def. -->
 		</skills>
 	</item>
-	<item id="35781" name="Raccoon Ears" name_additional="Evasion" type="Armor">
+	<item id="35781" name="Raccoon Ears" additionalName="Evasion" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1422,7 +1422,7 @@
 			<skill id="9564" level="1" /> <!-- Hair Accessory: Evasion -->
 		</skills>
 	</item>
-	<item id="35782" name="Raccoon Ears" name_additional="P. Atk." type="Armor">
+	<item id="35782" name="Raccoon Ears" additionalName="P. Atk." type="Armor">
 		<!-- P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1437,7 +1437,7 @@
 			<skill id="9565" level="1" /> <!-- Hair Accessory: P. Atk. -->
 		</skills>
 	</item>
-	<item id="35783" name="Raccoon Ears" name_additional="M. Atk." type="Armor">
+	<item id="35783" name="Raccoon Ears" additionalName="M. Atk." type="Armor">
 		<!-- M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1452,7 +1452,7 @@
 			<skill id="9566" level="1" /> <!-- Hair Accessory: M. Atk. -->
 		</skills>
 	</item>
-	<item id="35784" name="Raccoon Ears" name_additional="Accuracy" type="Armor">
+	<item id="35784" name="Raccoon Ears" additionalName="Accuracy" type="Armor">
 		<!-- Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1467,7 +1467,7 @@
 			<skill id="9567" level="1" /> <!-- Hair Accessory: Accuracy -->
 		</skills>
 	</item>
-	<item id="35785" name="Cat Ears" name_additional="STR" type="Armor">
+	<item id="35785" name="Cat Ears" additionalName="STR" type="Armor">
 		<!-- STR + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1482,7 +1482,7 @@
 			<skill id="9554" level="1" /> <!-- Hair Accessory: STR -->
 		</skills>
 	</item>
-	<item id="35786" name="Cat Ears" name_additional="DEX" type="Armor">
+	<item id="35786" name="Cat Ears" additionalName="DEX" type="Armor">
 		<!-- DEX + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1497,7 +1497,7 @@
 			<skill id="9555" level="1" /> <!-- Hair Accessory: DEX -->
 		</skills>
 	</item>
-	<item id="35787" name="Cat Ears" name_additional="CON" type="Armor">
+	<item id="35787" name="Cat Ears" additionalName="CON" type="Armor">
 		<!-- CON + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1512,7 +1512,7 @@
 			<skill id="9556" level="1" /> <!-- Hair Accessory: CON -->
 		</skills>
 	</item>
-	<item id="35788" name="Cat Ears" name_additional="MEN" type="Armor">
+	<item id="35788" name="Cat Ears" additionalName="MEN" type="Armor">
 		<!-- MEN + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1527,7 +1527,7 @@
 			<skill id="9557" level="1" /> <!-- Hair Accessory: MEN -->
 		</skills>
 	</item>
-	<item id="35789" name="Cat Ears" name_additional="Critical Rate" type="Armor">
+	<item id="35789" name="Cat Ears" additionalName="Critical Rate" type="Armor">
 		<!-- P. Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1542,7 +1542,7 @@
 			<skill id="9560" level="1" /> <!-- Hair Accessory: Critical Rate -->
 		</skills>
 	</item>
-	<item id="35790" name="Cat Ears" name_additional="Critical Damage" type="Armor">
+	<item id="35790" name="Cat Ears" additionalName="Critical Damage" type="Armor">
 		<!-- P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1557,7 +1557,7 @@
 			<skill id="9561" level="1" /> <!-- Hair Accessory: Critical Damage -->
 		</skills>
 	</item>
-	<item id="35791" name="Cat Ears" name_additional="P. Def." type="Armor">
+	<item id="35791" name="Cat Ears" additionalName="P. Def." type="Armor">
 		<!-- P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1572,7 +1572,7 @@
 			<skill id="9562" level="1" /> <!-- Hair Accessory Circlet: P. Def. -->
 		</skills>
 	</item>
-	<item id="35792" name="Cat Ears" name_additional="M. Def." type="Armor">
+	<item id="35792" name="Cat Ears" additionalName="M. Def." type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1587,7 +1587,7 @@
 			<skill id="9563" level="1" /> <!-- Hair Accessory: M. Def. -->
 		</skills>
 	</item>
-	<item id="35793" name="Cat Ears" name_additional="Evasion" type="Armor">
+	<item id="35793" name="Cat Ears" additionalName="Evasion" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1602,7 +1602,7 @@
 			<skill id="9564" level="1" /> <!-- Hair Accessory: Evasion -->
 		</skills>
 	</item>
-	<item id="35794" name="Cat Ears" name_additional="P. Atk." type="Armor">
+	<item id="35794" name="Cat Ears" additionalName="P. Atk." type="Armor">
 		<!-- P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1617,7 +1617,7 @@
 			<skill id="9565" level="1" /> <!-- Hair Accessory: P. Atk. -->
 		</skills>
 	</item>
-	<item id="35795" name="Cat Ears" name_additional="M. Atk." type="Armor">
+	<item id="35795" name="Cat Ears" additionalName="M. Atk." type="Armor">
 		<!-- M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1632,7 +1632,7 @@
 			<skill id="9566" level="1" /> <!-- Hair Accessory: M. Atk. -->
 		</skills>
 	</item>
-	<item id="35796" name="Cat Ears" name_additional="Accuracy" type="Armor">
+	<item id="35796" name="Cat Ears" additionalName="Accuracy" type="Armor">
 		<!-- Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1647,7 +1647,7 @@
 			<skill id="9567" level="1" /> <!-- Hair Accessory: Accuracy -->
 		</skills>
 	</item>
-	<item id="35797" name="Romantic Chapeau" name_additional="STR" type="Armor">
+	<item id="35797" name="Romantic Chapeau" additionalName="STR" type="Armor">
 		<!-- STR + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1662,7 +1662,7 @@
 			<skill id="9554" level="1" /> <!-- Hair Accessory: STR -->
 		</skills>
 	</item>
-	<item id="35798" name="Romantic Chapeau" name_additional="DEX" type="Armor">
+	<item id="35798" name="Romantic Chapeau" additionalName="DEX" type="Armor">
 		<!-- DEX + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1677,7 +1677,7 @@
 			<skill id="9555" level="1" /> <!-- Hair Accessory: DEX -->
 		</skills>
 	</item>
-	<item id="35799" name="Romantic Chapeau" name_additional="CON" type="Armor">
+	<item id="35799" name="Romantic Chapeau" additionalName="CON" type="Armor">
 		<!-- CON + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />

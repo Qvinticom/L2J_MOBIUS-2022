@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="23700" name="Tribal Warrior Top" name_additional="Modified Set" type="Armor">
+	<item id="23700" name="Tribal Warrior Top" additionalName="Modified Set" type="Armor">
 		<!-- Native Taiwanese Top. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_u" />
 		<set name="is_clan_depositable" val="false" />
@@ -15,7 +15,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23701" name="Tribal Warrior Pants" name_additional="Modified Set" type="Armor">
+	<item id="23701" name="Tribal Warrior Pants" additionalName="Modified Set" type="Armor">
 		<!-- Native Taiwanese Pants. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_l" />
 		<set name="is_clan_depositable" val="false" />
@@ -30,7 +30,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23702" name="Tribal Warrior Gloves" name_additional="Modified Set" type="Armor">
+	<item id="23702" name="Tribal Warrior Gloves" additionalName="Modified Set" type="Armor">
 		<!-- Native Taiwanese Gloves. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_g" />
 		<set name="is_clan_depositable" val="false" />
@@ -45,7 +45,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23703" name="Tribal Warrior Shoes" name_additional="Modified Set" type="Armor">
+	<item id="23703" name="Tribal Warrior Shoes" additionalName="Modified Set" type="Armor">
 		<!-- Native Taiwanese Shoes. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_b" />
 		<set name="is_clan_depositable" val="false" />
@@ -60,7 +60,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23704" name="Tribal Warrior Top Appearance Stone" name_additional="Modified Set" type="EtcItem">
+	<item id="23704" name="Tribal Warrior Top Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Native Taiwanese outfit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
@@ -76,7 +76,7 @@
 			<skill id="22904" level="1" /> <!-- Tribal Warrior Top Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23705" name="Tribal Warrior Pants Appearance Stone" name_additional="Modified Set" type="EtcItem">
+	<item id="23705" name="Tribal Warrior Pants Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of pants into that of a Native Taiwanese outfit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
@@ -92,7 +92,7 @@
 			<skill id="22905" level="1" /> <!-- Tribal Warrior Pants Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23706" name="Tribal Warrior Gloves Appearance Stone" name_additional="Modified Set" type="EtcItem">
+	<item id="23706" name="Tribal Warrior Gloves Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of gloves into that of a Native Taiwanese outfit. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
@@ -108,7 +108,7 @@
 			<skill id="22906" level="1" /> <!-- Tribal Warrior Gloves Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23707" name="Tribal Warrior Shoes Appearance Stone" name_additional="Modified Set" type="EtcItem">
+	<item id="23707" name="Tribal Warrior Shoes Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of shoes into that of a Native Taiwanese outfit. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
@@ -124,7 +124,7 @@
 			<skill id="22907" level="1" /> <!-- Tribal Warrior Shoes Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23708" name="Metal Suit Top" name_additional="Modified Set" type="Armor">
+	<item id="23708" name="Metal Suit Top" additionalName="Modified Set" type="Armor">
 		<!-- Metal Suit Top. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="is_clan_depositable" val="false" />
@@ -139,7 +139,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23709" name="Metal Suit Pants" name_additional="Modified Set" type="Armor">
+	<item id="23709" name="Metal Suit Pants" additionalName="Modified Set" type="Armor">
 		<!-- Metal Suit Pants. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_l" />
 		<set name="is_clan_depositable" val="false" />
@@ -154,7 +154,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23710" name="Metal Suit Gloves" name_additional="Modified Set" type="Armor">
+	<item id="23710" name="Metal Suit Gloves" additionalName="Modified Set" type="Armor">
 		<!-- Metal Suit Gloves. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_g" />
 		<set name="is_clan_depositable" val="false" />
@@ -169,7 +169,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23711" name="Metal Suit Shoes" name_additional="Modified Set" type="Armor">
+	<item id="23711" name="Metal Suit Shoes" additionalName="Modified Set" type="Armor">
 		<!-- Metal Suit Shoes. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_b" />
 		<set name="is_clan_depositable" val="false" />
@@ -184,7 +184,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23712" name="Metal Suit Top Appearance Stone" name_additional="Modified Set" type="EtcItem">
+	<item id="23712" name="Metal Suit Top Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Metal Suit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
@@ -200,7 +200,7 @@
 			<skill id="22908" level="1" /> <!-- Metal Suit Top Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23713" name="Metal Suit Pants Appearance Stone" name_additional="Modified Set" type="EtcItem">
+	<item id="23713" name="Metal Suit Pants Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of pants into that of a Metal Suit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
@@ -216,7 +216,7 @@
 			<skill id="22909" level="1" /> <!-- Metal Suit Pants Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23714" name="Metal Suit Gloves Appearance Stone" name_additional="Modified Set" type="EtcItem">
+	<item id="23714" name="Metal Suit Gloves Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of gloves into that of a Metal Suit. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
@@ -232,7 +232,7 @@
 			<skill id="22910" level="1" /> <!-- Metal Suit Gloves Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23715" name="Metal Suit Shoes Appearance Stone" name_additional="Modified Set" type="EtcItem">
+	<item id="23715" name="Metal Suit Shoes Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of shoes into that of a Metal Suit. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
@@ -248,7 +248,7 @@
 			<skill id="22911" level="1" /> <!-- Metal Suit Shoes Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23716" name="Military Top" name_additional="Modified Set" type="Armor">
+	<item id="23716" name="Military Top" additionalName="Modified Set" type="Armor">
 		<!-- Military Top. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_military_u" />
 		<set name="is_clan_depositable" val="false" />
@@ -263,7 +263,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23717" name="Military Pants" name_additional="Modified Set" type="Armor">
+	<item id="23717" name="Military Pants" additionalName="Modified Set" type="Armor">
 		<!-- Military Pants. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_military_l" />
 		<set name="is_clan_depositable" val="false" />
@@ -278,7 +278,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23718" name="Military Gloves" name_additional="Modified Set" type="Armor">
+	<item id="23718" name="Military Gloves" additionalName="Modified Set" type="Armor">
 		<!-- Military Gloves. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_military_g" />
 		<set name="is_clan_depositable" val="false" />
@@ -293,7 +293,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23719" name="Military Shoes" name_additional="Modified Set" type="Armor">
+	<item id="23719" name="Military Shoes" additionalName="Modified Set" type="Armor">
 		<!-- Military Shoes. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_military_b" />
 		<set name="is_clan_depositable" val="false" />
@@ -308,7 +308,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23720" name="Military Top Appearance Stone" name_additional="Modified Set" type="EtcItem">
+	<item id="23720" name="Military Top Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Military Outfit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
@@ -324,7 +324,7 @@
 			<skill id="22912" level="1" /> <!-- Military Top Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23721" name="Military Pants Appearance Stone" name_additional="Modified Set" type="EtcItem">
+	<item id="23721" name="Military Pants Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of pants into that of a Military Outfit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
@@ -340,7 +340,7 @@
 			<skill id="22913" level="1" /> <!-- Military Pants Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23722" name="Military Gloves Appearance Stone" name_additional="Modified Set" type="EtcItem">
+	<item id="23722" name="Military Gloves Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of gloves into that of a Military Outfit. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
@@ -356,7 +356,7 @@
 			<skill id="22914" level="1" /> <!-- Military Gloves Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23723" name="Military Shoes Appearance Stone" name_additional="Modified Set" type="EtcItem">
+	<item id="23723" name="Military Shoes Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of shoes into that of a Military Outfit. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
@@ -603,7 +603,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23743" name="Prestige Rune 30%" name_additional="3-hour" type="EtcItem">
+	<item id="23743" name="Prestige Rune 30%" additionalName="3-hour" type="EtcItem">
 		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -617,7 +617,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="10800" />
 	</item>
-	<item id="23744" name="Prestige Rune 30%" name_additional="10-hour" type="EtcItem">
+	<item id="23744" name="Prestige Rune 30%" additionalName="10-hour" type="EtcItem">
 		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.30%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -631,7 +631,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="36000" />
 	</item>
-	<item id="23745" name="Prestige Rune 30%" name_additional="7-day" type="EtcItem">
+	<item id="23745" name="Prestige Rune 30%" additionalName="7-day" type="EtcItem">
 		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.30%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -645,7 +645,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23746" name="Prestige Rune 30% Pack" name_additional="3-hour" type="EtcItem">
+	<item id="23746" name="Prestige Rune 30% Pack" additionalName="3-hour" type="EtcItem">
 		<!-- Pack containing Drop Rate Rune 30% (3-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -658,7 +658,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10800" />
 	</item>
-	<item id="23747" name="Prestige Rune 30% Pack" name_additional="10-hour" type="EtcItem">
+	<item id="23747" name="Prestige Rune 30% Pack" additionalName="10-hour" type="EtcItem">
 		<!-- Pack containing Drop Rate Rune 30% (10-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -671,7 +671,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="36000" />
 	</item>
-	<item id="23748" name="Prestige Rune 30% Pack" name_additional="7-day" type="EtcItem">
+	<item id="23748" name="Prestige Rune 30% Pack" additionalName="7-day" type="EtcItem">
 		<!-- Pack containing Drop Rate Rune 30% (7-day. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -684,7 +684,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23749" name="Prestige Rune 50%" name_additional="3-hour" type="EtcItem">
+	<item id="23749" name="Prestige Rune 50%" additionalName="3-hour" type="EtcItem">
 		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -698,7 +698,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="10800" />
 	</item>
-	<item id="23750" name="Prestige Rune 50%" name_additional="10-hour" type="EtcItem">
+	<item id="23750" name="Prestige Rune 50%" additionalName="10-hour" type="EtcItem">
 		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -712,7 +712,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="36000" />
 	</item>
-	<item id="23751" name="Prestige Rune 50%" name_additional="7-day" type="EtcItem">
+	<item id="23751" name="Prestige Rune 50%" additionalName="7-day" type="EtcItem">
 		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -726,7 +726,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23752" name="Prestige Rune 50% Pack" name_additional="3-hour" type="EtcItem">
+	<item id="23752" name="Prestige Rune 50% Pack" additionalName="3-hour" type="EtcItem">
 		<!-- Pack containing Drop Rate Rune 50% (3-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -739,7 +739,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10800" />
 	</item>
-	<item id="23753" name="Prestige Rune 50% Pack" name_additional="10-hour" type="EtcItem">
+	<item id="23753" name="Prestige Rune 50% Pack" additionalName="10-hour" type="EtcItem">
 		<!-- Pack containing Drop Rate Rune 50% (10-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -752,7 +752,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="36000" />
 	</item>
-	<item id="23754" name="Prestige Rune 50% Pack" name_additional="7-day" type="EtcItem">
+	<item id="23754" name="Prestige Rune 50% Pack" additionalName="7-day" type="EtcItem">
 		<!-- Pack containing Drop Rate Rune 50% (7-day. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -765,7 +765,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23755" name="Prestige Rune 100%" name_additional="3-hour" type="EtcItem">
+	<item id="23755" name="Prestige Rune 100%" additionalName="3-hour" type="EtcItem">
 		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -779,7 +779,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="10800" />
 	</item>
-	<item id="23756" name="Prestige Rune 100%" name_additional="10-hour" type="EtcItem">
+	<item id="23756" name="Prestige Rune 100%" additionalName="10-hour" type="EtcItem">
 		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -793,7 +793,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="36000" />
 	</item>
-	<item id="23757" name="Prestige Rune 100%" name_additional="7-day" type="EtcItem">
+	<item id="23757" name="Prestige Rune 100%" additionalName="7-day" type="EtcItem">
 		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -807,7 +807,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23758" name="Prestige Rune 100% Pack" name_additional="3-hour" type="EtcItem">
+	<item id="23758" name="Prestige Rune 100% Pack" additionalName="3-hour" type="EtcItem">
 		<!-- Wrapped Pack containing Drop Rate Rune 100% (3-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -820,7 +820,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10800" />
 	</item>
-	<item id="23759" name="Prestige Rune 100% Pack" name_additional="10-hour" type="EtcItem">
+	<item id="23759" name="Prestige Rune 100% Pack" additionalName="10-hour" type="EtcItem">
 		<!-- Wrapped Pack containing Drop Rate Rune 100% (10-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -833,7 +833,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="36000" />
 	</item>
-	<item id="23760" name="Prestige Rune 100% Pack" name_additional="7-day" type="EtcItem">
+	<item id="23760" name="Prestige Rune 100% Pack" additionalName="7-day" type="EtcItem">
 		<!-- Wrapped Pack containing Drop Rate Rune 100% (7-day. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -846,7 +846,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23761" name="Prestige Cube" name_additional="30-day" type="EtcItem">
+	<item id="23761" name="Prestige Cube" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain either Dark/Bloody Eternal Enhancement Stone, Weapon Enchant Scroll (S - R-grade), Blessed Scroll of Resurrection, High-grade Elixir Pack, Energy of Destruction, or Giant's Energy. Once a day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -861,7 +861,7 @@
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="23762" name="High-grade Elixir Pack" name_additional="Event" type="EtcItem">
+	<item id="23762" name="High-grade Elixir Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 5 each of High-grade Elixir of Life/Mind/CP. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="weight" val="10" />
@@ -870,7 +870,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23763" name="Vitality Recovery Potion" name_additional="1-day" type="EtcItem">
+	<item id="23763" name="Vitality Recovery Potion" additionalName="1-day" type="EtcItem">
 		<!-- Premium User Only\nFor 60 min., Vitality is restored upon XP gain. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="is_depositable" val="false" />
@@ -884,7 +884,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="86400" />
 	</item>
-	<item id="23764" name="Heavenly Cocktail" name_additional="1-day" type="EtcItem">
+	<item id="23764" name="Heavenly Cocktail" additionalName="1-day" type="EtcItem">
 		<!-- Premium User Only\nFor 60 min., you receive all 6 Melody buffs Lv. 2. Cooldown is 60 min. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
 		<set name="is_depositable" val="false" />
@@ -899,7 +899,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="time" val="86400" />
 	</item>
-	<item id="23765" name="Feather of Blessing" name_additional="1-day" type="EtcItem">
+	<item id="23765" name="Feather of Blessing" additionalName="1-day" type="EtcItem">
 		<!-- Premium User Only\nCan resurrect at the spot if stored in the inventory. -->
 		<set name="icon" val="icon.blessed_feather_i00" />
 		<set name="is_depositable" val="false" />

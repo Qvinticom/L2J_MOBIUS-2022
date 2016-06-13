@@ -40,7 +40,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26405" name="Alien's Ingredient Box" name_additional="Event" type="EtcItem">
+	<item id="26405" name="Alien's Ingredient Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get an Energy of Destruction or one of the ingredients. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -70,7 +70,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26408" name="XP Rune (Dragon's Ascension)" name_additional="1-hr" type="EtcItem">
+	<item id="26408" name="XP Rune (Dragon's Ascension)" additionalName="1-hr" type="EtcItem">
 		<!-- When possessed in inventory, increases XP and SP acquired through hunting by 100%. The effect only applies to characters Lv. 99 or below. 1-hr. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -105,7 +105,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26411" name="XP Rune (Dragon's Ascension)" name_additional="1-day" type="EtcItem">
+	<item id="26411" name="XP Rune (Dragon's Ascension)" additionalName="1-day" type="EtcItem">
 		<!-- When possessed in inventory, increases XP and SP acquired through hunting by 100%. The effect only applies to characters Lv. 99 or below. 1-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -141,7 +141,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26414" name="XP Rune (Dragon's Ascension)" name_additional="7-day" type="EtcItem">
+	<item id="26414" name="XP Rune (Dragon's Ascension)" additionalName="7-day" type="EtcItem">
 		<!-- When possessed in inventory, increases XP and SP acquired through hunting by 100%. The effect only applies to characters Lv. 99 or below. 7-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -177,7 +177,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26417" name="XP Rune (Dragon's Ascension)" name_additional="30-day" type="EtcItem">
+	<item id="26417" name="XP Rune (Dragon's Ascension)" additionalName="30-day" type="EtcItem">
 		<!-- When possessed in inventory, increases XP and SP acquired through hunting by 100%. The effect only applies to characters Lv. 99 or below. 30-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -239,7 +239,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26422" name="Luck Box 1" name_additional="Journey's Prelude" type="EtcItem">
+	<item id="26422" name="Luck Box 1" additionalName="Journey's Prelude" type="EtcItem">
 		<!-- Get 1 of the following: Recipe: Talisman - Abundance Lv. 1-4 (High-grade), Hunter/Slaughterer/Conqueror/Outlaw Talisman, Valakas' Necklace, Istina's Necklace, Octavis' Necklace, Antharas' Earring, Istina's Earring, Octavis' Earring, Baiu's Ring, Queen Ant's Ring, Istina's Ring, Octavis' Ring, Lilith/Anakim Talisman, Orfen's Earring, Elcyum Crystal x5, Elcyum x2, Giant's Energy x10, Tempest Stone, Lv. 5 Legendary Dye Pack, Fortune Pocket - Stage 5, Gemstone (R-grade) x30. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
@@ -247,7 +247,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26423" name="Luck Box 2" name_additional="Journey's Prelude" type="EtcItem">
+	<item id="26423" name="Luck Box 2" additionalName="Journey's Prelude" type="EtcItem">
 		<!-- Get 1 of the following: Seven Signs' Energy, Freya's Lucky Enchant Stone: Armor/Weapon (R-grade), Windy Lucky Enchant Stone: Armor/Weapon (R-grade), Blessed Giant's Lucky Enchant Stone: Armor/Weapon Pack (R-grade), Giant's Scroll: Enchant Weapon (R-grade), Blessed Lucky Enchant Stone: Armor/Weapon Pack (R-grade), Blessed High-grade Lucky Enchant Stone: Armor/Weapon (R-grade), Lesser Giant's Lucky Enchant Stone: Armor/Weapon Pack (R-grade), Bottle of Antharas/Valakas/Queen Ant/Orfen/Baium's Soul, Blessed Scroll: Enchant Armor/Weapon (R-grade), High-grade Lucky Enchant Stone: Weapon (R-grade), Blessed High-grade Lucky Enchant Stone: Armor (R-grade), Giant's Scroll: Enchant Armor (R-grade), Scroll: Enchant Weapon Pack (R-grade), Scroll: Enchant Armor (R-grade) x3, Lucky Box 1. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
@@ -255,7 +255,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26424" name="Luck Box 3" name_additional="Journey's Prelude" type="EtcItem">
+	<item id="26424" name="Luck Box 3" additionalName="Journey's Prelude" type="EtcItem">
 		<!-- Get 1 of the following: Talisman - Annihilation Crafting Pack, Hellfire/Desire/Longing/Insanity Talisman Upgrade Pack, XP Rune III 100% Pack (30-day), Prestige Rune 100% Pack (30-day), Pa'agrio's Warm Breeze (1-hour) Pack, Ghost Potion, Emperor's Growth Scroll x2, Feather of Blessing Pack x3, Letter Collector's Gift x2, Gemstone (R-grade) x10, Heavenly Recovery Potion x30, Life Stone Instilled with Giants' Power, Immortal Scroll/Chapter 1/Chapter 2, Elcyum Powder, Lucky Box 1, Luck Box 2. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
@@ -350,7 +350,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26433" name="Ruby Lv. 1 For Testing" name_additional="Test" type="EtcItem">
+	<item id="26433" name="Ruby Lv. 1 For Testing" additionalName="Test" type="EtcItem">
 		<!-- For testing. Not for update. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="BranchIcon.Icon.etc_sign_agathion_feed_yellow_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -468,7 +468,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26447" name="Talisman - Abundance" name_additional="War" type="Armor">
+	<item id="26447" name="Talisman - Abundance" additionalName="War" type="Armor">
 		<!-- P. Atk. + 154, M. Atk. + 181, and P. Evasion/M. Evasion + 4.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -476,7 +476,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="26448" name="Talisman - Abundance" name_additional="Tactics" type="Armor">
+	<item id="26448" name="Talisman - Abundance" additionalName="Tactics" type="Armor">
 		<!-- Attribute Resistance + 10 and Debuff Resistance + 10%.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -484,7 +484,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="26449" name="Talisman - Abundance" name_additional="Morale" type="Armor">
+	<item id="26449" name="Talisman - Abundance" additionalName="Morale" type="Armor">
 		<!-- P./M. Critical Rate + 8%, Received P. Critical Damage - 10%, Received Skill Damage in PvP - 10%.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -492,7 +492,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="26450" name="Talisman - Abundance" name_additional="Physique" type="Armor">
+	<item id="26450" name="Talisman - Abundance" additionalName="Physique" type="Armor">
 		<!-- Max HP/MP/CP + 325 and HP/MP/CP Recovery Rate + 5.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -500,7 +500,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="26451" name="Talisman - Abundance" name_additional="Hunter" type="Armor">
+	<item id="26451" name="Talisman - Abundance" additionalName="Hunter" type="Armor">
 		<!-- P. Atk. + 231, M. Atk. 271, P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%. Received P. Critical Damage - 15%, Received Skill Damage in PvP - 15%. \nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -508,7 +508,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="26452" name="Talisman - Abundance" name_additional="Slaughterer" type="Armor">
+	<item id="26452" name="Talisman - Abundance" additionalName="Slaughterer" type="Armor">
 		<!-- P. Atk. + 231, M. Atk. + 271 P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, Max HP, MP, and CP + 490, and HP, MP, and CP Recovery + 7.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -516,7 +516,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="26453" name="Talisman - Abundance" name_additional="Conquerer" type="Armor">
+	<item id="26453" name="Talisman - Abundance" additionalName="Conquerer" type="Armor">
 		<!-- P. Atk. + 231, M. Atk. + 271, P. Evasion/M. Evasion + 7, P./M. Critical Rate + 13%, Max HP, MP, and CP + 490, HP, MP, and CP Recovery + 7. Received P. Critical Damage - 15%, Received Skill Damage in PvP - 15%.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -524,7 +524,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="26454" name="Talisman - Abundance" name_additional="Outlaw" type="Armor">
+	<item id="26454" name="Talisman - Abundance" additionalName="Outlaw" type="Armor">
 		<!-- Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%, Max HP, MP, and CP + 490, HP, MP, and CP Recovery + 7. Received P. Critical Damage - 15%, Received Skill Damage in PvP - 15%.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -749,7 +749,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26474" name="La Vie En Rose's Radiant Brooch" name_additional="" type="Armor">
+	<item id="26474" name="La Vie En Rose's Radiant Brooch" additionalName="" type="Armor">
 		<!-- Activates 5 jewel slots when equipped. Inventory Slot + 12. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -767,7 +767,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="26475" name="Radiant Gemstone Fragment" name_additional="" type="EtcItem">
+	<item id="26475" name="Radiant Gemstone Fragment" additionalName="" type="EtcItem">
 		<!-- Main ingredient for making a La Vie En Rose's Radiant Brooch. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_piece" />
 		<set name="is_freightable" val="false" />
@@ -775,7 +775,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26476" name="Vital Stone" name_additional="Lv. 1" type="Armor">
+	<item id="26476" name="Vital Stone" additionalName="Lv. 1" type="Armor">
 		<!-- Increases Vitality Status Bonus EXP by 3%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
@@ -789,7 +789,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26477" name="Vital Stone" name_additional="Lv. 2" type="Armor">
+	<item id="26477" name="Vital Stone" additionalName="Lv. 2" type="Armor">
 		<!-- Increases Vitality Status Bonus EXP by 6%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
@@ -803,7 +803,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26478" name="Vital Stone" name_additional="Lv. 3" type="Armor">
+	<item id="26478" name="Vital Stone" additionalName="Lv. 3" type="Armor">
 		<!-- Increases Vitality Status Bonus EXP by 12%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
@@ -817,7 +817,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26479" name="Vital Stone" name_additional="Lv. 4" type="Armor">
+	<item id="26479" name="Vital Stone" additionalName="Lv. 4" type="Armor">
 		<!-- Increases Vitality Status Bonus EXP by 20% and decreases Vitality Point Consumption Speed by 7%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
@@ -831,7 +831,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26480" name="Vital Stone" name_additional="Lv. 5" type="Armor">
+	<item id="26480" name="Vital Stone" additionalName="Lv. 5" type="Armor">
 		<!-- Increases Vitality Status Bonus EXP by 30% and decreases Vitality Point Consumption Speed by 15%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
@@ -840,7 +840,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26481" name="Garnet" name_additional="Lv. 1" type="Armor">
+	<item id="26481" name="Garnet" additionalName="Lv. 1" type="Armor">
 		<!-- Resistance to Debuffs + 3%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="default_action" val="EQUIP" />
@@ -854,7 +854,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26482" name="Garnet" name_additional="Lv. 2" type="Armor">
+	<item id="26482" name="Garnet" additionalName="Lv. 2" type="Armor">
 		<!-- Resistance to Debuffs + 6%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="default_action" val="EQUIP" />
@@ -868,7 +868,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26483" name="Garnet" name_additional="Lv. 3" type="Armor">
+	<item id="26483" name="Garnet" additionalName="Lv. 3" type="Armor">
 		<!-- Resistance to Debuffs + 12%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="default_action" val="EQUIP" />
@@ -882,7 +882,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26484" name="Garnet" name_additional="Lv. 4" type="Armor">
+	<item id="26484" name="Garnet" additionalName="Lv. 4" type="Armor">
 		<!-- Resistance to Debuffs + 20%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="default_action" val="EQUIP" />
@@ -896,7 +896,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26485" name="Garnet" name_additional="Lv. 5" type="Armor">
+	<item id="26485" name="Garnet" additionalName="Lv. 5" type="Armor">
 		<!-- Resistance to Debuffs + 30%. Cancels your debuffs. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="default_action" val="EQUIP" />
@@ -905,7 +905,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26486" name="Tanzanite" name_additional="Lv. 1" type="Armor">
+	<item id="26486" name="Tanzanite" additionalName="Lv. 1" type="Armor">
 		<!-- Creates a protection shield that absorbs 5,000 damage for 5 seconds. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="default_action" val="EQUIP" />
@@ -919,7 +919,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26487" name="Tanzanite" name_additional="Lv. 2" type="Armor">
+	<item id="26487" name="Tanzanite" additionalName="Lv. 2" type="Armor">
 		<!-- Creates a protection shield that absorbs 10,000 damage for 5 seconds. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="default_action" val="EQUIP" />
@@ -933,7 +933,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26488" name="Tanzanite" name_additional="Lv. 3" type="Armor">
+	<item id="26488" name="Tanzanite" additionalName="Lv. 3" type="Armor">
 		<!-- Creates a protection shield that absorbs 15,000 damage for 10 seconds. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="default_action" val="EQUIP" />
@@ -947,7 +947,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26489" name="Tanzanite" name_additional="Lv. 4" type="Armor">
+	<item id="26489" name="Tanzanite" additionalName="Lv. 4" type="Armor">
 		<!-- Creates a protection shield that absorbs 30,000 damage for 10 seconds. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="default_action" val="EQUIP" />
@@ -961,7 +961,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26490" name="Tanzanite" name_additional="Lv. 5" type="Armor">
+	<item id="26490" name="Tanzanite" additionalName="Lv. 5" type="Armor">
 		<!-- Creates a protection shield that absorbs 50,000 damage for 15 seconds. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="default_action" val="EQUIP" />
@@ -970,7 +970,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26491" name="La Vie En Rose's Vital Stone Chest" name_additional="" type="EtcItem">
+	<item id="26491" name="La Vie En Rose's Vital Stone Chest" additionalName="" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Vital Stone. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
 		<set name="is_freightable" val="false" />
@@ -978,7 +978,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26492" name="La Vie En Rose's Garnet Chest" name_additional="" type="EtcItem">
+	<item id="26492" name="La Vie En Rose's Garnet Chest" additionalName="" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Garnet. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
 		<set name="is_freightable" val="false" />
@@ -986,7 +986,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26493" name="La Vie En Rose's Tanzanite Chest" name_additional="" type="EtcItem">
+	<item id="26493" name="La Vie En Rose's Tanzanite Chest" additionalName="" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Tanzanite. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
 		<set name="is_freightable" val="false" />
@@ -994,7 +994,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26494" name="La Vie En Rose's Radiant Brooch Chest" name_additional="" type="EtcItem">
+	<item id="26494" name="La Vie En Rose's Radiant Brooch Chest" additionalName="" type="EtcItem">
 		<!-- Double-click to acquire a La Vie En Rose's Radiant Brooch. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="is_freightable" val="false" />
@@ -1002,7 +1002,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26495" name="Shadai's Jewelry Box" name_additional="" type="EtcItem">
+	<item id="26495" name="Shadai's Jewelry Box" additionalName="" type="EtcItem">
 		<!-- Double-click to acquire 1 of the La Vie En Rose's Jewelry Boxes. Has a very low chance of obtaining a Radiant Gemstone Fragment or a La Vie En Rose's Radiant Brooch. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="is_freightable" val="false" />
@@ -1010,7 +1010,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26496" name="Shiny Gemstone Fragment" name_additional="" type="EtcItem">
+	<item id="26496" name="Shiny Gemstone Fragment" additionalName="" type="EtcItem">
 		<!-- Main ingredient for making a La Vie En Rose's Radiant Brooch. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_piece" />
 		<set name="is_freightable" val="false" />
@@ -1018,7 +1018,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26497" name="Cat's Eye" name_additional="Lv. 1" type="Armor">
+	<item id="26497" name="Cat's Eye" additionalName="Lv. 1" type="Armor">
 		<!-- Resistance to Damage Shield + 10. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1032,7 +1032,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26498" name="Cat's Eye" name_additional="Lv. 2" type="Armor">
+	<item id="26498" name="Cat's Eye" additionalName="Lv. 2" type="Armor">
 		<!-- Resistance to Damage Shield + 20. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1046,7 +1046,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="26499" name="Cat's Eye" name_additional="Lv. 3" type="Armor">
+	<item id="26499" name="Cat's Eye" additionalName="Lv. 3" type="Armor">
 		<!-- Resistance to Damage Shield + 30. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="default_action" val="EQUIP" />

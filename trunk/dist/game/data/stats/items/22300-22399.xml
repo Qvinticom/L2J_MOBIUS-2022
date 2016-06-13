@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="22300" name="Miraculous Valentine Cake: Special Ingredient" name_additional="15-day (Event)" type="EtcItem">
+	<item id="22300" name="Miraculous Valentine Cake: Special Ingredient" additionalName="15-day (Event)" type="EtcItem">
 		<!-- Description: Take this along with a Perfect Happy Cake to the Valentine Messenger Queen of Hearts to complete a Miracle Happy Cake. Cannot be exchanged or dropped. Can be destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_deco_i00" />
 		<set name="material" val="PAPER" />
@@ -16,7 +16,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="21600" />
 	</item>
-	<item id="22301" name="Sweet Chocolate Cookie" name_additional="Event" type="EtcItem">
+	<item id="22301" name="Sweet Chocolate Cookie" additionalName="Event" type="EtcItem">
 		<!-- Description: When used, energy is replenished by 5000 points. Re-use time is 60 minutes. Cannot be exchanged or dropped. Can be destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="LIQUID" />
@@ -36,7 +36,7 @@
 			<skill id="22397" level="1" /> <!-- Sweet Chocolate Cookie -->
 		</skills>
 	</item>
-	<item id="22302" name="Antharas' Earring" name_additional="3-day (Event)" type="Armor">
+	<item id="22302" name="Antharas' Earring" additionalName="3-day (Event)" type="Armor">
 		<!-- Description: MP +37, resistance to Bleed +40%, Bleed attack rate +40%, increases heal amount, vampiric rage effect, resistance to Stun/Mental attacks +30%, Stun/Mental attack rate +30%, decreases MP consumption, and increases heal amount and resistance to Earth. Only one effect is applied when two of the same earrings are equipped. Cannot be exchanged or dropped. Can be destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -63,7 +63,7 @@
 			<stat type="maxMp">37</stat>
 		</stats>
 	</item>
-	<item id="22303" name="Antharas' Earring" name_additional="7-day (Event)" type="Armor">
+	<item id="22303" name="Antharas' Earring" additionalName="7-day (Event)" type="Armor">
 		<!-- Description: MP +37, resistance to Bleed +40%, Bleed attack rate +40%, increases heal amount, vampiric rage effect, resistance to Stun/Mental attacks +30%, Stun/Mental attack rate +30%, decreases MP consumption, and increases heal amount and resistance to Earth. Only one effect is applied when two of the same earrings are equipped. Cannot be exchanged or dropped. Can be destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -90,7 +90,7 @@
 			<stat type="maxMp">37</stat>
 		</stats>
 	</item>
-	<item id="22304" name="Baium's Ring" name_additional="3-day (Event)" type="Armor">
+	<item id="22304" name="Baium's Ring" additionalName="3-day (Event)" type="Armor">
 		<!-- Description: MP +21, resistance to Poison +40%, Poison attack rate +40%, resistance to Hold +30%, Hold attack rate +30%, and increases Accuracy, Critical Damage, P. Atk., and Casting Spd. Only one effect is applied when two of the same ring are equipped. Cannot be exchanged or dropped. Can be destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -117,7 +117,7 @@
 			<stat type="maxMp">21</stat>
 		</stats>
 	</item>
-	<item id="22305" name="Baium's Ring" name_additional="7-day (Event)" type="Armor">
+	<item id="22305" name="Baium's Ring" additionalName="7-day (Event)" type="Armor">
 		<!-- Description: MP +21, resistance to Poison +40%, Poison attack rate +40%, resistance to Hold +30%, Hold attack rate +30%, and increases Accuracy, Critical Damage, P. Atk., and Casting Spd. Only one effect is applied when two of the same ring are equipped. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -144,7 +144,7 @@
 			<stat type="maxMp">21</stat>
 		</stats>
 	</item>
-	<item id="22306" name="Scroll: Enchant Weapon (S-grade)" name_additional="Event" type="EtcItem">
+	<item id="22306" name="Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: Increases P. Atk. by 5 for S-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. Increases P. Atk. by 6 for two-handed sword, two-handed blunt, dualsword, and two-handed combat weapon. Increases P. Atk. by 10 for bow weapons. Increases M. Atk. by 4 for all weapons. P. Atk./M. Atk. increase by double starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="material" val="PAPER" />
@@ -160,7 +160,7 @@
 			<skill id="2021" level="1" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 		</skills>
 	</item>
-	<item id="22307" name="Scroll: Enchant Weapon (A-grade)" name_additional="Event" type="EtcItem">
+	<item id="22307" name="Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: Increases P. Atk. by 4 for A-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. Increases P. Atk. by 5 for two-handed sword, two-handed blunt, dualsword, and two-handed combat weapon. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./M. Atk. increase by double starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="material" val="PAPER" />
@@ -176,7 +176,7 @@
 			<skill id="2006" level="1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 		</skills>
 	</item>
-	<item id="22308" name="Scroll: Enchant Armor (S-grade)" name_additional="Event" type="EtcItem">
+	<item id="22308" name="Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: Increases P. Def. by 1 for S-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When armor is enchanted above +4, HP also increases depending on the enchant value. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="material" val="PAPER" />
@@ -192,7 +192,7 @@
 			<skill id="2022" level="1" /> <!-- Scroll: Enchant Armor (S-grade) -->
 		</skills>
 	</item>
-	<item id="22309" name="Scroll: Enchant Armor (A-grade)" name_additional="Event" type="EtcItem">
+	<item id="22309" name="Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: Increases P. Def. by 1 for A-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When armor is enchanted above +4, HP also increases depending on the enchant value. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="material" val="PAPER" />
@@ -723,7 +723,7 @@
 			<item id="16853" min="1" max="1" chance="100" /> <!-- Equipment Set Pack (90-day) - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="22334" name="XP Rune III (Lv. 1-100+) 50%" name_additional="1-hour" type="EtcItem">
+	<item id="22334" name="XP Rune III (Lv. 1-100+) 50%" additionalName="1-hour" type="EtcItem">
 		<!-- Description: Ancient characters that bestow a mysterious ability when possessed in the inventory. Increases acquired Exp. by 50%. The remaining period decreases even while logged off. Cannot be exchanged or dropped. Can be destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="material" val="PAPER" />
@@ -812,7 +812,7 @@
 			<item id="22337" min="1" max="1" chance="100" /> <!-- Extra Pass: Rim Kamaloka -->
 		</capsuled_items>
 	</item>
-	<item id="22339" name="Weapon Pack (S80-grade)" name_additional="Event" type="EtcItem">
+	<item id="22339" name="Weapon Pack (S80-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: The chest contains 1 S84 top-grade weapon. Which one could it be? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="COTTON" />
@@ -825,7 +825,7 @@
 			<skill id="22405" level="1" /> <!-- Weapon Pack (S84-grade) -->
 		</skills>
 	</item>
-	<item id="22340" name="Elegia Armor Pack" name_additional="Event" type="EtcItem">
+	<item id="22340" name="Elegia Armor Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: The chest contains 1 Elegia armor. Which one could it be? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="COTTON" />
@@ -1006,7 +1006,7 @@
 			<skill id="22410" level="1" /> <!-- Adventurer's Song - Eva's Protection -->
 		</skills>
 	</item>
-	<item id="22350" name="Adventurer's Song - Eva's Protection" name_additional="R-grade" type="EtcItem">
+	<item id="22350" name="Adventurer's Song - Eva's Protection" additionalName="R-grade" type="EtcItem">
 		<!-- Receives the power of a mysterious song of a great adventurer to decrease the duration of the 'Shilen's Breath' de-buff upon death. The effect lasts for 30 minutes upon use. Can only be used by characters level 85 - 99. -->
 		<set name="icon" val="BranchSys3.Icon.g_sing_of_adventurer_eva_r" />
 		<set name="weight" val="120" />
@@ -1079,7 +1079,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22355" name="Mount - Tame Princess Ant" name_additional="7-day" type="Armor">
+	<item id="22355" name="Mount - Tame Princess Ant" additionalName="7-day" type="Armor">
 		<!-- Can mount a tame princess ant when equipped. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_ant_princess_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1245,7 +1245,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22363" name="Mount - Black Bear" name_additional="7-day" type="Armor">
+	<item id="22363" name="Mount - Black Bear" additionalName="7-day" type="Armor">
 		<!-- Can ride a Black Bear when equipped. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_black_bear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1287,7 +1287,7 @@
 			<skill id="21271" level="1" /> <!-- Ride Black Bear -->
 		</skills>
 	</item>
-	<item id="22365" name="Black Bear Claw" name_additional="7-day" type="Weapon">
+	<item id="22365" name="Black Bear Claw" additionalName="7-day" type="Weapon">
 		<!-- Powerful-looking fist weapon in the shape of Black Bear claws. 7-day. Very low P. Atk. -->
 		<set name="icon" val="BranchSys3.Icon.g_hands_of_blackbear" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1344,7 +1344,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22367" name="Black Bear Hat" name_additional="7-day" type="Armor">
+	<item id="22367" name="Black Bear Hat" additionalName="7-day" type="Armor">
 		<!-- Powerful-looking Black Bear Hat. 7-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_hat_of_blackbear" />
 		<set name="default_action" val="EQUIP" />
@@ -1488,7 +1488,7 @@
 			<item id="22368" min="1" max="1" chance="100" /> <!-- Black Bear Hat -->
 		</capsuled_items>
 	</item>
-	<item id="22375" name="Brilliant Beach Sun Cap" name_additional="7-day" type="Armor">
+	<item id="22375" name="Brilliant Beach Sun Cap" additionalName="7-day" type="Armor">
 		<!-- Brilliant beach sun cap that provide perfect protection from the sun. 7-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys3.icon.g_beach_cap" />
 		<set name="default_action" val="EQUIP" />
@@ -1524,7 +1524,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="22377" name="Stylish Straw Hat" name_additional="7-day" type="Armor">
+	<item id="22377" name="Stylish Straw Hat" additionalName="7-day" type="Armor">
 		<!-- Hat made of straw. 7-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys3.icon.g_straw_hat" />
 		<set name="default_action" val="EQUIP" />
@@ -1632,7 +1632,7 @@
 			<item id="22378" min="1" max="1" chance="100" /> <!-- Stylish Straw Hat -->
 		</capsuled_items>
 	</item>
-	<item id="22383" name="Halloween Broomstick Mount" name_additional="7-day (Event)" type="Armor">
+	<item id="22383" name="Halloween Broomstick Mount" additionalName="7-day (Event)" type="Armor">
 		<!-- Can mount a flying Halloween Broomstick. It is a Halloween event reward item that 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_halloween_flying_broom_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1654,7 +1654,7 @@
 			<skill id="21272" level="1" /> <!-- Ride Halloween Witch's Broomstick -->
 		</skills>
 	</item>
-	<item id="22384" name="Halloween Broomstick Mount" name_additional="Event" type="Armor">
+	<item id="22384" name="Halloween Broomstick Mount" additionalName="Event" type="Armor">
 		<!-- Can mount a flying Halloween Broomstick. It is a Halloween event reward item. -->
 		<set name="icon" val="BranchSys3.Icon.g_halloween_flying_broom_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1674,7 +1674,7 @@
 			<skill id="21272" level="1" /> <!-- Ride Halloween Witch's Broomstick -->
 		</skills>
 	</item>
-	<item id="22385" name="Halloween Cookie" name_additional="Event" type="EtcItem">
+	<item id="22385" name="Halloween Cookie" additionalName="Event" type="EtcItem">
 		<!-- Cookie that can be obtained on Halloween. Speed increases by 33 for 60 min. -->
 		<set name="icon" val="BranchSys3.Icon.ev_halloween_cookie" />
 		<set name="weight" val="120" />
@@ -1694,7 +1694,7 @@
 			<skill id="22415" level="1" /> <!-- Halloween Cookie -->
 		</skills>
 	</item>
-	<item id="22386" name="Halloween Special Cookie" name_additional="Event" type="EtcItem">
+	<item id="22386" name="Halloween Special Cookie" additionalName="Event" type="EtcItem">
 		<!-- Special cookie that can be obtained on Halloween. Powerful spirit acts to increases the character's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 2, P. Critical Rate during a standard attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Debuff Resistance by 10%, and P. Def. upon evading a Critical Attack. Decreases Speed by 15%, and for party members equipped with melee and long-range weapons who receive more than ordinary damage attacks, Critical power increases during an ordinary attack. -->
 		<set name="icon" val="BranchSys3.Icon.ev_halloween_cookie" />
 		<set name="weight" val="120" />
@@ -1714,7 +1714,7 @@
 			<skill id="22416" level="1" /> <!-- Halloween Special Cookie -->
 		</skills>
 	</item>
-	<item id="22387" name="Halloween Scythe" name_additional="7-day (Event)" type="Weapon">
+	<item id="22387" name="Halloween Scythe" additionalName="7-day (Event)" type="Weapon">
 		<!-- Scythe that give off the shadow of death. It is a Halloween event reward item that 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_halloween_scythe" />
 		<set name="weapon_type" val="POLE" />
@@ -1746,7 +1746,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="22388" name="Halloween Scythe" name_additional="Event" type="Weapon">
+	<item id="22388" name="Halloween Scythe" additionalName="Event" type="Weapon">
 		<!-- Scythe that gives off the shadow of death. It is a Halloween event reward item. -->
 		<set name="icon" val="BranchSys3.Icon.g_halloween_scythe" />
 		<set name="weapon_type" val="POLE" />
@@ -1777,7 +1777,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="22389" name="Halloween Cloak" name_additional="7-day (Event)" type="Armor">
+	<item id="22389" name="Halloween Cloak" additionalName="7-day (Event)" type="Armor">
 		<!-- Cloak that gives off charisma. It is a Halloween event reward item that 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_halloween_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1798,7 +1798,7 @@
 			<stat type="pDef">20</stat>
 		</stats>
 	</item>
-	<item id="22390" name="Halloween Cloak" name_additional="Event" type="Armor">
+	<item id="22390" name="Halloween Cloak" additionalName="Event" type="Armor">
 		<!-- Cloak that gives off charisma. It is a Halloween event reward item. -->
 		<set name="icon" val="BranchSys3.Icon.g_halloween_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1817,7 +1817,7 @@
 			<stat type="pDef">20</stat>
 		</stats>
 	</item>
-	<item id="22391" name="Halloween Pumpkin Hat" name_additional="7-day (Event)" type="Armor">
+	<item id="22391" name="Halloween Pumpkin Hat" additionalName="7-day (Event)" type="Armor">
 		<!-- Scary pumpkin hat. It is a Halloween event reward item. 7-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_halloween_magic_hat" />
 		<set name="default_action" val="EQUIP" />
@@ -1835,7 +1835,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="22392" name="Halloween Pumpkin Hat" name_additional="Event" type="Armor">
+	<item id="22392" name="Halloween Pumpkin Hat" additionalName="Event" type="Armor">
 		<!-- Scary pumpkin hat. It is a Halloween event reward item. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_halloween_magic_hat" />
 		<set name="default_action" val="EQUIP" />
@@ -1853,7 +1853,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="22393" name="Halloween Gift Box" name_additional="Event" type="EtcItem">
+	<item id="22393" name="Halloween Gift Box" additionalName="Event" type="EtcItem">
 		<!-- It is a Halloween event reward item. Has a chance of obtaining one of the Halloween series items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1867,7 +1867,7 @@
 			<skill id="22414" level="1" /> <!-- Halloween Gift Box -->
 		</skills>
 	</item>
-	<item id="22394" name="Agathion - Valakas" name_additional="Lv. 1" type="Armor">
+	<item id="22394" name="Agathion - Valakas" additionalName="Lv. 1" type="Armor">
 		<!-- Bracelet that can summon a level 1 Valakas Agathion. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1889,7 +1889,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="22395" name="Agathion - Valakas" name_additional="Lv. 2" type="Armor">
+	<item id="22395" name="Agathion - Valakas" additionalName="Lv. 2" type="Armor">
 		<!-- Bracelet that can summon a level 2 Valakas Agathion. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1912,7 +1912,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="22396" name="Agathion - Valakas" name_additional="Lv. 3" type="Armor">
+	<item id="22396" name="Agathion - Valakas" additionalName="Lv. 3" type="Armor">
 		<!-- Bracelet that can summon a level 3 Valakas Agathion. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1935,7 +1935,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="22397" name="Agathion - Valakas" name_additional="Lv. 4" type="Armor">
+	<item id="22397" name="Agathion - Valakas" additionalName="Lv. 4" type="Armor">
 		<!-- Bracelet that can summon a level 4 Valakas Agathion. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1958,7 +1958,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="22398" name="Agathion - Valakas" name_additional="Lv. 5" type="Armor">
+	<item id="22398" name="Agathion - Valakas" additionalName="Lv. 5" type="Armor">
 		<!-- Bracelet that can summon a level 5 Valakas Agathion. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1981,7 +1981,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="22399" name="Agathion - Valakas" name_additional="Lv. 6" type="Armor">
+	<item id="22399" name="Agathion - Valakas" additionalName="Lv. 6" type="Armor">
 		<!-- Bracelet that can summon a level 6 Valakas Agathion. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00" />
 		<set name="default_action" val="EQUIP" />

@@ -820,7 +820,7 @@
 			<skill id="2630" level="1" /> <!-- Presentation - Collect Items -->
 		</skills>
 	</item>
-	<item id="13845" name="Attribute Master Yin's Sword" name_additional="10-minute" type="Weapon">
+	<item id="13845" name="Attribute Master Yin's Sword" additionalName="10-minute" type="Weapon">
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1429,7 +1429,7 @@
 			<skill id="5822" level="1" /> <!-- Bait for Drakes -->
 		</skills>
 	</item>
-	<item id="13881" name="Attribute Master Yang's Sword" name_additional="10-minute" type="Weapon">
+	<item id="13881" name="Attribute Master Yang's Sword" additionalName="10-minute" type="Weapon">
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="17000" name="Jewelry Pack (B-grade)" name_additional="90-day" type="EtcItem">
+	<item id="17000" name="Jewelry Pack (B-grade)" additionalName="90-day" type="EtcItem">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -22,7 +22,7 @@
 			<item id="16859" min="2" max="2" chance="100" /> <!-- Black Ore Ring of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="17001" name="Jewelry Pack (C-grade)" name_additional="90-day" type="EtcItem">
+	<item id="17001" name="Jewelry Pack (C-grade)" additionalName="90-day" type="EtcItem">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -44,7 +44,7 @@
 			<item id="16862" min="2" max="2" chance="100" /> <!-- Sealed Ring of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="17002" name="Jewelry Pack (D-grade)" name_additional="90-day" type="EtcItem">
+	<item id="17002" name="Jewelry Pack (D-grade)" additionalName="90-day" type="EtcItem">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -66,7 +66,7 @@
 			<item id="16865" min="2" max="2" chance="100" /> <!-- Elven Ring of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="17003" name="Santa's Gift" name_additional="Event" type="EtcItem">
+	<item id="17003" name="Santa's Gift" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.lucky_bag_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -80,7 +80,7 @@
 			<skill id="9085" level="1" /> <!-- Santa' Gift -->
 		</skills>
 	</item>
-	<item id="17004" name="Agathion - Kid Rudolph" name_additional="Event" type="Armor">
+	<item id="17004" name="Agathion - Kid Rudolph" additionalName="Event" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -100,7 +100,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="17005" name="Santa - CP Potion" name_additional="Event" type="EtcItem">
+	<item id="17005" name="Santa - CP Potion" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_cp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -708,7 +708,7 @@
 			<item id="16852" min="1" max="1" chance="100" /> <!-- Hero's Treasure Chest -->
 		</capsuled_items>
 	</item>
-	<item id="17033" name="Circlet of Ice (Event)" name_additional="30-day" type="Armor">
+	<item id="17033" name="Circlet of Ice (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.accessory_ice_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1664,7 +1664,7 @@
 			<item id="10613" min="1" max="1" chance="100" /> <!-- Bird Nest (Event) -->
 		</capsuled_items>
 	</item>
-	<item id="17084" name="Shadow Item: Magician Cap Pack" name_additional="Escape" type="EtcItem">
+	<item id="17084" name="Shadow Item: Magician Cap Pack" additionalName="Escape" type="EtcItem">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1686,7 +1686,7 @@
 			<item id="9187" min="1" max="1" chance="100" /> <!-- Shadow Item: Wizard Hat - Escape -->
 		</capsuled_items>
 	</item>
-	<item id="17085" name="Shadow Item: Magician Cap Pack" name_additional="Big Head" type="EtcItem">
+	<item id="17085" name="Shadow Item: Magician Cap Pack" additionalName="Big Head" type="EtcItem">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1708,7 +1708,7 @@
 			<item id="9194" min="1" max="1" chance="100" /> <!-- Shadow Item: Wizard Hat - Big Head -->
 		</capsuled_items>
 	</item>
-	<item id="17086" name="Shadow Item: Magician Cap Pack" name_additional="Firework" type="EtcItem">
+	<item id="17086" name="Shadow Item: Magician Cap Pack" additionalName="Firework" type="EtcItem">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1857,7 +1857,7 @@
 			<skill id="9114" level="1" /> <!-- Nevit's Voice -->
 		</skills>
 	</item>
-	<item id="17095" name="XP Buff 50% (1-hour)" name_additional="1~19" type="EtcItem">
+	<item id="17095" name="XP Buff 50% (1-hour)" additionalName="1~19" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1880,7 +1880,7 @@
 			<skill id="9115" level="1" /> <!-- XP Buff 50% (1-hour) -->
 		</skills>
 	</item>
-	<item id="17096" name="XP Buff 50% (1.5-hour)" name_additional="1~19" type="EtcItem">
+	<item id="17096" name="XP Buff 50% (1.5-hour)" additionalName="1~19" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1903,7 +1903,7 @@
 			<skill id="9116" level="1" /> <!-- XP Buff 50% (1.5-hour) -->
 		</skills>
 	</item>
-	<item id="17097" name="XP Buff 50% (2-hour)" name_additional="1~19" type="EtcItem">
+	<item id="17097" name="XP Buff 50% (2-hour)" additionalName="1~19" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1926,7 +1926,7 @@
 			<skill id="9117" level="1" /> <!-- XP Buff 50% (2-hour) -->
 		</skills>
 	</item>
-	<item id="17098" name="XP Buff 50% (2.5-hour)" name_additional="1~19" type="EtcItem">
+	<item id="17098" name="XP Buff 50% (2.5-hour)" additionalName="1~19" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1949,7 +1949,7 @@
 			<skill id="9118" level="1" /> <!-- XP Buff 50% (2.5-hour) -->
 		</skills>
 	</item>
-	<item id="17099" name="XP Buff 50% (3-hour)" name_additional="1~19" type="EtcItem">
+	<item id="17099" name="XP Buff 50% (3-hour)" additionalName="1~19" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />

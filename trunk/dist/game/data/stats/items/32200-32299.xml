@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="32200" name="Blessed Twilight Leather Helmet" name_additional="Assassin Type" type="Armor">
+	<item id="32200" name="Blessed Twilight Leather Helmet" additionalName="Assassin Type" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -20,7 +20,7 @@
 			<stat type="mEvas">1.05</stat>
 		</stats>
 	</item>
-	<item id="32201" name="Blessed Twilight Leather Armor" name_additional="Assassin Type" type="Armor">
+	<item id="32201" name="Blessed Twilight Leather Armor" additionalName="Assassin Type" type="Armor">
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -46,7 +46,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="32202" name="Blessed Twilight Leather Leggings" name_additional="Assassin Type" type="Armor">
+	<item id="32202" name="Blessed Twilight Leather Leggings" additionalName="Assassin Type" type="Armor">
 		<set name="icon" val="icon.armor_t602_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -70,7 +70,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="32203" name="Blessed Twilight Leather Gloves" name_additional="Assassin Type" type="Armor">
+	<item id="32203" name="Blessed Twilight Leather Gloves" additionalName="Assassin Type" type="Armor">
 		<set name="icon" val="icon.armor_t602_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -91,7 +91,7 @@
 			<stat type="accMagic">1</stat>
 		</stats>
 	</item>
-	<item id="32204" name="Blessed Twilight Leather Boots" name_additional="Assassin Type" type="Armor">
+	<item id="32204" name="Blessed Twilight Leather Boots" additionalName="Assassin Type" type="Armor">
 		<set name="icon" val="icon.armor_t602_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -111,7 +111,7 @@
 			<stat type="moveSpeed">15</stat>
 		</stats>
 	</item>
-	<item id="32205" name="Blessed Twilight Circlet" name_additional="Magic Type" type="Armor">
+	<item id="32205" name="Blessed Twilight Circlet" additionalName="Magic Type" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -131,7 +131,7 @@
 			<stat type="mEvas">1.05</stat>
 		</stats>
 	</item>
-	<item id="32206" name="Blessed Twilight Tunic" name_additional="Magic Type" type="Armor">
+	<item id="32206" name="Blessed Twilight Tunic" additionalName="Magic Type" type="Armor">
 		<set name="icon" val="icon.armor_t603_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -156,7 +156,7 @@
 			<stat type="pAtk">26</stat>
 		</stats>
 	</item>
-	<item id="32207" name="Blessed Twilight Stockings" name_additional="Magic Type" type="Armor">
+	<item id="32207" name="Blessed Twilight Stockings" additionalName="Magic Type" type="Armor">
 		<set name="icon" val="icon.armor_t603_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -179,7 +179,7 @@
 			<stat type="mCritRate">2.6</stat>
 		</stats>
 	</item>
-	<item id="32208" name="Blessed Twilight Gloves" name_additional="Magic Type" type="Armor">
+	<item id="32208" name="Blessed Twilight Gloves" additionalName="Magic Type" type="Armor">
 		<set name="icon" val="icon.armor_t603_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -200,7 +200,7 @@
 			<stat type="accMagic">1</stat>
 		</stats>
 	</item>
-	<item id="32209" name="Blessed Twilight Shoes" name_additional="Magic Type" type="Armor">
+	<item id="32209" name="Blessed Twilight Shoes" additionalName="Magic Type" type="Armor">
 		<set name="icon" val="icon.armor_t603_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -220,7 +220,7 @@
 			<stat type="moveSpeed">15</stat>
 		</stats>
 	</item>
-	<item id="32210" name="Blessed Twilight Helmet" name_additional="Defense Type" type="Armor">
+	<item id="32210" name="Blessed Twilight Helmet" additionalName="Defense Type" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -239,7 +239,7 @@
 			<stat type="mEvas">1.05</stat>
 		</stats>
 	</item>
-	<item id="32211" name="Blessed Twilight Breastplate" name_additional="Defense Type" type="Armor">
+	<item id="32211" name="Blessed Twilight Breastplate" additionalName="Defense Type" type="Armor">
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -262,7 +262,7 @@
 			<stat type="pAtk">26</stat>
 		</stats>
 	</item>
-	<item id="32212" name="Blessed Twilight Gaiters" name_additional="Defense Type" type="Armor">
+	<item id="32212" name="Blessed Twilight Gaiters" additionalName="Defense Type" type="Armor">
 		<set name="icon" val="icon.armor_t401_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -283,7 +283,7 @@
 			<stat type="mCritRate">2.6</stat>
 		</stats>
 	</item>
-	<item id="32213" name="Blessed Twilight Gauntlets" name_additional="Defense Type" type="Armor">
+	<item id="32213" name="Blessed Twilight Gauntlets" additionalName="Defense Type" type="Armor">
 		<set name="icon" val="icon.armor_t401_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -303,7 +303,7 @@
 			<stat type="accMagic">1</stat>
 		</stats>
 	</item>
-	<item id="32214" name="Blessed Twilight Boots" name_additional="Defense Type" type="Armor">
+	<item id="32214" name="Blessed Twilight Boots" additionalName="Defense Type" type="Armor">
 		<set name="icon" val="icon.armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -322,7 +322,7 @@
 			<stat type="moveSpeed">15</stat>
 		</stats>
 	</item>
-	<item id="32215" name="Blessed Twilight Shield" name_additional="Defense Type" type="Weapon">
+	<item id="32215" name="Blessed Twilight Shield" additionalName="Defense Type" type="Weapon">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.kratere_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -346,7 +346,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="32216" name="Blessed Twilight Leather Helmet" name_additional="Enchant Type" type="Armor">
+	<item id="32216" name="Blessed Twilight Leather Helmet" additionalName="Enchant Type" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -365,7 +365,7 @@
 			<stat type="mEvas">1.05</stat>
 		</stats>
 	</item>
-	<item id="32217" name="Blessed Twilight Leather Armor" name_additional="Enchant Type" type="Armor">
+	<item id="32217" name="Blessed Twilight Leather Armor" additionalName="Enchant Type" type="Armor">
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -390,7 +390,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="32218" name="Blessed Twilight Leather Leggings" name_additional="Enchant Type" type="Armor">
+	<item id="32218" name="Blessed Twilight Leather Leggings" additionalName="Enchant Type" type="Armor">
 		<set name="icon" val="icon.armor_t602_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -413,7 +413,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="32219" name="Blessed Twilight Leather Gloves" name_additional="Enchant Type" type="Armor">
+	<item id="32219" name="Blessed Twilight Leather Gloves" additionalName="Enchant Type" type="Armor">
 		<set name="icon" val="icon.armor_t602_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -433,7 +433,7 @@
 			<stat type="accMagic">1</stat>
 		</stats>
 	</item>
-	<item id="32220" name="Blessed Twilight Leather Boots" name_additional="Enchant Type" type="Armor">
+	<item id="32220" name="Blessed Twilight Leather Boots" additionalName="Enchant Type" type="Armor">
 		<set name="icon" val="icon.armor_t602_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -452,7 +452,7 @@
 			<stat type="moveSpeed">15</stat>
 		</stats>
 	</item>
-	<item id="32221" name="Blessed Twilight Circlet" name_additional="Recovery Type" type="Armor">
+	<item id="32221" name="Blessed Twilight Circlet" additionalName="Recovery Type" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -471,7 +471,7 @@
 			<stat type="mEvas">1.05</stat>
 		</stats>
 	</item>
-	<item id="32222" name="Blessed Twilight Tunic" name_additional="Recovery Type" type="Armor">
+	<item id="32222" name="Blessed Twilight Tunic" additionalName="Recovery Type" type="Armor">
 		<set name="icon" val="icon.armor_t603_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -495,7 +495,7 @@
 			<stat type="pAtk">26</stat>
 		</stats>
 	</item>
-	<item id="32223" name="Blessed Twilight Stockings" name_additional="Recovery Type" type="Armor">
+	<item id="32223" name="Blessed Twilight Stockings" additionalName="Recovery Type" type="Armor">
 		<set name="icon" val="icon.armor_t603_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -517,7 +517,7 @@
 			<stat type="mCritRate">2.6</stat>
 		</stats>
 	</item>
-	<item id="32224" name="Blessed Twilight Gloves" name_additional="Recovery Type" type="Armor">
+	<item id="32224" name="Blessed Twilight Gloves" additionalName="Recovery Type" type="Armor">
 		<set name="icon" val="icon.armor_t603_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -537,7 +537,7 @@
 			<stat type="accMagic">1</stat>
 		</stats>
 	</item>
-	<item id="32225" name="Blessed Twilight Shoes" name_additional="Recovery Type" type="Armor">
+	<item id="32225" name="Blessed Twilight Shoes" additionalName="Recovery Type" type="Armor">
 		<set name="icon" val="icon.armor_t603_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1151,7 +1151,7 @@
 			<skill id="12799" level="1" /> <!-- Awakened Hero's Olympiad Reward Box -->
 		</skills>
 	</item>
-	<item id="32264" name="Abelius' Power" name_additional="Sigel Knight" type="EtcItem">
+	<item id="32264" name="Abelius' Power" additionalName="Sigel Knight" type="EtcItem">
 		<!-- Chest that contains items helpful to Sigel Knights after Awakening. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1177,7 +1177,7 @@
 			<skill id="12800" level="1" /> <!-- Box for the Awakened -->
 		</skills>
 	</item>
-	<item id="32265" name="Sapyros' Power" name_additional="Tyrr Warrior" type="EtcItem">
+	<item id="32265" name="Sapyros' Power" additionalName="Tyrr Warrior" type="EtcItem">
 		<!-- Chest that contains items helpful to Tyrr Warriors after Awakening. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1203,7 +1203,7 @@
 			<skill id="12801" level="1" /> <!-- Box for the Awakened -->
 		</skills>
 	</item>
-	<item id="32266" name="Ashagen's Power" name_additional="Othell Rogue" type="EtcItem">
+	<item id="32266" name="Ashagen's Power" additionalName="Othell Rogue" type="EtcItem">
 		<!-- Chest that contains items helpful to Othell Rogues after Awakening. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1229,7 +1229,7 @@
 			<skill id="12802" level="1" /> <!-- Box for the Awakened -->
 		</skills>
 	</item>
-	<item id="32267" name="Cranigg's Power" name_additional="Yul Archer" type="EtcItem">
+	<item id="32267" name="Cranigg's Power" additionalName="Yul Archer" type="EtcItem">
 		<!-- Chest that contains items helpful to Yul Archers after Awakening. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1255,7 +1255,7 @@
 			<skill id="12803" level="1" /> <!-- Box for the Awakened -->
 		</skills>
 	</item>
-	<item id="32268" name="Soltkreig's Power" name_additional="Feoh Wizard" type="EtcItem">
+	<item id="32268" name="Soltkreig's Power" additionalName="Feoh Wizard" type="EtcItem">
 		<!-- Chest that contains items helpful to Feoh Wizards after Awakening. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1281,7 +1281,7 @@
 			<skill id="12804" level="1" /> <!-- Box for the Awakened -->
 		</skills>
 	</item>
-	<item id="32269" name="Naviarope's Power" name_additional="Wynn Summoner" type="EtcItem">
+	<item id="32269" name="Naviarope's Power" additionalName="Wynn Summoner" type="EtcItem">
 		<!-- Chest that contains items helpful to Wynn Summoners after Awakening. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1307,7 +1307,7 @@
 			<skill id="12806" level="1" /> <!-- Box for the Awakened -->
 		</skills>
 	</item>
-	<item id="32270" name="Leister's Power" name_additional="Iss Enchanter" type="EtcItem">
+	<item id="32270" name="Leister's Power" additionalName="Iss Enchanter" type="EtcItem">
 		<!-- Chest that contains items helpful to Iss Enchanters after Awakening. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1333,7 +1333,7 @@
 			<skill id="12805" level="1" /> <!-- Box for the Awakened -->
 		</skills>
 	</item>
-	<item id="32271" name="Lakcis' Power" name_additional="Aeore Healer" type="EtcItem">
+	<item id="32271" name="Lakcis' Power" additionalName="Aeore Healer" type="EtcItem">
 		<!-- Chest that contains items helpful to Aeore Healers after Awakening. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />

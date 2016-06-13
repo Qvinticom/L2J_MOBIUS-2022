@@ -396,7 +396,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37732" name="Blessed Antharas' Earring" name_additional="7-day" type="Armor">
+	<item id="37732" name="Blessed Antharas' Earring" additionalName="7-day" type="Armor">
 		<!-- MP +59, Bleed Resistance 50% increase, Bleed Attack Rate 50% increase, Heal Amount increase, Vampiric Rage Effect, Stun/Mental resistance 40%, Stun/Mental attack rate 40% increase, physical/magic skill MP consumption decrease, earth resistance increase, Holy Resistance increase, CON +3, MEN +3. P. Def./M. Def. are increased. Can use the Stun canceling skill. Momentarily increases Stun resistance by 100%. Only one effect is applied even when the same two earrings are worn. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -414,7 +414,7 @@
 			<stat type="mDef">170</stat>
 		</stats>
 	</item>
-	<item id="37733" name="Blessed Valakas' Necklace" name_additional="7-day" type="Armor">
+	<item id="37733" name="Blessed Valakas' Necklace" additionalName="7-day" type="Armor">
 		<!-- HP +625, MP +79, Sleep Resistance 50% increase, Sleep Attack Rate 50% increase, physical/magic skill cooldown decrease, Wild Magic Effect, damage shield effect, fire resistance 30 increase, Dark Resistance 20 increase, STR +3, INT +3. P. Skill Atk. 5% increase, P. Atk. 10% increase, M. Atk. 20% increase, hold resistance skill use. Hold resistance 100% increase momentarily. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -432,7 +432,7 @@
 			<stat type="mDef">226</stat>
 		</stats>
 	</item>
-	<item id="37734" name="Tauti's Ring" name_additional="7-day" type="Armor">
+	<item id="37734" name="Tauti's Ring" additionalName="7-day" type="Armor">
 		<!-- Tauti's Ring. Fire/Dark Resistance 25 increase, MP 38 increase, Critical Damage 15% increase, skill attack 5% increase, damage inflicted during PvP 5% increase, paralysis/yoke/exile resistance 10 increase, damage reflect resistance 5 increase, HP drain resistance 5 increase, damage received during PvP 5% decrease. Critical 54 increase when equipped with a blunt. Only one effect is applied even when the same two rings are worn (excluding attributes/M. Def.) Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessary_tauti_ring" />
 		<set name="default_action" val="EQUIP" />
@@ -450,7 +450,7 @@
 			<stat type="mDef">108</stat>
 		</stats>
 	</item>
-	<item id="37735" name="Earth Wyrm Heart Ring" name_additional="7-day" type="Armor">
+	<item id="37735" name="Earth Wyrm Heart Ring" additionalName="7-day" type="Armor">
 		<!-- MP +38, increases physical attack resistance, Mental Attack Resistance, MP Regeneration, P. Critical Damage, and Accuracy. Poison Resistance 50% increase, Poison Attack Rate 50% increase, Knock Back, Knock Down, pulling resistance 20 increase, Atk. Spd. Increase, Casting Spd. Increase, and Wind/Water Resistance increase. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied even when the same two rings are worn. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
@@ -468,7 +468,7 @@
 			<stat type="mDef">108</stat>
 		</stats>
 	</item>
-	<item id="37736" name="Blessed Zaken's Earring" name_additional="7-day" type="Armor">
+	<item id="37736" name="Blessed Zaken's Earring" additionalName="7-day" type="Armor">
 		<!-- MP +37, Bleed Resistance 30% increase, Bleed Attack Rate 30% increase, Heal Amount 15% increase, Vampiric Rage Effect, Stun/Mental resistance 30% increase, Stun/Mental attack rate 30% increase, Dark Resistance 15 increase. Only one effect is applied even when the same two earrings are worn. When equipped with a normal Zaken's Earring, only the effects of the Blessed Zaken's Earring are applied. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -486,7 +486,7 @@
 			<stat type="mDef">94</stat>
 		</stats>
 	</item>
-	<item id="37737" name="Ruler's Authority" name_additional="7-day" type="Armor">
+	<item id="37737" name="Ruler's Authority" additionalName="7-day" type="Armor">
 		<!-- Item is given to the winner of the Ceremony of Chaos that takes place in the Mysterious Mansion. When equipped, increases Max HP, MP, and CP by 1000, weight by 25600, and damage by 8%. Decreases received damage by 9% and Damage Reflect Resistance by 5%. Increases the number of inventory slots by 36 and all Attribute Resistance by 15. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.belt_rulers_authority" />
 		<set name="armor_type" val="LIGHT" />
@@ -504,7 +504,7 @@
 			<stat type="pDef">50</stat>
 		</stats>
 	</item>
-	<item id="37738" name="Test Soulshot (D-grade)" name_additional="Not in Use" type="EtcItem">
+	<item id="37738" name="Test Soulshot (D-grade)" additionalName="Not in Use" type="EtcItem">
 		<!-- Soulshot for test use. To be included in the D-grade or C-grade load effect. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -513,7 +513,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37739" name="Test Soulshot (C-grade)" name_additional="Not in Use" type="EtcItem">
+	<item id="37739" name="Test Soulshot (C-grade)" additionalName="Not in Use" type="EtcItem">
 		<!-- Soulshot for test use. To be included in the C-grade or D-grade load effect. -->
 		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
 		<set name="weight" val="2" />
@@ -522,7 +522,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37740" name="Reinforced Soulshot (No-grade)" name_additional="Not in Use" type="EtcItem">
+	<item id="37740" name="Reinforced Soulshot (No-grade)" additionalName="Not in Use" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on no-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -532,7 +532,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37741" name="Reinforced Soulshot (D-grade)" name_additional="Not in Use" type="EtcItem">
+	<item id="37741" name="Reinforced Soulshot (D-grade)" additionalName="Not in Use" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on D-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -542,7 +542,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37742" name="Reinforced Soulshot (C-grade)" name_additional="Not in Use" type="EtcItem">
+	<item id="37742" name="Reinforced Soulshot (C-grade)" additionalName="Not in Use" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on C-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -552,7 +552,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37743" name="Reinforced Soulshot (B-grade)" name_additional="Not in Use" type="EtcItem">
+	<item id="37743" name="Reinforced Soulshot (B-grade)" additionalName="Not in Use" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on B-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -562,7 +562,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37744" name="Reinforced Soulshot (A-grade)" name_additional="Not in Use" type="EtcItem">
+	<item id="37744" name="Reinforced Soulshot (A-grade)" additionalName="Not in Use" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on A-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -572,7 +572,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37745" name="Reinforced Soulshot (S-grade)" name_additional="Not in Use" type="EtcItem">
+	<item id="37745" name="Reinforced Soulshot (S-grade)" additionalName="Not in Use" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on S-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -582,7 +582,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37746" name="Reinforced Soulshot (R-grade)" name_additional="Not in Use" type="EtcItem">
+	<item id="37746" name="Reinforced Soulshot (R-grade)" additionalName="Not in Use" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on R-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -592,7 +592,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37747" name="Reinforced Spiritshot (No-grade)" name_additional="Not in Use" type="EtcItem">
+	<item id="37747" name="Reinforced Spiritshot (No-grade)" additionalName="Not in Use" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on no-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -602,7 +602,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37748" name="Reinforced Spiritshot (D-grade)" name_additional="Not in Use" type="EtcItem">
+	<item id="37748" name="Reinforced Spiritshot (D-grade)" additionalName="Not in Use" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on D-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -612,7 +612,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37749" name="Reinforced Spiritshot (C-grade)" name_additional="Not in Use" type="EtcItem">
+	<item id="37749" name="Reinforced Spiritshot (C-grade)" additionalName="Not in Use" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on C-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -622,7 +622,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37750" name="Reinforced Spiritshot (B-grade)" name_additional="Not in Use" type="EtcItem">
+	<item id="37750" name="Reinforced Spiritshot (B-grade)" additionalName="Not in Use" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on B-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -632,7 +632,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37751" name="Reinforced Spiritshot (A-grade)" name_additional="Not in Use" type="EtcItem">
+	<item id="37751" name="Reinforced Spiritshot (A-grade)" additionalName="Not in Use" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on A-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -642,7 +642,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37752" name="Reinforced Spiritshot (S-grade)" name_additional="Not in Use" type="EtcItem">
+	<item id="37752" name="Reinforced Spiritshot (S-grade)" additionalName="Not in Use" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on S-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -652,7 +652,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37753" name="Reinforced Spiritshot (R-grade)" name_additional="Not in Use" type="EtcItem">
+	<item id="37753" name="Reinforced Spiritshot (R-grade)" additionalName="Not in Use" type="EtcItem">
 		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on R-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -662,7 +662,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37754" name="All-purpose Soulshot" name_additional="Not in Use" type="EtcItem">
+	<item id="37754" name="All-purpose Soulshot" additionalName="Not in Use" type="EtcItem">
 		<!-- Confirm if it becomes crystal_free -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -671,7 +671,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37755" name="All-purpose Spiritshot" name_additional="Not in Use" type="EtcItem">
+	<item id="37755" name="All-purpose Spiritshot" additionalName="Not in Use" type="EtcItem">
 		<!-- Confirm if it becomes crystal_free -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
@@ -1044,7 +1044,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
-	<item id="37788" name="SP Rune (Low-grade)" name_additional="1-day" type="EtcItem">
+	<item id="37788" name="SP Rune (Low-grade)" additionalName="1-day" type="EtcItem">
 		<!-- When held in the inventory, it increases SP acquired through hunting by 10%. 1-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="weight" val="120" />
@@ -1059,7 +1059,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="time" val="86400" />
 	</item>
-	<item id="37789" name="SP Rune (Mid-grade)" name_additional="1-day" type="EtcItem">
+	<item id="37789" name="SP Rune (Mid-grade)" additionalName="1-day" type="EtcItem">
 		<!-- When held in the inventory, it increases SP acquired through hunting by 20%. 1-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="weight" val="120" />
@@ -1074,7 +1074,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="time" val="86400" />
 	</item>
-	<item id="37790" name="SP Rune (High-grade)" name_additional="1-day" type="EtcItem">
+	<item id="37790" name="SP Rune (High-grade)" additionalName="1-day" type="EtcItem">
 		<!-- When held in the inventory, it increases SP acquired through hunting by 30%. 1-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="weight" val="120" />

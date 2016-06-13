@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="17100" name="XP Buff 50% (1-hour)" name_additional="20~39" type="EtcItem">
+	<item id="17100" name="XP Buff 50% (1-hour)" additionalName="20~39" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -23,7 +23,7 @@
 			<skill id="9120" level="1" /> <!-- XP Buff 50% (1-hour) -->
 		</skills>
 	</item>
-	<item id="17101" name="XP Buff 50% (1.5-hour)" name_additional="20~39" type="EtcItem">
+	<item id="17101" name="XP Buff 50% (1.5-hour)" additionalName="20~39" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -46,7 +46,7 @@
 			<skill id="9121" level="1" /> <!-- XP Buff 50% (1.5-hour) -->
 		</skills>
 	</item>
-	<item id="17102" name="XP Buff 50% (2-hour)" name_additional="20~39" type="EtcItem">
+	<item id="17102" name="XP Buff 50% (2-hour)" additionalName="20~39" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -69,7 +69,7 @@
 			<skill id="9122" level="1" /> <!-- XP Buff 50% (2-hour) -->
 		</skills>
 	</item>
-	<item id="17103" name="XP Buff 50% (2.5-hour)" name_additional="20~39" type="EtcItem">
+	<item id="17103" name="XP Buff 50% (2.5-hour)" additionalName="20~39" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -92,7 +92,7 @@
 			<skill id="9123" level="1" /> <!-- XP Buff 50% (2.5-hour) -->
 		</skills>
 	</item>
-	<item id="17104" name="XP Buff 50% (3-hour)" name_additional="20~39" type="EtcItem">
+	<item id="17104" name="XP Buff 50% (3-hour)" additionalName="20~39" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -115,7 +115,7 @@
 			<skill id="9124" level="1" /> <!-- XP Buff 50% (3-hour) -->
 		</skills>
 	</item>
-	<item id="17105" name="XP Buff 50% (1-hour)" name_additional="40~51" type="EtcItem">
+	<item id="17105" name="XP Buff 50% (1-hour)" additionalName="40~51" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -138,7 +138,7 @@
 			<skill id="9125" level="1" /> <!-- XP Buff 50% (1-hour) -->
 		</skills>
 	</item>
-	<item id="17106" name="XP Buff 50% (1.5-hour)" name_additional="40~51" type="EtcItem">
+	<item id="17106" name="XP Buff 50% (1.5-hour)" additionalName="40~51" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -161,7 +161,7 @@
 			<skill id="9126" level="1" /> <!-- XP Buff 50% (1.5-hour) -->
 		</skills>
 	</item>
-	<item id="17107" name="XP Buff 50% (2-hour)" name_additional="40~51" type="EtcItem">
+	<item id="17107" name="XP Buff 50% (2-hour)" additionalName="40~51" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -184,7 +184,7 @@
 			<skill id="9127" level="1" /> <!-- XP Buff 50% (2-hour) -->
 		</skills>
 	</item>
-	<item id="17108" name="XP Buff 50% (2.5-hour)" name_additional="40~51" type="EtcItem">
+	<item id="17108" name="XP Buff 50% (2.5-hour)" additionalName="40~51" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -207,7 +207,7 @@
 			<skill id="9128" level="1" /> <!-- XP Buff 50% (2.5-hour) -->
 		</skills>
 	</item>
-	<item id="17109" name="XP Buff 50% (3-hour)" name_additional="40~51" type="EtcItem">
+	<item id="17109" name="XP Buff 50% (3-hour)" additionalName="40~51" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -230,7 +230,7 @@
 			<skill id="9129" level="1" /> <!-- XP Buff 50% (3-hour) -->
 		</skills>
 	</item>
-	<item id="17110" name="XP Buff 50% (1-hour)" name_additional="52~60" type="EtcItem">
+	<item id="17110" name="XP Buff 50% (1-hour)" additionalName="52~60" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -253,7 +253,7 @@
 			<skill id="9130" level="1" /> <!-- XP Buff 50% (1-hour) -->
 		</skills>
 	</item>
-	<item id="17111" name="XP Buff 50% (1.5-hour)" name_additional="52~60" type="EtcItem">
+	<item id="17111" name="XP Buff 50% (1.5-hour)" additionalName="52~60" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -276,7 +276,7 @@
 			<skill id="9131" level="1" /> <!-- XP Buff 50% (1.5-hour) -->
 		</skills>
 	</item>
-	<item id="17112" name="XP Buff 50% (2-hour)" name_additional="52~60" type="EtcItem">
+	<item id="17112" name="XP Buff 50% (2-hour)" additionalName="52~60" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -299,7 +299,7 @@
 			<skill id="9132" level="1" /> <!-- XP Buff 50% (2-hour) -->
 		</skills>
 	</item>
-	<item id="17113" name="XP Buff 50% (2.5-hour)" name_additional="52~60" type="EtcItem">
+	<item id="17113" name="XP Buff 50% (2.5-hour)" additionalName="52~60" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -322,7 +322,7 @@
 			<skill id="9133" level="1" /> <!-- XP Buff 50% (2.5-hour) -->
 		</skills>
 	</item>
-	<item id="17114" name="XP Buff 50% (3-hour)" name_additional="52~60" type="EtcItem">
+	<item id="17114" name="XP Buff 50% (3-hour)" additionalName="52~60" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -345,7 +345,7 @@
 			<skill id="9134" level="1" /> <!-- XP Buff 50% (3-hour) -->
 		</skills>
 	</item>
-	<item id="17115" name="XP Buff 50% (1-hour)" name_additional="61~75" type="EtcItem">
+	<item id="17115" name="XP Buff 50% (1-hour)" additionalName="61~75" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -368,7 +368,7 @@
 			<skill id="9135" level="1" /> <!-- XP Buff 50% (1-hour) -->
 		</skills>
 	</item>
-	<item id="17116" name="XP Buff 50% (1.5-hour)" name_additional="61~75" type="EtcItem">
+	<item id="17116" name="XP Buff 50% (1.5-hour)" additionalName="61~75" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -391,7 +391,7 @@
 			<skill id="9136" level="1" /> <!-- XP Buff 50% (1.5-hour) -->
 		</skills>
 	</item>
-	<item id="17117" name="XP Buff 50% (2-hour)" name_additional="61~75" type="EtcItem">
+	<item id="17117" name="XP Buff 50% (2-hour)" additionalName="61~75" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -414,7 +414,7 @@
 			<skill id="9137" level="1" /> <!-- XP Buff 50% (2-hour) -->
 		</skills>
 	</item>
-	<item id="17118" name="XP Buff 50% (2.5-hour)" name_additional="61~75" type="EtcItem">
+	<item id="17118" name="XP Buff 50% (2.5-hour)" additionalName="61~75" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -437,7 +437,7 @@
 			<skill id="9138" level="1" /> <!-- XP Buff 50% (2.5-hour) -->
 		</skills>
 	</item>
-	<item id="17119" name="XP Buff 50% (3-hour)" name_additional="61~75" type="EtcItem">
+	<item id="17119" name="XP Buff 50% (3-hour)" additionalName="61~75" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -460,7 +460,7 @@
 			<skill id="9139" level="1" /> <!-- XP Buff 50% (3-hour) -->
 		</skills>
 	</item>
-	<item id="17120" name="XP Buff 50% (1-hour)" name_additional="76~79" type="EtcItem">
+	<item id="17120" name="XP Buff 50% (1-hour)" additionalName="76~79" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -483,7 +483,7 @@
 			<skill id="9140" level="1" /> <!-- XP Buff 50% (1-hour) -->
 		</skills>
 	</item>
-	<item id="17121" name="XP Buff 50% (1.5-hour)" name_additional="76~79" type="EtcItem">
+	<item id="17121" name="XP Buff 50% (1.5-hour)" additionalName="76~79" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -506,7 +506,7 @@
 			<skill id="9141" level="1" /> <!-- XP Buff 50% (1.5-hour) -->
 		</skills>
 	</item>
-	<item id="17122" name="XP Buff 50% (2-hour)" name_additional="76~79" type="EtcItem">
+	<item id="17122" name="XP Buff 50% (2-hour)" additionalName="76~79" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -529,7 +529,7 @@
 			<skill id="9142" level="1" /> <!-- XP Buff 50% (2-hour) -->
 		</skills>
 	</item>
-	<item id="17123" name="XP Buff 50% (2.5-hour)" name_additional="76~79" type="EtcItem">
+	<item id="17123" name="XP Buff 50% (2.5-hour)" additionalName="76~79" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -552,7 +552,7 @@
 			<skill id="9143" level="1" /> <!-- XP Buff 50% (2.5-hour) -->
 		</skills>
 	</item>
-	<item id="17124" name="XP Buff 50% (3-hour)" name_additional="76~79" type="EtcItem">
+	<item id="17124" name="XP Buff 50% (3-hour)" additionalName="76~79" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -575,7 +575,7 @@
 			<skill id="9144" level="1" /> <!-- XP Buff 50% (3-hour) -->
 		</skills>
 	</item>
-	<item id="17125" name="XP Buff 50% (1-hour)" name_additional="80~85" type="EtcItem">
+	<item id="17125" name="XP Buff 50% (1-hour)" additionalName="80~85" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -598,7 +598,7 @@
 			<skill id="9145" level="1" /> <!-- XP Buff 50% (1-hour) -->
 		</skills>
 	</item>
-	<item id="17126" name="XP Buff 50% (1.5-hour)" name_additional="80~85" type="EtcItem">
+	<item id="17126" name="XP Buff 50% (1.5-hour)" additionalName="80~85" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -621,7 +621,7 @@
 			<skill id="9146" level="1" /> <!-- XP Buff 50% (1.5-hour) -->
 		</skills>
 	</item>
-	<item id="17127" name="XP Buff 50% (2-hour)" name_additional="80~85" type="EtcItem">
+	<item id="17127" name="XP Buff 50% (2-hour)" additionalName="80~85" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -644,7 +644,7 @@
 			<skill id="9147" level="1" /> <!-- XP Buff 50% (2-hour) -->
 		</skills>
 	</item>
-	<item id="17128" name="XP Buff 50% (2.5-hour)" name_additional="80~85" type="EtcItem">
+	<item id="17128" name="XP Buff 50% (2.5-hour)" additionalName="80~85" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -667,7 +667,7 @@
 			<skill id="9148" level="1" /> <!-- XP Buff 50% (2.5-hour) -->
 		</skills>
 	</item>
-	<item id="17129" name="XP Buff 50% (3-hour)" name_additional="80~85" type="EtcItem">
+	<item id="17129" name="XP Buff 50% (3-hour)" additionalName="80~85" type="EtcItem">
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -846,7 +846,7 @@
 			<skill id="9160" level="1" /> <!-- Transformation Scroll: Zaken -->
 		</skills>
 	</item>
-	<item id="17141" name="Ribbon Hairband" name_additional="Promotion" type="Armor">
+	<item id="17141" name="Ribbon Hairband" additionalName="Promotion" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_Ribbon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -866,7 +866,7 @@
 			<player sex="1" />
 		</cond>
 	</item>
-	<item id="17142" name="Refined Wizard Hat" name_additional="Promotion" type="Armor">
+	<item id="17142" name="Refined Wizard Hat" additionalName="Promotion" type="Armor">
 		<set name="icon" val="icon.accessory_magician_cap2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -883,7 +883,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="17143" name="Refined Jester Hat" name_additional="Promotion" type="Armor">
+	<item id="17143" name="Refined Jester Hat" additionalName="Promotion" type="Armor">
 		<set name="icon" val="icon.accessory_jester_cap_2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -900,7 +900,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="17144" name="Refined Romantic Chapeau" name_additional="Promotion" type="Armor">
+	<item id="17144" name="Refined Romantic Chapeau" additionalName="Promotion" type="Armor">
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -917,7 +917,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="17145" name="Refined Dapper Cap" name_additional="Promotion" type="Armor">
+	<item id="17145" name="Refined Dapper Cap" additionalName="Promotion" type="Armor">
 		<set name="icon" val="icon.accessory_dandy_cap2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -934,7 +934,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="17146" name="Refined Angel Ring" name_additional="Promotion" type="Armor">
+	<item id="17146" name="Refined Angel Ring" additionalName="Promotion" type="Armor">
 		<set name="icon" val="icon.accessory_angel_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -951,7 +951,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="17147" name="Popped-Out Eye" name_additional="Promotion" type="Armor">
+	<item id="17147" name="Popped-Out Eye" additionalName="Promotion" type="Armor">
 		<set name="icon" val="icon.accessory_beetle_eye_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -968,7 +968,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="17148" name="Bird Nest" name_additional="Promotion" type="Armor">
+	<item id="17148" name="Bird Nest" additionalName="Promotion" type="Armor">
 		<set name="icon" val="icon.accessory_nest_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -985,7 +985,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="17149" name="Varka Circlet" name_additional="Promotion" type="Armor">
+	<item id="17149" name="Varka Circlet" additionalName="Promotion" type="Armor">
 		<set name="icon" val="icon.accessory_barka_karm_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1002,7 +1002,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="17150" name="Ketra Circlet" name_additional="Promotion" type="Armor">
+	<item id="17150" name="Ketra Circlet" additionalName="Promotion" type="Armor">
 		<set name="icon" val="icon.accessory_ketra_karm_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1019,7 +1019,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="17151" name="Puffy Hat of Friendship" name_additional="Promotion" type="Armor">
+	<item id="17151" name="Puffy Hat of Friendship" additionalName="Promotion" type="Armor">
 		<set name="icon" val="icon.accessory_globefish_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1036,7 +1036,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="17152" name="Arrow-pierced Apple" name_additional="Promotion" type="Armor">
+	<item id="17152" name="Arrow-pierced Apple" additionalName="Promotion" type="Armor">
 		<set name="icon" val="icon.accessory_arrow_apple_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1053,7 +1053,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="17153" name="Fish Hat" name_additional="Promotion" type="Armor">
+	<item id="17153" name="Fish Hat" additionalName="Promotion" type="Armor">
 		<set name="icon" val="icon.accessory_fish_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1070,7 +1070,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="17154" name="Purple Viking Circlet" name_additional="Promotion" type="Armor">
+	<item id="17154" name="Purple Viking Circlet" additionalName="Promotion" type="Armor">
 		<set name="icon" val="icon.accessory_viking_circlet_violet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1087,7 +1087,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="17155" name="Golden Viking Circlet" name_additional="Promotion" type="Armor">
+	<item id="17155" name="Golden Viking Circlet" additionalName="Promotion" type="Armor">
 		<set name="icon" val="icon.accessory_viking_circlet_gold_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1104,7 +1104,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="17156" name="White Sheep Hat" name_additional="Promotion" type="Armor">
+	<item id="17156" name="White Sheep Hat" additionalName="Promotion" type="Armor">
 		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1121,7 +1121,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="17157" name="Black Sheep Hat" name_additional="Promotion" type="Armor">
+	<item id="17157" name="Black Sheep Hat" additionalName="Promotion" type="Armor">
 		<set name="icon" val="icon.accessory_sheep_cap_black_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1701,7 +1701,7 @@
 			<skill id="9175" level="1" /> <!-- Scroll: 10,000 SP -->
 		</skills>
 	</item>
-	<item id="17186" name="Olympic Athlete's Ring" name_additional="3-day" type="Armor">
+	<item id="17186" name="Olympic Athlete's Ring" additionalName="3-day" type="Armor">
 		<!-- Description: National Representative Warrior's Ring. Limited time item available for 3 days. MP+ 21; Resistance to Hold +30%; a chance of Hold attack +30%; increases Accuracy and Critical Damage. Only one effect is applied even when two identical rings are worn. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1726,7 +1726,7 @@
 			<stat type="maxMp">21</stat>
 		</stats>
 	</item>
-	<item id="17187" name="Olympic Athlete's Necklace" name_additional="3-day" type="Armor">
+	<item id="17187" name="Olympic Athlete's Necklace" additionalName="3-day" type="Armor">
 		<!-- Description: National Representative Warrior's Necklace. Limited time item available for 3 days. MP+ 42, Sleep/Paralysis/Shock Resistance increase by 15%. Sleep/Paralysis/Shock attack rate increase by 15%. Decreased skill reuse delay and damage shield effects. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1751,7 +1751,7 @@
 			<stat type="maxMp">42</stat>
 		</stats>
 	</item>
-	<item id="17188" name="Olympic Athlete's Earring" name_additional="3-day" type="Armor">
+	<item id="17188" name="Olympic Athlete's Earring" additionalName="3-day" type="Armor">
 		<!-- Description: National Representative Warrior's Earring. Limited-time item that can be worn for 3 days. It has effects of MP +31, shock/mind attack resistance +20%, Shock/Mental attack rate +20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1776,7 +1776,7 @@
 			<stat type="maxMp">31</stat>
 		</stats>
 	</item>
-	<item id="17189" name="Olympic Athlete's Ring" name_additional="7-day" type="Armor">
+	<item id="17189" name="Olympic Athlete's Ring" additionalName="7-day" type="Armor">
 		<!-- Description: National Representative Warrior's Ring. Limited time item available for 7 days. MP+ 21; Resistance to Hold +30%; a chance of Hold attack +30%; increases Accuracy and Critical Damage. Only one effect is applied even when two identical rings are worn. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1801,7 +1801,7 @@
 			<stat type="maxMp">21</stat>
 		</stats>
 	</item>
-	<item id="17190" name="Olympic Athlete's Necklace" name_additional="7-day" type="Armor">
+	<item id="17190" name="Olympic Athlete's Necklace" additionalName="7-day" type="Armor">
 		<!-- Description: National Representative Warrior's Necklace. Limited time item available for 7 days. MP+ 42, Sleep/Paralysis/Shock Resistance increase by 15%. Sleep/Paralysis/Shock attack rate increase by 15%. Decreased skill reuse delay and damage shield effects. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1826,7 +1826,7 @@
 			<stat type="maxMp">42</stat>
 		</stats>
 	</item>
-	<item id="17191" name="Olympic Athlete's Earring" name_additional="7-day" type="Armor">
+	<item id="17191" name="Olympic Athlete's Earring" additionalName="7-day" type="Armor">
 		<!-- Description: National Representative Warrior's Earring. Limited-time item that can be worn for 7 days. It has effects of MP +31, shock/mind attack resistance +20%, Shock/Mental attack rate +20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1851,7 +1851,7 @@
 			<stat type="maxMp">31</stat>
 		</stats>
 	</item>
-	<item id="17192" name="Olympic Athlete's Ring" name_additional="10-day" type="Armor">
+	<item id="17192" name="Olympic Athlete's Ring" additionalName="10-day" type="Armor">
 		<!-- Description: National Representative Warrior's Ring. Limited time item available for 10 days. MP+ 21; Resistance to Hold +30%; a chance of Hold attack +30%; increases Accuracy and Critical Damage. Only one effect is applied even when two identical rings are worn. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1876,7 +1876,7 @@
 			<stat type="maxMp">21</stat>
 		</stats>
 	</item>
-	<item id="17193" name="Olympic Athlete's Necklace" name_additional="10-day" type="Armor">
+	<item id="17193" name="Olympic Athlete's Necklace" additionalName="10-day" type="Armor">
 		<!-- Description: National Representative Warrior's Necklace. Limited time item available for 10 days. MP+ 42, Sleep/Paralysis/Shock Resistance increase by 15%. Sleep/Paralysis/Shock attack rate increase by 15%. Decreased skill reuse delay and damage shield effects. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1901,7 +1901,7 @@
 			<stat type="maxMp">42</stat>
 		</stats>
 	</item>
-	<item id="17194" name="Olympic Athlete's Earring" name_additional="10-day" type="Armor">
+	<item id="17194" name="Olympic Athlete's Earring" additionalName="10-day" type="Armor">
 		<!-- Description: National Representative Warrior's Earring. Limited-time item that can be worn for 10 days. It has effects of MP +31, shock/mind attack resistance +20%, Shock/Mental attack rate +20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1926,7 +1926,7 @@
 			<stat type="maxMp">31</stat>
 		</stats>
 	</item>
-	<item id="17195" name="Olympic Athlete's Ring" name_additional="30-day" type="Armor">
+	<item id="17195" name="Olympic Athlete's Ring" additionalName="30-day" type="Armor">
 		<!-- Description: National Representative Warrior's Ring. Limited time item available for 30 days. MP+ 21; Resistance to Hold +30%; a chance of Hold attack +30%; increases Accuracy and Critical Damage. Only one effect is applied even when two identical rings are worn. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1951,7 +1951,7 @@
 			<stat type="maxMp">21</stat>
 		</stats>
 	</item>
-	<item id="17196" name="Olympic Athlete's Necklace" name_additional="30-day" type="Armor">
+	<item id="17196" name="Olympic Athlete's Necklace" additionalName="30-day" type="Armor">
 		<!-- Description: National Representative Warrior's Necklace. Limited time item available for 30 days. MP+ 42, Sleep/Paralysis/Shock Resistance increase by 15%. Sleep/Paralysis/Shock attack rate increase by 15%. Decreased skill reuse delay and damage shield effects. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1976,7 +1976,7 @@
 			<stat type="maxMp">42</stat>
 		</stats>
 	</item>
-	<item id="17197" name="Olympic Athlete's Earring" name_additional="30-day" type="Armor">
+	<item id="17197" name="Olympic Athlete's Earring" additionalName="30-day" type="Armor">
 		<!-- Description: National Representative Warrior's Earring. Limited-time item that can be worn for 30 days. It has effects of MP +31, shock/mind attack resistance +20%, Shock/Mental attack rate +20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="35900" name="Refined Devil Horn" name_additional="Evasion" type="Armor">
+	<item id="35900" name="Refined Devil Horn" additionalName="Evasion" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -127,7 +127,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="35915" name="Draco's Hat" name_additional="STR (Event)" type="Armor">
+	<item id="35915" name="Draco's Hat" additionalName="STR (Event)" type="Armor">
 		<!-- STR + 3 when equipped. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -143,7 +143,7 @@
 			<skill id="9554" level="1" /> <!-- Hair Accessory: STR -->
 		</skills>
 	</item>
-	<item id="35916" name="Draco's Hat" name_additional="DEX (Event)" type="Armor">
+	<item id="35916" name="Draco's Hat" additionalName="DEX (Event)" type="Armor">
 		<!-- DEX + 3 when equipped. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -159,7 +159,7 @@
 			<skill id="9555" level="1" /> <!-- Hair Accessory: DEX -->
 		</skills>
 	</item>
-	<item id="35917" name="Draco's Hat" name_additional="CON (Event)" type="Armor">
+	<item id="35917" name="Draco's Hat" additionalName="CON (Event)" type="Armor">
 		<!-- CON + 3 when equipped. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -175,7 +175,7 @@
 			<skill id="9556" level="1" /> <!-- Hair Accessory: CON -->
 		</skills>
 	</item>
-	<item id="35918" name="Draco's Hat" name_additional="MEN (Event)" type="Armor">
+	<item id="35918" name="Draco's Hat" additionalName="MEN (Event)" type="Armor">
 		<!-- MEN + 3 when equipped. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -191,7 +191,7 @@
 			<skill id="9557" level="1" /> <!-- Hair Accessory: MEN -->
 		</skills>
 	</item>
-	<item id="35919" name="Draco's Hat" name_additional="INT (Event)" type="Armor">
+	<item id="35919" name="Draco's Hat" additionalName="INT (Event)" type="Armor">
 		<!-- INT + 3 when equipped. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -207,7 +207,7 @@
 			<skill id="9558" level="1" /> <!-- Hair Accessory: INT -->
 		</skills>
 	</item>
-	<item id="35920" name="Draco's Hat" name_additional="WIT (Event)" type="Armor">
+	<item id="35920" name="Draco's Hat" additionalName="WIT (Event)" type="Armor">
 		<!-- WIT + 3 when equipped. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -223,7 +223,7 @@
 			<skill id="9559" level="1" /> <!-- Hair Accessory: WIT -->
 		</skills>
 	</item>
-	<item id="35921" name="Draco's Hat" name_additional="Critical Rate (Event)" type="Armor">
+	<item id="35921" name="Draco's Hat" additionalName="Critical Rate (Event)" type="Armor">
 		<!-- P. Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -239,7 +239,7 @@
 			<skill id="9560" level="1" /> <!-- Hair Accessory: Critical Rate -->
 		</skills>
 	</item>
-	<item id="35922" name="Draco's Hat" name_additional="Critical Damage (Event)" type="Armor">
+	<item id="35922" name="Draco's Hat" additionalName="Critical Damage (Event)" type="Armor">
 		<!-- P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -255,7 +255,7 @@
 			<skill id="9561" level="1" /> <!-- Hair Accessory: Critical Damage -->
 		</skills>
 	</item>
-	<item id="35923" name="Draco's Hat" name_additional="P. Def. (Event)" type="Armor">
+	<item id="35923" name="Draco's Hat" additionalName="P. Def. (Event)" type="Armor">
 		<!-- P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -271,7 +271,7 @@
 			<skill id="9562" level="1" /> <!-- Hair Accessory Circlet: P. Def. -->
 		</skills>
 	</item>
-	<item id="35924" name="Draco's Hat" name_additional="M. Def. (Event)" type="Armor">
+	<item id="35924" name="Draco's Hat" additionalName="M. Def. (Event)" type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -287,7 +287,7 @@
 			<skill id="9563" level="1" /> <!-- Hair Accessory: M. Def. -->
 		</skills>
 	</item>
-	<item id="35925" name="Draco's Hat" name_additional="Evasion (Event)" type="Armor">
+	<item id="35925" name="Draco's Hat" additionalName="Evasion (Event)" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -303,7 +303,7 @@
 			<skill id="9564" level="1" /> <!-- Hair Accessory: Evasion -->
 		</skills>
 	</item>
-	<item id="35926" name="Draco's Hat" name_additional="P. Atk. (Event)" type="Armor">
+	<item id="35926" name="Draco's Hat" additionalName="P. Atk. (Event)" type="Armor">
 		<!-- P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -319,7 +319,7 @@
 			<skill id="9565" level="1" /> <!-- Hair Accessory: P. Atk. -->
 		</skills>
 	</item>
-	<item id="35927" name="Draco's Hat" name_additional="M. Atk. (Event)" type="Armor">
+	<item id="35927" name="Draco's Hat" additionalName="M. Atk. (Event)" type="Armor">
 		<!-- M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -335,7 +335,7 @@
 			<skill id="9566" level="1" /> <!-- Hair Accessory: M. Atk. -->
 		</skills>
 	</item>
-	<item id="35928" name="Draco's Hat" name_additional="Accuracy (Event)" type="Armor">
+	<item id="35928" name="Draco's Hat" additionalName="Accuracy (Event)" type="Armor">
 		<!-- Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -451,7 +451,7 @@
 			<item id="35934" min="1" max="1" chance="100" /> <!-- XP Rune II (Lv. 1-95) 100% - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35934" name="XP Rune II (Lv. 1-95) 100%" name_additional="7-day" type="EtcItem">
+	<item id="35934" name="XP Rune II (Lv. 1-95) 100%" additionalName="7-day" type="EtcItem">
 		<!-- When possessed in the inventory, increases XP and SP acquired through hunting by 100%. The effect only applies to characters level 95 or below. 7-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -484,7 +484,7 @@
 			<skill id="9527" level="1" /> <!-- Verdof's Vitality Replenishing Herb -->
 		</skills>
 	</item>
-	<item id="35936" name="Star Agathion - Heejin Jang" name_additional="15-day" type="Armor">
+	<item id="35936" name="Star Agathion - Heejin Jang" additionalName="15-day" type="Armor">
 		<!-- 15-day\nWhen equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, M. Def. 5%, Max HP 5%, and Attribute Resistance + 10. \nUsed skill:ﾠBlessed Escape ability. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -518,7 +518,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35937" name="Star Agathion - Hyuk Jang" name_additional="15-day" type="Armor">
+	<item id="35937" name="Star Agathion - Hyuk Jang" additionalName="15-day" type="Armor">
 		<!-- 15-day\nWhen equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, P. Def. 5%, and Attribute Resistance + 10. \nUsed skill:ﾠBlessed Escape ability. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -552,7 +552,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35938" name="Star Agathion - Sooro Kim" name_additional="15-day" type="Armor">
+	<item id="35938" name="Star Agathion - Sooro Kim" additionalName="15-day" type="Armor">
 		<!-- 15-day\nWhen equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, P. Def. 5%, Max HP 5%, and Attribute Resistance + 10. \nUsed skill:ﾠBlessed Escape ability. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -586,7 +586,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35939" name="Star Agathion - Jaebum Park" name_additional="15-day" type="Armor">
+	<item id="35939" name="Star Agathion - Jaebum Park" additionalName="15-day" type="Armor">
 		<!-- 15-day\nWhen equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, P. Atk. 6%, and Attribute Resistance + 10. \nUsed skill:ﾠBlessed Escape ability. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -620,7 +620,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35940" name="Star Agathion - Shin-young Kim" name_additional="15-day" type="Armor">
+	<item id="35940" name="Star Agathion - Shin-young Kim" additionalName="15-day" type="Armor">
 		<!-- 15-day\nWhen equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, and Attribute Resistance + 10. Skill cooldown 3% and skill MP consumption - 3%. \nUsed skill:ﾠBlessed Escape ability. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -654,7 +654,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35941" name="Star Agathion - Heejin Jang" name_additional="30-day" type="Armor">
+	<item id="35941" name="Star Agathion - Heejin Jang" additionalName="30-day" type="Armor">
 		<!-- 30-day\nWhen equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, M. Def. 5%, Max HP 5%, and Attribute Resistance + 10. \nUsed skill: Blessed Escape ability. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -688,7 +688,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35942" name="Star Agathion - Hyuk Jang" name_additional="30-day" type="Armor">
+	<item id="35942" name="Star Agathion - Hyuk Jang" additionalName="30-day" type="Armor">
 		<!-- 30-day\nWhen equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, P. Def. 5%, and Attribute Resistance + 10. \nUsed skill: Blessed Escape ability. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -722,7 +722,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35943" name="Star Agathion - Sooro Kim" name_additional="30-day" type="Armor">
+	<item id="35943" name="Star Agathion - Sooro Kim" additionalName="30-day" type="Armor">
 		<!-- 30-day\nWhen equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, P. Def. 5%, Max HP 5%, and Attribute Resistance + 10. \nUsed skill: Blessed Escape ability. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -756,7 +756,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35944" name="Star Agathion - Jaebum Park" name_additional="30-day" type="Armor">
+	<item id="35944" name="Star Agathion - Jaebum Park" additionalName="30-day" type="Armor">
 		<!-- 30-day\nWhen equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, P. Atk. 6%, and Attribute Resistance + 10. \nUsed skill: Blessed Escape ability. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -790,7 +790,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="35945" name="Star Agathion - Shin-young Kim" name_additional="30-day" type="Armor">
+	<item id="35945" name="Star Agathion - Shin-young Kim" additionalName="30-day" type="Armor">
 		<!-- 30-day\nWhen equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, and Attribute Resistance+ 10. Skill cooldown 3% and skill MP consumption - 3%. \nUsed skill: Blessed Escape ability. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1109,7 +1109,7 @@
 			<item id="35945" min="1" max="1" chance="100" /> <!-- Star Agathion - Shin-young Kim - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35961" name="Agathion - Heejin Jang Pack (7-day)" name_additional="Event" type="EtcItem">
+	<item id="35961" name="Agathion - Heejin Jang Pack (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Heejin Jang (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1128,7 +1128,7 @@
 			<item id="34935" min="1" max="1" chance="100" /> <!-- Star Agathion - Heejin Jang - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35962" name="Agathion - Hyuk Jang Pack (7-day)" name_additional="Event" type="EtcItem">
+	<item id="35962" name="Agathion - Hyuk Jang Pack (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Hyuk Jang (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1147,7 +1147,7 @@
 			<item id="34936" min="1" max="1" chance="100" /> <!-- Star Agathion - Hyuk Jang - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35963" name="Agathion - Sooro Kim Pack (7-day)" name_additional="Event" type="EtcItem">
+	<item id="35963" name="Agathion - Sooro Kim Pack (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Sooro Kim (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1166,7 +1166,7 @@
 			<item id="34937" min="1" max="1" chance="100" /> <!-- Star Agathion - Sooro Kim - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35964" name="Agathion - Jaebum Park Pack (7-day)" name_additional="Event" type="EtcItem">
+	<item id="35964" name="Agathion - Jaebum Park Pack (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Jaebum Park (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1185,7 +1185,7 @@
 			<item id="34938" min="1" max="1" chance="100" /> <!-- Star Agathion - Jaebum Park - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35965" name="Agathion - Shin-young Kim Pack (7-day)" name_additional="Event" type="EtcItem">
+	<item id="35965" name="Agathion - Shin-young Kim Pack (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Shin-young Kim (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1204,7 +1204,7 @@
 			<item id="34939" min="1" max="1" chance="100" /> <!-- Star Agathion - Shin-young Kim - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35966" name="Agathion - Heejin Jang Pack (15-day)" name_additional="Event" type="EtcItem">
+	<item id="35966" name="Agathion - Heejin Jang Pack (15-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Heejin Jang (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1223,7 +1223,7 @@
 			<item id="35936" min="1" max="1" chance="100" /> <!-- Star Agathion - Heejin Jang - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35967" name="Agathion - Hyuk Jang Pack (15-day)" name_additional="Event" type="EtcItem">
+	<item id="35967" name="Agathion - Hyuk Jang Pack (15-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Hyuk Jang (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1242,7 +1242,7 @@
 			<item id="35937" min="1" max="1" chance="100" /> <!-- Star Agathion - Hyuk Jang - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35968" name="Agathion - Sooro Kim Pack (15-day)" name_additional="Event" type="EtcItem">
+	<item id="35968" name="Agathion - Sooro Kim Pack (15-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Sooro Kim (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1261,7 +1261,7 @@
 			<item id="35938" min="1" max="1" chance="100" /> <!-- Star Agathion - Sooro Kim - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35969" name="Agathion - Jaebum Park Pack (15-day)" name_additional="Event" type="EtcItem">
+	<item id="35969" name="Agathion - Jaebum Park Pack (15-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Jaebum Park (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1280,7 +1280,7 @@
 			<item id="35939" min="1" max="1" chance="100" /> <!-- Star Agathion - Jaebum Park - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35970" name="Agathion - Shin-young Kim Pack (15-day)" name_additional="Event" type="EtcItem">
+	<item id="35970" name="Agathion - Shin-young Kim Pack (15-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Shin-young Kim (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1299,7 +1299,7 @@
 			<item id="35940" min="1" max="1" chance="100" /> <!-- Star Agathion - Shin-young Kim - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35971" name="Agathion - Heejin Jang Pack (30-day)" name_additional="Event" type="EtcItem">
+	<item id="35971" name="Agathion - Heejin Jang Pack (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Heejin Jang (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1318,7 +1318,7 @@
 			<item id="35941" min="1" max="1" chance="100" /> <!-- Star Agathion - Heejin Jang - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35972" name="Agathion - Hyuk Jang Pack (30-day)" name_additional="Event" type="EtcItem">
+	<item id="35972" name="Agathion - Hyuk Jang Pack (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Hyuk Jang (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1337,7 +1337,7 @@
 			<item id="35942" min="1" max="1" chance="100" /> <!-- Star Agathion - Hyuk Jang - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35973" name="Agathion - Sooro Kim Pack (30-day)" name_additional="Event" type="EtcItem">
+	<item id="35973" name="Agathion - Sooro Kim Pack (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Sooro Kim (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1356,7 +1356,7 @@
 			<item id="35943" min="1" max="1" chance="100" /> <!-- Star Agathion - Sooro Kim - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35974" name="Agathion - Jaebum Park Pack (30-day)" name_additional="Event" type="EtcItem">
+	<item id="35974" name="Agathion - Jaebum Park Pack (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Jaebum Park (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1375,7 +1375,7 @@
 			<item id="35944" min="1" max="1" chance="100" /> <!-- Star Agathion - Jaebum Park - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35975" name="Agathion - Shin-young Kim Pack (30-day)" name_additional="Event" type="EtcItem">
+	<item id="35975" name="Agathion - Shin-young Kim Pack (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Shin-young Kim (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1394,7 +1394,7 @@
 			<item id="35945" min="1" max="1" chance="100" /> <!-- Star Agathion - Shin-young Kim - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35976" name="Dragon Vitality Replenishing Potion" name_additional="Event" type="EtcItem">
+	<item id="35976" name="Dragon Vitality Replenishing Potion" additionalName="Event" type="EtcItem">
 		<!-- Replenishes some vitality upon use. Cooldown is 60 min. For 1 week, up to 5 uses do not apply to the limit. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1414,7 +1414,7 @@
 			<skill id="9752" level="1" /> <!-- Dragon Vitality Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="35977" name="XP Rune II (Lv. 1-95) 100% Pack (7-day)" name_additional="Event" type="EtcItem">
+	<item id="35977" name="XP Rune II (Lv. 1-95) 100% Pack (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing XP Rune II (Lv. 1-95) 100% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1434,7 +1434,7 @@
 			<item id="35934" min="1" max="1" chance="100" /> <!-- XP Rune II (Lv. 1-95) 100% - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35978" name="Mysterious Ring (7-day)" name_additional="Event" type="Armor">
+	<item id="35978" name="Mysterious Ring (7-day)" additionalName="Event" type="Armor">
 		<!-- Mysterious Ring. 7-day. It summons the selected clan member to your location. Cooldown is 1 hour. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessory_shiny_couple_ring" />
 		<set name="default_action" val="EQUIP" />
@@ -1455,7 +1455,7 @@
 			<skill id="9522" level="1" /> <!-- Summon Clan Member -->
 		</skills>
 	</item>
-	<item id="35979" name="Mysterious Ring Pack" name_additional="Event" type="EtcItem">
+	<item id="35979" name="Mysterious Ring Pack" additionalName="Event" type="EtcItem">
 		<!-- Box containing Mysterious Ring: 7-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1475,7 +1475,7 @@
 			<item id="35978" min="1" max="1" chance="100" /> <!-- Mysterious Ring (7-day) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="35980" name="Talisman - Annihilation" name_additional="3-day (Event)" type="Armor">
+	<item id="35980" name="Talisman - Annihilation" additionalName="3-day (Event)" type="Armor">
 		<!-- Talisman - Annihilation (3-day). When equipped, increases Max HP, MP, and CP by 300, P./M. Accuracy by 2, P./M. Evasion by 2, Vampiric Rage 3%, Atk. Spd./Casting Spd. by 20, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 103, and M. Atk. by 156. -->
 		<set name="icon" val="icon.accessory_extermination_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1498,7 +1498,7 @@
 			<skill id="8864" level="3" /> <!-- Talisman - Annihilation -->
 		</skills>
 	</item>
-	<item id="35981" name="Talisman - Annihilation" name_additional="7-day (Event)" type="Armor">
+	<item id="35981" name="Talisman - Annihilation" additionalName="7-day (Event)" type="Armor">
 		<!-- Talisman - Annihilation (7-day). When equipped, increases Max HP, MP, and CP by 300, P./M. Accuracy by 2, P./M. Evasion by 2, Vampiric Rage 3%, Atk. Spd./Casting Spd. by 20, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 103, and M. Atk. by 156. -->
 		<set name="icon" val="icon.accessory_extermination_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1577,7 +1577,7 @@
 			<skill id="9544" level="1" /> <!-- Power Herb -->
 		</skills>
 	</item>
-	<item id="35985" name="XP Rune I (Lv. 1-85) 100% (1-hour)" name_additional="Event" type="EtcItem">
+	<item id="35985" name="XP Rune I (Lv. 1-85) 100% (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Increases XP and SP acquired in hunt by 100%. The effect only applies to characters Lv. 86 or below. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1596,7 +1596,7 @@
 			<skill id="9240" level="1" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
 	</item>
-	<item id="35986" name="XP Rune I (Lv. 1-85) 200% (1-hour)" name_additional="Event" type="EtcItem">
+	<item id="35986" name="XP Rune I (Lv. 1-85) 200% (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Increases XP and SP acquired in hunt by 200%. The effect only applies to characters Lv. 86 or below. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1615,7 +1615,7 @@
 			<skill id="9240" level="2" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
 	</item>
-	<item id="35987" name="XP Rune I (Lv. 1-85) 100% Pack (1-hour)" name_additional="Event" type="EtcItem">
+	<item id="35987" name="XP Rune I (Lv. 1-85) 100% Pack (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Double-click on the box to acquire 1 XP Rune I (Lv. 1-85) 100% (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1634,7 +1634,7 @@
 			<item id="35985" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (1-hour) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="35988" name="XP Rune I (Lv. 1-85) 200% Pack (1-hour)" name_additional="Event" type="EtcItem">
+	<item id="35988" name="XP Rune I (Lv. 1-85) 200% Pack (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Double-click on the box to acquire 1 XP Rune I (Lv. 1-85) 200% (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1653,7 +1653,7 @@
 			<item id="35986" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (1-hour) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="35989" name="Festival's Cloak" name_additional="Ceremony of Chaos" type="Armor">
+	<item id="35989" name="Festival's Cloak" additionalName="Ceremony of Chaos" type="Armor">
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1669,7 +1669,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="220" />
 	</item>
-	<item id="35990" name="Circlet of Ice" name_additional="Ceremony of Chaos" type="Armor">
+	<item id="35990" name="Circlet of Ice" additionalName="Ceremony of Chaos" type="Armor">
 		<set name="icon" val="icon.accessory_ice_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1685,7 +1685,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="35991" name="Ceremony of Chaos" name_additional="Attack" type="EtcItem">
+	<item id="35991" name="Ceremony of Chaos" additionalName="Attack" type="EtcItem">
 		<!-- Item that can be used at the Ceremony of Chaos Arena but nowhere else. For 7 minutes, provides the effects of Horn Melody, Guitar Melody, Pipe Organ Melody, Lute Melody, Harp Melody, Drum Melody, and Warrior's Harmony Lv. 1. -->
 		<set name="icon" val="icon.etc_super_potion_i03" />
 		<set name="weight" val="5" />
@@ -1715,7 +1715,7 @@
 			<skill id="9545" level="1" /> <!-- Ceremony of Chaos - Horn Melody -->
 		</skills>
 	</item>
-	<item id="35992" name="Ceremony of Chaos" name_additional="Magic" type="EtcItem">
+	<item id="35992" name="Ceremony of Chaos" additionalName="Magic" type="EtcItem">
 		<!-- Item that can be used at the Ceremony of Chaos Arena but nowhere else. For 7 minutes, provides the effects of Horn Melody, Guitar Melody, Pipe Organ Melody, Lute Melody, Harp Melody, Drum Melody, and Wizard's Harmony Lv. 1. -->
 		<set name="icon" val="icon.etc_super_potion_i03" />
 		<set name="weight" val="5" />
@@ -1745,7 +1745,7 @@
 			<skill id="9545" level="1" /> <!-- Ceremony of Chaos - Horn Melody -->
 		</skills>
 	</item>
-	<item id="35993" name="Ceremony of Chaos" name_additional="Defense" type="EtcItem">
+	<item id="35993" name="Ceremony of Chaos" additionalName="Defense" type="EtcItem">
 		<!-- Item that can be used at the Ceremony of Chaos Arena but nowhere else. For 7 minutes, provides the effects of Horn Melody, Guitar Melody, Pipe Organ Melody, Lute Melody, Harp Melody, Drum Melody, and Knight's Harmony Lv. 1. -->
 		<set name="icon" val="icon.etc_super_potion_i03" />
 		<set name="weight" val="5" />
@@ -1775,7 +1775,7 @@
 			<skill id="9545" level="1" /> <!-- Ceremony of Chaos - Horn Melody -->
 		</skills>
 	</item>
-	<item id="35994" name="Tauti's Treasure Chest" name_additional="Event" type="EtcItem">
+	<item id="35994" name="Tauti's Treasure Chest" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive a reward. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_clan_depositable" val="false" />
@@ -1794,7 +1794,7 @@
 			<skill id="9568" level="1" /> <!-- Tauti's Treasure Chest -->
 		</skills>
 	</item>
-	<item id="35995" name="Gemstone" name_additional="Not in Use" type="EtcItem">
+	<item id="35995" name="Gemstone" additionalName="Not in Use" type="EtcItem">
 		<!-- Not in Use -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="price" val="100" />

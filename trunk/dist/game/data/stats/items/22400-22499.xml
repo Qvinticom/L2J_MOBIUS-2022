@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="22400" name="Agathion - Valakas" name_additional="Lv. 7" type="Armor">
+	<item id="22400" name="Agathion - Valakas" additionalName="Lv. 7" type="Armor">
 		<!-- Bracelet that can summon a level 7 Valakas Agathion. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -403,7 +403,7 @@
 			<skill id="22437" level="1" /> <!-- (Test) Emerald Sword Modification Stone -->
 		</skills>
 	</item>
-	<item id="22421" name="Holiday Tree - Star Ornament" name_additional="Event" type="EtcItem">
+	<item id="22421" name="Holiday Tree - Star Ornament" additionalName="Event" type="EtcItem">
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the Holiday Trees. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_tree_star" />
 		<set name="weight" val="20" />
@@ -419,7 +419,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22422" name="Holiday Tree - Globe Ornament" name_additional="Event" type="EtcItem">
+	<item id="22422" name="Holiday Tree - Globe Ornament" additionalName="Event" type="EtcItem">
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the Holiday Trees. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_tree_bead" />
 		<set name="weight" val="20" />
@@ -435,7 +435,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22423" name="Holiday Tree - Garland Ornament" name_additional="Event" type="EtcItem">
+	<item id="22423" name="Holiday Tree - Garland Ornament" additionalName="Event" type="EtcItem">
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the Holiday Trees. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_tree_band" />
 		<set name="weight" val="20" />
@@ -451,7 +451,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22424" name="Holiday Tree - Bow Ornament" name_additional="Event" type="EtcItem">
+	<item id="22424" name="Holiday Tree - Bow Ornament" additionalName="Event" type="EtcItem">
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the Holiday Trees. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_tree_ribbon" />
 		<set name="weight" val="20" />
@@ -1392,7 +1392,7 @@
 			<item id="34620" min="3" max="3" chance="100" /> <!-- Heavenly Cocktail -->
 		</capsuled_items>
 	</item>
-	<item id="22475" name="Santa Girl's Gift Box" name_additional="Event" type="EtcItem">
+	<item id="22475" name="Santa Girl's Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Santa Girl gave you this gift box in exchange for 100 red stockings. Contains a random reward, and a chance at getting a temporary or permanent Santa Girl's Cloak. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_clan_depositable" val="false" />
@@ -1407,7 +1407,7 @@
 			<skill id="22452" level="1" /> <!-- Santa Girl's Gift Box -->
 		</skills>
 	</item>
-	<item id="22476" name="Santa Girl's Red Stockings" name_additional="Event" type="EtcItem">
+	<item id="22476" name="Santa Girl's Red Stockings" additionalName="Event" type="EtcItem">
 		<!-- Collect 100 to bring back to Santa Girl in exchange for Santa Girl's Wrapped Pack. -->
 		<set name="icon" val="icon.xmas_present_i00" />
 		<set name="weight" val="5" />
@@ -1420,7 +1420,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22477" name="Santa Girl's Cloak" name_additional="1-day (Event)" type="Armor">
+	<item id="22477" name="Santa Girl's Cloak" additionalName="1-day (Event)" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. Decreases weight. Increases inventory slots. Expires after 1 day. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
@@ -1445,7 +1445,7 @@
 			<stat type="pDef">20</stat>
 		</stats>
 	</item>
-	<item id="22478" name="Santa Girl's Cloak" name_additional="7-day (Event)" type="Armor">
+	<item id="22478" name="Santa Girl's Cloak" additionalName="7-day (Event)" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. Decreases weight. Increases inventory slots. Expires after 7 days. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
@@ -1470,7 +1470,7 @@
 			<stat type="pDef">20</stat>
 		</stats>
 	</item>
-	<item id="22479" name="Santa Girl's Cloak" name_additional="30-day (Event)" type="Armor">
+	<item id="22479" name="Santa Girl's Cloak" additionalName="30-day (Event)" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. Decreases weight. Increases inventory slots. Expires after 30 days. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
@@ -1495,7 +1495,7 @@
 			<stat type="pDef">20</stat>
 		</stats>
 	</item>
-	<item id="22480" name="Santa Girl's Cloak" name_additional="Event" type="Armor">
+	<item id="22480" name="Santa Girl's Cloak" additionalName="Event" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. You can keep it forever! -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
@@ -1519,7 +1519,7 @@
 			<stat type="pDef">20</stat>
 		</stats>
 	</item>
-	<item id="22481" name="Improved Bronze Bracelet" name_additional="1-day" type="Armor">
+	<item id="22481" name="Improved Bronze Bracelet" additionalName="1-day" type="Armor">
 		<!-- Activates 2 talisman slots when equipped. 1 day. -->
 		<set name="icon" val="icon.etc_rbracelet_b_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1538,7 +1538,7 @@
 			<skill id="3323" level="1" /> <!-- Bronze Bracelet -->
 		</skills>
 	</item>
-	<item id="22482" name="Improved Bronze Bracelet" name_additional="15-day" type="Armor">
+	<item id="22482" name="Improved Bronze Bracelet" additionalName="15-day" type="Armor">
 		<!-- Activates 2 talisman slots when equipped. 15 days. -->
 		<set name="icon" val="icon.etc_rbracelet_b_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1557,7 +1557,7 @@
 			<skill id="3323" level="1" /> <!-- Bronze Bracelet -->
 		</skills>
 	</item>
-	<item id="22483" name="Improved Bronze Bracelet" name_additional="30-day" type="Armor">
+	<item id="22483" name="Improved Bronze Bracelet" additionalName="30-day" type="Armor">
 		<!-- Activates 2 talisman slots when equipped. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_b_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1576,7 +1576,7 @@
 			<skill id="3323" level="1" /> <!-- Bronze Bracelet -->
 		</skills>
 	</item>
-	<item id="22484" name="Improved Bronze Bracelet" name_additional="90-day" type="Armor">
+	<item id="22484" name="Improved Bronze Bracelet" additionalName="90-day" type="Armor">
 		<!-- Activates 2 talisman slots when equipped. 90 days. -->
 		<set name="icon" val="icon.etc_rbracelet_b_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1595,7 +1595,7 @@
 			<skill id="3323" level="1" /> <!-- Bronze Bracelet -->
 		</skills>
 	</item>
-	<item id="22485" name="Improved Steel Bracelet" name_additional="1-day" type="Armor">
+	<item id="22485" name="Improved Steel Bracelet" additionalName="1-day" type="Armor">
 		<!-- Activates 3 talisman slots when equipped. 1 day. -->
 		<set name="icon" val="icon.etc_rbracelet_a_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1614,7 +1614,7 @@
 			<skill id="3324" level="1" /> <!-- Steel Bracelet -->
 		</skills>
 	</item>
-	<item id="22486" name="Improved Steel Bracelet" name_additional="15-day" type="Armor">
+	<item id="22486" name="Improved Steel Bracelet" additionalName="15-day" type="Armor">
 		<!-- Activates 3 talisman slots when equipped. 15 days. -->
 		<set name="icon" val="icon.etc_rbracelet_a_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1633,7 +1633,7 @@
 			<skill id="3324" level="1" /> <!-- Steel Bracelet -->
 		</skills>
 	</item>
-	<item id="22487" name="Improved Steel Bracelet" name_additional="30-day" type="Armor">
+	<item id="22487" name="Improved Steel Bracelet" additionalName="30-day" type="Armor">
 		<!-- Activates 3 talisman slots when equipped. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_a_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1652,7 +1652,7 @@
 			<skill id="3324" level="1" /> <!-- Steel Bracelet -->
 		</skills>
 	</item>
-	<item id="22488" name="Improved Steel Bracelet" name_additional="90-day" type="Armor">
+	<item id="22488" name="Improved Steel Bracelet" additionalName="90-day" type="Armor">
 		<!-- Activates 3 talisman slots when equipped. 90 days. -->
 		<set name="icon" val="icon.etc_rbracelet_a_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1671,7 +1671,7 @@
 			<skill id="3324" level="1" /> <!-- Steel Bracelet -->
 		</skills>
 	</item>
-	<item id="22489" name="Improved Mithril Bracelet" name_additional="1-day" type="Armor">
+	<item id="22489" name="Improved Mithril Bracelet" additionalName="1-day" type="Armor">
 		<!-- Activates 4 talisman slots when equipped. 1 day. -->
 		<set name="icon" val="icon.etc_rbracelet_s_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -1690,7 +1690,7 @@
 			<skill id="3325" level="1" /> <!-- Mithril Bracelet -->
 		</skills>
 	</item>
-	<item id="22490" name="Improved Mithril Bracelet" name_additional="15-day" type="Armor">
+	<item id="22490" name="Improved Mithril Bracelet" additionalName="15-day" type="Armor">
 		<!-- Activates 4 talisman slots when equipped. 15 days. -->
 		<set name="icon" val="icon.etc_rbracelet_s_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -1709,7 +1709,7 @@
 			<skill id="3325" level="1" /> <!-- Mithril Bracelet -->
 		</skills>
 	</item>
-	<item id="22491" name="Improved Mithril Bracelet" name_additional="30-day" type="Armor">
+	<item id="22491" name="Improved Mithril Bracelet" additionalName="30-day" type="Armor">
 		<!-- Activates 4 talisman slots when equipped. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_s_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -1728,7 +1728,7 @@
 			<skill id="3325" level="1" /> <!-- Mithril Bracelet -->
 		</skills>
 	</item>
-	<item id="22492" name="Improved Mithril Bracelet" name_additional="90-day" type="Armor">
+	<item id="22492" name="Improved Mithril Bracelet" additionalName="90-day" type="Armor">
 		<!-- Activates 4 talisman slots when equipped. 90 days. -->
 		<set name="icon" val="icon.etc_rbracelet_s_i03" />
 		<set name="default_action" val="EQUIP" />

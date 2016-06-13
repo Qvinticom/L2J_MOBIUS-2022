@@ -13,7 +13,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23901" name="Mysterious Dark Resistance Dye" name_additional="Dark Resistance, 7-day" type="EtcItem">
+	<item id="23901" name="Mysterious Dark Resistance Dye" additionalName="Dark Resistance, 7-day" type="EtcItem">
 		<!-- Bring this to the village symbol maker to imprint a 7-day magic symbol that boosts stats (Dark Resistance + 120 when fighting normal monsters). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
 		<set name="is_stackable" val="true" />
@@ -26,7 +26,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23902" name="Mysterious Holy Resistance Dye" name_additional="Holy Resistance, 7-day" type="EtcItem">
+	<item id="23902" name="Mysterious Holy Resistance Dye" additionalName="Holy Resistance, 7-day" type="EtcItem">
 		<!-- Bring this to the village symbol maker to imprint a 7-day magic symbol that boosts stats (Holy Resistance + 120 when fighting normal monsters). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
 		<set name="is_stackable" val="true" />
@@ -39,7 +39,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23903" name="Mysterious Fire Resistance Dye" name_additional="Fire Resistance, 7-day" type="EtcItem">
+	<item id="23903" name="Mysterious Fire Resistance Dye" additionalName="Fire Resistance, 7-day" type="EtcItem">
 		<!-- Bring this to the village symbol maker to imprint a 7-day magic symbol that boosts stats (Fire Resistance + 120 when fighting normal monsters). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
 		<set name="is_stackable" val="true" />
@@ -52,7 +52,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23904" name="Mysterious Water Resistance Dye" name_additional="Water Resistance, 7-day" type="EtcItem">
+	<item id="23904" name="Mysterious Water Resistance Dye" additionalName="Water Resistance, 7-day" type="EtcItem">
 		<!-- Bring this to the village symbol maker to imprint a 7-day magic symbol that boosts stats (Water Resistance + 120 when fighting normal monsters). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_water" />
 		<set name="is_stackable" val="true" />
@@ -65,7 +65,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23905" name="Mysterious Wind Resistance Dye" name_additional="Wind Resistance, 7-day" type="EtcItem">
+	<item id="23905" name="Mysterious Wind Resistance Dye" additionalName="Wind Resistance, 7-day" type="EtcItem">
 		<!-- Bring this to the village symbol maker to imprint a 7-day magic symbol that boosts stats (Wind Resistance + 120 when fighting normal monsters). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_wind" />
 		<set name="is_stackable" val="true" />
@@ -78,7 +78,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23906" name="Mysterious Earth Resistance Dye" name_additional="Earth Resistance, 7-day" type="EtcItem">
+	<item id="23906" name="Mysterious Earth Resistance Dye" additionalName="Earth Resistance, 7-day" type="EtcItem">
 		<!-- Bring this to the village symbol maker to imprint a 7-day magic symbol that boosts stats (Earth Resistance + 120 when fighting normal monsters). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_earth" />
 		<set name="is_stackable" val="true" />
@@ -91,7 +91,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23907" name="Mysterious Abnormal State Resistance Dye" name_additional="Abnormal State/ Buff Cancellation Resistance, Abnormal State Reflect, 7-day" type="EtcItem">
+	<item id="23907" name="Mysterious Abnormal State Resistance Dye" additionalName="Abnormal State/ Buff Cancellation Resistance, Abnormal State Reflect, 7-day" type="EtcItem">
 		<!-- Bring this to the village symbol maker to imprint a 7-day magic symbol that boosts stats (Hold, Sleep, Paralysis, Mental Attack, Poison, Bleed, Stun Resistance + 20 / Buff-canceling Attack Resistance + 20 / 5% chance of reflecting physical and magical abnormal status). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_debuff" />
 		<set name="is_stackable" val="true" />
@@ -104,7 +104,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23908" name="Mysterious Invincibility Boost Dye" name_additional="Invincibility Duration Increase, 7-day" type="EtcItem">
+	<item id="23908" name="Mysterious Invincibility Boost Dye" additionalName="Invincibility Duration Increase, 7-day" type="EtcItem">
 		<!-- Bring this to the village symbol maker to imprint a 7-day magic symbol that boosts stats (normal hit and duration of invincibility against skills + 50%). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_buff" />
 		<set name="is_stackable" val="true" />
@@ -117,7 +117,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23909" name="Mysterious World Boss Defense Dye" name_additional="P. Def., M. Def., 7-day" type="EtcItem">
+	<item id="23909" name="Mysterious World Boss Defense Dye" additionalName="P. Def., M. Def., 7-day" type="EtcItem">
 		<!-- Bring this to the village symbol maker to imprint a 7-day magic symbol that boosts stats (P. Def. and M. Def. + 15% when fighting Antharas, Valakas, or Lindvior). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_boss_normal" />
 		<set name="is_stackable" val="true" />
@@ -130,7 +130,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23910" name="Mysterious Antharas Defense Dye" name_additional="P. Def., M. Def., 7-day" type="EtcItem">
+	<item id="23910" name="Mysterious Antharas Defense Dye" additionalName="P. Def., M. Def., 7-day" type="EtcItem">
 		<!-- Bring this to the village symbol maker to imprint a 7-day magic symbol that boosts stats (P. Def. and M. Def. + 20% when fighting Antharas). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_boss_antaras" />
 		<set name="is_stackable" val="true" />
@@ -143,7 +143,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23911" name="Mysterious Valakas Defense Dye" name_additional="P. Def., M. Def., 7-day" type="EtcItem">
+	<item id="23911" name="Mysterious Valakas Defense Dye" additionalName="P. Def., M. Def., 7-day" type="EtcItem">
 		<!-- Bring this to the village symbol maker to imprint a 7-day magic symbol that boosts stats (P. Def. and M. Def.+ 20% when fighting Valakas). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_boss_valakas" />
 		<set name="is_stackable" val="true" />
@@ -156,7 +156,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23912" name="Mysterious Lindvior Defense Dye" name_additional="P. Def., M. Def., 7-day" type="EtcItem">
+	<item id="23912" name="Mysterious Lindvior Defense Dye" additionalName="P. Def., M. Def., 7-day" type="EtcItem">
 		<!-- Bring this to the village symbol maker to imprint a 7-day magic symbol that boosts stats (P. Def. and M. Def. + 20% when fighting Lindvior). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_boss_lindvior" />
 		<set name="is_stackable" val="true" />
@@ -548,7 +548,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="23929" name="Tears One-handed Sword Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="23929" name="Tears One-handed Sword Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of a Tears One-handed Sword. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
@@ -564,7 +564,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23930" name="Tears Dagger Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="23930" name="Tears Dagger Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of a Tears Dagger. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="is_stackable" val="true" />
@@ -580,7 +580,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23931" name="Tears Two-handed Sword Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="23931" name="Tears Two-handed Sword Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of a Tears Two-handed Sword. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="is_stackable" val="true" />
@@ -596,7 +596,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23932" name="Tears Fist Weapon Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="23932" name="Tears Fist Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon to that of a Tears Fist Weapon. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="is_stackable" val="true" />
@@ -612,7 +612,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23933" name="Tears Spear Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="23933" name="Tears Spear Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a spear to that of a Tears Spear. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="is_stackable" val="true" />
@@ -628,7 +628,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23934" name="Tears Bow Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="23934" name="Tears Bow Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a bow to that of a Tears Bow. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_bow" />
 		<set name="is_stackable" val="true" />
@@ -644,7 +644,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23935" name="Tears Crossbow Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="23935" name="Tears Crossbow Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a crossbow to that of a Tears Crossbow. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_crossbow" />
 		<set name="is_stackable" val="true" />
@@ -660,7 +660,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23936" name="Tears One-handed Blunt Weapon Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="23936" name="Tears One-handed Blunt Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt weapon to that of a Tears One-handed Blunt Weapon. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
 		<set name="is_stackable" val="true" />
@@ -676,7 +676,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23937" name="Tears Magic Sword Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="23937" name="Tears Magic Sword Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt weapon to that of a Tears Two-handed Blunt Weapon. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="is_stackable" val="true" />
@@ -692,7 +692,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23938" name="Tears One-handed Magic Blunt Weapon Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="23938" name="Tears One-handed Magic Blunt Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt weapon to that of a Tears Magic Blunt Weapon. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="is_stackable" val="true" />
@@ -708,7 +708,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23939" name="Tears Two-handed Magic Blunt Weapon Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="23939" name="Tears Two-handed Magic Blunt Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt weapon to that of a Tears Two-handed Magic Blunt Weapon. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="is_stackable" val="true" />
@@ -724,7 +724,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23940" name="Tears Dualsword Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="23940" name="Tears Dualsword Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a dualsword to that of a Tears Dualsword. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
@@ -740,7 +740,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23941" name="Tears Dual Dagger Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="23941" name="Tears Dual Dagger Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger to that of a Tears Dual Dagger. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="is_stackable" val="true" />
@@ -756,7 +756,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23942" name="Tears Dual Blunt Weapon Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="23942" name="Tears Dual Blunt Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt weapon to that of a Tears Dual Blunt Weapon. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="is_stackable" val="true" />
@@ -772,7 +772,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23943" name="Tears Shield Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="23943" name="Tears Shield Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a shield to that of a Tears Shield. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_shield" />
 		<set name="is_stackable" val="true" />
@@ -788,7 +788,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23944" name="Tears Sigil Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="23944" name="Tears Sigil Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a sigil to that of a Tears Sigil. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sigil" />
 		<set name="is_stackable" val="true" />
@@ -804,7 +804,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23945" name="Prestige Rune 100% Pack" name_additional="3-hour" type="EtcItem">
+	<item id="23945" name="Prestige Rune 100% Pack" additionalName="3-hour" type="EtcItem">
 		<!-- Wrapped Pack containing Prestige Rune 100% (3-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -850,7 +850,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="icon" val="Branchsys2.icon.cube_event_i02" />
 	</item>
-	<item id="23950" name="Returning Hero's Gold Chest" name_additional="Event" type="EtcItem">
+	<item id="23950" name="Returning Hero's Gold Chest" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing Returning Hero's Mark x 250, a Returning Hero's Potion Pack, and a Returning Hero's Support Box. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="100" />
@@ -1309,7 +1309,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23989" name="Agathion - Virgo" name_additional="Stage 1" type="Armor">
+	<item id="23989" name="Agathion - Virgo" additionalName="Stage 1" type="Armor">
 		<!-- Can summon Virgo when equipped.\n\n(Active Skill)\n1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 2250 sec.)\n2. Attribute Enchant: Attribute Atk./Resistance + 5. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1325,7 +1325,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23990" name="Agathion - Virgo" name_additional="Stage 2" type="Armor">
+	<item id="23990" name="Agathion - Virgo" additionalName="Stage 2" type="Armor">
 		<!-- Can summon Virgo when equipped.\n\n(Active Skill)\n1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 2100 sec.)\n2. Balanced Power: MEN + 1.\n2. Attribute Enchant: Attribute Atk./Resistance + 5. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1341,7 +1341,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23991" name="Agathion - Virgo" name_additional="Stage 3" type="Armor">
+	<item id="23991" name="Agathion - Virgo" additionalName="Stage 3" type="Armor">
 		<!-- Can summon Virgo when equipped.\n\n(Active Skill)\n1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 1950 sec.)\n2. Balanced Power: MEN + 1.\n2. Attribute Enchant: Attribute Atk./Resistance + 10. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1357,7 +1357,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23992" name="Agathion - Virgo" name_additional="Stage 4" type="Armor">
+	<item id="23992" name="Agathion - Virgo" additionalName="Stage 4" type="Armor">
 		<!-- Can summon Virgo when equipped.\n\n(Active Skill)\n1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 1800 sec.)\n2. Balanced Power: CON/MEN + 1.\n2. Attribute Enchant: Attribute Atk./Resistance + 10. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1373,7 +1373,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23993" name="Agathion - Virgo" name_additional="Stage 5" type="Armor">
+	<item id="23993" name="Agathion - Virgo" additionalName="Stage 5" type="Armor">
 		<!-- Can summon Virgo when equipped.\n\n(Active Skill)\n1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 1650 sec.)\n2. Balanced Power: CON/MEN + 1.\n2. Attribute Enchant: Attribute Atk./Resistance + 15. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1389,7 +1389,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23994" name="Agathion - Virgo" name_additional="Stage 6" type="Armor">
+	<item id="23994" name="Agathion - Virgo" additionalName="Stage 6" type="Armor">
 		<!-- Can summon Virgo when equipped.\n\n(Active Skill)\n1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 1500 sec.)\n2. Balanced Power: CON/WIT/MEN + 1.\n2. Attribute Enchant: Attribute Atk./Resistance + 15. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1405,7 +1405,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23995" name="Agathion - Virgo" name_additional="Stage 7" type="Armor">
+	<item id="23995" name="Agathion - Virgo" additionalName="Stage 7" type="Armor">
 		<!-- Can summon Virgo when equipped.\n\n(Active Skill)\n1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 1350 sec.)\n2. Balanced Power: CON/WIT/MEN + 1.\n2. Attribute Enchant: Attribute Atk./Resistance + 20. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1421,7 +1421,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23996" name="Agathion - Virgo" name_additional="Stage 8" type="Armor">
+	<item id="23996" name="Agathion - Virgo" additionalName="Stage 8" type="Armor">
 		<!-- Can summon Virgo when equipped.\n\n(Active Skill)\n1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 1200 sec.)\n2. Balanced Power: CON/DEX/WIT/MEN + 1.\n2. Attribute Enchant: Attribute Atk./Resistance + 20. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1437,7 +1437,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23997" name="Agathion - Virgo" name_additional="Stage 9" type="Armor">
+	<item id="23997" name="Agathion - Virgo" additionalName="Stage 9" type="Armor">
 		<!-- Can summon Virgo when equipped.\n\n(Active Skill)\n1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 1050 sec.)\n2. Balanced Power: CON/DEX/WIT/MEN + 1.\n2. Attribute Enchant: Attribute Atk./Resistance + 25. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1453,7 +1453,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23998" name="Agathion - Virgo" name_additional="Stage 10" type="Armor">
+	<item id="23998" name="Agathion - Virgo" additionalName="Stage 10" type="Armor">
 		<!-- Can summon Virgo when equipped.\n\n(Active Skill)\n1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 900 sec.)\n2. Balanced Power: INT/CON/DEX/WIT/MEN + 1.\n2. Attribute Enchant: Attribute Atk./Resistance + 25. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1469,7 +1469,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23999" name="Agathion - Virgo" name_additional="Stage 11" type="Armor">
+	<item id="23999" name="Agathion - Virgo" additionalName="Stage 11" type="Armor">
 		<!-- Can summon Virgo when equipped.\n\n(Active Skill)\n1. Healing Light: Restores entire party's HP/MP/CP with a chance to cancel debuffs. (Cooldown is 750 sec.)\n2. Balanced Power: INT/CON/DEX/WIT/MEN + 1.\n2. Attribute Enchant: Attribute Atk./Resistance + 30. -->
 		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
 		<set name="default_action" val="EQUIP" />

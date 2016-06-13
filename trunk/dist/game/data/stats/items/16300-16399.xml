@@ -2040,7 +2040,7 @@
 			<item id="16406" min="3" max="3" chance="100" /> <!-- White Winter Wish Candle (Event) -->
 		</capsuled_items>
 	</item>
-	<item id="16399" name="Teddy Boy Summon Bracelet" name_additional="Permanent" type="Armor">
+	<item id="16399" name="Teddy Boy Summon Bracelet" additionalName="Permanent" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />

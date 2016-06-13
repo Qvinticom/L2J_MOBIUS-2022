@@ -409,7 +409,7 @@
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
 	</item>
-	<item id="15829" name="Periel Sword" name_additional="Health" type="Weapon">
+	<item id="15829" name="Periel Sword" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_periwing_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -441,7 +441,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15830" name="Periel Sword" name_additional="Focus" type="Weapon">
+	<item id="15830" name="Periel Sword" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_periwing_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -473,7 +473,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15831" name="Periel Sword" name_additional="Haste" type="Weapon">
+	<item id="15831" name="Periel Sword" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_periwing_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -505,7 +505,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15832" name="Skull Edge" name_additional="HP Drain" type="Weapon">
+	<item id="15832" name="Skull Edge" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_skulledge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -537,7 +537,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15833" name="Skull Edge" name_additional="Haste" type="Weapon">
+	<item id="15833" name="Skull Edge" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_skulledge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -569,7 +569,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15834" name="Skull Edge" name_additional="Critical Damage" type="Weapon">
+	<item id="15834" name="Skull Edge" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_skulledge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -601,7 +601,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15835" name="Vigwik Axe" name_additional="Health" type="Weapon">
+	<item id="15835" name="Vigwik Axe" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vigwik_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -633,7 +633,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15836" name="Vigwik Axe" name_additional="HP Regeneration" type="Weapon">
+	<item id="15836" name="Vigwik Axe" additionalName="HP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_vigwik_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -665,7 +665,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15837" name="Vigwik Axe" name_additional="HP Drain" type="Weapon">
+	<item id="15837" name="Vigwik Axe" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_vigwik_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -697,7 +697,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15838" name="Devilish Maul" name_additional="Health" type="Weapon">
+	<item id="15838" name="Devilish Maul" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_evildeity_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -729,7 +729,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15839" name="Devilish Maul" name_additional="HP Drain" type="Weapon">
+	<item id="15839" name="Devilish Maul" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_evildeity_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -761,7 +761,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15840" name="Devilish Maul" name_additional="HP Regeneration" type="Weapon">
+	<item id="15840" name="Devilish Maul" additionalName="HP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_evildeity_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -793,7 +793,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15841" name="Feather Eye Blade" name_additional="Health" type="Weapon">
+	<item id="15841" name="Feather Eye Blade" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_feathereye_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -825,7 +825,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15842" name="Feather Eye Blade" name_additional="Focus" type="Weapon">
+	<item id="15842" name="Feather Eye Blade" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_feathereye_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -857,7 +857,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15843" name="Feather Eye Blade" name_additional="Haste" type="Weapon">
+	<item id="15843" name="Feather Eye Blade" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_feathereye_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -889,7 +889,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15844" name="Octo Claw" name_additional="Health" type="Weapon">
+	<item id="15844" name="Octo Claw" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_octoclaw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -921,7 +921,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15845" name="Octo Claw" name_additional="Critical Stun" type="Weapon">
+	<item id="15845" name="Octo Claw" additionalName="Critical Stun" type="Weapon">
 		<set name="icon" val="icon.weapon_octoclaw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -954,7 +954,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15846" name="Octo Claw" name_additional="Focus" type="Weapon">
+	<item id="15846" name="Octo Claw" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_octoclaw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -986,7 +986,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15847" name="Doubletop Spear" name_additional="Guidance" type="Weapon">
+	<item id="15847" name="Doubletop Spear" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_doubletopa_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1018,7 +1018,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="15848" name="Doubletop Spear" name_additional="Haste" type="Weapon">
+	<item id="15848" name="Doubletop Spear" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_doubletopa_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1050,7 +1050,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="15849" name="Doubletop Spear" name_additional="Health" type="Weapon">
+	<item id="15849" name="Doubletop Spear" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_doubletopa_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1082,7 +1082,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="15850" name="Rising Star" name_additional="MP Regeneration" type="Weapon">
+	<item id="15850" name="Rising Star" additionalName="MP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_cuticle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1115,7 +1115,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15851" name="Rising Star" name_additional="Mana Up" type="Weapon">
+	<item id="15851" name="Rising Star" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_cuticle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1148,7 +1148,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15852" name="Rising Star" name_additional="Acumen" type="Weapon">
+	<item id="15852" name="Rising Star" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_cuticle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1181,7 +1181,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15853" name="Black Visage" name_additional="MP Regeneration" type="Weapon">
+	<item id="15853" name="Black Visage" additionalName="MP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_blackvisage_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1214,7 +1214,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15854" name="Black Visage" name_additional="Magic Hold" type="Weapon">
+	<item id="15854" name="Black Visage" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_blackvisage_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1248,7 +1248,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15855" name="Black Visage" name_additional="Empower" type="Weapon">
+	<item id="15855" name="Black Visage" additionalName="Empower" type="Weapon">
 		<set name="icon" val="icon.weapon_blackvisage_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1281,7 +1281,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15856" name="Veniplant Sword" name_additional="Acumen" type="Weapon">
+	<item id="15856" name="Veniplant Sword" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_veniplant_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1313,7 +1313,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15857" name="Veniplant Sword" name_additional="Magic Hold" type="Weapon">
+	<item id="15857" name="Veniplant Sword" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_veniplant_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1346,7 +1346,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15858" name="Veniplant Sword" name_additional="Mana Up" type="Weapon">
+	<item id="15858" name="Veniplant Sword" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_veniplant_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1378,7 +1378,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15859" name="Skull Carnium Bow" name_additional="Focus" type="Weapon">
+	<item id="15859" name="Skull Carnium Bow" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_skullgrove_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1413,7 +1413,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="15860" name="Skull Carnium Bow" name_additional="Critical Slow" type="Weapon">
+	<item id="15860" name="Skull Carnium Bow" additionalName="Critical Slow" type="Weapon">
 		<set name="icon" val="icon.weapon_skullgrove_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1449,7 +1449,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="15861" name="Skull Carnium Bow" name_additional="Cheap Shot" type="Weapon">
+	<item id="15861" name="Skull Carnium Bow" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_skullgrove_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1485,7 +1485,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="15862" name="Gemtail Rapier" name_additional="Health" type="Weapon">
+	<item id="15862" name="Gemtail Rapier" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_gemtail_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1523,7 +1523,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15863" name="Gemtail Rapier" name_additional="Focus" type="Weapon">
+	<item id="15863" name="Gemtail Rapier" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_gemtail_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1561,7 +1561,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15864" name="Gemtail Rapier" name_additional="Haste" type="Weapon">
+	<item id="15864" name="Gemtail Rapier" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_gemtail_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1599,7 +1599,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15865" name="Finale Blade" name_additional="Health" type="Weapon">
+	<item id="15865" name="Finale Blade" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_findragon blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1635,7 +1635,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15866" name="Finale Blade" name_additional="Focus" type="Weapon">
+	<item id="15866" name="Finale Blade" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_findragon blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1671,7 +1671,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15867" name="Finale Blade" name_additional="Haste" type="Weapon">
+	<item id="15867" name="Finale Blade" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_findragon blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1707,7 +1707,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15868" name="Dominion Crossbow" name_additional="Focus" type="Weapon">
+	<item id="15868" name="Dominion Crossbow" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_rudecutter_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1744,7 +1744,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="15869" name="Dominion Crossbow" name_additional="Critical Slow" type="Weapon">
+	<item id="15869" name="Dominion Crossbow" additionalName="Critical Slow" type="Weapon">
 		<set name="icon" val="icon.weapon_rudecutter_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1782,7 +1782,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="15870" name="Dominion Crossbow" name_additional="Cheap Shot" type="Weapon">
+	<item id="15870" name="Dominion Crossbow" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_rudecutter_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1820,7 +1820,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="15871" name="Eternal Core Sword" name_additional="Focus" type="Weapon">
+	<item id="15871" name="Eternal Core Sword" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_incessantcore_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1852,7 +1852,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15872" name="Eternal Core Sword" name_additional="Haste" type="Weapon">
+	<item id="15872" name="Eternal Core Sword" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_incessantcore_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1884,7 +1884,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15873" name="Eternal Core Sword" name_additional="Health" type="Weapon">
+	<item id="15873" name="Eternal Core Sword" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_incessantcore_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1916,7 +1916,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15874" name="Mamba Edge" name_additional="Haste" type="Weapon">
+	<item id="15874" name="Mamba Edge" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_mambaedge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1948,7 +1948,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15875" name="Mamba Edge" name_additional="Critical Damage" type="Weapon">
+	<item id="15875" name="Mamba Edge" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_mambaedge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1980,7 +1980,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15876" name="Mamba Edge" name_additional="HP Drain" type="Weapon">
+	<item id="15876" name="Mamba Edge" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_mambaedge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2012,7 +2012,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15877" name="Eversor Mace" name_additional="HP Regeneration" type="Weapon">
+	<item id="15877" name="Eversor Mace" additionalName="HP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_expowder_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2044,7 +2044,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15878" name="Eversor Mace" name_additional="HP Drain" type="Weapon">
+	<item id="15878" name="Eversor Mace" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_expowder_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2076,7 +2076,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15879" name="Eversor Mace" name_additional="Health" type="Weapon">
+	<item id="15879" name="Eversor Mace" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_expowder_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2108,7 +2108,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15880" name="Contristo Hammer" name_additional="HP Drain" type="Weapon">
+	<item id="15880" name="Contristo Hammer" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_pereztear_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2140,7 +2140,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15881" name="Contristo Hammer" name_additional="HP Regeneration" type="Weapon">
+	<item id="15881" name="Contristo Hammer" additionalName="HP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_pereztear_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2172,7 +2172,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15882" name="Contristo Hammer" name_additional="Health" type="Weapon">
+	<item id="15882" name="Contristo Hammer" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_pereztear_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2204,7 +2204,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15883" name="Lava Saw" name_additional="Focus" type="Weapon">
+	<item id="15883" name="Lava Saw" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_lavamond_saw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2236,7 +2236,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15884" name="Lava Saw" name_additional="Haste" type="Weapon">
+	<item id="15884" name="Lava Saw" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_lavamond_saw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2268,7 +2268,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15885" name="Lava Saw" name_additional="Health" type="Weapon">
+	<item id="15885" name="Lava Saw" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_lavamond_saw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2300,7 +2300,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15886" name="Jade Claw" name_additional="Critical Stun" type="Weapon">
+	<item id="15886" name="Jade Claw" additionalName="Critical Stun" type="Weapon">
 		<set name="icon" val="icon.weapon_jademice_claw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2333,7 +2333,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15887" name="Jade Claw" name_additional="Focus" type="Weapon">
+	<item id="15887" name="Jade Claw" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_jademice_claw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2365,7 +2365,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15888" name="Jade Claw" name_additional="Health" type="Weapon">
+	<item id="15888" name="Jade Claw" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_jademice_claw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2397,7 +2397,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15889" name="Demitelum" name_additional="Haste" type="Weapon">
+	<item id="15889" name="Demitelum" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_ghostcleaner_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2429,7 +2429,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="15890" name="Demitelum" name_additional="Health" type="Weapon">
+	<item id="15890" name="Demitelum" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_ghostcleaner_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2461,7 +2461,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="15891" name="Demitelum" name_additional="Guidance" type="Weapon">
+	<item id="15891" name="Demitelum" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_ghostcleaner_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2493,7 +2493,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="15892" name="Sacredium" name_additional="Mana Up" type="Weapon">
+	<item id="15892" name="Sacredium" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_sacredumors_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2526,7 +2526,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15893" name="Sacredium" name_additional="Acumen" type="Weapon">
+	<item id="15893" name="Sacredium" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_sacredumors_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2559,7 +2559,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15894" name="Sacredium" name_additional="MP Regeneration" type="Weapon">
+	<item id="15894" name="Sacredium" additionalName="MP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_sacredumors_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2592,7 +2592,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15895" name="Cyclic Cane" name_additional="Magic Hold" type="Weapon">
+	<item id="15895" name="Cyclic Cane" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_psyskilt_cane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2626,7 +2626,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15896" name="Cyclic Cane" name_additional="Empower" type="Weapon">
+	<item id="15896" name="Cyclic Cane" additionalName="Empower" type="Weapon">
 		<set name="icon" val="icon.weapon_psyskilt_cane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2659,7 +2659,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15897" name="Cyclic Cane" name_additional="MP Regeneration" type="Weapon">
+	<item id="15897" name="Cyclic Cane" additionalName="MP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_psyskilt_cane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2692,7 +2692,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15898" name="Archangel Sword" name_additional="Magic Hold" type="Weapon">
+	<item id="15898" name="Archangel Sword" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_archangel_sword_i001" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2725,7 +2725,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15899" name="Archangel Sword" name_additional="Mana Up" type="Weapon">
+	<item id="15899" name="Archangel Sword" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_archangel_sword_i001" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

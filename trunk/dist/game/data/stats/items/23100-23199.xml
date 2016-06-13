@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="23100" name="Vesper Retributer of Fortune" name_additional="90-day" type="Weapon">
+	<item id="23100" name="Vesper Retributer of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Max HP + 25%. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -36,7 +36,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="23101" name="Vesper Caster of Fortune" name_additional="90-day" type="Weapon">
+	<item id="23101" name="Vesper Caster of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Casting Spd. + 15%. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -72,7 +72,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="23102" name="Vesper Singer of Fortune" name_additional="90-day" type="Weapon">
+	<item id="23102" name="Vesper Singer of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Critical + 151. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -108,7 +108,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="23103" name="Vesper Thrower of Fortune" name_additional="90-day" type="Weapon">
+	<item id="23103" name="Vesper Thrower of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Critical + 133. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -145,7 +145,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="23104" name="Vesper Pincer of Fortune" name_additional="90-day" type="Weapon">
+	<item id="23104" name="Vesper Pincer of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Kamael-only weapon. \nCritical + 131. Has a chance of increasing all party members' P. Atk., M. Atk., and Heal Amount, and decreasing MP consumption during skill use during a Critical Attack. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -182,7 +182,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="23105" name="Vesper Shooter of Fortune" name_additional="90-day" type="Weapon">
+	<item id="23105" name="Vesper Shooter of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Kamael-only weapon. \nCritical + 133. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -219,7 +219,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="23106" name="Vesper Nagan of Fortune" name_additional="90-day" type="Weapon">
+	<item id="23106" name="Vesper Nagan of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Kamael-only weapon. \nCritical + 131. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -255,7 +255,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="23107" name="Vorpal Helmet of Fortune" name_additional="90-day" type="Armor">
+	<item id="23107" name="Vorpal Helmet of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -276,7 +276,7 @@
 			<stat type="pDef">107</stat>
 		</stats>
 	</item>
-	<item id="23108" name="Vorpal Leather Helmet of Fortune" name_additional="90-day" type="Armor">
+	<item id="23108" name="Vorpal Leather Helmet of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -297,7 +297,7 @@
 			<stat type="pDef">107</stat>
 		</stats>
 	</item>
-	<item id="23109" name="Vorpal Circlet of Fortune" name_additional="90-day" type="Armor">
+	<item id="23109" name="Vorpal Circlet of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -318,7 +318,7 @@
 			<stat type="pDef">107</stat>
 		</stats>
 	</item>
-	<item id="23110" name="Vorpal Breastplate of Fortune" name_additional="90-day" type="Armor">
+	<item id="23110" name="Vorpal Breastplate of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t94_u_i03" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -340,7 +340,7 @@
 			<stat type="pDef">263</stat>
 		</stats>
 	</item>
-	<item id="23111" name="Vorpal Leather Breastplate of Fortune" name_additional="90-day" type="Armor">
+	<item id="23111" name="Vorpal Leather Breastplate of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t95_u_i03" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -362,7 +362,7 @@
 			<stat type="pDef">197</stat>
 		</stats>
 	</item>
-	<item id="23112" name="Vorpal Tunic of Fortune" name_additional="90-day" type="Armor">
+	<item id="23112" name="Vorpal Tunic of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t96_u_i03" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -384,7 +384,7 @@
 			<stat type="pDef">132</stat>
 		</stats>
 	</item>
-	<item id="23113" name="Vorpal Gaiters of Fortune" name_additional="90-day" type="Armor">
+	<item id="23113" name="Vorpal Gaiters of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t94_l_i03" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -406,7 +406,7 @@
 			<stat type="pDef">164</stat>
 		</stats>
 	</item>
-	<item id="23114" name="Vorpal Leather Leggings of Fortune" name_additional="90-day" type="Armor">
+	<item id="23114" name="Vorpal Leather Leggings of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t95_l_i03" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -428,7 +428,7 @@
 			<stat type="pDef">123</stat>
 		</stats>
 	</item>
-	<item id="23115" name="Vorpal Stockings of Fortune" name_additional="90-day" type="Armor">
+	<item id="23115" name="Vorpal Stockings of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t96_l_i03" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -450,7 +450,7 @@
 			<stat type="pDef">82</stat>
 		</stats>
 	</item>
-	<item id="23116" name="Vorpal Gauntlets of Fortune" name_additional="90-day" type="Armor">
+	<item id="23116" name="Vorpal Gauntlets of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t94_g_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -471,7 +471,7 @@
 			<stat type="pDef">71</stat>
 		</stats>
 	</item>
-	<item id="23117" name="Vorpal Leather Gloves of Fortune" name_additional="90-day" type="Armor">
+	<item id="23117" name="Vorpal Leather Gloves of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t95_g_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -492,7 +492,7 @@
 			<stat type="pDef">71</stat>
 		</stats>
 	</item>
-	<item id="23118" name="Vorpal Gloves of Fortune" name_additional="90-day" type="Armor">
+	<item id="23118" name="Vorpal Gloves of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t96_g_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -513,7 +513,7 @@
 			<stat type="pDef">71</stat>
 		</stats>
 	</item>
-	<item id="23119" name="Vorpal Boots of Fortune" name_additional="90-day" type="Armor">
+	<item id="23119" name="Vorpal Boots of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t94_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -534,7 +534,7 @@
 			<stat type="pDef">71</stat>
 		</stats>
 	</item>
-	<item id="23120" name="Vorpal Leather Boots of Fortune" name_additional="90-day" type="Armor">
+	<item id="23120" name="Vorpal Leather Boots of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t95_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -555,7 +555,7 @@
 			<stat type="pDef">71</stat>
 		</stats>
 	</item>
-	<item id="23121" name="Vorpal Shoes of Fortune" name_additional="90-day" type="Armor">
+	<item id="23121" name="Vorpal Shoes of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t96_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -576,7 +576,7 @@
 			<stat type="pDef">71</stat>
 		</stats>
 	</item>
-	<item id="23122" name="Vorpal Shield of Fortune" name_additional="90-day" type="Weapon">
+	<item id="23122" name="Vorpal Shield of Fortune" additionalName="90-day" type="Weapon">
 		<set name="icon" val="icon.Evilgate_Shield_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -599,7 +599,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="23123" name="Vorpal Sigil of Fortune" name_additional="90-day" type="Armor">
+	<item id="23123" name="Vorpal Sigil of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.belleface_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />
@@ -622,7 +622,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="23124" name="Vorpal Heavy Armor of Fortune Set Pack (S80-grade)" name_additional="90-day" type="EtcItem">
+	<item id="23124" name="Vorpal Heavy Armor of Fortune Set Pack (S80-grade)" additionalName="90-day" type="EtcItem">
 		<!-- Wrapped Pack containing Vorpal Heavy Armor Set of Fortune. Disappears after 90 days. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="weight" val="100" />
@@ -645,7 +645,7 @@
 			<item id="23122" min="1" max="1" chance="100" /> <!-- Vorpal Shield of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="23125" name="Vorpal Light Armor of Fortune Set Pack (S80-grade)" name_additional="90-day" type="EtcItem">
+	<item id="23125" name="Vorpal Light Armor of Fortune Set Pack (S80-grade)" additionalName="90-day" type="EtcItem">
 		<!-- Wrapped Pack containing Vorpal Light Armor Set of Fortune. Disappears after 90 days. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="weight" val="100" />
@@ -667,7 +667,7 @@
 			<item id="23120" min="1" max="1" chance="100" /> <!-- Vorpal Leather Boots of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="23126" name="Vorpal Robe of Fortune Set Pack (S80-grade)" name_additional="90-day" type="EtcItem">
+	<item id="23126" name="Vorpal Robe of Fortune Set Pack (S80-grade)" additionalName="90-day" type="EtcItem">
 		<!-- Wrapped Pack containing Vorpal Robe Set of Fortune. Disappears after 90 days. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="weight" val="100" />
@@ -760,7 +760,7 @@
 			<item id="23132" min="1" max="1" chance="100" /> <!-- Vorpal Necklace of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="23130" name="Vorpal Ring of Fortune" name_additional="90-day" type="Armor">
+	<item id="23130" name="Vorpal Ring of Fortune" additionalName="90-day" type="Armor">
 		<!-- MP+ 26. -->
 		<set name="icon" val="icon.accessary_ponshrnoen_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -781,7 +781,7 @@
 			<stat type="mDef">65</stat>
 		</stats>
 	</item>
-	<item id="23131" name="Vorpal Earring of Fortune" name_additional="90-day" type="Armor">
+	<item id="23131" name="Vorpal Earring of Fortune" additionalName="90-day" type="Armor">
 		<!-- MP+ 38. -->
 		<set name="icon" val="icon.accessary_ponshrnoen_earring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -802,7 +802,7 @@
 			<stat type="mDef">98</stat>
 		</stats>
 	</item>
-	<item id="23132" name="Vorpal Necklace of Fortune" name_additional="90-day" type="Armor">
+	<item id="23132" name="Vorpal Necklace of Fortune" additionalName="90-day" type="Armor">
 		<!-- MP + 51. -->
 		<set name="icon" val="icon.accessary_ponshrnoen_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -904,7 +904,7 @@
 			<skill id="22626" level="1" /> <!-- Extra Pass -->
 		</skills>
 	</item>
-	<item id="23138" name="Vesper Dualsword of Fortune" name_additional="90-day" type="Weapon">
+	<item id="23138" name="Vesper Dualsword of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Dualswords, as with Two-handed Swords, Two-handed Blunts and Fist Weapons, increase in P. Atk. when enchanted compared to standard One-handed Swords. When enchanted to + 4 or above, Critical + 109 and Max HP + 10%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -940,7 +940,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="23139" name="Vesper Dual Dagger of Fortune" name_additional="90-day" type="Weapon">
+	<item id="23139" name="Vesper Dual Dagger of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Dual Daggers increase in P. Atk. when enchanted compared to standard One-handed Swords. When enchanted to + 4 or above, Critical + 109. Increases damage inflicted during PvP. Lv. 81 or above and Dagger Masters only. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1077,7 +1077,7 @@
 			<stat type="pDef">42</stat>
 		</stats>
 	</item>
-	<item id="23145" name="Consecrated Demon Eliminator" name_additional="Event" type="Armor">
+	<item id="23145" name="Consecrated Demon Eliminator" additionalName="Event" type="Armor">
 		<!-- Consecrated by the Einhasad Priests, this relic provides skills imbued with the Power of Einhasad. Use it to defeat zombies spreading Shilen's plague. 30-min. -->
 		<set name="icon" val="icon.etc_imperial_scepter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1101,7 +1101,7 @@
 			<skill id="21296" level="1" /> <!-- Exorcist's Punishment -->
 		</skills>
 	</item>
-	<item id="23146" name="Nevit's Holy Water Flask" name_additional="Event" type="Armor">
+	<item id="23146" name="Nevit's Holy Water Flask" additionalName="Event" type="Armor">
 		<!-- Consecrated by the Einhasad Priests, the holy water in this flask provides the healing skill of the Crystal of Protection and Nevit's skills that heal infected people before they turn into zombies. 30-min. -->
 		<set name="icon" val="icon.etc_water_potion_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1123,7 +1123,7 @@
 			<skill id="21297" level="1" /> <!-- Nevit's Touch -->
 		</skills>
 	</item>
-	<item id="23147" name="Ghost Potion" name_additional="Event" type="EtcItem">
+	<item id="23147" name="Ghost Potion" additionalName="Event" type="EtcItem">
 		<!-- Ghost Potion\n P. Atk. + 20%, M. Atk. + 85%, and Speed + 20. Cooldown is 60 min. -->
 		<set name="icon" val="icon.etc_water_potion_i00" />
 		<set name="weight" val="5" />
@@ -1140,7 +1140,7 @@
 			<skill id="22630" level="1" /> <!-- Ghost Potion -->
 		</skills>
 	</item>
-	<item id="23148" name="Exorcist's Mark" name_additional="Event" type="EtcItem">
+	<item id="23148" name="Exorcist's Mark" additionalName="Event" type="EtcItem">
 		<!-- Mark given to those who fought as zombies or against zombies in the zombie invasion of the village.\nCan be exchanged for various items through Exorcist Seira or Zombie Shaman Alestina. -->
 		<set name="icon" val="icon.etc_badge_black_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1154,7 +1154,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23149" name="Exorcist's Gift" name_additional="Event" type="EtcItem">
+	<item id="23149" name="Exorcist's Gift" additionalName="Event" type="EtcItem">
 		<!-- Use this to receive a useful item out of many. -->
 		<set name="icon" val="icon.etc_grave_goods_i00" />
 		<set name="is_freightable" val="false" />
@@ -1167,7 +1167,7 @@
 			<skill id="22627" level="1" /> <!-- Exorcist's Gift -->
 		</skills>
 	</item>
-	<item id="23150" name="Einhasad's Gift" name_additional="Event" type="EtcItem">
+	<item id="23150" name="Einhasad's Gift" additionalName="Event" type="EtcItem">
 		<!-- Use this to receive an item more valuable than the gift itself. -->
 		<set name="icon" val="icon.event_july_seven_park_i00" />
 		<set name="is_freightable" val="false" />
@@ -1180,7 +1180,7 @@
 			<skill id="22628" level="1" /> <!-- Einhasad's Gift -->
 		</skills>
 	</item>
-	<item id="23151" name="Shilen's Gift" name_additional="Event" type="EtcItem">
+	<item id="23151" name="Shilen's Gift" additionalName="Event" type="EtcItem">
 		<!-- Use this to receive an item more valuable than the gift itself. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="is_freightable" val="false" />
@@ -1511,7 +1511,7 @@
 			<skill id="22634" level="1" /> <!-- Soul Avatar's Large Placid -->
 		</skills>
 	</item>
-	<item id="23165" name="Chocolate for Summer Slushie" name_additional="Event" type="EtcItem">
+	<item id="23165" name="Chocolate for Summer Slushie" additionalName="Event" type="EtcItem">
 		<!-- Chocolate for Summer Slushie sought by Herina. Tastes sweet. You need 10 each of chocolate/cream/ice/biscuits to make 1 Sweet Summer Slushie. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_icewater_cho" />
 		<set name="is_sellable" val="false" />
@@ -1519,7 +1519,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23166" name="Cream for Summer Slushie" name_additional="Event" type="EtcItem">
+	<item id="23166" name="Cream for Summer Slushie" additionalName="Event" type="EtcItem">
 		<!-- Cream for Summer Slushie sought by Herina. Tastes smooth. You need 10 each of chocolate/cream/ice/biscuits to make 1 Sweet Summer Slushie. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_icewater_cream" />
 		<set name="is_sellable" val="false" />
@@ -1527,7 +1527,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23167" name="Ice for Summer Slushie" name_additional="Event" type="EtcItem">
+	<item id="23167" name="Ice for Summer Slushie" additionalName="Event" type="EtcItem">
 		<!-- Ice for Summer Slushie sought by Herina. Seems finely shaven. You need 10 each of chocolate/cream/ice/biscuits to make 1 Sweet Summer Slushie. -->
 		<set name="icon" val="icon.etc_broken_crystal_white_i00" />
 		<set name="is_sellable" val="false" />
@@ -1535,7 +1535,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23168" name="Biscuits for Summer Slushie" name_additional="Event" type="EtcItem">
+	<item id="23168" name="Biscuits for Summer Slushie" additionalName="Event" type="EtcItem">
 		<!-- Basket containing biscuits for Summer Slushie sought by Herina. Includes assorted biscuits, fruits, candy, and the like. You need 10 each of chocolate/cream/ice/biscuits to make 1 Sweet Summer Slushie. -->
 		<set name="icon" val="icon.etc_candy_basket_i00" />
 		<set name="is_sellable" val="false" />
@@ -1543,7 +1543,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23169" name="Sweet Summer Slushie" name_additional="Event" type="EtcItem">
+	<item id="23169" name="Sweet Summer Slushie" additionalName="Event" type="EtcItem">
 		<!-- Summer Slushie made by Herina. Use it to change into a Beach Swimsuit. For 1 hr., Atk. Spd. + 5%, Casting Spd. + 5%, Speed + 5, and Max HP/MP + 5%. Cooldown is 1 hr. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_sweet_icewater" />
 		<set name="is_sellable" val="false" />
@@ -1558,7 +1558,7 @@
 			<skill id="22631" level="1" /> <!-- Sweet Summer Slushie -->
 		</skills>
 	</item>
-	<item id="23170" name="Fantastic Summer Slushie" name_additional="Event" type="EtcItem">
+	<item id="23170" name="Fantastic Summer Slushie" additionalName="Event" type="EtcItem">
 		<!-- Summer Slushie made by Herina. Use this top-quality slushie to change into an Alluring Swimsuit. For 1 hr., Atk. Spd. + 10%, Casting Spd. + 10%, Speed. + 10, and Max HP/MP + 10%. Cooldown is 1 hr. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_sweet_icewater" />
 		<set name="is_clan_depositable" val="false" />
@@ -1578,7 +1578,7 @@
 			<skill id="22631" level="2" /> <!-- Fantastic Summer Slushie -->
 		</skills>
 	</item>
-	<item id="23171" name="Beach Swimsuit" name_additional="Event" type="Armor">
+	<item id="23171" name="Beach Swimsuit" additionalName="Event" type="Armor">
 		<!-- Swimsuit for the beach. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_swimsuit_event_01" />
 		<set name="armor_type" val="HEAVY" />
@@ -1595,7 +1595,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23172" name="Beach Swimsuit Appearance Stone" name_additional="Event" type="EtcItem">
+	<item id="23172" name="Beach Swimsuit Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of a Beach Swimsuit. One pieces are also possible. It modifies everything, making the appearance of all armor into that of swimwear. When changed, the cloak is not visible. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="immediate_effect" val="true" />
@@ -1631,7 +1631,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23174" name="Herina's Gift Box" name_additional="Event" type="EtcItem">
+	<item id="23174" name="Herina's Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain either a Fantastic Summer Slushie, Beach Swimsuit Appearance Stone, Alluring Swimsuit, Beach Sun Cap Pack (30-day), or Stylish Straw Hat Pack (30-day) at random. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1648,7 +1648,7 @@
 			<skill id="22633" level="1" /> <!-- Herina's Gift Box -->
 		</skills>
 	</item>
-	<item id="23175" name="Brilliant Beach Sun Cap" name_additional="30-day (Event)" type="Armor">
+	<item id="23175" name="Brilliant Beach Sun Cap" additionalName="30-day (Event)" type="Armor">
 		<!-- Fancy cap that completely blocks the sun. Uses 2 hair accessory slots. 30-day. -->
 		<set name="icon" val="BranchSys3.icon.g_beach_cap" />
 		<set name="default_action" val="EQUIP" />
@@ -1666,7 +1666,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="23176" name="Stylish Straw Hat" name_additional="30-day (Event)" type="Armor">
+	<item id="23176" name="Stylish Straw Hat" additionalName="30-day (Event)" type="Armor">
 		<!-- Hat made of straw fibers. Uses 2 hair accessory slots. 30-day. -->
 		<set name="icon" val="BranchSys3.icon.g_straw_hat" />
 		<set name="default_action" val="EQUIP" />
@@ -1684,7 +1684,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="23177" name="Brilliant Beach Sun Cap Pack (30-day)" name_additional="Event" type="EtcItem">
+	<item id="23177" name="Brilliant Beach Sun Cap Pack (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing Brilliant Beach Sun Cap (30-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />
@@ -1702,7 +1702,7 @@
 			<item id="23175" min="1" max="1" chance="100" /> <!-- Brilliant Beach Sun Cap - 30-day (Event) -->
 		</capsuled_items>
 	</item>
-	<item id="23178" name="Stylish Straw Hat Pack (30-day)" name_additional="Event" type="EtcItem">
+	<item id="23178" name="Stylish Straw Hat Pack (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing Stylish Straw Hat (30-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />

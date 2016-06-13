@@ -995,7 +995,7 @@
 			<skill id="9178" level="1" /> <!-- Theodric's Box -->
 		</skills>
 	</item>
-	<item id="17255" name="Blessed Scroll: Enchant Weapon (A-grade)" name_additional="Event" type="EtcItem">
+	<item id="17255" name="Blessed Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: When enchanted, P. Atk. increases by 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. increases by 5 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons. P. Atk. increases by 8 for bows. M. Atk. increases by 3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to +3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
 		<set name="material" val="PAPER" />
@@ -1012,7 +1012,7 @@
 			<skill id="2027" level="1" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
 		</skills>
 	</item>
-	<item id="17256" name="Blessed Scroll: Enchant Armor (A-grade)" name_additional="Event" type="EtcItem">
+	<item id="17256" name="Blessed Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: When enchanted, P. Def. increases by 1 for A-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
 		<set name="material" val="PAPER" />
@@ -1029,7 +1029,7 @@
 			<skill id="2209" level="1" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
 		</skills>
 	</item>
-	<item id="17257" name="Blessed Scroll: Enchant Weapon (B-grade)" name_additional="Event" type="EtcItem">
+	<item id="17257" name="Blessed Scroll: Enchant Weapon (B-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: When enchanted, P. Atk. increases by 3 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. increases by 4 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons. P. Atk. increases by 6 for bows. M. Atk. increases by 3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to +3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
 		<set name="material" val="PAPER" />
@@ -1046,7 +1046,7 @@
 			<skill id="2028" level="1" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
 		</skills>
 	</item>
-	<item id="17258" name="Blessed Scroll: Enchant Armor (B-grade)" name_additional="Event" type="EtcItem">
+	<item id="17258" name="Blessed Scroll: Enchant Armor (B-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: When enchanted, P. Def. increases by 1 for B-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
 		<set name="material" val="PAPER" />
@@ -1063,7 +1063,7 @@
 			<skill id="2210" level="1" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
 		</skills>
 	</item>
-	<item id="17259" name="Blessed Scroll: Enchant Weapon (C-grade)" name_additional="Event" type="EtcItem">
+	<item id="17259" name="Blessed Scroll: Enchant Weapon (C-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: When enchanted, P. Atk. increases by 3 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. increases by 4 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons. P. Atk. increases by 6 for bows. M. Atk. increases by 3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to +3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
 		<set name="material" val="PAPER" />
@@ -1080,7 +1080,7 @@
 			<skill id="2029" level="1" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
 		</skills>
 	</item>
-	<item id="17260" name="Blessed Scroll: Enchant Armor (C-grade)" name_additional="Event" type="EtcItem">
+	<item id="17260" name="Blessed Scroll: Enchant Armor (C-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: When enchanted, P. Def. increases by 1 for C-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
 		<set name="material" val="PAPER" />
@@ -1097,7 +1097,7 @@
 			<skill id="2211" level="1" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
 		</skills>
 	</item>
-	<item id="17261" name="Blessed Scroll: Enchant Weapon (D-grade)" name_additional="Event" type="EtcItem">
+	<item id="17261" name="Blessed Scroll: Enchant Weapon (D-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: When enchanted, P. Atk. increases by 2 for all D-grade weapons with the exception of bow, which will increase by 4. M. Atk. increases by 2 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to +3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
 		<set name="material" val="PAPER" />
@@ -1114,7 +1114,7 @@
 			<skill id="2030" level="1" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
 		</skills>
 	</item>
-	<item id="17262" name="Blessed Scroll: Enchant Armor (D-grade)" name_additional="Event" type="EtcItem">
+	<item id="17262" name="Blessed Scroll: Enchant Armor (D-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: When enchanted, P. Def. increases by 1 for D-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
 		<set name="material" val="PAPER" />
@@ -1131,7 +1131,7 @@
 			<skill id="2212" level="1" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
 		</skills>
 	</item>
-	<item id="17263" name="Blessed Scroll: Enchant Weapon (S-grade)" name_additional="Event" type="EtcItem">
+	<item id="17263" name="Blessed Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: When enchanted, P. Atk. increases by 5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. increases by 6 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons. P. Atk. increases by 10 for bows. M. Atk. increases by 4 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to +3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
 		<set name="material" val="PAPER" />
@@ -1148,7 +1148,7 @@
 			<skill id="2026" level="1" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
 		</skills>
 	</item>
-	<item id="17264" name="Blessed Scroll: Enchant Armor (S-grade)" name_additional="Event" type="EtcItem">
+	<item id="17264" name="Blessed Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: When enchanted, P. Def. increases by 1 for S-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
 		<set name="material" val="PAPER" />
@@ -1504,7 +1504,7 @@
 			<skill id="9181" level="1" /> <!-- XP Buff 50% (4-hour) -->
 		</skills>
 	</item>
-	<item id="17284" name="XP Buff 50% (4-hour)" name_additional="Event" type="EtcItem">
+	<item id="17284" name="XP Buff 50% (4-hour)" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. Hourglass that increases Nevit's blessing time by 4 hour(s). Can be used regardless of the level. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="material" val="LIQUID" />
@@ -1546,7 +1546,7 @@
 			<skill id="9183" level="1" /> <!-- Freya's Refreshing Breeze (4-hour) -->
 		</skills>
 	</item>
-	<item id="17286" name="Freya's Refreshing Breeze" name_additional="Event" type="EtcItem">
+	<item id="17286" name="Freya's Refreshing Breeze" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. When used, you can feel the Vitality recovery herb's effect for 4 hour(s). But there will be no effect when the "Birthday Joy" effect is applied. Re-use time is 60 minutes. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="material" val="LIQUID" />
@@ -1567,7 +1567,7 @@
 			<skill id="9184" level="1" /> <!-- Freya's Refreshing Breeze (4-hour) (Event) -->
 		</skills>
 	</item>
-	<item id="17287" name="2010 Summer Special Pack" name_additional="Event" type="EtcItem">
+	<item id="17287" name="2010 Summer Special Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional Item Pack. Gift box containing Nevit's Hourglass, Freya's Refreshing Breeze, and Ice Watermelon Hat. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -1587,7 +1587,7 @@
 			<item id="17288" min="1" max="1" chance="100" /> <!-- Ice Watermelon Hat - Event -->
 		</capsuled_items>
 	</item>
-	<item id="17288" name="Ice Watermelon Hat" name_additional="Event" type="Armor">
+	<item id="17288" name="Ice Watermelon Hat" additionalName="Event" type="Armor">
 		<!-- Description: Dimensional item. Hat that looks like a watermelon. Just looking at it is refreshing. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
 		<set name="default_action" val="EQUIP" />

@@ -253,7 +253,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="10617" name="Ant Hat" name_additional="Year 2008" type="Armor">
+	<item id="10617" name="Ant Hat" additionalName="Year 2008" type="Armor">
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -271,7 +271,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="10618" name="Ol Mahum Hat" name_additional="Year 2008" type="Armor">
+	<item id="10618" name="Ol Mahum Hat" additionalName="Year 2008" type="Armor">
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -289,7 +289,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="10619" name="Wolf Hat" name_additional="Year 2008" type="Armor">
+	<item id="10619" name="Wolf Hat" additionalName="Year 2008" type="Armor">
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -307,7 +307,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="10620" name="Shadow Item: Ant Hat" name_additional="Blessed Escape" type="Armor">
+	<item id="10620" name="Shadow Item: Ant Hat" additionalName="Blessed Escape" type="Armor">
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -329,7 +329,7 @@
 			<skill id="3264" level="1" /> <!-- Blessed Escape -->
 		</skills>
 	</item>
-	<item id="10621" name="Shadow Item: Ant Hat" name_additional="Blessed Resurrection" type="Armor">
+	<item id="10621" name="Shadow Item: Ant Hat" additionalName="Blessed Resurrection" type="Armor">
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -351,7 +351,7 @@
 			<skill id="3263" level="1" /> <!-- Blessed Resurrection -->
 		</skills>
 	</item>
-	<item id="10622" name="Shadow Item: Ant Hat" name_additional="Firework" type="Armor">
+	<item id="10622" name="Shadow Item: Ant Hat" additionalName="Firework" type="Armor">
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -373,7 +373,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker's Ability -->
 		</skills>
 	</item>
-	<item id="10623" name="Shadow Item: Ant Hat" name_additional="Big Head" type="Armor">
+	<item id="10623" name="Shadow Item: Ant Hat" additionalName="Big Head" type="Armor">
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -395,7 +395,7 @@
 			<skill id="3265" level="1" /> <!-- Mysterious Ability -->
 		</skills>
 	</item>
-	<item id="10624" name="Shadow Item: Ol Mahum Hat" name_additional="Blessed Escape" type="Armor">
+	<item id="10624" name="Shadow Item: Ol Mahum Hat" additionalName="Blessed Escape" type="Armor">
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -417,7 +417,7 @@
 			<skill id="3264" level="1" /> <!-- Blessed Escape -->
 		</skills>
 	</item>
-	<item id="10625" name="Shadow Item: Ol Mahum Hat" name_additional="Blessed Resurrection" type="Armor">
+	<item id="10625" name="Shadow Item: Ol Mahum Hat" additionalName="Blessed Resurrection" type="Armor">
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -439,7 +439,7 @@
 			<skill id="3263" level="1" /> <!-- Blessed Resurrection -->
 		</skills>
 	</item>
-	<item id="10626" name="Shadow Item: Ol Mahum Hat" name_additional="Firework" type="Armor">
+	<item id="10626" name="Shadow Item: Ol Mahum Hat" additionalName="Firework" type="Armor">
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -461,7 +461,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker's Ability -->
 		</skills>
 	</item>
-	<item id="10627" name="Shadow Item: Ol Mahum Hat" name_additional="Big Head" type="Armor">
+	<item id="10627" name="Shadow Item: Ol Mahum Hat" additionalName="Big Head" type="Armor">
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -483,7 +483,7 @@
 			<skill id="3265" level="1" /> <!-- Mysterious Ability -->
 		</skills>
 	</item>
-	<item id="10628" name="Shadow Item: Wolf Hat" name_additional="Blessed Escape" type="Armor">
+	<item id="10628" name="Shadow Item: Wolf Hat" additionalName="Blessed Escape" type="Armor">
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -505,7 +505,7 @@
 			<skill id="3264" level="1" /> <!-- Blessed Escape -->
 		</skills>
 	</item>
-	<item id="10629" name="Shadow Item: Wolf Hat" name_additional="Blessed Resurrection" type="Armor">
+	<item id="10629" name="Shadow Item: Wolf Hat" additionalName="Blessed Resurrection" type="Armor">
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -527,7 +527,7 @@
 			<skill id="3263" level="1" /> <!-- Blessed Resurrection -->
 		</skills>
 	</item>
-	<item id="10630" name="Shadow Item: Wolf Hat" name_additional="Firework" type="Armor">
+	<item id="10630" name="Shadow Item: Wolf Hat" additionalName="Firework" type="Armor">
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -549,7 +549,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker's Ability -->
 		</skills>
 	</item>
-	<item id="10631" name="Shadow Item: Wolf Hat" name_additional="Big Head" type="Armor">
+	<item id="10631" name="Shadow Item: Wolf Hat" additionalName="Big Head" type="Armor">
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1027,7 +1027,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10667" name="Sirra's Blade {PvP}" name_additional="Haste" type="Weapon">
+	<item id="10667" name="Sirra's Blade {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1064,7 +1064,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10668" name="Sirra's Blade {PvP}" name_additional="Health" type="Weapon">
+	<item id="10668" name="Sirra's Blade {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1101,7 +1101,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10669" name="Sirra's Blade {PvP}" name_additional="Critical Poison" type="Weapon">
+	<item id="10669" name="Sirra's Blade {PvP}" additionalName="Critical Poison" type="Weapon">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1138,7 +1138,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10670" name="Sword of Ipos {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10670" name="Sword of Ipos {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1175,7 +1175,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10671" name="Sword of Ipos {PvP}" name_additional="Haste" type="Weapon">
+	<item id="10671" name="Sword of Ipos {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1212,7 +1212,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10672" name="Sword of Ipos {PvP}" name_additional="Health" type="Weapon">
+	<item id="10672" name="Sword of Ipos {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1249,7 +1249,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10673" name="Barakiel's Axe {PvP}" name_additional="Health" type="Weapon">
+	<item id="10673" name="Barakiel's Axe {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1287,7 +1287,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10674" name="Barakiel's Axe {PvP}" name_additional="Haste" type="Weapon">
+	<item id="10674" name="Barakiel's Axe {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1325,7 +1325,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10675" name="Barakiel's Axe {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10675" name="Barakiel's Axe {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1363,7 +1363,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10676" name="Behemoth' Tuning Fork {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10676" name="Behemoth' Tuning Fork {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1401,7 +1401,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10677" name="Behemoth' Tuning Fork {PvP}" name_additional="Health" type="Weapon">
+	<item id="10677" name="Behemoth' Tuning Fork {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1439,7 +1439,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10678" name="Behemoth' Tuning Fork {PvP}" name_additional="Anger" type="Weapon">
+	<item id="10678" name="Behemoth' Tuning Fork {PvP}" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1477,7 +1477,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10679" name="Naga Storm {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10679" name="Naga Storm {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1516,7 +1516,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10680" name="Naga Storm {PvP}" name_additional="Critical Damage" type="Weapon">
+	<item id="10680" name="Naga Storm {PvP}" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1555,7 +1555,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10681" name="Naga Storm {PvP}" name_additional="Back Blow" type="Weapon">
+	<item id="10681" name="Naga Storm {PvP}" additionalName="Back Blow" type="Weapon">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1594,7 +1594,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10682" name="Tiphon's Spear {PvP}" name_additional="Critical Stun" type="Weapon">
+	<item id="10682" name="Tiphon's Spear {PvP}" additionalName="Critical Stun" type="Weapon">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1632,7 +1632,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10683" name="Tiphon's Spear {PvP}" name_additional="Long Blow" type="Weapon">
+	<item id="10683" name="Tiphon's Spear {PvP}" additionalName="Long Blow" type="Weapon">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1670,7 +1670,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10684" name="Tiphon's Spear {PvP}" name_additional="Wild Blow" type="Weapon">
+	<item id="10684" name="Tiphon's Spear {PvP}" additionalName="Wild Blow" type="Weapon">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1707,7 +1707,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10685" name="Shyeed's Bow {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="10685" name="Shyeed's Bow {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1747,7 +1747,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="10686" name="Shyeed's Bow {PvP}" name_additional="Focus" type="Weapon">
+	<item id="10686" name="Shyeed's Bow {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1787,7 +1787,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="10687" name="Shyeed's Bow {PvP}" name_additional="Quick Recovery" type="Weapon">
+	<item id="10687" name="Shyeed's Bow {PvP}" additionalName="Quick Recovery" type="Weapon">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1826,7 +1826,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="10688" name="Sobekk's Hurricane {PvP}" name_additional="Rsk. Haste" type="Weapon">
+	<item id="10688" name="Sobekk's Hurricane {PvP}" additionalName="Rsk. Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1865,7 +1865,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10689" name="Sobekk's Hurricane {PvP}" name_additional="Haste" type="Weapon">
+	<item id="10689" name="Sobekk's Hurricane {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1904,7 +1904,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10690" name="Sobekk's Hurricane {PvP}" name_additional="Critical Drain" type="Weapon">
+	<item id="10690" name="Sobekk's Hurricane {PvP}" additionalName="Critical Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1943,7 +1943,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10691" name="Themis' Tongue {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="10691" name="Themis' Tongue {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1981,7 +1981,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10692" name="Themis' Tongue {PvP}" name_additional="Magic Mental Shield" type="Weapon">
+	<item id="10692" name="Themis' Tongue {PvP}" additionalName="Magic Mental Shield" type="Weapon">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2019,7 +2019,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10693" name="Themis' Tongue {PvP}" name_additional="Magic Focus" type="Weapon">
+	<item id="10693" name="Themis' Tongue {PvP}" additionalName="Magic Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2057,7 +2057,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10694" name="Cabrio's Hand {PvP}" name_additional="Conversion" type="Weapon">
+	<item id="10694" name="Cabrio's Hand {PvP}" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2096,7 +2096,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10695" name="Cabrio's Hand {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="10695" name="Cabrio's Hand {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2135,7 +2135,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10696" name="Cabrio's Hand {PvP}" name_additional="Magic Silence" type="Weapon">
+	<item id="10696" name="Cabrio's Hand {PvP}" additionalName="Magic Silence" type="Weapon">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2174,7 +2174,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10697" name="Daimon Crystal {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="10697" name="Daimon Crystal {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2213,7 +2213,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10698" name="Daimon Crystal {PvP}" name_additional="Acumen" type="Weapon">
+	<item id="10698" name="Daimon Crystal {PvP}" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2252,7 +2252,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10699" name="Daimon Crystal {PvP}" name_additional="Magic Mental Shield" type="Weapon">
+	<item id="10699" name="Daimon Crystal {PvP}" additionalName="Magic Mental Shield" type="Weapon">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

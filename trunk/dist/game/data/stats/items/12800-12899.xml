@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="12800" name="Pumpkin Transformation Stick" name_additional="30-day" type="Weapon">
+	<item id="12800" name="Pumpkin Transformation Stick" additionalName="30-day" type="Weapon">
 		<set name="icon" val="icon.weapon_pumpkin_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1064,7 +1064,7 @@
 			<player level="80" />
 		</cond>
 	</item>
-	<item id="12852" name="Naga Storm - Molar {PvP}" name_additional="Focus" type="Weapon">
+	<item id="12852" name="Naga Storm - Molar {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1104,7 +1104,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12853" name="Naga Storm - Molar {PvP}" name_additional="Critical Damage" type="Weapon">
+	<item id="12853" name="Naga Storm - Molar {PvP}" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1144,7 +1144,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12854" name="Naga Storm - Molar {PvP}" name_additional="Back Blow" type="Weapon">
+	<item id="12854" name="Naga Storm - Molar {PvP}" additionalName="Back Blow" type="Weapon">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1184,7 +1184,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12855" name="Daimon Crystal - Wisdom {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="12855" name="Daimon Crystal - Wisdom {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1224,7 +1224,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12856" name="Daimon Crystal - Wisdom {PvP}" name_additional="Acumen" type="Weapon">
+	<item id="12856" name="Daimon Crystal - Wisdom {PvP}" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1264,7 +1264,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12857" name="Daimon Crystal - Wisdom {PvP}" name_additional="Magic Mental Shield" type="Weapon">
+	<item id="12857" name="Daimon Crystal - Wisdom {PvP}" additionalName="Magic Mental Shield" type="Weapon">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1304,7 +1304,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12858" name="Barakiel's Axe - Mild {PvP}" name_additional="Health" type="Weapon">
+	<item id="12858" name="Barakiel's Axe - Mild {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1343,7 +1343,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12859" name="Barakiel's Axe - Mild {PvP}" name_additional="Haste" type="Weapon">
+	<item id="12859" name="Barakiel's Axe - Mild {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1382,7 +1382,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12860" name="Barakiel's Axe - Mild {PvP}" name_additional="Focus" type="Weapon">
+	<item id="12860" name="Barakiel's Axe - Mild {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1421,7 +1421,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12861" name="Screaming Vengeance - Concentration {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="12861" name="Screaming Vengeance - Concentration {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1464,7 +1464,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="12862" name="Screaming Vengeance - Concentration {PvP}" name_additional="Focus" type="Weapon">
+	<item id="12862" name="Screaming Vengeance - Concentration {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1507,7 +1507,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="12863" name="Screaming Vengeance - Concentration {PvP}" name_additional="Quick Recovery" type="Weapon">
+	<item id="12863" name="Screaming Vengeance - Concentration {PvP}" additionalName="Quick Recovery" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1549,7 +1549,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="12864" name="Behemoth' Tuning Fork - Destruction {PvP}" name_additional="Focus" type="Weapon">
+	<item id="12864" name="Behemoth' Tuning Fork - Destruction {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1588,7 +1588,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12865" name="Behemoth' Tuning Fork - Destruction {PvP}" name_additional="Health" type="Weapon">
+	<item id="12865" name="Behemoth' Tuning Fork - Destruction {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1627,7 +1627,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12866" name="Behemoth' Tuning Fork - Destruction {PvP}" name_additional="Anger" type="Weapon">
+	<item id="12866" name="Behemoth' Tuning Fork - Destruction {PvP}" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1666,7 +1666,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12867" name="Durendal - Earth {PvP}" name_additional="Focus" type="Weapon">
+	<item id="12867" name="Durendal - Earth {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1708,7 +1708,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12868" name="Durendal - Earth {PvP}" name_additional="Haste" type="Weapon">
+	<item id="12868" name="Durendal - Earth {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1750,7 +1750,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12869" name="Durendal - Earth {PvP}" name_additional="Health" type="Weapon">
+	<item id="12869" name="Durendal - Earth {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1792,7 +1792,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12870" name="Shyeed's Bow - Concentration {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="12870" name="Shyeed's Bow - Concentration {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1833,7 +1833,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="12871" name="Shyeed's Bow - Concentration {PvP}" name_additional="Focus" type="Weapon">
+	<item id="12871" name="Shyeed's Bow - Concentration {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1874,7 +1874,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="12872" name="Shyeed's Bow - Concentration {PvP}" name_additional="Quick Recovery" type="Weapon">
+	<item id="12872" name="Shyeed's Bow - Concentration {PvP}" additionalName="Quick Recovery" type="Weapon">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1914,7 +1914,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="12873" name="Sword of Ipos - Earth {PvP}" name_additional="Focus" type="Weapon">
+	<item id="12873" name="Sword of Ipos - Earth {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1952,7 +1952,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12874" name="Sword of Ipos - Earth {PvP}" name_additional="Haste" type="Weapon">
+	<item id="12874" name="Sword of Ipos - Earth {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1990,7 +1990,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12875" name="Sword of Ipos - Earth {PvP}" name_additional="Health" type="Weapon">
+	<item id="12875" name="Sword of Ipos - Earth {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2028,7 +2028,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12876" name="Sobekk's Hurricane - Landslide {PvP}" name_additional="Rsk. Haste" type="Weapon">
+	<item id="12876" name="Sobekk's Hurricane - Landslide {PvP}" additionalName="Rsk. Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2068,7 +2068,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12877" name="Sobekk's Hurricane - Landslide {PvP}" name_additional="Haste" type="Weapon">
+	<item id="12877" name="Sobekk's Hurricane - Landslide {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2108,7 +2108,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12878" name="Sobekk's Hurricane - Landslide {PvP}" name_additional="Critical Drain" type="Weapon">
+	<item id="12878" name="Sobekk's Hurricane - Landslide {PvP}" additionalName="Critical Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2148,7 +2148,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12879" name="Sirra's Blade - Landslide {PvP}" name_additional="Haste" type="Weapon">
+	<item id="12879" name="Sirra's Blade - Landslide {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2186,7 +2186,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12880" name="Sirra's Blade - Landslide {PvP}" name_additional="Health" type="Weapon">
+	<item id="12880" name="Sirra's Blade - Landslide {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2224,7 +2224,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12881" name="Sirra's Blade - Landslide {PvP}" name_additional="Critical Poison" type="Weapon">
+	<item id="12881" name="Sirra's Blade - Landslide {PvP}" additionalName="Critical Poison" type="Weapon">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2262,7 +2262,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12882" name="Éclair Bijou - Landslide {PvP}" name_additional="Haste" type="Weapon">
+	<item id="12882" name="Éclair Bijou - Landslide {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2305,7 +2305,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12883" name="Éclair Bijou - Landslide {PvP}" name_additional="Health" type="Weapon">
+	<item id="12883" name="Éclair Bijou - Landslide {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2348,7 +2348,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12884" name="Éclair Bijou - Landslide {PvP}" name_additional="Critical Poison" type="Weapon">
+	<item id="12884" name="Éclair Bijou - Landslide {PvP}" additionalName="Critical Poison" type="Weapon">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2391,7 +2391,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12885" name="Tiphon's Spear - Landslide {PvP}" name_additional="Critical Stun" type="Weapon">
+	<item id="12885" name="Tiphon's Spear - Landslide {PvP}" additionalName="Critical Stun" type="Weapon">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2430,7 +2430,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="12886" name="Tiphon's Spear - Landslide {PvP}" name_additional="Long Blow" type="Weapon">
+	<item id="12886" name="Tiphon's Spear - Landslide {PvP}" additionalName="Long Blow" type="Weapon">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2469,7 +2469,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="12887" name="Tiphon's Spear - Landslide {PvP}" name_additional="Wild Blow" type="Weapon">
+	<item id="12887" name="Tiphon's Spear - Landslide {PvP}" additionalName="Wild Blow" type="Weapon">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2545,7 +2545,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12889" name="Themis' Tongue - Cleverness {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="12889" name="Themis' Tongue - Cleverness {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2584,7 +2584,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12890" name="Themis' Tongue - Cleverness {PvP}" name_additional="Magic Mental Shield" type="Weapon">
+	<item id="12890" name="Themis' Tongue - Cleverness {PvP}" additionalName="Magic Mental Shield" type="Weapon">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2623,7 +2623,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12891" name="Themis' Tongue - Cleverness {PvP}" name_additional="Magic Focus" type="Weapon">
+	<item id="12891" name="Themis' Tongue - Cleverness {PvP}" additionalName="Magic Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2662,7 +2662,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12892" name="Cabrio's Hand - Cleverness {PvP}" name_additional="Conversion" type="Weapon">
+	<item id="12892" name="Cabrio's Hand - Cleverness {PvP}" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2702,7 +2702,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12893" name="Cabrio's Hand - Cleverness {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="12893" name="Cabrio's Hand - Cleverness {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2742,7 +2742,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12894" name="Cabrio's Hand - Cleverness {PvP}" name_additional="Magic Silence" type="Weapon">
+	<item id="12894" name="Cabrio's Hand - Cleverness {PvP}" additionalName="Magic Silence" type="Weapon">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2782,7 +2782,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12895" name="Gram - Thunder {PvP}" name_additional="Haste" type="Weapon">
+	<item id="12895" name="Gram - Thunder {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2824,7 +2824,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12896" name="Gram - Thunder {PvP}" name_additional="Health" type="Weapon">
+	<item id="12896" name="Gram - Thunder {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2866,7 +2866,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12897" name="Gram - Thunder {PvP}" name_additional="Focus" type="Weapon">
+	<item id="12897" name="Gram - Thunder {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2908,7 +2908,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12898" name="Demon Splinter - Thunder {PvP}" name_additional="Focus" type="Weapon">
+	<item id="12898" name="Demon Splinter - Thunder {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2948,7 +2948,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12899" name="Demon Splinter - Thunder {PvP}" name_additional="Health" type="Weapon">
+	<item id="12899" name="Demon Splinter - Thunder {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />

@@ -21,7 +21,7 @@
 			<item id="23198" min="1" max="1" chance="100" /> <!-- Tribal Warrior Hair Accessory Appearance Stone -->
 		</capsuled_items>
 	</item>
-	<item id="23201" name="Dark Accessory Pack" name_additional="Event" type="EtcItem">
+	<item id="23201" name="Dark Accessory Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive either Antharas' Earring, Valakas' Necklace, Earth Wyrm Heart Ring, Bottle of Antharas' Soul, or Bottle of Valakas' Soul. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
@@ -622,7 +622,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="POTION" />
 	</item>
-	<item id="23233" name="Traces of Ancient Kartia's Labyrinth" name_additional="Event" type="EtcItem">
+	<item id="23233" name="Traces of Ancient Kartia's Labyrinth" additionalName="Event" type="EtcItem">
 		<!-- Traces of Ancient Kartia's Labyrinth. Perhaps a Kartia Researcher may know more about it. -->
 		<set name="icon" val="BranchSys3.Icon.g_ev_magic_powder" />
 		<set name="weight" val="10" />
@@ -985,7 +985,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23253" name="XP Rune III (Lv. 1-100+) 50%" name_additional="30-day" type="EtcItem">
+	<item id="23253" name="XP Rune III (Lv. 1-100+) 50%" additionalName="30-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired XP by 50%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1004,7 +1004,7 @@
 			<skill id="26046" level="5" /> <!-- XP Rune III (Lv. 1-100+) 50% -->
 		</skills>
 	</item>
-	<item id="23254" name="XP Rune III (Lv. 1-100+) 100%" name_additional="1-hour" type="EtcItem">
+	<item id="23254" name="XP Rune III (Lv. 1-100+) 100%" additionalName="1-hour" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired XP by 100%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1023,7 +1023,7 @@
 			<skill id="26046" level="6" /> <!-- XP Rune III (Lv. 1-100+) 100% -->
 		</skills>
 	</item>
-	<item id="23255" name="XP Rune III (Lv. 1-100+) 100%" name_additional="7-day" type="EtcItem">
+	<item id="23255" name="XP Rune III (Lv. 1-100+) 100%" additionalName="7-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired XP by 100%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1042,7 +1042,7 @@
 			<skill id="26046" level="6" /> <!-- XP Rune III (Lv. 1-100+) 100% -->
 		</skills>
 	</item>
-	<item id="23256" name="XP Rune III (Lv. 1-100+) 100%" name_additional="30-day" type="EtcItem">
+	<item id="23256" name="XP Rune III (Lv. 1-100+) 100%" additionalName="30-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired XP by 100%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1061,7 +1061,7 @@
 			<skill id="26046" level="6" /> <!-- XP Rune III (Lv. 1-100+) 100% -->
 		</skills>
 	</item>
-	<item id="23257" name="XP Rune III (Lv. 1-100+) 200%" name_additional="1-hour" type="EtcItem">
+	<item id="23257" name="XP Rune III (Lv. 1-100+) 200%" additionalName="1-hour" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired XP by 200%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1080,7 +1080,7 @@
 			<skill id="26046" level="7" /> <!-- XP Rune III (Lv. 1-100+) 200% -->
 		</skills>
 	</item>
-	<item id="23258" name="XP Rune III (Lv. 1-100+) 200%" name_additional="7-day" type="EtcItem">
+	<item id="23258" name="XP Rune III (Lv. 1-100+) 200%" additionalName="7-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired XP by 200%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1099,7 +1099,7 @@
 			<skill id="26046" level="7" /> <!-- XP Rune III (Lv. 1-100+) 200% -->
 		</skills>
 	</item>
-	<item id="23259" name="XP Rune III (Lv. 1-100+) 200%" name_additional="30-day" type="EtcItem">
+	<item id="23259" name="XP Rune III (Lv. 1-100+) 200%" additionalName="30-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired XP by 200%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1118,7 +1118,7 @@
 			<skill id="26046" level="7" /> <!-- XP Rune III (Lv. 1-100+) 200% -->
 		</skills>
 	</item>
-	<item id="23260" name="SP Rune 50%" name_additional="30-day" type="EtcItem">
+	<item id="23260" name="SP Rune 50%" additionalName="30-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired SP by 50%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1137,7 +1137,7 @@
 			<skill id="26047" level="5" /> <!-- SP Rune 50% -->
 		</skills>
 	</item>
-	<item id="23261" name="SP Rune 100%" name_additional="1-hour" type="EtcItem">
+	<item id="23261" name="SP Rune 100%" additionalName="1-hour" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired SP by 100%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1156,7 +1156,7 @@
 			<skill id="26047" level="6" /> <!-- SP Rune 100% -->
 		</skills>
 	</item>
-	<item id="23262" name="SP Rune 100%" name_additional="7-day" type="EtcItem">
+	<item id="23262" name="SP Rune 100%" additionalName="7-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired SP by 100%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1175,7 +1175,7 @@
 			<skill id="26047" level="6" /> <!-- SP Rune 100% -->
 		</skills>
 	</item>
-	<item id="23263" name="SP Rune 100%" name_additional="30-day" type="EtcItem">
+	<item id="23263" name="SP Rune 100%" additionalName="30-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired SP by 100%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1194,7 +1194,7 @@
 			<skill id="26047" level="6" /> <!-- SP Rune 100% -->
 		</skills>
 	</item>
-	<item id="23264" name="SP Rune 200%" name_additional="1-hour" type="EtcItem">
+	<item id="23264" name="SP Rune 200%" additionalName="1-hour" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired SP by 200%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1213,7 +1213,7 @@
 			<skill id="26047" level="7" /> <!-- SP Rune 200% -->
 		</skills>
 	</item>
-	<item id="23265" name="SP Rune 200%" name_additional="7-day" type="EtcItem">
+	<item id="23265" name="SP Rune 200%" additionalName="7-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired SP by 200%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1232,7 +1232,7 @@
 			<skill id="26047" level="7" /> <!-- SP Rune 200% -->
 		</skills>
 	</item>
-	<item id="23266" name="SP Rune 200%" name_additional="30-day" type="EtcItem">
+	<item id="23266" name="SP Rune 200%" additionalName="30-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired SP by 200%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1251,7 +1251,7 @@
 			<skill id="26047" level="7" /> <!-- SP Rune 200% -->
 		</skills>
 	</item>
-	<item id="23267" name="Eva's Rune" name_additional="1-hour" type="EtcItem">
+	<item id="23267" name="Eva's Rune" additionalName="1-hour" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When held in your inventory, grants the user Eva's Rune passive skill. The remaining time decreases even when not playing. -->
 		<set name="icon" val="BranchSys.icon.br_rune_of_eva_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1270,7 +1270,7 @@
 			<skill id="22091" level="1" /> <!-- Eva's Rune -->
 		</skills>
 	</item>
-	<item id="23268" name="Eva's Rune" name_additional="7-day" type="EtcItem">
+	<item id="23268" name="Eva's Rune" additionalName="7-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When held in your inventory, grants the user Eva's Rune passive skill. The remaining time decreases even when not playing. -->
 		<set name="icon" val="BranchSys.icon.br_rune_of_eva_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1289,7 +1289,7 @@
 			<skill id="22091" level="1" /> <!-- Eva's Rune -->
 		</skills>
 	</item>
-	<item id="23269" name="Eva's Rune" name_additional="30-day" type="EtcItem">
+	<item id="23269" name="Eva's Rune" additionalName="30-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When held in your inventory, grants the user Eva's Rune passive skill. The remaining time decreases even when not playing. -->
 		<set name="icon" val="BranchSys.icon.br_rune_of_eva_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1308,7 +1308,7 @@
 			<skill id="22091" level="1" /> <!-- Eva's Rune -->
 		</skills>
 	</item>
-	<item id="23270" name="Drop Rate Rune 50%" name_additional="1-hour" type="EtcItem">
+	<item id="23270" name="Drop Rate Rune 50%" additionalName="1-hour" type="EtcItem">
 		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1326,7 +1326,7 @@
 			<skill id="22587" level="2" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="23271" name="Drop Rate Rune 100%" name_additional="1-hour" type="EtcItem">
+	<item id="23271" name="Drop Rate Rune 100%" additionalName="1-hour" type="EtcItem">
 		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1344,7 +1344,7 @@
 			<skill id="22587" level="3" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="23272" name="Drop Rate Rune 200%" name_additional="1-hour" type="EtcItem">
+	<item id="23272" name="Drop Rate Rune 200%" additionalName="1-hour" type="EtcItem">
 		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 200%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1362,7 +1362,7 @@
 			<skill id="22587" level="4" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="23273" name="Drop Rate Rune 50%" name_additional="30-day" type="EtcItem">
+	<item id="23273" name="Drop Rate Rune 50%" additionalName="30-day" type="EtcItem">
 		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1380,7 +1380,7 @@
 			<skill id="22587" level="2" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="23274" name="Drop Rate Rune 100%" name_additional="30-day" type="EtcItem">
+	<item id="23274" name="Drop Rate Rune 100%" additionalName="30-day" type="EtcItem">
 		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1398,7 +1398,7 @@
 			<skill id="22587" level="3" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="23275" name="Drop Rate Rune 200%" name_additional="30-day" type="EtcItem">
+	<item id="23275" name="Drop Rate Rune 200%" additionalName="30-day" type="EtcItem">
 		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 200%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />

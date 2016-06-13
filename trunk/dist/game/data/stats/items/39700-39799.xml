@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="39700" name="Little Angel Wings" name_additional="LUC" type="Armor">
+	<item id="39700" name="Little Angel Wings" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
 		<set name="icon" val="icon.accessory_hair_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -8,7 +8,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="price" val="50000" />
 	</item>
-	<item id="39701" name="Little Angel Wings" name_additional="CHA" type="Armor">
+	<item id="39701" name="Little Angel Wings" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
 		<set name="icon" val="icon.accessory_hair_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -16,7 +16,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="price" val="50000" />
 	</item>
-	<item id="39702" name="Fairy Antennae" name_additional="LUC" type="Armor">
+	<item id="39702" name="Fairy Antennae" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
 		<set name="icon" val="icon.accessory_hair_feeler_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -24,7 +24,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="price" val="50000" />
 	</item>
-	<item id="39703" name="Fairy Antennae" name_additional="CHA" type="Armor">
+	<item id="39703" name="Fairy Antennae" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
 		<set name="icon" val="icon.accessory_hair_feeler_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -32,7 +32,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="price" val="50000" />
 	</item>
-	<item id="39704" name="Chapeau" name_additional="LUC" type="Armor">
+	<item id="39704" name="Chapeau" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
 		<set name="icon" val="icon.accessory_archer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -40,7 +40,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="price" val="200000" />
 	</item>
-	<item id="39705" name="Chapeau" name_additional="CHA" type="Armor">
+	<item id="39705" name="Chapeau" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
 		<set name="icon" val="icon.accessory_archer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -48,7 +48,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="price" val="200000" />
 	</item>
-	<item id="39706" name="Artisan's Goggles" name_additional="LUC" type="Armor">
+	<item id="39706" name="Artisan's Goggles" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
 		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -56,7 +56,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="price" val="200000" />
 	</item>
-	<item id="39707" name="Artisan's Goggles" name_additional="CHA" type="Armor">
+	<item id="39707" name="Artisan's Goggles" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
 		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -64,7 +64,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="price" val="200000" />
 	</item>
-	<item id="39708" name="Arrow-pierced Apple" name_additional="LUC" type="Armor">
+	<item id="39708" name="Arrow-pierced Apple" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
 		<set name="icon" val="icon.accessory_arrow_apple_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -72,7 +72,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="price" val="200000" />
 	</item>
-	<item id="39709" name="Arrow-pierced Apple" name_additional="CHA" type="Armor">
+	<item id="39709" name="Arrow-pierced Apple" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
 		<set name="icon" val="icon.accessory_arrow_apple_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -621,7 +621,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
-	<item id="39747" name="Dimensional Bracelet" name_additional="Stage 1 - Basic" type="Armor">
+	<item id="39747" name="Dimensional Bracelet" additionalName="Stage 1 - Basic" type="Armor">
 		<!-- Activates 1 Talisman Slot. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -637,7 +637,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39748" name="Dimensional Bracelet" name_additional="Stage 1 - STR" type="Armor">
+	<item id="39748" name="Dimensional Bracelet" additionalName="Stage 1 - STR" type="Armor">
 		<!-- Activates 1 Talisman Slot. STR stat can be added or enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -653,7 +653,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39749" name="Dimensional Bracelet" name_additional="Stage 1 - DEX" type="Armor">
+	<item id="39749" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
 		<!-- Activates 1 Talisman Slot. DEX stat can be added or enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -669,7 +669,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39750" name="Dimensional Bracelet" name_additional="Stage 1 - CON" type="Armor">
+	<item id="39750" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
 		<!-- Activates 1 Talisman Slot. CON stat can be added or enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -685,7 +685,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39751" name="Dimensional Bracelet" name_additional="Stage 1 - INT" type="Armor">
+	<item id="39751" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
 		<!-- Activates 1 Talisman Slot. INT stat can be added or enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -701,7 +701,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39752" name="Dimensional Bracelet" name_additional="Stage 1 - MEN" type="Armor">
+	<item id="39752" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
 		<!-- Activates 1 Talisman Slot. MEN stat can be added or enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -717,7 +717,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39753" name="Dimensional Bracelet" name_additional="Stage 1 - WIT" type="Armor">
+	<item id="39753" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
 		<!-- Activates 1 Talisman Slot. WIT stat can be added or enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -733,7 +733,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39754" name="Dimensional Bracelet" name_additional="Stage 1 - LUC" type="Armor">
+	<item id="39754" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
 		<!-- Activates 1 Talisman Slot. LUC stat can be added or enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -749,7 +749,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39755" name="Dimensional Bracelet" name_additional="Stage 1 - CHA" type="Armor">
+	<item id="39755" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
 		<!-- Activates 1 Talisman Slot. CHA stat can be added or enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -765,7 +765,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39756" name="Dimensional Bracelet" name_additional="Stage 1 - STR" type="Armor">
+	<item id="39756" name="Dimensional Bracelet" additionalName="Stage 1 - STR" type="Armor">
 		<!-- Activates 1 Talisman Slot. STR + 1. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -781,7 +781,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39757" name="Dimensional Bracelet" name_additional="Stage 1 - STR" type="Armor">
+	<item id="39757" name="Dimensional Bracelet" additionalName="Stage 1 - STR" type="Armor">
 		<!-- Activates 1 Talisman Slot. STR + 2. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -797,7 +797,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39758" name="Dimensional Bracelet" name_additional="Stage 1 - STR" type="Armor">
+	<item id="39758" name="Dimensional Bracelet" additionalName="Stage 1 - STR" type="Armor">
 		<!-- Activates 1 Talisman Slot. STR + 3. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -813,7 +813,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39759" name="Dimensional Bracelet" name_additional="Stage 1 - STR" type="Armor">
+	<item id="39759" name="Dimensional Bracelet" additionalName="Stage 1 - STR" type="Armor">
 		<!-- Activates 1 Talisman Slot. STR + 4. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -829,7 +829,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39760" name="Dimensional Bracelet" name_additional="Stage 1 - STR" type="Armor">
+	<item id="39760" name="Dimensional Bracelet" additionalName="Stage 1 - STR" type="Armor">
 		<!-- Activates 1 Talisman Slot. STR + 5. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -845,7 +845,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39761" name="Dimensional Bracelet" name_additional="Stage 1 - DEX" type="Armor">
+	<item id="39761" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
 		<!-- Activates 1 Talisman Slot. DEX + 1. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -861,7 +861,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39762" name="Dimensional Bracelet" name_additional="Stage 1 - DEX" type="Armor">
+	<item id="39762" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
 		<!-- Activates 1 Talisman Slot. DEX + 2. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -877,7 +877,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39763" name="Dimensional Bracelet" name_additional="Stage 1 - DEX" type="Armor">
+	<item id="39763" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
 		<!-- Activates 1 Talisman Slot. DEX + 3. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -893,7 +893,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39764" name="Dimensional Bracelet" name_additional="Stage 1 - DEX" type="Armor">
+	<item id="39764" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
 		<!-- Activates 1 Talisman Slot. DEX + 4. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -909,7 +909,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39765" name="Dimensional Bracelet" name_additional="Stage 1 - DEX" type="Armor">
+	<item id="39765" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
 		<!-- Activates 1 Talisman Slot. DEX + 5. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -925,7 +925,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39766" name="Dimensional Bracelet" name_additional="Stage 1 - CON" type="Armor">
+	<item id="39766" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
 		<!-- Activates 1 Talisman Slot. CON + 1. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -941,7 +941,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39767" name="Dimensional Bracelet" name_additional="Stage 1 - CON" type="Armor">
+	<item id="39767" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
 		<!-- Activates 1 Talisman Slot. CON + 2. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -957,7 +957,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39768" name="Dimensional Bracelet" name_additional="Stage 1 - CON" type="Armor">
+	<item id="39768" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
 		<!-- Activates 1 Talisman Slot. CON + 3. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -973,7 +973,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39769" name="Dimensional Bracelet" name_additional="Stage 1 - CON" type="Armor">
+	<item id="39769" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
 		<!-- Activates 1 Talisman Slot. CON + 4. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -989,7 +989,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39770" name="Dimensional Bracelet" name_additional="Stage 1 - CON" type="Armor">
+	<item id="39770" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
 		<!-- Activates 1 Talisman Slot. CON + 5. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1005,7 +1005,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39771" name="Dimensional Bracelet" name_additional="Stage 1 - INT" type="Armor">
+	<item id="39771" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
 		<!-- Activates 1 Talisman Slot. INT + 1. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1021,7 +1021,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39772" name="Dimensional Bracelet" name_additional="Stage 1 - INT" type="Armor">
+	<item id="39772" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
 		<!-- Activates 1 Talisman Slot. INT + 2. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1037,7 +1037,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39773" name="Dimensional Bracelet" name_additional="Stage 1 - INT" type="Armor">
+	<item id="39773" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
 		<!-- Activates 1 Talisman Slot. INT + 3. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1053,7 +1053,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39774" name="Dimensional Bracelet" name_additional="Stage 1 - INT" type="Armor">
+	<item id="39774" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
 		<!-- Activates 1 Talisman Slot. INT + 4. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1069,7 +1069,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39775" name="Dimensional Bracelet" name_additional="Stage 1 - INT" type="Armor">
+	<item id="39775" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
 		<!-- Activates 1 Talisman Slot. INT + 5. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1085,7 +1085,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39776" name="Dimensional Bracelet" name_additional="Stage 1 - MEN" type="Armor">
+	<item id="39776" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
 		<!-- Activates 1 Talisman Slot. MEN + 1. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1101,7 +1101,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39777" name="Dimensional Bracelet" name_additional="Stage 1 - MEN" type="Armor">
+	<item id="39777" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
 		<!-- Activates 1 Talisman Slot. MEN + 2. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1117,7 +1117,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39778" name="Dimensional Bracelet" name_additional="Stage 1 - MEN" type="Armor">
+	<item id="39778" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
 		<!-- Activates 1 Talisman Slot. MEN + 3. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1133,7 +1133,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39779" name="Dimensional Bracelet" name_additional="Stage 1 - MEN" type="Armor">
+	<item id="39779" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
 		<!-- Activates 1 Talisman Slot. MEN + 4. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1149,7 +1149,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39780" name="Dimensional Bracelet" name_additional="Stage 1 - MEN" type="Armor">
+	<item id="39780" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
 		<!-- Activates 1 Talisman Slot. MEN + 5. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1165,7 +1165,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39781" name="Dimensional Bracelet" name_additional="Stage 1 - WIT" type="Armor">
+	<item id="39781" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
 		<!-- Activates 1 Talisman Slot. WIT + 1. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1181,7 +1181,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39782" name="Dimensional Bracelet" name_additional="Stage 1 - WIT" type="Armor">
+	<item id="39782" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
 		<!-- Activates 1 Talisman Slot. WIT + 2. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1197,7 +1197,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39783" name="Dimensional Bracelet" name_additional="Stage 1 - WIT" type="Armor">
+	<item id="39783" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
 		<!-- Activates 1 Talisman Slot. WIT + 3. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1213,7 +1213,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39784" name="Dimensional Bracelet" name_additional="Stage 1 - WIT" type="Armor">
+	<item id="39784" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
 		<!-- Activates 1 Talisman Slot. WIT + 4. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1229,7 +1229,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39785" name="Dimensional Bracelet" name_additional="Stage 1 - WIT" type="Armor">
+	<item id="39785" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
 		<!-- Activates 1 Talisman Slot. WIT + 5. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1245,7 +1245,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39786" name="Dimensional Bracelet" name_additional="Stage 1 - LUC" type="Armor">
+	<item id="39786" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
 		<!-- Activates 1 Talisman Slot. LUC + 1. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1261,7 +1261,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39787" name="Dimensional Bracelet" name_additional="Stage 1 - LUC" type="Armor">
+	<item id="39787" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
 		<!-- Activates 1 Talisman Slot. LUC + 2. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1277,7 +1277,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39788" name="Dimensional Bracelet" name_additional="Stage 1 - LUC" type="Armor">
+	<item id="39788" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
 		<!-- Activates 1 Talisman Slot. LUC + 3. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1293,7 +1293,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39789" name="Dimensional Bracelet" name_additional="Stage 1 - LUC" type="Armor">
+	<item id="39789" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
 		<!-- Activates 1 Talisman Slot. LUC + 4. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1309,7 +1309,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39790" name="Dimensional Bracelet" name_additional="Stage 1 - LUC" type="Armor">
+	<item id="39790" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
 		<!-- Activates 1 Talisman Slot. LUC + 5. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1325,7 +1325,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39791" name="Dimensional Bracelet" name_additional="Stage 1 - CHA" type="Armor">
+	<item id="39791" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
 		<!-- Activates 1 Talisman Slot. CHA + 1. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1341,7 +1341,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39792" name="Dimensional Bracelet" name_additional="Stage 1 - CHA" type="Armor">
+	<item id="39792" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
 		<!-- Activates 1 Talisman Slot. CHA + 2. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1357,7 +1357,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39793" name="Dimensional Bracelet" name_additional="Stage 1 - CHA" type="Armor">
+	<item id="39793" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
 		<!-- Activates 1 Talisman Slot. CHA + 3. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1373,7 +1373,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39794" name="Dimensional Bracelet" name_additional="Stage 1 - CHA" type="Armor">
+	<item id="39794" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
 		<!-- Activates 1 Talisman Slot. CHA + 4. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1389,7 +1389,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39795" name="Dimensional Bracelet" name_additional="Stage 1 - CHA" type="Armor">
+	<item id="39795" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
 		<!-- Activates 1 Talisman Slot. CHA + 5. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1405,7 +1405,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39796" name="Dimensional Bracelet" name_additional="Stage 2 - Basic" type="Armor">
+	<item id="39796" name="Dimensional Bracelet" additionalName="Stage 2 - Basic" type="Armor">
 		<!-- Activates 2 Talisman Slots. -->
 		<set name="icon" val="icon.dimension_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1421,7 +1421,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39797" name="Dimensional Bracelet" name_additional="Stage 2 - STR" type="Armor">
+	<item id="39797" name="Dimensional Bracelet" additionalName="Stage 2 - STR" type="Armor">
 		<!-- Activates 2 Talisman Slots. STR stat can be added or enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1437,7 +1437,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39798" name="Dimensional Bracelet" name_additional="Stage 2 - DEX" type="Armor">
+	<item id="39798" name="Dimensional Bracelet" additionalName="Stage 2 - DEX" type="Armor">
 		<!-- Activates 2 Talisman Slots. DEX stat can be added or enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1453,7 +1453,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39799" name="Dimensional Bracelet" name_additional="Stage 2 - CON" type="Armor">
+	<item id="39799" name="Dimensional Bracelet" additionalName="Stage 2 - CON" type="Armor">
 		<!-- Activates 2 Talisman Slots. CON stat can be added or enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />

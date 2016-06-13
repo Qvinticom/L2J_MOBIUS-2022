@@ -1192,7 +1192,7 @@
 			<stat type="broochJewels">3</stat>
 		</stats>
 	</item>
-	<item id="38850" name="Topaz" name_additional="Lv. 1" type="Armor">
+	<item id="38850" name="Topaz" additionalName="Lv. 1" type="Armor">
 		<!-- Disrupts the target's casting when used. When used on a PC, inflicts damage with 1062 power. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1207,7 +1207,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38851" name="Topaz" name_additional="Lv. 2" type="Armor">
+	<item id="38851" name="Topaz" additionalName="Lv. 2" type="Armor">
 		<!-- Disrupts the target's casting when used. When used on a PC, inflicts damage with 3717 power. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1221,7 +1221,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 	</item>
-	<item id="38852" name="Topaz" name_additional="Lv. 3" type="Armor">
+	<item id="38852" name="Topaz" additionalName="Lv. 3" type="Armor">
 		<!-- Disrupts the target's casting when used. When used on a PC, inflicts damage with 6903 power. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1236,7 +1236,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38853" name="Topaz" name_additional="Lv. 4" type="Armor">
+	<item id="38853" name="Topaz" additionalName="Lv. 4" type="Armor">
 		<!-- Disrupts the target's casting when used. When used on a PC, inflicts damage with 10089 power. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1251,7 +1251,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38854" name="Topaz" name_additional="Lv. 5" type="Armor">
+	<item id="38854" name="Topaz" additionalName="Lv. 5" type="Armor">
 		<!-- Disrupts the target's casting when used. When used on a PC, inflicts damage with 13275 power. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1261,7 +1261,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38855" name="Ruby" name_additional="Lv. 1" type="Armor">
+	<item id="38855" name="Ruby" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 1%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1276,7 +1276,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38856" name="Ruby" name_additional="Lv. 2" type="Armor">
+	<item id="38856" name="Ruby" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 3.5%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1291,7 +1291,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38857" name="Ruby" name_additional="Lv. 3" type="Armor">
+	<item id="38857" name="Ruby" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 7.5%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1306,7 +1306,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38858" name="Ruby" name_additional="Lv. 4" type="Armor">
+	<item id="38858" name="Ruby" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 12.5%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1321,7 +1321,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38859" name="Ruby" name_additional="Lv. 5" type="Armor">
+	<item id="38859" name="Ruby" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 20%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1430,7 +1430,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38870" name="Obsidian" name_additional="Lv. 1" type="Armor">
+	<item id="38870" name="Obsidian" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, PvP incoming damage decreases by 1%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1445,7 +1445,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38871" name="Obsidian" name_additional="Lv. 2" type="Armor">
+	<item id="38871" name="Obsidian" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, PvP incoming damage decreases by 3%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1460,7 +1460,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38872" name="Obsidian" name_additional="Lv. 3" type="Armor">
+	<item id="38872" name="Obsidian" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, PvP incoming damage decreases by 7%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1475,7 +1475,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38873" name="Obsidian" name_additional="Lv. 4" type="Armor">
+	<item id="38873" name="Obsidian" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, PvP incoming damage decreases by 11%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1490,7 +1490,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38874" name="Obsidian" name_additional="Lv. 5" type="Armor">
+	<item id="38874" name="Obsidian" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, PvP incoming damage decreases by 15%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1500,7 +1500,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38875" name="Opal" name_additional="Lv. 1" type="Armor">
+	<item id="38875" name="Opal" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, the weapon attribute P. Atk. Increases by 10. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1515,7 +1515,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38876" name="Opal" name_additional="Lv. 2" type="Armor">
+	<item id="38876" name="Opal" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, the weapon attribute P. Atk. Increases by 20. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1530,7 +1530,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38877" name="Opal" name_additional="Lv. 3" type="Armor">
+	<item id="38877" name="Opal" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, the weapon attribute P. Atk. Increases by 40. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1545,7 +1545,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38878" name="Opal" name_additional="Lv. 4" type="Armor">
+	<item id="38878" name="Opal" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, the weapon attribute P. Atk. Increases by 70. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1560,7 +1560,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38879" name="Opal" name_additional="Lv. 5" type="Armor">
+	<item id="38879" name="Opal" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, the weapon attribute P. Atk. Increases by 120. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1570,7 +1570,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38880" name="Emerald" name_additional="Lv. 1" type="Armor">
+	<item id="38880" name="Emerald" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, CON + 1 and MEN + 1. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1588,7 +1588,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="compoundChance" val="100" />
 	</item>
-	<item id="38881" name="Emerald" name_additional="Lv. 2" type="Armor">
+	<item id="38881" name="Emerald" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, STR + 1, CON + 1, INT + 1, and MEN + 1. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1607,7 +1607,7 @@
 		<set name="compoundChance" val="80" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38882" name="Emerald" name_additional="Lv. 3" type="Armor">
+	<item id="38882" name="Emerald" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, STR + 1, DEX + 1, CON + 1, INT + 1, WIT + 1, and MEN + 1. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1626,7 +1626,7 @@
 		<set name="compoundChance" val="70" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38883" name="Emerald" name_additional="Lv. 4" type="Armor">
+	<item id="38883" name="Emerald" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, STR + 2, DEX + 2, CON + 2, INT + 2, WIT + 2, and MEN + 2. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1645,7 +1645,7 @@
 		<set name="compoundChance" val="50" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38884" name="Emerald" name_additional="Lv. 5" type="Armor">
+	<item id="38884" name="Emerald" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, STR + 3, DEX + 3, CON + 3, INT + 3, WIT + 3, and MEN + 3. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1655,7 +1655,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38885" name="Aquamarine" name_additional="Lv. 1" type="Armor">
+	<item id="38885" name="Aquamarine" additionalName="Lv. 1" type="Armor">
 		<!-- When using the skill after equipping, there is a chance of MP Recovery. Activation rate 1%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1674,7 +1674,7 @@
 		<set name="compoundChance" val="100" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38886" name="Aquamarine" name_additional="Lv. 2" type="Armor">
+	<item id="38886" name="Aquamarine" additionalName="Lv. 2" type="Armor">
 		<!-- When using the skill after equipping, there is a chance of MP Recovery. Activation rate 2%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1693,7 +1693,7 @@
 		<set name="compoundChance" val="80" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38887" name="Aquamarine" name_additional="Lv. 3" type="Armor">
+	<item id="38887" name="Aquamarine" additionalName="Lv. 3" type="Armor">
 		<!-- When using the skill after equipping, there is a chance of MP Recovery. Activation rate 4%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1712,7 +1712,7 @@
 		<set name="compoundChance" val="70" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38888" name="Aquamarine" name_additional="Lv. 4" type="Armor">
+	<item id="38888" name="Aquamarine" additionalName="Lv. 4" type="Armor">
 		<!-- When using the skill after equipping, there is a chance of MP Recovery. Activation rate 9%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1731,7 +1731,7 @@
 		<set name="compoundChance" val="50" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38889" name="Aquamarine" name_additional="Lv. 5" type="Armor">
+	<item id="38889" name="Aquamarine" additionalName="Lv. 5" type="Armor">
 		<!-- When using the skill after equipping, there is a chance of MP Recovery. Activation rate 15%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1741,7 +1741,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38890" name="Diamond" name_additional="Lv. 1" type="Armor">
+	<item id="38890" name="Diamond" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, P. Def. Increases by 283 and incoming P. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1760,7 +1760,7 @@
 		<set name="compoundChance" val="100" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38891" name="Diamond" name_additional="Lv. 2" type="Armor">
+	<item id="38891" name="Diamond" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, P. Def. Increases by 567 and incoming P. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1779,7 +1779,7 @@
 		<set name="compoundChance" val="80" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38892" name="Diamond" name_additional="Lv. 3" type="Armor">
+	<item id="38892" name="Diamond" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, P. Def. Increases by 945 and incoming P. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1798,7 +1798,7 @@
 		<set name="compoundChance" val="70" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38893" name="Diamond" name_additional="Lv. 4" type="Armor">
+	<item id="38893" name="Diamond" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, P. Def. Increases by 1418 and incoming P. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1817,7 +1817,7 @@
 		<set name="compoundChance" val="50" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38894" name="Diamond" name_additional="Lv. 5" type="Armor">
+	<item id="38894" name="Diamond" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, P. Def. Increases by 1986 and incoming P. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1827,7 +1827,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="38895" name="Pearl" name_additional="Lv. 1" type="Armor">
+	<item id="38895" name="Pearl" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, M. Def. Increases by 163 and incoming M. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1846,7 +1846,7 @@
 		<set name="compoundChance" val="100" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38896" name="Pearl" name_additional="Lv. 2" type="Armor">
+	<item id="38896" name="Pearl" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, M. Def. Increases by 328 and incoming M. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1865,7 +1865,7 @@
 		<set name="compoundChance" val="80" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38897" name="Pearl" name_additional="Lv. 3" type="Armor">
+	<item id="38897" name="Pearl" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, M. Def. Increases by 548 and incoming M. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1884,7 +1884,7 @@
 		<set name="compoundChance" val="70" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38898" name="Pearl" name_additional="Lv. 4" type="Armor">
+	<item id="38898" name="Pearl" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, M. Def. Increases by 821 and incoming M. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1903,7 +1903,7 @@
 		<set name="compoundChance" val="50" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38899" name="Pearl" name_additional="Lv. 5" type="Armor">
+	<item id="38899" name="Pearl" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, M. Def. Increases by 1150 and incoming M. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />

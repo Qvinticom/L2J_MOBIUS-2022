@@ -380,7 +380,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21920" name="Hellblade" name_additional="Haste" type="Weapon">
+	<item id="21920" name="Hellblade" additionalName="Haste" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -413,7 +413,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21921" name="Hellblade" name_additional="Health" type="Weapon">
+	<item id="21921" name="Hellblade" additionalName="Health" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -446,7 +446,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21922" name="Hellblade" name_additional="Focus" type="Weapon">
+	<item id="21922" name="Hellblade" additionalName="Focus" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -518,7 +518,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21924" name="Hellblade {PvP}" name_additional="Haste" type="Weapon">
+	<item id="21924" name="Hellblade {PvP}" additionalName="Haste" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -558,7 +558,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21925" name="Hellblade {PvP}" name_additional="Health" type="Weapon">
+	<item id="21925" name="Hellblade {PvP}" additionalName="Health" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -598,7 +598,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21926" name="Hellblade {PvP}" name_additional="Focus" type="Weapon">
+	<item id="21926" name="Hellblade {PvP}" additionalName="Focus" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -671,7 +671,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21928" name="Hellblade - Lightning" name_additional="Haste" type="Weapon">
+	<item id="21928" name="Hellblade - Lightning" additionalName="Haste" type="Weapon">
 		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -705,7 +705,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21929" name="Hellblade - Lightning" name_additional="Health" type="Weapon">
+	<item id="21929" name="Hellblade - Lightning" additionalName="Health" type="Weapon">
 		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -739,7 +739,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21930" name="Hellblade - Lightning" name_additional="Focus" type="Weapon">
+	<item id="21930" name="Hellblade - Lightning" additionalName="Focus" type="Weapon">
 		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -813,7 +813,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21932" name="Hellblade - Lightning {PvP}" name_additional="Haste" type="Weapon">
+	<item id="21932" name="Hellblade - Lightning {PvP}" additionalName="Haste" type="Weapon">
 		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -854,7 +854,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21933" name="Hellblade - Lightning {PvP}" name_additional="Health" type="Weapon">
+	<item id="21933" name="Hellblade - Lightning {PvP}" additionalName="Health" type="Weapon">
 		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -895,7 +895,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21934" name="Hellblade - Lightning {PvP}" name_additional="Focus" type="Weapon">
+	<item id="21934" name="Hellblade - Lightning {PvP}" additionalName="Focus" type="Weapon">
 		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1149,7 +1149,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21940" name="Claw of Destruction" name_additional="HP Drain" type="Weapon">
+	<item id="21940" name="Claw of Destruction" additionalName="HP Drain" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Recovers 4% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1183,7 +1183,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21941" name="Claw of Destruction" name_additional="Health" type="Weapon">
+	<item id="21941" name="Claw of Destruction" additionalName="Health" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1217,7 +1217,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21942" name="Claw of Destruction" name_additional="HP Regeneration" type="Weapon">
+	<item id="21942" name="Claw of Destruction" additionalName="HP Regeneration" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Increases HP recovery rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1291,7 +1291,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21944" name="Claw of Destruction {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="21944" name="Claw of Destruction {PvP}" additionalName="HP Drain" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Recovers 4% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1332,7 +1332,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21945" name="Claw of Destruction {PvP}" name_additional="Health" type="Weapon">
+	<item id="21945" name="Claw of Destruction {PvP}" additionalName="Health" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1373,7 +1373,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21946" name="Claw of Destruction {PvP}" name_additional="HP Regeneration" type="Weapon">
+	<item id="21946" name="Claw of Destruction {PvP}" additionalName="HP Regeneration" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. HP recovery speed is increased. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1448,7 +1448,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21948" name="Claw of Destruction - Landslide" name_additional="HP Drain" type="Weapon">
+	<item id="21948" name="Claw of Destruction - Landslide" additionalName="HP Drain" type="Weapon">
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Recovers 4% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1483,7 +1483,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21949" name="Claw of Destruction - Landslide" name_additional="Health" type="Weapon">
+	<item id="21949" name="Claw of Destruction - Landslide" additionalName="Health" type="Weapon">
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1518,7 +1518,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21950" name="Claw of Destruction - Landslide" name_additional="HP Regeneration" type="Weapon">
+	<item id="21950" name="Claw of Destruction - Landslide" additionalName="HP Regeneration" type="Weapon">
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases HP recovery rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1594,7 +1594,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21952" name="Claw of Destruction - Landslide {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="21952" name="Claw of Destruction - Landslide {PvP}" additionalName="HP Drain" type="Weapon">
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Recovers 4% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1636,7 +1636,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21953" name="Claw of Destruction - Landslide {PvP}" name_additional="Health" type="Weapon">
+	<item id="21953" name="Claw of Destruction - Landslide {PvP}" additionalName="Health" type="Weapon">
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1678,7 +1678,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21954" name="Claw of Destruction - Landslide {PvP}" name_additional="HP Regeneration" type="Weapon">
+	<item id="21954" name="Claw of Destruction - Landslide {PvP}" additionalName="HP Regeneration" type="Weapon">
 		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases HP recovery rate. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1902,7 +1902,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21960" name="Blood Brother" name_additional="Focus" type="Weapon">
+	<item id="21960" name="Blood Brother" additionalName="Focus" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1935,7 +1935,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21961" name="Blood Brother" name_additional="Health" type="Weapon">
+	<item id="21961" name="Blood Brother" additionalName="Health" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1968,7 +1968,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21962" name="Blood Brother" name_additional="Light Armor" type="Weapon">
+	<item id="21962" name="Blood Brother" additionalName="Light Armor" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2002,7 +2002,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21963" name="Blood Brother {PvP}" name_additional="Focus" type="Weapon">
+	<item id="21963" name="Blood Brother {PvP}" additionalName="Focus" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2042,7 +2042,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21964" name="Blood Brother {PvP}" name_additional="Health" type="Weapon">
+	<item id="21964" name="Blood Brother {PvP}" additionalName="Health" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2082,7 +2082,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21965" name="Blood Brother {PvP}" name_additional="Light Armor" type="Weapon">
+	<item id="21965" name="Blood Brother {PvP}" additionalName="Light Armor" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases weight gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2155,7 +2155,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21967" name="Blood Brother - Great Gale" name_additional="Focus" type="Weapon">
+	<item id="21967" name="Blood Brother - Great Gale" additionalName="Focus" type="Weapon">
 		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2189,7 +2189,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21968" name="Blood Brother - Great Gale" name_additional="Health" type="Weapon">
+	<item id="21968" name="Blood Brother - Great Gale" additionalName="Health" type="Weapon">
 		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2223,7 +2223,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21969" name="Blood Brother - Great Gale" name_additional="Light Armor" type="Weapon">
+	<item id="21969" name="Blood Brother - Great Gale" additionalName="Light Armor" type="Weapon">
 		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2258,7 +2258,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21970" name="Blood Brother - Great Gale {PvP}" name_additional="Focus" type="Weapon">
+	<item id="21970" name="Blood Brother - Great Gale {PvP}" additionalName="Focus" type="Weapon">
 		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2299,7 +2299,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21971" name="Blood Brother - Great Gale {PvP}" name_additional="Health" type="Weapon">
+	<item id="21971" name="Blood Brother - Great Gale {PvP}" additionalName="Health" type="Weapon">
 		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2340,7 +2340,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21972" name="Blood Brother - Great Gale {PvP}" name_additional="Light Armor" type="Weapon">
+	<item id="21972" name="Blood Brother - Great Gale {PvP}" additionalName="Light Armor" type="Weapon">
 		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases weight gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2412,7 +2412,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21974" name="Mardil's Fan" name_additional="M. Atk." type="Weapon">
+	<item id="21974" name="Mardil's Fan" additionalName="M. Atk." type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. When using magic, increases MP Consumption by 15% and increases M. Atk. by 167. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2445,7 +2445,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21975" name="Mardil's Fan" name_additional="Magic Silence" type="Weapon">
+	<item id="21975" name="Mardil's Fan" additionalName="Magic Silence" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. Inflicts silence on a target with a 10% chance when using a magic skill. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2479,7 +2479,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21976" name="Mardil's Fan" name_additional="Acumen" type="Weapon">
+	<item id="21976" name="Mardil's Fan" additionalName="Acumen" type="Weapon">
 		<!-- Description: (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2545,7 +2545,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21978" name="Mardil's Fan - Holy Spirit" name_additional="M. Atk." type="Weapon">
+	<item id="21978" name="Mardil's Fan - Holy Spirit" additionalName="M. Atk." type="Weapon">
 		<!-- Description: Masterwork Item that increases heal amount. (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. When using magic, increases MP Consumption by 15% and increases M. Atk. by 167. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2579,7 +2579,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21979" name="Mardil's Fan - Holy Spirit" name_additional="Magic Silence" type="Weapon">
+	<item id="21979" name="Mardil's Fan - Holy Spirit" additionalName="Magic Silence" type="Weapon">
 		<!-- Description: Masterwork Item that increases heal amount. (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. Inflicts silence on a target with a 10% chance when using a magic skill. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2614,7 +2614,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21980" name="Mardil's Fan - Holy Spirit" name_additional="Acumen" type="Weapon">
+	<item id="21980" name="Mardil's Fan - Holy Spirit" additionalName="Acumen" type="Weapon">
 		<!-- Description: Masterwork Item that increases heal amount. (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />

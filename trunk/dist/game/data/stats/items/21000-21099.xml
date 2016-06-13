@@ -218,7 +218,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="21011" name="Soccer Ball Afro Hair - Red" name_additional="Blessing of Victory" type="Armor">
+	<item id="21011" name="Soccer Ball Afro Hair - Red" additionalName="Blessing of Victory" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_worldcup_hair_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -598,7 +598,7 @@
 			<item id="21010" min="1" max="1" chance="100" /> <!-- Soccer Ball Afro Hair - Blue -->
 		</capsuled_items>
 	</item>
-	<item id="21026" name="Soccer Hall Afro Hair (Red) Pack" name_additional="Blessing of Victory" type="EtcItem">
+	<item id="21026" name="Soccer Hall Afro Hair (Red) Pack" additionalName="Blessing of Victory" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -944,7 +944,7 @@
 			<skill id="22179" level="1" /> <!-- Fortuna of Chaos -->
 		</skills>
 	</item>
-	<item id="21042" name="Flag Hat" name_additional="7-day" type="Armor">
+	<item id="21042" name="Flag Hat" additionalName="7-day" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_flag_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1025,7 +1025,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="21046" name="Agathion - Granny Tiger" name_additional="7-day" type="Armor">
+	<item id="21046" name="Agathion - Granny Tiger" additionalName="7-day" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_tiger_grandma_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1095,7 +1095,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="21049" name="Agathion - Cheerleader Orodriel" name_additional="7-day" type="Armor">
+	<item id="21049" name="Agathion - Cheerleader Orodriel" additionalName="7-day" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_cheer_FElf_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1142,7 +1142,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="21051" name="Agathion - Cheerleader Lanya" name_additional="7-day" type="Armor">
+	<item id="21051" name="Agathion - Cheerleader Lanya" additionalName="7-day" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_cheer_FFighter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1189,7 +1189,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="21053" name="Agathion - Cheerleader Naonin" name_additional="7-day" type="Armor">
+	<item id="21053" name="Agathion - Cheerleader Naonin" additionalName="7-day" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_cheer_FKamael_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1236,7 +1236,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="21055" name="Agathion - Cheerleader Mortia" name_additional="7-day" type="Armor">
+	<item id="21055" name="Agathion - Cheerleader Mortia" additionalName="7-day" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_cheer_FDarkelf_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1283,7 +1283,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="21057" name="Agathion - Cheerleader Kaurin" name_additional="7-day" type="Armor">
+	<item id="21057" name="Agathion - Cheerleader Kaurin" additionalName="7-day" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_cheer_FOrc_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1330,7 +1330,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="21059" name="Agathion - Cheerleader Meruril" name_additional="7-day" type="Armor">
+	<item id="21059" name="Agathion - Cheerleader Meruril" additionalName="7-day" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_cheer_FDwarf_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1377,7 +1377,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="21061" name="Agathion - Handy" name_additional="7-day" type="Armor">
+	<item id="21061" name="Agathion - Handy" additionalName="7-day" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_block_mother_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />

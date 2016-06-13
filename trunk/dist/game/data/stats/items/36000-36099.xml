@@ -167,7 +167,7 @@
 			<skill id="9574" level="1" /> <!-- High-grade Lucky Enchant Stone: Armor (R-grade) -->
 		</skills>
 	</item>
-	<item id="36010" name="Heavenly P. Atk. Cookie" name_additional="Event" type="EtcItem">
+	<item id="36010" name="Heavenly P. Atk. Cookie" additionalName="Event" type="EtcItem">
 		<!-- For 1 hour, increases Atk. by 35%, P. Critical Damage by 35%, P. Critical Rate by 100%, Atk. Spd. by 8%, M. Atk. by 16%, Casting Spd. by 8%, and Speed by 8. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_attack_cookie" />
 		<set name="weight" val="120" />
@@ -187,7 +187,7 @@
 			<skill id="9660" level="1" /> <!-- Heavenly P. Atk. Cookie (Event) -->
 		</skills>
 	</item>
-	<item id="36011" name="Heavenly P. Def. Cookie" name_additional="Event" type="EtcItem">
+	<item id="36011" name="Heavenly P. Def. Cookie" additionalName="Event" type="EtcItem">
 		<!-- For 1 hour, increases Atk. by 12%, P. Critical Damage by 35%, P. Critical Rate by 100%, Defense by 45%, Shield Defense Rate by 30%, and Shield Defense by 50%. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_defence_cookie" />
 		<set name="weight" val="120" />
@@ -207,7 +207,7 @@
 			<skill id="9661" level="1" /> <!-- Heavenly P. Def. Cookie (Event) -->
 		</skills>
 	</item>
-	<item id="36012" name="Heavenly Magic Cookie" name_additional="Event" type="EtcItem">
+	<item id="36012" name="Heavenly Magic Cookie" additionalName="Event" type="EtcItem">
 		<!-- For 1 hour, M. Atk. + 40%, M. Critical Rate by100%, Casting Spd. by 8%, P. Atk. by 8%, Atk. Spd. by 8%. Speed by 8, M. Def. by 14%, and MP Recovery Rate by 20%. For 1 hour, decreases Magic Skill MP Consumption by 15%, Physical Skill MP Consumption by 5%, and Skill Cooldown by 20%. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_magic_cookie" />
 		<set name="weight" val="120" />
@@ -227,7 +227,7 @@
 			<skill id="9662" level="1" /> <!-- Heavenly Magic Cookie (Event) -->
 		</skills>
 	</item>
-	<item id="36013" name="Heavenly CP Cookie" name_additional="Event" type="EtcItem">
+	<item id="36013" name="Heavenly CP Cookie" additionalName="Event" type="EtcItem">
 		<!-- For 1 hr., increases Max CP by 20%. Cooldown is 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_cp_cookie" />
 		<set name="weight" val="120" />
@@ -247,7 +247,7 @@
 			<skill id="9663" level="1" /> <!-- Heavenly CP Cookie (Event) -->
 		</skills>
 	</item>
-	<item id="36014" name="Heavenly P. Atk. Special Box" name_additional="Event" type="EtcItem">
+	<item id="36014" name="Heavenly P. Atk. Special Box" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly P. Atk. Cookies. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_clan_depositable" val="false" />
@@ -264,7 +264,7 @@
 			<item id="36010" min="10" max="10" chance="100" /> <!-- Heavenly P. Atk. Cookie - Event -->
 		</capsuled_items>
 	</item>
-	<item id="36015" name="Heavenly P. Def. Special Box" name_additional="Event" type="EtcItem">
+	<item id="36015" name="Heavenly P. Def. Special Box" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly P. Def. Cookies. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -281,7 +281,7 @@
 			<item id="36011" min="10" max="10" chance="100" /> <!-- Heavenly P. Def. Cookie - Event -->
 		</capsuled_items>
 	</item>
-	<item id="36016" name="Heavenly Magic Special Box" name_additional="Event" type="EtcItem">
+	<item id="36016" name="Heavenly Magic Special Box" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly Magic Cookies. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="is_clan_depositable" val="false" />
@@ -298,7 +298,7 @@
 			<item id="36012" min="10" max="10" chance="100" /> <!-- Heavenly Magic Cookie - Event -->
 		</capsuled_items>
 	</item>
-	<item id="36017" name="Heavenly CP Increase Special Box" name_additional="Event" type="EtcItem">
+	<item id="36017" name="Heavenly CP Increase Special Box" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly CP Cookie s. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="is_clan_depositable" val="false" />
@@ -315,7 +315,7 @@
 			<item id="36013" min="10" max="10" chance="100" /> <!-- Heavenly CP Cookie - Event -->
 		</capsuled_items>
 	</item>
-	<item id="36018" name="High-grade Lucky Enchant Stone Special Box" name_additional="Event" type="EtcItem">
+	<item id="36018" name="High-grade Lucky Enchant Stone Special Box" additionalName="Event" type="EtcItem">
 		<!-- Can get High-grade Lucky Enchant Stone: Weapon (R-grade) and High-grade Lucky Enchant Stone: Armor (R-grade). -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="is_clan_depositable" val="false" />
@@ -332,7 +332,7 @@
 			<item id="36020" min="1" max="1" chance="100" /> <!-- High-grade Lucky Enchant Stone: Armor (R-grade) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="36019" name="High-grade Lucky Enchant Stone: Weapon (R-grade)" name_additional="Event" type="EtcItem">
+	<item id="36019" name="High-grade Lucky Enchant Stone: Weapon (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate + 20% for weapons (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
@@ -352,7 +352,7 @@
 			<skill id="9573" level="1" /> <!-- High-grade Lucky Enchant Stone: Weapon (R-grade) -->
 		</skills>
 	</item>
-	<item id="36020" name="High-grade Lucky Enchant Stone: Armor (R-grade)" name_additional="Event" type="EtcItem">
+	<item id="36020" name="High-grade Lucky Enchant Stone: Armor (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate + 30% for armor (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="weight" val="120" />

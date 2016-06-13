@@ -282,7 +282,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36116" name="Scroll of Blessing (R-grade)" name_additional="Campaign" type="EtcItem">
+	<item id="36116" name="Scroll of Blessing (R-grade)" additionalName="Campaign" type="EtcItem">
 		<!-- The Blacksmith of Mammon can exchange standard Requiem, Immortal, Apocalypse or Twilight equipment for Blessed equipment for you at a low probability. Small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r1" />
 		<set name="weight" val="100" />
@@ -293,7 +293,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
-	<item id="36117" name="Scroll of Blessing (R95-grade)" name_additional="Campaign" type="EtcItem">
+	<item id="36117" name="Scroll of Blessing (R95-grade)" additionalName="Campaign" type="EtcItem">
 		<!-- The Blacksmith of Mammon can exchange standard Specter or Seraph equipment for Blessed equipment for you at a low probability. Small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r95" />
 		<set name="weight" val="100" />
@@ -357,7 +357,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="36121" name="Rabbit Ears: STR (3-day)" name_additional="Campaign" type="Armor">
+	<item id="36121" name="Rabbit Ears: STR (3-day)" additionalName="Campaign" type="Armor">
 		<!-- STR + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -378,7 +378,7 @@
 			<skill id="13396" level="1" /> <!-- Rabbit Ears: STR -->
 		</skills>
 	</item>
-	<item id="36122" name="Rabbit Ears: DEX (3-day)" name_additional="Campaign" type="Armor">
+	<item id="36122" name="Rabbit Ears: DEX (3-day)" additionalName="Campaign" type="Armor">
 		<!-- DEX + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -399,7 +399,7 @@
 			<skill id="13397" level="1" /> <!-- Rabbit Ears: DEX -->
 		</skills>
 	</item>
-	<item id="36123" name="Rabbit Ears: WIT (3-day)" name_additional="Campaign" type="Armor">
+	<item id="36123" name="Rabbit Ears: WIT (3-day)" additionalName="Campaign" type="Armor">
 		<!-- WIT + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -420,7 +420,7 @@
 			<skill id="13398" level="1" /> <!-- Rabbit Ears: WIT -->
 		</skills>
 	</item>
-	<item id="36124" name="Rabbit Ears: INT (3-day)" name_additional="Campaign" type="Armor">
+	<item id="36124" name="Rabbit Ears: INT (3-day)" additionalName="Campaign" type="Armor">
 		<!-- INT + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -441,7 +441,7 @@
 			<skill id="13399" level="1" /> <!-- Rabbit Ears: INT -->
 		</skills>
 	</item>
-	<item id="36125" name="Angel Circlet - STR (7-day)" name_additional="Campaign" type="Armor">
+	<item id="36125" name="Angel Circlet - STR (7-day)" additionalName="Campaign" type="Armor">
 		<!-- STR + 2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -462,7 +462,7 @@
 			<skill id="13400" level="1" /> <!-- Angel Circlet - STR -->
 		</skills>
 	</item>
-	<item id="36126" name="Angel Circlet - DEX (7-day)" name_additional="Campaign" type="Armor">
+	<item id="36126" name="Angel Circlet - DEX (7-day)" additionalName="Campaign" type="Armor">
 		<!-- DEX + 2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -483,7 +483,7 @@
 			<skill id="13401" level="1" /> <!-- Angel Circlet - DEX -->
 		</skills>
 	</item>
-	<item id="36127" name="Angel Circlet - WIT (7-day)" name_additional="Campaign" type="Armor">
+	<item id="36127" name="Angel Circlet - WIT (7-day)" additionalName="Campaign" type="Armor">
 		<!-- WIT + 2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -504,7 +504,7 @@
 			<skill id="13402" level="1" /> <!-- Angel Circlet - WIT -->
 		</skills>
 	</item>
-	<item id="36128" name="Angel Circlet - INT (7-day)" name_additional="Campaign" type="Armor">
+	<item id="36128" name="Angel Circlet - INT (7-day)" additionalName="Campaign" type="Armor">
 		<!-- INT + 2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1216,7 +1216,7 @@
 			<skill id="9695" level="1" /> <!-- Scroll of Escape: Seal of Shilen -->
 		</skills>
 	</item>
-	<item id="36176" name="2012 World Olympiad Hero's Accessory" name_additional="Sigel Knight" type="Armor">
+	<item id="36176" name="2012 World Olympiad Hero's Accessory" additionalName="Sigel Knight" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Jowangshin. Mark of the strongest Sigel Knight in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1235,7 +1235,7 @@
 			<skill id="9696" level="1" /> <!-- 2012 World Olympiad Hero -->
 		</skills>
 	</item>
-	<item id="36177" name="2012 World Olympiad Hero's Accessory" name_additional="Yul Archer" type="Armor">
+	<item id="36177" name="2012 World Olympiad Hero's Accessory" additionalName="Yul Archer" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, NangmanNalppi. Mark of the strongest Yul Archer in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1254,7 +1254,7 @@
 			<skill id="9697" level="1" /> <!-- 2012 World Olympiad Hero -->
 		</skills>
 	</item>
-	<item id="36178" name="2012 World Olympiad Hero's Accessory" name_additional="Tyrr Warrior" type="Armor">
+	<item id="36178" name="2012 World Olympiad Hero's Accessory" additionalName="Tyrr Warrior" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Gumsungs. Mark of the strongest Tyrr Warrior in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1273,7 +1273,7 @@
 			<skill id="9698" level="1" /> <!-- 2012 World Olympiad Hero -->
 		</skills>
 	</item>
-	<item id="36179" name="2012 World Olympiad Hero's Accessory" name_additional="Othell Rogue" type="Armor">
+	<item id="36179" name="2012 World Olympiad Hero's Accessory" additionalName="Othell Rogue" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Matdongsan. Mark of the strongest Othell Rogue in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1292,7 +1292,7 @@
 			<skill id="9699" level="1" /> <!-- 2012 World Olympiad Hero -->
 		</skills>
 	</item>
-	<item id="36180" name="2012 World Olympiad Hero's Accessory" name_additional="Iss Enchanter" type="Armor">
+	<item id="36180" name="2012 World Olympiad Hero's Accessory" additionalName="Iss Enchanter" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Akinsihoo. Mark of the strongest Iss Enchanter in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1311,7 +1311,7 @@
 			<skill id="9700" level="1" /> <!-- 2012 World Olympiad Hero -->
 		</skills>
 	</item>
-	<item id="36181" name="2012 World Olympiad Hero's Accessory" name_additional="Wynn Summoner" type="Armor">
+	<item id="36181" name="2012 World Olympiad Hero's Accessory" additionalName="Wynn Summoner" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Isisunarang. Mark of the strongest Wynn Summoner in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1330,7 +1330,7 @@
 			<skill id="9701" level="1" /> <!-- 2012 World Olympiad Hero -->
 		</skills>
 	</item>
-	<item id="36182" name="2012 World Olympiad Hero's Accessory" name_additional="Aeore Healer" type="Armor">
+	<item id="36182" name="2012 World Olympiad Hero's Accessory" additionalName="Aeore Healer" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Shinudambi. Mark of the strongest Aeore Healer in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1349,7 +1349,7 @@
 			<skill id="9702" level="1" /> <!-- 2012 World Olympiad Hero -->
 		</skills>
 	</item>
-	<item id="36183" name="2012 World Olympiad Hero's Accessory" name_additional="Feoh Wizard" type="Armor">
+	<item id="36183" name="2012 World Olympiad Hero's Accessory" additionalName="Feoh Wizard" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Chunhagun. Mark of the strongest Feoh Wizard in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1368,7 +1368,7 @@
 			<skill id="9703" level="1" /> <!-- 2012 World Olympiad Hero -->
 		</skills>
 	</item>
-	<item id="36184" name="Kaliel's Energy" name_additional="Annihilation" type="EtcItem">
+	<item id="36184" name="Kaliel's Energy" additionalName="Annihilation" type="EtcItem">
 		<!-- Kaliel's Energy protects the Talisman - Annihilation from turning into Talisman - Destruction when enchanting to Talisman - Hellfire fails. -->
 		<set name="icon" val="icon.etc_spirit_kalie_i00" />
 		<set name="is_stackable" val="true" />
@@ -1378,7 +1378,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="36185" name="Kaliel's Energy" name_additional="Hellfire" type="EtcItem">
+	<item id="36185" name="Kaliel's Energy" additionalName="Hellfire" type="EtcItem">
 		<!-- Kaliel's Energy protects the Talisman - Hellfire from turning into Talisman - Annihilation when enchanting to Talisman - Desire fails. -->
 		<set name="icon" val="icon.etc_spirit_kalie_i00" />
 		<set name="is_stackable" val="true" />
@@ -1388,7 +1388,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="36186" name="Kaliel's Energy" name_additional="Desire" type="EtcItem">
+	<item id="36186" name="Kaliel's Energy" additionalName="Desire" type="EtcItem">
 		<!-- Kaliel's Energy protects the Talisman - Desire from turning into Talisman - Hellfire when enchanting to Talisman - Longing fails. -->
 		<set name="icon" val="icon.etc_spirit_kalie_i00" />
 		<set name="is_stackable" val="true" />

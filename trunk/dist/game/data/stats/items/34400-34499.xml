@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="34400" name="Player Commendation - Tallum Blade*Damascus (Dark)" name_additional="PC-exclusive" type="Weapon">
+	<item id="34400" name="Player Commendation - Tallum Blade*Damascus (Dark)" additionalName="PC-exclusive" type="Weapon">
 		<!-- Tallum Blade*Damascus (Dark) with limited ability enhancement. P. Atk. Increases more when enchanted with a two-handed sword, two-handed blunt, or fist weapon rather than with a regular one-handed sword. When enchanted to 4 or more, increases Atk. Spd. by 8%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -38,7 +38,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34401" name="Player Commendation - Themis' Tongue (Earth)" name_additional="Mana Up (PC-exclusive)" type="Weapon">
+	<item id="34401" name="Player Commendation - Themis' Tongue (Earth)" additionalName="Mana Up (PC-exclusive)" type="Weapon">
 		<!-- Themis' Tongue (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max MP by 30%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -75,7 +75,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34402" name="Player Commendation - Themis' Tongue (Water)" name_additional="Mana Up (PC-exclusive)" type="Weapon">
+	<item id="34402" name="Player Commendation - Themis' Tongue (Water)" additionalName="Mana Up (PC-exclusive)" type="Weapon">
 		<!-- Themis' Tongue (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max MP by 30%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -112,7 +112,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34403" name="Player Commendation - Themis' Tongue (Wind)" name_additional="Mana Up (PC-exclusive)" type="Weapon">
+	<item id="34403" name="Player Commendation - Themis' Tongue (Wind)" additionalName="Mana Up (PC-exclusive)" type="Weapon">
 		<!-- Themis' Tongue (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max MP by 30%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -149,7 +149,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34404" name="Player Commendation - Themis' Tongue (Fire)" name_additional="Mana Up (PC-exclusive)" type="Weapon">
+	<item id="34404" name="Player Commendation - Themis' Tongue (Fire)" additionalName="Mana Up (PC-exclusive)" type="Weapon">
 		<!-- Themis' Tongue (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max MP by 30%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -186,7 +186,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34405" name="Player Commendation - Themis' Tongue (Holy)" name_additional="Mana Up (PC-exclusive)" type="Weapon">
+	<item id="34405" name="Player Commendation - Themis' Tongue (Holy)" additionalName="Mana Up (PC-exclusive)" type="Weapon">
 		<!-- Themis' Tongue (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max MP by 30%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -223,7 +223,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34406" name="Player Commendation - Themis' Tongue (Dark)" name_additional="Mana Up (PC-exclusive)" type="Weapon">
+	<item id="34406" name="Player Commendation - Themis' Tongue (Dark)" additionalName="Mana Up (PC-exclusive)" type="Weapon">
 		<!-- Themis' Tongue (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max MP by 30%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -260,7 +260,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34407" name="Player Commendation - Cabrio's Hand (Earth)" name_additional="Mana Up (PC-exclusive)" type="Weapon">
+	<item id="34407" name="Player Commendation - Cabrio's Hand (Earth)" additionalName="Mana Up (PC-exclusive)" type="Weapon">
 		<!-- Cabrio's Hand (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max MP by 30%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -298,7 +298,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34408" name="Player Commendation - Cabrio's Hand (Water)" name_additional="Mana Up (PC-exclusive)" type="Weapon">
+	<item id="34408" name="Player Commendation - Cabrio's Hand (Water)" additionalName="Mana Up (PC-exclusive)" type="Weapon">
 		<!-- Cabrio's Hand (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max MP by 30%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -336,7 +336,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34409" name="Player Commendation - Cabrio's Hand (Wind)" name_additional="Mana Up (PC-exclusive)" type="Weapon">
+	<item id="34409" name="Player Commendation - Cabrio's Hand (Wind)" additionalName="Mana Up (PC-exclusive)" type="Weapon">
 		<!-- Cabrio's Hand (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max MP by 30%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -374,7 +374,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34410" name="Player Commendation - Cabrio's Hand (Fire)" name_additional="Mana Up (PC-exclusive)" type="Weapon">
+	<item id="34410" name="Player Commendation - Cabrio's Hand (Fire)" additionalName="Mana Up (PC-exclusive)" type="Weapon">
 		<!-- Cabrio's Hand (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max MP by 30%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -412,7 +412,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34411" name="Player Commendation - Cabrio's Hand (Holy)" name_additional="Mana Up (PC-exclusive)" type="Weapon">
+	<item id="34411" name="Player Commendation - Cabrio's Hand (Holy)" additionalName="Mana Up (PC-exclusive)" type="Weapon">
 		<!-- Cabrio's Hand (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max MP by 30%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -450,7 +450,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34412" name="Player Commendation - Cabrio's Hand (Dark)" name_additional="Mana Up (PC-exclusive)" type="Weapon">
+	<item id="34412" name="Player Commendation - Cabrio's Hand (Dark)" additionalName="Mana Up (PC-exclusive)" type="Weapon">
 		<!-- Cabrio's Hand (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max MP by 30%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -488,7 +488,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34413" name="Player Commendation - Vesper Nagan (Earth)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34413" name="Player Commendation - Vesper Nagan (Earth)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Nagan (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -526,7 +526,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34414" name="Player Commendation - Vesper Nagan (Water)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34414" name="Player Commendation - Vesper Nagan (Water)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Nagan (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -564,7 +564,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34415" name="Player Commendation - Vesper Nagan (Wind)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34415" name="Player Commendation - Vesper Nagan (Wind)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Nagan (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -602,7 +602,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34416" name="Player Commendation - Vesper Nagan (Fire)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34416" name="Player Commendation - Vesper Nagan (Fire)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Nagan (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -640,7 +640,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34417" name="Player Commendation - Vesper Nagan (Holy)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34417" name="Player Commendation - Vesper Nagan (Holy)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Nagan (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -678,7 +678,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34418" name="Player Commendation - Vesper Nagan (Dark)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34418" name="Player Commendation - Vesper Nagan (Dark)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Nagan (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -716,7 +716,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34419" name="Player Commendation - Vesper Dual Daggers (Earth)" name_additional="PC-exclusive" type="Weapon">
+	<item id="34419" name="Player Commendation - Vesper Dual Daggers (Earth)" additionalName="PC-exclusive" type="Weapon">
 		<!-- Vesper Dual Daggers (Earth) with limited ability enhancement. When enchanted, P. Atk. of dual daggers increases more than that of a normal one-handed weapon. When enchanted to 4 or more, Critical increases by 109. Increases damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -755,7 +755,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34420" name="Player Commendation - Vesper Dual Daggers (Water)" name_additional="PC-exclusive" type="Weapon">
+	<item id="34420" name="Player Commendation - Vesper Dual Daggers (Water)" additionalName="PC-exclusive" type="Weapon">
 		<!-- Vesper Dual Daggers (Water) with limited ability enhancement. When enchanted, P. Atk. of dual daggers increases more than that of a normal one-handed weapon. When enchanted to 4 or more, Critical increases by 109. Increases damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -794,7 +794,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34421" name="Player Commendation - Vesper Dual Daggers (Wind)" name_additional="PC-exclusive" type="Weapon">
+	<item id="34421" name="Player Commendation - Vesper Dual Daggers (Wind)" additionalName="PC-exclusive" type="Weapon">
 		<!-- Vesper Dual Daggers (Wind) with limited ability enhancement. When enchanted, P. Atk. of dual daggers increases more than that of a normal one-handed weapon. When enchanted to 4 or more, Critical increases by 109. Increases damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -833,7 +833,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34422" name="Player Commendation - Vesper Dual Daggers (Fire)" name_additional="PC-exclusive" type="Weapon">
+	<item id="34422" name="Player Commendation - Vesper Dual Daggers (Fire)" additionalName="PC-exclusive" type="Weapon">
 		<!-- Vesper Dual Daggers (Fire) with limited ability enhancement. When enchanted, P. Atk. of dual daggers increases more than that of a normal one-handed weapon. When enchanted to 4 or more, Critical increases by 109. Increases damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -872,7 +872,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34423" name="Player Commendation - Vesper Dual Daggers (Holy)" name_additional="PC-exclusive" type="Weapon">
+	<item id="34423" name="Player Commendation - Vesper Dual Daggers (Holy)" additionalName="PC-exclusive" type="Weapon">
 		<!-- Vesper Dual Daggers (Holy) with limited ability enhancement. When enchanted, P. Atk. of dual daggers increases more than that of a normal one-handed weapon. When enchanted to 4 or more, Critical increases by 109. Increases damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -911,7 +911,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34424" name="Player Commendation - Vesper Dual Daggers (Dark)" name_additional="PC-exclusive" type="Weapon">
+	<item id="34424" name="Player Commendation - Vesper Dual Daggers (Dark)" additionalName="PC-exclusive" type="Weapon">
 		<!-- Vesper Dual Daggers (Dark) with limited ability enhancement. When enchanted, P. Atk. of dual daggers increases more than that of a normal one-handed weapon. When enchanted to 4 or more, Critical increases by 109. Increases damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -950,7 +950,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34425" name="Player Commendation - Vesper Dualsword (Earth)" name_additional="PC-exclusive" type="Weapon">
+	<item id="34425" name="Player Commendation - Vesper Dualsword (Earth)" additionalName="PC-exclusive" type="Weapon">
 		<!-- Vesper Dualsword (Earth) with limited ability enhancement. P. Atk. of dualswords increases more when enchanted with a two-handed sword, two-handed blunt, or fist weapon rather than with a regular one-handed sword. When enchanted to 4 or more, Critical increases by 109 and Max HP increases by 10%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -988,7 +988,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34426" name="Player Commendation - Vesper Dualsword (Water)" name_additional="PC-exclusive" type="Weapon">
+	<item id="34426" name="Player Commendation - Vesper Dualsword (Water)" additionalName="PC-exclusive" type="Weapon">
 		<!-- Vesper Dualsword (Water) with limited ability enhancement. P. Atk. of dualswords increases more when enchanted with a two-handed sword, two-handed blunt, or fist weapon rather than with a regular one-handed sword. When enchanted to 4 or more, Critical increases by 109 and Max HP increases by 10%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1026,7 +1026,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34427" name="Player Commendation - Vesper Dualsword (Wind)" name_additional="PC-exclusive" type="Weapon">
+	<item id="34427" name="Player Commendation - Vesper Dualsword (Wind)" additionalName="PC-exclusive" type="Weapon">
 		<!-- Vesper Dualsword (Wind) with limited ability enhancement. P. Atk. of dualswords increases more when enchanted with a two-handed sword, two-handed blunt, or fist weapon rather than with a regular one-handed sword. When enchanted to 4 or more, Critical increases by 109 and Max HP increases by 10%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1064,7 +1064,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34428" name="Player Commendation - Vesper Dualsword (Fire)" name_additional="PC-exclusive" type="Weapon">
+	<item id="34428" name="Player Commendation - Vesper Dualsword (Fire)" additionalName="PC-exclusive" type="Weapon">
 		<!-- Vesper Dualsword (Fire) with limited ability enhancement. P. Atk. of dualswords increases more when enchanted with a two-handed sword, two-handed blunt, or fist weapon rather than with a regular one-handed sword. When enchanted to 4 or more, Critical increases by 109 and Max HP increases by 10%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1102,7 +1102,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34429" name="Player Commendation - Vesper Dualsword (Holy)" name_additional="PC-exclusive" type="Weapon">
+	<item id="34429" name="Player Commendation - Vesper Dualsword (Holy)" additionalName="PC-exclusive" type="Weapon">
 		<!-- Vesper Dualsword (Holy) with limited ability enhancement. P. Atk. of dualswords increases more when enchanted with a two-handed sword, two-handed blunt, or fist weapon rather than with a regular one-handed sword. When enchanted to 4 or more, Critical increases by 109 and Max HP increases by 10%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1140,7 +1140,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34430" name="Player Commendation - Vesper Dualsword (Dark)" name_additional="PC-exclusive" type="Weapon">
+	<item id="34430" name="Player Commendation - Vesper Dualsword (Dark)" additionalName="PC-exclusive" type="Weapon">
 		<!-- Vesper Dualsword (Dark) with limited ability enhancement. P. Atk. of dualswords increases more when enchanted with a two-handed sword, two-handed blunt, or fist weapon rather than with a regular one-handed sword. When enchanted to 4 or more, Critical increases by 109 and Max HP increases by 10%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1178,7 +1178,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34431" name="Player Commendation - Vesper Retributer (Earth)" name_additional="Health (PC-exclusive)" type="Weapon">
+	<item id="34431" name="Player Commendation - Vesper Retributer (Earth)" additionalName="Health (PC-exclusive)" type="Weapon">
 		<!-- Vesper Retributer (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1216,7 +1216,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34432" name="Player Commendation - Vesper Retributer (Water)" name_additional="Health (PC-exclusive)" type="Weapon">
+	<item id="34432" name="Player Commendation - Vesper Retributer (Water)" additionalName="Health (PC-exclusive)" type="Weapon">
 		<!-- Vesper Retributer (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1254,7 +1254,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34433" name="Player Commendation - Vesper Retributer (Wind)" name_additional="Health (PC-exclusive)" type="Weapon">
+	<item id="34433" name="Player Commendation - Vesper Retributer (Wind)" additionalName="Health (PC-exclusive)" type="Weapon">
 		<!-- Vesper Retributer (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1292,7 +1292,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34434" name="Player Commendation - Vesper Retributer (Fire)" name_additional="Health (PC-exclusive)" type="Weapon">
+	<item id="34434" name="Player Commendation - Vesper Retributer (Fire)" additionalName="Health (PC-exclusive)" type="Weapon">
 		<!-- Vesper Retributer (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1330,7 +1330,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34435" name="Player Commendation - Vesper Retributer (Holy)" name_additional="Health (PC-exclusive)" type="Weapon">
+	<item id="34435" name="Player Commendation - Vesper Retributer (Holy)" additionalName="Health (PC-exclusive)" type="Weapon">
 		<!-- Vesper Retributer (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1368,7 +1368,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34436" name="Player Commendation - Vesper Retributer (Dark)" name_additional="Health (PC-exclusive)" type="Weapon">
+	<item id="34436" name="Player Commendation - Vesper Retributer (Dark)" additionalName="Health (PC-exclusive)" type="Weapon">
 		<!-- Vesper Retributer (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1406,7 +1406,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34437" name="Player Commendation - Vesper Buster (Earth)" name_additional="Acumen (PC-exclusive)" type="Weapon">
+	<item id="34437" name="Player Commendation - Vesper Buster (Earth)" additionalName="Acumen (PC-exclusive)" type="Weapon">
 		<!-- Vesper Buster (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1443,7 +1443,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34438" name="Player Commendation - Vesper Buster (Water)" name_additional="Acumen (PC-exclusive)" type="Weapon">
+	<item id="34438" name="Player Commendation - Vesper Buster (Water)" additionalName="Acumen (PC-exclusive)" type="Weapon">
 		<!-- Vesper Buster (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1480,7 +1480,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34439" name="Player Commendation - Vesper Buster (Wind)" name_additional="Acumen (PC-exclusive)" type="Weapon">
+	<item id="34439" name="Player Commendation - Vesper Buster (Wind)" additionalName="Acumen (PC-exclusive)" type="Weapon">
 		<!-- Vesper Buster (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1517,7 +1517,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34440" name="Player Commendation - Vesper Buster (Fire)" name_additional="Acumen (PC-exclusive)" type="Weapon">
+	<item id="34440" name="Player Commendation - Vesper Buster (Fire)" additionalName="Acumen (PC-exclusive)" type="Weapon">
 		<!-- Vesper Buster (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1554,7 +1554,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34441" name="Player Commendation - Vesper Buster (Holy)" name_additional="Acumen (PC-exclusive)" type="Weapon">
+	<item id="34441" name="Player Commendation - Vesper Buster (Holy)" additionalName="Acumen (PC-exclusive)" type="Weapon">
 		<!-- Vesper Buster (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1591,7 +1591,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34442" name="Player Commendation - Vesper Buster (Dark)" name_additional="Acumen (PC-exclusive)" type="Weapon">
+	<item id="34442" name="Player Commendation - Vesper Buster (Dark)" additionalName="Acumen (PC-exclusive)" type="Weapon">
 		<!-- Vesper Buster (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1628,7 +1628,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34443" name="Player Commendation - Vesper Shaper (Earth)" name_additional="Critical Damage (PC-exclusive)" type="Weapon">
+	<item id="34443" name="Player Commendation - Vesper Shaper (Earth)" additionalName="Critical Damage (PC-exclusive)" type="Weapon">
 		<!-- Vesper Shaper (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 906 during a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1666,7 +1666,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34444" name="Player Commendation - Vesper Shaper (Water)" name_additional="Critical Damage (PC-exclusive)" type="Weapon">
+	<item id="34444" name="Player Commendation - Vesper Shaper (Water)" additionalName="Critical Damage (PC-exclusive)" type="Weapon">
 		<!-- Vesper Shaper (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 906 during a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1704,7 +1704,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34445" name="Player Commendation - Vesper Shaper (Wind)" name_additional="Critical Damage (PC-exclusive)" type="Weapon">
+	<item id="34445" name="Player Commendation - Vesper Shaper (Wind)" additionalName="Critical Damage (PC-exclusive)" type="Weapon">
 		<!-- Vesper Shaper (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 906 during a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1742,7 +1742,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34446" name="Player Commendation - Vesper Shaper (Fire)" name_additional="Critical Damage (PC-exclusive)" type="Weapon">
+	<item id="34446" name="Player Commendation - Vesper Shaper (Fire)" additionalName="Critical Damage (PC-exclusive)" type="Weapon">
 		<!-- Vesper Shaper (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 906 during a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1780,7 +1780,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34447" name="Player Commendation - Vesper Shaper (Holy)" name_additional="Critical Damage (PC-exclusive)" type="Weapon">
+	<item id="34447" name="Player Commendation - Vesper Shaper (Holy)" additionalName="Critical Damage (PC-exclusive)" type="Weapon">
 		<!-- Vesper Shaper (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 906 during a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1818,7 +1818,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34448" name="Player Commendation - Vesper Shaper (Dark)" name_additional="Critical Damage (PC-exclusive)" type="Weapon">
+	<item id="34448" name="Player Commendation - Vesper Shaper (Dark)" additionalName="Critical Damage (PC-exclusive)" type="Weapon">
 		<!-- Vesper Shaper (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 906 during a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1856,7 +1856,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34449" name="Player Commendation - Vesper Shooter (Earth)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34449" name="Player Commendation - Vesper Shooter (Earth)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Shooter (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1895,7 +1895,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34450" name="Player Commendation - Vesper Shooter (Water)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34450" name="Player Commendation - Vesper Shooter (Water)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Shooter (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1934,7 +1934,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34451" name="Player Commendation - Vesper Shooter (Wind)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34451" name="Player Commendation - Vesper Shooter (Wind)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Shooter (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1973,7 +1973,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34452" name="Player Commendation - Vesper Shooter (Fire)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34452" name="Player Commendation - Vesper Shooter (Fire)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Shooter (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2012,7 +2012,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34453" name="Player Commendation - Vesper Shooter (Holy)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34453" name="Player Commendation - Vesper Shooter (Holy)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Shooter (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2051,7 +2051,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34454" name="Player Commendation - Vesper Shooter (Dark)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34454" name="Player Commendation - Vesper Shooter (Dark)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Shooter (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2090,7 +2090,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34455" name="Player Commendation - Vesper Thrower (Earth)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34455" name="Player Commendation - Vesper Thrower (Earth)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Thrower (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2129,7 +2129,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34456" name="Player Commendation - Vesper Thrower (Water)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34456" name="Player Commendation - Vesper Thrower (Water)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Thrower (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2168,7 +2168,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34457" name="Player Commendation - Vesper Thrower (Wind)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34457" name="Player Commendation - Vesper Thrower (Wind)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Thrower (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2207,7 +2207,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34458" name="Player Commendation - Vesper Thrower (Fire)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34458" name="Player Commendation - Vesper Thrower (Fire)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Thrower (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2246,7 +2246,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34459" name="Player Commendation - Vesper Thrower (Holy)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34459" name="Player Commendation - Vesper Thrower (Holy)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Thrower (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2285,7 +2285,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34460" name="Player Commendation - Vesper Thrower (Dark)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34460" name="Player Commendation - Vesper Thrower (Dark)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Thrower (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2324,7 +2324,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34461" name="Player Commendation - Vesper Stormer (Earth)" name_additional="Haste (PC-exclusive)" type="Weapon">
+	<item id="34461" name="Player Commendation - Vesper Stormer (Earth)" additionalName="Haste (PC-exclusive)" type="Weapon">
 		<!-- Vesper Stormer (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2362,7 +2362,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34462" name="Player Commendation - Vesper Stormer (Water)" name_additional="Haste (PC-exclusive)" type="Weapon">
+	<item id="34462" name="Player Commendation - Vesper Stormer (Water)" additionalName="Haste (PC-exclusive)" type="Weapon">
 		<!-- Vesper Stormer (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2400,7 +2400,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34463" name="Player Commendation - Vesper Stormer (Wind)" name_additional="Haste (PC-exclusive)" type="Weapon">
+	<item id="34463" name="Player Commendation - Vesper Stormer (Wind)" additionalName="Haste (PC-exclusive)" type="Weapon">
 		<!-- Vesper Stormer (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2438,7 +2438,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34464" name="Player Commendation - Vesper Stormer (Fire)" name_additional="Haste (PC-exclusive)" type="Weapon">
+	<item id="34464" name="Player Commendation - Vesper Stormer (Fire)" additionalName="Haste (PC-exclusive)" type="Weapon">
 		<!-- Vesper Stormer (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2476,7 +2476,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34465" name="Player Commendation - Vesper Stormer (Holy)" name_additional="Haste (PC-exclusive)" type="Weapon">
+	<item id="34465" name="Player Commendation - Vesper Stormer (Holy)" additionalName="Haste (PC-exclusive)" type="Weapon">
 		<!-- Vesper Stormer (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2514,7 +2514,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34466" name="Player Commendation - Vesper Stormer (Dark)" name_additional="Haste (PC-exclusive)" type="Weapon">
+	<item id="34466" name="Player Commendation - Vesper Stormer (Dark)" additionalName="Haste (PC-exclusive)" type="Weapon">
 		<!-- Vesper Stormer (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2552,7 +2552,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34467" name="Player Commendation - Vesper Slasher (Earth)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34467" name="Player Commendation - Vesper Slasher (Earth)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Slasher (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2589,7 +2589,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34468" name="Player Commendation - Vesper Slasher (Water)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34468" name="Player Commendation - Vesper Slasher (Water)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Slasher (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2626,7 +2626,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34469" name="Player Commendation - Vesper Slasher (Wind)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34469" name="Player Commendation - Vesper Slasher (Wind)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Slasher (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2663,7 +2663,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34470" name="Player Commendation - Vesper Slasher (Fire)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34470" name="Player Commendation - Vesper Slasher (Fire)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Slasher (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2700,7 +2700,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34471" name="Player Commendation - Vesper Slasher (Holy)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34471" name="Player Commendation - Vesper Slasher (Holy)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Slasher (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2737,7 +2737,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34472" name="Player Commendation - Vesper Slasher (Dark)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34472" name="Player Commendation - Vesper Slasher (Dark)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Slasher (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2774,7 +2774,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34473" name="Player Commendation - Vesper Singer (Earth)" name_additional="Empower (PC-exclusive)" type="Weapon">
+	<item id="34473" name="Player Commendation - Vesper Singer (Earth)" additionalName="Empower (PC-exclusive)" type="Weapon">
 		<!-- Vesper Singer (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nM. Atk. + 151. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2812,7 +2812,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34474" name="Player Commendation - Vesper Singer (Water)" name_additional="Empower (PC-exclusive)" type="Weapon">
+	<item id="34474" name="Player Commendation - Vesper Singer (Water)" additionalName="Empower (PC-exclusive)" type="Weapon">
 		<!-- Vesper Singer (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nM. Atk. + 151. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2850,7 +2850,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34475" name="Player Commendation - Vesper Singer (Wind)" name_additional="Empower (PC-exclusive)" type="Weapon">
+	<item id="34475" name="Player Commendation - Vesper Singer (Wind)" additionalName="Empower (PC-exclusive)" type="Weapon">
 		<!-- Vesper Singer (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nM. Atk. + 151. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2888,7 +2888,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34476" name="Player Commendation - Vesper Singer (Fire)" name_additional="Empower (PC-exclusive)" type="Weapon">
+	<item id="34476" name="Player Commendation - Vesper Singer (Fire)" additionalName="Empower (PC-exclusive)" type="Weapon">
 		<!-- Vesper Singer (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nM. Atk. + 151. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2926,7 +2926,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34477" name="Player Commendation - Vesper Singer (Holy)" name_additional="Empower (PC-exclusive)" type="Weapon">
+	<item id="34477" name="Player Commendation - Vesper Singer (Holy)" additionalName="Empower (PC-exclusive)" type="Weapon">
 		<!-- Vesper Singer (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nM. Atk. + 151. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2964,7 +2964,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34478" name="Player Commendation - Vesper Singer (Dark)" name_additional="Empower (PC-exclusive)" type="Weapon">
+	<item id="34478" name="Player Commendation - Vesper Singer (Dark)" additionalName="Empower (PC-exclusive)" type="Weapon">
 		<!-- Vesper Singer (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nM. Atk. + 151. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3002,7 +3002,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34479" name="Player Commendation - Vesper Avenger (Earth)" name_additional="Health (PC-exclusive)" type="Weapon">
+	<item id="34479" name="Player Commendation - Vesper Avenger (Earth)" additionalName="Health (PC-exclusive)" type="Weapon">
 		<!-- Vesper Avenger (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3040,7 +3040,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34480" name="Player Commendation - Vesper Avenger (Water)" name_additional="Health (PC-exclusive)" type="Weapon">
+	<item id="34480" name="Player Commendation - Vesper Avenger (Water)" additionalName="Health (PC-exclusive)" type="Weapon">
 		<!-- Vesper Avenger (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3078,7 +3078,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34481" name="Player Commendation - Vesper Avenger (Wind)" name_additional="Health (PC-exclusive)" type="Weapon">
+	<item id="34481" name="Player Commendation - Vesper Avenger (Wind)" additionalName="Health (PC-exclusive)" type="Weapon">
 		<!-- Vesper Avenger (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3116,7 +3116,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34482" name="Player Commendation - Vesper Avenger (Fire)" name_additional="Health (PC-exclusive)" type="Weapon">
+	<item id="34482" name="Player Commendation - Vesper Avenger (Fire)" additionalName="Health (PC-exclusive)" type="Weapon">
 		<!-- Vesper Avenger (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3154,7 +3154,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34483" name="Player Commendation - Vesper Avenger (Holy)" name_additional="Health (PC-exclusive)" type="Weapon">
+	<item id="34483" name="Player Commendation - Vesper Avenger (Holy)" additionalName="Health (PC-exclusive)" type="Weapon">
 		<!-- Vesper Avenger (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3192,7 +3192,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34484" name="Player Commendation - Vesper Avenger (Dark)" name_additional="Health (PC-exclusive)" type="Weapon">
+	<item id="34484" name="Player Commendation - Vesper Avenger (Dark)" additionalName="Health (PC-exclusive)" type="Weapon">
 		<!-- Vesper Avenger (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3230,7 +3230,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34485" name="Player Commendation - Vesper Caster (Earth)" name_additional="Acumen (PC-exclusive)" type="Weapon">
+	<item id="34485" name="Player Commendation - Vesper Caster (Earth)" additionalName="Acumen (PC-exclusive)" type="Weapon">
 		<!-- Vesper Caster (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3268,7 +3268,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34486" name="Player Commendation - Vesper Caster (Water)" name_additional="Acumen (PC-exclusive)" type="Weapon">
+	<item id="34486" name="Player Commendation - Vesper Caster (Water)" additionalName="Acumen (PC-exclusive)" type="Weapon">
 		<!-- Vesper Caster (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3306,7 +3306,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34487" name="Player Commendation - Vesper Caster (Wind)" name_additional="Acumen (PC-exclusive)" type="Weapon">
+	<item id="34487" name="Player Commendation - Vesper Caster (Wind)" additionalName="Acumen (PC-exclusive)" type="Weapon">
 		<!-- Vesper Caster (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3344,7 +3344,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34488" name="Player Commendation - Vesper Caster (Fire)" name_additional="Acumen (PC-exclusive)" type="Weapon">
+	<item id="34488" name="Player Commendation - Vesper Caster (Fire)" additionalName="Acumen (PC-exclusive)" type="Weapon">
 		<!-- Vesper Caster (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3382,7 +3382,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34489" name="Player Commendation - Vesper Caster (Holy)" name_additional="Acumen (PC-exclusive)" type="Weapon">
+	<item id="34489" name="Player Commendation - Vesper Caster (Holy)" additionalName="Acumen (PC-exclusive)" type="Weapon">
 		<!-- Vesper Caster (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3420,7 +3420,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34490" name="Player Commendation - Vesper Caster (Dark)" name_additional="Acumen (PC-exclusive)" type="Weapon">
+	<item id="34490" name="Player Commendation - Vesper Caster (Dark)" additionalName="Acumen (PC-exclusive)" type="Weapon">
 		<!-- Vesper Caster (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3458,7 +3458,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34491" name="Player Commendation - Vesper Cutter (Earth)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34491" name="Player Commendation - Vesper Cutter (Earth)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Cutter (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3495,7 +3495,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34492" name="Player Commendation - Vesper Cutter (Water)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34492" name="Player Commendation - Vesper Cutter (Water)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Cutter (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3532,7 +3532,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34493" name="Player Commendation - Vesper Cutter (Wind)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34493" name="Player Commendation - Vesper Cutter (Wind)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Cutter (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3569,7 +3569,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34494" name="Player Commendation - Vesper Cutter (Fire)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34494" name="Player Commendation - Vesper Cutter (Fire)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Cutter (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3606,7 +3606,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34495" name="Player Commendation - Vesper Cutter (Holy)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34495" name="Player Commendation - Vesper Cutter (Holy)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Cutter (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3643,7 +3643,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34496" name="Player Commendation - Vesper Cutter (Dark)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34496" name="Player Commendation - Vesper Cutter (Dark)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Cutter (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3680,7 +3680,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34497" name="Player Commendation - Vesper Fighter (Earth)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34497" name="Player Commendation - Vesper Fighter (Earth)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Fighter (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 123. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3718,7 +3718,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34498" name="Player Commendation - Vesper Fighter (Water)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34498" name="Player Commendation - Vesper Fighter (Water)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Fighter (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 123. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3756,7 +3756,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34499" name="Player Commendation - Vesper Fighter (Wind)" name_additional="Focus (PC-exclusive)" type="Weapon">
+	<item id="34499" name="Player Commendation - Vesper Fighter (Wind)" additionalName="Focus (PC-exclusive)" type="Weapon">
 		<!-- Vesper Fighter (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nCritical increases by 123. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />

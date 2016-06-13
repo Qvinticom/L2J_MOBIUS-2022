@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="19600" name="Bound Immortal Gloves" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19600" name="Bound Immortal Gloves" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t503_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -24,7 +24,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="19601" name="Bound Immortal Shoes" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19601" name="Bound Immortal Shoes" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t503_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -48,7 +48,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="19602" name="Bound Twilight Helmet" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19602" name="Bound Twilight Helmet" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -71,7 +71,7 @@
 			<stat type="pDef">126</stat>
 		</stats>
 	</item>
-	<item id="19603" name="Bound Twilight Breastplate" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19603" name="Bound Twilight Breastplate" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -100,7 +100,7 @@
 			<stat type="pDef">335</stat>
 		</stats>
 	</item>
-	<item id="19604" name="Bound Twilight Gaiters" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19604" name="Bound Twilight Gaiters" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t601_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -125,7 +125,7 @@
 			<stat type="pDef">209</stat>
 		</stats>
 	</item>
-	<item id="19605" name="Bound Twilight Gauntlets" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19605" name="Bound Twilight Gauntlets" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t601_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -149,7 +149,7 @@
 			<stat type="pDef">84</stat>
 		</stats>
 	</item>
-	<item id="19606" name="Bound Twilight Boots" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19606" name="Bound Twilight Boots" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t601_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -173,7 +173,7 @@
 			<stat type="pDef">84</stat>
 		</stats>
 	</item>
-	<item id="19607" name="Bound Twilight Shield" name_additional="Attack Type / Heavy" type="Weapon">
+	<item id="19607" name="Bound Twilight Shield" additionalName="Attack Type / Heavy" type="Weapon">
 		<!-- Additionally increases Shield Defense. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.kratere_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -201,7 +201,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="19608" name="Bound Twilight Leather Helmet" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19608" name="Bound Twilight Leather Helmet" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -224,7 +224,7 @@
 			<stat type="pDef">126</stat>
 		</stats>
 	</item>
-	<item id="19609" name="Bound Twilight Leather Armor" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19609" name="Bound Twilight Leather Armor" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -255,7 +255,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="19610" name="Bound Twilight Leather Leggings" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19610" name="Bound Twilight Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t602_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -282,7 +282,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="19611" name="Bound Twilight Leather Gloves" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19611" name="Bound Twilight Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t602_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -306,7 +306,7 @@
 			<stat type="pDef">84</stat>
 		</stats>
 	</item>
-	<item id="19612" name="Bound Twilight Leather Boots" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19612" name="Bound Twilight Leather Boots" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t602_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -330,7 +330,7 @@
 			<stat type="pDef">84</stat>
 		</stats>
 	</item>
-	<item id="19613" name="Bound Twilight Circlet" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19613" name="Bound Twilight Circlet" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -353,7 +353,7 @@
 			<stat type="pDef">126</stat>
 		</stats>
 	</item>
-	<item id="19614" name="Bound Twilight Tunic" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19614" name="Bound Twilight Tunic" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t603_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -383,7 +383,7 @@
 			<stat type="mDef">41</stat>
 		</stats>
 	</item>
-	<item id="19615" name="Bound Twilight Stockings" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19615" name="Bound Twilight Stockings" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t603_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -409,7 +409,7 @@
 			<stat type="mDef">27</stat>
 		</stats>
 	</item>
-	<item id="19616" name="Bound Twilight Gloves" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19616" name="Bound Twilight Gloves" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t603_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -433,7 +433,7 @@
 			<stat type="pDef">84</stat>
 		</stats>
 	</item>
-	<item id="19617" name="Bound Twilight Shoes" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19617" name="Bound Twilight Shoes" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t603_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -457,7 +457,7 @@
 			<stat type="pDef">84</stat>
 		</stats>
 	</item>
-	<item id="19618" name="Bound Seraph Helmet" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19618" name="Bound Seraph Helmet" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -480,7 +480,7 @@
 			<stat type="pDef">139</stat>
 		</stats>
 	</item>
-	<item id="19619" name="Bound Seraph Breastplate" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19619" name="Bound Seraph Breastplate" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -509,7 +509,7 @@
 			<stat type="pDef">370</stat>
 		</stats>
 	</item>
-	<item id="19620" name="Bound Seraph Gaiters" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19620" name="Bound Seraph Gaiters" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t401_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -534,7 +534,7 @@
 			<stat type="pDef">231</stat>
 		</stats>
 	</item>
-	<item id="19621" name="Bound Seraph Gauntlets" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19621" name="Bound Seraph Gauntlets" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t401_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -558,7 +558,7 @@
 			<stat type="pDef">93</stat>
 		</stats>
 	</item>
-	<item id="19622" name="Bound Seraph Boots" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19622" name="Bound Seraph Boots" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -582,7 +582,7 @@
 			<stat type="pDef">93</stat>
 		</stats>
 	</item>
-	<item id="19623" name="Bound Seraph Shield" name_additional="Attack Type / Heavy" type="Weapon">
+	<item id="19623" name="Bound Seraph Shield" additionalName="Attack Type / Heavy" type="Weapon">
 		<!-- Additionally increases Shield Defense. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.beranka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -610,7 +610,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="19624" name="Bound Seraph Leather Helmet" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19624" name="Bound Seraph Leather Helmet" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -633,7 +633,7 @@
 			<stat type="pDef">139</stat>
 		</stats>
 	</item>
-	<item id="19625" name="Bound Seraph Leather Armor" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19625" name="Bound Seraph Leather Armor" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -664,7 +664,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="19626" name="Bound Seraph Leather Leggings" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19626" name="Bound Seraph Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t402_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -691,7 +691,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="19627" name="Bound Seraph Leather Gloves" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19627" name="Bound Seraph Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t402_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -715,7 +715,7 @@
 			<stat type="pDef">93</stat>
 		</stats>
 	</item>
-	<item id="19628" name="Bound Seraph Leather Boots" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19628" name="Bound Seraph Leather Boots" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t402_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -739,7 +739,7 @@
 			<stat type="pDef">93</stat>
 		</stats>
 	</item>
-	<item id="19629" name="Bound Seraph Circlet" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19629" name="Bound Seraph Circlet" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -762,7 +762,7 @@
 			<stat type="pDef">139</stat>
 		</stats>
 	</item>
-	<item id="19630" name="Bound Seraph Tunic" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19630" name="Bound Seraph Tunic" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -792,7 +792,7 @@
 			<stat type="mDef">47</stat>
 		</stats>
 	</item>
-	<item id="19631" name="Bound Seraph Stockings" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19631" name="Bound Seraph Stockings" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t403_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -818,7 +818,7 @@
 			<stat type="mDef">31</stat>
 		</stats>
 	</item>
-	<item id="19632" name="Bound Seraph Gloves" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19632" name="Bound Seraph Gloves" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t403_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -842,7 +842,7 @@
 			<stat type="pDef">93</stat>
 		</stats>
 	</item>
-	<item id="19633" name="Bound Seraph Shoes" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19633" name="Bound Seraph Shoes" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t403_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -866,7 +866,7 @@
 			<stat type="pDef">93</stat>
 		</stats>
 	</item>
-	<item id="19634" name="Bound Eternal Helmet" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19634" name="Bound Eternal Helmet" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -889,7 +889,7 @@
 			<stat type="pDef">147</stat>
 		</stats>
 	</item>
-	<item id="19635" name="Bound Eternal Breastplate" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19635" name="Bound Eternal Breastplate" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -918,7 +918,7 @@
 			<stat type="pDef">392</stat>
 		</stats>
 	</item>
-	<item id="19636" name="Bound Eternal Gaiters" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19636" name="Bound Eternal Gaiters" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t701_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -943,7 +943,7 @@
 			<stat type="pDef">245</stat>
 		</stats>
 	</item>
-	<item id="19637" name="Bound Eternal Gauntlets" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19637" name="Bound Eternal Gauntlets" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t701_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -967,7 +967,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="19638" name="Bound Eternal Boots" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19638" name="Bound Eternal Boots" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t701_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -991,7 +991,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="19639" name="Bound Eternal Shield" name_additional="Attack Type / Heavy" type="Weapon">
+	<item id="19639" name="Bound Eternal Shield" additionalName="Attack Type / Heavy" type="Weapon">
 		<!-- Additionally increases Shield Defense. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_akra_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1019,7 +1019,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="19640" name="Bound Eternal Leather Helmet" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19640" name="Bound Eternal Leather Helmet" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1042,7 +1042,7 @@
 			<stat type="pDef">147</stat>
 		</stats>
 	</item>
-	<item id="19641" name="Bound Eternal Leather Armor" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19641" name="Bound Eternal Leather Armor" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1073,7 +1073,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="19642" name="Bound Eternal Leather Leggings" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19642" name="Bound Eternal Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t702_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1100,7 +1100,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="19643" name="Bound Eternal Leather Gloves" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19643" name="Bound Eternal Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t702_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1124,7 +1124,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="19644" name="Bound Eternal Leather Boots" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19644" name="Bound Eternal Leather Boots" additionalName="Assassin Type / Light" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t702_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1148,7 +1148,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="19645" name="Bound Eternal Circlet" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19645" name="Bound Eternal Circlet" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1171,7 +1171,7 @@
 			<stat type="pDef">147</stat>
 		</stats>
 	</item>
-	<item id="19646" name="Bound Eternal Tunic" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19646" name="Bound Eternal Tunic" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1201,7 +1201,7 @@
 			<stat type="mDef">49</stat>
 		</stats>
 	</item>
-	<item id="19647" name="Bound Eternal Stockings" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19647" name="Bound Eternal Stockings" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t703_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1227,7 +1227,7 @@
 			<stat type="mDef">33</stat>
 		</stats>
 	</item>
-	<item id="19648" name="Bound Eternal Gloves" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19648" name="Bound Eternal Gloves" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t703_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1251,7 +1251,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="19649" name="Bound Eternal Shoes" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19649" name="Bound Eternal Shoes" additionalName="Magic Type / Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t703_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1275,7 +1275,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="19650" name="Blessed Immortal Helmet" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19650" name="Blessed Immortal Helmet" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1293,7 +1293,7 @@
 			<stat type="pDef">118</stat>
 		</stats>
 	</item>
-	<item id="19651" name="Blessed Immortal Breastplate" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19651" name="Blessed Immortal Breastplate" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1318,7 +1318,7 @@
 			<stat type="pDef">315</stat>
 		</stats>
 	</item>
-	<item id="19652" name="Blessed Immortal Gaiters" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19652" name="Blessed Immortal Gaiters" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t501_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1338,7 +1338,7 @@
 			<stat type="pDef">197</stat>
 		</stats>
 	</item>
-	<item id="19653" name="Blessed Immortal Gauntlets" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19653" name="Blessed Immortal Gauntlets" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t501_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1357,7 +1357,7 @@
 			<stat type="pDef">78</stat>
 		</stats>
 	</item>
-	<item id="19654" name="Blessed Immortal Boots" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19654" name="Blessed Immortal Boots" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t501_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1376,7 +1376,7 @@
 			<stat type="pDef">78</stat>
 		</stats>
 	</item>
-	<item id="19655" name="Blessed Immortal Shield" name_additional="Attack Type / Heavy" type="Weapon">
+	<item id="19655" name="Blessed Immortal Shield" additionalName="Attack Type / Heavy" type="Weapon">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.weapon_sacon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1400,7 +1400,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="19656" name="Blessed Immortal Leather Helmet" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19656" name="Blessed Immortal Leather Helmet" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1418,7 +1418,7 @@
 			<stat type="pDef">118</stat>
 		</stats>
 	</item>
-	<item id="19657" name="Blessed Immortal Leather Armor" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19657" name="Blessed Immortal Leather Armor" additionalName="Assassin Type / Light" type="Armor">
 		<!-- When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1445,7 +1445,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="19658" name="Blessed Immortal Leather Leggings" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19658" name="Blessed Immortal Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t502_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1467,7 +1467,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="19659" name="Blessed Immortal Leather Gloves" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19659" name="Blessed Immortal Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t502_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1486,7 +1486,7 @@
 			<stat type="pDef">78</stat>
 		</stats>
 	</item>
-	<item id="19660" name="Blessed Immortal Leather Boots" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19660" name="Blessed Immortal Leather Boots" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t502_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1505,7 +1505,7 @@
 			<stat type="pDef">78</stat>
 		</stats>
 	</item>
-	<item id="19661" name="Blessed Immortal Circlet" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19661" name="Blessed Immortal Circlet" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1523,7 +1523,7 @@
 			<stat type="pDef">118</stat>
 		</stats>
 	</item>
-	<item id="19662" name="Blessed Immortal Tunic" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19662" name="Blessed Immortal Tunic" additionalName="Magic Type / Robe" type="Armor">
 		<!-- When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1549,7 +1549,7 @@
 			<stat type="mDef">36</stat>
 		</stats>
 	</item>
-	<item id="19663" name="Blessed Immortal Stockings" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19663" name="Blessed Immortal Stockings" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t503_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1570,7 +1570,7 @@
 			<stat type="mDef">24</stat>
 		</stats>
 	</item>
-	<item id="19664" name="Blessed Immortal Gloves" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19664" name="Blessed Immortal Gloves" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t503_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1589,7 +1589,7 @@
 			<stat type="pDef">78</stat>
 		</stats>
 	</item>
-	<item id="19665" name="Blessed Immortal Shoes" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19665" name="Blessed Immortal Shoes" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t503_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1608,7 +1608,7 @@
 			<stat type="pDef">78</stat>
 		</stats>
 	</item>
-	<item id="19666" name="Blessed Twilight Helmet" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19666" name="Blessed Twilight Helmet" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1626,7 +1626,7 @@
 			<stat type="pDef">130</stat>
 		</stats>
 	</item>
-	<item id="19667" name="Blessed Twilight Breastplate" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19667" name="Blessed Twilight Breastplate" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1651,7 +1651,7 @@
 			<stat type="pDef">348</stat>
 		</stats>
 	</item>
-	<item id="19668" name="Blessed Twilight Gaiters" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19668" name="Blessed Twilight Gaiters" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t601_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1671,7 +1671,7 @@
 			<stat type="pDef">217</stat>
 		</stats>
 	</item>
-	<item id="19669" name="Blessed Twilight Gauntlets" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19669" name="Blessed Twilight Gauntlets" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t601_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1690,7 +1690,7 @@
 			<stat type="pDef">87</stat>
 		</stats>
 	</item>
-	<item id="19670" name="Blessed Twilight Boots" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19670" name="Blessed Twilight Boots" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t601_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1709,7 +1709,7 @@
 			<stat type="pDef">87</stat>
 		</stats>
 	</item>
-	<item id="19671" name="Blessed Twilight Shield" name_additional="Attack Type / Heavy" type="Weapon">
+	<item id="19671" name="Blessed Twilight Shield" additionalName="Attack Type / Heavy" type="Weapon">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.kratere_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1733,7 +1733,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="19672" name="Blessed Twilight Leather Helmet" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19672" name="Blessed Twilight Leather Helmet" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1751,7 +1751,7 @@
 			<stat type="pDef">130</stat>
 		</stats>
 	</item>
-	<item id="19673" name="Blessed Twilight Leather Armor" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19673" name="Blessed Twilight Leather Armor" additionalName="Assassin Type / Light" type="Armor">
 		<!-- When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1778,7 +1778,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="19674" name="Blessed Twilight Leather Leggings" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19674" name="Blessed Twilight Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t602_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1800,7 +1800,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="19675" name="Blessed Twilight Leather Gloves" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19675" name="Blessed Twilight Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t602_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1819,7 +1819,7 @@
 			<stat type="pDef">87</stat>
 		</stats>
 	</item>
-	<item id="19676" name="Blessed Twilight Leather Boots" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19676" name="Blessed Twilight Leather Boots" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t602_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1838,7 +1838,7 @@
 			<stat type="pDef">87</stat>
 		</stats>
 	</item>
-	<item id="19677" name="Blessed Twilight Circlet" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19677" name="Blessed Twilight Circlet" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1856,7 +1856,7 @@
 			<stat type="pDef">130</stat>
 		</stats>
 	</item>
-	<item id="19678" name="Blessed Twilight Tunic" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19678" name="Blessed Twilight Tunic" additionalName="Magic Type / Robe" type="Armor">
 		<!-- When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t603_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1882,7 +1882,7 @@
 			<stat type="mDef">41</stat>
 		</stats>
 	</item>
-	<item id="19679" name="Blessed Twilight Stockings" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19679" name="Blessed Twilight Stockings" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t603_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1903,7 +1903,7 @@
 			<stat type="mDef">27</stat>
 		</stats>
 	</item>
-	<item id="19680" name="Blessed Twilight Gloves" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19680" name="Blessed Twilight Gloves" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t603_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1922,7 +1922,7 @@
 			<stat type="pDef">87</stat>
 		</stats>
 	</item>
-	<item id="19681" name="Blessed Twilight Shoes" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19681" name="Blessed Twilight Shoes" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t603_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1941,7 +1941,7 @@
 			<stat type="pDef">87</stat>
 		</stats>
 	</item>
-	<item id="19682" name="Blessed Seraph Helmet" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19682" name="Blessed Seraph Helmet" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1959,7 +1959,7 @@
 			<stat type="pDef">144</stat>
 		</stats>
 	</item>
-	<item id="19683" name="Blessed Seraph Breastplate" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19683" name="Blessed Seraph Breastplate" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1984,7 +1984,7 @@
 			<stat type="pDef">384</stat>
 		</stats>
 	</item>
-	<item id="19684" name="Blessed Seraph Gaiters" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19684" name="Blessed Seraph Gaiters" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t401_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -2004,7 +2004,7 @@
 			<stat type="pDef">240</stat>
 		</stats>
 	</item>
-	<item id="19685" name="Blessed Seraph Gauntlets" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19685" name="Blessed Seraph Gauntlets" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t401_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2023,7 +2023,7 @@
 			<stat type="pDef">96</stat>
 		</stats>
 	</item>
-	<item id="19686" name="Blessed Seraph Boots" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19686" name="Blessed Seraph Boots" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2042,7 +2042,7 @@
 			<stat type="pDef">96</stat>
 		</stats>
 	</item>
-	<item id="19687" name="Blessed Seraph Shield" name_additional="Attack Type / Heavy" type="Weapon">
+	<item id="19687" name="Blessed Seraph Shield" additionalName="Attack Type / Heavy" type="Weapon">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.beranka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2066,7 +2066,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="19688" name="Blessed Seraph Leather Helmet" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19688" name="Blessed Seraph Leather Helmet" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2084,7 +2084,7 @@
 			<stat type="pDef">144</stat>
 		</stats>
 	</item>
-	<item id="19689" name="Blessed Seraph Leather Armor" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19689" name="Blessed Seraph Leather Armor" additionalName="Assassin Type / Light" type="Armor">
 		<!-- When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -2111,7 +2111,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="19690" name="Blessed Seraph Leather Leggings" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19690" name="Blessed Seraph Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t402_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -2133,7 +2133,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="19691" name="Blessed Seraph Leather Gloves" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19691" name="Blessed Seraph Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t402_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2152,7 +2152,7 @@
 			<stat type="pDef">96</stat>
 		</stats>
 	</item>
-	<item id="19692" name="Blessed Seraph Leather Boots" name_additional="Assassin Type / Light" type="Armor">
+	<item id="19692" name="Blessed Seraph Leather Boots" additionalName="Assassin Type / Light" type="Armor">
 		<set name="icon" val="icon.armor_t402_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2171,7 +2171,7 @@
 			<stat type="pDef">96</stat>
 		</stats>
 	</item>
-	<item id="19693" name="Blessed Seraph Circlet" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19693" name="Blessed Seraph Circlet" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2189,7 +2189,7 @@
 			<stat type="pDef">144</stat>
 		</stats>
 	</item>
-	<item id="19694" name="Blessed Seraph Tunic" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19694" name="Blessed Seraph Tunic" additionalName="Magic Type / Robe" type="Armor">
 		<!-- When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -2215,7 +2215,7 @@
 			<stat type="mDef">47</stat>
 		</stats>
 	</item>
-	<item id="19695" name="Blessed Seraph Stockings" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19695" name="Blessed Seraph Stockings" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t403_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -2236,7 +2236,7 @@
 			<stat type="mDef">31</stat>
 		</stats>
 	</item>
-	<item id="19696" name="Blessed Seraph Gloves" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19696" name="Blessed Seraph Gloves" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t403_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2255,7 +2255,7 @@
 			<stat type="pDef">96</stat>
 		</stats>
 	</item>
-	<item id="19697" name="Blessed Seraph Shoes" name_additional="Magic Type / Robe" type="Armor">
+	<item id="19697" name="Blessed Seraph Shoes" additionalName="Magic Type / Robe" type="Armor">
 		<set name="icon" val="icon.armor_t403_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2274,7 +2274,7 @@
 			<stat type="pDef">96</stat>
 		</stats>
 	</item>
-	<item id="19698" name="Blessed Eternal Helmet" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19698" name="Blessed Eternal Helmet" additionalName="Attack Type / Heavy" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2292,7 +2292,7 @@
 			<stat type="pDef">153</stat>
 		</stats>
 	</item>
-	<item id="19699" name="Blessed Eternal Breastplate" name_additional="Attack Type / Heavy" type="Armor">
+	<item id="19699" name="Blessed Eternal Breastplate" additionalName="Attack Type / Heavy" type="Armor">
 		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="armor_type" val="HEAVY" />

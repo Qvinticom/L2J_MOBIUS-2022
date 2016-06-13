@@ -792,7 +792,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="14053" name="Mount - Gold Maned Lion" name_additional="7-day" type="Armor">
+	<item id="14053" name="Mount - Gold Maned Lion" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -815,7 +815,7 @@
 			<skill id="8262" level="1" /> <!-- Ride Gold Maned Lion -->
 		</skills>
 	</item>
-	<item id="14054" name="Mount - Steam Beetle" name_additional="7-day" type="Armor">
+	<item id="14054" name="Mount - Steam Beetle" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -858,7 +858,7 @@
 			<skill id="9750" level="1" /> <!-- Vitality Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="14056" name="Snow Man Transformation Stick" name_additional="30-day" type="Weapon">
+	<item id="14056" name="Snow Man Transformation Stick" additionalName="30-day" type="Weapon">
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -889,7 +889,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14057" name="Scarecrow Jack Transformation Stick" name_additional="30-day" type="Weapon">
+	<item id="14057" name="Scarecrow Jack Transformation Stick" additionalName="30-day" type="Weapon">
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -920,7 +920,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14058" name="Tin Golem Transformation Stick" name_additional="30-day" type="Weapon">
+	<item id="14058" name="Tin Golem Transformation Stick" additionalName="30-day" type="Weapon">
 		<set name="icon" val="icon.weapon_tin_golem_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -951,7 +951,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14059" name="Agathion - Teddy Boy" name_additional="30-day" type="Armor">
+	<item id="14059" name="Agathion - Teddy Boy" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -974,7 +974,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14060" name="Agathion - Teddy Girl" name_additional="30-day" type="Armor">
+	<item id="14060" name="Agathion - Teddy Girl" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1097,7 +1097,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="14065" name="Superior Minion Coupon" name_additional="5-hour" type="EtcItem">
+	<item id="14065" name="Superior Minion Coupon" additionalName="5-hour" type="EtcItem">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -1111,7 +1111,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_mailable" val="false" />
 	</item>
-	<item id="14066" name="Mount - Gold Maned Lion (Event)" name_additional="7-day" type="Armor">
+	<item id="14066" name="Mount - Gold Maned Lion (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1134,7 +1134,7 @@
 			<skill id="8262" level="1" /> <!-- Ride Gold Maned Lion -->
 		</skills>
 	</item>
-	<item id="14067" name="Mount - Steam Beetle (Event)" name_additional="7-day" type="Armor">
+	<item id="14067" name="Mount - Steam Beetle (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1177,7 +1177,7 @@
 			<skill id="9751" level="1" /> <!-- Vitality Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="14069" name="Snow Man Transformation Stick (Event)" name_additional="30-day" type="Weapon">
+	<item id="14069" name="Snow Man Transformation Stick (Event)" additionalName="30-day" type="Weapon">
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1208,7 +1208,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14070" name="Scarecrow Jack Transformation Stick (Event)" name_additional="30-day" type="Weapon">
+	<item id="14070" name="Scarecrow Jack Transformation Stick (Event)" additionalName="30-day" type="Weapon">
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1239,7 +1239,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14071" name="Tin Golem Transformation Stick (Event)" name_additional="30-day" type="Weapon">
+	<item id="14071" name="Tin Golem Transformation Stick (Event)" additionalName="30-day" type="Weapon">
 		<set name="icon" val="icon.weapon_tin_golem_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1270,7 +1270,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14072" name="Agathion - Teddy Boy (Event)" name_additional="30-day" type="Armor">
+	<item id="14072" name="Agathion - Teddy Boy (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1293,7 +1293,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14073" name="Agathion - Teddy Girl (Event)" name_additional="30-day" type="Armor">
+	<item id="14073" name="Agathion - Teddy Girl (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1316,7 +1316,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14074" name="Superior Minion Coupon (Event)" name_additional="5-hour" type="EtcItem">
+	<item id="14074" name="Superior Minion Coupon (Event)" additionalName="5-hour" type="EtcItem">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -1330,7 +1330,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_mailable" val="false" />
 	</item>
-	<item id="14075" name="Agathion - Angry Devil (Event)" name_additional="30-day" type="Armor">
+	<item id="14075" name="Agathion - Angry Devil (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1353,7 +1353,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14076" name="Agathion - Shiny (Event)" name_additional="30-day" type="Armor">
+	<item id="14076" name="Agathion - Shiny (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1376,7 +1376,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14077" name="Agathion - Sobbing (Event)" name_additional="30-day" type="Armor">
+	<item id="14077" name="Agathion - Sobbing (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1589,7 +1589,7 @@
 			<skill id="2524" level="1" /> <!-- Lucky Clover (S-grade) -->
 		</skills>
 	</item>
-	<item id="14088" name="Snow Man Transformation Stick" name_additional="7-day" type="Weapon">
+	<item id="14088" name="Snow Man Transformation Stick" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1620,7 +1620,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14089" name="Scarecrow Jack Transformation Stick" name_additional="7-day" type="Weapon">
+	<item id="14089" name="Scarecrow Jack Transformation Stick" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1651,7 +1651,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14090" name="Tin Golem Transformation Stick" name_additional="7-day" type="Weapon">
+	<item id="14090" name="Tin Golem Transformation Stick" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_tin_golem_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1682,7 +1682,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14091" name="Agathion - Teddy Boy" name_additional="7-day" type="Armor">
+	<item id="14091" name="Agathion - Teddy Boy" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1705,7 +1705,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14092" name="Agathion - Teddy Girl" name_additional="7-day" type="Armor">
+	<item id="14092" name="Agathion - Teddy Girl" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1728,7 +1728,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14093" name="Agathion - Angry Devil" name_additional="7-day" type="Armor">
+	<item id="14093" name="Agathion - Angry Devil" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1751,7 +1751,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14094" name="Agathion - Shiny" name_additional="7-day" type="Armor">
+	<item id="14094" name="Agathion - Shiny" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1774,7 +1774,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14095" name="Agathion - Sobbing" name_additional="7-day" type="Armor">
+	<item id="14095" name="Agathion - Sobbing" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1797,7 +1797,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14096" name="Snow Man Transformation Stick (Event)" name_additional="7-day" type="Weapon">
+	<item id="14096" name="Snow Man Transformation Stick (Event)" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1828,7 +1828,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14097" name="Scarecrow Jack Transformation Stick (Event)" name_additional="7-day" type="Weapon">
+	<item id="14097" name="Scarecrow Jack Transformation Stick (Event)" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1859,7 +1859,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14098" name="Tin Golem Transformation Stick (Event)" name_additional="7-day" type="Weapon">
+	<item id="14098" name="Tin Golem Transformation Stick (Event)" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_tin_golem_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1890,7 +1890,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14099" name="Agathion - Teddy Boy (Event)" name_additional="7-day" type="Armor">
+	<item id="14099" name="Agathion - Teddy Boy (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />

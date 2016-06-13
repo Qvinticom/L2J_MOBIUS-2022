@@ -1350,7 +1350,7 @@
 			<skill id="9487" level="1" /> <!-- Angel Cat's Blessing -->
 		</skills>
 	</item>
-	<item id="35670" name="Beast Soulshot" name_additional="Wynn Summoners Only" type="EtcItem">
+	<item id="35670" name="Beast Soulshot" additionalName="Wynn Summoners Only" type="EtcItem">
 		<!-- The light of Spirits fill the pet/servitor to instantly inflict a powerful attack on the enemy. You can check the number of consumed soulshots at the pet/servitor info screen. (They are used from the master's inventory.) -->
 		<set name="icon" val="BranchSys.icon.br_beast_soul_shot_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1370,7 +1370,7 @@
 			<skill id="22036" level="1" /> <!-- Beast Soulshot -->
 		</skills>
 	</item>
-	<item id="35671" name="Blessed Beast Spiritshot" name_additional="Wynn Summoners Only" type="EtcItem">
+	<item id="35671" name="Blessed Beast Spiritshot" additionalName="Wynn Summoners Only" type="EtcItem">
 		<!-- High-level light of Spirits fill the pet/servitor to instantly strengthen the pet/servitor's M. Atk. It is very light. You can check the number of consumed spiritshots at the pet/servitor info screen. (They are used from the master's inventory.) -->
 		<set name="icon" val="BranchSys.icon.br_blessed_beast_spirit_shot_i00" />
 		<set name="price" val="65" />
@@ -1549,7 +1549,7 @@
 			<skill id="2862" level="7" /> <!-- Superior Elixir of CP (R-grade) -->
 		</skills>
 	</item>
-	<item id="35678" name="Test Shaper" name_additional="Test" type="Weapon">
+	<item id="35678" name="Test Shaper" additionalName="Test" type="Weapon">
 		<!-- For Test (not GD2.0 update content) -->
 		<set name="icon" val="icon.weapon_stanpid_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -1579,7 +1579,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35679" name="Test Cutter" name_additional="Test" type="Weapon">
+	<item id="35679" name="Test Cutter" additionalName="Test" type="Weapon">
 		<!-- For Test (not GD2.0 update content) -->
 		<set name="icon" val="icon.weapon_plenitas_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -1608,7 +1608,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35680" name="Test Slasher" name_additional="Test" type="Weapon">
+	<item id="35680" name="Test Slasher" additionalName="Test" type="Weapon">
 		<!-- For Test (not GD2.0 update content) -->
 		<set name="icon" val="icon.weapon_bauen_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -1637,7 +1637,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35681" name="Test Avenger" name_additional="Test" type="Weapon">
+	<item id="35681" name="Test Avenger" additionalName="Test" type="Weapon">
 		<!-- For Test (not GD2.0 update content) -->
 		<set name="icon" val="icon.weapon_qutram_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -1667,7 +1667,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35682" name="Test Fighter" name_additional="Test" type="Weapon">
+	<item id="35682" name="Test Fighter" additionalName="Test" type="Weapon">
 		<!-- For Test (not GD2.0 update content) -->
 		<set name="icon" val="icon.weapon_durga_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -1697,7 +1697,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35683" name="Test Stormer" name_additional="Test" type="Weapon">
+	<item id="35683" name="Test Stormer" additionalName="Test" type="Weapon">
 		<!-- For Test (not GD2.0 update content) -->
 		<set name="icon" val="icon.weapon_crabel_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -1728,7 +1728,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="35684" name="Test Thrower" name_additional="Test" type="Weapon">
+	<item id="35684" name="Test Thrower" additionalName="Test" type="Weapon">
 		<!-- For Test (not GD2.0 update content) -->
 		<set name="icon" val="icon.weapon_castron_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -1759,7 +1759,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="35685" name="Test Shooter" name_additional="Test" type="Weapon">
+	<item id="35685" name="Test Shooter" additionalName="Test" type="Weapon">
 		<!-- For Test (not GD2.0 update content) -->
 		<set name="icon" val="icon.weapon_stilla_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -1790,7 +1790,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="35686" name="Test Buster" name_additional="Test" type="Weapon">
+	<item id="35686" name="Test Buster" additionalName="Test" type="Weapon">
 		<!-- For Test (not GD2.0 update content) -->
 		<set name="icon" val="icon.weaon_serapear_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -1819,7 +1819,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35687" name="Test Caster" name_additional="Test" type="Weapon">
+	<item id="35687" name="Test Caster" additionalName="Test" type="Weapon">
 		<!-- For Test (not GD2.0 update content) -->
 		<set name="icon" val="icon.weapon_pilia_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -1849,7 +1849,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35688" name="Test Retributer" name_additional="Test" type="Weapon">
+	<item id="35688" name="Test Retributer" additionalName="Test" type="Weapon">
 		<!-- For Test (not GD2.0 update content) -->
 		<set name="icon" val="icon.weapon_shaelon_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -1880,7 +1880,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35689" name="Test Dualsword" name_additional="Test" type="Weapon">
+	<item id="35689" name="Test Dualsword" additionalName="Test" type="Weapon">
 		<!-- For Test (not GD2.0 update content) -->
 		<set name="icon" val="icon.weapon_r_dualsword_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -1909,7 +1909,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35690" name="Test Dual Dagger" name_additional="Test" type="Weapon">
+	<item id="35690" name="Test Dual Dagger" additionalName="Test" type="Weapon">
 		<!-- For Test (not GD2.0 update content) -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -1939,7 +1939,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35691" name="Test Dual Blunt Weapon" name_additional="Test" type="Weapon">
+	<item id="35691" name="Test Dual Blunt Weapon" additionalName="Test" type="Weapon">
 		<!-- For Test (not GD2.0 update content) -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -1969,7 +1969,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35692" name="Monster's Weapon" name_additional="Test" type="Weapon">
+	<item id="35692" name="Monster's Weapon" additionalName="Test" type="Weapon">
 		<!-- Test weapon. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00" />
 		<set name="weapon_type" val="SWORD" />
@@ -1999,7 +1999,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="35693" name="Santa Girl's Cloak" name_additional="1-day (Event)" type="Armor">
+	<item id="35693" name="Santa Girl's Cloak" additionalName="1-day (Event)" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. This Santa Girl's Holiday Event reward item. 1 day. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
@@ -2026,7 +2026,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="35694" name="Santa Girl's Cloak" name_additional="3-day (Event)" type="Armor">
+	<item id="35694" name="Santa Girl's Cloak" additionalName="3-day (Event)" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. This Santa Girl's Holiday Event reward item. 3 days. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
@@ -2053,7 +2053,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="35695" name="Holiday Tree - Star Ornament" name_additional="Event" type="EtcItem">
+	<item id="35695" name="Holiday Tree - Star Ornament" additionalName="Event" type="EtcItem">
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the trees. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_tree_star" />
 		<set name="is_freightable" val="false" />
@@ -2063,7 +2063,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="35696" name="Holiday Tree - Globe Ornament" name_additional="Event" type="EtcItem">
+	<item id="35696" name="Holiday Tree - Globe Ornament" additionalName="Event" type="EtcItem">
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the trees. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_tree_bead" />
 		<set name="is_freightable" val="false" />
@@ -2073,7 +2073,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="35697" name="Holiday Tree - Garland Ornament" name_additional="Event" type="EtcItem">
+	<item id="35697" name="Holiday Tree - Garland Ornament" additionalName="Event" type="EtcItem">
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the trees. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_tree_band" />
 		<set name="is_freightable" val="false" />
@@ -2083,7 +2083,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="35698" name="Holiday Tree - Bow Ornament" name_additional="Event" type="EtcItem">
+	<item id="35698" name="Holiday Tree - Bow Ornament" additionalName="Event" type="EtcItem">
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the trees. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_tree_ribbon" />
 		<set name="is_freightable" val="false" />
@@ -2093,7 +2093,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="35699" name="Santa Girl's Gift Box" name_additional="Event" type="EtcItem">
+	<item id="35699" name="Santa Girl's Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Cloak Box and Hat Box (1-day). If you are lucky, you can acquire an additional reward. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />

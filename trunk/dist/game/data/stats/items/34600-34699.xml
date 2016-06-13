@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="34600" name="Player Commendation - Transformation Scroll: Rose (F)" name_additional="PC-exclusive" type="EtcItem">
+	<item id="34600" name="Player Commendation - Transformation Scroll: Rose (F)" additionalName="PC-exclusive" type="EtcItem">
 		<!-- Inflicts magic-type attack. Transforms into a Rose (F) for 10 min. -->
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="is_clan_depositable" val="false" />
@@ -19,7 +19,7 @@
 			<skill id="9324" level="1" /> <!-- Player Commendation - Transform Rose (Female) -->
 		</skills>
 	</item>
-	<item id="34601" name="Player Commendation - Transformation Scroll: Rose (M)" name_additional="PC-exclusive" type="EtcItem">
+	<item id="34601" name="Player Commendation - Transformation Scroll: Rose (M)" additionalName="PC-exclusive" type="EtcItem">
 		<!-- Inflicts warrior-type attack. Transforms into a Rose (M) for 10 min. -->
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="is_clan_depositable" val="false" />
@@ -38,7 +38,7 @@
 			<skill id="9323" level="1" /> <!-- Player Commendation - Transform Rose (Male) -->
 		</skills>
 	</item>
-	<item id="34602" name="Player Commendation - Quick Healing Potion" name_additional="PC-exclusive" type="EtcItem">
+	<item id="34602" name="Player Commendation - Quick Healing Potion" additionalName="PC-exclusive" type="EtcItem">
 		<!-- Magic potion that instantly restores HP. Cannot be used when HP is full. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="180" />
@@ -63,7 +63,7 @@
 			<skill id="9292" level="1" /> <!-- Player Commendation - Quick Healing Potion -->
 		</skills>
 	</item>
-	<item id="34603" name="Mysterious No-grade Soulshot" name_additional="Event" type="EtcItem">
+	<item id="34603" name="Mysterious No-grade Soulshot" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a No-grade weapon. -->
 		<set name="icon" val="icon.etc_spirit_bullet_white_i00" />
 		<set name="is_freightable" val="false" />
@@ -77,7 +77,7 @@
 			<skill id="9293" level="1" /> <!-- Player Commendation - Soulshot (No-grade) -->
 		</skills>
 	</item>
-	<item id="34604" name="Mysterious Soulshot (D-grade)" name_additional="Event" type="EtcItem">
+	<item id="34604" name="Mysterious Soulshot (D-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a D-grade weapon. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="is_freightable" val="false" />
@@ -92,7 +92,7 @@
 			<skill id="9294" level="1" /> <!-- Player Commendation - Soulshot (D-grade) -->
 		</skills>
 	</item>
-	<item id="34605" name="Mysterious Soulshot (C-grade)" name_additional="Event" type="EtcItem">
+	<item id="34605" name="Mysterious Soulshot (C-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a C-grade weapon. -->
 		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
 		<set name="is_freightable" val="false" />
@@ -107,7 +107,7 @@
 			<skill id="9295" level="1" /> <!-- Player Commendation - Soulshot (C-grade) -->
 		</skills>
 	</item>
-	<item id="34606" name="Mysterious Soulshot (B-grade)" name_additional="Event" type="EtcItem">
+	<item id="34606" name="Mysterious Soulshot (B-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a B-grade weapon. -->
 		<set name="icon" val="icon.etc_spirit_bullet_red_i00" />
 		<set name="is_freightable" val="false" />
@@ -122,7 +122,7 @@
 			<skill id="9296" level="1" /> <!-- Player Commendation - Soulshot (B-grade) -->
 		</skills>
 	</item>
-	<item id="34607" name="Mysterious Soulshot (A-grade)" name_additional="Event" type="EtcItem">
+	<item id="34607" name="Mysterious Soulshot (A-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with an A-grade weapon. -->
 		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
 		<set name="is_freightable" val="false" />
@@ -137,7 +137,7 @@
 			<skill id="9297" level="1" /> <!-- Player Commendation - Soulshot (A-grade) -->
 		</skills>
 	</item>
-	<item id="34608" name="Mysterious Soulshot (S-grade)" name_additional="Event" type="EtcItem">
+	<item id="34608" name="Mysterious Soulshot (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with an S-grade weapon. -->
 		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
 		<set name="is_freightable" val="false" />
@@ -152,7 +152,7 @@
 			<skill id="9298" level="1" /> <!-- Player Commendation - Soulshot (S-grade) -->
 		</skills>
 	</item>
-	<item id="34609" name="Mysterious Soulshot (R-grade)" name_additional="Event" type="EtcItem">
+	<item id="34609" name="Mysterious Soulshot (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its P. Atk. significantly. Can be used with an R-grade weapon. -->
 		<set name="icon" val="icon.soulshot_r_i00" />
 		<set name="default_action" val="SOULSHOT" />
@@ -169,7 +169,7 @@
 			<skill id="9299" level="1" /> <!-- Player Commendation - Soulshot (R-grade) -->
 		</skills>
 	</item>
-	<item id="34610" name="Mysterious Blessed No-grade Spiritshot" name_additional="Event" type="EtcItem">
+	<item id="34610" name="Mysterious Blessed No-grade Spiritshot" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with No-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i01" />
 		<set name="is_freightable" val="false" />
@@ -183,7 +183,7 @@
 			<skill id="9300" level="1" /> <!-- Player Commendation - Blessed Spiritshot (No-grade) -->
 		</skills>
 	</item>
-	<item id="34611" name="Mysterious Blessed Spiritshot (D-grade)" name_additional="Event" type="EtcItem">
+	<item id="34611" name="Mysterious Blessed Spiritshot (D-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with D-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
 		<set name="is_freightable" val="false" />
@@ -198,7 +198,7 @@
 			<skill id="9301" level="1" /> <!-- Player Commendation - Blessed Spiritshot (D-grade) -->
 		</skills>
 	</item>
-	<item id="34612" name="Mysterious Blessed Spiritshot (C-grade)" name_additional="Event" type="EtcItem">
+	<item id="34612" name="Mysterious Blessed Spiritshot (C-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with C-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i01" />
 		<set name="is_freightable" val="false" />
@@ -213,7 +213,7 @@
 			<skill id="9302" level="1" /> <!-- Player Commendation - Blessed Spiritshot (C-grade) -->
 		</skills>
 	</item>
-	<item id="34613" name="Mysterious Blessed Spiritshot (B-grade)" name_additional="Event" type="EtcItem">
+	<item id="34613" name="Mysterious Blessed Spiritshot (B-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with B-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i01" />
 		<set name="is_freightable" val="false" />
@@ -228,7 +228,7 @@
 			<skill id="9303" level="1" /> <!-- Player Commendation - Blessed Spiritshot (B-grade) -->
 		</skills>
 	</item>
-	<item id="34614" name="Mysterious Blessed Spiritshot (A-grade)" name_additional="Event" type="EtcItem">
+	<item id="34614" name="Mysterious Blessed Spiritshot (A-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with A-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
 		<set name="is_freightable" val="false" />
@@ -243,7 +243,7 @@
 			<skill id="9304" level="1" /> <!-- Player Commendation - Blessed Spiritshot (A-grade) -->
 		</skills>
 	</item>
-	<item id="34615" name="Mysterious Blessed Spiritshot (S-grade)" name_additional="Event" type="EtcItem">
+	<item id="34615" name="Mysterious Blessed Spiritshot (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with S-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
 		<set name="is_freightable" val="false" />
@@ -258,7 +258,7 @@
 			<skill id="9305" level="1" /> <!-- Player Commendation - Blessed Spiritshot (S-grade) -->
 		</skills>
 	</item>
-	<item id="34616" name="Mysterious Blessed Spiritshot (R-grade)" name_additional="Event" type="EtcItem">
+	<item id="34616" name="Mysterious Blessed Spiritshot (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its M. Atk. significantly. Can be used with an R-grade weapon. -->
 		<set name="icon" val="icon.blessed_spiritshot_r_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -275,7 +275,7 @@
 			<skill id="9306" level="1" /> <!-- Player Commendation - Blessed Spiritshot (R-grade) -->
 		</skills>
 	</item>
-	<item id="34617" name="Player Commendation - Agathion's Gift" name_additional="PC-exclusive" type="EtcItem">
+	<item id="34617" name="Player Commendation - Agathion's Gift" additionalName="PC-exclusive" type="EtcItem">
 		<!-- When used, you can receive an Agathion's gift. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="20" />
@@ -294,7 +294,7 @@
 			<skill id="9318" level="1" /> <!-- Open PC Points Coupon -->
 		</skills>
 	</item>
-	<item id="34618" name="Player Commendation - Enhanced Cocktail" name_additional="PC-exclusive" type="EtcItem">
+	<item id="34618" name="Player Commendation - Enhanced Cocktail" additionalName="PC-exclusive" type="EtcItem">
 		<!-- Cocktail that contains the flavors of many rare fruits. When consumed, you will feel the effects of Horn Melody, Lute Melody, Pipe Organ Melody, Guitar Melody, Harp Melody, and Drum Melody. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i02" />
 		<set name="weight" val="2" />
@@ -321,7 +321,7 @@
 			<skill id="9331" level="1" /> <!-- Horn Melody - Enhanced Cocktail -->
 		</skills>
 	</item>
-	<item id="34619" name="Player Commendation Points Coupon" name_additional="PC-exclusive" type="EtcItem">
+	<item id="34619" name="Player Commendation Points Coupon" additionalName="PC-exclusive" type="EtcItem">
 		<!-- Click on the item to acquire PC Points. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="weight" val="120" />

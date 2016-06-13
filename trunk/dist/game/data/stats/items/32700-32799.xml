@@ -210,7 +210,7 @@
 			<skill id="12822" level="1" /> <!-- Guardian Warrior's Reward Box -->
 		</skills>
 	</item>
-	<item id="32725" name="Chic Silver Chapeau" name_additional="3-day" type="Armor">
+	<item id="32725" name="Chic Silver Chapeau" additionalName="3-day" type="Armor">
 		<!-- Chic Silver Chapeau. 3-day. STR/INT + 1. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys2.icon2.pi_silverchaperon" />
 		<set name="default_action" val="EQUIP" />
@@ -229,7 +229,7 @@
 			<skill id="13144" level="1" /> <!-- Chic Silver Chapeau -->
 		</skills>
 	</item>
-	<item id="32726" name="Demon Circlet" name_additional="3-day" type="Armor">
+	<item id="32726" name="Demon Circlet" additionalName="3-day" type="Armor">
 		<!-- Hair accessory with weak energy. 3-day. CON/MEN + 1. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -442,7 +442,7 @@
 			<skill id="12847" level="1" /> <!-- Elixir Pack (A-grade) -->
 		</skills>
 	</item>
-	<item id="32742" name="Rabbit Ears" name_additional="STR" type="Armor">
+	<item id="32742" name="Rabbit Ears" additionalName="STR" type="Armor">
 		<!-- STR + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -457,7 +457,7 @@
 			<skill id="9554" level="1" /> <!-- Hair Accessory: STR -->
 		</skills>
 	</item>
-	<item id="32743" name="Rabbit Ears" name_additional="DEX" type="Armor">
+	<item id="32743" name="Rabbit Ears" additionalName="DEX" type="Armor">
 		<!-- DEX + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -472,7 +472,7 @@
 			<skill id="9555" level="1" /> <!-- Hair Accessory: DEX -->
 		</skills>
 	</item>
-	<item id="32744" name="Raccoon Ears" name_additional="CON" type="Armor">
+	<item id="32744" name="Raccoon Ears" additionalName="CON" type="Armor">
 		<!-- CON + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -487,7 +487,7 @@
 			<skill id="9556" level="1" /> <!-- Hair Accessory: CON -->
 		</skills>
 	</item>
-	<item id="32745" name="Raccoon Ears" name_additional="MEN" type="Armor">
+	<item id="32745" name="Raccoon Ears" additionalName="MEN" type="Armor">
 		<!-- MEN + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -502,7 +502,7 @@
 			<skill id="9557" level="1" /> <!-- Hair Accessory: MEN -->
 		</skills>
 	</item>
-	<item id="32746" name="Cat Ears" name_additional="INT" type="Armor">
+	<item id="32746" name="Cat Ears" additionalName="INT" type="Armor">
 		<!-- INT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -517,7 +517,7 @@
 			<skill id="9558" level="1" /> <!-- Hair Accessory: INT -->
 		</skills>
 	</item>
-	<item id="32747" name="Cat Ears" name_additional="WIT" type="Armor">
+	<item id="32747" name="Cat Ears" additionalName="WIT" type="Armor">
 		<!-- WIT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -532,7 +532,7 @@
 			<skill id="9559" level="1" /> <!-- Hair Accessory: WIT -->
 		</skills>
 	</item>
-	<item id="32748" name="Romantic Chapeau" name_additional="Critical Rate" type="Armor">
+	<item id="32748" name="Romantic Chapeau" additionalName="Critical Rate" type="Armor">
 		<!-- P. Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -547,7 +547,7 @@
 			<skill id="9560" level="1" /> <!-- Hair Accessory: Critical Rate -->
 		</skills>
 	</item>
-	<item id="32749" name="Romantic Chapeau" name_additional="Critical Damage" type="Armor">
+	<item id="32749" name="Romantic Chapeau" additionalName="Critical Damage" type="Armor">
 		<!-- P. P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -562,7 +562,7 @@
 			<skill id="9561" level="1" /> <!-- Hair Accessory: Critical Damage -->
 		</skills>
 	</item>
-	<item id="32750" name="Angel Circlet" name_additional="P. Def." type="Armor">
+	<item id="32750" name="Angel Circlet" additionalName="P. Def." type="Armor">
 		<!-- P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -577,7 +577,7 @@
 			<skill id="9562" level="1" /> <!-- Hair Accessory Circlet: P. Def. -->
 		</skills>
 	</item>
-	<item id="32751" name="Angel Circlet" name_additional="M. Def." type="Armor">
+	<item id="32751" name="Angel Circlet" additionalName="M. Def." type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -592,7 +592,7 @@
 			<skill id="9563" level="1" /> <!-- Hair Accessory: M. Def. -->
 		</skills>
 	</item>
-	<item id="32752" name="Angel Circlet" name_additional="Evasion" type="Armor">
+	<item id="32752" name="Angel Circlet" additionalName="Evasion" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -607,7 +607,7 @@
 			<skill id="9564" level="1" /> <!-- Hair Accessory: Evasion -->
 		</skills>
 	</item>
-	<item id="32753" name="Demon Circlet" name_additional="P. Atk." type="Armor">
+	<item id="32753" name="Demon Circlet" additionalName="P. Atk." type="Armor">
 		<!-- P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -622,7 +622,7 @@
 			<skill id="9565" level="1" /> <!-- Hair Accessory: P. Atk. -->
 		</skills>
 	</item>
-	<item id="32754" name="Demon Circlet" name_additional="M. Atk." type="Armor">
+	<item id="32754" name="Demon Circlet" additionalName="M. Atk." type="Armor">
 		<!-- M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -637,7 +637,7 @@
 			<skill id="9566" level="1" /> <!-- Hair Accessory: M. Atk. -->
 		</skills>
 	</item>
-	<item id="32755" name="Demon Circlet" name_additional="Accuracy" type="Armor">
+	<item id="32755" name="Demon Circlet" additionalName="Accuracy" type="Armor">
 		<!-- Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />

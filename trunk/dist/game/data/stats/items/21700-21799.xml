@@ -18,7 +18,7 @@
 			<item id="21580" min="1" max="1" chance="100" /> <!-- Power Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="21701" name="Power Shirt Pack" name_additional="Event" type="EtcItem">
+	<item id="21701" name="Power Shirt Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Gift box containing 1 Olf's T-shirt. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
@@ -115,7 +115,7 @@
 			<item id="21704" min="3" max="3" chance="100" /> <!-- Honey Rice Cakes -->
 		</capsuled_items>
 	</item>
-	<item id="21706" name="Power Shirt" name_additional="Event" type="Armor">
+	<item id="21706" name="Power Shirt" additionalName="Event" type="Armor">
 		<!-- Description: Dimensional item. Olf's T-shirt Enchant Scroll. Can enhance up to +10 using a Blessed Olf's T-shirt Enchant Scroll. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.7anni_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -136,7 +136,7 @@
 			<stat type="pDef">28</stat>
 		</stats>
 	</item>
-	<item id="21707" name="Blessed Scroll: Enchant Power Shirt" name_additional="Event" type="EtcItem">
+	<item id="21707" name="Blessed Scroll: Enchant Power Shirt" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. Enchant scroll exclusive to Olf's T-shirt. Increases the T-shirt's P. Def. and M. Def. by 1. Starting from +4, increases P. Def. by 3. Can safely enchant to +3 and up to a max +10. From +4, "basic abilities (CON, MEN, STR, INT, DEX, WIT)" are raised in stages. Special skills are added at +5, +7, +8 and +9. If the enchant fails, the existing enchant value becomes 0. Cannot be dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -155,7 +155,7 @@
 			<skill id="22254" level="1" /> <!-- Blessed Scroll: Enchant Power Shirt -->
 		</skills>
 	</item>
-	<item id="21708" name="Honey Rice Cakes" name_additional="Event" type="EtcItem">
+	<item id="21708" name="Honey Rice Cakes" additionalName="Event" type="EtcItem">
 		<!-- Description: Delicious honey rice cakes. When used, instantly recovers Max MP by 50%. Reuse time is 5 minutes. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_c_i00" />
 		<set name="material" val="LIQUID" />
@@ -177,7 +177,7 @@
 			<skill id="22255" level="1" /> <!-- Honey Rice Cakes -->
 		</skills>
 	</item>
-	<item id="21709" name="Agathion - Rudolph" name_additional="Event" type="Armor">
+	<item id="21709" name="Agathion - Rudolph" additionalName="Event" type="Armor">
 		<!-- Description: Bracelet that can summon a cute Rudolph Agathion. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.event_lbracelet_rudolph" />
 		<set name="default_action" val="EQUIP" />
@@ -199,7 +199,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="21710" name="Vitality Replenishing Potion" name_additional="Event" type="EtcItem">
+	<item id="21710" name="Vitality Replenishing Potion" additionalName="Event" type="EtcItem">
 		<!-- Description: When used, replenishes energy to 100%. Reuse time is 60 minutes. Cannot be destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="material" val="LIQUID" />
@@ -217,7 +217,7 @@
 			<skill id="22252" level="1" /> <!-- Vitality Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="21711" name="Santa's Blessing" name_additional="Event" type="EtcItem">
+	<item id="21711" name="Santa's Blessing" additionalName="Event" type="EtcItem">
 		<!-- Description: When used, HP Recovery Bonus, Max MP, and Critical Atk. Rate +20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hour. Cannot be destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
 		<set name="material" val="LIQUID" />
@@ -557,7 +557,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="21726" name="Angel Cat's Blessing" name_additional="Event" type="EtcItem">
+	<item id="21726" name="Angel Cat's Blessing" additionalName="Event" type="EtcItem">
 		<!-- Description: When used, HP Recovery Bonus, Max MP, and Critical Atk. Rate +20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hour. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
 		<set name="material" val="LIQUID" />
@@ -595,7 +595,7 @@
 			<skill id="22253" level="1" /> <!-- Prophecy of Water -->
 		</skills>
 	</item>
-	<item id="21727" name="Agathion - Zinyanzi (3-day)" name_additional="3-day" type="Armor">
+	<item id="21727" name="Agathion - Zinyanzi (3-day)" additionalName="3-day" type="Armor">
 		<!-- Description: Bracelet skill that let's you summon Zinenze for 3 days. Upon using the skill name, instantly recovers Exp, HP, MP, and CP, and makes you invincible for 5 seconds. (But can only be used when HP is below 30%.). Cool time is 12 hour(s). Can be stored in a private warehouse. But cannot be exchange, dropped, or sold in shops. -->
 		<set name="icon" val="BranchSys2.Icon.br_aga_jinjiayan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -621,7 +621,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="21728" name="Agathion - Zinyanzi (7-day)" name_additional="7-day" type="Armor">
+	<item id="21728" name="Agathion - Zinyanzi (7-day)" additionalName="7-day" type="Armor">
 		<!-- Description: Bracelet skill that let's you summon Zinenze for 3 days. Upon using the skill name, instantly recovers Exp, HP, MP, and CP, and makes you invincible for 5 seconds. (But can only be used when HP is below 31%.). Cool time is 12 hour(s). Can be stored in a private warehouse. But cannot be exchange, dropped, or sold in shops. -->
 		<set name="icon" val="BranchSys2.Icon.br_aga_jinjiayan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -647,7 +647,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="21729" name="Agathion - Yanzi" name_additional="Permanent" type="Armor">
+	<item id="21729" name="Agathion - Yanzi" additionalName="Permanent" type="Armor">
 		<!-- Description: Enze Agathion. Upon skill use, transforms into an Enze fairy. Can stay as an Enze fairy for 10 minutes. Cool time is 5 hours. Can be traded, sold at a private store, and stored in a private warehouse. But cannot be dropped or sold at a shop. -->
 		<set name="icon" val="BranchSys2.Icon.br_aga_jiayan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -669,7 +669,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="21730" name="Letter Collector's Gift" name_additional="Event" type="EtcItem">
+	<item id="21730" name="Letter Collector's Gift" additionalName="Event" type="EtcItem">
 		<!-- Description: 7th Anniversary. Letter Collector's Gift. Upon use, for 2 hours, increases Atk. Spd. +15%, Casting Spd. +15%, Speed +20, and changes the appearance of the equipped weapon and armor to look like items from the past. Reuse time is 60 minutes. -->
 		<set name="icon" val="icon.shield_bread_i01" />
 		<set name="material" val="LIQUID" />
@@ -687,7 +687,7 @@
 			<skill id="22270" level="1" /> <!-- Letter Collector's Gift -->
 		</skills>
 	</item>
-	<item id="21731" name="Maingauche" name_additional="Event" type="Weapon">
+	<item id="21731" name="Maingauche" additionalName="Event" type="Weapon">
 		<!-- Description: Letter Collector's Maingauche of Memory -->
 		<set name="icon" val="icon.weapon_maingauche_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -716,7 +716,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21732" name="Sword of Revolution" name_additional="Event" type="Weapon">
+	<item id="21732" name="Sword of Revolution" additionalName="Event" type="Weapon">
 		<!-- Description: Letter Collector's Sword of Revolution of Memory -->
 		<set name="icon" val="icon.weapon_sword_of_revolution_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -743,7 +743,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21733" name="Lesser Giant's Sword" name_additional="Event" type="Weapon">
+	<item id="21733" name="Lesser Giant's Sword" additionalName="Event" type="Weapon">
 		<!-- Description: Letter Collector's Titan Sword of Memory -->
 		<set name="icon" val="icon.weapon_giants_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -770,7 +770,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21734" name="Priest Mace" name_additional="Event" type="Weapon">
+	<item id="21734" name="Priest Mace" additionalName="Event" type="Weapon">
 		<!-- Description: Letter Collector's Priest Mace of Memory -->
 		<set name="icon" val="icon.weapon_mace_of_priest_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -799,7 +799,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21735" name="Tarbar" name_additional="Event" type="Weapon">
+	<item id="21735" name="Tarbar" additionalName="Event" type="Weapon">
 		<!-- Description: Letter Collector's Tarbar of Memory -->
 		<set name="icon" val="icon.weapon_tarbar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -828,7 +828,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21736" name="Goat Head Staff" name_additional="Event" type="Weapon">
+	<item id="21736" name="Goat Head Staff" additionalName="Event" type="Weapon">
 		<!-- Description: Letter Collector's Goat Head Staff of Memory -->
 		<set name="icon" val="icon.weapon_goathead_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -857,7 +857,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21737" name="Lesser Giant's Hammer" name_additional="Event" type="Weapon">
+	<item id="21737" name="Lesser Giant's Hammer" additionalName="Event" type="Weapon">
 		<!-- Description: Letter Collector's Titan Hammer of Memory -->
 		<set name="icon" val="icon.weapon_giants_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -886,7 +886,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21738" name="Winged Spear" name_additional="Event" type="Weapon">
+	<item id="21738" name="Winged Spear" additionalName="Event" type="Weapon">
 		<!-- Description: Letter Collector's Winged Spear of Memory -->
 		<set name="icon" val="icon.weapon_winged_spear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -918,7 +918,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="21739" name="Reinforced Longbow" name_additional="Event" type="Weapon">
+	<item id="21739" name="Reinforced Longbow" additionalName="Event" type="Weapon">
 		<!-- Description: Letter Collector's Strengthened Low Bow of Memory -->
 		<set name="icon" val="icon.weapon_strengthening_long_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -948,7 +948,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="21740" name="Épée" name_additional="Event" type="Weapon">
+	<item id="21740" name="Épée" additionalName="Event" type="Weapon">
 		<!-- Description: Letter Collector's Epee of Memory -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -980,7 +980,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21741" name="Sword of Magic Fog" name_additional="Event" type="Weapon">
+	<item id="21741" name="Sword of Magic Fog" additionalName="Event" type="Weapon">
 		<!-- Description: Letter Collector's Sword of Magic Fog of Memory -->
 		<set name="icon" val="icon.weapon_sword_of_magic_fog_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1007,7 +1007,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21742" name="Bastard Sword*Bastard Sword" name_additional="Event" type="Weapon">
+	<item id="21742" name="Bastard Sword*Bastard Sword" additionalName="Event" type="Weapon">
 		<!-- Description: Letter Collector's Bastars*Bastard of Memory -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1034,7 +1034,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21743" name="Bich'Hwa" name_additional="Event" type="Weapon">
+	<item id="21743" name="Bich'Hwa" additionalName="Event" type="Weapon">
 		<!-- Description: Letter Collector's Bich'Hwa of Memory -->
 		<set name="icon" val="icon.weapon_bichhwa_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1063,7 +1063,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21744" name="Katzbalger" name_additional="Event" type="Weapon">
+	<item id="21744" name="Katzbalger" additionalName="Event" type="Weapon">
 		<!-- Description: Letter Collector's Katzbalger of Memory -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1095,7 +1095,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21745" name="Arm Breaker" name_additional="Event" type="Weapon">
+	<item id="21745" name="Arm Breaker" additionalName="Event" type="Weapon">
 		<!-- Description: Letter Collector's Arm Breaker of Memory -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1500,7 +1500,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="21775" name="Imperial Crusader Breastplate of Fortune" name_additional="90-day" type="Armor">
+	<item id="21775" name="Imperial Crusader Breastplate of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t88_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1527,7 +1527,7 @@
 			<stat type="pDef">205</stat>
 		</stats>
 	</item>
-	<item id="21776" name="Imperial Crusader Gaiters of Fortune" name_additional="90-day" type="Armor">
+	<item id="21776" name="Imperial Crusader Gaiters of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t88_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1554,7 +1554,7 @@
 			<stat type="pDef">128</stat>
 		</stats>
 	</item>
-	<item id="21777" name="Imperial Crusader Gauntlets of Fortune" name_additional="90-day" type="Armor">
+	<item id="21777" name="Imperial Crusader Gauntlets of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t88_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1577,7 +1577,7 @@
 			<stat type="pDef">55</stat>
 		</stats>
 	</item>
-	<item id="21778" name="Imperial Crusader Boots of Fortune" name_additional="90-day" type="Armor">
+	<item id="21778" name="Imperial Crusader Boots of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t88_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1600,7 +1600,7 @@
 			<stat type="pDef">55</stat>
 		</stats>
 	</item>
-	<item id="21779" name="Imperial Crusader Helmet of Fortune" name_additional="90-day" type="Armor">
+	<item id="21779" name="Imperial Crusader Helmet of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1623,7 +1623,7 @@
 			<stat type="pDef">83</stat>
 		</stats>
 	</item>
-	<item id="21780" name="Imperial Crusader Shield of Fortune" name_additional="90-day" type="Armor">
+	<item id="21780" name="Imperial Crusader Shield of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1651,7 +1651,7 @@
 			<stat type="sDef">290</stat>
 		</stats>
 	</item>
-	<item id="21781" name="Imperial Crusader of Fortune Set Pack (S-grade)" name_additional="90-day" type="EtcItem">
+	<item id="21781" name="Imperial Crusader of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">
 		<!-- Description: When used, you acquire an Imperial Crusader of Fortune armor set. Expires after 90 days if not used. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="material" val="STEEL" />
@@ -1674,7 +1674,7 @@
 			<item id="21780" min="1" max="1" chance="100" /> <!-- Imperial Crusader Shield of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="21782" name="Draconic Leather Armor of Fortune" name_additional="90-day" type="Armor">
+	<item id="21782" name="Draconic Leather Armor of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: One-piece Body Armor. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t89_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1698,7 +1698,7 @@
 			<stat type="pDef">249</stat>
 		</stats>
 	</item>
-	<item id="21783" name="Draconic Leather Gloves of Fortune" name_additional="90-day" type="Armor">
+	<item id="21783" name="Draconic Leather Gloves of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t89_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1721,7 +1721,7 @@
 			<stat type="pDef">55</stat>
 		</stats>
 	</item>
-	<item id="21784" name="Draconic Leather Boots of Fortune" name_additional="90-day" type="Armor">
+	<item id="21784" name="Draconic Leather Boots of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t89_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1744,7 +1744,7 @@
 			<stat type="pDef">55</stat>
 		</stats>
 	</item>
-	<item id="21785" name="Draconic Leather Helmet of Fortune" name_additional="90-day" type="Armor">
+	<item id="21785" name="Draconic Leather Helmet of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1767,7 +1767,7 @@
 			<stat type="pDef">83</stat>
 		</stats>
 	</item>
-	<item id="21786" name="Draconic Leather of Fortune Set Pack (S-grade)" name_additional="90-day" type="EtcItem">
+	<item id="21786" name="Draconic Leather of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">
 		<!-- Description: When used, you acquire a Draconic Leather of Fortune Armor Set. Expires after 90 days if not used. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="material" val="STEEL" />
@@ -1788,7 +1788,7 @@
 			<item id="21785" min="1" max="1" chance="100" /> <!-- Draconic Leather Helmet of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="21787" name="Major Arcana Robe of Fortune" name_additional="90-day" type="Armor">
+	<item id="21787" name="Major Arcana Robe of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: One-piece Body Armor. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t90_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1816,7 +1816,7 @@
 			<stat type="maxMp">866</stat>
 		</stats>
 	</item>
-	<item id="21788" name="Major Arcana Gloves of Fortune" name_additional="90-day" type="Armor">
+	<item id="21788" name="Major Arcana Gloves of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t90_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1839,7 +1839,7 @@
 			<stat type="pDef">55</stat>
 		</stats>
 	</item>
-	<item id="21789" name="Major Arcana Boots of Fortune" name_additional="90-day" type="Armor">
+	<item id="21789" name="Major Arcana Boots of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t90_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1862,7 +1862,7 @@
 			<stat type="pDef">55</stat>
 		</stats>
 	</item>
-	<item id="21790" name="Major Arcana Circlet of Fortune" name_additional="90-day" type="Armor">
+	<item id="21790" name="Major Arcana Circlet of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1885,7 +1885,7 @@
 			<stat type="pDef">83</stat>
 		</stats>
 	</item>
-	<item id="21791" name="Arcana Sigil of Fortune" name_additional="90-day" type="Armor">
+	<item id="21791" name="Arcana Sigil of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.arcana_sigil_i00" />
 		<set name="armor_type" val="SIGIL" />
@@ -1910,7 +1910,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="21792" name="Major Arcana Robe of Fortune Set Pack (S-grade)" name_additional="90-day" type="EtcItem">
+	<item id="21792" name="Major Arcana Robe of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">
 		<!-- Description: When used, you acquire an Arcana Robe of Fortune Set. Expires after 90 days if not used. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="material" val="STEEL" />
@@ -1932,7 +1932,7 @@
 			<item id="21791" min="1" max="1" chance="100" /> <!-- Arcana Sigil of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="21793" name="Dynasty Breastplate of Fortune" name_additional="90-day" type="Armor">
+	<item id="21793" name="Dynasty Breastplate of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1959,7 +1959,7 @@
 			<stat type="pDef">226</stat>
 		</stats>
 	</item>
-	<item id="21794" name="Dynasty Gaiters of Fortune" name_additional="90-day" type="Armor">
+	<item id="21794" name="Dynasty Gaiters of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t91_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1986,7 +1986,7 @@
 			<stat type="pDef">141</stat>
 		</stats>
 	</item>
-	<item id="21795" name="Dynasty Gauntlets of Fortune" name_additional="90-day" type="Armor">
+	<item id="21795" name="Dynasty Gauntlets of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t91_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2009,7 +2009,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="21796" name="Dynasty Boots of Fortune" name_additional="90-day" type="Armor">
+	<item id="21796" name="Dynasty Boots of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_t91_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2032,7 +2032,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="21797" name="Dynasty Helmet of Fortune" name_additional="90-day" type="Armor">
+	<item id="21797" name="Dynasty Helmet of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be assigned an attribute. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2055,7 +2055,7 @@
 			<stat type="pDef">92</stat>
 		</stats>
 	</item>
-	<item id="21798" name="Dynasty Shield of Fortune" name_additional="90-day" type="Armor">
+	<item id="21798" name="Dynasty Shield of Fortune" additionalName="90-day" type="Armor">
 		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.shield_dynasty_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2083,7 +2083,7 @@
 			<stat type="sDef">321</stat>
 		</stats>
 	</item>
-	<item id="21799" name="Dynasty Breastplate of Fortune Set Pack (S-grade)" name_additional="90-day" type="EtcItem">
+	<item id="21799" name="Dynasty Breastplate of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">
 		<!-- Description: When used, you acquire a Dynasty Breastplate Armor of Fortune Set. Expires after 90 days if not used. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="material" val="STEEL" />

@@ -59,7 +59,7 @@
 			<skill id="8262" level="1" /> <!-- Ride Gold Maned Lion -->
 		</skills>
 	</item>
-	<item id="20503" name="Mount - Gold Maned Lion" name_additional="30-day" type="Armor">
+	<item id="20503" name="Mount - Gold Maned Lion" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -82,7 +82,7 @@
 			<skill id="8262" level="1" /> <!-- Ride Gold Maned Lion -->
 		</skills>
 	</item>
-	<item id="20504" name="Mount - Steam Beetle" name_additional="30-day" type="Armor">
+	<item id="20504" name="Mount - Steam Beetle" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -273,7 +273,7 @@
 			<item id="20502" min="1" max="1" chance="100" /> <!-- Mount - Gold Maned Lion -->
 		</capsuled_items>
 	</item>
-	<item id="20513" name="Mount - Gold Maned Lion Pack (30-day)" name_additional="30-day" type="EtcItem">
+	<item id="20513" name="Mount - Gold Maned Lion Pack (30-day)" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -294,7 +294,7 @@
 			<item id="20503" min="1" max="1" chance="100" /> <!-- Mount - Gold Maned Lion - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="20514" name="Mount - Steam Beetle Pack (30-day)" name_additional="30-day" type="EtcItem">
+	<item id="20514" name="Mount - Steam Beetle Pack (30-day)" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -745,7 +745,7 @@
 			<skill id="22090" level="1" /> <!-- Advanced Block -->
 		</skills>
 	</item>
-	<item id="20535" name="Mount - Steam Beetle" name_additional="30-day" type="Armor">
+	<item id="20535" name="Mount - Steam Beetle" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -767,7 +767,7 @@
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 		</skills>
 	</item>
-	<item id="20536" name="Mount - Gold Maned Lion" name_additional="30-day" type="Armor">
+	<item id="20536" name="Mount - Gold Maned Lion" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -789,7 +789,7 @@
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 		</skills>
 	</item>
-	<item id="20537" name="Afro Hair" name_additional="Vitality (7-day)" type="Armor">
+	<item id="20537" name="Afro Hair" additionalName="Vitality (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -811,7 +811,7 @@
 			<skill id="21011" level="1" /> <!-- Maintain Vitality -->
 		</skills>
 	</item>
-	<item id="20538" name="Horn-rimmed Glasses" name_additional="Vitality (7-day)" type="Armor">
+	<item id="20538" name="Horn-rimmed Glasses" additionalName="Vitality (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_Eye_Glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -833,7 +833,7 @@
 			<skill id="21012" level="1" /> <!-- Maintain Vitality -->
 		</skills>
 	</item>
-	<item id="20539" name="Assassin's Bamboo Hat" name_additional="Vitality (7-day)" type="Armor">
+	<item id="20539" name="Assassin's Bamboo Hat" additionalName="Vitality (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_Bamboo_Hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1413,7 +1413,7 @@
 			<item id="22066" min="1" max="1" chance="100" /> <!-- Rune of Feather - 24-hour -->
 		</capsuled_items>
 	</item>
-	<item id="20567" name="Eva's Circlet (Event)" name_additional="3-day" type="Armor">
+	<item id="20567" name="Eva's Circlet (Event)" additionalName="3-day" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_circlet_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1434,7 +1434,7 @@
 			<skill id="21087" level="1" /> <!-- Berserker Spirit -->
 		</skills>
 	</item>
-	<item id="20568" name="Eva's Circlet" name_additional="7-day" type="Armor">
+	<item id="20568" name="Eva's Circlet" additionalName="7-day" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_circlet_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1475,7 +1475,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="20570" name="Eva's Rune (Event)" name_additional="5-hour" type="EtcItem">
+	<item id="20570" name="Eva's Rune (Event)" additionalName="5-hour" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_rune_of_eva_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -1496,7 +1496,7 @@
 			<skill id="22091" level="1" /> <!-- Eva's Rune -->
 		</skills>
 	</item>
-	<item id="20571" name="Eva's Rune (Event)" name_additional="3-day" type="EtcItem">
+	<item id="20571" name="Eva's Rune (Event)" additionalName="3-day" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_rune_of_eva_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -1517,7 +1517,7 @@
 			<skill id="22091" level="1" /> <!-- Eva's Rune -->
 		</skills>
 	</item>
-	<item id="20572" name="XP Rune III (Lv. 1-100+) 30%" name_additional="3-hour" type="EtcItem">
+	<item id="20572" name="XP Rune III (Lv. 1-100+) 30%" additionalName="3-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -1799,7 +1799,7 @@
 			<item id="20591" min="1" max="1" chance="100" /> <!-- Agathion - Weaver -->
 		</capsuled_items>
 	</item>
-	<item id="20588" name="Agathion - Weaver Pack (24-hour)" name_additional="Power of the Golden Calf" type="EtcItem">
+	<item id="20588" name="Agathion - Weaver Pack (24-hour)" additionalName="Power of the Golden Calf" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1816,7 +1816,7 @@
 			<item id="20592" min="1" max="1" chance="100" /> <!-- Agathion - Weaver - Power of the Golden Calf (24-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="20589" name="Agathion - Weaver Pack (3-day)" name_additional="Power of the Golden Calf" type="EtcItem">
+	<item id="20589" name="Agathion - Weaver Pack (3-day)" additionalName="Power of the Golden Calf" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1875,7 +1875,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20592" name="Agathion - Weaver" name_additional="Power of the Golden Calf (24-hour)" type="Armor">
+	<item id="20592" name="Agathion - Weaver" additionalName="Power of the Golden Calf (24-hour)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_womanweaver_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1899,7 +1899,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20593" name="Agathion - Weaver" name_additional="Power of the Golden Calf (3-day)" type="Armor">
+	<item id="20593" name="Agathion - Weaver" additionalName="Power of the Golden Calf (3-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_womanweaver_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1923,7 +1923,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20594" name="Summon of Love Bracelet (Event)" name_additional="24-hour" type="Armor">
+	<item id="20594" name="Summon of Love Bracelet (Event)" additionalName="24-hour" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_ring_of_friendship_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1989,7 +1989,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="20598" name="Twilight Staff Pack (7-day)" name_additional="Dance of Shadow" type="EtcItem">
+	<item id="20598" name="Twilight Staff Pack (7-day)" additionalName="Dance of Shadow" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2009,7 +2009,7 @@
 			<item id="20600" min="1" max="1" chance="100" /> <!-- Twilight Staff - Dance of Shadow (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="20599" name="Anniversary Hat Pack (7-day)" name_additional="Soul of Phoenix" type="EtcItem">
+	<item id="20599" name="Anniversary Hat Pack (7-day)" additionalName="Soul of Phoenix" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

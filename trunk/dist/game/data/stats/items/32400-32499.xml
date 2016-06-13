@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="32400" name="Fantasy Pa'agrio Hammer" name_additional="Not in Use" type="Weapon">
+	<item id="32400" name="Fantasy Pa'agrio Hammer" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Rsk. Evasion, Magic Poison, or Magic Weakness. -->
 		<set name="icon" val="icon.weapon_paagrio_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -27,7 +27,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32401" name="Fantasy Bec de Corbin" name_additional="Not in Use" type="Weapon">
+	<item id="32401" name="Fantasy Bec de Corbin" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Critical Stun, Long Blow or Light. -->
 		<set name="icon" val="icon.weapon_bech_de_corbin_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -57,7 +57,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="32402" name="Fantasy Poleaxe" name_additional="Not in Use" type="Weapon">
+	<item id="32402" name="Fantasy Poleaxe" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Wide Blow, Long Blow or Critical Stun. -->
 		<set name="icon" val="icon.weapon_poleaxe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -87,7 +87,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="32403" name="Fantasy Knuckle Duster" name_additional="Not in Use" type="Weapon">
+	<item id="32403" name="Fantasy Knuckle Duster" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions, Rsk. Evasion, Rsk. Haste or Haste. -->
 		<set name="icon" val="icon.weapon_knuckle_dust_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -114,7 +114,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32404" name="Fantasy Fisted Blade" name_additional="Not in Use" type="Weapon">
+	<item id="32404" name="Fantasy Fisted Blade" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Rsk. Evasion, Rsk. Haste or Haste. -->
 		<set name="icon" val="icon.weapon_fist_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -141,7 +141,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32405" name="Fantasy Sword of Revolution*Sword of Revolution" name_additional="Not in Use" type="Weapon">
+	<item id="32405" name="Fantasy Sword of Revolution*Sword of Revolution" additionalName="Not in Use" type="Weapon">
 		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Max HP increases by 25%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -170,7 +170,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32406" name="Fantasy StormBringer*StormBringer" name_additional="Not in Use" type="Weapon">
+	<item id="32406" name="Fantasy StormBringer*StormBringer" additionalName="Not in Use" type="Weapon">
 		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 2. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -199,7 +199,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32407" name="Fantasy Compound Armor" name_additional="Not in Use" type="Armor">
+	<item id="32407" name="Fantasy Compound Armor" additionalName="Not in Use" type="Armor">
 		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t61_ul_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -217,7 +217,7 @@
 			<stat type="pDef">224</stat>
 		</stats>
 	</item>
-	<item id="32408" name="Fantasy Theca Leather Armor" name_additional="Not in Use" type="Armor">
+	<item id="32408" name="Fantasy Theca Leather Armor" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t63_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -234,7 +234,7 @@
 			<stat type="pDef">121</stat>
 		</stats>
 	</item>
-	<item id="32409" name="Fantasy Theca Leather Gaiters" name_additional="Not in Use" type="Armor">
+	<item id="32409" name="Fantasy Theca Leather Gaiters" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t63_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -251,7 +251,7 @@
 			<stat type="pDef">66</stat>
 		</stats>
 	</item>
-	<item id="32410" name="Fantasy Demon's Tunic" name_additional="Not in Use" type="Armor">
+	<item id="32410" name="Fantasy Demon's Tunic" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t54_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -268,7 +268,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="32411" name="Fantasy Demon's Stockings" name_additional="Not in Use" type="Armor">
+	<item id="32411" name="Fantasy Demon's Stockings" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t54_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -285,7 +285,7 @@
 			<stat type="pDef">43</stat>
 		</stats>
 	</item>
-	<item id="32412" name="Fantasy Mithril Gauntlets" name_additional="Not in Use" type="Armor">
+	<item id="32412" name="Fantasy Mithril Gauntlets" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t61_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -301,7 +301,7 @@
 			<stat type="pDef">36</stat>
 		</stats>
 	</item>
-	<item id="32413" name="Fantasy Theca Leather Gloves" name_additional="Not in Use" type="Armor">
+	<item id="32413" name="Fantasy Theca Leather Gloves" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t63_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -317,7 +317,7 @@
 			<stat type="pDef">37</stat>
 		</stats>
 	</item>
-	<item id="32414" name="Fantasy Demon's Gloves" name_additional="Not in Use" type="Armor">
+	<item id="32414" name="Fantasy Demon's Gloves" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t54_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -333,7 +333,7 @@
 			<stat type="pDef">36</stat>
 		</stats>
 	</item>
-	<item id="32415" name="Fantasy Theca Leather Boots" name_additional="Not in Use" type="Armor">
+	<item id="32415" name="Fantasy Theca Leather Boots" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t63_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -349,7 +349,7 @@
 			<stat type="pDef">37</stat>
 		</stats>
 	</item>
-	<item id="32416" name="Fantasy Demon's Boots" name_additional="Not in Use" type="Armor">
+	<item id="32416" name="Fantasy Demon's Boots" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t54_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -365,7 +365,7 @@
 			<stat type="pDef">36</stat>
 		</stats>
 	</item>
-	<item id="32417" name="Fantasy Compound Boots" name_additional="Not in Use" type="Armor">
+	<item id="32417" name="Fantasy Compound Boots" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t61_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -381,7 +381,7 @@
 			<stat type="pDef">36</stat>
 		</stats>
 	</item>
-	<item id="32418" name="Fantasy Shining Circlet" name_additional="Not in Use" type="Armor">
+	<item id="32418" name="Fantasy Shining Circlet" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -396,7 +396,7 @@
 			<stat type="pDef">54</stat>
 		</stats>
 	</item>
-	<item id="32419" name="Fantasy Compound Helmet" name_additional="Not in Use" type="Armor">
+	<item id="32419" name="Fantasy Compound Helmet" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -411,7 +411,7 @@
 			<stat type="pDef">54</stat>
 		</stats>
 	</item>
-	<item id="32420" name="Fantasy Compound Shield" name_additional="Not in Use" type="Weapon">
+	<item id="32420" name="Fantasy Compound Shield" additionalName="Not in Use" type="Weapon">
 		<set name="icon" val="icon.shield_composite_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -429,7 +429,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="32421" name="Fantasy Kris" name_additional="Not in Use" type="Weapon">
+	<item id="32421" name="Fantasy Kris" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Evasion, Focus, or Back Blow. -->
 		<set name="icon" val="icon.weapon_kris_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -456,7 +456,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32422" name="Fantasy Sword of Valhalla" name_additional="Not in Use" type="Weapon">
+	<item id="32422" name="Fantasy Sword of Valhalla" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Acumen, Magic Weakness or Magic Regeneration. -->
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -482,7 +482,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32423" name="Fantasy Keshanberk" name_additional="Not in Use" type="Weapon">
+	<item id="32423" name="Fantasy Keshanberk" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Guidance, Focus or Back Blow -->
 		<set name="icon" val="icon.weapon_kshanberk_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -508,7 +508,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32424" name="Fantasy Military Fleuret" name_additional="Not in Use" type="Weapon">
+	<item id="32424" name="Fantasy Military Fleuret" additionalName="Not in Use" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Keshanberk\nBestows one of the following functions: Guidance, Focus or Back Blow.\nWhen enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -538,7 +538,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32425" name="Fantasy Great Sword" name_additional="Not in Use" type="Weapon">
+	<item id="32425" name="Fantasy Great Sword" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Health, P. Critical Damage or Focus. -->
 		<set name="icon" val="icon.weapon_great_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -564,7 +564,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32426" name="Fantasy Innominate Victory" name_additional="Not in Use" type="Weapon">
+	<item id="32426" name="Fantasy Innominate Victory" additionalName="Not in Use" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Great Sword\nBestows one of the following functions: Health, P. Critical Damage or Focus. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -591,7 +591,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32427" name="Fantasy Dismantler" name_additional="Not in Use" type="Weapon">
+	<item id="32427" name="Fantasy Dismantler" additionalName="Not in Use" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Guardian's Sword Conversion\nBestows one of the following functions: Critical Drain, Health or Critical Bleed. -->
 		<set name="icon" val="icon.weapon_dismantler_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -618,7 +618,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32428" name="Fantasy Dark Elven Longbow" name_additional="Not in Use" type="Weapon">
+	<item id="32428" name="Fantasy Dark Elven Longbow" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Evasion, Critical Bleed or Miser. -->
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -646,7 +646,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="32429" name="Fantasy Peacemaker" name_additional="Not in Use" type="Weapon">
+	<item id="32429" name="Fantasy Peacemaker" additionalName="Not in Use" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Dark Elven Longbow conversion\nBestows one of the following functions: Evasion, Critical Bleed or Miser. -->
 		<set name="icon" val="icon.weapon_peace_maker_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -674,7 +674,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="32430" name="Fantasy Heavy War Axe" name_additional="Not in Use" type="Weapon">
+	<item id="32430" name="Fantasy Heavy War Axe" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Anger, Health or Rsk. Focus. -->
 		<set name="icon" val="icon.weapon_heavy_war_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -701,7 +701,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32431" name="Fantasy Spirit's Staff" name_additional="Not in Use" type="Weapon">
+	<item id="32431" name="Fantasy Spirit's Staff" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Regeneration, Mental Shield or Hold. -->
 		<set name="icon" val="icon.weapon_sprites_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -728,7 +728,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32432" name="Fantasy Great Axe" name_additional="Not in Use" type="Weapon">
+	<item id="32432" name="Fantasy Great Axe" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Anger, Critical Stun or Light. -->
 		<set name="icon" val="icon.weapon_great_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -758,7 +758,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="32433" name="Fantasy Arthro Nail" name_additional="Not in Use" type="Weapon">
+	<item id="32433" name="Fantasy Arthro Nail" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Critical Poison, Rsk. Evasion or Rsk. Haste. -->
 		<set name="icon" val="icon.weapon_arthro_nail_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -785,7 +785,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32434" name="Fantasy Sword of Delusion*Sword of Delusion" name_additional="Not in Use" type="Weapon">
+	<item id="32434" name="Fantasy Sword of Delusion*Sword of Delusion" additionalName="Not in Use" type="Weapon">
 		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 4. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -814,7 +814,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32435" name="Fantasy Zubei's Breastplate" name_additional="Not in Use" type="Armor">
+	<item id="32435" name="Fantasy Zubei's Breastplate" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t64_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -831,7 +831,7 @@
 			<stat type="pDef">157</stat>
 		</stats>
 	</item>
-	<item id="32436" name="Fantasy Zubei's Gaiters" name_additional="Not in Use" type="Armor">
+	<item id="32436" name="Fantasy Zubei's Gaiters" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t64_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -848,7 +848,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="32437" name="Fantasy Zubei's Leather Shirt" name_additional="Not in Use" type="Armor">
+	<item id="32437" name="Fantasy Zubei's Leather Shirt" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t65_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -865,7 +865,7 @@
 			<stat type="pDef">117</stat>
 		</stats>
 	</item>
-	<item id="32438" name="Fantasy Zubei's Leather Gaiters" name_additional="Not in Use" type="Armor">
+	<item id="32438" name="Fantasy Zubei's Leather Gaiters" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t65_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -882,7 +882,7 @@
 			<stat type="pDef">73</stat>
 		</stats>
 	</item>
-	<item id="32439" name="Fantasy Tunic of Zubei" name_additional="Not in Use" type="Armor">
+	<item id="32439" name="Fantasy Tunic of Zubei" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t56_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -899,7 +899,7 @@
 			<stat type="pDef">84</stat>
 		</stats>
 	</item>
-	<item id="32440" name="Fantasy Stockings of Zubei" name_additional="Not in Use" type="Armor">
+	<item id="32440" name="Fantasy Stockings of Zubei" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t56_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -916,7 +916,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="32441" name="Fantasy Zubei's Gauntlets" name_additional="Not in Use" type="Armor">
+	<item id="32441" name="Fantasy Zubei's Gauntlets" additionalName="Not in Use" type="Armor">
 		<!-- Part of the heavy Zubei's set. -->
 		<set name="icon" val="icon.armor_t64_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -933,7 +933,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="32442" name="Fantasy Zubei's Gauntlets" name_additional="Not in Use" type="Armor">
+	<item id="32442" name="Fantasy Zubei's Gauntlets" additionalName="Not in Use" type="Armor">
 		<!-- Part of the light Zubei's set. -->
 		<set name="icon" val="icon.armor_t65_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -950,7 +950,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="32443" name="Fantasy Zubei's Gauntlets" name_additional="Not in Use" type="Armor">
+	<item id="32443" name="Fantasy Zubei's Gauntlets" additionalName="Not in Use" type="Armor">
 		<!-- Part of the Zubei's robe set. -->
 		<set name="icon" val="icon.armor_t56_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -967,7 +967,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="32444" name="Fantasy Zubei's Boots" name_additional="Not in Use" type="Armor">
+	<item id="32444" name="Fantasy Zubei's Boots" additionalName="Not in Use" type="Armor">
 		<!-- Part of the heavy Zubei's set. -->
 		<set name="icon" val="icon.armor_t64_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -984,7 +984,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="32445" name="Fantasy Zubei's Boots" name_additional="Not in Use" type="Armor">
+	<item id="32445" name="Fantasy Zubei's Boots" additionalName="Not in Use" type="Armor">
 		<!-- Part of the light Zubei's set. -->
 		<set name="icon" val="icon.armor_t65_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1001,7 +1001,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="32446" name="Fantasy Zubei's Boots" name_additional="Not in Use" type="Armor">
+	<item id="32446" name="Fantasy Zubei's Boots" additionalName="Not in Use" type="Armor">
 		<!-- Part of the Zubei's robe set. -->
 		<set name="icon" val="icon.armor_t56_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1018,7 +1018,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="32447" name="Fantasy Zubei's Helmet" name_additional="Not in Use" type="Armor">
+	<item id="32447" name="Fantasy Zubei's Helmet" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1033,7 +1033,7 @@
 			<stat type="pDef">62</stat>
 		</stats>
 	</item>
-	<item id="32448" name="Fantasy Zubei's Shield" name_additional="Not in Use" type="Weapon">
+	<item id="32448" name="Fantasy Zubei's Shield" additionalName="Not in Use" type="Weapon">
 		<set name="icon" val="icon.shield_shrnoens_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1051,7 +1051,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="32449" name="Fantasy Bloody Orchid" name_additional="Not in Use" type="Weapon">
+	<item id="32449" name="Fantasy Bloody Orchid" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Focus, Back Blow, or Critical Bleed. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1078,7 +1078,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32450" name="Fantasy Soul Separator" name_additional="Not in Use" type="Weapon">
+	<item id="32450" name="Fantasy Soul Separator" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Guidance, P. Critical Damage, or Rsk. Haste. -->
 		<set name="icon" val="icon.weapon_soul_separator_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1105,7 +1105,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32451" name="Fantasy Sword of Miracles" name_additional="Not in Use" type="Weapon">
+	<item id="32451" name="Fantasy Sword of Miracles" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: M. Atk., Magic Silence or Acumen. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1131,7 +1131,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32452" name="Fantasy Tallum Blade" name_additional="Not in Use" type="Weapon">
+	<item id="32452" name="Fantasy Tallum Blade" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Critical Poison, Haste or Anger. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1157,7 +1157,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32453" name="Fantasy Dark Legion's Edge" name_additional="Not in Use" type="Weapon">
+	<item id="32453" name="Fantasy Dark Legion's Edge" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: P. Critical Damage, Health, or Rsk. Focus. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1183,7 +1183,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32454" name="Fantasy White Lightning" name_additional="Not in Use" type="Weapon">
+	<item id="32454" name="Fantasy White Lightning" additionalName="Not in Use" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Tallum Blade Conversion\nBestows one of the following functions: Critical Poison, Haste or Anger.\nWhen enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1213,7 +1213,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32455" name="Fantasy Lacerator" name_additional="Not in Use" type="Weapon">
+	<item id="32455" name="Fantasy Lacerator" additionalName="Not in Use" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Dark Legion Conversion\nBestows one of the following functions: Critical Damage, Health or Rsk. Focus.\nWhen enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1243,7 +1243,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32456" name="Fantasy Infernal Master" name_additional="Not in Use" type="Weapon">
+	<item id="32456" name="Fantasy Infernal Master" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Haste, P. Critical Damage, or Focus. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1269,7 +1269,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32457" name="Fantasy Dragon Slayer" name_additional="Not in Use" type="Weapon">
+	<item id="32457" name="Fantasy Dragon Slayer" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Health, Critical Bleed or Critical Drain. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1295,7 +1295,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32458" name="Fantasy Divine Pain" name_additional="Not in Use" type="Weapon">
+	<item id="32458" name="Fantasy Divine Pain" additionalName="Not in Use" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Infernal Master conversion\nBestows one of the following functions: Haste, P. Critical Damage, or Focus. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1322,7 +1322,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32459" name="Fantasy Undertaker" name_additional="Not in Use" type="Weapon">
+	<item id="32459" name="Fantasy Undertaker" additionalName="Not in Use" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Dragon Slayer Conversion\nBestows one of the following functions: Health, Critical Bleed or Critical Drain. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1349,7 +1349,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32460" name="Fantasy Carnage Bow" name_additional="Not in Use" type="Weapon">
+	<item id="32460" name="Fantasy Carnage Bow" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Light, Critical Bleed, or Mana Up. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1377,7 +1377,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="32461" name="Fantasy Soul Bow" name_additional="Not in Use" type="Weapon">
+	<item id="32461" name="Fantasy Soul Bow" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Cheap Shot, Quick Recovery, or Critical Poison. -->
 		<set name="icon" val="icon.weapon_soul_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1405,7 +1405,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="32462" name="Fantasy Doomchanter" name_additional="Not in Use" type="Weapon">
+	<item id="32462" name="Fantasy Doomchanter" additionalName="Not in Use" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Carnage Bow Conversion\nBestows one of the following functions: Light, Critical Bleed, or Mana Up. -->
 		<set name="icon" val="icon.weapon_doom_singer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1433,7 +1433,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="32463" name="Fantasy Reaper" name_additional="Not in Use" type="Weapon">
+	<item id="32463" name="Fantasy Reaper" additionalName="Not in Use" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Soul Bow conversion.\nBestows one of the following functions: Cheap Shot, Quick Recovery or Critical Poison. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1461,7 +1461,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="32464" name="Fantasy Meteor Shower" name_additional="Not in Use" type="Weapon">
+	<item id="32464" name="Fantasy Meteor Shower" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Focus, Critical Bleed, or Rsk. Haste. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1488,7 +1488,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32465" name="Fantasy Elysian" name_additional="Not in Use" type="Weapon">
+	<item id="32465" name="Fantasy Elysian" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Health, Anger, or a Critical Drain. -->
 		<set name="icon" val="icon.weapon_elysian_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1515,7 +1515,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32466" name="Fantasy Dasparion's Staff" name_additional="Not in Use" type="Weapon">
+	<item id="32466" name="Fantasy Dasparion's Staff" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the follow three functions, Mana Up, Conversion or Acumen. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1542,7 +1542,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32467" name="Fantasy Branch of the Mother Tree" name_additional="Not in Use" type="Weapon">
+	<item id="32467" name="Fantasy Branch of the Mother Tree" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Conversion, Magic Damage, or Acumen. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1569,7 +1569,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32468" name="Fantasy Halberd" name_additional="Not in Use" type="Weapon">
+	<item id="32468" name="Fantasy Halberd" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Haste, Critical Stun or Wide Blow. -->
 		<set name="icon" val="icon.weapon_halbard_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1599,7 +1599,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="32469" name="Fantasy Tallum Glaive" name_additional="Not in Use" type="Weapon">
+	<item id="32469" name="Fantasy Tallum Glaive" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Guidance, Health, or Wide Blow. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1629,7 +1629,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="32470" name="Fantasy Blood Tornado" name_additional="Not in Use" type="Weapon">
+	<item id="32470" name="Fantasy Blood Tornado" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Haste, Focus, or Anger. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1656,7 +1656,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32471" name="Fantasy Dragon Grinder" name_additional="Not in Use" type="Weapon">
+	<item id="32471" name="Fantasy Dragon Grinder" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Rsk. Evasion, Guidance, or Health. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1683,7 +1683,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32472" name="Fantasy Keshanberk*Keshanberk" name_additional="Not in Use" type="Weapon">
+	<item id="32472" name="Fantasy Keshanberk*Keshanberk" additionalName="Not in Use" type="Weapon">
 		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1712,7 +1712,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32473" name="Fantasy Keshanberk*Damascus" name_additional="Not in Use" type="Weapon">
+	<item id="32473" name="Fantasy Keshanberk*Damascus" additionalName="Not in Use" type="Weapon">
 		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Max HP increases by 25%. Inflicts additional damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1741,7 +1741,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="32474" name="Fantasy Dark Crystal Breastplate" name_additional="Not in Use" type="Armor">
+	<item id="32474" name="Fantasy Dark Crystal Breastplate" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t74_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1758,7 +1758,7 @@
 			<stat type="pDef">171</stat>
 		</stats>
 	</item>
-	<item id="32475" name="Fantasy Dark Crystal Gaiters" name_additional="Not in Use" type="Armor">
+	<item id="32475" name="Fantasy Dark Crystal Gaiters" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t74_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1775,7 +1775,7 @@
 			<stat type="pDef">107</stat>
 		</stats>
 	</item>
-	<item id="32476" name="Fantasy Majestic Plate Armor" name_additional="Not in Use" type="Armor">
+	<item id="32476" name="Fantasy Majestic Plate Armor" additionalName="Not in Use" type="Armor">
 		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t83_ul_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1793,7 +1793,7 @@
 			<stat type="pDef">293</stat>
 		</stats>
 	</item>
-	<item id="32477" name="Fantasy Dark Crystal Leather Armor" name_additional="Not in Use" type="Armor">
+	<item id="32477" name="Fantasy Dark Crystal Leather Armor" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t75_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1810,7 +1810,7 @@
 			<stat type="pDef">152</stat>
 		</stats>
 	</item>
-	<item id="32478" name="Fantasy Dark Crystal Leggings" name_additional="Not in Use" type="Armor">
+	<item id="32478" name="Fantasy Dark Crystal Leggings" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t75_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1827,7 +1827,7 @@
 			<stat type="pDef">95</stat>
 		</stats>
 	</item>
-	<item id="32479" name="Fantasy Majestic Leather Armor" name_additional="Not in Use" type="Armor">
+	<item id="32479" name="Fantasy Majestic Leather Armor" additionalName="Not in Use" type="Armor">
 		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t84_ul_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1845,7 +1845,7 @@
 			<stat type="pDef">220</stat>
 		</stats>
 	</item>
-	<item id="32480" name="Fantasy Tallum Tunic" name_additional="Not in Use" type="Armor">
+	<item id="32480" name="Fantasy Tallum Tunic" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t79_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1862,7 +1862,7 @@
 			<stat type="pDef">86</stat>
 		</stats>
 	</item>
-	<item id="32481" name="Fantasy Tallum Stockings" name_additional="Not in Use" type="Armor">
+	<item id="32481" name="Fantasy Tallum Stockings" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_t79_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1879,7 +1879,7 @@
 			<stat type="pDef">53</stat>
 		</stats>
 	</item>
-	<item id="32482" name="Fantasy Dark Crystal Robe" name_additional="Not in Use" type="Armor">
+	<item id="32482" name="Fantasy Dark Crystal Robe" additionalName="Not in Use" type="Armor">
 		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1897,7 +1897,7 @@
 			<stat type="pDef">139</stat>
 		</stats>
 	</item>
-	<item id="32483" name="Fantasy Majestic Robe" name_additional="Not in Use" type="Armor">
+	<item id="32483" name="Fantasy Majestic Robe" additionalName="Not in Use" type="Armor">
 		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t85_ul_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1915,7 +1915,7 @@
 			<stat type="pDef">147</stat>
 		</stats>
 	</item>
-	<item id="32484" name="Fantasy Dark Crystal Gloves" name_additional="Not in Use" type="Armor">
+	<item id="32484" name="Fantasy Dark Crystal Gloves" additionalName="Not in Use" type="Armor">
 		<!-- Part of the heavy dark crystal set. -->
 		<set name="icon" val="icon.armor_t74_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1932,7 +1932,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="32485" name="Fantasy Dark Crystal Gloves" name_additional="Not in Use" type="Armor">
+	<item id="32485" name="Fantasy Dark Crystal Gloves" additionalName="Not in Use" type="Armor">
 		<!-- Part of the light dark crystal set. -->
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1949,7 +1949,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="32486" name="Fantasy Dark Crystal Gloves" name_additional="Not in Use" type="Armor">
+	<item id="32486" name="Fantasy Dark Crystal Gloves" additionalName="Not in Use" type="Armor">
 		<!-- Part of the dark crystal robe set. -->
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1966,7 +1966,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="32487" name="Fantasy Majestic Gauntlets" name_additional="Not in Use" type="Armor">
+	<item id="32487" name="Fantasy Majestic Gauntlets" additionalName="Not in Use" type="Armor">
 		<!-- Part of the heavy majestic set. -->
 		<set name="icon" val="icon.armor_t83_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1983,7 +1983,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="32488" name="Fantasy Majestic Gauntlets" name_additional="Not in Use" type="Armor">
+	<item id="32488" name="Fantasy Majestic Gauntlets" additionalName="Not in Use" type="Armor">
 		<!-- Part of the light majestic set. -->
 		<set name="icon" val="icon.armor_t84_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2000,7 +2000,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="32489" name="Fantasy Majestic Gauntlets" name_additional="Not in Use" type="Armor">
+	<item id="32489" name="Fantasy Majestic Gauntlets" additionalName="Not in Use" type="Armor">
 		<!-- Part of the majestic robe set. -->
 		<set name="icon" val="icon.armor_t85_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2017,7 +2017,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="32490" name="Fantasy Dark Crystal Boots" name_additional="Not in Use" type="Armor">
+	<item id="32490" name="Fantasy Dark Crystal Boots" additionalName="Not in Use" type="Armor">
 		<!-- Part of the heavy dark crystal set. -->
 		<set name="icon" val="icon.armor_t74_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2034,7 +2034,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="32491" name="Fantasy Dark Crystal Boots" name_additional="Not in Use" type="Armor">
+	<item id="32491" name="Fantasy Dark Crystal Boots" additionalName="Not in Use" type="Armor">
 		<!-- Part of the light dark crystal set. -->
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2051,7 +2051,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="32492" name="Fantasy Dark Crystal Boots" name_additional="Not in Use" type="Armor">
+	<item id="32492" name="Fantasy Dark Crystal Boots" additionalName="Not in Use" type="Armor">
 		<!-- Part of the dark crystal robe set. -->
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2068,7 +2068,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="32493" name="Fantasy Majestic Boots" name_additional="Not in Use" type="Armor">
+	<item id="32493" name="Fantasy Majestic Boots" additionalName="Not in Use" type="Armor">
 		<!-- Part of the heavy majestic set. -->
 		<set name="icon" val="icon.armor_t83_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2085,7 +2085,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="32494" name="Fantasy Majestic Boots" name_additional="Not in Use" type="Armor">
+	<item id="32494" name="Fantasy Majestic Boots" additionalName="Not in Use" type="Armor">
 		<!-- Part of the light majestic set. -->
 		<set name="icon" val="icon.armor_t84_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2102,7 +2102,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="32495" name="Fantasy Majestic Boots" name_additional="Not in Use" type="Armor">
+	<item id="32495" name="Fantasy Majestic Boots" additionalName="Not in Use" type="Armor">
 		<!-- Part of the majestic robe set. -->
 		<set name="icon" val="icon.armor_t85_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2119,7 +2119,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="32496" name="Fantasy Dark Crystal Helmet" name_additional="Not in Use" type="Armor">
+	<item id="32496" name="Fantasy Dark Crystal Helmet" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2134,7 +2134,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="32497" name="Fantasy Majestic Circlet" name_additional="Not in Use" type="Armor">
+	<item id="32497" name="Fantasy Majestic Circlet" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2149,7 +2149,7 @@
 			<stat type="pDef">73</stat>
 		</stats>
 	</item>
-	<item id="32498" name="Fantasy Dark Crystal Shield" name_additional="Not in Use" type="Weapon">
+	<item id="32498" name="Fantasy Dark Crystal Shield" additionalName="Not in Use" type="Weapon">
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -2167,7 +2167,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="32499" name="Fantasy Shield of Nightmare" name_additional="Not in Use" type="Weapon">
+	<item id="32499" name="Fantasy Shield of Nightmare" additionalName="Not in Use" type="Weapon">
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />

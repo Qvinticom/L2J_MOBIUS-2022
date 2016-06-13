@@ -1385,7 +1385,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="14884" name="Gludio Supply Box - Magic Rune Clip" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14884" name="Gludio Supply Box - Magic Rune Clip" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1405,7 +1405,7 @@
 			<skill id="2975" level="1" /> <!-- Gludio supply box - magic rune clip -->
 		</skills>
 	</item>
-	<item id="14885" name="Dion Supply Box - Magic Rune Clip" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14885" name="Dion Supply Box - Magic Rune Clip" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1425,7 +1425,7 @@
 			<skill id="2976" level="1" /> <!-- Dion supply box - magic rune clip -->
 		</skills>
 	</item>
-	<item id="14886" name="Giran Supply Box - Magic Rune Clip" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14886" name="Giran Supply Box - Magic Rune Clip" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1445,7 +1445,7 @@
 			<skill id="2977" level="1" /> <!-- Giran supply box - magic rune clip -->
 		</skills>
 	</item>
-	<item id="14887" name="Oren Supply Box - Magic Rune Clip" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14887" name="Oren Supply Box - Magic Rune Clip" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1465,7 +1465,7 @@
 			<skill id="2978" level="1" /> <!-- Oren supply box - magic rune clip -->
 		</skills>
 	</item>
-	<item id="14888" name="Aden Supply Box - Magic Rune Clip" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14888" name="Aden Supply Box - Magic Rune Clip" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1485,7 +1485,7 @@
 			<skill id="2979" level="1" /> <!-- Aden supply box - magic rune clip -->
 		</skills>
 	</item>
-	<item id="14889" name="Innadril Supply Box - Magic Rune Clip" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14889" name="Innadril Supply Box - Magic Rune Clip" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1505,7 +1505,7 @@
 			<skill id="2980" level="1" /> <!-- Innadril supply box - magic rune clip -->
 		</skills>
 	</item>
-	<item id="14890" name="Goddard Supply Box: Magic Rune Clip" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14890" name="Goddard Supply Box: Magic Rune Clip" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1525,7 +1525,7 @@
 			<skill id="2981" level="1" /> <!-- Goddard Supply Box: magic rune clip -->
 		</skills>
 	</item>
-	<item id="14891" name="Rune Supply Box - Magic Rune Clip" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14891" name="Rune Supply Box - Magic Rune Clip" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1545,7 +1545,7 @@
 			<skill id="2982" level="1" /> <!-- Rune supply box - magic rune clip -->
 		</skills>
 	</item>
-	<item id="14892" name="Schuttgart Supply Box - Magic Rune Clip" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14892" name="Schuttgart Supply Box - Magic Rune Clip" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1565,7 +1565,7 @@
 			<skill id="2983" level="1" /> <!-- Schuttgart supply box - magic rune clip -->
 		</skills>
 	</item>
-	<item id="14893" name="Gludio Supply Box - Magic Ornament" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14893" name="Gludio Supply Box - Magic Ornament" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1585,7 +1585,7 @@
 			<skill id="2984" level="1" /> <!-- Gludio supply box - magic ornament -->
 		</skills>
 	</item>
-	<item id="14894" name="Dion Supply Box - Magic Ornament" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14894" name="Dion Supply Box - Magic Ornament" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1605,7 +1605,7 @@
 			<skill id="2985" level="1" /> <!-- Dion supply box - magic ornament -->
 		</skills>
 	</item>
-	<item id="14895" name="Giran Supply Box - Magic Ornament" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14895" name="Giran Supply Box - Magic Ornament" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1625,7 +1625,7 @@
 			<skill id="2986" level="1" /> <!-- Giran supply box - magic ornament -->
 		</skills>
 	</item>
-	<item id="14896" name="Oren Supply Box - Magic Ornament" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14896" name="Oren Supply Box - Magic Ornament" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1645,7 +1645,7 @@
 			<skill id="2987" level="1" /> <!-- Oren supply box - magic ornament -->
 		</skills>
 	</item>
-	<item id="14897" name="Aden Supply Box - Magic Ornament" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14897" name="Aden Supply Box - Magic Ornament" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1665,7 +1665,7 @@
 			<skill id="2988" level="1" /> <!-- Aden supply box - magic ornament -->
 		</skills>
 	</item>
-	<item id="14898" name="Innadril Supply Box - Magic Ornament" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14898" name="Innadril Supply Box - Magic Ornament" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1685,7 +1685,7 @@
 			<skill id="2989" level="1" /> <!-- Innadril supply box - magic ornament -->
 		</skills>
 	</item>
-	<item id="14899" name="Goddard Supply Box: Magic Ornament" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14899" name="Goddard Supply Box: Magic Ornament" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />

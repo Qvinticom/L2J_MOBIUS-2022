@@ -1194,7 +1194,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6581" name="Forgotten Blade" name_additional="Haste" type="Weapon">
+	<item id="6581" name="Forgotten Blade" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1226,7 +1226,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6582" name="Forgotten Blade" name_additional="Health" type="Weapon">
+	<item id="6582" name="Forgotten Blade" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1258,7 +1258,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6583" name="Forgotten Blade" name_additional="Focus" type="Weapon">
+	<item id="6583" name="Forgotten Blade" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1290,7 +1290,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6584" name="Basalt Battlehammer" name_additional="HP Drain" type="Weapon">
+	<item id="6584" name="Basalt Battlehammer" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1322,7 +1322,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6585" name="Basalt Battlehammer" name_additional="Health" type="Weapon">
+	<item id="6585" name="Basalt Battlehammer" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1354,7 +1354,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6586" name="Basalt Battlehammer" name_additional="HP Regeneration" type="Weapon">
+	<item id="6586" name="Basalt Battlehammer" additionalName="HP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1386,7 +1386,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6587" name="Imperial Staff" name_additional="Empower" type="Weapon">
+	<item id="6587" name="Imperial Staff" additionalName="Empower" type="Weapon">
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1419,7 +1419,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6588" name="Imperial Staff" name_additional="MP Regeneration" type="Weapon">
+	<item id="6588" name="Imperial Staff" additionalName="MP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1452,7 +1452,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6589" name="Imperial Staff" name_additional="Magic Hold" type="Weapon">
+	<item id="6589" name="Imperial Staff" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1486,7 +1486,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6590" name="Angel Slayer" name_additional="Critical Damage" type="Weapon">
+	<item id="6590" name="Angel Slayer" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1518,7 +1518,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6591" name="Angel Slayer" name_additional="HP Drain" type="Weapon">
+	<item id="6591" name="Angel Slayer" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1550,7 +1550,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6592" name="Angel Slayer" name_additional="Haste" type="Weapon">
+	<item id="6592" name="Angel Slayer" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1582,7 +1582,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6593" name="Bow of Light" name_additional="Cheap Shot" type="Weapon">
+	<item id="6593" name="Bow of Light" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_shining_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1613,7 +1613,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="6594" name="Bow of Light" name_additional="Focus" type="Weapon">
+	<item id="6594" name="Bow of Light" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_shining_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1644,7 +1644,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="6595" name="Bow of Light" name_additional="Critical Slow" type="Weapon">
+	<item id="6595" name="Bow of Light" additionalName="Critical Slow" type="Weapon">
 		<set name="icon" val="icon.weapon_shining_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1675,7 +1675,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="6596" name="Dragon Hunter Axe" name_additional="HP Regeneration" type="Weapon">
+	<item id="6596" name="Dragon Hunter Axe" additionalName="HP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1707,7 +1707,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6597" name="Dragon Hunter Axe" name_additional="Health" type="Weapon">
+	<item id="6597" name="Dragon Hunter Axe" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1739,7 +1739,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6598" name="Dragon Hunter Axe" name_additional="HP Drain" type="Weapon">
+	<item id="6598" name="Dragon Hunter Axe" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1771,7 +1771,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6599" name="Saint Spear" name_additional="Health" type="Weapon">
+	<item id="6599" name="Saint Spear" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />

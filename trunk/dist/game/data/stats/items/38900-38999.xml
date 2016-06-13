@@ -56,7 +56,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38907" name="Secret Fragment 1" name_additional="The" type="EtcItem">
+	<item id="38907" name="Secret Fragment 1" additionalName="The" type="EtcItem">
 		<!-- Ears, gently flapping, like wings that soar. -->
 		<set name="icon" val="icon.ev_ertheia1" />
 		<set name="is_clan_depositable" val="false" />
@@ -64,7 +64,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38908" name="Secret Fragment 2" name_additional="People" type="EtcItem">
+	<item id="38908" name="Secret Fragment 2" additionalName="People" type="EtcItem">
 		<!-- Wide eyes, reflecting the vast sky above. -->
 		<set name="icon" val="icon.ev_ertheia2" />
 		<set name="is_clan_depositable" val="false" />
@@ -72,7 +72,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38909" name="Secret Fragment 3" name_additional="Of" type="EtcItem">
+	<item id="38909" name="Secret Fragment 3" additionalName="Of" type="EtcItem">
 		<!-- Merciful Einhasad! A free soul was their only sin, as they cry for freedom within a cage. Have mercy, Goddess! -->
 		<set name="icon" val="icon.ev_ertheia3" />
 		<set name="is_clan_depositable" val="false" />
@@ -80,7 +80,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38910" name="Secret Fragment 4" name_additional="The" type="EtcItem">
+	<item id="38910" name="Secret Fragment 4" additionalName="The" type="EtcItem">
 		<!-- Keep the blood pure, and make it a swifter vessel of mana. Mix the blood free, and it will forge a body of steel. -->
 		<set name="icon" val="icon.ev_ertheia4" />
 		<set name="is_clan_depositable" val="false" />
@@ -88,7 +88,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38911" name="Secret Fragment 5" name_additional="Wind" type="EtcItem">
+	<item id="38911" name="Secret Fragment 5" additionalName="Wind" type="EtcItem">
 		<!-- Humans call her the goddess of light and righteousness. Elves call her the protector of mithril. Dark Elves call her the hypocrite of the light. Orcs call her the mother of gold, while the Dwarves call her the goddess of justice. -->
 		<set name="icon" val="icon.ev_ertheia5" />
 		<set name="is_clan_depositable" val="false" />
@@ -96,7 +96,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38912" name="Secret Fragment 6" name_additional="Er" type="EtcItem">
+	<item id="38912" name="Secret Fragment 6" additionalName="Er" type="EtcItem">
 		<!-- Sylph's Soliloquy\n\nDo you hear it, the laughter?\nAs clear as the wind...\nDo you feel it, their hearts?\nInnocent and pure, those children of Sayha! -->
 		<set name="icon" val="icon.ev_ertheia6" />
 		<set name="is_clan_depositable" val="false" />
@@ -104,7 +104,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38913" name="Secret Fragment 7" name_additional="The" type="EtcItem">
+	<item id="38913" name="Secret Fragment 7" additionalName="The" type="EtcItem">
 		<!-- 'Does your soul sing with sorrow in this chaotic time? Lend us your strength, and we will certainly win.' \n\n'Forgive us, but we cannot hold your bloodied hand. The wind is indiscriminate, and does not favor one side over another.' -->
 		<set name="icon" val="icon.ev_ertheia7" />
 		<set name="is_clan_depositable" val="false" />
@@ -112,7 +112,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38914" name="Secret Fragment 8" name_additional="Ia" type="EtcItem">
+	<item id="38914" name="Secret Fragment 8" additionalName="Ia" type="EtcItem">
 		<!-- Humans call him Archangel, while Elves call him the ruler of the wind sprites. Dark Elves call him the hypocrite's child. Orcs call him the keeper of the storm, while the Dwarves him the wanderer of the wind. -->
 		<set name="icon" val="icon.ev_ertheia8" />
 		<set name="is_clan_depositable" val="false" />
@@ -228,7 +228,7 @@
 		<set name="etcitem_type" val="ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38927" name="Sapphire" name_additional="Lv. 1" type="Armor">
+	<item id="38927" name="Sapphire" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 1%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -247,7 +247,7 @@
 		<set name="compoundChance" val="100" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38928" name="Sapphire" name_additional="Lv. 2" type="Armor">
+	<item id="38928" name="Sapphire" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 3.5%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -266,7 +266,7 @@
 		<set name="compoundChance" val="80" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38929" name="Sapphire" name_additional="Lv. 3" type="Armor">
+	<item id="38929" name="Sapphire" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 7.5%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -285,7 +285,7 @@
 		<set name="compoundChance" val="70" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38930" name="Sapphire" name_additional="Lv. 4" type="Armor">
+	<item id="38930" name="Sapphire" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 12.5%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -304,7 +304,7 @@
 		<set name="compoundChance" val="50" />
 		<!-- TODO: Find more retail values -->
 	</item>
-	<item id="38931" name="Sapphire" name_additional="Lv. 5" type="Armor">
+	<item id="38931" name="Sapphire" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 20%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />

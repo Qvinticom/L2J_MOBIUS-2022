@@ -1198,7 +1198,7 @@
 			<skill id="26045" level="1" /> <!-- Scroll: Wild Magic -->
 		</skills>
 	</item>
-	<item id="22054" name="XP Rune III (Lv. 1-100+)" name_additional="24-hour" type="EtcItem">
+	<item id="22054" name="XP Rune III (Lv. 1-100+)" additionalName="24-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="immediate_effect" val="true" />
@@ -1221,7 +1221,7 @@
 			<skill id="26046" level="5" /> <!-- XP Rune III (Lv. 1-100+) 50% -->
 		</skills>
 	</item>
-	<item id="22055" name="XP Rune III (Lv. 1-100+)" name_additional="168-hour" type="EtcItem">
+	<item id="22055" name="XP Rune III (Lv. 1-100+)" additionalName="168-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="immediate_effect" val="true" />
@@ -1244,7 +1244,7 @@
 			<skill id="26046" level="5" /> <!-- XP Rune III (Lv. 1-100+) 50% -->
 		</skills>
 	</item>
-	<item id="22056" name="XP Rune III (Lv. 1-100+)" name_additional="336-hour" type="EtcItem">
+	<item id="22056" name="XP Rune III (Lv. 1-100+)" additionalName="336-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="immediate_effect" val="true" />
@@ -1267,7 +1267,7 @@
 			<skill id="26046" level="5" /> <!-- XP Rune III (Lv. 1-100+) 50% -->
 		</skills>
 	</item>
-	<item id="22057" name="XP Rune III (Lv. 1-100+)" name_additional="720-hour" type="EtcItem">
+	<item id="22057" name="XP Rune III (Lv. 1-100+)" additionalName="720-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="immediate_effect" val="true" />
@@ -1290,7 +1290,7 @@
 			<skill id="26046" level="5" /> <!-- XP Rune III (Lv. 1-100+) 50% -->
 		</skills>
 	</item>
-	<item id="22058" name="SP Rune" name_additional="24-hour" type="EtcItem">
+	<item id="22058" name="SP Rune" additionalName="24-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="immediate_effect" val="true" />
@@ -1313,7 +1313,7 @@
 			<skill id="26047" level="5" /> <!-- SP Rune 50% -->
 		</skills>
 	</item>
-	<item id="22059" name="SP Rune" name_additional="168-hour" type="EtcItem">
+	<item id="22059" name="SP Rune" additionalName="168-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="immediate_effect" val="true" />
@@ -1336,7 +1336,7 @@
 			<skill id="26047" level="5" /> <!-- SP Rune 50% -->
 		</skills>
 	</item>
-	<item id="22060" name="SP Rune" name_additional="336-hour" type="EtcItem">
+	<item id="22060" name="SP Rune" additionalName="336-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="immediate_effect" val="true" />
@@ -1359,7 +1359,7 @@
 			<skill id="26047" level="5" /> <!-- SP Rune 50% -->
 		</skills>
 	</item>
-	<item id="22061" name="SP Rune" name_additional="720-hour" type="EtcItem">
+	<item id="22061" name="SP Rune" additionalName="720-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="immediate_effect" val="true" />
@@ -1382,7 +1382,7 @@
 			<skill id="26047" level="5" /> <!-- SP Rune 50% -->
 		</skills>
 	</item>
-	<item id="22062" name="Rune of Crystal" name_additional="24-hour" type="EtcItem">
+	<item id="22062" name="Rune of Crystal" additionalName="24-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="immediate_effect" val="true" />
@@ -1405,7 +1405,7 @@
 			<skill id="26048" level="5" /> <!-- Rune of Crystal (Lv. 5) -->
 		</skills>
 	</item>
-	<item id="22063" name="Rune of Crystal" name_additional="168-hour" type="EtcItem">
+	<item id="22063" name="Rune of Crystal" additionalName="168-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="immediate_effect" val="true" />
@@ -1428,7 +1428,7 @@
 			<skill id="26048" level="5" /> <!-- Rune of Crystal (Lv. 5) -->
 		</skills>
 	</item>
-	<item id="22064" name="Rune of Crystal" name_additional="336-hour" type="EtcItem">
+	<item id="22064" name="Rune of Crystal" additionalName="336-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="immediate_effect" val="true" />
@@ -1451,7 +1451,7 @@
 			<skill id="26048" level="5" /> <!-- Rune of Crystal (Lv. 5) -->
 		</skills>
 	</item>
-	<item id="22065" name="Rune of Crystal" name_additional="720-hour" type="EtcItem">
+	<item id="22065" name="Rune of Crystal" additionalName="720-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="immediate_effect" val="true" />
@@ -1474,7 +1474,7 @@
 			<skill id="26048" level="5" /> <!-- Rune of Crystal (Lv. 5) -->
 		</skills>
 	</item>
-	<item id="22066" name="Rune of Feather" name_additional="24-hour" type="EtcItem">
+	<item id="22066" name="Rune of Feather" additionalName="24-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />

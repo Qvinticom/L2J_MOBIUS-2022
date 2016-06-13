@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="6600" name="Saint Spear" name_additional="Guidance" type="Weapon">
+	<item id="6600" name="Saint Spear" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -32,7 +32,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="6601" name="Saint Spear" name_additional="Haste" type="Weapon">
+	<item id="6601" name="Saint Spear" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -64,7 +64,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="6602" name="Demon Splinter" name_additional="Focus" type="Weapon">
+	<item id="6602" name="Demon Splinter" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -96,7 +96,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6603" name="Demon Splinter" name_additional="Health" type="Weapon">
+	<item id="6603" name="Demon Splinter" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -128,7 +128,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6604" name="Demon Splinter" name_additional="Critical Stun" type="Weapon">
+	<item id="6604" name="Demon Splinter" additionalName="Critical Stun" type="Weapon">
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -161,7 +161,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6605" name="Heaven's Divider" name_additional="Haste" type="Weapon">
+	<item id="6605" name="Heaven's Divider" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -193,7 +193,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6606" name="Heaven's Divider" name_additional="Health" type="Weapon">
+	<item id="6606" name="Heaven's Divider" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -225,7 +225,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6607" name="Heaven's Divider" name_additional="Focus" type="Weapon">
+	<item id="6607" name="Heaven's Divider" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -257,7 +257,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6608" name="Arcana Mace" name_additional="Acumen" type="Weapon">
+	<item id="6608" name="Arcana Mace" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -290,7 +290,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6609" name="Arcana Mace" name_additional="MP Regeneration" type="Weapon">
+	<item id="6609" name="Arcana Mace" additionalName="MP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -323,7 +323,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6610" name="Arcana Mace" name_additional="Mana Up" type="Weapon">
+	<item id="6610" name="Arcana Mace" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

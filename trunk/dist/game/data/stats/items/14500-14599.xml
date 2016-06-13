@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="14500" name="Vesper Retributer {PvP}" name_additional="Health" type="Weapon">
+	<item id="14500" name="Vesper Retributer {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -38,7 +38,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14501" name="Vesper Retributer {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="14501" name="Vesper Retributer {PvP}" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -76,7 +76,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14502" name="Vesper Caster {PvP}" name_additional="Acumen" type="Weapon">
+	<item id="14502" name="Vesper Caster {PvP}" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -115,7 +115,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14503" name="Vesper Caster {PvP}" name_additional="MP Regeneration" type="Weapon">
+	<item id="14503" name="Vesper Caster {PvP}" additionalName="MP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -154,7 +154,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14504" name="Vesper Caster {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="14504" name="Vesper Caster {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -193,7 +193,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14505" name="Vesper Singer {PvP}" name_additional="Empower" type="Weapon">
+	<item id="14505" name="Vesper Singer {PvP}" additionalName="Empower" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -232,7 +232,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14506" name="Vesper Singer {PvP}" name_additional="MP Regeneration" type="Weapon">
+	<item id="14506" name="Vesper Singer {PvP}" additionalName="MP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -271,7 +271,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14507" name="Vesper Singer {PvP}" name_additional="Magic Hold" type="Weapon">
+	<item id="14507" name="Vesper Singer {PvP}" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -310,7 +310,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14508" name="Vesper Thrower {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="14508" name="Vesper Thrower {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -350,7 +350,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="14509" name="Vesper Thrower {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14509" name="Vesper Thrower {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -390,7 +390,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="14510" name="Vesper Thrower {PvP}" name_additional="Critical Slow" type="Weapon">
+	<item id="14510" name="Vesper Thrower {PvP}" additionalName="Critical Slow" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -430,7 +430,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="14511" name="Vesper Pincer {PvP}" name_additional="Haste" type="Weapon">
+	<item id="14511" name="Vesper Pincer {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -472,7 +472,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14512" name="Vesper Pincer {PvP}" name_additional="Health" type="Weapon">
+	<item id="14512" name="Vesper Pincer {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -514,7 +514,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14513" name="Vesper Pincer {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14513" name="Vesper Pincer {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -556,7 +556,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14514" name="Vesper Shooter {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="14514" name="Vesper Shooter {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -598,7 +598,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="14515" name="Vesper Shooter {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14515" name="Vesper Shooter {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -640,7 +640,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="14516" name="Vesper Shooter {PvP}" name_additional="Critical Slow" type="Weapon">
+	<item id="14516" name="Vesper Shooter {PvP}" additionalName="Critical Slow" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -682,7 +682,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="14517" name="Vesper Nagan {PvP}" name_additional="Haste" type="Weapon">
+	<item id="14517" name="Vesper Nagan {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -723,7 +723,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14518" name="Vesper Nagan {PvP}" name_additional="Health" type="Weapon">
+	<item id="14518" name="Vesper Nagan {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -764,7 +764,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14519" name="Vesper Nagan {PvP}" name_additional="Focus" type="Weapon">
+	<item id="14519" name="Vesper Nagan {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1171,7 +1171,7 @@
 			<item id="13316" min="1" max="1" chance="100" /> <!-- Ornithomimus Hat (Event) - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="14531" name="Gludio Supply Box - Magic Pin" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14531" name="Gludio Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1191,7 +1191,7 @@
 			<skill id="2948" level="1" /> <!-- Gludio Supply Box - magic pin -->
 		</skills>
 	</item>
-	<item id="14532" name="Dion Supply Box - Magic Pin" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14532" name="Dion Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1211,7 +1211,7 @@
 			<skill id="2949" level="1" /> <!-- Dion supply box - magic pin -->
 		</skills>
 	</item>
-	<item id="14533" name="Giran Supply Box - Magic Pin" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14533" name="Giran Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1231,7 +1231,7 @@
 			<skill id="2950" level="1" /> <!-- Giran supply box - magic pin -->
 		</skills>
 	</item>
-	<item id="14534" name="Oren Supply Box - Magic Pin" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14534" name="Oren Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1251,7 +1251,7 @@
 			<skill id="2951" level="1" /> <!-- Oren supply box - magic pin -->
 		</skills>
 	</item>
-	<item id="14535" name="Aden Supply Box - Magic Pin" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14535" name="Aden Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1271,7 +1271,7 @@
 			<skill id="2952" level="1" /> <!-- Aden supply box - magic pin -->
 		</skills>
 	</item>
-	<item id="14536" name="Innadril Supply Box - Magic Pin" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14536" name="Innadril Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1291,7 +1291,7 @@
 			<skill id="2953" level="1" /> <!-- Innadril supply box - magic pin -->
 		</skills>
 	</item>
-	<item id="14537" name="Goddard Supply Box: Magic Pin" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14537" name="Goddard Supply Box: Magic Pin" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1311,7 +1311,7 @@
 			<skill id="2954" level="1" /> <!-- Goddard Supply Box: magic pin -->
 		</skills>
 	</item>
-	<item id="14538" name="Rune Supply Box - Magic Pin" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14538" name="Rune Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1331,7 +1331,7 @@
 			<skill id="2955" level="1" /> <!-- Rune supply box - magic pin -->
 		</skills>
 	</item>
-	<item id="14539" name="Schuttgart Supply Box - Magic Pin" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14539" name="Schuttgart Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1351,7 +1351,7 @@
 			<skill id="2956" level="1" /> <!-- Schuttgart supply box - magic pin -->
 		</skills>
 	</item>
-	<item id="14540" name="Gludio Supply Box - Magic Pouch" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14540" name="Gludio Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1371,7 +1371,7 @@
 			<skill id="2957" level="1" /> <!-- Gludio supply box - magic pouch -->
 		</skills>
 	</item>
-	<item id="14541" name="Dion Supply Box - Magic Pouch" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14541" name="Dion Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1391,7 +1391,7 @@
 			<skill id="2958" level="1" /> <!-- Dion supply box - magic pouch -->
 		</skills>
 	</item>
-	<item id="14542" name="Giran Supply Box - Magic Pouch" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14542" name="Giran Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1411,7 +1411,7 @@
 			<skill id="2959" level="1" /> <!-- Giran supply box - magic pouch -->
 		</skills>
 	</item>
-	<item id="14543" name="Oren Supply Box - Magic Pouch" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14543" name="Oren Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1431,7 +1431,7 @@
 			<skill id="2960" level="1" /> <!-- Oren supply box - magic pouch -->
 		</skills>
 	</item>
-	<item id="14544" name="Aden Supply Box - Magic Pouch" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14544" name="Aden Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1451,7 +1451,7 @@
 			<skill id="2961" level="1" /> <!-- Aden supply box - magic pouch -->
 		</skills>
 	</item>
-	<item id="14545" name="Innadril Supply Box - Magic Pouch" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14545" name="Innadril Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1471,7 +1471,7 @@
 			<skill id="2962" level="1" /> <!-- Innadril supply box - magic pouch -->
 		</skills>
 	</item>
-	<item id="14546" name="Goddard Supply Box: Magic Pouch" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14546" name="Goddard Supply Box: Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1491,7 +1491,7 @@
 			<skill id="2963" level="1" /> <!-- Goddard Supply Box: magic pouch -->
 		</skills>
 	</item>
-	<item id="14547" name="Rune Supply Box - Magic Pouch" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14547" name="Rune Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1511,7 +1511,7 @@
 			<skill id="2964" level="1" /> <!-- Rune supply box - magic pouch -->
 		</skills>
 	</item>
-	<item id="14548" name="Schuttgart Supply Box - Magic Pouch" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14548" name="Schuttgart Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1531,7 +1531,7 @@
 			<skill id="2965" level="1" /> <!-- Schuttgart supply box - magic pouch -->
 		</skills>
 	</item>
-	<item id="14549" name="Gludio Supply Box - Belt" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14549" name="Gludio Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1551,7 +1551,7 @@
 			<skill id="2966" level="1" /> <!-- Gludio supply box - belt -->
 		</skills>
 	</item>
-	<item id="14550" name="Dion Supply Box - Belt" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14550" name="Dion Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1571,7 +1571,7 @@
 			<skill id="2967" level="1" /> <!-- Dion supply box - belt -->
 		</skills>
 	</item>
-	<item id="14551" name="Giran Supply Box - Belt" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14551" name="Giran Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1591,7 +1591,7 @@
 			<skill id="2968" level="1" /> <!-- Giran supply box - belt -->
 		</skills>
 	</item>
-	<item id="14552" name="Oren Supply Box - Belt" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14552" name="Oren Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1611,7 +1611,7 @@
 			<skill id="2969" level="1" /> <!-- Oren supply box - belt -->
 		</skills>
 	</item>
-	<item id="14553" name="Aden Supply Box - Belt" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14553" name="Aden Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1631,7 +1631,7 @@
 			<skill id="2970" level="1" /> <!-- Aden supply box - belt -->
 		</skills>
 	</item>
-	<item id="14554" name="Innadril Supply Box - Belt" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14554" name="Innadril Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1651,7 +1651,7 @@
 			<skill id="2971" level="1" /> <!-- Innadril supply box - belt -->
 		</skills>
 	</item>
-	<item id="14555" name="Goddard Supply Box: Belt" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14555" name="Goddard Supply Box: Belt" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1671,7 +1671,7 @@
 			<skill id="2972" level="1" /> <!-- Goddard Supply Box: belt -->
 		</skills>
 	</item>
-	<item id="14556" name="Rune Supply Box - Belt" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14556" name="Rune Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1691,7 +1691,7 @@
 			<skill id="2973" level="1" /> <!-- Rune supply box - belt -->
 		</skills>
 	</item>
-	<item id="14557" name="Schuttgart Supply Box - Belt" name_additional="S-/A-grade" type="EtcItem">
+	<item id="14557" name="Schuttgart Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -2584,7 +2584,7 @@
 			<stat type="pDef">293</stat>
 		</stats>
 	</item>
-	<item id="14584" name="Apella Combat Gauntlets" name_additional="Heavy Armor" type="Armor">
+	<item id="14584" name="Apella Combat Gauntlets" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1004_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2613,7 +2613,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="14585" name="Apella Combat Boots" name_additional="Heavy Armor" type="Armor">
+	<item id="14585" name="Apella Combat Boots" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1004_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2669,7 +2669,7 @@
 			<stat type="pDef">220</stat>
 		</stats>
 	</item>
-	<item id="14587" name="Apella Combat Leather Gloves" name_additional="Light Armor" type="Armor">
+	<item id="14587" name="Apella Combat Leather Gloves" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1005_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2695,7 +2695,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="14588" name="Apella Combat Shoes" name_additional="Light Armor" type="Armor">
+	<item id="14588" name="Apella Combat Shoes" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1005_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2752,7 +2752,7 @@
 			<stat type="maxMp">718</stat>
 		</stats>
 	</item>
-	<item id="14590" name="Apella Combat Silk Gloves" name_additional="Robe" type="Armor">
+	<item id="14590" name="Apella Combat Silk Gloves" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t1006_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2781,7 +2781,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="14591" name="Apella Combat Sandals" name_additional="Robe" type="Armor">
+	<item id="14591" name="Apella Combat Sandals" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t1006_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />

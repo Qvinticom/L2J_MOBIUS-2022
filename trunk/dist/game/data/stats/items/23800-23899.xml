@@ -76,7 +76,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23807" name="Prestige Rune 30%" name_additional="30-day" type="EtcItem">
+	<item id="23807" name="Prestige Rune 30%" additionalName="30-day" type="EtcItem">
 		<!-- When stored in the inventory, item acquisition through drops, Adena, and spoils in hunt + 30%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -90,7 +90,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="23808" name="Prestige Rune 50%" name_additional="30-day" type="EtcItem">
+	<item id="23808" name="Prestige Rune 50%" additionalName="30-day" type="EtcItem">
 		<!-- When stored in the inventory, item acquisition through drops, Adena, and spoils in hunt + 50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -104,7 +104,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="23809" name="Prestige Rune 100%" name_additional="30-day" type="EtcItem">
+	<item id="23809" name="Prestige Rune 100%" additionalName="30-day" type="EtcItem">
 		<!-- When stored in the inventory, item acquisition through drops, Adena, and spoils in hunt + 100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -118,7 +118,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="23810" name="Prestige Rune 30% Pack" name_additional="30-day" type="EtcItem">
+	<item id="23810" name="Prestige Rune 30% Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Prestige Rune 30%. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -131,7 +131,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="23811" name="Prestige Rune 50% Pack" name_additional="30-day" type="EtcItem">
+	<item id="23811" name="Prestige Rune 50% Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Prestige Rune 50%. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -144,7 +144,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="23812" name="Prestige Rune 100% Pack" name_additional="30-day" type="EtcItem">
+	<item id="23812" name="Prestige Rune 100% Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Prestige Rune 100%. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -157,7 +157,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="23813" name="Prestige Cube Pack" name_additional="30-day" type="EtcItem">
+	<item id="23813" name="Prestige Cube Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Prestige Cube (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -171,7 +171,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="23814" name="Chaos Essence Pack" name_additional="30-day" type="EtcItem">
+	<item id="23814" name="Chaos Essence Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing a Chaos Essence (30-day). The Chaos Essence cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="is_stackable" val="true" />
@@ -184,7 +184,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="23815" name="Chaos Essence Pack (Dual Class)" name_additional="30-day" type="EtcItem">
+	<item id="23815" name="Chaos Essence Pack (Dual Class)" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing a Chaos Essence (Dual Class) (30-day). The Chaos Essence cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="is_stackable" val="true" />
@@ -214,7 +214,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="RING" />
 	</item>
-	<item id="23818" name="Uthanka's Ring" name_additional="7-day" type="Armor">
+	<item id="23818" name="Uthanka's Ring" additionalName="7-day" type="Armor">
 		<!-- Can transform into Pirate Captain Uthanka (7-day).\n -->
 		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka" />
 		<set name="default_action" val="EQUIP" />
@@ -228,7 +228,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23819" name="Uthanka's Ring Pack" name_additional="7-day" type="EtcItem">
+	<item id="23819" name="Uthanka's Ring Pack" additionalName="7-day" type="EtcItem">
 		<!-- Wrapped Pack containing Uthanka's Ring (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -254,7 +254,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23822" name="Agathion - Pirate Captain Uthanka" name_additional="7-day" type="Armor">
+	<item id="23822" name="Agathion - Pirate Captain Uthanka" additionalName="7-day" type="Armor">
 		<!-- Summon Uthanka Agathion (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -268,7 +268,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23823" name="Agathion - Uthanka Pack" name_additional="7-day" type="EtcItem">
+	<item id="23823" name="Agathion - Uthanka Pack" additionalName="7-day" type="EtcItem">
 		<!-- Wrapped Pack containing Uthanka Agathion (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -286,7 +286,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23825" name="Mysterious Human Dye" name_additional="Aim, Mental, Unbind, 7-day" type="EtcItem">
+	<item id="23825" name="Mysterious Human Dye" additionalName="Aim, Mental, Unbind, 7-day" type="EtcItem">
 		<!-- Mysterious dye containing Human power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Human race. (Fire/Water/Wind/Earth Resistance + 10, Debuff Resistance + 1%/Active Skill: Unbind) All classes. Cannot be stacked with the previous Prophecy: Unbind skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_human" />
 		<set name="is_stackable" val="true" />
@@ -299,7 +299,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23826" name="Mysterious Elf Dye" name_additional="Blessing of Water, Delicacy, Prevision, 7-day" type="EtcItem">
+	<item id="23826" name="Mysterious Elf Dye" additionalName="Blessing of Water, Delicacy, Prevision, 7-day" type="EtcItem">
 		<!-- Mysterious dye containing Elven power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Elf race. (Water Resistance + 20, P. Critical Rate + 10, M. Critical Rate + 10/Active Skill: Prevision) All classes. Cannot be stacked with the previous Prophecy: Prevision skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_elf" />
 		<set name="is_stackable" val="true" />
@@ -312,7 +312,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23827" name="Mysterious Dark Elf Dye" name_additional="Sharpness, Blessing of Wind, Disparition, 7-day" type="EtcItem">
+	<item id="23827" name="Mysterious Dark Elf Dye" additionalName="Sharpness, Blessing of Wind, Disparition, 7-day" type="EtcItem">
 		<!-- Mysterious dye containing Dark Elven power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Dark Elf race. (Wind Resistance + 20, P. Critical Damage and M. Critical Damage + 1%/Active Skill: Disparition) All classes. Cannot be stacked with the previous Prophecy: Disparition skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_darkelf" />
 		<set name="is_stackable" val="true" />
@@ -325,7 +325,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23828" name="Mysterious Orc Dye" name_additional="Blessing of Fire, Energetic, Savage, 7-day" type="EtcItem">
+	<item id="23828" name="Mysterious Orc Dye" additionalName="Blessing of Fire, Energetic, Savage, 7-day" type="EtcItem">
 		<!-- Mysterious dye containing Orc power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Orc race. (Fire Resistance + 20, HP/MP/CP + 1%/Active Skill: Savage) All classes. Cannot be stacked with the previous Prophecy: Savage skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_orc" />
 		<set name="is_stackable" val="true" />
@@ -338,7 +338,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23829" name="Mysterious Dwarf Dye" name_additional="Dexterity, Blessing of Earth, Endurance, 7-day" type="EtcItem">
+	<item id="23829" name="Mysterious Dwarf Dye" additionalName="Dexterity, Blessing of Earth, Endurance, 7-day" type="EtcItem">
 		<!-- Mysterious dye containing Dwarven power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Dwarf race. (Water Resistance + 20, Skill Cooldown - 1%/Active Skill: Endurance) All classes. Cannot be stacked with the previous Prophecy: Endurance skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_dwarf" />
 		<set name="is_stackable" val="true" />
@@ -351,7 +351,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23830" name="Mysterious Kamael Dye" name_additional="Battle Instinct, Dark Silence, Soul Protection, 7-day" type="EtcItem">
+	<item id="23830" name="Mysterious Kamael Dye" additionalName="Battle Instinct, Dark Silence, Soul Protection, 7-day" type="EtcItem">
 		<!-- Mysterious dye containing Kamael power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Kamael race. (Dark Resistance + 20, PvP Damage + 1%/Active Skill: Soul Protection) All classes. Cannot be stacked with the previous Prophecy: Soul Protection skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_kamael" />
 		<set name="is_stackable" val="true" />
@@ -364,7 +364,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23831" name="XP Rune I (Lv. 1-85) 100% Pack (1-hour)" name_additional="Event" type="EtcItem">
+	<item id="23831" name="XP Rune I (Lv. 1-85) 100% Pack (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an XP Rune I (Lv. 1-85) 100% Pack (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -374,7 +374,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23832" name="Pa'agrio's Warm Breeze Pack (1-hour)" name_additional="Event" type="EtcItem">
+	<item id="23832" name="Pa'agrio's Warm Breeze Pack (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a Pa'agrio's Warm Breeze Pack (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -384,7 +384,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23833" name="Talisman - Abundance" name_additional="War" type="Armor">
+	<item id="23833" name="Talisman - Abundance" additionalName="War" type="Armor">
 		<!-- P. Atk. + 154, M. Atk. + 181, and P. Evasion/M. Evasion + 4.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -392,7 +392,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23834" name="Talisman - Abundance" name_additional="Tactics" type="Armor">
+	<item id="23834" name="Talisman - Abundance" additionalName="Tactics" type="Armor">
 		<!-- Attribute Resistance + 10 and Debuff Resistance + 10%.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -400,7 +400,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23835" name="Talisman - Abundance" name_additional="Morale" type="Armor">
+	<item id="23835" name="Talisman - Abundance" additionalName="Morale" type="Armor">
 		<!-- P./M. Critical Rate + 8%, Received Critical Damage - 10%, and PvP skill power - 10%.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -408,7 +408,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23836" name="Talisman - Abundance" name_additional="Physique" type="Armor">
+	<item id="23836" name="Talisman - Abundance" additionalName="Physique" type="Armor">
 		<!-- Max HP/MP/CP + 325 and HP/MP/CP Recovery Rate + 5.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -416,7 +416,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23837" name="Talisman - Hunter" name_additional="Abundance" type="Armor">
+	<item id="23837" name="Talisman - Hunter" additionalName="Abundance" type="Armor">
 		<!-- P. Atk. + 231, M. Atk. 271, P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%. Received Critical Damage - 15%, and skill damage during PvP - 15%. Additionally, skill damage received during PvP is decreased.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -424,7 +424,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23838" name="Talisman - Slaughterer" name_additional="Abundance" type="Armor">
+	<item id="23838" name="Talisman - Slaughterer" additionalName="Abundance" type="Armor">
 		<!-- P. Atk. + 231, M. Atk. + 271 P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, Max HP, MP, and CP + 490, and HP, MP, and CP Recovery + 7.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -432,7 +432,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23839" name="Talisman - Conquerer" name_additional="Abundance" type="Armor">
+	<item id="23839" name="Talisman - Conquerer" additionalName="Abundance" type="Armor">
 		<!-- P. Atk. + 231, M. Atk. + 271, P. Evasion/M. Evasion + 7, P./M. Critical Rate + 13%, Max HP, MP, and CP + 490, HP, MP, and CP Recovery + 7. Received Critical Damage - 15%, and skill damage during PvP - 15%.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -440,7 +440,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23840" name="Talisman - Outlaw" name_additional="Abundance" type="Armor">
+	<item id="23840" name="Talisman - Outlaw" additionalName="Abundance" type="Armor">
 		<!-- Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%, Max HP, MP, and CP + 490, HP, MP, and CP Recovery + 7. Received Critical Damage - 15%, and skill damage during PvP - 15%.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -448,35 +448,35 @@
 		<set name="is_mailable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23841" name="Abundance Gift Box" name_additional="War" type="EtcItem">
+	<item id="23841" name="Abundance Gift Box" additionalName="War" type="EtcItem">
 		<!-- Has a chance of obtaining either Talisman - Abundance: War, Blessed Scroll: Enchant Weapon/ Armor (R-grade), Lucky Enchant Stone: Weapon/ Armor (R-grade), Scroll: Enchant Weapon/ Armor (R-grade), Elcyum Powder, Divine Protection Elixir, Pa'agrio's Warm Breeze Pack (1-hour), XP Rune I (Lv. 1-85) 100% Pack (1-hour), Prestige Rune 100% Pack, or XP Rune II (Lv. 1-95) 100% Pack (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23842" name="Abundance Gift Box" name_additional="Tactics" type="EtcItem">
+	<item id="23842" name="Abundance Gift Box" additionalName="Tactics" type="EtcItem">
 		<!-- Has a chance of obtaining either Talisman - Abundance: Tactics, Blessed Scroll: Enchant Weapon/ Armor (R-grade), Lucky Enchant Stone: Weapon/ Armor (R-grade), Scroll: Enchant Weapon/ Armor (R-grade), Elcyum Powder, Divine Protection Elixir, Pa'agrio's Warm Breeze Pack (1-hour), XP Rune I (Lv. 1-85) 100% Pack (1-hour), Prestige Rune 100% Pack, or XP Rune II (Lv. 1-95) 100% Pack (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23843" name="Abundance Gift Box" name_additional="Morale" type="EtcItem">
+	<item id="23843" name="Abundance Gift Box" additionalName="Morale" type="EtcItem">
 		<!-- Has a chance of obtaining either Talisman - Abundance: Morale, Blessed Scroll: Enchant Weapon/ Armor (R-grade), Lucky Enchant Stone: Weapon/ Armor (R-grade), Scroll: Enchant Weapon/ Armor (R-grade), Elcyum Powder, Divine Protection Elixir, Pa'agrio's Warm Breeze Pack (1-hour), XP Rune I (Lv. 1-85) 100% Pack (1-hour), Prestige Rune 100% Pack, or XP Rune II (Lv. 1-95) 100% Pack (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23844" name="Abundance Gift Box" name_additional="Physique" type="EtcItem">
+	<item id="23844" name="Abundance Gift Box" additionalName="Physique" type="EtcItem">
 		<!-- Has a chance of obtaining either Talisman - Abundance: Physique, Blessed Scroll: Enchant Weapon/ Armor (R-grade), Lucky Enchant Stone: Weapon/ Armor (R-grade), Scroll: Enchant Weapon/ Armor (R-grade), Elcyum Powder, Divine Protection Elixir, Pa'agrio's Warm Breeze Pack (1-hour), XP Rune I (Lv. 1-85) 100% Pack (1-hour), Prestige Rune 100% Pack, or XP Rune II (Lv. 1-95) 100% Pack (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23845" name="Mysterious Hunt Dye" name_additional="P. Def., Speed, 1-day" type="EtcItem">
+	<item id="23845" name="Mysterious Hunt Dye" additionalName="P. Def., Speed, 1-day" type="EtcItem">
 		<!-- Take it to the town's Symbol Maker for a 1-day tattoo that increases your power (when HP is 90% or above, P. Def. + 20%, Speed + 33). All classes. Awakened only.\n\nNote: Tattoo is only effective in the Olympiad and Ceremony of Chaos. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
 		<set name="is_stackable" val="true" />
@@ -489,7 +489,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="time" val="86400" />
 	</item>
-	<item id="23846" name="Mysterious Slaughter Dye" name_additional="Damage Reflect Resistance, Received Damage Decrease, 1-day" type="EtcItem">
+	<item id="23846" name="Mysterious Slaughter Dye" additionalName="Damage Reflect Resistance, Received Damage Decrease, 1-day" type="EtcItem">
 		<!-- Take it to the town's Symbol Maker for a 1-day tattoo that increases your power (Received Damage from PCs - 2%, Damage Reflect Resistance + 2, effect increased for PC kills, up to Lv. 5) All classes. Awakened only.\n\nNote: Tattoo is only effective in a castle siege, dimensional castle siege, fortress siege, and a clan hall war. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
 		<set name="is_stackable" val="true" />
@@ -522,7 +522,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23849" name="Luxury Fortune Reading Coupon" name_additional="Event" type="EtcItem">
+	<item id="23849" name="Luxury Fortune Reading Coupon" additionalName="Event" type="EtcItem">
 		<!-- Coupon you can trade in for a Luxury Fortune Reading Ticket through Eve's Fortune Shop. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -530,7 +530,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23850" name="Luxury Fortune Reading Coupon" name_additional="Event" type="EtcItem">
+	<item id="23850" name="Luxury Fortune Reading Coupon" additionalName="Event" type="EtcItem">
 		<!-- Coupon you can trade in for a Luxury Fortune Reading Ticket through Eve's Fortune Shop. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -730,7 +730,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23871" name="Prestige Rune 100%" name_additional="1-hour" type="EtcItem">
+	<item id="23871" name="Prestige Rune 100%" additionalName="1-hour" type="EtcItem">
 		<!-- When possessed in the inventory while hunting, Adena gain, item drops, and item acquisition through spoils + 100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -744,7 +744,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="3600" />
 	</item>
-	<item id="23872" name="Prestige Rune 100%" name_additional="5-hour" type="EtcItem">
+	<item id="23872" name="Prestige Rune 100%" additionalName="5-hour" type="EtcItem">
 		<!-- When possessed in the inventory while hunting, Adena gain, item drops, and item acquisition through spoils + 100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -758,7 +758,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="18000" />
 	</item>
-	<item id="23873" name="Prestige Rune 100%" name_additional="7-day" type="EtcItem">
+	<item id="23873" name="Prestige Rune 100%" additionalName="7-day" type="EtcItem">
 		<!-- When possessed in the inventory while hunting, Adena gain, item drops, and item acquisition through spoils + 100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -772,7 +772,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="23874" name="Prestige Rune 100% Pack" name_additional="1-hour" type="EtcItem">
+	<item id="23874" name="Prestige Rune 100% Pack" additionalName="1-hour" type="EtcItem">
 		<!-- Wrapped Pack containing Prestige Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -782,7 +782,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="3600" />
 	</item>
-	<item id="23875" name="Prestige Rune 100% Pack" name_additional="5-hour" type="EtcItem">
+	<item id="23875" name="Prestige Rune 100% Pack" additionalName="5-hour" type="EtcItem">
 		<!-- Wrapped Pack containing Prestige Rune 100% (5-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -792,7 +792,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="18000" />
 	</item>
-	<item id="23876" name="Prestige Rune 100% Pack" name_additional="7-day" type="EtcItem">
+	<item id="23876" name="Prestige Rune 100% Pack" additionalName="7-day" type="EtcItem">
 		<!-- Wrapped Pack containing Prestige Rune 100% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />

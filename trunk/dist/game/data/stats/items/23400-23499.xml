@@ -658,7 +658,7 @@
 			<skill id="2212" level="1" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
 		</skills>
 	</item>
-	<item id="23434" name="Agathion - Phoenix Pack (7-day)" name_additional="Nirvana Rebirth" type="EtcItem">
+	<item id="23434" name="Agathion - Phoenix Pack (7-day)" additionalName="Nirvana Rebirth" type="EtcItem">
 		<!-- Wrapped Pack containing Phoenix (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -672,7 +672,7 @@
 			<item id="20940" min="1" max="1" chance="100" /> <!-- Agathion - Phoenix - Nirvana Rebirth (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="23435" name="Agathion - Blue Opera Pack (7-day)" name_additional="Sword of Recovery" type="EtcItem">
+	<item id="23435" name="Agathion - Blue Opera Pack (7-day)" additionalName="Sword of Recovery" type="EtcItem">
 		<!-- Wrapped Pack containing Blue Opera (7-day; Sword of Recovery). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -686,7 +686,7 @@
 			<item id="20776" min="1" max="1" chance="100" /> <!-- Agathion - Blue Opera - Sword of Recovery (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="23436" name="Agathion - Button-eyed Bear Doll Pack (7-day)" name_additional="Vitality" type="EtcItem">
+	<item id="23436" name="Agathion - Button-eyed Bear Doll Pack (7-day)" additionalName="Vitality" type="EtcItem">
 		<!-- Wrapped Pack containing Button-eyed Bear Doll (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1049,7 +1049,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23460" name="Ink Herb" name_additional="Event" type="EtcItem">
+	<item id="23460" name="Ink Herb" additionalName="Event" type="EtcItem">
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1065,7 +1065,7 @@
 			<skill id="22737" level="1" /> <!-- Ink Herb -->
 		</skills>
 	</item>
-	<item id="23461" name="Greater Ink Herb" name_additional="Event" type="EtcItem">
+	<item id="23461" name="Greater Ink Herb" additionalName="Event" type="EtcItem">
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1081,7 +1081,7 @@
 			<skill id="22739" level="2" /> <!-- Greater Ink Herb -->
 		</skills>
 	</item>
-	<item id="23462" name="Fantasy Isle Invitation" name_additional="Event" type="EtcItem">
+	<item id="23462" name="Fantasy Isle Invitation" additionalName="Event" type="EtcItem">
 		<!-- Invitation for Aden's celebrities to attend the Fantasy Isle Festival, entrusted to you by Small Bard. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_invitation" />
 		<set name="is_freightable" val="false" />
@@ -1089,7 +1089,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23463" name="Fantasy Isle VIP Invitation" name_additional="Event" type="EtcItem">
+	<item id="23463" name="Fantasy Isle VIP Invitation" additionalName="Event" type="EtcItem">
 		<!-- VIP Invitation for Aden's celebrities to attend the Fantasy Isle Festival, entrusted to you by Small Bard. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_vip_invitation" />
 		<set name="is_freightable" val="false" />
@@ -1097,7 +1097,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23464" name="RSVP Notice" name_additional="Event" type="EtcItem">
+	<item id="23464" name="RSVP Notice" additionalName="Event" type="EtcItem">
 		<!-- Notices from celebrities of Aden, accepting the invitation to the Fantasy Isle Festival. Bring 10 to the Sponsorship Manager to receive a gift. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_attendance" />
 		<set name="is_clan_depositable" val="false" />
@@ -1111,7 +1111,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23465" name="Declining Letter" name_additional="Event" type="EtcItem">
+	<item id="23465" name="Declining Letter" additionalName="Event" type="EtcItem">
 		<!-- Notices from celebrities of Aden, declining the invitation to the Fantasy Isle Festival. Bring this to the Sponsorship Manager to exchange for a matching number of rewards. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_nonparticipation" />
 		<set name="is_clan_depositable" val="false" />
@@ -1125,7 +1125,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23466" name="Fantasy Gift Box" name_additional="Event" type="EtcItem">
+	<item id="23466" name="Fantasy Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Gift from the Fantasy Isle Festival Manager. Has a chance of obtaining one of many items. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_fantasy_box" />
 		<set name="is_freightable" val="false" />
@@ -1137,7 +1137,7 @@
 			<skill id="22741" level="1" /> <!-- Fantasy Gift Box -->
 		</skills>
 	</item>
-	<item id="23467" name="Fantasy Health Potion" name_additional="Event" type="EtcItem">
+	<item id="23467" name="Fantasy Health Potion" additionalName="Event" type="EtcItem">
 		<!-- Restores 3000 HP, and the remaining power restores CP. Instant effect with no duration. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_red_potion" />
 		<set name="weight" val="10" />
@@ -1155,7 +1155,7 @@
 			<skill id="22742" level="1" /> <!-- Fantasy Health Potion -->
 		</skills>
 	</item>
-	<item id="23468" name="Fantasy Mana Potion" name_additional="Event" type="EtcItem">
+	<item id="23468" name="Fantasy Mana Potion" additionalName="Event" type="EtcItem">
 		<!-- Restores 100 MP. Instant effect with no duration. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_blue_potion" />
 		<set name="weight" val="10" />
@@ -1173,7 +1173,7 @@
 			<skill id="22743" level="1" /> <!-- Fantasy Mana Potion -->
 		</skills>
 	</item>
-	<item id="23469" name="Fantasy Cookie" name_additional="Event" type="EtcItem">
+	<item id="23469" name="Fantasy Cookie" additionalName="Event" type="EtcItem">
 		<!-- Cookie made for the Fantasy Isle Festival. For 60 min., Speed + 33. -->
 		<set name="icon" val="BranchSys3.Icon.ev_halloween_cookie" />
 		<set name="weight" val="120" />
@@ -1192,7 +1192,7 @@
 			<skill id="22744" level="1" /> <!-- Fantasy Cookie -->
 		</skills>
 	</item>
-	<item id="23470" name="Fantasy Homemade Cookie" name_additional="Event" type="EtcItem">
+	<item id="23470" name="Fantasy Homemade Cookie" additionalName="Event" type="EtcItem">
 		<!-- Homemade cookie made for the Fantasy Isle Festival. For 60 min., with the help of a powerful spirit, Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Damage 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%, and P. Def. Increases when receiving a critical attack. Speed - 15%. Party members equipped with melee and ranged weapons have increased Critical Damage after receiving an amount of damage. -->
 		<set name="icon" val="BranchSys3.Icon.ev_halloween_cookie" />
 		<set name="weight" val="120" />
@@ -1211,7 +1211,7 @@
 			<skill id="22745" level="1" /> <!-- Fantasy Homemade Cookie -->
 		</skills>
 	</item>
-	<item id="23471" name="Fantasy Special Cookie" name_additional="Event" type="EtcItem">
+	<item id="23471" name="Fantasy Special Cookie" additionalName="Event" type="EtcItem">
 		<!-- Special cookie made for the Fantasy Isle Festival. For 60 min., SP/XP obtained through hunt + 100% for characters Lv.1-95. -->
 		<set name="icon" val="BranchSys3.Icon.ev_halloween_cookie" />
 		<set name="weight" val="120" />
@@ -1230,7 +1230,7 @@
 			<skill id="22746" level="1" /> <!-- Fantasy Special Cookie -->
 		</skills>
 	</item>
-	<item id="23472" name="Fantasy Cookie Set" name_additional="Event" type="EtcItem">
+	<item id="23472" name="Fantasy Cookie Set" additionalName="Event" type="EtcItem">
 		<!-- Cookie set made for the Fantasy Isle Festival. Contains 1 Fantasy Cookie, 1 Fantasy Homemade Cookie, and 1 Fantasy Special Cookie. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_freightable" val="false" />
@@ -1477,7 +1477,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23486" name="Santa Outfit Appearance Stone" name_additional="14-day" type="EtcItem">
+	<item id="23486" name="Santa Outfit Appearance Stone" additionalName="14-day" type="EtcItem">
 		<!-- Appearance stone that modifies into a Santa outfit. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Santa outfit. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
@@ -1553,7 +1553,7 @@
 			<item id="23487" min="1" max="1" chance="100" /> <!-- Santa Outfit Appearance Stone -->
 		</capsuled_items>
 	</item>
-	<item id="23490" name="PC Vitality (1-hour)" name_additional="Event" type="EtcItem">
+	<item id="23490" name="PC Vitality (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- For 1 hr., restores vitality with XP acquired through hunting. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="is_clan_depositable" val="false" />

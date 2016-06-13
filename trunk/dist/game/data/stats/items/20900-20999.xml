@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="20900" name="Santa Hat" name_additional="14-day" type="Armor">
+	<item id="20900" name="Santa Hat" additionalName="14-day" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_xmas_gawibawibo_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -112,7 +112,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="20908" name="Desheloph Rose Necklace (Event)" name_additional="3-hour Summon Duration" type="EtcItem">
+	<item id="20908" name="Desheloph Rose Necklace (Event)" additionalName="3-hour Summon Duration" type="EtcItem">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -136,7 +136,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20909" name="Hyum Rose Necklace (Event)" name_additional="3-hour Summon Duration" type="EtcItem">
+	<item id="20909" name="Hyum Rose Necklace (Event)" additionalName="3-hour Summon Duration" type="EtcItem">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -160,7 +160,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20910" name="Lekang Rose Necklace (Event)" name_additional="3-hour Summon Duration" type="EtcItem">
+	<item id="20910" name="Lekang Rose Necklace (Event)" additionalName="3-hour Summon Duration" type="EtcItem">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -184,7 +184,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20911" name="Lilias Rose Necklace (Event)" name_additional="3-hour Summon Duration" type="EtcItem">
+	<item id="20911" name="Lilias Rose Necklace (Event)" additionalName="3-hour Summon Duration" type="EtcItem">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -208,7 +208,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20912" name="Lapham Rose Necklace (Event)" name_additional="3-hour Summon Duration" type="EtcItem">
+	<item id="20912" name="Lapham Rose Necklace (Event)" additionalName="3-hour Summon Duration" type="EtcItem">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -232,7 +232,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20913" name="Mafum Rose Necklace (Event)" name_additional="3-hour Summon Duration" type="EtcItem">
+	<item id="20913" name="Mafum Rose Necklace (Event)" additionalName="3-hour Summon Duration" type="EtcItem">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -271,7 +271,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_mailable" val="false" />
 	</item>
-	<item id="20915" name="Enhanced Rose Necklace: Desheloph" name_additional="5-hour Summon Duration" type="EtcItem">
+	<item id="20915" name="Enhanced Rose Necklace: Desheloph" additionalName="5-hour Summon Duration" type="EtcItem">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -296,7 +296,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20916" name="Enhanced Rose Necklace: Hyum" name_additional="5-hour Summon Duration" type="EtcItem">
+	<item id="20916" name="Enhanced Rose Necklace: Hyum" additionalName="5-hour Summon Duration" type="EtcItem">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -321,7 +321,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20917" name="Enhanced Rose Necklace: Lekang" name_additional="5-hour Summon Duration" type="EtcItem">
+	<item id="20917" name="Enhanced Rose Necklace: Lekang" additionalName="5-hour Summon Duration" type="EtcItem">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -346,7 +346,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20918" name="Enhanced Rose Necklace: Lilias" name_additional="5-hour Summon Duration" type="EtcItem">
+	<item id="20918" name="Enhanced Rose Necklace: Lilias" additionalName="5-hour Summon Duration" type="EtcItem">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -371,7 +371,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20919" name="Enhanced Rose Necklace: Lapham" name_additional="5-hour Summon Duration" type="EtcItem">
+	<item id="20919" name="Enhanced Rose Necklace: Lapham" additionalName="5-hour Summon Duration" type="EtcItem">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -396,7 +396,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20920" name="Enhanced Rose Necklace: Mafum" name_additional="5-hour Summon Duration" type="EtcItem">
+	<item id="20920" name="Enhanced Rose Necklace: Mafum" additionalName="5-hour Summon Duration" type="EtcItem">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -421,7 +421,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20921" name="Rose Spirit Test Report" name_additional="24-hour" type="EtcItem">
+	<item id="20921" name="Rose Spirit Test Report" additionalName="24-hour" type="EtcItem">
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -616,7 +616,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_mailable" val="false" />
 	</item>
-	<item id="20932" name="Vesper Royal Crown" name_additional="30-day" type="Armor">
+	<item id="20932" name="Vesper Royal Crown" additionalName="30-day" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -635,7 +635,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="20933" name="Vesper Royal Circlet" name_additional="30-day" type="Armor">
+	<item id="20933" name="Vesper Royal Circlet" additionalName="30-day" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_royal_circlet_of_vesper_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -654,7 +654,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="20934" name="Vesper Noble Mask" name_additional="30-day" type="Armor">
+	<item id="20934" name="Vesper Noble Mask" additionalName="30-day" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_noblesse_oblige_of_vesper_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -718,7 +718,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_mailable" val="false" />
 	</item>
-	<item id="20938" name="Mount - Jet Bike" name_additional="7-day" type="Armor">
+	<item id="20938" name="Mount - Jet Bike" additionalName="7-day" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_z_bike_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -741,7 +741,7 @@
 			<skill id="21171" level="1" /> <!-- Ride Jet Bike -->
 		</skills>
 	</item>
-	<item id="20939" name="Mount - Jet Bike" name_additional="30-day" type="Armor">
+	<item id="20939" name="Mount - Jet Bike" additionalName="30-day" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_z_bike_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -764,7 +764,7 @@
 			<skill id="21171" level="1" /> <!-- Ride Jet Bike -->
 		</skills>
 	</item>
-	<item id="20940" name="Agathion - Phoenix" name_additional="Nirvana Rebirth (7-day)" type="Armor">
+	<item id="20940" name="Agathion - Phoenix" additionalName="Nirvana Rebirth (7-day)" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_china_phoenix_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -789,7 +789,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20941" name="Agathion - Phoenix" name_additional="Mountain Echoes (7-day)" type="Armor">
+	<item id="20941" name="Agathion - Phoenix" additionalName="Mountain Echoes (7-day)" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_china_phoenix_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -833,7 +833,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_mailable" val="false" />
 	</item>
-	<item id="20943" name="Fox Mask" name_additional="Silent Move (7-day)" type="Armor">
+	<item id="20943" name="Fox Mask" additionalName="Silent Move (7-day)" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_fox_japan_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -874,7 +874,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_mailable" val="false" />
 	</item>
-	<item id="20945" name="Paiwan Hat" name_additional="Power of Guardian Deity (7-day)" type="Armor">
+	<item id="20945" name="Paiwan Hat" additionalName="Power of Guardian Deity (7-day)" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_paiwan_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -936,7 +936,7 @@
 			<item id="20939" min="1" max="1" chance="100" /> <!-- Mount - Jet Bike - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="20948" name="Agathion - Phoenix Pack (7-day)" name_additional="Nirvana Rebirth" type="EtcItem">
+	<item id="20948" name="Agathion - Phoenix Pack (7-day)" additionalName="Nirvana Rebirth" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -956,7 +956,7 @@
 			<item id="20940" min="1" max="1" chance="100" /> <!-- Agathion - Phoenix - Nirvana Rebirth (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="20949" name="Agathion - Phoenix Pack (7-day)" name_additional="Mountain Echoes" type="EtcItem">
+	<item id="20949" name="Agathion - Phoenix Pack (7-day)" additionalName="Mountain Echoes" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -996,7 +996,7 @@
 			<item id="20942" min="1" max="1" chance="100" /> <!-- Fox Mask -->
 		</capsuled_items>
 	</item>
-	<item id="20951" name="Fox Mask Pack (7-day)" name_additional="Silent Move" type="EtcItem">
+	<item id="20951" name="Fox Mask Pack (7-day)" additionalName="Silent Move" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1036,7 +1036,7 @@
 			<item id="20944" min="1" max="1" chance="100" /> <!-- Paiwan Hat -->
 		</capsuled_items>
 	</item>
-	<item id="20953" name="Paiwan Hat Pack (7-day)" name_additional="Power of Guardian Deity" type="EtcItem">
+	<item id="20953" name="Paiwan Hat Pack (7-day)" additionalName="Power of Guardian Deity" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1094,7 +1094,7 @@
 			<skill id="22166" level="1" /> <!-- Replenish Energy -->
 		</skills>
 	</item>
-	<item id="20956" name="Agathion - Zombie" name_additional="Soul Stealth (7-day)" type="Armor">
+	<item id="20956" name="Agathion - Zombie" additionalName="Soul Stealth (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_gangsi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1119,7 +1119,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20957" name="Agathion - Zombie Pack (7-day)" name_additional="Soul Stealth" type="EtcItem">
+	<item id="20957" name="Agathion - Zombie Pack (7-day)" additionalName="Soul Stealth" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1376,7 +1376,7 @@
 			<item id="20968" min="1" max="1" chance="100" /> <!-- Agathion - Guangong -->
 		</capsuled_items>
 	</item>
-	<item id="20970" name="Agathion - Three-headed Dragon" name_additional="Premium" type="Armor">
+	<item id="20970" name="Agathion - Three-headed Dragon" additionalName="Premium" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_threehead_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1401,7 +1401,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20971" name="Trejuo Transformation Stick" name_additional="Blessed Child Transformation" type="Weapon">
+	<item id="20971" name="Trejuo Transformation Stick" additionalName="Blessed Child Transformation" type="Weapon">
 		<set name="icon" val="BranchSys2.icon.br_blessed_taiboy_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1432,7 +1432,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20972" name="Sujin Transformation Stick" name_additional="Blessed Child Transformation" type="Weapon">
+	<item id="20972" name="Sujin Transformation Stick" additionalName="Blessed Child Transformation" type="Weapon">
 		<set name="icon" val="BranchSys2.icon.br_blessed_taigirl_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1463,7 +1463,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20973" name="Opera Mask - Liu Bei" name_additional="Buff of Virtue, Age of the Three Kingdoms" type="Armor">
+	<item id="20973" name="Opera Mask - Liu Bei" additionalName="Buff of Virtue, Age of the Three Kingdoms" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_a_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1486,7 +1486,7 @@
 			<skill id="21197" level="1" /> <!-- Induk's Buff -->
 		</skills>
 	</item>
-	<item id="20974" name="Opera Mask - Guan Yu" name_additional="Silence of Fidelity, Age of the Three Kingdoms" type="Armor">
+	<item id="20974" name="Opera Mask - Guan Yu" additionalName="Silence of Fidelity, Age of the Three Kingdoms" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1509,7 +1509,7 @@
 			<skill id="21198" level="1" /> <!-- Silence of Loyalty -->
 		</skills>
 	</item>
-	<item id="20975" name="Opera Mask - Zhang Fei" name_additional="Vitality of Courage, Age of the Three Kingdoms" type="Armor">
+	<item id="20975" name="Opera Mask - Zhang Fei" additionalName="Vitality of Courage, Age of the Three Kingdoms" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_c_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1532,7 +1532,7 @@
 			<skill id="21199" level="1" /> <!-- Vitality of Courage -->
 		</skills>
 	</item>
-	<item id="20976" name="Warrior's Mark" name_additional="30-day" type="EtcItem">
+	<item id="20976" name="Warrior's Mark" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_symbol_a_i00" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
@@ -1640,7 +1640,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_mailable" val="false" />
 	</item>
-	<item id="20982" name="Dragon Boat" name_additional="Haste (7-day)" type="Armor">
+	<item id="20982" name="Dragon Boat" additionalName="Haste (7-day)" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_dragonboat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1662,7 +1662,7 @@
 			<skill id="21201" level="1" /> <!-- Haste -->
 		</skills>
 	</item>
-	<item id="20983" name="Agathion - Ball Trapping Gnosian" name_additional="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20983" name="Agathion - Ball Trapping Gnosian" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_ball_male_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1686,7 +1686,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20984" name="Agathion - Ball Trapping Orodriel" name_additional="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20984" name="Agathion - Ball Trapping Orodriel" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_ball_female_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1710,7 +1710,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20985" name="Agathion - Penalty Kick" name_additional="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20985" name="Agathion - Penalty Kick" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_ball_kick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1734,7 +1734,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20986" name="Agathion - Ball Trapping Gnosian" name_additional="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20986" name="Agathion - Ball Trapping Gnosian" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_jball_male_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1758,7 +1758,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20987" name="Agathion - Ball Trapping Orodriel" name_additional="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20987" name="Agathion - Ball Trapping Orodriel" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_jball_female_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1782,7 +1782,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20988" name="Agathion - Penalty Kick" name_additional="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20988" name="Agathion - Penalty Kick" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_jball_kick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1806,7 +1806,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20989" name="Agathion - Ball Trapping Gnosian" name_additional="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20989" name="Agathion - Ball Trapping Gnosian" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_male_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1830,7 +1830,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20990" name="Agathion - Ball Trapping Orodriel" name_additional="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20990" name="Agathion - Ball Trapping Orodriel" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_female_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1854,7 +1854,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20991" name="Agathion - Penalty Kick" name_additional="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
+	<item id="20991" name="Agathion - Penalty Kick" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_kick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1918,7 +1918,7 @@
 			<skill id="22169" level="1" /> <!-- Soccer Ball of Cheering Release -->
 		</skills>
 	</item>
-	<item id="20994" name="Agathion - Three-headed Dragon Pack" name_additional="Wind Walk" type="EtcItem">
+	<item id="20994" name="Agathion - Three-headed Dragon Pack" additionalName="Wind Walk" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1939,7 +1939,7 @@
 			<item id="20970" min="1" max="1" chance="100" /> <!-- Agathion - Three-headed Dragon - Premium -->
 		</capsuled_items>
 	</item>
-	<item id="20995" name="Liu Bei Opera Mask Pack" name_additional="Buff of Virtue, Age of the Three Kingdoms" type="EtcItem">
+	<item id="20995" name="Liu Bei Opera Mask Pack" additionalName="Buff of Virtue, Age of the Three Kingdoms" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1959,7 +1959,7 @@
 			<item id="20973" min="1" max="1" chance="100" /> <!-- Opera Mask - Liu Bei - Buff of Virtue, Age of the Three Kingdoms -->
 		</capsuled_items>
 	</item>
-	<item id="20996" name="Guan Yu Opera Mask Pack" name_additional="Silence of Fidelity, Age of the Three Kingdoms" type="EtcItem">
+	<item id="20996" name="Guan Yu Opera Mask Pack" additionalName="Silence of Fidelity, Age of the Three Kingdoms" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1979,7 +1979,7 @@
 			<item id="20974" min="1" max="1" chance="100" /> <!-- Opera Mask - Guan Yu - Silence of Fidelity, Age of the Three Kingdoms -->
 		</capsuled_items>
 	</item>
-	<item id="20997" name="Zhang Fei Opera Mask Pack" name_additional="Vitality of Courage, Age of the Three Kingdoms" type="EtcItem">
+	<item id="20997" name="Zhang Fei Opera Mask Pack" additionalName="Vitality of Courage, Age of the Three Kingdoms" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2019,7 +2019,7 @@
 			<item id="20981" min="1" max="1" chance="100" /> <!-- Dragon Boat -->
 		</capsuled_items>
 	</item>
-	<item id="20999" name="Dragon Boat Pack (7-day)" name_additional="Haste" type="EtcItem">
+	<item id="20999" name="Dragon Boat Pack (7-day)" additionalName="Haste" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

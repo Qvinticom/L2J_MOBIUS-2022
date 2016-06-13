@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="37500" name="Water Stone" name_additional="Event" type="EtcItem">
+	<item id="37500" name="Water Stone" additionalName="Event" type="EtcItem">
 		<!-- Water attack attribute increases by 5 when bestowed on a weapon. Fire defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="weight" val="1" />
@@ -13,7 +13,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37501" name="Earth Stone" name_additional="Event" type="EtcItem">
+	<item id="37501" name="Earth Stone" additionalName="Event" type="EtcItem">
 		<!-- Earth attack attribute increases by 5 when bestowed on a weapon. Wind defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="weight" val="1" />
@@ -26,7 +26,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37502" name="Wind Stone" name_additional="Event" type="EtcItem">
+	<item id="37502" name="Wind Stone" additionalName="Event" type="EtcItem">
 		<!-- Wind attack attribute increases by 5 when bestowed on a weapon. Earth defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
 		<set name="weight" val="1" />
@@ -39,7 +39,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37503" name="Dark Stone" name_additional="Event" type="EtcItem">
+	<item id="37503" name="Dark Stone" additionalName="Event" type="EtcItem">
 		<!-- Darkness Elemental attack attribute increases by 5 when bestowed on a weapon. Holy defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
 		<set name="weight" val="1" />
@@ -52,7 +52,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37504" name="Holy Stone" name_additional="Event" type="EtcItem">
+	<item id="37504" name="Holy Stone" additionalName="Event" type="EtcItem">
 		<!-- Holy attack attribute increases by 5 when bestowed on a weapon. Darkness Elemental defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="weight" val="1" />
@@ -91,7 +91,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37507" name="Enhanced Octavis' Ring" name_additional="Warrior" type="Armor">
+	<item id="37507" name="Enhanced Octavis' Ring" additionalName="Warrior" type="Armor">
 		<!-- MP + 37, Atk. Spd. + 3%, P. Critical Rate + 10, and P. Critical Damage + 15%. Wearing two of these rings will give you the effect of wearing one. -->
 		<set name="icon" val="icon.octavis_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -109,7 +109,7 @@
 			<stat type="mDef">103</stat>
 		</stats>
 	</item>
-	<item id="37508" name="Enhanced Octavis' Earring" name_additional="Warrior" type="Armor">
+	<item id="37508" name="Enhanced Octavis' Earring" additionalName="Warrior" type="Armor">
 		<!-- MP + 56, Def. + 3%, P. Skill MP consumption - 5%, and Vampiric Rage + 5%. Wearing two of these earrings will give you the effect of wearing one. -->
 		<set name="icon" val="icon.octavis_earring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -126,7 +126,7 @@
 			<stat type="mDef">154</stat>
 		</stats>
 	</item>
-	<item id="37509" name="Enhanced Octavis' Necklace" name_additional="Warrior" type="Armor">
+	<item id="37509" name="Enhanced Octavis' Necklace" additionalName="Warrior" type="Armor">
 		<!-- MP + 74, P. Atk. + 3%, P. Skill Cooldown - 10%, and Damage Reflection + 5%. -->
 		<set name="icon" val="icon.octavis_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -144,7 +144,7 @@
 			<stat type="mDef">205</stat>
 		</stats>
 	</item>
-	<item id="37510" name="Enhanced Istina's Ring" name_additional="Warrior" type="Armor">
+	<item id="37510" name="Enhanced Istina's Ring" additionalName="Warrior" type="Armor">
 		<!-- MP + 37, Atk. Spd. + 2%, P. Critical Rate + 10, and P. Critical Damage + 10%. Wearing two of these rings will give you the effect of wearing one. -->
 		<set name="icon" val="icon.istina_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -162,7 +162,7 @@
 			<stat type="mDef">103</stat>
 		</stats>
 	</item>
-	<item id="37511" name="Enhanced Istina's Earring" name_additional="Warrior" type="Armor">
+	<item id="37511" name="Enhanced Istina's Earring" additionalName="Warrior" type="Armor">
 		<!-- MP + 56, Def. + 2%, P. Skill MP consumption - 3%, and Vampiric Rage + 5%. Wearing two of these earrings will give you the effect of wearing one. -->
 		<set name="icon" val="icon.istina_earring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -180,7 +180,7 @@
 			<stat type="mDef">154</stat>
 		</stats>
 	</item>
-	<item id="37512" name="Enhanced Istina's Necklace" name_additional="Warrior" type="Armor">
+	<item id="37512" name="Enhanced Istina's Necklace" additionalName="Warrior" type="Armor">
 		<!-- MP + 74, P. Atk. + 2%, P. Skill Cooldown - 5%, and Damage Reflection + 5%. -->
 		<set name="icon" val="icon.istina_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -198,7 +198,7 @@
 			<stat type="mDef">205</stat>
 		</stats>
 	</item>
-	<item id="37513" name="Enhanced Octavis' Ring" name_additional="Wizard" type="Armor">
+	<item id="37513" name="Enhanced Octavis' Ring" additionalName="Wizard" type="Armor">
 		<!-- MP + 37, Casting Spd. + 2%, M. Critical Rate + 10, and M. Critical Damage + 10%. Wearing two of these rings will give you the effect of wearing one. -->
 		<set name="icon" val="icon.octavis_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -215,7 +215,7 @@
 			<stat type="mDef">103</stat>
 		</stats>
 	</item>
-	<item id="37514" name="Enhanced Octavis' Earring" name_additional="Wizard" type="Armor">
+	<item id="37514" name="Enhanced Octavis' Earring" additionalName="Wizard" type="Armor">
 		<!-- MP + 56, M. Def. + 2%, M. Skill MP consumption - 3%, and Vampiric Rage + 5%. Wearing two of these earrings will give you the effect of wearing one. -->
 		<set name="icon" val="icon.octavis_earring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -233,7 +233,7 @@
 			<stat type="mDef">154</stat>
 		</stats>
 	</item>
-	<item id="37515" name="Enhanced Octavis' Necklace" name_additional="Wizard" type="Armor">
+	<item id="37515" name="Enhanced Octavis' Necklace" additionalName="Wizard" type="Armor">
 		<!-- MP + 74, M. Atk. + 3%, M. Skill Cooldown - 5%, and Damage Reflection + 5%. -->
 		<set name="icon" val="icon.octavis_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -250,7 +250,7 @@
 			<stat type="mDef">205</stat>
 		</stats>
 	</item>
-	<item id="37516" name="Enhanced Istina's Ring" name_additional="Wizard" type="Armor">
+	<item id="37516" name="Enhanced Istina's Ring" additionalName="Wizard" type="Armor">
 		<!-- MP + 37, Casting Spd. + 3%, M. Critical Rate + 10, and M. Critical Damage + 15%. Wearing two of these rings will give you the effect of wearing one. -->
 		<set name="icon" val="icon.istina_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -268,7 +268,7 @@
 			<stat type="mDef">103</stat>
 		</stats>
 	</item>
-	<item id="37517" name="Enhanced Istina's Earring" name_additional="Wizard" type="Armor">
+	<item id="37517" name="Enhanced Istina's Earring" additionalName="Wizard" type="Armor">
 		<!-- MP + 56, M. Def. + 3%, M. Skill MP consumption - 5%, and Vampiric Rage + 5%. Wearing two of these earrings will give you the effect of wearing one. -->
 		<set name="icon" val="icon.istina_earring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -286,7 +286,7 @@
 			<stat type="mDef">154</stat>
 		</stats>
 	</item>
-	<item id="37518" name="Enhanced Istina's Necklace" name_additional="Wizard" type="Armor">
+	<item id="37518" name="Enhanced Istina's Necklace" additionalName="Wizard" type="Armor">
 		<!-- MP + 74, M. Atk. + 5%, M. Skill Cooldown - 10% and Damage Reflection + 5%. -->
 		<set name="icon" val="icon.istina_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -374,7 +374,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37525" name="Agathion - Pomona" name_additional="90-day" type="Armor">
+	<item id="37525" name="Agathion - Pomona" additionalName="90-day" type="Armor">
 		<!-- Bracelet for summoning Pomona Agathion. 90-day.\n(Active Skill)\nPomona Agathion Teleport\nLets you teleport to various strongholds. (Cooldown is 30 min.) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -398,7 +398,7 @@
 			<skill id="17090" level="1" /> <!-- Kisung's Cute Trick -->
 		</skills>
 	</item>
-	<item id="37527" name="Transformation Sealbook: Part-time Seller" name_additional="One-eyed ParaPara Cat" type="EtcItem">
+	<item id="37527" name="Transformation Sealbook: Part-time Seller" additionalName="One-eyed ParaPara Cat" type="EtcItem">
 		<!-- Sealbook for learning the skill of transforming yourself into an One-eyed ParaPara Cat. -->
 		<set name="icon" val="icon.etc_transform_warrior_i00" />
 		<set name="is_freightable" val="false" />
@@ -406,7 +406,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37528" name="Transformation Sealbook: Part-time Seller" name_additional="Smiling ParaPara Cat" type="EtcItem">
+	<item id="37528" name="Transformation Sealbook: Part-time Seller" additionalName="Smiling ParaPara Cat" type="EtcItem">
 		<!-- Sealbook for learning the skill of transforming yourself into a Smiling ParaPara Cat. -->
 		<set name="icon" val="icon.etc_transform_warrior_i00" />
 		<set name="is_freightable" val="false" />
@@ -414,7 +414,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37529" name="Transformation Sealbook: Part-time Seller" name_additional="Charming ParaPara Cat" type="EtcItem">
+	<item id="37529" name="Transformation Sealbook: Part-time Seller" additionalName="Charming ParaPara Cat" type="EtcItem">
 		<!-- Sealbook for learning the skill of transforming yourself into a Charming ParaPara Cat. -->
 		<set name="icon" val="icon.etc_transform_warrior_i00" />
 		<set name="is_freightable" val="false" />
@@ -422,7 +422,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37530" name="Transformation Sealbook: Part-time Seller" name_additional="Ferocious ParaPara Cat" type="EtcItem">
+	<item id="37530" name="Transformation Sealbook: Part-time Seller" additionalName="Ferocious ParaPara Cat" type="EtcItem">
 		<!-- Sealbook for learning the skill of transforming yourself into a Ferocious ParaPara Cat. -->
 		<set name="icon" val="icon.etc_transform_warrior_i00" />
 		<set name="is_freightable" val="false" />
@@ -430,7 +430,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37531" name="Transformation Sealbook: Part-time Seller" name_additional="Merchant ParaPara Cat" type="EtcItem">
+	<item id="37531" name="Transformation Sealbook: Part-time Seller" additionalName="Merchant ParaPara Cat" type="EtcItem">
 		<!-- Sealbook for learning the skill of transforming yourself into a Merchant ParaPara Cat. -->
 		<set name="icon" val="icon.etc_transform_warrior_i00" />
 		<set name="is_freightable" val="false" />
@@ -545,7 +545,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37542" name="Summon Scroll: Bae Kisung" name_additional="Test" type="EtcItem">
+	<item id="37542" name="Summon Scroll: Bae Kisung" additionalName="Test" type="EtcItem">
 		<!-- Scroll for summoning Bae Kisung once. From the summoned Bae Kisung, you can receive power-up buff and additionally Bae Kisung's gift box that has special gifts. -->
 		<set name="icon" val="icon.etc_star_scroll_baekisung" />
 		<set name="is_freightable" val="false" />
@@ -577,28 +577,28 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37546" name="Rudolph's Gift" name_additional="Stage 1" type="EtcItem">
+	<item id="37546" name="Rudolph's Gift" additionalName="Stage 1" type="EtcItem">
 		<!-- Winter Holiday Gift for 2013. Gives 10 Nectars for the Wintermelon Event. Deleted after event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37547" name="Rudolph's Gift" name_additional="Stage 2" type="EtcItem">
+	<item id="37547" name="Rudolph's Gift" additionalName="Stage 2" type="EtcItem">
 		<!-- Winter Holiday Gift for 2013. Gives 15 Nectars for the Wintermelon Event. Deleted after event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37548" name="Rudolph's Gift" name_additional="Stage 3" type="EtcItem">
+	<item id="37548" name="Rudolph's Gift" additionalName="Stage 3" type="EtcItem">
 		<!-- Winter Holiday Gift for 2013. Gives 25 Nectars for the Wintermelon Event. Deleted after event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37549" name="Rudolph's Gift" name_additional="Stage 4" type="EtcItem">
+	<item id="37549" name="Rudolph's Gift" additionalName="Stage 4" type="EtcItem">
 		<!-- Winter Holiday Gift for 2013. Gives 60 Nectars for the Wintermelon Event. Deleted after event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="10" />
@@ -632,7 +632,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37554" name="Kisung's Cherry Nose Buff Scroll" name_additional="Event" type="EtcItem">
+	<item id="37554" name="Kisung's Cherry Nose Buff Scroll" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive Bae Kisung's Power Up buff for 30 min. Cooldown is 15 sec. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_star_scroll_baekisung" />
 		<set name="is_clan_depositable" val="false" />
@@ -663,7 +663,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37556" name="Promise Cube" name_additional="100-day" type="EtcItem">
+	<item id="37556" name="Promise Cube" additionalName="100-day" type="EtcItem">
 		<!-- Promise Cube. Double click to acquire one of the following: Dark/Bloody Eternal Enhancement Stone (Annihilation/Hellfire/Desire), Blessed Scroll of Resurrection, High-grade Elixir Box, or Energy of Destruction. Can use 1 time per 1 day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -693,7 +693,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37558" name="High-grade Elixir Pack" name_additional="Event" type="EtcItem">
+	<item id="37558" name="High-grade Elixir Pack" additionalName="Event" type="EtcItem">
 		<!-- Double click to acquire 5 each of high-grade elixirs of life, mind, and CP. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="weight" val="10" />
@@ -929,7 +929,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37588" name="Snake's Gift" name_additional="Not in Use" type="EtcItem">
+	<item id="37588" name="Snake's Gift" additionalName="Not in Use" type="EtcItem">
 		<!-- Snake's Gift for the Year of the Black Snake. Double-click for a chance to obtain a card excluding the Hidden Card. -->
 		<set name="icon" val="icon.card_event_snake_gift" />
 		<set name="weight" val="10" />
@@ -969,7 +969,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37593" name="Returning Hero's Vitality Replenishing Juice" name_additional="Event" type="EtcItem">
+	<item id="37593" name="Returning Hero's Vitality Replenishing Juice" additionalName="Event" type="EtcItem">
 		<!-- 1 out of 4 bars on the vitality gauge are replenished. -->
 		<set name="icon" val="icon.etc_recall_potion3" />
 		<set name="is_clan_depositable" val="false" />
@@ -983,7 +983,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37594" name="Returning Hero's Vitality Replenishing Juice 4-unit Pack" name_additional="Event" type="EtcItem">
+	<item id="37594" name="Returning Hero's Vitality Replenishing Juice 4-unit Pack" additionalName="Event" type="EtcItem">
 		<!-- It contains 4 Returning Hero's Vitality Replenishing Juices that can replenish 1 out of 4 bars on the vitality gauge. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -996,7 +996,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37595" name="Returning Hero's Potion Pack" name_additional="Event" type="EtcItem">
+	<item id="37595" name="Returning Hero's Potion Pack" additionalName="Event" type="EtcItem">
 		<!-- Gift box containing 30 Returning Hero's Health Potion, 1 Returning Hero's Vitality Replenishing Juice 4-unit Pack, and 6 Heavenly Cocktails. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_clan_depositable" val="false" />

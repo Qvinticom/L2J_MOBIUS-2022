@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="30200" name="Amaranthine Avenger" name_additional="Critical Damage + Focus" type="Weapon">
+	<item id="30200" name="Amaranthine Avenger" additionalName="Critical Damage + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 1232 during a Critical Attack. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_qutram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -34,7 +34,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30201" name="Amaranthine Avenger" name_additional="Focus + Haste" type="Weapon">
+	<item id="30201" name="Amaranthine Avenger" additionalName="Focus + Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 78.7 and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_qutram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -68,7 +68,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30202" name="Amaranthine Fighter" name_additional="Focus + Damage" type="Weapon">
+	<item id="30202" name="Amaranthine Fighter" additionalName="Focus + Damage" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 81.9 and P. Atk. by 415. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -102,7 +102,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30203" name="Amaranthine Fighter" name_additional="Damage Up + Haste" type="Weapon">
+	<item id="30203" name="Amaranthine Fighter" additionalName="Damage Up + Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 415 and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -136,7 +136,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30204" name="Amaranthine Fighter" name_additional="Haste + Focus" type="Weapon">
+	<item id="30204" name="Amaranthine Fighter" additionalName="Haste + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases Critical by 75.5. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -170,7 +170,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30205" name="Amaranthine Stormer" name_additional="HP Drain + Guidance" type="Weapon">
+	<item id="30205" name="Amaranthine Stormer" additionalName="HP Drain + Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nAbsorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases Accuracy by 7.9. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -205,7 +205,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30206" name="Amaranthine Stormer" name_additional="Guidance + Damage Up" type="Weapon">
+	<item id="30206" name="Amaranthine Stormer" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 7.8 and P. Atk. by 415. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -240,7 +240,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30207" name="Amaranthine Stormer" name_additional="Damage Up + HP Drain" type="Weapon">
+	<item id="30207" name="Amaranthine Stormer" additionalName="Damage Up + HP Drain" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 415. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -275,7 +275,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30208" name="Amaranthine Thrower" name_additional="Damage Up + Focus" type="Weapon">
+	<item id="30208" name="Amaranthine Thrower" additionalName="Damage Up + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 415. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_castron_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -310,7 +310,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30209" name="Amaranthine Thrower" name_additional="Focus + Long Blow" type="Weapon">
+	<item id="30209" name="Amaranthine Thrower" additionalName="Focus + Long Blow" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 78.7. Increases the attack range. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_castron_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -345,7 +345,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30210" name="Amaranthine Thrower" name_additional="Long Blow + Damage Up" type="Weapon">
+	<item id="30210" name="Amaranthine Thrower" additionalName="Long Blow + Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases the attack range. P. Atk. + 415. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_castron_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -380,7 +380,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30211" name="Amaranthine Shooter" name_additional="Focus + Critical Slow" type="Weapon">
+	<item id="30211" name="Amaranthine Shooter" additionalName="Focus + Critical Slow" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 78.7. Has a chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -416,7 +416,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30212" name="Amaranthine Shooter" name_additional="Critical Slow + Haste" type="Weapon">
+	<item id="30212" name="Amaranthine Shooter" additionalName="Critical Slow + Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a chance of casting Slow on the target during a Critical Attack. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -452,7 +452,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30213" name="Amaranthine Shooter" name_additional="Haste + Focus" type="Weapon">
+	<item id="30213" name="Amaranthine Shooter" additionalName="Haste + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -487,7 +487,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30214" name="Amaranthine Buster" name_additional="Acumen + Magic Hold" type="Weapon">
+	<item id="30214" name="Amaranthine Buster" additionalName="Acumen + Magic Hold" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weaon_serapear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -521,7 +521,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30215" name="Amaranthine Buster" name_additional="Magic Hold + Mana Up" type="Weapon">
+	<item id="30215" name="Amaranthine Buster" additionalName="Magic Hold + Mana Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 20% chance of casting Dryad Root on the target during magic use. Increases Max MP by 30%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weaon_serapear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -555,7 +555,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30216" name="Amaranthine Buster" name_additional="Mana Up + Acumen" type="Weapon">
+	<item id="30216" name="Amaranthine Buster" additionalName="Mana Up + Acumen" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Max MP by 30% and Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weaon_serapear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -588,7 +588,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30217" name="Amaranthine Caster" name_additional="Empower + Acumen" type="Weapon">
+	<item id="30217" name="Amaranthine Caster" additionalName="Empower + Acumen" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nM. Atk. + 460 and Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_pilia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -622,7 +622,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30218" name="Amaranthine Caster" name_additional="Acumen + Magic Hold" type="Weapon">
+	<item id="30218" name="Amaranthine Caster" additionalName="Acumen + Magic Hold" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_pilia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -657,7 +657,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30219" name="Amaranthine Caster" name_additional="Magic Hold + Empower" type="Weapon">
+	<item id="30219" name="Amaranthine Caster" additionalName="Magic Hold + Empower" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 20% chance of casting Dryad Root on the target during magic use. M. Atk. + 460. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_pilia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -692,7 +692,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30220" name="Amaranthine Retributer" name_additional="MP Regeneration + Acumen" type="Weapon">
+	<item id="30220" name="Amaranthine Retributer" additionalName="MP Regeneration + Acumen" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases MP Recovery Rate and Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -727,7 +727,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30221" name="Amaranthine Retributer" name_additional="Acumen + Empower" type="Weapon">
+	<item id="30221" name="Amaranthine Retributer" additionalName="Acumen + Empower" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. M. Atk. + 460. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -762,7 +762,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30222" name="Amaranthine Retributer" name_additional="Empower + MP Regeneration" type="Weapon">
+	<item id="30222" name="Amaranthine Retributer" additionalName="Empower + MP Regeneration" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nM. Atk. + 322. Increases MP Recovery Rate. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -797,7 +797,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30223" name="Amaranthine Dualsword" name_additional="Haste + Damage Up" type="Weapon">
+	<item id="30223" name="Amaranthine Dualsword" additionalName="Haste + Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15% and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -830,7 +830,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30224" name="Amaranthine Dualsword" name_additional="Damage Up + Health" type="Weapon">
+	<item id="30224" name="Amaranthine Dualsword" additionalName="Damage Up + Health" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 457 and Max HP by 25%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -863,7 +863,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30225" name="Amaranthine Dualsword" name_additional="Health + Haste" type="Weapon">
+	<item id="30225" name="Amaranthine Dualsword" additionalName="Health + Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Max HP by 25% and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -896,7 +896,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30226" name="Amaranthine Dual Dagger" name_additional="Damage Up + Focus" type="Weapon">
+	<item id="30226" name="Amaranthine Dual Dagger" additionalName="Damage Up + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 377. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -930,7 +930,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30227" name="Amaranthine Dual Dagger" name_additional="Focus + Guidance" type="Weapon">
+	<item id="30227" name="Amaranthine Dual Dagger" additionalName="Focus + Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.2 and Accuracy by 7.9. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -964,7 +964,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30228" name="Amaranthine Dual Dagger" name_additional="Guidance + Damage Up" type="Weapon">
+	<item id="30228" name="Amaranthine Dual Dagger" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 7.9 and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -998,7 +998,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30229" name="Amaranthine Dual Blunt Weapon" name_additional="Focus + Guidance" type="Weapon">
+	<item id="30229" name="Amaranthine Dual Blunt Weapon" additionalName="Focus + Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.2 and Accuracy by 7.9. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1032,7 +1032,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30230" name="Amaranthine Dual Blunt Weapon" name_additional="Guidance + Damage Up" type="Weapon">
+	<item id="30230" name="Amaranthine Dual Blunt Weapon" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 7.8 and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1066,7 +1066,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30231" name="Amaranthine Dual Blunt Weapon" name_additional="Damage Up + Focus" type="Weapon">
+	<item id="30231" name="Amaranthine Dual Blunt Weapon" additionalName="Damage Up + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 377. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1100,7 +1100,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30232" name="Blessed Amaranthine Shaper" name_additional="Guidance + Haste" type="Weapon">
+	<item id="30232" name="Blessed Amaranthine Shaper" additionalName="Guidance + Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 8 and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_stanpid_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1135,7 +1135,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30233" name="Blessed Amaranthine Shaper" name_additional="Haste + Focus" type="Weapon">
+	<item id="30233" name="Blessed Amaranthine Shaper" additionalName="Haste + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases Critical by 81.9. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_stanpid_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1170,7 +1170,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30234" name="Blessed Amaranthine Shaper" name_additional="Focus + Guidance" type="Weapon">
+	<item id="30234" name="Blessed Amaranthine Shaper" additionalName="Focus + Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.2 and Accuracy by 7.9. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_stanpid_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1205,7 +1205,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30235" name="Blessed Amaranthine Cutter" name_additional="Haste + Focus" type="Weapon">
+	<item id="30235" name="Blessed Amaranthine Cutter" additionalName="Haste + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_plenitas_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1239,7 +1239,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30236" name="Blessed Amaranthine Cutter" name_additional="Focus + Health" type="Weapon">
+	<item id="30236" name="Blessed Amaranthine Cutter" additionalName="Focus + Health" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 75.4 and Max HP by 25%. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_plenitas_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1273,7 +1273,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30237" name="Blessed Amaranthine Cutter" name_additional="Health + Haste" type="Weapon">
+	<item id="30237" name="Blessed Amaranthine Cutter" additionalName="Health + Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Max HP by 25% and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_plenitas_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1307,7 +1307,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30238" name="Blessed Amaranthine Slasher" name_additional="Focus + Damage" type="Weapon">
+	<item id="30238" name="Blessed Amaranthine Slasher" additionalName="Focus + Damage" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 78.7 and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_bauen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1341,7 +1341,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30239" name="Blessed Amaranthine Slasher" name_additional="Damage Up + Haste" type="Weapon">
+	<item id="30239" name="Blessed Amaranthine Slasher" additionalName="Damage Up + Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 415 and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_bauen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1375,7 +1375,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30240" name="Blessed Amaranthine Slasher" name_additional="Haste + Focus" type="Weapon">
+	<item id="30240" name="Blessed Amaranthine Slasher" additionalName="Haste + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_bauen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1409,7 +1409,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30241" name="Blessed Amaranthine Avenger" name_additional="Haste + Critical Damage" type="Weapon">
+	<item id="30241" name="Blessed Amaranthine Avenger" additionalName="Haste + Critical Damage" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15% and P. Atk. by 1232 during a Critical Attack. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_qutram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1444,7 +1444,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30242" name="Blessed Amaranthine Avenger" name_additional="Critical Damage + Focus" type="Weapon">
+	<item id="30242" name="Blessed Amaranthine Avenger" additionalName="Critical Damage + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 1232 during a Critical Attack. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_qutram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1479,7 +1479,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30243" name="Blessed Amaranthine Avenger" name_additional="Focus + Haste" type="Weapon">
+	<item id="30243" name="Blessed Amaranthine Avenger" additionalName="Focus + Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 78.7 and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_qutram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1514,7 +1514,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30244" name="Blessed Amaranthine Fighter" name_additional="Focus + Damage" type="Weapon">
+	<item id="30244" name="Blessed Amaranthine Fighter" additionalName="Focus + Damage" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 81.9 and P. Atk. by 415. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1549,7 +1549,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30245" name="Blessed Amaranthine Fighter" name_additional="Damage Up + Haste" type="Weapon">
+	<item id="30245" name="Blessed Amaranthine Fighter" additionalName="Damage Up + Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 415 and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1584,7 +1584,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30246" name="Blessed Amaranthine Fighter" name_additional="Haste + Focus" type="Weapon">
+	<item id="30246" name="Blessed Amaranthine Fighter" additionalName="Haste + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases Critical by 75.5. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1619,7 +1619,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30247" name="Blessed Amaranthine Stormer" name_additional="HP Drain + Guidance" type="Weapon">
+	<item id="30247" name="Blessed Amaranthine Stormer" additionalName="HP Drain + Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nAbsorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases Accuracy by 7.9. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1655,7 +1655,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30248" name="Blessed Amaranthine Stormer" name_additional="Guidance + Damage Up" type="Weapon">
+	<item id="30248" name="Blessed Amaranthine Stormer" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 7.8 and P. Atk. by 415. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1691,7 +1691,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30249" name="Blessed Amaranthine Stormer" name_additional="Damage Up + HP Drain" type="Weapon">
+	<item id="30249" name="Blessed Amaranthine Stormer" additionalName="Damage Up + HP Drain" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 415. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1727,7 +1727,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30250" name="Blessed Amaranthine Thrower" name_additional="Damage Up + Focus" type="Weapon">
+	<item id="30250" name="Blessed Amaranthine Thrower" additionalName="Damage Up + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 415. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_castron_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1763,7 +1763,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30251" name="Blessed Amaranthine Thrower" name_additional="Focus + Long Blow" type="Weapon">
+	<item id="30251" name="Blessed Amaranthine Thrower" additionalName="Focus + Long Blow" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 78.7. Increases the attack range. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_castron_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1799,7 +1799,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30252" name="Blessed Amaranthine Thrower" name_additional="Long Blow + Damage Up" type="Weapon">
+	<item id="30252" name="Blessed Amaranthine Thrower" additionalName="Long Blow + Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases the attack range and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_castron_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1835,7 +1835,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30253" name="Blessed Amaranthine Shooter" name_additional="Focus + Critical Slow" type="Weapon">
+	<item id="30253" name="Blessed Amaranthine Shooter" additionalName="Focus + Critical Slow" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 78.7. Has a chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1872,7 +1872,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30254" name="Blessed Amaranthine Shooter" name_additional="Critical Slow + Haste" type="Weapon">
+	<item id="30254" name="Blessed Amaranthine Shooter" additionalName="Critical Slow + Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a chance of casting Slow on the target during a Critical Attack. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1909,7 +1909,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30255" name="Blessed Amaranthine Shooter" name_additional="Haste + Focus" type="Weapon">
+	<item id="30255" name="Blessed Amaranthine Shooter" additionalName="Haste + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1945,7 +1945,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30256" name="Blessed Amaranthine Buster" name_additional="Acumen + Magic Hold" type="Weapon">
+	<item id="30256" name="Blessed Amaranthine Buster" additionalName="Acumen + Magic Hold" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weaon_serapear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1980,7 +1980,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30257" name="Blessed Amaranthine Buster" name_additional="Magic Hold + Mana Up" type="Weapon">
+	<item id="30257" name="Blessed Amaranthine Buster" additionalName="Magic Hold + Mana Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 20% chance of casting Dryad Root on the target during magic use. Increases Max MP by 30%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weaon_serapear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2015,7 +2015,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30258" name="Blessed Amaranthine Buster" name_additional="Mana Up + Acumen" type="Weapon">
+	<item id="30258" name="Blessed Amaranthine Buster" additionalName="Mana Up + Acumen" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Max MP by 30% and Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weaon_serapear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2049,7 +2049,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30259" name="Blessed Amaranthine Caster" name_additional="Empower + Acumen" type="Weapon">
+	<item id="30259" name="Blessed Amaranthine Caster" additionalName="Empower + Acumen" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nM. Atk. + 460 and Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_pilia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2084,7 +2084,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30260" name="Blessed Amaranthine Caster" name_additional="Acumen + Magic Hold" type="Weapon">
+	<item id="30260" name="Blessed Amaranthine Caster" additionalName="Acumen + Magic Hold" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_pilia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2120,7 +2120,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30261" name="Blessed Amaranthine Caster" name_additional="Magic Hold + Empower" type="Weapon">
+	<item id="30261" name="Blessed Amaranthine Caster" additionalName="Magic Hold + Empower" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 20% chance of casting Dryad Root on the target during magic use. M. Atk. + 460. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_pilia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2156,7 +2156,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30262" name="Blessed Amaranthine Retributer" name_additional="MP Regeneration + Acumen" type="Weapon">
+	<item id="30262" name="Blessed Amaranthine Retributer" additionalName="MP Regeneration + Acumen" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases MP Recovery Rate and Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2192,7 +2192,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30263" name="Blessed Amaranthine Retributer" name_additional="Acumen + Empower" type="Weapon">
+	<item id="30263" name="Blessed Amaranthine Retributer" additionalName="Acumen + Empower" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. M. Atk. + 460. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2228,7 +2228,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30264" name="Blessed Amaranthine Retributer" name_additional="Empower + MP Regeneration" type="Weapon">
+	<item id="30264" name="Blessed Amaranthine Retributer" additionalName="Empower + MP Regeneration" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nM. Atk. + 322 and MP Recovery Rate. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2264,7 +2264,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30265" name="Blessed Amaranthine Dualsword" name_additional="Haste + Damage Up" type="Weapon">
+	<item id="30265" name="Blessed Amaranthine Dualsword" additionalName="Haste + Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15% and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2298,7 +2298,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30266" name="Blessed Amaranthine Dualsword" name_additional="Damage Up + Health" type="Weapon">
+	<item id="30266" name="Blessed Amaranthine Dualsword" additionalName="Damage Up + Health" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 457 and Max HP by 25%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2332,7 +2332,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30267" name="Blessed Amaranthine Dualsword" name_additional="Health + Haste" type="Weapon">
+	<item id="30267" name="Blessed Amaranthine Dualsword" additionalName="Health + Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Max HP by 25% and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2366,7 +2366,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30268" name="Blessed Amaranthine Dual Dagger" name_additional="Damage Up + Focus" type="Weapon">
+	<item id="30268" name="Blessed Amaranthine Dual Dagger" additionalName="Damage Up + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 377. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2401,7 +2401,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30269" name="Blessed Amaranthine Dual Dagger" name_additional="Focus + Guidance" type="Weapon">
+	<item id="30269" name="Blessed Amaranthine Dual Dagger" additionalName="Focus + Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.2 and Accuracy by 7.9. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2436,7 +2436,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30270" name="Blessed Amaranthine Dual Dagger" name_additional="Guidance + Damage Up" type="Weapon">
+	<item id="30270" name="Blessed Amaranthine Dual Dagger" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 7.9 and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2471,7 +2471,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30271" name="Blessed Amaranthine Dual Blunt Weapon" name_additional="Focus + Guidance" type="Weapon">
+	<item id="30271" name="Blessed Amaranthine Dual Blunt Weapon" additionalName="Focus + Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.2 and Accuracy by 7.9. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2506,7 +2506,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30272" name="Blessed Amaranthine Dual Blunt Weapon" name_additional="Guidance + Damage Up" type="Weapon">
+	<item id="30272" name="Blessed Amaranthine Dual Blunt Weapon" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 7.8 and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -2541,7 +2541,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30273" name="Blessed Amaranthine Dual Blunt Weapon" name_additional="Damage Up + Focus" type="Weapon">
+	<item id="30273" name="Blessed Amaranthine Dual Blunt Weapon" additionalName="Damage Up + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 377. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />

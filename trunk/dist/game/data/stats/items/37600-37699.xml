@@ -42,7 +42,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37606" name="Promise Cube Pack" name_additional="Event" type="EtcItem">
+	<item id="37606" name="Promise Cube Pack" additionalName="Event" type="EtcItem">
 		<!-- Double click to acquire a Promise Cube (100-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -55,7 +55,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37607" name="Treasure Chest" name_additional="Western Winds" type="EtcItem">
+	<item id="37607" name="Treasure Chest" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain either a hair accessory pack, pendant pack, enchant scroll pack, attribute stone pack, or ingredient pack. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -64,7 +64,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="37608" name="Hair Accessory Pack" name_additional="Western Winds" type="EtcItem">
+	<item id="37608" name="Hair Accessory Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a hair accessory on which you can add a pendant. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -72,7 +72,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37609" name="Pendant Pack" name_additional="Western Winds" type="EtcItem">
+	<item id="37609" name="Pendant Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a pendant. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -80,7 +80,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37610" name="Enchant Scroll Pack" name_additional="Western Winds" type="EtcItem">
+	<item id="37610" name="Enchant Scroll Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain an Enchant Scroll (S or R-grade), or have a low chance of receiving a Blessed Enchant Scroll. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -88,7 +88,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37611" name="Attribute Stone Pack" name_additional="Western Winds" type="EtcItem">
+	<item id="37611" name="Attribute Stone Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain either an attribute stone or crystal. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -96,7 +96,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37612" name="Ingredient Box" name_additional="Western Winds" type="EtcItem">
+	<item id="37612" name="Ingredient Box" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain either an Energy of Destruction or a crafting ingredient. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -104,7 +104,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37613" name="Hero's Treasure Chest" name_additional="Western Winds" type="EtcItem">
+	<item id="37613" name="Hero's Treasure Chest" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain either a Hero's Lucky Enchant Stone Pack, Hero's Giant Enchant Scroll Pack, Hero's Blessed Enchant Scroll Pack, Hero's Unbind Scroll Pack, Hero's Attribute Crystal Pack, PK Pack, Reputation Pack, Mysterious Shot Box, Kaliel's Energy Box, Soul Bottle Pack, or Top-grade Life Stone Pack. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -113,7 +113,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="37614" name="Hero's Lucky Enchant Stone Pack" name_additional="Western Winds" type="EtcItem">
+	<item id="37614" name="Hero's Lucky Enchant Stone Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a Lucky Enchant Stone (S or R-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -121,7 +121,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37615" name="Hero's Giant Enchant Scroll Pack" name_additional="Western Winds" type="EtcItem">
+	<item id="37615" name="Hero's Giant Enchant Scroll Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a Giant's Enchant Scroll (S or R-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -129,7 +129,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37616" name="Hero's Blessed Enchant Scroll Pack" name_additional="Western Winds" type="EtcItem">
+	<item id="37616" name="Hero's Blessed Enchant Scroll Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Enchant Scroll (S or R-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -137,7 +137,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37617" name="Hero's Unbind Scroll Pack" name_additional="Western Winds" type="EtcItem">
+	<item id="37617" name="Hero's Unbind Scroll Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain an Unbind Scroll (R, R95, or R99-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -145,7 +145,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37618" name="Hero's Attribute Crystal Pack" name_additional="Western Winds" type="EtcItem">
+	<item id="37618" name="Hero's Attribute Crystal Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain an attribute crystal, or either a Super 60 or Super 150 attribute Stone. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -153,7 +153,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37619" name="PK Pack" name_additional="Western Winds" type="EtcItem">
+	<item id="37619" name="PK Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a random Scroll: PK. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -161,7 +161,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37620" name="Reputation Pack" name_additional="Western Winds" type="EtcItem">
+	<item id="37620" name="Reputation Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a random Scroll: Reputation. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -169,7 +169,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37621" name="Mysterious Shot Pack" name_additional="Western Winds" type="EtcItem">
+	<item id="37621" name="Mysterious Shot Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain either a Mysterious Soulshot or a Mysterious Blessed Spiritshot. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -177,7 +177,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37622" name="Kaliel's Energy Box" name_additional="Western Winds" type="EtcItem">
+	<item id="37622" name="Kaliel's Energy Box" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain one of Kaliel's Energies. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -185,7 +185,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37623" name="Soul Bottle Pack" name_additional="Western Winds" type="EtcItem">
+	<item id="37623" name="Soul Bottle Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain either a Bottle of Antharas' Soul, or a Bottle of Valakas' Soul. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -193,7 +193,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37624" name="Top-grade Life Stone Pack" name_additional="Western Winds" type="EtcItem">
+	<item id="37624" name="Top-grade Life Stone Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain either a Top-grade Life Stone (R95 or R99-grade), or a Life Stone Instilled with Giants' Power. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -280,7 +280,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37630" name="Mysterious Shaper" name_additional="7-day" type="Weapon">
+	<item id="37630" name="Mysterious Shaper" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_dagger_of_hero" />
 		<set name="weapon_type" val="DAGGER" />
@@ -307,7 +307,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37631" name="Mysterious Cutter" name_additional="7-day" type="Weapon">
+	<item id="37631" name="Mysterious Cutter" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_sword_of_hero" />
 		<set name="weapon_type" val="SWORD" />
@@ -333,7 +333,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37632" name="Mysterious Slasher" name_additional="7-day" type="Weapon">
+	<item id="37632" name="Mysterious Slasher" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
 		<set name="weapon_type" val="SWORD" />
@@ -359,7 +359,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37633" name="Mysterious Avenger" name_additional="7-day" type="Weapon">
+	<item id="37633" name="Mysterious Avenger" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_axe_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
@@ -386,7 +386,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37634" name="Mysterious Fighter" name_additional="7-day" type="Weapon">
+	<item id="37634" name="Mysterious Fighter" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_fist_of_hero" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -413,7 +413,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37635" name="Mysterious Stormer" name_additional="7-day" type="Weapon">
+	<item id="37635" name="Mysterious Stormer" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_pole_of_hero" />
 		<set name="weapon_type" val="POLE" />
@@ -440,7 +440,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="37636" name="Mysterious Thrower" name_additional="7-day" type="Weapon">
+	<item id="37636" name="Mysterious Thrower" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_bow_of_hero" />
 		<set name="weapon_type" val="BOW" />
@@ -467,7 +467,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="37637" name="Mysterious Shooter" name_additional="7-day" type="Weapon">
+	<item id="37637" name="Mysterious Shooter" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_infinity_shooter" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -493,7 +493,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="37638" name="Mysterious Buster" name_additional="7-day" type="Weapon">
+	<item id="37638" name="Mysterious Buster" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_infinity_sword" />
 		<set name="weapon_type" val="SWORD" />
@@ -519,7 +519,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37639" name="Mysterious Caster" name_additional="7-day" type="Weapon">
+	<item id="37639" name="Mysterious Caster" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_mace_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
@@ -546,7 +546,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37640" name="Mysterious Retributer" name_additional="7-day" type="Weapon">
+	<item id="37640" name="Mysterious Retributer" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_staff_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
@@ -574,7 +574,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37641" name="Mysterious Dualsword" name_additional="7-day" type="Weapon">
+	<item id="37641" name="Mysterious Dualsword" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualsword" />
 		<set name="weapon_type" val="DUAL" />
@@ -600,7 +600,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37642" name="Mysterious Dual Dagger" name_additional="7-day" type="Weapon">
+	<item id="37642" name="Mysterious Dual Dagger" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualdagger" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -627,7 +627,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37643" name="Mysterious Dual Blunt" name_additional="7-day" type="Weapon">
+	<item id="37643" name="Mysterious Dual Blunt" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualblunt" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -654,7 +654,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37644" name="Mysterious Shaper" name_additional="30-day" type="Weapon">
+	<item id="37644" name="Mysterious Shaper" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_dagger_of_hero" />
 		<set name="weapon_type" val="DAGGER" />
@@ -681,7 +681,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37645" name="Mysterious Cutter" name_additional="30-day" type="Weapon">
+	<item id="37645" name="Mysterious Cutter" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_sword_of_hero" />
 		<set name="weapon_type" val="SWORD" />
@@ -707,7 +707,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37646" name="Mysterious Slasher" name_additional="30-day" type="Weapon">
+	<item id="37646" name="Mysterious Slasher" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
 		<set name="weapon_type" val="SWORD" />
@@ -733,7 +733,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37647" name="Mysterious Avenger" name_additional="30-day" type="Weapon">
+	<item id="37647" name="Mysterious Avenger" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_axe_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
@@ -760,7 +760,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37648" name="Mysterious Fighter" name_additional="30-day" type="Weapon">
+	<item id="37648" name="Mysterious Fighter" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_fist_of_hero" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -787,7 +787,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37649" name="Mysterious Stormer" name_additional="30-day" type="Weapon">
+	<item id="37649" name="Mysterious Stormer" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_pole_of_hero" />
 		<set name="weapon_type" val="POLE" />
@@ -814,7 +814,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="37650" name="Mysterious Thrower" name_additional="30-day" type="Weapon">
+	<item id="37650" name="Mysterious Thrower" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_bow_of_hero" />
 		<set name="weapon_type" val="BOW" />
@@ -841,7 +841,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="37651" name="Mysterious Shooter" name_additional="30-day" type="Weapon">
+	<item id="37651" name="Mysterious Shooter" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_infinity_shooter" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -867,7 +867,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="37652" name="Mysterious Buster" name_additional="30-day" type="Weapon">
+	<item id="37652" name="Mysterious Buster" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_infinity_sword" />
 		<set name="weapon_type" val="SWORD" />
@@ -893,7 +893,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37653" name="Mysterious Caster" name_additional="30-day" type="Weapon">
+	<item id="37653" name="Mysterious Caster" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_mace_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
@@ -920,7 +920,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37654" name="Mysterious Retributer" name_additional="30-day" type="Weapon">
+	<item id="37654" name="Mysterious Retributer" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_staff_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
@@ -948,7 +948,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37655" name="Mysterious Dualsword" name_additional="30-day" type="Weapon">
+	<item id="37655" name="Mysterious Dualsword" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualsword" />
 		<set name="weapon_type" val="DUAL" />
@@ -974,7 +974,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37656" name="Mysterious Dual Dagger" name_additional="30-day" type="Weapon">
+	<item id="37656" name="Mysterious Dual Dagger" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualdagger" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1001,7 +1001,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37657" name="Mysterious Dual Blunt" name_additional="30-day" type="Weapon">
+	<item id="37657" name="Mysterious Dual Blunt" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualblunt" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -1153,7 +1153,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37667" name="Blessed Antharas' Earring" name_additional="30-day" type="Armor">
+	<item id="37667" name="Blessed Antharas' Earring" additionalName="30-day" type="Armor">
 		<!-- MP +59, Bleed Resistance 50% increase, Bleed Attack Rate 50% increase, Heal Amount increase, Vampiric Rage Effect, Stun/Mental resistance 40%, Stun/Mental attack rate 40% increase, physical/magic skill MP consumption decrease, earth resistance increase, Holy Resistance increase, CON +3, MEN +3. P. Def./M. Def. are increased. Can use the Stun canceling skill. Momentarily increases Stun resistance by 100%. Only one effect is applied even when the same two earrings are worn. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_earring_of_antaras" />
 		<set name="default_action" val="EQUIP" />
@@ -1173,7 +1173,7 @@
 			<stat type="mDef">170</stat>
 		</stats>
 	</item>
-	<item id="37668" name="Blessed Valakas' Necklace" name_additional="30-day" type="Armor">
+	<item id="37668" name="Blessed Valakas' Necklace" additionalName="30-day" type="Armor">
 		<!-- HP +625, MP +79, Sleep Resistance 50% increase, Sleep Attack Rate 50% increase, physical/magic skill cooldown decrease, Wild Magic Effect, damage shield effect, fire resistance 30 increase, Dark Resistance 20 increase, STR +3, INT +3. P. Skill Atk. 5% increase, P. Atk. 10% increase, M. Atk. 20% increase, hold resistance skill use. Hold resistance 100% increase momentarily. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_necklace_of_valakas" />
 		<set name="default_action" val="EQUIP" />
@@ -1193,7 +1193,7 @@
 			<stat type="mDef">226</stat>
 		</stats>
 	</item>
-	<item id="37669" name="Tauti's Ring" name_additional="30-day" type="Armor">
+	<item id="37669" name="Tauti's Ring" additionalName="30-day" type="Armor">
 		<!-- Tauti's Ring. Fire/Dark Resistance 25 increase, MP 38 increase, Critical Damage 15% increase, skill attack 5% increase, damage inflicted during PvP 5% increase, paralysis/yoke/exile resistance 10 increase, damage reflect resistance 5 increase, HP drain resistance 5 increase, damage received during PvP 5% decrease. Critical 54 increase when equipped with a blunt. Only one effect is applied even when the same two rings are worn (excluding attributes/M. Def.) Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_tauti_ring" />
 		<set name="default_action" val="EQUIP" />
@@ -1213,7 +1213,7 @@
 			<stat type="mDef">108</stat>
 		</stats>
 	</item>
-	<item id="37670" name="Earth Wyrm Heart Ring" name_additional="30-day" type="Armor">
+	<item id="37670" name="Earth Wyrm Heart Ring" additionalName="30-day" type="Armor">
 		<!-- MP +38, increases physical attack resistance, Mental Attack Resistance, MP Regeneration, P. Critical Damage, and Accuracy. Poison Resistance 50% increase, Poison Attack Rate 50% increase, Knock Back, Knock Down, pulling resistance 20 increase, Atk. Spd. Increase, Casting Spd. Increase, and Wind/Water Resistance increase. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied even when the same two rings are worn. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
@@ -1243,7 +1243,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37672" name="Mysterious Friend Summon Bracelet" name_additional="30-day" type="Armor">
+	<item id="37672" name="Mysterious Friend Summon Bracelet" additionalName="30-day" type="Armor">
 		<!-- Bracelet that can summon another character. The summoning character and the summoned character must both be equipped with it and in the same party. 30-day. Cooldown is 60 minutes. Cannot be used in the Olympiad. Cannot be shared within the same account through the Dimensional Merchant. -->
 		<set name="icon" val="icon.bm_ring_of_friendship" />
 		<set name="default_action" val="EQUIP" />
@@ -1300,7 +1300,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37677" name="GM's Buff Scroll" name_additional="P. Def." type="EtcItem">
+	<item id="37677" name="GM's Buff Scroll" additionalName="P. Def." type="EtcItem">
 		<!-- When used, can receive the effects of 6 types of level 4 melodies, including Guardian's Harmony, and 3 types of sonatas, for 60 minutes. Cannot be used in the Olympiad or Ceremony of Chaos. Cooldown is 2 minutes. -->
 		<set name="icon" val="icon.buff_scroll_gm_i00" />
 		<set name="weight" val="120" />
@@ -1315,7 +1315,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37678" name="GM's Buff Scroll" name_additional="P. Atk." type="EtcItem">
+	<item id="37678" name="GM's Buff Scroll" additionalName="P. Atk." type="EtcItem">
 		<!-- When used, can receive the effects of 6 types of level 4 melodies, including Berserker's Harmony, and 3 types of sonatas, for 60 minutes. Cannot be used in the Olympiad or Ceremony of Chaos. Cooldown is 2 minutes. -->
 		<set name="icon" val="icon.buff_scroll_gm_i00" />
 		<set name="weight" val="120" />
@@ -1330,7 +1330,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37679" name="GM's Buff Scroll" name_additional="M. Atk." type="EtcItem">
+	<item id="37679" name="GM's Buff Scroll" additionalName="M. Atk." type="EtcItem">
 		<!-- When used, can receive the effects of 6 types of level 4 melodies, including Magician's Harmony, and 3 types of sonatas, for 60 minutes. Cannot be used in the Olympiad or Ceremony of Chaos. Cooldown is 2 minutes. -->
 		<set name="icon" val="icon.buff_scroll_gm_i00" />
 		<set name="weight" val="120" />
@@ -1354,7 +1354,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37681" name="Theamo's Talisman" name_additional="Not in Use" type="Armor">
+	<item id="37681" name="Theamo's Talisman" additionalName="Not in Use" type="Armor">
 		<!-- Test Item; do not open to public -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -1367,7 +1367,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="37682" name="Theamo's Rune" name_additional="Not in Use" type="EtcItem">
+	<item id="37682" name="Theamo's Rune" additionalName="Not in Use" type="EtcItem">
 		<!-- Test Item; do not open to public -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1380,7 +1380,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 	</item>
-	<item id="37683" name="Demonic Sword Zariche" name_additional="Appearance Modification" type="Weapon">
+	<item id="37683" name="Demonic Sword Zariche" additionalName="Appearance Modification" type="Weapon">
 		<!-- Demonic Sword Zariche skin. -->
 		<set name="icon" val="icon.weapon_unique_zariche_i00" />
 		<set name="weapon_type" val="SWORD" />
@@ -1406,7 +1406,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37684" name="Blood Sword Akamanah" name_additional="Appearance Modification" type="Weapon">
+	<item id="37684" name="Blood Sword Akamanah" additionalName="Appearance Modification" type="Weapon">
 		<!-- Blood Sword Akamanah skin. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />

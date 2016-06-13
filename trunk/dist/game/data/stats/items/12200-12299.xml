@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="12200" name="Common Item - Blue Wolf Gloves" name_additional="Robe" type="Armor">
+	<item id="12200" name="Common Item - Blue Wolf Gloves" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t70_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -138,7 +138,7 @@
 			<stat type="pDef">107</stat>
 		</stats>
 	</item>
-	<item id="12207" name="Common Item - Dark Crystal Gloves" name_additional="Heavy Armor" type="Armor">
+	<item id="12207" name="Common Item - Dark Crystal Gloves" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t74_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -157,7 +157,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="12208" name="Common Item - Dark Crystal Gloves" name_additional="Light Armor" type="Armor">
+	<item id="12208" name="Common Item - Dark Crystal Gloves" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -173,7 +173,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="12209" name="Common Item - Dark Crystal Gloves" name_additional="Robe" type="Armor">
+	<item id="12209" name="Common Item - Dark Crystal Gloves" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -230,7 +230,7 @@
 			<stat type="maxMp">665</stat>
 		</stats>
 	</item>
-	<item id="12212" name="Common Item - Dark Crystal Boots" name_additional="Heavy Armor" type="Armor">
+	<item id="12212" name="Common Item - Dark Crystal Boots" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t74_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -249,7 +249,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="12213" name="Common Item - Dark Crystal Boots" name_additional="Light Armor" type="Armor">
+	<item id="12213" name="Common Item - Dark Crystal Boots" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -265,7 +265,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="12214" name="Common Item - Dark Crystal Boots" name_additional="Robe" type="Armor">
+	<item id="12214" name="Common Item - Dark Crystal Boots" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -665,7 +665,7 @@
 			<stat type="maxMp">256</stat>
 		</stats>
 	</item>
-	<item id="12236" name="Common Item - Tallum Gloves" name_additional="Heavy Armor" type="Armor">
+	<item id="12236" name="Common Item - Tallum Gloves" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t77_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -684,7 +684,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="12237" name="Common Item - Tallum Gloves" name_additional="Light Armor" type="Armor">
+	<item id="12237" name="Common Item - Tallum Gloves" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t78_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -700,7 +700,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="12238" name="Common Item - Tallum Gloves" name_additional="Robe" type="Armor">
+	<item id="12238" name="Common Item - Tallum Gloves" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t79_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -736,7 +736,7 @@
 			<stat type="pDef">209</stat>
 		</stats>
 	</item>
-	<item id="12240" name="Common Item - Tallum Boots" name_additional="Heavy Armor" type="Armor">
+	<item id="12240" name="Common Item - Tallum Boots" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t77_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -755,7 +755,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="12241" name="Common Item - Tallum Boots" name_additional="Light Armor" type="Armor">
+	<item id="12241" name="Common Item - Tallum Boots" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t78_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -771,7 +771,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="12242" name="Common Item - Tallum Boots" name_additional="Robe" type="Armor">
+	<item id="12242" name="Common Item - Tallum Boots" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t79_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -868,7 +868,7 @@
 			<stat type="maxMp">256</stat>
 		</stats>
 	</item>
-	<item id="12247" name="Common Item - Majestic Gauntlets" name_additional="Heavy Armor" type="Armor">
+	<item id="12247" name="Common Item - Majestic Gauntlets" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t83_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -887,7 +887,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="12248" name="Common Item - Majestic Gauntlets" name_additional="Light Armor" type="Armor">
+	<item id="12248" name="Common Item - Majestic Gauntlets" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t84_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -903,7 +903,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="12249" name="Common Item - Majestic Gauntlets" name_additional="Robe" type="Armor">
+	<item id="12249" name="Common Item - Majestic Gauntlets" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t85_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -960,7 +960,7 @@
 			<stat type="maxMp">718</stat>
 		</stats>
 	</item>
-	<item id="12252" name="Common Item - Majestic Boots" name_additional="Heavy Armor" type="Armor">
+	<item id="12252" name="Common Item - Majestic Boots" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t83_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -979,7 +979,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="12253" name="Common Item - Majestic Boots" name_additional="Light Armor" type="Armor">
+	<item id="12253" name="Common Item - Majestic Boots" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t84_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -995,7 +995,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="12254" name="Common Item - Majestic Boots" name_additional="Robe" type="Armor">
+	<item id="12254" name="Common Item - Majestic Boots" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t85_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1303,7 +1303,7 @@
 			<stat type="pDef">293</stat>
 		</stats>
 	</item>
-	<item id="12271" name="Common Item - Gauntlets of Nightmare" name_additional="Heavy Armor" type="Armor">
+	<item id="12271" name="Common Item - Gauntlets of Nightmare" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1322,7 +1322,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="12272" name="Common Item - Gauntlets of Nightmare" name_additional="Light Armor" type="Armor">
+	<item id="12272" name="Common Item - Gauntlets of Nightmare" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t81_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1338,7 +1338,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="12273" name="Common Item - Gauntlets of Nightmare" name_additional="Robe" type="Armor">
+	<item id="12273" name="Common Item - Gauntlets of Nightmare" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t82_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1395,7 +1395,7 @@
 			<stat type="maxMp">718</stat>
 		</stats>
 	</item>
-	<item id="12276" name="Common Item - Boots of Nightmare" name_additional="Heavy Armor" type="Armor">
+	<item id="12276" name="Common Item - Boots of Nightmare" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1414,7 +1414,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="12277" name="Common Item - Boots of Nightmare" name_additional="Light Armor" type="Armor">
+	<item id="12277" name="Common Item - Boots of Nightmare" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t81_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1430,7 +1430,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="12278" name="Common Item - Boots of Nightmare" name_additional="Robe" type="Armor">
+	<item id="12278" name="Common Item - Boots of Nightmare" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t82_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />

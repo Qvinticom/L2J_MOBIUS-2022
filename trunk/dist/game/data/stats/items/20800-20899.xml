@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="20800" name="Agathion - Red Opera Pack (7-day)" name_additional="Spear of Flames" type="EtcItem">
+	<item id="20800" name="Agathion - Red Opera Pack (7-day)" additionalName="Spear of Flames" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -40,7 +40,7 @@
 			<item id="20779" min="1" max="1" chance="100" /> <!-- Agathion - Opera -->
 		</capsuled_items>
 	</item>
-	<item id="20802" name="Agathion - Opera Pack (30-day)" name_additional="Sword of Life" type="EtcItem">
+	<item id="20802" name="Agathion - Opera Pack (30-day)" additionalName="Sword of Life" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -60,7 +60,7 @@
 			<item id="20780" min="1" max="1" chance="100" /> <!-- Agathion - Opera - Sword of Life (30-day) -->
 		</capsuled_items>
 	</item>
-	<item id="20803" name="Agathion - Miss Chipao Pack (7-day)" name_additional="Decrease Weight" type="EtcItem">
+	<item id="20803" name="Agathion - Miss Chipao Pack (7-day)" additionalName="Decrease Weight" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -140,7 +140,7 @@
 			<item id="20784" min="1" max="1" chance="100" /> <!-- Agathion - Ladder Snow -->
 		</capsuled_items>
 	</item>
-	<item id="20807" name="Agathion - Nepal Snow Pack (7-day)" name_additional="Snow's Haste" type="EtcItem">
+	<item id="20807" name="Agathion - Nepal Snow Pack (7-day)" additionalName="Snow's Haste" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -160,7 +160,7 @@
 			<item id="20785" min="1" max="1" chance="100" /> <!-- Agathion - Nepal Snow - Snow's Haste (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="20808" name="Agathion - Round Ball Snow Pack (7-day)" name_additional="Snow's Acumen" type="EtcItem">
+	<item id="20808" name="Agathion - Round Ball Snow Pack (7-day)" additionalName="Snow's Acumen" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -180,7 +180,7 @@
 			<item id="20786" min="1" max="1" chance="100" /> <!-- Agathion - Round Ball Snow - Snow's Acumen (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="20809" name="Agathion - Ladder Snow Pack (7-day)" name_additional="Snow's Wind Walk" type="EtcItem">
+	<item id="20809" name="Agathion - Ladder Snow Pack (7-day)" additionalName="Snow's Wind Walk" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -220,7 +220,7 @@
 			<item id="20788" min="1" max="1" chance="100" /> <!-- Flame Box -->
 		</capsuled_items>
 	</item>
-	<item id="20811" name="Rocket Gun Hat Pack" name_additional="Chain Fireworks" type="EtcItem">
+	<item id="20811" name="Rocket Gun Hat Pack" additionalName="Chain Fireworks" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -240,7 +240,7 @@
 			<item id="20789" min="1" max="1" chance="100" /> <!-- Rocket Gun Hat - Chain Fireworks -->
 		</capsuled_items>
 	</item>
-	<item id="20812" name="Yellow Paper Hat Pack (7-day)" name_additional="Blessed Body" type="EtcItem">
+	<item id="20812" name="Yellow Paper Hat Pack (7-day)" additionalName="Blessed Body" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -260,7 +260,7 @@
 			<item id="20790" min="1" max="1" chance="100" /> <!-- Yellow Paper Hat - Blessed Body (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="20813" name="Pink Paper Mask Set Pack (7-day)" name_additional="Blessed Soul" type="EtcItem">
+	<item id="20813" name="Pink Paper Mask Set Pack (7-day)" additionalName="Blessed Soul" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -320,7 +320,7 @@
 			<item id="20793" min="1" max="1" chance="100" /> <!-- Sweet Cheese Hat -->
 		</capsuled_items>
 	</item>
-	<item id="20816" name="Flavorful Cheese Hat Pack (7-day)" name_additional="Scent of Flavorful Cheese" type="EtcItem">
+	<item id="20816" name="Flavorful Cheese Hat Pack (7-day)" additionalName="Scent of Flavorful Cheese" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -340,7 +340,7 @@
 			<item id="20794" min="1" max="1" chance="100" /> <!-- Flavorful Cheese Hat - Scent of Flavorful Cheese (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="20817" name="Sweet Cheese Hat Pack (7-day)" name_additional="Scent of Sweet Cheese" type="EtcItem">
+	<item id="20817" name="Sweet Cheese Hat Pack (7-day)" additionalName="Scent of Sweet Cheese" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -387,7 +387,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20819" name="Agathion - Iken" name_additional="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
+	<item id="20819" name="Agathion - Iken" additionalName="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -439,7 +439,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20821" name="Agathion - Lanya" name_additional="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
+	<item id="20821" name="Agathion - Lanya" additionalName="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_a_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -491,7 +491,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20823" name="Agathion - Gnosian" name_additional="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
+	<item id="20823" name="Agathion - Gnosian" additionalName="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_f_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -543,7 +543,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20825" name="Agathion - Cheerleader Orodriel" name_additional="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
+	<item id="20825" name="Agathion - Cheerleader Orodriel" additionalName="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_e_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -595,7 +595,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20827" name="Agathion - Lakinos" name_additional="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
+	<item id="20827" name="Agathion - Lakinos" additionalName="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_d_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -647,7 +647,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20829" name="Agathion - Mortia" name_additional="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
+	<item id="20829" name="Agathion - Mortia" additionalName="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_c_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -699,7 +699,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20831" name="Agathion - Heintz" name_additional="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
+	<item id="20831" name="Agathion - Heintz" additionalName="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_h_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -751,7 +751,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20833" name="Agathion - Meruril" name_additional="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
+	<item id="20833" name="Agathion - Meruril" additionalName="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -803,7 +803,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20835" name="Agathion - Taman Zu Rapatui" name_additional="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
+	<item id="20835" name="Agathion - Taman Zu Rapatui" additionalName="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_i_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -855,7 +855,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20837" name="Agathion - Kaurin" name_additional="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
+	<item id="20837" name="Agathion - Kaurin" additionalName="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_j_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -907,7 +907,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20839" name="Agathion - Ahertbein" name_additional="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
+	<item id="20839" name="Agathion - Ahertbein" additionalName="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -959,7 +959,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20841" name="Agathion - Naonin" name_additional="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
+	<item id="20841" name="Agathion - Naonin" additionalName="Prominent Outsider Adventurer's Ability (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_k_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1005,7 +1005,7 @@
 			<item id="20884" min="1" max="1" chance="100" /> <!-- Lancet Character Card -->
 		</capsuled_items>
 	</item>
-	<item id="20843" name="Agathion - Iken Pack (7-day)" name_additional="Prominent Outsider Adventurer's Ability" type="EtcItem">
+	<item id="20843" name="Agathion - Iken Pack (7-day)" additionalName="Prominent Outsider Adventurer's Ability" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_silver_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1047,7 +1047,7 @@
 			<item id="20885" min="1" max="1" chance="100" /> <!-- Liposa Character Card -->
 		</capsuled_items>
 	</item>
-	<item id="20845" name="Agathion - Lanya Pack (7-day)" name_additional="Prominent Outsider Adventurer's Ability" type="EtcItem">
+	<item id="20845" name="Agathion - Lanya Pack (7-day)" additionalName="Prominent Outsider Adventurer's Ability" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_silver_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1089,7 +1089,7 @@
 			<item id="20886" min="1" max="1" chance="100" /> <!-- Velarin Character Card -->
 		</capsuled_items>
 	</item>
-	<item id="20847" name="Agathion - Gnosian Pack (7-day)" name_additional="Prominent Outsider Adventurer's Ability" type="EtcItem">
+	<item id="20847" name="Agathion - Gnosian Pack (7-day)" additionalName="Prominent Outsider Adventurer's Ability" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_silver_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1131,7 +1131,7 @@
 			<item id="20887" min="1" max="1" chance="100" /> <!-- Dulcinel Character Card -->
 		</capsuled_items>
 	</item>
-	<item id="20849" name="Agathion - Cheerleader Orodriel Pack (7-day)" name_additional="Prominent Outsider Adventurer's Ability" type="EtcItem">
+	<item id="20849" name="Agathion - Cheerleader Orodriel Pack (7-day)" additionalName="Prominent Outsider Adventurer's Ability" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_silver_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1173,7 +1173,7 @@
 			<item id="20888" min="1" max="1" chance="100" /> <!-- Chimeros Character Card -->
 		</capsuled_items>
 	</item>
-	<item id="20851" name="Agathion - Lakinos Pack (7-day)" name_additional="Prominent Outsider Adventurer's Ability" type="EtcItem">
+	<item id="20851" name="Agathion - Lakinos Pack (7-day)" additionalName="Prominent Outsider Adventurer's Ability" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_silver_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1215,7 +1215,7 @@
 			<item id="20889" min="1" max="1" chance="100" /> <!-- Niveri Character Card -->
 		</capsuled_items>
 	</item>
-	<item id="20853" name="Agathion - Mortia Pack (7-day)" name_additional="Prominent Outsider Adventurer's Ability" type="EtcItem">
+	<item id="20853" name="Agathion - Mortia Pack (7-day)" additionalName="Prominent Outsider Adventurer's Ability" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_silver_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1257,7 +1257,7 @@
 			<item id="20890" min="1" max="1" chance="100" /> <!-- Hamell Character Card -->
 		</capsuled_items>
 	</item>
-	<item id="20855" name="Agathion - Heintz Pack (7-day)" name_additional="Prominent Outsider Adventurer's Ability" type="EtcItem">
+	<item id="20855" name="Agathion - Heintz Pack (7-day)" additionalName="Prominent Outsider Adventurer's Ability" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_silver_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1299,7 +1299,7 @@
 			<item id="20891" min="1" max="1" chance="100" /> <!-- Joriya Character Card -->
 		</capsuled_items>
 	</item>
-	<item id="20857" name="Agathion - Meruril Pack (7-day)" name_additional="Prominent Outsider Adventurer's Ability" type="EtcItem">
+	<item id="20857" name="Agathion - Meruril Pack (7-day)" additionalName="Prominent Outsider Adventurer's Ability" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_silver_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1341,7 +1341,7 @@
 			<item id="20892" min="1" max="1" chance="100" /> <!-- Ralmak Character Card -->
 		</capsuled_items>
 	</item>
-	<item id="20859" name="Agathion - Taman Zu Rapatui Pack (7-day)" name_additional="Prominent Outsider Adventurer's Ability" type="EtcItem">
+	<item id="20859" name="Agathion - Taman Zu Rapatui Pack (7-day)" additionalName="Prominent Outsider Adventurer's Ability" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_silver_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1383,7 +1383,7 @@
 			<item id="20893" min="1" max="1" chance="100" /> <!-- Goras Character Card -->
 		</capsuled_items>
 	</item>
-	<item id="20861" name="Agathion - Kaurin Pack (7-day)" name_additional="Prominent Outsider Adventurer's Ability" type="EtcItem">
+	<item id="20861" name="Agathion - Kaurin Pack (7-day)" additionalName="Prominent Outsider Adventurer's Ability" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_silver_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1425,7 +1425,7 @@
 			<item id="20894" min="1" max="1" chance="100" /> <!-- Vensar Character Card -->
 		</capsuled_items>
 	</item>
-	<item id="20863" name="Agathion - Ahertbein Pack (7-day)" name_additional="Prominent Outsider Adventurer's Ability" type="EtcItem">
+	<item id="20863" name="Agathion - Ahertbein Pack (7-day)" additionalName="Prominent Outsider Adventurer's Ability" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_silver_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1467,7 +1467,7 @@
 			<item id="20895" min="1" max="1" chance="100" /> <!-- Kiela Character Card -->
 		</capsuled_items>
 	</item>
-	<item id="20865" name="Agathion - Naonin Pack (7-day)" name_additional="Prominent Outsider Adventurer's Ability" type="EtcItem">
+	<item id="20865" name="Agathion - Naonin Pack (7-day)" additionalName="Prominent Outsider Adventurer's Ability" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_silver_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1519,7 +1519,7 @@
 			<item id="20862" min="1" max="1" chance="100" /> <!-- Soul Avatar - Ahertbein Pack -->
 		</capsuled_items>
 	</item>
-	<item id="20867" name="Kadomas Transformation Stick" name_additional="7-day" type="Weapon">
+	<item id="20867" name="Kadomas Transformation Stick" additionalName="7-day" type="Weapon">
 		<set name="icon" val="BranchSys.icon.br_kadomatsu_wp_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1718,7 +1718,7 @@
 			<skill id="22136" level="1" /> <!-- Silver Fireworks -->
 		</skills>
 	</item>
-	<item id="20876" name="Love for All Seasons" name_additional="Empower, Wild Magic" type="EtcItem">
+	<item id="20876" name="Love for All Seasons" additionalName="Empower, Wild Magic" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_a_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1741,7 +1741,7 @@
 			<skill id="22145" level="1" /> <!-- Love for All Seasons Empower -->
 		</skills>
 	</item>
-	<item id="20877" name="Happy New Year" name_additional="Death Whisper, Focus, Guidance" type="EtcItem">
+	<item id="20877" name="Happy New Year" additionalName="Death Whisper, Focus, Guidance" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_b_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1765,7 +1765,7 @@
 			<skill id="22143" level="1" /> <!-- Happy New Year Death Whisper -->
 		</skills>
 	</item>
-	<item id="20878" name="Female Aniruddha" name_additional="Shield, Magic Barrier, Blessed Shield" type="EtcItem">
+	<item id="20878" name="Female Aniruddha" additionalName="Shield, Magic Barrier, Blessed Shield" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_c_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1789,7 +1789,7 @@
 			<skill id="22155" level="1" /> <!-- Female Aniruddha's Blessed Shield -->
 		</skills>
 	</item>
-	<item id="20879" name="Kung Hei Fat Choy" name_additional="Might, Berserker Spirit, Vampiric Rage" type="EtcItem">
+	<item id="20879" name="Kung Hei Fat Choy" additionalName="Might, Berserker Spirit, Vampiric Rage" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_d_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1813,7 +1813,7 @@
 			<skill id="22149" level="1" /> <!-- Kung Hei Fat Choy Berserker Spirit -->
 		</skills>
 	</item>
-	<item id="20880" name="Chinese Feast" name_additional="Clarity, Acumen, Blessed Soul" type="EtcItem">
+	<item id="20880" name="Chinese Feast" additionalName="Clarity, Acumen, Blessed Soul" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_e_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1837,7 +1837,7 @@
 			<skill id="22146" level="1" /> <!-- Chinese Feast Greater Acumen -->
 		</skills>
 	</item>
-	<item id="20881" name="Hwa Gei Bu Gwi" name_additional="Decrease Weight, Haste" type="EtcItem">
+	<item id="20881" name="Hwa Gei Bu Gwi" additionalName="Decrease Weight, Haste" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_f_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1860,7 +1860,7 @@
 			<skill id="22140" level="1" /> <!-- Hwa Gei Bu Gwi Haste -->
 		</skills>
 	</item>
-	<item id="20882" name="Fire Stamp" name_additional="Wind Walk, Agility, Blessed Body" type="EtcItem">
+	<item id="20882" name="Fire Stamp" additionalName="Wind Walk, Agility, Blessed Body" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_g_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -2050,7 +2050,7 @@
 			<skill id="22129" level="1" /> <!-- Red Dimensional Stone -->
 		</skills>
 	</item>
-	<item id="20897" name="Purple Paper Mask" name_additional="Blessed Soul (7-day)" type="Armor">
+	<item id="20897" name="Purple Paper Mask" additionalName="Blessed Soul (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_party_mask_purple_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2072,7 +2072,7 @@
 			<skill id="21170" level="1" /> <!-- Blessed Soul -->
 		</skills>
 	</item>
-	<item id="20898" name="Purple Paper Mask Pack (7-day)" name_additional="Blessed Soul" type="EtcItem">
+	<item id="20898" name="Purple Paper Mask Pack (7-day)" additionalName="Blessed Soul" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

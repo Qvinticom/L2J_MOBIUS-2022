@@ -175,7 +175,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="34911" name="Ruler's Authority" name_additional="Not in Use" type="EtcItem">
+	<item id="34911" name="Ruler's Authority" additionalName="Not in Use" type="EtcItem">
 		<!-- Item given to the winner of the tournament held in the Mysterious Mansion. Increases Max HP/MP/CP by 500, Weight Gauge by 12000, damage inflicted during PvP by 5%, Damage Reflect Resistance by 5, and Attribute Resistance by 10. Also increases HP/MP Recovery Rate and Inventory Slot numbers. Decreases damage received during PvP by 6%. You can use these item skills only during the week of victory. -->
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -247,7 +247,7 @@
 			<skill id="9465" level="1" /> <!-- Bundle -->
 		</skills>
 	</item>
-	<item id="34915" name="Hard Transport Goods - Aden" name_additional="Not in Use" type="EtcItem">
+	<item id="34915" name="Hard Transport Goods - Aden" additionalName="Not in Use" type="EtcItem">
 		<!-- Box stolen from the transportation cart. Give it to the revolutionaries to receive a campaign reward. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="weight" val="10" />
@@ -741,7 +741,7 @@
 			<skill id="9424" level="1" /> <!-- Campaign Reward Pouch -->
 		</skills>
 	</item>
-	<item id="34935" name="Star Agathion - Heejin Jang" name_additional="7-day" type="Armor">
+	<item id="34935" name="Star Agathion - Heejin Jang" additionalName="7-day" type="Armor">
 		<!-- 7-day\nIncreases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, M. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10.\nUsable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -775,7 +775,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="34936" name="Star Agathion - Hyuk Jang" name_additional="7-day" type="Armor">
+	<item id="34936" name="Star Agathion - Hyuk Jang" additionalName="7-day" type="Armor">
 		<!-- 7-day\nIncreases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, P. Atk. by 5%, and Attribute Resistance by 10. \nUsable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -809,7 +809,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="34937" name="Star Agathion - Sooro Kim" name_additional="7-day" type="Armor">
+	<item id="34937" name="Star Agathion - Sooro Kim" additionalName="7-day" type="Armor">
 		<!-- 7-day\nIncreases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, P. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10. \nUsable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -843,7 +843,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="34938" name="Star Agathion - Jaebum Park" name_additional="7-day" type="Armor">
+	<item id="34938" name="Star Agathion - Jaebum Park" additionalName="7-day" type="Armor">
 		<!-- 7-day\nIncreases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, M. Atk. By 6%, and Attribute Resistance by 10. \nUsable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -877,7 +877,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="34939" name="Star Agathion - Shin-young Kim" name_additional="7-day" type="Armor">
+	<item id="34939" name="Star Agathion - Shin-young Kim" additionalName="7-day" type="Armor">
 		<!-- 7-day\nIncreases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, and Attribute Resistance by 10. Decreases skill cooldown and MP consumed during skill use by 3%. \nUsable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -911,7 +911,7 @@
 			<stat type="darkRes">10</stat>
 		</stats>
 	</item>
-	<item id="34940" name="Scroll: Enchant Hair Accessory" name_additional="Event" type="EtcItem">
+	<item id="34940" name="Scroll: Enchant Hair Accessory" additionalName="Event" type="EtcItem">
 		<!-- Increases M. Def. of hair accessories by 2. It is greatly increased starting at + 4. Can be safely enchanted to + 3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="weight" val="10" />
@@ -928,7 +928,7 @@
 			<skill id="9234" level="1" /> <!-- Scroll: Enchant Hair Accessory -->
 		</skills>
 	</item>
-	<item id="34941" name="Life Stone: Hair Accessory" name_additional="Event" type="EtcItem">
+	<item id="34941" name="Life Stone: Hair Accessory" additionalName="Event" type="EtcItem">
 		<!-- Life Stone for Hair Accessories. -->
 		<set name="icon" val="icon.life_dust_hairacc_general" />
 		<set name="weight" val="100" />
@@ -939,7 +939,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="34942" name="Lv. 2 Giant Dye Pack" name_additional="Event" type="EtcItem">
+	<item id="34942" name="Lv. 2 Giant Dye Pack" additionalName="Event" type="EtcItem">
 		<!-- When opened, you can acquire 1 of the following Lv. 2 Giant Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -954,7 +954,7 @@
 			<skill id="9425" level="1" /> <!-- Lv. 2 Giant Dye Pack -->
 		</skills>
 	</item>
-	<item id="34943" name="Lv. 2 Legendary Dye Pack" name_additional="Event" type="EtcItem">
+	<item id="34943" name="Lv. 2 Legendary Dye Pack" additionalName="Event" type="EtcItem">
 		<!-- When opened, you can acquire 1 of the following Lv. 2 Legendary Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -969,7 +969,7 @@
 			<skill id="9426" level="1" /> <!-- Lv. 2 Legendary Dye Pack -->
 		</skills>
 	</item>
-	<item id="34944" name="Lv. 2 Ancient Dye Pack" name_additional="Event" type="EtcItem">
+	<item id="34944" name="Lv. 2 Ancient Dye Pack" additionalName="Event" type="EtcItem">
 		<!-- When opened, you can acquire 1 of the following Lv. 2 Ancient Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -984,7 +984,7 @@
 			<skill id="9427" level="1" /> <!-- Lv. 2 Ancient Dye Pack -->
 		</skills>
 	</item>
-	<item id="34945" name="Lv. 3 Giant Dye Pack" name_additional="Event" type="EtcItem">
+	<item id="34945" name="Lv. 3 Giant Dye Pack" additionalName="Event" type="EtcItem">
 		<!-- When opened, you can acquire 1 of the following Lv. 3 Giant Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -999,7 +999,7 @@
 			<skill id="9428" level="1" /> <!-- Lv. 3 Giant Dye Pack -->
 		</skills>
 	</item>
-	<item id="34946" name="Lv. 3 Legendary Dye Pack" name_additional="Event" type="EtcItem">
+	<item id="34946" name="Lv. 3 Legendary Dye Pack" additionalName="Event" type="EtcItem">
 		<!-- When opened, you can acquire 1 of the following Lv. 3 Legendary Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -1014,7 +1014,7 @@
 			<skill id="9429" level="1" /> <!-- Lv. 3 Legendary Dye Pack -->
 		</skills>
 	</item>
-	<item id="34947" name="Lv. 3 Ancient Dye Pack" name_additional="Event" type="EtcItem">
+	<item id="34947" name="Lv. 3 Ancient Dye Pack" additionalName="Event" type="EtcItem">
 		<!-- When opened, you can acquire 1 of the following Lv. 3 Ancient Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -1029,7 +1029,7 @@
 			<skill id="9430" level="1" /> <!-- Lv. 3 Ancient Dye Pack -->
 		</skills>
 	</item>
-	<item id="34948" name="Scroll of Escape Pack: Village" name_additional="Event" type="EtcItem">
+	<item id="34948" name="Scroll of Escape Pack: Village" additionalName="Event" type="EtcItem">
 		<!-- When opened, can acquire 1 Scroll of Escape to a random village. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -1044,7 +1044,7 @@
 			<skill id="9437" level="1" /> <!-- Scroll of Escape Pack: Village -->
 		</skills>
 	</item>
-	<item id="34949" name="Letter Collector's Gift (9th Anniversary)" name_additional="Event" type="EtcItem">
+	<item id="34949" name="Letter Collector's Gift (9th Anniversary)" additionalName="Event" type="EtcItem">
 		<!-- When Letter Collector's Gift is used, it increases Atk. Spd. by 10%, Casting Spd. by 10%, Spd. by 10, and Max HP and Max MP by 10% for 2 hours. The appearance of the equipped weapon and armor change to a nostalgic style. Cooldown is 30 min. -->
 		<set name="icon" val="icon.shield_bread_i02" />
 		<set name="weight" val="5" />
@@ -1059,7 +1059,7 @@
 			<skill id="9438" level="1" /> <!-- Letter Collector's Gift (9th Anniversary) -->
 		</skills>
 	</item>
-	<item id="34950" name="Lv. 4 Giant Dye Pack" name_additional="Event" type="EtcItem">
+	<item id="34950" name="Lv. 4 Giant Dye Pack" additionalName="Event" type="EtcItem">
 		<!-- When opened, you can acquire 1 of the following Lv. 4 Giant Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -1074,7 +1074,7 @@
 			<skill id="9431" level="1" /> <!-- Lv. 4 Giant Dye Pack -->
 		</skills>
 	</item>
-	<item id="34951" name="Lv. 4 Legendary Dye Pack" name_additional="Event" type="EtcItem">
+	<item id="34951" name="Lv. 4 Legendary Dye Pack" additionalName="Event" type="EtcItem">
 		<!-- When opened, you can acquire 1 of the following Lv. 4 Legendary Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -1089,7 +1089,7 @@
 			<skill id="9432" level="1" /> <!-- Lv. 4 Legendary Dye Pack -->
 		</skills>
 	</item>
-	<item id="34952" name="Lv. 4 Ancient Dye Pack" name_additional="Event" type="EtcItem">
+	<item id="34952" name="Lv. 4 Ancient Dye Pack" additionalName="Event" type="EtcItem">
 		<!-- When opened, you can acquire 1 of the following Lv. 4 Ancient Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -1104,7 +1104,7 @@
 			<skill id="9433" level="1" /> <!-- Lv. 4 Ancient Dye Pack -->
 		</skills>
 	</item>
-	<item id="34953" name="Lv. 5 Giant Dye Pack" name_additional="Event" type="EtcItem">
+	<item id="34953" name="Lv. 5 Giant Dye Pack" additionalName="Event" type="EtcItem">
 		<!-- When opened, you can acquire 1 of the following Lv. 5 Giant Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -1119,7 +1119,7 @@
 			<skill id="9434" level="1" /> <!-- Lv. 5 Giant Dye Pack -->
 		</skills>
 	</item>
-	<item id="34954" name="Lv. 5 Legendary Dye Pack" name_additional="Event" type="EtcItem">
+	<item id="34954" name="Lv. 5 Legendary Dye Pack" additionalName="Event" type="EtcItem">
 		<!-- When opened, you can acquire 1 of the following Lv. 5 Legendary Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -1134,7 +1134,7 @@
 			<skill id="9435" level="1" /> <!-- Lv. 5 Legendary Dye Pack -->
 		</skills>
 	</item>
-	<item id="34955" name="Lv. 5 Ancient Dye Pack" name_additional="Event" type="EtcItem">
+	<item id="34955" name="Lv. 5 Ancient Dye Pack" additionalName="Event" type="EtcItem">
 		<!-- When opened, you can acquire 1 of the following Lv. 5 Ancient Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />

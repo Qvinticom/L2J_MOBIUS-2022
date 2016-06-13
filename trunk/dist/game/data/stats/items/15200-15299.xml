@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="15200" name="Orc Mage Class Equipment Set" name_additional="10-day" type="EtcItem">
+	<item id="15200" name="Orc Mage Class Equipment Set" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -32,7 +32,7 @@
 			<item id="15273" min="1" max="1" chance="100" /> <!-- Jewelry Pack (D-grade) - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15201" name="Knight Class Equipment Set" name_additional="30-day" type="EtcItem">
+	<item id="15201" name="Knight Class Equipment Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -61,7 +61,7 @@
 			<item id="15277" min="1" max="1" chance="100" /> <!-- Jewelry Pack (D-grade) - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15202" name="Mage Class Equipment Set" name_additional="30-day" type="EtcItem">
+	<item id="15202" name="Mage Class Equipment Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -88,7 +88,7 @@
 			<item id="15277" min="1" max="1" chance="100" /> <!-- Jewelry Pack (D-grade) - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15203" name="Warrior Class Equipment Set" name_additional="30-day" type="EtcItem">
+	<item id="15203" name="Warrior Class Equipment Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -117,7 +117,7 @@
 			<item id="15277" min="1" max="1" chance="100" /> <!-- Jewelry Pack (D-grade) - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15204" name="Rogue Class Equipment Set" name_additional="30-day" type="EtcItem">
+	<item id="15204" name="Rogue Class Equipment Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -145,7 +145,7 @@
 			<item id="15277" min="1" max="1" chance="100" /> <!-- Jewelry Pack (D-grade) - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15205" name="Kamael Class Equipment Set" name_additional="30-day" type="EtcItem">
+	<item id="15205" name="Kamael Class Equipment Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -174,7 +174,7 @@
 			<item id="15277" min="1" max="1" chance="100" /> <!-- Jewelry Pack (D-grade) - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15206" name="Orc Fighter Class Equipment Set" name_additional="30-day" type="EtcItem">
+	<item id="15206" name="Orc Fighter Class Equipment Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -207,7 +207,7 @@
 			<item id="15277" min="1" max="1" chance="100" /> <!-- Jewelry Pack (D-grade) - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15207" name="Orc Mage Class Equipment Set" name_additional="30-day" type="EtcItem">
+	<item id="15207" name="Orc Mage Class Equipment Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -239,7 +239,7 @@
 			<item id="15277" min="1" max="1" chance="100" /> <!-- Jewelry Pack (D-grade) - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15208" name="Bracelet of Glory: Friendship" name_additional="30-day" type="Armor">
+	<item id="15208" name="Bracelet of Glory: Friendship" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.accessory_ring_of_friendship_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -279,7 +279,7 @@
 			<item id="15210" min="1" max="1" chance="100" /> <!-- Equipment Set Pack (10-day) - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15210" name="Equipment Set Pack (10-day)" name_additional="10-day" type="EtcItem">
+	<item id="15210" name="Equipment Set Pack (10-day)" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -299,7 +299,7 @@
 			<skill id="2914" level="1" /> <!-- Equipment Set Pack (10-day) -->
 		</skills>
 	</item>
-	<item id="15211" name="Equipment Set Pack (30-day)" name_additional="30-day" type="EtcItem">
+	<item id="15211" name="Equipment Set Pack (30-day)" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -319,7 +319,7 @@
 			<skill id="2914" level="2" /> <!-- Equipment Set Pack (30-day) -->
 		</skills>
 	</item>
-	<item id="15212" name="Friend Recommend Round 1 Reward Pack Coupon" name_additional="Recommender" type="EtcItem">
+	<item id="15212" name="Friend Recommend Round 1 Reward Pack Coupon" additionalName="Recommender" type="EtcItem">
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -340,7 +340,7 @@
 			<item id="15213" min="1" max="1" chance="100" /> <!-- Friend Recommend Round 1 Reward Pack - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15213" name="Friend Recommend Round 1 Reward Pack" name_additional="30-day" type="EtcItem">
+	<item id="15213" name="Friend Recommend Round 1 Reward Pack" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -362,7 +362,7 @@
 			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="15214" name="Friend Recommend Round 2 Reward Pack Coupon" name_additional="Recommender" type="EtcItem">
+	<item id="15214" name="Friend Recommend Round 2 Reward Pack Coupon" additionalName="Recommender" type="EtcItem">
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -383,7 +383,7 @@
 			<item id="15215" min="1" max="1" chance="100" /> <!-- Friend Recommend Round 2 Reward Pack - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15215" name="Friend Recommend Round 2 Reward Pack" name_additional="30-day" type="EtcItem">
+	<item id="15215" name="Friend Recommend Round 2 Reward Pack" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -406,7 +406,7 @@
 			<item id="15279" min="10" max="10" chance="100" /> <!-- Friend Recommendation Proof -->
 		</capsuled_items>
 	</item>
-	<item id="15216" name="Friend Recommend Round 1 Reward Pack Coupon" name_additional="New Dormancy" type="EtcItem">
+	<item id="15216" name="Friend Recommend Round 1 Reward Pack Coupon" additionalName="New Dormancy" type="EtcItem">
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -427,7 +427,7 @@
 			<item id="15217" min="1" max="1" chance="100" /> <!-- Friend Recommend Round 1 Reward Pack - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15217" name="Friend Recommend Round 1 Reward Pack" name_additional="30-day" type="EtcItem">
+	<item id="15217" name="Friend Recommend Round 1 Reward Pack" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -450,7 +450,7 @@
 			<item id="15211" min="1" max="1" chance="100" /> <!-- Equipment Set Pack (30-day) - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15218" name="Friend Recommend Round 2 Reward Pack Coupon" name_additional="New Dormancy" type="EtcItem">
+	<item id="15218" name="Friend Recommend Round 2 Reward Pack Coupon" additionalName="New Dormancy" type="EtcItem">
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -471,7 +471,7 @@
 			<item id="15219" min="1" max="1" chance="100" /> <!-- Friend Recommend Round 2 Reward Pack - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15219" name="Friend Recommend Round 2 Reward Pack" name_additional="30-day" type="EtcItem">
+	<item id="15219" name="Friend Recommend Round 2 Reward Pack" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -495,7 +495,7 @@
 			<item id="15279" min="10" max="10" chance="100" /> <!-- Friend Recommendation Proof -->
 		</capsuled_items>
 	</item>
-	<item id="15220" name="Agathion - Oink Oink" name_additional="10-day" type="Armor">
+	<item id="15220" name="Agathion - Oink Oink" additionalName="10-day" type="Armor">
 		<set name="icon" val="icon.accessory_pig_lbracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -536,7 +536,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="15222" name="Fortune Heavy Armor of Nightmare Set Pack" name_additional="10-day" type="EtcItem">
+	<item id="15222" name="Fortune Heavy Armor of Nightmare Set Pack" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -560,7 +560,7 @@
 			<item id="15145" min="1" max="1" chance="100" /> <!-- Shield of Nightmare of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15223" name="Doom Plate Armor of Fortune Set Pack" name_additional="10-day" type="EtcItem">
+	<item id="15223" name="Doom Plate Armor of Fortune Set Pack" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -584,7 +584,7 @@
 			<item id="15121" min="1" max="1" chance="100" /> <!-- Doom Shield of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15224" name="Full Plate of Fortune Set Pack" name_additional="10-day" type="EtcItem">
+	<item id="15224" name="Full Plate of Fortune Set Pack" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -608,7 +608,7 @@
 			<item id="15130" min="1" max="1" chance="100" /> <!-- Full Plate Shield of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15225" name="Brigandine of Fortune Set Pack" name_additional="10-day" type="EtcItem">
+	<item id="15225" name="Brigandine of Fortune Set Pack" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -633,7 +633,7 @@
 			<item id="15140" min="1" max="1" chance="100" /> <!-- Brigandine Shield of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15226" name="Dark Crystal Light Armor of Fortune Set Pack" name_additional="10-day" type="EtcItem">
+	<item id="15226" name="Dark Crystal Light Armor of Fortune Set Pack" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -657,7 +657,7 @@
 			<item id="15093" min="1" max="1" chance="100" /> <!-- Dark Crystal Helmet of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15227" name="Leather Armor of Doom of Fortune Set Pack" name_additional="10-day" type="EtcItem">
+	<item id="15227" name="Leather Armor of Doom of Fortune Set Pack" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -680,7 +680,7 @@
 			<item id="15119" min="1" max="1" chance="100" /> <!-- Doom Boots of Fortune - Light Armor - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15228" name="Plated Leather of Fortune Set Pack" name_additional="10-day" type="EtcItem">
+	<item id="15228" name="Plated Leather of Fortune Set Pack" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -704,7 +704,7 @@
 			<item id="15126" min="1" max="1" chance="100" /> <!-- Full Plate Helmet of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15229" name="Manticore Leather of Fortune Set Pack" name_additional="10-day" type="EtcItem">
+	<item id="15229" name="Manticore Leather of Fortune Set Pack" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -728,7 +728,7 @@
 			<item id="15137" min="1" max="1" chance="100" /> <!-- Brigandine Helmet of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15230" name="Dark Crystal Robe of Fortune Set Pack" name_additional="10-day" type="EtcItem">
+	<item id="15230" name="Dark Crystal Robe of Fortune Set Pack" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -752,7 +752,7 @@
 			<item id="15096" min="1" max="1" chance="100" /> <!-- Dark Crystal Shield of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15231" name="Avadon Robe of Fortune Set Pack" name_additional="10-day" type="EtcItem">
+	<item id="15231" name="Avadon Robe of Fortune Set Pack" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -776,7 +776,7 @@
 			<item id="15101" min="1" max="1" chance="100" /> <!-- Avadon Shield of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15232" name="Karmian of Fortune Set Pack" name_additional="10-day" type="EtcItem">
+	<item id="15232" name="Karmian of Fortune Set Pack" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -800,7 +800,7 @@
 			<item id="15126" min="1" max="1" chance="100" /> <!-- Full Plate Helmet of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15233" name="Mithril Tunic of Fortune Set Pack" name_additional="10-day" type="EtcItem">
+	<item id="15233" name="Mithril Tunic of Fortune Set Pack" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -824,7 +824,7 @@
 			<item id="15137" min="1" max="1" chance="100" /> <!-- Brigandine Helmet of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15234" name="Magic Weapon of Fortune Set" name_additional="10-day" type="EtcItem">
+	<item id="15234" name="Magic Weapon of Fortune Set" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -847,7 +847,7 @@
 			<item id="15149" min="1" max="1" chance="100" /> <!-- Staff of Life of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15235" name="Dagger of Fortune Set" name_additional="10-day" type="EtcItem">
+	<item id="15235" name="Dagger of Fortune Set" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -870,7 +870,7 @@
 			<item id="15153" min="1" max="1" chance="100" /> <!-- Mithril Dagger of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15236" name="Bow of Fortune Set" name_additional="10-day" type="EtcItem">
+	<item id="15236" name="Bow of Fortune Set" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -893,7 +893,7 @@
 			<item id="15157" min="1" max="1" chance="100" /> <!-- Light Crossbow of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15237" name="Blunt Weapon of Fortune Set" name_additional="10-day" type="EtcItem">
+	<item id="15237" name="Blunt Weapon of Fortune Set" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -916,7 +916,7 @@
 			<item id="15161" min="1" max="1" chance="100" /> <!-- Bonebreaker of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15238" name="One-handed Sword of Fortune Set" name_additional="10-day" type="EtcItem">
+	<item id="15238" name="One-handed Sword of Fortune Set" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -939,7 +939,7 @@
 			<item id="15165" min="1" max="1" chance="100" /> <!-- Elven Long Sword of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15239" name="Two-handed Sword of Fortune Set" name_additional="10-day" type="EtcItem">
+	<item id="15239" name="Two-handed Sword of Fortune Set" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -962,7 +962,7 @@
 			<item id="15169" min="1" max="1" chance="100" /> <!-- Claymore of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15240" name="Fist Weapon of Fortune Set" name_additional="10-day" type="EtcItem">
+	<item id="15240" name="Fist Weapon of Fortune Set" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -985,7 +985,7 @@
 			<item id="15173" min="1" max="1" chance="100" /> <!-- Scallop Jamadhr of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15241" name="Dualsword of Fortune Set" name_additional="10-day" type="EtcItem">
+	<item id="15241" name="Dualsword of Fortune Set" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1008,7 +1008,7 @@
 			<item id="15177" min="1" max="1" chance="100" /> <!-- Bastard Sword*Elven Sword of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15242" name="Spear of Fortune Set" name_additional="10-day" type="EtcItem">
+	<item id="15242" name="Spear of Fortune Set" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1031,7 +1031,7 @@
 			<item id="15181" min="1" max="1" chance="100" /> <!-- Glaive of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15243" name="Ancient Sword of Fortune Set" name_additional="10-day" type="EtcItem">
+	<item id="15243" name="Ancient Sword of Fortune Set" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1054,7 +1054,7 @@
 			<item id="15185" min="1" max="1" chance="100" /> <!-- General's Katzbalger of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15244" name="Rapier of Fortune Set" name_additional="10-day" type="EtcItem">
+	<item id="15244" name="Rapier of Fortune Set" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1077,7 +1077,7 @@
 			<item id="15189" min="1" max="1" chance="100" /> <!-- Grand Épée of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15245" name="Crossbow of Fortune Set" name_additional="10-day" type="EtcItem">
+	<item id="15245" name="Crossbow of Fortune Set" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1100,7 +1100,7 @@
 			<item id="15193" min="1" max="1" chance="100" /> <!-- Cranequin of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15246" name="Fortune Heavy Armor of Nightmare Set Pack" name_additional="30-day" type="EtcItem">
+	<item id="15246" name="Fortune Heavy Armor of Nightmare Set Pack" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1124,7 +1124,7 @@
 			<item id="15031" min="1" max="1" chance="100" /> <!-- Shield of Nightmare of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15247" name="Doom Plate Armor of Fortune Set Pack" name_additional="30-day" type="EtcItem">
+	<item id="15247" name="Doom Plate Armor of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1148,7 +1148,7 @@
 			<item id="15007" min="1" max="1" chance="100" /> <!-- Doom Shield of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15248" name="Full Plate of Fortune Set Pack" name_additional="30-day" type="EtcItem">
+	<item id="15248" name="Full Plate of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1172,7 +1172,7 @@
 			<item id="15016" min="1" max="1" chance="100" /> <!-- Full Plate Shield of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15249" name="Brigandine of Fortune Set Pack" name_additional="30-day" type="EtcItem">
+	<item id="15249" name="Brigandine of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1197,7 +1197,7 @@
 			<item id="15026" min="1" max="1" chance="100" /> <!-- Brigandine Shield of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15250" name="Dark Crystal Light Armor of Fortune Set Pack" name_additional="30-day" type="EtcItem">
+	<item id="15250" name="Dark Crystal Light Armor of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1221,7 +1221,7 @@
 			<item id="14979" min="1" max="1" chance="100" /> <!-- Dark Crystal Helmet of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15251" name="Leather Armor of Doom of Fortune Set Pack" name_additional="30-day" type="EtcItem">
+	<item id="15251" name="Leather Armor of Doom of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1244,7 +1244,7 @@
 			<item id="15005" min="1" max="1" chance="100" /> <!-- Doom Boots of Fortune - Light Armor - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15252" name="Plated Leather of Fortune Set Pack" name_additional="30-day" type="EtcItem">
+	<item id="15252" name="Plated Leather of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1268,7 +1268,7 @@
 			<item id="15012" min="1" max="1" chance="100" /> <!-- Full Plate Helmet of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15253" name="Manticore Leather of Fortune Set Pack" name_additional="30-day" type="EtcItem">
+	<item id="15253" name="Manticore Leather of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1292,7 +1292,7 @@
 			<item id="15023" min="1" max="1" chance="100" /> <!-- Brigandine Helmet of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15254" name="Dark Crystal Robe of Fortune Set Pack" name_additional="30-day" type="EtcItem">
+	<item id="15254" name="Dark Crystal Robe of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1316,7 +1316,7 @@
 			<item id="14982" min="1" max="1" chance="100" /> <!-- Dark Crystal Shield of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15255" name="Avadon Robe of Fortune Set Pack" name_additional="30-day" type="EtcItem">
+	<item id="15255" name="Avadon Robe of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1340,7 +1340,7 @@
 			<item id="14987" min="1" max="1" chance="100" /> <!-- Avadon Shield of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15256" name="Karmian of Fortune Set Pack" name_additional="30-day" type="EtcItem">
+	<item id="15256" name="Karmian of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1364,7 +1364,7 @@
 			<item id="15012" min="1" max="1" chance="100" /> <!-- Full Plate Helmet of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15257" name="Mithril Tunic of Fortune Set Pack" name_additional="30-day" type="EtcItem">
+	<item id="15257" name="Mithril Tunic of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1388,7 +1388,7 @@
 			<item id="15023" min="1" max="1" chance="100" /> <!-- Brigandine Helmet of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15258" name="Magic Weapon of Fortune Set" name_additional="30-day" type="EtcItem">
+	<item id="15258" name="Magic Weapon of Fortune Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1411,7 +1411,7 @@
 			<item id="15035" min="1" max="1" chance="100" /> <!-- Staff of Life of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15259" name="Dagger of Fortune Set" name_additional="30-day" type="EtcItem">
+	<item id="15259" name="Dagger of Fortune Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1434,7 +1434,7 @@
 			<item id="15039" min="1" max="1" chance="100" /> <!-- Mithril Dagger of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15260" name="Bow of Fortune Set" name_additional="30-day" type="EtcItem">
+	<item id="15260" name="Bow of Fortune Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1457,7 +1457,7 @@
 			<item id="15043" min="1" max="1" chance="100" /> <!-- Light Crossbow of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15261" name="Blunt Weapon of Fortune Set" name_additional="30-day" type="EtcItem">
+	<item id="15261" name="Blunt Weapon of Fortune Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1480,7 +1480,7 @@
 			<item id="15047" min="1" max="1" chance="100" /> <!-- Bonebreaker of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15262" name="One-handed Sword of Fortune Set" name_additional="30-day" type="EtcItem">
+	<item id="15262" name="One-handed Sword of Fortune Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1503,7 +1503,7 @@
 			<item id="15051" min="1" max="1" chance="100" /> <!-- Elven Long Sword of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15263" name="Two-handed Sword of Fortune Set" name_additional="30-day" type="EtcItem">
+	<item id="15263" name="Two-handed Sword of Fortune Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1526,7 +1526,7 @@
 			<item id="15055" min="1" max="1" chance="100" /> <!-- Claymore of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15264" name="Fist Weapon of Fortune Set" name_additional="30-day" type="EtcItem">
+	<item id="15264" name="Fist Weapon of Fortune Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1549,7 +1549,7 @@
 			<item id="15059" min="1" max="1" chance="100" /> <!-- Scallop Jamadhr of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15265" name="Dualsword of Fortune Set" name_additional="30-day" type="EtcItem">
+	<item id="15265" name="Dualsword of Fortune Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1572,7 +1572,7 @@
 			<item id="15063" min="1" max="1" chance="100" /> <!-- Bastard Sword*Elven Sword of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15266" name="Spear of Fortune Set" name_additional="30-day" type="EtcItem">
+	<item id="15266" name="Spear of Fortune Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1595,7 +1595,7 @@
 			<item id="15067" min="1" max="1" chance="100" /> <!-- Glaive of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15267" name="Ancient Sword of Fortune Set" name_additional="30-day" type="EtcItem">
+	<item id="15267" name="Ancient Sword of Fortune Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1618,7 +1618,7 @@
 			<item id="15071" min="1" max="1" chance="100" /> <!-- General's Katzbalger of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15268" name="Short Sword of Fortune Set" name_additional="30-day" type="EtcItem">
+	<item id="15268" name="Short Sword of Fortune Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1641,7 +1641,7 @@
 			<item id="15075" min="1" max="1" chance="100" /> <!-- Grand Épée of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15269" name="Crossbow of Fortune Set" name_additional="30-day" type="EtcItem">
+	<item id="15269" name="Crossbow of Fortune Set" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1664,7 +1664,7 @@
 			<item id="15079" min="1" max="1" chance="100" /> <!-- Cranequin of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15270" name="Jewelry Pack (A-grade)" name_additional="10-day" type="EtcItem">
+	<item id="15270" name="Jewelry Pack (A-grade)" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1686,7 +1686,7 @@
 			<item id="15082" min="2" max="2" chance="100" /> <!-- Majestic Ring of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15271" name="Jewelry Pack (B-grade)" name_additional="10-day" type="EtcItem">
+	<item id="15271" name="Jewelry Pack (B-grade)" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1708,7 +1708,7 @@
 			<item id="15085" min="2" max="2" chance="100" /> <!-- Black Ore Ring of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15272" name="Jewelry Pack (C-grade)" name_additional="10-day" type="EtcItem">
+	<item id="15272" name="Jewelry Pack (C-grade)" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1730,7 +1730,7 @@
 			<item id="15088" min="2" max="2" chance="100" /> <!-- Sealed Ring of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15273" name="Jewelry Pack (D-grade)" name_additional="10-day" type="EtcItem">
+	<item id="15273" name="Jewelry Pack (D-grade)" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1752,7 +1752,7 @@
 			<item id="15091" min="2" max="2" chance="100" /> <!-- Elven Ring of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15274" name="Jewelry Pack (A-grade)" name_additional="30-day" type="EtcItem">
+	<item id="15274" name="Jewelry Pack (A-grade)" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1774,7 +1774,7 @@
 			<item id="14968" min="2" max="2" chance="100" /> <!-- Majestic Ring of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15275" name="Jewelry Pack (B-grade)" name_additional="30-day" type="EtcItem">
+	<item id="15275" name="Jewelry Pack (B-grade)" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1796,7 +1796,7 @@
 			<item id="14971" min="2" max="2" chance="100" /> <!-- Black Ore Ring of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15276" name="Jewelry Pack (C-grade)" name_additional="30-day" type="EtcItem">
+	<item id="15276" name="Jewelry Pack (C-grade)" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1818,7 +1818,7 @@
 			<item id="14974" min="2" max="2" chance="100" /> <!-- Sealed Ring of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15277" name="Jewelry Pack (D-grade)" name_additional="30-day" type="EtcItem">
+	<item id="15277" name="Jewelry Pack (D-grade)" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

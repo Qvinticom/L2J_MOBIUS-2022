@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="5600" name="Meteor Shower" name_additional="Critical Bleed" type="Weapon">
+	<item id="5600" name="Meteor Shower" additionalName="Critical Bleed" type="Weapon">
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -32,7 +32,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5601" name="Meteor Shower" name_additional="Rsk. Haste" type="Weapon">
+	<item id="5601" name="Meteor Shower" additionalName="Rsk. Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -63,7 +63,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5602" name="Elysian" name_additional="Health" type="Weapon">
+	<item id="5602" name="Elysian" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -94,7 +94,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5603" name="Elysian" name_additional="Anger" type="Weapon">
+	<item id="5603" name="Elysian" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -125,7 +125,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5604" name="Elysian" name_additional="Critical Drain" type="Weapon">
+	<item id="5604" name="Elysian" additionalName="Critical Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -157,7 +157,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5605" name="Branch of the Mother Tree" name_additional="Conversion" type="Weapon">
+	<item id="5605" name="Branch of the Mother Tree" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -189,7 +189,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5606" name="Branch of the Mother Tree" name_additional="Magic Damage" type="Weapon">
+	<item id="5606" name="Branch of the Mother Tree" additionalName="Magic Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -222,7 +222,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5607" name="Branch of the Mother Tree" name_additional="Acumen" type="Weapon">
+	<item id="5607" name="Branch of the Mother Tree" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -254,7 +254,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5608" name="Carnage Bow" name_additional="Light Armor" type="Weapon">
+	<item id="5608" name="Carnage Bow" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -289,7 +289,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="5609" name="Carnage Bow" name_additional="Critical Bleed" type="Weapon">
+	<item id="5609" name="Carnage Bow" additionalName="Critical Bleed" type="Weapon">
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -324,7 +324,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="5610" name="Carnage Bow" name_additional="Mana Up" type="Weapon">
+	<item id="5610" name="Carnage Bow" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -358,7 +358,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="5611" name="Soul Bow" name_additional="Cheap Shot" type="Weapon">
+	<item id="5611" name="Soul Bow" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -393,7 +393,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="5612" name="Soul Bow" name_additional="Quick Recovery" type="Weapon">
+	<item id="5612" name="Soul Bow" additionalName="Quick Recovery" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -427,7 +427,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="5613" name="Soul Bow" name_additional="Critical Poison" type="Weapon">
+	<item id="5613" name="Soul Bow" additionalName="Critical Poison" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -462,7 +462,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="5614" name="Bloody Orchid" name_additional="Focus" type="Weapon">
+	<item id="5614" name="Bloody Orchid" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -493,7 +493,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5615" name="Bloody Orchid" name_additional="Back Blow" type="Weapon">
+	<item id="5615" name="Bloody Orchid" additionalName="Back Blow" type="Weapon">
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -524,7 +524,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5616" name="Bloody Orchid" name_additional="Critical Bleed" type="Weapon">
+	<item id="5616" name="Bloody Orchid" additionalName="Critical Bleed" type="Weapon">
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -556,7 +556,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5617" name="Soul Separator" name_additional="Guidance" type="Weapon">
+	<item id="5617" name="Soul Separator" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -587,7 +587,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5618" name="Soul Separator" name_additional="Critical Damage" type="Weapon">
+	<item id="5618" name="Soul Separator" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -618,7 +618,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5619" name="Soul Separator" name_additional="Rsk. Haste" type="Weapon">
+	<item id="5619" name="Soul Separator" additionalName="Rsk. Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -649,7 +649,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5620" name="Blood Tornado" name_additional="Haste" type="Weapon">
+	<item id="5620" name="Blood Tornado" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -680,7 +680,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5621" name="Blood Tornado" name_additional="Focus" type="Weapon">
+	<item id="5621" name="Blood Tornado" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -711,7 +711,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5622" name="Blood Tornado" name_additional="Anger" type="Weapon">
+	<item id="5622" name="Blood Tornado" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -742,7 +742,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5623" name="Dragon Grinder" name_additional="Rsk. Evasion" type="Weapon">
+	<item id="5623" name="Dragon Grinder" additionalName="Rsk. Evasion" type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -773,7 +773,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5624" name="Dragon Grinder" name_additional="Guidance" type="Weapon">
+	<item id="5624" name="Dragon Grinder" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -804,7 +804,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5625" name="Dragon Grinder" name_additional="Health" type="Weapon">
+	<item id="5625" name="Dragon Grinder" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -835,7 +835,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5626" name="Halberd" name_additional="Haste" type="Weapon">
+	<item id="5626" name="Halberd" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -866,7 +866,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="5627" name="Halberd" name_additional="Critical Stun" type="Weapon">
+	<item id="5627" name="Halberd" additionalName="Critical Stun" type="Weapon">
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -898,7 +898,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="5628" name="Halberd" name_additional="Wide Blow" type="Weapon">
+	<item id="5628" name="Halberd" additionalName="Wide Blow" type="Weapon">
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1022,7 +1022,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="5632" name="Tallum Glaive" name_additional="Guidance" type="Weapon">
+	<item id="5632" name="Tallum Glaive" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1053,7 +1053,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="5633" name="Tallum Glaive" name_additional="Health" type="Weapon">
+	<item id="5633" name="Tallum Glaive" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1084,7 +1084,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="5634" name="Tallum Glaive" name_additional="Wide Blow" type="Weapon">
+	<item id="5634" name="Tallum Glaive" additionalName="Wide Blow" type="Weapon">
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1115,7 +1115,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="5635" name="Tallum Blade" name_additional="Critical Poison" type="Weapon">
+	<item id="5635" name="Tallum Blade" additionalName="Critical Poison" type="Weapon">
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1147,7 +1147,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5636" name="Tallum Blade" name_additional="Haste" type="Weapon">
+	<item id="5636" name="Tallum Blade" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1178,7 +1178,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5637" name="Tallum Blade" name_additional="Anger" type="Weapon">
+	<item id="5637" name="Tallum Blade" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1209,7 +1209,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5638" name="Elemental Sword" name_additional="M. Atk." type="Weapon">
+	<item id="5638" name="Elemental Sword" additionalName="M. Atk." type="Weapon">
 		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1240,7 +1240,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5639" name="Elemental Sword" name_additional="Magic Paralyze" type="Weapon">
+	<item id="5639" name="Elemental Sword" additionalName="Magic Paralyze" type="Weapon">
 		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1272,7 +1272,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5640" name="Elemental Sword" name_additional="Empower" type="Weapon">
+	<item id="5640" name="Elemental Sword" additionalName="Empower" type="Weapon">
 		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1303,7 +1303,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5641" name="Sword of Miracles" name_additional="M. Atk." type="Weapon">
+	<item id="5641" name="Sword of Miracles" additionalName="M. Atk." type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1334,7 +1334,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5642" name="Sword of Miracles" name_additional="Magic Silence" type="Weapon">
+	<item id="5642" name="Sword of Miracles" additionalName="Magic Silence" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1366,7 +1366,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5643" name="Sword of Miracles" name_additional="Acumen" type="Weapon">
+	<item id="5643" name="Sword of Miracles" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1397,7 +1397,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5644" name="Dragon Slayer" name_additional="Health" type="Weapon">
+	<item id="5644" name="Dragon Slayer" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1428,7 +1428,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5645" name="Dragon Slayer" name_additional="Critical Bleed" type="Weapon">
+	<item id="5645" name="Dragon Slayer" additionalName="Critical Bleed" type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1460,7 +1460,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5646" name="Dragon Slayer" name_additional="Critical Drain" type="Weapon">
+	<item id="5646" name="Dragon Slayer" additionalName="Critical Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1492,7 +1492,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5647" name="Dark Legion's Edge" name_additional="Critical Damage" type="Weapon">
+	<item id="5647" name="Dark Legion's Edge" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1523,7 +1523,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5648" name="Dark Legion's Edge" name_additional="Health" type="Weapon">
+	<item id="5648" name="Dark Legion's Edge" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1554,7 +1554,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5649" name="Dark Legion's Edge" name_additional="Rsk. Focus" type="Weapon">
+	<item id="5649" name="Dark Legion's Edge" additionalName="Rsk. Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

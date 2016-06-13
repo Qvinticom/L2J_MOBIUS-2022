@@ -237,7 +237,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10214" name="Dynasty Leather Armor" name_additional="Summoner" type="Armor">
+	<item id="10214" name="Dynasty Leather Armor" additionalName="Summoner" type="Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -654,7 +654,7 @@
 			<stat type="pDef">226</stat>
 		</stats>
 	</item>
-	<item id="10228" name="Dynasty Platinum Plate" name_additional="Shield Master" type="Armor">
+	<item id="10228" name="Dynasty Platinum Plate" additionalName="Shield Master" type="Armor">
 		<set name="icon" val="icon.armor_t91_uk_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -680,7 +680,7 @@
 			<stat type="pDef">226</stat>
 		</stats>
 	</item>
-	<item id="10229" name="Dynasty Platinum Plate" name_additional="Weapon Master" type="Armor">
+	<item id="10229" name="Dynasty Platinum Plate" additionalName="Weapon Master" type="Armor">
 		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -706,7 +706,7 @@
 			<stat type="pDef">226</stat>
 		</stats>
 	</item>
-	<item id="10230" name="Dynasty Platinum Plate" name_additional="Force Master" type="Armor">
+	<item id="10230" name="Dynasty Platinum Plate" additionalName="Force Master" type="Armor">
 		<set name="icon" val="icon.armor_t91_uf_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -732,7 +732,7 @@
 			<stat type="pDef">226</stat>
 		</stats>
 	</item>
-	<item id="10231" name="Dynasty Platinum Plate" name_additional="Bard" type="Armor">
+	<item id="10231" name="Dynasty Platinum Plate" additionalName="Bard" type="Armor">
 		<set name="icon" val="icon.armor_t91_uke_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -778,7 +778,7 @@
 			<stat type="pDef">170</stat>
 		</stats>
 	</item>
-	<item id="10233" name="Dynasty Jewel Leather Armor" name_additional="Dagger Master" type="Armor">
+	<item id="10233" name="Dynasty Jewel Leather Armor" additionalName="Dagger Master" type="Armor">
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -801,7 +801,7 @@
 			<stat type="pDef">170</stat>
 		</stats>
 	</item>
-	<item id="10234" name="Dynasty Jewel Leather Armor" name_additional="Bow Master" type="Armor">
+	<item id="10234" name="Dynasty Jewel Leather Armor" additionalName="Bow Master" type="Armor">
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -848,7 +848,7 @@
 			<stat type="maxMp">592</stat>
 		</stats>
 	</item>
-	<item id="10236" name="Dynasty Silver Satin Tunic" name_additional="Healer" type="Armor">
+	<item id="10236" name="Dynasty Silver Satin Tunic" additionalName="Healer" type="Armor">
 		<set name="icon" val="icon.armor_t93_uh_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -875,7 +875,7 @@
 			<stat type="maxMp">592</stat>
 		</stats>
 	</item>
-	<item id="10237" name="Dynasty Silver Satin Tunic" name_additional="Enchanter" type="Armor">
+	<item id="10237" name="Dynasty Silver Satin Tunic" additionalName="Enchanter" type="Armor">
 		<set name="icon" val="icon.armor_t93_ue_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -902,7 +902,7 @@
 			<stat type="maxMp">592</stat>
 		</stats>
 	</item>
-	<item id="10238" name="Dynasty Silver Satin Tunic" name_additional="Summoner" type="Armor">
+	<item id="10238" name="Dynasty Silver Satin Tunic" additionalName="Summoner" type="Armor">
 		<set name="icon" val="icon.armor_t93_us_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -929,7 +929,7 @@
 			<stat type="maxMp">592</stat>
 		</stats>
 	</item>
-	<item id="10239" name="Dynasty Silver Satin Tunic" name_additional="Wizard" type="Armor">
+	<item id="10239" name="Dynasty Silver Satin Tunic" additionalName="Wizard" type="Armor">
 		<set name="icon" val="icon.armor_t93_uw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1176,7 +1176,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10254" name="1st Place Treasure Sack" name_additional="Event" type="EtcItem">
+	<item id="10254" name="1st Place Treasure Sack" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_treasure_sack_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1189,7 +1189,7 @@
 			<skill id="2422" level="1" /> <!-- 1st Place Treasure Sack -->
 		</skills>
 	</item>
-	<item id="10255" name="2nd Place Treasure Sack" name_additional="Event" type="EtcItem">
+	<item id="10255" name="2nd Place Treasure Sack" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_treasure_sack_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1202,7 +1202,7 @@
 			<skill id="2423" level="2" /> <!-- 2nd Place Treasure Sack -->
 		</skills>
 	</item>
-	<item id="10256" name="3rd Place Treasure Sack" name_additional="Event" type="EtcItem">
+	<item id="10256" name="3rd Place Treasure Sack" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_treasure_sack_3_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1215,7 +1215,7 @@
 			<skill id="2424" level="3" /> <!-- 3rd Place Treasure Sack -->
 		</skills>
 	</item>
-	<item id="10257" name="4th Place Treasure Sack" name_additional="Event" type="EtcItem">
+	<item id="10257" name="4th Place Treasure Sack" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_treasure_sack_4_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1228,7 +1228,7 @@
 			<skill id="2425" level="4" /> <!-- 4th Place Treasure Sack -->
 		</skills>
 	</item>
-	<item id="10258" name="5th Place Treasure Sack" name_additional="Event" type="EtcItem">
+	<item id="10258" name="5th Place Treasure Sack" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_treasure_sack_5_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1241,7 +1241,7 @@
 			<skill id="2426" level="5" /> <!-- 5th Place Treasure sack -->
 		</skills>
 	</item>
-	<item id="10259" name="6th Place Treasure Sack" name_additional="Event" type="EtcItem">
+	<item id="10259" name="6th Place Treasure Sack" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_treasure_sack_6_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />

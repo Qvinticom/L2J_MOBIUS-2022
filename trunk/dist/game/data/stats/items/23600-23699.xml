@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="23600" name="Lucky Enchant Stone: Armor (R-grade)" name_additional="Event" type="EtcItem">
+	<item id="23600" name="Lucky Enchant Stone: Armor (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Enchant success rate + 15% for armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="weight" val="120" />
@@ -14,7 +14,7 @@
 			<skill id="9208" level="1" /> <!-- Lucky Clover (R-grade) -->
 		</skills>
 	</item>
-	<item id="23601" name="Player Commendation - Gift Box" name_additional="Event" type="EtcItem">
+	<item id="23601" name="Player Commendation - Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Gift given after accumulating 1-hr worth of PC Points. Double-click to use. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_clan_depositable" val="false" />
@@ -229,7 +229,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="23614" name="Vitality Maintaining Potion (10-minute)" name_additional="No Weekly Usage Limit" type="EtcItem">
+	<item id="23614" name="Vitality Maintaining Potion (10-minute)" additionalName="No Weekly Usage Limit" type="EtcItem">
 		<!-- Maintains Vitality for 10 min. Cooldown is 30 min. No weekly usage limit. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
 		<set name="weight" val="10" />
@@ -251,7 +251,7 @@
 			<skill id="22848" level="1" /> <!-- Vitality Maintaining Potion -->
 		</skills>
 	</item>
-	<item id="23615" name="Black Gem Mask" name_additional="Vitality (7-day) (No Weekly Usage Limit)" type="Armor">
+	<item id="23615" name="Black Gem Mask" additionalName="Vitality (7-day) (No Weekly Usage Limit)" type="Armor">
 		<!-- Black gem mask made of luxurious metal. -->
 		<set name="icon" val="BranchSys.icon.br_black_gem_mask_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -272,7 +272,7 @@
 			<skill id="21353" level="1" /> <!-- Vitality Recovery -->
 		</skills>
 	</item>
-	<item id="23616" name="Artisan's Goggles" name_additional="Vitality (7-day) (No Weekly Usage Limit)" type="Armor">
+	<item id="23616" name="Artisan's Goggles" additionalName="Vitality (7-day) (No Weekly Usage Limit)" type="Armor">
 		<!-- Large round goggles to protect your eyes. Uses 2 accessory slots. -->
 		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -293,7 +293,7 @@
 			<skill id="21354" level="1" /> <!-- Vitality Recovery -->
 		</skills>
 	</item>
-	<item id="23617" name="Vitality Maintaining Potion Pack" name_additional="No Weekly Usage Limit" type="EtcItem">
+	<item id="23617" name="Vitality Maintaining Potion Pack" additionalName="No Weekly Usage Limit" type="EtcItem">
 		<!-- Wrapped Pack containing Vitality Maintaining Potion with no weekly usage limit. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
@@ -308,7 +308,7 @@
 			<item id="23614" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Potion (10-minute) - No Weekly Usage Limit -->
 		</capsuled_items>
 	</item>
-	<item id="23618" name="Black Gem Mask Pack (7-day)" name_additional="Vitality (No Weekly Usage Limit)" type="EtcItem">
+	<item id="23618" name="Black Gem Mask Pack (7-day)" additionalName="Vitality (No Weekly Usage Limit)" type="EtcItem">
 		<!-- Wrapped Pack containing Black Gem Mask (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
@@ -323,7 +323,7 @@
 			<item id="23615" min="1" max="1" chance="100" /> <!-- Black Gem Mask - Vitality (7-day) (No Weekly Usage Limit) -->
 		</capsuled_items>
 	</item>
-	<item id="23619" name="Artisan's Goggles Pack (7-day)" name_additional="Vitality (No Weekly Usage Limit)" type="EtcItem">
+	<item id="23619" name="Artisan's Goggles Pack (7-day)" additionalName="Vitality (No Weekly Usage Limit)" type="EtcItem">
 		<!-- Wrapped Pack containing Artisan's Goggles (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
@@ -338,7 +338,7 @@
 			<item id="23616" min="1" max="1" chance="100" /> <!-- Artisan's Goggles - Vitality (7-day) (No Weekly Usage Limit) -->
 		</capsuled_items>
 	</item>
-	<item id="23620" name="Dragon Vitality Replenishing Potion" name_additional="No Weekly Usage Limit" type="EtcItem">
+	<item id="23620" name="Dragon Vitality Replenishing Potion" additionalName="No Weekly Usage Limit" type="EtcItem">
 		<!-- Replenishes a certain amount of Vitality. Cooldown is 1 min. No weekly usage limit. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -359,7 +359,7 @@
 			<skill id="22849" level="1" /> <!-- Dragon Vitality Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="23621" name="Vitality Suspending Potion (30-minute)" name_additional="No Weekly Usage Limit" type="EtcItem">
+	<item id="23621" name="Vitality Suspending Potion (30-minute)" additionalName="No Weekly Usage Limit" type="EtcItem">
 		<!-- Stops Vitality consumption and bonuses for 30 min. Cooldown is 60 min. No weekly usage limit. -->
 		<set name="icon" val="BranchSys3.lcon.g_vitality_potion_stop" />
 		<set name="weight" val="36" />
@@ -492,7 +492,7 @@
 			<skill id="22852" level="1" /> <!-- Piroscki - Replenish Vitality -->
 		</skills>
 	</item>
-	<item id="23629" name="Torun Gingerbread" name_additional="1-hour" type="EtcItem">
+	<item id="23629" name="Torun Gingerbread" additionalName="1-hour" type="EtcItem">
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -507,7 +507,7 @@
 			<skill id="22853" level="1" /> <!-- Torun Gingerbread (1-hour) -->
 		</skills>
 	</item>
-	<item id="23630" name="Torun Gingerbread" name_additional="1.5-hour" type="EtcItem">
+	<item id="23630" name="Torun Gingerbread" additionalName="1.5-hour" type="EtcItem">
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -526,7 +526,7 @@
 			<skill id="22854" level="1" /> <!-- Torun Gingerbread (1.5-hour) -->
 		</skills>
 	</item>
-	<item id="23631" name="Torun Gingerbread" name_additional="2-hour" type="EtcItem">
+	<item id="23631" name="Torun Gingerbread" additionalName="2-hour" type="EtcItem">
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -541,7 +541,7 @@
 			<skill id="22855" level="1" /> <!-- Torun Gingerbread (2-hour) -->
 		</skills>
 	</item>
-	<item id="23632" name="Torun Gingerbread" name_additional="2.5-hour" type="EtcItem">
+	<item id="23632" name="Torun Gingerbread" additionalName="2.5-hour" type="EtcItem">
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -560,7 +560,7 @@
 			<skill id="22856" level="1" /> <!-- Torun Gingerbread (2.5-hour) -->
 		</skills>
 	</item>
-	<item id="23633" name="Torun Gingerbread" name_additional="3-hour" type="EtcItem">
+	<item id="23633" name="Torun Gingerbread" additionalName="3-hour" type="EtcItem">
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -579,7 +579,7 @@
 			<skill id="22857" level="1" /> <!-- Torun Gingerbread (3-hour) -->
 		</skills>
 	</item>
-	<item id="23634" name="Torun Gingerbread" name_additional="4-hour" type="EtcItem">
+	<item id="23634" name="Torun Gingerbread" additionalName="4-hour" type="EtcItem">
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -638,7 +638,7 @@
 			<stat type="darkRes">7</stat>
 		</stats>
 	</item>
-	<item id="23637" name="Blessed Antharas' Earring" name_additional="3-day" type="Armor">
+	<item id="23637" name="Blessed Antharas' Earring" additionalName="3-day" type="Armor">
 		<!-- MP + 59, Bleed Resistance + 50%, Bleed Attack Rate + 50%, Stun/Mental Resistance + 40%, Stun/Mental Attack + 40%, CON + 3, and MEN + 3. Increases Heal Amount, Vampiric Rage Effect, Earth Resistance, Holy Resistance, P. Def., and M. Def. Decreases P. Skill MP Consumption and M. Skill MP Consumption. Can use Cancel Stun skill, and Stun Resistance + 100% temporarily. 3-day. Equipping two will only give the effect of one. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -664,7 +664,7 @@
 			<stat type="mDef">170</stat>
 		</stats>
 	</item>
-	<item id="23638" name="Blessed Antharas' Earring" name_additional="7-day" type="Armor">
+	<item id="23638" name="Blessed Antharas' Earring" additionalName="7-day" type="Armor">
 		<!-- MP + 59, Bleed Resistance + 50%, Bleed Attack Rate + 50%, Stun/Mental Resistance + 40%, Stun/Mental Attack + 40%, CON + 3, and MEN + 3. Increases Heal Amount, Vampiric Rage Effect, Earth Resistance, Holy Resistance, P. Def., and M. Def. Decreases P. Skill MP Consumption and M. Skill MP Consumption. Can use Cancel Stun skill, and Stun Resistance + 100% temporarily. 7-day. Equipping two will only give the effect of one. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -690,7 +690,7 @@
 			<stat type="mDef">170</stat>
 		</stats>
 	</item>
-	<item id="23639" name="Blessed Valakas' Necklace" name_additional="3-day" type="Armor">
+	<item id="23639" name="Blessed Valakas' Necklace" additionalName="3-day" type="Armor">
 		<!-- HP + 625, MP + 79, Sleep Resistance + 50%, Sleep Attack Rate + 50%, Fire Resistance + 30, Dark Resistance + 20, STR + 3, INT + 3, P. Skill Attack + 5%, P. Atk. + 10%, M. Atk. + 20%. Wild Magic Effect, and Damage Shield effect. Decreases P. Skill cooldown and M. Skill cooldown. Can use Cancel Hold skill, and Hold Resistance + 100% momentarily. 3-day. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -716,7 +716,7 @@
 			<stat type="mDef">226</stat>
 		</stats>
 	</item>
-	<item id="23640" name="Blessed Valakas' Necklace" name_additional="7-day" type="Armor">
+	<item id="23640" name="Blessed Valakas' Necklace" additionalName="7-day" type="Armor">
 		<!-- HP + 625, MP + 79, Sleep Resistance + 50%, Sleep Attack Rate + 50%, Fire Resistance + 30, Dark Resistance + 20, STR + 3, INT + 3, P. Skill Attack + 5%, P. Atk. + 10%, M. Atk. + 20%. Wild Magic Effect, and Damage Shield effect. Decreases P. Skill cooldown and M. Skill cooldown. Can use Cancel Hold skill, and Hold Resistance + 100% temporarily. 7-day. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -888,7 +888,7 @@
 			<skill id="22862" level="1" /> <!-- Royal Guard's Fortune Box -->
 		</skills>
 	</item>
-	<item id="23650" name="Blessed Weapon Appearance Stone (R-grade)" name_additional="1-day" type="EtcItem">
+	<item id="23650" name="Blessed Weapon Appearance Stone (R-grade)" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
 		<set name="is_stackable" val="true" />
@@ -905,7 +905,7 @@
 			<skill id="22863" level="1" /> <!-- Blessed Weapon Appearance Stone (R-grade) -->
 		</skills>
 	</item>
-	<item id="23651" name="Blessed Weapon Appearance Stone (S-grade)" name_additional="1-day" type="EtcItem">
+	<item id="23651" name="Blessed Weapon Appearance Stone (S-grade)" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_s" />
 		<set name="is_stackable" val="true" />
@@ -922,7 +922,7 @@
 			<skill id="22864" level="1" /> <!-- Blessed Weapon Appearance Stone (S-grade) -->
 		</skills>
 	</item>
-	<item id="23652" name="Blessed Weapon Appearance Stone (A-grade)" name_additional="1-day" type="EtcItem">
+	<item id="23652" name="Blessed Weapon Appearance Stone (A-grade)" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_a" />
 		<set name="is_stackable" val="true" />
@@ -939,7 +939,7 @@
 			<skill id="22865" level="1" /> <!-- Blessed Weapon Appearance Stone (A-grade) -->
 		</skills>
 	</item>
-	<item id="23653" name="Blessed Weapon Appearance Stone (B-grade)" name_additional="1-day" type="EtcItem">
+	<item id="23653" name="Blessed Weapon Appearance Stone (B-grade)" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_b" />
 		<set name="is_stackable" val="true" />
@@ -956,7 +956,7 @@
 			<skill id="22866" level="1" /> <!-- Blessed Weapon Appearance Stone (B-grade) -->
 		</skills>
 	</item>
-	<item id="23654" name="Blessed Weapon Appearance Stone (C-grade)" name_additional="1-day" type="EtcItem">
+	<item id="23654" name="Blessed Weapon Appearance Stone (C-grade)" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_c" />
 		<set name="is_stackable" val="true" />
@@ -973,7 +973,7 @@
 			<skill id="22867" level="1" /> <!-- Blessed Weapon Appearance Stone (C-grade) -->
 		</skills>
 	</item>
-	<item id="23655" name="Blessed Weapon Appearance Stone (D-grade)" name_additional="1-day" type="EtcItem">
+	<item id="23655" name="Blessed Weapon Appearance Stone (D-grade)" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
 		<set name="is_stackable" val="true" />
@@ -990,7 +990,7 @@
 			<skill id="22868" level="1" /> <!-- Blessed Weapon Appearance Stone (D-grade) -->
 		</skills>
 	</item>
-	<item id="23656" name="Blessed Weapon Appearance Stone (R-grade)" name_additional="7-day" type="EtcItem">
+	<item id="23656" name="Blessed Weapon Appearance Stone (R-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
 		<set name="is_stackable" val="true" />
@@ -1007,7 +1007,7 @@
 			<skill id="22869" level="1" /> <!-- Blessed Weapon Appearance Stone (R-grade) -->
 		</skills>
 	</item>
-	<item id="23657" name="Blessed Weapon Appearance Stone (S-grade)" name_additional="7-day" type="EtcItem">
+	<item id="23657" name="Blessed Weapon Appearance Stone (S-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_s" />
 		<set name="is_stackable" val="true" />
@@ -1024,7 +1024,7 @@
 			<skill id="22870" level="1" /> <!-- Blessed Weapon Appearance Stone (S-grade) -->
 		</skills>
 	</item>
-	<item id="23658" name="Blessed Weapon Appearance Stone (A-grade)" name_additional="7-day" type="EtcItem">
+	<item id="23658" name="Blessed Weapon Appearance Stone (A-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_a" />
 		<set name="is_stackable" val="true" />
@@ -1041,7 +1041,7 @@
 			<skill id="22871" level="1" /> <!-- Blessed Weapon Appearance Stone (A-grade) -->
 		</skills>
 	</item>
-	<item id="23659" name="Blessed Weapon Appearance Stone (B-grade)" name_additional="7-day" type="EtcItem">
+	<item id="23659" name="Blessed Weapon Appearance Stone (B-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_b" />
 		<set name="is_stackable" val="true" />
@@ -1058,7 +1058,7 @@
 			<skill id="22872" level="1" /> <!-- Blessed Weapon Appearance Stone (B-grade) -->
 		</skills>
 	</item>
-	<item id="23660" name="Blessed Weapon Appearance Stone (C-grade)" name_additional="7-day" type="EtcItem">
+	<item id="23660" name="Blessed Weapon Appearance Stone (C-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_c" />
 		<set name="is_stackable" val="true" />
@@ -1075,7 +1075,7 @@
 			<skill id="22873" level="1" /> <!-- Blessed Weapon Appearance Stone (C-grade) -->
 		</skills>
 	</item>
-	<item id="23661" name="Blessed Weapon Appearance Stone (D-grade)" name_additional="7-day" type="EtcItem">
+	<item id="23661" name="Blessed Weapon Appearance Stone (D-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
 		<set name="is_stackable" val="true" />
@@ -1092,7 +1092,7 @@
 			<skill id="22874" level="1" /> <!-- Blessed Weapon Appearance Stone (D-grade) -->
 		</skills>
 	</item>
-	<item id="23662" name="Blessed Weapon Appearance Stone (R-grade)" name_additional="30-day" type="EtcItem">
+	<item id="23662" name="Blessed Weapon Appearance Stone (R-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
 		<set name="is_stackable" val="true" />
@@ -1109,7 +1109,7 @@
 			<skill id="22875" level="1" /> <!-- Blessed Weapon Appearance Stone (R-grade) -->
 		</skills>
 	</item>
-	<item id="23663" name="Blessed Weapon Appearance Stone (S-grade)" name_additional="30-day" type="EtcItem">
+	<item id="23663" name="Blessed Weapon Appearance Stone (S-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_s" />
 		<set name="is_stackable" val="true" />
@@ -1126,7 +1126,7 @@
 			<skill id="22876" level="1" /> <!-- Blessed Weapon Appearance Stone (S-grade) -->
 		</skills>
 	</item>
-	<item id="23664" name="Blessed Weapon Appearance Stone (A-grade)" name_additional="30-day" type="EtcItem">
+	<item id="23664" name="Blessed Weapon Appearance Stone (A-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_a" />
 		<set name="is_stackable" val="true" />
@@ -1143,7 +1143,7 @@
 			<skill id="22877" level="1" /> <!-- Blessed Weapon Appearance Stone (A-grade) -->
 		</skills>
 	</item>
-	<item id="23665" name="Blessed Weapon Appearance Stone (B-grade)" name_additional="30-day" type="EtcItem">
+	<item id="23665" name="Blessed Weapon Appearance Stone (B-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_b" />
 		<set name="is_stackable" val="true" />
@@ -1160,7 +1160,7 @@
 			<skill id="22878" level="1" /> <!-- Blessed Weapon Appearance Stone (B-grade) -->
 		</skills>
 	</item>
-	<item id="23666" name="Blessed Weapon Appearance Stone (C-grade)" name_additional="30-day" type="EtcItem">
+	<item id="23666" name="Blessed Weapon Appearance Stone (C-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_c" />
 		<set name="is_stackable" val="true" />
@@ -1177,7 +1177,7 @@
 			<skill id="22879" level="1" /> <!-- Blessed Weapon Appearance Stone (C-grade) -->
 		</skills>
 	</item>
-	<item id="23667" name="Blessed Weapon Appearance Stone (D-grade)" name_additional="30-day" type="EtcItem">
+	<item id="23667" name="Blessed Weapon Appearance Stone (D-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
 		<set name="is_stackable" val="true" />
@@ -1194,7 +1194,7 @@
 			<skill id="22880" level="1" /> <!-- Blessed Weapon Appearance Stone (D-grade) -->
 		</skills>
 	</item>
-	<item id="23668" name="Blessed Armor Appearance Stone (R-grade)" name_additional="1-day" type="EtcItem">
+	<item id="23668" name="Blessed Armor Appearance Stone (R-grade)" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_r" />
 		<set name="is_stackable" val="true" />
@@ -1210,7 +1210,7 @@
 			<skill id="22881" level="1" /> <!-- Blessed Scroll: Modify Armor (R-grade) -->
 		</skills>
 	</item>
-	<item id="23669" name="Blessed Armor Appearance Stone (S-grade)" name_additional="1-day" type="EtcItem">
+	<item id="23669" name="Blessed Armor Appearance Stone (S-grade)" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_s" />
 		<set name="is_stackable" val="true" />
@@ -1226,7 +1226,7 @@
 			<skill id="22882" level="1" /> <!-- Blessed Scroll: Modify Armor (S-grade) -->
 		</skills>
 	</item>
-	<item id="23670" name="Blessed Armor Appearance Stone (A-grade)" name_additional="1-day" type="EtcItem">
+	<item id="23670" name="Blessed Armor Appearance Stone (A-grade)" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_a" />
 		<set name="is_stackable" val="true" />
@@ -1242,7 +1242,7 @@
 			<skill id="22883" level="1" /> <!-- Blessed Scroll: Modify Armor (A-grade) -->
 		</skills>
 	</item>
-	<item id="23671" name="Blessed Armor Appearance Stone (B-grade)" name_additional="1-day" type="EtcItem">
+	<item id="23671" name="Blessed Armor Appearance Stone (B-grade)" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_b" />
 		<set name="is_stackable" val="true" />
@@ -1258,7 +1258,7 @@
 			<skill id="22884" level="1" /> <!-- Blessed Scroll: Modify Armor (B-grade) -->
 		</skills>
 	</item>
-	<item id="23672" name="Blessed Armor Appearance Stone (C-grade)" name_additional="1-day" type="EtcItem">
+	<item id="23672" name="Blessed Armor Appearance Stone (C-grade)" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_c" />
 		<set name="is_stackable" val="true" />
@@ -1274,7 +1274,7 @@
 			<skill id="22885" level="1" /> <!-- Blessed Scroll: Modify Armor (C-grade) -->
 		</skills>
 	</item>
-	<item id="23673" name="Blessed Armor Appearance Stone (D-grade)" name_additional="1-day" type="EtcItem">
+	<item id="23673" name="Blessed Armor Appearance Stone (D-grade)" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_d" />
 		<set name="is_stackable" val="true" />
@@ -1290,7 +1290,7 @@
 			<skill id="22886" level="1" /> <!-- Blessed Scroll: Modify Armor (D-grade) -->
 		</skills>
 	</item>
-	<item id="23674" name="Blessed Armor Appearance Stone (R-grade)" name_additional="7-day" type="EtcItem">
+	<item id="23674" name="Blessed Armor Appearance Stone (R-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_r" />
 		<set name="is_stackable" val="true" />
@@ -1306,7 +1306,7 @@
 			<skill id="22887" level="1" /> <!-- Blessed Scroll: Modify Armor (R-grade) -->
 		</skills>
 	</item>
-	<item id="23675" name="Blessed Armor Appearance Stone (S-grade)" name_additional="7-day" type="EtcItem">
+	<item id="23675" name="Blessed Armor Appearance Stone (S-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_s" />
 		<set name="is_stackable" val="true" />
@@ -1322,7 +1322,7 @@
 			<skill id="22888" level="1" /> <!-- Blessed Scroll: Modify Armor (S-grade) -->
 		</skills>
 	</item>
-	<item id="23676" name="Blessed Armor Appearance Stone (A-grade)" name_additional="7-day" type="EtcItem">
+	<item id="23676" name="Blessed Armor Appearance Stone (A-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_a" />
 		<set name="is_stackable" val="true" />
@@ -1338,7 +1338,7 @@
 			<skill id="22889" level="1" /> <!-- Blessed Scroll: Modify Armor (A-grade) -->
 		</skills>
 	</item>
-	<item id="23677" name="Blessed Armor Appearance Stone (B-grade)" name_additional="7-day" type="EtcItem">
+	<item id="23677" name="Blessed Armor Appearance Stone (B-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_b" />
 		<set name="is_stackable" val="true" />
@@ -1354,7 +1354,7 @@
 			<skill id="22890" level="1" /> <!-- Blessed Scroll: Modify Armor (B-grade) -->
 		</skills>
 	</item>
-	<item id="23678" name="Blessed Armor Appearance Stone (C-grade)" name_additional="7-day" type="EtcItem">
+	<item id="23678" name="Blessed Armor Appearance Stone (C-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_c" />
 		<set name="is_stackable" val="true" />
@@ -1370,7 +1370,7 @@
 			<skill id="22891" level="1" /> <!-- Blessed Scroll: Modify Armor (C-grade) -->
 		</skills>
 	</item>
-	<item id="23679" name="Blessed Armor Appearance Stone (D-grade)" name_additional="7-day" type="EtcItem">
+	<item id="23679" name="Blessed Armor Appearance Stone (D-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_d" />
 		<set name="is_stackable" val="true" />
@@ -1386,7 +1386,7 @@
 			<skill id="22892" level="1" /> <!-- Blessed Scroll: Modify Armor (D-grade) -->
 		</skills>
 	</item>
-	<item id="23680" name="Blessed Armor Appearance Stone (R-grade)" name_additional="30-day" type="EtcItem">
+	<item id="23680" name="Blessed Armor Appearance Stone (R-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_r" />
 		<set name="is_stackable" val="true" />
@@ -1402,7 +1402,7 @@
 			<skill id="22893" level="1" /> <!-- Blessed Scroll: Modify Armor (R-grade) -->
 		</skills>
 	</item>
-	<item id="23681" name="Blessed Armor Appearance Stone (S-grade)" name_additional="30-day" type="EtcItem">
+	<item id="23681" name="Blessed Armor Appearance Stone (S-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_s" />
 		<set name="is_stackable" val="true" />
@@ -1418,7 +1418,7 @@
 			<skill id="22894" level="1" /> <!-- Blessed Scroll: Modify Armor (S-grade) -->
 		</skills>
 	</item>
-	<item id="23682" name="Blessed Armor Appearance Stone (A-grade)" name_additional="30-day" type="EtcItem">
+	<item id="23682" name="Blessed Armor Appearance Stone (A-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_a" />
 		<set name="is_stackable" val="true" />
@@ -1434,7 +1434,7 @@
 			<skill id="22895" level="1" /> <!-- Blessed Scroll: Modify Armor (A-grade) -->
 		</skills>
 	</item>
-	<item id="23683" name="Blessed Armor Appearance Stone (B-grade)" name_additional="30-day" type="EtcItem">
+	<item id="23683" name="Blessed Armor Appearance Stone (B-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_b" />
 		<set name="is_stackable" val="true" />
@@ -1450,7 +1450,7 @@
 			<skill id="22896" level="1" /> <!-- Blessed Scroll: Modify Armor (B-grade) -->
 		</skills>
 	</item>
-	<item id="23684" name="Blessed Armor Appearance Stone (C-grade)" name_additional="30-day" type="EtcItem">
+	<item id="23684" name="Blessed Armor Appearance Stone (C-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_c" />
 		<set name="is_stackable" val="true" />
@@ -1466,7 +1466,7 @@
 			<skill id="22897" level="1" /> <!-- Blessed Scroll: Modify Armor (C-grade) -->
 		</skills>
 	</item>
-	<item id="23685" name="Blessed Armor Appearance Stone (D-grade)" name_additional="30-day" type="EtcItem">
+	<item id="23685" name="Blessed Armor Appearance Stone (D-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_d" />
 		<set name="is_stackable" val="true" />
@@ -1542,7 +1542,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23692" name="Ninja Top" name_additional="Modified Set" type="Armor">
+	<item id="23692" name="Ninja Top" additionalName="Modified Set" type="Armor">
 		<!-- Ninja Top. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_u" />
 		<set name="is_clan_depositable" val="false" />
@@ -1557,7 +1557,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23693" name="Ninja Pants" name_additional="Modified Set" type="Armor">
+	<item id="23693" name="Ninja Pants" additionalName="Modified Set" type="Armor">
 		<!-- Ninja Pants. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_l" />
 		<set name="is_clan_depositable" val="false" />
@@ -1572,7 +1572,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23694" name="Ninja Gloves" name_additional="Modified Set" type="Armor">
+	<item id="23694" name="Ninja Gloves" additionalName="Modified Set" type="Armor">
 		<!-- Ninja Gloves. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_g" />
 		<set name="is_clan_depositable" val="false" />
@@ -1587,7 +1587,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23695" name="Ninja Shoes" name_additional="Modified Set" type="Armor">
+	<item id="23695" name="Ninja Shoes" additionalName="Modified Set" type="Armor">
 		<!-- Ninja Shoes. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_b" />
 		<set name="is_clan_depositable" val="false" />
@@ -1602,7 +1602,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23696" name="Ninja Top Appearance Stone" name_additional="Modified Set" type="EtcItem">
+	<item id="23696" name="Ninja Top Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Ninja outfit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
@@ -1618,7 +1618,7 @@
 			<skill id="22900" level="1" /> <!-- Ninja Top Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23697" name="Ninja Pants Appearance Stone" name_additional="Modified Set" type="EtcItem">
+	<item id="23697" name="Ninja Pants Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of pants to that of a Ninja outfit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
@@ -1634,7 +1634,7 @@
 			<skill id="22901" level="1" /> <!-- Ninja Pants Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23698" name="Ninja Gloves Appearance Stone" name_additional="Modified Set" type="EtcItem">
+	<item id="23698" name="Ninja Gloves Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of gloves to that of a Ninja outfit. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
@@ -1650,7 +1650,7 @@
 			<skill id="22902" level="1" /> <!-- Ninja Gloves Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23699" name="Ninja Shoes Appearance Stone" name_additional="Modified Set" type="EtcItem">
+	<item id="23699" name="Ninja Shoes Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of shoes to that of a Ninja outfit. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="20300" name="Agathion - Blue Sumo Wrestler" name_additional="Wild Magic (7-day)" type="Armor">
+	<item id="20300" name="Agathion - Blue Sumo Wrestler" additionalName="Wild Magic (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_sumo_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -46,7 +46,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20302" name="Agathion - Great Sumo Match" name_additional="Big Head / Firework (7-day)" type="Armor">
+	<item id="20302" name="Agathion - Great Sumo Match" additionalName="Big Head / Firework (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_sumo_match_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -93,7 +93,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20304" name="Agathion - Button-eyed Bear Doll" name_additional="Escape (7-day)" type="Armor">
+	<item id="20304" name="Agathion - Button-eyed Bear Doll" additionalName="Escape (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_toybear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -117,7 +117,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20305" name="Agathion - Button-eyed Bear Doll" name_additional="Resurrection (7-day)" type="Armor">
+	<item id="20305" name="Agathion - Button-eyed Bear Doll" additionalName="Resurrection (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_toybear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -141,7 +141,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20306" name="Agathion - Button-eyed Bear Doll" name_additional="Vitality (7-day)" type="Armor">
+	<item id="20306" name="Agathion - Button-eyed Bear Doll" additionalName="Vitality (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_toybear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -187,7 +187,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20308" name="Agathion - God of Fortune" name_additional="Vitality (7-day)" type="Armor">
+	<item id="20308" name="Agathion - God of Fortune" additionalName="Vitality (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_wealth_god_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -255,7 +255,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20311" name="Agathion - Wonboso" name_additional="Wind Walk (7-day)" type="Armor">
+	<item id="20311" name="Agathion - Wonboso" additionalName="Wind Walk (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_cashcow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -301,7 +301,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20313" name="Agathion - Daewoonso" name_additional="New Year's Gift (7-day)" type="Armor">
+	<item id="20313" name="Agathion - Daewoonso" additionalName="New Year's Gift (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_luckycow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -325,7 +325,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20314" name="Birthday Cake Pack" name_additional="Vitality" type="EtcItem">
+	<item id="20314" name="Birthday Cake Pack" additionalName="Vitality" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -445,7 +445,7 @@
 			<item id="20325" min="1" max="1" chance="100" /> <!-- Plastic Hair -->
 		</capsuled_items>
 	</item>
-	<item id="20320" name="Birthday Cake" name_additional="Vitality (24-hour)" type="EtcItem">
+	<item id="20320" name="Birthday Cake" additionalName="Vitality (24-hour)" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_birthday_cake_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -723,7 +723,7 @@
 			<skill id="22038" level="1" /> <!-- Blessed Beast Spiritshot -->
 		</skills>
 	</item>
-	<item id="20335" name="XP Rune III (Lv. 1-100+) 30%" name_additional="5-hour" type="EtcItem">
+	<item id="20335" name="XP Rune III (Lv. 1-100+) 30%" additionalName="5-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -745,7 +745,7 @@
 			<skill id="26046" level="3" /> <!-- XP Rune III (Lv. 1-100+) 30% -->
 		</skills>
 	</item>
-	<item id="20336" name="XP Rune III (Lv. 1-100+) 50%" name_additional="5-hour" type="EtcItem">
+	<item id="20336" name="XP Rune III (Lv. 1-100+) 50%" additionalName="5-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -767,7 +767,7 @@
 			<skill id="26046" level="5" /> <!-- XP Rune III (Lv. 1-100+) 50% -->
 		</skills>
 	</item>
-	<item id="20337" name="XP Rune III (Lv. 1-100+) 30%" name_additional="10-hour" type="EtcItem">
+	<item id="20337" name="XP Rune III (Lv. 1-100+) 30%" additionalName="10-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -789,7 +789,7 @@
 			<skill id="26046" level="3" /> <!-- XP Rune III (Lv. 1-100+) 30% -->
 		</skills>
 	</item>
-	<item id="20338" name="XP Rune III (Lv. 1-100+) 50%" name_additional="10-hour" type="EtcItem">
+	<item id="20338" name="XP Rune III (Lv. 1-100+) 50%" additionalName="10-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -811,7 +811,7 @@
 			<skill id="26046" level="5" /> <!-- XP Rune III (Lv. 1-100+) 50% -->
 		</skills>
 	</item>
-	<item id="20339" name="XP Rune III (Lv. 1-100+) 30%" name_additional="7-day" type="EtcItem">
+	<item id="20339" name="XP Rune III (Lv. 1-100+) 30%" additionalName="7-day" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -833,7 +833,7 @@
 			<skill id="26046" level="3" /> <!-- XP Rune III (Lv. 1-100+) 30% -->
 		</skills>
 	</item>
-	<item id="20340" name="XP Rune III (Lv. 1-100+) 50%" name_additional="7-day" type="EtcItem">
+	<item id="20340" name="XP Rune III (Lv. 1-100+) 50%" additionalName="7-day" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -855,7 +855,7 @@
 			<skill id="26046" level="5" /> <!-- XP Rune III (Lv. 1-100+) 50% -->
 		</skills>
 	</item>
-	<item id="20341" name="SP Rune 30%" name_additional="5-hour" type="EtcItem">
+	<item id="20341" name="SP Rune 30%" additionalName="5-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -877,7 +877,7 @@
 			<skill id="26047" level="3" /> <!-- SP Rune 30% -->
 		</skills>
 	</item>
-	<item id="20342" name="SP Rune 50%" name_additional="5-hour" type="EtcItem">
+	<item id="20342" name="SP Rune 50%" additionalName="5-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -899,7 +899,7 @@
 			<skill id="26047" level="5" /> <!-- SP Rune 50% -->
 		</skills>
 	</item>
-	<item id="20343" name="SP Rune 30%" name_additional="10-hour" type="EtcItem">
+	<item id="20343" name="SP Rune 30%" additionalName="10-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -921,7 +921,7 @@
 			<skill id="26047" level="3" /> <!-- SP Rune 30% -->
 		</skills>
 	</item>
-	<item id="20344" name="SP Rune 50%" name_additional="10-hour" type="EtcItem">
+	<item id="20344" name="SP Rune 50%" additionalName="10-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -943,7 +943,7 @@
 			<skill id="26047" level="5" /> <!-- SP Rune 50% -->
 		</skills>
 	</item>
-	<item id="20345" name="SP Rune 30%" name_additional="7-day" type="EtcItem">
+	<item id="20345" name="SP Rune 30%" additionalName="7-day" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -965,7 +965,7 @@
 			<skill id="26047" level="3" /> <!-- SP Rune 30% -->
 		</skills>
 	</item>
-	<item id="20346" name="SP Rune 50%" name_additional="7-day" type="EtcItem">
+	<item id="20346" name="SP Rune 50%" additionalName="7-day" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -987,7 +987,7 @@
 			<skill id="26047" level="5" /> <!-- SP Rune 50% -->
 		</skills>
 	</item>
-	<item id="20347" name="Rune of Crystal (Lv. 3)" name_additional="5-hour" type="EtcItem">
+	<item id="20347" name="Rune of Crystal (Lv. 3)" additionalName="5-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -1009,7 +1009,7 @@
 			<skill id="26048" level="3" /> <!-- Rune of Crystal (Lv. 3) -->
 		</skills>
 	</item>
-	<item id="20348" name="Rune of Crystal (Lv. 5)" name_additional="5-hour" type="EtcItem">
+	<item id="20348" name="Rune of Crystal (Lv. 5)" additionalName="5-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -1031,7 +1031,7 @@
 			<skill id="26048" level="5" /> <!-- Rune of Crystal (Lv. 5) -->
 		</skills>
 	</item>
-	<item id="20349" name="Rune of Crystal (Lv. 3)" name_additional="10-hour" type="EtcItem">
+	<item id="20349" name="Rune of Crystal (Lv. 3)" additionalName="10-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -1053,7 +1053,7 @@
 			<skill id="26048" level="3" /> <!-- Rune of Crystal (Lv. 3) -->
 		</skills>
 	</item>
-	<item id="20350" name="Rune of Crystal (Lv. 5)" name_additional="10-hour" type="EtcItem">
+	<item id="20350" name="Rune of Crystal (Lv. 5)" additionalName="10-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -1075,7 +1075,7 @@
 			<skill id="26048" level="5" /> <!-- Rune of Crystal (Lv. 5) -->
 		</skills>
 	</item>
-	<item id="20351" name="Rune of Crystal (Lv. 3)" name_additional="7-day" type="EtcItem">
+	<item id="20351" name="Rune of Crystal (Lv. 3)" additionalName="7-day" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -1097,7 +1097,7 @@
 			<skill id="26048" level="3" /> <!-- Rune of Crystal (Lv. 3) -->
 		</skills>
 	</item>
-	<item id="20352" name="Rune of Crystal (Lv. 5)" name_additional="7-day" type="EtcItem">
+	<item id="20352" name="Rune of Crystal (Lv. 5)" additionalName="7-day" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -2195,7 +2195,7 @@
 			<item id="10649" min="3" max="3" chance="100" /> <!-- Feather of Blessing -->
 		</capsuled_items>
 	</item>
-	<item id="20399" name="Laborer Hat" name_additional="Blessed Body (7-day)" type="Armor">
+	<item id="20399" name="Laborer Hat" additionalName="Blessed Body (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_people_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />

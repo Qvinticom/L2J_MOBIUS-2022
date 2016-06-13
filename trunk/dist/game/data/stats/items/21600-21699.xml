@@ -636,7 +636,7 @@
 			<item id="21088" min="1" max="1" chance="100" /> <!-- Mount - Jet Bike -->
 		</capsuled_items>
 	</item>
-	<item id="21645" name="Napoleon Hat Pack (7-day)" name_additional="Mana Regeneration" type="EtcItem">
+	<item id="21645" name="Napoleon Hat Pack (7-day)" additionalName="Mana Regeneration" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -664,7 +664,7 @@
 			<item id="20322" min="1" max="1" chance="100" /> <!-- Napoleon Hat -->
 		</capsuled_items>
 	</item>
-	<item id="21647" name="Horn Hairband Pack (7-day)" name_additional="Reflect Damage" type="EtcItem">
+	<item id="21647" name="Horn Hairband Pack (7-day)" additionalName="Reflect Damage" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -692,7 +692,7 @@
 			<item id="20323" min="1" max="1" chance="100" /> <!-- Horn Hairband -->
 		</capsuled_items>
 	</item>
-	<item id="21649" name="Black Gem Mask Pack (7-day)" name_additional="Vitality" type="EtcItem">
+	<item id="21649" name="Black Gem Mask Pack (7-day)" additionalName="Vitality" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -720,7 +720,7 @@
 			<item id="20324" min="1" max="1" chance="100" /> <!-- Black Gem Mask -->
 		</capsuled_items>
 	</item>
-	<item id="21651" name="Plastic Hair Pack (7-day)" name_additional="Blessed Escape" type="EtcItem">
+	<item id="21651" name="Plastic Hair Pack (7-day)" additionalName="Blessed Escape" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -748,7 +748,7 @@
 			<item id="20325" min="1" max="1" chance="100" /> <!-- Plastic Hair -->
 		</capsuled_items>
 	</item>
-	<item id="21653" name="Daisy Hairpin Pack (7-day)" name_additional="Dark Resistance" type="EtcItem">
+	<item id="21653" name="Daisy Hairpin Pack (7-day)" additionalName="Dark Resistance" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -776,7 +776,7 @@
 			<item id="22156" min="1" max="1" chance="100" /> <!-- Daisy Hairpin -->
 		</capsuled_items>
 	</item>
-	<item id="21655" name="Forget-me-not Hairpin Pack (7-day)" name_additional="Wind Walk" type="EtcItem">
+	<item id="21655" name="Forget-me-not Hairpin Pack (7-day)" additionalName="Wind Walk" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -804,7 +804,7 @@
 			<item id="22157" min="1" max="1" chance="100" /> <!-- Forget-me-not Hairpin -->
 		</capsuled_items>
 	</item>
-	<item id="21657" name="Outlaw's Eyepatch Pack (7-day)" name_additional="Death Whisper" type="EtcItem">
+	<item id="21657" name="Outlaw's Eyepatch Pack (7-day)" additionalName="Death Whisper" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -832,7 +832,7 @@
 			<item id="22158" min="1" max="1" chance="100" /> <!-- Outlaw's Eyepatch -->
 		</capsuled_items>
 	</item>
-	<item id="21659" name="Pirate's Eyepatch Pack (7-day)" name_additional="Agility" type="EtcItem">
+	<item id="21659" name="Pirate's Eyepatch Pack (7-day)" additionalName="Agility" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -860,7 +860,7 @@
 			<item id="22159" min="1" max="1" chance="100" /> <!-- Pirate's Eyepatch -->
 		</capsuled_items>
 	</item>
-	<item id="21661" name="Monocle Pack (7-day)" name_additional="Wild Magic" type="EtcItem">
+	<item id="21661" name="Monocle Pack (7-day)" additionalName="Wild Magic" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -888,7 +888,7 @@
 			<item id="22160" min="1" max="1" chance="100" /> <!-- Monocle -->
 		</capsuled_items>
 	</item>
-	<item id="21663" name="Red Mask of Victory Pack (7-day)" name_additional="Mana Regeneration" type="EtcItem">
+	<item id="21663" name="Red Mask of Victory Pack (7-day)" additionalName="Mana Regeneration" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -916,7 +916,7 @@
 			<item id="22161" min="1" max="1" chance="100" /> <!-- Red Mask of Victory -->
 		</capsuled_items>
 	</item>
-	<item id="21665" name="Red Horn of Victory Pack (7-day)" name_additional="Reflect Damage" type="EtcItem">
+	<item id="21665" name="Red Horn of Victory Pack (7-day)" additionalName="Reflect Damage" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -944,7 +944,7 @@
 			<item id="22162" min="1" max="1" chance="100" /> <!-- Red Horn of Victory -->
 		</capsuled_items>
 	</item>
-	<item id="21667" name="Party Mask Pack (7-day)" name_additional="Greater Heal" type="EtcItem">
+	<item id="21667" name="Party Mask Pack (7-day)" additionalName="Greater Heal" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -972,7 +972,7 @@
 			<item id="22163" min="1" max="1" chance="100" /> <!-- Party Mask -->
 		</capsuled_items>
 	</item>
-	<item id="21669" name="Red Party Mask Pack (7-day)" name_additional="Dark Resistance" type="EtcItem">
+	<item id="21669" name="Red Party Mask Pack (7-day)" additionalName="Dark Resistance" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1000,7 +1000,7 @@
 			<item id="22164" min="1" max="1" chance="100" /> <!-- Red Party Mask -->
 		</capsuled_items>
 	</item>
-	<item id="21671" name="Cat Ears Pack (7-day)" name_additional="Wind Walk" type="EtcItem">
+	<item id="21671" name="Cat Ears Pack (7-day)" additionalName="Wind Walk" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1028,7 +1028,7 @@
 			<item id="22165" min="1" max="1" chance="100" /> <!-- Cat Ears -->
 		</capsuled_items>
 	</item>
-	<item id="21673" name="Lady's Hairpin Pack (7-day)" name_additional="Death Whisper" type="EtcItem">
+	<item id="21673" name="Lady's Hairpin Pack (7-day)" additionalName="Death Whisper" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1056,7 +1056,7 @@
 			<item id="22166" min="1" max="1" chance="100" /> <!-- Lady's Hairpin -->
 		</capsuled_items>
 	</item>
-	<item id="21675" name="Raccoon Ears Pack (7-day)" name_additional="Agility" type="EtcItem">
+	<item id="21675" name="Raccoon Ears Pack (7-day)" additionalName="Agility" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1084,7 +1084,7 @@
 			<item id="22167" min="1" max="1" chance="100" /> <!-- Raccoon Ears -->
 		</capsuled_items>
 	</item>
-	<item id="21677" name="Rabbit Ears Pack (7-day)" name_additional="Wild Magic" type="EtcItem">
+	<item id="21677" name="Rabbit Ears Pack (7-day)" additionalName="Wild Magic" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1112,7 +1112,7 @@
 			<item id="22168" min="1" max="1" chance="100" /> <!-- Rabbit Ears -->
 		</capsuled_items>
 	</item>
-	<item id="21679" name="Little Angel Wings Pack (7-day)" name_additional="Mana Regeneration" type="EtcItem">
+	<item id="21679" name="Little Angel Wings Pack (7-day)" additionalName="Mana Regeneration" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1140,7 +1140,7 @@
 			<item id="22169" min="1" max="1" chance="100" /> <!-- Little Angel Wings -->
 		</capsuled_items>
 	</item>
-	<item id="21681" name="Fairy Antennae Pack (7-day)" name_additional="Reflect Damage" type="EtcItem">
+	<item id="21681" name="Fairy Antennae Pack (7-day)" additionalName="Reflect Damage" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1168,7 +1168,7 @@
 			<item id="22170" min="1" max="1" chance="100" /> <!-- Fairy Antennae -->
 		</capsuled_items>
 	</item>
-	<item id="21683" name="Chapeau Pack (7-day)" name_additional="Greater Heal" type="EtcItem">
+	<item id="21683" name="Chapeau Pack (7-day)" additionalName="Greater Heal" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1196,7 +1196,7 @@
 			<item id="22171" min="1" max="1" chance="100" /> <!-- Chapeau -->
 		</capsuled_items>
 	</item>
-	<item id="21685" name="Artisan's Goggles Pack (7-day)" name_additional="Vitality" type="EtcItem">
+	<item id="21685" name="Artisan's Goggles Pack (7-day)" additionalName="Vitality" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

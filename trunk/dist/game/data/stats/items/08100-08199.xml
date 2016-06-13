@@ -32,7 +32,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8102" name="Pa'agrian Sword" name_additional="Focus" type="Weapon">
+	<item id="8102" name="Pa'agrian Sword" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -63,7 +63,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8103" name="Pa'agrian Sword" name_additional="Health" type="Weapon">
+	<item id="8103" name="Pa'agrian Sword" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -94,7 +94,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8104" name="Pa'agrian Sword" name_additional="Critical Drain" type="Weapon">
+	<item id="8104" name="Pa'agrian Sword" additionalName="Critical Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -125,7 +125,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8105" name="Guardian's Sword" name_additional="Critical Drain" type="Weapon">
+	<item id="8105" name="Guardian's Sword" additionalName="Critical Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -156,7 +156,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8106" name="Guardian's Sword" name_additional="Health" type="Weapon">
+	<item id="8106" name="Guardian's Sword" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -187,7 +187,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8107" name="Guardian's Sword" name_additional="Critical Bleed" type="Weapon">
+	<item id="8107" name="Guardian's Sword" additionalName="Critical Bleed" type="Weapon">
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -218,7 +218,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8108" name="Infernal Master" name_additional="Haste" type="Weapon">
+	<item id="8108" name="Infernal Master" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -249,7 +249,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8109" name="Infernal Master" name_additional="Critical Damage" type="Weapon">
+	<item id="8109" name="Infernal Master" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -280,7 +280,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8110" name="Infernal Master" name_additional="Focus" type="Weapon">
+	<item id="8110" name="Infernal Master" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -311,7 +311,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8111" name="Mysterious Sword" name_additional="Acumen" type="Weapon">
+	<item id="8111" name="Mysterious Sword" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -342,7 +342,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8112" name="Mysterious Sword" name_additional="M. Atk." type="Weapon">
+	<item id="8112" name="Mysterious Sword" additionalName="M. Atk." type="Weapon">
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -373,7 +373,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8113" name="Mysterious Sword" name_additional="Magic Weakness" type="Weapon">
+	<item id="8113" name="Mysterious Sword" additionalName="Magic Weakness" type="Weapon">
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -404,7 +404,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8114" name="Ecliptic Sword" name_additional="Empower" type="Weapon">
+	<item id="8114" name="Ecliptic Sword" additionalName="Empower" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -435,7 +435,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8115" name="Ecliptic Sword" name_additional="M. Atk." type="Weapon">
+	<item id="8115" name="Ecliptic Sword" additionalName="M. Atk." type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -466,7 +466,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8116" name="Ecliptic Sword" name_additional="Magic Silence" type="Weapon">
+	<item id="8116" name="Ecliptic Sword" additionalName="Magic Silence" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -497,7 +497,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8117" name="Wizard's Tear" name_additional="Acumen" type="Weapon">
+	<item id="8117" name="Wizard's Tear" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -528,7 +528,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8118" name="Wizard's Tear" name_additional="M. Atk." type="Weapon">
+	<item id="8118" name="Wizard's Tear" additionalName="M. Atk." type="Weapon">
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -559,7 +559,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8119" name="Wizard's Tear" name_additional="Conversion" type="Weapon">
+	<item id="8119" name="Wizard's Tear" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -590,7 +590,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8120" name="Dwarven Hammer" name_additional="Health" type="Weapon">
+	<item id="8120" name="Dwarven Hammer" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dwarven_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -621,7 +621,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8121" name="Dwarven Hammer" name_additional="Anger" type="Weapon">
+	<item id="8121" name="Dwarven Hammer" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_dwarven_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -652,7 +652,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8122" name="Dwarven Hammer" name_additional="Critical Bleed" type="Weapon">
+	<item id="8122" name="Dwarven Hammer" additionalName="Critical Bleed" type="Weapon">
 		<set name="icon" val="icon.weapon_dwarven_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -683,7 +683,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8123" name="Karik Horn" name_additional="Focus" type="Weapon">
+	<item id="8123" name="Karik Horn" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -714,7 +714,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8124" name="Karik Horn" name_additional="Haste" type="Weapon">
+	<item id="8124" name="Karik Horn" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -745,7 +745,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8125" name="Karik Horn" name_additional="Critical Drain" type="Weapon">
+	<item id="8125" name="Karik Horn" additionalName="Critical Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -776,7 +776,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8126" name="Destroyer Hammer" name_additional="Health" type="Weapon">
+	<item id="8126" name="Destroyer Hammer" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -807,7 +807,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8127" name="Destroyer Hammer" name_additional="Haste" type="Weapon">
+	<item id="8127" name="Destroyer Hammer" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -838,7 +838,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8128" name="Destroyer Hammer" name_additional="Critical Drain" type="Weapon">
+	<item id="8128" name="Destroyer Hammer" additionalName="Critical Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -870,7 +870,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8129" name="Ice Storm Hammer" name_additional="Focus" type="Weapon">
+	<item id="8129" name="Ice Storm Hammer" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -901,7 +901,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8130" name="Ice Storm Hammer" name_additional="Anger" type="Weapon">
+	<item id="8130" name="Ice Storm Hammer" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -932,7 +932,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8131" name="Ice Storm Hammer" name_additional="Critical Bleed" type="Weapon">
+	<item id="8131" name="Ice Storm Hammer" additionalName="Critical Bleed" type="Weapon">
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -963,7 +963,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8132" name="Star Buster" name_additional="Health" type="Weapon">
+	<item id="8132" name="Star Buster" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -994,7 +994,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8133" name="Star Buster" name_additional="Haste" type="Weapon">
+	<item id="8133" name="Star Buster" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1025,7 +1025,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8134" name="Star Buster" name_additional="Rsk. Focus" type="Weapon">
+	<item id="8134" name="Star Buster" additionalName="Rsk. Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1056,7 +1056,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8135" name="Doom Crusher" name_additional="Health" type="Weapon">
+	<item id="8135" name="Doom Crusher" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1087,7 +1087,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8136" name="Doom Crusher" name_additional="Anger" type="Weapon">
+	<item id="8136" name="Doom Crusher" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1118,7 +1118,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8137" name="Doom Crusher" name_additional="Rsk. Haste" type="Weapon">
+	<item id="8137" name="Doom Crusher" additionalName="Rsk. Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1149,7 +1149,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8138" name="Ecliptic Axe" name_additional="Conversion" type="Weapon">
+	<item id="8138" name="Ecliptic Axe" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1181,7 +1181,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8139" name="Ecliptic Axe" name_additional="M. Atk." type="Weapon">
+	<item id="8139" name="Ecliptic Axe" additionalName="M. Atk." type="Weapon">
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1213,7 +1213,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8140" name="Ecliptic Axe" name_additional="Magic Hold" type="Weapon">
+	<item id="8140" name="Ecliptic Axe" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1245,7 +1245,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8141" name="Spell Breaker" name_additional="Acumen" type="Weapon">
+	<item id="8141" name="Spell Breaker" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1277,7 +1277,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8142" name="Spell Breaker" name_additional="Magic Mental Shield" type="Weapon">
+	<item id="8142" name="Spell Breaker" additionalName="Magic Mental Shield" type="Weapon">
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1309,7 +1309,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8143" name="Spell Breaker" name_additional="Magic Hold" type="Weapon">
+	<item id="8143" name="Spell Breaker" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1341,7 +1341,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8144" name="Kaim Vanul's Bones" name_additional="Mana Up" type="Weapon">
+	<item id="8144" name="Kaim Vanul's Bones" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1373,7 +1373,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8145" name="Kaim Vanul's Bones" name_additional="Magic Silence" type="Weapon">
+	<item id="8145" name="Kaim Vanul's Bones" additionalName="Magic Silence" type="Weapon">
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1405,7 +1405,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8146" name="Kaim Vanul's Bones" name_additional="Conversion" type="Weapon">
+	<item id="8146" name="Kaim Vanul's Bones" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1437,7 +1437,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8147" name="Spiritual Eye" name_additional="Mana Up" type="Weapon">
+	<item id="8147" name="Spiritual Eye" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1469,7 +1469,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8148" name="Spiritual Eye" name_additional="Magic Poison" type="Weapon">
+	<item id="8148" name="Spiritual Eye" additionalName="Magic Poison" type="Weapon">
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1502,7 +1502,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8149" name="Spiritual Eye" name_additional="Acumen" type="Weapon">
+	<item id="8149" name="Spiritual Eye" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1534,7 +1534,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8150" name="Flaming Dragon Skull" name_additional="Acumen" type="Weapon">
+	<item id="8150" name="Flaming Dragon Skull" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1566,7 +1566,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8151" name="Flaming Dragon Skull" name_additional="M. Atk." type="Weapon">
+	<item id="8151" name="Flaming Dragon Skull" additionalName="M. Atk." type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1598,7 +1598,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8152" name="Flaming Dragon Skull" name_additional="Magic Silence" type="Weapon">
+	<item id="8152" name="Flaming Dragon Skull" additionalName="Magic Silence" type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

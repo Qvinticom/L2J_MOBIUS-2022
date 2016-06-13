@@ -148,7 +148,7 @@
 			<stat type="pDef">50</stat>
 		</stats>
 	</item>
-	<item id="30310" name="Abelius Cloak" name_additional="Sigel Knight" type="Armor">
+	<item id="30310" name="Abelius Cloak" additionalName="Sigel Knight" type="Armor">
 		<!-- Cloak that can only be worn by someone who has received the strength of the ancient giant Abelius. M. Def. + 40. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -173,7 +173,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="30311" name="Sapyros Cloak" name_additional="Tyrr Warrior" type="Armor">
+	<item id="30311" name="Sapyros Cloak" additionalName="Tyrr Warrior" type="Armor">
 		<!-- Cloak that can only be worn by someone who has received the strength of the ancient giant Sapyros. M. Def. + 40. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -198,7 +198,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="30312" name="Ashagen Cloak" name_additional="Othell Rogue" type="Armor">
+	<item id="30312" name="Ashagen Cloak" additionalName="Othell Rogue" type="Armor">
 		<!-- Cloak that can only be worn by someone who has received the strength of the ancient giant Ashagen. M. Def. + 40. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -223,7 +223,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="30313" name="Cranigg Cloak" name_additional="Yul Archer" type="Armor">
+	<item id="30313" name="Cranigg Cloak" additionalName="Yul Archer" type="Armor">
 		<!-- Cloak that can only be worn by someone who has received the strength of the ancient giant Cranigg. M. Def. + 40. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -248,7 +248,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="30314" name="Soltkreig Cloak" name_additional="Feoh Wizard" type="Armor">
+	<item id="30314" name="Soltkreig Cloak" additionalName="Feoh Wizard" type="Armor">
 		<!-- Cloak that can only be worn by someone who has received the strength of the ancient giant Soltkreig. M. Def. + 40. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -273,7 +273,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="30315" name="Naviarope Cloak" name_additional="Wynn Summoner" type="Armor">
+	<item id="30315" name="Naviarope Cloak" additionalName="Wynn Summoner" type="Armor">
 		<!-- Cloak that can only be worn by someone who has received the strength of the ancient giant Naviarope. M. Def. + 40. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -298,7 +298,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="30316" name="Leister Cloak" name_additional="Iss Enchanter" type="Armor">
+	<item id="30316" name="Leister Cloak" additionalName="Iss Enchanter" type="Armor">
 		<!-- Cloak that can only be worn by someone who has received the strength of the ancient giant Leister. M. Def. + 40. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -323,7 +323,7 @@
 			<stat type="mDef">40</stat>
 		</stats>
 	</item>
-	<item id="30317" name="Lakcis Cloak" name_additional="Aeore Healer" type="Armor">
+	<item id="30317" name="Lakcis Cloak" additionalName="Aeore Healer" type="Armor">
 		<!-- Cloak that can only be worn by someone who has received the strength of the ancient giant Lakcis. M. Def. + 40. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1549,7 +1549,7 @@
 			<skill id="12185" level="1" /> <!-- Magic Filled Box -->
 		</skills>
 	</item>
-	<item id="30375" name="Infinite Orichalcum Quiver" name_additional="Additional Hit" type="EtcItem">
+	<item id="30375" name="Infinite Orichalcum Quiver" additionalName="Additional Hit" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="ARROW" />
@@ -1561,7 +1561,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 	</item>
-	<item id="30376" name="Infinite Orichalcum Quiver" name_additional="Critical Hit" type="EtcItem">
+	<item id="30376" name="Infinite Orichalcum Quiver" additionalName="Critical Hit" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="ARROW" />
@@ -1573,7 +1573,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 	</item>
-	<item id="30377" name="Infinite Orichalcum Quiver" name_additional="Bleed Hit" type="EtcItem">
+	<item id="30377" name="Infinite Orichalcum Quiver" additionalName="Bleed Hit" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="ARROW" />
@@ -1585,7 +1585,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 	</item>
-	<item id="30378" name="Infinite Orichalcum Bolt Container" name_additional="Additional Hit" type="EtcItem">
+	<item id="30378" name="Infinite Orichalcum Bolt Container" additionalName="Additional Hit" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="BOLT" />
@@ -1597,7 +1597,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 	</item>
-	<item id="30379" name="Infinite Orichalcum Bolt Container" name_additional="Critical Hit" type="EtcItem">
+	<item id="30379" name="Infinite Orichalcum Bolt Container" additionalName="Critical Hit" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="BOLT" />
@@ -1609,7 +1609,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 	</item>
-	<item id="30380" name="Infinite Orichalcum Bolt Container" name_additional="Bleed Hit" type="EtcItem">
+	<item id="30380" name="Infinite Orichalcum Bolt Container" additionalName="Bleed Hit" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="BOLT" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="10500" name="Mithril Shirt" name_additional="HP" type="Armor">
+	<item id="10500" name="Mithril Shirt" additionalName="HP" type="Armor">
 		<set name="icon" val="icon.etc_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -20,7 +20,7 @@
 			<stat type="pDef">28</stat>
 		</stats>
 	</item>
-	<item id="10501" name="Mithril Shirt" name_additional="MP" type="Armor">
+	<item id="10501" name="Mithril Shirt" additionalName="MP" type="Armor">
 		<set name="icon" val="icon.etc_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -40,7 +40,7 @@
 			<stat type="pDef">28</stat>
 		</stats>
 	</item>
-	<item id="10502" name="Mithril Shirt" name_additional="CP" type="Armor">
+	<item id="10502" name="Mithril Shirt" additionalName="CP" type="Armor">
 		<set name="icon" val="icon.etc_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -60,7 +60,7 @@
 			<stat type="pDef">28</stat>
 		</stats>
 	</item>
-	<item id="10503" name="Striped Silk Shirt" name_additional="HP" type="Armor">
+	<item id="10503" name="Striped Silk Shirt" additionalName="HP" type="Armor">
 		<set name="icon" val="icon.etc_stripe_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -80,7 +80,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="10504" name="Striped Silk Shirt" name_additional="MP" type="Armor">
+	<item id="10504" name="Striped Silk Shirt" additionalName="MP" type="Armor">
 		<set name="icon" val="icon.etc_stripe_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -100,7 +100,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="10505" name="Striped Silk Shirt" name_additional="CP" type="Armor">
+	<item id="10505" name="Striped Silk Shirt" additionalName="CP" type="Armor">
 		<set name="icon" val="icon.etc_stripe_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -120,7 +120,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="10506" name="Thin Striped Leather Shirt" name_additional="HP" type="Armor">
+	<item id="10506" name="Thin Striped Leather Shirt" additionalName="HP" type="Armor">
 		<set name="icon" val="icon.etc_stripe_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -140,7 +140,7 @@
 			<stat type="pDef">22</stat>
 		</stats>
 	</item>
-	<item id="10507" name="Thin Striped Leather Shirt" name_additional="MP" type="Armor">
+	<item id="10507" name="Thin Striped Leather Shirt" additionalName="MP" type="Armor">
 		<set name="icon" val="icon.etc_stripe_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -160,7 +160,7 @@
 			<stat type="pDef">22</stat>
 		</stats>
 	</item>
-	<item id="10508" name="Thin Striped Leather Shirt" name_additional="CP" type="Armor">
+	<item id="10508" name="Thin Striped Leather Shirt" additionalName="CP" type="Armor">
 		<set name="icon" val="icon.etc_stripe_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -180,7 +180,7 @@
 			<stat type="pDef">22</stat>
 		</stats>
 	</item>
-	<item id="10509" name="Striped Scale Shirt" name_additional="HP" type="Armor">
+	<item id="10509" name="Striped Scale Shirt" additionalName="HP" type="Armor">
 		<set name="icon" val="icon.etc_stripe_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -200,7 +200,7 @@
 			<stat type="pDef">26</stat>
 		</stats>
 	</item>
-	<item id="10510" name="Striped Scale Shirt" name_additional="MP" type="Armor">
+	<item id="10510" name="Striped Scale Shirt" additionalName="MP" type="Armor">
 		<set name="icon" val="icon.etc_stripe_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -220,7 +220,7 @@
 			<stat type="pDef">26</stat>
 		</stats>
 	</item>
-	<item id="10511" name="Striped Scale Shirt" name_additional="CP" type="Armor">
+	<item id="10511" name="Striped Scale Shirt" additionalName="CP" type="Armor">
 		<set name="icon" val="icon.etc_stripe_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -240,7 +240,7 @@
 			<stat type="pDef">26</stat>
 		</stats>
 	</item>
-	<item id="10512" name="Striped Mithril Shirt" name_additional="HP" type="Armor">
+	<item id="10512" name="Striped Mithril Shirt" additionalName="HP" type="Armor">
 		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -260,7 +260,7 @@
 			<stat type="pDef">30</stat>
 		</stats>
 	</item>
-	<item id="10513" name="Striped Mithril Shirt" name_additional="MP" type="Armor">
+	<item id="10513" name="Striped Mithril Shirt" additionalName="MP" type="Armor">
 		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -280,7 +280,7 @@
 			<stat type="pDef">30</stat>
 		</stats>
 	</item>
-	<item id="10514" name="Striped Mithril Shirt" name_additional="CP" type="Armor">
+	<item id="10514" name="Striped Mithril Shirt" additionalName="CP" type="Armor">
 		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -533,7 +533,7 @@
 			<skill id="2333" level="1" /> <!-- Holy Stone -->
 		</skills>
 	</item>
-	<item id="10527" name="Dynasty Staff" name_additional="Mana Up" type="Weapon">
+	<item id="10527" name="Dynasty Staff" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -566,7 +566,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10528" name="Dynasty Staff" name_additional="Conversion" type="Weapon">
+	<item id="10528" name="Dynasty Staff" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -599,7 +599,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10529" name="Dynasty Staff" name_additional="Acumen" type="Weapon">
+	<item id="10529" name="Dynasty Staff" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -632,7 +632,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10530" name="Dynasty Crusher" name_additional="Anger" type="Weapon">
+	<item id="10530" name="Dynasty Crusher" additionalName="Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -664,7 +664,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10531" name="Dynasty Crusher" name_additional="Health" type="Weapon">
+	<item id="10531" name="Dynasty Crusher" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -696,7 +696,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10532" name="Dynasty Crusher" name_additional="Rsk. Focus" type="Weapon">
+	<item id="10532" name="Dynasty Crusher" additionalName="Rsk. Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

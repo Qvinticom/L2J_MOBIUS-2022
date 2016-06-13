@@ -983,7 +983,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30446" name="Bound Homunkulus' Sword" name_additional="Acumen" type="Weapon">
+	<item id="30446" name="Bound Homunkulus' Sword" additionalName="Acumen" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1018,7 +1018,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30447" name="Bound Homunkulus' Sword" name_additional="Conversion" type="Weapon">
+	<item id="30447" name="Bound Homunkulus' Sword" additionalName="Conversion" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Max MP by 60% and decreases Max HP by 40%. -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1053,7 +1053,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30448" name="Bound Homunkulus' Sword" name_additional="Magic Paralyze" type="Weapon">
+	<item id="30448" name="Bound Homunkulus' Sword" additionalName="Magic Paralyze" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 5% chance of casting Paralysis on the target during magic use. -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1155,7 +1155,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30451" name="Bound Sage's Staff" name_additional="Magic Hold" type="Weapon">
+	<item id="30451" name="Bound Sage's Staff" additionalName="Magic Hold" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 6% chance of casting Dryad Root on the target during magic use. -->
 		<set name="icon" val="icon.weapon_sages_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1191,7 +1191,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30452" name="Bound Sage's Staff" name_additional="Magic Poison" type="Weapon">
+	<item id="30452" name="Bound Sage's Staff" additionalName="Magic Poison" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 7% chance of casting Curse Poison on the target during magic use. -->
 		<set name="icon" val="icon.weapon_sages_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1227,7 +1227,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30453" name="Bound Sage's Staff" name_additional="Magic Weakness" type="Weapon">
+	<item id="30453" name="Bound Sage's Staff" additionalName="Magic Weakness" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 7% chance of casting Curse Weakness on the target during magic use. -->
 		<set name="icon" val="icon.weapon_sages_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1536,7 +1536,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30464" name="Bound Twilight Knife" name_additional="Magic Regeneration" type="Weapon">
+	<item id="30464" name="Bound Twilight Knife" additionalName="Magic Regeneration" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nHas a 30% chance of casting Regeneration on the target during magic use. -->
 		<set name="icon" val="icon.weapon_hell_knife_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1572,7 +1572,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30465" name="Bound Twilight Knife" name_additional="Magic Mental Shield" type="Weapon">
+	<item id="30465" name="Bound Twilight Knife" additionalName="Magic Mental Shield" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nHas a 50% chance of casting Mental Shield on the target during magic use. -->
 		<set name="icon" val="icon.weapon_hell_knife_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1608,7 +1608,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30466" name="Bound Twilight Knife" name_additional="Magic Weakness" type="Weapon">
+	<item id="30466" name="Bound Twilight Knife" additionalName="Magic Weakness" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nHas a 7% chance of casting Curse Weakness on the target during magic use. -->
 		<set name="icon" val="icon.weapon_hell_knife_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1678,7 +1678,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="30468" name="Bound Hell Hound" name_additional="Guidance" type="Weapon">
+	<item id="30468" name="Bound Hell Hound" additionalName="Guidance" type="Weapon">
 		<!-- Bound Item.\nKamael-exclusive Weapon: Bow of Peril Conversion\n(Soul Crystal Enhancement)\nIncreases Accuracy by 3. -->
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1715,7 +1715,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="30469" name="Bound Hell Hound" name_additional="Quick Recovery" type="Weapon">
+	<item id="30469" name="Bound Hell Hound" additionalName="Quick Recovery" type="Weapon">
 		<!-- Bound Item.\nKamael-exclusive Weapon: Bow of Peril Conversion\n(Soul Crystal Enhancement)\nIncreases cooldown by about 13%. -->
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1749,7 +1749,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="30470" name="Bound Hell Hound" name_additional="Cheap Shot" type="Weapon">
+	<item id="30470" name="Bound Hell Hound" additionalName="Cheap Shot" type="Weapon">
 		<!-- Bound Item.\nKamael-exclusive Weapon: Bow of Peril Conversion\n(Soul Crystal Enhancement)\nDecreases MP consumption by 12% when using skills. -->
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1853,7 +1853,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30473" name="Bound Heavy War Axe" name_additional="Anger" type="Weapon">
+	<item id="30473" name="Bound Heavy War Axe" additionalName="Anger" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nDecreases Max HP by 15%. P. Atk. + 28. -->
 		<set name="icon" val="icon.weapon_heavy_war_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1889,7 +1889,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30474" name="Bound Heavy War Axe" name_additional="Health" type="Weapon">
+	<item id="30474" name="Bound Heavy War Axe" additionalName="Health" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_heavy_war_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1925,7 +1925,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30475" name="Bound Heavy War Axe" name_additional="Rsk. Focus" type="Weapon">
+	<item id="30475" name="Bound Heavy War Axe" additionalName="Rsk. Focus" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Critical by 107 when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_heavy_war_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2062,7 +2062,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30479" name="Bound Heavy Doom Hammer" name_additional="Magic Regeneration" type="Weapon">
+	<item id="30479" name="Bound Heavy Doom Hammer" additionalName="Magic Regeneration" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 30% chance of casting Regeneration on the target during magic use. -->
 		<set name="icon" val="icon.weapon_heavy_doom_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2098,7 +2098,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30480" name="Bound Heavy Doom Hammer" name_additional="Magic Mental Shield" type="Weapon">
+	<item id="30480" name="Bound Heavy Doom Hammer" additionalName="Magic Mental Shield" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 50% chance of casting Mental Shield on the target during magic use. -->
 		<set name="icon" val="icon.weapon_heavy_doom_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2134,7 +2134,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30481" name="Bound Heavy Doom Hammer" name_additional="Magic Hold" type="Weapon">
+	<item id="30481" name="Bound Heavy Doom Hammer" additionalName="Magic Hold" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 6% chance of casting Dryad Root on the target during magic use. -->
 		<set name="icon" val="icon.weapon_heavy_doom_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2204,7 +2204,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30483" name="Bound Heavy Doom Axe" name_additional="Magic Poison" type="Weapon">
+	<item id="30483" name="Bound Heavy Doom Axe" additionalName="Magic Poison" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas an 8% chance of casting Curse Poison on the target during magic use. -->
 		<set name="icon" val="icon.weapon_heavy_doom_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2240,7 +2240,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30484" name="Bound Heavy Doom Axe" name_additional="Magic Weakness" type="Weapon">
+	<item id="30484" name="Bound Heavy Doom Axe" additionalName="Magic Weakness" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas an 8% chance of casting Curse Weakness on the target during magic use. -->
 		<set name="icon" val="icon.weapon_heavy_doom_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2276,7 +2276,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30485" name="Bound Heavy Doom Axe" name_additional="Magic Chaos" type="Weapon">
+	<item id="30485" name="Bound Heavy Doom Axe" additionalName="Magic Chaos" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas an 8% chance of casting Curse Chaos on the target during magic use. -->
 		<set name="icon" val="icon.weapon_heavy_doom_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2345,7 +2345,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30487" name="Bound Heaven's Divider" name_additional="Haste" type="Weapon">
+	<item id="30487" name="Bound Heaven's Divider" additionalName="Haste" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Atk. Spd. by about + 7%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2381,7 +2381,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30488" name="Bound Heaven's Divider" name_additional="Health" type="Weapon">
+	<item id="30488" name="Bound Heaven's Divider" additionalName="Health" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2417,7 +2417,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30489" name="Bound Heaven's Divider" name_additional="Focus" type="Weapon">
+	<item id="30489" name="Bound Heaven's Divider" additionalName="Focus" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Critical by 84. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2604,7 +2604,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30495" name="Bound Halberd" name_additional="Haste" type="Weapon">
+	<item id="30495" name="Bound Halberd" additionalName="Haste" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_halbard_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2640,7 +2640,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30496" name="Bound Halberd" name_additional="Critical Stun" type="Weapon">
+	<item id="30496" name="Bound Halberd" additionalName="Critical Stun" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Critical by about 25% and Stun effect. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_halbard_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2677,7 +2677,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30497" name="Bound Halberd" name_additional="Wide Blow" type="Weapon">
+	<item id="30497" name="Bound Halberd" additionalName="Wide Blow" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nWidened angle of attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_halbard_i00" />
 		<set name="default_action" val="EQUIP" />

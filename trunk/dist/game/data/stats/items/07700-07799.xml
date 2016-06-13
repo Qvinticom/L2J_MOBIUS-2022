@@ -14,7 +14,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="7701" name="Stick of Faith" name_additional="Mana Up" type="Weapon">
+	<item id="7701" name="Stick of Faith" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -46,7 +46,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7702" name="Stick of Faith" name_additional="Magic Hold" type="Weapon">
+	<item id="7702" name="Stick of Faith" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -78,7 +78,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7703" name="Stick of Faith" name_additional="Magic Mental Shield" type="Weapon">
+	<item id="7703" name="Stick of Faith" additionalName="Magic Mental Shield" type="Weapon">
 		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -110,7 +110,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7704" name="Stick of Eternity" name_additional="Empower" type="Weapon">
+	<item id="7704" name="Stick of Eternity" additionalName="Empower" type="Weapon">
 		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -142,7 +142,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7705" name="Stick of Eternity" name_additional="Rsk. Evasion" type="Weapon">
+	<item id="7705" name="Stick of Eternity" additionalName="Rsk. Evasion" type="Weapon">
 		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -174,7 +174,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7706" name="Stick of Eternity" name_additional="Blessed Body" type="Weapon">
+	<item id="7706" name="Stick of Eternity" additionalName="Blessed Body" type="Weapon">
 		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -206,7 +206,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7707" name="Nirvana Axe" name_additional="M. Atk." type="Weapon">
+	<item id="7707" name="Nirvana Axe" additionalName="M. Atk." type="Weapon">
 		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -238,7 +238,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7708" name="Nirvana Axe" name_additional="Magic Poison" type="Weapon">
+	<item id="7708" name="Nirvana Axe" additionalName="Magic Poison" type="Weapon">
 		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -270,7 +270,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7709" name="Nirvana Axe" name_additional="Magic Weakness" type="Weapon">
+	<item id="7709" name="Nirvana Axe" additionalName="Magic Weakness" type="Weapon">
 		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -302,7 +302,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7710" name="Club of Nature" name_additional="Acumen" type="Weapon">
+	<item id="7710" name="Club of Nature" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -334,7 +334,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7711" name="Club of Nature" name_additional="Magic Mental Shield" type="Weapon">
+	<item id="7711" name="Club of Nature" additionalName="Magic Mental Shield" type="Weapon">
 		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -366,7 +366,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7712" name="Club of Nature" name_additional="Magic Hold" type="Weapon">
+	<item id="7712" name="Club of Nature" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -398,7 +398,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7713" name="Mace of Underworld" name_additional="Mana Up" type="Weapon">
+	<item id="7713" name="Mace of Underworld" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -430,7 +430,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7714" name="Mace of Underworld" name_additional="Magic Silence" type="Weapon">
+	<item id="7714" name="Mace of Underworld" additionalName="Magic Silence" type="Weapon">
 		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -462,7 +462,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7715" name="Mace of Underworld" name_additional="Conversion" type="Weapon">
+	<item id="7715" name="Mace of Underworld" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -494,7 +494,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7716" name="Inferno Staff" name_additional="Acumen" type="Weapon">
+	<item id="7716" name="Inferno Staff" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -526,7 +526,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7717" name="Inferno Staff" name_additional="Magic Silence" type="Weapon">
+	<item id="7717" name="Inferno Staff" additionalName="Magic Silence" type="Weapon">
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -558,7 +558,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7718" name="Inferno Staff" name_additional="Magic Paralyze" type="Weapon">
+	<item id="7718" name="Inferno Staff" additionalName="Magic Paralyze" type="Weapon">
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -590,7 +590,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7719" name="Poleaxe" name_additional="Critical Stun" type="Weapon">
+	<item id="7719" name="Poleaxe" additionalName="Critical Stun" type="Weapon">
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -622,7 +622,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="7720" name="Poleaxe" name_additional="Long Blow" type="Weapon">
+	<item id="7720" name="Poleaxe" additionalName="Long Blow" type="Weapon">
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -654,7 +654,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="7721" name="Poleaxe" name_additional="Wide Blow" type="Weapon">
+	<item id="7721" name="Poleaxe" additionalName="Wide Blow" type="Weapon">
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -685,7 +685,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="7722" name="Sword of Valhalla" name_additional="Acumen" type="Weapon">
+	<item id="7722" name="Sword of Valhalla" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -716,7 +716,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7723" name="Sword of Valhalla" name_additional="Magic Weakness" type="Weapon">
+	<item id="7723" name="Sword of Valhalla" additionalName="Magic Weakness" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -747,7 +747,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7724" name="Sword of Valhalla" name_additional="Magic Regeneration" type="Weapon">
+	<item id="7724" name="Sword of Valhalla" additionalName="Magic Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

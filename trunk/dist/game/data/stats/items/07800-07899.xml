@@ -144,7 +144,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7810" name="Soulfire Dirk" name_additional="Mana Up" type="Weapon">
+	<item id="7810" name="Soulfire Dirk" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -176,7 +176,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7811" name="Soulfire Dirk" name_additional="Magic Hold" type="Weapon">
+	<item id="7811" name="Soulfire Dirk" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -208,7 +208,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7812" name="Soulfire Dirk" name_additional="Magic Silence" type="Weapon">
+	<item id="7812" name="Soulfire Dirk" additionalName="Magic Silence" type="Weapon">
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -240,7 +240,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7813" name="Twilight Knife" name_additional="Magic Regeneration" type="Weapon">
+	<item id="7813" name="Twilight Knife" additionalName="Magic Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -272,7 +272,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7814" name="Twilight Knife" name_additional="Magic Mental Shield" type="Weapon">
+	<item id="7814" name="Twilight Knife" additionalName="Magic Mental Shield" type="Weapon">
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -304,7 +304,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="7815" name="Twilight Knife" name_additional="Magic Weakness" type="Weapon">
+	<item id="7815" name="Twilight Knife" additionalName="Magic Weakness" type="Weapon">
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1246,7 +1246,7 @@
 			<stat type="pDef">158</stat>
 		</stats>
 	</item>
-	<item id="7852" name="Clan Oath Gauntlets" name_additional="Heavy Armor" type="Armor">
+	<item id="7852" name="Clan Oath Gauntlets" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1001_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1272,7 +1272,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="7853" name="Clan Oath Sabaton" name_additional="Heavy Armor" type="Armor">
+	<item id="7853" name="Clan Oath Sabaton" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1001_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1322,7 +1322,7 @@
 			<stat type="pDef">119</stat>
 		</stats>
 	</item>
-	<item id="7855" name="Clan Oath Leather Gloves" name_additional="Light Armor" type="Armor">
+	<item id="7855" name="Clan Oath Leather Gloves" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1002_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1345,7 +1345,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="7856" name="Clan Oath Boots" name_additional="Light Armor" type="Armor">
+	<item id="7856" name="Clan Oath Boots" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1002_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1396,7 +1396,7 @@
 			<stat type="maxMp">239</stat>
 		</stats>
 	</item>
-	<item id="7858" name="Clan Oath Padded Gloves" name_additional="Robe" type="Armor">
+	<item id="7858" name="Clan Oath Padded Gloves" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t1003_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1422,7 +1422,7 @@
 			<stat type="pDef">24</stat>
 		</stats>
 	</item>
-	<item id="7859" name="Clan Oath Sandals" name_additional="Robe" type="Armor">
+	<item id="7859" name="Clan Oath Sandals" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t1003_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1493,7 +1493,7 @@
 			<stat type="pDef">278</stat>
 		</stats>
 	</item>
-	<item id="7862" name="Apella Gauntlets" name_additional="Heavy Armor" type="Armor">
+	<item id="7862" name="Apella Gauntlets" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1004_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1517,7 +1517,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="7863" name="Apella Solleret" name_additional="Heavy Armor" type="Armor">
+	<item id="7863" name="Apella Solleret" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1004_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1563,7 +1563,7 @@
 			<stat type="pDef">209</stat>
 		</stats>
 	</item>
-	<item id="7865" name="Apella Leather Gloves" name_additional="Light Armor" type="Armor">
+	<item id="7865" name="Apella Leather Gloves" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1005_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1584,7 +1584,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="7866" name="Apella Boots" name_additional="Light Armor" type="Armor">
+	<item id="7866" name="Apella Boots" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1005_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1631,7 +1631,7 @@
 			<stat type="maxMp">665</stat>
 		</stats>
 	</item>
-	<item id="7868" name="Apella Silk Gloves" name_additional="Robe" type="Armor">
+	<item id="7868" name="Apella Silk Gloves" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t1006_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1655,7 +1655,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="7869" name="Apella Sandals" name_additional="Robe" type="Armor">
+	<item id="7869" name="Apella Sandals" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t1006_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />

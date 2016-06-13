@@ -481,7 +481,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17913" name="Bound Seraph Helmet" name_additional="Heavy Armor" type="Armor">
+	<item id="17913" name="Bound Seraph Helmet" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -504,7 +504,7 @@
 			<stat type="pDef">139</stat>
 		</stats>
 	</item>
-	<item id="17914" name="Bound Seraph Breastplate" name_additional="Heavy Armor" type="Armor">
+	<item id="17914" name="Bound Seraph Breastplate" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -533,7 +533,7 @@
 			<stat type="pDef">370</stat>
 		</stats>
 	</item>
-	<item id="17915" name="Bound Seraph Gaiters" name_additional="Heavy Armor" type="Armor">
+	<item id="17915" name="Bound Seraph Gaiters" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t401_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -558,7 +558,7 @@
 			<stat type="pDef">231</stat>
 		</stats>
 	</item>
-	<item id="17916" name="Bound Seraph Gauntlets" name_additional="Heavy Armor" type="Armor">
+	<item id="17916" name="Bound Seraph Gauntlets" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t401_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -582,7 +582,7 @@
 			<stat type="pDef">93</stat>
 		</stats>
 	</item>
-	<item id="17917" name="Bound Seraph Boots" name_additional="Heavy Armor" type="Armor">
+	<item id="17917" name="Bound Seraph Boots" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -606,7 +606,7 @@
 			<stat type="pDef">93</stat>
 		</stats>
 	</item>
-	<item id="17918" name="Bound Seraph Shield" name_additional="Heavy Armor" type="Weapon">
+	<item id="17918" name="Bound Seraph Shield" additionalName="Heavy Armor" type="Weapon">
 		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.beranka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -631,7 +631,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="17919" name="Bound Seraph Leather Helmet" name_additional="Light Armor" type="Armor">
+	<item id="17919" name="Bound Seraph Leather Helmet" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -654,7 +654,7 @@
 			<stat type="pDef">139</stat>
 		</stats>
 	</item>
-	<item id="17920" name="Bound Seraph Leather Armor" name_additional="Light Armor" type="Armor">
+	<item id="17920" name="Bound Seraph Leather Armor" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -685,7 +685,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="17921" name="Bound Seraph Leather Leggings" name_additional="Light Armor" type="Armor">
+	<item id="17921" name="Bound Seraph Leather Leggings" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t402_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -712,7 +712,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="17922" name="Bound Seraph Leather Gloves" name_additional="Light Armor" type="Armor">
+	<item id="17922" name="Bound Seraph Leather Gloves" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t402_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -736,7 +736,7 @@
 			<stat type="pDef">93</stat>
 		</stats>
 	</item>
-	<item id="17923" name="Bound Seraph Leather Boots" name_additional="Light Armor" type="Armor">
+	<item id="17923" name="Bound Seraph Leather Boots" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t402_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -760,7 +760,7 @@
 			<stat type="pDef">93</stat>
 		</stats>
 	</item>
-	<item id="17924" name="Bound Seraph Circlet" name_additional="Robe" type="Armor">
+	<item id="17924" name="Bound Seraph Circlet" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -783,7 +783,7 @@
 			<stat type="pDef">139</stat>
 		</stats>
 	</item>
-	<item id="17925" name="Bound Seraph Tunic" name_additional="Robe" type="Armor">
+	<item id="17925" name="Bound Seraph Tunic" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -813,7 +813,7 @@
 			<stat type="mDef">47</stat>
 		</stats>
 	</item>
-	<item id="17926" name="Bound Seraph Stockings" name_additional="Robe" type="Armor">
+	<item id="17926" name="Bound Seraph Stockings" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t403_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -839,7 +839,7 @@
 			<stat type="mDef">31</stat>
 		</stats>
 	</item>
-	<item id="17927" name="Bound Seraph Gloves" name_additional="Robe" type="Armor">
+	<item id="17927" name="Bound Seraph Gloves" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t403_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -863,7 +863,7 @@
 			<stat type="pDef">93</stat>
 		</stats>
 	</item>
-	<item id="17928" name="Bound Seraph Shoes" name_additional="Robe" type="Armor">
+	<item id="17928" name="Bound Seraph Shoes" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t403_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -887,7 +887,7 @@
 			<stat type="pDef">93</stat>
 		</stats>
 	</item>
-	<item id="17929" name="Bound Seraph Sigil" name_additional="Robe" type="Armor">
+	<item id="17929" name="Bound Seraph Sigil" additionalName="Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.airtoil_i00" />
 		<set name="armor_type" val="SIGIL" />
@@ -1496,7 +1496,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17947" name="Bound Eternal Helmet" name_additional="Heavy Armor" type="Armor">
+	<item id="17947" name="Bound Eternal Helmet" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1519,7 +1519,7 @@
 			<stat type="pDef">147</stat>
 		</stats>
 	</item>
-	<item id="17948" name="Bound Eternal Breastplate" name_additional="Heavy Armor" type="Armor">
+	<item id="17948" name="Bound Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1548,7 +1548,7 @@
 			<stat type="pDef">392</stat>
 		</stats>
 	</item>
-	<item id="17949" name="Bound Eternal Gaiters" name_additional="Heavy Armor" type="Armor">
+	<item id="17949" name="Bound Eternal Gaiters" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t701_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1573,7 +1573,7 @@
 			<stat type="pDef">245</stat>
 		</stats>
 	</item>
-	<item id="17950" name="Bound Eternal Gauntlets" name_additional="Heavy Armor" type="Armor">
+	<item id="17950" name="Bound Eternal Gauntlets" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t701_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1597,7 +1597,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="17951" name="Bound Eternal Boots" name_additional="Heavy Armor" type="Armor">
+	<item id="17951" name="Bound Eternal Boots" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t701_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1621,7 +1621,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="17952" name="Bound Eternal Shield" name_additional="Heavy Armor" type="Weapon">
+	<item id="17952" name="Bound Eternal Shield" additionalName="Heavy Armor" type="Weapon">
 		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_akra_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1646,7 +1646,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="17953" name="Bound Eternal Leather Helmet" name_additional="Light Armor" type="Armor">
+	<item id="17953" name="Bound Eternal Leather Helmet" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1669,7 +1669,7 @@
 			<stat type="pDef">147</stat>
 		</stats>
 	</item>
-	<item id="17954" name="Bound Eternal Leather Armor" name_additional="Light Armor" type="Armor">
+	<item id="17954" name="Bound Eternal Leather Armor" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1700,7 +1700,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="17955" name="Bound Eternal Leather Leggings" name_additional="Light Armor" type="Armor">
+	<item id="17955" name="Bound Eternal Leather Leggings" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t702_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1727,7 +1727,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="17956" name="Bound Eternal Leather Gloves" name_additional="Light Armor" type="Armor">
+	<item id="17956" name="Bound Eternal Leather Gloves" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t702_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1751,7 +1751,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="17957" name="Bound Eternal Leather Boots" name_additional="Light Armor" type="Armor">
+	<item id="17957" name="Bound Eternal Leather Boots" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t702_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1775,7 +1775,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="17958" name="Bound Eternal Circlet" name_additional="Robe" type="Armor">
+	<item id="17958" name="Bound Eternal Circlet" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1798,7 +1798,7 @@
 			<stat type="pDef">147</stat>
 		</stats>
 	</item>
-	<item id="17959" name="Bound Eternal Tunic" name_additional="Robe" type="Armor">
+	<item id="17959" name="Bound Eternal Tunic" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1828,7 +1828,7 @@
 			<stat type="mDef">49</stat>
 		</stats>
 	</item>
-	<item id="17960" name="Bound Eternal Stockings" name_additional="Robe" type="Armor">
+	<item id="17960" name="Bound Eternal Stockings" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t703_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -1854,7 +1854,7 @@
 			<stat type="mDef">33</stat>
 		</stats>
 	</item>
-	<item id="17961" name="Bound Eternal Gloves" name_additional="Robe" type="Armor">
+	<item id="17961" name="Bound Eternal Gloves" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t703_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1878,7 +1878,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="17962" name="Bound Eternal Shoes" name_additional="Robe" type="Armor">
+	<item id="17962" name="Bound Eternal Shoes" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t703_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1902,7 +1902,7 @@
 			<stat type="pDef">98</stat>
 		</stats>
 	</item>
-	<item id="17963" name="Bound Eternal Sigil" name_additional="Robe" type="Armor">
+	<item id="17963" name="Bound Eternal Sigil" additionalName="Robe" type="Armor">
 		<!-- Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.elos_i00" />
 		<set name="armor_type" val="SIGIL" />
@@ -2455,7 +2455,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17981" name="Blessed Immortal Helmet" name_additional="Heavy Armor" type="Armor">
+	<item id="17981" name="Blessed Immortal Helmet" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2474,7 +2474,7 @@
 			<stat type="pDef">118</stat>
 		</stats>
 	</item>
-	<item id="17982" name="Blessed Immortal Breastplate" name_additional="Heavy Armor" type="Armor">
+	<item id="17982" name="Blessed Immortal Breastplate" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -2499,7 +2499,7 @@
 			<stat type="pDef">315</stat>
 		</stats>
 	</item>
-	<item id="17983" name="Blessed Immortal Gaiters" name_additional="Heavy Armor" type="Armor">
+	<item id="17983" name="Blessed Immortal Gaiters" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t501_l_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -2520,7 +2520,7 @@
 			<stat type="pDef">197</stat>
 		</stats>
 	</item>
-	<item id="17984" name="Blessed Immortal Gauntlets" name_additional="Heavy Armor" type="Armor">
+	<item id="17984" name="Blessed Immortal Gauntlets" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t501_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2540,7 +2540,7 @@
 			<stat type="pDef">78</stat>
 		</stats>
 	</item>
-	<item id="17985" name="Blessed Immortal Boots" name_additional="Heavy Armor" type="Armor">
+	<item id="17985" name="Blessed Immortal Boots" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t501_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2560,7 +2560,7 @@
 			<stat type="pDef">78</stat>
 		</stats>
 	</item>
-	<item id="17986" name="Blessed Immortal Shield" name_additional="Heavy Armor" type="Weapon">
+	<item id="17986" name="Blessed Immortal Shield" additionalName="Heavy Armor" type="Weapon">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.weapon_sacon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2581,7 +2581,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="17987" name="Blessed Immortal Leather Helmet" name_additional="Light Armor" type="Armor">
+	<item id="17987" name="Blessed Immortal Leather Helmet" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2600,7 +2600,7 @@
 			<stat type="pDef">118</stat>
 		</stats>
 	</item>
-	<item id="17988" name="Blessed Immortal Leather Armor" name_additional="Light Armor" type="Armor">
+	<item id="17988" name="Blessed Immortal Leather Armor" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -2627,7 +2627,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="17989" name="Blessed Immortal Leather Leggings" name_additional="Light Armor" type="Armor">
+	<item id="17989" name="Blessed Immortal Leather Leggings" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t502_l_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -2650,7 +2650,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="17990" name="Blessed Immortal Leather Gloves" name_additional="Light Armor" type="Armor">
+	<item id="17990" name="Blessed Immortal Leather Gloves" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t502_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2670,7 +2670,7 @@
 			<stat type="pDef">78</stat>
 		</stats>
 	</item>
-	<item id="17991" name="Blessed Immortal Leather Boots" name_additional="Light Armor" type="Armor">
+	<item id="17991" name="Blessed Immortal Leather Boots" additionalName="Light Armor" type="Armor">
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t502_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2690,7 +2690,7 @@
 			<stat type="pDef">78</stat>
 		</stats>
 	</item>
-	<item id="17992" name="Blessed Immortal Circlet" name_additional="Robe" type="Armor">
+	<item id="17992" name="Blessed Immortal Circlet" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2709,7 +2709,7 @@
 			<stat type="pDef">118</stat>
 		</stats>
 	</item>
-	<item id="17993" name="Blessed Immortal Tunic" name_additional="Robe" type="Armor">
+	<item id="17993" name="Blessed Immortal Tunic" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -2735,7 +2735,7 @@
 			<stat type="mDef">36</stat>
 		</stats>
 	</item>
-	<item id="17994" name="Blessed Immortal Stockings" name_additional="Robe" type="Armor">
+	<item id="17994" name="Blessed Immortal Stockings" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t503_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -2757,7 +2757,7 @@
 			<stat type="mDef">24</stat>
 		</stats>
 	</item>
-	<item id="17995" name="Blessed Immortal Gloves" name_additional="Robe" type="Armor">
+	<item id="17995" name="Blessed Immortal Gloves" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t503_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2777,7 +2777,7 @@
 			<stat type="pDef">78</stat>
 		</stats>
 	</item>
-	<item id="17996" name="Blessed Immortal Shoes" name_additional="Robe" type="Armor">
+	<item id="17996" name="Blessed Immortal Shoes" additionalName="Robe" type="Armor">
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t503_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2797,7 +2797,7 @@
 			<stat type="pDef">78</stat>
 		</stats>
 	</item>
-	<item id="17997" name="Blessed Immortal Sigil" name_additional="Robe" type="Armor">
+	<item id="17997" name="Blessed Immortal Sigil" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.weapon_karyen_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />

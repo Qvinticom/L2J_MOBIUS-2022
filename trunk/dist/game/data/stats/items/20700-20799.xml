@@ -20,7 +20,7 @@
 			<item id="20674" min="1" max="1" chance="100" /> <!-- Bamboo Panda Hat -->
 		</capsuled_items>
 	</item>
-	<item id="20701" name="Bamboo Panda Hat Pack (7-day)" name_additional="Great Adventurer's Soul Power" type="EtcItem">
+	<item id="20701" name="Bamboo Panda Hat Pack (7-day)" additionalName="Great Adventurer's Soul Power" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -60,7 +60,7 @@
 			<item id="20676" min="1" max="1" chance="100" /> <!-- Sexy Panda Hat -->
 		</capsuled_items>
 	</item>
-	<item id="20703" name="Sexy Panda Hat (7-day)" name_additional="Blessed Resurrection" type="EtcItem">
+	<item id="20703" name="Sexy Panda Hat (7-day)" additionalName="Blessed Resurrection" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -100,7 +100,7 @@
 			<item id="20678" min="1" max="1" chance="100" /> <!-- Gatekeeper Hat -->
 		</capsuled_items>
 	</item>
-	<item id="20705" name="Gatekeeper Hat Pack (7-day)" name_additional="Appetite for Destruction" type="EtcItem">
+	<item id="20705" name="Gatekeeper Hat Pack (7-day)" additionalName="Appetite for Destruction" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -221,7 +221,7 @@
 			<skill id="21132" level="1" /> <!-- Shadow Ability -->
 		</skills>
 	</item>
-	<item id="20712" name="Reanimated Corpse Mask (Event)" name_additional="Skooldie's Blessing: Protection of Darkness (2-hour)" type="Armor">
+	<item id="20712" name="Reanimated Corpse Mask (Event)" additionalName="Skooldie's Blessing: Protection of Darkness (2-hour)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_frankenstein_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -245,7 +245,7 @@
 			<skill id="21122" level="1" /> <!-- Skooldie's Blessing: Protection of Darkness -->
 		</skills>
 	</item>
-	<item id="20713" name="Shriek Mask (Event)" name_additional="Skooldie's Blessing: Protection of Darkness (2-hour)" type="Armor">
+	<item id="20713" name="Shriek Mask (Event)" additionalName="Skooldie's Blessing: Protection of Darkness (2-hour)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_scream_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -269,7 +269,7 @@
 			<skill id="21123" level="1" /> <!-- Skooldie's Blessing: Protection of Darkness -->
 		</skills>
 	</item>
-	<item id="20714" name="Red Devil Mask (Event)" name_additional="Skooldie's Blessing: Protection of Darkness (2-hour)" type="Armor">
+	<item id="20714" name="Red Devil Mask (Event)" additionalName="Skooldie's Blessing: Protection of Darkness (2-hour)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_doccabi_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -293,7 +293,7 @@
 			<skill id="21124" level="1" /> <!-- Skooldie's Blessing: Protection of Darkness -->
 		</skills>
 	</item>
-	<item id="20715" name="Mummy Mask (Event)" name_additional="Skooldie's Blessing: Protection of Darkness (2-hour)" type="Armor">
+	<item id="20715" name="Mummy Mask (Event)" additionalName="Skooldie's Blessing: Protection of Darkness (2-hour)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_mummy_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -317,7 +317,7 @@
 			<skill id="21125" level="1" /> <!-- Skooldie's Blessing: Protection of Darkness -->
 		</skills>
 	</item>
-	<item id="20716" name="Alien Mask (Event)" name_additional="Skooldie's Blessing: Protection of Darkness (2-hour)" type="Armor">
+	<item id="20716" name="Alien Mask (Event)" additionalName="Skooldie's Blessing: Protection of Darkness (2-hour)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_alien_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -361,7 +361,7 @@
 			<skill id="22109" level="1" /> <!-- Shiny Halloween Toy Box -->
 		</skills>
 	</item>
-	<item id="20718" name="Shiny Reanimated Corpse Mask (Event)" name_additional="Blessing of Halloween (4-hour)" type="Armor">
+	<item id="20718" name="Shiny Reanimated Corpse Mask (Event)" additionalName="Blessing of Halloween (4-hour)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_shiny_frankenstein_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -385,7 +385,7 @@
 			<skill id="21127" level="1" /> <!-- Blessing of Halloween -->
 		</skills>
 	</item>
-	<item id="20719" name="Shiny Shriek Mask (Event)" name_additional="Blessing of Halloween (4-hour)" type="Armor">
+	<item id="20719" name="Shiny Shriek Mask (Event)" additionalName="Blessing of Halloween (4-hour)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_shiny_scream_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -409,7 +409,7 @@
 			<skill id="21128" level="1" /> <!-- Blessing of Halloween -->
 		</skills>
 	</item>
-	<item id="20720" name="Shiny Red Devil Mask (Event)" name_additional="Blessing of Halloween (4-hour)" type="Armor">
+	<item id="20720" name="Shiny Red Devil Mask (Event)" additionalName="Blessing of Halloween (4-hour)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_shiny_doccabi_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -433,7 +433,7 @@
 			<skill id="21129" level="1" /> <!-- Blessing of Halloween -->
 		</skills>
 	</item>
-	<item id="20721" name="Shiny Mummy Mask (Event)" name_additional="Blessing of Halloween (4-hour)" type="Armor">
+	<item id="20721" name="Shiny Mummy Mask (Event)" additionalName="Blessing of Halloween (4-hour)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_shiny_mummy_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -457,7 +457,7 @@
 			<skill id="21130" level="1" /> <!-- Blessing of Halloween -->
 		</skills>
 	</item>
-	<item id="20722" name="Shiny Alien Mask (Event)" name_additional="Blessing of Halloween (4-hour)" type="Armor">
+	<item id="20722" name="Shiny Alien Mask (Event)" additionalName="Blessing of Halloween (4-hour)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_shiny_alien_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -500,7 +500,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="20724" name="Golden Jack O'Lantern Mask" name_additional="Golden Jack O'Lantern's Authority (7-day)" type="Armor">
+	<item id="20724" name="Golden Jack O'Lantern Mask" additionalName="Golden Jack O'Lantern's Authority (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_golden_jack0_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -563,7 +563,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20727" name="Agathion - Zombie" name_additional="Soul Stealth (7-day)" type="Armor">
+	<item id="20727" name="Agathion - Zombie" additionalName="Soul Stealth (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_gangsi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -720,7 +720,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20734" name="Golden Jack O'Lantern Mask Pack (7-day)" name_additional="Golden Jack O'Lantern's Authority" type="EtcItem">
+	<item id="20734" name="Golden Jack O'Lantern Mask Pack (7-day)" additionalName="Golden Jack O'Lantern's Authority" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -760,7 +760,7 @@
 			<item id="20726" min="1" max="1" chance="100" /> <!-- Agathion - Zombie -->
 		</capsuled_items>
 	</item>
-	<item id="20736" name="Agathion - Zombie Pack (7-day)" name_additional="Soul Stealth" type="EtcItem">
+	<item id="20736" name="Agathion - Zombie Pack (7-day)" additionalName="Soul Stealth" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -860,7 +860,7 @@
 			<item id="20394" min="1" max="1" chance="100" /> <!-- Fresh Fruit Cocktail -->
 		</capsuled_items>
 	</item>
-	<item id="20741" name="SP Rune 30% (Event)" name_additional="1-hour" type="EtcItem">
+	<item id="20741" name="SP Rune 30% (Event)" additionalName="1-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -881,7 +881,7 @@
 			<skill id="26047" level="3" /> <!-- SP Rune 30% -->
 		</skills>
 	</item>
-	<item id="20742" name="XP Rune III (Lv. 1-100+) 30% (Event)" name_additional="1-hour" type="EtcItem">
+	<item id="20742" name="XP Rune III (Lv. 1-100+) 30% (Event)" additionalName="1-hour" type="EtcItem">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -902,7 +902,7 @@
 			<skill id="26046" level="3" /> <!-- XP Rune III (Lv. 1-100+) 30% -->
 		</skills>
 	</item>
-	<item id="20743" name="Shiny Reanimated Corpse Mask" name_additional="Blessing of Halloween (7-day)" type="Armor">
+	<item id="20743" name="Shiny Reanimated Corpse Mask" additionalName="Blessing of Halloween (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_shiny_frankenstein_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -925,7 +925,7 @@
 			<skill id="21137" level="1" /> <!-- Blessing of Halloween -->
 		</skills>
 	</item>
-	<item id="20744" name="Shiny Shriek Mask" name_additional="Blessing of Halloween (7-day)" type="Armor">
+	<item id="20744" name="Shiny Shriek Mask" additionalName="Blessing of Halloween (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_shiny_scream_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -948,7 +948,7 @@
 			<skill id="21138" level="1" /> <!-- Blessing of Halloween -->
 		</skills>
 	</item>
-	<item id="20745" name="Shiny Red Devil Mask" name_additional="Blessing of Halloween (7-day)" type="Armor">
+	<item id="20745" name="Shiny Red Devil Mask" additionalName="Blessing of Halloween (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_shiny_doccabi_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -971,7 +971,7 @@
 			<skill id="21139" level="1" /> <!-- Blessing of Halloween -->
 		</skills>
 	</item>
-	<item id="20746" name="Shiny Mummy Mask" name_additional="Blessing of Halloween (7-day)" type="Armor">
+	<item id="20746" name="Shiny Mummy Mask" additionalName="Blessing of Halloween (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_shiny_mummy_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -994,7 +994,7 @@
 			<skill id="21140" level="1" /> <!-- Blessing of Halloween -->
 		</skills>
 	</item>
-	<item id="20747" name="Shiny Alien Mask" name_additional="Blessing of Halloween (7-day)" type="Armor">
+	<item id="20747" name="Shiny Alien Mask" additionalName="Blessing of Halloween (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_shiny_alien_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1017,7 +1017,7 @@
 			<skill id="21141" level="1" /> <!-- Blessing of Halloween -->
 		</skills>
 	</item>
-	<item id="20748" name="Shiny Reanimated Corpse Mask Pack (7-day)" name_additional="Blessing of Halloween" type="EtcItem">
+	<item id="20748" name="Shiny Reanimated Corpse Mask Pack (7-day)" additionalName="Blessing of Halloween" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1037,7 +1037,7 @@
 			<item id="20743" min="1" max="1" chance="100" /> <!-- Shiny Reanimated Corpse Mask - Blessing of Halloween (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="20749" name="Shiny Shriek Mask Pack (7-day)" name_additional="Blessing of Halloween" type="EtcItem">
+	<item id="20749" name="Shiny Shriek Mask Pack (7-day)" additionalName="Blessing of Halloween" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1057,7 +1057,7 @@
 			<item id="20744" min="1" max="1" chance="100" /> <!-- Shiny Shriek Mask - Blessing of Halloween (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="20750" name="Shiny Red Devil Mask Pack (7-day)" name_additional="Blessing of Halloween" type="EtcItem">
+	<item id="20750" name="Shiny Red Devil Mask Pack (7-day)" additionalName="Blessing of Halloween" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1077,7 +1077,7 @@
 			<item id="20745" min="1" max="1" chance="100" /> <!-- Shiny Red Devil Mask - Blessing of Halloween (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="20751" name="Shiny Mummy Mask Pack (7-day)" name_additional="Blessing of Halloween" type="EtcItem">
+	<item id="20751" name="Shiny Mummy Mask Pack (7-day)" additionalName="Blessing of Halloween" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1097,7 +1097,7 @@
 			<item id="20746" min="1" max="1" chance="100" /> <!-- Shiny Mummy Mask - Blessing of Halloween (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="20752" name="Shiny Alien Mask Pack (7-day)" name_additional="Blessing of Halloween" type="EtcItem">
+	<item id="20752" name="Shiny Alien Mask Pack (7-day)" additionalName="Blessing of Halloween" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1163,7 +1163,7 @@
 			<item id="5561" min="1" max="1" chance="100" /> <!-- Special Holiday Tree -->
 		</capsuled_items>
 	</item>
-	<item id="20755" name="Santa's Weapon Coupon - Regular" name_additional="24-hour" type="EtcItem">
+	<item id="20755" name="Santa's Weapon Coupon - Regular" additionalName="24-hour" type="EtcItem">
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1179,7 +1179,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="1440" />
 	</item>
-	<item id="20756" name="Santa's Shirt Coupon" name_additional="24-hour" type="EtcItem">
+	<item id="20756" name="Santa's Shirt Coupon" additionalName="24-hour" type="EtcItem">
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1195,7 +1195,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="1440" />
 	</item>
-	<item id="20757" name="Santa's Weapon Coupon - Jackpot" name_additional="24-hour" type="EtcItem">
+	<item id="20757" name="Santa's Weapon Coupon - Jackpot" additionalName="24-hour" type="EtcItem">
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1232,7 +1232,7 @@
 			<skill id="22115" level="1" /> <!-- Santa's Weapon Coupon Box -->
 		</skills>
 	</item>
-	<item id="20759" name="Holiday Shirt" name_additional="24-hour" type="Armor">
+	<item id="20759" name="Holiday Shirt" additionalName="24-hour" type="Armor">
 		<set name="icon" val="BranchSys.br_xmas_shirts_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1298,7 +1298,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="20762" name="Rudolph Pet Coupon" name_additional="7-day" type="EtcItem">
+	<item id="20762" name="Rudolph Pet Coupon" additionalName="7-day" type="EtcItem">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1315,7 +1315,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20763" name="Rudolph Rearing Certificate" name_additional="24-hour" type="EtcItem">
+	<item id="20763" name="Rudolph Rearing Certificate" additionalName="24-hour" type="EtcItem">
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1537,7 +1537,7 @@
 			<item id="20768" min="1" max="1" chance="100" /> <!-- Mysterious Food -->
 		</capsuled_items>
 	</item>
-	<item id="20774" name="Agathion - Guangong" name_additional="Aura of Fury (7-day)" type="Armor">
+	<item id="20774" name="Agathion - Guangong" additionalName="Aura of Fury (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_warriorgod_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1562,7 +1562,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20775" name="Agathion - Gwanseum Nyang Nyang" name_additional="Blessing of Mercy (7-day)" type="Armor">
+	<item id="20775" name="Agathion - Gwanseum Nyang Nyang" additionalName="Blessing of Mercy (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_mercygod_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1586,7 +1586,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20776" name="Agathion - Blue Opera" name_additional="Sword of Recovery (7-day)" type="Armor">
+	<item id="20776" name="Agathion - Blue Opera" additionalName="Sword of Recovery (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_blue_pekingopera_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1610,7 +1610,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20777" name="Agathion - Blue Opera" name_additional="Sword of Lightning (7-day)" type="Armor">
+	<item id="20777" name="Agathion - Blue Opera" additionalName="Sword of Lightning (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_blue_pekingopera_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1634,7 +1634,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20778" name="Agathion - Red Opera" name_additional="Spear of Flames (7-day)" type="Armor">
+	<item id="20778" name="Agathion - Red Opera" additionalName="Spear of Flames (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_pekingopera_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1680,7 +1680,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20780" name="Agathion - Opera" name_additional="Sword of Life (30-day)" type="Armor">
+	<item id="20780" name="Agathion - Opera" additionalName="Sword of Life (30-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_redblue_pekingopera_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1705,7 +1705,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20781" name="Agathion - Miss Chipao" name_additional="Decrease Weight (7-day)" type="Armor">
+	<item id="20781" name="Agathion - Miss Chipao" additionalName="Decrease Weight (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_chinesedress_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1796,7 +1796,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20785" name="Agathion - Nepal Snow" name_additional="Snow's Haste (7-day)" type="Armor">
+	<item id="20785" name="Agathion - Nepal Snow" additionalName="Snow's Haste (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_suno_trumpet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1821,7 +1821,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20786" name="Agathion - Round Ball Snow" name_additional="Snow's Acumen (7-day)" type="Armor">
+	<item id="20786" name="Agathion - Round Ball Snow" additionalName="Snow's Acumen (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_suno_ball_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1846,7 +1846,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20787" name="Agathion - Ladder Snow" name_additional="Snow's Wind Walk (7-day)" type="Armor">
+	<item id="20787" name="Agathion - Ladder Snow" additionalName="Snow's Wind Walk (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_aga_suno_tall_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1892,7 +1892,7 @@
 			<skill id="22116" level="1" /> <!-- Summon Flame Box -->
 		</skills>
 	</item>
-	<item id="20789" name="Rocket Gun Hat" name_additional="Chain Fireworks" type="Armor">
+	<item id="20789" name="Rocket Gun Hat" additionalName="Chain Fireworks" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1914,7 +1914,7 @@
 			<skill id="21152" level="1" /> <!-- Chain Fireworks -->
 		</skills>
 	</item>
-	<item id="20790" name="Yellow Paper Hat" name_additional="Blessed Body (7-day)" type="Armor">
+	<item id="20790" name="Yellow Paper Hat" additionalName="Blessed Body (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_party_hat_gold_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1936,7 +1936,7 @@
 			<skill id="21153" level="1" /> <!-- Blessed Body -->
 		</skills>
 	</item>
-	<item id="20791" name="Pink Paper Mask Set" name_additional="Blessed Soul (7-day)" type="Armor">
+	<item id="20791" name="Pink Paper Mask Set" additionalName="Blessed Soul (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_party_hat_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1996,7 +1996,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_mailable" val="false" />
 	</item>
-	<item id="20794" name="Flavorful Cheese Hat" name_additional="Scent of Flavorful Cheese (7-day)" type="Armor">
+	<item id="20794" name="Flavorful Cheese Hat" additionalName="Scent of Flavorful Cheese (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_bigrat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2018,7 +2018,7 @@
 			<skill id="21155" level="1" /> <!-- Scent of Flavorful Cheese -->
 		</skills>
 	</item>
-	<item id="20795" name="Sweet Cheese Hat" name_additional="Scent of Sweet Cheese (7-day)" type="Armor">
+	<item id="20795" name="Sweet Cheese Hat" additionalName="Scent of Sweet Cheese (7-day)" type="Armor">
 		<set name="icon" val="BranchSys.icon.br_goldrat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2040,7 +2040,7 @@
 			<skill id="21156" level="1" /> <!-- Scent of Sweet Cheese -->
 		</skills>
 	</item>
-	<item id="20796" name="Agathion - Guangong Pack (7-day)" name_additional="Aura of Fury" type="EtcItem">
+	<item id="20796" name="Agathion - Guangong Pack (7-day)" additionalName="Aura of Fury" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2060,7 +2060,7 @@
 			<item id="20774" min="1" max="1" chance="100" /> <!-- Agathion - Guangong - Aura of Fury (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="20797" name="Agathion - Gwanseum Nyang Nyang Pack (7-day)" name_additional="Blessing of Mercy" type="EtcItem">
+	<item id="20797" name="Agathion - Gwanseum Nyang Nyang Pack (7-day)" additionalName="Blessing of Mercy" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2080,7 +2080,7 @@
 			<item id="20775" min="1" max="1" chance="100" /> <!-- Agathion - Gwanseum Nyang Nyang - Blessing of Mercy (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="20798" name="Agathion - Blue Opera Pack (7-day)" name_additional="Sword of Recovery" type="EtcItem">
+	<item id="20798" name="Agathion - Blue Opera Pack (7-day)" additionalName="Sword of Recovery" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2100,7 +2100,7 @@
 			<item id="20776" min="1" max="1" chance="100" /> <!-- Agathion - Blue Opera - Sword of Recovery (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="20799" name="Agathion - Blue Opera Pack (7-day)" name_additional="Sword of Lightning" type="EtcItem">
+	<item id="20799" name="Agathion - Blue Opera Pack (7-day)" additionalName="Sword of Lightning" type="EtcItem">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

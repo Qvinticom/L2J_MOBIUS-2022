@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="36300" name="Unbind Scroll: Armor (R95-grade)" name_additional="Event" type="EtcItem">
+	<item id="36300" name="Unbind Scroll: Armor (R95-grade)" additionalName="Event" type="EtcItem">
 		<!-- Transforms an R95-grade bound armor item into a standard item through the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.cursed_free_r95_armor" />
 		<set name="weight" val="2" />
@@ -15,7 +15,7 @@
 		<set name="crystal_type" val="R95" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36302" name="Scroll of Blessing: Armor (R-grade)" name_additional="Campaign" type="EtcItem">
+	<item id="36302" name="Scroll of Blessing: Armor (R-grade)" additionalName="Campaign" type="EtcItem">
 		<!-- The Blacksmith of Mammon can exchange standard Immortal/Hell armor for Blessed equipment for you at a low probability. A small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r1_armor" />
 		<set name="weight" val="2" />
@@ -30,7 +30,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36303" name="Scroll of Blessing: Armor (R95-grade)" name_additional="Campaign" type="EtcItem">
+	<item id="36303" name="Scroll of Blessing: Armor (R95-grade)" additionalName="Campaign" type="EtcItem">
 		<!-- The Blacksmith of Mammon can exchange standard Seraph armor for Blessed equipment for you at a low probability. A small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r95_armor" />
 		<set name="weight" val="2" />
@@ -220,7 +220,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="36322" name="Lyn Draco's Accessory Pack" name_additional="Event" type="EtcItem">
+	<item id="36322" name="Lyn Draco's Accessory Pack" additionalName="Event" type="EtcItem">
 		<!-- Use it to receive one of the following: Blessed Valakas' Necklace, Blessed Antharas' Earring, Earth Wyrm Heart Ring, and Tauti's Ring. -->
 		<set name="icon" val="icon.etc_ev_draco_gift_box" />
 		<set name="is_freightable" val="false" />
@@ -247,7 +247,7 @@
 			<skill id="9769" level="1" /> <!-- Lyn Draco's Gift -->
 		</skills>
 	</item>
-	<item id="36324" name="Draco's Shiny Accessory Pack" name_additional="Event" type="EtcItem">
+	<item id="36324" name="Draco's Shiny Accessory Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive one of the following: Antharas' Earring, Valakas' Necklace, Earth Wyrm Heart Ring, Bottle of Antharas' Soul, Bottle of Valakas' Soul, Istina's Earring/Necklace/Ring, and Octavis' Earring/Necklace/Ring. -->
 		<set name="icon" val="icon.etc_ev_draco_gift_box" />
 		<set name="is_freightable" val="false" />
@@ -261,7 +261,7 @@
 			<skill id="9773" level="1" /> <!-- Draco's Shiny Accessory Pack (Event) -->
 		</skills>
 	</item>
-	<item id="36325" name="Draco's Gift" name_additional="Event" type="EtcItem">
+	<item id="36325" name="Draco's Gift" additionalName="Event" type="EtcItem">
 		<!-- Gift from a Lyn Draco that hatched from a purified Draco Egg. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
@@ -274,7 +274,7 @@
 			<skill id="9771" level="1" /> <!-- Draco's Gift (Event) -->
 		</skills>
 	</item>
-	<item id="36326" name="Draco's Shiny Gift" name_additional="Event" type="EtcItem">
+	<item id="36326" name="Draco's Shiny Gift" additionalName="Event" type="EtcItem">
 		<!-- Gift from a Draco that hatched from a purified Draco Egg. It shines. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_stackable" val="true" />
@@ -287,7 +287,7 @@
 			<skill id="9772" level="1" /> <!-- Draco's Shiny Gift (Event) -->
 		</skills>
 	</item>
-	<item id="36327" name="Birthday Vitality Potion" name_additional="1-hour" type="EtcItem">
+	<item id="36327" name="Birthday Vitality Potion" additionalName="1-hour" type="EtcItem">
 		<!-- Upon use, for 1 hour, Vitality is recovered when XP is acquired through hunting. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="weight" val="80" />
@@ -306,7 +306,7 @@
 			<skill id="9775" level="1" /> <!-- Birthday Vitality Potion -->
 		</skills>
 	</item>
-	<item id="36328" name="Freya's Refreshing Breeze" name_additional="1-hour" type="EtcItem">
+	<item id="36328" name="Freya's Refreshing Breeze" additionalName="1-hour" type="EtcItem">
 		<!-- Upon use, for 1 hour, you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the 'Birthday Joy' buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="weight" val="1" />
@@ -357,7 +357,7 @@
 			<skill id="9778" level="1" /> <!-- Sweet Chocolate (1-hour) -->
 		</skills>
 	</item>
-	<item id="36331" name="Returning Hero's Vitality Replenishing Juice" name_additional="1-hour" type="EtcItem">
+	<item id="36331" name="Returning Hero's Vitality Replenishing Juice" additionalName="1-hour" type="EtcItem">
 		<!-- Upon use, for 1 hour, you can temporarily feel the Vitality recovery effect. No effect applies when used while the 'Birthday Joy' buff is in effect. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys2.icon.br_breath_of_hero_i00" />
 		<set name="weight" val="120" />
@@ -406,7 +406,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36334" name="Adrenaline Energy Drink" name_additional="Event" type="EtcItem">
+	<item id="36334" name="Adrenaline Energy Drink" additionalName="Event" type="EtcItem">
 		<!-- Energy drink meant to make one run like the wind. Speed + 15. Formulated for special events, the recipe remains a secret. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 minutes. -->
 		<set name="icon" val="icon.etc_oblivion_yellow_i00" />
 		<set name="is_stackable" val="true" />
@@ -418,7 +418,7 @@
 			<skill id="9786" level="1" /> <!-- Adrenaline Energy Drink -->
 		</skills>
 	</item>
-	<item id="36335" name="Caffeine Energy Drink" name_additional="Event" type="EtcItem">
+	<item id="36335" name="Caffeine Energy Drink" additionalName="Event" type="EtcItem">
 		<!-- Energy drink that boosts dexterity and clears one's mind with a single cup. DEX + 10. Formulated for special events, this energy drink should be used with care as it can raise pulse rate and blood pressure. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 minutes. -->
 		<set name="icon" val="icon.etc_oblivion_green_i00" />
 		<set name="is_stackable" val="true" />
@@ -430,7 +430,7 @@
 			<skill id="9787" level="1" /> <!-- Caffeine Energy Drink -->
 		</skills>
 	</item>
-	<item id="36336" name="Protein Energy Drink" name_additional="Event" type="EtcItem">
+	<item id="36336" name="Protein Energy Drink" additionalName="Event" type="EtcItem">
 		<!-- Energy drink that creates monstrous muscle mass. STR + 10. Formulated for special events, this energy drink makes one extremely powerful. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 minutes. -->
 		<set name="icon" val="icon.etc_oblivion_blue_i00" />
 		<set name="is_freightable" val="false" />
@@ -441,7 +441,7 @@
 			<skill id="9788" level="1" /> <!-- Protein Energy Drink -->
 		</skills>
 	</item>
-	<item id="36337" name="DHA Energy Drink" name_additional="Event" type="EtcItem">
+	<item id="36337" name="DHA Energy Drink" additionalName="Event" type="EtcItem">
 		<!-- Energy drink that increases brain power. INT + 10. Formulated for special events, this energy drink sharpens Mental/magical attacks unto one's enemy while strengthening the brain from the resulting whiplash. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 minutes. -->
 		<set name="icon" val="icon.etc_oblivion_violet_i00" />
 		<set name="is_freightable" val="false" />
@@ -452,7 +452,7 @@
 			<skill id="9789" level="1" /> <!-- DHA Energy Drink -->
 		</skills>
 	</item>
-	<item id="36338" name="Omega3 Energy Drink" name_additional="Event" type="EtcItem">
+	<item id="36338" name="Omega3 Energy Drink" additionalName="Event" type="EtcItem">
 		<!-- Energy drink that stimulates the nerves, activating the neurons in the brain. WIT + 10. Formulated for special events, this energy drink is said to help with Mental activity. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 minutes. -->
 		<set name="icon" val="icon.etc_oblivion_white_i00" />
 		<set name="is_stackable" val="true" />
@@ -464,7 +464,7 @@
 			<skill id="9790" level="1" /> <!-- Omega 3 Energy Drink -->
 		</skills>
 	</item>
-	<item id="36339" name="Medal of Glory" name_additional="Event" type="EtcItem">
+	<item id="36339" name="Medal of Glory" additionalName="Event" type="EtcItem">
 		<!-- Medal used in the festival hosted by Amadeo Cadmus, the king of Aden. It is rarer and more precious than the Medal of Victory and the Medal of Friendship. Event Manager Cocoring can exchange it for a Golden Chest for you. -->
 		<set name="icon" val="icon.etc_london_olympic_gold" />
 		<set name="is_freightable" val="false" />
@@ -472,7 +472,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36340" name="Medal of Victory" name_additional="Event" type="EtcItem">
+	<item id="36340" name="Medal of Victory" additionalName="Event" type="EtcItem">
 		<!-- Medal used in the festival hosted by Amadeo Cadmus, the king of Aden. There are the Medal of Glory, the Medal of Victory and the Medal of Friendship. Event Manager Cocoring can exchange it for a Golden Chest for you. -->
 		<set name="icon" val="icon.etc_london_olympic_silver" />
 		<set name="is_freightable" val="false" />
@@ -480,7 +480,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36341" name="Medal of Friendship" name_additional="Event" type="EtcItem">
+	<item id="36341" name="Medal of Friendship" additionalName="Event" type="EtcItem">
 		<!-- Medal used in the festival hosted by Amadeo Cadmus, the king of Aden. There are the Medal of Glory, the Medal of Victory and the Medal of Friendship. Event Manager Cocoring can exchange it for a Golden Chest for you. -->
 		<set name="icon" val="icon.etc_london_olympic_bronze" />
 		<set name="is_freightable" val="false" />
@@ -488,7 +488,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36342" name="Agathion Bracelet" name_additional="Jr. Cocoring" type="Armor">
+	<item id="36342" name="Agathion Bracelet" additionalName="Jr. Cocoring" type="Armor">
 		<!-- Bracelet received from Event Manager Cocoring. When you wear it, you can summon Jr. Cocoring Agathion. This Agathion can take away one of the three medals (the Medal of Glory, the Medal of Victory and the Medal of Friendship) from a monster every hour for 5 hours after being summoned. Your Vitality recovers when stay in a Peaceful Zone wearing this bracelet. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -508,7 +508,7 @@
 			<skill id="9782" level="1" /> <!-- Release Agathion's Seal - Jr. Cocoring -->
 		</skills>
 	</item>
-	<item id="36343" name="Male Swimsuit No. 1" name_additional="Event" type="Armor">
+	<item id="36343" name="Male Swimsuit No. 1" additionalName="Event" type="Armor">
 		<!-- Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. Male only. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
@@ -517,7 +517,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 	</item>
-	<item id="36344" name="Male Swimsuit No. 2" name_additional="Event" type="Armor">
+	<item id="36344" name="Male Swimsuit No. 2" additionalName="Event" type="Armor">
 		<!-- Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. Male only. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
@@ -526,7 +526,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 	</item>
-	<item id="36345" name="Female Swimsuit No. 1" name_additional="Event" type="Armor">
+	<item id="36345" name="Female Swimsuit No. 1" additionalName="Event" type="Armor">
 		<!-- Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. Female only. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
@@ -535,7 +535,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 	</item>
-	<item id="36346" name="Female Swimsuit No. 2" name_additional="Event" type="Armor">
+	<item id="36346" name="Female Swimsuit No. 2" additionalName="Event" type="Armor">
 		<!-- Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. Female only. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
@@ -544,7 +544,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 	</item>
-	<item id="36347" name="Scroll: Energy of Glory" name_additional="Event" type="EtcItem">
+	<item id="36347" name="Scroll: Energy of Glory" additionalName="Event" type="EtcItem">
 		<!-- Increases acquired XP and SP by 30% for 30 min. -->
 		<set name="icon" val="icon.etc_london_olympic_scroll_i01" />
 		<set name="is_freightable" val="false" />
@@ -555,7 +555,7 @@
 			<skill id="9785" level="1" /> <!-- Scroll of Glory -->
 		</skills>
 	</item>
-	<item id="36348" name="Red Horns" name_additional="Event" type="Armor">
+	<item id="36348" name="Red Horns" additionalName="Event" type="Armor">
 		<!-- Hair accessory that can be used with a pendant. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
@@ -563,7 +563,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="36349" name="Bracelet of Glory: Glory" name_additional="Event" type="Armor">
+	<item id="36349" name="Bracelet of Glory: Glory" additionalName="Event" type="Armor">
 		<!-- Item for the Aden Golden Medal Event. Activates 5 talisman slots when equipped. MP + 216, Str + 1, Int + 1. -->
 		<set name="icon" val="icon.london_olympic_bracelet" />
 		<set name="default_action" val="EQUIP" />
@@ -574,7 +574,7 @@
 			<skill id="13489" level="1" /> <!-- Bracelet of Glory: Glory -->
 		</skills>
 	</item>
-	<item id="36350" name="Bracelet of Glory: Victory" name_additional="Event" type="Armor">
+	<item id="36350" name="Bracelet of Glory: Victory" additionalName="Event" type="Armor">
 		<!-- Item for the Aden Golden Medal Event. Activates 5 talisman slots when equipped. MP + 216, Dex + 1, Wit + 1. -->
 		<set name="icon" val="icon.london_olympic_bracelet" />
 		<set name="default_action" val="EQUIP" />
@@ -585,7 +585,7 @@
 			<skill id="13491" level="1" /> <!-- Bracelet of Glory: Victory -->
 		</skills>
 	</item>
-	<item id="36351" name="Bracelet of Glory: Friendship" name_additional="Event" type="Armor">
+	<item id="36351" name="Bracelet of Glory: Friendship" additionalName="Event" type="Armor">
 		<!-- Item for the Aden Golden Medal Event. Activates 5 talisman slots when equipped. MP + 216, Con + 1, Men +1. -->
 		<set name="icon" val="icon.london_olympic_bracelet" />
 		<set name="default_action" val="EQUIP" />
@@ -596,7 +596,7 @@
 			<skill id="13490" level="1" /> <!-- Bracelet of Glory: Friendship -->
 		</skills>
 	</item>
-	<item id="36352" name="Red Horns" name_additional="STR (Event)" type="Armor">
+	<item id="36352" name="Red Horns" additionalName="STR (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. STR + 3 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
@@ -607,7 +607,7 @@
 			<skill id="9554" level="1" /> <!-- Hair Accessory: STR -->
 		</skills>
 	</item>
-	<item id="36353" name="Red Horns" name_additional="DEX (Event)" type="Armor">
+	<item id="36353" name="Red Horns" additionalName="DEX (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. DEX + 3 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
@@ -618,7 +618,7 @@
 			<skill id="9555" level="1" /> <!-- Hair Accessory: DEX -->
 		</skills>
 	</item>
-	<item id="36354" name="Red Horns" name_additional="CON (Event)" type="Armor">
+	<item id="36354" name="Red Horns" additionalName="CON (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. CON + 3 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
@@ -629,7 +629,7 @@
 			<skill id="9556" level="1" /> <!-- Hair Accessory: CON -->
 		</skills>
 	</item>
-	<item id="36355" name="Red Horns" name_additional="MEN (Event)" type="Armor">
+	<item id="36355" name="Red Horns" additionalName="MEN (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. MEN + 3 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
@@ -640,7 +640,7 @@
 			<skill id="9557" level="1" /> <!-- Hair Accessory: MEN -->
 		</skills>
 	</item>
-	<item id="36356" name="Red Horns" name_additional="INT (Event)" type="Armor">
+	<item id="36356" name="Red Horns" additionalName="INT (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. INT + 3 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
@@ -651,7 +651,7 @@
 			<skill id="9558" level="1" /> <!-- Hair Accessory: INT -->
 		</skills>
 	</item>
-	<item id="36357" name="Red Horns" name_additional="WIT (Event)" type="Armor">
+	<item id="36357" name="Red Horns" additionalName="WIT (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. WIT + 3 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
@@ -662,7 +662,7 @@
 			<skill id="9559" level="1" /> <!-- Hair Accessory: WIT -->
 		</skills>
 	</item>
-	<item id="36358" name="Red Horns" name_additional="Critical Rate (Event)" type="Armor">
+	<item id="36358" name="Red Horns" additionalName="Critical Rate (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
@@ -673,7 +673,7 @@
 			<skill id="9560" level="1" /> <!-- Hair Accessory: Critical Rate -->
 		</skills>
 	</item>
-	<item id="36359" name="Red Horns" name_additional="Critical Damage (Event)" type="Armor">
+	<item id="36359" name="Red Horns" additionalName="Critical Damage (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
@@ -684,7 +684,7 @@
 			<skill id="9561" level="1" /> <!-- Hair Accessory: Critical Damage -->
 		</skills>
 	</item>
-	<item id="36360" name="Red Horns" name_additional="P. Def. (Event)" type="Armor">
+	<item id="36360" name="Red Horns" additionalName="P. Def. (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
@@ -695,7 +695,7 @@
 			<skill id="9562" level="1" /> <!-- Hair Accessory Circlet: P. Def. -->
 		</skills>
 	</item>
-	<item id="36361" name="Red Horns" name_additional="M. Def. (Event)" type="Armor">
+	<item id="36361" name="Red Horns" additionalName="M. Def. (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
@@ -707,7 +707,7 @@
 			<skill id="9563" level="1" /> <!-- Hair Accessory: M. Def. -->
 		</skills>
 	</item>
-	<item id="36362" name="Red Horns" name_additional="Evasion (Event)" type="Armor">
+	<item id="36362" name="Red Horns" additionalName="Evasion (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. Evasion + 5% when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
@@ -718,7 +718,7 @@
 			<skill id="9564" level="1" /> <!-- Hair Accessory: Evasion -->
 		</skills>
 	</item>
-	<item id="36363" name="Red Horns" name_additional="P. Atk. (Event)" type="Armor">
+	<item id="36363" name="Red Horns" additionalName="P. Atk. (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. P. Atk. + 5 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
@@ -729,7 +729,7 @@
 			<skill id="9565" level="1" /> <!-- Hair Accessory: P. Atk. -->
 		</skills>
 	</item>
-	<item id="36364" name="Red Horns" name_additional="M. Atk. (Event)" type="Armor">
+	<item id="36364" name="Red Horns" additionalName="M. Atk. (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. M. Atk. + 10 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
@@ -740,7 +740,7 @@
 			<skill id="9566" level="1" /> <!-- Hair Accessory: M. Atk. -->
 		</skills>
 	</item>
-	<item id="36365" name="Red Horns" name_additional="Accuracy (Event)" type="Armor">
+	<item id="36365" name="Red Horns" additionalName="Accuracy (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
@@ -751,7 +751,7 @@
 			<skill id="9567" level="1" /> <!-- Hair Accessory: Accuracy -->
 		</skills>
 	</item>
-	<item id="36366" name="Golden Chest" name_additional="Event" type="EtcItem">
+	<item id="36366" name="Golden Chest" additionalName="Event" type="EtcItem">
 		<!-- You can get a Golden Chest (Reward) prepared by Amadeo Cadmus, the king of Aden. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_freightable" val="false" />
@@ -759,14 +759,14 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36367" name="Luminous Golden Chest" name_additional="Event" type="EtcItem">
+	<item id="36367" name="Luminous Golden Chest" additionalName="Event" type="EtcItem">
 		<!-- Luminous Golden Chest with bright energy. Special reward prepared by Amadeo Cadmus, the king of Aden. Double-click to get the reward. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36368" name="Treasure Chest" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36368" name="Treasure Chest" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Small Reward Box for your help in the reconstruction of Aden. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="weight" val="10" />
@@ -774,7 +774,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36369" name="Hero's Treasure Chest" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36369" name="Hero's Treasure Chest" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Reward Box for your great help in the reconstruction of Aden. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -782,7 +782,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36370" name="Hair Accessory Pack" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36370" name="Hair Accessory Pack" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing hair accessory. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="weight" val="10" />
@@ -790,7 +790,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36371" name="Pendant Pack" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36371" name="Pendant Pack" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing pendant that enchants a hair accessory. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="weight" val="10" />
@@ -798,7 +798,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36372" name="Enchant Scroll Pack (S-grade)" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36372" name="Enchant Scroll Pack (S-grade)" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing S-grade enchant scroll. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="weight" val="10" />
@@ -806,7 +806,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36373" name="Enchant Scroll Pack (R-grade)" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36373" name="Enchant Scroll Pack (R-grade)" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing R-grade enchant scroll. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="weight" val="10" />
@@ -814,7 +814,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36374" name="Attribute Stone Fragment Box" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36374" name="Attribute Stone Fragment Box" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing attribute stone. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="weight" val="10" />
@@ -822,7 +822,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36375" name="Ingredient Box" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36375" name="Ingredient Box" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing various materials required for item crafting. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="weight" val="10" />
@@ -830,7 +830,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36376" name="Hero's Lucky Enchant Stone Pack" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36376" name="Hero's Lucky Enchant Stone Pack" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing Lucky Echant Stone. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -838,7 +838,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36377" name="Destruction Enchant Scroll Pack" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36377" name="Destruction Enchant Scroll Pack" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing Enchant Scroll of Destruction. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -846,7 +846,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36378" name="Hero's Giant Enchant Scroll Pack" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36378" name="Hero's Giant Enchant Scroll Pack" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing Giant's Enchant Scroll. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -854,7 +854,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36379" name="Hero's Blessed Enchant Scroll Pack" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36379" name="Hero's Blessed Enchant Scroll Pack" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing Hero's Blessed Enchant Scroll. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -862,7 +862,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36380" name="Hero's Unbind Scroll Pack" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36380" name="Hero's Unbind Scroll Pack" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Pack containing Unbind Scroll. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -870,7 +870,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36381" name="Hero's Attribute Crystal Pack" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36381" name="Hero's Attribute Crystal Pack" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing either an attribute crystal or a Super - 60/150 ore. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -878,7 +878,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36382" name="PK Pack" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36382" name="PK Pack" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing Scroll: PK. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -886,7 +886,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36383" name="Reputation Pack" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36383" name="Reputation Pack" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing Scroll: Reputation. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -894,7 +894,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36384" name="Mysterious Shot Pack" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36384" name="Mysterious Shot Pack" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing Mysterious Soulshots/Spiritshots (R-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
@@ -902,7 +902,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36385" name="Kaliel's Energy Box" name_additional="Aden Reconstruction" type="EtcItem">
+	<item id="36385" name="Kaliel's Energy Box" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Box containing Kaliel's Energy. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />

@@ -1399,7 +1399,7 @@
 			<player level="99" />
 		</cond>
 	</item>
-	<item id="18578" name="Requiem Shaper" name_additional="Guidance" type="Weapon">
+	<item id="18578" name="Requiem Shaper" additionalName="Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 7.6. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_aspeda_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1432,7 +1432,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18579" name="Requiem Shaper" name_additional="Haste" type="Weapon">
+	<item id="18579" name="Requiem Shaper" additionalName="Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_aspeda_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1465,7 +1465,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18580" name="Requiem Shaper" name_additional="Focus" type="Weapon">
+	<item id="18580" name="Requiem Shaper" additionalName="Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 82.7. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_aspeda_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1498,7 +1498,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18581" name="Requiem Cutter" name_additional="Haste" type="Weapon">
+	<item id="18581" name="Requiem Cutter" additionalName="Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_estia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1530,7 +1530,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18582" name="Requiem Cutter" name_additional="Focus" type="Weapon">
+	<item id="18582" name="Requiem Cutter" additionalName="Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.5. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_estia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1562,7 +1562,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18583" name="Requiem Cutter" name_additional="Health" type="Weapon">
+	<item id="18583" name="Requiem Cutter" additionalName="Health" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Max HP by 25%. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_estia_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1594,7 +1594,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18584" name="Requiem Slasher" name_additional="Focus" type="Weapon">
+	<item id="18584" name="Requiem Slasher" additionalName="Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_polion_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1626,7 +1626,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18585" name="Requiem Slasher" name_additional="Damage Up" type="Weapon">
+	<item id="18585" name="Requiem Slasher" additionalName="Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 288. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_polion_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1658,7 +1658,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18586" name="Requiem Slasher" name_additional="Haste" type="Weapon">
+	<item id="18586" name="Requiem Slasher" additionalName="Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_polion_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1690,7 +1690,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18587" name="Requiem Avenger" name_additional="Haste" type="Weapon">
+	<item id="18587" name="Requiem Avenger" additionalName="Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_batista_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1723,7 +1723,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18588" name="Requiem Avenger" name_additional="Critical Damage" type="Weapon">
+	<item id="18588" name="Requiem Avenger" additionalName="Critical Damage" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 1108 during a Critical Attack. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_batista_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1756,7 +1756,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18589" name="Requiem Avenger" name_additional="Focus" type="Weapon">
+	<item id="18589" name="Requiem Avenger" additionalName="Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_batista_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1789,7 +1789,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18590" name="Requiem Fighter" name_additional="Focus" type="Weapon">
+	<item id="18590" name="Requiem Fighter" additionalName="Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 76.3. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_fantasma_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1822,7 +1822,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18591" name="Requiem Fighter" name_additional="Damage Up" type="Weapon">
+	<item id="18591" name="Requiem Fighter" additionalName="Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 288. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_fantasma_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1855,7 +1855,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18592" name="Requiem Fighter" name_additional="Haste" type="Weapon">
+	<item id="18592" name="Requiem Fighter" additionalName="Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_fantasma_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1888,7 +1888,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="18593" name="Requiem Stormer" name_additional="HP Drain" type="Weapon">
+	<item id="18593" name="Requiem Stormer" additionalName="HP Drain" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nAbsorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_soryu_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1921,7 +1921,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="18594" name="Requiem Stormer" name_additional="Guidance" type="Weapon">
+	<item id="18594" name="Requiem Stormer" additionalName="Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by 7.6. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_soryu_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1954,7 +1954,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="18595" name="Requiem Stormer" name_additional="Damage Up" type="Weapon">
+	<item id="18595" name="Requiem Stormer" additionalName="Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 288. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_soryu_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1987,7 +1987,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="18596" name="Requiem Thrower" name_additional="Damage Up" type="Weapon">
+	<item id="18596" name="Requiem Thrower" additionalName="Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 288. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_grabathus_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2021,7 +2021,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="18597" name="Requiem Thrower" name_additional="Focus" type="Weapon">
+	<item id="18597" name="Requiem Thrower" additionalName="Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_grabathus_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2055,7 +2055,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="18598" name="Requiem Thrower" name_additional="Long Blow" type="Weapon">
+	<item id="18598" name="Requiem Thrower" additionalName="Long Blow" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases the attack range. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_grabathus_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2089,7 +2089,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="18599" name="Requiem Shooter" name_additional="Focus" type="Weapon">
+	<item id="18599" name="Requiem Shooter" additionalName="Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 79.5. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_shyayaka_i01" />
 		<set name="default_action" val="EQUIP" />

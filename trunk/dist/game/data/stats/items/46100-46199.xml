@@ -70,7 +70,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46108" name="Drake Maul Appearance Stone" name_additional="30-day" type="EtcItem">
+	<item id="46108" name="Drake Maul Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt into that of Drake Maul. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="is_stackable" val="true" />
@@ -78,7 +78,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="46109" name="Freya's Staff Appearance Stone" name_additional="30-day" type="EtcItem">
+	<item id="46109" name="Freya's Staff Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed magic blunt into that of Freya's Staff. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -86,7 +86,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="46110" name="Spezion's Claw Appearance Stone" name_additional="30-day" type="EtcItem">
+	<item id="46110" name="Spezion's Claw Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed fist weapon into that of Spezion's Claw. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="is_stackable" val="true" />
@@ -94,7 +94,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="46111" name="Maliss Stormer Appearance Stone" name_additional="30-day" type="EtcItem">
+	<item id="46111" name="Maliss Stormer Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Maliss Stormer. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="is_stackable" val="true" />
@@ -102,7 +102,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="46112" name="Steregos' Dagger Appearance Stone" name_additional="30-day" type="EtcItem">
+	<item id="46112" name="Steregos' Dagger Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one handed dagger into that of Steregos' Dagger. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="is_stackable" val="true" />
@@ -110,7 +110,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="46113" name="Ron's Dual Blunt Weapon Appearance Stone" name_additional="30-day" type="EtcItem">
+	<item id="46113" name="Ron's Dual Blunt Weapon Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt into that of Ron's Dual Blunt Weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="is_stackable" val="true" />
@@ -160,7 +160,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46120" name="Little Girls' Hat Appearance Stone" name_additional="30-day" type="EtcItem">
+	<item id="46120" name="Little Girls' Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Little Girl's Hat. 30-day. Can be used only on hair accessories that take up 2 slots. Female only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
@@ -168,7 +168,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="46121" name="Little Boy's Hat Appearance Stone" name_additional="30-day" type="EtcItem">
+	<item id="46121" name="Little Boy's Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Little Boy's Hat. 30-day. Can be used only on hair accessories that take up 2 slots. Male only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
@@ -190,7 +190,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46124" name="Uniform Hat Appearance Stone" name_additional="30-day" type="EtcItem">
+	<item id="46124" name="Uniform Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Uniform Hat. 30-day. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
@@ -198,7 +198,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="46125" name="Afro - Gold Appearance Stone" name_additional="30-day" type="EtcItem">
+	<item id="46125" name="Afro - Gold Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Gold Afro. 30-day. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
@@ -206,7 +206,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="46126" name="Afro - Pink Appearance Stone" name_additional="30-day" type="EtcItem">
+	<item id="46126" name="Afro - Pink Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Pink Afro. 30-day. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
@@ -469,7 +469,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="icon" val="icon.etc_powder_black_i00" />
 	</item>
-	<item id="46146" name="Atelia Fortress Stronghold I Teleport Device" name_additional="24-hr" type="EtcItem">
+	<item id="46146" name="Atelia Fortress Stronghold I Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold I. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -483,7 +483,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="46147" name="Atelia Fortress Stronghold II Teleport Device" name_additional="24-hr" type="EtcItem">
+	<item id="46147" name="Atelia Fortress Stronghold II Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold II. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -497,7 +497,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="46148" name="Atelia Fortress Stronghold III Teleport Device" name_additional="24-hr" type="EtcItem">
+	<item id="46148" name="Atelia Fortress Stronghold III Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold III. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -511,7 +511,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="46149" name="Atelia Fortress Stronghold IV Teleport Device" name_additional="24-hr" type="EtcItem">
+	<item id="46149" name="Atelia Fortress Stronghold IV Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold IV. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -763,7 +763,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 	</item>
-	<item id="46170" name="Atelia Fortress Protection Box" name_additional="Event" type="EtcItem">
+	<item id="46170" name="Atelia Fortress Protection Box" additionalName="Event" type="EtcItem">
 		<!-- Reward for Drew's Golden Dice event. Will be deleted once the event ends. -->
 		<set name="icon" val="BranchSys.br_bright_gold_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -776,7 +776,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46171" name="Garden of the Spirits Protection Box" name_additional="Event" type="EtcItem">
+	<item id="46171" name="Garden of the Spirits Protection Box" additionalName="Event" type="EtcItem">
 		<!-- Reward for Drew's Golden Dice event. Will be deleted once the event ends. -->
 		<set name="icon" val="BranchSys.br_gold_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -789,7 +789,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46172" name="Drew Protection Box" name_additional="Event" type="EtcItem">
+	<item id="46172" name="Drew Protection Box" additionalName="Event" type="EtcItem">
 		<!-- Reward for Drew's Golden Dice event. Will be deleted once the event ends. -->
 		<set name="icon" val="BranchSys.br_silver_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -802,7 +802,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46173" name="Male Swimsuit No.1 Appearance Stone" name_additional="30-day" type="EtcItem">
+	<item id="46173" name="Male Swimsuit No.1 Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of Male Swimwear No. 1. Works on one-pieces too. It modifies everything, making the appearance of all armor into that of swimwear. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="is_stackable" val="true" />
@@ -811,7 +811,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="46174" name="Male Swimsuit No.2 Appearance Stone" name_additional="30-day" type="EtcItem">
+	<item id="46174" name="Male Swimsuit No.2 Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of Male Swimwear No. 2. Works on one-pieces too. It modifies everything, making the appearance of all armor into that of swimwear. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="is_stackable" val="true" />
@@ -820,7 +820,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="46175" name="Bikini No.1 Appearance Stone" name_additional="30-day" type="EtcItem">
+	<item id="46175" name="Bikini No.1 Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of Bikini No. 1. Works on one-pieces too. It modifies everything, making the appearance of all armor into that of a bikini. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="is_stackable" val="true" />
@@ -829,7 +829,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="46176" name="Bikini No.2 Appearance Stone" name_additional="30-day" type="EtcItem">
+	<item id="46176" name="Bikini No.2 Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of Bikini No. 2. Works on one-pieces too. It modifies everything, making the appearance of all armor into that of a bikini. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="is_stackable" val="true" />
@@ -934,7 +934,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="46186" name="Agathion - Anakim Holy Barrier" name_additional="30-day" type="Armor">
+	<item id="46186" name="Agathion - Anakim Holy Barrier" additionalName="30-day" type="Armor">
 		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakims.\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Enchant: Fire/Water/Earth/Wind/Dark/Holy Atk. and Def. each increases by 30. \n3. Anakim Blessing : Acquired XP and SP + 3%. -->
 		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
@@ -949,7 +949,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="46187" name="Agathion - Anakim Holy Barrier Pack" name_additional="30-day" type="EtcItem">
+	<item id="46187" name="Agathion - Anakim Holy Barrier Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Anakim Holy Barrier (30-day). -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="weight" val="10" />
@@ -977,7 +977,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46190" name="Vampiric Style Appearance Stone" name_additional="30-day" type="EtcItem">
+	<item id="46190" name="Vampiric Style Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of your armor into that of a Vampiric Style. 30-day. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Vampiric Style. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
@@ -1072,7 +1072,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46199" name="Halloween Appearance Stone" name_additional="7-day" type="EtcItem">
+	<item id="46199" name="Halloween Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a top armor or a one-piece into that of a Halloween outfit. It changes everything, making the appearance of all armor into that of the Halloween outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />

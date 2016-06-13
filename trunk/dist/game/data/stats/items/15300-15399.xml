@@ -349,7 +349,7 @@
 			<skill id="8337" level="1" /> <!-- Weight Up -->
 		</skills>
 	</item>
-	<item id="15313" name="Player Commendation - Forgotten Blade" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="15313" name="Player Commendation - Forgotten Blade" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -385,7 +385,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15314" name="Player Commendation - Basalt Battlehammer" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="15314" name="Player Commendation - Basalt Battlehammer" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -422,7 +422,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15315" name="Player Commendation - Imperial Staff" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="15315" name="Player Commendation - Imperial Staff" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -460,7 +460,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15316" name="Player Commendation - Angel Slayer" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="15316" name="Player Commendation - Angel Slayer" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -497,7 +497,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15317" name="Player Commendation - Dragon Hunter Axe" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="15317" name="Player Commendation - Dragon Hunter Axe" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -534,7 +534,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15318" name="Player Commendation - Saint Spear" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="15318" name="Player Commendation - Saint Spear" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_saint_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -571,7 +571,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="15319" name="Player Commendation - Demon Splinter" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="15319" name="Player Commendation - Demon Splinter" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -608,7 +608,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15320" name="Player Commendation - Heaven's Divider" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="15320" name="Player Commendation - Heaven's Divider" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -644,7 +644,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15321" name="Player Commendation - Arcana Mace" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="15321" name="Player Commendation - Arcana Mace" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_arcana_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -682,7 +682,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15322" name="Player Commendation - Draconic Bow" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="15322" name="Player Commendation - Draconic Bow" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -721,7 +721,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="15323" name="Player Commendation - Laevateinn" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="15323" name="Player Commendation - Laevateinn" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -762,7 +762,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15324" name="Player Commendation - Gram" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="15324" name="Player Commendation - Gram" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -802,7 +802,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15325" name="Player Commendation - Sarunga" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="15325" name="Player Commendation - Sarunga" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_sarnga_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -843,7 +843,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="15326" name="Player Commendation - Tallum Blade*Dark Legion's Edge" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="15326" name="Player Commendation - Tallum Blade*Dark Legion's Edge" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1096,7 +1096,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15342" name="Aqua Elf Transformation Harp" name_additional="60-day" type="Weapon">
+	<item id="15342" name="Aqua Elf Transformation Harp" additionalName="60-day" type="Weapon">
 		<set name="icon" val="icon.harp_of_transform_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1147,7 +1147,7 @@
 			<item id="15342" min="1" max="1" chance="100" /> <!-- Aqua Elf Transformation Harp - 60-day -->
 		</capsuled_items>
 	</item>
-	<item id="15344" name="Aqua Elf Transformation Harp (Event)" name_additional="60-day" type="Weapon">
+	<item id="15344" name="Aqua Elf Transformation Harp (Event)" additionalName="60-day" type="Weapon">
 		<set name="icon" val="icon.harp_of_transform_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1460,7 +1460,7 @@
 			<skill id="9021" level="1" /> <!-- Berserker Spirit -->
 		</skills>
 	</item>
-	<item id="15358" name="Player Commendation Instant Lottery Ticket" name_additional="30-day" type="EtcItem">
+	<item id="15358" name="Player Commendation Instant Lottery Ticket" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_exchange_ticket_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1481,7 +1481,7 @@
 			<skill id="9027" level="1" /> <!-- Player Commendation Instant Lottery Ticket -->
 		</skills>
 	</item>
-	<item id="15359" name="Winning Lottery Ticket: 10,000 PC Points" name_additional="30-day" type="EtcItem">
+	<item id="15359" name="Winning Lottery Ticket: 10,000 PC Points" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_exchange_ticket_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1496,7 +1496,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="15360" name="Winning Lottery Ticket: 1,000 PC Points" name_additional="30-day" type="EtcItem">
+	<item id="15360" name="Winning Lottery Ticket: 1,000 PC Points" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_exchange_ticket_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1511,7 +1511,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="15361" name="Winning Lottery Ticket: 200 PC Points" name_additional="30-day" type="EtcItem">
+	<item id="15361" name="Winning Lottery Ticket: 200 PC Points" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1526,7 +1526,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="15362" name="Winning Lottery Ticket: 100 PC Points" name_additional="30-day" type="EtcItem">
+	<item id="15362" name="Winning Lottery Ticket: 100 PC Points" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1541,7 +1541,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="15363" name="Winning Lottery Ticket: 10 PC Points" name_additional="30-day" type="EtcItem">
+	<item id="15363" name="Winning Lottery Ticket: 10 PC Points" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.etc_exchange_ticket_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1867,7 +1867,7 @@
 			<skill id="9039" level="1" /> <!-- Steamed Rice Cake -->
 		</skills>
 	</item>
-	<item id="15381" name="Event - Herdsman's Love Scroll" name_additional="Event" type="EtcItem">
+	<item id="15381" name="Event - Herdsman's Love Scroll" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_altair_enchant_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -1884,7 +1884,7 @@
 			<skill id="9033" level="1" /> <!-- Herdsman's Love Scroll -->
 		</skills>
 	</item>
-	<item id="15382" name="Event - Scroll: Enchant Vitality Belt" name_additional="Event" type="EtcItem">
+	<item id="15382" name="Event - Scroll: Enchant Vitality Belt" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_energy_enchant_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -1901,7 +1901,7 @@
 			<skill id="9034" level="1" /> <!-- Scroll: Enchant Vitality Belt -->
 		</skills>
 	</item>
-	<item id="15383" name="Weaver's Colorful Dress" name_additional="7-day" type="Armor">
+	<item id="15383" name="Weaver's Colorful Dress" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1918,7 +1918,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="15384" name="Weaver's Colorful Dress" name_additional="30-day" type="Armor">
+	<item id="15384" name="Weaver's Colorful Dress" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1935,7 +1935,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="15385" name="Weaver's Colorful Dress" name_additional="60-day" type="Armor">
+	<item id="15385" name="Weaver's Colorful Dress" additionalName="60-day" type="Armor">
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1952,7 +1952,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="86400" />
 	</item>
-	<item id="15386" name="Weaver's Colorful Dress" name_additional="90-day" type="Armor">
+	<item id="15386" name="Weaver's Colorful Dress" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1969,7 +1969,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="129600" />
 	</item>
-	<item id="15387" name="Weaver's Colorful Dress" name_additional="Permanent" type="Armor">
+	<item id="15387" name="Weaver's Colorful Dress" additionalName="Permanent" type="Armor">
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1985,7 +1985,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="15388" name="Weaver's Colorful Dress (Event)" name_additional="7-day" type="Armor">
+	<item id="15388" name="Weaver's Colorful Dress (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2002,7 +2002,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="15389" name="Weaver's Colorful Dress (Event)" name_additional="30-day" type="Armor">
+	<item id="15389" name="Weaver's Colorful Dress (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2019,7 +2019,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="15390" name="Weaver's Colorful Dress (Event)" name_additional="60-day" type="Armor">
+	<item id="15390" name="Weaver's Colorful Dress (Event)" additionalName="60-day" type="Armor">
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2036,7 +2036,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="86400" />
 	</item>
-	<item id="15391" name="Weaver's Colorful Dress (Event)" name_additional="90-day" type="Armor">
+	<item id="15391" name="Weaver's Colorful Dress (Event)" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2053,7 +2053,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="129600" />
 	</item>
-	<item id="15392" name="Weaver's Colorful Dress (Event)" name_additional="Permanent" type="Armor">
+	<item id="15392" name="Weaver's Colorful Dress (Event)" additionalName="Permanent" type="Armor">
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2069,7 +2069,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="15393" name="Vitality Belt" name_additional="7-day" type="Armor">
+	<item id="15393" name="Vitality Belt" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2089,7 +2089,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="15394" name="Vitality Belt" name_additional="30-day" type="Armor">
+	<item id="15394" name="Vitality Belt" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2109,7 +2109,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="15395" name="Vitality Belt" name_additional="60-day" type="Armor">
+	<item id="15395" name="Vitality Belt" additionalName="60-day" type="Armor">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2129,7 +2129,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="86400" />
 	</item>
-	<item id="15396" name="Vitality Belt" name_additional="90-day" type="Armor">
+	<item id="15396" name="Vitality Belt" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2149,7 +2149,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="129600" />
 	</item>
-	<item id="15397" name="Vitality Belt" name_additional="Permanent" type="Armor">
+	<item id="15397" name="Vitality Belt" additionalName="Permanent" type="Armor">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2167,7 +2167,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="15398" name="Vitality Belt (Event)" name_additional="7-day" type="Armor">
+	<item id="15398" name="Vitality Belt (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2187,7 +2187,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="15399" name="Vitality Belt (Event)" name_additional="30-day" type="Armor">
+	<item id="15399" name="Vitality Belt (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />

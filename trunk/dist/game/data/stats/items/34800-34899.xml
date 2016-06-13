@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="34800" name="Dark Crystal" name_additional="Event" type="EtcItem">
+	<item id="34800" name="Dark Crystal" additionalName="Event" type="EtcItem">
 		<!-- Dark attack attribute increases by 5 when bestowed on a weapon. Holy Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
 		<set name="weight" val="1" />
@@ -16,7 +16,7 @@
 			<skill id="2334" level="2" /> <!-- Dark Crystal -->
 		</skills>
 	</item>
-	<item id="34801" name="Holy Crystal" name_additional="Event" type="EtcItem">
+	<item id="34801" name="Holy Crystal" additionalName="Event" type="EtcItem">
 		<!-- Holy attack attribute increases by 5 when bestowed on a weapon. Dark Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
 		<set name="weight" val="1" />
@@ -32,7 +32,7 @@
 			<skill id="2333" level="2" /> <!-- Holy Crystal -->
 		</skills>
 	</item>
-	<item id="34811" name="Soulshot Pack" name_additional="Event" type="EtcItem">
+	<item id="34811" name="Soulshot Pack" additionalName="Event" type="EtcItem">
 		<!-- Pack containing soulshot. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -46,7 +46,7 @@
 			<skill id="9380" level="1" /> <!-- Soulshot Pack -->
 		</skills>
 	</item>
-	<item id="34812" name="Blessed Spiritshot Pack" name_additional="Event" type="EtcItem">
+	<item id="34812" name="Blessed Spiritshot Pack" additionalName="Event" type="EtcItem">
 		<!-- Pack containing blessed spiritshot. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -60,7 +60,7 @@
 			<skill id="9381" level="1" /> <!-- Blessed Spiritshot Pack -->
 		</skills>
 	</item>
-	<item id="34813" name="Stone Pack" name_additional="Event" type="EtcItem">
+	<item id="34813" name="Stone Pack" additionalName="Event" type="EtcItem">
 		<!-- Pack containing attribute stone. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -74,7 +74,7 @@
 			<skill id="9382" level="1" /> <!-- Stone Pack -->
 		</skills>
 	</item>
-	<item id="34814" name="Crystal Pack" name_additional="Event" type="EtcItem">
+	<item id="34814" name="Crystal Pack" additionalName="Event" type="EtcItem">
 		<!-- Pack containing attribute crystal. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -88,7 +88,7 @@
 			<skill id="9383" level="1" /> <!-- Crystal Pack -->
 		</skills>
 	</item>
-	<item id="34815" name="Scroll: Enchant Armor Pack (S-grade)" name_additional="Event" type="EtcItem">
+	<item id="34815" name="Scroll: Enchant Armor Pack (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- Pack containing S-grade Scroll: Enchant Armor. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -102,7 +102,7 @@
 			<skill id="9384" level="1" /> <!-- Scroll: Enchant Armor Pack (S-grade) -->
 		</skills>
 	</item>
-	<item id="34816" name="Scroll: Enchant Armor Pack (R-grade)" name_additional="Event" type="EtcItem">
+	<item id="34816" name="Scroll: Enchant Armor Pack (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Pack containing R-grade Scroll: Enchant Armor. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -116,7 +116,7 @@
 			<skill id="9385" level="1" /> <!-- Scroll: Enchant Armor Pack (R-grade) -->
 		</skills>
 	</item>
-	<item id="34817" name="Scroll: Enchant Weapon Pack (S-grade)" name_additional="Event" type="EtcItem">
+	<item id="34817" name="Scroll: Enchant Weapon Pack (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- Pack containing S-grade Scroll: Enchant Weapon. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -130,7 +130,7 @@
 			<skill id="9386" level="1" /> <!-- Scroll: Enchant Weapon Pack (S-grade) -->
 		</skills>
 	</item>
-	<item id="34818" name="Scroll: Enchant Weapon Pack (R-grade)" name_additional="Event" type="EtcItem">
+	<item id="34818" name="Scroll: Enchant Weapon Pack (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Pack containing R-grade Scroll: Enchant Weapon. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -144,7 +144,7 @@
 			<skill id="9387" level="1" /> <!-- Scroll: Enchant Weapon Pack (R-grade) -->
 		</skills>
 	</item>
-	<item id="34819" name="Squash Ring Pack" name_additional="Event" type="EtcItem">
+	<item id="34819" name="Squash Ring Pack" additionalName="Event" type="EtcItem">
 		<!-- Squash ring Pack. Can acquire a Warrior-type or Magic-type ring. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -158,7 +158,7 @@
 			<skill id="9400" level="1" /> <!-- Squash Ring Pack -->
 		</skills>
 	</item>
-	<item id="34820" name="Squash Earring Pack" name_additional="Event" type="EtcItem">
+	<item id="34820" name="Squash Earring Pack" additionalName="Event" type="EtcItem">
 		<!-- Squash earring Pack. Can acquire a Warrior-type or Magic-type earring. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -172,7 +172,7 @@
 			<skill id="9401" level="1" /> <!-- Squash Earring Pack -->
 		</skills>
 	</item>
-	<item id="34821" name="Squash Necklace Pack" name_additional="Event" type="EtcItem">
+	<item id="34821" name="Squash Necklace Pack" additionalName="Event" type="EtcItem">
 		<!-- Squash necklace Pack. Can acquire a squash necklace. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -186,7 +186,7 @@
 			<skill id="9402" level="1" /> <!-- Squash Necklace Pack -->
 		</skills>
 	</item>
-	<item id="34822" name="Squash Accessory Pack" name_additional="Event" type="EtcItem">
+	<item id="34822" name="Squash Accessory Pack" additionalName="Event" type="EtcItem">
 		<!-- When opened, can acquire one of the following: a Squash Ring Pack, a Squash Earring Pack, or a Squash Necklace Pack. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -200,7 +200,7 @@
 			<skill id="9388" level="1" /> <!-- Squash Accessory Pack -->
 		</skills>
 	</item>
-	<item id="34823" name="Rare Soul Crystal Pack (R-grade)" name_additional="Event" type="EtcItem">
+	<item id="34823" name="Rare Soul Crystal Pack (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Pack containing rare Soul Crystal (R-grade). -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -214,7 +214,7 @@
 			<skill id="9389" level="1" /> <!-- Soul Crystal Pack (R-grade) -->
 		</skills>
 	</item>
-	<item id="34824" name="Rare Soul Crystal Pack (R95-grade)" name_additional="Event" type="EtcItem">
+	<item id="34824" name="Rare Soul Crystal Pack (R95-grade)" additionalName="Event" type="EtcItem">
 		<!-- Pack containing rare Soul Crystal (R95-grade). -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -228,7 +228,7 @@
 			<skill id="9390" level="1" /> <!-- Soul Crystal Pack (R95-grade) -->
 		</skills>
 	</item>
-	<item id="34825" name="Rare Soul Crystal Pack (R99-grade)" name_additional="Event" type="EtcItem">
+	<item id="34825" name="Rare Soul Crystal Pack (R99-grade)" additionalName="Event" type="EtcItem">
 		<!-- Pack containing rare Soul Crystal (R99-grade). -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -242,7 +242,7 @@
 			<skill id="9391" level="1" /> <!-- Soul Crystal Pack (R99-grade) -->
 		</skills>
 	</item>
-	<item id="34826" name="Talisman Pack" name_additional="Event" type="EtcItem">
+	<item id="34826" name="Talisman Pack" additionalName="Event" type="EtcItem">
 		<!-- Pack containing talisman. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -256,7 +256,7 @@
 			<skill id="9392" level="1" /> <!-- Talisman Pack -->
 		</skills>
 	</item>
-	<item id="34827" name="Elixir Pack (S-grade)" name_additional="Event" type="EtcItem">
+	<item id="34827" name="Elixir Pack (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- Pack containing S-grade elixir. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -270,7 +270,7 @@
 			<skill id="9393" level="1" /> <!-- Elixir Pack (S-grade) -->
 		</skills>
 	</item>
-	<item id="34828" name="Elixir Pack (R-grade)" name_additional="Event" type="EtcItem">
+	<item id="34828" name="Elixir Pack (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Pack containing R-grade elixir. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -284,7 +284,7 @@
 			<skill id="9394" level="1" /> <!-- Elixir Pack (R-grade) -->
 		</skills>
 	</item>
-	<item id="34829" name="Scroll of Blessing Pack (R-grade)" name_additional="Event" type="EtcItem">
+	<item id="34829" name="Scroll of Blessing Pack (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Pack containing blessed scroll. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
@@ -326,7 +326,7 @@
 			<item id="18571" min="4" max="4" chance="100" /> <!-- Top-grade Life Stone (R95-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="34831" name="Squash Ring (Wizard)" name_additional="Event" type="Armor">
+	<item id="34831" name="Squash Ring (Wizard)" additionalName="Event" type="Armor">
 		<!-- Squash ring for wizards. Increases M. Critical Rate by 2% and M. Accuracy by 2. 15-day. Wearing 2 of these rings will give the effect of 1. -->
 		<set name="icon" val="icon.accessory_ring_of_gourd_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -350,7 +350,7 @@
 			<stat type="mDef">62</stat>
 		</stats>
 	</item>
-	<item id="34832" name="Squash Earring (Wizard)" name_additional="Event" type="Armor">
+	<item id="34832" name="Squash Earring (Wizard)" additionalName="Event" type="Armor">
 		<!-- Squash earring for wizards. Increases Casting Spd. by 4% and Speed by 5. 15-day. When two identical earrings are equipped, only one effect is applied. -->
 		<set name="icon" val="icon.accessory_earring_of_gourd_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -392,7 +392,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="34834" name="Afro Hair" name_additional="7-day" type="Armor">
+	<item id="34834" name="Afro Hair" additionalName="7-day" type="Armor">
 		<!-- Hair accessory that looks like Afro hair. (7-day) -->
 		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -733,7 +733,7 @@
 			<item id="6406" min="1" max="1" chance="100" /> <!-- Firecracker -->
 		</capsuled_items>
 	</item>
-	<item id="34856" name="Echo Crystal - Theme of Love" name_additional="Campaign" type="EtcItem">
+	<item id="34856" name="Echo Crystal - Theme of Love" additionalName="Campaign" type="EtcItem">
 		<!-- Echo crystal that plays the theme music of love. May only be used once. -->
 		<set name="icon" val="icon.etc_echo_crystal_i02" />
 		<set name="weight" val="10" />
@@ -749,7 +749,7 @@
 			<skill id="2070" level="1" /> <!-- Item - Race Sound Crystal -->
 		</skills>
 	</item>
-	<item id="34857" name="Echo Crystal - Theme of Festival" name_additional="Campaign" type="EtcItem">
+	<item id="34857" name="Echo Crystal - Theme of Festival" additionalName="Campaign" type="EtcItem">
 		<!-- Echo crystal that plays the theme music of a feast. May only be used once. -->
 		<set name="icon" val="icon.etc_echo_crystal_i04" />
 		<set name="weight" val="10" />
@@ -765,7 +765,7 @@
 			<skill id="2071" level="1" /> <!-- Item - Race Sound Crystal -->
 		</skills>
 	</item>
-	<item id="34858" name="Echo Crystal - Theme of Celebration" name_additional="Campaign" type="EtcItem">
+	<item id="34858" name="Echo Crystal - Theme of Celebration" additionalName="Campaign" type="EtcItem">
 		<!-- Echo crystal that plays the theme music of a celebration. May only be used once. -->
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
 		<set name="weight" val="10" />
@@ -982,7 +982,7 @@
 			<item id="33801" min="1" max="1" chance="100" /> <!-- Mentoring Guidebook -->
 		</capsuled_items>
 	</item>
-	<item id="34871" name="Low-grade Magic Rune Clip Immortal Belt" name_additional="HP Recovery" type="Armor">
+	<item id="34871" name="Low-grade Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r1_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1003,7 +1003,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="34872" name="Standard Magic Rune Clip Immortal Belt" name_additional="HP Recovery" type="Armor">
+	<item id="34872" name="Standard Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r1_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1024,7 +1024,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="34873" name="High-grade Magic Rune Clip Immortal Belt" name_additional="HP Recovery" type="Armor">
+	<item id="34873" name="High-grade Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r1_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1045,7 +1045,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="34874" name="Top-grade Magic Rune Clip Immortal Belt" name_additional="HP Recovery" type="Armor">
+	<item id="34874" name="Top-grade Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
 		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.r1_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1066,7 +1066,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="34875" name="Low-grade Magic Rune Clip Immortal Belt" name_additional="MP Recovery" type="Armor">
+	<item id="34875" name="Low-grade Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r1_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1087,7 +1087,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="34876" name="Standard Magic Rune Clip Immortal Belt" name_additional="MP Recovery" type="Armor">
+	<item id="34876" name="Standard Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r1_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1108,7 +1108,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="34877" name="High-grade Magic Rune Clip Immortal Belt" name_additional="MP Recovery" type="Armor">
+	<item id="34877" name="High-grade Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r1_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1129,7 +1129,7 @@
 			<stat type="pDef">19</stat>
 		</stats>
 	</item>
-	<item id="34878" name="Top-grade Magic Rune Clip Immortal Belt" name_additional="MP Recovery" type="Armor">
+	<item id="34878" name="Top-grade Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
 		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.r1_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1426,7 +1426,7 @@
 			<skill id="7114" level="1" /> <!-- Spellbook: Clan Flag -->
 		</skills>
 	</item>
-	<item id="34896" name="Rabbit Ears" name_additional="Campaign" type="Armor">
+	<item id="34896" name="Rabbit Ears" additionalName="Campaign" type="Armor">
 		<!-- When equipped, STR + 3, DEX + 1, CON + 1, P. Evasion + 1, and M. Evasion + 1. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1447,7 +1447,7 @@
 			<skill id="13381" level="1" /> <!-- Hair Accessory Rabbit Ears: Campaign -->
 		</skills>
 	</item>
-	<item id="34897" name="Angel Circlet" name_additional="Campaign" type="Armor">
+	<item id="34897" name="Angel Circlet" additionalName="Campaign" type="Armor">
 		<!-- Increases INT + 3, WIT + 1, MEN + 1, Physical Attack Resistance + 1, and Mental Attack Resistance + 1. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />

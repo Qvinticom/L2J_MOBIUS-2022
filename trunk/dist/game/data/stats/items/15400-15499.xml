@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="15400" name="Vitality Belt (Event)" name_additional="60-day" type="Armor">
+	<item id="15400" name="Vitality Belt (Event)" additionalName="60-day" type="Armor">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -20,7 +20,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="86400" />
 	</item>
-	<item id="15401" name="Vitality Belt (Event)" name_additional="90-day" type="Armor">
+	<item id="15401" name="Vitality Belt (Event)" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -40,7 +40,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="129600" />
 	</item>
-	<item id="15402" name="Vitality Belt (Event)" name_additional="Permanent" type="Armor">
+	<item id="15402" name="Vitality Belt (Event)" additionalName="Permanent" type="Armor">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -58,7 +58,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="15403" name="Player Commendation - Berserker Blade" name_additional="PC-exclusive Weapon" type="Weapon">
+	<item id="15403" name="Player Commendation - Berserker Blade" additionalName="PC-exclusive Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -94,7 +94,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15404" name="6th Anniversary Party Gift Box (2003)" name_additional="Event" type="EtcItem">
+	<item id="15404" name="6th Anniversary Party Gift Box (2003)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -115,7 +115,7 @@
 			<item id="15418" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15405" name="6th Anniversary Party Gift Box (2004)" name_additional="Event" type="EtcItem">
+	<item id="15405" name="6th Anniversary Party Gift Box (2004)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -136,7 +136,7 @@
 			<item id="15419" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 25-day -->
 		</capsuled_items>
 	</item>
-	<item id="15406" name="6th Anniversary Party Gift Box (2005)" name_additional="Event" type="EtcItem">
+	<item id="15406" name="6th Anniversary Party Gift Box (2005)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -157,7 +157,7 @@
 			<item id="15420" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 20-day -->
 		</capsuled_items>
 	</item>
-	<item id="15407" name="6th Anniversary Party Gift Box (2006)" name_additional="Event" type="EtcItem">
+	<item id="15407" name="6th Anniversary Party Gift Box (2006)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -178,7 +178,7 @@
 			<item id="15421" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="15408" name="6th Anniversary Party Gift Box (2007)" name_additional="Event" type="EtcItem">
+	<item id="15408" name="6th Anniversary Party Gift Box (2007)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -199,7 +199,7 @@
 			<item id="15422" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15409" name="6th Anniversary Party Gift Box (2008)" name_additional="Event" type="EtcItem">
+	<item id="15409" name="6th Anniversary Party Gift Box (2008)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -220,7 +220,7 @@
 			<item id="15423" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 5-day -->
 		</capsuled_items>
 	</item>
-	<item id="15410" name="6th Anniversary Party Gift Box (2009)" name_additional="Event" type="EtcItem">
+	<item id="15410" name="6th Anniversary Party Gift Box (2009)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -241,7 +241,7 @@
 			<item id="15424" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 3-day -->
 		</capsuled_items>
 	</item>
-	<item id="15411" name="6th Anniversary Party Gift Set (2003)" name_additional="Event" type="EtcItem">
+	<item id="15411" name="6th Anniversary Party Gift Set (2003)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -263,7 +263,7 @@
 			<item id="15418" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="15412" name="6th Anniversary Party Gift Set (2004)" name_additional="Event" type="EtcItem">
+	<item id="15412" name="6th Anniversary Party Gift Set (2004)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -285,7 +285,7 @@
 			<item id="15419" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 25-day -->
 		</capsuled_items>
 	</item>
-	<item id="15413" name="6th Anniversary Party Gift Set (2005)" name_additional="Event" type="EtcItem">
+	<item id="15413" name="6th Anniversary Party Gift Set (2005)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -307,7 +307,7 @@
 			<item id="15420" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 20-day -->
 		</capsuled_items>
 	</item>
-	<item id="15414" name="6th Anniversary Party Gift Set (2006)" name_additional="Event" type="EtcItem">
+	<item id="15414" name="6th Anniversary Party Gift Set (2006)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -329,7 +329,7 @@
 			<item id="15421" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="15415" name="6th Anniversary Party Gift Set (2007)" name_additional="Event" type="EtcItem">
+	<item id="15415" name="6th Anniversary Party Gift Set (2007)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -351,7 +351,7 @@
 			<item id="15422" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 10-day -->
 		</capsuled_items>
 	</item>
-	<item id="15416" name="6th Anniversary Party Gift Set (2008)" name_additional="Event" type="EtcItem">
+	<item id="15416" name="6th Anniversary Party Gift Set (2008)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -373,7 +373,7 @@
 			<item id="15423" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 5-day -->
 		</capsuled_items>
 	</item>
-	<item id="15417" name="6th Anniversary Party Gift Set (2009)" name_additional="Event" type="EtcItem">
+	<item id="15417" name="6th Anniversary Party Gift Set (2009)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -395,7 +395,7 @@
 			<item id="15424" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 3-day -->
 		</capsuled_items>
 	</item>
-	<item id="15418" name="6th Anniversary Party Cube (Event)" name_additional="30-day" type="EtcItem">
+	<item id="15418" name="6th Anniversary Party Cube (Event)" additionalName="30-day" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -414,7 +414,7 @@
 			<skill id="9042" level="1" /> <!-- 6th Anniversary Cube -->
 		</skills>
 	</item>
-	<item id="15419" name="6th Anniversary Party Cube (Event)" name_additional="25-day" type="EtcItem">
+	<item id="15419" name="6th Anniversary Party Cube (Event)" additionalName="25-day" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -433,7 +433,7 @@
 			<skill id="9043" level="1" /> <!-- 6th Anniversary Cube -->
 		</skills>
 	</item>
-	<item id="15420" name="6th Anniversary Party Cube (Event)" name_additional="20-day" type="EtcItem">
+	<item id="15420" name="6th Anniversary Party Cube (Event)" additionalName="20-day" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -452,7 +452,7 @@
 			<skill id="9044" level="1" /> <!-- 6th Anniversary Cube -->
 		</skills>
 	</item>
-	<item id="15421" name="6th Anniversary Party Cube (Event)" name_additional="15-day" type="EtcItem">
+	<item id="15421" name="6th Anniversary Party Cube (Event)" additionalName="15-day" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -471,7 +471,7 @@
 			<skill id="9045" level="1" /> <!-- 6th Anniversary Cube -->
 		</skills>
 	</item>
-	<item id="15422" name="6th Anniversary Party Cube (Event)" name_additional="10-day" type="EtcItem">
+	<item id="15422" name="6th Anniversary Party Cube (Event)" additionalName="10-day" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -490,7 +490,7 @@
 			<skill id="9046" level="1" /> <!-- 6th Anniversary Cube -->
 		</skills>
 	</item>
-	<item id="15423" name="6th Anniversary Party Cube (Event)" name_additional="5-day" type="EtcItem">
+	<item id="15423" name="6th Anniversary Party Cube (Event)" additionalName="5-day" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -509,7 +509,7 @@
 			<skill id="9047" level="1" /> <!-- 6th Anniversary Cube -->
 		</skills>
 	</item>
-	<item id="15424" name="6th Anniversary Party Cube (Event)" name_additional="3-day" type="EtcItem">
+	<item id="15424" name="6th Anniversary Party Cube (Event)" additionalName="3-day" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -528,7 +528,7 @@
 			<skill id="9048" level="1" /> <!-- 6th Anniversary Cube -->
 		</skills>
 	</item>
-	<item id="15425" name="Hero's Treasure Chest" name_additional="Event" type="EtcItem">
+	<item id="15425" name="Hero's Treasure Chest" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -548,7 +548,7 @@
 			<item id="15426" min="1" max="1" chance="100" /> <!-- Hero's Escape Point - Event -->
 		</capsuled_items>
 	</item>
-	<item id="15426" name="Hero's Escape Point" name_additional="Event" type="EtcItem">
+	<item id="15426" name="Hero's Escape Point" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -567,7 +567,7 @@
 			<skill id="9040" level="1" /> <!-- PC Points -->
 		</skills>
 	</item>
-	<item id="15427" name="6th Anniversary Party Cake" name_additional="Event" type="EtcItem">
+	<item id="15427" name="6th Anniversary Party Cake" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_six_party_cake_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -586,7 +586,7 @@
 			<skill id="9041" level="1" /> <!-- 6th Anniversary Cake -->
 		</skills>
 	</item>
-	<item id="15428" name="6th Anniversary Party Earring (Event)" name_additional="30-day" type="Armor">
+	<item id="15428" name="6th Anniversary Party Earring (Event)" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.event_six_party_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -613,7 +613,7 @@
 			<stat type="maxMp">31</stat>
 		</stats>
 	</item>
-	<item id="15429" name="6th Anniversary Party Belt (Event)" name_additional="7-day" type="Armor">
+	<item id="15429" name="6th Anniversary Party Belt (Event)" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -636,7 +636,7 @@
 			<skill id="8360" level="1" /> <!-- Vitality Maintenance Effect -->
 		</skills>
 	</item>
-	<item id="15430" name="Event - Revita-Pop" name_additional="Event" type="EtcItem">
+	<item id="15430" name="Event - Revita-Pop" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -737,7 +737,7 @@
 			<skill id="9065" level="1" /> <!-- Shiny Halloween Toy Box -->
 		</skills>
 	</item>
-	<item id="15436" name="Halloween Transformation Stick" name_additional="7-day" type="Weapon">
+	<item id="15436" name="Halloween Transformation Stick" additionalName="7-day" type="Weapon">
 		<set name="icon" val="icon.weapon_pumpkin_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -999,7 +999,7 @@
 			<skill id="8376" level="1" /> <!-- Planet X235 Alien Mask's Effect -->
 		</skills>
 	</item>
-	<item id="15448" name="Golden Jack O'Lantern Mask" name_additional="Permanent" type="Armor">
+	<item id="15448" name="Golden Jack O'Lantern Mask" additionalName="Permanent" type="Armor">
 		<set name="icon" val="icon.ev_golden_jack0_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1133,7 +1133,7 @@
 			<skill id="8375" level="1" /> <!-- Mummy Mask -->
 		</skills>
 	</item>
-	<item id="15454" name="Shiny Alien Mask Pack" name_additional="Event" type="EtcItem">
+	<item id="15454" name="Shiny Alien Mask Pack" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1153,7 +1153,7 @@
 			<item id="15449" min="1" max="1" chance="100" /> <!-- Shiny Alien Mask -->
 		</capsuled_items>
 	</item>
-	<item id="15455" name="Shiny Reanimated Corpse Mask Pack" name_additional="Event" type="EtcItem">
+	<item id="15455" name="Shiny Reanimated Corpse Mask Pack" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1173,7 +1173,7 @@
 			<item id="15450" min="1" max="1" chance="100" /> <!-- Shiny Reanimated Corpse Mask -->
 		</capsuled_items>
 	</item>
-	<item id="15456" name="Shiny Shriek Mask Pack" name_additional="Event" type="EtcItem">
+	<item id="15456" name="Shiny Shriek Mask Pack" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1193,7 +1193,7 @@
 			<item id="15451" min="1" max="1" chance="100" /> <!-- Shiny Shriek Mask -->
 		</capsuled_items>
 	</item>
-	<item id="15457" name="Shiny Red Devil Mask Pack" name_additional="Event" type="EtcItem">
+	<item id="15457" name="Shiny Red Devil Mask Pack" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1213,7 +1213,7 @@
 			<item id="15452" min="1" max="1" chance="100" /> <!-- Shiny Red Devil Mask -->
 		</capsuled_items>
 	</item>
-	<item id="15458" name="Shiny Mummy Mask Pack" name_additional="Event" type="EtcItem">
+	<item id="15458" name="Shiny Mummy Mask Pack" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1233,7 +1233,7 @@
 			<item id="15453" min="1" max="1" chance="100" /> <!-- Shiny Mummy Mask -->
 		</capsuled_items>
 	</item>
-	<item id="15459" name="Halloween Nectar Pumpkin Pack" name_additional="Event" type="EtcItem">
+	<item id="15459" name="Halloween Nectar Pumpkin Pack" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1253,7 +1253,7 @@
 			<item id="15461" min="1" max="1" chance="100" /> <!-- Halloween Nectar Pumpkin - Event -->
 		</capsuled_items>
 	</item>
-	<item id="15460" name="Halloween King Pumpkin Pack" name_additional="Event" type="EtcItem">
+	<item id="15460" name="Halloween King Pumpkin Pack" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1273,7 +1273,7 @@
 			<item id="15462" min="1" max="1" chance="100" /> <!-- Halloween King Pumpkin - Event -->
 		</capsuled_items>
 	</item>
-	<item id="15461" name="Halloween Nectar Pumpkin" name_additional="Event" type="EtcItem">
+	<item id="15461" name="Halloween Nectar Pumpkin" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_halloween_pumpkin_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -1289,7 +1289,7 @@
 			<skill id="9070" level="1" /> <!-- Halloween Pumpkin -->
 		</skills>
 	</item>
-	<item id="15462" name="Halloween King Pumpkin" name_additional="Event" type="EtcItem">
+	<item id="15462" name="Halloween King Pumpkin" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_halloween_king_pumpkini00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1308,7 +1308,7 @@
 			<item id="15464" min="1" max="1" chance="100" /> <!-- Golden Jack O'Lantern Mask - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="15463" name="Small Halloween Pumpkin" name_additional="Event" type="EtcItem">
+	<item id="15463" name="Small Halloween Pumpkin" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_halloween_pumpkin_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -1327,7 +1327,7 @@
 			<skill id="9072" level="1" /> <!-- Small Halloween Pumpkin -->
 		</skills>
 	</item>
-	<item id="15464" name="Golden Jack O'Lantern Mask" name_additional="7-day" type="Armor">
+	<item id="15464" name="Golden Jack O'Lantern Mask" additionalName="7-day" type="Armor">
 		<set name="icon" val="icon.ev_golden_jack0_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1348,7 +1348,7 @@
 			<skill id="8377" level="1" /> <!-- Golden Jack O'Lantern Mask's Effect -->
 		</skills>
 	</item>
-	<item id="15465" name="Halloween Nectar Pumpkin Pack (Event)" name_additional="Event" type="EtcItem">
+	<item id="15465" name="Halloween Nectar Pumpkin Pack (Event)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1368,7 +1368,7 @@
 			<item id="15461" min="1" max="1" chance="100" /> <!-- Halloween Nectar Pumpkin - Event -->
 		</capsuled_items>
 	</item>
-	<item id="15466" name="Halloween King Pumpkin Pack (Event)" name_additional="Event" type="EtcItem">
+	<item id="15466" name="Halloween King Pumpkin Pack (Event)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1388,7 +1388,7 @@
 			<item id="15462" min="1" max="1" chance="100" /> <!-- Halloween King Pumpkin - Event -->
 		</capsuled_items>
 	</item>
-	<item id="15467" name="Halloween Nectar Pumpkin (Event)" name_additional="Event" type="EtcItem">
+	<item id="15467" name="Halloween Nectar Pumpkin (Event)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_halloween_pumpkin_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -1404,7 +1404,7 @@
 			<skill id="9071" level="1" /> <!-- Halloween Pumpkin (Event) -->
 		</skills>
 	</item>
-	<item id="15468" name="Halloween King Pumpkin (Event)" name_additional="Event" type="EtcItem">
+	<item id="15468" name="Halloween King Pumpkin (Event)" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.event_halloween_king_pumpkini00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

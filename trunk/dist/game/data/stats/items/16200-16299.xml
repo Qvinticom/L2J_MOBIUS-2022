@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="16200" name="Vesper Retributer - Great Gale {PvP}" name_additional="HP Regeneration" type="Weapon">
+	<item id="16200" name="Vesper Retributer - Great Gale {PvP}" additionalName="HP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -39,7 +39,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16201" name="Vesper Retributer - Great Gale {PvP}" name_additional="Health" type="Weapon">
+	<item id="16201" name="Vesper Retributer - Great Gale {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -78,7 +78,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16202" name="Vesper Retributer - Great Gale {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="16202" name="Vesper Retributer - Great Gale {PvP}" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -117,7 +117,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16203" name="Vesper Caster - Cleverness {PvP}" name_additional="Acumen" type="Weapon">
+	<item id="16203" name="Vesper Caster - Cleverness {PvP}" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -157,7 +157,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16204" name="Vesper Caster - Cleverness {PvP}" name_additional="MP Regeneration" type="Weapon">
+	<item id="16204" name="Vesper Caster - Cleverness {PvP}" additionalName="MP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -197,7 +197,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16205" name="Vesper Caster - Cleverness {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="16205" name="Vesper Caster - Cleverness {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -237,7 +237,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16206" name="Vesper Singer - Hail {PvP}" name_additional="Empower" type="Weapon">
+	<item id="16206" name="Vesper Singer - Hail {PvP}" additionalName="Empower" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -277,7 +277,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16207" name="Vesper Singer - Hail {PvP}" name_additional="MP Regeneration" type="Weapon">
+	<item id="16207" name="Vesper Singer - Hail {PvP}" additionalName="MP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -317,7 +317,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16208" name="Vesper Singer - Hail {PvP}" name_additional="Magic Hold" type="Weapon">
+	<item id="16208" name="Vesper Singer - Hail {PvP}" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -357,7 +357,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16209" name="Vesper Thrower - Clairvoyance {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="16209" name="Vesper Thrower - Clairvoyance {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -398,7 +398,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="16210" name="Vesper Thrower - Clairvoyance {PvP}" name_additional="Focus" type="Weapon">
+	<item id="16210" name="Vesper Thrower - Clairvoyance {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -439,7 +439,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="16211" name="Vesper Thrower - Clairvoyance {PvP}" name_additional="Critical Slow" type="Weapon">
+	<item id="16211" name="Vesper Thrower - Clairvoyance {PvP}" additionalName="Critical Slow" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -480,7 +480,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="16212" name="Vesper Pincer - Thunder {PvP}" name_additional="Haste" type="Weapon">
+	<item id="16212" name="Vesper Pincer - Thunder {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -523,7 +523,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16213" name="Vesper Pincer - Thunder {PvP}" name_additional="Health" type="Weapon">
+	<item id="16213" name="Vesper Pincer - Thunder {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -566,7 +566,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16214" name="Vesper Pincer - Thunder {PvP}" name_additional="Focus" type="Weapon">
+	<item id="16214" name="Vesper Pincer - Thunder {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -609,7 +609,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16215" name="Vesper Shooter - Clairvoyance {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="16215" name="Vesper Shooter - Clairvoyance {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -652,7 +652,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="16216" name="Vesper Shooter - Clairvoyance {PvP}" name_additional="Focus" type="Weapon">
+	<item id="16216" name="Vesper Shooter - Clairvoyance {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -695,7 +695,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="16217" name="Vesper Shooter - Clairvoyance {PvP}" name_additional="Critical Slow" type="Weapon">
+	<item id="16217" name="Vesper Shooter - Clairvoyance {PvP}" additionalName="Critical Slow" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -738,7 +738,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="16218" name="Vesper Nagan - Great Gale {PvP}" name_additional="Haste" type="Weapon">
+	<item id="16218" name="Vesper Nagan - Great Gale {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -780,7 +780,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16219" name="Vesper Nagan - Great Gale {PvP}" name_additional="Health" type="Weapon">
+	<item id="16219" name="Vesper Nagan - Great Gale {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -822,7 +822,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16220" name="Vesper Nagan - Great Gale {PvP}" name_additional="Focus" type="Weapon">
+	<item id="16220" name="Vesper Nagan - Great Gale {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />

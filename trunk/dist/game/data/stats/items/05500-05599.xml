@@ -1155,7 +1155,7 @@
 			<skill id="2167" level="3" /> <!-- SP Scroll -->
 		</skills>
 	</item>
-	<item id="5596" name="Dasparion's Staff" name_additional="Mana Up" type="Weapon">
+	<item id="5596" name="Dasparion's Staff" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1187,7 +1187,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5597" name="Dasparion's Staff" name_additional="Conversion" type="Weapon">
+	<item id="5597" name="Dasparion's Staff" additionalName="Conversion" type="Weapon">
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1219,7 +1219,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5598" name="Dasparion's Staff" name_additional="Acumen" type="Weapon">
+	<item id="5598" name="Dasparion's Staff" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1251,7 +1251,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5599" name="Meteor Shower" name_additional="Focus" type="Weapon">
+	<item id="5599" name="Meteor Shower" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

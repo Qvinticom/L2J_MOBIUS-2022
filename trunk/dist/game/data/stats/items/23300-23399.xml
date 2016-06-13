@@ -148,7 +148,7 @@
 			<stat type="pDef">28</stat>
 		</stats>
 	</item>
-	<item id="23308" name="Recipe: Elven Radler" name_additional="Event" type="EtcItem">
+	<item id="23308" name="Recipe: Elven Radler" additionalName="Event" type="EtcItem">
 		<!-- Recipe needed for making Elven Radler. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_recipe_i00" />
 		<set name="weight" val="10" />
@@ -167,7 +167,7 @@
 		<set name="recipe_id" val="3002" /> <!-- mk_g_ev_beer_racipe -->
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="23309" name="Elven Radler" name_additional="Event" type="EtcItem">
+	<item id="23309" name="Elven Radler" additionalName="Event" type="EtcItem">
 		<!-- Delicious and simple Elven Radler. You can acquire a Dion Pilsner if you're lucky. -->
 		<set name="icon" val="BranchSys3.icon1.g_beerfestival_lager" />
 		<set name="weight" val="100" />
@@ -179,7 +179,7 @@
 			<skill id="22690" level="1" /> <!-- Elven Radler -->
 		</skills>
 	</item>
-	<item id="23310" name="Dion Pilsner" name_additional="Event" type="EtcItem">
+	<item id="23310" name="Dion Pilsner" additionalName="Event" type="EtcItem">
 		<!-- Very delicious Dion Pilsner. You can acquire a Dwarven Royal Blue Cocktail if you're lucky. -->
 		<set name="icon" val="BranchSys3.icon1.g_beerfestival_lager" />
 		<set name="weight" val="100" />
@@ -191,7 +191,7 @@
 			<skill id="22691" level="1" /> <!-- Dion Pilsner -->
 		</skills>
 	</item>
-	<item id="23311" name="Dwarven Royal Blue Cocktail" name_additional="Event" type="EtcItem">
+	<item id="23311" name="Dwarven Royal Blue Cocktail" additionalName="Event" type="EtcItem">
 		<!-- Extremely delicious Dwarven Royal Blue Cocktail. You can acquire an Aden White Beer if you're lucky. -->
 		<set name="icon" val="BranchSys3.icon1.g_beerfestival_lager" />
 		<set name="weight" val="100" />
@@ -203,7 +203,7 @@
 			<skill id="22692" level="1" /> <!-- Dwarven Royal Blue Cocktail -->
 		</skills>
 	</item>
-	<item id="23312" name="Aden White Beer" name_additional="Event" type="EtcItem">
+	<item id="23312" name="Aden White Beer" additionalName="Event" type="EtcItem">
 		<!-- Aden White Beer made with the finest recipe. Take it to Queen of Hearts with the Beer Tankard to obtain the Gran Kain's Delight. -->
 		<set name="icon" val="BranchSys3.icon1.g_beerfestival_lager" />
 		<set name="weight" val="100" />
@@ -215,7 +215,7 @@
 			<skill id="22693" level="1" /> <!-- Aden White Beer -->
 		</skills>
 	</item>
-	<item id="23313" name="Gran Kain's Delight" name_additional="30-day (Event)" type="EtcItem">
+	<item id="23313" name="Gran Kain's Delight" additionalName="30-day (Event)" type="EtcItem">
 		<!-- Finest beer obtained from Queen of Hearts. -->
 		<set name="icon" val="BranchSys3.icon1.g_beerfestival_octoberfest_beer" />
 		<set name="weight" val="100" />
@@ -234,28 +234,28 @@
 			<skill id="22694" level="1" /> <!-- Gran Kain's Delight -->
 		</skills>
 	</item>
-	<item id="23314" name="Beer Ingredient: Malt" name_additional="Event" type="EtcItem">
+	<item id="23314" name="Beer Ingredient: Malt" additionalName="Event" type="EtcItem">
 		<!-- Ingredient needed for crafting beer. -->
 		<set name="icon" val="BranchSys3.icon1.g_beerfestival_malt" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23315" name="Beer Ingredient: Hops" name_additional="Event" type="EtcItem">
+	<item id="23315" name="Beer Ingredient: Hops" additionalName="Event" type="EtcItem">
 		<!-- Ingredient needed for crafting beer. -->
 		<set name="icon" val="BranchSys3.icon1.g_beerfestival_hops" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23316" name="Beer Ingredient: Yeast" name_additional="Event" type="EtcItem">
+	<item id="23316" name="Beer Ingredient: Yeast" additionalName="Event" type="EtcItem">
 		<!-- Ingredient needed for crafting beer. -->
 		<set name="icon" val="BranchSys3.icon1.g_beerfestival_yeast" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23318" name="Beer Tankard" name_additional="Event" type="EtcItem">
+	<item id="23318" name="Beer Tankard" additionalName="Event" type="EtcItem">
 		<!-- Take this and the Aden White Beer to Queen of Hearts to obtain a Gran Kain's Delight. -->
 		<set name="icon" val="BranchSys3.icon1.g_beerfestival_beer_barrel" />
 		<set name="is_clan_depositable" val="false" />
@@ -1404,7 +1404,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23386" name="Agathion - Griffin" name_additional="Wind Walk" type="Armor">
+	<item id="23386" name="Agathion - Griffin" additionalName="Wind Walk" type="Armor">
 		<!-- Can summon Griffin when equipped. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1429,7 +1429,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="23387" name="Blessed Griffin Egg" name_additional="1-day" type="EtcItem">
+	<item id="23387" name="Blessed Griffin Egg" additionalName="1-day" type="EtcItem">
 		<!-- This Blessed Griffin Egg will be of great help to you. -->
 		<set name="icon" val="BranchSys3.Icon.g_threehead_source" />
 		<set name="is_clan_depositable" val="false" />
@@ -1503,7 +1503,7 @@
 			<item id="23392" min="1" max="1" chance="100" /> <!-- XP Rune II (Lv. 1-95) 100% - 3-hour -->
 		</capsuled_items>
 	</item>
-	<item id="23391" name="XP Rune II (Lv. 1-95) 100%" name_additional="1-hour" type="EtcItem">
+	<item id="23391" name="XP Rune II (Lv. 1-95) 100%" additionalName="1-hour" type="EtcItem">
 		<!-- If stored in the inventory, acquired XP/ SP + 100%. Lv. 95 or below. 1-hour. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1521,7 +1521,7 @@
 			<skill id="9529" level="1" /> <!-- XP Rune II (Lv. 1-95) 100% -->
 		</skills>
 	</item>
-	<item id="23392" name="XP Rune II (Lv. 1-95) 100%" name_additional="3-hour" type="EtcItem">
+	<item id="23392" name="XP Rune II (Lv. 1-95) 100%" additionalName="3-hour" type="EtcItem">
 		<!-- If stored in the inventory, acquired XP/ SP + 100%. Lv. 95 or below. 3-hour. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />

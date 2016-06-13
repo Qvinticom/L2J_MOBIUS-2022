@@ -396,7 +396,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10126" name="Dynasty Leather Armor" name_additional="Force Master" type="Armor">
+	<item id="10126" name="Dynasty Leather Armor" additionalName="Force Master" type="Armor">
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -422,7 +422,7 @@
 			<stat type="pDef">170</stat>
 		</stats>
 	</item>
-	<item id="10127" name="Dynasty Leather Armor" name_additional="Weapon Master" type="Armor">
+	<item id="10127" name="Dynasty Leather Armor" additionalName="Weapon Master" type="Armor">
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1222,7 +1222,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10168" name="Dynasty Leather Armor" name_additional="Enchanter" type="Armor">
+	<item id="10168" name="Dynasty Leather Armor" additionalName="Enchanter" type="Armor">
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="30900" name="Bound Sword of Nightmare" name_additional="Focus" type="Weapon">
+	<item id="30900" name="Bound Sword of Nightmare" additionalName="Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 77. -->
 		<set name="icon" val="icon.weapon_sword_of_nightmare_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -35,7 +35,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30901" name="Bound Sword of Nightmare" name_additional="Light Armor" type="Weapon">
+	<item id="30901" name="Bound Sword of Nightmare" additionalName="Light Armor" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Weight Gauge by 20%. -->
 		<set name="icon" val="icon.weapon_sword_of_nightmare_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -70,7 +70,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30902" name="Bound Gauntlets of Nightmare" name_additional="Heavy Armor" type="Armor">
+	<item id="30902" name="Bound Gauntlets of Nightmare" additionalName="Heavy Armor" type="Armor">
 		<!-- Part of the Heavy Nightmare set. -->
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -93,7 +93,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="30903" name="Bound Gauntlets of Nightmare" name_additional="Light Armor" type="Armor">
+	<item id="30903" name="Bound Gauntlets of Nightmare" additionalName="Light Armor" type="Armor">
 		<!-- Part of the Light Nightmare set. -->
 		<set name="icon" val="icon.armor_t81_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -116,7 +116,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="30904" name="Bound Gauntlets of Nightmare" name_additional="Robe" type="Armor">
+	<item id="30904" name="Bound Gauntlets of Nightmare" additionalName="Robe" type="Armor">
 		<!-- Part of the Nightmare Robe set. -->
 		<set name="icon" val="icon.armor_t82_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -247,7 +247,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30909" name="Bound Demon's Staff" name_additional="Magic Poison" type="Weapon">
+	<item id="30909" name="Bound Demon's Staff" additionalName="Magic Poison" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 7% chance of casting Curse Poison on the target during magic use. -->
 		<set name="icon" val="icon.weapon_demons_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -283,7 +283,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30910" name="Bound Demon's Staff" name_additional="Magic Weakness" type="Weapon">
+	<item id="30910" name="Bound Demon's Staff" additionalName="Magic Weakness" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 7% chance of casting Curse Weakness on the target during magic use. -->
 		<set name="icon" val="icon.weapon_demons_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -319,7 +319,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30911" name="Bound Demon's Staff" name_additional="Magic Chaos" type="Weapon">
+	<item id="30911" name="Bound Demon's Staff" additionalName="Magic Chaos" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 7% chance of casting Curse Chaos on the target during magic use. -->
 		<set name="icon" val="icon.weapon_demons_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -469,7 +469,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30916" name="Bound Demon's Dagger" name_additional="Critical Bleed" type="Weapon">
+	<item id="30916" name="Bound Demon's Dagger" additionalName="Critical Bleed" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nHas a 12% chance of casting Bleed on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_demons_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -505,7 +505,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30917" name="Bound Demon's Dagger" name_additional="Critical Poison" type="Weapon">
+	<item id="30917" name="Bound Demon's Dagger" additionalName="Critical Poison" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nHas a 6% chance of casting Poison on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_demons_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -541,7 +541,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30918" name="Bound Demon's Dagger" name_additional="Mortal Strike" type="Weapon">
+	<item id="30918" name="Bound Demon's Dagger" additionalName="Mortal Strike" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases success rate of Mortal Blow and Deadly Blow by 40%. -->
 		<set name="icon" val="icon.weapon_demons_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -577,7 +577,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30919" name="Bound Demon's Dagger" name_additional="Critical Damage" type="Weapon">
+	<item id="30919" name="Bound Demon's Dagger" additionalName="Critical Damage" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nP. Atk. + 160 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_demons_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -646,7 +646,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30921" name="Bound Art of Battle Axe" name_additional="Health" type="Weapon">
+	<item id="30921" name="Bound Art of Battle Axe" additionalName="Health" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -682,7 +682,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30922" name="Bound Art of Battle Axe" name_additional="Rsk. Focus" type="Weapon">
+	<item id="30922" name="Bound Art of Battle Axe" additionalName="Rsk. Focus" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Critical by 99 when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -718,7 +718,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30923" name="Bound Art of Battle Axe" name_additional="Haste" type="Weapon">
+	<item id="30923" name="Bound Art of Battle Axe" additionalName="Haste" type="Weapon">
 		<!-- Bound Item. Cannot be exchanged or dropped\n(Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 6%. -->
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -945,7 +945,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30931" name="Bound Akat Longbow" name_additional="Guidance" type="Weapon">
+	<item id="30931" name="Bound Akat Longbow" additionalName="Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Accuracy by about 4. -->
 		<set name="icon" val="icon.weapon_akat_long_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -982,7 +982,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30932" name="Bound Akat Longbow" name_additional="Evasion" type="Weapon">
+	<item id="30932" name="Bound Akat Longbow" additionalName="Evasion" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Evasion by 2. -->
 		<set name="icon" val="icon.weapon_akat_long_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1019,7 +1019,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30933" name="Bound Akat Longbow" name_additional="Miser" type="Weapon">
+	<item id="30933" name="Bound Akat Longbow" additionalName="Miser" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 60% chance of reducing the number of soulshots consumed to 8. -->
 		<set name="icon" val="icon.weapon_akat_long_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1087,7 +1087,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30935" name="Bound Ice Storm Hammer" name_additional="Focus" type="Weapon">
+	<item id="30935" name="Bound Ice Storm Hammer" additionalName="Focus" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Critical by 68. -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1123,7 +1123,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30936" name="Bound Ice Storm Hammer" name_additional="Anger" type="Weapon">
+	<item id="30936" name="Bound Ice Storm Hammer" additionalName="Anger" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nP. Atk. + 28 and decreases Max HP by 15%. -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1159,7 +1159,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30937" name="Bound Ice Storm Hammer" name_additional="Critical Bleed" type="Weapon">
+	<item id="30937" name="Bound Ice Storm Hammer" additionalName="Critical Bleed" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nHas a 41% chance of casting Bleed on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1254,7 +1254,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30940" name="Bound Arthro Nail" name_additional="Critical Poison" type="Weapon">
+	<item id="30940" name="Bound Arthro Nail" additionalName="Critical Poison" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nHas a 14% chance of casting Poison on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_arthro_nail_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1290,7 +1290,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30941" name="Bound Arthro Nail" name_additional="Rsk. Evasion" type="Weapon">
+	<item id="30941" name="Bound Arthro Nail" additionalName="Rsk. Evasion" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Evasion by 6 when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_arthro_nail_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1326,7 +1326,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30942" name="Bound Arthro Nail" name_additional="Rsk. Haste" type="Weapon">
+	<item id="30942" name="Bound Arthro Nail" additionalName="Rsk. Haste" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Atk. Spd. by 10% when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_arthro_nail_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1453,7 +1453,7 @@
 			<stat type="pDef">62</stat>
 		</stats>
 	</item>
-	<item id="30947" name="Bound Avadon Boots" name_additional="Heavy Armor" type="Armor">
+	<item id="30947" name="Bound Avadon Boots" additionalName="Heavy Armor" type="Armor">
 		<!-- Part of the Heavy Avadon set. -->
 		<set name="icon" val="icon.armor_t66_b_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1476,7 +1476,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="30948" name="Bound Avadon Boots" name_additional="Light Armor" type="Armor">
+	<item id="30948" name="Bound Avadon Boots" additionalName="Light Armor" type="Armor">
 		<!-- Part of the Light Avadon set. -->
 		<set name="icon" val="icon.armor_t66_b_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1499,7 +1499,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="30949" name="Bound Avadon Boots" name_additional="Robe" type="Armor">
+	<item id="30949" name="Bound Avadon Boots" additionalName="Robe" type="Armor">
 		<!-- Part of the Avadon Robe set. -->
 		<set name="icon" val="icon.armor_t66_b_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1570,7 +1570,7 @@
 			<stat type="pDef">191</stat>
 		</stats>
 	</item>
-	<item id="30952" name="Bound Avadon Gloves" name_additional="Heavy Armor" type="Armor">
+	<item id="30952" name="Bound Avadon Gloves" additionalName="Heavy Armor" type="Armor">
 		<!-- Part of the Heavy Avadon set. -->
 		<set name="icon" val="icon.armor_t66_g_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1593,7 +1593,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="30953" name="Bound Avadon Gloves" name_additional="Light Armor" type="Armor">
+	<item id="30953" name="Bound Avadon Gloves" additionalName="Light Armor" type="Armor">
 		<!-- Part of the Light Avadon set. -->
 		<set name="icon" val="icon.armor_t66_g_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1616,7 +1616,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="30954" name="Bound Avadon Gloves" name_additional="Robe" type="Armor">
+	<item id="30954" name="Bound Avadon Gloves" additionalName="Robe" type="Armor">
 		<!-- Part of the Avadon Robe set. -->
 		<set name="icon" val="icon.armor_t66_g_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1676,7 +1676,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30956" name="Bound Admiral's Estoc" name_additional="Focus" type="Weapon">
+	<item id="30956" name="Bound Admiral's Estoc" additionalName="Focus" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Samurai Long Sword\n(Soul Crystal Enhancement)\nIncreases Critical by 73.\nWhen enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1713,7 +1713,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30957" name="Bound Admiral's Estoc" name_additional="Critical Damage" type="Weapon">
+	<item id="30957" name="Bound Admiral's Estoc" additionalName="Critical Damage" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Samurai Long Sword\n(Soul Crystal Enhancement)\nP. Atk. + 231 during a Critical Attack.\nWhen enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1750,7 +1750,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30958" name="Bound Admiral's Estoc" name_additional="Haste" type="Weapon">
+	<item id="30958" name="Bound Admiral's Estoc" additionalName="Haste" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Samurai long sword\n(Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 7%.\n When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1845,7 +1845,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30961" name="Bound Arcana Mace" name_additional="Acumen" type="Weapon">
+	<item id="30961" name="Bound Arcana Mace" additionalName="Acumen" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1882,7 +1882,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30962" name="Bound Arcana Mace" name_additional="MP Regeneration" type="Weapon">
+	<item id="30962" name="Bound Arcana Mace" additionalName="MP Regeneration" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases MP Recovery Rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1919,7 +1919,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30963" name="Bound Arcana Mace" name_additional="Mana Up" type="Weapon">
+	<item id="30963" name="Bound Arcana Mace" additionalName="Mana Up" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2150,7 +2150,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30972" name="Bound Samurai Long Sword" name_additional="Focus" type="Weapon">
+	<item id="30972" name="Bound Samurai Long Sword" additionalName="Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Critical by 73. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2185,7 +2185,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30973" name="Bound Samurai Long Sword" name_additional="Critical Damage" type="Weapon">
+	<item id="30973" name="Bound Samurai Long Sword" additionalName="Critical Damage" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 231 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2220,7 +2220,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30974" name="Bound Samurai Long Sword" name_additional="Haste" type="Weapon">
+	<item id="30974" name="Bound Samurai Long Sword" additionalName="Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 7%. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2356,7 +2356,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30978" name="Bound Stick of Faith" name_additional="Mana Up" type="Weapon">
+	<item id="30978" name="Bound Stick of Faith" additionalName="Mana Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Max MP by 30%. -->
 		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2392,7 +2392,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30979" name="Bound Stick of Faith" name_additional="Magic Hold" type="Weapon">
+	<item id="30979" name="Bound Stick of Faith" additionalName="Magic Hold" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 6% chance of casting Dryad Root on the target during magic use. -->
 		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2428,7 +2428,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30980" name="Bound Stick of Faith" name_additional="Magic Mental Shield" type="Weapon">
+	<item id="30980" name="Bound Stick of Faith" additionalName="Magic Mental Shield" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 50% chance of casting Mental Shield on the target during magic use. -->
 		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2676,7 +2676,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30988" name="Bound Spirit Sword" name_additional="Critical Damage" type="Weapon">
+	<item id="30988" name="Bound Spirit Sword" additionalName="Critical Damage" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nP. Atk. + 194 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_spirits_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2711,7 +2711,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30989" name="Bound Spirit Sword" name_additional="Critical Poison" type="Weapon">
+	<item id="30989" name="Bound Spirit Sword" additionalName="Critical Poison" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nHas a 15% chance of casting Poison on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_spirits_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2746,7 +2746,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30990" name="Bound Spirit Sword" name_additional="Haste" type="Weapon">
+	<item id="30990" name="Bound Spirit Sword" additionalName="Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nIncreases Atk. Spd. by about 7%. -->
 		<set name="icon" val="icon.weapon_spirits_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2814,7 +2814,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30992" name="Bound Spell Breaker" name_additional="Acumen" type="Weapon">
+	<item id="30992" name="Bound Spell Breaker" additionalName="Acumen" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2850,7 +2850,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30993" name="Bound Spell Breaker" name_additional="Magic Mental Shield" type="Weapon">
+	<item id="30993" name="Bound Spell Breaker" additionalName="Magic Mental Shield" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nHas a 50% chance of casting Mental Shield on the target during magic use. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2886,7 +2886,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30994" name="Bound Spell Breaker" name_additional="Magic Hold" type="Weapon">
+	<item id="30994" name="Bound Spell Breaker" additionalName="Magic Hold" type="Weapon">
 		<!-- Bound Item.\n(Soul Crystal Enhancement)\nHas a 10% chance of casting Dryad Root on the target during magic use. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />

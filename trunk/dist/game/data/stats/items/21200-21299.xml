@@ -42,7 +42,7 @@
 			<item id="21202" min="1" max="1" chance="100" /> <!-- Magic Glasses - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="21202" name="Magic Glasses" name_additional="30-day" type="Armor">
+	<item id="21202" name="Magic Glasses" additionalName="30-day" type="Armor">
 		<!-- Description: Dimensional item. Magic glasses that has MP +10 and M. Def. +70 effect. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_Eye_Glasses_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -124,7 +124,7 @@
 			<item id="21208" min="1" max="1" chance="100" /> <!-- Zaken's Earring - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="21206" name="Queen Ant's Ring" name_additional="30-day" type="Armor">
+	<item id="21206" name="Queen Ant's Ring" additionalName="30-day" type="Armor">
 		<!-- Description: Dimensional item. MP +21, Resistance to Poison +30%, poison attack rate +30%, accuracy increase, critical damage increase, hold tolerance 20% increase, and hold attack rate 20% increase. Only one effect is applied even when two identical rings are worn. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_ring_of_queen_ant" />
 		<set name="default_action" val="EQUIP" />
@@ -152,7 +152,7 @@
 			<stat type="maxMp">21</stat>
 		</stats>
 	</item>
-	<item id="21207" name="Baium's Ring" name_additional="30-day" type="Armor">
+	<item id="21207" name="Baium's Ring" additionalName="30-day" type="Armor">
 		<!-- Description: Dimensional item. MP +21, Resistance to Poison +40%, poison attack rate +40%, accuracy increase, critical damage increase, hold tolerance +30%, hold attack rate +30%, attack increase, and Casting Spd. increase. Only one effect is applied even when two identical rings are worn. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_ring_of_baium" />
 		<set name="default_action" val="EQUIP" />
@@ -180,7 +180,7 @@
 			<stat type="maxMp">21</stat>
 		</stats>
 	</item>
-	<item id="21208" name="Zaken's Earring" name_additional="30-day" type="Armor">
+	<item id="21208" name="Zaken's Earring" additionalName="30-day" type="Armor">
 		<!-- Description: Dimensional item. MP +31, Resistance to Bleed +30%, Bleed attack rate +30%, heal amount increase, vampiric rage effect, Resistance to Shock/Mental attacks 20% increase, and Shock/Mental attack rate 20% increase. When equipped with two identical earrings, the effect of only one earring will be applied. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_earring_of_zaken" />
 		<set name="default_action" val="EQUIP" />
@@ -386,7 +386,7 @@
 			<item id="21222" min="1" max="1" chance="100" /> <!-- Antharas' Earring - 180-day -->
 		</capsuled_items>
 	</item>
-	<item id="21218" name="Queen Ant's Ring" name_additional="180-day" type="Armor">
+	<item id="21218" name="Queen Ant's Ring" additionalName="180-day" type="Armor">
 		<!-- Description: Dimensional item. MP +21, Resistance to Poison +30%, poison attack rate +30%, accuracy increase, critical damage increase, hold tolerance 20% increase, and hold attack rate 20% increase. Only one effect is applied even when two identical rings are worn. Can be used for 180 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -414,7 +414,7 @@
 			<stat type="maxMp">21</stat>
 		</stats>
 	</item>
-	<item id="21219" name="Baium's Ring" name_additional="180-day" type="Armor">
+	<item id="21219" name="Baium's Ring" additionalName="180-day" type="Armor">
 		<!-- Description: Dimensional item. MP +21, Resistance to Poison +40%, poison attack rate +40%, accuracy increase, critical damage increase, hold tolerance +30%, hold attack rate +30%, attack increase, and Casting Spd. increase. Only one effect is applied even when two identical rings are worn. Can be used for 180 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -442,7 +442,7 @@
 			<stat type="maxMp">21</stat>
 		</stats>
 	</item>
-	<item id="21220" name="Zaken's Earring" name_additional="180-day" type="Armor">
+	<item id="21220" name="Zaken's Earring" additionalName="180-day" type="Armor">
 		<!-- Description: Dimensional item. MP +31, Resistance to Bleed +30%, Bleed attack rate +30%, heal amount increase, vampiric rage effect, Resistance to Shock/Mental attacks 20% increase, and Shock/Mental attack rate 20% increase. When equipped with two identical earrings, the effect of only one earring will be applied. Can be used for 180 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -470,7 +470,7 @@
 			<stat type="maxMp">31</stat>
 		</stats>
 	</item>
-	<item id="21221" name="Valakas' Necklace" name_additional="180-day" type="Armor">
+	<item id="21221" name="Valakas' Necklace" additionalName="180-day" type="Armor">
 		<!-- Description: Dimensional item. MP +50, Resistance to Sleep +40%, sleep attack rate +40%, HP +445, reuse delay decrease, P. Atk. and M. Atk. increase, wild magic effect, damage shield effect, and Resistance to Fire increase. Only one effect is applied even when the two identical necklaces are worn. Can be used for 180 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -498,7 +498,7 @@
 			<stat type="maxMp">50</stat>
 		</stats>
 	</item>
-	<item id="21222" name="Antharas' Earring" name_additional="180-day" type="Armor">
+	<item id="21222" name="Antharas' Earring" additionalName="180-day" type="Armor">
 		<!-- Description: Dimensional item. MP +37, Resistance to Bleed +40%, Bleed attack rate +40%, heal amount increase, vampiric rage effect, Resistance to Stun/Mental attacks 30%, Stun/Mental attack rate +30%, MP consumption decrease, and Resistance to Earth increase. Only one effect is applied even when the two identical earrings are worn. Can be used for 180 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -585,7 +585,7 @@
 			<item id="21227" min="3" max="3" chance="100" /> <!-- Sweet Concentrated Fruit Cocktail -->
 		</capsuled_items>
 	</item>
-	<item id="21226" name="Sweet Concentrated Fruit Cocktail Pack" name_additional="Event" type="EtcItem">
+	<item id="21226" name="Sweet Concentrated Fruit Cocktail Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 3 sweet fruit cocktails. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -637,7 +637,7 @@
 			<skill id="22329" level="1" /> <!-- Wind Walk -->
 		</skills>
 	</item>
-	<item id="21228" name="Sweet Concentrated Fruit Cocktail" name_additional="Event" type="EtcItem">
+	<item id="21228" name="Sweet Concentrated Fruit Cocktail" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. Cocktail drink that's flavored with many rare types of fruit. When consumed, one can feel Might, Shield, Wind Walk, Focus, Death Whisper, Guidance, Bless Shield, Blessed Body, Haste, Vampiric Rage, and Berserker Spirit effects for 60 minutes. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -689,7 +689,7 @@
 			<item id="21231" min="3" max="3" chance="100" /> <!-- Fresh Concentrated Fruit Cocktail -->
 		</capsuled_items>
 	</item>
-	<item id="21230" name="Fresh Concentrated Fruit Cocktail Pack" name_additional="Event" type="EtcItem">
+	<item id="21230" name="Fresh Concentrated Fruit Cocktail Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 3 fresh fruit cocktails. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -739,7 +739,7 @@
 			<skill id="22320" level="1" /> <!-- Berserker Spirit -->
 		</skills>
 	</item>
-	<item id="21232" name="Fresh Concentrated Fruit Cocktail" name_additional="Event" type="EtcItem">
+	<item id="21232" name="Fresh Concentrated Fruit Cocktail" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. Cocktail drink that's flavored with many rare types of fruit. When consumed, one can feel Berserker Spirit, Blessed Body, Magic Barrier, Shield, Wind Walk, Blessed Soul, Empower, Acumen, and Clarity effects for 60 minutes. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -789,7 +789,7 @@
 			<item id="21235" min="3" max="3" chance="100" /> <!-- Fresh Milk -->
 		</capsuled_items>
 	</item>
-	<item id="21234" name="Fresh Milk Pack" name_additional="Event" type="EtcItem">
+	<item id="21234" name="Fresh Milk Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 3 fresh milks. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -844,7 +844,7 @@
 			<skill id="22340" level="1" /> <!-- Might -->
 		</skills>
 	</item>
-	<item id="21236" name="Fresh Milk" name_additional="Event" type="EtcItem">
+	<item id="21236" name="Fresh Milk" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. Freshly drawn milk. When used, you can feel the effects of Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic and Concentration for 1 hour. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -899,7 +899,7 @@
 			<item id="21239" min="3" max="3" chance="100" /> <!-- Super Healthy Juice (HP) -->
 		</capsuled_items>
 	</item>
-	<item id="21238" name="Super Healthy Juice Pack (HP)" name_additional="Event" type="EtcItem">
+	<item id="21238" name="Super Healthy Juice Pack (HP)" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 3 super healthy juices (HP). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -938,7 +938,7 @@
 			<skill id="22217" level="1" /> <!-- Super Healthy Juice (HP) -->
 		</skills>
 	</item>
-	<item id="21240" name="Super Healthy Juice (HP)" name_additional="Event" type="EtcItem">
+	<item id="21240" name="Super Healthy Juice (HP)" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. Magic juice that temporarily recovers stamina in full. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.etc_health_juice_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -980,7 +980,7 @@
 			<item id="21243" min="5" max="5" chance="100" /> <!-- Super Healthy Juice (CP) -->
 		</capsuled_items>
 	</item>
-	<item id="21242" name="Super Healthy Juice Pack (CP)" name_additional="Event" type="EtcItem">
+	<item id="21242" name="Super Healthy Juice Pack (CP)" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 5 super healthy juices (CP). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -1019,7 +1019,7 @@
 			<skill id="22219" level="1" /> <!-- Super Healthy Juice (CP) -->
 		</skills>
 	</item>
-	<item id="21244" name="Super Healthy Juice (CP)" name_additional="Event" type="EtcItem">
+	<item id="21244" name="Super Healthy Juice (CP)" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. Magic juice that temporarily recovers CP in full. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.etc_health_juice_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1061,7 +1061,7 @@
 			<item id="21247" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Potion -->
 		</capsuled_items>
 	</item>
-	<item id="21246" name="Vitality Replenishing Potion Pack" name_additional="Event" type="EtcItem">
+	<item id="21246" name="Vitality Replenishing Potion Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 1 Vitality Replenishing Beverage. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -1101,7 +1101,7 @@
 			<skill id="22221" level="1" /> <!-- Vitality Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="21248" name="Vitality Replenishing Potion" name_additional="Event" type="EtcItem">
+	<item id="21248" name="Vitality Replenishing Potion" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. Vitality is replenished to 100% upon use. Re-use time is 60 minutes. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1141,7 +1141,7 @@
 			<item id="21251" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Potion (30-minute) -->
 		</capsuled_items>
 	</item>
-	<item id="21250" name="Vitality Maintaining Potion (30-minute) Pack" name_additional="Event" type="EtcItem">
+	<item id="21250" name="Vitality Maintaining Potion (30-minute) Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 1 Vitality Maintainig Potion. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -1181,7 +1181,7 @@
 			<skill id="22223" level="1" /> <!-- Vitality Maintaining Potion -->
 		</skills>
 	</item>
-	<item id="21252" name="Vitality Maintaining Potion (30-minute)" name_additional="Event" type="EtcItem">
+	<item id="21252" name="Vitality Maintaining Potion (30-minute)" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. Maintains energy for 30 minutes when used. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1220,7 +1220,7 @@
 			<item id="21255" min="5" max="5" chance="100" /> <!-- Gludio Homemade Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="21254" name="Gludio Homemade Cookie Pack" name_additional="Event" type="EtcItem">
+	<item id="21254" name="Gludio Homemade Cookie Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 5 Gludio Homemade Cookies. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -1259,7 +1259,7 @@
 			<skill id="22225" level="1" /> <!-- Gludio Homemade Cookie -->
 		</skills>
 	</item>
-	<item id="21256" name="Gludio Homemade Cookie" name_additional="Event" type="EtcItem">
+	<item id="21256" name="Gludio Homemade Cookie" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. Increases P. Atk. by 10% for 60 minutes. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
@@ -1298,7 +1298,7 @@
 			<item id="21259" min="5" max="5" chance="100" /> <!-- Dion Homemade Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="21258" name="Dion Homemade Cookie Pack" name_additional="Event" type="EtcItem">
+	<item id="21258" name="Dion Homemade Cookie Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 5 Dion Homemade Cookies. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -1337,7 +1337,7 @@
 			<skill id="22227" level="1" /> <!-- Dion Homemade Cookie -->
 		</skills>
 	</item>
-	<item id="21260" name="Dion Homemade Cookie" name_additional="Event" type="EtcItem">
+	<item id="21260" name="Dion Homemade Cookie" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. Increases P. Def. by 15% for 60 minutes. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
@@ -1376,7 +1376,7 @@
 			<item id="21263" min="3" max="3" chance="100" /> <!-- Aden Homemade Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="21262" name="Aden Homemade Cookie Pack" name_additional="Event" type="EtcItem">
+	<item id="21262" name="Aden Homemade Cookie Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 3 Aden Designer Cookies. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -1415,7 +1415,7 @@
 			<skill id="22229" level="1" /> <!-- Aden Homemade Cookie -->
 		</skills>
 	</item>
-	<item id="21264" name="Aden Homemade Cookie" name_additional="Event" type="EtcItem">
+	<item id="21264" name="Aden Homemade Cookie" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. For 60 minutes, receives help from a great spirit to recover HP by 20%, increases Max HP by 20%, the rate of Prominent Damage occurring through magic damage by 2, the rate of critical attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Resistance to de-buffs by 10%, and accuracy by 4. Decreases moving speed by 20%. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
@@ -1454,7 +1454,7 @@
 			<item id="21267" min="3" max="3" chance="100" /> <!-- Giran Homemade Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="21266" name="Giran Homemade Cookie Pack" name_additional="Event" type="EtcItem">
+	<item id="21266" name="Giran Homemade Cookie Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 3 Giran Designer Cookies. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -1493,7 +1493,7 @@
 			<skill id="22231" level="1" /> <!-- Giran Homemade Cookie -->
 		</skills>
 	</item>
-	<item id="21268" name="Giran Homemade Cookie" name_additional="Event" type="EtcItem">
+	<item id="21268" name="Giran Homemade Cookie" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. For 60 minutes, increases P. Def. against Critical by 30%. When the target receives an attack above a certain amount of damage, the critical damage for general short-range physical attack is increased for 8 seconds. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
@@ -1532,7 +1532,7 @@
 			<item id="21271" min="3" max="3" chance="100" /> <!-- Rune Homemade Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="21270" name="Rune Homemade Cookie Pack" name_additional="Event" type="EtcItem">
+	<item id="21270" name="Rune Homemade Cookie Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 3 Rune Designer Cookies. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -1571,7 +1571,7 @@
 			<skill id="22233" level="1" /> <!-- Rune Homemade Cookie -->
 		</skills>
 	</item>
-	<item id="21272" name="Rune Homemade Cookie" name_additional="Event" type="EtcItem">
+	<item id="21272" name="Rune Homemade Cookie" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional Item. Greatly increases received recharge power for 60 minutes. The amount of recovered MP may vary according to the level. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
@@ -1610,7 +1610,7 @@
 			<item id="13273" min="3" max="3" chance="100" /> <!-- Minion Coupon (5-hour) -->
 		</capsuled_items>
 	</item>
-	<item id="21274" name="Minion Coupon Pack" name_additional="Event" type="EtcItem">
+	<item id="21274" name="Minion Coupon Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 3 hunting helper exchange coupons. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -1646,7 +1646,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_mailable" val="false" />
 	</item>
-	<item id="21276" name="Minion Coupon" name_additional="Event" type="EtcItem">
+	<item id="21276" name="Minion Coupon" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. An exchange coupon that can be exchanged for a necklace that allows you to summon a Hunting Helper (5 hours). Can be exchanged through the Dimensional Merchant. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="PAPER" />
@@ -1682,7 +1682,7 @@
 			<item id="14065" min="2" max="2" chance="100" /> <!-- Superior Minion Coupon - 5-hour -->
 		</capsuled_items>
 	</item>
-	<item id="21278" name="Superior Minion Coupon Pack" name_additional="Event" type="EtcItem">
+	<item id="21278" name="Superior Minion Coupon Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 2 high quality hunting helper exchange coupons. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -1718,7 +1718,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_mailable" val="false" />
 	</item>
-	<item id="21280" name="Superior Minion Coupon" name_additional="Event" type="EtcItem">
+	<item id="21280" name="Superior Minion Coupon" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item. An exchange coupon that can be exchanged for a necklace that allows you to summon a High Quality Hunting Helper (5 hours). Can be exchanged through the Dimensional Merchant. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="PAPER" />
@@ -1754,7 +1754,7 @@
 			<item id="10649" min="1" max="1" chance="100" /> <!-- Feather of Blessing -->
 		</capsuled_items>
 	</item>
-	<item id="21282" name="Feather of Blessing Pack" name_additional="Event" type="EtcItem">
+	<item id="21282" name="Feather of Blessing Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 1 feather of blessing. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -1790,7 +1790,7 @@
 			<item id="13015" min="1" max="1" chance="100" /> <!-- My Teleport Book -->
 		</capsuled_items>
 	</item>
-	<item id="21284" name="My Teleport Book Pack" name_additional="Event" type="EtcItem">
+	<item id="21284" name="My Teleport Book Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 1 sheet of the Free Teleport Scroll. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -1826,7 +1826,7 @@
 			<item id="13016" min="30" max="30" chance="100" /> <!-- My Teleport Scroll -->
 		</capsuled_items>
 	</item>
-	<item id="21286" name="My Teleport Scroll Pack" name_additional="Event" type="EtcItem">
+	<item id="21286" name="My Teleport Scroll Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 30 sheets of the Free Teleport Scroll. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -1862,7 +1862,7 @@
 			<item id="13011" min="15" max="15" chance="100" /> <!-- Extra Pass: Near Kamaloka -->
 		</capsuled_items>
 	</item>
-	<item id="21288" name="Extra Pass: Near Kamaloka Pack" name_additional="Event" type="EtcItem">
+	<item id="21288" name="Extra Pass: Near Kamaloka Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 15 Near Kamaloka entrance passes. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -1898,7 +1898,7 @@
 			<item id="13010" min="15" max="15" chance="100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -->
 		</capsuled_items>
 	</item>
-	<item id="21290" name="Extra Pass: Kamaloka (Hall of the Abyss) Pack" name_additional="Event" type="EtcItem">
+	<item id="21290" name="Extra Pass: Kamaloka (Hall of the Abyss) Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 15 Kamaloka (Hall of the Abyss) entrance passes. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -1934,7 +1934,7 @@
 			<item id="13012" min="15" max="15" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		</capsuled_items>
 	</item>
-	<item id="21292" name="Extra Pass: Kamaloka (Labyrinth of the Abyss) Pack" name_additional="Event" type="EtcItem">
+	<item id="21292" name="Extra Pass: Kamaloka (Labyrinth of the Abyss) Pack" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 15 Kamaloka (Labyrinth of the Abyss) entrance passes. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -1970,7 +1970,7 @@
 			<item id="14705" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Weapon (A-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="21294" name="Lucky Enchant Stone: Weapon Pack (A-grade)" name_additional="Event" type="EtcItem">
+	<item id="21294" name="Lucky Enchant Stone: Weapon Pack (A-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 1 weapon-type enhance backup stone (A-Grade). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -2006,7 +2006,7 @@
 			<item id="14706" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Weapon (S-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="21296" name="Lucky Enchant Stone: Weapon Pack (S-grade)" name_additional="Event" type="EtcItem">
+	<item id="21296" name="Lucky Enchant Stone: Weapon Pack (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 1 weapon-type enhance backup stone (S-Grade). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -2042,7 +2042,7 @@
 			<item id="14710" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Armor (A-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="21298" name="Lucky Enchant Stone: Armor Pack (A-grade)" name_additional="Event" type="EtcItem">
+	<item id="21298" name="Lucky Enchant Stone: Armor Pack (A-grade)" additionalName="Event" type="EtcItem">
 		<!-- Description: Dimensional item pack. Gift box containing 1 armor-type enhance backup stone (A-Grade). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />

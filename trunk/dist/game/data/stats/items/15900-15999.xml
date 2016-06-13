@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="15900" name="Archangel Sword" name_additional="Acumen" type="Weapon">
+	<item id="15900" name="Archangel Sword" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_archangel_sword_i001" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -32,7 +32,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15901" name="Recurve Thorne Bow" name_additional="Critical Slow" type="Weapon">
+	<item id="15901" name="Recurve Thorne Bow" additionalName="Critical Slow" type="Weapon">
 		<set name="icon" val="icon.weapon_recurvethorne_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -68,7 +68,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="15902" name="Recurve Thorne Bow" name_additional="Cheap Shot" type="Weapon">
+	<item id="15902" name="Recurve Thorne Bow" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_recurvethorne_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -104,7 +104,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="15903" name="Recurve Thorne Bow" name_additional="Focus" type="Weapon">
+	<item id="15903" name="Recurve Thorne Bow" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_recurvethorne_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -139,7 +139,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="15904" name="Heavenstare Rapier" name_additional="Focus" type="Weapon">
+	<item id="15904" name="Heavenstare Rapier" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_heavenstair_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -176,7 +176,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15905" name="Heavenstare Rapier" name_additional="Haste" type="Weapon">
+	<item id="15905" name="Heavenstare Rapier" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_heavenstair_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -213,7 +213,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15906" name="Heavenstare Rapier" name_additional="Health" type="Weapon">
+	<item id="15906" name="Heavenstare Rapier" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_heavenstair_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -250,7 +250,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15907" name="Pyseal Blade" name_additional="Focus" type="Weapon">
+	<item id="15907" name="Pyseal Blade" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_pyseal_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -286,7 +286,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15908" name="Pyseal Blade" name_additional="Haste" type="Weapon">
+	<item id="15908" name="Pyseal Blade" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_pyseal_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -322,7 +322,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15909" name="Pyseal Blade" name_additional="Health" type="Weapon">
+	<item id="15909" name="Pyseal Blade" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_pyseal_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -358,7 +358,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15910" name="Thorne Crossbow" name_additional="Critical Slow" type="Weapon">
+	<item id="15910" name="Thorne Crossbow" additionalName="Critical Slow" type="Weapon">
 		<set name="icon" val="icon.weapon_thorne_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -396,7 +396,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="15911" name="Thorne Crossbow" name_additional="Cheap Shot" type="Weapon">
+	<item id="15911" name="Thorne Crossbow" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_thorne_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -434,7 +434,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="15912" name="Thorne Crossbow" name_additional="Focus" type="Weapon">
+	<item id="15912" name="Thorne Crossbow" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_thorne_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1545,7 +1545,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="15941" name="Periel Sword {PvP}" name_additional="Health" type="Weapon">
+	<item id="15941" name="Periel Sword {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_periwing_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1582,7 +1582,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15942" name="Periel Sword {PvP}" name_additional="Focus" type="Weapon">
+	<item id="15942" name="Periel Sword {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_periwing_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1619,7 +1619,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15943" name="Periel Sword {PvP}" name_additional="Haste" type="Weapon">
+	<item id="15943" name="Periel Sword {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_periwing_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1656,7 +1656,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15944" name="Skull Edge {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="15944" name="Skull Edge {PvP}" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_skulledge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1695,7 +1695,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15945" name="Skull Edge {PvP}" name_additional="Haste" type="Weapon">
+	<item id="15945" name="Skull Edge {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_skulledge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1734,7 +1734,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15946" name="Skull Edge {PvP}" name_additional="Critical Damage" type="Weapon">
+	<item id="15946" name="Skull Edge {PvP}" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_skulledge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1773,7 +1773,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15947" name="Vigwik Axe {PvP}" name_additional="Health" type="Weapon">
+	<item id="15947" name="Vigwik Axe {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_vigwik_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1811,7 +1811,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15948" name="Vigwik Axe {PvP}" name_additional="HP Regeneration" type="Weapon">
+	<item id="15948" name="Vigwik Axe {PvP}" additionalName="HP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_vigwik_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1849,7 +1849,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15949" name="Vigwik Axe {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="15949" name="Vigwik Axe {PvP}" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_vigwik_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1887,7 +1887,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15950" name="Devilish Maul {PvP}" name_additional="Health" type="Weapon">
+	<item id="15950" name="Devilish Maul {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_evildeity_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1925,7 +1925,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15951" name="Devilish Maul {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="15951" name="Devilish Maul {PvP}" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_evildeity_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1963,7 +1963,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15952" name="Devilish Maul {PvP}" name_additional="HP Regeneration" type="Weapon">
+	<item id="15952" name="Devilish Maul {PvP}" additionalName="HP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_evildeity_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2001,7 +2001,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15953" name="Feather Eye Blade {PvP}" name_additional="Health" type="Weapon">
+	<item id="15953" name="Feather Eye Blade {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_feathereye_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2038,7 +2038,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15954" name="Feather Eye Blade {PvP}" name_additional="Focus" type="Weapon">
+	<item id="15954" name="Feather Eye Blade {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_feathereye_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2075,7 +2075,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15955" name="Feather Eye Blade {PvP}" name_additional="Haste" type="Weapon">
+	<item id="15955" name="Feather Eye Blade {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_feathereye_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2112,7 +2112,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15956" name="Octo Claw {PvP}" name_additional="Health" type="Weapon">
+	<item id="15956" name="Octo Claw {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_octoclaw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2151,7 +2151,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15957" name="Octo Claw {PvP}" name_additional="Critical Stun" type="Weapon">
+	<item id="15957" name="Octo Claw {PvP}" additionalName="Critical Stun" type="Weapon">
 		<set name="icon" val="icon.weapon_octoclaw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2190,7 +2190,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15958" name="Octo Claw {PvP}" name_additional="Focus" type="Weapon">
+	<item id="15958" name="Octo Claw {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_octoclaw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2229,7 +2229,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15959" name="Doubletop Spear {PvP}" name_additional="Guidance" type="Weapon">
+	<item id="15959" name="Doubletop Spear {PvP}" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_doubletopa_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2267,7 +2267,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="15960" name="Doubletop Spear {PvP}" name_additional="Haste" type="Weapon">
+	<item id="15960" name="Doubletop Spear {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_doubletopa_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2305,7 +2305,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="15961" name="Doubletop Spear {PvP}" name_additional="Health" type="Weapon">
+	<item id="15961" name="Doubletop Spear {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_doubletopa_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2343,7 +2343,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="15962" name="Rising Star {PvP}" name_additional="MP Regeneration" type="Weapon">
+	<item id="15962" name="Rising Star {PvP}" additionalName="MP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_cuticle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2382,7 +2382,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15963" name="Rising Star {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="15963" name="Rising Star {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_cuticle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2421,7 +2421,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15964" name="Rising Star {PvP}" name_additional="Acumen" type="Weapon">
+	<item id="15964" name="Rising Star {PvP}" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_cuticle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2460,7 +2460,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15965" name="Black Visage {PvP}" name_additional="MP Regeneration" type="Weapon">
+	<item id="15965" name="Black Visage {PvP}" additionalName="MP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_blackvisage_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2499,7 +2499,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15966" name="Black Visage {PvP}" name_additional="Magic Hold" type="Weapon">
+	<item id="15966" name="Black Visage {PvP}" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_blackvisage_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2538,7 +2538,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15967" name="Black Visage {PvP}" name_additional="Empower" type="Weapon">
+	<item id="15967" name="Black Visage {PvP}" additionalName="Empower" type="Weapon">
 		<set name="icon" val="icon.weapon_blackvisage_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2577,7 +2577,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15968" name="Veniplant Sword {PvP}" name_additional="Acumen" type="Weapon">
+	<item id="15968" name="Veniplant Sword {PvP}" additionalName="Acumen" type="Weapon">
 		<set name="icon" val="icon.weapon_veniplant_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2615,7 +2615,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15969" name="Veniplant Sword {PvP}" name_additional="Magic Hold" type="Weapon">
+	<item id="15969" name="Veniplant Sword {PvP}" additionalName="Magic Hold" type="Weapon">
 		<set name="icon" val="icon.weapon_veniplant_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2653,7 +2653,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15970" name="Veniplant Sword {PvP}" name_additional="Mana Up" type="Weapon">
+	<item id="15970" name="Veniplant Sword {PvP}" additionalName="Mana Up" type="Weapon">
 		<set name="icon" val="icon.weapon_veniplant_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2691,7 +2691,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15971" name="Skull Carnium Bow {PvP}" name_additional="Focus" type="Weapon">
+	<item id="15971" name="Skull Carnium Bow {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_skullgrove_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2731,7 +2731,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="15972" name="Skull Carnium Bow {PvP}" name_additional="Critical Slow" type="Weapon">
+	<item id="15972" name="Skull Carnium Bow {PvP}" additionalName="Critical Slow" type="Weapon">
 		<set name="icon" val="icon.weapon_skullgrove_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2771,7 +2771,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="15973" name="Skull Carnium Bow {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="15973" name="Skull Carnium Bow {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_skullgrove_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2811,7 +2811,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="15974" name="Gemtail Rapier {PvP}" name_additional="Health" type="Weapon">
+	<item id="15974" name="Gemtail Rapier {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_gemtail_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2853,7 +2853,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15975" name="Gemtail Rapier {PvP}" name_additional="Focus" type="Weapon">
+	<item id="15975" name="Gemtail Rapier {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_gemtail_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2895,7 +2895,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15976" name="Gemtail Rapier {PvP}" name_additional="Haste" type="Weapon">
+	<item id="15976" name="Gemtail Rapier {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_gemtail_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2937,7 +2937,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15977" name="Finale Blade {PvP}" name_additional="Health" type="Weapon">
+	<item id="15977" name="Finale Blade {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_findragon blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2978,7 +2978,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15978" name="Finale Blade {PvP}" name_additional="Focus" type="Weapon">
+	<item id="15978" name="Finale Blade {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_findragon blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -3019,7 +3019,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15979" name="Finale Blade {PvP}" name_additional="Haste" type="Weapon">
+	<item id="15979" name="Finale Blade {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_findragon blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -3060,7 +3060,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15980" name="Dominion Crossbow {PvP}" name_additional="Focus" type="Weapon">
+	<item id="15980" name="Dominion Crossbow {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_rudecutter_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3102,7 +3102,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="15981" name="Dominion Crossbow {PvP}" name_additional="Critical Slow" type="Weapon">
+	<item id="15981" name="Dominion Crossbow {PvP}" additionalName="Critical Slow" type="Weapon">
 		<set name="icon" val="icon.weapon_rudecutter_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3144,7 +3144,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="15982" name="Dominion Crossbow {PvP}" name_additional="Cheap Shot" type="Weapon">
+	<item id="15982" name="Dominion Crossbow {PvP}" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_rudecutter_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3186,7 +3186,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="15983" name="Eternal Core Sword {PvP}" name_additional="Focus" type="Weapon">
+	<item id="15983" name="Eternal Core Sword {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_incessantcore_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -3223,7 +3223,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15984" name="Eternal Core Sword {PvP}" name_additional="Haste" type="Weapon">
+	<item id="15984" name="Eternal Core Sword {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_incessantcore_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -3260,7 +3260,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15985" name="Eternal Core Sword {PvP}" name_additional="Health" type="Weapon">
+	<item id="15985" name="Eternal Core Sword {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_incessantcore_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -3297,7 +3297,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15986" name="Mamba Edge {PvP}" name_additional="Haste" type="Weapon">
+	<item id="15986" name="Mamba Edge {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_mambaedge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -3336,7 +3336,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15987" name="Mamba Edge {PvP}" name_additional="Critical Damage" type="Weapon">
+	<item id="15987" name="Mamba Edge {PvP}" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_mambaedge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -3375,7 +3375,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15988" name="Mamba Edge {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="15988" name="Mamba Edge {PvP}" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_mambaedge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -3414,7 +3414,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15989" name="Eversor Mace {PvP}" name_additional="HP Regeneration" type="Weapon">
+	<item id="15989" name="Eversor Mace {PvP}" additionalName="HP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_expowder_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3452,7 +3452,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15990" name="Eversor Mace {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="15990" name="Eversor Mace {PvP}" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_expowder_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3490,7 +3490,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15991" name="Eversor Mace {PvP}" name_additional="Health" type="Weapon">
+	<item id="15991" name="Eversor Mace {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_expowder_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3528,7 +3528,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15992" name="Contristo Hammer {PvP}" name_additional="HP Drain" type="Weapon">
+	<item id="15992" name="Contristo Hammer {PvP}" additionalName="HP Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_pereztear_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3566,7 +3566,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15993" name="Contristo Hammer {PvP}" name_additional="HP Regeneration" type="Weapon">
+	<item id="15993" name="Contristo Hammer {PvP}" additionalName="HP Regeneration" type="Weapon">
 		<set name="icon" val="icon.weapon_pereztear_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3604,7 +3604,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15994" name="Contristo Hammer {PvP}" name_additional="Health" type="Weapon">
+	<item id="15994" name="Contristo Hammer {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_pereztear_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3642,7 +3642,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15995" name="Lava Saw {PvP}" name_additional="Focus" type="Weapon">
+	<item id="15995" name="Lava Saw {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_lavamond_saw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -3679,7 +3679,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15996" name="Lava Saw {PvP}" name_additional="Haste" type="Weapon">
+	<item id="15996" name="Lava Saw {PvP}" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_lavamond_saw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -3716,7 +3716,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15997" name="Lava Saw {PvP}" name_additional="Health" type="Weapon">
+	<item id="15997" name="Lava Saw {PvP}" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_lavamond_saw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -3753,7 +3753,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15998" name="Jade Claw {PvP}" name_additional="Critical Stun" type="Weapon">
+	<item id="15998" name="Jade Claw {PvP}" additionalName="Critical Stun" type="Weapon">
 		<set name="icon" val="icon.weapon_jademice_claw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -3792,7 +3792,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="15999" name="Jade Claw {PvP}" name_additional="Focus" type="Weapon">
+	<item id="15999" name="Jade Claw {PvP}" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_jademice_claw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />

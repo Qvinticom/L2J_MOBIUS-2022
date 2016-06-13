@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="9200" name="Shadow Item: Jester Hat" name_additional="Firework" type="Armor">
+	<item id="9200" name="Shadow Item: Jester Hat" additionalName="Firework" type="Armor">
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -22,7 +22,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker's Ability -->
 		</skills>
 	</item>
-	<item id="9201" name="Shadow Item: Wizard Hat" name_additional="Firework" type="Armor">
+	<item id="9201" name="Shadow Item: Wizard Hat" additionalName="Firework" type="Armor">
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -44,7 +44,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker's Ability -->
 		</skills>
 	</item>
-	<item id="9202" name="Shadow Item: Dapper Cap" name_additional="Firework" type="Armor">
+	<item id="9202" name="Shadow Item: Dapper Cap" additionalName="Firework" type="Armor">
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -66,7 +66,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker's Ability -->
 		</skills>
 	</item>
-	<item id="9203" name="Shadow Item: Romantic Chapeau" name_additional="Firework" type="Armor">
+	<item id="9203" name="Shadow Item: Romantic Chapeau" additionalName="Firework" type="Armor">
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -88,7 +88,7 @@
 			<skill id="3266" level="1" /> <!-- Large Firecracker's Ability -->
 		</skills>
 	</item>
-	<item id="9204" name="Shadow Item: Iron Circlet" name_additional="Firework" type="Armor">
+	<item id="9204" name="Shadow Item: Iron Circlet" additionalName="Firework" type="Armor">
 		<set name="icon" val="icon.accessory_iron_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -856,7 +856,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9229" name="Soldat Estoc" name_additional="Critical Anger" type="Weapon">
+	<item id="9229" name="Soldat Estoc" additionalName="Critical Anger" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -894,7 +894,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9230" name="Soldat Estoc" name_additional="Focus" type="Weapon">
+	<item id="9230" name="Soldat Estoc" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -930,7 +930,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9231" name="Soldat Estoc" name_additional="Light Armor" type="Weapon">
+	<item id="9231" name="Soldat Estoc" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -998,7 +998,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9233" name="Schlager" name_additional="Critical Damage" type="Weapon">
+	<item id="9233" name="Schlager" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1033,7 +1033,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9234" name="Schlager" name_additional="Focus" type="Weapon">
+	<item id="9234" name="Schlager" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1068,7 +1068,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9235" name="Schlager" name_additional="Light Armor" type="Weapon">
+	<item id="9235" name="Schlager" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1136,7 +1136,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9237" name="Arbalest" name_additional="Guidance" type="Weapon">
+	<item id="9237" name="Arbalest" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1172,7 +1172,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9238" name="Arbalest" name_additional="Evasion" type="Weapon">
+	<item id="9238" name="Arbalest" additionalName="Evasion" type="Weapon">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1208,7 +1208,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9239" name="Arbalest" name_additional="Quick Recovery" type="Weapon">
+	<item id="9239" name="Arbalest" additionalName="Quick Recovery" type="Weapon">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1276,7 +1276,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9241" name="Chevalier Rapier" name_additional="Guidance" type="Weapon">
+	<item id="9241" name="Chevalier Rapier" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1312,7 +1312,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9242" name="Chevalier Rapier" name_additional="Back Blow" type="Weapon">
+	<item id="9242" name="Chevalier Rapier" additionalName="Back Blow" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1348,7 +1348,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9243" name="Chevalier Rapier" name_additional="Rsk. Evasion" type="Weapon">
+	<item id="9243" name="Chevalier Rapier" additionalName="Rsk. Evasion" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1419,7 +1419,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9245" name="Chevalier Rapier" name_additional="Focus" type="Weapon">
+	<item id="9245" name="Chevalier Rapier" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1455,7 +1455,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9246" name="Chevalier Rapier" name_additional="Critical Damage" type="Weapon">
+	<item id="9246" name="Chevalier Rapier" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1491,7 +1491,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9247" name="Chevalier Rapier" name_additional="Haste" type="Weapon">
+	<item id="9247" name="Chevalier Rapier" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1562,7 +1562,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9249" name="Chevalier Rapier" name_additional="Critical Damage" type="Weapon">
+	<item id="9249" name="Chevalier Rapier" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1598,7 +1598,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9250" name="Chevalier Rapier" name_additional="Critical Poison" type="Weapon">
+	<item id="9250" name="Chevalier Rapier" additionalName="Critical Poison" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1635,7 +1635,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9251" name="Chevalier Rapier" name_additional="Haste" type="Weapon">
+	<item id="9251" name="Chevalier Rapier" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1706,7 +1706,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9253" name="Chevalier Rapier" name_additional="Focus" type="Weapon">
+	<item id="9253" name="Chevalier Rapier" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1742,7 +1742,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9254" name="Chevalier Rapier" name_additional="Critical Drain" type="Weapon">
+	<item id="9254" name="Chevalier Rapier" additionalName="Critical Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1779,7 +1779,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9255" name="Chevalier Rapier" name_additional="Critical Poison" type="Weapon">
+	<item id="9255" name="Chevalier Rapier" additionalName="Critical Poison" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1849,7 +1849,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9257" name="Ballista" name_additional="Guidance" type="Weapon">
+	<item id="9257" name="Ballista" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1885,7 +1885,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9258" name="Ballista" name_additional="Miser" type="Weapon">
+	<item id="9258" name="Ballista" additionalName="Miser" type="Weapon">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1919,7 +1919,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9259" name="Ballista" name_additional="Quick Recovery" type="Weapon">
+	<item id="9259" name="Ballista" additionalName="Quick Recovery" type="Weapon">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1985,7 +1985,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9261" name="Ballista" name_additional="Evasion" type="Weapon">
+	<item id="9261" name="Ballista" additionalName="Evasion" type="Weapon">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2021,7 +2021,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9262" name="Ballista" name_additional="Miser" type="Weapon">
+	<item id="9262" name="Ballista" additionalName="Miser" type="Weapon">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2055,7 +2055,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9263" name="Ballista" name_additional="Cheap Shot" type="Weapon">
+	<item id="9263" name="Ballista" additionalName="Cheap Shot" type="Weapon">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2126,7 +2126,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9265" name="Blinzlasher" name_additional="Guidance" type="Weapon">
+	<item id="9265" name="Blinzlasher" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2162,7 +2162,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9266" name="Blinzlasher" name_additional="Focus" type="Weapon">
+	<item id="9266" name="Blinzlasher" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2198,7 +2198,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9267" name="Blinzlasher" name_additional="Critical Damage" type="Weapon">
+	<item id="9267" name="Blinzlasher" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2269,7 +2269,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9269" name="Blinzlasher" name_additional="Focus" type="Weapon">
+	<item id="9269" name="Blinzlasher" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2305,7 +2305,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9270" name="Blinzlasher" name_additional="Health" type="Weapon">
+	<item id="9270" name="Blinzlasher" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2341,7 +2341,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9271" name="Blinzlasher" name_additional="Rsk. Haste" type="Weapon">
+	<item id="9271" name="Blinzlasher" additionalName="Rsk. Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2412,7 +2412,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9273" name="Blinzlasher" name_additional="Focus" type="Weapon">
+	<item id="9273" name="Blinzlasher" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2448,7 +2448,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9274" name="Blinzlasher" name_additional="Critical Damage" type="Weapon">
+	<item id="9274" name="Blinzlasher" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2484,7 +2484,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9275" name="Blinzlasher" name_additional="Haste" type="Weapon">
+	<item id="9275" name="Blinzlasher" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2555,7 +2555,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9277" name="Blinzlasher" name_additional="Health" type="Weapon">
+	<item id="9277" name="Blinzlasher" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2591,7 +2591,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9278" name="Blinzlasher" name_additional="Focus" type="Weapon">
+	<item id="9278" name="Blinzlasher" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2627,7 +2627,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9279" name="Blinzlasher" name_additional="Light Armor" type="Weapon">
+	<item id="9279" name="Blinzlasher" additionalName="Light Armor" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2698,7 +2698,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9281" name="Blinzlasher" name_additional="Guidance" type="Weapon">
+	<item id="9281" name="Blinzlasher" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2734,7 +2734,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9282" name="Blinzlasher" name_additional="Critical Drain" type="Weapon">
+	<item id="9282" name="Blinzlasher" additionalName="Critical Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2771,7 +2771,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9283" name="Blinzlasher" name_additional="Health" type="Weapon">
+	<item id="9283" name="Blinzlasher" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2839,7 +2839,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9285" name="Immortal Edge" name_additional="Focus" type="Weapon">
+	<item id="9285" name="Immortal Edge" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2874,7 +2874,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9286" name="Immortal Edge" name_additional="Health" type="Weapon">
+	<item id="9286" name="Immortal Edge" additionalName="Health" type="Weapon">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2909,7 +2909,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9287" name="Immortal Edge" name_additional="Critical Drain" type="Weapon">
+	<item id="9287" name="Immortal Edge" additionalName="Critical Drain" type="Weapon">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2977,7 +2977,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9289" name="Tathlum" name_additional="Guidance" type="Weapon">
+	<item id="9289" name="Tathlum" additionalName="Guidance" type="Weapon">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3013,7 +3013,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9290" name="Tathlum" name_additional="Evasion" type="Weapon">
+	<item id="9290" name="Tathlum" additionalName="Evasion" type="Weapon">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3049,7 +3049,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9291" name="Tathlum" name_additional="Miser" type="Weapon">
+	<item id="9291" name="Tathlum" additionalName="Miser" type="Weapon">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3118,7 +3118,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9293" name="Admiral's Estoc" name_additional="Focus" type="Weapon">
+	<item id="9293" name="Admiral's Estoc" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -3154,7 +3154,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9294" name="Admiral's Estoc" name_additional="Critical Damage" type="Weapon">
+	<item id="9294" name="Admiral's Estoc" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -3190,7 +3190,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9295" name="Admiral's Estoc" name_additional="Haste" type="Weapon">
+	<item id="9295" name="Admiral's Estoc" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -3258,7 +3258,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9297" name="Saber Tooth" name_additional="Focus" type="Weapon">
+	<item id="9297" name="Saber Tooth" additionalName="Focus" type="Weapon">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -3293,7 +3293,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9298" name="Saber Tooth" name_additional="Critical Damage" type="Weapon">
+	<item id="9298" name="Saber Tooth" additionalName="Critical Damage" type="Weapon">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -3328,7 +3328,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="9299" name="Saber Tooth" name_additional="Haste" type="Weapon">
+	<item id="9299" name="Saber Tooth" additionalName="Haste" type="Weapon">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />

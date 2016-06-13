@@ -1479,7 +1479,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38765" name="Lara the Cat's Card Key Pack" name_additional="Luxury" type="EtcItem">
+	<item id="38765" name="Lara the Cat's Card Key Pack" additionalName="Luxury" type="EtcItem">
 		<!-- Double-click to obtain Lara the Cat's Card Key, Lara the Cat's Secret Gift x 3 and Lara the Cat's Quality Secret Gift. Temporary event item. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1551,7 +1551,7 @@
 			<stat type="inventoryLimit">12</stat>
 		</stats>
 	</item>
-	<item id="38769" name="Test: Jewel Lv.1" name_additional="1" type="Armor">
+	<item id="38769" name="Test: Jewel Lv.1" additionalName="1" type="Armor">
 		<!-- Test Jewel -->
 		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1560,7 +1560,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="38770" name="Test: Jewel Lv.2" name_additional="1" type="Armor">
+	<item id="38770" name="Test: Jewel Lv.2" additionalName="1" type="Armor">
 		<!-- Test Jewel -->
 		<set name="icon" val="icon.etc_bm_jewel_moonstone_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1569,7 +1569,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="38771" name="Test: Jewel Lv.1" name_additional="2" type="Armor">
+	<item id="38771" name="Test: Jewel Lv.1" additionalName="2" type="Armor">
 		<!-- Test Jewel -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1578,7 +1578,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="38772" name="Test: Jewel Lv.2" name_additional="2" type="Armor">
+	<item id="38772" name="Test: Jewel Lv.2" additionalName="2" type="Armor">
 		<!-- Test Jewel -->
 		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1587,7 +1587,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="38773" name="Test: Jewel Lv.1" name_additional="3" type="Armor">
+	<item id="38773" name="Test: Jewel Lv.1" additionalName="3" type="Armor">
 		<!-- Test Jewel -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1596,7 +1596,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="38774" name="Test: Jewel Lv.2" name_additional="3" type="Armor">
+	<item id="38774" name="Test: Jewel Lv.2" additionalName="3" type="Armor">
 		<!-- Test Jewel -->
 		<set name="icon" val="icon.etc_bm_jewel_Tourmaline_i00" />
 		<set name="default_action" val="EQUIP" />

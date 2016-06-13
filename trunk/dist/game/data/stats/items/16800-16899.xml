@@ -383,7 +383,7 @@
 			<item id="16853" min="1" max="1" chance="100" /> <!-- Equipment Set Pack (90-day) - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="16853" name="Equipment Set Pack (90-day)" name_additional="90-day" type="EtcItem">
+	<item id="16853" name="Equipment Set Pack (90-day)" additionalName="90-day" type="EtcItem">
 		<set name="icon" val="icon.etc_equip_item_box_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -403,7 +403,7 @@
 			<skill id="2914" level="3" /> <!-- Equipment Set Pack (90-day) -->
 		</skills>
 	</item>
-	<item id="16854" name="Majestic Earring of Fortune" name_additional="90-day" type="Armor">
+	<item id="16854" name="Majestic Earring of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -425,7 +425,7 @@
 			<stat type="maxMp">25</stat>
 		</stats>
 	</item>
-	<item id="16855" name="Majestic Necklace of Fortune" name_additional="90-day" type="Armor">
+	<item id="16855" name="Majestic Necklace of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -447,7 +447,7 @@
 			<stat type="maxMp">33</stat>
 		</stats>
 	</item>
-	<item id="16856" name="Majestic Ring of Fortune" name_additional="90-day" type="Armor">
+	<item id="16856" name="Majestic Ring of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -469,7 +469,7 @@
 			<stat type="maxMp">17</stat>
 		</stats>
 	</item>
-	<item id="16857" name="Black Ore Earring of Fortune" name_additional="90-day" type="Armor">
+	<item id="16857" name="Black Ore Earring of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -490,7 +490,7 @@
 			<stat type="mDef">54</stat>
 		</stats>
 	</item>
-	<item id="16858" name="Black Ore Necklace of Fortune" name_additional="90-day" type="Armor">
+	<item id="16858" name="Black Ore Necklace of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.accessary_necklace_of_black_ore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -511,7 +511,7 @@
 			<stat type="mDef">72</stat>
 		</stats>
 	</item>
-	<item id="16859" name="Black Ore Ring of Fortune" name_additional="90-day" type="Armor">
+	<item id="16859" name="Black Ore Ring of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.accessary_ring_of_black_ore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -532,7 +532,7 @@
 			<stat type="mDef">36</stat>
 		</stats>
 	</item>
-	<item id="16860" name="Sealed Earring of Fortune" name_additional="90-day" type="Armor">
+	<item id="16860" name="Sealed Earring of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -553,7 +553,7 @@
 			<stat type="mDef">45</stat>
 		</stats>
 	</item>
-	<item id="16861" name="Sealed Necklace of Fortune" name_additional="90-day" type="Armor">
+	<item id="16861" name="Sealed Necklace of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.accessary_necklace_of_binding_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -574,7 +574,7 @@
 			<stat type="mDef">64</stat>
 		</stats>
 	</item>
-	<item id="16862" name="Sealed Ring of Fortune" name_additional="90-day" type="Armor">
+	<item id="16862" name="Sealed Ring of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.accessary_ring_of_binding_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -595,7 +595,7 @@
 			<stat type="mDef">32</stat>
 		</stats>
 	</item>
-	<item id="16863" name="Elven Earring of Fortune" name_additional="90-day" type="Armor">
+	<item id="16863" name="Elven Earring of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.accessary_elven_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -616,7 +616,7 @@
 			<stat type="mDef">34</stat>
 		</stats>
 	</item>
-	<item id="16864" name="Elven Necklace of Fortune" name_additional="90-day" type="Armor">
+	<item id="16864" name="Elven Necklace of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.accessary_elven_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -637,7 +637,7 @@
 			<stat type="mDef">45</stat>
 		</stats>
 	</item>
-	<item id="16865" name="Elven Ring of Fortune" name_additional="90-day" type="Armor">
+	<item id="16865" name="Elven Ring of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.accessary_elven_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -658,7 +658,7 @@
 			<stat type="mDef">22</stat>
 		</stats>
 	</item>
-	<item id="16866" name="Dark Crystal Robe of Fortune" name_additional="90-day" type="Armor">
+	<item id="16866" name="Dark Crystal Robe of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -684,7 +684,7 @@
 			<stat type="maxMp">665</stat>
 		</stats>
 	</item>
-	<item id="16867" name="Dark Crystal Helmet of Fortune" name_additional="90-day" type="Armor">
+	<item id="16867" name="Dark Crystal Helmet of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -705,7 +705,7 @@
 			<stat type="pDef">69</stat>
 		</stats>
 	</item>
-	<item id="16868" name="Dark Crystal Gloves of Fortune - Robe" name_additional="90-day" type="Armor">
+	<item id="16868" name="Dark Crystal Gloves of Fortune - Robe" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -729,7 +729,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="16869" name="Dark Crystal Boots of Fortune - Robe" name_additional="90-day" type="Armor">
+	<item id="16869" name="Dark Crystal Boots of Fortune - Robe" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -753,7 +753,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="16870" name="Dark Crystal Shield of Fortune" name_additional="90-day" type="Armor">
+	<item id="16870" name="Dark Crystal Shield of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -779,7 +779,7 @@
 			<stat type="sDef">243</stat>
 		</stats>
 	</item>
-	<item id="16871" name="Avadon Robe of Fortune" name_additional="90-day" type="Armor">
+	<item id="16871" name="Avadon Robe of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -805,7 +805,7 @@
 			<stat type="maxMp">561</stat>
 		</stats>
 	</item>
-	<item id="16872" name="Avadon Circlet of Fortune" name_additional="90-day" type="Armor">
+	<item id="16872" name="Avadon Circlet of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -826,7 +826,7 @@
 			<stat type="pDef">62</stat>
 		</stats>
 	</item>
-	<item id="16873" name="Avadon Gloves of Fortune - Robe" name_additional="90-day" type="Armor">
+	<item id="16873" name="Avadon Gloves of Fortune - Robe" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -850,7 +850,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="16874" name="Avadon Boots of Fortune - Robe" name_additional="90-day" type="Armor">
+	<item id="16874" name="Avadon Boots of Fortune - Robe" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -874,7 +874,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="16875" name="Avadon Shield of Fortune" name_additional="90-day" type="Armor">
+	<item id="16875" name="Avadon Shield of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -900,7 +900,7 @@
 			<stat type="sDef">216</stat>
 		</stats>
 	</item>
-	<item id="16876" name="Karmian Tunic of Fortune" name_additional="90-day" type="Armor">
+	<item id="16876" name="Karmian Tunic of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t53_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -926,7 +926,7 @@
 			<stat type="maxMp">225</stat>
 		</stats>
 	</item>
-	<item id="16877" name="Karmian Stockings of Fortune" name_additional="90-day" type="Armor">
+	<item id="16877" name="Karmian Stockings of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t53_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -952,7 +952,7 @@
 			<stat type="maxMp">141</stat>
 		</stats>
 	</item>
-	<item id="16878" name="Karmian Gloves of Fortune" name_additional="90-day" type="Armor">
+	<item id="16878" name="Karmian Gloves of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t53_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -973,7 +973,7 @@
 			<stat type="pDef">32</stat>
 		</stats>
 	</item>
-	<item id="16879" name="Karmian Boots of Fortune" name_additional="90-day" type="Armor">
+	<item id="16879" name="Karmian Boots of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t53_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -994,7 +994,7 @@
 			<stat type="pDef">32</stat>
 		</stats>
 	</item>
-	<item id="16880" name="Mithril Tunic of Fortune" name_additional="90-day" type="Armor">
+	<item id="16880" name="Mithril Tunic of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1020,7 +1020,7 @@
 			<stat type="maxMp">169</stat>
 		</stats>
 	</item>
-	<item id="16881" name="Mithril Stockings of Fortune" name_additional="90-day" type="Armor">
+	<item id="16881" name="Mithril Stockings of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t51_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1046,7 +1046,7 @@
 			<stat type="maxMp">105</stat>
 		</stats>
 	</item>
-	<item id="16882" name="Elven Mithril Gloves of Fortune" name_additional="90-day" type="Armor">
+	<item id="16882" name="Elven Mithril Gloves of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t51_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1067,7 +1067,7 @@
 			<stat type="pDef">27</stat>
 		</stats>
 	</item>
-	<item id="16883" name="Elven Mithril Boots of Fortune" name_additional="90-day" type="Armor">
+	<item id="16883" name="Elven Mithril Boots of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t51_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1088,7 +1088,7 @@
 			<stat type="pDef">27</stat>
 		</stats>
 	</item>
-	<item id="16884" name="Dark Crystal Leather Armor of Fortune" name_additional="90-day" type="Armor">
+	<item id="16884" name="Dark Crystal Leather Armor of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t75_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1110,7 +1110,7 @@
 			<stat type="pDef">128</stat>
 		</stats>
 	</item>
-	<item id="16885" name="Dark Crystal Leggings of Fortune" name_additional="90-day" type="Armor">
+	<item id="16885" name="Dark Crystal Leggings of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t75_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1132,7 +1132,7 @@
 			<stat type="pDef">80</stat>
 		</stats>
 	</item>
-	<item id="16886" name="Dark Crystal Gloves of Fortune - Light Armor" name_additional="90-day" type="Armor">
+	<item id="16886" name="Dark Crystal Gloves of Fortune - Light Armor" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1153,7 +1153,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="16887" name="Dark Crystal Boots of Fortune - Light Armor" name_additional="90-day" type="Armor">
+	<item id="16887" name="Dark Crystal Boots of Fortune - Light Armor" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1174,7 +1174,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="16888" name="Leather Armor of Doom of Fortune" name_additional="90-day" type="Armor">
+	<item id="16888" name="Leather Armor of Doom of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1196,7 +1196,7 @@
 			<stat type="pDef">202</stat>
 		</stats>
 	</item>
-	<item id="16889" name="Doom Helmet of Fortune" name_additional="90-day" type="Armor">
+	<item id="16889" name="Doom Helmet of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1217,7 +1217,7 @@
 			<stat type="pDef">66</stat>
 		</stats>
 	</item>
-	<item id="16890" name="Doom Gloves of Fortune - Heavy Armor" name_additional="90-day" type="Armor">
+	<item id="16890" name="Doom Gloves of Fortune - Heavy Armor" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1241,7 +1241,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="16891" name="Doom Gloves of Fortune - Light Armor" name_additional="90-day" type="Armor">
+	<item id="16891" name="Doom Gloves of Fortune - Light Armor" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t72_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1262,7 +1262,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="16892" name="Doom Boots of Fortune - Heavy Armor" name_additional="90-day" type="Armor">
+	<item id="16892" name="Doom Boots of Fortune - Heavy Armor" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1286,7 +1286,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="16893" name="Doom Boots of Fortune - Light Armor" name_additional="90-day" type="Armor">
+	<item id="16893" name="Doom Boots of Fortune - Light Armor" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t72_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1307,7 +1307,7 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="16894" name="Doom Plate Armor of Fortune" name_additional="90-day" type="Armor">
+	<item id="16894" name="Doom Plate Armor of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t71_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1332,7 +1332,7 @@
 			<stat type="pDef">270</stat>
 		</stats>
 	</item>
-	<item id="16895" name="Doom Shield of Fortune" name_additional="90-day" type="Armor">
+	<item id="16895" name="Doom Shield of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.shield_doom_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1358,7 +1358,7 @@
 			<stat type="sDef">230</stat>
 		</stats>
 	</item>
-	<item id="16896" name="Plated Leather Armor of Fortune" name_additional="90-day" type="Armor">
+	<item id="16896" name="Plated Leather Armor of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t47_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1380,7 +1380,7 @@
 			<stat type="pDef">94</stat>
 		</stats>
 	</item>
-	<item id="16897" name="Plated Leather Gaiters of Fortune" name_additional="90-day" type="Armor">
+	<item id="16897" name="Plated Leather Gaiters of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t47_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1402,7 +1402,7 @@
 			<stat type="pDef">59</stat>
 		</stats>
 	</item>
-	<item id="16898" name="Plated Leather Boots of Fortune" name_additional="90-day" type="Armor">
+	<item id="16898" name="Plated Leather Boots of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t47_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1423,7 +1423,7 @@
 			<stat type="pDef">32</stat>
 		</stats>
 	</item>
-	<item id="16899" name="Plated Leather Gloves of Fortune" name_additional="90-day" type="Armor">
+	<item id="16899" name="Plated Leather Gloves of Fortune" additionalName="90-day" type="Armor">
 		<set name="icon" val="icon.armor_t47_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />

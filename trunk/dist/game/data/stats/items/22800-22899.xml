@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="22800" name="Freya's Staff - Cleverness" name_additional="Magic Hold" type="Weapon">
+	<item id="22800" name="Freya's Staff - Cleverness" additionalName="Magic Hold" type="Weapon">
 		<!-- Masterwork Item with chance of MP absorption.\n(Soul Crystal Enhancement)\nTwo-handed magic blunt with special powers used by Freya. 20% chance of casting Dryad Root on the target during magic use. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -35,7 +35,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22801" name="Freya's Staff - Cleverness" name_additional="Empower" type="Weapon">
+	<item id="22801" name="Freya's Staff - Cleverness" additionalName="Empower" type="Weapon">
 		<!-- Masterwork Item with chance of MP absorption.\n(Soul Crystal Enhancement)\nTwo-handed magic blunt with special powers used by Freya. M. Atk. Increases by 177. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -69,7 +69,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22802" name="Freya's Staff - Cleverness" name_additional="MP Regeneration" type="Weapon">
+	<item id="22802" name="Freya's Staff - Cleverness" additionalName="MP Regeneration" type="Weapon">
 		<!-- Masterwork Item with chance of MP absorption.\n(Soul Crystal Enhancement)\nTwo-handed magic blunt with special powers used by Freya. Increases MP Recovery Rate. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -142,7 +142,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22804" name="Freya's Staff - Cleverness (PvP)" name_additional="Magic Hold" type="Weapon">
+	<item id="22804" name="Freya's Staff - Cleverness (PvP)" additionalName="Magic Hold" type="Weapon">
 		<!-- Masterwork Item with chance of MP absorption.\n(Soul Crystal Enhancement)\nTwo-handed magic blunt with special powers used by Freya. A 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -182,7 +182,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22805" name="Freya's Staff - Cleverness (PvP)" name_additional="Empower" type="Weapon">
+	<item id="22805" name="Freya's Staff - Cleverness (PvP)" additionalName="Empower" type="Weapon">
 		<!-- Masterwork Item with chance of MP absorption.\n(Soul Crystal Enhancement)\nTwo-handed magic blunt with special powers used by Freya. M. Atk. Increases by 177. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -222,7 +222,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22806" name="Freya's Staff - Cleverness (PvP)" name_additional="MP Regeneration" type="Weapon">
+	<item id="22806" name="Freya's Staff - Cleverness (PvP)" additionalName="MP Regeneration" type="Weapon">
 		<!-- Masterwork Item with chance of MP absorption.\n(Soul Crystal Enhancement)\nTwo-handed magic blunt with special powers used by Freya. MP Recovery Rate is raised. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -295,7 +295,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22808" name="Spezion's Claw" name_additional="Focus" type="Weapon">
+	<item id="22808" name="Spezion's Claw" additionalName="Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nFist weapon with special powers used by Spezion. Critical increases by 76. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. and P. Atk. also increase. -->
 		<set name="icon" val="BranchSys3.Icon.g_spacia_claw_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -329,7 +329,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22809" name="Spezion's Claw" name_additional="Damage Up" type="Weapon">
+	<item id="22809" name="Spezion's Claw" additionalName="Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nFist weapon with special powers used by Spezion. P. Atk. Increases by 332. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. and P. Atk. also increase. -->
 		<set name="icon" val="BranchSys3.Icon.g_spacia_claw_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -363,7 +363,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22810" name="Spezion's Claw" name_additional="Haste" type="Weapon">
+	<item id="22810" name="Spezion's Claw" additionalName="Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nFist weapon with special powers used by Spezion. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. and P. Atk. also increase. -->
 		<set name="icon" val="BranchSys3.Icon.g_spacia_claw_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -397,7 +397,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22811" name="Spezion's Claw" name_additional="Focus + Damage" type="Weapon">
+	<item id="22811" name="Spezion's Claw" additionalName="Focus + Damage" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nFist weapon with special powers used by Spezion. Critical increases by 78.9. P. Atk. Increases by 332. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. and P. Atk. also increase. -->
 		<set name="icon" val="BranchSys3.Icon.g_spacia_claw_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -432,7 +432,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22812" name="Spezion's Claw" name_additional="Damage Up + Haste" type="Weapon">
+	<item id="22812" name="Spezion's Claw" additionalName="Damage Up + Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nFist weapon with special powers used by Spezion. P. Atk. Increases by 415. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. and P. Atk. also increase. -->
 		<set name="icon" val="BranchSys3.Icon.g_spacia_claw_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -467,7 +467,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22813" name="Spezion's Claw" name_additional="Haste + Focus" type="Weapon">
+	<item id="22813" name="Spezion's Claw" additionalName="Haste + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nFist weapon with special powers used by Spezion. Atk. Spd. Increases by about 15%. Critical increases by 76. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. and P. Atk. also increase. -->
 		<set name="icon" val="BranchSys3.Icon.g_spacia_claw_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -536,7 +536,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="22815" name="Maliss Stormer" name_additional="HP Drain" type="Weapon">
+	<item id="22815" name="Maliss Stormer" additionalName="HP Drain" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nSpear used by Maliss. Recovers 4% of standard physical damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack also increases. -->
 		<set name="icon" val="BranchSys3.Icon.g_melisa_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -570,7 +570,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="22816" name="Maliss Stormer" name_additional="Guidance" type="Weapon">
+	<item id="22816" name="Maliss Stormer" additionalName="Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nSpear used by Maliss. Accuracy increases by 7.6. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack also increases. -->
 		<set name="icon" val="BranchSys3.Icon.g_melisa_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -604,7 +604,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="22817" name="Maliss Stormer" name_additional="Damage Up" type="Weapon">
+	<item id="22817" name="Maliss Stormer" additionalName="Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nSpear used by Maliss. P. Atk. Increases by 288. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack also increases. -->
 		<set name="icon" val="BranchSys3.Icon.g_melisa_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -638,7 +638,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="22818" name="Maliss Stormer" name_additional="HP Drain + Guidance" type="Weapon">
+	<item id="22818" name="Maliss Stormer" additionalName="HP Drain + Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nSpear used by Maliss. Recovers 4% of standard melee physical damage inflicted upon the enemy as HP. Accuracy increases by 7.6. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack also increases. -->
 		<set name="icon" val="BranchSys3.Icon.g_melisa_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -674,7 +674,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="22819" name="Maliss Stormer" name_additional="Guidance + Damage Up" type="Weapon">
+	<item id="22819" name="Maliss Stormer" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nSpear used by Maliss. Accuracy increases by 7.6. P. Atk. Increases by 288. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack also increases. -->
 		<set name="icon" val="BranchSys3.Icon.g_melisa_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -710,7 +710,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="22820" name="Maliss Stormer" name_additional="Damage Up + HP Drain" type="Weapon">
+	<item id="22820" name="Maliss Stormer" additionalName="Damage Up + HP Drain" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nSpear used by Maliss. P. Atk. Increases by 288. Recovers 4% of standard melee physical damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack also increases. -->
 		<set name="icon" val="BranchSys3.Icon.g_melisa_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -779,7 +779,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22822" name="Steregos' Dagger" name_additional="Guidance" type="Weapon">
+	<item id="22822" name="Steregos' Dagger" additionalName="Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nDagger used by Steregos. Accuracy increases by 7.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="BranchSys3.Icon.g_dainsleif_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -813,7 +813,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22823" name="Steregos' Dagger" name_additional="Haste" type="Weapon">
+	<item id="22823" name="Steregos' Dagger" additionalName="Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nDagger used by Steregos. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="BranchSys3.Icon.g_dainsleif_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -847,7 +847,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22824" name="Steregos' Dagger" name_additional="Focus" type="Weapon">
+	<item id="22824" name="Steregos' Dagger" additionalName="Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nDagger used by Steregos. Critical increases by 82.3. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="BranchSys3.Icon.g_dainsleif_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -881,7 +881,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22825" name="Steregos' Dagger" name_additional="Guidance + Haste" type="Weapon">
+	<item id="22825" name="Steregos' Dagger" additionalName="Guidance + Haste" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nDagger used by Steregos. Accuracy increases by 7.9. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="BranchSys3.Icon.g_dainsleif_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -916,7 +916,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22826" name="Steregos' Dagger" name_additional="Haste + Focus" type="Weapon">
+	<item id="22826" name="Steregos' Dagger" additionalName="Haste + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nDagger used by Steregos. Atk. Spd. Increases by about 15%. Critical increases by 82.3. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="BranchSys3.Icon.g_dainsleif_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -951,7 +951,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22827" name="Steregos' Dagger" name_additional="Focus + Guidance" type="Weapon">
+	<item id="22827" name="Steregos' Dagger" additionalName="Focus + Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nDagger used by Steregos. Critical increases by 82.3. Accuracy increases by 7.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="BranchSys3.Icon.g_dainsleif_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1019,7 +1019,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22829" name="Ron's Dual Blunt Weapon" name_additional="Focus" type="Weapon">
+	<item id="22829" name="Ron's Dual Blunt Weapon" additionalName="Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nDual blunt with special powers used by Ron. Critical increases by 78.9. Increases damage inflicted during PvP. When enchanted to + 4, also increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="BranchSys3.Icon.g_urukmash_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1053,7 +1053,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22830" name="Ron's Dual Blunt Weapon" name_additional="Guidance" type="Weapon">
+	<item id="22830" name="Ron's Dual Blunt Weapon" additionalName="Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nDual blunt with special powers used by Ron. Accuracy increases by 7.8. Increases damage inflicted during PvP. When enchanted to + 4, also increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="BranchSys3.Icon.g_urukmash_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1087,7 +1087,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22831" name="Ron's Dual Blunt Weapon" name_additional="Damage Up" type="Weapon">
+	<item id="22831" name="Ron's Dual Blunt Weapon" additionalName="Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nDual blunt with special powers used by Ron. P. Atk. Increases by 377. Increases damage inflicted during PvP. When enchanted to + 4, also increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="BranchSys3.Icon.g_urukmash_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1121,7 +1121,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22832" name="Ron's Dual Blunt Weapon" name_additional="Focus + Guidance" type="Weapon">
+	<item id="22832" name="Ron's Dual Blunt Weapon" additionalName="Focus + Guidance" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nDual blunt with special powers used by Ron. Critical increases by 79.2. Accuracy increases by 7.8. Increases damage inflicted during PvP. When enchanted to + 4, also increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="BranchSys3.Icon.g_urukmash_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1156,7 +1156,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22833" name="Ron's Dual Blunt Weapon" name_additional="Guidance + Damage Up" type="Weapon">
+	<item id="22833" name="Ron's Dual Blunt Weapon" additionalName="Guidance + Damage Up" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nDual blunt with special powers used by Ron. Accuracy increases by 7.7. P. Atk. Increases by 377. Increases damage inflicted during PvP. When enchanted to + 4, also increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="BranchSys3.Icon.g_urukmash_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1191,7 +1191,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22834" name="Ron's Dual Blunt Weapon" name_additional="Damage Up + Focus" type="Weapon">
+	<item id="22834" name="Ron's Dual Blunt Weapon" additionalName="Damage Up + Focus" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nDual blunt with special powers used by Ron. P. Atk. Increases by 377. Critical increases by 78.9. Increases damage inflicted during PvP. When enchanted to + 4, also increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="BranchSys3.Icon.g_urukmash_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1476,7 +1476,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22896" name="Ancient Kartia's Labyrinth Origins" name_additional="Stage 1" type="EtcItem">
+	<item id="22896" name="Ancient Kartia's Labyrinth Origins" additionalName="Stage 1" type="EtcItem">
 		<!-- Item that allows you to acquire 1,200,000,000 XP and 360,000 SP. Cooldown is 2 days. Lv. 85 - 89. -->
 		<set name="icon" val="BranchSys3.lcon.g_scroll_of_cartia_85" />
 		<set name="weight" val="120" />
@@ -1497,7 +1497,7 @@
 			<skill id="22599" level="1" /> <!-- Ancient Kartia's Labyrinth Origins -->
 		</skills>
 	</item>
-	<item id="22897" name="Ancient Kartia's Labyrinth Origins" name_additional="Stage 2" type="EtcItem">
+	<item id="22897" name="Ancient Kartia's Labyrinth Origins" additionalName="Stage 2" type="EtcItem">
 		<!-- Item that allows you to acquire 1,675,000,000 XP and 500,000 SP. Cooldown is 2 days. Lv. 90 - 94. -->
 		<set name="icon" val="BranchSys3.lcon.g_scroll_of_cartia_90" />
 		<set name="weight" val="120" />
@@ -1518,7 +1518,7 @@
 			<skill id="22600" level="1" /> <!-- Ancient Kartia's Labyrinth Origins -->
 		</skills>
 	</item>
-	<item id="22898" name="Ancient Kartia's Labyrinth Origins" name_additional="Stage 3" type="EtcItem">
+	<item id="22898" name="Ancient Kartia's Labyrinth Origins" additionalName="Stage 3" type="EtcItem">
 		<!-- Item that allows you to acquire 2,425,000,000 XP and 700,000 SP. Cooldown is 2 days. Lv. 95 - 99. -->
 		<set name="icon" val="BranchSys3.lcon.g_scroll_of_cartia_95" />
 		<set name="weight" val="120" />

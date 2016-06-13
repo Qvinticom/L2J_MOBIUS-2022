@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="33600" name="Bound Dynasty Leather Gloves" name_additional="Event" type="Armor">
+	<item id="33600" name="Bound Dynasty Leather Gloves" additionalName="Event" type="Armor">
 		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t92_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -23,7 +23,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="33601" name="Bound Dynasty Leather Boots" name_additional="Event" type="Armor">
+	<item id="33601" name="Bound Dynasty Leather Boots" additionalName="Event" type="Armor">
 		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t92_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -46,7 +46,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="33602" name="Bound Dynasty Tunic" name_additional="Event" type="Armor">
+	<item id="33602" name="Bound Dynasty Tunic" additionalName="Event" type="Armor">
 		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t93_u_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -70,7 +70,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="33603" name="Bound Dynasty Stockings" name_additional="Event" type="Armor">
+	<item id="33603" name="Bound Dynasty Stockings" additionalName="Event" type="Armor">
 		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t93_l_i00" />
 		<set name="armor_type" val="MAGIC" />
@@ -94,7 +94,7 @@
 			<stat type="pDef">71</stat>
 		</stats>
 	</item>
-	<item id="33604" name="Bound Dynasty Circlet" name_additional="Event" type="Armor">
+	<item id="33604" name="Bound Dynasty Circlet" additionalName="Event" type="Armor">
 		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -116,7 +116,7 @@
 			<stat type="pDef">92</stat>
 		</stats>
 	</item>
-	<item id="33605" name="Bound Dynasty Gloves" name_additional="Event" type="Armor">
+	<item id="33605" name="Bound Dynasty Gloves" additionalName="Event" type="Armor">
 		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t93_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -139,7 +139,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="33606" name="Bound Dynasty Shoes" name_additional="Event" type="Armor">
+	<item id="33606" name="Bound Dynasty Shoes" additionalName="Event" type="Armor">
 		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t93_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -162,7 +162,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="33607" name="Bound Dynasty Sigil" name_additional="Event" type="Armor">
+	<item id="33607" name="Bound Dynasty Sigil" additionalName="Event" type="Armor">
 		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.dynasty_sigil_i00" />
 		<set name="armor_type" val="SIGIL" />
@@ -189,7 +189,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="33608" name="Unidentified Dynasty Knife" name_additional="Event" type="EtcItem">
+	<item id="33608" name="Unidentified Dynasty Knife" additionalName="Event" type="EtcItem">
 		<!-- Dynasty knife in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / dagger) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -208,7 +208,7 @@
 			<skill id="12900" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33609" name="Unidentified Dynasty Sword" name_additional="Event" type="EtcItem">
+	<item id="33609" name="Unidentified Dynasty Sword" additionalName="Event" type="EtcItem">
 		<!-- Dynasty sword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / sword) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -227,7 +227,7 @@
 			<skill id="12901" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33610" name="Unidentified Dynasty Phantom" name_additional="Event" type="EtcItem">
+	<item id="33610" name="Unidentified Dynasty Phantom" additionalName="Event" type="EtcItem">
 		<!-- Dynasty phantom in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / sword) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -246,7 +246,7 @@
 			<skill id="12902" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33611" name="Unidentified Dynasty Rapier" name_additional="Event" type="EtcItem">
+	<item id="33611" name="Unidentified Dynasty Rapier" additionalName="Event" type="EtcItem">
 		<!-- Dynasty rapier in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / short sword) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -265,7 +265,7 @@
 			<skill id="12903" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33612" name="Unidentified Dynasty Blade" name_additional="Event" type="EtcItem">
+	<item id="33612" name="Unidentified Dynasty Blade" additionalName="Event" type="EtcItem">
 		<!-- Dynasty blade in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / sword) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -284,7 +284,7 @@
 			<skill id="12904" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33613" name="Unidentified Dynasty Ancient Sword" name_additional="Event" type="EtcItem">
+	<item id="33613" name="Unidentified Dynasty Ancient Sword" additionalName="Event" type="EtcItem">
 		<!-- Dynasty ancient sword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / ancient sword) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -303,7 +303,7 @@
 			<skill id="12905" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33614" name="Unidentified Dynasty Halberd" name_additional="Event" type="EtcItem">
+	<item id="33614" name="Unidentified Dynasty Halberd" additionalName="Event" type="EtcItem">
 		<!-- Dynasty halberd in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / spear) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -322,7 +322,7 @@
 			<skill id="12906" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33615" name="Unidentified Dynasty Crossbow" name_additional="Event" type="EtcItem">
+	<item id="33615" name="Unidentified Dynasty Crossbow" additionalName="Event" type="EtcItem">
 		<!-- Dynasty crossbow in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / crossbow) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -341,7 +341,7 @@
 			<skill id="12907" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33616" name="Unidentified Dynasty Cudgel" name_additional="Event" type="EtcItem">
+	<item id="33616" name="Unidentified Dynasty Cudgel" additionalName="Event" type="EtcItem">
 		<!-- Dynasty cudgel in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / blunt) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -360,7 +360,7 @@
 			<skill id="12908" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33617" name="Unidentified Dynasty Mace" name_additional="Event" type="EtcItem">
+	<item id="33617" name="Unidentified Dynasty Mace" additionalName="Event" type="EtcItem">
 		<!-- Dynasty mace in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / blunt) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -379,7 +379,7 @@
 			<skill id="12909" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33618" name="Unidentified Dynasty Staff" name_additional="Event" type="EtcItem">
+	<item id="33618" name="Unidentified Dynasty Staff" additionalName="Event" type="EtcItem">
 		<!-- Dynasty staff in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / blunt) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -398,7 +398,7 @@
 			<skill id="12910" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33619" name="Unidentified Dynasty Crusher" name_additional="Event" type="EtcItem">
+	<item id="33619" name="Unidentified Dynasty Crusher" additionalName="Event" type="EtcItem">
 		<!-- Dynasty crusher in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / blunt) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -417,7 +417,7 @@
 			<skill id="12911" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33620" name="Unidentified Dynasty Bagh-Nakh" name_additional="Event" type="EtcItem">
+	<item id="33620" name="Unidentified Dynasty Bagh-Nakh" additionalName="Event" type="EtcItem">
 		<!-- Dynasty Bagh-Nakh in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / fist weapon) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -436,7 +436,7 @@
 			<skill id="12912" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33621" name="Unidentified Dynasty Dualsword" name_additional="Event" type="EtcItem">
+	<item id="33621" name="Unidentified Dynasty Dualsword" additionalName="Event" type="EtcItem">
 		<!-- Dynasty dualsword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / dualsword) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -453,7 +453,7 @@
 			<skill id="12913" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33622" name="Unidentified Dynasty Dual Dagger" name_additional="Event" type="EtcItem">
+	<item id="33622" name="Unidentified Dynasty Dual Dagger" additionalName="Event" type="EtcItem">
 		<!-- Dynasty Dual Dagger in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / dual dagger) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -470,7 +470,7 @@
 			<skill id="12914" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33623" name="Unidentified Dynasty Breastplate" name_additional="Event" type="EtcItem">
+	<item id="33623" name="Unidentified Dynasty Breastplate" additionalName="Event" type="EtcItem">
 		<!-- Dynasty breastplate in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: upper / heavy armor) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -487,7 +487,7 @@
 			<skill id="12915" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33624" name="Unidentified Dynasty Gaiters" name_additional="Event" type="EtcItem">
+	<item id="33624" name="Unidentified Dynasty Gaiters" additionalName="Event" type="EtcItem">
 		<!-- Dynasty gaiters in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: lower / heavy armor) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -504,7 +504,7 @@
 			<skill id="12916" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33625" name="Unidentified Dynasty Helmet" name_additional="Event" type="EtcItem">
+	<item id="33625" name="Unidentified Dynasty Helmet" additionalName="Event" type="EtcItem">
 		<!-- Dynasty helmet in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: headgear) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -521,7 +521,7 @@
 			<skill id="12917" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33626" name="Unidentified Dynasty Gauntlets" name_additional="Event" type="EtcItem">
+	<item id="33626" name="Unidentified Dynasty Gauntlets" additionalName="Event" type="EtcItem">
 		<!-- Dynasty gauntlets in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: gloves) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -538,7 +538,7 @@
 			<skill id="12918" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33627" name="Unidentified Dynasty Boots" name_additional="Event" type="EtcItem">
+	<item id="33627" name="Unidentified Dynasty Boots" additionalName="Event" type="EtcItem">
 		<!-- Dynasty boots in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: boots) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -555,7 +555,7 @@
 			<skill id="12919" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33628" name="Unidentified Dynasty Shield" name_additional="Event" type="EtcItem">
+	<item id="33628" name="Unidentified Dynasty Shield" additionalName="Event" type="EtcItem">
 		<!-- Dynasty shield in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: shield) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -572,7 +572,7 @@
 			<skill id="12920" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33629" name="Unidentified Dynasty Leather Armor" name_additional="Event" type="EtcItem">
+	<item id="33629" name="Unidentified Dynasty Leather Armor" additionalName="Event" type="EtcItem">
 		<!-- Dynasty leather armor in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: upper / light armor) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -589,7 +589,7 @@
 			<skill id="12921" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33630" name="Unidentified Dynasty Leather Leggings" name_additional="Event" type="EtcItem">
+	<item id="33630" name="Unidentified Dynasty Leather Leggings" additionalName="Event" type="EtcItem">
 		<!-- Dynasty leather leggings in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: lower / light armor) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -606,7 +606,7 @@
 			<skill id="12922" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33631" name="Unidentified Dynasty Leather Helmet" name_additional="Event" type="EtcItem">
+	<item id="33631" name="Unidentified Dynasty Leather Helmet" additionalName="Event" type="EtcItem">
 		<!-- Dynasty leather helmet in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: headgear) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -623,7 +623,7 @@
 			<skill id="12923" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33632" name="Unidentified Dynasty Leather Gloves" name_additional="Event" type="EtcItem">
+	<item id="33632" name="Unidentified Dynasty Leather Gloves" additionalName="Event" type="EtcItem">
 		<!-- Dynasty leather gloves in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: gloves) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -640,7 +640,7 @@
 			<skill id="12924" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33633" name="Unidentified Dynasty Leather Boots" name_additional="Event" type="EtcItem">
+	<item id="33633" name="Unidentified Dynasty Leather Boots" additionalName="Event" type="EtcItem">
 		<!-- Dynasty leather boots in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: boots) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -657,7 +657,7 @@
 			<skill id="12925" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33634" name="Unidentified Dynasty Tunic" name_additional="Event" type="EtcItem">
+	<item id="33634" name="Unidentified Dynasty Tunic" additionalName="Event" type="EtcItem">
 		<!-- Dynasty tunic in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: upper / robe) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -674,7 +674,7 @@
 			<skill id="12926" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33635" name="Unidentified Dynasty Stockings" name_additional="Event" type="EtcItem">
+	<item id="33635" name="Unidentified Dynasty Stockings" additionalName="Event" type="EtcItem">
 		<!-- Dynasty stockings in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: lower / robe) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -691,7 +691,7 @@
 			<skill id="12927" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33636" name="Unidentified Dynasty Circlet" name_additional="Event" type="EtcItem">
+	<item id="33636" name="Unidentified Dynasty Circlet" additionalName="Event" type="EtcItem">
 		<!-- Dynasty circlet in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: headgear) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -708,7 +708,7 @@
 			<skill id="12928" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33637" name="Unidentified Dynasty Gloves" name_additional="Event" type="EtcItem">
+	<item id="33637" name="Unidentified Dynasty Gloves" additionalName="Event" type="EtcItem">
 		<!-- Dynasty gloves in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: gloves) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -725,7 +725,7 @@
 			<skill id="12929" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33638" name="Unidentified Dynasty Shoes" name_additional="Event" type="EtcItem">
+	<item id="33638" name="Unidentified Dynasty Shoes" additionalName="Event" type="EtcItem">
 		<!-- Dynasty shoes in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: boots) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -742,7 +742,7 @@
 			<skill id="12930" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33639" name="Unidentified Dynasty Sigil" name_additional="Event" type="EtcItem">
+	<item id="33639" name="Unidentified Dynasty Sigil" additionalName="Event" type="EtcItem">
 		<!-- Dynasty sigil in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: sigil) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -759,7 +759,7 @@
 			<skill id="12931" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33640" name="Blessed Scroll of Escape" name_additional="Campaign" type="EtcItem">
+	<item id="33640" name="Blessed Scroll of Escape" additionalName="Campaign" type="EtcItem">
 		<!-- Mysterious scroll that relocates user to the nearest village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="weight" val="120" />
@@ -984,7 +984,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33651" name="Unidentified Crystal Dagger" name_additional="Event" type="EtcItem">
+	<item id="33651" name="Unidentified Crystal Dagger" additionalName="Event" type="EtcItem">
 		<!-- Crystal Dagger in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / dagger) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1002,7 +1002,7 @@
 			<skill id="12937" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33652" name="Unidentified Samurai Long Sword" name_additional="Event" type="EtcItem">
+	<item id="33652" name="Unidentified Samurai Long Sword" additionalName="Event" type="EtcItem">
 		<!-- Samurai Long Sword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / sword) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1021,7 +1021,7 @@
 			<skill id="12938" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33653" name="Unidentified Ecliptic Sword" name_additional="Event" type="EtcItem">
+	<item id="33653" name="Unidentified Ecliptic Sword" additionalName="Event" type="EtcItem">
 		<!-- Ecliptic Sword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / sword) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1040,7 +1040,7 @@
 			<skill id="12939" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33654" name="Unidentified Admiral's Estoc" name_additional="Event" type="EtcItem">
+	<item id="33654" name="Unidentified Admiral's Estoc" additionalName="Event" type="EtcItem">
 		<!-- Kamael-exclusive Weapon: Samurai Long Sword Conversion, Admiral's Estoc in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon: rapier) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1059,7 +1059,7 @@
 			<skill id="12940" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33655" name="Unidentified Berserker Blade" name_additional="Event" type="EtcItem">
+	<item id="33655" name="Unidentified Berserker Blade" additionalName="Event" type="EtcItem">
 		<!-- Berserker Blade in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / sword) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1078,7 +1078,7 @@
 			<skill id="12941" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33656" name="Unidentified Saber Tooth" name_additional="Event" type="EtcItem">
+	<item id="33656" name="Unidentified Saber Tooth" additionalName="Event" type="EtcItem">
 		<!-- Kamael-exclusive Weapon: Berserker Blade Conversion, Saber Tooth in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / ancient sword) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1097,7 +1097,7 @@
 			<skill id="12942" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33657" name="Unidentified Eminence Bow" name_additional="Event" type="EtcItem">
+	<item id="33657" name="Unidentified Eminence Bow" additionalName="Event" type="EtcItem">
 		<!-- Eminence Bow in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / bow) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1116,7 +1116,7 @@
 			<skill id="12943" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33658" name="Unidentified Sharpshooter" name_additional="Event" type="EtcItem">
+	<item id="33658" name="Unidentified Sharpshooter" additionalName="Event" type="EtcItem">
 		<!-- Kamael-exclusive Weapon: Eminence Bow Conversion, Sharpshooter in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / crossbow) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1135,7 +1135,7 @@
 			<skill id="12944" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33659" name="Unidentified Ecliptic Axe" name_additional="Event" type="EtcItem">
+	<item id="33659" name="Unidentified Ecliptic Axe" additionalName="Event" type="EtcItem">
 		<!-- Ecliptic Axe in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / blunt) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1154,7 +1154,7 @@
 			<skill id="12945" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33660" name="Unidentified Yaksa Mace" name_additional="Event" type="EtcItem">
+	<item id="33660" name="Unidentified Yaksa Mace" additionalName="Event" type="EtcItem">
 		<!-- Yaksa Mace in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / blunt) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1173,7 +1173,7 @@
 			<skill id="12946" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33661" name="Unidentified Dwarven Hammer" name_additional="Event" type="EtcItem">
+	<item id="33661" name="Unidentified Dwarven Hammer" additionalName="Event" type="EtcItem">
 		<!-- Dwarven Hammer in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / blunt) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1192,7 +1192,7 @@
 			<skill id="12947" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33662" name="Unidentified Ghoul's Staff" name_additional="Event" type="EtcItem">
+	<item id="33662" name="Unidentified Ghoul's Staff" additionalName="Event" type="EtcItem">
 		<!-- Ghoul's Staff in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / blunt) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1211,7 +1211,7 @@
 			<skill id="12948" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33663" name="Unidentified Orcish Poleaxe" name_additional="Event" type="EtcItem">
+	<item id="33663" name="Unidentified Orcish Poleaxe" additionalName="Event" type="EtcItem">
 		<!-- Orcish Poleaxe in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / spear) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1230,7 +1230,7 @@
 			<skill id="12949" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33664" name="Unidentified Great Pata" name_additional="Event" type="EtcItem">
+	<item id="33664" name="Unidentified Great Pata" additionalName="Event" type="EtcItem">
 		<!-- Great Pata in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / fist weapon) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1249,7 +1249,7 @@
 			<skill id="12950" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33665" name="Unidentified Shamshir*Shamshir" name_additional="Event" type="EtcItem">
+	<item id="33665" name="Unidentified Shamshir*Shamshir" additionalName="Event" type="EtcItem">
 		<!-- Shamshir*Shamshir in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / dual weapon) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1266,7 +1266,7 @@
 			<skill id="12951" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33666" name="Unidentified Full Plate Helmet" name_additional="Event" type="EtcItem">
+	<item id="33666" name="Unidentified Full Plate Helmet" additionalName="Event" type="EtcItem">
 		<!-- Full Plate Helmet in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Headgear) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1283,7 +1283,7 @@
 			<skill id="12952" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33667" name="Unidentified Full Plate Armor" name_additional="Event" type="EtcItem">
+	<item id="33667" name="Unidentified Full Plate Armor" additionalName="Event" type="EtcItem">
 		<!-- Full Plate Armor in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-piece/ heavy armor) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1300,7 +1300,7 @@
 			<skill id="12953" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33668" name="Unidentified Full Plate Shield" name_additional="Event" type="EtcItem">
+	<item id="33668" name="Unidentified Full Plate Shield" additionalName="Event" type="EtcItem">
 		<!-- Full Plate Shield in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Shield) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1317,7 +1317,7 @@
 			<skill id="12954" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33669" name="Unidentified Full Plate Boots" name_additional="Event" type="EtcItem">
+	<item id="33669" name="Unidentified Full Plate Boots" additionalName="Event" type="EtcItem">
 		<!-- Full Plate Boots in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: boots) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1334,7 +1334,7 @@
 			<skill id="12955" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33670" name="Unidentified Full Plate Gauntlets" name_additional="Event" type="EtcItem">
+	<item id="33670" name="Unidentified Full Plate Gauntlets" additionalName="Event" type="EtcItem">
 		<!-- Full Plate Gauntlets in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Gloves) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1351,7 +1351,7 @@
 			<skill id="12956" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33671" name="Unidentified Divine Stockings" name_additional="Event" type="EtcItem">
+	<item id="33671" name="Unidentified Divine Stockings" additionalName="Event" type="EtcItem">
 		<!-- Divine Stockings in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: lower / robe) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1368,7 +1368,7 @@
 			<skill id="12957" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33672" name="Unidentified Divine Tunic" name_additional="Event" type="EtcItem">
+	<item id="33672" name="Unidentified Divine Tunic" additionalName="Event" type="EtcItem">
 		<!-- Divine Tunic in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: upper / robe) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1385,7 +1385,7 @@
 			<skill id="12958" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33673" name="Unidentified Divine Gloves" name_additional="Event" type="EtcItem">
+	<item id="33673" name="Unidentified Divine Gloves" additionalName="Event" type="EtcItem">
 		<!-- Divine Gloves in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Gloves) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1402,7 +1402,7 @@
 			<skill id="12959" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33674" name="Unidentified Drake Leather Boots" name_additional="Event" type="EtcItem">
+	<item id="33674" name="Unidentified Drake Leather Boots" additionalName="Event" type="EtcItem">
 		<!-- Drake Leather boots in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: boots) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1419,7 +1419,7 @@
 			<skill id="12960" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33675" name="Unidentified Drake Leather Armor" name_additional="Event" type="EtcItem">
+	<item id="33675" name="Unidentified Drake Leather Armor" additionalName="Event" type="EtcItem">
 		<!-- Drake Leather armor in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one piece / light armor) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1436,7 +1436,7 @@
 			<skill id="12961" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33676" name="Unidentified Drake Leather Gloves" name_additional="Event" type="EtcItem">
+	<item id="33676" name="Unidentified Drake Leather Gloves" additionalName="Event" type="EtcItem">
 		<!-- Drake Leather gloves in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Gloves) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1453,7 +1453,7 @@
 			<skill id="12962" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33677" name="Unidentified Demon's Dagger" name_additional="Event" type="EtcItem">
+	<item id="33677" name="Unidentified Demon's Dagger" additionalName="Event" type="EtcItem">
 		<!-- Demon's Dagger in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / dagger) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1471,7 +1471,7 @@
 			<skill id="12963" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33678" name="Unidentified Wizard's Tear" name_additional="Event" type="EtcItem">
+	<item id="33678" name="Unidentified Wizard's Tear" additionalName="Event" type="EtcItem">
 		<!-- Wizard's Tear in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / sword) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1490,7 +1490,7 @@
 			<skill id="12964" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33679" name="Unidentified Damascus Sword" name_additional="Event" type="EtcItem">
+	<item id="33679" name="Unidentified Damascus Sword" additionalName="Event" type="EtcItem">
 		<!-- Damascus Sword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / sword) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1509,7 +1509,7 @@
 			<skill id="12965" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33680" name="Unidentified Guardian's Sword" name_additional="Event" type="EtcItem">
+	<item id="33680" name="Unidentified Guardian's Sword" additionalName="Event" type="EtcItem">
 		<!-- Guardian's Sword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / sword) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1528,7 +1528,7 @@
 			<skill id="12966" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33681" name="Unidentified Bow of Peril" name_additional="Event" type="EtcItem">
+	<item id="33681" name="Unidentified Bow of Peril" additionalName="Event" type="EtcItem">
 		<!-- Bow of Peril in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / bow) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1547,7 +1547,7 @@
 			<skill id="12967" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33682" name="Unidentified Kaim Vanul's Bones" name_additional="Event" type="EtcItem">
+	<item id="33682" name="Unidentified Kaim Vanul's Bones" additionalName="Event" type="EtcItem">
 		<!-- Kaim Vanul's Bones in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / blunt) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1566,7 +1566,7 @@
 			<skill id="12968" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33683" name="Unidentified Art of Battle Axe" name_additional="Event" type="EtcItem">
+	<item id="33683" name="Unidentified Art of Battle Axe" additionalName="Event" type="EtcItem">
 		<!-- Art of Battle Axe in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / blunt) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1585,7 +1585,7 @@
 			<skill id="12969" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33684" name="Unidentified Star Buster" name_additional="Event" type="EtcItem">
+	<item id="33684" name="Unidentified Star Buster" additionalName="Event" type="EtcItem">
 		<!-- Star Buster in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / blunt) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1604,7 +1604,7 @@
 			<skill id="12970" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33685" name="Unidentified Staff of Evil Spirits" name_additional="Event" type="EtcItem">
+	<item id="33685" name="Unidentified Staff of Evil Spirits" additionalName="Event" type="EtcItem">
 		<!-- Staff of Evil Spirits in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / blunt) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1623,7 +1623,7 @@
 			<skill id="12971" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33686" name="Unidentified Lance" name_additional="Event" type="EtcItem">
+	<item id="33686" name="Unidentified Lance" additionalName="Event" type="EtcItem">
 		<!-- Lance in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / spear) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1642,7 +1642,7 @@
 			<skill id="12972" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33687" name="Unidentified Bellion Cestus" name_additional="Event" type="EtcItem">
+	<item id="33687" name="Unidentified Bellion Cestus" additionalName="Event" type="EtcItem">
 		<!-- Bellion Cestus in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / fist weapon) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1661,7 +1661,7 @@
 			<skill id="12973" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33688" name="Unidentified Samurai Long Sword*Samurai Long Sword" name_additional="Event" type="EtcItem">
+	<item id="33688" name="Unidentified Samurai Long Sword*Samurai Long Sword" additionalName="Event" type="EtcItem">
 		<!-- Samurai Long Sword*Samurai Long Sword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / dual weapon) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1678,7 +1678,7 @@
 			<skill id="12932" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33689" name="Unidentified Stockings of Doom" name_additional="Event" type="EtcItem">
+	<item id="33689" name="Unidentified Stockings of Doom" additionalName="Event" type="EtcItem">
 		<!-- Stockings of Doom in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: lower / robe) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1695,7 +1695,7 @@
 			<skill id="12974" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33690" name="Unidentified Tunic of Doom" name_additional="Event" type="EtcItem">
+	<item id="33690" name="Unidentified Tunic of Doom" additionalName="Event" type="EtcItem">
 		<!-- Tunic of Doom in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: upper / robe) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1712,7 +1712,7 @@
 			<skill id="12975" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33691" name="Unidentified Leather Armor of Doom" name_additional="Event" type="EtcItem">
+	<item id="33691" name="Unidentified Leather Armor of Doom" additionalName="Event" type="EtcItem">
 		<!-- Leather Armor of Doom in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one piece / light armor) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1729,7 +1729,7 @@
 			<skill id="12976" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33692" name="Unidentified Doom Helmet" name_additional="Event" type="EtcItem">
+	<item id="33692" name="Unidentified Doom Helmet" additionalName="Event" type="EtcItem">
 		<!-- Doom Helmet in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Headgear) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1746,7 +1746,7 @@
 			<skill id="12977" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33693" name="Unidentified Doom Plate Armor" name_additional="Event" type="EtcItem">
+	<item id="33693" name="Unidentified Doom Plate Armor" additionalName="Event" type="EtcItem">
 		<!-- Doom Plate Armor in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one piece / heavy armor) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1763,7 +1763,7 @@
 			<skill id="12978" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33694" name="Unidentified Doom Shield" name_additional="Event" type="EtcItem">
+	<item id="33694" name="Unidentified Doom Shield" additionalName="Event" type="EtcItem">
 		<!-- Doom Shield in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Shield) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1780,7 +1780,7 @@
 			<skill id="12979" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33695" name="Unidentified Doom Boots" name_additional="Event" type="EtcItem">
+	<item id="33695" name="Unidentified Doom Boots" additionalName="Event" type="EtcItem">
 		<!-- Doom Boots in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: boots) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1797,7 +1797,7 @@
 			<skill id="12980" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33696" name="Unidentified Doom Gloves" name_additional="Event" type="EtcItem">
+	<item id="33696" name="Unidentified Doom Gloves" additionalName="Event" type="EtcItem">
 		<!-- Doom Gloves in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Gloves) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1814,7 +1814,7 @@
 			<skill id="12981" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33697" name="Unidentified Soul Separator" name_additional="Event" type="EtcItem">
+	<item id="33697" name="Unidentified Soul Separator" additionalName="Event" type="EtcItem">
 		<!-- Soul Separator in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / dagger) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1833,7 +1833,7 @@
 			<skill id="12982" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33698" name="Unidentified Sword of Miracles" name_additional="Event" type="EtcItem">
+	<item id="33698" name="Unidentified Sword of Miracles" additionalName="Event" type="EtcItem">
 		<!-- Sword of Miracles in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / sword) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1852,7 +1852,7 @@
 			<skill id="12983" level="1" /> <!-- Check Item -->
 		</skills>
 	</item>
-	<item id="33699" name="Unidentified Dark Legion's Edge" name_additional="Event" type="EtcItem">
+	<item id="33699" name="Unidentified Dark Legion's Edge" additionalName="Event" type="EtcItem">
 		<!-- Dark Legion's Edge in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one-handed weapon / sword) -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
