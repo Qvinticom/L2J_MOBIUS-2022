@@ -1027,3 +1027,7 @@ INSERT INTO `teleport` VALUES
 ('Monastic Fortress -> Den of Evil',20178,68693,-110438,-1946,500,0,57), -- retail
 ('Monastic Fortress -> Ice Merchant Cabin',20179,113903,-108752,-860,500,0,57), -- retail
 ('Monastic Fortress -> Shyeed\'s Cavern',20180,76911,-55295,-5824,500,0,57); -- retail
+
+-- Enchnated Valley
+UPDATE `teleport` SET `Description`='Hunters -> Enchanted Valley',`loc_x`=114681,`loc_y`=48255,`loc_z`=4576 WHERE `Id`=100;
+INSERT INTO `teleport` VALUES ('Herb Collector -> Enchanted Valley ', '3408701', '116703', '53018', '-3632', '0', '0', '57');

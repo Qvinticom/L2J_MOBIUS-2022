@@ -1,21 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="19600" level="85" type="L2Monster" name="Flower Bud" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="19600" level="101" type="L2Monster" name="Flower Bud">
+		<!-- GUESSED BASED OTHER NPC's in AREA - FIXME -->
+		<race>PLANT</race>
+		<acquire exp="37812025" sp="90748" />
 		<stats str="70" int="28" dex="40" wit="65" con="74" men="20">
-			<vitals hp="58233" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="60447" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" />
-				<run ground="180" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skill_list>
 		<collision>
-			<radius normal="30" />
-			<height normal="78" />
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
+				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
+				<item id="35473" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Circlet (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
+			</corpse>
+			<lucky_corpse>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_corpse>
+		</drop_lists>
 	</npc>
 	<npc id="19601" level="85" type="L2Npc" name="" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
