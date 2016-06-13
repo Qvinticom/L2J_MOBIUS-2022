@@ -525,6 +525,7 @@
 		<!-- Lineage II Living Guide written by Master Toma with great efforts. -->
 		<set name="icon" val="icon.etc_letter_in_bottle_white_i00" />
 		<set name="is_clan_depositable" val="false" />
+		<set name="handler" val="Book" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -532,6 +533,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36951" name="9th Anniversary Instrument" type="Weapon">

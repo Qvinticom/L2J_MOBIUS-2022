@@ -50,7 +50,7 @@ public class Book implements IItemHandler
 		}
 		else
 		{
-			final NpcHtmlMessage itemReply = new NpcHtmlMessage(0, item.getId());
+			final NpcHtmlMessage itemReply = new NpcHtmlMessage();
 			itemReply.setHtml(content);
 			activeChar.sendPacket(itemReply);
 		}
