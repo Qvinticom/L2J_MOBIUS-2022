@@ -59,7 +59,7 @@ public abstract class L2ZoneType extends ListenersContainer
 	private char _classType;
 	private InstanceType _target = InstanceType.L2Character; // default all chars
 	private boolean _allowStore;
-	private boolean _enabled;
+	protected boolean _enabled;
 	private AbstractZoneSettings _settings;
 	
 	protected L2ZoneType(int id)
