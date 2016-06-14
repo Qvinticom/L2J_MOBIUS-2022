@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
-	<spawn name="DragonValley">
-		<group>
-			<!-- Day Monsters -->
+	<spawn name="DragonValley" ai="DayNightSpawns">
+		<group name="dayTime" spawnByDefault="false">
 			<npc id="23423" x="76695" y="117351" z="-3742" heading="55854" respawnTime="60sec" /><!-- Mesmer Dragon -->
 			<npc id="23423" x="75255" y="117426" z="-3734" heading="2286" respawnTime="60sec" /><!-- Mesmer Dragon -->
 			<npc id="23423" x="78341" y="116680" z="-3822" heading="55891" respawnTime="60sec" /><!-- Mesmer Dragon -->
@@ -198,7 +197,8 @@
 			<npc id="23434" x="94235" y="113440" z="-3074" heading="18481" respawnTime="60sec" /><!-- Dragon Hatchling -->
 			<npc id="23434" x="94237" y="113353" z="-3070" heading="1069" respawnTime="60sec" /><!-- Dragon Hatchling -->
 			<npc id="23434" x="94267" y="113283" z="-3066" heading="53375" respawnTime="60sec" /><!-- Dragon Hatchling -->
-			<!-- Night Monsters -->
+		</group>
+		<group name="nightTime" spawnByDefault="false">
 			<npc id="23436" x="74460" y="117873" z="-3745" heading="22709" respawnTime="60sec" /><!-- Cave Servant Archer -->
 			<npc id="23436" x="75249" y="117693" z="-3739" heading="12940" respawnTime="60sec" /><!-- Cave Servant Archer -->
 			<npc id="23436" x="76584" y="117753" z="-3698" heading="129" respawnTime="60sec" /><!-- Cave Servant Archer -->
@@ -350,11 +350,21 @@
 			<npc id="23444" x="93303" y="112899" z="-3071" heading="49764" respawnTime="60sec" /><!-- Dark Grave Knight -->
 			<npc id="23444" x="94845" y="112576" z="-3033" heading="43866" respawnTime="60sec" /><!-- Dark Grave Knight -->
 			<npc id="23444" x="97604" y="109342" z="-3695" heading="43018" respawnTime="60sec" /><!-- Dark Grave Knight -->
+		</group>
+		<group>
 			<!-- NPCs -->
 			<npc id="32867" x="129887" y="115296" z="-3794" heading="2002" respawnTime="60sec" /><!-- Separated Soul -->
 			<npc id="33970" x="102396" y="113152" z="-3727" heading="43643" respawnTime="60sec" /><!-- Mercenary Captain -->
 			<npc id="33971" x="129951" y="113707" z="-3745" heading="15899" respawnTime="60sec" /><!-- Mercenary -->	
 			<npc id="33972" x="102238" y="113296" z="-3727" heading="50632" respawnTime="60sec" /><!-- Rakun -->
+			<npc id="33973" x="72224" y="116720" z="-3693" heading="25811" respawnTime="60sec" /><!-- Namo -->
+			<npc id="30754" x="72452" y="117062" z="-3678" heading="18067" respawnTime="60sec" /><!-- Gilmore -->
+			<npc id="32870" x="72597" y="117140" z="-3682" heading="21826" respawnTime="60sec" /><!-- Separated Soul -->
+			<npc id="33970" x="80042" y="116033" z="-3680" heading="44928" respawnTime="60sec" /><!-- Mercenary Captain -->
+			<npc id="33970" x="102396" y="113152" z="-3727" heading="43643" respawnTime="60sec" /><!-- Mercenary Captain -->
+			<npc id="33971" x="129951" y="113707" z="-3745" heading="15899" respawnTime="60sec" /><!-- Mercenary -->
+			<npc id="30755" x="129958" y="115257" z="-3793" heading="44928" respawnTime="60sec" /><!-- Theodric -->
+			<npc id="32867" x="129887" y="115296" z="-3794" heading="2002" respawnTime="60sec" /><!-- Separated Soul -->
 		</group>
 	</spawn>
 </list>
