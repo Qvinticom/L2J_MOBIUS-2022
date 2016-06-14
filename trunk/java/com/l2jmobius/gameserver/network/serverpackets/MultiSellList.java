@@ -138,7 +138,7 @@ public final class MultiSellList implements IClientOutgoingPacket
 				}
 				else
 				{
-					packet.writeH(0x00); // enchant level
+					packet.writeH(ing.getEnchantLevel()); // enchant level
 					packet.writeD(ing.getChance()); // augment id
 					packet.writeD(0x00); // mana
 					packet.writeD(0x00); // time ?
@@ -196,7 +196,7 @@ public final class MultiSellList implements IClientOutgoingPacket
 				}
 				else
 				{
-					packet.writeH(0x00); // enchant level
+					packet.writeH(ing.getEnchantLevel()); // enchant level
 					packet.writeD(ing.getChance()); // augment id
 					packet.writeD(0x00); // mana
 					packet.writeH(0x00); // attack element

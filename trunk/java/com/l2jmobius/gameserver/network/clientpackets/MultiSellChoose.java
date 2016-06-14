@@ -152,8 +152,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				}
 				
 				final ArrayList<Ingredient> ingredientsList = new ArrayList<>(entry.getIngredients().size());
-				// Generate a list of distinct ingredients and counts in order to check if the correct item-counts
-				// are possessed by the player
+				// Generate a list of distinct ingredients and counts in order to check if the correct item-counts are possessed by the player
 				boolean newIng;
 				for (Ingredient e : entry.getIngredients())
 				{
@@ -187,7 +186,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 					}
 				}
 				
-				// now check if the player has sufficient items in the inventory to cover the ingredients' expences
+				// now check if the player has sufficient items in the inventory to cover the ingredient expenses
 				for (Ingredient e : ingredientsList)
 				{
 					if ((e.getItemCount() * _amount) > Integer.MAX_VALUE)
@@ -206,13 +205,23 @@ public class MultiSellChoose implements IClientIncomingPacket
 					{
 						// if this is not a list that maintains enchantment, check the count of all items that have the given id.
 						// otherwise, check only the count of items with exactly the needed enchantment level
-						final long required = ((Config.ALT_BLACKSMITH_USE_RECIPES || !e.getMaintainIngredient()) ? (e.getItemCount() * _amount) : e.getItemCount());
-						if (inv.getInventoryItemCount(e.getItemId(), list.getMaintainEnchantment() ? e.getEnchantLevel() : -1, false) < required)
+						final long required = (Config.ALT_BLACKSMITH_USE_RECIPES || !e.getMaintainIngredient()) ? (e.getItemCount() * _amount) : e.getItemCount();
+						if (inv.getInventoryItemCount(e.getItemId(), (list.getMaintainEnchantment() || (e.getEnchantLevel() > 0)) ? e.getEnchantLevel() : -1, false) < required)
 						{
-							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S2_S1_S);
-							sm.addItemName(e.getTemplate());
-							sm.addLong(required);
-							player.sendPacket(sm);
+							if (e.getEnchantLevel() > 0)
+							{
+								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S2_S1_S);
+								sm.addString("+" + e.getEnchantLevel() + " " + e.getTemplate().getName());
+								sm.addLong(required);
+								player.sendPacket(sm);
+							}
+							else
+							{
+								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S2_S1_S);
+								sm.addItemName(e.getTemplate());
+								sm.addLong(required);
+								player.sendPacket(sm);
+							}
 							return;
 						}
 					}
@@ -253,7 +262,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 							// if it's a stackable item, just reduce the amount from the first (only) instance that is found in the inventory
 							if (itemToTake.isStackable())
 							{
-								if (!player.destroyItem("Multisell", itemToTake.getObjectId(), (e.getItemCount() * _amount), player.getTarget(), true))
+								if (!player.destroyItem("Multisell", itemToTake.getObjectId(), e.getItemCount() * _amount, player.getTarget(), true))
 								{
 									player.setMultiSell(null);
 									return;
@@ -266,7 +275,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 								// b) list does not maintain enchantment: get the instances with the LOWEST enchantment level
 								
 								// a) if enchantment is maintained, then get a list of items that exactly match this enchantment
-								if (list.getMaintainEnchantment())
+								if (list.getMaintainEnchantment() || (e.getEnchantLevel() > 0))
 								{
 									// loop through this list and remove (one by one) each item until the required amount is taken.
 									final L2ItemInstance[] inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantLevel(), false).toArray(new L2ItemInstance[0]);
@@ -329,7 +338,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 										{
 											for (L2ItemInstance item : inventoryContents)
 											{
-												if (item.getEnchantLevel() < itemToTake.getEnchantLevel())
+												if ((item.getEnchantLevel() < itemToTake.getEnchantLevel()) && (item.getEnchantLevel() >= e.getEnchantLevel()))
 												{
 													itemToTake = item;
 													// nothing will have enchantment less than 0. If a zero-enchanted
@@ -369,7 +378,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 						}
 						
 						// Calculate chance
-						matched = (itemRandom < (cumulativeChance += e.getChance()));
+						matched = itemRandom < (cumulativeChance += e.getChance());
 						if (!matched)
 						{
 							continue;
@@ -388,47 +397,51 @@ public class MultiSellChoose implements IClientIncomingPacket
 						}
 						else
 						{
+							L2ItemInstance product = null;
 							for (int i = 0; i < (e.getItemCount() * _amount); i++)
 							{
-								final L2ItemInstance product = inv.addItem("Multisell", e.getItemId(), 1, player, player.getTarget());
-								if ((product != null) && list.getMaintainEnchantment())
+								product = inv.addItem("Multisell", e.getItemId(), 1, player, player.getTarget());
+								if ((product != null) && (list.getMaintainEnchantment() || (e.getEnchantLevel() > 0)))
 								{
 									final ItemInfo info = originalInfos.get(i);
-									if (info.getAugmentId() > 0)
+									if (info != null)
 									{
-										product.setAugmentation(new L2Augmentation(info.getAugmentId()));
-									}
-									if (info.getElementals().length > 0)
-									{
-										Arrays.stream(info.getElementals()).filter(Objects::nonNull).forEach(product::setAttribute);
-									}
-									if (info.getVisualId() > 0)
-									{
-										product.setVisualId(info.getVisualId());
-										if (info.getVisualStoneId() > 0)
+										if (info.getAugmentId() > 0)
 										{
-											product.getVariables().set(ItemVariables.VISUAL_APPEARANCE_STONE_ID, info.getVisualStoneId());
+											product.setAugmentation(new L2Augmentation(info.getAugmentId()));
 										}
-										if (info.getVisualIdLifeTime() > 0)
+										if (info.getElementals().length > 0)
 										{
-											product.getVariables().set(ItemVariables.VISUAL_APPEARANCE_LIFE_TIME, info.getVisualIdLifeTime());
-											product.scheduleVisualLifeTime();
+											Arrays.stream(info.getElementals()).filter(Objects::nonNull).forEach(product::setAttribute);
 										}
-									}
-									if (!info.getSpecialAbilities().isEmpty())
-									{
-										int position = 0;
-										for (EnsoulOption option : info.getSpecialAbilities())
+										if (info.getVisualId() > 0)
 										{
-											product.addSpecialAbility(option, position++, 1, true);
+											product.setVisualId(info.getVisualId());
+											if (info.getVisualStoneId() > 0)
+											{
+												product.getVariables().set(ItemVariables.VISUAL_APPEARANCE_STONE_ID, info.getVisualStoneId());
+											}
+											if (info.getVisualIdLifeTime() > 0)
+											{
+												product.getVariables().set(ItemVariables.VISUAL_APPEARANCE_LIFE_TIME, info.getVisualIdLifeTime());
+												product.scheduleVisualLifeTime();
+											}
 										}
-									}
-									if (!info.getAdditionalSpecialAbilities().isEmpty())
-									{
-										int position = 0;
-										for (EnsoulOption option : info.getAdditionalSpecialAbilities())
+										if (!info.getSpecialAbilities().isEmpty())
 										{
-											product.addSpecialAbility(option, position++, 2, true);
+											int position = 0;
+											for (EnsoulOption option : info.getSpecialAbilities())
+											{
+												product.addSpecialAbility(option, position++, 1, true);
+											}
+										}
+										if (!info.getAdditionalSpecialAbilities().isEmpty())
+										{
+											int position = 0;
+											for (EnsoulOption option : info.getAdditionalSpecialAbilities())
+											{
+												product.addSpecialAbility(option, position++, 2, true);
+											}
 										}
 									}
 									product.setEnchantLevel(e.getEnchantLevel());

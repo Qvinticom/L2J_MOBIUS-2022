@@ -61,7 +61,7 @@ public class PreparedEntry extends Entry
 				// do not yet add this adena amount to the list as non-taxIngredient adena might be entered later (order not guaranteed)
 				continue;
 			}
-			else if (maintainEnchantment && (item != null) && ing.isArmorOrWeapon())
+			if (maintainEnchantment && (item != null) && ing.isArmorOrWeapon())
 			{
 				info = new ItemInfo(item);
 				final Ingredient newIngredient = ing.getCopy();
@@ -70,8 +70,7 @@ public class PreparedEntry extends Entry
 			}
 			else
 			{
-				final Ingredient newIngredient = ing.getCopy();
-				_ingredients.add(newIngredient);
+				_ingredients.add(ing.getCopy());
 			}
 		}
 		
@@ -79,7 +78,7 @@ public class PreparedEntry extends Entry
 		adenaAmount += _taxAmount; // do not forget tax
 		if (adenaAmount > 0)
 		{
-			_ingredients.add(new Ingredient(ADENA_ID, adenaAmount, 0, false, false));
+			_ingredients.add(new Ingredient(ADENA_ID, adenaAmount, 0, 0, false, false));
 		}
 		
 		// now copy products
