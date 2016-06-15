@@ -729,9 +729,20 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			su.addCaster(caster);
 		}
 		
-		computeStatusUpdate(su, StatusUpdateType.MAX_HP);
+		// HP
+		if (isDead())
+		{
+			su.addUpdate(StatusUpdateType.MAX_HP, getMaxHp());
+			su.addUpdate(StatusUpdateType.CUR_HP, 0);
+		}
+		else
+		{
+			computeStatusUpdate(su, StatusUpdateType.MAX_HP);
+			computeStatusUpdate(su, StatusUpdateType.CUR_HP);
+		}
+		
+		// MP
 		computeStatusUpdate(su, StatusUpdateType.MAX_MP);
-		computeStatusUpdate(su, StatusUpdateType.CUR_HP);
 		computeStatusUpdate(su, StatusUpdateType.CUR_MP);
 		
 		if (su.hasUpdates())
