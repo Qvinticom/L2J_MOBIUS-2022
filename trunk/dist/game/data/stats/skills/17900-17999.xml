@@ -797,13 +797,24 @@
 		</effects>
 	</skill>
 	<skill id="17960" toLevel="1" name="Scroll of Escape: Wall of Argos">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Teleports you to Wall of Argos. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeId>39585</itemConsumeId> <!-- Scroll of Escape: Town of Giran -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<magicLvl>1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<effects>
+			<effect name="Teleport">
+				<!-- Teleports you to Wall of Argos -->
+				<x>164653</x>
+				<y>-48104</y>
+				<z>-3549</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17961" toLevel="1" name="Scroll of Escape: Town of Giran">
 		<!-- Teleports you to the Town of Giran. -->

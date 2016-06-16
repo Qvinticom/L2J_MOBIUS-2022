@@ -1320,7 +1320,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_questitem" val="false" />
 		<set name="weight" val="30" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -1332,6 +1332,9 @@
 	<item id="39585" name="Scroll of Escape: Wall of Argos" type="EtcItem">
 		<!-- Teleports you to Wall of Argos. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1340,8 +1343,14 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_questitem" val="false" />
 		<set name="weight" val="30" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="17960" level="1" /> <!-- Scroll of Escape: Wall of Argos -->
+		</skills>
 	</item>
 	<item id="39586" name="Scroll of Escape: Town of Giran" type="EtcItem">
 		<!-- Teleports you to Town of Giran. -->
@@ -1357,7 +1366,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_questitem" val="false" />
 		<set name="weight" val="30" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -1380,7 +1389,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_questitem" val="false" />
 		<set name="weight" val="30" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
