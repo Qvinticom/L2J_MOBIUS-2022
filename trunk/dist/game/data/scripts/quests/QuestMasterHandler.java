@@ -317,6 +317,8 @@ import quests.Q10787_ASpyMission.Q10787_ASpyMission;
 import quests.Q10789_LettersFromTheQueenSwampOfScreams.Q10789_LettersFromTheQueenSwampOfScreams;
 import quests.Q10792_LettersFromTheQueenForestOfTheDead.Q10792_LettersFromTheQueenForestOfTheDead;
 import quests.Q10793_SaveTheSouls.Q10793_SaveTheSouls;
+import quests.Q10795_LettersFromTheQueenWallOfAgros.Q10795_LettersFromTheQueenWallOfAgros;
+import quests.Q10798_LettersFromTheQueenDragonValley.Q10798_LettersFromTheQueenDragonValley;
 import quests.Q10811_ExaltedOneWhoFacesTheLimit.Q10811_ExaltedOneWhoFacesTheLimit;
 import quests.Q10812_FacingSadness.Q10812_FacingSadness;
 import quests.Q10813_ForGlory.Q10813_ForGlory;
@@ -630,6 +632,8 @@ public class QuestMasterHandler
 		Q10789_LettersFromTheQueenSwampOfScreams.class,
 		Q10792_LettersFromTheQueenForestOfTheDead.class,
 		Q10793_SaveTheSouls.class,
+		Q10795_LettersFromTheQueenWallOfAgros.class,
+		Q10798_LettersFromTheQueenDragonValley.class,
 		Q10811_ExaltedOneWhoFacesTheLimit.class,
 		Q10812_FacingSadness.class,
 		Q10813_ForGlory.class,
