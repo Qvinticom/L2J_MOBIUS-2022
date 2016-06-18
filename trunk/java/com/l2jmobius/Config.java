@@ -422,6 +422,7 @@ public final class Config
 	public static int SAVE_DROPPED_ITEM_INTERVAL;
 	public static boolean CLEAR_DROPPED_ITEM_TABLE;
 	public static boolean AUTODELETE_INVALID_QUEST_DATA;
+	public static boolean ENABLE_STORY_QUEST_BUFF_REWARD;
 	public static boolean PRECISE_DROP_CALCULATION;
 	public static boolean MULTIPLE_ITEM_DROP;
 	public static boolean FORCE_INVENTORY_UPDATE;
@@ -1636,6 +1637,7 @@ public final class Config
 			SAVE_DROPPED_ITEM_INTERVAL = General.getInt("SaveDroppedItemInterval", 60) * 60000;
 			CLEAR_DROPPED_ITEM_TABLE = General.getBoolean("ClearDroppedItemTable", false);
 			AUTODELETE_INVALID_QUEST_DATA = General.getBoolean("AutoDeleteInvalidQuestData", false);
+			ENABLE_STORY_QUEST_BUFF_REWARD = General.getBoolean("StoryQuestRewardBuff", true);
 			MULTIPLE_ITEM_DROP = General.getBoolean("MultipleItemDrop", true);
 			FORCE_INVENTORY_UPDATE = General.getBoolean("ForceInventoryUpdate", false);
 			LAZY_CACHE = General.getBoolean("LazyCache", true);

@@ -3383,6 +3383,9 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public void giveStoryQuestReward(L2PcInstance player, int steelDoorCoinCount)
 	{
 		giveItems(player, STEEL_DOOR_COIN, steelDoorCoinCount);
-		STORY_QUEST_REWARD.getSkill().applyEffects(player, player);
+		if (Config.ENABLE_STORY_QUEST_BUFF_REWARD)
+		{
+			STORY_QUEST_REWARD.getSkill().applyEffects(player, player);
+		}
 	}
 }
