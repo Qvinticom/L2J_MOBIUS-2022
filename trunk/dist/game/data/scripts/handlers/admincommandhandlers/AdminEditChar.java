@@ -366,7 +366,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2PcInstance player = target.getActingPlayer();
 				if ((ClassId.getClassId(classidval) != null) && (player.getClassId().getId() != classidval))
 				{
-					player.transform(255, false);
+					// player.transform(255, false);
 					player.setClassId(classidval);
 					if (player.isSubClassActive())
 					{
@@ -383,7 +383,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
 					player.storeMe();
 					player.sendMessage("A GM changed your class to " + newclass + ".");
-					player.untransform();
+					// player.untransform();
 					player.broadcastUserInfo();
 					if (player.isInCategory(CategoryType.AWAKEN_GROUP))
 					{
