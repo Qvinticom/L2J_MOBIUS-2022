@@ -320,6 +320,7 @@ import quests.Q10793_SaveTheSouls.Q10793_SaveTheSouls;
 import quests.Q10795_LettersFromTheQueenWallOfAgros.Q10795_LettersFromTheQueenWallOfAgros;
 import quests.Q10798_LettersFromTheQueenDragonValley.Q10798_LettersFromTheQueenDragonValley;
 import quests.Q10799_StrangeThingsAfootInTheValley.Q10799_StrangeThingsAfootInTheValley;
+import quests.Q10800_ReconnaissanceADragonValley.Q10800_ReconnaissanceADragonValley;
 import quests.Q10811_ExaltedOneWhoFacesTheLimit.Q10811_ExaltedOneWhoFacesTheLimit;
 import quests.Q10812_FacingSadness.Q10812_FacingSadness;
 import quests.Q10813_ForGlory.Q10813_ForGlory;
@@ -636,6 +637,7 @@ public class QuestMasterHandler
 		Q10795_LettersFromTheQueenWallOfAgros.class,
 		Q10798_LettersFromTheQueenDragonValley.class,
 		Q10799_StrangeThingsAfootInTheValley.class,
+		Q10800_ReconnaissanceADragonValley.class,
 		Q10811_ExaltedOneWhoFacesTheLimit.class,
 		Q10812_FacingSadness.class,
 		Q10813_ForGlory.class,
