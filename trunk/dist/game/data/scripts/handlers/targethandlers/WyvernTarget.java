@@ -39,5 +39,4 @@ public class WyvernTarget implements ITargetTypeHandler
 	{
 		return null;
 	}
-	
 }

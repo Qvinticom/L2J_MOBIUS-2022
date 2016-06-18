@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.model.holders.SkillHolder;
  */
 public enum CommonSkill
 {
+	SWEEPER(42, 1),
 	RAID_CURSE(4215, 1),
 	RAID_CURSE2(4515, 1),
 	SEAL_OF_RULER(246, 1),

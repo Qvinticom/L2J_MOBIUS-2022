@@ -206,7 +206,6 @@ public class SkillCaster implements Runnable
 			// Stop casting if there is no next phase.
 			stopCasting(false);
 		}
-		
 	}
 	
 	public boolean startCasting()
@@ -545,8 +544,12 @@ public class SkillCaster implements Runnable
 					}
 					else if (obj.isMonster() || (obj.isPlayable() && ((obj.getActingPlayer().getPvpFlag() > 0) || (obj.getActingPlayer().getReputation() < 0))))
 					{
-						// Supporting players or monsters result in pvpflag.
-						player.updatePvPStatus();
+						// Supporting players or monsters result in pvpflag,
+						// but Sweeper is excluded.
+						if (obj.isMonster() && (skill.getId() != CommonSkill.SWEEPER.getId()))
+						{
+							player.updatePvPStatus();
+						}
 					}
 				}
 				

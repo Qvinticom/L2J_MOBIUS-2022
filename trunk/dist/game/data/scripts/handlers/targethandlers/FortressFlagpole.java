@@ -64,7 +64,9 @@ public class FortressFlagpole implements ITargetTypeHandler
 				case 36285:
 				case 36316:
 				case 36354:
+				{
 					return target;
+				}
 			}
 		}
 		

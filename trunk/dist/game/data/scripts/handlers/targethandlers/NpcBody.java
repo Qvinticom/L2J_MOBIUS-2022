@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -61,7 +60,7 @@ public class NpcBody implements ITargetTypeHandler
 			return null;
 		}
 		
-		final L2Playable target = (L2Playable) selectedTarget;
+		final L2Character target = (L2Character) selectedTarget;
 		
 		if (target.isDead())
 		{
@@ -90,7 +89,7 @@ public class NpcBody implements ITargetTypeHandler
 				return null;
 			}
 			
-			return target;
+			return selectedTarget;
 		}
 		
 		// If target is not dead or not player/pet it will not even bother to walk within range, unlike Enemy target type.

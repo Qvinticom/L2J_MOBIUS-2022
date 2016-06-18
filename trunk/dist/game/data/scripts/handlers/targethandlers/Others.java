@@ -39,5 +39,4 @@ public class Others implements ITargetTypeHandler
 	{
 		return null;
 	}
-	
 }
