@@ -16,6 +16,9 @@
  */
 package ai.areas.OrbisTemple;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
@@ -23,71 +26,35 @@ import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import ai.AbstractNpcAI;
 
 /**
- * Orbis Temple teleport AI.
- * @author Mobius
+ * Orbis Temple AI.
+ * @author Gladicek
  */
 public final class OrbisTempleTeleports extends AbstractNpcAI
 {
-	// Zones
-	private static final int ZONE_ID_1 = 200201;
-	private static final int ZONE_ID_2 = 200202;
-	private static final int ZONE_ID_3 = 200203;
-	private static final int ZONE_ID_4 = 200204;
-	private static final int ZONE_ID_5 = 200205;
-	private static final int ZONE_ID_6 = 200206;
-	// Teleport Locations
-	private static final Location TELEPORT_LOC_1 = new Location(198022, 90032, -192);
-	private static final Location TELEPORT_LOC_2 = new Location(213983, 53250, -8176);
-	private static final Location TELEPORT_LOC_3 = new Location(215056, 50467, -8416);
-	private static final Location TELEPORT_LOC_4 = new Location(213799, 53253, -14432);
-	private static final Location TELEPORT_LOC_5 = new Location(211137, 50501, -14624);
-	private static final Location TELEPORT_LOC_6 = new Location(211641, 115547, -12736);
-	
-	private OrbisTempleTeleports()
+	private static final Map<Integer, Location> TELEPORT_DATA = new HashMap<>();
+	static
 	{
-		addEnterZoneId(ZONE_ID_1, ZONE_ID_2, ZONE_ID_3, ZONE_ID_4, ZONE_ID_5, ZONE_ID_6);
+		TELEPORT_DATA.put(12036, new Location(213983, 53250, -8176));
+		TELEPORT_DATA.put(12037, new Location(198022, 90032, -192));
+		TELEPORT_DATA.put(12038, new Location(213799, 53253, -14432));
+		TELEPORT_DATA.put(12039, new Location(215056, 50467, -8416));
+		TELEPORT_DATA.put(12040, new Location(211641, 115547, -12736));
+		TELEPORT_DATA.put(12041, new Location(211137, 50501, -14624));
+	}
+	
+	public OrbisTempleTeleports()
+	{
+		addEnterZoneId(TELEPORT_DATA.keySet());
 	}
 	
 	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
+	public String onEnterZone(L2Character creature, L2ZoneType zone)
 	{
-		if (character.isPlayer())
+		if (creature.isPlayer() && (creature.getInstanceWorld() == null))
 		{
-			switch (zone.getId())
-			{
-				case ZONE_ID_1:
-				{
-					character.teleToLocation(TELEPORT_LOC_2);
-					break;
-				}
-				case ZONE_ID_2:
-				{
-					character.teleToLocation(TELEPORT_LOC_1);
-					break;
-				}
-				case ZONE_ID_3:
-				{
-					character.teleToLocation(TELEPORT_LOC_4);
-					break;
-				}
-				case ZONE_ID_4:
-				{
-					character.teleToLocation(TELEPORT_LOC_3);
-					break;
-				}
-				case ZONE_ID_5:
-				{
-					character.teleToLocation(TELEPORT_LOC_6);
-					break;
-				}
-				case ZONE_ID_6:
-				{
-					character.teleToLocation(TELEPORT_LOC_5);
-					break;
-				}
-			}
+			creature.teleToLocation(TELEPORT_DATA.get(zone.getId()));
 		}
-		return super.onEnterZone(character, zone);
+		return super.onEnterZone(creature, zone);
 	}
 	
 	public static void main(String[] args)
