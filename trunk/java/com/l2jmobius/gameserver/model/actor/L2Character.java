@@ -2827,6 +2827,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		return _effectList.isAffectedBySkill(skillId);
 	}
 	
+	public int getAffectedSkillLevel(int skillId)
+	{
+		final BuffInfo info = _effectList.getBuffInfoBySkillId(skillId);
+		return info == null ? 0 : info.getSkill().getLevel();
+	}
+	
 	/**
 	 * This class group all movement data.<br>
 	 * <B><U> Data</U> :</B>
