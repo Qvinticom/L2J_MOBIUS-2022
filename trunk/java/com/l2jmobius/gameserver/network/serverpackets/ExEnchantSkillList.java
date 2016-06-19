@@ -16,11 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 public class ExEnchantSkillList implements IClientOutgoingPacket
@@ -34,16 +33,29 @@ public class ExEnchantSkillList implements IClientOutgoingPacket
 	}
 	
 	private final EnchantSkillType _type;
-	private final List<Skill> _skills = new LinkedList<>();
+	private final List<Skill> _skills;
+	
+	static class Skill
+	{
+		public int id;
+		public int nextLevel;
+		
+		Skill(int pId, int pNextLevel)
+		{
+			id = pId;
+			nextLevel = pNextLevel;
+		}
+	}
+	
+	public void addSkill(int id, int level)
+	{
+		_skills.add(new Skill(id, level));
+	}
 	
 	public ExEnchantSkillList(EnchantSkillType type)
 	{
 		_type = type;
-	}
-	
-	public void addSkill(Skill skill)
-	{
-		_skills.add(skill);
+		_skills = new ArrayList<>();
 	}
 	
 	@Override
@@ -53,10 +65,10 @@ public class ExEnchantSkillList implements IClientOutgoingPacket
 		
 		packet.writeD(_type.ordinal());
 		packet.writeD(_skills.size());
-		for (Skill skill : _skills)
+		for (Skill sk : _skills)
 		{
-			packet.writeD(skill.getId());
-			packet.writeD(skill.getLevel());
+			packet.writeD(sk.id);
+			packet.writeD(sk.nextLevel);
 		}
 		return true;
 	}

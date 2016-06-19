@@ -32,12 +32,21 @@ public final class RequestExEnchantSkillInfo implements IClientIncomingPacket
 {
 	private int _skillId;
 	private int _skillLvl;
+	private int _fullLvl;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		_skillId = packet.readD();
-		_skillLvl = packet.readD();
+		_fullLvl = packet.readD();
+		if (_fullLvl < 100)
+		{
+			_skillLvl = _fullLvl;
+		}
+		else
+		{
+			_skillLvl = _fullLvl >> 16;
+		}
 		return true;
 	}
 	
@@ -78,6 +87,6 @@ public final class RequestExEnchantSkillInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new ExEnchantSkillInfo(_skillId, _skillLvl));
+		activeChar.sendPacket(new ExEnchantSkillInfo(_skillId, _skillLvl));
 	}
 }

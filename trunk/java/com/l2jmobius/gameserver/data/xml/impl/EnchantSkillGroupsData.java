@@ -25,6 +25,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.L2EnchantSkillGroup;
 import com.l2jmobius.gameserver.model.L2EnchantSkillGroup.EnchantSkillHolder;
@@ -41,10 +42,26 @@ public class EnchantSkillGroupsData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(EnchantSkillGroupsData.class.getName());
 	
-	public static final int NORMAL_ENCHANT_BOOK = 6622;
-	public static final int SAFE_ENCHANT_BOOK = 9627;
-	public static final int CHANGE_ENCHANT_BOOK = 9626;
-	public static final int UNTRAIN_ENCHANT_BOOK = 9625;
+	public static final int NORMAL_ENCHANT_COST_MULTIPLIER = Config.NORMAL_ENCHANT_COST_MULTIPLIER;
+	public static final int SAFE_ENCHANT_COST_MULTIPLIER = Config.SAFE_ENCHANT_COST_MULTIPLIER;
+	
+	public static final int NORMAL_ENCHANT_BOOK_OLD = 6622;
+	public static final int SAFE_ENCHANT_BOOK_OLD = 9627;
+	public static final int CHANGE_ENCHANT_BOOK_OLD = 9626;
+	public static final int UNTRAIN_ENCHANT_BOOK_OLD = 9625;
+	public static final int NORMAL_ENCHANT_BOOK = 30297;
+	public static final int SAFE_ENCHANT_BOOK = 30298;
+	public static final int CHANGE_ENCHANT_BOOK = 30299;
+	public static final int UNTRAIN_ENCHANT_BOOK = 30300;
+	public static final int IMMORTAL_SCROLL = 37044;
+	public static final int NORMAL_ENCHANT_BOOK_V2 = 46150;
+	public static final int SAFE_ENCHANT_BOOK_V2 = 46151;
+	public static final int CHANGE_ENCHANT_BOOK_V2 = 46152;
+	public static final int IMMORTAL_SCROLL_V2 = 46153;
+	public static final int NORMAL_ENCHANT_BOOK_V3 = 46154;
+	public static final int SAFE_ENCHANT_BOOK_V3 = 46155;
+	public static final int CHANGE_ENCHANT_BOOK_V3 = 46156;
+	public static final int IMMORTAL_SCROLL_V3 = 46157;
 	
 	private final Map<Integer, L2EnchantSkillGroup> _enchantSkillGroups = new HashMap<>();
 	private final Map<Integer, L2EnchantSkillLearn> _enchantSkillTrees = new HashMap<>();

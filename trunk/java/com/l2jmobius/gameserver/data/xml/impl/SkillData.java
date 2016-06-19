@@ -56,19 +56,9 @@ public class SkillData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SkillData.class.getName());
 	
-	private static final Set<String> BLOCK_ITEM_VALUE_ELEMENTS = new HashSet<>();
-	private static final Set<String> BLOCK_ITEM_ELEMENTS = new HashSet<>();
-	
 	private final Map<Integer, Skill> _skills = new HashMap<>();
 	private final Map<Integer, Integer> _skillsMaxLevel = new HashMap<>();
 	private final Set<Integer> _enchantable = new HashSet<>();
-	
-	static
-	{
-		BLOCK_ITEM_VALUE_ELEMENTS.add("item");
-		BLOCK_ITEM_VALUE_ELEMENTS.add("value");
-		BLOCK_ITEM_ELEMENTS.add("item");
-	}
 	
 	private class NamedParamInfo
 	{
@@ -150,7 +140,7 @@ public class SkillData implements IGameXmlReader
 	 */
 	public static int getSkillHashCode(int skillId, int skillLevel)
 	{
-		return (skillId * 1021) + skillLevel;
+		return (skillId * 1031) + skillLevel;
 	}
 	
 	public Skill getSkill(int skillId, int level)
@@ -423,7 +413,10 @@ public class SkillData implements IGameXmlReader
 								
 								_skills.put(getSkillHashCode(skill), skill);
 								_skillsMaxLevel.merge(skill.getId(), skill.getLevel(), Integer::max);
-								// TODO: add enchantable
+								if ((skill.getLevel() > 99) && !_enchantable.contains(skill.getId()))
+								{
+									_enchantable.add(skill.getId());
+								}
 							});
 						});
 					}

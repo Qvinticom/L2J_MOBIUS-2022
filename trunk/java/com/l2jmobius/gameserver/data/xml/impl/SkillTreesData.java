@@ -240,25 +240,37 @@ public final class SkillTreesData implements IGameXmlReader
 									switch (b.getNodeName())
 									{
 										case "item":
+										{
 											skillLearn.addRequiredItem(new ItemHolder(parseInteger(attrs, "id"), parseInteger(attrs, "count")));
 											break;
+										}
 										case "preRequisiteSkill":
+										{
 											skillLearn.addPreReqSkill(new SkillHolder(parseInteger(attrs, "id"), parseInteger(attrs, "lvl")));
 											break;
+										}
 										case "race":
+										{
 											skillLearn.addRace(Race.valueOf(b.getTextContent()));
 											break;
+										}
 										case "residenceId":
+										{
 											skillLearn.addResidenceId(Integer.valueOf(b.getTextContent()));
 											break;
+										}
 										case "socialClass":
+										{
 											skillLearn.setSocialClass(Enum.valueOf(SocialClass.class, b.getTextContent()));
 											break;
+										}
 										case "removeSkill":
+										{
 											final int removeSkillId = parseInteger(attrs, "id");
 											skillLearn.addRemoveSkills(removeSkillId);
 											_removeSkillCache.computeIfAbsent(classId, k -> new HashSet<>()).add(removeSkillId);
 											break;
+										}
 									}
 								}
 								
