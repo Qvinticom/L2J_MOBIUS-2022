@@ -99,6 +99,7 @@ import handlers.admincommandhandlers.AdminMessages;
 import handlers.admincommandhandlers.AdminMobGroup;
 import handlers.admincommandhandlers.AdminMonsterRace;
 import handlers.admincommandhandlers.AdminOlympiad;
+import handlers.admincommandhandlers.AdminPcCafePoints;
 import handlers.admincommandhandlers.AdminPForge;
 import handlers.admincommandhandlers.AdminPathNode;
 import handlers.admincommandhandlers.AdminPcCondOverride;
@@ -375,6 +376,7 @@ public class MasterHandler
 			AdminMonsterRace.class,
 			AdminOlympiad.class,
 			AdminPathNode.class,
+			AdminPcCafePoints.class,
 			AdminPetition.class,
 			AdminPForge.class,
 			AdminPledge.class,

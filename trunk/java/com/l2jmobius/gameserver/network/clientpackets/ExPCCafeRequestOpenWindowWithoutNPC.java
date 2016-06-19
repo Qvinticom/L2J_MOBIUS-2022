@@ -16,8 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * @author Mobius
@@ -33,12 +36,12 @@ public class ExPCCafeRequestOpenWindowWithoutNPC implements IClientIncomingPacke
 	@Override
 	public void run(L2GameClient client)
 	{
-		// final L2PcInstance activeChar = client.getActiveChar();
-		// if ((activeChar != null) && Config.PC_BANG_ENABLED)
-		// {
-		// final NpcHtmlMessage html = new NpcHtmlMessage();
-		// html.setFile(activeChar.getHtmlPrefix(), "data/html/pccafe.htm");
-		// activeChar.sendPacket(html);
-		// }
+		final L2PcInstance activeChar = client.getActiveChar();
+		if ((activeChar != null) && Config.PC_CAFE_ENABLED)
+		{
+			final NpcHtmlMessage html = new NpcHtmlMessage();
+			html.setFile(activeChar.getHtmlPrefix(), "data/html/pccafe.htm");
+			activeChar.sendPacket(html);
+		}
 	}
 }

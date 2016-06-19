@@ -22,6 +22,7 @@ import java.util.logging.Level;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.handler.BypassHandler;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
@@ -59,7 +60,8 @@ public final class RequestBypassToServer implements IClientIncomingPacket
 		"_diary",
 		"_olympiad?command",
 		"menu_select",
-		"manor_menu_select"
+		"manor_menu_select",
+		"pccafe"
 	};
 	
 	// S
@@ -251,6 +253,16 @@ public final class RequestBypassToServer implements IClientIncomingPacket
 					final boolean time = split[2].split("=")[1].equals("1");
 					EventDispatcher.getInstance().notifyEventAsync(new OnNpcManorBypass(activeChar, lastNpc, ask, state, time), lastNpc);
 				}
+			}
+			else if (_command.startsWith("pccafe"))
+			{
+				final L2PcInstance player = client.getActiveChar();
+				if ((player == null) || !Config.PC_CAFE_ENABLED)
+				{
+					return;
+				}
+				final int multisellId = Integer.parseInt(_command.substring(10).trim());
+				MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, false);
 			}
 			else
 			{

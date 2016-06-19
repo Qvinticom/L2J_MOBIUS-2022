@@ -300,7 +300,7 @@ public final class L2TeleporterInstance extends L2Npc
 		}
 		switch (itemId)
 		{
-			case MultisellData.PC_BANG_POINTS:
+			case MultisellData.PC_CAFE_POINTS:
 			{
 				return "Player Commendation Points";
 			}

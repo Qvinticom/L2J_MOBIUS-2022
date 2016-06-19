@@ -40,6 +40,7 @@ import com.l2jmobius.gameserver.model.multisell.Ingredient;
 import com.l2jmobius.gameserver.model.multisell.ListContainer;
 import com.l2jmobius.gameserver.model.multisell.PreparedListContainer;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.ExPCCafePointInfo;
 import com.l2jmobius.gameserver.network.serverpackets.MultiSellList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
@@ -53,7 +54,7 @@ public final class MultisellData implements IGameXmlReader
 	
 	public static final int PAGE_SIZE = 40;
 	// Special IDs.
-	public static final int PC_BANG_POINTS = -100;
+	public static final int PC_CAFE_POINTS = -100;
 	public static final int CLAN_REPUTATION = -200;
 	public static final int FAME = -300;
 	public static final int FIELD_CYCLE_POINTS = -400;
@@ -282,6 +283,15 @@ public final class MultisellData implements IGameXmlReader
 	{
 		switch (id)
 		{
+			case PC_CAFE_POINTS:
+			{
+				if (player.getPcCafePoints() >= amount)
+				{
+					return true;
+				}
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_SHORT_OF_PC_POINTS));
+				break;
+			}
 			case CLAN_REPUTATION:
 			{
 				if (player.getClan() == null)
@@ -289,12 +299,12 @@ public final class MultisellData implements IGameXmlReader
 					player.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION);
 					return false;
 				}
-				else if (!player.isClanLeader())
+				if (!player.isClanLeader())
 				{
 					player.sendPacket(SystemMessageId.ONLY_THE_CLAN_LEADER_IS_ENABLED);
 					return false;
 				}
-				else if (player.getClan().getReputationScore() < amount)
+				if (player.getClan().getReputationScore() < amount)
 				{
 					player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
 					return false;
@@ -327,6 +337,16 @@ public final class MultisellData implements IGameXmlReader
 	{
 		switch (id)
 		{
+			case PC_CAFE_POINTS:
+			{
+				final int cost = player.getPcCafePoints() - (int) amount;
+				player.setPcCafePoints(cost);
+				final SystemMessage smsgpc = SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_USING_S1_POINT);
+				smsgpc.addLong((int) amount);
+				player.sendPacket(smsgpc);
+				player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), (int) amount, 1));
+				return true;
+			}
 			case CLAN_REPUTATION:
 			{
 				player.getClan().takeReputationScore((int) amount, true);
@@ -410,7 +430,7 @@ public final class MultisellData implements IGameXmlReader
 	{
 		switch (ing.getItemId())
 		{
-			case PC_BANG_POINTS:
+			case PC_CAFE_POINTS:
 			case CLAN_REPUTATION:
 			case FAME:
 			case RAIDBOSS_POINTS:

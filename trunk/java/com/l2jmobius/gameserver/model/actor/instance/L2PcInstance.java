@@ -364,7 +364,7 @@ public final class L2PcInstance extends L2Playable
 	
 	// Character Character SQL String Definitions:
 	private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,reputation,fame,raidbossPoints,pvpkills,pkkills,clanid,race,classid,deletetime,cancraft,title,title_color,online,clan_privs,wantspeace,base_class,nobless,power_grade,vitality_points,createDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,reputation=?,fame=?,raidbossPoints=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,online=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,bookmarkslot=?,vitality_points=?,language=?,faction=? WHERE charId=?";
+	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,reputation=?,fame=?,raidbossPoints=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,online=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,bookmarkslot=?,vitality_points=?,language=?,faction=?,pccafe_points=? WHERE charId=?";
 	private static final String UPDATE_CHARACTER_ACCESS = "UPDATE characters SET accesslevel = ? WHERE charId = ?";
 	private static final String RESTORE_CHARACTER = "SELECT * FROM characters WHERE charId=?";
 	
@@ -404,6 +404,8 @@ public final class L2PcInstance extends L2Playable
 	public static final int ID_NONE = -1;
 	
 	public static final int REQUEST_TIMEOUT = 15;
+	
+	private int _pcCafePoints = 0;
 	
 	private L2GameClient _client;
 	
@@ -6555,6 +6557,8 @@ public final class L2PcInstance extends L2Playable
 						player.setClanCreateExpiryTime(0);
 					}
 					
+					player.setPcCafePoints(rset.getInt("pccafe_points"));
+					
 					final int clanId = rset.getInt("clanid");
 					player.setPowerGrade(rset.getInt("power_grade"));
 					player.getStat().setVitalityPoints(rset.getInt("vitality_points"));
@@ -7139,8 +7143,8 @@ public final class L2PcInstance extends L2Playable
 				factionId = 2;
 			}
 			statement.setInt(47, factionId);
-			
-			statement.setInt(48, getObjectId());
+			statement.setInt(48, getPcCafePoints());
+			statement.setInt(49, getObjectId());
 			
 			statement.execute();
 		}
@@ -12537,6 +12541,16 @@ public final class L2PcInstance extends L2Playable
 		_offlineShopStart = time;
 	}
 	
+	public int getPcCafePoints()
+	{
+		return _pcCafePoints;
+	}
+	
+	public void setPcCafePoints(int count)
+	{
+		_pcCafePoints = count < 200000 ? count : 200000;
+	}
+	
 	/**
 	 * Check all player skills for skill level. If player level is lower than skill learn level - 9, skill level is decreased to next possible level.
 	 */
@@ -13868,4 +13882,5 @@ public final class L2PcInstance extends L2Playable
 		addStatusUpdateValue(StatusUpdateType.MAX_CP);
 		addStatusUpdateValue(StatusUpdateType.CUR_CP);
 	}
+	
 }

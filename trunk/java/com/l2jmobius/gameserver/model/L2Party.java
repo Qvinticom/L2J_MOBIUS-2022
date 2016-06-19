@@ -36,6 +36,7 @@ import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.PartyDistributionType;
 import com.l2jmobius.gameserver.instancemanager.DuelManager;
+import com.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
@@ -881,6 +882,7 @@ public class L2Party extends AbstractPlayerGroup
 						clan.addHuntingPoints(member, target, finalExp);
 					}
 					member.updateVitalityPoints(target.getVitalityPoints(member.getLevel(), addexp, target.isRaid()), true, false);
+					PcCafePointsManager.getInstance().givePcCafePoint(member, addexp);
 				}
 			}
 			else

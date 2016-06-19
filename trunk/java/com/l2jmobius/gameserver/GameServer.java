@@ -128,6 +128,7 @@ import com.l2jmobius.gameserver.instancemanager.MailManager;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
 import com.l2jmobius.gameserver.instancemanager.MentorManager;
+import com.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import com.l2jmobius.gameserver.instancemanager.PetitionManager;
 import com.l2jmobius.gameserver.instancemanager.PremiumManager;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
@@ -238,6 +239,7 @@ public class GameServer
 		FishingData.getInstance();
 		HennaData.getInstance();
 		PrimeShopData.getInstance();
+		PcCafePointsManager.getInstance();
 		AppearanceItemData.getInstance();
 		AlchemyData.getInstance();
 		CommissionManager.getInstance();

@@ -70,6 +70,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExConnectedTimeAndGettable
 import com.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import com.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
 import com.l2jmobius.gameserver.network.serverpackets.ExNotifyPremiumItem;
+import com.l2jmobius.gameserver.network.serverpackets.ExPCCafePointInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeWaitingListAlarm;
 import com.l2jmobius.gameserver.network.serverpackets.ExQuestItemList;
@@ -421,6 +422,18 @@ public class EnterWorld implements IClientIncomingPacket
 		if (activeChar.isCursedWeaponEquipped())
 		{
 			CursedWeaponsManager.getInstance().getCursedWeapon(activeChar.getCursedWeaponEquippedId()).cursedOnLogin();
+		}
+		
+		if (Config.PC_CAFE_ENABLED)
+		{
+			if (activeChar.getPcCafePoints() > 0)
+			{
+				activeChar.sendPacket(new ExPCCafePointInfo(activeChar.getPcCafePoints(), 0, 1));
+			}
+			else
+			{
+				activeChar.sendPacket(new ExPCCafePointInfo());
+			}
 		}
 		
 		activeChar.updateEffectIcons();

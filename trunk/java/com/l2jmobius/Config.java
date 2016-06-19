@@ -701,6 +701,15 @@ public final class Config
 	public static float PREMIUM_RATE_SPOIL_AMOUNT;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_CHANCE_BY_ID;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_AMOUNT_BY_ID;
+	public static boolean PC_CAFE_ENABLED;
+	public static boolean PC_CAFE_ONLY_PREMIUM;
+	public static int PC_CAFE_MAX_POINTS;
+	public static boolean PC_CAFE_ENABLE_DOUBLE_POINTS;
+	public static int PC_CAFE_DOUBLE_POINTS_CHANCE;
+	public static double PC_CAFE_POINT_RATE;
+	public static boolean PC_CAFE_RANDOM_POINT;
+	public static boolean PC_CAFE_REWARD_LOW_EXP_KILLS;
+	public static int PC_CAFE_LOW_EXP_KILLS_CHANCE;
 	public static boolean SELLBUFF_ENABLED;
 	public static int SELLBUFF_MP_MULTIPLER;
 	public static int SELLBUFF_PAYMENT_ID;
@@ -2219,6 +2228,36 @@ public final class Config
 						}
 					}
 				}
+			}
+			
+			PC_CAFE_ENABLED = CustomSettings.getBoolean("PcCafeEnabled", false);
+			PC_CAFE_ONLY_PREMIUM = CustomSettings.getBoolean("PcCafeOnlyPremium", false);
+			PC_CAFE_MAX_POINTS = CustomSettings.getInt("MaxPcCafePoints", 200000);
+			if (PC_CAFE_MAX_POINTS < 0)
+			{
+				PC_CAFE_MAX_POINTS = 0;
+			}
+			PC_CAFE_ENABLE_DOUBLE_POINTS = CustomSettings.getBoolean("DoublingAcquisitionPoints", false);
+			PC_CAFE_DOUBLE_POINTS_CHANCE = CustomSettings.getInt("DoublingAcquisitionPointsChance", 1);
+			if ((PC_CAFE_DOUBLE_POINTS_CHANCE < 0) || (PC_CAFE_DOUBLE_POINTS_CHANCE > 100))
+			{
+				PC_CAFE_DOUBLE_POINTS_CHANCE = 1;
+			}
+			PC_CAFE_POINT_RATE = CustomSettings.getDouble("AcquisitionPointsRate", 1.0);
+			PC_CAFE_RANDOM_POINT = CustomSettings.getBoolean("AcquisitionPointsRandom", false);
+			if (PC_CAFE_POINT_RATE < 0)
+			{
+				PC_CAFE_POINT_RATE = 1;
+			}
+			PC_CAFE_REWARD_LOW_EXP_KILLS = CustomSettings.getBoolean("RewardLowExpKills", true);
+			PC_CAFE_LOW_EXP_KILLS_CHANCE = CustomSettings.getInt("RewardLowExpKillsChance", 50);
+			if (PC_CAFE_LOW_EXP_KILLS_CHANCE < 0)
+			{
+				PC_CAFE_LOW_EXP_KILLS_CHANCE = 0;
+			}
+			if (PC_CAFE_LOW_EXP_KILLS_CHANCE > 100)
+			{
+				PC_CAFE_LOW_EXP_KILLS_CHANCE = 100;
 			}
 			
 			SELLBUFF_ENABLED = CustomSettings.getBoolean("SellBuffEnable", false);

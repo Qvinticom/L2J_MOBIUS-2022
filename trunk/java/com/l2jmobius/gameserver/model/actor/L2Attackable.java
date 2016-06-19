@@ -48,6 +48,7 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
+import com.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.model.AggroInfo;
 import com.l2jmobius.gameserver.model.DamageDoneInfo;
@@ -508,8 +509,8 @@ public class L2Attackable extends L2Npc
 										}
 										clan.addHuntingPoints(attacker, this, finalExp);
 									}
-									
 									attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), addexp, isRaid()), true, false);
+									PcCafePointsManager.getInstance().givePcCafePoint(attacker, addexp);
 								}
 							}
 						}
