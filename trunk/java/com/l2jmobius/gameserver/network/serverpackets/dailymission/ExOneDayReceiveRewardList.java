@@ -20,8 +20,8 @@ import java.time.LocalDate;
 import java.util.Collection;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.data.xml.impl.OneDayRewardData;
-import com.l2jmobius.gameserver.model.OneDayRewardDataHolder;
+import com.l2jmobius.gameserver.data.xml.impl.DailyMissionData;
+import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -32,12 +32,12 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 {
 	final L2PcInstance _player;
-	private final Collection<OneDayRewardDataHolder> _rewards;
+	private final Collection<DailyMissionDataHolder> _rewards;
 	
 	public ExOneDayReceiveRewardList(L2PcInstance player)
 	{
 		_player = player;
-		_rewards = OneDayRewardData.getInstance().getOneDayRewardData(player);
+		_rewards = DailyMissionData.getInstance().getDailyMissionData(player);
 	}
 	
 	@Override
@@ -48,7 +48,7 @@ public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 		packet.writeD(_player.getClassId().getId());
 		packet.writeD(LocalDate.now().getDayOfWeek().ordinal()); // Day of week
 		packet.writeD(_rewards.size());
-		for (OneDayRewardDataHolder reward : _rewards)
+		for (DailyMissionDataHolder reward : _rewards)
 		{
 			packet.writeH(reward.getId());
 			packet.writeC(reward.getStatus(_player));

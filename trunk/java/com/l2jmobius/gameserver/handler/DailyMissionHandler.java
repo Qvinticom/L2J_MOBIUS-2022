@@ -20,22 +20,22 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-import com.l2jmobius.gameserver.model.OneDayRewardDataHolder;
+import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
 
 /**
  * @author Sdw
  */
-public class OneDayRewardHandler
+public class DailyMissionHandler
 {
-	private final Map<String, Function<OneDayRewardDataHolder, AbstractOneDayRewardHandler>> _handlerFactories = new HashMap<>();
+	private final Map<String, Function<DailyMissionDataHolder, AbstractDailyMissionHandler>> _handlerFactories = new HashMap<>();
 	
-	public void registerHandler(String name, Function<OneDayRewardDataHolder, AbstractOneDayRewardHandler> handlerFactory)
+	public void registerHandler(String name, Function<DailyMissionDataHolder, AbstractDailyMissionHandler> handlerFactory)
 	{
 		_handlerFactories.put(name, handlerFactory);
 	}
 	
-	public Function<OneDayRewardDataHolder, AbstractOneDayRewardHandler> getHandler(String name)
+	public Function<DailyMissionDataHolder, AbstractDailyMissionHandler> getHandler(String name)
 	{
 		return _handlerFactories.get(name);
 	}
@@ -50,21 +50,21 @@ public class OneDayRewardHandler
 		try
 		{
 			
-			ScriptEngineManager.getInstance().executeOneDayRewardMasterHandler();
+			ScriptEngineManager.getInstance().executeDailyMissionMasterHandler();
 		}
 		catch (Exception e)
 		{
-			throw new Error("Problems while running OneDayRewardMasterHandler", e);
+			throw new Error("Problems while running DailyMissionMasterHandler", e);
 		}
 	}
 	
-	public static OneDayRewardHandler getInstance()
+	public static DailyMissionHandler getInstance()
 	{
 		return SingletonHolder._instance;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final OneDayRewardHandler _instance = new OneDayRewardHandler();
+		protected static final DailyMissionHandler _instance = new DailyMissionHandler();
 	}
 }

@@ -26,29 +26,29 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.enums.OneDayRewardStatus;
-import com.l2jmobius.gameserver.model.OneDayRewardDataHolder;
-import com.l2jmobius.gameserver.model.OneDayRewardPlayerEntry;
+import com.l2jmobius.gameserver.enums.DailyMissionStatus;
+import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
+import com.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.ListenersContainer;
 
 /**
  * @author Sdw
  */
-public abstract class AbstractOneDayRewardHandler extends ListenersContainer
+public abstract class AbstractDailyMissionHandler extends ListenersContainer
 {
 	protected Logger LOGGER = Logger.getLogger(getClass().getName());
 	
-	private final Map<Integer, OneDayRewardPlayerEntry> _entries = new ConcurrentHashMap<>();
-	private final OneDayRewardDataHolder _holder;
+	private final Map<Integer, DailyMissionPlayerEntry> _entries = new ConcurrentHashMap<>();
+	private final DailyMissionDataHolder _holder;
 	
-	protected AbstractOneDayRewardHandler(OneDayRewardDataHolder holder)
+	protected AbstractDailyMissionHandler(DailyMissionDataHolder holder)
 	{
 		_holder = holder;
 		init();
 	}
 	
-	public OneDayRewardDataHolder getHolder()
+	public DailyMissionDataHolder getHolder()
 	{
 		return _holder;
 	}
@@ -59,13 +59,13 @@ public abstract class AbstractOneDayRewardHandler extends ListenersContainer
 	
 	public int getStatus(L2PcInstance player)
 	{
-		final OneDayRewardPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
-		return entry != null ? entry.getStatus().getClientId() : OneDayRewardStatus.NOT_AVAILABLE.getClientId();
+		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
+		return entry != null ? entry.getStatus().getClientId() : DailyMissionStatus.NOT_AVAILABLE.getClientId();
 	}
 	
 	public int getProgress(L2PcInstance player)
 	{
-		final OneDayRewardPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
+		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		return entry != null ? entry.getProgress() : 0;
 	}
 	
@@ -75,7 +75,7 @@ public abstract class AbstractOneDayRewardHandler extends ListenersContainer
 			PreparedStatement ps = con.prepareStatement("DELETE FROM character_daily_rewards WHERE rewardId = ? AND status = ?"))
 		{
 			ps.setInt(1, _holder.getId());
-			ps.setInt(2, OneDayRewardStatus.COMPLETED.getClientId());
+			ps.setInt(2, DailyMissionStatus.COMPLETED.getClientId());
 			ps.execute();
 		}
 		catch (SQLException e)
@@ -94,8 +94,8 @@ public abstract class AbstractOneDayRewardHandler extends ListenersContainer
 		{
 			giveRewards(player);
 			
-			final OneDayRewardPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
-			entry.setStatus(OneDayRewardStatus.COMPLETED);
+			final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
+			entry.setStatus(DailyMissionStatus.COMPLETED);
 			entry.setLastCompleted(System.currentTimeMillis());
 			storePlayerEntry(entry);
 			
@@ -109,7 +109,7 @@ public abstract class AbstractOneDayRewardHandler extends ListenersContainer
 		_holder.getRewards().forEach(i -> player.addItem("One Day Reward", i, player, true));
 	}
 	
-	protected void storePlayerEntry(OneDayRewardPlayerEntry entry)
+	protected void storePlayerEntry(DailyMissionPlayerEntry entry)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("REPLACE INTO character_daily_rewards (charId, rewardId, status, progress, lastCompleted) VALUES (?, ?, ?, ?, ?)"))
@@ -130,9 +130,9 @@ public abstract class AbstractOneDayRewardHandler extends ListenersContainer
 		}
 	}
 	
-	protected OneDayRewardPlayerEntry getPlayerEntry(int objectId, boolean createIfNone)
+	protected DailyMissionPlayerEntry getPlayerEntry(int objectId, boolean createIfNone)
 	{
-		final OneDayRewardPlayerEntry existingEntry = _entries.get(objectId);
+		final DailyMissionPlayerEntry existingEntry = _entries.get(objectId);
 		if (existingEntry != null)
 		{
 			return existingEntry;
@@ -147,7 +147,7 @@ public abstract class AbstractOneDayRewardHandler extends ListenersContainer
 			{
 				if (rs.next())
 				{
-					final OneDayRewardPlayerEntry entry = new OneDayRewardPlayerEntry(rs.getInt("charId"), rs.getInt("rewardId"), rs.getInt("status"), rs.getInt("progress"), rs.getLong("lastCompleted"));
+					final DailyMissionPlayerEntry entry = new DailyMissionPlayerEntry(rs.getInt("charId"), rs.getInt("rewardId"), rs.getInt("status"), rs.getInt("progress"), rs.getLong("lastCompleted"));
 					_entries.put(objectId, entry);
 				}
 			}
@@ -159,7 +159,7 @@ public abstract class AbstractOneDayRewardHandler extends ListenersContainer
 		
 		if (createIfNone)
 		{
-			final OneDayRewardPlayerEntry entry = new OneDayRewardPlayerEntry(objectId, _holder.getId());
+			final DailyMissionPlayerEntry entry = new DailyMissionPlayerEntry(objectId, _holder.getId());
 			_entries.put(objectId, entry);
 			return entry;
 		}

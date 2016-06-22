@@ -14,27 +14,26 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package handlers.onedayrewardshandlers;
+package handlers.dailymissionhandlers;
 
-import com.l2jmobius.gameserver.enums.OneDayRewardStatus;
-import com.l2jmobius.gameserver.handler.AbstractOneDayRewardHandler;
-import com.l2jmobius.gameserver.model.OneDayRewardDataHolder;
-import com.l2jmobius.gameserver.model.OneDayRewardPlayerEntry;
+import com.l2jmobius.gameserver.enums.DailyMissionStatus;
+import com.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
+import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
+import com.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerFishing;
+import com.l2jmobius.gameserver.model.events.impl.ceremonyofchaos.OnCeremonyOfChaosMatchResult;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import com.l2jmobius.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndReason;
 
 /**
  * @author UnAfraid
  */
-public class FishingOneDayRewardHandler extends AbstractOneDayRewardHandler
+public class CeremonyOfChaosDailyMissionHandler extends AbstractDailyMissionHandler
 {
 	private final int _amount;
 	
-	public FishingOneDayRewardHandler(OneDayRewardDataHolder holder)
+	public CeremonyOfChaosDailyMissionHandler(DailyMissionDataHolder holder)
 	{
 		super(holder);
 		_amount = holder.getRequiredCompletions();
@@ -43,13 +42,13 @@ public class FishingOneDayRewardHandler extends AbstractOneDayRewardHandler
 	@Override
 	public void init()
 	{
-		Containers.Players().addListener(new ConsumerEventListener(this, EventType.ON_PLAYER_FISHING, (OnPlayerFishing event) -> onPlayerFishing(event), this));
+		Containers.Global().addListener(new ConsumerEventListener(this, EventType.ON_CEREMONY_OF_CHAOS_MATCH_RESULT, (OnCeremonyOfChaosMatchResult event) -> onCeremonyOfChaosMatchResult(event), this));
 	}
 	
 	@Override
 	public boolean isAvailable(L2PcInstance player)
 	{
-		final OneDayRewardPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
+		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		if (entry != null)
 		{
 			switch (entry.getStatus())
@@ -58,7 +57,7 @@ public class FishingOneDayRewardHandler extends AbstractOneDayRewardHandler
 				{
 					if (entry.getProgress() >= _amount)
 					{
-						entry.setStatus(OneDayRewardStatus.AVAILABLE);
+						entry.setStatus(DailyMissionStatus.AVAILABLE);
 						storePlayerEntry(entry);
 					}
 					break;
@@ -72,20 +71,19 @@ public class FishingOneDayRewardHandler extends AbstractOneDayRewardHandler
 		return false;
 	}
 	
-	private void onPlayerFishing(OnPlayerFishing event)
+	private void onCeremonyOfChaosMatchResult(OnCeremonyOfChaosMatchResult event)
 	{
-		final L2PcInstance player = event.getActiveChar();
-		if (event.getReason() == FishingEndReason.WIN)
+		event.getMembers().forEach(member ->
 		{
-			final OneDayRewardPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
-			if (entry.getStatus() == OneDayRewardStatus.NOT_AVAILABLE)
+			final DailyMissionPlayerEntry entry = getPlayerEntry(member.getObjectId(), true);
+			if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)
 			{
 				if (entry.increaseProgress() >= _amount)
 				{
-					entry.setStatus(OneDayRewardStatus.AVAILABLE);
+					entry.setStatus(DailyMissionStatus.AVAILABLE);
 				}
 				storePlayerEntry(entry);
 			}
-		}
+		});
 	}
 }

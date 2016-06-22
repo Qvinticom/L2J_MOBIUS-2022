@@ -48,7 +48,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String HAIR_ACCESSORY_VARIABLE_NAME = "HAIR_ACCESSORY_ENABLED";
 	public static final String WORLD_CHAT_VARIABLE_NAME = "WORLD_CHAT_POINTS";
 	public static final String VITALITY_ITEMS_USED_VARIABLE_NAME = "VITALITY_ITEMS_USED";
-	private static final String ONE_DAY_REWARDS = "ONE_DAY_REWARDS";
+	private static final String DAILY_MISSION_REWARDS = "DAILY_MISSION_REWARDS";
 	public static final String CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES = "CEREMONY_OF_CHAOS_PENALTIES";
 	public static final String ABILITY_POINTS_MAIN_CLASS = "ABILITY_POINTS";
 	public static final String ABILITY_POINTS_DUAL_CLASS = "ABILITY_POINTS_DUAL_CLASS";
@@ -163,9 +163,9 @@ public class PlayerVariables extends AbstractVariables
 		return L2World.getInstance().getPlayer(_objectId);
 	}
 	
-	public void addOneDayReward(int rewardId)
+	public void addDailyMissionReward(int rewardId)
 	{
-		String result = getString(ONE_DAY_REWARDS, "");
+		String result = getString(DAILY_MISSION_REWARDS, "");
 		if (result.isEmpty())
 		{
 			result = Integer.toString(rewardId);
@@ -174,13 +174,13 @@ public class PlayerVariables extends AbstractVariables
 		{
 			result += "," + rewardId;
 		}
-		set(ONE_DAY_REWARDS, result);
+		set(DAILY_MISSION_REWARDS, result);
 	}
 	
-	public void removeOneDayReward(int rewardId)
+	public void removeDailyMissionReward(int rewardId)
 	{
 		String result = "";
-		final String data = getString(ONE_DAY_REWARDS, "");
+		final String data = getString(DAILY_MISSION_REWARDS, "");
 		for (String s : data.split(","))
 		{
 			if (s.equals(Integer.toString(rewardId)))
@@ -196,12 +196,12 @@ public class PlayerVariables extends AbstractVariables
 				result += "," + s;
 			}
 		}
-		set(ONE_DAY_REWARDS, result);
+		set(DAILY_MISSION_REWARDS, result);
 	}
 	
-	public boolean hasOneDayReward(int rewardId)
+	public boolean hasDailyMissionReward(int rewardId)
 	{
-		final String data = getString(ONE_DAY_REWARDS, "");
+		final String data = getString(DAILY_MISSION_REWARDS, "");
 		for (String s : data.split(","))
 		{
 			if (s.equals(Integer.toString(rewardId)))
@@ -212,13 +212,13 @@ public class PlayerVariables extends AbstractVariables
 		return false;
 	}
 	
-	public List<Integer> getOneDayRewards()
+	public List<Integer> getDailyMissionRewards()
 	{
 		List<Integer> rewards = null;
-		final String data = getString(ONE_DAY_REWARDS, "");
+		final String data = getString(DAILY_MISSION_REWARDS, "");
 		if (!data.isEmpty())
 		{
-			for (String s : getString(ONE_DAY_REWARDS, "").split(","))
+			for (String s : getString(DAILY_MISSION_REWARDS, "").split(","))
 			{
 				if (Util.isDigit(s))
 				{

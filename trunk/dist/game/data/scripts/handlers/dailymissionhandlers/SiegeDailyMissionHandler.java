@@ -14,15 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package handlers.onedayrewardshandlers;
+package handlers.dailymissionhandlers;
 
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.enums.OneDayRewardStatus;
-import com.l2jmobius.gameserver.handler.AbstractOneDayRewardHandler;
+import com.l2jmobius.gameserver.enums.DailyMissionStatus;
+import com.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
+import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
+import com.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2SiegeClan;
-import com.l2jmobius.gameserver.model.OneDayRewardDataHolder;
-import com.l2jmobius.gameserver.model.OneDayRewardPlayerEntry;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventType;
@@ -32,9 +32,9 @@ import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 /**
  * @author UnAfraid
  */
-public class SiegeOneDayRewardHandler extends AbstractOneDayRewardHandler
+public class SiegeDailyMissionHandler extends AbstractDailyMissionHandler
 {
-	public SiegeOneDayRewardHandler(OneDayRewardDataHolder holder)
+	public SiegeDailyMissionHandler(DailyMissionDataHolder holder)
 	{
 		super(holder);
 	}
@@ -48,7 +48,7 @@ public class SiegeOneDayRewardHandler extends AbstractOneDayRewardHandler
 	@Override
 	public boolean isAvailable(L2PcInstance player)
 	{
-		final OneDayRewardPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
+		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		if (entry != null)
 		{
 			switch (entry.getStatus())
@@ -75,8 +75,8 @@ public class SiegeOneDayRewardHandler extends AbstractOneDayRewardHandler
 		{
 			clan.getOnlineMembers(0).forEach(player ->
 			{
-				final OneDayRewardPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
-				entry.setStatus(OneDayRewardStatus.AVAILABLE);
+				final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
+				entry.setStatus(DailyMissionStatus.AVAILABLE);
 				storePlayerEntry(entry);
 			});
 		}

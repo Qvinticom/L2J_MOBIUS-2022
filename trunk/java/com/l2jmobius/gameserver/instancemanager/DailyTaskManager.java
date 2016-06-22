@@ -26,11 +26,11 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.data.xml.impl.OneDayRewardData;
+import com.l2jmobius.gameserver.data.xml.impl.DailyMissionData;
+import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.OneDayRewardDataHolder;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.stat.PcStat;
 import com.l2jmobius.gameserver.model.base.SubClass;
@@ -64,10 +64,10 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	{
 		resetClanBonus();
 		resetExtendDrop();
+		resetDailyMissionRewards();
 		resetDailySkills();
-		resetWorldChatPoints();
-		resetOneDayReward();
 		resetRecommends();
+		resetWorldChatPoints();
 	}
 	
 	@ScheduleTarget
@@ -242,9 +242,9 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		});
 	}
 	
-	private void resetOneDayReward()
+	private void resetDailyMissionRewards()
 	{
-		OneDayRewardData.getInstance().getOneDayRewardData().forEach(OneDayRewardDataHolder::reset);
+		DailyMissionData.getInstance().getDailyMissionData().forEach(DailyMissionDataHolder::reset);
 	}
 	
 	public static DailyTaskManager getInstance()

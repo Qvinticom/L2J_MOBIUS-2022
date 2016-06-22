@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.enums;
 /**
  * @author UnAfraid
  */
-public enum OneDayRewardStatus
+public enum DailyMissionStatus
 {
 	AVAILABLE(1),
 	NOT_AVAILABLE(2),
@@ -27,7 +27,7 @@ public enum OneDayRewardStatus
 	
 	private int _clientId;
 	
-	private OneDayRewardStatus(int clientId)
+	private DailyMissionStatus(int clientId)
 	{
 		_clientId = clientId;
 	}
@@ -37,9 +37,9 @@ public enum OneDayRewardStatus
 		return _clientId;
 	}
 	
-	public static OneDayRewardStatus valueOf(int clientId)
+	public static DailyMissionStatus valueOf(int clientId)
 	{
-		for (OneDayRewardStatus type : values())
+		for (DailyMissionStatus type : values())
 		{
 			if (type.getClientId() == clientId)
 			{

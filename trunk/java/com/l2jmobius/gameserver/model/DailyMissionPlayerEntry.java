@@ -16,29 +16,29 @@
  */
 package com.l2jmobius.gameserver.model;
 
-import com.l2jmobius.gameserver.enums.OneDayRewardStatus;
+import com.l2jmobius.gameserver.enums.DailyMissionStatus;
 
 /**
  * @author UnAfraid
  */
-public class OneDayRewardPlayerEntry
+public class DailyMissionPlayerEntry
 {
 	private final int _objectId;
 	private final int _rewardId;
-	private OneDayRewardStatus _status = OneDayRewardStatus.NOT_AVAILABLE;
+	private DailyMissionStatus _status = DailyMissionStatus.NOT_AVAILABLE;
 	private int _progress;
 	private long _lastCompleted;
 	
-	public OneDayRewardPlayerEntry(int objectId, int rewardId)
+	public DailyMissionPlayerEntry(int objectId, int rewardId)
 	{
 		_objectId = objectId;
 		_rewardId = rewardId;
 	}
 	
-	public OneDayRewardPlayerEntry(int objectId, int rewardId, int status, int progress, long lastCompleted)
+	public DailyMissionPlayerEntry(int objectId, int rewardId, int status, int progress, long lastCompleted)
 	{
 		this(objectId, rewardId);
-		_status = OneDayRewardStatus.valueOf(status);
+		_status = DailyMissionStatus.valueOf(status);
 		_progress = progress;
 		_lastCompleted = lastCompleted;
 	}
@@ -53,12 +53,12 @@ public class OneDayRewardPlayerEntry
 		return _rewardId;
 	}
 	
-	public OneDayRewardStatus getStatus()
+	public DailyMissionStatus getStatus()
 	{
 		return _status;
 	}
 	
-	public void setStatus(OneDayRewardStatus status)
+	public void setStatus(DailyMissionStatus status)
 	{
 		_status = status;
 	}

@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 import org.w3c.dom.Document;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.OneDayRewardDataHolder;
+import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
@@ -37,12 +37,12 @@ import com.l2jmobius.gameserver.model.holders.ItemHolder;
 /**
  * @author Sdw
  */
-public class OneDayRewardData implements IGameXmlReader
+public class DailyMissionData implements IGameXmlReader
 {
-	private static final Logger LOGGER = Logger.getLogger(OneDayRewardData.class.getName());
-	private final Map<Integer, List<OneDayRewardDataHolder>> _oneDayReward = new LinkedHashMap<>();
+	private static final Logger LOGGER = Logger.getLogger(DailyMissionData.class.getName());
+	private final Map<Integer, List<DailyMissionDataHolder>> _dailyMissionRewards = new LinkedHashMap<>();
 	
-	protected OneDayRewardData()
+	protected DailyMissionData()
 	{
 		load();
 	}
@@ -50,9 +50,9 @@ public class OneDayRewardData implements IGameXmlReader
 	@Override
 	public void load()
 	{
-		_oneDayReward.clear();
-		parseDatapackFile("data/OneDayReward.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _oneDayReward.size() + " one day rewards.");
+		_dailyMissionRewards.clear();
+		parseDatapackFile("data/DailyMission.xml");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _dailyMissionRewards.size() + " one day rewards.");
 	}
 	
 	@Override
@@ -93,25 +93,25 @@ public class OneDayRewardData implements IGameXmlReader
 				forEach(handlerNode, "param", paramNode -> params.set(parseString(paramNode.getAttributes(), "name"), paramNode.getTextContent()));
 			});
 			
-			final OneDayRewardDataHolder holder = new OneDayRewardDataHolder(set);
-			_oneDayReward.computeIfAbsent(holder.getId(), k -> new ArrayList<>()).add(holder);
+			final DailyMissionDataHolder holder = new DailyMissionDataHolder(set);
+			_dailyMissionRewards.computeIfAbsent(holder.getId(), k -> new ArrayList<>()).add(holder);
 		}));
 	}
 	
-	public Collection<OneDayRewardDataHolder> getOneDayRewardData()
+	public Collection<DailyMissionDataHolder> getDailyMissionData()
 	{
 		//@formatter:off
-		return _oneDayReward.values()
+		return _dailyMissionRewards.values()
 			.stream()
 			.flatMap(List::stream)
 			.collect(Collectors.toList());
 		//@formatter:on
 	}
 	
-	public Collection<OneDayRewardDataHolder> getOneDayRewardData(L2PcInstance player)
+	public Collection<DailyMissionDataHolder> getDailyMissionData(L2PcInstance player)
 	{
 		//@formatter:off
-		return _oneDayReward.values()
+		return _dailyMissionRewards.values()
 			.stream()
 			.flatMap(List::stream)
 			.filter(o -> o.isDisplayable(player))
@@ -119,22 +119,22 @@ public class OneDayRewardData implements IGameXmlReader
 		//@formatter:on
 	}
 	
-	public Collection<OneDayRewardDataHolder> getOneDayRewardData(int id)
+	public Collection<DailyMissionDataHolder> getDailyMissionData(int id)
 	{
-		return _oneDayReward.get(id);
+		return _dailyMissionRewards.get(id);
 	}
 	
 	/**
-	 * Gets the single instance of OneDayRewardData.
-	 * @return single instance of OneDayRewardData
+	 * Gets the single instance of DailyMissionData.
+	 * @return single instance of DailyMissionData
 	 */
-	public static final OneDayRewardData getInstance()
+	public static final DailyMissionData getInstance()
 	{
 		return SingletonHolder._instance;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final OneDayRewardData _instance = new OneDayRewardData();
+		protected static final DailyMissionData _instance = new DailyMissionData();
 	}
 }

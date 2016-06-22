@@ -19,9 +19,9 @@ package com.l2jmobius.gameserver.model;
 import java.util.List;
 import java.util.function.Function;
 
-import com.l2jmobius.gameserver.enums.OneDayRewardStatus;
-import com.l2jmobius.gameserver.handler.AbstractOneDayRewardHandler;
-import com.l2jmobius.gameserver.handler.OneDayRewardHandler;
+import com.l2jmobius.gameserver.enums.DailyMissionStatus;
+import com.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
+import com.l2jmobius.gameserver.handler.DailyMissionHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.model.holders.ItemHolder;
 /**
  * @author Sdw
  */
-public class OneDayRewardDataHolder
+public class DailyMissionDataHolder
 {
 	private final int _id;
 	private final int _rewardId;
@@ -38,11 +38,11 @@ public class OneDayRewardDataHolder
 	private final int _requiredCompletions;
 	private final StatsSet _params;
 	private final boolean _isOneTime;
-	private final AbstractOneDayRewardHandler _handler;
+	private final AbstractDailyMissionHandler _handler;
 	
-	public OneDayRewardDataHolder(StatsSet set)
+	public DailyMissionDataHolder(StatsSet set)
 	{
-		final Function<OneDayRewardDataHolder, AbstractOneDayRewardHandler> handler = OneDayRewardHandler.getInstance().getHandler(set.getString("handler"));
+		final Function<DailyMissionDataHolder, AbstractDailyMissionHandler> handler = DailyMissionHandler.getInstance().getHandler(set.getString("handler"));
 		
 		_id = set.getInt("id");
 		_rewardId = set.getInt("reward_id");
@@ -91,7 +91,7 @@ public class OneDayRewardDataHolder
 	
 	public boolean isDisplayable(L2PcInstance player)
 	{
-		return (!_isOneTime || (getStatus(player) != OneDayRewardStatus.COMPLETED.getClientId())) && (_classRestriction.isEmpty() || _classRestriction.contains(player.getClassId()));
+		return (!_isOneTime || (getStatus(player) != DailyMissionStatus.COMPLETED.getClientId())) && (_classRestriction.isEmpty() || _classRestriction.contains(player.getClassId()));
 	}
 	
 	public void requestReward(L2PcInstance player)
@@ -104,12 +104,12 @@ public class OneDayRewardDataHolder
 	
 	public int getStatus(L2PcInstance player)
 	{
-		return _handler != null ? _handler.getStatus(player) : OneDayRewardStatus.NOT_AVAILABLE.getClientId();
+		return _handler != null ? _handler.getStatus(player) : DailyMissionStatus.NOT_AVAILABLE.getClientId();
 	}
 	
 	public int getProgress(L2PcInstance player)
 	{
-		return _handler != null ? _handler.getProgress(player) : OneDayRewardStatus.NOT_AVAILABLE.getClientId();
+		return _handler != null ? _handler.getProgress(player) : DailyMissionStatus.NOT_AVAILABLE.getClientId();
 	}
 	
 	public void reset()

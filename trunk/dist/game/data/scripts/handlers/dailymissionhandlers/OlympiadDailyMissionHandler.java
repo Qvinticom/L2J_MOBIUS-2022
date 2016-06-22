@@ -14,12 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package handlers.onedayrewardshandlers;
+package handlers.dailymissionhandlers;
 
-import com.l2jmobius.gameserver.enums.OneDayRewardStatus;
-import com.l2jmobius.gameserver.handler.AbstractOneDayRewardHandler;
-import com.l2jmobius.gameserver.model.OneDayRewardDataHolder;
-import com.l2jmobius.gameserver.model.OneDayRewardPlayerEntry;
+import com.l2jmobius.gameserver.enums.DailyMissionStatus;
+import com.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
+import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
+import com.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventType;
@@ -29,11 +29,11 @@ import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 /**
  * @author UnAfraid
  */
-public class OlympiadOneDayRewardHandler extends AbstractOneDayRewardHandler
+public class OlympiadDailyMissionHandler extends AbstractDailyMissionHandler
 {
 	private final int _amount;
 	
-	public OlympiadOneDayRewardHandler(OneDayRewardDataHolder holder)
+	public OlympiadDailyMissionHandler(DailyMissionDataHolder holder)
 	{
 		super(holder);
 		_amount = holder.getRequiredCompletions();
@@ -48,7 +48,7 @@ public class OlympiadOneDayRewardHandler extends AbstractOneDayRewardHandler
 	@Override
 	public boolean isAvailable(L2PcInstance player)
 	{
-		final OneDayRewardPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
+		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		if (entry != null)
 		{
 			switch (entry.getStatus())
@@ -57,7 +57,7 @@ public class OlympiadOneDayRewardHandler extends AbstractOneDayRewardHandler
 				{
 					if (entry.getProgress() >= _amount)
 					{
-						entry.setStatus(OneDayRewardStatus.AVAILABLE);
+						entry.setStatus(DailyMissionStatus.AVAILABLE);
 						storePlayerEntry(entry);
 					}
 					break;
@@ -73,22 +73,22 @@ public class OlympiadOneDayRewardHandler extends AbstractOneDayRewardHandler
 	
 	private void onOlympiadMatchResult(OnOlympiadMatchResult event)
 	{
-		final OneDayRewardPlayerEntry winnerEntry = getPlayerEntry(event.getWinner().getObjectId(), true);
-		if (winnerEntry.getStatus() == OneDayRewardStatus.NOT_AVAILABLE)
+		final DailyMissionPlayerEntry winnerEntry = getPlayerEntry(event.getWinner().getObjectId(), true);
+		if (winnerEntry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)
 		{
 			if (winnerEntry.increaseProgress() >= _amount)
 			{
-				winnerEntry.setStatus(OneDayRewardStatus.AVAILABLE);
+				winnerEntry.setStatus(DailyMissionStatus.AVAILABLE);
 			}
 			storePlayerEntry(winnerEntry);
 		}
 		
-		final OneDayRewardPlayerEntry loseEntry = getPlayerEntry(event.getLoser().getObjectId(), true);
-		if (loseEntry.getStatus() == OneDayRewardStatus.NOT_AVAILABLE)
+		final DailyMissionPlayerEntry loseEntry = getPlayerEntry(event.getLoser().getObjectId(), true);
+		if (loseEntry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)
 		{
 			if (loseEntry.increaseProgress() >= _amount)
 			{
-				loseEntry.setStatus(OneDayRewardStatus.AVAILABLE);
+				loseEntry.setStatus(DailyMissionStatus.AVAILABLE);
 			}
 			storePlayerEntry(loseEntry);
 		}

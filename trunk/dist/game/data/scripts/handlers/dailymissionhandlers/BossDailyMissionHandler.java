@@ -14,17 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package handlers.onedayrewardshandlers;
+package handlers.dailymissionhandlers;
 
 import java.util.List;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.enums.OneDayRewardStatus;
-import com.l2jmobius.gameserver.handler.AbstractOneDayRewardHandler;
+import com.l2jmobius.gameserver.enums.DailyMissionStatus;
+import com.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
+import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
+import com.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
 import com.l2jmobius.gameserver.model.L2CommandChannel;
 import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.OneDayRewardDataHolder;
-import com.l2jmobius.gameserver.model.OneDayRewardPlayerEntry;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.Containers;
@@ -35,11 +35,11 @@ import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 /**
  * @author UnAfraid
  */
-public class BossOneDayRewardHandler extends AbstractOneDayRewardHandler
+public class BossDailyMissionHandler extends AbstractDailyMissionHandler
 {
 	private final int _amount;
 	
-	public BossOneDayRewardHandler(OneDayRewardDataHolder holder)
+	public BossDailyMissionHandler(DailyMissionDataHolder holder)
 	{
 		super(holder);
 		_amount = holder.getRequiredCompletions();
@@ -54,7 +54,7 @@ public class BossOneDayRewardHandler extends AbstractOneDayRewardHandler
 	@Override
 	public boolean isAvailable(L2PcInstance player)
 	{
-		final OneDayRewardPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
+		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		if (entry != null)
 		{
 			switch (entry.getStatus())
@@ -63,7 +63,7 @@ public class BossOneDayRewardHandler extends AbstractOneDayRewardHandler
 				{
 					if (entry.getProgress() >= _amount)
 					{
-						entry.setStatus(OneDayRewardStatus.AVAILABLE);
+						entry.setStatus(DailyMissionStatus.AVAILABLE);
 						storePlayerEntry(entry);
 					}
 					break;
@@ -99,12 +99,12 @@ public class BossOneDayRewardHandler extends AbstractOneDayRewardHandler
 	
 	private void processPlayerProgress(L2PcInstance player)
 	{
-		final OneDayRewardPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
-		if (entry.getStatus() == OneDayRewardStatus.NOT_AVAILABLE)
+		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
+		if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)
 		{
 			if (entry.increaseProgress() >= _amount)
 			{
-				entry.setStatus(OneDayRewardStatus.AVAILABLE);
+				entry.setStatus(DailyMissionStatus.AVAILABLE);
 			}
 			storePlayerEntry(entry);
 		}

@@ -14,12 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package handlers.onedayrewardshandlers;
+package handlers.dailymissionhandlers;
 
-import com.l2jmobius.gameserver.enums.OneDayRewardStatus;
-import com.l2jmobius.gameserver.handler.AbstractOneDayRewardHandler;
-import com.l2jmobius.gameserver.model.OneDayRewardDataHolder;
-import com.l2jmobius.gameserver.model.OneDayRewardPlayerEntry;
+import com.l2jmobius.gameserver.enums.DailyMissionStatus;
+import com.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
+import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
+import com.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventType;
@@ -29,12 +29,12 @@ import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 /**
  * @author Sdw
  */
-public class LevelOneDayRewardHandler extends AbstractOneDayRewardHandler
+public class LevelDailyMissionHandler extends AbstractDailyMissionHandler
 {
 	private final int _level;
 	private final boolean _dualclass;
 	
-	public LevelOneDayRewardHandler(OneDayRewardDataHolder holder)
+	public LevelDailyMissionHandler(DailyMissionDataHolder holder)
 	{
 		super(holder);
 		_level = holder.getParams().getInt("level");
@@ -50,7 +50,7 @@ public class LevelOneDayRewardHandler extends AbstractOneDayRewardHandler
 	@Override
 	public boolean isAvailable(L2PcInstance player)
 	{
-		final OneDayRewardPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
+		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		if (entry != null)
 		{
 			switch (entry.getStatus())
@@ -59,7 +59,7 @@ public class LevelOneDayRewardHandler extends AbstractOneDayRewardHandler
 				{
 					if ((player.getLevel() >= _level) && (player.isDualClassActive() == _dualclass))
 					{
-						entry.setStatus(OneDayRewardStatus.AVAILABLE);
+						entry.setStatus(DailyMissionStatus.AVAILABLE);
 						storePlayerEntry(entry);
 					}
 					break;
@@ -84,10 +84,10 @@ public class LevelOneDayRewardHandler extends AbstractOneDayRewardHandler
 		final L2PcInstance player = event.getActiveChar();
 		if ((player.getLevel() >= _level) && (player.isDualClassActive() == _dualclass))
 		{
-			final OneDayRewardPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
-			if (entry.getStatus() == OneDayRewardStatus.NOT_AVAILABLE)
+			final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
+			if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)
 			{
-				entry.setStatus(OneDayRewardStatus.AVAILABLE);
+				entry.setStatus(DailyMissionStatus.AVAILABLE);
 				storePlayerEntry(entry);
 			}
 		}
