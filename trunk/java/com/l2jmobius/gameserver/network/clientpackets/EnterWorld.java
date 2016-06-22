@@ -98,8 +98,8 @@ import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 import com.l2jmobius.gameserver.network.serverpackets.SkillList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
+import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 import com.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
-import com.l2jmobius.gameserver.network.serverpackets.onedayreward.ExOneDayReceiveRewardList;
 
 /**
  * Enter World Packet Handler

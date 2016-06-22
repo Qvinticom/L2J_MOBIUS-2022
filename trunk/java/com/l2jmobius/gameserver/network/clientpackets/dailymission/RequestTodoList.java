@@ -14,29 +14,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.clientpackets.onedayreward;
-
-import java.util.Collection;
+package com.l2jmobius.gameserver.network.clientpackets.dailymission;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.OneDayRewardData;
-import com.l2jmobius.gameserver.model.OneDayRewardDataHolder;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import com.l2jmobius.gameserver.network.serverpackets.onedayreward.ExOneDayReceiveRewardList;
+import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 
 /**
- * @author Sdw
+ * @author UnAfraid
  */
-public class RequestOneDayRewardReceive implements IClientIncomingPacket
+public class RequestTodoList implements IClientIncomingPacket
 {
-	private int _id;
+	private int _tab;
+	@SuppressWarnings("unused")
+	private int _showAllLevels;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_id = packet.readH();
+		_tab = packet.readC(); // Daily Reward = 9, Event = 1, Instance Zone = 2
+		_showAllLevels = packet.readC(); // Disabled = 0, Enabled = 1
 		return true;
 	}
 	
@@ -49,13 +48,23 @@ public class RequestOneDayRewardReceive implements IClientIncomingPacket
 			return;
 		}
 		
-		final Collection<OneDayRewardDataHolder> reward = OneDayRewardData.getInstance().getOneDayRewardData(_id);
-		if (reward.isEmpty())
+		switch (_tab)
 		{
-			return;
+			// case 1:
+			// {
+			// 	player.sendPacket(new ExTodoListInzone());
+			// 	break;
+			// }
+			// case 2:
+			// {
+			// 	player.sendPacket(new ExTodoListInzone());
+			// 	break;
+			// }
+			case 9:
+			{
+				player.sendPacket(new ExOneDayReceiveRewardList(player));
+				break;
+			}
 		}
-		
-		reward.stream().filter(o -> o.isDisplayable(player)).forEach(r -> r.requestReward(player));
-		player.sendPacket(new ExOneDayReceiveRewardList(player));
 	}
 }

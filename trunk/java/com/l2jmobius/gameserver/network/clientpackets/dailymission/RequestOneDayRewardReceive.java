@@ -14,28 +14,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.clientpackets.onedayreward;
+package com.l2jmobius.gameserver.network.clientpackets.dailymission;
+
+import java.util.Collection;
 
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.data.xml.impl.OneDayRewardData;
+import com.l2jmobius.gameserver.model.OneDayRewardDataHolder;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import com.l2jmobius.gameserver.network.serverpackets.onedayreward.ExOneDayReceiveRewardList;
+import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 
 /**
- * @author UnAfraid
+ * @author Sdw
  */
-public class RequestTodoList implements IClientIncomingPacket
+public class RequestOneDayRewardReceive implements IClientIncomingPacket
 {
-	private int _tab;
-	@SuppressWarnings("unused")
-	private int _allLevels;
+	private int _reward;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_tab = packet.readC();
-		_allLevels = packet.readC();
+		_reward = packet.readC();
 		return true;
 	}
 	
@@ -48,13 +49,13 @@ public class RequestTodoList implements IClientIncomingPacket
 			return;
 		}
 		
-		switch (_tab)
+		final Collection<OneDayRewardDataHolder> reward = OneDayRewardData.getInstance().getOneDayRewardData(_reward);
+		if (reward.isEmpty())
 		{
-			case 9: // Daily Rewards
-			{
-				player.sendPacket(new ExOneDayReceiveRewardList(player));
-				break;
-			}
+			return;
 		}
+		
+		reward.stream().filter(o -> o.isDisplayable(player)).forEach(r -> r.requestReward(player));
+		player.sendPacket(new ExOneDayReceiveRewardList(player));
 	}
 }

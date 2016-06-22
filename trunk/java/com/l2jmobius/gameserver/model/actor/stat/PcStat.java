@@ -41,8 +41,8 @@ import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
+import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 import com.l2jmobius.gameserver.network.serverpackets.friend.L2FriendStatus;
-import com.l2jmobius.gameserver.network.serverpackets.onedayreward.ExOneDayReceiveRewardList;
 import com.l2jmobius.gameserver.util.Util;
 
 public class PcStat extends PlayableStat
