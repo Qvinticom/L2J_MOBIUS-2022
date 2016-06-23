@@ -856,6 +856,7 @@
 		<!-- Activates 5 jewel slots when equipped. Inventory Slot + 12. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -867,6 +868,8 @@
 		<set name="weight" val="10" />
 		<stats>
 			<stat type="mDef">101.0</stat>
+			<stat type="broochJewels">5</stat>
+			<stat type="inventoryLimit">12</stat>
 		</stats>
 	</item>
 	<item id="46669" name="Radiant Brooch Fragment" additionalName="" type="EtcItem">
