@@ -113,7 +113,7 @@ public class AppearanceItemData implements IGameXmlReader
 								}
 								case "bodyPart":
 								{
-									final int part = ItemTable._slots.get(c.getTextContent());
+									final int part = ItemTable.SLOTS.get(c.getTextContent());
 									stone.addBodyPart(part);
 									break;
 								}

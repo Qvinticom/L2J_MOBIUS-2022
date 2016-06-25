@@ -21,6 +21,7 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.UserInfoType;
+import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -325,7 +326,10 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeC(_activeChar.getInventory().getTalismanSlots()); // Confirmed
 			packet.writeC(_activeChar.getInventory().getBroochJewelSlots()); // Confirmed
 			packet.writeC(_activeChar.getTeam().getId()); // Confirmed
-			packet.writeD(0x00); // (1 = Red, 2 = White, 3 = White Pink, there is higher values (23, 50, 100 produces different aura) dotted / straight circle ring on the floor
+			packet.writeC(0x00); // (1 = Red, 2 = White, 3 = White Pink) dotted ring on the floor
+			packet.writeC(0x00);
+			packet.writeC(0x00);
+			packet.writeC(0x00);
 		}
 		
 		if (containsMask(UserInfoType.MOVEMENTS))
@@ -345,9 +349,10 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		if (containsMask(UserInfoType.INVENTORY_LIMIT))
 		{
 			packet.writeH(9);
-			packet.writeD(0x00);
+			packet.writeH(0x00);
+			packet.writeH(0x00);
 			packet.writeH(_activeChar.getInventoryLimit());
-			packet.writeC(0x00); // if greater than 1 show the attack cursor when interacting, CoC or Cursed Weapon level ?
+			packet.writeC(_activeChar.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_activeChar.getCursedWeaponEquippedId()) : 0);
 		}
 		
 		if (containsMask(UserInfoType.UNK_3))

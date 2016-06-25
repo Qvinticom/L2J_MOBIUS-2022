@@ -199,7 +199,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		_duration = set.getInt("duration", -1);
 		_time = set.getInt("time", -1);
 		_autoDestroyTime = set.getInt("auto_destroy_time", -1) * 1000;
-		_bodyPart = ItemTable._slots.get(set.getString("bodypart", "none"));
+		_bodyPart = ItemTable.SLOTS.get(set.getString("bodypart", "none"));
 		_referencePrice = set.getInt("price", 0);
 		_crystalType = set.getEnum("crystal_type", CrystalType.class, CrystalType.NONE);
 		_crystalCount = set.getInt("crystal_count", 0);

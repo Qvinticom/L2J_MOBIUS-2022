@@ -46,7 +46,7 @@ public final class Disarmor extends AbstractEffect
 		_unequippedItems = new ConcurrentHashMap<>();
 		
 		final String slot = params.getString("slot", "chest");
-		_slot = ItemTable._slots.getOrDefault(slot, L2Item.SLOT_NONE);
+		_slot = ItemTable.SLOTS.getOrDefault(slot, L2Item.SLOT_NONE);
 		if (_slot == L2Item.SLOT_NONE)
 		{
 			_log.severe("Unknown bodypart slot for effect: " + slot);

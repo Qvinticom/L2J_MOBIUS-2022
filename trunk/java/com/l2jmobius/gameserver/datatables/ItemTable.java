@@ -24,7 +24,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -58,53 +57,52 @@ public class ItemTable
 	private static Logger LOGGER = Logger.getLogger(ItemTable.class.getName());
 	private static Logger LOGGER_ITEMS = Logger.getLogger("item");
 	
-	public static final Map<String, Integer> _slots = new HashMap<>();
+	public static final Map<String, Integer> SLOTS = new HashMap<>();
 	
 	private L2Item[] _allTemplates;
-	private final Map<Integer, L2EtcItem> _etcItems;
-	private final Map<Integer, L2Armor> _armors;
-	private final Map<Integer, L2Weapon> _weapons;
-	
+	private final Map<Integer, L2EtcItem> _etcItems = new HashMap<>();
+	private final Map<Integer, L2Armor> _armors = new HashMap<>();
+	private final Map<Integer, L2Weapon> _weapons = new HashMap<>();
 	static
 	{
-		_slots.put("shirt", L2Item.SLOT_UNDERWEAR);
-		_slots.put("lbracelet", L2Item.SLOT_L_BRACELET);
-		_slots.put("rbracelet", L2Item.SLOT_R_BRACELET);
-		_slots.put("talisman", L2Item.SLOT_DECO);
-		_slots.put("chest", L2Item.SLOT_CHEST);
-		_slots.put("fullarmor", L2Item.SLOT_FULL_ARMOR);
-		_slots.put("head", L2Item.SLOT_HEAD);
-		_slots.put("hair", L2Item.SLOT_HAIR);
-		_slots.put("hairall", L2Item.SLOT_HAIRALL);
-		_slots.put("underwear", L2Item.SLOT_UNDERWEAR);
-		_slots.put("back", L2Item.SLOT_BACK);
-		_slots.put("neck", L2Item.SLOT_NECK);
-		_slots.put("legs", L2Item.SLOT_LEGS);
-		_slots.put("feet", L2Item.SLOT_FEET);
-		_slots.put("gloves", L2Item.SLOT_GLOVES);
-		_slots.put("chest,legs", L2Item.SLOT_CHEST | L2Item.SLOT_LEGS);
-		_slots.put("belt", L2Item.SLOT_BELT);
-		_slots.put("rhand", L2Item.SLOT_R_HAND);
-		_slots.put("lhand", L2Item.SLOT_L_HAND);
-		_slots.put("lrhand", L2Item.SLOT_LR_HAND);
-		_slots.put("rear;lear", L2Item.SLOT_R_EAR | L2Item.SLOT_L_EAR);
-		_slots.put("rfinger;lfinger", L2Item.SLOT_R_FINGER | L2Item.SLOT_L_FINGER);
-		_slots.put("wolf", L2Item.SLOT_WOLF);
-		_slots.put("greatwolf", L2Item.SLOT_GREATWOLF);
-		_slots.put("hatchling", L2Item.SLOT_HATCHLING);
-		_slots.put("strider", L2Item.SLOT_STRIDER);
-		_slots.put("babypet", L2Item.SLOT_BABYPET);
-		_slots.put("brooch", L2Item.SLOT_BROOCH);
-		_slots.put("brooch_jewel", L2Item.SLOT_BROOCH_JEWEL);
-		_slots.put("none", L2Item.SLOT_NONE);
+		SLOTS.put("shirt", L2Item.SLOT_UNDERWEAR);
+		SLOTS.put("lbracelet", L2Item.SLOT_L_BRACELET);
+		SLOTS.put("rbracelet", L2Item.SLOT_R_BRACELET);
+		SLOTS.put("talisman", L2Item.SLOT_DECO);
+		SLOTS.put("chest", L2Item.SLOT_CHEST);
+		SLOTS.put("fullarmor", L2Item.SLOT_FULL_ARMOR);
+		SLOTS.put("head", L2Item.SLOT_HEAD);
+		SLOTS.put("hair", L2Item.SLOT_HAIR);
+		SLOTS.put("hairall", L2Item.SLOT_HAIRALL);
+		SLOTS.put("underwear", L2Item.SLOT_UNDERWEAR);
+		SLOTS.put("back", L2Item.SLOT_BACK);
+		SLOTS.put("neck", L2Item.SLOT_NECK);
+		SLOTS.put("legs", L2Item.SLOT_LEGS);
+		SLOTS.put("feet", L2Item.SLOT_FEET);
+		SLOTS.put("gloves", L2Item.SLOT_GLOVES);
+		SLOTS.put("chest,legs", L2Item.SLOT_CHEST | L2Item.SLOT_LEGS);
+		SLOTS.put("belt", L2Item.SLOT_BELT);
+		SLOTS.put("rhand", L2Item.SLOT_R_HAND);
+		SLOTS.put("lhand", L2Item.SLOT_L_HAND);
+		SLOTS.put("lrhand", L2Item.SLOT_LR_HAND);
+		SLOTS.put("rear;lear", L2Item.SLOT_R_EAR | L2Item.SLOT_L_EAR);
+		SLOTS.put("rfinger;lfinger", L2Item.SLOT_R_FINGER | L2Item.SLOT_L_FINGER);
+		SLOTS.put("wolf", L2Item.SLOT_WOLF);
+		SLOTS.put("greatwolf", L2Item.SLOT_GREATWOLF);
+		SLOTS.put("hatchling", L2Item.SLOT_HATCHLING);
+		SLOTS.put("strider", L2Item.SLOT_STRIDER);
+		SLOTS.put("babypet", L2Item.SLOT_BABYPET);
+		SLOTS.put("brooch", L2Item.SLOT_BROOCH);
+		SLOTS.put("brooch_jewel", L2Item.SLOT_BROOCH_JEWEL);
+		SLOTS.put("none", L2Item.SLOT_NONE);
 		
 		// retail compatibility
-		_slots.put("onepiece", L2Item.SLOT_FULL_ARMOR);
-		_slots.put("hair2", L2Item.SLOT_HAIR2);
-		_slots.put("dhair", L2Item.SLOT_HAIRALL);
-		_slots.put("alldress", L2Item.SLOT_ALLDRESS);
-		_slots.put("deco1", L2Item.SLOT_DECO);
-		_slots.put("waist", L2Item.SLOT_BELT);
+		SLOTS.put("onepiece", L2Item.SLOT_FULL_ARMOR);
+		SLOTS.put("hair2", L2Item.SLOT_HAIR2);
+		SLOTS.put("dhair", L2Item.SLOT_HAIRALL);
+		SLOTS.put("alldress", L2Item.SLOT_ALLDRESS);
+		SLOTS.put("deco1", L2Item.SLOT_DECO);
+		SLOTS.put("waist", L2Item.SLOT_BELT);
 	}
 	
 	/**
@@ -117,9 +115,6 @@ public class ItemTable
 	
 	protected ItemTable()
 	{
-		_etcItems = new ConcurrentHashMap<>();
-		_armors = new ConcurrentHashMap<>();
-		_weapons = new ConcurrentHashMap<>();
 		load();
 	}
 	

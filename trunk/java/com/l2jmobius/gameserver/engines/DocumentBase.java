@@ -1151,9 +1151,9 @@ public abstract class DocumentBase
 					{
 						final int old = mask;
 						final String item = st.nextToken().trim();
-						if (ItemTable._slots.containsKey(item))
+						if (ItemTable.SLOTS.containsKey(item))
 						{
-							mask |= ItemTable._slots.get(item);
+							mask |= ItemTable.SLOTS.get(item);
 						}
 						
 						if (old == mask)

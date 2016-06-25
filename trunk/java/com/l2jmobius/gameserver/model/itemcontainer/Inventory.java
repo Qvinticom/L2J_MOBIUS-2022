@@ -1727,14 +1727,11 @@ public abstract class Inventory extends ItemContainer
 		// find same (or incompatible) brooch jewel type
 		for (int i = PAPERDOLL_BROOCH_JEWEL1; i < (PAPERDOLL_BROOCH_JEWEL1 + getBroochJewelSlots()); i++)
 		{
-			if (_paperdoll[i] != null)
+			if ((_paperdoll[i] != null) && (getPaperdollItemId(i) == item.getId()))
 			{
-				if (getPaperdollItemId(i) == item.getId())
-				{
-					// overwtite
-					setPaperdollItem(i, item);
-					return;
-				}
+				// overwtite
+				setPaperdollItem(i, item);
+				return;
 			}
 		}
 		

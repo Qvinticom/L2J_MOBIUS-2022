@@ -118,7 +118,7 @@ public final class EnchantItemGroupsData implements IGameXmlReader
 										final NamedNodeMap attrs = z.getAttributes();
 										if (attrs.getNamedItem("slot") != null)
 										{
-											rateGroup.addSlot(ItemTable._slots.get(parseString(attrs, "slot")));
+											rateGroup.addSlot(ItemTable.SLOTS.get(parseString(attrs, "slot")));
 										}
 										if (attrs.getNamedItem("magicWeapon") != null)
 										{
