@@ -262,8 +262,10 @@ public final class UseItem implements IClientIncomingPacket
 								switch (wpn.getItemType())
 								{
 									case NONE:
+									{
 										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 										return;
+									}
 								}
 								break;
 							}
@@ -278,8 +280,10 @@ public final class UseItem implements IClientIncomingPacket
 									case RAPIER:
 									case CROSSBOW:
 									case ANCIENTSWORD:
+									{
 										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 										return;
+									}
 								}
 								break;
 							}
@@ -297,8 +301,10 @@ public final class UseItem implements IClientIncomingPacket
 									case ANCIENTSWORD:
 									case CROSSBOW:
 									case DUALDAGGER:
+									{
 										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 										return;
+									}
 								}
 								break;
 							}
@@ -314,7 +320,7 @@ public final class UseItem implements IClientIncomingPacket
 				case L2Item.SLOT_HEAD:
 				case L2Item.SLOT_LEGS:
 				{
-					if ((activeChar.getRace() == Race.KAMAEL) && ((item.getItem().getItemType() == ArmorType.HEAVY) || (item.getItem().getItemType() == ArmorType.MAGIC)))
+					if ((activeChar.getRace() == Race.ERTHEIA) && activeChar.isMageClass() && ((item.getItem().getItemType() == ArmorType.SHIELD) || (item.getItem().getItemType() == ArmorType.SIGIL)))
 					{
 						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 						return;
