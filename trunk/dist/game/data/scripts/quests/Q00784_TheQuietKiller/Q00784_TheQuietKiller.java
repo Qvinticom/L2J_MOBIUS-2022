@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
 /**
- * The Quiet Killer (00784)
+ * The Quiet Killer (784)
  * @URL https://l2wiki.com/The_Quiet_Killer
  * @author Gigi
  */

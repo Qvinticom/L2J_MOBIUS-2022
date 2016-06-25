@@ -157,6 +157,8 @@ import quests.Q00760_BlockTheExit.Q00760_BlockTheExit;
 import quests.Q00761_AssistingTheGoldenRamArmy.Q00761_AssistingTheGoldenRamArmy;
 import quests.Q00762_AnOminousRequest.Q00762_AnOminousRequest;
 import quests.Q00763_ADauntingTask.Q00763_ADauntingTask;
+import quests.Q00784_TheQuietKiller.Q00784_TheQuietKiller;
+import quests.Q00786_AwaitingTheVoiceOfTheGods.Q00786_AwaitingTheVoiceOfTheGods;
 import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
 import quests.Q00902_ReclaimOurEra.Q00902_ReclaimOurEra;
 import quests.Q00903_TheCallOfAntharas.Q00903_TheCallOfAntharas;
@@ -474,6 +476,8 @@ public class QuestMasterHandler
 		Q00761_AssistingTheGoldenRamArmy.class,
 		Q00762_AnOminousRequest.class,
 		Q00763_ADauntingTask.class,
+		Q00784_TheQuietKiller.class,
+		Q00786_AwaitingTheVoiceOfTheGods.class,
 		Q00901_HowLavasaurusesAreMade.class,
 		Q00902_ReclaimOurEra.class,
 		Q00903_TheCallOfAntharas.class,
