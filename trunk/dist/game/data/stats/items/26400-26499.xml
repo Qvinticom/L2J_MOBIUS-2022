@@ -763,10 +763,13 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="13659" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
+			<skill id="13924" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
+		</skills>
 		<stats>
 			<stat type="mDef">101</stat>
-			<stat type="broochJewels">5</stat>
-			<stat type="inventoryLimit">12</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="26475" name="Radiant Gemstone Fragment" additionalName="" type="EtcItem">

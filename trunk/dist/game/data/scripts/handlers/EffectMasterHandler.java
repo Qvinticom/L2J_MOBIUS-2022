@@ -161,6 +161,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("IgnoreDeath", IgnoreDeath::new);
 		EffectHandler.getInstance().registerHandler("ImmobilePetBuff", ImmobilePetBuff::new);
 		EffectHandler.getInstance().registerHandler("InstantKillResist", InstantKillResist::new);
+		EffectHandler.getInstance().registerHandler("JewelSlot", JewelSlot::new);
 		EffectHandler.getInstance().registerHandler("KarmaCount", KarmaCount::new);
 		EffectHandler.getInstance().registerHandler("KnockBack", KnockBack::new);
 		EffectHandler.getInstance().registerHandler("Lethal", Lethal::new);

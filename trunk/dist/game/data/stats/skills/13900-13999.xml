@@ -163,9 +163,15 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="13924" toLevel="1" name="La Vie En Rose's Radiant Brooch">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Expands inventory. -->
-		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
-		<operateType>P</operateType>
-	</skill>
+		<!-- Updated to IO -->
+ 		<!-- Expands inventory. -->
+ 		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
+ 		<operateType>P</operateType>
+		<effects>
+			<effect name="EnlargeSlot">
+				<amount>12</amount>
+				<type>INVENTORY_NORMAL</type>
+			</effect>
+		</effects>
+ 	</skill>
 </list>

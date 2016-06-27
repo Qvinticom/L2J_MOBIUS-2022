@@ -355,11 +355,16 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="13659" toLevel="1" name="La Vie En Rose's Radiant Brooch">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- 5 Jewels can be equipped. -->
-		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
-		<operateType>P</operateType>
-	</skill>
+		<!-- Updated to IO -->
+ 		<!-- 5 Jewels can be equipped. -->
+ 		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
+ 		<operateType>P</operateType>
+		<effects>
+			<effect name="JewelSlot">
+				<amount>5</amount>
+			</effect>
+		</effects>
+ 	</skill>
 	<skill id="13660" toLevel="1" name="Noble Top-grade Brooch">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- 6 Jewels can be equipped. -->
