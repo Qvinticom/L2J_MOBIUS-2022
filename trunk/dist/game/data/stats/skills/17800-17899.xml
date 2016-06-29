@@ -133,15 +133,36 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17822" toLevel="1" name="Aquamarine">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<target>SELF</target>
+		<effects>
+			<effect name="Mp">
+				<amount>136</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17823" toLevel="5" name="Aquamarine">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- 1% chance of recovering 136 MP. -->
+		<!-- Need activation/reuse info ... -->
+		<!-- 1%, 2%, 4%, 9%, 15% chance of recovering 136 MP. -->
 		<icon>icon.etc_bm_jewel_aquamarine_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
+				<skillId>17822</skillId>
+				<skillLevel>1</skillLevel>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<chance>
+					<value level="1">1</value>
+					<value level="1">2</value>
+					<value level="1">4</value>
+					<value level="1">9</value>
+					<value level="1">15</value>
+				</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17824" toLevel="1" name="La Vie En Rose's Jewelry Box">
 		<!-- AUTO GENERATED SKILL -->
@@ -149,10 +170,75 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17825" toLevel="5" name="Emerald">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CON + 1, MEN + 1 -->
+		<!-- CON + 1, MEN + 1, STR + 1, INT + 1 -->
+		<!-- CON + 1, MEN + 1, STR + 1, INT + 1, DEX + 1, WIT + 1 -->
+		<!-- CON + 2, MEN + 2, STR + 2, INT + 2, DEX + 2, WIT + 2 -->
+		<!-- CON + 3, MEN + 3, STR + 3, INT + 3, DEX + 3, WIT + 3 -->
 		<icon>icon.etc_bm_jewel_emerald_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">1</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">1</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">1</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">1</value>
+				</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17826" toLevel="1" name="10th Anniversary Time Capsule Box">
 		<!-- AUTO GENERATED SKILL -->

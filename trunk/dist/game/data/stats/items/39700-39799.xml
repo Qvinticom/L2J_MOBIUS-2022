@@ -89,10 +89,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="13659" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
+		</skills>
 		<stats>
 			<stat type="mDef">87</stat>
-			<stat type="broochJewels">5</stat>
-			<stat type="inventoryLimit">12</stat>
 		</stats>
 	</item>
 	<item id="39711" name="Shining Mysterious Fragment" type="EtcItem">
