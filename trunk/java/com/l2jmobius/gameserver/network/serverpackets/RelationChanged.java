@@ -84,7 +84,8 @@ public final class RelationChanged implements IClientOutgoingPacket
 	{
 		if (activeChar.isInvisible())
 		{
-			throw new IllegalArgumentException("Cannot add insivisble character to multi relation packet");
+			// throw new IllegalArgumentException("Cannot add invisible character to multi relation packet");
+			return;
 		}
 		final Relation r = new Relation();
 		r._objId = activeChar.getObjectId();
