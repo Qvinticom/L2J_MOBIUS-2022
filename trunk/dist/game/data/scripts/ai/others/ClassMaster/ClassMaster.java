@@ -678,11 +678,64 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		String html = null;
 		if ((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP)) && (player.getLevel() >= 40)) // In retail you can skip first occupation
 		{
-			html = getHtm(player.getHtmlPrefix(), onAdvEvent("secondclass", null, player));
+			String htmltext = "";
+			if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
+			{
+				htmltext = player.getLevel() < 40 ? "test_server_helper023.html" : getSecondOccupationChangeHtml(player);
+			}
+			else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
+			{
+				htmltext = "test_server_helper010.html";
+			}
+			else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
+			{
+				htmltext = "test_server_helper011.html";
+			}
+			else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
+			{
+				htmltext = "test_server_helper011a.html";
+			}
+			else
+			{
+				htmltext = "test_server_helper029.html";
+			}
+			html = getHtm(player.getHtmlPrefix(), htmltext);
 		}
 		else if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && (player.getLevel() >= 20))
 		{
-			html = getHtm(player.getHtmlPrefix(), onAdvEvent("firstclass", null, player));
+			String htmltext = "";
+			if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
+			{
+				if (player.getRace() == Race.ERTHEIA)
+				{
+					htmltext = "test_server_helper027a.html";
+				}
+				else if (player.getLevel() < 20)
+				{
+					htmltext = "test_server_helper027.html";
+				}
+				else
+				{
+					htmltext = getFirstOccupationChangeHtml(player);
+				}
+			}
+			else if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP))
+			{
+				htmltext = "test_server_helper028.html";
+			}
+			else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
+			{
+				htmltext = "test_server_helper010.html";
+			}
+			else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
+			{
+				htmltext = "test_server_helper011.html";
+			}
+			else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
+			{
+				htmltext = "test_server_helper011a.html";
+			}
+			html = getHtm(player.getHtmlPrefix(), htmltext);
 		}
 		else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && (player.getLevel() >= 76))
 		{
