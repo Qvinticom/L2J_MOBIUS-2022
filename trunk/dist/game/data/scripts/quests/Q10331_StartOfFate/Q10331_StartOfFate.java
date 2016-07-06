@@ -743,6 +743,11 @@ public final class Q10331_StartOfFate extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
+		
 		final L2PcInstance player = event.getActiveChar();
 		final QuestState qs = getQuestState(player, false);
 		final int oldLevel = event.getOldLevel();
@@ -758,6 +763,11 @@ public final class Q10331_StartOfFate extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
+		
 		final L2PcInstance player = event.getActiveChar();
 		final QuestState qs = getQuestState(player, false);
 		

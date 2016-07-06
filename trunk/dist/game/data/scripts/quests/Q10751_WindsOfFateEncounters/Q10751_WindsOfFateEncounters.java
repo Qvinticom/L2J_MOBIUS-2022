@@ -19,6 +19,7 @@ package quests.Q10751_WindsOfFateEncounters;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.HtmlActionScope;
 import com.l2jmobius.gameserver.enums.Race;
@@ -478,6 +479,11 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
+		
 		final L2PcInstance player = event.getActiveChar();
 		final QuestState st = getQuestState(player, false);
 		final int oldLevel = event.getOldLevel();
@@ -494,6 +500,11 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
+		
 		final L2PcInstance player = event.getActiveChar();
 		final QuestState st = getQuestState(player, false);
 		
