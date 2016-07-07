@@ -273,61 +273,12 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 			}
 			case "firstclass":
 			{
-				if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
-				{
-					if (player.getRace() == Race.ERTHEIA)
-					{
-						htmltext = "test_server_helper027a.html";
-					}
-					else if (player.getLevel() < 20)
-					{
-						htmltext = "test_server_helper027.html";
-					}
-					else
-					{
-						htmltext = getFirstOccupationChangeHtml(player);
-					}
-				}
-				else if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP))
-				{
-					htmltext = "test_server_helper028.html";
-				}
-				else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
-				{
-					htmltext = "test_server_helper010.html";
-				}
-				else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
-				{
-					htmltext = "test_server_helper011.html";
-				}
-				else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
-				{
-					htmltext = "test_server_helper011a.html";
-				}
+				htmltext = getFirstOccupationChangeHtml(player);
 				break;
 			}
 			case "secondclass":
 			{
-				if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
-				{
-					htmltext = player.getLevel() < 40 ? "test_server_helper023.html" : getSecondOccupationChangeHtml(player);
-				}
-				else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
-				{
-					htmltext = "test_server_helper010.html";
-				}
-				else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
-				{
-					htmltext = "test_server_helper011.html";
-				}
-				else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
-				{
-					htmltext = "test_server_helper011a.html";
-				}
-				else
-				{
-					htmltext = "test_server_helper029.html";
-				}
+				htmltext = getSecondOccupationChangeHtml(player);
 				break;
 			}
 			case "thirdclass":
@@ -509,103 +460,282 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 	
 	private String getFirstOccupationChangeHtml(L2PcInstance player)
 	{
-		switch (player.getClassId())
+		String htmltext = null;
+		if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
 		{
-			case FIGHTER:
-				return "test_server_helper026a.html";
-			case MAGE:
-				return "test_server_helper026b.html";
-			case ELVEN_FIGHTER:
-				return "test_server_helper026c.html";
-			case ELVEN_MAGE:
-				return "test_server_helper026d.html";
-			case DARK_FIGHTER:
-				return "test_server_helper026e.html";
-			case DARK_MAGE:
-				return "test_server_helper026f.html";
-			case ORC_FIGHTER:
-				return "test_server_helper026g.html";
-			case ORC_MAGE:
-				return "test_server_helper026h.html";
-			case DWARVEN_FIGHTER:
-				return "test_server_helper026i.html";
-			case MALE_SOLDIER:
-				return "test_server_helper026j.html";
-			case FEMALE_SOLDIER:
-				return "test_server_helper026k.html";
-			default:
-				return null;
+			if (player.getRace() == Race.ERTHEIA)
+			{
+				htmltext = "test_server_helper027a.html";
+			}
+			else if (player.getLevel() < 20)
+			{
+				htmltext = "test_server_helper027.html";
+			}
+			else
+			{
+				switch (player.getClassId())
+				{
+					case FIGHTER:
+					{
+						htmltext = "test_server_helper026a.html";
+						break;
+					}
+					case MAGE:
+					{
+						htmltext = "test_server_helper026b.html";
+						break;
+					}
+					case ELVEN_FIGHTER:
+					{
+						htmltext = "test_server_helper026c.html";
+						break;
+					}
+					case ELVEN_MAGE:
+					{
+						htmltext = "test_server_helper026d.html";
+						break;
+					}
+					case DARK_FIGHTER:
+					{
+						htmltext = "test_server_helper026e.html";
+						break;
+					}
+					case DARK_MAGE:
+					{
+						htmltext = "test_server_helper026f.html";
+						break;
+					}
+					case ORC_FIGHTER:
+					{
+						htmltext = "test_server_helper026g.html";
+						break;
+					}
+					case ORC_MAGE:
+					{
+						htmltext = "test_server_helper026h.html";
+						break;
+					}
+					case DWARVEN_FIGHTER:
+					{
+						htmltext = "test_server_helper026i.html";
+						break;
+					}
+					case MALE_SOLDIER:
+					{
+						htmltext = "test_server_helper026j.html";
+						break;
+					}
+					case FEMALE_SOLDIER:
+					{
+						htmltext = "test_server_helper026k.html";
+						break;
+					}
+				}
+			}
 		}
+		else if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP))
+		{
+			htmltext = "test_server_helper028.html";
+		}
+		else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
+		{
+			htmltext = "test_server_helper010.html";
+		}
+		else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
+		{
+			htmltext = "test_server_helper011.html";
+		}
+		else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
+		{
+			htmltext = "test_server_helper011a.html";
+		}
+		return htmltext;
 	}
 	
 	private String getSecondOccupationChangeHtml(L2PcInstance player)
 	{
-		switch (player.getClassId())
+		String htmltext = null;
+		if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
 		{
-			case FIGHTER:
-				return "test_server_helper012.html";
-			case WARRIOR:
-				return "test_server_helper012a.html";
-			case KNIGHT:
-				return "test_server_helper012b.html";
-			case ROGUE:
-				return "test_server_helper012c.html";
-			case MAGE:
-				return "test_server_helper013.html";
-			case WIZARD:
-				return "test_server_helper013a.html";
-			case CLERIC:
-				return "test_server_helper013b.html";
-			case ELVEN_FIGHTER:
-				return "test_server_helper014.html";
-			case ELVEN_KNIGHT:
-				return "test_server_helper014a.html";
-			case ELVEN_SCOUT:
-				return "test_server_helper014b.html";
-			case ELVEN_MAGE:
-				return "test_server_helper015.html";
-			case ELVEN_WIZARD:
-				return "test_server_helper015a.html";
-			case ORACLE:
-				return "test_server_helper015b.html";
-			case DARK_FIGHTER:
-				return "test_server_helper016.html";
-			case PALUS_KNIGHT:
-				return "test_server_helper016a.html";
-			case ASSASSIN:
-				return "test_server_helper016b.html";
-			case DARK_MAGE:
-				return "test_server_helper017.html";
-			case DARK_WIZARD:
-				return "test_server_helper017a.html";
-			case SHILLIEN_ORACLE:
-				return "test_server_helper017b.html";
-			case ORC_FIGHTER:
-				return "test_server_helper018.html";
-			case ORC_RAIDER:
-				return "test_server_helper018a.html";
-			case ORC_MONK:
-				return "test_server_helper018b.html";
-			case ORC_MAGE:
-			case ORC_SHAMAN:
-				return "test_server_helper019.html";
-			case DWARVEN_FIGHTER:
-				return "test_server_helper020.html";
-			case ARTISAN:
-				return "test_server_helper020b.html";
-			case SCAVENGER:
-				return "test_server_helper020a.html";
-			case TROOPER:
-				return "test_server_helper020c.html";
-			case WARDER:
-				return "test_server_helper020d.html";
-			case ERTHEIA_FIGHTER:
-				return "test_server_helper020e.html";
-			case ERTHEIA_WIZARD:
-				return "test_server_helper020f.html";
-			default:
-				return null;
+			if (player.getLevel() < 40)
+			{
+				htmltext = "test_server_helper023.html";
+			}
+			else
+			{
+				switch (player.getClassId())
+				{
+					case FIGHTER:
+					{
+						htmltext = "test_server_helper012.html";
+						break;
+					}
+					case WARRIOR:
+					{
+						htmltext = "test_server_helper012a.html";
+						break;
+					}
+					case KNIGHT:
+					{
+						htmltext = "test_server_helper012b.html";
+						break;
+					}
+					case ROGUE:
+					{
+						htmltext = "test_server_helper012c.html";
+						break;
+					}
+					case MAGE:
+					{
+						htmltext = "test_server_helper013.html";
+						break;
+					}
+					case WIZARD:
+					{
+						htmltext = "test_server_helper013a.html";
+						break;
+					}
+					case CLERIC:
+					{
+						htmltext = "test_server_helper013b.html";
+						break;
+					}
+					case ELVEN_FIGHTER:
+					{
+						htmltext = "test_server_helper014.html";
+						break;
+					}
+					case ELVEN_KNIGHT:
+					{
+						htmltext = "test_server_helper014a.html";
+						break;
+					}
+					case ELVEN_SCOUT:
+					{
+						htmltext = "test_server_helper014b.html";
+						break;
+					}
+					case ELVEN_MAGE:
+					{
+						htmltext = "test_server_helper015.html";
+						break;
+					}
+					case ELVEN_WIZARD:
+					{
+						htmltext = "test_server_helper015a.html";
+						break;
+					}
+					case ORACLE:
+					{
+						htmltext = "test_server_helper015b.html";
+						break;
+					}
+					case DARK_FIGHTER:
+					{
+						htmltext = "test_server_helper016.html";
+						break;
+					}
+					case PALUS_KNIGHT:
+					{
+						htmltext = "test_server_helper016a.html";
+						break;
+					}
+					case ASSASSIN:
+					{
+						htmltext = "test_server_helper016b.html";
+						break;
+					}
+					case DARK_MAGE:
+					{
+						htmltext = "test_server_helper017.html";
+						break;
+					}
+					case DARK_WIZARD:
+					{
+						htmltext = "test_server_helper017a.html";
+						break;
+					}
+					case SHILLIEN_ORACLE:
+					{
+						htmltext = "test_server_helper017b.html";
+						break;
+					}
+					case ORC_FIGHTER:
+					{
+						htmltext = "test_server_helper018.html";
+						break;
+					}
+					case ORC_RAIDER:
+					{
+						htmltext = "test_server_helper018a.html";
+						break;
+					}
+					case ORC_MONK:
+					{
+						htmltext = "test_server_helper018b.html";
+						break;
+					}
+					case ORC_MAGE:
+					case ORC_SHAMAN:
+					{
+						htmltext = "test_server_helper019.html";
+						break;
+					}
+					case DWARVEN_FIGHTER:
+					{
+						htmltext = "test_server_helper020.html";
+						break;
+					}
+					case ARTISAN:
+					{
+						htmltext = "test_server_helper020b.html";
+						break;
+					}
+					case SCAVENGER:
+					{
+						htmltext = "test_server_helper020a.html";
+						break;
+					}
+					case TROOPER:
+					{
+						htmltext = "test_server_helper020c.html";
+						break;
+					}
+					case WARDER:
+					{
+						htmltext = "test_server_helper020d.html";
+						break;
+					}
+					case ERTHEIA_FIGHTER:
+					{
+						htmltext = "test_server_helper020e.html";
+						break;
+					}
+					case ERTHEIA_WIZARD:
+					{
+						htmltext = "test_server_helper020f.html";
+						break;
+					}
+				}
+			}
 		}
+		else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
+		{
+			htmltext = "test_server_helper010.html";
+		}
+		else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
+		{
+			htmltext = "test_server_helper011.html";
+		}
+		else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
+		{
+			htmltext = "test_server_helper011a.html";
+		}
+		else
+		{
+			htmltext = "test_server_helper029.html";
+		}
+		return htmltext;
 	}
 	
 	private boolean changeToNextClass(L2PcInstance player)
@@ -678,64 +808,11 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		String html = null;
 		if ((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP)) && (player.getLevel() >= 40)) // In retail you can skip first occupation
 		{
-			String htmltext = "";
-			if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
-			{
-				htmltext = player.getLevel() < 40 ? "test_server_helper023.html" : getSecondOccupationChangeHtml(player);
-			}
-			else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
-			{
-				htmltext = "test_server_helper010.html";
-			}
-			else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
-			{
-				htmltext = "test_server_helper011.html";
-			}
-			else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
-			{
-				htmltext = "test_server_helper011a.html";
-			}
-			else
-			{
-				htmltext = "test_server_helper029.html";
-			}
-			html = getHtm(player.getHtmlPrefix(), htmltext);
+			html = getHtm(player.getHtmlPrefix(), getSecondOccupationChangeHtml(player));
 		}
 		else if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && (player.getLevel() >= 20))
 		{
-			String htmltext = "";
-			if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
-			{
-				if (player.getRace() == Race.ERTHEIA)
-				{
-					htmltext = "test_server_helper027a.html";
-				}
-				else if (player.getLevel() < 20)
-				{
-					htmltext = "test_server_helper027.html";
-				}
-				else
-				{
-					htmltext = getFirstOccupationChangeHtml(player);
-				}
-			}
-			else if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP))
-			{
-				htmltext = "test_server_helper028.html";
-			}
-			else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
-			{
-				htmltext = "test_server_helper010.html";
-			}
-			else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
-			{
-				htmltext = "test_server_helper011.html";
-			}
-			else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
-			{
-				htmltext = "test_server_helper011a.html";
-			}
-			html = getHtm(player.getHtmlPrefix(), htmltext);
+			html = getHtm(player.getHtmlPrefix(), getFirstOccupationChangeHtml(player));
 		}
 		else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && (player.getLevel() >= 76))
 		{
