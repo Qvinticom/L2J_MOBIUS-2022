@@ -170,7 +170,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 			mask |= ItemListType.VISUAL_ID.getMask();
 		}
 		
-		if (!item.getSoulCrystalOptions().isEmpty() || !item.getSoulCrystalSpecialOptions().isEmpty())
+		if (((item.getSoulCrystalOptions() != null) && !item.getSoulCrystalOptions().isEmpty()) || ((item.getSoulCrystalSpecialOptions() != null) && !item.getSoulCrystalSpecialOptions().isEmpty()))
 		{
 			mask |= ItemListType.SOUL_CRYSTAL.getMask();
 		}
