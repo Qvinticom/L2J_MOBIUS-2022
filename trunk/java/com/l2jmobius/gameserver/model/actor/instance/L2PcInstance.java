@@ -13798,8 +13798,13 @@ public final class L2PcInstance extends L2Playable
 		}
 	}
 	
-	public void handleAutoShots()
+	public void handleAutoShots(boolean force)
 	{
+		if (getAutoSoulShot().isEmpty() && !force)
+		{
+			return;
+		}
+		
 		final L2ItemInstance weapon = getActiveWeaponInstance();
 		int soulShotId = 0;
 		int spiritShotId = 0;
@@ -13853,10 +13858,40 @@ public final class L2PcInstance extends L2Playable
 			}
 		}
 		
-		sendPacket(new ExAutoSoulShot(soulShotId, true, 1));
-		sendPacket(new ExAutoSoulShot(spiritShotId, true, 2));
-		sendPacket(new ExAutoSoulShot(summonSoulShotId, true, 3));
-		sendPacket(new ExAutoSoulShot(summonSpiritShotId, true, 4));
+		for (int shotId : getAutoSoulShot())
+		{
+			if ((shotId != soulShotId) && (shotId != spiritShotId) && (shotId != summonSoulShotId) && (shotId != summonSpiritShotId))
+			{
+				removeAutoSoulShot(shotId);
+			}
+		}
+		
+		if (soulShotId != 0)
+		{
+			addAutoSoulShot(soulShotId);
+		}
+		if (spiritShotId != 0)
+		{
+			addAutoSoulShot(spiritShotId);
+		}
+		if (summonSoulShotId != 0)
+		{
+			addAutoSoulShot(summonSoulShotId);
+		}
+		if (summonSpiritShotId != 0)
+		{
+			addAutoSoulShot(summonSpiritShotId);
+		}
+		
+		sendPacket(new ExAutoSoulShot(soulShotId, true, 0));
+		sendPacket(new ExAutoSoulShot(spiritShotId, true, 1));
+		sendPacket(new ExAutoSoulShot(summonSoulShotId, true, 2));
+		sendPacket(new ExAutoSoulShot(summonSpiritShotId, true, 3));
+		
+		if (!getAutoSoulShot().isEmpty())
+		{
+			rechargeShots(true, true, true);
+		}
 	}
 	
 	public GroupType getGroupType()

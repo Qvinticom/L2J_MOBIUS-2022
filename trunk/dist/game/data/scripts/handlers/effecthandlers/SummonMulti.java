@@ -104,6 +104,6 @@ public final class SummonMulti extends AbstractEffect
 		summon.setRunning();
 		summon.spawnMe();
 		
-		player.handleAutoShots();
+		player.handleAutoShots(false);
 	}
 }

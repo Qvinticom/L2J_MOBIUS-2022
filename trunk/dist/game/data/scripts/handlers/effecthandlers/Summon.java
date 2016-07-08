@@ -113,6 +113,6 @@ public final class Summon extends AbstractEffect
 		summon.setRunning();
 		summon.spawnMe();
 		
-		player.handleAutoShots();
+		player.handleAutoShots(false);
 	}
 }

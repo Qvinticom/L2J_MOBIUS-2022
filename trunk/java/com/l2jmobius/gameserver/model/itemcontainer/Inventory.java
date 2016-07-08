@@ -374,7 +374,7 @@ public abstract class Inventory extends ItemContainer
 				
 				if (item.isWeapon())
 				{
-					player.handleAutoShots();
+					player.handleAutoShots(false);
 				}
 			}
 			
@@ -470,7 +470,7 @@ public abstract class Inventory extends ItemContainer
 			
 			if (item.isWeapon())
 			{
-				player.handleAutoShots();
+				player.handleAutoShots(Config.ENABLE_AUTO_SHOTS);
 			}
 		}
 	}

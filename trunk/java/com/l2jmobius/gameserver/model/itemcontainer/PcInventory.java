@@ -460,7 +460,7 @@ public class PcInventory extends Inventory
 				
 				if (item.isEtcItem() && (item.getItemType() == EtcItemType.SOULSHOT))
 				{
-					actor.handleAutoShots();
+					actor.handleAutoShots(false);
 				}
 				
 				// Notify to scripts
@@ -516,7 +516,7 @@ public class PcInventory extends Inventory
 			
 			if (item.isEtcItem() && (item.getItemType() == EtcItemType.SOULSHOT))
 			{
-				actor.handleAutoShots();
+				actor.handleAutoShots(false);
 			}
 			
 			// Notify to scripts

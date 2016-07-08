@@ -63,6 +63,7 @@ import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.Die;
 import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
+import com.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 import com.l2jmobius.gameserver.network.serverpackets.ExBeautyItemList;
 import com.l2jmobius.gameserver.network.serverpackets.ExCastleState;
@@ -616,7 +617,18 @@ public class EnterWorld implements IClientIncomingPacket
 		activeChar.sendPacket(new ExWorldChatCnt(activeChar));
 		activeChar.sendPacket(new ExOneDayReceiveRewardList(activeChar));
 		activeChar.sendPacket(ExConnectedTimeAndGettableReward.STATIC_PACKET);
-		activeChar.handleAutoShots();
+		
+		if (Config.ENABLE_AUTO_SHOTS)
+		{
+			activeChar.handleAutoShots(true);
+		}
+		else
+		{
+			activeChar.sendPacket(new ExAutoSoulShot(0, false, 0));
+			activeChar.sendPacket(new ExAutoSoulShot(0, false, 1));
+			activeChar.sendPacket(new ExAutoSoulShot(0, false, 2));
+			activeChar.sendPacket(new ExAutoSoulShot(0, false, 3));
+		}
 	}
 	
 	/**

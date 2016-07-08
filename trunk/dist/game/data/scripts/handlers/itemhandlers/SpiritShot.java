@@ -42,7 +42,7 @@ public class SpiritShot implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = (L2PcInstance) playable;
+		final L2PcInstance activeChar = playable.getActingPlayer();
 		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 		final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
 		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
@@ -54,7 +54,7 @@ public class SpiritShot implements IItemHandler
 		
 		final int itemId = item.getId();
 		
-		// Check if Spirit shot can be used
+		// Check if SpiritShot can be used
 		if ((weaponInst == null) || (weaponItem.getSpiritShotCount() == 0))
 		{
 			if (!activeChar.getAutoSoulShot().contains(itemId))
@@ -64,12 +64,13 @@ public class SpiritShot implements IItemHandler
 			return false;
 		}
 		
-		// Check if Spirit shot is already active
+		// Check if SpiritShot is already active
 		if (activeChar.isChargedShot(ShotType.SPIRITSHOTS))
 		{
 			return false;
 		}
 		
+		// Check for correct grade
 		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.SPIRITSHOT) && (weaponInst.getItem().getCrystalTypePlus() == item.getItem().getCrystalTypePlus());
 		
 		if (!gradeCheck)
@@ -82,7 +83,7 @@ public class SpiritShot implements IItemHandler
 			return false;
 		}
 		
-		// Consume Spirit shot if player has enough of them
+		// Consume SpiritShot if player has enough of them
 		if (!activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), weaponItem.getSpiritShotCount(), null, false))
 		{
 			if (!activeChar.disableAutoShot(itemId))
@@ -96,7 +97,10 @@ public class SpiritShot implements IItemHandler
 		activeChar.setChargedShot(ShotType.SPIRITSHOTS, true);
 		
 		// Send message to client
-		activeChar.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_HAS_BEEN_ENABLED);
+		if (!activeChar.getAutoSoulShot().contains(item.getId()))
+		{
+			activeChar.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_HAS_BEEN_ENABLED);
+		}
 		skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, holder.getSkillId(), holder.getSkillLvl(), 0, 0), 600));
 		return true;
 	}

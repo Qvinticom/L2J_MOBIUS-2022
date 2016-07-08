@@ -42,21 +42,20 @@ public class BlessedSpiritShot implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = (L2PcInstance) playable;
+		final L2PcInstance activeChar = playable.getActingPlayer();
 		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 		final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
 		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
-		
-		final int itemId = item.getId();
-		
 		if (skills == null)
 		{
 			_log.warning(getClass().getSimpleName() + ": is missing skills!");
 			return false;
 		}
 		
+		final int itemId = item.getId();
+		
 		// Check if Blessed SpiritShot can be used
-		if ((weaponInst == null) || (weaponItem == null) || (weaponItem.getSpiritShotCount() == 0))
+		if ((weaponInst == null) || (weaponItem.getSpiritShotCount() == 0))
 		{
 			if (!activeChar.getAutoSoulShot().contains(itemId))
 			{
@@ -94,10 +93,14 @@ public class BlessedSpiritShot implements IItemHandler
 			return false;
 		}
 		
-		// Send message to client
-		activeChar.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_HAS_BEEN_ENABLED);
-		activeChar.setChargedShot(ShotType.BLESSED_SPIRITSHOTS, true);
+		// Charge Spirit shot
+		activeChar.setChargedShot(ShotType.SPIRITSHOTS, true);
 		
+		// Send message to client
+		if (!activeChar.getAutoSoulShot().contains(item.getId()))
+		{
+			activeChar.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_HAS_BEEN_ENABLED);
+		}
 		skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, holder.getSkillId(), holder.getSkillLvl(), 0, 0), 600));
 		return true;
 	}

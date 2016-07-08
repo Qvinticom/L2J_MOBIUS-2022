@@ -184,9 +184,13 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 			case SPIRITSHOT:
 			case SOULSHOT:
 			case FISHINGSHOT:
+			{
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -196,9 +200,13 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 		{
 			case SUMMON_SPIRITSHOT:
 			case SUMMON_SOULSHOT:
+			{
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 }
