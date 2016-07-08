@@ -223,55 +223,185 @@
 		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="18017" toLevel="1" name="Maphr's Pouch">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Use to obtain 400,000 XP. Can combine 2 Lv. 1 pouches. Below Lv. 85 only. -->
-		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>39629</itemConsumeId> <!-- Fortune Pocket - Stage 1 -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveXp">
+				<xp>400000</xp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18018" toLevel="1" name="Maphr's Pouch">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Use to obtain 1,600,000 XP. Can combine 2 Lv. 2 pouches. Below Lv. 85 only. -->
-		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>39630</itemConsumeId> <!-- Fortune Pocket - Stage 2 -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveXp">
+				<xp>1600000</xp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18019" toLevel="1" name="Maphr's Pouch">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Use to obtain 6,400,000 XP. Below Lv. 85 only. -->
-		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>39631</itemConsumeId> <!-- Fortune Pocket - Stage 3 -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>5000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveXp">
+				<xp>6400000</xp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18020" toLevel="2" name="Maphr's Pouch">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Random Prize. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="1">
+						<item id="39631" count="10" />
+					</item>
+					<item chance="4.5">
+						<item id="39386" count="1" />
+					</item>
+					<item chance="3.5">
+						<item id="39387" count="1" />
+					</item>
+					<item chance="0.5">
+						<item id="39388" count="1" />
+					</item>
+					<item chance="2">
+						<item id="39720" count="1" />
+					</item>
+					<item chance="30">
+						<item id="57" count="20000" />
+					</item>
+					<item chance="30">
+						<item id="57" count="200000" />
+					</item>
+					<item chance="30">
+						<item id="57" count="2000000" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18021" toLevel="1" name="Maphr's Pouch">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Use to obtain 80,000 XP. Can combine 2 Lv. 4 pouches. -->
-		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>39632</itemConsumeId> <!-- Fortune Pocket - Stage 4 -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<hitTime>200</hitTime>
 		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveXp">
+				<xp>80000</xp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18022" toLevel="1" name="Maphr's Pouch">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Use to obtain 256,000 SP. -->
-		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>39633</itemConsumeId> <!-- Fortune Pocket - Stage 5 -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<hitTime>200</hitTime>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveSp">
+				<sp>256000</sp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18023" toLevel="2" name="Maphr's Pouch">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Random Prize. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="4.5">
+						<item id="39633" count="10" />
+					</item>
+					<item chance="2">
+						<item id="39389" count="1" />
+					</item>
+					<item chance="0.5">
+						<item id="39390" count="1" />
+					</item>
+					<item chance="15.5">
+						<item id="39720" count="1" />
+					</item>
+					<item chance="3">
+						<item id="57" count="100000000" />
+					</item>
+					<item chance="3">
+						<item id="57" count="1000000000" />
+					</item>
+					<item chance="30">
+						<item id="57" count="100000" />
+					</item>
+					<item chance="30">
+						<item id="57" count="1000000" />
+					</item>
+					<item chance="30">
+						<item id="57" count="10000000" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18024" toLevel="24" name="Venir's Talisman">
 		<!-- Updated to Infinity Odyssey -->

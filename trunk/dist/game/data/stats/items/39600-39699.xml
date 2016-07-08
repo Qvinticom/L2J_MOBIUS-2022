@@ -646,6 +646,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<cond msgId="1902">
+			<player levelRange="1;84" />
+		</cond>
+		<skills>
+			<skill id="18017" level="1" /> <!-- Maphr's Pouch -->
+		</skills>
 	</item>
 	<item id="39630" name="Fortune Pocket - Stage 2" type="EtcItem">
 		<!-- Use to obtain 1600000 XP. Go to Pelu the Grocer in Faeron Village to combine to 2 Stage 2 Pockets. Under Lv. 85 only. -->
@@ -655,6 +662,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<cond msgId="1902">
+			<player levelRange="1;84" />
+		</cond>
+		<skills>
+			<skill id="18018" level="1" /> <!-- Maphr's Pouch -->
+		</skills>
 	</item>
 	<item id="39631" name="Fortune Pocket - Stage 3" type="EtcItem">
 		<!-- Use to obtain 6400000 XP, plus a little something else. Go to Pelu the Grocer in Faeron Village to combine to 2 Stage 3 Pockets. Under Lv. 85 only. -->
@@ -664,6 +678,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<cond msgId="1902">
+			<player levelRange="1;84" />
+		</cond>
+		<skills>
+			<skill id="18019" level="1" /> <!-- Maphr's Pouch -->
+			<skill id="18020" level="1" /> <!-- Maphr's Pouch -->
+		</skills>
 	</item>
 	<item id="39632" name="Fortune Pocket - Stage 4" type="EtcItem">
 		<!-- Use to obtain 80000 SP. Go to Pelu the Grocer in Faeron Village to combine to 2 Stage 4 Pockets. Lv. 85 or above. -->
@@ -673,6 +695,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<cond msgId="1902">
+			<player levelRange="85;107" />
+		</cond>
+		<skills>
+			<skill id="18021" level="1" /> <!-- Maphr's Pouch -->
+		</skills>
 	</item>
 	<item id="39633" name="Fortune Pocket - Stage 5" type="EtcItem">
 		<!-- Use to obtain 256000 SP, plus a little something else. Lv. 85 or above. -->
@@ -681,6 +710,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<cond msgId="1902">
+			<player levelRange="85;107" />
+		</cond>
+		<skills>
+			<skill id="18022" level="1" /> <!-- Maphr's Pouch -->
+			<skill id="18023" level="1" /> <!-- Maphr's Pouch -->
+		</skills>
 	</item>
 	<item id="39634" name="Venir's Talisman" additionalName="Stage 1" type="Armor">
 		<!-- MEN + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->

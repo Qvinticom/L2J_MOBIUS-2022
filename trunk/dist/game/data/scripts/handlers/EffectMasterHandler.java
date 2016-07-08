@@ -140,6 +140,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("GetMomentum", GetMomentum::new);
 		EffectHandler.getInstance().registerHandler("GiveRecommendation", GiveRecommendation::new);
 		EffectHandler.getInstance().registerHandler("GiveSp", GiveSp::new);
+		EffectHandler.getInstance().registerHandler("GiveXp", GiveXp::new);
 		EffectHandler.getInstance().registerHandler("Grow", Grow::new);
 		EffectHandler.getInstance().registerHandler("HairAccessorySet", HairAccessorySet::new);
 		EffectHandler.getInstance().registerHandler("Harvesting", Harvesting::new);
