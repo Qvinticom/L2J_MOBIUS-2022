@@ -13858,13 +13858,7 @@ public final class L2PcInstance extends L2Playable
 			}
 		}
 		
-		for (int shotId : getAutoSoulShot())
-		{
-			if ((shotId != soulShotId) && (shotId != spiritShotId) && (shotId != summonSoulShotId) && (shotId != summonSpiritShotId))
-			{
-				removeAutoSoulShot(shotId);
-			}
-		}
+		_activeSoulShots.clear();
 		
 		if (soulShotId != 0)
 		{
