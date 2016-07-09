@@ -13882,10 +13882,7 @@ public final class L2PcInstance extends L2Playable
 		sendPacket(new ExAutoSoulShot(summonSoulShotId, true, 2));
 		sendPacket(new ExAutoSoulShot(summonSpiritShotId, true, 3));
 		
-		if (!getAutoSoulShot().isEmpty())
-		{
-			rechargeShots(true, true, true);
-		}
+		rechargeShots(true, true, true);
 	}
 	
 	public GroupType getGroupType()
