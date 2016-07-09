@@ -212,7 +212,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="1296000" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="37920" name="Chrono Cithara Appearance Stone: One-handed Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Chrono Cithara. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
@@ -223,7 +223,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="1296000" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="37921" name="Chrono Unitus Appearance Stone: Fist Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Chrono Unitus. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
@@ -234,7 +234,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="1296000" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="37922" name="Chrono Campana Appearance Stone: Spear" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Chrono Campana. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
@@ -245,7 +245,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="1296000" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="37923" name="Chrono Darbuka Appearance Stone: Two-handed Blunt Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Chrono Darbuka. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
@@ -256,7 +256,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="1296000" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="37924" name="Chrono Maracas Appearance Stone: Dualsword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Chrono Maracas. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
@@ -267,7 +267,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="1296000" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="37925" name="Pumpkin Dagger Appearance Stone: Dagger" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dagger into that of a Pumpkin Dagger. 15-day. -->
@@ -278,7 +278,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="1296000" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="37926" name="Pumpkin Dual Dagger Appearance Stone: Dual Dagger" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger into that of a Pumpkin Dual Dagger. 15-day. -->
@@ -289,7 +289,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="1296000" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="37927" name="Scarecrow Sword Appearance Stone: One-handed Magic Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic sword into that of a Scarecrow Sword. 15-day. -->
@@ -300,7 +300,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="1296000" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="37928" name="Player Commendation - Art of Seduction" type="EtcItem">
 		<!-- For 30 min., Max HP/MP/CP + 30%, P. Def./ M. Def. +30%, P. Atk. + 10%, M. Atk.+ 20%. Cooldown is 5min. Double-click to use. Effect disappears if you receive the Art of Seduction buff. Cannot be used in the Olympiad. Can be used in the Ceremony of Chaos. -->
@@ -331,6 +331,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="10080" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -356,6 +357,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -381,6 +383,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="10080" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -407,6 +410,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="10080" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -433,6 +437,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -459,6 +464,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -485,6 +491,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="10080" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -511,6 +518,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -537,6 +545,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -563,6 +572,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -588,6 +598,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -614,6 +625,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="10080" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -640,6 +652,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -666,6 +679,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -688,6 +702,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="37944" name="Emperor's Cookie" type="EtcItem">
 		<!-- For 1 hr., Prevailing/ Combat/ Refreshing Sonata buffs are applied. Cooldown is 60min. Double-click to use. Buff remains even after death. -->
@@ -707,6 +722,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="time" val="21600" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -723,6 +739,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="time" val="21600" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -740,6 +757,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="time" val="21600" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -756,6 +774,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lrhand" />
+		<set name="time" val="21600" />
 		<set name="default_action" val="EQUIP" />
 		<stats>
 			<stat type="pAtk">1</stat>
@@ -774,6 +793,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="time" val="21600" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>

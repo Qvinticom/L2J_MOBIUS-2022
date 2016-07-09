@@ -229,6 +229,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="9546" min="100" max="100" chance="100" /> <!-- Fire Stone -->
 			<item id="9547" min="100" max="100" chance="100" /> <!-- Water Stone -->
@@ -252,6 +253,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="9552" min="100" max="100" chance="100" /> <!-- Fire Crystal -->
 			<item id="9553" min="100" max="100" chance="100" /> <!-- Water Crystal -->
@@ -878,7 +880,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30442" name="Bound Hoplon" type="Weapon">
+	<item id="30442" name="Bound Hoplon" type="Armor">
 		<!-- Bound Hoplon. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.shield_hoplon_i00" />
 		<set name="default_action" val="EQUIP" />

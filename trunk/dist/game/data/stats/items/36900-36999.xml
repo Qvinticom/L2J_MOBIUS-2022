@@ -520,6 +520,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="icon" val="icon.etc_water_of_silen_i00" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="36950" name="Toma's Living Guide" type="EtcItem">
 		<!-- Lineage II Living Guide written by Master Toma with great efforts. -->
@@ -1016,6 +1017,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="36996" name="9th Anniversary Gift Box" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Gift Box that contains 9th Anniversary Rocket Gun Hat: Chain Fireworks and 9th Anniversary Cube (20-day) (Event). -->
@@ -1030,6 +1032,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="time" val="28800" />
 	</item>
 	<item id="36997" name="9th Anniversary Gift Box" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Gift Box that contains 9th Anniversary Rocket Gun Hat: Chain Fireworks and 9th Anniversary Cube (10-day) (Event). -->
@@ -1044,6 +1047,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="time" val="14400" />
 	</item>
 	<item id="36998" name="9th Anniversary Gift Box" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Gift Box that contains 9th Anniversary Rocket Gun Hat: Chain Fireworks and 9th Anniversary Cube (5-day) (Event). -->
@@ -1058,6 +1062,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="time" val="7200" />
 	</item>
 	<item id="36999" name="9th Anniversary Cube (30-day) (Event)" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/Hellfire/Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
@@ -1072,5 +1077,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="icon" val="icon.special_cube_i00" />
+		<set name="time" val="43200" />
 	</item>
 </list>

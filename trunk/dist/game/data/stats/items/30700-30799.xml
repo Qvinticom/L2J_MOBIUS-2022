@@ -383,7 +383,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30712" name="Bound Chain Shield" type="Weapon">
+	<item id="30712" name="Bound Chain Shield" type="Armor">
 		<!-- Bound Chain Shield. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.shield_chain_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -529,7 +529,7 @@
 			<stat type="pDef">33</stat>
 		</stats>
 	</item>
-	<item id="30718" name="Bound Bronze Shield" type="Weapon">
+	<item id="30718" name="Bound Bronze Shield" type="Armor">
 		<!-- Bound bronze Shield. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.shield_bronze_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1803,7 +1803,7 @@
 			<stat type="pDef">83</stat>
 		</stats>
 	</item>
-	<item id="30759" name="Bound Imperial Crusader Shield" type="Weapon">
+	<item id="30759" name="Bound Imperial Crusader Shield" type="Armor">
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />

@@ -1545,7 +1545,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38096" name="Emperor's Rune" additionalName="2-hour" type="EtcItem">
 		<!-- While possessed, character's XP/SP gained + 30%. 2-hour. Only one effect applies if used with Emperor's Rune (8-hour). -->
@@ -1559,7 +1559,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="7200" />
+		<set name="time" val="120" />
 	</item>
 	<item id="38097" name="Emperor's Rune Pack (2-hour)" type="EtcItem">
 		<!-- Wrapped Pack containing Emperor's Rune (2-hour). -->

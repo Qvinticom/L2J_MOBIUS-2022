@@ -378,7 +378,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="45434" name="NC Dinos Hat Appearance Stone Pack (30-day)" type="EtcItem">
 		<!-- Wrapped Pack containing an NC Dinos Hat Appearance Stone (30-day). -->
@@ -407,7 +407,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="45436" name="NC Dinos Uniform Appearance Stone Pack (30-day)" type="EtcItem">
 		<!-- Wrapped Pack containing an NC Dinos Uniform Appearance Stone (30-day). -->
@@ -438,7 +438,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">48</stat>
 		</stats>
@@ -483,7 +483,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="86400" />
+		<set name="time" val="1440" />
 	</item>
 	<item id="45441" name="Agathion - Alien Celebrity Pack" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing Kisung. -->
@@ -539,7 +539,7 @@
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="1800" />
+		<set name="time" val="30" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
@@ -556,14 +556,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1800" />
+		<set name="time" val="30" />
 	</item>
 	<item id="45447" name="Sealed Visitation Scroll: Hellbound" additionalName="90-min" type="EtcItem">
 		<!-- A protection scroll made by the Black Marketeer of Mammon using counterfeit Atelia. When used, a character Lv. 98 or below can stay in Hellbound. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="5400" />
+		<set name="time" val="90" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
@@ -580,7 +580,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="5400" />
+		<set name="time" val="90" />
 	</item>
 	<item id="45449" name="Magma Ore" type="EtcItem">
 		<!-- A stone that was formed with hardened lava. It can be obtained by killing monsters in the Blazing Swamp. Take it to Harp Zu Hestui to get a reward. -->
@@ -666,7 +666,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 	</item>
 	<item id="45456" name="Appearance Stone: Top Hat" additionalName="90-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Top Hat (90-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->
@@ -676,7 +676,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 	</item>
 	<item id="45457" name="Appearance Stone: Napoleon Hat" additionalName="90-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Napoleon Hat (90-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->
@@ -686,7 +686,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 	</item>
 	<item id="45458" name="Appearance Stone: Ruthless Tribe Mask" additionalName="90-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Ruthless Tribe Mask (90-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->
@@ -696,7 +696,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 	</item>
 	<item id="45459" name="Appearance Stone: Zorro Hat" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Zorro Hat (1-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->
@@ -706,7 +706,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
-		<set name="time" val="86400" />
+		<set name="time" val="1440" />
 	</item>
 	<item id="45460" name="Appearance Stone: Top Hat" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Top Hat (1-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->
@@ -716,7 +716,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
-		<set name="time" val="86400" />
+		<set name="time" val="1440" />
 	</item>
 	<item id="45461" name="Appearance Stone: Napoleon Hat" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Napoleon Hat (1-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->
@@ -726,7 +726,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
-		<set name="time" val="86400" />
+		<set name="time" val="1440" />
 	</item>
 	<item id="45462" name="Appearance Stone: Ruthless Tribe Mask" additionalName="1-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Ruthless Tribe Mask (1-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->
@@ -736,7 +736,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
-		<set name="time" val="86400" />
+		<set name="time" val="1440" />
 	</item>
 	<item id="45463" name="Entrance Pass: Nightmare Kamaloka" type="EtcItem">
 		<!-- Double-click to reset cooldown to Nightmare Kamaloka. Can only be used once a day outside of the instance zone. -->
@@ -1028,7 +1028,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="1000" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>

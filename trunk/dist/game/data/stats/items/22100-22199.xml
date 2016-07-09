@@ -1526,6 +1526,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22181" min="60" max="60" chance="100" /> <!-- Event - Cupid's Fatigue Relief Potion -->
 			<item id="22182" min="15" max="15" chance="100" /> <!-- Event - Cupid's Major Fatigue Relief Potion -->

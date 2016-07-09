@@ -51,6 +51,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21704" min="1" max="1" chance="100" /> <!-- Honey Rice Cakes -->
 			<item id="21582" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Power Shirt -->
@@ -68,6 +69,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21704" min="6" max="6" chance="100" /> <!-- Honey Rice Cakes -->
 			<item id="21582" min="6" max="6" chance="100" /> <!-- Blessed Scroll: Enchant Power Shirt -->
@@ -111,6 +113,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21704" min="3" max="3" chance="100" /> <!-- Honey Rice Cakes -->
 		</capsuled_items>
@@ -1665,6 +1668,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="time" val="129600" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21775" min="1" max="1" chance="100" /> <!-- Imperial Crusader Breastplate of Fortune - 90-day -->
 			<item id="21776" min="1" max="1" chance="100" /> <!-- Imperial Crusader Gaiters of Fortune - 90-day -->
@@ -1781,6 +1785,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="time" val="129600" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21782" min="1" max="1" chance="100" /> <!-- Draconic Leather Armor of Fortune - 90-day -->
 			<item id="21783" min="1" max="1" chance="100" /> <!-- Draconic Leather Gloves of Fortune - 90-day -->
@@ -1924,6 +1929,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="time" val="129600" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21787" min="1" max="1" chance="100" /> <!-- Major Arcana Robe of Fortune - 90-day -->
 			<item id="21788" min="1" max="1" chance="100" /> <!-- Major Arcana Gloves of Fortune - 90-day -->
@@ -2097,6 +2103,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="time" val="129600" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21793" min="1" max="1" chance="100" /> <!-- Dynasty Breastplate of Fortune - 90-day -->
 			<item id="21794" min="1" max="1" chance="100" /> <!-- Dynasty Gaiters of Fortune - 90-day -->

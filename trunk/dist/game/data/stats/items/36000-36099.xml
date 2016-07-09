@@ -63,6 +63,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
 			<item id="35999" min="10" max="10" chance="100" /> <!-- Heavenly P. Atk. Cookie -->
@@ -80,6 +81,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
 			<item id="36000" min="10" max="10" chance="100" /> <!-- Heavenly P. Def. Cookie -->
@@ -97,6 +99,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
 			<item id="36001" min="10" max="10" chance="100" /> <!-- Heavenly Magic Cookie -->
@@ -114,6 +117,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
 			<item id="36002" min="10" max="10" chance="100" /> <!-- Heavenly CP Cookie -->
@@ -130,6 +134,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="36008" min="1" max="1" chance="100" /> <!-- High-grade Lucky Enchant Stone: Weapon (R-grade) -->
 			<item id="36009" min="1" max="1" chance="100" /> <!-- High-grade Lucky Enchant Stone: Armor (R-grade) -->
@@ -259,6 +264,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
 			<item id="36010" min="10" max="10" chance="100" /> <!-- Heavenly P. Atk. Cookie - Event -->
@@ -276,6 +282,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
 			<item id="36011" min="10" max="10" chance="100" /> <!-- Heavenly P. Def. Cookie - Event -->
@@ -293,6 +300,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
 			<item id="36012" min="10" max="10" chance="100" /> <!-- Heavenly Magic Cookie - Event -->
@@ -310,6 +318,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
 			<item id="36013" min="10" max="10" chance="100" /> <!-- Heavenly CP Cookie - Event -->
@@ -327,6 +336,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="36019" min="1" max="1" chance="100" /> <!-- High-grade Lucky Enchant Stone: Weapon (R-grade) - Event -->
 			<item id="36020" min="1" max="1" chance="100" /> <!-- High-grade Lucky Enchant Stone: Armor (R-grade) - Event -->
@@ -385,6 +395,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="36022" min="30" max="30" chance="100" /> <!-- Returning Hero's Health Potion -->
 			<item id="34082" min="6" max="6" chance="100" /> <!-- Heavenly Cocktail -->
@@ -429,6 +440,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33509" min="1" max="1" chance="100" /> <!-- Returning Hero's Shirt -->
 			<item id="33510" min="1" max="1" chance="100" /> <!-- Returning Hero's Belt -->
@@ -1852,6 +1864,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="36083" min="1" max="1" chance="100" /> <!-- Star Agathion - Innocent Heejin -->
 		</capsuled_items>
@@ -1871,6 +1884,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="36084" min="1" max="1" chance="100" /> <!-- Star Agathion - Dandy Hyuk -->
 		</capsuled_items>
@@ -1890,6 +1904,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="36085" min="1" max="1" chance="100" /> <!-- Star Agathion - Powerful Sooro -->
 		</capsuled_items>
@@ -1909,6 +1924,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="36086" min="1" max="1" chance="100" /> <!-- Star Agathion - Chic Jaebum -->
 		</capsuled_items>
@@ -1928,6 +1944,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="36087" min="1" max="1" chance="100" /> <!-- Star Agathion - Cute Shinyoung -->
 		</capsuled_items>

@@ -939,6 +939,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
+		<set name="time" val="43200" />
 		<set name="icon" val="icon.etc_pink_crystal_cube_pc_i00" />
 	</item>
 	<item id="36569" name="Yum Yum Candy Gift Box" additionalName="Event" type="EtcItem">
@@ -951,6 +952,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="36570" name="Nom Nom Candy Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Lineage II L2 Together is even better with friends! Double-click to obtain a Nom Nom Candy (30-day) that increases additional XP/SP by 15%. Cannot be exchanged once open. A Nom Nom Candy Gift Box is included in the gift coupon provided when you paid for your account. Can be exchanged and stored in a private warehouse. -->
@@ -962,6 +964,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="36571" name="Yum Yum Candy (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Have fun with your friends! increases additionally obtained XP/SP by 15%. When this candy and a Nom Nom Candy are used together, both of their effects apply. When this candy is used with an identical candy, their effects apply only once. -->
@@ -976,6 +979,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="icon" val="icon.etc_whiteday_candy_i05" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="9834" level="1" /> <!-- Yum Yum Candy -->
 		</skills>
@@ -992,6 +996,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="time" val="43200" />
 		<set name="icon" val="icon.etc_whiteday_candy_i06" />
 		<skills>
 			<skill id="9835" level="1" /> <!-- Nom Nom Candy -->
@@ -1009,6 +1014,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="time" val="43200" />
 		<set name="icon" val="icon.etc_pink_crystal_cube_pc_i00" />
 		<skills>
 			<skill id="9836" level="1" /> <!-- Friendship Cube -->

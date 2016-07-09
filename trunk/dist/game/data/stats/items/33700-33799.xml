@@ -1240,6 +1240,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33649" min="1" max="1" chance="100" /> <!-- Kukurin Feather Helm -->
 		</capsuled_items>
@@ -1259,6 +1260,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33649" min="1" max="1" chance="100" /> <!-- Kukurin Feather Helm -->
 			<item id="33642" min="1" max="1" chance="100" /> <!-- Kukurin Bracelet -->
@@ -1870,6 +1872,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="9570" min="1" max="1" chance="100" /> <!-- Red Soul Crystal - Stage 14 -->
 			<item id="57" min="5000000" max="5000000" chance="100" /> <!-- Adena -->
@@ -1892,6 +1895,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="9571" min="1" max="1" chance="100" /> <!-- Blue Soul Crystal - Stage 14 -->
 			<item id="57" min="5000000" max="5000000" chance="100" /> <!-- Adena -->
@@ -1914,6 +1918,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="9572" min="1" max="1" chance="100" /> <!-- Green Soul Crystal - Stage 14 -->
 			<item id="57" min="5000000" max="5000000" chance="100" /> <!-- Adena -->
@@ -2351,6 +2356,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33512" min="3" max="3" chance="100" /> <!-- Returning Hero's Vitality Replenishing Juice -->
 		</capsuled_items>
@@ -2370,6 +2376,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33511" min="250" max="250" chance="100" /> <!-- Returning Hero's Mark -->
 			<item id="36021" min="1" max="1" chance="100" /> <!-- Returning Hero's Potion Pack -->

@@ -52,7 +52,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37702" name="Valentine Shield" type="Weapon">
+	<item id="37702" name="Valentine Shield" type="Armor">
 		<!-- Modifies the appearance of a shield. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -409,7 +409,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 		<stats>
 			<stat type="mDef">170</stat>
 		</stats>
@@ -427,7 +427,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 		<stats>
 			<stat type="mDef">226</stat>
 		</stats>
@@ -445,7 +445,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 		<stats>
 			<stat type="mDef">108</stat>
 		</stats>
@@ -463,7 +463,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 		<stats>
 			<stat type="mDef">108</stat>
 		</stats>
@@ -481,7 +481,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 		<stats>
 			<stat type="mDef">94</stat>
 		</stats>
@@ -499,7 +499,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 		<stats>
 			<stat type="pDef">50</stat>
 		</stats>
@@ -725,6 +725,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="icon" val="icon.etc_magic_energy_i00" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="37760" name="Faint Dimensional Energy - Stage 2" type="EtcItem">
 		<!-- Faint energy of dimensional strength. It is needed to receive rewards from Mermoden or to raise the stage. If you raise the stage, you can receive even more rewards. But, in order to raise to stage 3, the next period's defense must be successful. 15-day. -->
@@ -738,6 +739,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="icon" val="icon.etc_magic_energy_i01" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="37761" name="Faint Dimensional Energy - Stage 3" type="EtcItem">
 		<!-- Faint energy of dimensional strength. It is needed to receive rewards from Mermoden or to raise the stage. If you raise the stage, you can receive even more rewards. But, in order to raise to stage 4, the next period's defense must be successful. 15-day. -->
@@ -751,6 +753,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="icon" val="icon.etc_magic_energy_i01" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="37762" name="Faint Dimensional Energy - Stage 4" type="EtcItem">
 		<!-- Faint energy of dimensional strength. It is the highest stage for receiving rewards from Mermoden. -->
@@ -1057,7 +1060,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
-		<set name="time" val="86400" />
+		<set name="time" val="1440" />
 	</item>
 	<item id="37789" name="SP Rune (Mid-grade)" additionalName="1-day" type="EtcItem">
 		<!-- When held in the inventory, it increases SP acquired through hunting by 20%. 1-day. -->
@@ -1072,7 +1075,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
-		<set name="time" val="86400" />
+		<set name="time" val="1440" />
 	</item>
 	<item id="37790" name="SP Rune (High-grade)" additionalName="1-day" type="EtcItem">
 		<!-- When held in the inventory, it increases SP acquired through hunting by 30%. 1-day. -->
@@ -1087,7 +1090,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
-		<set name="time" val="86400" />
+		<set name="time" val="1440" />
 	</item>
 	<item id="37791" name="Sealed Demonic Tome" type="EtcItem">
 		<!-- Ancient book of a tightly sealed demon. The ancient book managing caravan Budenka is collecting it in the Refugee Village. -->

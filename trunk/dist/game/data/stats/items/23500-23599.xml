@@ -352,6 +352,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23542" min="1" max="1" chance="100" /> <!-- Vesper Noble Light Armor Top Appearance Stone - Event -->
 			<item id="23543" min="1" max="1" chance="100" /> <!-- Vesper Noble Light Armor Pants Appearance Stone - Event -->
@@ -455,6 +456,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22799" level="1" /> <!-- Vesper Noble Top Appearance Stone -->
 		</skills>
@@ -475,6 +477,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22800" level="1" /> <!-- Vesper Noble Pants Appearance Stone -->
 		</skills>
@@ -495,6 +498,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22801" level="1" /> <!-- Vesper Noble Gloves Appearance Stone -->
 		</skills>
@@ -515,6 +519,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22802" level="1" /> <!-- Vesper Noble Shoes Appearance Stone -->
 		</skills>
@@ -530,6 +535,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23552" min="500" max="500" chance="100" /> <!-- Mysterious Soulshot (R-grade) - Event -->
 		</capsuled_items>
@@ -545,6 +551,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23553" min="500" max="500" chance="100" /> <!-- Mysterious Spiritshot (R-grade) - Event -->
 		</capsuled_items>
@@ -1024,6 +1031,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="Appearance" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23581" min="1" max="1" chance="100" /> <!-- Vorpal Light Armor Top Appearance Stone - Event -->
 			<item id="23582" min="1" max="1" chance="100" /> <!-- Vorpal Light Armor Pants Appearance Stone - Event -->
@@ -1127,6 +1135,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22831" level="1" /> <!-- Vorpal Top Appearance Stone -->
 		</skills>
@@ -1147,6 +1156,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22832" level="1" /> <!-- Vorpal Pants Appearance Stone -->
 		</skills>
@@ -1167,6 +1177,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22833" level="1" /> <!-- Vorpal Gloves Appearance Stone -->
 		</skills>
@@ -1187,6 +1198,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22834" level="1" /> <!-- Vorpal Shoes Appearance Stone -->
 		</skills>
@@ -1220,6 +1232,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22836" level="1" /> <!-- Hellblade Appearance Stone -->
 		</skills>
@@ -1239,6 +1252,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22837" level="1" /> <!-- Claw of Destruction Appearance Stone -->
 		</skills>
@@ -1258,6 +1272,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22838" level="1" /> <!-- Butcher Blades Appearance Stone -->
 		</skills>
@@ -1277,6 +1292,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22839" level="1" /> <!-- Blades of Delusion Appearance Stone -->
 		</skills>
@@ -1296,6 +1312,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22840" level="1" /> <!-- Blood Brother Appearance Stone -->
 		</skills>
@@ -1315,6 +1332,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22841" level="1" /> <!-- Mardil's Fan Appearance Stone -->
 		</skills>

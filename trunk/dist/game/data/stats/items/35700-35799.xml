@@ -10,6 +10,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="35711" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak Box - 3-day (Event) -->
 			<item id="35721" min="1" max="1" chance="100" /> <!-- Santa Girl's Hat Box - 3-day (Event) -->
@@ -32,6 +33,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="35699" min="1" max="1" chance="100" /> <!-- Santa Girl's Gift Box - Event -->
 			<item id="35700" min="1" max="1" chance="0.0617" /> <!-- Santa Girl's Golden Gift Box - Event -->
@@ -191,6 +193,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="35693" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak - 1-day (Event) -->
 		</capsuled_items>
@@ -205,6 +208,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="35694" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak - 3-day (Event) -->
 		</capsuled_items>
@@ -375,6 +379,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="35718" min="1" max="1" chance="100" /> <!-- Santa Hat - 1-day (Event) -->
 		</capsuled_items>
@@ -389,6 +394,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="35719" min="1" max="1" chance="100" /> <!-- Santa Hat - 3-day (Event) -->
 		</capsuled_items>
@@ -427,6 +433,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18171" min="1" max="1" chance="100" /> <!-- Unidentified Specter Shaper -->
 			<item id="18172" min="1" max="1" chance="100" /> <!-- Unidentified Specter Cutter -->
@@ -460,6 +467,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18185" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Helmet - Heavy Armor -->
 			<item id="18186" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Breastplate - Heavy Armor -->
@@ -496,6 +504,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18202" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Necklace -->
 			<item id="18203" min="2" max="2" chance="100" /> <!-- Unidentified Seraph Earring -->
@@ -518,6 +527,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17526" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			<item id="17527" min="33" max="33" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
@@ -545,6 +555,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="35562" min="75" max="75" chance="100" /> <!-- Energy of Destruction -->
 			<item id="35563" min="100" max="100" chance="100" /> <!-- Giant's Energy -->
@@ -567,6 +578,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="35723" min="1" max="1" chance="100" /> <!-- Specter Weapon Pack -->
 			<item id="35724" min="1" max="1" chance="100" /> <!-- Seraph Armor Pack -->

@@ -88,7 +88,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="23808" name="Prestige Rune 50%" additionalName="30-day" type="EtcItem">
 		<!-- When stored in the inventory, item acquisition through drops, Adena, and spoils in hunt + 50%. -->
@@ -102,7 +102,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="23809" name="Prestige Rune 100%" additionalName="30-day" type="EtcItem">
 		<!-- When stored in the inventory, item acquisition through drops, Adena, and spoils in hunt + 100%. -->
@@ -116,7 +116,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="23810" name="Prestige Rune 30% Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Prestige Rune 30%. -->
@@ -129,7 +129,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="23811" name="Prestige Rune 50% Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Prestige Rune 50%. -->
@@ -142,7 +142,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="23812" name="Prestige Rune 100% Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Prestige Rune 100%. -->
@@ -155,7 +155,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="23813" name="Prestige Cube Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Prestige Cube (30-day). -->
@@ -169,7 +169,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="23814" name="Chaos Essence Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing a Chaos Essence (30-day). The Chaos Essence cannot be used by Ertheia. -->
@@ -182,7 +182,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="23815" name="Chaos Essence Pack (Dual Class)" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing a Chaos Essence (Dual Class) (30-day). The Chaos Essence cannot be used by Ertheia. -->
@@ -195,7 +195,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="23816" name="Uthanka's Treasure Chest" type="EtcItem">
 		<!-- Pirate Captain Uthanka's treasure. Double-click for a chance to obtain one of many items. -->
@@ -226,7 +226,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="23819" name="Uthanka's Ring Pack" additionalName="7-day" type="EtcItem">
 		<!-- Wrapped Pack containing Uthanka's Ring (7-day). -->
@@ -236,7 +236,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="23820" name="Scroll of Escape: Uthanka's Tomb" type="EtcItem">
 		<!-- Return to Uthanka's Tomb. -->
@@ -266,7 +266,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="23823" name="Agathion - Uthanka Pack" additionalName="7-day" type="EtcItem">
 		<!-- Wrapped Pack containing Uthanka Agathion (7-day). -->
@@ -276,7 +276,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="23824" name="Uthanka's Blessed Scroll of Resurrection" type="EtcItem">
 		<!-- Resurrects a dead person and restores their XP. -->
@@ -297,7 +297,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="DYE" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="23826" name="Mysterious Elf Dye" additionalName="Blessing of Water, Delicacy, Prevision, 7-day" type="EtcItem">
 		<!-- Mysterious dye containing Elven power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Elf race. (Water Resistance + 20, P. Critical Rate + 10, M. Critical Rate + 10/Active Skill: Prevision) All classes. Cannot be stacked with the previous Prophecy: Prevision skill. -->
@@ -310,7 +310,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="DYE" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="23827" name="Mysterious Dark Elf Dye" additionalName="Sharpness, Blessing of Wind, Disparition, 7-day" type="EtcItem">
 		<!-- Mysterious dye containing Dark Elven power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Dark Elf race. (Wind Resistance + 20, P. Critical Damage and M. Critical Damage + 1%/Active Skill: Disparition) All classes. Cannot be stacked with the previous Prophecy: Disparition skill. -->
@@ -323,7 +323,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="DYE" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="23828" name="Mysterious Orc Dye" additionalName="Blessing of Fire, Energetic, Savage, 7-day" type="EtcItem">
 		<!-- Mysterious dye containing Orc power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Orc race. (Fire Resistance + 20, HP/MP/CP + 1%/Active Skill: Savage) All classes. Cannot be stacked with the previous Prophecy: Savage skill. -->
@@ -336,7 +336,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="DYE" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="23829" name="Mysterious Dwarf Dye" additionalName="Dexterity, Blessing of Earth, Endurance, 7-day" type="EtcItem">
 		<!-- Mysterious dye containing Dwarven power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Dwarf race. (Water Resistance + 20, Skill Cooldown - 1%/Active Skill: Endurance) All classes. Cannot be stacked with the previous Prophecy: Endurance skill. -->
@@ -349,7 +349,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="DYE" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="23830" name="Mysterious Kamael Dye" additionalName="Battle Instinct, Dark Silence, Soul Protection, 7-day" type="EtcItem">
 		<!-- Mysterious dye containing Kamael power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Kamael race. (Dark Resistance + 20, PvP Damage + 1%/Active Skill: Soul Protection) All classes. Cannot be stacked with the previous Prophecy: Soul Protection skill. -->
@@ -362,7 +362,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="DYE" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="23831" name="XP Rune I (Lv. 1-85) 100% Pack (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an XP Rune I (Lv. 1-85) 100% Pack (1-hour). -->
@@ -487,7 +487,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="DYE" />
-		<set name="time" val="86400" />
+		<set name="time" val="1440" />
 	</item>
 	<item id="23846" name="Mysterious Slaughter Dye" additionalName="Damage Reflect Resistance, Received Damage Decrease, 1-day" type="EtcItem">
 		<!-- Take it to the town's Symbol Maker for a 1-day tattoo that increases your power (Received Damage from PCs - 2%, Damage Reflect Resistance + 2, effect increased for PC kills, up to Lv. 5) All classes. Awakened only.\n\nNote: Tattoo is only effective in a castle siege, dimensional castle siege, fortress siege, and a clan hall war. -->
@@ -500,7 +500,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="DYE" />
-		<set name="time" val="86400" />
+		<set name="time" val="1440" />
 	</item>
 	<item id="23847" name="Luxury Fortune Reading Coupon" type="EtcItem">
 		<!-- Coupon you can trade in for a Luxury Fortune Reading Ticket through Eve's Fortune Shop. -->
@@ -742,7 +742,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="3600" />
+		<set name="time" val="60" />
 	</item>
 	<item id="23872" name="Prestige Rune 100%" additionalName="5-hour" type="EtcItem">
 		<!-- When possessed in the inventory while hunting, Adena gain, item drops, and item acquisition through spoils + 100%. -->
@@ -756,7 +756,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="18000" />
+		<set name="time" val="300" />
 	</item>
 	<item id="23873" name="Prestige Rune 100%" additionalName="7-day" type="EtcItem">
 		<!-- When possessed in the inventory while hunting, Adena gain, item drops, and item acquisition through spoils + 100%. -->
@@ -770,7 +770,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="23874" name="Prestige Rune 100% Pack" additionalName="1-hour" type="EtcItem">
 		<!-- Wrapped Pack containing Prestige Rune 100% (1-hour). -->
@@ -780,7 +780,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="time" val="3600" />
+		<set name="time" val="60" />
 	</item>
 	<item id="23875" name="Prestige Rune 100% Pack" additionalName="5-hour" type="EtcItem">
 		<!-- Wrapped Pack containing Prestige Rune 100% (5-hour). -->
@@ -790,7 +790,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="time" val="18000" />
+		<set name="time" val="300" />
 	</item>
 	<item id="23876" name="Prestige Rune 100% Pack" additionalName="7-day" type="EtcItem">
 		<!-- Wrapped Pack containing Prestige Rune 100% (7-day). -->
@@ -800,7 +800,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="23877" name="Samurai Hair Accessory" type="Armor">
 		<!-- Samurai look. -->

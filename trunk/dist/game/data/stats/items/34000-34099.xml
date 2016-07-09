@@ -745,6 +745,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34035" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (3-hour) -->
 		</capsuled_items>
@@ -761,6 +762,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34036" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (5-hour) -->
 		</capsuled_items>
@@ -777,6 +779,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34037" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (7-day) -->
 		</capsuled_items>
@@ -793,6 +796,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34038" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (3-hour) -->
 		</capsuled_items>
@@ -809,6 +813,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34039" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (5-hour) -->
 		</capsuled_items>
@@ -825,6 +830,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34040" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (7-day) -->
 		</capsuled_items>
@@ -844,6 +850,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34035" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (3-hour) -->
 		</capsuled_items>
@@ -863,6 +870,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34036" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (5-hour) -->
 		</capsuled_items>
@@ -882,6 +890,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34037" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (7-day) -->
 		</capsuled_items>
@@ -901,6 +910,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34038" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (3-hour) -->
 		</capsuled_items>
@@ -920,6 +930,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34039" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (5-hour) -->
 		</capsuled_items>
@@ -939,6 +950,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34040" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (7-day) -->
 		</capsuled_items>
@@ -955,6 +967,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18035" min="1" max="1" chance="100" /> <!-- Blessed Specter Shaper -->
 			<item id="18036" min="1" max="1" chance="100" /> <!-- Blessed Specter Cutter -->
@@ -984,6 +997,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18049" min="1" max="1" chance="100" /> <!-- Blessed Seraph Helmet - Heavy Armor -->
 			<item id="18050" min="1" max="1" chance="100" /> <!-- Blessed Seraph Breastplate - Heavy Armor -->
@@ -1005,6 +1019,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18055" min="1" max="1" chance="100" /> <!-- Blessed Seraph Leather Helmet - Light Armor -->
 			<item id="18056" min="1" max="1" chance="100" /> <!-- Blessed Seraph Leather Armor - Light Armor -->
@@ -1025,6 +1040,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18060" min="1" max="1" chance="100" /> <!-- Blessed Seraph Circlet - Robe -->
 			<item id="18061" min="1" max="1" chance="100" /> <!-- Blessed Seraph Tunic - Robe -->
@@ -1046,6 +1062,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18066" min="1" max="1" chance="100" /> <!-- Blessed Seraph Necklace -->
 			<item id="18067" min="2" max="2" chance="100" /> <!-- Blessed Seraph Earring -->
@@ -1064,6 +1081,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="6656" min="1" max="1" chance="100" /> <!-- Antharas' Earring -->
 			<item id="6658" min="1" max="1" chance="100" /> <!-- Baium's Ring -->

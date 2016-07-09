@@ -66,7 +66,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="40306" name="Dual Expertise Rune Pack" additionalName="R99-grade" type="EtcItem">
 		<!-- Double-click to obtain a Dual Expertise Rune Pack (R99-grade) (30-day). Cannot be used in the Olympiad. -->
@@ -151,6 +151,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="is_stackable" val="true" />
+		<set name="time" val="360" />
 	</item>
 	<item id="40312" name="Santa's Cloak" type="Armor">
 		<!-- Light and cozy cloak. -->
@@ -325,7 +326,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 	</item>
 	<item id="40332" name="Mother Tree's Branch of Fortune" additionalName="90-day" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. PvP damage increased. -->
@@ -345,7 +346,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 		<stats>
 			<stat type="pAtk">226</stat>
 			<stat type="mAtk">167</stat>
@@ -373,7 +374,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 		<stats>
 			<stat type="pAtk">189</stat>
 			<stat type="mAtk">145</stat>
@@ -401,7 +402,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 		<stats>
 			<stat type="pAtk">135</stat>
 			<stat type="mAtk">111</stat>
@@ -428,7 +429,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 		<stats>
 			<stat type="pAtk">90</stat>
 			<stat type="mAtk">79</stat>
@@ -456,7 +457,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 		<stats>
 			<stat type="pAtk">274</stat>
 			<stat type="mAtk">193</stat>
@@ -484,7 +485,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 		<stats>
 			<stat type="pAtk">325</stat>
 			<stat type="mAtk">222</stat>
@@ -505,7 +506,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 	</item>
 	<item id="40339" name="Ertheia Wizard Equipment Set" additionalName="90-day" type="EtcItem">
 		<!-- Item set for Ertheia Wizard classes. Disappears after 90 days if unused. -->
@@ -518,7 +519,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 	</item>
 	<item id="40340" name="Fist Weapon Set of Fortune" additionalName="90-day" type="EtcItem">
 		<!-- Use to receive 5 fist weapons (S - C-grade). Disappears after 90 days if unused. -->
@@ -531,7 +532,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 	</item>
 	<item id="40341" name="Fist Weapon Set of Fortune" additionalName="30-day" type="EtcItem">
 		<!-- Use to receive 3 fist weapons (A - C-grade). Disappears after 30 days if unused. -->
@@ -544,7 +545,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="40342" name="Magic Staff Set of Fortune" additionalName="30-day" type="EtcItem">
 		<!-- Use to receive 3 magic staff weapons (A - C-grade). Disappears after 30 days if unused. -->
@@ -557,7 +558,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="40343" name="Mother Tree's Branch of Fortune" additionalName="30-day" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. PvP damage increased. -->
@@ -577,7 +578,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pAtk">226</stat>
 			<stat type="mAtk">167</stat>
@@ -605,7 +606,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pAtk">189</stat>
 			<stat type="mAtk">145</stat>
@@ -633,7 +634,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pAtk">135</stat>
 			<stat type="mAtk">111</stat>
@@ -660,7 +661,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pAtk">90</stat>
 			<stat type="mAtk">79</stat>
@@ -688,7 +689,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pAtk">274</stat>
 			<stat type="mAtk">193</stat>
@@ -716,7 +717,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pAtk">325</stat>
 			<stat type="mAtk">222</stat>
@@ -737,7 +738,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="40350" name="Ertheia Wizard Equipment Set" additionalName="30-day" type="EtcItem">
 		<!-- Item set for Ertheia Warrior classes. Disappears after 30 days if unused. -->
@@ -750,7 +751,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="40351" name="Fist Weapon Set of Fortune" additionalName="10-day" type="EtcItem">
 		<!-- Use to receive 3 fist weapons (A - C-grade). Disappears after 10 days if unused. -->
@@ -763,7 +764,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="864000" />
+		<set name="time" val="14400" />
 	</item>
 	<item id="40352" name="Magic Staff Set of Fortune" additionalName="10-day" type="EtcItem">
 		<!-- Use to receive 3 magic staff weapons (A - C-grade). Disappears after 10 days if unused. -->
@@ -776,7 +777,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="864000" />
+		<set name="time" val="14400" />
 	</item>
 	<item id="40353" name="Mother Tree's Branch of Fortune" additionalName="10-day" type="Weapon">
 		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. PvP damage increased. -->
@@ -796,7 +797,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="864000" />
+		<set name="time" val="14400" />
 		<stats>
 			<stat type="pAtk">226</stat>
 			<stat type="mAtk">167</stat>
@@ -824,7 +825,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="864000" />
+		<set name="time" val="14400" />
 		<stats>
 			<stat type="pAtk">189</stat>
 			<stat type="mAtk">145</stat>
@@ -852,7 +853,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="864000" />
+		<set name="time" val="14400" />
 		<stats>
 			<stat type="pAtk">135</stat>
 			<stat type="mAtk">111</stat>
@@ -879,7 +880,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="864000" />
+		<set name="time" val="14400" />
 		<stats>
 			<stat type="pAtk">90</stat>
 			<stat type="mAtk">79</stat>
@@ -907,7 +908,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="864000" />
+		<set name="time" val="14400" />
 		<stats>
 			<stat type="pAtk">274</stat>
 			<stat type="mAtk">193</stat>
@@ -935,7 +936,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="864000" />
+		<set name="time" val="14400" />
 		<stats>
 			<stat type="pAtk">325</stat>
 			<stat type="mAtk">222</stat>
@@ -956,7 +957,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="864000" />
+		<set name="time" val="14400" />
 	</item>
 	<item id="40360" name="Ertheia Wizard Equipment Set" additionalName="10-day" type="EtcItem">
 		<!-- Item set for Ertheia Wizard classes. Disappears after 10 days if unused. -->
@@ -969,7 +970,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="864000" />
+		<set name="time" val="14400" />
 	</item>
 	<item id="40361" name="Agathion - Joon Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain an Agathion - Joon (30-day). Cannot be shared once open. -->
@@ -983,7 +984,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="40362" name="Agathion - Joon Pack (30-day)" type="Armor">
 		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad.\n\n(Passive Skill)\n1. Joon's Magic: For 30 min., acquired XP/SP + 10%, Atk. Attribute + 100, P. Atk. + 20%, M. Atk. + 30%, Atk./Casting Spd. + 10%, P./M. Accuracy + 4, Speed + 10, Max. HP/MP/CP + 10%, P./M. Def. + 10%, and MP Consumption - 10%. Cannot be stacked with Art of Seduction. Buff remains after death.\n\n(Active Skill)\n1. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 hr. -->
@@ -1057,6 +1058,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="40369" name="Napoleon Hat" additionalName="30-day" type="Armor">
 		<!-- A hat for conquering the world. -->
@@ -1072,7 +1074,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="40370" name="Sweet Cheese Hat" additionalName="30-day" type="Armor">
 		<!-- A delicious cheese hat. There might be a pink rat hiding in there somewhere. -->
@@ -1088,7 +1090,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="40371" name="Vigilante Hat" additionalName="30-day" type="Armor">
 		<!-- A swashbuckler's hat. -->
@@ -1104,13 +1106,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="40372" name="Agathion - Three-headed Dragon" additionalName="30-day" type="Armor">
 		<!-- Can summon Pisces when equipped.\n\n(Active Skill)\n1. Agathion Teleport: teleports you to Heine, or town of Aden/Rune/Giran. (Cooldown is 30 min.)\n\n(Passive Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN + 1.\n2. Attribute Enchant: Attribute Attck/Resistance + 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 </list>

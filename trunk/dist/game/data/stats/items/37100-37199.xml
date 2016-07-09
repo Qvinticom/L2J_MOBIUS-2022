@@ -520,6 +520,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="200" />
 		<stats>
 			<stat type="pDef">58</stat>
@@ -539,6 +540,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="3493" />
 		<stats>
 			<stat type="pDef">239</stat>
@@ -558,6 +560,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="400" />
 		<stats>
 			<stat type="pDef">39</stat>
@@ -577,12 +580,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="200" />
 		<stats>
 			<stat type="pDef">39</stat>
 		</stats>
 	</item>
-	<item id="37139" name="Steel Plate Shield (60-day)" type="Weapon">
+	<item id="37139" name="Steel Plate Shield (60-day)" type="Armor">
 		<!-- Full Plate Shield with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
 		<set name="icon" val="icon.shield_full_plate_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -596,6 +600,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="407" />
 		<stats>
 			<stat type="sDef">203</stat>
@@ -618,6 +623,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="660" />
 		<stats>
 			<stat type="pDef">60</stat>
@@ -638,6 +644,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="323" />
 		<stats>
 			<stat type="pDef">37</stat>
@@ -657,6 +664,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="207" />
 		<stats>
 			<stat type="pDef">32</stat>
@@ -676,6 +684,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="410" />
 		<stats>
 			<stat type="pDef">32</stat>
@@ -696,6 +705,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="1483" />
 		<stats>
 			<stat type="pDef">94</stat>
@@ -716,6 +726,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="520" />
 		<stats>
 			<stat type="pDef">59</stat>
@@ -735,6 +746,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="407" />
 		<stats>
 			<stat type="pDef">32</stat>
@@ -754,6 +766,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="203" />
 		<stats>
 			<stat type="pDef">33</stat>
@@ -773,6 +786,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="193" />
 		<stats>
 			<stat type="pDef">66</stat>
@@ -792,6 +806,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="193" />
 		<stats>
 			<stat type="pDef">44</stat>
@@ -811,6 +826,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="377" />
 		<stats>
 			<stat type="pDef">44</stat>
@@ -830,12 +846,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="3327" />
 		<stats>
 			<stat type="pDef">270</stat>
 		</stats>
 	</item>
-	<item id="37152" name="Steel Doom Shield (60-day)" type="Weapon">
+	<item id="37152" name="Steel Doom Shield (60-day)" type="Armor">
 		<!-- Doom Shield with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
 		<set name="icon" val="icon.shield_doom_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -849,6 +866,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="400" />
 		<stats>
 			<stat type="sDef">230</stat>
@@ -871,6 +889,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="847" />
 		<stats>
 			<stat type="pDef">127</stat>
@@ -890,6 +909,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="197" />
 		<stats>
 			<stat type="pDef">62</stat>
@@ -909,6 +929,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="197" />
 		<stats>
 			<stat type="pDef">41</stat>
@@ -928,12 +949,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="393" />
 		<stats>
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="37157" name="Steel Avadon Shield (60-day)" type="Weapon">
+	<item id="37157" name="Steel Avadon Shield (60-day)" type="Armor">
 		<!-- Avadon Shield with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -947,6 +969,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="403" />
 		<stats>
 			<stat type="sDef">216</stat>
@@ -969,6 +992,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="1833" />
 		<stats>
 			<stat type="pDef">202</stat>
@@ -988,6 +1012,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="193" />
 		<stats>
 			<stat type="pDef">44</stat>
@@ -1007,6 +1032,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="377" />
 		<stats>
 			<stat type="pDef">44</stat>
@@ -1026,6 +1052,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="3193" />
 		<stats>
 			<stat type="pDef">293</stat>
@@ -1045,6 +1072,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="187" />
 		<stats>
 			<stat type="pDef">73</stat>
@@ -1064,6 +1092,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="183" />
 		<stats>
 			<stat type="pDef">49</stat>
@@ -1083,12 +1112,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="370" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="37165" name="Steel Shield of Nightmare (60-day)" type="Weapon">
+	<item id="37165" name="Steel Shield of Nightmare (60-day)" type="Armor">
 		<!-- Shield of Nightmare with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1102,6 +1132,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="393" />
 		<stats>
 			<stat type="sDef">256</stat>
@@ -1124,6 +1155,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="817" />
 		<stats>
 			<stat type="pDef">139</stat>
@@ -1143,6 +1175,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="190" />
 		<stats>
 			<stat type="pDef">69</stat>
@@ -1162,6 +1195,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="193" />
 		<stats>
 			<stat type="pDef">46</stat>
@@ -1181,12 +1215,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="370" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="37170" name="Steel Dark Crystal Shield (60-day)" type="Weapon">
+	<item id="37170" name="Steel Dark Crystal Shield (60-day)" type="Armor">
 		<!-- Dark Crystal Shield with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1200,6 +1235,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="397" />
 		<stats>
 			<stat type="sDef">243</stat>
@@ -1222,6 +1258,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="1433" />
 		<stats>
 			<stat type="pDef">128</stat>
@@ -1242,6 +1279,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="493" />
 		<stats>
 			<stat type="pDef">80</stat>
@@ -1261,6 +1299,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="193" />
 		<stats>
 			<stat type="pDef">46</stat>
@@ -1280,6 +1319,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="370" />
 		<stats>
 			<stat type="pDef">46</stat>
@@ -1300,6 +1340,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="2540" />
 		<stats>
 			<stat type="pDef">205</stat>
@@ -1320,6 +1361,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="1087" />
 		<stats>
 			<stat type="pDef">128</stat>
@@ -1339,6 +1381,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="180" />
 		<stats>
 			<stat type="pDef">55</stat>
@@ -1358,6 +1401,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="370" />
 		<stats>
 			<stat type="pDef">55</stat>
@@ -1377,12 +1421,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="183" />
 		<stats>
 			<stat type="pDef">83</stat>
 		</stats>
 	</item>
-	<item id="37180" name="Steel Imperial Crusader Shield (60-day)" type="Weapon">
+	<item id="37180" name="Steel Imperial Crusader Shield (60-day)" type="Armor">
 		<!-- Imperial Crusader Helmet with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1396,6 +1441,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="390" />
 		<stats>
 			<stat type="sDef">290</stat>
@@ -1418,6 +1464,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="767" />
 		<stats>
 			<stat type="pDef">166</stat>
@@ -1437,6 +1484,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="180" />
 		<stats>
 			<stat type="pDef">55</stat>
@@ -1456,6 +1504,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="370" />
 		<stats>
 			<stat type="pDef">55</stat>
@@ -1475,6 +1524,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="183" />
 		<stats>
 			<stat type="pDef">83</stat>
@@ -1495,6 +1545,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="940" />
 		<stats>
 			<stat type="pDef">13</stat>
@@ -1516,6 +1567,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="1650" />
 		<stats>
 			<stat type="pDef">249</stat>
@@ -1535,6 +1587,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="180" />
 		<stats>
 			<stat type="pDef">55</stat>
@@ -1554,6 +1607,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="370" />
 		<stats>
 			<stat type="pDef">55</stat>
@@ -1573,6 +1627,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="183" />
 		<stats>
 			<stat type="pDef">83</stat>
@@ -1593,6 +1648,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="2520" />
 		<stats>
 			<stat type="pDef">226</stat>
@@ -1613,6 +1669,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="1070" />
 		<stats>
 			<stat type="pDef">141</stat>
@@ -1632,6 +1689,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="180" />
 		<stats>
 			<stat type="pDef">92</stat>
@@ -1651,6 +1709,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="170" />
 		<stats>
 			<stat type="pDef">61</stat>
@@ -1670,12 +1729,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="360" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="37195" name="Steel Dynasty Shield (60-day)" type="Weapon">
+	<item id="37195" name="Steel Dynasty Shield (60-day)" type="Armor">
 		<!-- Dynasty Shield with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
 		<set name="icon" val="icon.shield_dynasty_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1689,6 +1749,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="380" />
 		<stats>
 			<stat type="sDef">321</stat>
@@ -1711,6 +1772,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="590" />
 		<stats>
 			<stat type="pDef">113</stat>
@@ -1731,6 +1793,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="290" />
 		<stats>
 			<stat type="pDef">71</stat>
@@ -1750,6 +1813,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="180" />
 		<stats>
 			<stat type="pDef">92</stat>
@@ -1769,6 +1833,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="86400" />
 		<set name="weight" val="170" />
 		<stats>
 			<stat type="pDef">61</stat>

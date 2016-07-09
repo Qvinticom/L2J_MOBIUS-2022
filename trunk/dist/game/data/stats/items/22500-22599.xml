@@ -14,6 +14,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13016" min="10" max="10" chance="100" /> <!-- My Teleport Scroll -->
 		</capsuled_items>
@@ -32,6 +33,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13016" min="30" max="30" chance="100" /> <!-- My Teleport Scroll -->
 		</capsuled_items>
@@ -50,6 +52,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="20033" min="1" max="1" chance="100" /> <!-- My Teleport Flag -->
 		</capsuled_items>
@@ -68,6 +71,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="20033" min="5" max="5" chance="100" /> <!-- My Teleport Flag -->
 		</capsuled_items>
@@ -86,6 +90,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="20033" min="10" max="10" chance="100" /> <!-- My Teleport Flag -->
 		</capsuled_items>
@@ -103,6 +108,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="10649" min="1" max="1" chance="100" /> <!-- Feather of Blessing -->
 		</capsuled_items>
@@ -121,6 +127,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="10649" min="3" max="3" chance="100" /> <!-- Feather of Blessing -->
 		</capsuled_items>
@@ -138,6 +145,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="728" min="5" max="5" chance="100" /> <!-- Mana Potion -->
 		</capsuled_items>
@@ -155,6 +163,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21235" min="3" max="3" chance="100" /> <!-- Fresh Milk -->
 		</capsuled_items>
@@ -172,6 +181,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="30381" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Weapon (R-grade) -->
 		</capsuled_items>
@@ -189,6 +199,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="30382" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Armor (R-grade) -->
 		</capsuled_items>
@@ -206,6 +217,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13021" min="3" max="3" chance="100" /> <!-- Color Title -->
 		</capsuled_items>
@@ -224,6 +236,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13273" min="3" max="3" chance="100" /> <!-- Minion Coupon (5-hour) -->
 		</capsuled_items>
@@ -242,6 +255,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hour) -->
 		</capsuled_items>
@@ -260,6 +274,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14065" min="2" max="2" chance="100" /> <!-- Superior Minion Coupon - 5-hour -->
 		</capsuled_items>
@@ -278,6 +293,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14065" min="1" max="1" chance="100" /> <!-- Superior Minion Coupon - 5-hour -->
 		</capsuled_items>
@@ -296,6 +312,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="5235" min="1" max="1" chance="100" /> <!-- Facelifting Potion - A -->
 		</capsuled_items>
@@ -314,6 +331,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="5236" min="1" max="1" chance="100" /> <!-- Facelifting Potion - B -->
 		</capsuled_items>
@@ -332,6 +350,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="5237" min="1" max="1" chance="100" /> <!-- Facelifting Potion - C -->
 		</capsuled_items>
@@ -350,6 +369,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="5238" min="1" max="1" chance="100" /> <!-- Dye Potion - A -->
 		</capsuled_items>
@@ -368,6 +388,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="5239" min="1" max="1" chance="100" /> <!-- Dye Potion - B -->
 		</capsuled_items>
@@ -386,6 +407,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="5240" min="1" max="1" chance="100" /> <!-- Dye Potion - C -->
 		</capsuled_items>
@@ -404,6 +426,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="5241" min="1" max="1" chance="100" /> <!-- Dye Potion - D -->
 		</capsuled_items>
@@ -422,6 +445,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="5242" min="1" max="1" chance="100" /> <!-- Hair Style Change Potion - A -->
 		</capsuled_items>
@@ -440,6 +464,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="5243" min="1" max="1" chance="100" /> <!-- Hair Style Change Potion - B -->
 		</capsuled_items>
@@ -458,6 +483,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="5244" min="1" max="1" chance="100" /> <!-- Hair Style Change Potion - C -->
 		</capsuled_items>
@@ -476,6 +502,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="5245" min="1" max="1" chance="100" /> <!-- Hair Style Change Potion - D -->
 		</capsuled_items>
@@ -494,6 +521,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="5246" min="1" max="1" chance="100" /> <!-- Hair Style Change Potion - E -->
 		</capsuled_items>
@@ -512,6 +540,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="5247" min="1" max="1" chance="100" /> <!-- Hair Style Change Potion - F -->
 		</capsuled_items>
@@ -530,6 +559,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="5248" min="1" max="1" chance="100" /> <!-- Hair Style Change Potion - G -->
 		</capsuled_items>
@@ -548,6 +578,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22481" min="1" max="1" chance="100" /> <!-- Improved Bronze Bracelet - 1-day -->
 		</capsuled_items>
@@ -566,6 +597,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22482" min="1" max="1" chance="100" /> <!-- Improved Bronze Bracelet - 15-day -->
 		</capsuled_items>
@@ -584,6 +616,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22483" min="1" max="1" chance="100" /> <!-- Improved Bronze Bracelet - 30-day -->
 		</capsuled_items>
@@ -602,6 +635,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22484" min="1" max="1" chance="100" /> <!-- Improved Bronze Bracelet - 90-day -->
 		</capsuled_items>
@@ -620,6 +654,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22485" min="1" max="1" chance="100" /> <!-- Improved Steel Bracelet - 1-day -->
 		</capsuled_items>
@@ -638,6 +673,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22486" min="1" max="1" chance="100" /> <!-- Improved Steel Bracelet - 15-day -->
 		</capsuled_items>
@@ -656,6 +692,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22487" min="1" max="1" chance="100" /> <!-- Improved Steel Bracelet - 30-day -->
 		</capsuled_items>
@@ -674,6 +711,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22488" min="1" max="1" chance="100" /> <!-- Improved Steel Bracelet - 90-day -->
 		</capsuled_items>
@@ -692,6 +730,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22489" min="1" max="1" chance="100" /> <!-- Improved Mithril Bracelet - 1-day -->
 		</capsuled_items>
@@ -710,6 +749,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22490" min="1" max="1" chance="100" /> <!-- Improved Mithril Bracelet - 15-day -->
 		</capsuled_items>
@@ -728,6 +768,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22491" min="1" max="1" chance="100" /> <!-- Improved Mithril Bracelet - 30-day -->
 		</capsuled_items>
@@ -746,6 +787,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22492" min="1" max="1" chance="100" /> <!-- Improved Mithril Bracelet - 90-day -->
 		</capsuled_items>
@@ -764,6 +806,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22444" min="1" max="1" chance="100" /> <!-- Improved Mithril Bracelet -->
 		</capsuled_items>
@@ -782,6 +825,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22351" min="3" max="3" chance="100" /> <!-- Auction House Fee 30% Voucher -->
 		</capsuled_items>
@@ -800,6 +844,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22352" min="3" max="3" chance="100" /> <!-- Auction House Fee 100% Voucher -->
 		</capsuled_items>
@@ -818,6 +863,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22353" min="3" max="3" chance="100" /> <!-- Auction House Extension Voucher (15-day) -->
 		</capsuled_items>
@@ -836,6 +882,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22354" min="3" max="3" chance="100" /> <!-- Auction House Extension Voucher (30-day) -->
 		</capsuled_items>
@@ -1181,6 +1228,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14074" min="2" max="2" chance="100" /> <!-- Superior Minion Coupon (Event) - 5-hour -->
 			<item id="13300" min="3" max="3" chance="100" /> <!-- Feather of Blessing (Event) -->
@@ -1204,6 +1252,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14701" min="20" max="20" chance="100" /> <!-- Superior Quick Healing Potion -->
 			<item id="14700" min="50" max="50" chance="100" /> <!-- Superior Healing Potion -->
@@ -1225,6 +1274,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21845" min="20000" max="20000" chance="100" /> <!-- Mysterious No-grade Soulshot -->
 			<item id="21846" min="20000" max="20000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
@@ -1254,6 +1304,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22610" min="5" max="5" chance="100" /> <!-- Luxury Cocktail -->
 			<item id="14065" min="2" max="2" chance="100" /> <!-- Superior Minion Coupon - 5-hour -->
@@ -1278,6 +1329,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22610" min="15" max="15" chance="100" /> <!-- Luxury Cocktail -->
 			<item id="14065" min="6" max="6" chance="100" /> <!-- Superior Minion Coupon - 5-hour -->
@@ -1303,6 +1355,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22610" min="45" max="45" chance="100" /> <!-- Luxury Cocktail -->
 			<item id="14065" min="18" max="18" chance="100" /> <!-- Superior Minion Coupon - 5-hour -->
@@ -1453,6 +1506,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="15050" min="1" max="1" chance="100" /> <!-- Samurai Long Sword of Fortune - 30-day -->
 			<item id="15054" min="1" max="1" chance="100" /> <!-- Berserker Blade of Fortune - 30-day -->
@@ -1481,6 +1535,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="15049" min="1" max="1" chance="100" /> <!-- Damascus Sword of Fortune - 30-day -->
 			<item id="15053" min="1" max="1" chance="100" /> <!-- Guardian's Sword of Fortune - 30-day -->
@@ -1510,6 +1565,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="15048" min="1" max="1" chance="100" /> <!-- Sirra's Blade of Fortune - 30-day -->
 			<item id="15052" min="1" max="1" chance="100" /> <!-- Sword of Ipos of Fortune - 30-day -->
@@ -1539,6 +1595,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21833" min="1" max="1" chance="100" /> <!-- Dynasty Phantom of Fortune - 90-day -->
 			<item id="21834" min="1" max="1" chance="100" /> <!-- Dynasty Knife of Fortune - 90-day -->
@@ -1568,6 +1625,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="15249" min="1" max="1" chance="100" /> <!-- Brigandine of Fortune Set Pack - 30-day -->
 			<item id="15253" min="1" max="1" chance="100" /> <!-- Manticore Leather of Fortune Set Pack - 30-day -->
@@ -1588,6 +1646,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="15248" min="1" max="1" chance="100" /> <!-- Full Plate of Fortune Set Pack - 30-day -->
 			<item id="15252" min="1" max="1" chance="100" /> <!-- Plated Leather of Fortune Set Pack - 30-day -->
@@ -1608,6 +1667,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="15247" min="1" max="1" chance="100" /> <!-- Doom Plate Armor of Fortune Set Pack - 30-day -->
 			<item id="15251" min="1" max="1" chance="100" /> <!-- Leather Armor of Doom of Fortune Set Pack - 30-day -->
@@ -1628,6 +1688,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="15246" min="1" max="1" chance="100" /> <!-- Fortune Heavy Armor of Nightmare Set Pack - 30-day -->
 			<item id="15250" min="1" max="1" chance="100" /> <!-- Dark Crystal Light Armor of Fortune Set Pack - 30-day -->
@@ -1648,6 +1709,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21799" min="1" max="1" chance="100" /> <!-- Dynasty Breastplate of Fortune Set Pack (S-grade) - 90-day -->
 			<item id="21805" min="1" max="1" chance="100" /> <!-- Dynasty Leather Armor of Fortune Set Pack (S-grade) - 90-day -->
@@ -1668,6 +1730,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="15051" min="1" max="1" chance="100" /> <!-- Elven Long Sword of Fortune - 30-day -->
 			<item id="15055" min="1" max="1" chance="100" /> <!-- Claymore of Fortune - 30-day -->
@@ -1718,6 +1781,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22588" min="3" max="3" chance="100" /> <!-- Leaf of Appreciation -->
 		</capsuled_items>

@@ -104,7 +104,7 @@
 			<stat type="pDef">39</stat>
 		</stats>
 	</item>
-	<item id="38606" name="Steel Full Plate Shield" type="Weapon">
+	<item id="38606" name="Steel Full Plate Shield" type="Armor">
 		<!-- Steel Full Plate Shield. -->
 		<set name="icon" val="icon.shield_full_plate_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -357,7 +357,7 @@
 			<stat type="pDef">270</stat>
 		</stats>
 	</item>
-	<item id="38619" name="Steel Doom Shield" type="Weapon">
+	<item id="38619" name="Steel Doom Shield" type="Armor">
 		<!-- Steel Doom Shield. -->
 		<set name="icon" val="icon.shield_doom_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -455,7 +455,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="38624" name="Steel Avadon Shield" type="Weapon">
+	<item id="38624" name="Steel Avadon Shield" type="Armor">
 		<!-- Steel Avadon Shield. -->
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -610,7 +610,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="38632" name="Steel Shield of Nightmare" type="Weapon">
+	<item id="38632" name="Steel Shield of Nightmare" type="Armor">
 		<!-- Steel Shield of Nightmare. -->
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -708,7 +708,7 @@
 			<stat type="pDef">46</stat>
 		</stats>
 	</item>
-	<item id="38637" name="Steel Dark Crystal Shield" type="Weapon">
+	<item id="38637" name="Steel Dark Crystal Shield" type="Armor">
 		<!-- Steel Dark Crystal Shield. -->
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -904,7 +904,7 @@
 			<stat type="pDef">83</stat>
 		</stats>
 	</item>
-	<item id="38647" name="Steel Imperial Crusader Shield" type="Weapon">
+	<item id="38647" name="Steel Imperial Crusader Shield" type="Armor">
 		<!-- Steel Imperial Crusader Shield. -->
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1197,7 +1197,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="38662" name="Steel Dynasty Shield" type="Weapon">
+	<item id="38662" name="Steel Dynasty Shield" type="Armor">
 		<!-- Steel Dynasty Shield. -->
 		<set name="icon" val="icon.shield_dynasty_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1732,6 +1732,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="43200" />
 		<set name="weight" val="50" />
 		<stats>
 			<stat type="mDef">94</stat>
@@ -1751,6 +1752,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="43200" />
 		<set name="weight" val="50" />
 		<stats>
 			<stat type="mDef">126</stat>
@@ -1770,6 +1772,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="43200" />
 		<set name="weight" val="50" />
 		<stats>
 			<stat type="mDef">63</stat>

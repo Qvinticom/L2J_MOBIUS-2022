@@ -13,6 +13,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="time" val="120" />
 	</item>
 	<item id="38101" name="Leona's Scroll: 1,000,000 SP" type="EtcItem">
 		<!-- Double-click to obtain 1,000,000 SP. -->
@@ -454,12 +455,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="time" val="60" />
 	</item>
 	<item id="38160" name="Entrance Pass: Fantasy Fishing Dock (2-hour)" type="EtcItem">
 		<!-- Pass that was used to enter the Fantasy Fishing Dock before it was opened. Now anyone can enter freely. -->
 		<set name="icon" val="icon.fishing_zone_ticket" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="time" val="120" />
 	</item>
 	<item id="38161" name="Agathion - Blessed Virgo" type="Armor">
 		<!-- Can summon Virgo.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increase by 30. -->
@@ -614,7 +617,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38178" name="Butcher Blades Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a dual dagger into that of a Butcher Blades . 30-day. -->
@@ -624,7 +627,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38179" name="Claw of Destruction Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a one-handed blunt weapon into that of a Claw of Destruction . 30-day. -->
@@ -634,7 +637,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38180" name="Blades of Delusion Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a dualsword into that of a Blades of Delusion . 30-day. -->
@@ -644,7 +647,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38181" name="Blood Brother Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a two-handed sword into that of a Blood Brother . 30-day. -->
@@ -654,7 +657,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38182" name="Mardil's Fan Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a one-handed magic sword into that of a Mardil's Fan . 30-day. -->
@@ -664,7 +667,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38183" name="Hellblade Appearance Stone" type="EtcItem">
 		<!-- Turns the appearance of a one-handed sword into that of a Hellblade . -->
@@ -728,7 +731,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38190" name="Trumpetfish Appearance Stone: Dagger" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a one-handed dagger into that of a Trumpetfish . 30-day. -->
@@ -738,7 +741,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38191" name="Shark Appearance Stone: Two-handed Sword" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a two-handed sword into that of a Shark . 30-day. -->
@@ -748,7 +751,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38192" name="Squid Appearance Stone: Spear" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a spear into that of a Squid . 30-day. -->
@@ -758,7 +761,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38193" name="Sea Horse Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a two-handed blunt weapon into that of a Sea Horse . 30-day. -->
@@ -768,7 +771,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38194" name="Lobster Appearance Stone: Fist Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a fist weapon into that of a Lobster . 30-day. -->
@@ -778,7 +781,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38195" name="Giant Crab Appearance Stone: Bow" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a bow into that of a Giant Crab . 30-day. -->
@@ -788,7 +791,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38196" name="Crayfish Appearance Stone: Crossbow" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a crossbow into that of a Crayfish . 30-day. -->
@@ -798,7 +801,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38197" name="Starfish Appearance Stone: Sigil" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a sigil into that of a Starfish . 30-day. -->
@@ -808,7 +811,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38198" name="Turtle Appearance Stone: Shield" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a shield into that of a Turtle . 30-day. -->
@@ -818,7 +821,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38199" name="Blue Mackerel Appearance Stone: Dualsword" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a dualsword into that of a Blue Mackerel . 30-day. -->
@@ -828,6 +831,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 </list>

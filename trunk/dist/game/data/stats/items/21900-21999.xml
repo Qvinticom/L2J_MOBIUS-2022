@@ -2927,6 +2927,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14055" min="9" max="9" chance="100" /> <!-- Vitality Replenishing Potion -->
 		</capsuled_items>
@@ -2946,6 +2947,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14055" min="12" max="12" chance="100" /> <!-- Vitality Replenishing Potion -->
 		</capsuled_items>
@@ -2965,6 +2967,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14055" min="15" max="15" chance="100" /> <!-- Vitality Replenishing Potion -->
 		</capsuled_items>

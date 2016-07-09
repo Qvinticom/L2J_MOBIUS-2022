@@ -219,7 +219,7 @@
 		<!-- Wrapped pack containing Prestige Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="3600" />
+		<set name="time" val="60" />
 	</item>
 	<item id="27632" name="Fancy Fishing Rod" additionalName="" type="Weapon">
 		<!-- A fancy fishing rod. Receive 50% extra XP/SP when fishing. Reduces fishing time. Consumes 1 Fishing Shot. -->
@@ -241,7 +241,7 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<set name="bodypart" val="lrhand" />
-		<set name="time" val="86400" />
+		<set name="time" val="1440" />
 		<stats>
 			<stat type="pAtk">1.0</stat>
 			<stat type="mAtk">1.0</stat>
@@ -262,7 +262,7 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<set name="bodypart" val="lrhand" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 		<stats>
 			<stat type="pAtk">1.0</stat>
 			<stat type="mAtk">1.0</stat>
@@ -283,7 +283,7 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<set name="bodypart" val="lrhand" />
-		<set name="time" val="2592000" />
+		<set name="time" val="40320" />
 		<stats>
 			<stat type="pAtk">1.0</stat>
 			<stat type="mAtk">1.0</stat>
@@ -442,7 +442,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 		<stats>
 			<stat type="mDef">108.0</stat>
 		</stats>
@@ -453,7 +453,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 		<stats>
 			<stat type="mDef">108.0</stat>
 		</stats>

@@ -219,6 +219,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="1440" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="45615" name="Talisman - Battle: Attack (3-day)" type="Armor">
@@ -234,6 +235,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="45616" name="Talisman - Battle: Attack (30-day)" type="Armor">
@@ -249,6 +251,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="45617" name="Talisman - Battle: Speed (1-day)" type="Armor">
@@ -264,6 +267,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="1440" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="45618" name="Talisman - Battle: Speed (3-day)" type="Armor">
@@ -279,6 +283,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="45619" name="Talisman - Battle: Speed (30-day)" type="Armor">
@@ -294,6 +299,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="45620" name="Talisman - Battle: Support (1-day)" type="Armor">
@@ -309,6 +315,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="1440" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="45621" name="Talisman - Battle: Support (3-day)" type="Armor">
@@ -324,6 +331,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="45622" name="Talisman - Battle: Support (30-day)" type="Armor">
@@ -339,6 +347,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="45623" name="Elikia's Certificate" type="EtcItem">
@@ -623,7 +632,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="1296000" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="45642" name="Rodemai's Rune Pack (15-day)" type="EtcItem">
 		<!-- Wrapped Pack containing 1 Rodemai's Rune (15-day). -->
@@ -805,7 +814,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="45654" name="Dynasty Leather Armor of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Leather Armor of Fortune Set. Expires after 30 days if not used. -->
@@ -818,7 +827,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="45655" name="Dynasty Tunic of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Tunic of Fortune Set. Expires after 30 days if not used. -->
@@ -831,7 +840,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="45656" name="Dynasty Accessory of Fortune Set" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Accessory of Fortune Set. Expires after 30 days if not used. -->
@@ -844,7 +853,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="45657" name="Dynasty Breastplate of Fortune" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.armor_t91_u_i00" />
@@ -860,7 +869,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">226</stat>
 		</stats>
@@ -879,7 +888,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">141</stat>
 		</stats>
@@ -897,7 +906,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -915,7 +924,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -933,7 +942,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">92</stat>
 		</stats>
@@ -951,7 +960,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="sDef">321</stat>
 			<stat type="rShld">20</stat>
@@ -972,7 +981,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">170</stat>
 		</stats>
@@ -991,7 +1000,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">106</stat>
 		</stats>
@@ -1009,7 +1018,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">92</stat>
 		</stats>
@@ -1027,7 +1036,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -1045,7 +1054,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -1064,7 +1073,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">113</stat>
 		</stats>
@@ -1083,7 +1092,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">71</stat>
 		</stats>
@@ -1101,7 +1110,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">92</stat>
 		</stats>
@@ -1119,7 +1128,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -1137,7 +1146,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -1156,7 +1165,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">15</stat>
 			<stat type="rEvas">-8</stat>
@@ -1175,7 +1184,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">79</stat>
 		</stats>
@@ -1193,7 +1202,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">106</stat>
 		</stats>
@@ -1211,7 +1220,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">60</stat>
 		</stats>
@@ -1227,7 +1236,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="45678" name="Twilight Defense Type Heavy Set Pack" additionalName="14-day" type="EtcItem">
 		<!-- Get a + 6 Twilight Defense Type Heavy set. Expires after 14 days if not used. -->
@@ -1240,7 +1249,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="45679" name="Twilight Assassin Type Light Set Pack" additionalName="14-day" type="EtcItem">
 		<!-- Get a + 6 Twilight Assassin Type Light set. Expires after 14 days if not used. -->
@@ -1253,7 +1262,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="45680" name="Twilight Enchant Type Light Set Pack" additionalName="14-day" type="EtcItem">
 		<!-- Get a + 6 Twilight Enchant Type Light set. Expires after 14 days if not used. -->
@@ -1266,7 +1275,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="45681" name="Twilight Magic Type Robe Set Pack" additionalName="14-day" type="EtcItem">
 		<!-- Get a + 6 Twilight Magic Type Robe set. Expires after 14 days if not used. -->
@@ -1279,7 +1288,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="45682" name="Twilight Recovery Type Robe Set Pack" additionalName="14-day" type="EtcItem">
 		<!-- Get a + 6 Twilight Recovery Type Robe set. Expires after 14 days if not used. -->
@@ -1292,7 +1301,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="45683" name="Twilight Helmet" additionalName="Attack Type / Heavy (14-day)" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
@@ -1307,7 +1316,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
@@ -1327,7 +1336,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">341</stat>
 		</stats>
@@ -1346,7 +1355,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">213</stat>
 		</stats>
@@ -1364,7 +1373,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -1382,7 +1391,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -1401,7 +1410,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="sDef">466</stat>
 			<stat type="rShld">20</stat>
@@ -1421,7 +1430,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
@@ -1441,7 +1450,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">341</stat>
 		</stats>
@@ -1460,7 +1469,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">213</stat>
 		</stats>
@@ -1478,7 +1487,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -1496,7 +1505,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -1515,7 +1524,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="sDef">466</stat>
 			<stat type="rShld">20</stat>
@@ -1535,7 +1544,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
@@ -1555,7 +1564,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">272</stat>
 			<stat type="rEvas">5</stat>
@@ -1576,7 +1585,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">170</stat>
 			<stat type="rEvas">3</stat>
@@ -1596,7 +1605,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -1614,7 +1623,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>

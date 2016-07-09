@@ -41,6 +41,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22200" min="1" max="1" chance="100" /> <!-- Agathion - Lantern - 33-day (Event) -->
 		</capsuled_items>
@@ -348,6 +349,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22221" min="1" max="1" chance="100" /> <!-- Destruction Scroll: Enchant Weapon (S-grade) - Event -->
 		</capsuled_items>
@@ -368,6 +370,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22221" min="3" max="3" chance="100" /> <!-- Destruction Scroll: Enchant Weapon (S-grade) - Event -->
 			<item id="22222" min="3" max="3" chance="100" /> <!-- Destruction Scroll: Enchant Armor (S-grade) - Event -->
@@ -620,6 +623,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22235" min="3" max="3" chance="100" /> <!-- Sweet Chocolate -->
 			<item id="22236" min="1" max="1" chance="100" /> <!-- Valentine's Day Love Pouch -->
@@ -747,6 +751,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22242" min="3" max="3" chance="100" /> <!-- Sweet Chocolate - Event -->
 			<item id="22236" min="1" max="1" chance="100" /> <!-- Valentine's Day Love Pouch -->
@@ -889,6 +894,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22244" min="10000" max="10000" chance="100" /> <!-- Mysterious Soulshot (C-grade) -->
 			<item id="22245" min="10000" max="10000" chance="100" /> <!-- Mysterious Soulshot (B-grade) -->
@@ -991,6 +997,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22249" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (C-grade) -->
 			<item id="22250" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (B-grade) -->
@@ -1035,6 +1042,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22254" min="1" max="1" chance="100" /> <!-- Mysterious Friend Summon Bracelet - 30-day -->
 		</capsuled_items>
@@ -1379,6 +1387,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22279" min="1" max="1" chance="100" /> <!-- PC Vitality (1-hour) - Event -->
 			<item id="22280" min="1" max="1" chance="100" /> <!-- Player Commendation - Blessing (1-hour) - Event -->
@@ -1546,6 +1555,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22281" min="1" max="1" chance="100" /> <!-- Sujin Transformation Stick - 7-day (Event) -->
 		</capsuled_items>
@@ -1596,6 +1606,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22283" min="1" max="1" chance="100" /> <!-- Trejuo Transformation Stick - 7-day (Event) -->
 		</capsuled_items>
@@ -1673,6 +1684,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22287" min="1" max="1" chance="100" /> <!-- Agathion - Juju - 33-day (Event) -->
 		</capsuled_items>
@@ -1821,6 +1833,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22300" min="1" max="1" chance="100" /> <!-- Miraculous Valentine Cake: Special Ingredient - 15-day (Event) -->
 		</capsuled_items>

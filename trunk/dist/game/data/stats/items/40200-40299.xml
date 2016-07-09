@@ -149,7 +149,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="40214" name="Blessed Antharas' Earring  Pack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Antharas Earring (7-day). -->
@@ -164,7 +164,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="40215" name="Blessed Valakas' Necklace Pack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Valakas Necklace (7-day). -->
@@ -179,7 +179,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="40216" name="Tauti's Ring Pack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain a Tauti's Ring (7-day). -->
@@ -194,7 +194,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="40217" name="Earth Wyrm Heart Ring Pack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain an Earth Wyrm Heart Ring (7-day). -->
@@ -209,7 +209,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="40218" name="Blessed Zaken's Earring" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Zaken's Earring (7-day). -->
@@ -224,7 +224,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="40219" name="Appearance Stone: Cat Fighter (Ertheia Only)" additionalName="90-day" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon into that of a Cat Fighter. 90-day.\n\n(Note) Modified items can only be equipped by Ertheia. -->
@@ -238,7 +238,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 	</item>
 	<item id="40220" name="Appearance Stone: Cat Staff (Ertheia Only)" additionalName="90-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed magic blunt weapon into that of a Cat Staff. 90-day.\n\n(Note) Modified items can only be equipped by Ertheia. -->
@@ -252,7 +252,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 	</item>
 	<item id="40221" name="Ertheia's Attribute Stone Pack (+ 60)" type="EtcItem">
 		<!-- Double-click to obtain an Attribute Stone (+ 60). -->
@@ -434,7 +434,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="40238" name="Freya's Supply Box" type="EtcItem">
 		<!-- Double-click to obtain a Transformation Scroll: Anakim / Zaken / Kechi / Saber Tooth Tiger / Doll Blader. Cannot be used in the Olympiad. -->
@@ -515,6 +515,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<stats>
 			<stat type="pDef">50</stat>
@@ -536,6 +537,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<stats>
 			<stat type="pDef">50</stat>
@@ -557,6 +559,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<stats>
 			<stat type="pDef">50</stat>
@@ -578,6 +581,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<stats>
 			<stat type="pDef">50</stat>
@@ -599,6 +603,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<stats>
 			<stat type="pDef">50</stat>
@@ -620,6 +625,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<stats>
 			<stat type="pDef">50</stat>
@@ -641,6 +647,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<stats>
 			<stat type="pDef">50</stat>
@@ -662,6 +669,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<stats>
 			<stat type="pDef">50</stat>
@@ -683,6 +691,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<stats>
 			<stat type="pDef">50</stat>
@@ -704,6 +713,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<stats>
 			<stat type="pDef">50</stat>

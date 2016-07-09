@@ -103,6 +103,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33503" min="5" max="5" chance="100" /> <!-- Hero's Blessed Buff Scroll -->
 		</capsuled_items>
@@ -143,6 +144,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33505" min="5" max="5" chance="100" /> <!-- Scroll: Noblesse Blessing -->
 		</capsuled_items>
@@ -183,6 +185,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33507" min="30" max="30" chance="100" /> <!-- Scroll: Mount Kukuru -->
 		</capsuled_items>
@@ -275,6 +278,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33512" min="5" max="5" chance="100" /> <!-- Returning Hero's Vitality Replenishing Juice -->
 		</capsuled_items>
@@ -415,6 +419,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17304" min="1" max="1" chance="100" /> <!-- Immortal Helmet - Heavy Armor -->
 			<item id="17305" min="1" max="1" chance="100" /> <!-- Immortal Breastplate - Heavy Armor -->
@@ -432,6 +437,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17310" min="1" max="1" chance="100" /> <!-- Immortal Leather Helmet - Light Armor -->
 			<item id="17311" min="1" max="1" chance="100" /> <!-- Immortal Leather Armor - Light Armor -->
@@ -2665,7 +2671,7 @@
 			<stat type="pDef">61</stat>
 		</stats>
 	</item>
-	<item id="33596" name="Bound Dynasty Shield" additionalName="Event" type="Weapon">
+	<item id="33596" name="Bound Dynasty Shield" additionalName="Event" type="Armor">
 		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.shield_dynasty_shield_i00" />
 		<set name="default_action" val="EQUIP" />

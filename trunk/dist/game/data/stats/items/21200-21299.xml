@@ -396,7 +396,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="time" val="259200" />
+		<set name="time" val="115200" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -424,7 +424,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="time" val="259200" />
+		<set name="time" val="115200" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -453,7 +453,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="time" val="259200" />
+		<set name="time" val="115200" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -480,7 +480,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="time" val="259200" />
+		<set name="time" val="115200" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -508,7 +508,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="time" val="259200" />
+		<set name="time" val="115200" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1216,6 +1216,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21255" min="5" max="5" chance="100" /> <!-- Gludio Homemade Cookie -->
 		</capsuled_items>
@@ -1234,6 +1235,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21256" min="5" max="5" chance="100" /> <!-- Gludio Homemade Cookie - Event -->
 		</capsuled_items>
@@ -1294,6 +1296,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21259" min="5" max="5" chance="100" /> <!-- Dion Homemade Cookie -->
 		</capsuled_items>
@@ -1312,6 +1315,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21260" min="5" max="5" chance="100" /> <!-- Dion Homemade Cookie - Event -->
 		</capsuled_items>
@@ -1372,6 +1376,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21263" min="3" max="3" chance="100" /> <!-- Aden Homemade Cookie -->
 		</capsuled_items>
@@ -1390,6 +1395,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21264" min="3" max="3" chance="100" /> <!-- Aden Homemade Cookie - Event -->
 		</capsuled_items>
@@ -1450,6 +1456,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21267" min="3" max="3" chance="100" /> <!-- Giran Homemade Cookie -->
 		</capsuled_items>
@@ -1468,6 +1475,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21268" min="3" max="3" chance="100" /> <!-- Giran Homemade Cookie - Event -->
 		</capsuled_items>
@@ -1528,6 +1536,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21271" min="3" max="3" chance="100" /> <!-- Rune Homemade Cookie -->
 		</capsuled_items>
@@ -1546,6 +1555,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21272" min="3" max="3" chance="100" /> <!-- Rune Homemade Cookie - Event -->
 		</capsuled_items>
@@ -1606,6 +1616,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13273" min="3" max="3" chance="100" /> <!-- Minion Coupon (5-hour) -->
 		</capsuled_items>
@@ -1624,6 +1635,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13383" min="3" max="3" chance="100" /> <!-- Minion Coupon (5-hour) (Event) -->
 		</capsuled_items>
@@ -1678,6 +1690,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14065" min="2" max="2" chance="100" /> <!-- Superior Minion Coupon - 5-hour -->
 		</capsuled_items>
@@ -1696,6 +1709,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14074" min="2" max="2" chance="100" /> <!-- Superior Minion Coupon (Event) - 5-hour -->
 		</capsuled_items>
@@ -1750,6 +1764,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="10649" min="1" max="1" chance="100" /> <!-- Feather of Blessing -->
 		</capsuled_items>
@@ -1768,6 +1783,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13300" min="1" max="1" chance="100" /> <!-- Feather of Blessing (Event) -->
 		</capsuled_items>
@@ -1786,6 +1802,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13015" min="1" max="1" chance="100" /> <!-- My Teleport Book -->
 		</capsuled_items>
@@ -1804,6 +1821,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13301" min="1" max="1" chance="100" /> <!-- My Teleport Book (Event) -->
 		</capsuled_items>
@@ -1822,6 +1840,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13016" min="30" max="30" chance="100" /> <!-- My Teleport Scroll -->
 		</capsuled_items>
@@ -1840,6 +1859,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13302" min="30" max="30" chance="100" /> <!-- My Teleport Scroll (Event) -->
 		</capsuled_items>
@@ -1858,6 +1878,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13011" min="15" max="15" chance="100" /> <!-- Extra Pass: Near Kamaloka -->
 		</capsuled_items>
@@ -1876,6 +1897,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13298" min="15" max="15" chance="100" /> <!-- Extra Pass: Near Kamaloka (Event) -->
 		</capsuled_items>
@@ -1894,6 +1916,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13010" min="15" max="15" chance="100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -->
 		</capsuled_items>
@@ -1912,6 +1935,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13297" min="15" max="15" chance="100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) (Event) -->
 		</capsuled_items>
@@ -1930,6 +1954,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13012" min="15" max="15" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		</capsuled_items>
@@ -1948,6 +1973,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13299" min="15" max="15" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) (Event) -->
 		</capsuled_items>
@@ -1966,6 +1992,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14705" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Weapon (A-grade) -->
 		</capsuled_items>
@@ -1984,6 +2011,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14705" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Weapon (A-grade) -->
 		</capsuled_items>
@@ -2002,6 +2030,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14706" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Weapon (S-grade) -->
 		</capsuled_items>
@@ -2020,6 +2049,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14706" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Weapon (S-grade) -->
 		</capsuled_items>
@@ -2038,6 +2068,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14710" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Armor (A-grade) -->
 		</capsuled_items>
@@ -2056,6 +2087,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14710" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Armor (A-grade) -->
 		</capsuled_items>
@@ -2074,6 +2106,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14711" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Armor (S-grade) -->
 		</capsuled_items>

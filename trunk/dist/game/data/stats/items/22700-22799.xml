@@ -643,7 +643,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22725" name="Japanese Shield" type="Weapon">
+	<item id="22725" name="Japanese Shield" type="Armor">
 		<!-- Japanese weapon. Shield form. Basic Japanese Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_shield" />
 		<set name="default_action" val="EQUIP" />
@@ -1042,6 +1042,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22710" min="1" max="1" chance="100" /> <!-- Vitality Suspending Potion -->
 		</capsuled_items>
@@ -1081,6 +1082,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22745" min="1" max="1" chance="100" /> <!-- Scroll: Increase Vitality -->
 		</capsuled_items>
@@ -1120,6 +1122,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22747" min="1" max="1" chance="100" /> <!-- Scroll: Increase Vitality (High-grade) -->
 		</capsuled_items>
@@ -1159,6 +1162,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22749" min="1" max="1" chance="100" /> <!-- Scroll: Increase Vitality (Top-grade) -->
 		</capsuled_items>
@@ -1394,6 +1398,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22751" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 30% (3-hour) -->
 		</capsuled_items>
@@ -1413,6 +1418,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22752" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 30% (5-hour) -->
 		</capsuled_items>
@@ -1432,6 +1438,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22753" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 30% (7-day) -->
 		</capsuled_items>
@@ -1451,6 +1458,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22754" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 50% (3-hour) -->
 		</capsuled_items>
@@ -1470,6 +1478,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22755" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 50% (5-hour) -->
 		</capsuled_items>
@@ -1489,6 +1498,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22756" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 50% (7-day) -->
 		</capsuled_items>
@@ -1508,6 +1518,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22757" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% (3-hour) -->
 		</capsuled_items>
@@ -1527,6 +1538,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22758" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% (5-hour) -->
 		</capsuled_items>
@@ -1546,6 +1558,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22759" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% (7-day) -->
 		</capsuled_items>
@@ -1565,6 +1578,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22760" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 200% (3-hour) -->
 		</capsuled_items>
@@ -1584,6 +1598,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22761" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 200% (5-hour) -->
 		</capsuled_items>
@@ -1603,6 +1618,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22762" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 200% (7-day) -->
 		</capsuled_items>

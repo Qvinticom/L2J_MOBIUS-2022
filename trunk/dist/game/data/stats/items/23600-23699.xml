@@ -28,6 +28,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23490" min="1" max="1" chance="100" /> <!-- PC Vitality (1-hour) - Event -->
 			<item id="22280" min="1" max="1" chance="100" /> <!-- Player Commendation - Blessing (1-hour) - Event -->
@@ -96,6 +97,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22959" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 1-hour -->
 		</capsuled_items>
@@ -304,6 +306,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23614" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Potion (10-minute) - No Weekly Usage Limit -->
 		</capsuled_items>
@@ -319,6 +322,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23615" min="1" max="1" chance="100" /> <!-- Black Gem Mask - Vitality (7-day) (No Weekly Usage Limit) -->
 		</capsuled_items>
@@ -334,6 +338,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23616" min="1" max="1" chance="100" /> <!-- Artisan's Goggles - Vitality (7-day) (No Weekly Usage Limit) -->
 		</capsuled_items>
@@ -503,6 +508,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="shared_reuse_group" val="16" />
+		<set name="time" val="60" />
 		<skills>
 			<skill id="22853" level="1" /> <!-- Torun Gingerbread (1-hour) -->
 		</skills>
@@ -521,6 +527,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
+		<set name="time" val="90" />
 		<set name="shared_reuse_group" val="16" />
 		<skills>
 			<skill id="22854" level="1" /> <!-- Torun Gingerbread (1.5-hour) -->
@@ -537,6 +544,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="shared_reuse_group" val="16" />
+		<set name="time" val="120" />
 		<skills>
 			<skill id="22855" level="1" /> <!-- Torun Gingerbread (2-hour) -->
 		</skills>
@@ -556,6 +564,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="shared_reuse_group" val="16" />
+		<set name="time" val="150" />
 		<skills>
 			<skill id="22856" level="1" /> <!-- Torun Gingerbread (2.5-hour) -->
 		</skills>
@@ -575,6 +584,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="shared_reuse_group" val="16" />
+		<set name="time" val="180" />
 		<skills>
 			<skill id="22857" level="1" /> <!-- Torun Gingerbread (3-hour) -->
 		</skills>
@@ -594,6 +604,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="shared_reuse_group" val="16" />
+		<set name="time" val="240" />
 		<skills>
 			<skill id="22858" level="1" /> <!-- Torun Gingerbread (4-hour) -->
 		</skills>
@@ -901,6 +912,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
 		<skills>
 			<skill id="22863" level="1" /> <!-- Blessed Weapon Appearance Stone (R-grade) -->
 		</skills>
@@ -918,6 +930,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
 		<skills>
 			<skill id="22864" level="1" /> <!-- Blessed Weapon Appearance Stone (S-grade) -->
 		</skills>
@@ -935,6 +948,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
 		<skills>
 			<skill id="22865" level="1" /> <!-- Blessed Weapon Appearance Stone (A-grade) -->
 		</skills>
@@ -952,6 +966,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
 		<skills>
 			<skill id="22866" level="1" /> <!-- Blessed Weapon Appearance Stone (B-grade) -->
 		</skills>
@@ -969,6 +984,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
 		<skills>
 			<skill id="22867" level="1" /> <!-- Blessed Weapon Appearance Stone (C-grade) -->
 		</skills>
@@ -986,6 +1002,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
 		<skills>
 			<skill id="22868" level="1" /> <!-- Blessed Weapon Appearance Stone (D-grade) -->
 		</skills>
@@ -1003,6 +1020,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22869" level="1" /> <!-- Blessed Weapon Appearance Stone (R-grade) -->
 		</skills>
@@ -1020,6 +1038,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22870" level="1" /> <!-- Blessed Weapon Appearance Stone (S-grade) -->
 		</skills>
@@ -1037,6 +1056,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22871" level="1" /> <!-- Blessed Weapon Appearance Stone (A-grade) -->
 		</skills>
@@ -1054,6 +1074,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22872" level="1" /> <!-- Blessed Weapon Appearance Stone (B-grade) -->
 		</skills>
@@ -1071,6 +1092,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22873" level="1" /> <!-- Blessed Weapon Appearance Stone (C-grade) -->
 		</skills>
@@ -1088,6 +1110,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22874" level="1" /> <!-- Blessed Weapon Appearance Stone (D-grade) -->
 		</skills>
@@ -1105,6 +1128,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="22875" level="1" /> <!-- Blessed Weapon Appearance Stone (R-grade) -->
 		</skills>
@@ -1122,6 +1146,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="22876" level="1" /> <!-- Blessed Weapon Appearance Stone (S-grade) -->
 		</skills>
@@ -1139,6 +1164,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="22877" level="1" /> <!-- Blessed Weapon Appearance Stone (A-grade) -->
 		</skills>
@@ -1156,6 +1182,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="22878" level="1" /> <!-- Blessed Weapon Appearance Stone (B-grade) -->
 		</skills>
@@ -1173,6 +1200,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="22879" level="1" /> <!-- Blessed Weapon Appearance Stone (C-grade) -->
 		</skills>
@@ -1190,6 +1218,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="22880" level="1" /> <!-- Blessed Weapon Appearance Stone (D-grade) -->
 		</skills>
@@ -1206,6 +1235,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
 		<skills>
 			<skill id="22881" level="1" /> <!-- Blessed Scroll: Modify Armor (R-grade) -->
 		</skills>
@@ -1222,6 +1252,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
 		<skills>
 			<skill id="22882" level="1" /> <!-- Blessed Scroll: Modify Armor (S-grade) -->
 		</skills>
@@ -1238,6 +1269,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
 		<skills>
 			<skill id="22883" level="1" /> <!-- Blessed Scroll: Modify Armor (A-grade) -->
 		</skills>
@@ -1254,6 +1286,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
 		<skills>
 			<skill id="22884" level="1" /> <!-- Blessed Scroll: Modify Armor (B-grade) -->
 		</skills>
@@ -1270,6 +1303,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
 		<skills>
 			<skill id="22885" level="1" /> <!-- Blessed Scroll: Modify Armor (C-grade) -->
 		</skills>
@@ -1286,6 +1320,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
 		<skills>
 			<skill id="22886" level="1" /> <!-- Blessed Scroll: Modify Armor (D-grade) -->
 		</skills>
@@ -1302,6 +1337,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22887" level="1" /> <!-- Blessed Scroll: Modify Armor (R-grade) -->
 		</skills>
@@ -1318,6 +1354,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22888" level="1" /> <!-- Blessed Scroll: Modify Armor (S-grade) -->
 		</skills>
@@ -1334,6 +1371,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22889" level="1" /> <!-- Blessed Scroll: Modify Armor (A-grade) -->
 		</skills>
@@ -1350,6 +1388,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22890" level="1" /> <!-- Blessed Scroll: Modify Armor (B-grade) -->
 		</skills>
@@ -1366,6 +1405,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22891" level="1" /> <!-- Blessed Scroll: Modify Armor (C-grade) -->
 		</skills>
@@ -1382,6 +1422,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22892" level="1" /> <!-- Blessed Scroll: Modify Armor (D-grade) -->
 		</skills>
@@ -1398,6 +1439,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="22893" level="1" /> <!-- Blessed Scroll: Modify Armor (R-grade) -->
 		</skills>
@@ -1414,6 +1456,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="22894" level="1" /> <!-- Blessed Scroll: Modify Armor (S-grade) -->
 		</skills>
@@ -1430,6 +1473,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="22895" level="1" /> <!-- Blessed Scroll: Modify Armor (A-grade) -->
 		</skills>
@@ -1446,6 +1490,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="22896" level="1" /> <!-- Blessed Scroll: Modify Armor (B-grade) -->
 		</skills>
@@ -1462,6 +1507,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="22897" level="1" /> <!-- Blessed Scroll: Modify Armor (C-grade) -->
 		</skills>
@@ -1478,6 +1524,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="22898" level="1" /> <!-- Blessed Scroll: Modify Armor (D-grade) -->
 		</skills>

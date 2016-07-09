@@ -131,6 +131,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="time" val="129600" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21800" min="1" max="1" chance="100" /> <!-- Dynasty Leather Armor of Fortune - 90-day -->
 			<item id="21801" min="1" max="1" chance="100" /> <!-- Dynasty Leather Leggings of Fortune - 90-day -->
@@ -303,6 +304,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="time" val="129600" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21806" min="1" max="1" chance="100" /> <!-- Dynasty Tunic of Fortune - 90-day -->
 			<item id="21807" min="1" max="1" chance="100" /> <!-- Dynasty Stockings of Fortune - 90-day -->
@@ -395,6 +397,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="time" val="129600" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21813" min="2" max="2" chance="100" /> <!-- Tateossian Earring of Fortune - 90-day -->
 			<item id="21814" min="2" max="2" chance="100" /> <!-- Tateossian Ring of Fortune - 90-day -->
@@ -484,6 +487,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="time" val="129600" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21817" min="2" max="2" chance="100" /> <!-- Dynasty Earring of Fortune - 90-day -->
 			<item id="21819" min="2" max="2" chance="100" /> <!-- Dynasty Ring of Fortune - 90-day -->
@@ -1693,6 +1697,7 @@
 		<set name="time" val="129600" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_destroyable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="16852" min="1" max="1" chance="100" /> <!-- Hero's Treasure Chest -->
 			<item id="21858" min="1" max="1" chance="100" /> <!-- Dimensional Support Pack - 90-day -->
@@ -1716,6 +1721,7 @@
 		<set name="time" val="129600" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_destroyable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14074" min="2" max="2" chance="100" /> <!-- Superior Minion Coupon (Event) - 5-hour -->
 			<item id="13300" min="3" max="3" chance="100" /> <!-- Feather of Blessing (Event) -->
@@ -1741,6 +1747,7 @@
 		<set name="time" val="129600" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_destroyable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14701" min="20" max="20" chance="100" /> <!-- Superior Quick Healing Potion -->
 			<item id="14700" min="50" max="50" chance="100" /> <!-- Superior Healing Potion -->
@@ -1764,6 +1771,7 @@
 		<set name="time" val="129600" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_destroyable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21845" min="20000" max="20000" chance="100" /> <!-- Mysterious No-grade Soulshot -->
 			<item id="21846" min="20000" max="20000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
@@ -1853,6 +1861,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21863" min="1" max="1" chance="100" /> <!-- Player Commendation - Blessing -->
 		</capsuled_items>
@@ -1932,6 +1941,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="20708" min="20" max="20" chance="100" /> <!-- Summon Scroll: Belldandy (Event) -->
 		</capsuled_items>
@@ -1952,6 +1962,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21857" min="1" max="1" chance="100" /> <!-- Hero's Gold Chest - 90-day -->
 		</capsuled_items>
@@ -1996,6 +2007,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="15209" min="3" max="3" chance="100" /> <!-- Equipment Set Pack (10-day) Coupon -->
 			<item id="20289" min="4" max="4" chance="100" /> <!-- Agathion - Button-eyed Bear Doll Pack (7-day) - Vitality -->
@@ -2080,6 +2092,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21878" min="1" max="1" chance="100" /> <!-- Pa'agrio's Warm Breeze Pack (4-hour) -->
 			<item id="21879" min="1" max="1" chance="100" /> <!-- XP Buff 50% Pack (4-hour) -->
@@ -2102,6 +2115,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21878" min="1" max="1" chance="100" /> <!-- Pa'agrio's Warm Breeze Pack (4-hour) -->
 			<item id="21879" min="1" max="1" chance="100" /> <!-- XP Buff 50% Pack (4-hour) -->
@@ -2124,6 +2138,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21880" min="15" max="15" chance="100" /> <!-- Pa'agrio's Warm Breeze (4-hour) -->
 		</capsuled_items>
@@ -2143,6 +2158,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17283" min="15" max="15" chance="100" /> <!-- XP Buff 50% (4-hour) -->
 		</capsuled_items>
@@ -2260,6 +2276,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_freightable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="20914" min="2" max="2" chance="100" /> <!-- Enhanced Rose Spirit Coupon (5-hour) -->
 		</capsuled_items>
@@ -2280,6 +2297,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_freightable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21885" min="1" max="1" chance="100" /> <!-- Rose Spirit Coupon Pack -->
 			<item id="21888" min="1" max="1" chance="100" /> <!-- Sweet Chocolate Box -->
@@ -2316,6 +2334,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="20904" min="50" max="50" chance="100" /> <!-- Rose Essence -->
 			<item id="21889" min="3" max="3" chance="100" /> <!-- Sweet Chocolate (4-hour) -->
@@ -2358,6 +2377,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_freightable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="20914" min="2" max="2" chance="100" /> <!-- Enhanced Rose Spirit Coupon (5-hour) -->
 		</capsuled_items>
@@ -2378,6 +2398,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_freightable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21885" min="1" max="1" chance="100" /> <!-- Rose Spirit Coupon Pack -->
 			<item id="21888" min="1" max="1" chance="100" /> <!-- Sweet Chocolate Box -->

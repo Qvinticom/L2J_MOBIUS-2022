@@ -37,6 +37,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33800" min="1" max="1" chance="100" /> <!-- Mentee Certificate -->
 			<item id="33801" min="1" max="1" chance="100" /> <!-- Mentoring Guidebook -->

@@ -14,7 +14,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="45373" name="Agathion - Blessed Pisces Pack" type="EtcItem">
 		<!-- Wrapped Pack containing an Agathion - Blessed Pisces (30-day). -->
@@ -112,7 +112,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lrhand" />
-		<set name="time" val="3600" />
+		<set name="time" val="60" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -136,7 +136,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lrhand" />
-		<set name="time" val="3600" />
+		<set name="time" val="60" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -158,7 +158,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1296000" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="45383" name="Maid Hairband" additionalName="15-day" type="Armor">
 		<!-- Cute hairband. Female only. Uses 2 hair accessory slots. -->
@@ -173,7 +173,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1296000" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="45384" name="Laborer Hat" additionalName="15-day" type="Armor">
 		<!-- Hat worn by Lei Feng. Uses 1 hair accessory slot. -->
@@ -188,7 +188,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1296000" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="45385" name="Ruthless Tribe Mask" additionalName="15-day" type="Armor">
 		<!-- Mask worn by a ruthless tribe. Uses 1 hair accessory slot. -->
@@ -203,7 +203,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1296000" />
+		<set name="time" val="21600" />
 	</item>
 	<item id="45386" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />

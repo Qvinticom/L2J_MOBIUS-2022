@@ -1320,7 +1320,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="false" />
 		<set name="weight" val="30" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -1343,7 +1342,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="false" />
 		<set name="weight" val="30" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -1366,7 +1364,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="false" />
 		<set name="weight" val="30" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -1389,7 +1386,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="false" />
 		<set name="weight" val="30" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -1434,6 +1430,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="icon" val="icon.etc_whiteday_candy_i05" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="39591" name="Nom Nom Candy (30-day)" additionalName="Event" type="EtcItem">
 		<!-- XP/SP Gain + 15%. Stacks with Yum Yum Candy, but not with another Nom Nom Candy. -->
@@ -1447,6 +1444,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="icon" val="icon.etc_whiteday_candy_i06" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="39592" name="Tempest Stone" type="EtcItem">
 		<!-- Precious material gained by dissecting the material world's elements. Used for the greatest of alchemical feats, this can also be double-clicked to gain either a Low/Mid/High-grade Windy Dye Pack or Talisman - Wind. -->

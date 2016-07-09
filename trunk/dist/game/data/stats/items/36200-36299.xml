@@ -1725,6 +1725,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.etc_treasure_box_i05" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="36221" min="5" max="5" chance="100" /> <!-- Scroll Imbued with Heroes' Power -->
 			<item id="36234" min="1" max="1" chance="100" /> <!-- Boss Accessory Pack - 1-day -->

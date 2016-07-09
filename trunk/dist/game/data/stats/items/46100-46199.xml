@@ -76,7 +76,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46109" name="Freya's Staff Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed magic blunt into that of Freya's Staff. 30-day. -->
@@ -84,7 +84,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46110" name="Spezion's Claw Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed fist weapon into that of Spezion's Claw. 30-day. -->
@@ -92,7 +92,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46111" name="Maliss Stormer Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Maliss Stormer. 30-day. -->
@@ -100,7 +100,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46112" name="Steregos' Dagger Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one handed dagger into that of Steregos' Dagger. 30-day. -->
@@ -108,7 +108,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46113" name="Ron's Dual Blunt Weapon Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt into that of Ron's Dual Blunt Weapon. 30-day. -->
@@ -116,7 +116,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46114" name="Drake Maul Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt into that of Drake Maul's. -->
@@ -166,7 +166,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46121" name="Little Boy's Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Little Boy's Hat. 30-day. Can be used only on hair accessories that take up 2 slots. Male only. -->
@@ -174,7 +174,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46122" name="Little Girls' Hat Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Little Girl's Hat. Can be used only on hair accessories that take up 2 slots. Female only. -->
@@ -196,7 +196,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46125" name="Afro - Gold Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Gold Afro. 30-day. Can be used only on hair accessories that take up 2 slots. -->
@@ -204,7 +204,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46126" name="Afro - Pink Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Pink Afro. 30-day. Can be used only on hair accessories that take up 2 slots. -->
@@ -212,7 +212,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46127" name="Uniform Hat Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Uniform Hat. Can be used only on hair accessories that take up 2 slots. -->
@@ -482,6 +482,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
+		<set name="time" val="1440" />
 	</item>
 	<item id="46147" name="Atelia Fortress Stronghold II Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold II. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
@@ -496,6 +497,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
+		<set name="time" val="1440" />
 	</item>
 	<item id="46148" name="Atelia Fortress Stronghold III Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold III. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
@@ -510,6 +512,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
+		<set name="time" val="1440" />
 	</item>
 	<item id="46149" name="Atelia Fortress Stronghold IV Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold IV. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
@@ -524,6 +527,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
+		<set name="time" val="1440" />
 	</item>
 	<item id="46150" name="Superior Giant's Codex Chapter 1" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between + 11~+ 20 after Awakening. -->
@@ -809,7 +813,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46174" name="Male Swimsuit No.2 Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of Male Swimwear No. 2. Works on one-pieces too. It modifies everything, making the appearance of all armor into that of swimwear. Appearance is restored through the use of a Restoration Stone. -->
@@ -818,7 +822,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46175" name="Bikini No.1 Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of Bikini No. 1. Works on one-pieces too. It modifies everything, making the appearance of all armor into that of a bikini. Appearance is restored through the use of a Restoration Stone. -->
@@ -827,7 +831,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46176" name="Bikini No.2 Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of Bikini No. 2. Works on one-pieces too. It modifies everything, making the appearance of all armor into that of a bikini. Appearance is restored through the use of a Restoration Stone. -->
@@ -836,7 +840,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46177" name="Soul Bottle Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 1 bottle containing Antharas, Valakas, Queen Ant, Orfen, Frintezza, or Baium's soul. -->
@@ -947,7 +951,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46187" name="Agathion - Anakim Holy Barrier Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Anakim Holy Barrier (30-day). -->
@@ -957,7 +961,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46188" name="Agathion - Anakim Holy Barrier Pack" type="EtcItem">
 		<!-- Wrapped Pack containing an Agathion - Anakim Holy Barrier (30-day) or an Agathion - Anakim Holy Barrier. -->
@@ -985,7 +989,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46191" name="Vampiric Style Appearance Stone Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a Vampiric Style Appearance Stone (30-day) or a Vampiric Style Appearance Stone. -->
@@ -1079,6 +1083,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 </list>

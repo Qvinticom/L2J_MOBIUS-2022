@@ -554,6 +554,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17527" min="5" max="5" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
 		</capsuled_items>
@@ -652,6 +653,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17714" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary MEN Dye - MEN + 5 / INT + 1 / Holy Resistance + 25 -->
 		</capsuled_items>
@@ -666,6 +668,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17713" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary WIT Dye - WIT + 5 / MEN + 1 / Wind Resistance + 25 -->
 		</capsuled_items>
@@ -680,6 +683,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17710" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary DEX Dye - DEX + 5 / CON + 1 / Earth Resistance + 25 -->
 		</capsuled_items>
@@ -694,6 +698,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17711" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary CON Dye - CON + 5 / STR + 1 / Dark Resistance + 25 -->
 		</capsuled_items>
@@ -708,6 +713,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17712" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary INT Dye - INT + 5 / WIT + 1 / Water Resistance + 25 -->
 		</capsuled_items>
@@ -722,6 +728,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17709" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary STR Dye - STR + 5 / DEX + 1 / Fire Resistance + 25 -->
 		</capsuled_items>
@@ -806,6 +813,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="36170" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Fog of Blood Region -->
 			<item id="36171" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Isle of Souls Harbor -->
@@ -825,6 +833,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34743" min="1" max="1" chance="100" /> <!-- Agathion - XP Bottle (10-hour) -->
 		</capsuled_items>
@@ -884,6 +893,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="9546" min="1" max="1" chance="100" /> <!-- Fire Stone -->
 			<item id="9547" min="1" max="1" chance="100" /> <!-- Water Stone -->
@@ -945,6 +955,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33818" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Hair Accessory - Event -->
 		</capsuled_items>
@@ -959,6 +970,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33819" min="1" max="1" chance="100" /> <!-- Life Stone: Hair Accessory - Event -->
 		</capsuled_items>

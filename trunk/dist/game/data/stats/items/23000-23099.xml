@@ -1138,6 +1138,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23082" min="10000" max="10000" chance="100" /> <!-- Mysterious Blessed Spiritshot (R-grade) -->
 		</capsuled_items>
@@ -1155,6 +1156,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23082" min="3000" max="3000" chance="100" /> <!-- Mysterious Blessed Spiritshot (R-grade) -->
 		</capsuled_items>
@@ -1216,6 +1218,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23085" min="1" max="1" chance="100" /> <!-- Power Shirt - Event -->
 		</capsuled_items>
@@ -1234,6 +1237,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21247" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Potion -->
 			<item id="22966" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Potion (1-hour) -->
@@ -1255,6 +1259,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21247" min="3" max="3" chance="100" /> <!-- Vitality Replenishing Potion -->
 			<item id="22906" min="9" max="9" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% Pack (1-hour) -->
@@ -1277,6 +1282,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21247" min="9" max="9" chance="100" /> <!-- Vitality Replenishing Potion -->
 			<item id="22906" min="10" max="10" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% Pack (1-hour) -->
@@ -1302,6 +1308,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22247" min="10000" max="10000" chance="100" /> <!-- Mysterious Soulshot (S-grade) -->
 			<item id="22252" min="5000" max="5000" chance="100" /> <!-- Mysterious Blessed Spiritshot (S-grade) -->
@@ -1323,6 +1330,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22888" min="10000" max="10000" chance="100" /> <!-- Mysterious Soulshot (R-grade) -->
 			<item id="23082" min="5000" max="5000" chance="100" /> <!-- Mysterious Blessed Spiritshot (R-grade) -->

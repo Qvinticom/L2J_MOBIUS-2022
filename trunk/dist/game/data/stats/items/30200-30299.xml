@@ -2640,6 +2640,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17754" min="5000" max="5000" chance="100" /> <!-- Soulshot (R-grade) -->
 		</capsuled_items>
@@ -2659,6 +2660,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17754" min="10000" max="10000" chance="100" /> <!-- Soulshot (R-grade) -->
 		</capsuled_items>
@@ -2678,6 +2680,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="19441" min="5000" max="5000" chance="100" /> <!-- Spiritshot (R-grade) -->
 		</capsuled_items>
@@ -2697,6 +2700,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="19441" min="10000" max="10000" chance="100" /> <!-- Spiritshot (R-grade) -->
 		</capsuled_items>
@@ -2716,6 +2720,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="19442" min="5000" max="5000" chance="100" /> <!-- Blessed Spiritshot (R-grade) -->
 		</capsuled_items>
@@ -2735,6 +2740,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="19442" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (R-grade) -->
 		</capsuled_items>
@@ -2753,6 +2759,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18550" min="10000" max="10000" chance="100" /> <!-- Orichalcum Arrow -->
 		</capsuled_items>
@@ -2771,6 +2778,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="19443" min="10000" max="10000" chance="100" /> <!-- Orichalcum Bolt -->
 		</capsuled_items>
@@ -2788,6 +2796,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18103" min="1" max="1" chance="100" /> <!-- Unidentified Requiem Shaper -->
 			<item id="18104" min="1" max="1" chance="100" /> <!-- Unidentified Requiem Cutter -->
@@ -2818,6 +2827,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18117" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Helmet - Heavy Armor -->
 			<item id="18118" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Breastplate - Heavy Armor -->
@@ -2840,6 +2850,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18123" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Leather Helmet - Light Armor -->
 			<item id="18124" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Leather Armor - Light Armor -->
@@ -2861,6 +2872,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18128" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Circlet - Robe -->
 			<item id="18129" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Tunic - Robe -->
@@ -2883,6 +2895,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18137" min="1" max="1" chance="100" /> <!-- Unidentified Apocalypse Shaper -->
 			<item id="18138" min="1" max="1" chance="100" /> <!-- Unidentified Apocalypse Cutter -->
@@ -2913,6 +2926,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18151" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Helmet - Heavy Armor -->
 			<item id="18152" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Breastplate - Heavy Armor -->
@@ -2935,6 +2949,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18157" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Leather Helmet - Light Armor -->
 			<item id="18158" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Leather Armor - Light Armor -->
@@ -2956,6 +2971,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18162" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Circlet - Robe -->
 			<item id="18163" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Tunic - Robe -->
@@ -2978,6 +2994,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18134" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Necklace -->
 			<item id="18135" min="2" max="2" chance="100" /> <!-- Unidentified Immortal Earring -->
@@ -2997,6 +3014,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18168" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Necklace -->
 			<item id="18169" min="2" max="2" chance="100" /> <!-- Unidentified Twilight Earring -->

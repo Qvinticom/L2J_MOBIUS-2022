@@ -150,6 +150,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21251" min="2" max="2" chance="100" /> <!-- Vitality Maintaining Potion (30-minute) -->
 		</capsuled_items>
@@ -168,6 +169,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21251" min="4" max="4" chance="100" /> <!-- Vitality Maintaining Potion (30-minute) -->
 		</capsuled_items>
@@ -235,6 +237,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="20572" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 30% - 3-hour -->
 		</capsuled_items>
@@ -251,6 +254,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21084" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 30% -->
 		</capsuled_items>
@@ -267,6 +271,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22334" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 1-hour -->
 		</capsuled_items>
@@ -299,6 +304,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14966" min="2" max="2" chance="100" /> <!-- Majestic Earring of Fortune - 30-day -->
 			<item id="14967" min="1" max="1" chance="100" /> <!-- Majestic Necklace of Fortune - 30-day -->
@@ -318,6 +324,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14970" min="1" max="1" chance="100" /> <!-- Black Ore Necklace of Fortune - 30-day -->
 			<item id="14969" min="2" max="2" chance="100" /> <!-- Black Ore Earring of Fortune - 30-day -->
@@ -337,6 +344,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14973" min="1" max="1" chance="100" /> <!-- Sealed Necklace of Fortune - 30-day -->
 			<item id="14972" min="2" max="2" chance="100" /> <!-- Sealed Earring of Fortune - 30-day -->
@@ -354,6 +362,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21817" min="2" max="2" chance="100" /> <!-- Dynasty Earring of Fortune - 90-day -->
 			<item id="21819" min="2" max="2" chance="100" /> <!-- Dynasty Ring of Fortune - 90-day -->
@@ -1392,7 +1401,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22664" name="Emerald Weapon: Shield" type="Weapon">
+	<item id="22664" name="Emerald Weapon: Shield" type="Armor">
 		<!-- Emerald Weapon. Shield form. Basic Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_shield" />
 		<set name="default_action" val="EQUIP" />

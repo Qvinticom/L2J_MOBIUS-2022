@@ -195,7 +195,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="46415" name="Sheep Hat - Magic" additionalName="7-day" type="Armor">
 		<!-- INT + 3, M. Atk. + 5% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
@@ -210,7 +210,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="46416" name="Sheep Hat - Defense" additionalName="7-day" type="Armor">
 		<!-- CON + 3, P./M. Def + 3% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
@@ -225,7 +225,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="604800" />
+		<set name="time" val="10080" />
 	</item>
 	<item id="46417" name="Gutenhagen's Weapon Recipe Coupon" additionalName="" type="EtcItem">
 		<!-- Coupon received from Collector Gutenhagen in the Pavel Ruins. Exchange it for a Weapon Recipe through Gutenhagen. -->
@@ -253,7 +253,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="1209600" />
+		<set name="time" val="20160" />
 	</item>
 	<item id="46419" name="Sheep Hat" additionalName="" type="Armor">
 		<!-- Hat that looks like a white sheep. Uses 2 hair accessory slots. -->
@@ -329,7 +329,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="1209600" />
+		<set name="time" val="20160" />
 	</item>
 	<item id="46425" name="Sheep Bait Coupon" additionalName="" type="EtcItem">
 		<!-- Exchange for 30 Sheep Bait for your corresponding level through a fishing guild member. Deleted after event. -->

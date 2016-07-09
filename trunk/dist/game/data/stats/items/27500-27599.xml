@@ -251,6 +251,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="27523" name="EP2.5 Aden Recostruction Item ID" additionalName="No translation needed" type="EtcItem">
 		<!-- No translation needed. -->
@@ -438,7 +439,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="27542" name="Riding Manual: Wolf" additionalName="" type="EtcItem">
 		<!-- Double-click to learn how to ride a Wolf. -->
@@ -563,7 +564,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">50.0</stat>
 		</stats>
@@ -592,6 +593,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="1440" />
 	</item>
 	<item id="27555" name="Lv. 3 Giant Dye Exchange Coupon" additionalName="" type="EtcItem">
 		<!-- Take it to the Dimensional Merchant to exchange for one of the Lv. 3 Giant Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
@@ -656,6 +658,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="27562" name="Noble Pack" additionalName="" type="EtcItem">
 		<!-- Double-click to get the following: XP Rune IV (Lv. 1-99) 100% (7-day) x1, Venir's Talisman Stage 4 x1, Adventurer's Support Box x1, Talisman - Abundance Pack x1, Radiant Zodiac Agathion Pack (30-day) x1, Beauty Shop Ticket x5, Leona's Scroll: Buffs x10, Dandy's Scroll: Passion x10. -->
@@ -911,7 +914,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="3600" />
+		<set name="time" val="40320" />
 	</item>
 	<item id="27582" name="SP Rune 100%" additionalName="1-hour" type="EtcItem">
 		<!-- Premium User Only\nAncient charm endowed with mysterious symbols. When stored in the inventory, increases acquired SP by 100%. The remaining time decreases even when not playing. -->
@@ -926,7 +929,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="3600" />
+		<set name="time" val="60" />
 	</item>
 	<item id="27583" name="Prestige Rune 100%" additionalName="1-hour" type="EtcItem">
 		<!-- Premium User Only\nWhen carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.100%. -->
@@ -941,7 +944,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="3600" />
+		<set name="time" val="60" />
 	</item>
 	<item id="27584" name="Top-grade Spirt Stone" additionalName="" type="EtcItem">
 		<!-- Top-grade Spirt Stone. It's an ingredient to augment weapons, and can be used by characters Lv. 99 and above. -->

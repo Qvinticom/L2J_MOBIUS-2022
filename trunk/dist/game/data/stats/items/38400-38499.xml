@@ -8,6 +8,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="time" val="120" />
 	</item>
 	<item id="38401" name="Expertise Rune (B-grade)" additionalName="2-hour" type="EtcItem">
 		<!-- 2-hour.When possessed, gives Expertise B Skill. -->
@@ -21,7 +22,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="7200" />
+		<set name="time" val="120" />
 	</item>
 	<item id="38402" name="Expertise Rune Pack" additionalName="B-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (B-grade) (2-hour). -->
@@ -44,7 +45,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="7200" />
+		<set name="time" val="120" />
 	</item>
 	<item id="38404" name="Expertise Rune Pack" additionalName="A-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (A-grade) (2-hour). -->
@@ -67,7 +68,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="7200" />
+		<set name="time" val="120" />
 	</item>
 	<item id="38406" name="Expertise Rune Pack" additionalName="S-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (S-grade) (2-hour). -->
@@ -90,7 +91,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="7200" />
+		<set name="time" val="120" />
 	</item>
 	<item id="38408" name="Expertise Rune Pack" additionalName="S80-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (S80-grade) (2-hour). -->
@@ -113,7 +114,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="7200" />
+		<set name="time" val="120" />
 	</item>
 	<item id="38410" name="Expertise Rune Pack" additionalName="R-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (R-grade) (2-hour). -->
@@ -136,7 +137,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="7200" />
+		<set name="time" val="120" />
 	</item>
 	<item id="38412" name="Expertise Rune Pack" additionalName="R95-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (R95-grade) (2-hour). -->
@@ -159,7 +160,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="time" val="7200" />
+		<set name="time" val="120" />
 	</item>
 	<item id="38414" name="Expertise Rune Pack" additionalName="R99-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (R99-grade) (2-hour). -->
@@ -169,6 +170,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="time" val="120" />
 	</item>
 	<item id="38415" name="Blue Mackerel Appearance Stone: Dual Blunt Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a dual blunt weapon into that of a Blue Mackerel. 30-day. -->
@@ -178,7 +180,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38416" name="Trumpetfish Appearance Stone: Dual Dagger" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a dual dagger into that of a Trumpetfish. 30-day. -->
@@ -188,7 +190,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38417" name="Blue Mackerel Appearance Stone: Dual Blunt Weapon" type="EtcItem">
 		<!-- Turns the appearance of a dual blunt weapon into that of a Blue Mackerel. -->
@@ -216,7 +218,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="38420" name="Blue Mackerel Appearance Stone: One-handed Blunt Weapon" type="EtcItem">
 		<!-- Turns the appearance of a one-handed blunt weapon into that of a Blue Mackerel. -->

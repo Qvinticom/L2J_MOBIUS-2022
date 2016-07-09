@@ -13,6 +13,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23301" min="1" max="1" chance="100" /> <!-- Sayha's Shirt -->
 		</capsuled_items>
@@ -68,6 +69,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23304" min="1" max="1" chance="100" /> <!-- Eva's Shirt -->
 		</capsuled_items>
@@ -123,6 +125,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23307" min="1" max="1" chance="100" /> <!-- Maphr's Shirt -->
 		</capsuled_items>
@@ -549,6 +552,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17754" min="5000" max="5000" chance="100" /> <!-- Soulshot (R-grade) -->
 		</capsuled_items>
@@ -564,6 +568,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="19442" min="5000" max="5000" chance="100" /> <!-- Blessed Spiritshot (R-grade) -->
 		</capsuled_items>
@@ -779,6 +784,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23085" min="1" max="1" chance="100" /> <!-- Power Shirt - Event -->
 		</capsuled_items>
@@ -1143,6 +1149,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22402" min="1" max="1" chance="100" /> <!-- Weapon Appearance Stone (R-grade) -->
 			<item id="22414" min="1" max="1" chance="100" /> <!-- Weapon Restoration Stone (R-grade) -->
@@ -1158,6 +1165,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22403" min="1" max="1" chance="100" /> <!-- Weapon Appearance Stone (S-grade) -->
 			<item id="22415" min="1" max="1" chance="100" /> <!-- Weapon Restoration Stone (S-grade) -->
@@ -1173,6 +1181,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22682" min="1" max="1" chance="100" /> <!-- Armor Appearance Stone (R-grade) -->
 			<item id="22694" min="1" max="1" chance="100" /> <!-- Armor Restoration Stone (R-grade) -->
@@ -1188,6 +1197,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22683" min="1" max="1" chance="100" /> <!-- Armor Appearance Stone (S-grade) -->
 			<item id="22695" min="1" max="1" chance="100" /> <!-- Armor Restoration Stone (S-grade) -->
@@ -1203,6 +1213,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22708" min="1" max="1" chance="100" /> <!-- Hair Accessory Appearance Stone -->
 			<item id="22882" min="1" max="1" chance="100" /> <!-- Hair Accessory Restoration Stone -->
@@ -1481,6 +1492,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23391" min="1" max="1" chance="100" /> <!-- XP Rune II (Lv. 1-95) 100% - 1-hour -->
 		</capsuled_items>
@@ -1499,6 +1511,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23392" min="1" max="1" chance="100" /> <!-- XP Rune II (Lv. 1-95) 100% - 3-hour -->
 		</capsuled_items>

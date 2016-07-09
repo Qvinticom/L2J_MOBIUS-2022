@@ -14,6 +14,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14711" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Armor (S-grade) -->
 		</capsuled_items>
@@ -32,6 +33,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21303" min="1" max="1" chance="100" /> <!-- Crystal of Fortune Treasure Sack -->
 		</capsuled_items>
@@ -50,6 +52,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21304" min="1" max="1" chance="100" /> <!-- Crystal of Fortune Treasure Sack - Event -->
 		</capsuled_items>
@@ -108,6 +111,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21307" min="1" max="1" chance="100" /> <!-- Enchant Scroll of Fortune Treasure Sack -->
 		</capsuled_items>
@@ -126,6 +130,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21308" min="1" max="1" chance="100" /> <!-- Enchant Scroll of Fortune Treasure Sack - Event -->
 		</capsuled_items>
@@ -184,6 +189,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21311" min="1" max="1" chance="100" /> <!-- Bead of Fortune Treasure Sack -->
 		</capsuled_items>
@@ -202,6 +208,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21312" min="1" max="1" chance="100" /> <!-- Bead of Fortune Treasure Sack - Event -->
 		</capsuled_items>
@@ -222,6 +229,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_mailable" val="false" />
+		<set name="time" val="300" />
 		<skills>
 			<skill id="22239" level="1" /> <!-- Bead of Fortune Treasure Sack -->
 		</skills>
@@ -242,6 +250,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_mailable" val="false" />
+		<set name="time" val="300" />
 		<skills>
 			<skill id="22240" level="1" /> <!-- Bead of Fortune Treasure Sack -->
 		</skills>
@@ -260,6 +269,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21315" min="1" max="1" chance="100" /> <!-- Rider Pouch -->
 		</capsuled_items>
@@ -278,6 +288,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21316" min="1" max="1" chance="100" /> <!-- Rider Pouch - Event -->
 		</capsuled_items>
@@ -298,6 +309,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_mailable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22241" level="1" /> <!-- Rider Pouch -->
 		</skills>
@@ -318,6 +330,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_mailable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22242" level="1" /> <!-- Rider Pouch -->
 		</skills>
@@ -336,6 +349,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21319" min="1" max="1" chance="100" /> <!-- Fashion Pouch -->
 		</capsuled_items>
@@ -354,6 +368,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21320" min="1" max="1" chance="100" /> <!-- Fashion Pouch - Event -->
 		</capsuled_items>
@@ -374,6 +389,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_mailable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22243" level="1" /> <!-- Fashion Pouch -->
 		</skills>
@@ -394,6 +410,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_mailable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
 			<skill id="22244" level="1" /> <!-- Fashion Pouch -->
 		</skills>
@@ -412,6 +429,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21323" min="1" max="1" chance="100" /> <!-- Buff Pouch -->
 		</capsuled_items>
@@ -430,6 +448,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21324" min="1" max="1" chance="100" /> <!-- Buff Pouch - Event -->
 		</capsuled_items>
@@ -488,6 +507,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21331" min="1" max="1" chance="100" /> <!-- Agathion - Griffin - 7-day -->
 		</capsuled_items>
@@ -506,6 +526,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21332" min="1" max="1" chance="100" /> <!-- Agathion - Griffin - 7-day (Event) -->
 		</capsuled_items>
@@ -524,6 +545,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21333" min="1" max="1" chance="100" /> <!-- Agathion - Griffin - 30-day -->
 		</capsuled_items>
@@ -542,6 +564,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21334" min="1" max="1" chance="100" /> <!-- Agathion - Griffin - 30-day (Event) -->
 		</capsuled_items>
@@ -560,6 +583,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21335" min="1" max="1" chance="100" /> <!-- Agathion - Griffin -->
 		</capsuled_items>
@@ -578,6 +602,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21336" min="1" max="1" chance="100" /> <!-- Agathion - Griffin - Event -->
 		</capsuled_items>
@@ -738,6 +763,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21343" min="1" max="1" chance="100" /> <!-- Agathion - Cow - 7-day -->
 		</capsuled_items>
@@ -756,6 +782,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21344" min="1" max="1" chance="100" /> <!-- Agathion - Cow - 7-day (Event) -->
 		</capsuled_items>
@@ -774,6 +801,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21345" min="1" max="1" chance="100" /> <!-- Agathion - Cow - 30-day -->
 		</capsuled_items>
@@ -792,6 +820,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21346" min="1" max="1" chance="100" /> <!-- Agathion - Cow - 30-day (Event) -->
 		</capsuled_items>
@@ -810,6 +839,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21347" min="1" max="1" chance="100" /> <!-- Agathion - Cow -->
 		</capsuled_items>
@@ -828,6 +858,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21348" min="1" max="1" chance="100" /> <!-- Agathion - Cow - Event -->
 		</capsuled_items>
@@ -988,6 +1019,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21355" min="1" max="1" chance="100" /> <!-- Agathion - Makeshift Bat - 7-day -->
 		</capsuled_items>
@@ -1006,6 +1038,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21356" min="1" max="1" chance="100" /> <!-- Agathion - Makeshift Bat - 7-day (Event) -->
 		</capsuled_items>
@@ -1024,6 +1057,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21357" min="1" max="1" chance="100" /> <!-- Agathion - Makeshift Bat - 30-day -->
 		</capsuled_items>
@@ -1042,6 +1076,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21358" min="1" max="1" chance="100" /> <!-- Agathion - Makeshift Bat - 30-day (Event) -->
 		</capsuled_items>
@@ -1060,6 +1095,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21359" min="1" max="1" chance="100" /> <!-- Agathion - Makeshift Bat -->
 		</capsuled_items>
@@ -1078,6 +1114,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21360" min="1" max="1" chance="100" /> <!-- Agathion - Makeshift Bat - Event -->
 		</capsuled_items>
@@ -1238,6 +1275,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21367" min="1" max="1" chance="100" /> <!-- Aqua Elf Transformation Harp - 7-day -->
 		</capsuled_items>
@@ -1256,6 +1294,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21368" min="1" max="1" chance="100" /> <!-- Aqua Elf Transformation Harp - 7-day (Event) -->
 		</capsuled_items>
@@ -1274,6 +1313,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21369" min="1" max="1" chance="100" /> <!-- Aqua Elf Transformation Harp - 30-day -->
 		</capsuled_items>
@@ -1292,6 +1332,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21370" min="1" max="1" chance="100" /> <!-- Aqua Elf Transformation Harp - 30-day (Event) -->
 		</capsuled_items>
@@ -1310,6 +1351,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21371" min="1" max="1" chance="100" /> <!-- Aqua Elf Transformation Harp -->
 		</capsuled_items>
@@ -1328,6 +1370,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21372" min="1" max="1" chance="100" /> <!-- Aqua Elf Transformation Harp - Event -->
 		</capsuled_items>
@@ -1538,6 +1581,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21379" min="1" max="1" chance="100" /> <!-- Mount - Darkmane Pacer - 7-day -->
 		</capsuled_items>
@@ -1556,6 +1600,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21380" min="1" max="1" chance="100" /> <!-- Mount - Darkmane Pacer - 7-day (Event) -->
 		</capsuled_items>
@@ -1574,6 +1619,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21381" min="1" max="1" chance="100" /> <!-- Mount - Darkmane Pacer - 30-day -->
 		</capsuled_items>
@@ -1592,6 +1638,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21382" min="1" max="1" chance="100" /> <!-- Mount - Darkmane Pacer - 30-day (Event) -->
 		</capsuled_items>
@@ -1607,6 +1654,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21383" min="1" max="1" chance="100" /> <!-- Mount - Darkmane Pacer -->
 		</capsuled_items>
@@ -1625,6 +1673,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21384" min="1" max="1" chance="100" /> <!-- Mount - Darkmane Pacer - Event -->
 		</capsuled_items>
@@ -1782,6 +1831,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21391" min="1" max="1" chance="100" /> <!-- Mount - Steam Beetle - 7-day -->
 		</capsuled_items>
@@ -1800,6 +1850,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21392" min="1" max="1" chance="100" /> <!-- Mount - Steam Beetle - 7-day (Event) -->
 		</capsuled_items>
@@ -1818,6 +1869,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21393" min="1" max="1" chance="100" /> <!-- Mount - Steam Beetle - 30-day -->
 		</capsuled_items>
@@ -1836,6 +1888,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21394" min="1" max="1" chance="100" /> <!-- Mount - Steam Beetle - 30-day (Event) -->
 		</capsuled_items>
@@ -1854,6 +1907,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21395" min="1" max="1" chance="100" /> <!-- Mount - Steam Beetle -->
 		</capsuled_items>
@@ -1872,6 +1926,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21396" min="1" max="1" chance="100" /> <!-- Mount - Steam Beetle - Event -->
 		</capsuled_items>
@@ -2024,6 +2079,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21403" min="1" max="1" chance="100" /> <!-- Mount - Gold Maned Lion - 7-day -->
 		</capsuled_items>
@@ -2042,6 +2098,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21404" min="1" max="1" chance="100" /> <!-- Mount - Gold Maned Lion - 7-day (Event) -->
 		</capsuled_items>
@@ -2060,6 +2117,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21405" min="1" max="1" chance="100" /> <!-- Mount - Gold Maned Lion - 30-day -->
 		</capsuled_items>

@@ -309,6 +309,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17526" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			<item id="17527" min="15" max="15" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
@@ -425,6 +426,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34833" min="1" max="1" chance="100" /> <!-- Afro Hair -->
 		</capsuled_items>
@@ -445,6 +447,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34834" min="1" max="1" chance="100" /> <!-- Afro Hair - 7-day -->
 		</capsuled_items>
@@ -469,6 +472,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17754" min="300" max="300" chance="100" /> <!-- Soulshot (R-grade) -->
 		</capsuled_items>
@@ -483,6 +487,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="19441" min="300" max="300" chance="100" /> <!-- Spiritshot (R-grade) -->
 		</capsuled_items>
@@ -497,6 +502,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="19442" min="300" max="300" chance="100" /> <!-- Blessed Spiritshot (R-grade) -->
 		</capsuled_items>
@@ -580,6 +586,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33778" min="10000" max="10000" chance="9" /> <!-- Soulshot (A-grade) - Event -->
 			<item id="33779" min="10000" max="10000" chance="7" /> <!-- Soulshot (S-grade) - Event -->
@@ -728,6 +735,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34742" min="1" max="1" chance="5" /> <!-- Scroll: 500,000,000 XP -->
 			<item id="6406" min="1" max="1" chance="100" /> <!-- Firecracker -->
@@ -850,6 +858,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17371" min="40" max="40" chance="100" /> <!-- Crystal (R-grade) -->
 			<item id="17371" min="3960" max="3960" chance="3" /> <!-- Crystal (R-grade) -->
@@ -976,6 +985,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34759" min="1" max="1" chance="100" /> <!-- Mentee Headphone -->
 			<item id="33800" min="1" max="1" chance="100" /> <!-- Mentee Certificate -->
@@ -1258,6 +1268,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34848" min="1" max="1" chance="100" /> <!-- Circlet of Earthquake (60-day) -->
 		</capsuled_items>

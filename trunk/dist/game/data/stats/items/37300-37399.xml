@@ -17,6 +17,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="43200" />
 		<set name="weight" val="360" />
 		<skills>
 			<skill id="3047" level="3" /> <!-- Special Ability: Acumen -->
@@ -48,6 +49,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<skills>
 			<skill id="3047" level="3" /> <!-- Special Ability: Acumen -->
@@ -78,6 +80,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="43200" />
 		<set name="weight" val="670" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
@@ -110,6 +113,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="43200" />
 		<set name="weight" val="580" />
 		<skills>
 			<skill id="3564" level="4" /> <!-- Special Ability: Haste -->
@@ -140,6 +144,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<skills>
 			<skill id="3564" level="4" /> <!-- Special Ability: Haste -->
@@ -170,6 +175,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="43200" />
 		<set name="weight" val="520" />
 		<skills>
 			<skill id="3564" level="4" /> <!-- Special Ability: Haste -->
@@ -201,6 +207,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="43200" />
 		<set name="weight" val="580" />
 		<skills>
 			<skill id="3566" level="6" /> <!-- Special Ability: Focus -->
@@ -232,6 +239,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<skills>
 			<skill id="3564" level="4" /> <!-- Special Ability: Haste -->
@@ -263,6 +271,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="43200" />
 		<set name="weight" val="680" />
 		<skills>
 			<skill id="13062" level="1" /> <!-- Special Ability: Damage Up -->
@@ -295,6 +304,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
+		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<skills>
 			<skill id="13062" level="1" /> <!-- Special Ability: Damage Up -->
@@ -327,6 +337,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1350" />
+		<set name="time" val="43200" />
 		<set name="weight" val="530" />
 		<skills>
 			<skill id="3564" level="4" /> <!-- Special Ability: Haste -->
@@ -358,6 +369,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="43200" />
 		<set name="weight" val="580" />
 		<skills>
 			<skill id="3564" level="4" /> <!-- Special Ability: Haste -->
@@ -389,6 +401,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="time" val="43200" />
 		<set name="weight" val="360" />
 		<skills>
 			<skill id="3047" level="3" /> <!-- Special Ability: Acumen -->
@@ -1293,6 +1306,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
+		<set name="time" val="86400" />
 		<set name="weight" val="550" />
 		<stats>
 			<stat type="pAtk">581</stat>
@@ -1322,6 +1336,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
+		<set name="time" val="86400" />
 		<set name="weight" val="510" />
 		<stats>
 			<stat type="pAtk">654</stat>
@@ -1359,7 +1374,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="37380" name="Blessed Scroll: Modify Weapon (S-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1374,7 +1389,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="37381" name="Blessed Scroll: Modify Weapon (A-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1389,7 +1404,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="37382" name="Blessed Scroll: Modify Weapon (B-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1404,7 +1419,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="37383" name="Blessed Scroll: Modify Weapon (C-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1419,7 +1434,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="37384" name="Blessed Scroll: Modify Weapon (D-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1434,7 +1449,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="37385" name="Blessed Scroll: Modify Armor (R-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1449,7 +1464,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="37386" name="Blessed Scroll: Modify Armor (S-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1464,7 +1479,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="37387" name="Blessed Scroll: Modify Armor (A-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1479,7 +1494,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="37388" name="Blessed Scroll: Modify Armor (B-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1494,7 +1509,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="37389" name="Blessed Scroll: Modify Armor (C-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1509,7 +1524,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="37390" name="Blessed Scroll: Modify Armor (D-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1524,7 +1539,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
-		<set name="time" val="2592000" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="37391" name="Steel Door Guild Reward Box (Low-grade)" type="EtcItem">
 		<!-- Low-grade reward box prepared by the Steel Door Guild for true adventurers of Aden. Double-click to receive an item. -->

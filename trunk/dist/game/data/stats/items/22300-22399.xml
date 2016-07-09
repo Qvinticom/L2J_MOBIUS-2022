@@ -673,6 +673,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="20034" min="5" max="5" chance="100" /> <!-- Revita-Pop (Event) -->
 			<item id="15440" min="5" max="5" chance="100" /> <!-- Vitality Maintaining Potion (30-minute) -->
@@ -696,6 +697,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="20034" min="10" max="10" chance="100" /> <!-- Revita-Pop (Event) -->
 			<item id="15440" min="10" max="10" chance="100" /> <!-- Vitality Maintaining Potion (30-minute) -->
@@ -719,6 +721,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="16853" min="1" max="1" chance="100" /> <!-- Equipment Set Pack (90-day) - 90-day -->
 		</capsuled_items>
@@ -808,6 +811,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22337" min="1" max="1" chance="100" /> <!-- Extra Pass: Rim Kamaloka -->
 		</capsuled_items>
@@ -1135,6 +1139,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22355" min="1" max="1" chance="100" /> <!-- Mount - Tame Princess Ant - 7-day -->
 		</capsuled_items>
@@ -1153,6 +1158,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22356" min="1" max="1" chance="100" /> <!-- Mount - Tame Princess Ant -->
 		</capsuled_items>
@@ -1394,6 +1400,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22363" min="1" max="1" chance="100" /> <!-- Mount - Black Bear - 7-day -->
 		</capsuled_items>
@@ -1412,6 +1419,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22364" min="1" max="1" chance="100" /> <!-- Mount - Black Bear -->
 		</capsuled_items>
@@ -1430,6 +1438,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22365" min="1" max="1" chance="100" /> <!-- Black Bear Claw - 7-day -->
 		</capsuled_items>
@@ -1448,6 +1457,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22366" min="1" max="1" chance="100" /> <!-- Black Bear Claw -->
 		</capsuled_items>
@@ -1466,6 +1476,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22367" min="1" max="1" chance="100" /> <!-- Black Bear Hat - 7-day -->
 		</capsuled_items>
@@ -1484,6 +1495,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22368" min="1" max="1" chance="100" /> <!-- Black Bear Hat -->
 		</capsuled_items>
@@ -1574,6 +1586,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22375" min="1" max="1" chance="100" /> <!-- Brilliant Beach Sun Cap - 7-day -->
 		</capsuled_items>
@@ -1592,6 +1605,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22376" min="1" max="1" chance="100" /> <!-- Brilliant Beach Sun Cap -->
 		</capsuled_items>
@@ -1610,6 +1624,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22377" min="1" max="1" chance="100" /> <!-- Stylish Straw Hat - 7-day -->
 		</capsuled_items>
@@ -1628,6 +1643,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22378" min="1" max="1" chance="100" /> <!-- Stylish Straw Hat -->
 		</capsuled_items>

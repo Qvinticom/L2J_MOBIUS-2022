@@ -55,6 +55,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17201" min="10" max="10" chance="100" /> <!-- Mark of Cheers -->
 		</capsuled_items>
@@ -622,6 +623,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17203" min="1" max="1" chance="100" /> <!-- Agathion - Ball Trapping Gnosian -->
 		</capsuled_items>
@@ -641,6 +643,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17204" min="1" max="1" chance="100" /> <!-- Agathion - Ball Trapping Orodriel -->
 		</capsuled_items>
@@ -660,6 +663,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17205" min="1" max="1" chance="100" /> <!-- Agathion - Penalty Kick -->
 		</capsuled_items>
@@ -693,6 +697,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17208" min="1" max="1" chance="100" /> <!-- XP Buff 50% (2-hour) -->
 			<item id="17212" min="1" max="1" chance="100" /> <!-- Nevit's Voice -->
@@ -713,6 +718,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17211" min="1" max="1" chance="100" /> <!-- XP Buff 50% (4-hour) -->
 			<item id="17212" min="1" max="1" chance="100" /> <!-- Nevit's Voice -->
@@ -1302,6 +1308,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17269" min="1" max="1" chance="100" /> <!-- Agathion - Antharas -->
 		</capsuled_items>
@@ -1321,6 +1328,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17270" min="1" max="1" chance="100" /> <!-- Agathion - Nevit's Messenger Kanna -->
 		</capsuled_items>
@@ -1340,6 +1348,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17271" min="1" max="1" chance="100" /> <!-- Agathion - Guardian of Dawn Kallesin -->
 		</capsuled_items>
@@ -1404,6 +1413,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17275" min="1" max="1" chance="100" /> <!-- Strider Pet Coupon -->
 		</capsuled_items>
@@ -1423,6 +1433,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17139" min="1" max="1" chance="100" /> <!-- Transformation Scroll: Anakim -->
 		</capsuled_items>
@@ -1442,6 +1453,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="10296" min="1" max="1" chance="100" /> <!-- Transformation Sealbook: Anakim -->
 		</capsuled_items>
@@ -1477,6 +1489,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17283" min="5" max="5" chance="100" /> <!-- XP Buff 50% (4-hour) -->
 			<item id="17285" min="5" max="5" chance="100" /> <!-- Freya's Refreshing Breeze -->
@@ -1581,6 +1594,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="17284" min="5" max="5" chance="100" /> <!-- XP Buff 50% (4-hour) - Event -->
 			<item id="17286" min="5" max="5" chance="100" /> <!-- Freya's Refreshing Breeze - Event -->

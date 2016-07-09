@@ -1392,6 +1392,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22888" min="10000" max="10000" chance="100" /> <!-- Mysterious Soulshot (R-grade) -->
 		</capsuled_items>
@@ -1410,6 +1411,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22888" min="5000" max="5000" chance="100" /> <!-- Mysterious Soulshot (R-grade) -->
 		</capsuled_items>
@@ -1428,6 +1430,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22889" min="10000" max="10000" chance="100" /> <!-- Mysterious Blessed Spiritshot (R-grade) -->
 		</capsuled_items>
@@ -1446,6 +1449,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22889" min="5000" max="5000" chance="100" /> <!-- Mysterious Blessed Spiritshot (R-grade) -->
 		</capsuled_items>

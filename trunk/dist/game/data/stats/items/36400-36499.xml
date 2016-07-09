@@ -13,6 +13,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="time" val="60" />
 		<skills>
 			<skill id="9828" level="1" /> <!-- XP Buff 50% (1-hour) -->
 		</skills>
@@ -124,6 +125,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13313" level="1" /> <!-- Blessed Antharas' Earring -->
@@ -147,6 +149,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13315" level="1" /> <!-- Blessed Valakas' Necklace -->
@@ -170,6 +173,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="8870" level="1" /> <!-- Tauti's Ring -->
@@ -192,6 +196,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13317" level="1" /> <!-- Earth Wyrm Heart Ring -->

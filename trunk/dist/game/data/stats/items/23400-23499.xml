@@ -668,6 +668,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="20940" min="1" max="1" chance="100" /> <!-- Agathion - Phoenix - Nirvana Rebirth (7-day) -->
 		</capsuled_items>
@@ -682,6 +683,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="20776" min="1" max="1" chance="100" /> <!-- Agathion - Blue Opera - Sword of Recovery (7-day) -->
 		</capsuled_items>
@@ -696,6 +698,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="20306" min="1" max="1" chance="100" /> <!-- Agathion - Button-eyed Bear Doll - Vitality (7-day) -->
 		</capsuled_items>
@@ -710,6 +713,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22254" min="1" max="1" chance="100" /> <!-- Mysterious Friend Summon Bracelet - 30-day -->
 		</capsuled_items>
@@ -724,6 +728,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21881" min="1" max="1" chance="100" /> <!-- Party Cake -->
 		</capsuled_items>
@@ -738,6 +743,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="10649" min="1" max="1" chance="100" /> <!-- Feather of Blessing -->
 		</capsuled_items>
@@ -751,6 +757,7 @@
 		<set name="commissionItemType" val="POTION" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21239" min="3" max="3" chance="100" /> <!-- Super Healthy Juice (HP) -->
 		</capsuled_items>
@@ -764,6 +771,7 @@
 		<set name="commissionItemType" val="POTION" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21243" min="5" max="5" chance="100" /> <!-- Super Healthy Juice (CP) -->
 		</capsuled_items>
@@ -1238,6 +1246,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23469" min="1" max="1" chance="100" /> <!-- Fantasy Cookie - Event -->
 			<item id="23470" min="1" max="1" chance="100" /> <!-- Fantasy Homemade Cookie - Event -->
@@ -1493,6 +1502,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="20160" />
 		<skills>
 			<skill id="22763" level="1" /> <!-- Santa Outfit Appearance Stone (14-day) -->
 		</skills>
@@ -1531,6 +1541,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23486" min="1" max="1" chance="100" /> <!-- Santa Outfit Appearance Stone - 14-day -->
 		</capsuled_items>
@@ -1549,6 +1560,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23487" min="1" max="1" chance="100" /> <!-- Santa Outfit Appearance Stone -->
 		</capsuled_items>

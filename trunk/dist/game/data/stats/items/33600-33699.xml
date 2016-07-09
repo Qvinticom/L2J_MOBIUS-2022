@@ -866,6 +866,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33643" min="3" max="3" chance="100" /> <!-- Scroll: Minion -->
 		</capsuled_items>
@@ -886,6 +887,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33644" min="3" max="3" chance="100" /> <!-- Scroll: Superior Minion -->
 		</capsuled_items>
@@ -906,6 +908,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33504" min="1" max="1" chance="100" /> <!-- Hero's Blessed Buff Scroll 5-unit Pack -->
 			<item id="13275" min="1" max="1" chance="100" /> <!-- Minion Coupon 3-unit Pack -->
@@ -930,6 +933,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33511" min="250" max="250" chance="100" /> <!-- Returning Hero's Mark -->
 			<item id="33513" min="1" max="1" chance="100" /> <!-- Returning Hero's Vitality Replenishing Juice 5-unit Pack -->

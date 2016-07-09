@@ -386,7 +386,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="7776000" />
+		<set name="time" val="129600" />
 		<skills>
 			<skill id="17088" level="1" /> <!-- Kisung's Emote 2 -->
 			<skill id="17089" level="1" /> <!-- Kisung's Cuteness -->
@@ -676,7 +676,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
-		<set name="time" val="8640000" />
+		<set name="time" val="144000" />
 	</item>
 	<item id="37557" name="Promise Cube (1-time use)" type="EtcItem">
 		<!-- Double click to acquire one of the following: Dark/Bloody Eternal Enhancement Stone (Annihilation/Hellfire/Desire), Blessed Scroll of Resurrection, High-grade Elixir Box, or Energy of Destruction. Cannot be used in the Olympiad. (disappears after 1 time use) -->
@@ -758,6 +758,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="time" val="480" />
 	</item>
 	<item id="37565" name="Emperor's Rune Pack" type="EtcItem">
 		<!-- Open the box to obtain the Emperor's Rune (8-hour). Cannot be used in the Olympiad. -->

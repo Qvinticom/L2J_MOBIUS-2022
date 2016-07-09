@@ -14,6 +14,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14055" min="3" max="3" chance="100" /> <!-- Vitality Replenishing Potion -->
 			<item id="10649" min="3" max="3" chance="100" /> <!-- Feather of Blessing -->
