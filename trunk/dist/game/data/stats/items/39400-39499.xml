@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="39400" name="Lv. 2 Legendary INT Dye (Charisma)" additionalName="INT + 4 CHA + 2" type="EtcItem">
 		<!-- Lv. 2 Legendary INT Dye (Charisma) (INT + 4 CHA + 2). Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
@@ -675,7 +675,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39476" name="Low-grade Love Potion" type="EtcItem">
-		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. -->
+		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody Dance. -->
 		<set name="icon" val="icon.love_potion" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -687,7 +687,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39477" name="Love Potion" type="EtcItem">
-		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. -->
+		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody Dance. -->
 		<set name="icon" val="icon.love_potion" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -699,7 +699,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39478" name="Mid-grade Love Potion" type="EtcItem">
-		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. -->
+		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody Dance. -->
 		<set name="icon" val="icon.love_potion" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -711,7 +711,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39479" name="High-grade Love Potion" type="EtcItem">
-		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. -->
+		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody Dance. -->
 		<set name="icon" val="icon.love_potion" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />

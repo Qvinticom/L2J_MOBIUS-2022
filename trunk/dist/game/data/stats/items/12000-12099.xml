@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="12000" name="Common Item - Arcana Mace" type="Weapon">
+		<!-- Arcana Mace with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -29,6 +30,7 @@
 		</stats>
 	</item>
 	<item id="12001" name="Common Item - Angel Slayer" type="Weapon">
+		<!-- Angel Slayer with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -56,6 +58,7 @@
 		</stats>
 	</item>
 	<item id="12002" name="Common Item - Imperial Staff" type="Weapon">
+		<!-- Imperial Staff with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -84,6 +87,7 @@
 		</stats>
 	</item>
 	<item id="12003" name="Common Item - Tallum Blade*Dark Legion's Edge" type="Weapon">
+		<!-- Tallum Blade*Dark Legion's Edge with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -113,6 +117,7 @@
 		</stats>
 	</item>
 	<item id="12004" name="Common Item - Forgotten Blade" type="Weapon">
+		<!-- Forgotten Blade with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -140,6 +145,7 @@
 		</stats>
 	</item>
 	<item id="12005" name="Common Item - Heaven's Divider" type="Weapon">
+		<!-- Heaven's Divider with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -167,6 +173,7 @@
 		</stats>
 	</item>
 	<item id="12006" name="Common Item - Leather Boots" type="Armor">
+		<!-- Leather Boots with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t09_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -183,6 +190,7 @@
 		</stats>
 	</item>
 	<item id="12007" name="Common Item - Quality Leather Gloves" type="Armor">
+		<!-- Quality Leather Gloves with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t09_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -199,6 +207,7 @@
 		</stats>
 	</item>
 	<item id="12008" name="Common Item - Ring Breastplate" type="Armor">
+		<!-- Ring Breastplate with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t12_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -219,6 +228,7 @@
 		</stats>
 	</item>
 	<item id="12009" name="Common Item - Bone Helmet" type="Armor">
+		<!-- Bone Helmet with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -235,6 +245,7 @@
 		</stats>
 	</item>
 	<item id="12010" name="Common Item - Cursed Tunic" type="Armor">
+		<!-- Cursed Tunic with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t14_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -256,6 +267,7 @@
 		</stats>
 	</item>
 	<item id="12011" name="Common Item - Cursed Stockings" type="Armor">
+		<!-- Cursed Stockings with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t14_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -277,6 +289,7 @@
 		</stats>
 	</item>
 	<item id="12012" name="Common Item - Iron Plate Gaiters" type="Armor">
+		<!-- Iron Plate Gaiters with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t12_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -297,6 +310,7 @@
 		</stats>
 	</item>
 	<item id="12013" name="Common Item - Bronze Shield" type="Armor">
+		<!-- Bronze Shield with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.shield_bronze_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -318,6 +332,7 @@
 		</stats>
 	</item>
 	<item id="12014" name="Common Item - Puma Skin Gaiters" type="Armor">
+		<!-- Puma Skin Gaiters with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t09_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -335,6 +350,7 @@
 		</stats>
 	</item>
 	<item id="12015" name="Common Item - Puma Skin Shirt" type="Armor">
+		<!-- Puma Skin Shirt with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t09_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -352,6 +368,7 @@
 		</stats>
 	</item>
 	<item id="12016" name="Common Item - Leather Gauntlets" type="Armor">
+		<!-- Leather Gauntlets with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t18_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -368,6 +385,7 @@
 		</stats>
 	</item>
 	<item id="12017" name="Common Item - Dark Stockings" type="Armor">
+		<!-- Dark Stockings with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t16_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -389,6 +407,7 @@
 		</stats>
 	</item>
 	<item id="12018" name="Common Item - Wizard Tunic" type="Armor">
+		<!-- Wizard Tunic with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t17_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -410,6 +429,7 @@
 		</stats>
 	</item>
 	<item id="12019" name="Common Item - Wizard Stockings" type="Armor">
+		<!-- Wizard Stockings with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t17_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -431,6 +451,7 @@
 		</stats>
 	</item>
 	<item id="12020" name="Common Item - Lion Skin Gaiters" type="Armor">
+		<!-- Lion Skin Gaiters with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t18_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -448,6 +469,7 @@
 		</stats>
 	</item>
 	<item id="12021" name="Common Item - Lion Skin Shirt" type="Armor">
+		<!-- Lion Skin Shirt with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t18_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -465,6 +487,7 @@
 		</stats>
 	</item>
 	<item id="12022" name="Common Item - White Tunic" type="Armor">
+		<!-- White Tunic with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t16_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -486,6 +509,7 @@
 		</stats>
 	</item>
 	<item id="12023" name="Common Item - Scale Gaiters" type="Armor">
+		<!-- Scale Gaiters with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t08_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -506,6 +530,7 @@
 		</stats>
 	</item>
 	<item id="12024" name="Common Item - Scale Mail" type="Armor">
+		<!-- Scale Mail with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t08_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -526,6 +551,7 @@
 		</stats>
 	</item>
 	<item id="12025" name="Common Item - Aspis" type="Armor">
+		<!-- Aspis with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.shield_aspis_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -547,6 +573,7 @@
 		</stats>
 	</item>
 	<item id="12026" name="Common Item - Elven Tunic" type="Armor">
+		<!-- Elven Tunic with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t11_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -568,6 +595,7 @@
 		</stats>
 	</item>
 	<item id="12027" name="Common Item - Elven Stockings" type="Armor">
+		<!-- Elven Stockings with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t11_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -589,6 +617,7 @@
 		</stats>
 	</item>
 	<item id="12028" name="Common Item - Bronze Helmet" type="Armor">
+		<!-- Bronze Helmet with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -605,6 +634,7 @@
 		</stats>
 	</item>
 	<item id="12029" name="Common Item - Blue Buckskin Boots" type="Armor">
+		<!-- Blue Buckskin Boots with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t18_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -621,6 +651,7 @@
 		</stats>
 	</item>
 	<item id="12030" name="Common Item - Dwarven Scale Mail" type="Armor">
+		<!-- Dwarven Scale Mail Hammer with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t15_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -641,6 +672,7 @@
 		</stats>
 	</item>
 	<item id="12031" name="Common Item - Mithril Breastplate" type="Armor">
+		<!-- Mithril Breastplate with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t19_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -661,6 +693,7 @@
 		</stats>
 	</item>
 	<item id="12032" name="Common Item - Compound Scale Mail" type="Armor">
+		<!-- Compound Scale Mail with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t20_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -681,6 +714,7 @@
 		</stats>
 	</item>
 	<item id="12033" name="Common Item - Iron Boots" type="Armor">
+		<!-- Iron Boots with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t10_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -697,6 +731,7 @@
 		</stats>
 	</item>
 	<item id="12034" name="Common Item - Reinforced Leather Gaiters" type="Armor">
+		<!-- Reinforced Leather Gaiters with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t13_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -714,6 +749,7 @@
 		</stats>
 	</item>
 	<item id="12035" name="Common Item - Reinforced Leather Boots" type="Armor">
+		<!-- Reinforced Leather Boots with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t13_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -730,6 +766,7 @@
 		</stats>
 	</item>
 	<item id="12036" name="Common Item - Reinforced Leather Shirt" type="Armor">
+		<!-- Reinforced Leather Shirt with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t13_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -747,6 +784,7 @@
 		</stats>
 	</item>
 	<item id="12037" name="Common Item - Reinforced Leather Gloves" type="Armor">
+		<!-- Reinforced Leather Gloves with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t13_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -763,6 +801,7 @@
 		</stats>
 	</item>
 	<item id="12038" name="Common Item - Gauntlets" type="Armor">
+		<!-- Gauntlets with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t10_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -779,6 +818,7 @@
 		</stats>
 	</item>
 	<item id="12039" name="Common Item - Dwarven Scale Gaiters" type="Armor">
+		<!-- Dwarven Scale Gaiters with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t15_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -799,6 +839,7 @@
 		</stats>
 	</item>
 	<item id="12040" name="Common Item - Linen Shirt" type="Armor">
+		<!-- Linen Shirt with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.etc_shirts_d_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -815,6 +856,7 @@
 		</stats>
 	</item>
 	<item id="12041" name="Common Item - Mithril Gaiters" type="Armor">
+		<!-- Mithril Gaiters with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t19_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -835,6 +877,7 @@
 		</stats>
 	</item>
 	<item id="12042" name="Common Item - Mithril Banded Gaiters" type="Armor">
+		<!-- Mithril Banded Gaiters with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t10_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -852,6 +895,7 @@
 		</stats>
 	</item>
 	<item id="12043" name="Common Item - Mithril Banded Mail" type="Armor">
+		<!-- Mithril Banded Mail with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t10_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -869,6 +913,7 @@
 		</stats>
 	</item>
 	<item id="12044" name="Common Item - Breastplate" type="Armor">
+		<!-- Breastplate with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t40_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -889,6 +934,7 @@
 		</stats>
 	</item>
 	<item id="12045" name="Common Item - Boots of Knowledge" type="Armor">
+		<!-- Boots of Knowledge with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t41_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -905,6 +951,7 @@
 		</stats>
 	</item>
 	<item id="12046" name="Common Item - Gloves of Knowledge" type="Armor">
+		<!-- Gloves of Knowledge with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t41_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -921,6 +968,7 @@
 		</stats>
 	</item>
 	<item id="12047" name="Common Item - Tunic of Knowledge" type="Armor">
+		<!-- Tunic of Knowledge with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t41_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -942,6 +990,7 @@
 		</stats>
 	</item>
 	<item id="12048" name="Common Item - Stockings of Knowledge" type="Armor">
+		<!-- Stockings of Knowledge with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t41_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -963,6 +1012,7 @@
 		</stats>
 	</item>
 	<item id="12049" name="Common Item - Compound Scale Gaiters" type="Armor">
+		<!-- Compound Scale Gaiters with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t20_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -983,6 +1033,7 @@
 		</stats>
 	</item>
 	<item id="12050" name="Common Item - Helmet" type="Armor">
+		<!-- Helmet with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -999,6 +1050,7 @@
 		</stats>
 	</item>
 	<item id="12051" name="Common Item - Hoplon" type="Armor">
+		<!-- Hoplon with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.shield_hoplon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1020,6 +1072,7 @@
 		</stats>
 	</item>
 	<item id="12052" name="Common Item - Manticore Skin Gaiters" type="Armor">
+		<!-- Manticore Skin Gaiters with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t42_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1037,6 +1090,7 @@
 		</stats>
 	</item>
 	<item id="12053" name="Common Item - Manticore Skin Boots" type="Armor">
+		<!-- Manticore Skin Boots with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t42_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1053,6 +1107,7 @@
 		</stats>
 	</item>
 	<item id="12054" name="Common Item - Manticore Skin Shirt" type="Armor">
+		<!-- Manticore Skin Shirt with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t42_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1070,6 +1125,7 @@
 		</stats>
 	</item>
 	<item id="12055" name="Common Item - Manticore Skin Gloves" type="Armor">
+		<!-- Manticore Skin Gloves with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t42_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1086,6 +1142,7 @@
 		</stats>
 	</item>
 	<item id="12056" name="Common Item - Mithril Scale Gaiters" type="Armor">
+		<!-- Mithril Scale Gaiters with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t40_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1106,6 +1163,7 @@
 		</stats>
 	</item>
 	<item id="12057" name="Common Item - Mithril Tunic" type="Armor">
+		<!-- Mithril Tunic with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1127,6 +1185,7 @@
 		</stats>
 	</item>
 	<item id="12058" name="Common Item - Mithril Stockings" type="Armor">
+		<!-- Mithril Stockings with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t51_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1148,6 +1207,7 @@
 		</stats>
 	</item>
 	<item id="12059" name="Common Item - Brigandine" type="Armor">
+		<!-- Brigandine with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t43_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1168,6 +1228,7 @@
 		</stats>
 	</item>
 	<item id="12060" name="Common Item - Brigandine Gaiters" type="Armor">
+		<!-- Brigandine Gaiters with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t43_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1188,6 +1249,7 @@
 		</stats>
 	</item>
 	<item id="12061" name="Common Item - Brigandine Gauntlets" type="Armor">
+		<!-- Brigandine Gauntlets with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t43_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1204,6 +1266,7 @@
 		</stats>
 	</item>
 	<item id="12062" name="Common Item - Brigandine Boots" type="Armor">
+		<!-- Brigandine Boots with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t43_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1220,6 +1283,7 @@
 		</stats>
 	</item>
 	<item id="12063" name="Common Item - Brigandine Shield" type="Armor">
+		<!-- Brigandine Shield with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.shield_brigandine_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1241,6 +1305,7 @@
 		</stats>
 	</item>
 	<item id="12064" name="Common Item - Brigandine Helmet" type="Armor">
+		<!-- Brigandine Helmet with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1257,6 +1322,7 @@
 		</stats>
 	</item>
 	<item id="12065" name="Common Item - Elven Mithril Gloves" type="Armor">
+		<!-- Elven Mithril Gloves with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t51_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1273,6 +1339,7 @@
 		</stats>
 	</item>
 	<item id="12066" name="Common Item - Elven Mithril Boots" type="Armor">
+		<!-- Elven Mithril Boots with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t51_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1289,6 +1356,7 @@
 		</stats>
 	</item>
 	<item id="12067" name="Common Item - Striped Linen Shirt" type="Armor">
+		<!-- Striped Linen Shirt with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.etc_stripe_shirts_d_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1305,6 +1373,7 @@
 		</stats>
 	</item>
 	<item id="12068" name="Common Item - Rip Gauntlets" type="Armor">
+		<!-- Rip Gauntlets with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t40_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1321,6 +1390,7 @@
 		</stats>
 	</item>
 	<item id="12069" name="Common Item - Kite Shield" type="Armor">
+		<!-- Kite Shield with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.shield_kite_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1342,6 +1412,7 @@
 		</stats>
 	</item>
 	<item id="12070" name="Common Item - Boots of Strength" type="Armor">
+		<!-- Boots of Strength with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t40_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1358,6 +1429,7 @@
 		</stats>
 	</item>
 	<item id="12071" name="Common Item - Assault Boots" type="Armor">
+		<!-- Assault Boots with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t44_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1374,6 +1446,7 @@
 		</stats>
 	</item>
 	<item id="12072" name="Common Item - Mithril Gloves" type="Armor">
+		<!-- Mithril Gloves with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t46_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1390,6 +1463,7 @@
 		</stats>
 	</item>
 	<item id="12073" name="Common Item - Square Shield" type="Armor">
+		<!-- Square Shield with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.shield_square_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1411,6 +1485,7 @@
 		</stats>
 	</item>
 	<item id="12074" name="Common Item - Salamander Skin Mail" type="Armor">
+		<!-- Salamander Skin Mail with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t45_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1428,6 +1503,7 @@
 		</stats>
 	</item>
 	<item id="12075" name="Common Item - Salamander Skin Boots" type="Armor">
+		<!-- Salamander Skin Boots with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t45_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1444,6 +1520,7 @@
 		</stats>
 	</item>
 	<item id="12076" name="Common Item - Ogre Power Gauntlets" type="Armor">
+		<!-- Ogre Power Gauntlets with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t45_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1460,6 +1537,7 @@
 		</stats>
 	</item>
 	<item id="12077" name="Common Item - Plate Boots" type="Armor">
+		<!-- Plate Boots with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t46_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1476,6 +1554,7 @@
 		</stats>
 	</item>
 	<item id="12078" name="Common Item - Plate Shield" type="Armor">
+		<!-- Plate Shield with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.shield_plate_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1497,6 +1576,7 @@
 		</stats>
 	</item>
 	<item id="12079" name="Common Item - Plate Helmet" type="Armor">
+		<!-- Plate Helmet with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1513,6 +1593,7 @@
 		</stats>
 	</item>
 	<item id="12080" name="Common Item - Plate Gaiters" type="Armor">
+		<!-- Plate Gaiters with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t46_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1533,6 +1614,7 @@
 		</stats>
 	</item>
 	<item id="12081" name="Common Item - Half Plate Armor" type="Armor">
+		<!-- Half Plate Armor with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t46_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1553,6 +1635,7 @@
 		</stats>
 	</item>
 	<item id="12082" name="Common Item - Sage's Worn Gloves" type="Armor">
+		<!-- Sage's Worn Gloves with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t44_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1569,6 +1652,7 @@
 		</stats>
 	</item>
 	<item id="12083" name="Common Item - Sage's Rags" type="Armor">
+		<!-- Sage's Rags with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t44_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1590,6 +1674,7 @@
 		</stats>
 	</item>
 	<item id="12084" name="Common Item - Reinforced Mithril Gaiters" type="Armor">
+		<!-- Reinforced Mithril Gaiters with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t47_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1607,6 +1692,7 @@
 		</stats>
 	</item>
 	<item id="12085" name="Common Item - Reinforced Mithril Boots" type="Armor">
+		<!-- Reinforced Mithril Boots with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t47_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1623,6 +1709,7 @@
 		</stats>
 	</item>
 	<item id="12086" name="Common Item - Reinforced Mithril Shirt" type="Armor">
+		<!-- Reinforced Mithril Shirt with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t47_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1640,6 +1727,7 @@
 		</stats>
 	</item>
 	<item id="12087" name="Common Item - Reinforced Mithril Gloves" type="Armor">
+		<!-- Reinforced Mithril Gloves with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t47_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1656,6 +1744,7 @@
 		</stats>
 	</item>
 	<item id="12088" name="Common Item - Dwarven Chain Boots" type="Armor">
+		<!-- Dwarven Chain Boots with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t60_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1672,6 +1761,7 @@
 		</stats>
 	</item>
 	<item id="12089" name="Common Item - Boots of Seal" type="Armor">
+		<!-- Boots of Seal with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t44_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1688,6 +1778,7 @@
 		</stats>
 	</item>
 	<item id="12090" name="Common Item - Chain Hood" type="Armor">
+		<!-- Chain Hood with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1704,6 +1795,7 @@
 		</stats>
 	</item>
 	<item id="12091" name="Common Item - Eldarake" type="Armor">
+		<!-- Eldarake with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.shield_eldarake_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1725,6 +1817,7 @@
 		</stats>
 	</item>
 	<item id="12092" name="Common Item - Chain Gloves" type="Armor">
+		<!-- Chain Gloves with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t48_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1741,6 +1834,7 @@
 		</stats>
 	</item>
 	<item id="12093" name="Common Item - Chain Boots" type="Armor">
+		<!-- Chain Boots with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t48_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1757,6 +1851,7 @@
 		</stats>
 	</item>
 	<item id="12094" name="Common Item - Chain Gaiters" type="Armor">
+		<!-- Chain Gaiters with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t48_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1777,6 +1872,7 @@
 		</stats>
 	</item>
 	<item id="12095" name="Common Item - Chain Mail Shirt" type="Armor">
+		<!-- Chain Mail Shirt with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t48_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1797,6 +1893,7 @@
 		</stats>
 	</item>
 	<item id="12096" name="Common Item - Chain Shield" type="Armor">
+		<!-- Chain Shield with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.shield_chain_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1818,6 +1915,7 @@
 		</stats>
 	</item>
 	<item id="12097" name="Common Item - Karmian Gloves" type="Armor">
+		<!-- Karmian Gloves with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t53_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1834,6 +1932,7 @@
 		</stats>
 	</item>
 	<item id="12098" name="Common Item - Karmian Boots" type="Armor">
+		<!-- Karmian Boots with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t53_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1850,6 +1949,7 @@
 		</stats>
 	</item>
 	<item id="12099" name="Common Item - Karmian Tunic" type="Armor">
+		<!-- Karmian Tunic with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.armor_t53_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />

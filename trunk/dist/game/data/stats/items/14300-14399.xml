@@ -1394,6 +1394,7 @@
 		</stats>
 	</item>
 	<item id="14351" name="Gracian Anniversary Coins" type="EtcItem">
+		<!-- Gracian Anniversary Coins can be used at an Item Merchant in order to receive a reward. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -1410,6 +1411,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="14352" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1426,6 +1428,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14353" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1442,6 +1445,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14354" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1458,6 +1462,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14355" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1474,6 +1479,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14356" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1490,6 +1496,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14357" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1506,6 +1513,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14358" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1522,6 +1530,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14359" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1538,6 +1547,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14360" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1554,6 +1564,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14361" name="Blood-stained Cloth" type="EtcItem">
+		<!-- Piece of cloth soaked in the blood of angels and Platinum race that Magister Kaspar asked for. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1570,6 +1581,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14362" name="White Cloth" type="EtcItem">
+		<!-- Large piece of white cloth given by Magister Kaspar. Stain the cloth with the blood of angels and the Platinum race in the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1586,6 +1598,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14363" name="Icarus Sawsword {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1622,6 +1635,7 @@
 		</stats>
 	</item>
 	<item id="14364" name="Icarus Disperser {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1659,6 +1673,7 @@
 		</stats>
 	</item>
 	<item id="14365" name="Icarus Spirit {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1697,6 +1712,7 @@
 		</stats>
 	</item>
 	<item id="14366" name="Icarus Heavy Arms {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1733,6 +1749,7 @@
 		</stats>
 	</item>
 	<item id="14367" name="Icarus Trident {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1771,6 +1788,7 @@
 		</stats>
 	</item>
 	<item id="14368" name="Icarus Hammer {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1808,6 +1826,7 @@
 		</stats>
 	</item>
 	<item id="14369" name="Icarus Hand {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1845,6 +1864,7 @@
 		</stats>
 	</item>
 	<item id="14370" name="Icarus Hall {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1884,6 +1904,7 @@
 		</stats>
 	</item>
 	<item id="14371" name="Icarus Spitter {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1923,6 +1944,7 @@
 		</stats>
 	</item>
 	<item id="14372" name="Icarus Stinger {PvP}" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Icarus Sawsword Conversion. When enchanted to 4 or more, there's a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal and decreased MP consumption per skill during a Critical Attack. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1964,6 +1986,7 @@
 		</stats>
 	</item>
 	<item id="14373" name="Icarus Wingblade {PvP}" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Icarus Heavy Arms Conversion. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2005,6 +2028,7 @@
 		</stats>
 	</item>
 	<item id="14374" name="Icarus Shooter {PvP}" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Icarus Spitter Conversion. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2046,6 +2070,7 @@
 		</stats>
 	</item>
 	<item id="14375" name="Icarus Dualsword {PvP}" type="Weapon">
+		<!-- P. Atk. of dual bladed weapons, two-handed swords, two-handed blunt weapons and fist weapons increases more than the regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical Attack by 109 and Max HP by 10%. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2083,6 +2108,7 @@
 		</stats>
 	</item>
 	<item id="14376" name="Icarus Sawsword {PvP}" additionalName="Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2120,6 +2146,7 @@
 		</stats>
 	</item>
 	<item id="14377" name="Icarus Sawsword {PvP}" additionalName="Health" type="Weapon">
+		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2157,6 +2184,7 @@
 		</stats>
 	</item>
 	<item id="14378" name="Icarus Sawsword {PvP}" additionalName="Light Armor" type="Weapon">
+		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2194,6 +2222,7 @@
 		</stats>
 	</item>
 	<item id="14379" name="Icarus Heavy Arms {PvP}" additionalName="Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2231,6 +2260,7 @@
 		</stats>
 	</item>
 	<item id="14380" name="Icarus Heavy Arms {PvP}" additionalName="Health" type="Weapon">
+		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2268,6 +2298,7 @@
 		</stats>
 	</item>
 	<item id="14381" name="Icarus Heavy Arms {PvP}" additionalName="Light Armor" type="Weapon">
+		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2305,6 +2336,7 @@
 		</stats>
 	</item>
 	<item id="14382" name="Icarus Spirit {PvP}" additionalName="Acumen" type="Weapon">
+		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2343,6 +2375,7 @@
 		</stats>
 	</item>
 	<item id="14383" name="Icarus Spirit {PvP}" additionalName="Mana Up" type="Weapon">
+		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2381,6 +2414,7 @@
 		</stats>
 	</item>
 	<item id="14384" name="Icarus Spirit {PvP}" additionalName="Conversion" type="Weapon">
+		<!-- <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2419,6 +2453,7 @@
 		</stats>
 	</item>
 	<item id="14385" name="Icarus Spitter {PvP}" additionalName="Cheap Shot" type="Weapon">
+		<!-- <Special Option>. Decreases MP consumption by 4% during a skill attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2459,6 +2494,7 @@
 		</stats>
 	</item>
 	<item id="14386" name="Icarus Spitter {PvP}" additionalName="Guidance" type="Weapon">
+		<!-- <Special Option>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2499,6 +2535,7 @@
 		</stats>
 	</item>
 	<item id="14387" name="Icarus Spitter {PvP}" additionalName="Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2539,6 +2576,7 @@
 		</stats>
 	</item>
 	<item id="14388" name="Icarus Disperser {PvP}" additionalName="Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2578,6 +2616,7 @@
 		</stats>
 	</item>
 	<item id="14389" name="Icarus Disperser {PvP}" additionalName="Evasion" type="Weapon">
+		<!-- <Special Option>. Increases Evasion by 5. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2617,6 +2656,7 @@
 		</stats>
 	</item>
 	<item id="14390" name="Icarus Disperser {PvP}" additionalName="Critical Damage" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 559 during a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2656,6 +2696,7 @@
 		</stats>
 	</item>
 	<item id="14391" name="Icarus Trident {PvP}" additionalName="Anger" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2694,6 +2735,7 @@
 		</stats>
 	</item>
 	<item id="14392" name="Icarus Trident {PvP}" additionalName="Critical Stun" type="Weapon">
+		<!-- <Special Option>. Has a 48% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2732,6 +2774,7 @@
 		</stats>
 	</item>
 	<item id="14393" name="Icarus Trident {PvP}" additionalName="Light Armor" type="Weapon">
+		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2770,6 +2813,7 @@
 		</stats>
 	</item>
 	<item id="14394" name="Icarus Hammer {PvP}" additionalName="Anger" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2808,6 +2852,7 @@
 		</stats>
 	</item>
 	<item id="14395" name="Icarus Hammer {PvP}" additionalName="Health" type="Weapon">
+		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2846,6 +2891,7 @@
 		</stats>
 	</item>
 	<item id="14396" name="Icarus Hammer {PvP}" additionalName="Rsk. Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2884,6 +2930,7 @@
 		</stats>
 	</item>
 	<item id="14397" name="Icarus Hall {PvP}" additionalName="Mana Up" type="Weapon">
+		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2923,6 +2970,7 @@
 		</stats>
 	</item>
 	<item id="14398" name="Icarus Hall {PvP}" additionalName="Conversion" type="Weapon">
+		<!-- <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2962,6 +3010,7 @@
 		</stats>
 	</item>
 	<item id="14399" name="Icarus Hall {PvP}" additionalName="Acumen" type="Weapon">
+		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="800" name="Tome of Nassen" type="EtcItem">
 		<set name="icon" val="icon.item_normal07" />
@@ -145,6 +145,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="809" name="Bone Fragment" type="EtcItem">
+		<!-- Bone fragments obtained from the undead skeletons. Collect ten of these and take to Tetrarch Kaitar. -->
 		<set name="icon" val="icon.etc_piece_bone_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -936,6 +937,7 @@
 		</stats>
 	</item>
 	<item id="858" name="Tateossian Earring" type="Armor">
+		<!-- Tateossian Earring. Produces the effect of MP + 31. -->
 		<set name="icon" val="icon.accessory_tateossian_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1005,6 +1007,7 @@
 		</stats>
 	</item>
 	<item id="862" name="Majestic Earring" type="Armor">
+		<!-- Majestic Earring. Produces the effect of MP + 25. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1159,6 +1162,7 @@
 		</stats>
 	</item>
 	<item id="871" name="Phoenix Earring" type="Armor">
+		<!-- Phoenix Earring. Produces the effect of M. Def. + 3 and MP + 20. -->
 		<set name="icon" val="icon.accessary_phoenixs_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1228,6 +1232,7 @@
 		</stats>
 	</item>
 	<item id="875" name="Ring of Knowledge" type="Armor">
+		<!-- Gold ring with delicately engraved rune characters of knowledge. -->
 		<set name="icon" val="icon.accessary_ring_of_knowledge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1242,6 +1247,7 @@
 		</stats>
 	</item>
 	<item id="876" name="Ring of Anguish" type="Armor">
+		<!-- Gold ring with engraved rune characters of anguish. -->
 		<set name="icon" val="icon.accessary_ring_of_anguish_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1454,6 +1460,7 @@
 		</stats>
 	</item>
 	<item id="889" name="Tateossian Ring" type="Armor">
+		<!-- Tateossian Ring. Produces the effect of MP + 21. -->
 		<set name="icon" val="icon.accessory_tateossian_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1523,6 +1530,7 @@
 		</stats>
 	</item>
 	<item id="893" name="Majestic Ring" type="Armor">
+		<!-- Majestic Ring. Produces the effect of MP + 17. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

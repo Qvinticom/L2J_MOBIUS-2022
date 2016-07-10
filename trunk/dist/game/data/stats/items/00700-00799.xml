@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="700" name="_" type="EtcItem">
+		<!-- Description of the hobgoblin amulet -->
 		<set name="icon" val="icon.item_normal05" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -17,6 +18,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="701" name="Fungus Juice" type="EtcItem">
+		<!-- The juice of a fungus. -->
 		<set name="icon" val="icon.item_canuse28" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -33,6 +35,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="702" name="Wolf Pelt" type="EtcItem">
+		<!-- Gather forty wolf pelts and take them to Trader Lector of the weapons and armor shop. -->
 		<set name="icon" val="icon.etc_leather_brown_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -49,6 +52,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="703" name="Giant Spider's Poison Sac" type="EtcItem">
+		<!-- Giant Spider's Poison Sacs obtained from the dead giant spider. Take this to Priest Yohanes. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -65,6 +69,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="704" name="Fever Medicine" type="EtcItem">
+		<!-- Medicine concocted by Priest Yohanes for the students who are ill with fever. Take this to Elias. -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -81,6 +86,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="705" name="_" type="EtcItem">
+		<!-- Description of an Orc feather amulet. -->
 		<set name="icon" val="icon.item_normal48" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -97,6 +103,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="706" name="Basilisk's Claw" type="EtcItem">
+		<!-- Basilisk's claw. -->
 		<set name="icon" val="icon.item_normal141" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -113,6 +120,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="707" name="Spore Sac" type="EtcItem">
+		<!-- Sac obtained from the spore fungus. Gather 10 of these and take them to Trader Vollodos. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -129,6 +137,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="708" name="Sylph Headband" type="EtcItem">
+		<!-- A Sylph Headband -->
 		<set name="icon" val="icon.item_system03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -497,6 +506,7 @@
 		</stats>
 	</item>
 	<item id="725" name="Healing Drug" type="EtcItem">
+		<!-- Magical, liquid medicine that restores HP for a certain amount of time. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -517,6 +527,7 @@
 		</skills>
 	</item>
 	<item id="726" name="Mana Potion" type="EtcItem">
+		<!-- Magical, liquid medicine that restores MP for a certain amount of time. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -538,6 +549,7 @@
 		</skills>
 	</item>
 	<item id="727" name="Healing Potion" type="EtcItem">
+		<!-- Magical, liquid medicine that restores HP for a certain amount of time. -->
 		<set name="icon" val="icon.item_system03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -555,6 +567,7 @@
 		</cond>
 	</item>
 	<item id="728" name="Mana Potion" type="EtcItem">
+		<!-- Magical, liquid medicine that restores MP for a certain amount of time. -->
 		<set name="icon" val="icon.etc_reagent_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -576,6 +589,7 @@
 		</skills>
 	</item>
 	<item id="729" name="Scroll: Enchant Weapon (A-Grade)" type="EtcItem">
+		<!-- When enchanted, P. Atk. + 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -593,6 +607,7 @@
 		</skills>
 	</item>
 	<item id="730" name="Scroll: Enchant Armor (A-Grade)" type="EtcItem">
+		<!-- P. Def. + 1 for A-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -610,6 +625,7 @@
 		</skills>
 	</item>
 	<item id="731" name="Crystal Scroll: Enchant Weapon (A-Grade)" type="EtcItem">
+		<!-- Scroll of enchantment that empowers an A-grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -622,6 +638,7 @@
 		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="732" name="Crystal Scroll: Enchant Armor (A-Grade)" type="EtcItem">
+		<!-- Scroll of enchantment that empowers an A-grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -634,6 +651,7 @@
 		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="733" name="Endeavor Potion" type="EtcItem">
+		<!-- Magical, liquid medicine that increases willpower. -->
 		<set name="icon" val="icon.etc_lesser_potion_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -651,6 +669,7 @@
 		</skills>
 	</item>
 	<item id="734" name="Wind Walk Potion" type="EtcItem">
+		<!-- Magical potion that increases movement Speed -->
 		<set name="icon" val="icon.etc_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -673,6 +692,7 @@
 		</skills>
 	</item>
 	<item id="735" name="Haste Potion" type="EtcItem">
+		<!-- Magical potion that increases Atk. Spd. -->
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -695,6 +715,7 @@
 		</skills>
 	</item>
 	<item id="736" name="Scroll of Escape" type="EtcItem">
+		<!-- Scroll of enchantment that relocates you to the nearest village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -711,6 +732,7 @@
 		</skills>
 	</item>
 	<item id="737" name="Scroll of Resurrection" type="EtcItem">
+		<!-- Scroll of enchantment that resuscitates a dead person. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -727,6 +749,7 @@
 		</skills>
 	</item>
 	<item id="738" name="Sword of Solidarity" type="Weapon">
+		<!-- Bronze sword crafted long ago in memory of the union between the Humans and the Elves. -->
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -751,6 +774,7 @@
 		</stats>
 	</item>
 	<item id="739" name="Broken Sword Handle" type="EtcItem">
+		<!-- The handle portion of the sword of solidarity. Take this to Blacksmith Altran. -->
 		<set name="icon" val="icon.weapon_small_sword_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -767,6 +791,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="740" name="Broken Blade Bottom" type="EtcItem">
+		<!-- Take this, and the upper portion of the blade to Blacksmith Altran. -->
 		<set name="icon" val="icon.weapon_great_sword_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -783,6 +808,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="741" name="Broken Blade Top" type="EtcItem">
+		<!-- Take this, and the lower portion of the blade to Blacksmith Altran. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -799,6 +825,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="742" name="Altran's Note" type="EtcItem">
+		<!-- Letter requesting the handle of the sword from Roien. Take this to Grand Master Roien of Sedrick's Training Hall. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -815,6 +842,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="743" name="Sword of Sentinel" type="Weapon">
+		<!-- Steel blade issued to those fighters that have been acknowledged as protectors of the woods. -->
 		<set name="icon" val="icon.weapon_broad_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -839,6 +867,7 @@
 		</stats>
 	</item>
 	<item id="744" name="Staff of Sentinel" type="Weapon">
+		<!-- Staff issued to those magicians that have been acknowledged as protectors of the woods. -->
 		<set name="icon" val="icon.weapon_cedar_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -881,6 +910,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="746" name="Alberius' List" type="EtcItem">
+		<!-- Deliver the medicine to Sentinel Berros, Sentinel Veltress, Sentinel Rayen, and Sentinel Gartrandell. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -897,6 +927,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="747" name="Wand of Adept" type="Weapon">
+		<!-- The wand presented to those who have finished their studies at the school of magic. -->
 		<set name="icon" val="icon.weapon_apprentices_wand_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -923,6 +954,7 @@
 		</stats>
 	</item>
 	<item id="748" name="Gallint's Oak Wand" type="Weapon">
+		<!-- Oak wand enchanted by Gallint's spell. This will capture and seal the spirit of mirrors. -->
 		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1014,6 +1046,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="752" name="Orc Amulet" type="EtcItem">
+		<!-- Amulet that the Orcs carry for magical purposes. Take this to Captain Gilbert. -->
 		<set name="icon" val="icon.etc_feather_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1046,6 +1079,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="754" name="Red Sunset Staff" type="Weapon">
+		<!-- Staff used by warriors belonging to the Red Sunset clan. -->
 		<set name="icon" val="icon.weapon_cedar_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1728,6 +1762,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="796" name="Roien's Letter" type="EtcItem">
+		<!-- Letter on which Roien summarized the historical information related to the sword of solidarity. Take this to Blacksmith Altran. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

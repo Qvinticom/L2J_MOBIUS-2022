@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="36900" name="Recipe: Exquisite Leather Braid - Combination" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Exquisite Leather (Lv. 5) and Quality Braid (Lv. 5) into Exquisite Leather Braid (Lv. 5). Requires Create Item (Lv. 14). -->
@@ -466,7 +466,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="36946" name="Lindvior's Earring" type="Armor">
-		<!-- MP + 59, Petrification and Resistance to it + 50%, Knock Back/Knock Down and Resistance to it + 40%, Pulling and Resistance to it + 40%, P. Critical Damage + 10%, M. Critical Damage + 10%, P./M. Abnormal Status Reflection + 10%. Reflect damage magic back to the attacker with the probability of 10%. Movement Speed + 5, DEX + 3, and WIT + 3. Increases Wind/Dark Resistance. Enables the skill of cancelling Knock Back/Knock Down and increases Knock Back/Knock Down Resistance to 100% instantly. When two identical earrings are equipped, only one effect is applied. -->
+		<!-- MP + 59, Petrification and Resistance to it + 50%, Knock Back/Knock Down and Resistance to it + 40%, Pulling success rate + 40%, Pulling/Danger Zone Resistance + 40%, P. Critical Damage + 10%, M. Critical Damage + 10%, P./M. Abnormal Status Reflection + 10%. Reflect damage magic back to the attacker with the probability of 10%. Movement Speed + 5, DEX + 3, and WIT + 3. Increases Wind/Dark Resistance. Enables the skill of cancelling Knock Back/Knock Down and increases Knock Back/Knock Down Resistance to 100% instantly. When two identical earrings are equipped, only one effect is applied. -->
 		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />

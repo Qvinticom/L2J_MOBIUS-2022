@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="17000" name="Jewelry Pack (B-grade)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire a Jewelry Set of Fortune (B-grade). Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -23,6 +24,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17001" name="Jewelry Pack (C-grade)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire a Jewelry Set of Fortune (C-grade). Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -45,6 +47,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17002" name="Jewelry Pack (D-grade)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire an Jewelry Set of Fortune (D-grade). Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -67,6 +70,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17003" name="Santa's Gift" additionalName="Event" type="EtcItem">
+		<!-- Santa's Gift. One can receive the gift when Double-clicked. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -81,6 +85,7 @@
 		</skills>
 	</item>
 	<item id="17004" name="Agathion - Kid Rudolph" additionalName="Event" type="Armor">
+		<!-- Bracelet that summons a cute Kid Rudolph Agathion that gives you a Santa's Gift. The Kid Rudolph gives you Santa's gift every 30 minutes after being summoned. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -101,6 +106,7 @@
 		</skills>
 	</item>
 	<item id="17005" name="Santa - CP Potion" additionalName="Event" type="EtcItem">
+		<!-- It recovers CP by 300. -->
 		<set name="icon" val="icon.etc_cp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -119,6 +125,7 @@
 		</skills>
 	</item>
 	<item id="17006" name="Sealed Vesper Noble Breastplate" type="Armor">
+		<!-- Sealed Vesper Noble Breastplate Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -142,6 +149,7 @@
 		</stats>
 	</item>
 	<item id="17007" name="Sealed Vesper Noble Leather Breastplate" type="Armor">
+		<!-- Sealed Vesper Noble Leather Breastplate. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -162,6 +170,7 @@
 		</stats>
 	</item>
 	<item id="17008" name="Sealed Vesper Noble Tunic" type="Armor">
+		<!-- Sealed Vesper Noble Tunic. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -186,6 +195,7 @@
 		</stats>
 	</item>
 	<item id="17009" name="Sealed Vesper Noble Gaiters" type="Armor">
+		<!-- Sealed Vesper Noble Gaiters. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -209,6 +219,7 @@
 		</stats>
 	</item>
 	<item id="17010" name="Sealed Vesper Noble Gauntlets" type="Armor">
+		<!-- Sealed Vesper Noble Gauntlets. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -231,6 +242,7 @@
 		</stats>
 	</item>
 	<item id="17011" name="Sealed Vesper Noble Boots" type="Armor">
+		<!-- Sealed Vesper Noble Boots. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -253,6 +265,7 @@
 		</stats>
 	</item>
 	<item id="17012" name="Sealed Vesper Noble Leather Leggings" type="Armor">
+		<!-- Sealed Vesper Noble Leather Leggings. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -273,6 +286,7 @@
 		</stats>
 	</item>
 	<item id="17013" name="Sealed Vesper Noble Leather Gloves" type="Armor">
+		<!-- Sealed Vesper Noble Leather Gloves. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -292,6 +306,7 @@
 		</stats>
 	</item>
 	<item id="17014" name="Sealed Vesper Noble Leather Boots" type="Armor">
+		<!-- Sealed Vesper Noble Leather Boots. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -311,6 +326,7 @@
 		</stats>
 	</item>
 	<item id="17015" name="Sealed Vesper Noble Stockings" type="Armor">
+		<!-- Sealed Vesper Noble Stockings. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -335,6 +351,7 @@
 		</stats>
 	</item>
 	<item id="17016" name="Sealed Vesper Noble Gloves" type="Armor">
+		<!-- Sealed Vesper Noble Gloves. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -357,6 +374,7 @@
 		</stats>
 	</item>
 	<item id="17017" name="Sealed Vesper Noble Shoes" type="Armor">
+		<!-- Sealed Vesper Noble Shoes. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -379,6 +397,7 @@
 		</stats>
 	</item>
 	<item id="17018" name="Hot Springs Recovery Potion" type="EtcItem">
+		<!-- Bottle containing hot springs water. It might have healing effects against maladies. -->
 		<set name="icon" val="icon.etc_cp_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -398,6 +417,7 @@
 		</skills>
 	</item>
 	<item id="17019" name="Mounting Item 3 Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Mount - Gold Maned Lion (7-day), 1 Mount - Darkmane Pacer (7-day), and 1 Mount - Steam Beetle (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -422,6 +442,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17020" name="Fresh Milk Pack (Event)" type="EtcItem">
+		<!-- Event - Wrapped Pack containing fresh milk. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -444,6 +465,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17021" name="Dimensional Experience Pack 30 (Event)" type="EtcItem">
+		<!-- Event - Wrapped Pack containing High-grade Minion Coupon 2-unit Pack, a Feather of Blessing 3-unit Pack, and an Entrance Pass: Kamaloka 3-unit Pack. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -468,6 +490,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17022" name="Varka Karm Pack (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Varka Karm (used by Varka Silenos). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -490,6 +513,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17023" name="Ketra Karm Pack (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Ketra Karm (used by Ketra Orcs). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -512,6 +536,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17024" name="Vitality Maintaining Potion Pack (Event)" type="EtcItem">
+		<!-- Event - Wrapped Pack containing 5 Vitality Potions (30min). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -533,6 +558,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17025" name="PC Point Pack (700) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing 700 PC Points. Cannot be exchanged, dropped, destroyed or sold in private store. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -555,6 +581,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17026" name="First Mate Hat Pack (Event)" type="EtcItem">
+		<!-- First Mate Hat - Wrapped Pack for event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -577,6 +604,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17027" name="Straw Hat Pack (Event)" type="EtcItem">
+		<!-- Straw Hat - Wrapped Pack for event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -599,6 +627,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17028" name="Phantom Mask Pack (Event)" type="EtcItem">
+		<!-- Phantom Mask - Wrapped Pack for event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -621,6 +650,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17029" name="Black Phantom Mask Pack (Event)" type="EtcItem">
+		<!-- Black Phantom Mask - Wrapped Pack for event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -643,6 +673,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17030" name="Forgotten Scroll: Create Item Lv. 10" type="EtcItem">
+		<!-- Forgotten Scroll for learning Create Item Lv. 10. Only Maestro can use it. Can be acquired by level 82. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -658,6 +689,7 @@
 		</skills>
 	</item>
 	<item id="17031" name="Freya White Pack" type="EtcItem">
+		<!-- 3 Vitality Replenishing Potions. Fire, Water, Wind, Earth, Holy, and Dark Crystals. Circlet of Freezing - Wrapped Pack for event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -687,6 +719,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17032" name="Hero's Treasure Chest Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Hero's Treasure Chest. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -709,6 +742,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17033" name="Circlet of Ice (Event)" additionalName="30-day" type="Armor">
+		<!-- Circlet that has the power of Freeze. Water Resistance increases by 30. Uses 2 hair accessory slots. 30-day. -->
 		<set name="icon" val="icon.accessory_ice_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -732,6 +766,7 @@
 		</skills>
 	</item>
 	<item id="17034" name="Forgotten Scroll: Fighter's Will (Event)" type="EtcItem">
+		<!-- Forgotten Scroll to learn the Fighter's Will. Fighters use it. Can be acquired at level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -752,6 +787,7 @@
 		</skills>
 	</item>
 	<item id="17035" name="Forgotten Scroll: Archer's Will (Event)" type="EtcItem">
+		<!-- Forgotten Scroll to learn the Archer's Will. Fighters use it. Can be acquired at level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -772,6 +808,7 @@
 		</skills>
 	</item>
 	<item id="17036" name="Forgotten Scroll: Magician's Will (Event)" type="EtcItem">
+		<!-- Forgotten Scroll to learn Magician's Will. Used by the Mage types. Can be acquired at level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -792,6 +829,7 @@
 		</skills>
 	</item>
 	<item id="17037" name="Forgotten Scroll: Protection of Rune (Event)" type="EtcItem">
+		<!-- Forgotten Scroll for learning Protection of Rune. Can be acquired at level 82. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -812,6 +850,7 @@
 		</skills>
 	</item>
 	<item id="17038" name="Forgotten Scroll: Protection of Elemental (Event)" type="EtcItem">
+		<!-- Forgotten Scroll for learning Protection of Elemental. Can be acquired at level 82. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -832,6 +871,7 @@
 		</skills>
 	</item>
 	<item id="17039" name="Forgotten Scroll: Protection of Alignment (Event)" type="EtcItem">
+		<!-- Forgotten Scroll for learning Protection of Alignment. Can be acquired at level 82. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -852,6 +892,7 @@
 		</skills>
 	</item>
 	<item id="17040" name="Love Box Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Love Box. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -872,6 +913,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17041" name="Sentiment Box Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Sentiment Box. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -892,6 +934,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17042" name="Confession Box Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Confession Box. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -912,6 +955,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17043" name="Joy Box Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Joy Box. -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -932,6 +976,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17044" name="Love Box" type="EtcItem">
+		<!-- Contains Talismans for STR, DEX and CON. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -951,6 +996,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17045" name="Sentiment Box" type="EtcItem">
+		<!-- Contains a Talisman for WIT, MEN and INT. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -970,6 +1016,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17046" name="Confession Box" type="EtcItem">
+		<!-- Contains a Talisman for Stun/Sleep/Hold/Paralysis Resistance. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -990,6 +1037,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17047" name="Joy Box" type="EtcItem">
+		<!-- Contains a Love Box, Sentiment Box, and Confession Box. -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -1011,6 +1059,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17048" name="Shiny Bracelet Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Shiny Bracelet. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -1029,6 +1078,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17049" name="Shiny Bracelet" type="Armor">
+		<!-- Activates three talisman slots when equipped. Cannot be equipped in the Olympiad Arena. -->
 		<set name="icon" val="icon.accessory_shiny_bracelet" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1047,6 +1097,7 @@
 		</skills>
 	</item>
 	<item id="17050" name="Shiny Couple Ring" type="Armor">
+		<!-- Summons another player. Both the summoner and the one being summoned must have it equipped. Cooldown is 1 hour. -->
 		<set name="icon" val="icon.accessory_shiny_couple_ring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1068,6 +1119,7 @@
 		</stats>
 	</item>
 	<item id="17051" name="Talisman - STR" type="Armor">
+		<!-- STR + 2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1090,6 +1142,7 @@
 		</skills>
 	</item>
 	<item id="17052" name="Talisman - DEX" type="Armor">
+		<!-- DEX + 2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1112,6 +1165,7 @@
 		</skills>
 	</item>
 	<item id="17053" name="Talisman - CON" type="Armor">
+		<!-- CON + 2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1134,6 +1188,7 @@
 		</skills>
 	</item>
 	<item id="17054" name="Talisman - WIT" type="Armor">
+		<!-- WIT + 2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1156,6 +1211,7 @@
 		</skills>
 	</item>
 	<item id="17055" name="Talisman - INT" type="Armor">
+		<!-- INT + 2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1178,6 +1234,7 @@
 		</skills>
 	</item>
 	<item id="17056" name="Talisman - MEN" type="Armor">
+		<!-- MEN + 2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1200,6 +1257,7 @@
 		</skills>
 	</item>
 	<item id="17057" name="Talisman - Stun Resistance" type="Armor">
+		<!-- Stun Resistance + 15 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1222,6 +1280,7 @@
 		</skills>
 	</item>
 	<item id="17058" name="Talisman - Sleep Resistance" type="Armor">
+		<!-- Sleep Resistance + 15 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1244,6 +1303,7 @@
 		</skills>
 	</item>
 	<item id="17059" name="Talisman - Hold Resistance" type="Armor">
+		<!-- Hold Resistance + 15 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1266,6 +1326,7 @@
 		</skills>
 	</item>
 	<item id="17060" name="Talisman - Paralysis Resistance" type="Armor">
+		<!-- Paralysis resistance + 15 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1288,6 +1349,7 @@
 		</skills>
 	</item>
 	<item id="17061" name="Talisman - ALL STATS" type="Armor">
+		<!-- Increases all stats by 1 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1310,6 +1372,7 @@
 		</skills>
 	</item>
 	<item id="17062" name="Event - Summon Scroll: Baby White Tiger" type="EtcItem">
+		<!-- Scroll that summons a baby White Tiger. If you relieve the Baby White Tiger's fatigue, you can acquire Apiga. (Recovery is only possible through Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
 		<set name="icon" val="icon.etc_scroll_of_tiger_a" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1324,6 +1387,7 @@
 		</skills>
 	</item>
 	<item id="17063" name="Event - Summon Scroll: Gloomy Baby White Tiger" type="EtcItem">
+		<!-- Scroll that summons a Gloomy Baby White Tiger. Can sometimes transform into a White Tiger while trying to recover the Baby White Tiger. (Recovery is only possible through Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
 		<set name="icon" val="icon.etc_scroll_of_tiger_a" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1338,6 +1402,7 @@
 		</skills>
 	</item>
 	<item id="17064" name="Event - Summon Scroll: Baby White Tiger Captain" type="EtcItem">
+		<!-- Scroll that summons a baby White Tiger Captain. If you relieve the Baby White Tiger Captain's fatigue, you can acquire Apiga. (Recovery is only possible through Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
 		<set name="icon" val="icon.etc_scroll_of_tiger_b" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1352,6 +1417,7 @@
 		</skills>
 	</item>
 	<item id="17065" name="Event - Summon Scroll: Gloomy Baby White Tiger Captain" type="EtcItem">
+		<!-- Scroll that summons a Gloomy Baby White Tiger Captain. Can sometimes transform into a White Tiger Captain while trying to recover the Baby White Tiger. (Recovery is only possible through Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
 		<set name="icon" val="icon.etc_scroll_of_tiger_b" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1366,6 +1432,7 @@
 		</skills>
 	</item>
 	<item id="17066" name="Event - Save the White Tiger Event Pack" type="EtcItem">
+		<!-- Event pack that can be obtained 1 time per account every 12 hours. By Double-clicking, you can obtain the Summon Scroll: Baby White Tiger and "Cupid's Fatigue Relief Potion" that are needed for the event. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1390,6 +1457,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17067" name="Event - Cupid's Fatigue Relief Potion" type="EtcItem">
+		<!-- Decreases fatigue when used on a White Tiger. -->
 		<set name="icon" val="icon.etc_faitgue_relief_of_cupid_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1408,6 +1476,7 @@
 		</skills>
 	</item>
 	<item id="17068" name="Event - Cupid's Major Fatigue Relief Potion" type="EtcItem">
+		<!-- Decreases fatigue when used on a White Tiger. It Has a better effect than Cupid's Fatigue Relief Potion. -->
 		<set name="icon" val="icon.etc_nutrients_of_cupid_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1426,6 +1495,7 @@
 		</skills>
 	</item>
 	<item id="17069" name="Vesper Weapon Pack" type="EtcItem">
+		<!-- Pack containing Vesper weapon. Which one could it be? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="false" />
@@ -1441,6 +1511,7 @@
 		</skills>
 	</item>
 	<item id="17070" name="Icarus Weapon Pack" type="EtcItem">
+		<!-- Pack containing Icarus weapon. Which one could it be? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="false" />
@@ -1456,6 +1527,7 @@
 		</skills>
 	</item>
 	<item id="17071" name="Dynasty Weapon Pack" type="EtcItem">
+		<!-- Pack containing Dynasty weapon. Which one could it be? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="false" />
@@ -1471,6 +1543,7 @@
 		</skills>
 	</item>
 	<item id="17072" name="Vesper Armor Pack" type="EtcItem">
+		<!-- Pack containing Vesper armor. Which one could it be? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="false" />
@@ -1486,6 +1559,7 @@
 		</skills>
 	</item>
 	<item id="17073" name="Moirai Armor Pack" type="EtcItem">
+		<!-- Pack containing Destino armor. Which one could it be? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="false" />
@@ -1501,6 +1575,7 @@
 		</skills>
 	</item>
 	<item id="17074" name="Dynasty Armor Pack" type="EtcItem">
+		<!-- Pack containing Dynasty armor. Which one could it be? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="false" />
@@ -1516,6 +1591,7 @@
 		</skills>
 	</item>
 	<item id="17075" name="Soul Crystal - Step 14 Box" type="EtcItem">
+		<!-- Box containing Soul Crystal - Step 14. Which one could it be? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="false" />
@@ -1531,6 +1607,7 @@
 		</skills>
 	</item>
 	<item id="17076" name="Soul Crystal - Step 15 Box" type="EtcItem">
+		<!-- Box containing Soul Crystal - Step 15. Which one could it be? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="false" />
@@ -1546,6 +1623,7 @@
 		</skills>
 	</item>
 	<item id="17077" name="Soul Crystal - Step 16 Box" type="EtcItem">
+		<!-- Box containing Soul Crystal - Step 16. Which one could it be? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="false" />
@@ -1561,6 +1639,7 @@
 		</skills>
 	</item>
 	<item id="17078" name="Facelifting Potion Pack" type="EtcItem">
+		<!-- Box containing Facelifting Potion. Sometimes, Sometimes contains Fresh Milk. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="false" />
@@ -1576,6 +1655,7 @@
 		</skills>
 	</item>
 	<item id="17079" name="Dye Potion Pack" type="EtcItem">
+		<!-- Box containing Dye Potion. Sometimes, Sometimes contains Fresh Milk. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="false" />
@@ -1591,6 +1671,7 @@
 		</skills>
 	</item>
 	<item id="17080" name="Hairstyle Change Potion Pack" type="EtcItem">
+		<!-- Box containing Hair Style Change Potion. Sometimes, Sometimes contains Fresh Milk. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="false" />
@@ -1606,6 +1687,7 @@
 		</skills>
 	</item>
 	<item id="17081" name="Golden Apigas Box" type="EtcItem">
+		<!-- Box containing S-grade Gemstone and an Attribute Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="false" />
@@ -1621,6 +1703,7 @@
 		</skills>
 	</item>
 	<item id="17082" name="Transformation Sealbook: Anakim Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Transformation Scroll: Anakim. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1643,6 +1726,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17083" name="Bird Nest Pack (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Bird Nest (Event). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1665,6 +1749,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17084" name="Shadow Item: Magician Cap Pack" additionalName="Escape" type="EtcItem">
+		<!-- Wrapped Pack containing Shadow Item: Magician CaP. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1687,6 +1772,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17085" name="Shadow Item: Magician Cap Pack" additionalName="Big Head" type="EtcItem">
+		<!-- Wrapped Pack containing Shadow Item: Magician CaP. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1709,6 +1795,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17086" name="Shadow Item: Magician Cap Pack" additionalName="Firework" type="EtcItem">
+		<!-- Wrapped Pack containing Shadow Item: Magician CaP. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1731,6 +1818,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17087" name="Seed: Twin Coba" type="EtcItem">
+		<!-- If you plant it in a monster in the Oren region, twin Coba will grow. The success rate is high when a level 77 - 87 character uses it on a level 77 - 87 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -1746,6 +1834,7 @@
 		</skills>
 	</item>
 	<item id="17088" name="Seed: Alternative Twin Coba" type="EtcItem">
+		<!-- If you plant it in a monster in the Oren region, Improved Twin Coba will grow. The success rate is high when a level 77 - 87 character uses it on a level 77 - 87 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1761,6 +1850,7 @@
 		</skills>
 	</item>
 	<item id="17089" name="Seed: Red Coba" type="EtcItem">
+		<!-- If you plant it in a monster in the Schuttgart region, Red Coba will grow. The success rate is high when a level 65 - 75 character uses it on a level 65 - 75 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -1776,6 +1866,7 @@
 		</skills>
 	</item>
 	<item id="17090" name="Seed: Alternative Red Coba" type="EtcItem">
+		<!-- If you plant it in a monster in the Schuttgart region, Improved Red Coba will grow. The success rate is high when a level 65 - 75 character uses it on a level 65 - 75 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1791,6 +1882,7 @@
 		</skills>
 	</item>
 	<item id="17091" name="Seed: Golden Coba" type="EtcItem">
+		<!-- If you plant it in a monster in the Schuttgart region, Golden Coba will grow. The success rate is high when a level 68 - 78 character uses it on a level 68 - 78 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -1806,6 +1898,7 @@
 		</skills>
 	</item>
 	<item id="17092" name="Seed: Alternative Golden Coba" type="EtcItem">
+		<!-- If you plant it in a monster in the Schuttgart region, Improved Golden Coba will grow. The success rate is high when a level 68 - 78 character uses it on a level 68 - 78 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1821,6 +1914,7 @@
 		</skills>
 	</item>
 	<item id="17093" name="Vitality Maintaining Potion (10-minute) (Event)" type="EtcItem">
+		<!-- Vitality is maintained for 10 min. Cooldown is 30 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_lesser_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1839,6 +1933,7 @@
 		</skills>
 	</item>
 	<item id="17094" name="Nevit's Voice" type="EtcItem">
+		<!-- Seashell containing Nevit's voice. Item that raises your evaluation value by 10. Can acquire 100,000 Adena by Double-clicking. -->
 		<set name="icon" val="icon.etc_fish_scale_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1858,6 +1953,7 @@
 		</skills>
 	</item>
 	<item id="17095" name="XP Buff 50% (1-hour)" additionalName="1~19" type="EtcItem">
+		<!-- Increases acquired XP by 50% for a certain amount of time. Can only be used at levels 1 - 19. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1881,6 +1977,7 @@
 		</skills>
 	</item>
 	<item id="17096" name="XP Buff 50% (1.5-hour)" additionalName="1~19" type="EtcItem">
+		<!-- Increases acquired XP by 50% for a certain amount of time. Can only be used at levels 1 - 19. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1904,6 +2001,7 @@
 		</skills>
 	</item>
 	<item id="17097" name="XP Buff 50% (2-hour)" additionalName="1~19" type="EtcItem">
+		<!-- Increases acquired XP by 50% for a certain amount of time. Can only be used at levels 1 - 19. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1927,6 +2025,7 @@
 		</skills>
 	</item>
 	<item id="17098" name="XP Buff 50% (2.5-hour)" additionalName="1~19" type="EtcItem">
+		<!-- Increases acquired XP by 50% for a certain amount of time. Can only be used at levels 1 - 19. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1950,6 +2049,7 @@
 		</skills>
 	</item>
 	<item id="17099" name="XP Buff 50% (3-hour)" additionalName="1~19" type="EtcItem">
+		<!-- Increases acquired XP by 50% for a certain amount of time. Can only be used at levels 1 - 19. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />

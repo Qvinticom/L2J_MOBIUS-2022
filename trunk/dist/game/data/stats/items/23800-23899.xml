@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="23800" name="Major Adenian Life Stone" type="EtcItem">
 		<!-- Life Stone for Adenian Underwear. Powerful. Has a higher chance of creating high stats when augmenting than a standard Adenian Life Stone. Can be augmented by blacksmiths in town. -->
@@ -206,7 +206,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23817" name="Uthanka's Ring" type="Armor">
-		<!-- Can transform into Pirate Captain Uthanka.\n -->
+		<!-- Can transform into Pirate Captain Uthanka. -->
 		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -215,7 +215,7 @@
 		<set name="commissionItemType" val="RING" />
 	</item>
 	<item id="23818" name="Uthanka's Ring" additionalName="7-day" type="Armor">
-		<!-- Can transform into Pirate Captain Uthanka (7-day).\n -->
+		<!-- Can transform into Pirate Captain Uthanka (7-day). -->
 		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -385,7 +385,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23833" name="Talisman - Abundance" additionalName="War" type="Armor">
-		<!-- P. Atk. + 154, M. Atk. + 181, and P. Evasion/M. Evasion + 4.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- P. Atk. + 154, M. Atk. + 181, and P. Evasion/M. Evasion + 4. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -393,7 +393,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="23834" name="Talisman - Abundance" additionalName="Tactics" type="Armor">
-		<!-- Attribute Resistance + 10 and Debuff Resistance + 10%.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- Attribute Resistance + 10 and Debuff Resistance + 10%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -401,7 +401,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="23835" name="Talisman - Abundance" additionalName="Morale" type="Armor">
-		<!-- P./M. Critical Rate + 8%, Received Critical Damage - 10%, and PvP skill power - 10%.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- P./M. Critical Rate + 8%, Received Critical Damage - 10%, and PvP skill power - 10%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -409,7 +409,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="23836" name="Talisman - Abundance" additionalName="Physique" type="Armor">
-		<!-- Max HP/MP/CP + 325 and HP/MP/CP Recovery Rate + 5.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- Max HP/MP/CP + 325 and HP/MP/CP Recovery Rate + 5. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -417,7 +417,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="23837" name="Talisman - Hunter" additionalName="Abundance" type="Armor">
-		<!-- P. Atk. + 231, M. Atk. 271, P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%. Received Critical Damage - 15%, and skill damage during PvP - 15%. Additionally, skill damage received during PvP is decreased.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- P. Atk. + 231, M. Atk. 271, P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%. Received Critical Damage - 15%, and skill damage during PvP - 15%. Additionally, skill damage received during PvP is decreased. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -425,7 +425,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="23838" name="Talisman - Slaughterer" additionalName="Abundance" type="Armor">
-		<!-- P. Atk. + 231, M. Atk. + 271 P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, Max HP, MP, and CP + 490, and HP, MP, and CP Recovery + 7.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- P. Atk. + 231, M. Atk. + 271 P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, Max HP, MP, and CP + 490, and HP, MP, and CP Recovery + 7. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -433,7 +433,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="23839" name="Talisman - Conquerer" additionalName="Abundance" type="Armor">
-		<!-- P. Atk. + 231, M. Atk. + 271, P. Evasion/M. Evasion + 7, P./M. Critical Rate + 13%, Max HP, MP, and CP + 490, HP, MP, and CP Recovery + 7. Received Critical Damage - 15%, and skill damage during PvP - 15%.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- P. Atk. + 231, M. Atk. + 271, P. Evasion/M. Evasion + 7, P./M. Critical Rate + 13%, Max HP, MP, and CP + 490, HP, MP, and CP Recovery + 7. Received Critical Damage - 15%, and skill damage during PvP - 15%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -441,7 +441,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="23840" name="Talisman - Outlaw" additionalName="Abundance" type="Armor">
-		<!-- Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%, Max HP, MP, and CP + 490, HP, MP, and CP Recovery + 7. Received Critical Damage - 15%, and skill damage during PvP - 15%.\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%, Max HP, MP, and CP + 490, HP, MP, and CP Recovery + 7. Received Critical Damage - 15%, and skill damage during PvP - 15%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -477,7 +477,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23845" name="Mysterious Hunt Dye" additionalName="P. Def., Speed, 1-day" type="EtcItem">
-		<!-- Take it to the town's Symbol Maker for a 1-day tattoo that increases your power (when HP is 90% or above, P. Def. + 20%, Speed + 33). All classes. Awakened only.\n\nNote: Tattoo is only effective in the Olympiad and Ceremony of Chaos. -->
+		<!-- Take it to the town's Symbol Maker for a 1-day tattoo that increases your power (when HP is 90% or above, P. Def. + 20%, Speed + 33). All classes. Awakened only. Note: Tattoo is only effective in the Olympiad and Ceremony of Chaos. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -490,7 +490,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="23846" name="Mysterious Slaughter Dye" additionalName="Damage Reflect Resistance, Received Damage Decrease, 1-day" type="EtcItem">
-		<!-- Take it to the town's Symbol Maker for a 1-day tattoo that increases your power (Received Damage from PCs - 2%, Damage Reflect Resistance + 2, effect increased for PC kills, up to Lv. 5) All classes. Awakened only.\n\nNote: Tattoo is only effective in a castle siege, dimensional castle siege, fortress siege, and a clan hall war. -->
+		<!-- Take it to the town's Symbol Maker for a 1-day tattoo that increases your power (Received Damage from PCs - 2%, Damage Reflect Resistance + 2, effect increased for PC kills, up to Lv. 5) All classes. Awakened only. Note: Tattoo is only effective in a castle siege, dimensional castle siege, fortress siege, and a clan hall war. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -565,7 +565,7 @@
 		<set name="weight" val="1000" />
 	</item>
 	<item id="23853" name="Transparent Armor Appearance Stone" type="EtcItem">
-		<!-- Transparent armor appearance stone. -->
+		<!-- Transparent armor appearance stone. Makes armor invisible so that Adenian Underwear and Tattoos are visible. Your cloak also becomes invisible. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -584,7 +584,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23855" name="Golden Crate" type="EtcItem">
-		<!-- Has a chance of obtaining either a Dark Amaranthine Enhancement Stone, Bloody Amaranthine Enhancement Stone, Dark Eternal Enhancement Stone, Bloody Eternal Enhancement Stone, Kaliel's Energy - Desire, Kaliel's Energy - Hellfire, Kaliel's Energy - Annihilation, Blessed Giant's Lucky Enchant Stone: Weapon (R-grade), Blessed Giant's Lucky Enchant Stone: Armor (R-grade), Top-grade Life Stone (R-grade), Giant's Energy, Energy of Destruction, Fire Crystal - Super, Water Crystal - Super, Wind Crystal - Super, Earth Crystal - Super, Holy Crystal - Super, Dark Crystal - Super, or Gemstone (R-grade). -->
+		<!-- Has a chance of obtaining either a Dark Amaranthine Enhancement Stone, Bloody Amaranthine Enhancement Stone, Dark Eternal Enhancement Stone, Bloody Eternal Enhancement Stone, Kaliel's Energy - Desire, Kaliel's Energy - Hellfire, Kaliel's Energy - Annihilation, Blessed Giant's Lucky Enchant Stone: Weapon (R-grade), Blessed Giant's Lucky Enchant Stone: Armor (R-grade), 3 Top-grade Life Stones (R-grade), 8 Giant's Energy, 20 Energy of Destruction, Fire Crystal - Super, Water Crystal - Super, Wind Crystal - Super, Earth Crystal - Super, Holy Crystal - Super, Dark Crystal - Super, or 40 Gemstones (R-grade). -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -593,7 +593,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23856" name="Silver Crate" type="EtcItem">
-		<!-- Has a chance of obtaining either a Scroll of Blessing (R99-grade), Scroll of Blessing (R95-grade), Scroll of Blessing (R2-grade), Scroll of Blessing (R1-grade), Lv. 5 Legendary Dye Pack, Blessed Scroll: Enchant Weapon (R-grade), Giant's Scroll: Enchant Weapon (R-grade), Blessed Scroll: Enchant Armor (R-grade), High-grade Lucky Enchant Stone: Weapon (R-grade), High-grade Lucky Enchant Stone: Armor (R-grade), Giant's Scroll: Enchant Armor (R-grade), Life Stone: Hair Accessory, Scroll: Enchant Hair Accessory, Fire Stone (+ 150), Water Stone (+ 150), Earth Stone (+ 150), Wind Stone (+ 150), Dark Stone (+ 150), or Holy Stone (+ 150). -->
+		<!-- Has a chance of obtaining either a Scroll of Blessing: (R99-grade), Scroll of Blessing: (R95-grade), Scroll of Blessing: (R2-grade), Scroll of Blessing: (R1-grade), Lv. 5 Legendary Dye Pack, Blessed Scroll: Enchant Weapon (R-grade), Giant's Scroll: Enchant Weapon (R-grade), Blessed Scroll: Enchant Armor (R-grade), High-grade Lucky Enchant Stone: Weapon (R-grade), High-grade Lucky Enchant Stone: Armor (R-grade), Giant's Scroll: Enchant Armor (R-grade), Life Stone: Hair Accessory, Scroll: Enchant Hair Accessory, Fire Stone (+ 150), Water Stone (+ 150), Earth Stone (+ 150), Wind Stone (+ 150), Dark Stone (+ 150), or Holy Stone (+ 150). -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -620,7 +620,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23859" name="Change Clan Name" type="EtcItem">
-		<!-- To change your clan name:\n1. Request through your own account.\n2. Send a request with the title 'Change Clan Name'.\n3. Your character must be the clan leader, with the Change Clan Name item in the inventory. -->
+		<!-- To change your clan name:. 1. Request through your own account. 2. Send a request with the title "Change Clan Name". 3. Your character must be the clan leader, with the Change Clan Name item in the inventory. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -815,7 +815,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23878" name="Samurai Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Modifies the appearance of a hair accessory into that of a Samurai Outfit. Only for 2-slot hair accessories.\n\nNote: Bestowing a pendant on a modified hair accessory wil reset the appearance. -->
+		<!-- Modifies the appearance of a hair accessory into that of a Samurai Outfit. Only for 2-slot hair accessories. Note: Bestowing a pendant on a modified hair accessory wil reset the appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -842,7 +842,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23880" name="Samurai Outfit Appearance Stone" type="EtcItem">
-		<!-- Modifies the appearance of armor into that of a Samurai. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone.\n\nNote: Upgrading or bestowing options on modified armor will reset the appearance. -->
+		<!-- Modifies the appearance of armor into that of a Samurai. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone. Note: Upgrading or bestowing options on modified armor will reset the appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -869,7 +869,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23882" name="Anakim Outfit Appearance Stone" type="EtcItem">
-		<!-- Modifies the appearance of armor into that of Anakim. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone.\n\nNote: Upgrading or bestowing options on modified armor will reset the appearance. -->
+		<!-- Modifies the appearance of armor into that of Anakim. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone. Note: Upgrading or bestowing options on modified armor will reset the appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1084,7 +1084,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23898" name="Pandora's Box" type="EtcItem">
-		<!-- Pandora's Box containing various high-grade items. Double-click to acquire one of the following: Life Stone Instilled with Giant's Power, Destruction Scroll: Enchant Weapon (R-grade), Destruction Scroll: Enchant Armor (R-grade), 10,000,000,000 Adena, Transformation Scroll, Immortal Scroll, Kaliel's Energy, Dye, Elcyum, Attribute Crystal, Pendant, Hair Accessory, Potion, etc. -->
+		<!-- Pandora's Box containing various high-grade items. Double-click to acquire one of the following: Life Stone Instilled with Giant's Power, Destruction Scroll: Enchant Weapon (R-grade), Destruction Scroll: Enchant Armor (R-grade), 100 Ziggo's Jewels, Transformation Scroll, Immortal Scroll, Kaliel's Energy, Dye, Elcyum, Attribute Crystal, Pendant, Hair Accessory, Potion, etc. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1097,7 +1097,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23899" name="Gambler's Box" type="EtcItem">
-		<!-- Gambler's Box containing various high-grade items. Double-click to acquire one of the following: 1,000,000,000 Adena, Scroll: Enchant Hair Accessory, Weapon Attribute Change Crystal (R-grade), Gemstone (R-grade), Scroll: Enchant Armor (R-grade), Life Stone (R-grade), Attribute Stone Pack, Blessed Scroll of Escape, Strawberry Cake (HP), or Fantasy Mana Potion. -->
+		<!-- Gambler's Box containing various high-grade items. Double-click to acquire one of the following: 10 Ziggo's Jewels, Scroll: Enchant Hair Accessory, Weapon Attribute Change Crystal (R-grade), Gemstone (R-grade), Scroll: Enchant Armor (R-grade), Life Stone (R-grade), Attribute Stone Pack, Blessed Scroll of Escape, Strawberry Cake (HP), or Fantasy Mana Potion. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />

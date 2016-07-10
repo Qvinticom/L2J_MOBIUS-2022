@@ -166,7 +166,7 @@
 		</stats>
 	</item>
 	<item id="45806" name="Dynasty Ancient Sword of Fortune" additionalName="30-day" type="Weapon">
-		<!-- Kamael-exclusive Weapon\nCritical + 111. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-exclusive Weapon. Critical + 111. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -194,7 +194,7 @@
 		</stats>
 	</item>
 	<item id="45807" name="Dynasty Rapier of Fortune" additionalName="30-day" type="Weapon">
-		<!-- Kamael-exclusive Weapon\nCritical + 111. Increases damage inflicted during PvP. \nHas a chance during a Critical to increase entire party's P./M. Atk. and received Heal, and decrease Skill MP Consumption. Can be assigned an attribute. -->
+		<!-- Kamael-exclusive Weapon. Critical + 111. Increases damage inflicted during PvP. Has a chance during a Critical to increase entire party's P./M. Atk. and received Heal, and decrease Skill MP Consumption. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="weapon_type" val="RAPIER" />
 		<set name="default_action" val="EQUIP" />
@@ -222,7 +222,7 @@
 		</stats>
 	</item>
 	<item id="45808" name="Dynasty Crossbow of Fortune" additionalName="30-day" type="Weapon">
-		<!-- Kamael-exclusive Weapon\nCritical + 116. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-exclusive Weapon. Critical + 116. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -274,7 +274,7 @@
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 	</item>
 	<item id="45811" name="Clan Reward" type="EtcItem">
-		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 16 Vitality Replenishing Star Candies. -->
+		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 16 Vitality Replenishing Star Candies.\r\n -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -287,7 +287,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45812" name="Clan Reward" type="EtcItem">
-		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 17 Vitality Replenishing Star Candies. -->
+		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 17 Vitality Replenishing Star Candies.\r\n -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -300,7 +300,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45813" name="Clan Reward" type="EtcItem">
-		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 18 Vitality Replenishing Star Candies. -->
+		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 18 Vitality Replenishing Star Candies.\r\n -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -313,7 +313,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45814" name="Clan Reward" type="EtcItem">
-		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 19 Vitality Replenishing Star Candies. -->
+		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 19 Vitality Replenishing Star Candies.\r\n -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -326,7 +326,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45815" name="Clan Reward" type="EtcItem">
-		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 20 Vitality Replenishing Star Candies. -->
+		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 20 Vitality Replenishing Star Candies.\r\n -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -339,7 +339,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45816" name="Clan Reward" type="EtcItem">
-		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 21 Vitality Replenishing Star Candies. -->
+		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 21 Vitality Replenishing Star Candies.\r\n -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -434,8 +434,8 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="45823" name="Apocalypse Shaper" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 82.3. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
+	<item id="45823" name="Apocalypse Shaper - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 82.3. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_phasian_i01" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -462,8 +462,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45824" name="Apocalypse Cutter" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 79.2. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Damage when enchanted to + 4. -->
+	<item id="45824" name="Apocalypse Cutter - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 79.2. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Damage when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_pasis_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -489,8 +489,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45825" name="Apocalypse Slasher" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 79.2. Increases damage inflicted during PvP. Increases Atk. Power when enchanted to + 4. -->
+	<item id="45825" name="Apocalypse Slasher - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 79.2. Increases damage inflicted during PvP. Increases Atk. Power when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_volver_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -516,8 +516,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45826" name="Apocalypse Avenger" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 79.2. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
+	<item id="45826" name="Apocalypse Avenger - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 79.2. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_raksilion_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -544,8 +544,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45827" name="Apocalypse Fighter" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 76. Increases damage inflicted during PvP. Increases Atk. Spd. and Atk. Power when enchanted to + 4. -->
+	<item id="45827" name="Apocalypse Fighter - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 76. Increases damage inflicted during PvP. Increases Atk. Spd. and Atk. Power when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_kirche_i01" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
@@ -572,8 +572,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45828" name="Apocalypse Stormer" additionalName="Damage Up (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nP. Atk. + 332. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4. -->
+	<item id="45828" name="Apocalypse Stormer - Damage Up" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 332. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_grave_i01" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
@@ -600,8 +600,8 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="45829" name="Apocalypse Thrower" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 79.2. Increases damage inflicted during PvP. Increases effect of P. Skills when enchanted to + 4. -->
+	<item id="45829" name="Apocalypse Thrower - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 79.2. Increases damage inflicted during PvP. Increases effect of P. Skills when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_spina_i01" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -628,8 +628,8 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="45830" name="Apocalypse Shooter" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 79.2. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. -->
+	<item id="45830" name="Apocalypse Shooter - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 79.2. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -655,8 +655,8 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="45831" name="Apocalypse Buster" additionalName="Acumen (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+	<item id="45831" name="Apocalypse Buster - Acumen" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Casting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_imerose_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -682,8 +682,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45832" name="Apocalypse Caster" additionalName="Acumen (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
+	<item id="45832" name="Apocalypse Caster - Acumen" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Casting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_yuke_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -710,8 +710,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45833" name="Apocalypse Retributer" additionalName="Acumen (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
+	<item id="45833" name="Apocalypse Retributer - Acumen" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Casting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_herencia_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -739,8 +739,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45834" name="Apocalypse Dualsword" additionalName="Damage Up (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nP. Atk. + 332. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
+	<item id="45834" name="Apocalypse Dualsword - Damage Up" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 332. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
@@ -766,8 +766,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45835" name="Apocalypse Dual Dagger" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 79.2. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. -->
+	<item id="45835" name="Apocalypse Dual Dagger - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 79.2. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -794,8 +794,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45836" name="Apocalypse Dual Blunt Weapon" additionalName="Damage Up (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nP. Atk. + 332. Increases damage inflicted during PvP. Increases effect of P. Skills and P. Atk. when enchanted to + 4. -->
+	<item id="45836" name="Apocalypse Dual Blunt Weapon - Damage Up" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 332. Increases damage inflicted during PvP. Increases effect of P. Skills and P. Atk. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1036,8 +1036,8 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="45851" name="Specter Shaper" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 82.1. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
+	<item id="45851" name="Specter Shaper - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 82.1. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_ignicion_i01" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -1064,8 +1064,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45852" name="Specter Cutter" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 78.9. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+	<item id="45852" name="Specter Cutter - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 78.9. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_ninfea_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1091,8 +1091,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45853" name="Specter Slasher" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 78.9. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4. -->
+	<item id="45853" name="Specter Slasher - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 78.9. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_skia_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1118,8 +1118,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45854" name="Specter Avenger" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 78.9. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
+	<item id="45854" name="Specter Avenger - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 78.9. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_ikeon_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1146,8 +1146,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45855" name="Specter Fighter" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 75.7. Increases damage inflicted during PvP. Increases Atk. Spd. and Atk. Power when enchanted to + 4. -->
+	<item id="45855" name="Specter Fighter - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 75.7. Increases damage inflicted during PvP. Increases Atk. Spd. and Atk. Power when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_deodos_i01" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
@@ -1174,8 +1174,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45856" name="Specter Stormer" additionalName="Damage Up (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nP. Atk. + 377. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. -->
+	<item id="45856" name="Specter Stormer - Damage Up" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 377. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_transgredi_i01" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
@@ -1202,8 +1202,8 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="45857" name="Specter Thrower" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 78.9. Increases damage inflicted during PvP. Increases effect of P. Skills when enchanted to + 4. -->
+	<item id="45857" name="Specter Thrower - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 78.9. Increases damage inflicted during PvP. Increases effect of P. Skills when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_solenas_i01" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -1230,8 +1230,8 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="45858" name="Specter Shooter" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 78.9. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. -->
+	<item id="45858" name="Specter Shooter - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 78.9. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_lapis_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -1257,8 +1257,8 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="45859" name="Specter Buster" additionalName="Acumen (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+	<item id="45859" name="Specter Buster - Acumen" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Casting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_zihel_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1284,8 +1284,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45860" name="Specter Caster" additionalName="Acumen (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+	<item id="45860" name="Specter Caster - Acumen" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Casting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_alacer_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1312,8 +1312,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45861" name="Specter Retributer" additionalName="Acumen (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+	<item id="45861" name="Specter Retributer - Acumen" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Casting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_rupe_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1341,8 +1341,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45862" name="Specter Dualsword" additionalName="Damage Up (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nP. Atk. + 377. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
+	<item id="45862" name="Specter Dualsword - Damage Up" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 377. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
@@ -1368,8 +1368,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45863" name="Specter Dual Dagger" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 78.9. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. -->
+	<item id="45863" name="Specter Dual Dagger - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 78.9. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -1396,8 +1396,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45864" name="Specter Dual Blunt Weapon" additionalName="Damage Up (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nP. Atk. + 377. Increases damage inflicted during PvP. Increases effect of P. Skills and P. Atk. when enchanted to + 4. -->
+	<item id="45864" name="Specter Dual Blunt Weapon - Damage Up" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 377. Increases damage inflicted during PvP. Increases effect of P. Skills and P. Atk. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1484,7 +1484,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45870" name="Spellbook: Favor of the Exalted" additionalName="Lv. 2" type="EtcItem">
-		<!-- Needed to learn active skill, Favor of the Exalted Lv. 2, used to buff a target with 10% Bonus XP and SP.\nCan be obtained in the main class status. -->
+		<!-- Needed to learn active skill, Favor of the Exalted Lv. 2, used to buff a target with 10% Bonus XP and SP. Can be obtained in the main class status. -->
 		<set name="icon" val="icon.giant_book_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1612,8 +1612,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="45879" name="Amaranthine Shaper" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 81.9. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
+	<item id="45879" name="Amaranthine Shaper - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 81.9. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_stanpid_i01" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -1640,8 +1640,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45880" name="Amaranthine Cutter" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 78.7. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+	<item id="45880" name="Amaranthine Cutter - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 78.7. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_plenitas_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1667,8 +1667,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45881" name="Amaranthine Slasher" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 78.7. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4. -->
+	<item id="45881" name="Amaranthine Slasher - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 78.7. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_bauen_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1694,8 +1694,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45882" name="Amaranthine Avenger" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 78.7. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. -->
+	<item id="45882" name="Amaranthine Avenger - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 78.7. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_qutram_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1722,8 +1722,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45883" name="Amaranthine Fighter" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 75.5. Increases damage inflicted during PvP. Increases Atk. Spd. And P. Atk. when enchanted to + 4. -->
+	<item id="45883" name="Amaranthine Fighter - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 75.5. Increases damage inflicted during PvP. Increases Atk. Spd. And P. Atk. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
@@ -1750,8 +1750,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45884" name="Amaranthine Stormer" additionalName="Damage Up (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nP. Atk. + 415. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. -->
+	<item id="45884" name="Amaranthine Stormer - Damage Up" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 415. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
@@ -1778,8 +1778,8 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="45885" name="Amaranthine Thrower" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 78.7. Increases damage inflicted during PvP. Increases effect of P. Skills when enchanted to + 4. -->
+	<item id="45885" name="Amaranthine Thrower - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 78.7. Increases damage inflicted during PvP. Increases effect of P. Skills when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_castron_i01" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -1806,8 +1806,8 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="45886" name="Amaranthine Shooter" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 78.7. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. -->
+	<item id="45886" name="Amaranthine Shooter - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 78.7. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -1833,8 +1833,8 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="45887" name="Amaranthine Buster" additionalName="Acumen (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+	<item id="45887" name="Amaranthine Buster - Acumen" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Casting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weaon_serapear_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1860,8 +1860,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45888" name="Amaranthine Caster" additionalName="Acumen (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+	<item id="45888" name="Amaranthine Caster - Acumen" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Casting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_pilia_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1888,8 +1888,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45889" name="Amaranthine Retributer" additionalName="Acumen (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+	<item id="45889" name="Amaranthine Retributer - Acumen" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Casting Spd. + 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1917,8 +1917,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45890" name="Amaranthine Dualsword" additionalName="Damage Up (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nP. Atk. + 415. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
+	<item id="45890" name="Amaranthine Dualsword - Damage Up" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 415. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
@@ -1944,8 +1944,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45891" name="Amaranthine Dual Dagger" additionalName="Focus (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCritical + 78.7. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. -->
+	<item id="45891" name="Amaranthine Dual Dagger - Focus" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. Critical + 78.7. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -1972,8 +1972,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45892" name="Amaranthine Dual Blunet Weapon" additionalName="Damage Up (7-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nP. Atk. + 415. Increases damage inflicted during PvP. Increases effect of P. Skills and P. Atk. when enchanted to + 4. -->
+	<item id="45892" name="Amaranthine Dual Blunet Weapon - Damage Up" additionalName="30-day" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 415. Increases damage inflicted during PvP. Increases effect of P. Skills and P. Atk. when enchanted to + 4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />

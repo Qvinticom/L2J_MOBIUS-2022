@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="34600" name="Player Commendation - Transformation Scroll: Rose (F)" additionalName="PC-exclusive" type="EtcItem">
 		<!-- Inflicts magic-type attack. Transforms into a Rose (F) for 10 min. -->
@@ -411,7 +411,7 @@
 		</skills>
 	</item>
 	<item id="34623" name="Pa'agrio's Shirt" type="Armor">
-		<!-- Magic shirt filled with the power of Pa'agrio, the god of fire.\nCan be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, can remove abnormal conditions and use the ultimate invincibility skill for a certain amount of time. -->
+		<!-- Magic shirt filled with the power of Pa'agrio, the god of fire. Can be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, can remove abnormal conditions and use the ultimate invincibility skill for a certain amount of time. -->
 		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_fire" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -432,7 +432,7 @@
 		</stats>
 	</item>
 	<item id="34624" name="Sayha's Shirt" type="Armor">
-		<!-- Magic shirt filled with the power of Sayha, the god of wind.\nCan be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, can use a portal teleport skill that allows you to create a portal at a selected location and teleport to that portal. No effect in the Olympiad. -->
+		<!-- Magic shirt filled with the power of Sayha, the god of wind. Can be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, can use a portal teleport skill that allows you to create a portal at a selected location and teleport to that portal. No effect in the Olympiad. -->
 		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_wind" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -453,7 +453,7 @@
 		</stats>
 	</item>
 	<item id="34625" name="Eva's Shirt" type="Armor">
-		<!-- Magic shirt filled with the power of Eva, the goddess of water.\nCan be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, can use HP/MP/CP recovering skills. -->
+		<!-- Magic shirt filled with the power of Eva, the goddess of water. Can be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, can use HP/MP/CP recovering skills. -->
 		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_water" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -474,7 +474,7 @@
 		</stats>
 	</item>
 	<item id="34626" name="Maphr's Shirt" type="Armor">
-		<!-- Magic shirt filled with the power of Maphr, the goddess of earth.\nCan be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, the enchant success rate is increased. No effect in the Olympiad. -->
+		<!-- Magic shirt filled with the power of Maphr, the goddess of earth. Can be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, the enchant success rate is increased. No effect in the Olympiad. -->
 		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_earth" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -494,7 +494,7 @@
 		</stats>
 	</item>
 	<item id="34627" name="Scroll: Enchant Elemental Shirt" type="EtcItem">
-		<!-- Enchant scroll that is exclusive to Pa'agrio's Shirt, Sayha's Shirt, Eva's Shirt, Maphr's Shirt, and the Shiny Elemental Shirt. When enchanted, increases P. Def. and M. Def. by 1. P. Def. + 3 starting from +4. Can be safely enchanted to +3 and up to a maximum of +10. From +4, basic abilities (CON, MEN, STR, INT, DEX, WT) are raised n stages. Depending on the shirt type, various additional options can be applied from +4 to +10. -->
+		<!-- Enchant scroll for t-shirts. When enchanted, increases P. Def. and M. Def. by 1. P. Def. + 3 starting from + 4. Can be safely enchanted to + 3 and up to a maximum of + 10. From + 4, basic abilities (CON, MEN, STR, INT, DEX, WT) are raised in stages. Depending on the shirt type, various additional options can be applied from + 4 to + 10. -->
 		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />

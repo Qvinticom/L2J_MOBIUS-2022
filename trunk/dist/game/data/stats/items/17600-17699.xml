@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="17600" name="Scroll of Afterlife" type="EtcItem">
 		<!-- Tome containing the soul of an Ancient Giant hero. Can be used before the Ancient Giat statues in the Reliquary of the Giants found in the Ruins of Ye Sagira. -->
@@ -381,7 +381,7 @@
 		</skills>
 	</item>
 	<item id="17623" name="Earth Wyrm Heart Ring" type="Armor">
-		<!-- MP + 38, increases Physical Attack Resistance, Mental Attack Resistance, MP Recovery Rate, P. Critical Damage, and Accuracy. Poison Resistance + 50%, Poison Atk. Rate + 50%, Knock Back, Knock Down, Pulling Resistance + 20, Atk. Spd., Casting Spd., and Wind/Water Resistance. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied when two of the same ring are equipped. -->
+		<!-- MP + 38, increases Physical Attack Resistance, Mental Attack Resistance, MP Recovery Rate, P. Critical Damage, and Accuracy. Poison Resistance + 50%, Poison Atk. Rate + 50%, Knock Back, Knock Down, Pulling, Danger Zone Resistance + 20, Atk. Spd., Casting Spd., and Wind/Water Resistance. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied when two of the same ring are equipped. -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

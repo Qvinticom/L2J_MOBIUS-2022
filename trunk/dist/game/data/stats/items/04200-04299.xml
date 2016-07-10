@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="4200" name="Spellbook: Restore Life" type="EtcItem">
+		<!-- Spellbook needed to learn Restore Life. Used by Bishops. Required level: 44 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -11,6 +12,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4201" name="Spellbook: Stun Resistance" type="EtcItem">
+		<!-- Spellbook needed to learn Stun Resistance. Used by Elven Elders. Required level: 40 -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -21,6 +23,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4202" name="Chrono Cithara" type="Weapon">
+		<!-- Chronicle I Souvenir!!! -->
 		<set name="icon" val="icon.weapon_chrono_cithara_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -42,6 +45,7 @@
 		</stats>
 	</item>
 	<item id="4203" name="Spellbook: Life Leech" type="EtcItem">
+		<!-- Spellbook needed to learn Life Leech. Used by Shillien Knights. Required level: 40 -->
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -52,6 +56,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4204" name="Amulet: Pa'agrio's Tact" type="EtcItem">
+		<!-- Amulet required for the Pa'agrio's Tact spell. Used by Overlords. Required level: 40 -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -62,6 +67,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4205" name="Amulet: Pa'agrio's Rage" type="EtcItem">
+		<!-- Amulet required for the Pa'agrio's Rage spell. Used by Overlords. Required level: 44 -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -72,6 +78,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4206" name="Spellbook: Transfer Pain" type="EtcItem">
+		<!-- Spellbook needed to learn Transfer Pain. Used by Necromancers, Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40 -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -82,6 +89,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4207" name="Spellbook: Mana Regeneration" type="EtcItem">
+		<!-- Spellbook needed to learn Mana Regeneration. Used by Spellsingers. Required level: 40 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -92,6 +100,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4208" name="Spellbook: Curse Gloom" type="EtcItem">
+		<!-- Spellbook needed to learn Curse Gloom. Used by Necromancers. Required level: 44 -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -102,6 +111,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4209" name="Change of Heart - Piece 1" type="EtcItem">
+		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -110,6 +120,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4210" name="Change of Heart - Piece 2" type="EtcItem">
+		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -118,6 +129,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4211" name="Change of Heart - Piece 3" type="EtcItem">
+		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -126,6 +138,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4212" name="Change of Heart - Piece 4" type="EtcItem">
+		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -134,6 +147,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4213" name="Change of Heart - Piece 5" type="EtcItem">
+		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i05" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -142,6 +156,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4214" name="Change of Heart - Piece 6" type="EtcItem">
+		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i06" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -150,6 +165,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4215" name="Change of Heart - Piece 7" type="EtcItem">
+		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i07" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -158,6 +174,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4216" name="Change of Heart - Piece 8" type="EtcItem">
+		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i08" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -166,6 +183,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4217" name="Change of Heart - Piece 9" type="EtcItem">
+		<!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
 		<set name="icon" val="icon.etc_heart_i09" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -174,6 +192,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4218" name="L2 Day - Scroll: Mana Regeneration" type="EtcItem">
+		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -525,6 +544,7 @@
 		</stats>
 	</item>
 	<item id="4232" name="Dice" type="EtcItem">
+		<!-- Simple game of chance! Roll 'em!! -->
 		<set name="icon" val="icon.etc_dice_a_i00" />
 		<set name="default_action" val="DICE" />
 		<set name="immediate_effect" val="true" />
@@ -534,6 +554,7 @@
 		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="4233" name="Knuckle Duster" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_knuckle_dust_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -562,6 +583,7 @@
 		</stats>
 	</item>
 	<item id="4234" name="Hatchling's Lv. 65 Armor" type="Armor">
+		<!-- Can be put on by Double-clicking. Exclusively used by a Hatchling. -->
 		<set name="icon" val="icon.etc_pet_armor_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -584,6 +606,7 @@
 		</stats>
 	</item>
 	<item id="4235" name="Hatchling's Lv. 75 Armor" type="Armor">
+		<!-- Can be put on by Double-clicking. Exclusively used by a Hatchling. -->
 		<set name="icon" val="icon.etc_pet_armor_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -628,6 +651,7 @@
 		</stats>
 	</item>
 	<item id="4237" name="Hatchling's Lv. 65 Weapon" type="Weapon">
+		<!-- Can be put on by Double-clicking. Exclusively used by a Hatchling. -->
 		<set name="icon" val="icon.etc_pet_arms_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -655,6 +679,7 @@
 		</stats>
 	</item>
 	<item id="4238" name="Hatchling's Lv. 75 Weapon" type="Weapon">
+		<!-- Can be put on by Double-clicking. Exclusively used by a Hatchling. -->
 		<set name="icon" val="icon.etc_pet_arms_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -682,6 +707,7 @@
 		</stats>
 	</item>
 	<item id="4239" name="Blade Mold" type="EtcItem">
+		<!-- Cargo that Trader Arodin needs to send to the Dark Elves. Find all 20 of them and take them to Trader Tyra. -->
 		<set name="icon" val="icon.etc_artisans_frame_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -698,6 +724,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4240" name="Tyra's Bill" type="EtcItem">
+		<!-- Note from Trader Tyra. Take it to Trader Arodin in Gludin Village. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -714,6 +741,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4241" name="Ranger's Report - Part 1" type="EtcItem">
+		<!-- First piece of a ranger's report. Find all 4 pieces and take them to Guard Alvah. -->
 		<set name="icon" val="icon.etc_piece_of_report_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -730,6 +758,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4242" name="Ranger's Report - Part 2" type="EtcItem">
+		<!-- Second piece of a ranger's report. Find all 4 pieces and take them to Guard Alvah. -->
 		<set name="icon" val="icon.etc_piece_of_report_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -746,6 +775,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4243" name="Ranger's Report - Part 3" type="EtcItem">
+		<!-- Third piece of a ranger's report. Find all 4 pieces and take them to Guard Alvah. -->
 		<set name="icon" val="icon.etc_piece_of_report_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -762,6 +792,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4244" name="Ranger's Report - Part 4" type="EtcItem">
+		<!-- Fourth piece of a ranger's report. Find all 4 pieces and take them to Guard Alvah. -->
 		<set name="icon" val="icon.etc_piece_of_report_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -778,6 +809,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4245" name="Weapons Trade Contract" type="EtcItem">
+		<!-- The contract that was carried by an Ol Mahum General. It is engraved with the Mark of the Dwarves. Take it to Guard Alvah. -->
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -794,6 +826,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4246" name="Attack Directives" type="EtcItem">
+		<!-- Operation order that was carried by an Ol Mahum General. Take it to Guard Alvah. -->
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -810,6 +843,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4247" name="Certificate of the Silver Scale Guild" type="EtcItem">
+		<!-- Certificate that verifies one's membership to the Silver Scale Guild. -->
 		<set name="icon" val="icon.etc_crest_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -826,6 +860,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4248" name="Rolento's Cargobox" type="EtcItem">
+		<!-- The war supplies that the Dwarven trader Rolento promised to send to Turek orcs. First, show it to Guard Alvah. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -842,6 +877,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4249" name="Ol Mahum Captain's Head" type="EtcItem">
+		<!-- Severed head of an Ol Mahum Captain. Collect 30 of them and take them to Turek Chief Burai. -->
 		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -858,6 +894,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4250" name="Jade Crystal" type="EtcItem">
+		<!-- Jade gemstone from the Enchanted Valley. Collect them and take them to Bentley of Hunter's Village. -->
 		<set name="icon" val="icon.etc_gem_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -874,6 +911,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4251" name="Ancient Goddess Statue" type="EtcItem">
+		<!-- Statue of a goddess from an old empire that has been discovered in the cemetery. Take it to Priestess Flownia of Town of Aden. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -890,6 +928,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4252" name="GalfRedo Romer's Bust" type="EtcItem">
+		<!-- Statue created by the ancient sculptor Berona. Take it to Trader Galibredo of the Town of Oren. -->
 		<set name="icon" val="icon.etc_holy_statue_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -906,6 +945,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4253" name="Eye of the Shadow" type="EtcItem">
+		<!-- Collect 50 eyes of the Shadow and take them to Warehouse Keeper Sorint. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -922,6 +962,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4254" name="Certificate of Participation: Battle Royal" type="EtcItem">
+		<!-- The certificate that allows one to participate in a Battle Royal. This game is played by grade 1 members of the Coin Collectors Club. -->
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -938,6 +979,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4255" name="Trade Cargo" type="EtcItem">
+		<!-- The cargo boxes that have been robbed from the wagon of the Trade Guild. Collect 30 of them and take them to Guard Weisz. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -954,6 +996,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4256" name="Agnes' Holy Symbol" type="EtcItem">
+		<!-- The Crucifix of the goddess of Einhasad. This article was left by Priestess Agnes after her death. Take it along with Agnes' Rosary to Priest Adonius. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -970,6 +1013,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4257" name="Agnes' Rosary" type="EtcItem">
+		<!-- Rosary used while praying. It was left by Priestess Agnes after her death. Take it along with the Crucifix of the goddess of Einhasad to Priest Adonius. -->
 		<set name="icon" val="icon.etc_evil_necklace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -986,6 +1030,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4258" name="Sinister Totem" type="EtcItem">
+		<!-- Black totem that exudes an evil aura. Take it to High Priestess Levian. -->
 		<set name="icon" val="icon.etc_totem_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -1002,6 +1047,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4259" name="Bear Skin" type="EtcItem">
+		<!-- The pelts obtained by hunting bears. Collect 20 of them and take them to Grocer Pano of Floran Village. -->
 		<set name="icon" val="icon.etc_leather_brown_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1018,6 +1064,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4260" name="Enku Orc's Head" type="EtcItem">
+		<!-- Beheaded head of an Enku Orc. Collect 100 of them and take them to Orc Lady Jennifer. -->
 		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1034,6 +1081,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4261" name="Orc Heads Bouquet - 1" type="EtcItem">
+		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to High Prefect Drikus. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1050,6 +1098,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4262" name="Orc Heads Bouquet - 2" type="EtcItem">
+		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Priest Manuel. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1066,6 +1115,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4263" name="Orc Heads Bouquet - 3" type="EtcItem">
+		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Vuku Chief Driko. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1082,6 +1132,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4264" name="Orc Heads Bouquet - 4" type="EtcItem">
+		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Seer Somak. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1098,6 +1149,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4265" name="Orc Heads Bouquet - 5" type="EtcItem">
+		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Prefect Dowki. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1114,6 +1166,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4266" name="Orc Heads Bouquet - 6" type="EtcItem">
+		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Watchman Endrigo. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1130,6 +1183,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4267" name="Orc Heads Bouquet -7" type="EtcItem">
+		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Captain Lucas. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1146,6 +1200,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4268" name="Jennifer's Box" type="EtcItem">
+		<!-- The box that a man who is smitten by Orc Lady Jennifer asked this to be delivered to her. What do you think is in the box...? -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1162,6 +1217,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4269" name="Articles of Dead Heroes" type="EtcItem">
+		<!-- The articles of dead soldiers who were sent as an expeditionary force 1,000 years ago. These articles have been collected by hunting cave servants. Take them to Antharas Watchman Gilmore. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1178,6 +1234,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4270" name="Old Key" type="EtcItem">
+		<!-- Article left by a dead soldier. His descendent Sir Kristof Rodemai is living in Town of Giran. Take it to him. -->
 		<set name="icon" val="icon.etc_old_key_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1194,6 +1251,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4271" name="Old Hilt" type="EtcItem">
+		<!-- Article left by a dead soldier. His descendant Duelist Kaien is living in the Town of Oren. Take it to him. -->
 		<set name="icon" val="icon.etc_hilt_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1210,6 +1268,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4272" name="Totem Necklace" type="EtcItem">
+		<!-- Article left by a dead soldier. His descendent, High Prefect Garvarentz, is living in Hunter's Village. Take it to him. -->
 		<set name="icon" val="icon.etc_totem_necklace_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1226,6 +1285,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4273" name="Einhasad's Crucifix" type="EtcItem">
+		<!-- Article left by a dead soldier. Take it to High Priest Orven of Einhasad Temple in Town of Aden where the dead soldier used to be stationed. -->
 		<set name="icon" val="icon.etc_magic_coin_silver_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1242,6 +1302,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4274" name="Victim's Arm Bone" type="EtcItem">
+		<!-- The arm bone of a victim who has been eaten by a Crokian. Collect the five types of bones and take them to Xenovia. -->
 		<set name="icon" val="icon.etc_piece_bone_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1258,6 +1319,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4275" name="Victim's Thigh Bone" type="EtcItem">
+		<!-- The thigh bone of a victim who has been eaten by a Crokian. Collect the five types of bones and take them to Xenovia. -->
 		<set name="icon" val="icon.etc_piece_bone_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1274,6 +1336,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4276" name="Victim's Skull" type="EtcItem">
+		<!-- The skull of a victim who has been eaten alive by a Crokian. Collect the five types of bones and take them to Xenovia. -->
 		<set name="icon" val="icon.etc_skull_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1290,6 +1353,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4277" name="Victim's Rib Bone" type="EtcItem">
+		<!-- The rib bone of a victim who has been eaten by a Crokian. Collect the five types of bones and take them to Xenovia. -->
 		<set name="icon" val="icon.etc_rib_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1306,6 +1370,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4278" name="Victim's Spine" type="EtcItem">
+		<!-- The spine of a victim who has been eaten by a Crokian. Collect the five types of bones and take them to Xenovia. -->
 		<set name="icon" val="icon.etc_piece_bone_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1322,6 +1387,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4279" name="Jar of Bones" type="EtcItem">
+		<!-- Urn that contains the bones of all the victims. Ask Mad Doctor Orpheus to resurrect the victims. -->
 		<set name="icon" val="icon.etc_oil_pot_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1338,6 +1404,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4280" name="Useless Bone Pieces" type="EtcItem">
+		<!-- Useless bone pieces obtained after hunting Crokians. If you take them to Orpheus, perhaps something good will happen...? -->
 		<set name="icon" val="icon.etc_mithril_ore_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1354,6 +1421,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4281" name="Powder to Summon Dead Souls" type="EtcItem">
+		<!-- The magic powder bought from Magister Xenovia. Throw it along with the victims' bones into a the Psychic Medium's Urn. -->
 		<set name="icon" val="icon.etc_powder_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1370,6 +1438,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4282" name="Sack of the Dead" type="EtcItem">
+		<!-- Sack containing victim's soul. Urn was possessed by the victim's soul. Take it to Locksmith Dorothy. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1386,6 +1455,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4283" name="Frog Prince" type="EtcItem">
+		<!-- What are you waiting for? You promised to help me! Release me from this curse immediately! I want to turn back to normal as soon as possible!!! -->
 		<set name="icon" val="icon.etc_q_frog_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1402,6 +1472,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4284" name="Fly Powder" type="EtcItem">
+		<!-- Powder made by grinding dried flies. Use it when you fail in your attempt to transform a frog. -->
 		<set name="icon" val="icon.etc_powder_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1418,6 +1489,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4285" name="Calculator" type="EtcItem">
+		<!-- The latest model of calculator. Take it to Blacksmith Brunon. -->
 		<set name="icon" val="icon.etc_calculator_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1434,6 +1506,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4286" name="Gemstone Beast's Crystal" type="EtcItem">
+		<!-- Crystal obtained by slaying a gemstone beast. Collect 10 of these and take them to Blacksmith Silvera. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1450,6 +1523,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4287" name="Lesser Giant's Powerstone" type="EtcItem">
+		<!-- The Lesser Giant's Powerstone that has been extracted from the corpse of a Giant. Take it to Magister Hanellin. -->
 		<set name="icon" val="icon.etc_instrument_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1466,6 +1540,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4288" name="Hanellin's 1st Letter" type="EtcItem">
+		<!-- A letter that Hanellin entrusted to you. Deliver it to Magister Harne at the Dark Elf Guild in the Town of Gludio and receive the next instructions. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1482,6 +1557,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4289" name="Hanellin's 2nd Letter" type="EtcItem">
+		<!-- Letter that Hanellin entrusted you with. Take it to Claudia Athebaldt of Town of Aden and receive your next assignment from her. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1498,6 +1574,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4290" name="Hanellin's 3rd Letter" type="EtcItem">
+		<!-- Letter that Hanellin entrusted you with. Take it to Martien of the Town of Giran and receive your next assignment from him. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1514,6 +1591,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4291" name="1st Key of Ark" type="EtcItem">
+		<!-- The key that was found upon the corpse of the guardian of the sacred ark. Use this key to open the sacred ark and retrieve the sacred object. -->
 		<set name="icon" val="icon.etc_old_key_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1530,6 +1608,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4292" name="2nd Key of Ark" type="EtcItem">
+		<!-- The key that was taken after killing Elberos, the guardian of the sacred ark. Use the key to open the sacred ark and retrieve the sacred object. -->
 		<set name="icon" val="icon.etc_old_key_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1546,6 +1625,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4293" name="3rd Key of Ark" type="EtcItem">
+		<!-- The key that was taken after killing Shadowfang, the guardian of the sacred ark. Use the key to open the sacred ark and retrieve the sacred object. -->
 		<set name="icon" val="icon.etc_old_key_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1562,6 +1642,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4294" name="White Cloth" type="EtcItem">
+		<!-- Large piece of white cloth given by Magister Hanellin. Kill the Platinum Tribe Shamans and Overlords and soak the cloth with their blood. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -1578,6 +1659,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4295" name="Blood-stained Cloth" type="EtcItem">
+		<!-- Piece of cloth soaked in the blood of angels and the Platinum race. Hanellin Has told you that in order to challenge Baium, you must wrap this blood-soaked cloth around your body. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -1594,6 +1676,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4296" name="Order of Gosta" type="EtcItem">
+		<!-- The order states that you should hunt Tasaba Lizardmen and Tasaba Lizardman Shaman and bring back their fangs as proof. -->
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1610,6 +1693,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4297" name="Lizardman's Fang" type="EtcItem">
+		<!-- The fangs that have been collected as proofs that Tasaba Lizardmen and Tasaba Lizardman Shaman have been hunted. -->
 		<set name="icon" val="icon.etc_molar_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1626,6 +1710,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4298" name="Barrel of League" type="EtcItem">
+		<!-- This seems to be the cargo that was stolen from Iason Heine's wagon by Tasaba Lizardmen. -->
 		<set name="icon" val="icon.etc_wine_barrel_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -1642,6 +1727,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4299" name="Operation Document - 1/10" type="EtcItem">
+		<!-- This document was found in the cargo of the Trade Guild. The document contains various information regarding Innadril. How could this have happened...? -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

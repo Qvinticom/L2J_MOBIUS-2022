@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="37700" name="Valentine Dual Dagger" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
@@ -246,7 +246,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="37718" name="Shiny Elemental Shirt" type="Armor">
-		<!-- Sparkly magic shirt containing Einhasad's energy.\nIt can be enchanted up to +10 using Enchant Scroll: Elemental Shirt. When enchanted to +4 or more, passive and stats are increased. When enchanted to +6 or more, various use skills are bestowed . -->
+		<!-- Sparkly magic shirt containing Einhasad's energy. It can be enchanted up to +10 using Enchant Scroll: Elemental Shirt. When enchanted to +4 or more, passive and stats are increased. When enchanted to +6 or more, various use skills are bestowed. -->
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -263,7 +263,7 @@
 		</stats>
 	</item>
 	<item id="37719" name="Pa'agrio's Special Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Pa'agrio's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. \n\nWarning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
+		<!-- Wrapped Pack containing Pa'agrio's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i02" />
 		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -272,7 +272,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37720" name="Maphr's Special Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. \n\nWarning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
+		<!-- Wrapped Pack containing Maphr's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i01" />
 		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -281,7 +281,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37721" name="Sayha's Special Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Sayha's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. \n\nWarning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
+		<!-- Wrapped Pack containing Sayha's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i03" />
 		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -290,7 +290,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37722" name="Eva's Special Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Eva's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. \n\nWarning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
+		<!-- Wrapped Pack containing Eva's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -451,7 +451,7 @@
 		</stats>
 	</item>
 	<item id="37735" name="Earth Wyrm Heart Ring" additionalName="7-day" type="Armor">
-		<!-- MP +38, increases physical attack resistance, Mental Attack Resistance, MP Regeneration, P. Critical Damage, and Accuracy. Poison Resistance 50% increase, Poison Attack Rate 50% increase, Knock Back, Knock Down, pulling resistance 20 increase, Atk. Spd. Increase, Casting Spd. Increase, and Wind/Water Resistance increase. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied even when the same two rings are worn. Cannot be used in the Olympiad. -->
+		<!-- MP +38, increases physical attack resistance, Mental Attack Resistance, MP Regeneration, P. Critical Damage, and Accuracy. Poison Resistance 50% increase, Poison Attack Rate 50% increase, Knock Back, Knock Down, pulling, Danger Zone Resistance 20 increase, Atk. Spd. Increase, Casting Spd. Increase, and Wind/Water Resistance increase. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied even when the same two rings are worn. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -769,6 +769,7 @@
 		<set name="icon" val="icon.etc_magic_energy_i02" />
 	</item>
 	<item id="37763" name="Exalted Cloak" type="Armor">
+		<!-- A cloak that symbolizes the Exalted status. STR/DEX/CON/INT/WIT/MEN/LUC/CHA +1. -->
 		<set name="icon" val="icon.cloak_noblesse2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />

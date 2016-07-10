@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="2500" name="Dark Legion's Edge" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -54,6 +55,7 @@
 		</stats>
 	</item>
 	<item id="2502" name="Dwarven War Hammer" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dwarven_warhammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -82,6 +84,7 @@
 		</stats>
 	</item>
 	<item id="2503" name="Yaksa Mace" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -110,6 +113,7 @@
 		</stats>
 	</item>
 	<item id="2504" name="Meteor Shower" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -138,6 +142,7 @@
 		</stats>
 	</item>
 	<item id="2505" name="Iron Canine" type="Weapon">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
 		<set name="icon" val="icon.etc_pet_arms_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -165,6 +170,7 @@
 		</stats>
 	</item>
 	<item id="2506" name="Wolf's Leather Armor" type="Armor">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
 		<set name="icon" val="icon.etc_pet_armor_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -225,6 +231,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="2509" name="Spiritshot (No-grade)" type="EtcItem">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a No-grade weapon. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -241,6 +248,7 @@
 		</skills>
 	</item>
 	<item id="2510" name="Spiritshot (D-grade)" type="EtcItem">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a D-grade weapon. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -259,6 +267,7 @@
 		</skills>
 	</item>
 	<item id="2511" name="Spiritshot (C-grade)" type="EtcItem">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a C-grade weapon. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -277,6 +286,7 @@
 		</skills>
 	</item>
 	<item id="2512" name="Spiritshot (B-grade)" type="EtcItem">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -295,6 +305,7 @@
 		</skills>
 	</item>
 	<item id="2513" name="Spiritshot (A-grade)" type="EtcItem">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with an A-grade weapon. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -313,6 +324,7 @@
 		</skills>
 	</item>
 	<item id="2514" name="Spiritshot (S-grade)" type="EtcItem">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with an S-grade weapon. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -331,6 +343,7 @@
 		</skills>
 	</item>
 	<item id="2515" name="Wolf Food" type="EtcItem">
+		<!-- When the hunger gauge of a wolf reaches 55% or below, its food will be consumed automatically. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1378,6 +1391,7 @@
 		</stats>
 	</item>
 	<item id="2554" name="Crimson Sword*Elven Long Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1462,6 +1476,7 @@
 		</stats>
 	</item>
 	<item id="2557" name="Elven Sword*Elven Long Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1492,6 +1507,7 @@
 		</stats>
 	</item>
 	<item id="2558" name="Sword of Revolution*Sword of Revolution" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1522,6 +1538,7 @@
 		</stats>
 	</item>
 	<item id="2559" name="Sword of Revolution*Elven Long Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1552,6 +1569,7 @@
 		</stats>
 	</item>
 	<item id="2560" name="Elven Long Sword*Elven Long Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1581,7 +1599,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2561" name="Stormbringer*Stormbringer" type="Weapon">
+	<item id="2561" name="StormBringer*StormBringer" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1611,7 +1630,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2562" name="Stormbringer*Shamshir" type="Weapon">
+	<item id="2562" name="StormBringer*Shamshir" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1641,7 +1661,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2563" name="Stormbringer*Katana" type="Weapon">
+	<item id="2563" name="StormBringer*Katana" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1671,7 +1692,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2564" name="Stormbringer*Spirit Sword" type="Weapon">
+	<item id="2564" name="StormBringer*Spirit Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1701,7 +1723,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2565" name="Stormbringer*Raid Sword" type="Weapon">
+	<item id="2565" name="StormBringer*Raid Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1731,7 +1754,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2566" name="Stormbringer*Caliburs" type="Weapon">
+	<item id="2566" name="StormBringer*Caliburs" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1762,6 +1786,7 @@
 		</stats>
 	</item>
 	<item id="2567" name="StormBringer*Ultimate Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1791,7 +1816,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2568" name="Stormbringer*Sword of Delusion" type="Weapon">
+	<item id="2568" name="StormBringer*Sword of Delusion" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1821,7 +1847,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2569" name="Stormbringer*Sword of Nightmare" type="Weapon">
+	<item id="2569" name="StormBringer*Sword of Nightmare" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1851,7 +1878,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2570" name="Stormbringer*Tsurugi" type="Weapon">
+	<item id="2570" name="StormBringer*Tsurugi" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1881,7 +1909,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2571" name="Stormbringer*Samurai Long sword" type="Weapon">
+	<item id="2571" name="StormBringer*Samurai Long sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1912,6 +1941,7 @@
 		</stats>
 	</item>
 	<item id="2572" name="Shamshir*Shamshir" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1942,6 +1972,7 @@
 		</stats>
 	</item>
 	<item id="2573" name="Shamshir*Katana" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1972,6 +2003,7 @@
 		</stats>
 	</item>
 	<item id="2574" name="Shamshir*Spirit Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2002,6 +2034,7 @@
 		</stats>
 	</item>
 	<item id="2575" name="Shamshir*Raid Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2032,6 +2065,7 @@
 		</stats>
 	</item>
 	<item id="2576" name="Shamshir*Caliburs" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2062,6 +2096,7 @@
 		</stats>
 	</item>
 	<item id="2577" name="Shamshir*Ultimate Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2092,6 +2127,7 @@
 		</stats>
 	</item>
 	<item id="2578" name="Shamshir*Sword of Delusion" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2122,6 +2158,7 @@
 		</stats>
 	</item>
 	<item id="2579" name="Shamshir*Sword of Nightmare" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2152,6 +2189,7 @@
 		</stats>
 	</item>
 	<item id="2580" name="Shamshir*Tsurugi" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2182,6 +2220,7 @@
 		</stats>
 	</item>
 	<item id="2581" name="Shamshir*Samurai Long Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2212,6 +2251,7 @@
 		</stats>
 	</item>
 	<item id="2582" name="Katana*Katana" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2242,6 +2282,7 @@
 		</stats>
 	</item>
 	<item id="2583" name="Katana*Spirit Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2272,6 +2313,7 @@
 		</stats>
 	</item>
 	<item id="2584" name="Katana*Raid Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2302,6 +2344,7 @@
 		</stats>
 	</item>
 	<item id="2585" name="Katana*Caliburs" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2332,6 +2375,7 @@
 		</stats>
 	</item>
 	<item id="2586" name="Katana*Ultimate Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2362,6 +2406,7 @@
 		</stats>
 	</item>
 	<item id="2587" name="Katana*Sword of Delusion" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2392,6 +2437,7 @@
 		</stats>
 	</item>
 	<item id="2588" name="Katana*Sword of Nightmare" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2422,6 +2468,7 @@
 		</stats>
 	</item>
 	<item id="2589" name="Katana*Tsurugi" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2452,6 +2499,7 @@
 		</stats>
 	</item>
 	<item id="2590" name="Katana*Samurai Long Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2482,6 +2530,7 @@
 		</stats>
 	</item>
 	<item id="2591" name="Spirit Sword*Spirit Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2512,6 +2561,7 @@
 		</stats>
 	</item>
 	<item id="2592" name="Spirit Sword*Raid Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2542,6 +2592,7 @@
 		</stats>
 	</item>
 	<item id="2593" name="Spirit Sword*Caliburs" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2572,6 +2623,7 @@
 		</stats>
 	</item>
 	<item id="2594" name="Spirit Sword*Ultimate Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2602,6 +2654,7 @@
 		</stats>
 	</item>
 	<item id="2595" name="Spirit Sword*Sword of Delusion" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2632,6 +2685,7 @@
 		</stats>
 	</item>
 	<item id="2596" name="Spirit Sword*Sword of Nightmare" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2662,6 +2716,7 @@
 		</stats>
 	</item>
 	<item id="2597" name="Spirit Sword*Tsurugi" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2692,6 +2747,7 @@
 		</stats>
 	</item>
 	<item id="2598" name="Spirit Sword*Samurai Long Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2722,6 +2778,7 @@
 		</stats>
 	</item>
 	<item id="2599" name="Raid Sword*Raid Sword" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="10600" name="Battle Manual - Soul Barrier" type="EtcItem">
+		<!-- Spellbook needed to learn Soul Barrier. Used by Berserkers and Arbalesters. Required level: 58 -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -11,6 +12,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10601" name="Battle Manual - Lightning Barrier" type="EtcItem">
+		<!-- Spellbook needed to learn Lightning Barrier. Used by Soul Hound. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -21,6 +23,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10602" name="Battle Manual - Soul Strike" type="EtcItem">
+		<!-- Spellbook needed to learn Soul Strike. Used by Soul Hound. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -31,6 +34,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10603" name="Battle Manual - Betrayal Mark" type="EtcItem">
+		<!-- Spellbook needed to learn Betrayal Mark. Used by Trickster. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -41,6 +45,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10604" name="Battle Manual - Rush Impact" type="EtcItem">
+		<!-- Spellbook needed to learn Rush Impact. Used by Doombringer. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -51,6 +56,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10605" name="Battle Manual - Mass Disarm" type="EtcItem">
+		<!-- Spellbook needed to learn Mass Disarm. Used by Doombringer. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -61,6 +67,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10606" name="Agathion - Rudolph" type="Armor">
+		<!-- The bracelet which can summon cute Rudolph Agathion. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -82,6 +89,7 @@
 		</skills>
 	</item>
 	<item id="10607" name="Agathion - Rudolph" type="EtcItem">
+		<!-- The bracelet which can summon cute Rudolph Agathion. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -96,6 +104,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="10608" name="Forgotten Scroll: Chant of Combat" type="EtcItem">
+		<!-- Scroll to learn Chant of Combat. Warcryer uses it. Can be acquired by level 70. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -110,6 +119,7 @@
 		</skills>
 	</item>
 	<item id="10609" name="Forgotten Scroll: Chant of Critical" type="EtcItem">
+		<!-- Scroll to learn Chant of Critical. Warcryer uses it. Can be acquired by level 72. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -124,6 +134,7 @@
 		</skills>
 	</item>
 	<item id="10610" name="Forgotten Scroll: Chant of Blood Awakening" type="EtcItem">
+		<!-- Scroll to learn Chant of Blood Awakening. Warcryer uses it. Can be acquired by level 74. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -138,6 +149,7 @@
 		</skills>
 	</item>
 	<item id="10611" name="Snow Fenrir Necklace" type="EtcItem">
+		<!-- The Necklace used to summon Snow Fenrir. Takes a part of the XP gained by the Pet master. -->
 		<set name="icon" val="icon.etc_summon_wolf_r_01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -165,6 +177,7 @@
 		</skills>
 	</item>
 	<item id="10612" name="Certificate - Master Ability" type="EtcItem">
+		<!-- Certificate needed to learn a Master Ability. Only main classes can learn this skill. -->
 		<set name="icon" val="icon.etc_all_subjob_skillbook_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -182,6 +195,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10613" name="Bird Nest (Event)" type="Armor">
+		<!-- Bird nest shaped hair accessory. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_nest_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -200,6 +214,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="10614" name="White Sheep Hat (Event)" type="Armor">
+		<!-- Fun hair accessory in the shape of a white sheep. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -218,6 +233,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="10615" name="Black Sheep Hat (Event)" type="Armor">
+		<!-- Fun hair accessory that looks like a black sheep. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_sheep_cap_black_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -236,6 +252,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="10616" name="Straw Hat (Event)" type="Armor">
+		<!-- Straw Hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_straw_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -254,6 +271,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="10617" name="Ant Hat" additionalName="Year 2008" type="Armor">
+		<!-- Fun hair accessory made with Monster Ant shape. Uses 2 hair accessory slots and exclusive for I-Card service. -->
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -272,6 +290,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="10618" name="Ol Mahum Hat" additionalName="Year 2008" type="Armor">
+		<!-- Monster Ol Mahum shaped hat. Uses 2 hair accessory slots and exclusive for I-Card service. -->
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -290,6 +309,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="10619" name="Wolf Hat" additionalName="Year 2008" type="Armor">
+		<!-- Monster wolf shaped hat. Uses 2 hair accessory slots and exclusive for I-Card service. -->
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -308,6 +328,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="10620" name="Shadow Item: Ant Hat" additionalName="Blessed Escape" type="Armor">
+		<!-- Monster Ant shaped hat. Uses 2 hair accessory slots and available to use active skill exclusive for I-Card service. -->
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -330,6 +351,7 @@
 		</skills>
 	</item>
 	<item id="10621" name="Shadow Item: Ant Hat" additionalName="Blessed Resurrection" type="Armor">
+		<!-- Monster Ant shaped hat. Uses 2 hair accessory slots and available to use active skill exclusive for I-Card service. -->
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -352,6 +374,7 @@
 		</skills>
 	</item>
 	<item id="10622" name="Shadow Item: Ant Hat" additionalName="Firework" type="Armor">
+		<!-- Monster Ant shaped hat. Uses 2 hair accessory slots and available to use active skill exclusive for I-Card service. -->
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -374,6 +397,7 @@
 		</skills>
 	</item>
 	<item id="10623" name="Shadow Item: Ant Hat" additionalName="Big Head" type="Armor">
+		<!-- Monster Ant shaped hat. Uses 2 hair accessory slots and available to use active skill exclusive for I-Card service. -->
 		<set name="icon" val="icon.accessory_ant_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -396,6 +420,7 @@
 		</skills>
 	</item>
 	<item id="10624" name="Shadow Item: Ol Mahum Hat" additionalName="Blessed Escape" type="Armor">
+		<!-- Monster Ol Mahum shaped hat. Uses 2 hair accessory slots and available to use active skill exclusive for I-Card service. -->
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -418,6 +443,7 @@
 		</skills>
 	</item>
 	<item id="10625" name="Shadow Item: Ol Mahum Hat" additionalName="Blessed Resurrection" type="Armor">
+		<!-- Monster Ol Mahum shaped hat. Uses 2 hair accessory slots and available to use active skill exclusive for I-Card service. -->
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -440,6 +466,7 @@
 		</skills>
 	</item>
 	<item id="10626" name="Shadow Item: Ol Mahum Hat" additionalName="Firework" type="Armor">
+		<!-- Monster Ol Mahum shaped hat. Uses 2 hair accessory slots and available to use active skill exclusive for I-Card service. -->
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -462,6 +489,7 @@
 		</skills>
 	</item>
 	<item id="10627" name="Shadow Item: Ol Mahum Hat" additionalName="Big Head" type="Armor">
+		<!-- Monster Ol Mahum shaped hat. Uses 2 hair accessory slots and available to use active skill exclusive for I-Card service. -->
 		<set name="icon" val="icon.accessory_ol_mahum_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -484,6 +512,7 @@
 		</skills>
 	</item>
 	<item id="10628" name="Shadow Item: Wolf Hat" additionalName="Blessed Escape" type="Armor">
+		<!-- Monster wolf shaped hat. Uses 2 hair accessory slots and available to use active skill exclusive for I-Card service. -->
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -506,6 +535,7 @@
 		</skills>
 	</item>
 	<item id="10629" name="Shadow Item: Wolf Hat" additionalName="Blessed Resurrection" type="Armor">
+		<!-- Monster wolf shaped hat. Uses 2 hair accessory slots and available to use active skill exclusive for I-Card service. -->
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -528,6 +558,7 @@
 		</skills>
 	</item>
 	<item id="10630" name="Shadow Item: Wolf Hat" additionalName="Firework" type="Armor">
+		<!-- Monster wolf shaped hat. Uses 2 hair accessory slots and available to use active skill exclusive for I-Card service. -->
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -550,6 +581,7 @@
 		</skills>
 	</item>
 	<item id="10631" name="Shadow Item: Wolf Hat" additionalName="Big Head" type="Armor">
+		<!-- Monster wolf shaped hat. Uses 2 hair accessory slots and available to use active skill exclusive for I-Card service. -->
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -572,6 +604,7 @@
 		</skills>
 	</item>
 	<item id="10632" name="Wondrous Cubic" type="EtcItem">
+		<!-- Double-click to create a cube fragment that can be exchanged for a weapon/armor enchant scroll. (Can only be used once per day.) -->
 		<set name="icon" val="icon.cube_upgrade" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -592,6 +625,7 @@
 		</skills>
 	</item>
 	<item id="10633" name="Cube Fragment Armor - D" type="EtcItem">
+		<!-- Speak with a warehouse keeper to exchange this for a D-grade Scroll: Enchant Armor. -->
 		<set name="icon" val="icon.event_cubic_piece_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -600,6 +634,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10634" name="Cube Fragment Armor - C" type="EtcItem">
+		<!-- Speak with a warehouse keeper to exchange this for a C-grade Scroll: Enchant Armor. -->
 		<set name="icon" val="icon.event_cubic_piece_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -608,6 +643,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10635" name="Cube Fragment Armor - B" type="EtcItem">
+		<!-- Speak with a warehouse keeper to exchange this for a B-grade armor Enchant Scroll. -->
 		<set name="icon" val="Branchsys2.icon.event_cubic_a_piece_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -616,6 +652,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="10636" name="Cube Fragment Armor - A" type="EtcItem">
+		<!-- Speak with a warehouse keeper to exchange this for an A-grade Scroll: Enchant Armor. -->
 		<set name="icon" val="Branchsys2.icon.event_cubic_a_piece_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -624,6 +661,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="10637" name="Cube Fragment Armor - S" type="EtcItem">
+		<!-- Speak with a warehouse keeper to exchange this for an S-grade Scroll: Enchant Armor. -->
 		<set name="icon" val="Branchsys2.icon.event_cubic_a_piece_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -632,6 +670,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="10638" name="Rough Black Cube Fragment" type="EtcItem">
+		<!-- You can confirm the use of this item by talking to the warehouse keeper. -->
 		<set name="icon" val="icon.event_cubic_piece_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -640,6 +679,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10639" name="Mouse Coin" type="EtcItem">
+		<!-- Currency used by Mutated Rats. Take it to a magic lab for a reward. -->
 		<set name="icon" val="icon.mouse_coin_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_freightable" val="false" />
@@ -647,6 +687,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10640" name="Cloned Squash Seed" type="EtcItem">
+		<!-- Double-click to make a Young Squash appear. -->
 		<set name="icon" val="icon.etc_gourd_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -666,6 +707,7 @@
 		</skills>
 	</item>
 	<item id="10641" name="Cloned Large Squash Seed" type="EtcItem">
+		<!-- Double-click to make a Large Young Squash appear. -->
 		<set name="icon" val="icon.etc_gourd_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -685,6 +727,7 @@
 		</skills>
 	</item>
 	<item id="10642" name="Cube Fragment Weapon - D" type="EtcItem">
+		<!-- Speak with a warehouse keeper to exchange this for a D-grade Scroll: Enchant Weapon. -->
 		<set name="icon" val="icon.event_cubic_piece_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -693,6 +736,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10643" name="Cube Fragment Weapon - C" type="EtcItem">
+		<!-- Speak with a warehouse keeper to exchange this for a C-grade Scroll: Enchant Weapon. -->
 		<set name="icon" val="icon.event_cubic_piece_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -701,6 +745,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10644" name="Cube Fragment Weapon - B" type="EtcItem">
+		<!-- Speak with a warehouse keeper to exchange this for a B-grade Scroll: Enchant Weapon. -->
 		<set name="icon" val="Branchsys2.icon.event_cubic_w_piece_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -709,6 +754,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="10645" name="Cube Fragment Weapon - A" type="EtcItem">
+		<!-- Speak with a warehouse keeper to exchange this for an A-grade Scroll: Enchant Weapon. -->
 		<set name="icon" val="Branchsys2.icon.event_cubic_w_piece_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -717,6 +763,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="10646" name="Cube Fragment Weapon - S" type="EtcItem">
+		<!-- Speak with a warehouse keeper to exchange this for an S-grade Scroll: Enchant Weapon. -->
 		<set name="icon" val="Branchsys2.icon.event_cubic_w_piece_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -725,6 +772,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="10647" name="Fine Black Cube Fragment" type="EtcItem">
+		<!-- You can confirm the use of this item by talking to the warehouse keeper. -->
 		<set name="icon" val="icon.event_cubic_piece_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -749,6 +797,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10649" name="Feather of Blessing" type="EtcItem">
+		<!-- You can resurrect right away at the spot where you died if you have the Feather of Blessing in your inventory. -->
 		<set name="icon" val="icon.blessed_feather_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
@@ -759,6 +808,7 @@
 		<set name="allow_self_resurrection" val="true" />
 	</item>
 	<item id="10650" name="Adventurer's Scroll of Escape" type="EtcItem">
+		<!-- Magic scroll that moves you to the nearest village. Item for beginner adventurers. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1028,6 +1078,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10667" name="Sirra's Blade {PvP}" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1065,6 +1116,7 @@
 		</stats>
 	</item>
 	<item id="10668" name="Sirra's Blade {PvP}" additionalName="Health" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1102,6 +1154,7 @@
 		</stats>
 	</item>
 	<item id="10669" name="Sirra's Blade {PvP}" additionalName="Critical Poison" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 15% chance of casting Poison on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1139,6 +1192,7 @@
 		</stats>
 	</item>
 	<item id="10670" name="Sword of Ipos {PvP}" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1176,6 +1230,7 @@
 		</stats>
 	</item>
 	<item id="10671" name="Sword of Ipos {PvP}" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1213,6 +1268,7 @@
 		</stats>
 	</item>
 	<item id="10672" name="Sword of Ipos {PvP}" additionalName="Health" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1250,6 +1306,7 @@
 		</stats>
 	</item>
 	<item id="10673" name="Barakiel's Axe {PvP}" additionalName="Health" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1288,6 +1345,7 @@
 		</stats>
 	</item>
 	<item id="10674" name="Barakiel's Axe {PvP}" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1326,6 +1384,7 @@
 		</stats>
 	</item>
 	<item id="10675" name="Barakiel's Axe {PvP}" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1364,6 +1423,7 @@
 		</stats>
 	</item>
 	<item id="10676" name="Behemoth' Tuning Fork {PvP}" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1402,6 +1462,7 @@
 		</stats>
 	</item>
 	<item id="10677" name="Behemoth' Tuning Fork {PvP}" additionalName="Health" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1440,6 +1501,7 @@
 		</stats>
 	</item>
 	<item id="10678" name="Behemoth' Tuning Fork {PvP}" additionalName="Anger" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 32 and decreases Max HP by 15%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1478,6 +1540,7 @@
 		</stats>
 	</item>
 	<item id="10679" name="Naga Storm {PvP}" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 67. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1517,6 +1580,7 @@
 		</stats>
 	</item>
 	<item id="10680" name="Naga Storm {PvP}" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 200 during a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1556,6 +1620,7 @@
 		</stats>
 	</item>
 	<item id="10681" name="Naga Storm {PvP}" additionalName="Back Blow" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Critical Rate by 37 when attacking the target from behind. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1595,6 +1660,7 @@
 		</stats>
 	</item>
 	<item id="10682" name="Tiphon's Spear {PvP}" additionalName="Critical Stun" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has about a 25% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1633,6 +1699,7 @@
 		</stats>
 	</item>
 	<item id="10683" name="Tiphon's Spear {PvP}" additionalName="Long Blow" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases the attack range. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1671,6 +1738,7 @@
 		</stats>
 	</item>
 	<item id="10684" name="Tiphon's Spear {PvP}" additionalName="Wild Blow" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Broadens the angle of attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1708,6 +1776,7 @@
 		</stats>
 	</item>
 	<item id="10685" name="Shyeed's Bow {PvP}" additionalName="Cheap Shot" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 30% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1748,6 +1817,7 @@
 		</stats>
 	</item>
 	<item id="10686" name="Shyeed's Bow {PvP}" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1788,6 +1858,7 @@
 		</stats>
 	</item>
 	<item id="10687" name="Shyeed's Bow {PvP}" additionalName="Quick Recovery" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Decreases cooldown by about 17%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1827,6 +1898,7 @@
 		</stats>
 	</item>
 	<item id="10688" name="Sobekk's Hurricane {PvP}" additionalName="Rsk. Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1866,6 +1938,7 @@
 		</stats>
 	</item>
 	<item id="10689" name="Sobekk's Hurricane {PvP}" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1905,6 +1978,7 @@
 		</stats>
 	</item>
 	<item id="10690" name="Sobekk's Hurricane {PvP}" additionalName="Critical Drain" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a chance to absorb 14 HP from the target during a critical attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1944,6 +2018,7 @@
 		</stats>
 	</item>
 	<item id="10691" name="Themis' Tongue {PvP}" additionalName="Mana Up" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1982,6 +2057,7 @@
 		</stats>
 	</item>
 	<item id="10692" name="Themis' Tongue {PvP}" additionalName="Magic Mental Shield" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2020,6 +2096,7 @@
 		</stats>
 	</item>
 	<item id="10693" name="Themis' Tongue {PvP}" additionalName="Magic Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Focus on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2058,6 +2135,7 @@
 		</stats>
 	</item>
 	<item id="10694" name="Cabrio's Hand {PvP}" additionalName="Conversion" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2097,6 +2175,7 @@
 		</stats>
 	</item>
 	<item id="10695" name="Cabrio's Hand {PvP}" additionalName="Mana Up" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2136,6 +2215,7 @@
 		</stats>
 	</item>
 	<item id="10696" name="Cabrio's Hand {PvP}" additionalName="Magic Silence" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2175,6 +2255,7 @@
 		</stats>
 	</item>
 	<item id="10697" name="Daimon Crystal {PvP}" additionalName="Mana Up" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2214,6 +2295,7 @@
 		</stats>
 	</item>
 	<item id="10698" name="Daimon Crystal {PvP}" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2253,6 +2335,7 @@
 		</stats>
 	</item>
 	<item id="10699" name="Daimon Crystal {PvP}" additionalName="Magic Mental Shield" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

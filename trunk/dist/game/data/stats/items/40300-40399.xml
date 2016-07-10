@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="40300" name="Freya's Recovery Potion" type="EtcItem">
 		<!-- Restores 3500 HP. If HP is full, CP is restored. No duration. Cannot be used in the Olympiad. -->
@@ -329,7 +329,7 @@
 		<set name="time" val="129600" />
 	</item>
 	<item id="40332" name="Mother Tree's Branch of Fortune" additionalName="90-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. PvP damage increased. -->
+		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -357,7 +357,7 @@
 		</stats>
 	</item>
 	<item id="40333" name="Foundation Staff of Evil Spirits of Fortune" additionalName="90-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nHas a 6% chance of inflicting Curse Poison on target when using a magical skill on them. -->
+		<!-- <Special Option>. Has a 6% chance of inflicting Curse Poison on target when using a magical skill on them. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -385,7 +385,7 @@
 		</stats>
 	</item>
 	<item id="40334" name="Inferno Staff of Fortune" additionalName="90-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. -->
+		<!-- <Special Option>. Casting Spd. + 15%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -440,7 +440,7 @@
 		</stats>
 	</item>
 	<item id="40336" name="Imperial Staff of Fortune" additionalName="90-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nM. Atk. + 60. PvP damage increased. -->
+		<!-- <Special Option>. M. Atk. + 60. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -468,7 +468,7 @@
 		</stats>
 	</item>
 	<item id="40337" name="Dynasty Staff of Fortune" additionalName="90-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. PvP damage increased. -->
+		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -561,7 +561,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="40343" name="Mother Tree's Branch of Fortune" additionalName="30-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. PvP damage increased. -->
+		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -589,7 +589,7 @@
 		</stats>
 	</item>
 	<item id="40344" name="Foundation Staff of Evil Spirits of Fortune" additionalName="30-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nHas a 6% chance of inflicting Curse Poison on target when using a magical skill on them. -->
+		<!-- <Special Option>. Has a 6% chance of inflicting Curse Poison on target when using a magical skill on them. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -617,7 +617,7 @@
 		</stats>
 	</item>
 	<item id="40345" name="Inferno Staff of Fortune" additionalName="30-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. -->
+		<!-- <Special Option>. Casting Spd. + 15%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -672,7 +672,7 @@
 		</stats>
 	</item>
 	<item id="40347" name="Imperial Staff of Fortune" additionalName="30-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nM. Atk. + 60. PvP damage increased. -->
+		<!-- <Special Option>. M. Atk. + 60. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -700,7 +700,7 @@
 		</stats>
 	</item>
 	<item id="40348" name="Dynasty Staff of Fortune" additionalName="30-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. PvP damage increased. -->
+		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -780,7 +780,7 @@
 		<set name="time" val="14400" />
 	</item>
 	<item id="40353" name="Mother Tree's Branch of Fortune" additionalName="10-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. PvP damage increased. -->
+		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -808,7 +808,7 @@
 		</stats>
 	</item>
 	<item id="40354" name="Foundation Staff of Evil Spirits of Fortune" additionalName="10-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nHas a 6% chance of inflicting Curse Poison on target when using a magical skill on them. -->
+		<!-- <Special Option>. Has a 6% chance of inflicting Curse Poison on target when using a magical skill on them. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -836,7 +836,7 @@
 		</stats>
 	</item>
 	<item id="40355" name="Inferno Staff of Fortune" additionalName="10-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. -->
+		<!-- <Special Option>. Casting Spd. + 15%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -891,7 +891,7 @@
 		</stats>
 	</item>
 	<item id="40357" name="Imperial Staff of Fortune" additionalName="10-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nM. Atk. + 60. PvP damage increased. -->
+		<!-- <Special Option>. M. Atk. + 60. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -919,7 +919,7 @@
 		</stats>
 	</item>
 	<item id="40358" name="Dynasty Staff of Fortune" additionalName="10-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nCasting Spd. + 15%. PvP damage increased. -->
+		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -987,7 +987,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="40362" name="Agathion - Joon Pack (30-day)" type="Armor">
-		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad.\n\n(Passive Skill)\n1. Joon's Magic: For 30 min., acquired XP/SP + 10%, Atk. Attribute + 100, P. Atk. + 20%, M. Atk. + 30%, Atk./Casting Spd. + 10%, P./M. Accuracy + 4, Speed + 10, Max. HP/MP/CP + 10%, P./M. Def. + 10%, and MP Consumption - 10%. Cannot be stacked with Art of Seduction. Buff remains after death.\n\n(Active Skill)\n1. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 hr. -->
+		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad. <Passive Skill>. 1. Joon's Magic: For 30 min., acquired XP/SP + 10%, Atk. Attribute + 100, P. Atk. + 20%, M. Atk. + 30%, Atk./Casting Spd. + 10%, P./M. Accuracy + 4, Speed + 10, Max. HP/MP/CP + 10%, P./M. Def. + 10%, and MP Consumption - 10%. Cannot be stacked with Art of Seduction. Buff remains after death. <Active Skill>. 1. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 hr. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1001,7 +1001,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="40363" name="Carrot" type="EtcItem">
-		<!-- Give some of these to Galup and you might get a special gift. You can give it to Hungry Galup in the hunting zones. Deleted after event. -->
+		<!-- Give some of these to Galup and you might get a special gift. You can give it to Hungry Galup in the hunting zones. Can be used as an ingredient for alchemy. -->
 		<set name="icon" val="icon.ev_carrot" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1047,7 +1047,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40368" name="Buff Promotion Gift Box" additionalName="Event" type="EtcItem">
-		<!-- Double-click for a chance to obtain a special weapon appearance stone coupon (30-day) or a special hair accessory at a lower rate. -->
+		<!-- Double-click for a chance to obtain a special weapon appearance stone (30-day) or a special hair accessory at a lower rate. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1061,7 +1061,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="40369" name="Napoleon Hat" additionalName="30-day" type="Armor">
-		<!-- A hat for conquering the world. -->
+		<!-- A hat accessory for conquering the world. -->
 		<set name="icon" val="BranchSys.icon.br_napoleonic_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />

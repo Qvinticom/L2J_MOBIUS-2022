@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="37000" name="9th Anniversary Cube (20-day) (Event)" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/Hellfire/Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
@@ -46,7 +46,7 @@
 		<set name="time" val="7200" />
 	</item>
 	<item id="37003" name="Letter Collector's Pouch: TOGETHER" type="EtcItem">
-		<!-- Magic pouch that contains the letters of TOGETHE. Double-click to get one of the following letters: T, O, G, E, T, H and E. The letter R can be obtained from the RIIS pouch at a certain probability. -->
+		<!-- Magic pouch that contains the letters of TOGETHE. Double-click to get one of the following letters: T, O, G, E, T, H, E and R. The letter R can be obtained from the RIIS pouch at a certain probability. -->
 		<set name="icon" val="icon.etc_crystal_spice_new_i00" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
@@ -54,7 +54,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37004" name="Letter Collector's Pouch: LINEAGE II" type="EtcItem">
-		<!-- Magic pouch that contains the letters of LINEAGE. Double-click to get one of the following letters: L, I, N, E, A, G and E. The letter II can be obtained from the RIIS pouch at a certain probability. -->
+		<!-- Magic pouch that contains the letters of LINEAGE II. Double-click to get one of the following letters: L, I, N, E, A, G, E, and II. The letter II can be obtained from the RIIS pouch at a certain probability. -->
 		<set name="icon" val="icon.etc_crystal_spice_new_i00" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
@@ -62,7 +62,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37005" name="Letter Collector's Pouch: NCSOFT" type="EtcItem">
-		<!-- Magic pouch that contains the letters of NCOFT. Double-click to get one of the following letters: N, C, O, F and T. The letter S can be obtained from the RIIS pouch at a certain probability. -->
+		<!-- Magic pouch that contains the letters of NCSOFT. Double-click to get one of the following letters: N, C, S, O, F and T. The letter S can be obtained from the RIIS pouch at a certain probability. -->
 		<set name="icon" val="icon.etc_crystal_spice_new_i00" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
@@ -666,7 +666,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="37044" name="Immortal Scroll" type="EtcItem">
-		<!-- Enchants a skill to the next grade with the success rate of 100% without consuming extra materials. -->
+		<!-- Enchants a skill +1~+10 to the next grade with a success rate of 100% without consuming extra materials. -->
 		<set name="icon" val="icon.esagira_telepo_01" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1482,7 +1482,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37092" name="Dimensional Cloak of Light" type="Armor">
-		<!-- Cloak that symbolizes glory and light. With the power of dimension, characters of all levels can wear it. Defense + 50, M. Def. + 40 and STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:ﾠCastle skill. Part of its effect does not apply when you are chaotic. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
+		<!-- Cloak that symbolizes glory and light. With the power of dimension, characters of all levels can wear it. Defense + 50, M. Def. + 40 and STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:�Castle skill. Part of its effect does not apply when you are chaotic. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1503,7 +1503,7 @@
 		</stats>
 	</item>
 	<item id="37093" name="Dimensional Cloak of Darkness" type="Armor">
-		<!-- Cloak that symbolizes avarice and darkness. With the power of dimension, characters of all levels can wear it. Defense + 50, M. Def. + 40 and STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:ﾠCastle skill. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
+		<!-- Cloak that symbolizes avarice and darkness. With the power of dimension, characters of all levels can wear it. Defense + 50, M. Def. + 40 and STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:�Castle skill. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_evilness_cloak" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

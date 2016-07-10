@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="23100" name="Vesper Retributer of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Max HP + 25%. Increases damage inflicted during PvP. Can be assigned an attribute. -->
@@ -146,7 +146,7 @@
 		</stats>
 	</item>
 	<item id="23104" name="Vesper Pincer of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-only weapon. \nCritical + 131. Has a chance of increasing all party members' P. Atk., M. Atk., and Heal Amount, and decreasing MP consumption during skill use during a Critical Attack. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-only weapon. Critical + 131. Has a chance of increasing all party members' P. Atk., M. Atk., and Heal Amount, and decreasing MP consumption during skill use during a Critical Attack. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -183,7 +183,7 @@
 		</stats>
 	</item>
 	<item id="23105" name="Vesper Shooter of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-only weapon. \nCritical + 133. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-only weapon. Critical + 133. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -220,7 +220,7 @@
 		</stats>
 	</item>
 	<item id="23106" name="Vesper Nagan of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-only weapon. \nCritical + 131. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-only weapon. Critical + 131. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1130,7 +1130,7 @@
 		</skills>
 	</item>
 	<item id="23147" name="Ghost Potion" additionalName="Event" type="EtcItem">
-		<!-- Ghost Potion\n P. Atk. + 20%, M. Atk. + 85%, and Speed + 20. Cooldown is 60 min. -->
+		<!-- Ghost Potion. P. Atk. + 20%, M. Atk. + 85%, and Speed + 20. Cooldown is 60 min. -->
 		<set name="icon" val="icon.etc_water_potion_i00" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
@@ -1147,7 +1147,7 @@
 		</skills>
 	</item>
 	<item id="23148" name="Exorcist's Mark" additionalName="Event" type="EtcItem">
-		<!-- Mark given to those who fought as zombies or against zombies in the zombie invasion of the village.\nCan be exchanged for various items through Exorcist Seira or Zombie Shaman Alestina. -->
+		<!-- Mark given to those who fought as zombies or against zombies in the zombie invasion of the village. Can be exchanged for various items through Exorcist Seira or Zombie Shaman Alestina. -->
 		<set name="icon" val="icon.etc_badge_black_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1200,7 +1200,7 @@
 		</skills>
 	</item>
 	<item id="23152" name="Soul Avatar - Lancet" type="Armor">
-		<!-- Bracelet that summons the image of Lancet as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Effective for M. Def. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Lancet as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for M. Def. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1225,7 +1225,7 @@
 		</skills>
 	</item>
 	<item id="23153" name="Soul Avatar - Liposa" type="Armor">
-		<!-- Bracelet that summons the image of Liposa as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Effective for M. Def. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Liposa as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for M. Def. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_a_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1250,7 +1250,7 @@
 		</skills>
 	</item>
 	<item id="23154" name="Soul Avatar - Velarin" type="Armor">
-		<!-- Bracelet that summons the image of Velarin as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Velarin as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_f_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1275,7 +1275,7 @@
 		</skills>
 	</item>
 	<item id="23155" name="Soul Avatar - Dulcinel" type="Armor">
-		<!-- Bracelet that summons the image of Dulcinel as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Dulcinel as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_e_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1300,7 +1300,7 @@
 		</skills>
 	</item>
 	<item id="23156" name="Soul Avatar - Chimeros" type="Armor">
-		<!-- Bracelet that summons the image of Chimeros as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Effective for M. Atk. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Chimeros as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for M. Atk. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_d_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1325,7 +1325,7 @@
 		</skills>
 	</item>
 	<item id="23157" name="Soul Avatar - Niveri" type="Armor">
-		<!-- Bracelet that summons the image of Niveri as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Effective for M. Atk. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Niveri as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for M. Atk. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_c_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1350,7 +1350,7 @@
 		</skills>
 	</item>
 	<item id="23158" name="Soul Avatar - Hamell" type="Armor">
-		<!-- Bracelet that summons the image of Hamell as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Effective for P. Def. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Hamell as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for P. Def. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_h_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1375,7 +1375,7 @@
 		</skills>
 	</item>
 	<item id="23159" name="Soul Avatar - Joriya" type="Armor">
-		<!-- Bracelet that summons the image of Joriya as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Effective for P. Def. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Joriya as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for P. Def. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1400,7 +1400,7 @@
 		</skills>
 	</item>
 	<item id="23160" name="Soul Avatar - Ralmak" type="Armor">
-		<!-- Bracelet that summons the image of Ralmak as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Effective for P. Atk. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Ralmak as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for P. Atk. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_i_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1425,7 +1425,7 @@
 		</skills>
 	</item>
 	<item id="23161" name="Soul Avatar - Goras" type="Armor">
-		<!-- Bracelet that summons the image of Goras as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Effective for P. Atk. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Goras as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for P. Atk. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_j_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1450,7 +1450,7 @@
 		</skills>
 	</item>
 	<item id="23162" name="Soul Avatar - Vensar" type="Armor">
-		<!-- Bracelet that summons the image of Vensar as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Vensar as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1475,7 +1475,7 @@
 		</skills>
 	</item>
 	<item id="23163" name="Soul Avatar - Kiela" type="Armor">
-		<!-- Bracelet that summons the image of Kiela as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Kiela as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_k_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1804,7 +1804,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23184" name="Tribal Warrior Top" type="Armor">
-		<!-- Traditional Taiwanese Top. Part of a costume. -->
+		<!-- Tribal Warrior Top. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_u" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1819,7 +1819,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23185" name="Tribal Warrior Pants" type="Armor">
-		<!-- Traditional Taiwanese Pants. Part of a costume. -->
+		<!-- Tribal Warrior Pants. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_l" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1834,7 +1834,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23186" name="Tribal Warrior Gloves" type="Armor">
-		<!-- Traditional Taiwanese Gloves. Part of a costume. -->
+		<!-- Tribal Warrior Gloves. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_g" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1849,7 +1849,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23187" name="Tribal Warrior Shoes" type="Armor">
-		<!-- Traditional Taiwanese Shoes. Part of a costume. -->
+		<!-- Tribal Warrior Shoes. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_b" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1864,7 +1864,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23188" name="Tribal Warrior Hair Accessory" type="Armor">
-		<!-- Traditional Taiwanese Hair Accessory. Hat form. Part of a costume. -->
+		<!-- Tribal Warrior Hair Accessory. Hat form. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_hair" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1955,7 +1955,7 @@
 		</skills>
 	</item>
 	<item id="23193" name="Ninja Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a hair accessory to that of a Ninja outfit. Can only be used on hair accessories that use 2 slots.\n\nWarning: The appearance resets if you bestow a pendant on the appearance-modified hair accessory. -->
+		<!-- Changes the appearance of a hair accessory to that of a Ninja outfit. Can only be used on hair accessories that use 2 slots. Warning: The appearance resets if you bestow a pendant on the appearance-modified hair accessory. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1974,7 +1974,7 @@
 		</skills>
 	</item>
 	<item id="23194" name="Tribal Warrior Top Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a top to that of a Traditional Taiwanese outfit. Abilities do not change after modification. Can be used regardless of material. -->
+		<!-- Changes the appearance of a top to that of a Tribal Warrior outfit. Abilities do not change after modification. Can be used regardless of material. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1993,7 +1993,7 @@
 		</skills>
 	</item>
 	<item id="23195" name="Tribal Warrior Pants Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a bottom to that of a Traditional Taiwanese outfit. Abilities do not change after modification. Can be used regardless of material. -->
+		<!-- Changes the appearance of a bottom to that of a Tribal Warrior outfit. Abilities do not change after modification. Can be used regardless of material. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -2012,7 +2012,7 @@
 		</skills>
 	</item>
 	<item id="23196" name="Tribal Warrior Gloves Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of gloves to that of a Traditional Taiwanese outfit. Abilities do not change after modification. -->
+		<!-- Changes the appearance of gloves to that of a Tribal Warrior outfit. Abilities do not change after modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -2031,7 +2031,7 @@
 		</skills>
 	</item>
 	<item id="23197" name="Tribal Warrior Shoes Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of shoes to that of a Traditional Taiwanese outfit. Abilities do not change after modification. -->
+		<!-- Changes the appearance of shoes to that of a Tribal Warrior outfit. Abilities do not change after modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -2050,7 +2050,7 @@
 		</skills>
 	</item>
 	<item id="23198" name="Tribal Warrior Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a hair accessory to that of a Traditional Taiwanese outfit. Can only be used on hair accessories that use 2 slots. -->
+		<!-- Changes the appearance of a hair accessory to that of a Tribal Warrior outfit. Can only be used on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />

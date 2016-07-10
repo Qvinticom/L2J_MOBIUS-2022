@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="15000" name="Doom Leather Armor of Fortune" additionalName="30-day" type="Armor">
+		<!-- One-piece Body Armor. -->
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -44,6 +45,7 @@
 		</stats>
 	</item>
 	<item id="15002" name="Doom Gloves of Fortune - Heavy Armor" additionalName="30-day" type="Armor">
+		<!-- A Set with Doom Plate Armor of Fortune. -->
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -68,6 +70,7 @@
 		</stats>
 	</item>
 	<item id="15003" name="Doom Gloves of Fortune - Light Armor" additionalName="30-day" type="Armor">
+		<!-- A Set with Doom Leather Armor of Fortune. -->
 		<set name="icon" val="icon.armor_t72_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -89,6 +92,7 @@
 		</stats>
 	</item>
 	<item id="15004" name="Doom Boots of Fortune - Heavy Armor" additionalName="30-day" type="Armor">
+		<!-- A Set with Doom Plate Armor of Fortune. -->
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -113,6 +117,7 @@
 		</stats>
 	</item>
 	<item id="15005" name="Doom Boots of Fortune - Light Armor" additionalName="30-day" type="Armor">
+		<!-- A Set with Doom Leather Armor of Fortune. -->
 		<set name="icon" val="icon.armor_t72_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -134,6 +139,7 @@
 		</stats>
 	</item>
 	<item id="15006" name="Doom Plate Armor of Fortune" additionalName="30-day" type="Armor">
+		<!-- One-piece Body Armor. -->
 		<set name="icon" val="icon.armor_t71_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -292,6 +298,7 @@
 		</stats>
 	</item>
 	<item id="15013" name="Full Plate Armor of Fortune" additionalName="30-day" type="Armor">
+		<!-- One-piece Body Armor. -->
 		<set name="icon" val="icon.armor_t62_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -610,6 +617,7 @@
 		</stats>
 	</item>
 	<item id="15027" name="Armor of Nightmare of Fortune" additionalName="30-day" type="Armor">
+		<!-- One-piece Body Armor. -->
 		<set name="icon" val="icon.armor_t80_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -656,6 +664,7 @@
 		</stats>
 	</item>
 	<item id="15029" name="Gauntlets of Nightmare of Fortune - Heavy Armor" additionalName="30-day" type="Armor">
+		<!-- A Set with Armor of Nightmare of Fortune -->
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -680,6 +689,7 @@
 		</stats>
 	</item>
 	<item id="15030" name="Boots of Nightmare of Fortune - Heavy Armor" additionalName="30-day" type="Armor">
+		<!-- A Set with Armor of Nightmare of Fortune -->
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -730,6 +740,7 @@
 		</stats>
 	</item>
 	<item id="15032" name="Sword of Miracles of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -765,6 +776,7 @@
 		</stats>
 	</item>
 	<item id="15033" name="Wizard's Tear of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -800,6 +812,7 @@
 		</stats>
 	</item>
 	<item id="15034" name="Homunkulus' Sword of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -868,6 +881,7 @@
 		</stats>
 	</item>
 	<item id="15036" name="Naga Storm of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases P. Critical Rate by 67. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -903,6 +917,7 @@
 		</stats>
 	</item>
 	<item id="15037" name="Kris of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases Critical by 71. -->
 		<set name="icon" val="icon.weapon_kris_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -938,6 +953,7 @@
 		</stats>
 	</item>
 	<item id="15038" name="Dark Screamer of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases Critical by 81. -->
 		<set name="icon" val="icon.weapon_dark_screamer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1005,6 +1021,7 @@
 		</stats>
 	</item>
 	<item id="15040" name="Shyeed's Bow of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases P. Critical Rate by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1042,6 +1059,7 @@
 		</stats>
 	</item>
 	<item id="15041" name="Bow of Peril of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Has a 42% chance of decreasing MP consumption to 2 during a standard attack. -->
 		<set name="icon" val="icon.weapon_hazard_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1077,6 +1095,7 @@
 		</stats>
 	</item>
 	<item id="15042" name="Eminence Bow of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Has a 42% chance of decreasing MP consumption to 1 during a standard attack. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1146,6 +1165,7 @@
 		</stats>
 	</item>
 	<item id="15044" name="Barakiel's Axe of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases P. Critical Rate by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1181,6 +1201,7 @@
 		</stats>
 	</item>
 	<item id="15045" name="Art of Battle Axe of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1216,6 +1237,7 @@
 		</stats>
 	</item>
 	<item id="15046" name="Yaksa Mace of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Max HP increases by 25%. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1283,6 +1305,7 @@
 		</stats>
 	</item>
 	<item id="15048" name="Sirra's Blade of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1317,6 +1340,7 @@
 		</stats>
 	</item>
 	<item id="15049" name="Damascus Sword of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases P. Critical Rate by 64. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1351,6 +1375,7 @@
 		</stats>
 	</item>
 	<item id="15050" name="Samurai Long Sword of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases Critical by 73. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1416,6 +1441,7 @@
 		</stats>
 	</item>
 	<item id="15052" name="Sword of Ipos of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases P. Critical Rate by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1450,6 +1476,7 @@
 		</stats>
 	</item>
 	<item id="15053" name="Guardian's Sword of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Max HP increases by 25%. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1484,6 +1511,7 @@
 		</stats>
 	</item>
 	<item id="15054" name="Berserker Blade of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases Critical by 73. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1549,6 +1577,7 @@
 		</stats>
 	</item>
 	<item id="15056" name="Sobekk's Hurricane of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases Atk. Spd. by 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1584,6 +1613,7 @@
 		</stats>
 	</item>
 	<item id="15057" name="Bellion Cestus of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases Atk. Spd. by 9% when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1619,6 +1649,7 @@
 		</stats>
 	</item>
 	<item id="15058" name="Great Pata of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases Atk. Spd. by 11% when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_great_pata_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1686,6 +1717,7 @@
 		</stats>
 	</item>
 	<item id="15060" name="Tallum Blade*Damascus of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases Atk. Spd. by 8%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1720,6 +1752,7 @@
 		</stats>
 	</item>
 	<item id="15061" name="Samurai Long Sword*Samurai Long Sword of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases Atk. Spd. by 4%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1754,6 +1787,7 @@
 		</stats>
 	</item>
 	<item id="15062" name="Spirit Sword*Raid Sword of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Increases Critical by 40. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1819,6 +1853,7 @@
 		</stats>
 	</item>
 	<item id="15064" name="Tiphon's Spear of Fortune" additionalName="30-day" type="Weapon">
+		<!-- angle of attack widens. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1854,6 +1889,7 @@
 		</stats>
 	</item>
 	<item id="15065" name="Lance of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Range increases. -->
 		<set name="icon" val="icon.weapon_lancia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1889,6 +1925,7 @@
 		</stats>
 	</item>
 	<item id="15066" name="Orcish Poleaxe of Fortune" additionalName="30-day" type="Weapon">
+		<!-- angle of attack widens. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1959,6 +1996,7 @@
 		</stats>
 	</item>
 	<item id="15068" name="Durendal of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Increases P. Critical Rate by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1997,6 +2035,7 @@
 		</stats>
 	</item>
 	<item id="15069" name="Dismantler of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_dismantler_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2035,6 +2074,7 @@
 		</stats>
 	</item>
 	<item id="15070" name="Saber Tooth of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Increases Critical by 73. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2073,6 +2113,7 @@
 		</stats>
 	</item>
 	<item id="15071" name="General's Katzbalger of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2108,6 +2149,7 @@
 		</stats>
 	</item>
 	<item id="15072" name="Éclair Bijou of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance that party members including yourself will get increased P. Atk., M. Atk., healing power received, and decreased Skill MP consumption during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2147,6 +2189,7 @@
 		</stats>
 	</item>
 	<item id="15073" name="Colichemarde of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Increases Atk. Spd. by about 6%, and improves the chance that party members including yourself will get increased P. Atk., M. Atk., healing power received, and decreased Skill MP consumption during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2186,6 +2229,7 @@
 		</stats>
 	</item>
 	<item id="15074" name="Admiral's Estoc of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Increases Atk. Spd. by 7%, and improves the chance that party members including yourself will get increased P. Atk., M. Atk., healing power received, and decreased Skill MP consumption during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2225,6 +2269,7 @@
 		</stats>
 	</item>
 	<item id="15075" name="Grand Épée of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Has a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2263,6 +2308,7 @@
 		</stats>
 	</item>
 	<item id="15076" name="Screaming Vengeance of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Increases P. Critical Rate by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2302,6 +2348,7 @@
 		</stats>
 	</item>
 	<item id="15077" name="Hell Hound of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. MP consumption decreases by about 12% during skill use. -->
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2341,6 +2388,7 @@
 		</stats>
 	</item>
 	<item id="15078" name="Sharpshooter of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Skill MP consumption decreases by 12%. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2380,6 +2428,7 @@
 		</stats>
 	</item>
 	<item id="15079" name="Cranequin of Fortune" additionalName="30-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2416,6 +2465,7 @@
 		</stats>
 	</item>
 	<item id="15080" name="Majestic Earring of Fortune" additionalName="10-day" type="Armor">
+		<!-- The effect is MP + 25. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -2438,6 +2488,7 @@
 		</stats>
 	</item>
 	<item id="15081" name="Majestic Necklace of Fortune" additionalName="10-day" type="Armor">
+		<!-- The effect is MP + 33. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2460,6 +2511,7 @@
 		</stats>
 	</item>
 	<item id="15082" name="Majestic Ring of Fortune" additionalName="10-day" type="Armor">
+		<!-- The effect is MP + 17. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2671,6 +2723,7 @@
 		</stats>
 	</item>
 	<item id="15092" name="Dark Crystal Robe of Fortune" additionalName="10-day" type="Armor">
+		<!-- One-piece Body Armor. -->
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -2718,6 +2771,7 @@
 		</stats>
 	</item>
 	<item id="15094" name="Dark Crystal Gloves of Fortune - Robe" additionalName="10-day" type="Armor">
+		<!-- A Set with Dark Crystal Robe of Fortune. -->
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2742,6 +2796,7 @@
 		</stats>
 	</item>
 	<item id="15095" name="Dark Crystal Boots of Fortune - Robe" additionalName="10-day" type="Armor">
+		<!-- A Set with Dark Crystal Robe of Fortune. -->
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2792,6 +2847,7 @@
 		</stats>
 	</item>
 	<item id="15097" name="Avadon Robe of Fortune" additionalName="10-day" type="Armor">
+		<!-- One-piece Body Armor. -->
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -2839,6 +2895,7 @@
 		</stats>
 	</item>
 	<item id="15099" name="Avadon Gloves of Fortune - Robe" additionalName="10-day" type="Armor">
+		<!-- A Set with Avadon Robe of Fortune. -->
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />

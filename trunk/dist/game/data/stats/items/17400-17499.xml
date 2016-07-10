@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="17400" name="Seraph Boots" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
@@ -316,7 +316,7 @@
 		</stats>
 	</item>
 	<item id="17416" name="Amaranthine Shaper" type="Weapon">
-		<!-- Bestows one of the following functions: Guidance, Haste, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_stanpid_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -348,7 +348,7 @@
 		</stats>
 	</item>
 	<item id="17417" name="Amaranthine Cutter" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, Focus, or Health. Two functions can be bestowed through a rare soul crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_plenitas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -379,7 +379,7 @@
 		</stats>
 	</item>
 	<item id="17418" name="Amaranthine Slasher" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_bauen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -410,7 +410,7 @@
 		</stats>
 	</item>
 	<item id="17419" name="Amaranthine Avenger" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, P. Critical Damage, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_qutram_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -442,7 +442,7 @@
 		</stats>
 	</item>
 	<item id="17420" name="Amaranthine Fighter" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_durga_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -474,7 +474,7 @@
 		</stats>
 	</item>
 	<item id="17421" name="Amaranthine Stormer" type="Weapon">
-		<!-- Bestows one of the following functions: HP Drain, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases Multi Attack when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_crabel_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -507,7 +507,7 @@
 		</stats>
 	</item>
 	<item id="17422" name="Amaranthine Thrower" type="Weapon">
-		<!-- Bestows one of the following functions: Damage Up, Focus, or Long Blow. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_castron_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -540,7 +540,7 @@
 		</stats>
 	</item>
 	<item id="17423" name="Amaranthine Shooter" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Critical Slow, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -573,7 +573,7 @@
 		</stats>
 	</item>
 	<item id="17424" name="Amaranthine Buster" type="Weapon">
-		<!-- Bestows one of the following functions: Acumen, Magic Hold, or Mana Up. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weaon_serapear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -604,7 +604,7 @@
 		</stats>
 	</item>
 	<item id="17425" name="Amaranthine Caster" type="Weapon">
-		<!-- Bestows one of the following functions: Empower, Acumen, or Magic Hold. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_pilia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -636,7 +636,7 @@
 		</stats>
 	</item>
 	<item id="17426" name="Amaranthine Retributer" type="Weapon">
-		<!-- Bestows one of the following functions: MP Regeneration, Acumen, or Empower. Two functions can be bestowed through a rare soul crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_shaelon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -669,7 +669,7 @@
 		</stats>
 	</item>
 	<item id="17427" name="Amaranthine Dualsword" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, Damage Up, or Health. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -700,7 +700,7 @@
 		</stats>
 	</item>
 	<item id="17428" name="Amaranthine Dual Dagger" type="Weapon">
-		<!-- Bestows one of the following functions: Damage Up, Focus, or Guidance. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -732,7 +732,7 @@
 		</stats>
 	</item>
 	<item id="17429" name="Amaranthine Dual Blunt Weapon" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2025,7 +2025,7 @@
 		</stats>
 	</item>
 	<item id="17484" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your sword...' -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sword..." -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2050,7 +2050,7 @@
 		</skills>
 	</item>
 	<item id="17485" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your sword...' -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sword..." -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2075,7 +2075,7 @@
 		</skills>
 	</item>
 	<item id="17486" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your sacrifice...' -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sacrifice..." -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2100,7 +2100,7 @@
 		</skills>
 	</item>
 	<item id="17487" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your sacrifice...' -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sacrifice..." -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2125,7 +2125,7 @@
 		</skills>
 	</item>
 	<item id="17488" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your dagger...' -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your dagger..." -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2150,7 +2150,7 @@
 		</skills>
 	</item>
 	<item id="17489" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your arrow...' -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your arrow..." -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2175,7 +2175,7 @@
 		</skills>
 	</item>
 	<item id="17490" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your wisdom...' -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your wisdom..." -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2200,7 +2200,7 @@
 		</skills>
 	</item>
 	<item id="17491" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your wisdom...' -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your wisdom..." -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2225,7 +2225,7 @@
 		</skills>
 	</item>
 	<item id="17492" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your wisdom...' -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your wisdom..." -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2250,7 +2250,7 @@
 		</skills>
 	</item>
 	<item id="17493" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your spirit...' -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your spirit..." -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2275,7 +2275,7 @@
 		</skills>
 	</item>
 	<item id="17494" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your spirit...' -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your spirit..." -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2300,7 +2300,7 @@
 		</skills>
 	</item>
 	<item id="17495" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your sacrifice...' -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sacrifice..." -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2325,7 +2325,7 @@
 		</skills>
 	</item>
 	<item id="17496" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your sacrifice...' -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sacrifice..." -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2349,7 +2349,7 @@
 		</skills>
 	</item>
 	<item id="17497" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your dagger...' -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your dagger..." -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2374,7 +2374,7 @@
 		</skills>
 	</item>
 	<item id="17498" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your arrow...' -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your arrow..." -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2399,7 +2399,7 @@
 		</skills>
 	</item>
 	<item id="17499" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your wisdom...' -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your wisdom..." -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />

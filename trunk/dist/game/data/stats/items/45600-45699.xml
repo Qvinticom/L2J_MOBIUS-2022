@@ -411,7 +411,7 @@
 		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
 	</item>
 	<item id="45627" name="Lionel Hunter's Mission List - Part 1" type="EtcItem">
-		<!-- First list of missions from Lionel Hunter to achieve the Exalted status. 'Finish the missions from these people and bring back a certificate - Verdure Elder Elikia from Heine, the Mysterious Butler, Weapon Merchant Galladucci from Giran, and Sir Eric Rodemai from Aden.' -->
+		<!-- First list of missions from Lionel Hunter to achieve the Exalted status. "Finish the missions from these people and bring back a certificate - Verdure Elder Elikia from Heine, the Mysterious Butler, Weapon Merchant Galladucci from Giran, and Sir Eric Rodemai from Aden." -->
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -486,7 +486,7 @@
 		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
 	</item>
 	<item id="45632" name="Lionel Hunter's Mission List - Part 2" type="EtcItem">
-		<!-- First list of missions from Lionel Hunter to achieve the Exalted status. 'Finish the missions from these people and bring back a certificate - Head Priest of the Earth Daichir from Schuttgart, the Olympiad Manager, Maestro Ishuma from the Wharf of Gludio Airships, and Sir Kristof Rodemai from Giran.' -->
+		<!-- First list of missions from Lionel Hunter to achieve the Exalted status. "Finish the missions from these people and bring back a certificate - Head Priest of the Earth Daichir from Schuttgart, the Olympiad Manager, Maestro Ishuma from the Wharf of Gludio Airships, and Sir Kristof Rodemai from Giran." -->
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -561,7 +561,7 @@
 		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
 	</item>
 	<item id="45637" name="Lionel Hunter's Mission List - Part 3" type="EtcItem">
-		<!-- First list of missions from Lionel Hunter to achieve the Exalted status. 'Finish the missions from these people and bring back a certificate - Captain Kurtiz from Aden, Merlot from Hunters' Village, Blacksmith of Mammon, and Sir Gustav Athebaldt from Oren.' -->
+		<!-- First list of missions from Lionel Hunter to achieve the Exalted status. "Finish the missions from these people and bring back a certificate - Captain Kurtiz from Aden, Merlot from Hunters' Village, Blacksmith of Mammon, and Sir Gustav Athebaldt from Oren." -->
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1225,8 +1225,8 @@
 			<stat type="mDef">60</stat>
 		</stats>
 	</item>
-	<item id="45677" name="Twilight Attack Type Heavy Set Pack" additionalName="14-day" type="EtcItem">
-		<!-- Get a + 6 Twilight Attack Type Heavy set. Expires after 14 days if not used. -->
+	<item id="45677" name="Twilight Attack Type Heavy Set Pack" additionalName="Event" type="EtcItem">
+		<!-- Get a + 6 enchanted 30-day Twilight Attack Type Heavy set. Deleted after event. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1238,8 +1238,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="45678" name="Twilight Defense Type Heavy Set Pack" additionalName="14-day" type="EtcItem">
-		<!-- Get a + 6 Twilight Defense Type Heavy set. Expires after 14 days if not used. -->
+	<item id="45678" name="Twilight Defense Type Heavy Set Pack" additionalName="Event" type="EtcItem">
+		<!-- Get a + 6 enchanted 30-day Twilight Defense Type Heavy set. Deleted after event. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1251,8 +1251,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="45679" name="Twilight Assassin Type Light Set Pack" additionalName="14-day" type="EtcItem">
-		<!-- Get a + 6 Twilight Assassin Type Light set. Expires after 14 days if not used. -->
+	<item id="45679" name="Twilight Assassin Type Light Set Pack" additionalName="Event" type="EtcItem">
+		<!-- Get a + 6 enchanted 30-day Twilight Assassin Type Light set. Deleted after event. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1264,8 +1264,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="45680" name="Twilight Enchant Type Light Set Pack" additionalName="14-day" type="EtcItem">
-		<!-- Get a + 6 Twilight Enchant Type Light set. Expires after 14 days if not used. -->
+	<item id="45680" name="Twilight Enchant Type Light Set Pack" additionalName="Event" type="EtcItem">
+		<!-- Get a + 6 enchanted 30-day Twilight Enchant Type Light set. Deleted after event. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1277,8 +1277,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="45681" name="Twilight Magic Type Robe Set Pack" additionalName="14-day" type="EtcItem">
-		<!-- Get a + 6 Twilight Magic Type Robe set. Expires after 14 days if not used. -->
+	<item id="45681" name="Twilight Magic Type Robe Set Pack" additionalName="Event" type="EtcItem">
+		<!-- Get a + 6 enchanted 30-day Twilight Magic Type Robe set. Deleted after event. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1290,8 +1290,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="45682" name="Twilight Recovery Type Robe Set Pack" additionalName="14-day" type="EtcItem">
-		<!-- Get a + 6 Twilight Recovery Type Robe set. Expires after 14 days if not used. -->
+	<item id="45682" name="Twilight Recovery Type Robe Set Pack" additionalName="Event" type="EtcItem">
+		<!-- Get a + 6 enchanted 30-day Twilight Recovery Type Robe set. Deleted after event. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1303,7 +1303,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="45683" name="Twilight Helmet" additionalName="Attack Type / Heavy (14-day)" type="Armor">
+	<item id="45683" name="Twilight Helmet" additionalName="Attack Type / Heavy (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1321,7 +1321,7 @@
 			<stat type="pDef">128</stat>
 		</stats>
 	</item>
-	<item id="45684" name="Twilight Breastplate" additionalName="Attack Type / Heavy (14-day)" type="Armor">
+	<item id="45684" name="Twilight Breastplate" additionalName="Attack Type / Heavy (30-day)" type="Armor">
 		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1341,7 +1341,7 @@
 			<stat type="pDef">341</stat>
 		</stats>
 	</item>
-	<item id="45685" name="Twilight Gaiters" additionalName="Attack Type / Heavy (14-day)" type="Armor">
+	<item id="45685" name="Twilight Gaiters" additionalName="Attack Type / Heavy (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t601_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1360,7 +1360,7 @@
 			<stat type="pDef">213</stat>
 		</stats>
 	</item>
-	<item id="45686" name="Twilight Gauntlets" additionalName="Attack Type / Heavy (14-day)" type="Armor">
+	<item id="45686" name="Twilight Gauntlets" additionalName="Attack Type / Heavy (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t601_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1378,7 +1378,7 @@
 			<stat type="pDef">85</stat>
 		</stats>
 	</item>
-	<item id="45687" name="Twilight Boots" additionalName="Attack Type / Heavy (14-day)" type="Armor">
+	<item id="45687" name="Twilight Boots" additionalName="Attack Type / Heavy (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t601_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1396,7 +1396,7 @@
 			<stat type="pDef">85</stat>
 		</stats>
 	</item>
-	<item id="45688" name="Twilight Shield" additionalName="14-day" type="Armor">
+	<item id="45688" name="Twilight Shield" additionalName="30-day" type="Armor">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.kratere_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1417,7 +1417,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="45689" name="Twilight Helmet" additionalName="Defense Type / Heavy (14-day)" type="Armor">
+	<item id="45689" name="Twilight Helmet" additionalName="Defense Type / Heavy (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1435,7 +1435,7 @@
 			<stat type="pDef">128</stat>
 		</stats>
 	</item>
-	<item id="45690" name="Twilight Breastplate" additionalName="Defense Type / Heavy (14-day)" type="Armor">
+	<item id="45690" name="Twilight Breastplate" additionalName="Defense Type / Heavy (30-day)" type="Armor">
 		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -1455,7 +1455,7 @@
 			<stat type="pDef">341</stat>
 		</stats>
 	</item>
-	<item id="45691" name="Twilight Gaiters" additionalName="Defense Type / Heavy (14-day)" type="Armor">
+	<item id="45691" name="Twilight Gaiters" additionalName="Defense Type / Heavy (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t601_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1474,7 +1474,7 @@
 			<stat type="pDef">213</stat>
 		</stats>
 	</item>
-	<item id="45692" name="Twilight Gauntlets" additionalName="Defense Type / Heavy (14-day)" type="Armor">
+	<item id="45692" name="Twilight Gauntlets" additionalName="Defense Type / Heavy (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t601_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1492,7 +1492,7 @@
 			<stat type="pDef">85</stat>
 		</stats>
 	</item>
-	<item id="45693" name="Twilight Boots" additionalName="Defense Type / Heavy (14-day)" type="Armor">
+	<item id="45693" name="Twilight Boots" additionalName="Defense Type / Heavy (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t601_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1510,7 +1510,7 @@
 			<stat type="pDef">85</stat>
 		</stats>
 	</item>
-	<item id="45694" name="Twilight Shield" additionalName="14-day" type="Armor">
+	<item id="45694" name="Twilight Shield" additionalName="30-day" type="Armor">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.kratere_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1531,7 +1531,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="45695" name="Twilight Leather Helmet" additionalName="Assassin Type / Light (14-day)" type="Armor">
+	<item id="45695" name="Twilight Leather Helmet" additionalName="Assassin Type / Light (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1549,7 +1549,7 @@
 			<stat type="pDef">128</stat>
 		</stats>
 	</item>
-	<item id="45696" name="Twilight Leather Armor" additionalName="Assassin Type / Light (14-day)" type="Armor">
+	<item id="45696" name="Twilight Leather Armor" additionalName="Assassin Type / Light (30-day)" type="Armor">
 		<!-- Increases Evasion, Speed, and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -1571,7 +1571,7 @@
 			<stat type="mEvas">5</stat>
 		</stats>
 	</item>
-	<item id="45697" name="Twilight Leather Leggings" additionalName="Assassin Type / Light (14-day)" type="Armor">
+	<item id="45697" name="Twilight Leather Leggings" additionalName="Assassin Type / Light (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t602_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1592,7 +1592,7 @@
 			<stat type="mEvas">3</stat>
 		</stats>
 	</item>
-	<item id="45698" name="Twilight Leather Gloves" additionalName="Assassin Type / Light (14-day)" type="Armor">
+	<item id="45698" name="Twilight Leather Gloves" additionalName="Assassin Type / Light (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t602_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1610,7 +1610,7 @@
 			<stat type="pDef">85</stat>
 		</stats>
 	</item>
-	<item id="45699" name="Twilight Leather Boots" additionalName="Assassin Type / Light (14-day)" type="Armor">
+	<item id="45699" name="Twilight Leather Boots" additionalName="Assassin Type / Light (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_t602_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />

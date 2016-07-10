@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="23700" name="Tribal Warrior Top" additionalName="Modified Set" type="Armor">
-		<!-- Native Taiwanese Top. Part of a costume. Modifying the full set creates a new skill. -->
+		<!-- Tribal Warrior Top. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_u" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -16,7 +16,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23701" name="Tribal Warrior Pants" additionalName="Modified Set" type="Armor">
-		<!-- Native Taiwanese Pants. Part of a costume. Modifying the full set creates a new skill. -->
+		<!-- Tribal Warrior Pants. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_l" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -31,7 +31,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23702" name="Tribal Warrior Gloves" additionalName="Modified Set" type="Armor">
-		<!-- Native Taiwanese Gloves. Part of a costume. Modifying the full set creates a new skill. -->
+		<!-- Tribal Warrior Gloves. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_g" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -46,7 +46,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23703" name="Tribal Warrior Shoes" additionalName="Modified Set" type="Armor">
-		<!-- Native Taiwanese Shoes. Part of a costume. Modifying the full set creates a new skill. -->
+		<!-- Tribal Warrior Shoes. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_b" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -61,7 +61,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23704" name="Tribal Warrior Top Appearance Stone" additionalName="Modified Set" type="EtcItem">
-		<!-- Changes the appearance of a top into that of a Native Taiwanese outfit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
+		<!-- Changes the appearance of a top into that of a Tribal Warrior outfit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -77,7 +77,7 @@
 		</skills>
 	</item>
 	<item id="23705" name="Tribal Warrior Pants Appearance Stone" additionalName="Modified Set" type="EtcItem">
-		<!-- Changes the appearance of pants into that of a Native Taiwanese outfit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
+		<!-- Changes the appearance of pants into that of a Tribal Warrior outfit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -93,7 +93,7 @@
 		</skills>
 	</item>
 	<item id="23706" name="Tribal Warrior Gloves Appearance Stone" additionalName="Modified Set" type="EtcItem">
-		<!-- Changes the appearance of gloves into that of a Native Taiwanese outfit. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
+		<!-- Changes the appearance of gloves into that of a Tribal Warrior outfit. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -109,7 +109,7 @@
 		</skills>
 	</item>
 	<item id="23707" name="Tribal Warrior Shoes Appearance Stone" additionalName="Modified Set" type="EtcItem">
-		<!-- Changes the appearance of shoes into that of a Native Taiwanese outfit. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
+		<!-- Changes the appearance of shoes into that of a Tribal Warrior outfit. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -373,7 +373,7 @@
 		</skills>
 	</item>
 	<item id="23724" name="Adenian Tattoo: Wings" type="Armor">
-		<!-- Adenian Collection\nP. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
+		<!-- Adenian Collection. P. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -389,7 +389,7 @@
 		</stats>
 	</item>
 	<item id="23725" name="Adenian Tattoo: Tribal" type="Armor">
-		<!-- Adenian Collection\nP. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
+		<!-- Adenian Collection. P. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -405,7 +405,7 @@
 		</stats>
 	</item>
 	<item id="23726" name="Adenian Tattoo: Evil" type="Armor">
-		<!-- Adenian Collection\nP. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
+		<!-- Adenian Collection. P. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -472,7 +472,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23731" name="Divine Scroll: Enchant Weapon (A-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (A-grade) + 4, and two-handed sword/blunt/fist, dagger, crossbow + 5. P. Atk. for bows + 8. M. Atk. for all weapons + 3. From +4, P. Atk./M. Atk. Increase twofold. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (A-grade) + 4, and two-handed sword/blunt/fist, dagger, crossbow + 5. P. Atk. for bows + 8. M. Atk. for all weapons + 3. From +4, P. Atk./M. Atk. Increase twofold. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_cry_of_ench_wp_a_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -485,7 +485,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23732" name="Divine Scroll: Enchant Weapon (S-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (S-grade) + 5, and two-handed sword/blunt/fist, dagger, crossbow + 6. P. Atk. for bows + 10. M. Atk. for all weapons + 4. From +4, P. Atk./M. Atk. Increase twofold. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (S-grade) + 5, and two-handed sword/blunt/fist, dagger, crossbow + 6. P. Atk. for bows + 10. M. Atk. for all weapons + 4. From +4, P. Atk./M. Atk. Increase twofold. -->
 		<set name="icon" val="BranchSys3.icon1.g_holy_cry_of_ench_wp_s" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -498,7 +498,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23733" name="Divine Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dagger, crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dagger, crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_wp_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -511,7 +511,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23734" name="Divine Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Def. for armor and accessories (A-grade) + 1. Starting from + 4, P. Def. + 3. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (A-grade) + 1. Starting from + 4, P. Def. + 3. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_cry_of_ench_am_a_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -524,7 +524,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23735" name="Divine Scroll: Enchant Armor (S-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Def. for armor and accessories (S-grade) + 1. Starting from + 4, P. Def. + 3, and HP gradually increases. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (S-grade) + 1. Starting from + 4, P. Def. + 3, and HP gradually increases. -->
 		<set name="icon" val="BranchSys3.icon1.g_holy_cry_of_ench_am_s" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -537,7 +537,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23736" name="Divine Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Def. for armor and accessories (R-grade) + 2. Starting from +4, increases P. Def. greatly, and HP gradually increases. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (R-grade) + 2. Starting from +4, increases P. Def. greatly, and HP gradually increases. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_am_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -550,7 +550,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23737" name="Divine Scroll: Enchant Weapon (A-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (A-grade) + 4, and two-handed sword/blunt/fist, dagger, crossbow + 5. P. Atk. for bows + 8. M. Atk. for all weapons + 3. From +4, P. Atk./M. Atk. Increase twofold. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (A-grade) + 4, and two-handed sword/blunt/fist, dagger, crossbow + 5. P. Atk. for bows + 8. M. Atk. for all weapons + 3. From +4, P. Atk./M. Atk. Increase twofold. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_cry_of_ench_wp_a_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -559,7 +559,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23738" name="Divine Scroll: Enchant Weapon (S-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (S-grade) + 5, and two-handed sword/blunt/fist, dagger, crossbow + 6. P. Atk. for bows + 10. M. Atk. for all weapons + 4. From +4, P. Atk./M. Atk. Increase twofold. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (S-grade) + 5, and two-handed sword/blunt/fist, dagger, crossbow + 6. P. Atk. for bows + 10. M. Atk. for all weapons + 4. From +4, P. Atk./M. Atk. Increase twofold. -->
 		<set name="icon" val="BranchSys3.icon1.g_holy_cry_of_ench_wp_s" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -568,7 +568,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23739" name="Divine Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dagger, crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dagger, crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_wp_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -577,7 +577,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23740" name="Divine Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Def. for armor and accessories (A-grade) + 1. Starting from + 4, P. Def. + 3. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (A-grade) + 1. Starting from + 4, P. Def. + 3. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_cry_of_ench_am_a_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -586,7 +586,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23741" name="Divine Scroll: Enchant Armor (S-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Def. for armor and accessories (S-grade) + 1. Starting from + 4, P. Def. + 3, and HP gradually increases. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (S-grade) + 1. Starting from + 4, P. Def. + 3, and HP gradually increases. -->
 		<set name="icon" val="BranchSys3.icon1.g_holy_cry_of_ench_am_s" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -595,7 +595,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23742" name="Divine Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Def. for armor and accessories (R-grade) + 2. Starting from +4, increases P. Def. greatly, and HP gradually increases. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (R-grade) + 2. Starting from +4, increases P. Def. greatly, and HP gradually increases. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_am_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -847,7 +847,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="23761" name="Prestige Cube" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain either Dark/Bloody Eternal Enhancement Stone, Weapon Enchant Scroll (S - R-grade), Blessed Scroll of Resurrection, High-grade Elixir Pack, Energy of Destruction, or Giant's Energy. Once a day. Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain either Dark/Bloody Eternal Enhancement Stone, Normal/Giant/Blessed Weapon Enchant Scroll (R-grade), Normal/Giant/Blessed Armor Enchant Scroll (R-grade), Gemstone (R-grade), or Giant's Energy. Once a day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -871,7 +871,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23763" name="Vitality Recovery Potion" additionalName="1-day" type="EtcItem">
-		<!-- Premium User Only\nFor 60 min., Vitality is restored upon XP gain. -->
+		<!-- Premium User Only. For 60 min., Vitality is restored upon XP gain. Cannot apply another buff with the same effect, and when applying a similar effect, the Vitaily Maintaining Potion's buff effect will disappear. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -885,7 +885,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="23764" name="Heavenly Cocktail" additionalName="1-day" type="EtcItem">
-		<!-- Premium User Only\nFor 60 min., you receive all 6 Melody buffs Lv. 2. Cooldown is 60 min. -->
+		<!-- Premium User Only. For 60 min., you receive all 6 Melody buffs Lv. 2. Cooldown is 60 min. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -900,7 +900,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="23765" name="Feather of Blessing" additionalName="1-day" type="EtcItem">
-		<!-- Premium User Only\nCan resurrect at the spot if stored in the inventory. -->
+		<!-- Premium User Only. Can resurrect at the spot if stored in the inventory. -->
 		<set name="icon" val="icon.blessed_feather_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -914,7 +914,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="23766" name="Warrior's Quick CP Potion" type="EtcItem">
-		<!-- Premium User Only\nPotion with the strength of an ancient warrior. Restores 350 CP. -->
+		<!-- Premium User Only. Potion with the strength of an ancient warrior. Restores 350 CP. -->
 		<set name="icon" val="BranchSys2.icon.br_breath_of_hero_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -1196,7 +1196,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23785" name="Lesser Giant's Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
-		<!-- Enchant rate rises to between + 2 and + 4 when using the Giant's Scroll: Enchant Weapon (R-grade). Only for items enchanted between + 3 and + 9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0.\n -->
+		<!-- Enchant rate rises to between + 2 and + 4 when using the Giant's Scroll: Enchant Weapon (R-grade). Only for items enchanted between + 3 and + 9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_giant_stone_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1211,7 +1211,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23786" name="Lesser Giant's Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
-		<!-- Enchant rate rises to between + 2 and + 4 when using the Giant's Scroll: Enchant Armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. \n -->
+		<!-- Enchant rate rises to between + 2 and + 4 when using the Giant's Scroll: Enchant Armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_giant_stone_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />

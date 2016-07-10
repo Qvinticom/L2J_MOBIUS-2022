@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="15300" name="Transparent Dual (NPC)" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
@@ -279,6 +279,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="15310" name="Einhasad's Sacred Sword" type="Weapon">
+		<!-- Einhasad's Sacred Sword given by the Emperor of Elmoreden Shunaiman. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -329,6 +330,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="15312" name="Dawn's Bracelet" type="Armor">
+		<!-- Dawn's bracelet given from the Priest Franz. Precious looking bracelet. Increases Weight Limit of 5000. -->
 		<set name="icon" val="icon.accessory_lbracelet_of_dawn" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -350,6 +352,7 @@
 		</skills>
 	</item>
 	<item id="15313" name="Player Commendation - Forgotten Blade" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Forgotten Blade with limited ability enhancement. <Special Option>. Critical increases by 84. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -386,6 +389,7 @@
 		</stats>
 	</item>
 	<item id="15314" name="Player Commendation - Basalt Battlehammer" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Basalt Battlehammer with limited ability enhancement. <Special Option>. Max HP increases by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -423,6 +427,7 @@
 		</stats>
 	</item>
 	<item id="15315" name="Player Commendation - Imperial Staff" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Imperial Staff with limited ability enhancement. <Special Option>. MP Recovery Rate increases. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -461,6 +466,7 @@
 		</stats>
 	</item>
 	<item id="15316" name="Player Commendation - Angel Slayer" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Angel Slayer with limited ability enhancement. <Special Option>. P. Atk. Increases by 265 during a critical attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -498,6 +504,7 @@
 		</stats>
 	</item>
 	<item id="15317" name="Player Commendation - Dragon Hunter Axe" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Dragon Hunter Axe with limited ability enhancement. <Special Option>. HP Recovery Rate increases. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -535,6 +542,7 @@
 		</stats>
 	</item>
 	<item id="15318" name="Player Commendation - Saint Spear" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Saint Spear with limited ability enhancement. <Special Option>. Max HP increases by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_saint_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -572,6 +580,7 @@
 		</stats>
 	</item>
 	<item id="15319" name="Player Commendation - Demon Splinter" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Demon Splinter with limited ability enhancement. <Special Option>. Critical increases by 80. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -609,6 +618,7 @@
 		</stats>
 	</item>
 	<item id="15320" name="Player Commendation - Heaven's Divider" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Heaven's Divider with limited ability enhancement. <Special Option>. Critical increases by 84. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -645,6 +655,7 @@
 		</stats>
 	</item>
 	<item id="15321" name="Player Commendation - Arcana Mace" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Arcana Mace with limited ability enhancement. <Special Option>. Casting Spd. Increases by 15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -683,6 +694,7 @@
 		</stats>
 	</item>
 	<item id="15322" name="Player Commendation - Draconic Bow" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Draconic Bow with limited ability enhancement. <Special Option>. Critical increases by 88. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -722,6 +734,7 @@
 		</stats>
 	</item>
 	<item id="15323" name="Player Commendation - Laevateinn" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Laevateinn with limited ability enhancement. <Special Option>. Atk. Spd. Increases by about 7%. Increases damage inflicted during PvP. When enchanted to 4 or more, chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -763,6 +776,7 @@
 		</stats>
 	</item>
 	<item id="15324" name="Player Commendation - Gram" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Gram with limited ability enhancement. <Special Option>. Critical increases by 84. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -803,6 +817,7 @@
 		</stats>
 	</item>
 	<item id="15325" name="Player Commendation - Sarunga" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Sarunga with limited ability enhancement. <Special Option>. Critical increases by 88. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_sarnga_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -844,6 +859,7 @@
 		</stats>
 	</item>
 	<item id="15326" name="Player Commendation - Tallum Blade*Dark Legion's Edge" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Tallum Blade*Dark Legion's Edge with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -880,6 +896,7 @@
 		</stats>
 	</item>
 	<item id="15327" name="Seed: Sea Coba" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -895,6 +912,7 @@
 		</skills>
 	</item>
 	<item id="15328" name="Seed: Sea Coba" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -910,6 +928,7 @@
 		</skills>
 	</item>
 	<item id="15329" name="Seed: Twin Coba" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -925,6 +944,7 @@
 		</skills>
 	</item>
 	<item id="15330" name="Seed: Twin Coba" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -940,6 +960,7 @@
 		</skills>
 	</item>
 	<item id="15331" name="Seed: Twin Coba" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -955,6 +976,7 @@
 		</skills>
 	</item>
 	<item id="15332" name="Seed: Twin Coba" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -970,6 +992,7 @@
 		</skills>
 	</item>
 	<item id="15333" name="Seed: Great Coba" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Great Coba. For best results, a level 80+ character must plant the seed on a level 80-90 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_great_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -985,6 +1008,7 @@
 		</skills>
 	</item>
 	<item id="15334" name="Seed: Alternative Sea Coba" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1000,6 +1024,7 @@
 		</skills>
 	</item>
 	<item id="15335" name="Seed: Alternative Sea Coba" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1015,6 +1040,7 @@
 		</skills>
 	</item>
 	<item id="15336" name="Seed: Alternative Twin Coba" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1030,6 +1056,7 @@
 		</skills>
 	</item>
 	<item id="15337" name="Seed: Alternative Twin Coba" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1045,6 +1072,7 @@
 		</skills>
 	</item>
 	<item id="15338" name="Seed: Alternative Twin Coba" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1060,6 +1088,7 @@
 		</skills>
 	</item>
 	<item id="15339" name="Seed: Alternative Twin Coba" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1075,6 +1104,7 @@
 		</skills>
 	</item>
 	<item id="15340" name="Seed: Alternative Great Coba" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Great Coba. For best results, a level 80-90 character must plant it on a level 80-90 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_great_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1090,6 +1120,7 @@
 		</skills>
 	</item>
 	<item id="15341" name="Guiding Tea Leaves" type="EtcItem">
+		<!-- Tea leaves collected from guiding souls. -->
 		<set name="icon" val="icon.etc_leaf_green_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_freightable" val="false" />
@@ -1097,6 +1128,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15342" name="Aqua Elf Transformation Harp" additionalName="60-day" type="Weapon">
+		<!-- Transformation stick that turns you into an Aqua Elf. 60 days. -->
 		<set name="icon" val="icon.harp_of_transform_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1128,6 +1160,7 @@
 		</stats>
 	</item>
 	<item id="15343" name="Aqua Elf Transformation Harp Pack (60-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Aqua Elf Transformation Stick (60-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1148,6 +1181,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15344" name="Aqua Elf Transformation Harp (Event)" additionalName="60-day" type="Weapon">
+		<!-- Transformation stick that turns you into an Aqua Elf. 60 days. -->
 		<set name="icon" val="icon.harp_of_transform_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1179,6 +1213,7 @@
 		</stats>
 	</item>
 	<item id="15345" name="Aqua Elf Transformation Harp Pack (60-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Aqua Elf Transformation Stick (60-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1199,6 +1234,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15346" name="Player Commendation - Scroll: Enchant Weapon (S-grade)" type="EtcItem">
+		<!-- Can only be used to enchant S-grade Player Commendation Weapons. Normal enchant rules apply. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -1221,6 +1257,7 @@
 		</skills>
 	</item>
 	<item id="15347" name="Player Commendation - Scroll: Enchant Weapon (A-grade)" type="EtcItem">
+		<!-- Can only be used to enchant A-grade Player Commendation Weapons. Normal enchant rules apply. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -1243,6 +1280,7 @@
 		</skills>
 	</item>
 	<item id="15348" name="Player Commendation - Scroll: Enchant Weapon (B-grade)" type="EtcItem">
+		<!-- Can only be used to enchant B-grade Player Commendation Weapons. Normal enchant rules apply. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -1265,6 +1303,7 @@
 		</skills>
 	</item>
 	<item id="15349" name="Player Commendation - Scroll: Enchant Weapon (C-grade)" type="EtcItem">
+		<!-- Can only be used to enchant C-grade Player Commendation Weapons. Normal enchant rules apply. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -1287,6 +1326,7 @@
 		</skills>
 	</item>
 	<item id="15350" name="Player Commendation - Scroll: Enchant Weapon (D-grade)" type="EtcItem">
+		<!-- Can only be used to enchant D-grade Player Commendation Weapons. Normal enchant rules apply. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -1309,6 +1349,7 @@
 		</skills>
 	</item>
 	<item id="15351" name="Seal Removal Bracelet_Towbat" type="Armor">
+		<!-- Bracelet to summon Towbat. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1331,6 +1372,7 @@
 		</skills>
 	</item>
 	<item id="15352" name="Proof of Time and Space" type="EtcItem">
+		<!-- Proof of Time and Space to prove one's identity?. -->
 		<set name="icon" val="icon.etc_sign_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1347,6 +1389,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15353" name="Mark of Resurrection" type="EtcItem">
+		<!-- Numerous clauses for satisfying the requirements for resurrection. -->
 		<set name="icon" val="icon.etc_scroll_chalik_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1363,6 +1406,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15354" name="Book of Resurrection" type="EtcItem">
+		<!-- Ancient book with marks of Resurrection in it. -->
 		<set name="icon" val="icon.etc_ancient_tablet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1379,6 +1423,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15355" name="Stone of Resurrection" type="EtcItem">
+		<!-- Ancient stone that makes Resurrection possible. -->
 		<set name="icon" val="icon.etc_life_stone_of_begining_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1395,6 +1440,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15356" name="Sweet Concentrated Fruit Cocktail" type="EtcItem">
+		<!-- Concentrated cocktail drink that's flavored with many rare types of fruit. It Has a better effect than the Sweet Fruit Cocktail. When consumed, one can feel Might, Shield, Wind Walk, Focus, Death Whisper, Guidance, Blessed Shield, Blessed Body, Haste, Vampiric Rage, and Berserker Spirit effects for a certain amount of time. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1429,6 +1475,7 @@
 		</skills>
 	</item>
 	<item id="15357" name="Fresh Concentrated Fruit Cocktail" type="EtcItem">
+		<!-- Concentrated cocktail drink that's flavored with many rare types of fruit. It Has a better effect than the Fresh Fruit Cocktail. When consumed, one can feel Berserker Spirit, Blessed Body, Magic Barrier, Shield, Wind Walk, Blessed Soul, Empower, Acumen, and Clarity effects for a certain amount of time. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1461,6 +1508,7 @@
 		</skills>
 	</item>
 	<item id="15358" name="Player Commendation Instant Lottery Ticket" additionalName="30-day" type="EtcItem">
+		<!-- Instant lottery ticket for a chance to win up to 10,000 Player Commendation Points. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1482,6 +1530,7 @@
 		</skills>
 	</item>
 	<item id="15359" name="Winning Lottery Ticket: 10,000 PC Points" additionalName="30-day" type="EtcItem">
+		<!-- Bring it to an Adventure Guildsman in any town to receive 10,000 PC Points. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1497,6 +1546,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15360" name="Winning Lottery Ticket: 1,000 PC Points" additionalName="30-day" type="EtcItem">
+		<!-- Bring it to an Adventure Guildsman in any town to receive 1,000 PC Points. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1512,6 +1562,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15361" name="Winning Lottery Ticket: 200 PC Points" additionalName="30-day" type="EtcItem">
+		<!-- Bring it to an Adventure Guildsman in any town to receive 200 PC Points. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1527,6 +1578,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15362" name="Winning Lottery Ticket: 100 PC Points" additionalName="30-day" type="EtcItem">
+		<!-- Bring it to an Adventure Guildsman in any town to receive 100 PC Points. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1542,6 +1594,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15363" name="Winning Lottery Ticket: 10 PC Points" additionalName="30-day" type="EtcItem">
+		<!-- Bring it to an Adventure Guildsman in any town to receive 10 PC Points. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1557,6 +1610,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15364" name="Cool Pack" type="EtcItem">
+		<!-- Event item. Fires a cool air cannon to lower the blistering temperature. -->
 		<set name="icon" val="icon.etc_int_symbol_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
@@ -1572,6 +1626,7 @@
 		</skills>
 	</item>
 	<item id="15365" name="Lucky Cool Pack" type="EtcItem">
+		<!-- Event item. Fires a cool air cannon to lower the blistering temperature. Looks much luckier than an ordinary cool air cannon. -->
 		<set name="icon" val="icon.etc_int_symbol_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
@@ -1587,6 +1642,7 @@
 		</skills>
 	</item>
 	<item id="15366" name="Watermelon seed" type="EtcItem">
+		<!-- Double-click to make a Growing Watermelon appear. -->
 		<set name="icon" val="icon.event_honey_watermelon_seed_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1600,6 +1656,7 @@
 		</skills>
 	</item>
 	<item id="15367" name="Honey Watermelon Seed" type="EtcItem">
+		<!-- Double-click to make a Growing Honey Watermelon appear. -->
 		<set name="icon" val="icon.event_watermelon_seed_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1613,6 +1670,7 @@
 		</skills>
 	</item>
 	<item id="15368" name="Copied Watermelon Seed" type="EtcItem">
+		<!-- Double-click to make a Growing Watermelon appear. -->
 		<set name="icon" val="icon.event_honey_watermelon_seed_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1632,6 +1690,7 @@
 		</skills>
 	</item>
 	<item id="15369" name="Copied Honey Watermelon Seed" type="EtcItem">
+		<!-- Double-click to make a Growing Honey Watermelon appear. -->
 		<set name="icon" val="icon.event_watermelon_seed_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1651,6 +1710,7 @@
 		</skills>
 	</item>
 	<item id="15370" name="Special July 7th Package" type="EtcItem">
+		<!-- Special July 7th package. Contains a Special July 7th parcel. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1672,6 +1732,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15371" name="July 7th Package" type="EtcItem">
+		<!-- July 7th package. Contains a July 7th parcel. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1693,6 +1754,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15372" name="Special July 7th Parcel" type="EtcItem">
+		<!-- Special July 7th parcel. Contains 5 steamed rice cakes. Has a chance to receive a bonus expiratory item (Weaver's Colorful Dress). -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1711,6 +1773,7 @@
 		</skills>
 	</item>
 	<item id="15373" name="July 7th Parcel" type="EtcItem">
+		<!-- July 7th parcel. Contains 1 steamed rice cake. -->
 		<set name="icon" val="icon.event_july_seven_park_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1729,6 +1792,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15374" name="Special July 7th Package (Event)" type="EtcItem">
+		<!-- Special July 7th package. Contains a Special July 7th parcel. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1750,6 +1814,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15375" name="July 7th Package (Event)" type="EtcItem">
+		<!-- July 7th package. Contains a July 7th parcel. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1771,6 +1836,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15376" name="Special July 7th Parcel (Event)" type="EtcItem">
+		<!-- Special July 7th parcel. Contains 5 steamed rice cakes. Has a chance to receive a bonus expiratory item (Weaver's Colorful Dress). -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1789,6 +1855,7 @@
 		</skills>
 	</item>
 	<item id="15377" name="July 7th Parcel (Event)" type="EtcItem">
+		<!-- July 7th parcel. Contains 1 steamed rice cake. -->
 		<set name="icon" val="icon.event_july_seven_park_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1807,6 +1874,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15378" name="July 7th Gift Box" type="EtcItem">
+		<!-- July 7th gift box. Contains a Weaver's Colorful Dress. 7-day. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1828,6 +1896,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15379" name="Steamed Rice Cake" type="EtcItem">
+		<!-- Delicious steamed rice cake. Some Vitality is replenished upon use. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.event_steamed_rice_cake_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1848,6 +1917,7 @@
 		</skills>
 	</item>
 	<item id="15380" name="Steamed Rice Cake (Event)" type="EtcItem">
+		<!-- Delicious steamed rice cake. Some Vitality is replenished upon use. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.event_steamed_rice_cake_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1868,6 +1938,7 @@
 		</skills>
 	</item>
 	<item id="15381" name="Event - Herdsman's Love Scroll" additionalName="Event" type="EtcItem">
+		<!-- July 7th event. Enchant scroll exclusively for the Weaver's Colorful Dress. Increases the P. Def. and M. Def. of the Weaver's Colorful Dress. Can be safely enchanted to + 3, and the item disappears when the enchant fails. When the Weaver's Colorful Dress is enchanted above + 4, attributes, STR, CON, INT, and MEN also increases according to the enhancement value. Can only be used during the event period. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.event_altair_enchant_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -1885,6 +1956,7 @@
 		</skills>
 	</item>
 	<item id="15382" name="Event - Scroll: Enchant Vitality Belt" additionalName="Event" type="EtcItem">
+		<!-- Enchant scroll exclusively for the Vitality Belt. Increases the Vitality Belt's P. Def. and M. Def. Maintains Vitality. Vitality maintenance cooldown reduced. Can be safely enchanted to + 3, and the item disappears when the enchant fails. When the Vitality Belt is enchanted above + 4, Vitality maintenance duration increases, and the decreases Vitality maintenance cooldown. Can only be used during the event period. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.event_energy_enchant_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -1902,6 +1974,7 @@
 		</skills>
 	</item>
 	<item id="15383" name="Weaver's Colorful Dress" additionalName="7-day" type="Armor">
+		<!-- Weaver's Colorful Dress. Can be enchanted using the Herdsman's Love Scroll. -->
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1919,6 +1992,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="15384" name="Weaver's Colorful Dress" additionalName="30-day" type="Armor">
+		<!-- Weaver's Colorful Dress. Can be enchanted using the Herdsman's Love Scroll. -->
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1936,6 +2010,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15385" name="Weaver's Colorful Dress" additionalName="60-day" type="Armor">
+		<!-- Weaver's Colorful Dress. Can be enchanted using the Herdsman's Love Scroll. -->
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1953,6 +2028,7 @@
 		<set name="time" val="86400" />
 	</item>
 	<item id="15386" name="Weaver's Colorful Dress" additionalName="90-day" type="Armor">
+		<!-- Weaver's Colorful Dress. Can be enchanted using the Herdsman's Love Scroll. -->
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1970,6 +2046,7 @@
 		<set name="time" val="129600" />
 	</item>
 	<item id="15387" name="Weaver's Colorful Dress" additionalName="Permanent" type="Armor">
+		<!-- Weaver's Colorful Dress. Can be enchanted using the Herdsman's Love Scroll. -->
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1986,6 +2063,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="15388" name="Weaver's Colorful Dress (Event)" additionalName="7-day" type="Armor">
+		<!-- Weaver's Colorful Dress. Can be enchanted using the Herdsman's Love Scroll. -->
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2003,6 +2081,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="15389" name="Weaver's Colorful Dress (Event)" additionalName="30-day" type="Armor">
+		<!-- Weaver's Colorful Dress. Can be enchanted using the Herdsman's Love Scroll. -->
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2020,6 +2099,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15390" name="Weaver's Colorful Dress (Event)" additionalName="60-day" type="Armor">
+		<!-- Weaver's Colorful Dress. Can be enchanted using the Herdsman's Love Scroll. -->
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2037,6 +2117,7 @@
 		<set name="time" val="86400" />
 	</item>
 	<item id="15391" name="Weaver's Colorful Dress (Event)" additionalName="90-day" type="Armor">
+		<!-- Weaver's Colorful Dress. Can be enchanted using the Herdsman's Love Scroll. -->
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2054,6 +2135,7 @@
 		<set name="time" val="129600" />
 	</item>
 	<item id="15392" name="Weaver's Colorful Dress (Event)" additionalName="Permanent" type="Armor">
+		<!-- Weaver's Colorful Dress. Can be enchanted using the Herdsman's Love Scroll. -->
 		<set name="icon" val="icon.event_vega_rainbow_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2070,6 +2152,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="15393" name="Vitality Belt" additionalName="7-day" type="Armor">
+		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2090,6 +2173,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="15394" name="Vitality Belt" additionalName="30-day" type="Armor">
+		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2110,6 +2194,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15395" name="Vitality Belt" additionalName="60-day" type="Armor">
+		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2130,6 +2215,7 @@
 		<set name="time" val="86400" />
 	</item>
 	<item id="15396" name="Vitality Belt" additionalName="90-day" type="Armor">
+		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2150,6 +2236,7 @@
 		<set name="time" val="129600" />
 	</item>
 	<item id="15397" name="Vitality Belt" additionalName="Permanent" type="Armor">
+		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2168,6 +2255,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15398" name="Vitality Belt (Event)" additionalName="7-day" type="Armor">
+		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2188,6 +2276,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="15399" name="Vitality Belt (Event)" additionalName="30-day" type="Armor">
+		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />

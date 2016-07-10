@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="6300" name="Nephilim Shaman Posting Ticket" type="EtcItem">
+		<!-- Giran/Wizard/Mobile. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -12,6 +13,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6301" name="Nephilim Warrior Posting Ticket" type="EtcItem">
+		<!-- Oren/Sword/Mobile. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -23,6 +25,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6302" name="Nephilim Shaman Posting Ticket" type="EtcItem">
+		<!-- Oren/Wizard/Mobile. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -34,6 +37,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6303" name="Nephilim Warrior Posting Ticket" type="EtcItem">
+		<!-- Aden/Sword/Mobile. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -45,6 +49,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6304" name="Nephilim Shaman Posting Ticket" type="EtcItem">
+		<!-- Aden/Wizard/Mobile. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -56,6 +61,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6305" name="Nephilim Warrior Posting Ticket" type="EtcItem">
+		<!-- Innadril/Sword/Mobile. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -67,6 +73,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6306" name="Nephilim Shaman Posting Ticket" type="EtcItem">
+		<!-- Innadril/Wizard/Mobile. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -78,6 +85,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6307" name="Ultimate Sword" additionalName="Guidance" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 5. -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -109,6 +117,7 @@
 		</stats>
 	</item>
 	<item id="6308" name="Ultimate Sword" additionalName="Critical Drain" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Absorbs 9 HP from the target during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -140,6 +149,7 @@
 		</stats>
 	</item>
 	<item id="6309" name="Ultimate Sword" additionalName="Health" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -171,6 +181,7 @@
 		</stats>
 	</item>
 	<item id="6310" name="Sword of Whispering Death" additionalName="Empower" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. M. Atk. + 24. -->
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -202,6 +213,7 @@
 		</stats>
 	</item>
 	<item id="6311" name="Sword of Whispering Death" additionalName="M. Atk." type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases MP consumption by 15%. M. Atk. + 99 during magic use. -->
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -233,6 +245,7 @@
 		</stats>
 	</item>
 	<item id="6312" name="Sword of Whispering Death" additionalName="Magic Silence" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence on the target during magic use. -->
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -264,6 +277,7 @@
 		</stats>
 	</item>
 	<item id="6313" name="Homunkulus' Sword" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -295,6 +309,7 @@
 		</stats>
 	</item>
 	<item id="6314" name="Homunkulus' Sword" additionalName="Conversion" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -326,6 +341,7 @@
 		</stats>
 	</item>
 	<item id="6315" name="Homunkulus' Sword" additionalName="Magic Paralyze" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 5% chance of casting Paralysis on the target during magic use. -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -357,6 +373,7 @@
 		</stats>
 	</item>
 	<item id="6316" name="Wyvern Food" type="EtcItem">
+		<!-- When the hunger gauge of a wyvern drops to 55% or below, its food will be consumed automatically. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -377,6 +394,7 @@
 		</skills>
 	</item>
 	<item id="6317" name="Mixing Manual" type="EtcItem">
+		<!-- Manual received from Magic Trader Wesley, with instructions for using the material mixing urn located in the basement of the Ivory Tower. -->
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -388,6 +406,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="6318" name="Blood Fire" type="EtcItem">
+		<!-- Dark flames from Purgatory. The only way to melt true gold. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -399,6 +418,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6319" name="Mimir's Elixir" type="EtcItem">
+		<!-- Legendary elixir said to bestow ultimate wisdom. Take it to Magister Ladd. -->
 		<set name="icon" val="icon.etc_lesser_potion_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -415,6 +435,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6320" name="Pure Silver" type="EtcItem">
+		<!-- Essential ingredient of Mimir's Elixir. Take it to Magister Ladd. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -425,6 +446,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6321" name="True Gold" type="EtcItem">
+		<!-- Essential ingredient of Mimir's Elixir. Take it to Magister Ladd. -->
 		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -441,6 +463,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6322" name="Philosopher's Stone" type="EtcItem">
+		<!-- Essential ingredient of Mimir's Elixir. Take it to Magister Joan. -->
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -457,6 +480,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6323" name="Sealed Phoenix Necklace" type="Armor">
+		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. + 4 and MP+ 26. -->
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -474,6 +498,7 @@
 		</stats>
 	</item>
 	<item id="6324" name="Sealed Phoenix Earring" type="Armor">
+		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. + 3 and MP+ 20. -->
 		<set name="icon" val="icon.accessary_phoenixs_earing_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -491,6 +516,7 @@
 		</stats>
 	</item>
 	<item id="6325" name="Sealed Phoenix Ring" type="Armor">
+		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. + 2 and MP+ 13. -->
 		<set name="icon" val="icon.accessary_phoenixs_ring_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -508,6 +534,7 @@
 		</stats>
 	</item>
 	<item id="6326" name="Sealed Majestic Necklace" type="Armor">
+		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. + 5 and MP+ 33. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -525,6 +552,7 @@
 		</stats>
 	</item>
 	<item id="6327" name="Sealed Majestic Earring" type="Armor">
+		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. + 3 and MP+ 25. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -542,6 +570,7 @@
 		</stats>
 	</item>
 	<item id="6328" name="Sealed Majestic Ring" type="Armor">
+		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. + 2 and MP+ 17. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -559,6 +588,7 @@
 		</stats>
 	</item>
 	<item id="6329" name="Recipe: Sealed Phoenix Necklace(70%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Phoenix Necklace. Requires Create Item - Skill Lv. 7. The success rate is 70%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -573,6 +603,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6330" name="Recipe: Sealed Phoenix Necklace" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Phoenix Necklace. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -587,6 +618,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6331" name="Recipe: Sealed Phoenix Earring(70%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the sealed Phoenix Earring. Requires Create Item - Skill Lv. 7. The success rate is 70%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -601,6 +633,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6332" name="Recipe: Sealed Phoenix Earring" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the sealed Phoenix Earring. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -615,6 +648,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6333" name="Recipe: Sealed Phoenix Ring(70%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Phoenix Ring. Requires Create Item - Skill Lv. 7. The success rate is 70%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -629,6 +663,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6334" name="Recipe: Sealed Phoenix Ring" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Phoenix Ring. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -643,6 +678,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6335" name="Recipe: Sealed Majestic Necklace(70%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Majestic Necklace. Requires Create Item - Skill Lv. 8. The success rate is 70%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -657,6 +693,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6336" name="Recipe: Sealed Majestic Necklace" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Majestic Necklace. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -671,6 +708,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6337" name="Recipe: Sealed Majestic Earring(70%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Majestic Earring. Requires Create Item - Skill Lv. 8. The success rate is 70%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -685,6 +723,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6338" name="Recipe: Sealed Majestic Earring" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Majestic Earring. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -699,6 +738,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6339" name="Recipe: Sealed Majestic Ring(70%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Majestic Ring. Requires Create Item - Skill Lv. 8. The success rate is 70%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -713,6 +753,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6340" name="Recipe: Sealed Majestic Ring" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Majestic Ring. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -727,6 +768,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6341" name="Sealed Phoenix Earring Gemstone" type="EtcItem">
+		<!-- Essential ingredient needed by a Dwarf to make a Sealed Phoenix Earring. It can be sold at any store. -->
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -738,6 +780,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6342" name="Sealed Majestic Earring Gemstone" type="EtcItem">
+		<!-- Essential ingredient needed by a Dwarf to make a Sealed Majestic Earring. It can be sold at any store. -->
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -749,6 +792,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6343" name="Sealed Phoenix Necklace Beads" type="EtcItem">
+		<!-- Essential ingredient needed by a Dwarf to make a Sealed Phoenix Necklace. It can be sold at any store. -->
 		<set name="icon" val="BranchSys2.icon.etc_sealed_phoenixbeads_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -760,6 +804,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6344" name="Sealed Majestic Necklace Beads" type="EtcItem">
+		<!-- Essential ingredient needed by a Dwarf to make a Sealed Majestic Necklace. It can be sold at any store. -->
 		<set name="icon" val="BranchSys2.icon.etc_sealed_majesticbeads_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -771,6 +816,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6345" name="Sealed Phoenix Ring Gemstone" type="EtcItem">
+		<!-- Essential ingredient needed by a Dwarf to make a Sealed Phoenix Ring. It can be sold at any store. -->
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -782,6 +828,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6346" name="Sealed Majestic Ring Gemstone" type="EtcItem">
+		<!-- Essential ingredient needed by a Dwarf to make a Sealed Majestic Ring. It can be sold at any store. -->
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -793,6 +840,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6347" name="Berserker Blade" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 73. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -824,6 +872,7 @@
 		</stats>
 	</item>
 	<item id="6348" name="Berserker Blade" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 270 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -855,6 +904,7 @@
 		</stats>
 	</item>
 	<item id="6349" name="Berserker Blade" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -886,6 +936,7 @@
 		</stats>
 	</item>
 	<item id="6350" name="Amulet: Pa'agrio's Honor" type="EtcItem">
+		<!-- Amulet required for the Pa'agrio's Honor spell. Used by Overlords. Required level: 66 -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -896,6 +947,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6351" name="Amulet: Ritual of Life" type="EtcItem">
+		<!-- Amulet required for the Ritual of Life spell. Used by Overlords. Required level: 64 -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -906,6 +958,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6352" name="Spellbook: Prayer" type="EtcItem">
+		<!-- Spellbook needed to learn Prayer. Used by Bishops. Required level: 66 -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -916,6 +969,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6353" name="Blue Gemstone" type="EtcItem">
+		<!-- Gemstone obtained from gremlins. Take it to a Newbie Helper. -->
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -988,6 +1042,7 @@
 		</stats>
 	</item>
 	<item id="6356" name="Dark Elven Dagger" additionalName="Rsk. Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 13% when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_darkelven_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1019,6 +1074,7 @@
 		</stats>
 	</item>
 	<item id="6357" name="Stiletto" additionalName="Rsk. Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 12% when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_stiletto_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1050,6 +1106,7 @@
 		</stats>
 	</item>
 	<item id="6358" name="Crystal Dagger" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 140 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1081,6 +1138,7 @@
 		</stats>
 	</item>
 	<item id="6359" name="Demon's Dagger" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 160 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_demons_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1112,6 +1170,7 @@
 		</stats>
 	</item>
 	<item id="6360" name="Blue Seal Stone" type="EtcItem">
+		<!-- Fragment of an ancient seal. Collect them all. Valued at 3 Ancient Adena. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -1121,6 +1180,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6361" name="Green Seal Stone" type="EtcItem">
+		<!-- Fragment of an ancient seal. Collect them all to break the seal. Valued at 5 Ancient Adena. -->
 		<set name="icon" val="icon.etc_wind_rune_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -1130,6 +1190,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6362" name="Red Seal Stone" type="EtcItem">
+		<!-- Fragment of an ancient seal. Collect them all to break the seal. Valued at 10 Ancient Adena. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -1139,6 +1200,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6363" name="Stolen Infernium Ore" type="EtcItem">
+		<!-- Infernium ore once owned by the Iron Gate Guild. Take it to Warehouse Keeper Romp of Town of Aden to play bingo. -->
 		<set name="icon" val="icon.etc_inf_ore_high_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1149,6 +1211,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6364" name="Forgotten Blade" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1178,6 +1241,7 @@
 		</stats>
 	</item>
 	<item id="6365" name="Basalt Battlehammer" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1207,6 +1271,7 @@
 		</stats>
 	</item>
 	<item id="6366" name="Imperial Staff" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1237,6 +1302,7 @@
 		</stats>
 	</item>
 	<item id="6367" name="Angel Slayer" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1297,6 +1363,7 @@
 		</stats>
 	</item>
 	<item id="6369" name="Dragon Hunter Axe" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1326,6 +1393,7 @@
 		</stats>
 	</item>
 	<item id="6370" name="Saint Spear" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_saint_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1358,6 +1426,7 @@
 		</stats>
 	</item>
 	<item id="6371" name="Demon Splinter" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1387,6 +1456,7 @@
 		</stats>
 	</item>
 	<item id="6372" name="Heaven's Divider" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1551,6 +1621,7 @@
 		</stats>
 	</item>
 	<item id="6379" name="Draconic Leather Armor" type="Armor">
+		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t89_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1627,6 +1698,7 @@
 		</stats>
 	</item>
 	<item id="6383" name="Major Arcana Robe" type="Armor">
+		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t90_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1716,6 +1788,7 @@
 		</stats>
 	</item>
 	<item id="6387" name="Blessed Scroll of Resurrection (Pet)" type="EtcItem">
+		<!-- Magic scroll that resurrects a dead pet and restores its XP completely. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_pet_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1732,6 +1805,7 @@
 		</skills>
 	</item>
 	<item id="6388" name="Lord's Certificate of Approval" type="EtcItem">
+		<!-- This certificate allows the bearer to join the Lords of Dawn without belonging to a castle-owning clan. -->
 		<set name="icon" val="icon.etc_permit_card_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1740,6 +1814,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6389" name="Squash Seed" type="EtcItem">
+		<!-- Double-click to make a Young Squash appear. -->
 		<set name="icon" val="icon.etc_gourd_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1753,6 +1828,7 @@
 		</skills>
 	</item>
 	<item id="6390" name="Large Squash Seed" type="EtcItem">
+		<!-- Double-click to make a Large Young Squash appear. -->
 		<set name="icon" val="icon.etc_gourd_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1766,6 +1842,7 @@
 		</skills>
 	</item>
 	<item id="6391" name="Nectar" type="EtcItem">
+		<!-- Used to exchange with Puss the Cat for squash seeds or for growing squashes. -->
 		<set name="icon" val="icon.etc_nectar_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1779,6 +1856,7 @@
 		</skills>
 	</item>
 	<item id="6392" name="Event - Medal" type="EtcItem">
+		<!-- L2 Medal Collection Event - If you take it to an Event Manager, he will trade it for a prize item of your choice. -->
 		<set name="icon" val="icon.etc_event_medal_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_freightable" val="false" />
@@ -1786,6 +1864,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6393" name="Event - Glittering Medal" type="EtcItem">
+		<!-- L2 Medal Collection Event - Used to raise the grade of a collector during the event. -->
 		<set name="icon" val="icon.etc_event_glitter_medal_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_freightable" val="false" />
@@ -1793,6 +1872,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6394" name="Red Party Mask" type="Armor">
+		<!-- Fashion accessory item that allows you to show a unique appearance. -->
 		<set name="icon" val="icon.etc_party_mask_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1805,6 +1885,7 @@
 		<set name="price" val="500000" />
 	</item>
 	<item id="6395" name="Amulet: Chant of Predator" type="EtcItem">
+		<!-- Amulet required for the Chant of Predator spell. Used by Warcryers. Required level: 48 -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1815,6 +1896,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6396" name="Amulet: Chant of Eagle" type="EtcItem">
+		<!-- Amulet needed to learn the Chant of Eagle incantation. Used by Warcryers. Required level: 48 -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1825,6 +1907,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6397" name="Amulet: Chant of Vampire" type="EtcItem">
+		<!-- Amulet required for the Chant of Vampire spell. Used by Warcryers. Required level: 44 -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1835,6 +1918,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6398" name="Spellbook: Body of Avatar" type="EtcItem">
+		<!-- Spellbook needed to learn Body of Avatar. Used by Bishops. Required level: 48 -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1845,6 +1929,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6399" name="Rabbit Crest" type="EtcItem">
+		<!-- The crest that indicates that its bearer's event collector is "rabbit." Without this badge, one cannot prove one's grade. -->
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />

@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="16300" name="Moirai Gloves" type="Armor">
+		<!-- Masterwork Item that increases M. Atk., Paralysis Resistance, and Wind Resistance. -->
 		<set name="icon" val="icon.armor_t102_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -26,6 +27,7 @@
 		</stats>
 	</item>
 	<item id="16301" name="Moirai Boots" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd., Stun Resistance, and Earth Resistance. -->
 		<set name="icon" val="icon.armor_t100_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -51,6 +53,7 @@
 		</stats>
 	</item>
 	<item id="16302" name="Moirai Leather Boots" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., MP Recovery Bonus, Hold Resistance, and Earth Resistance. -->
 		<set name="icon" val="icon.armor_t101_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -73,6 +76,7 @@
 		</stats>
 	</item>
 	<item id="16303" name="Moirai Shoes" type="Armor">
+		<!-- Masterwork Item that increases M. Atk., Paralysis Resistance, and Earth Resistance. -->
 		<set name="icon" val="icon.armor_t102_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -98,6 +102,7 @@
 		</stats>
 	</item>
 	<item id="16304" name="Moirai Shield" type="Armor">
+		<!-- Masterwork Item that increases Magic Damage Resistance. -->
 		<set name="icon" val="icon.weapon_tysandy_shield_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -125,6 +130,7 @@
 		</stats>
 	</item>
 	<item id="16305" name="Moirai Sigil" type="Armor">
+		<!-- Masterwork Item that increases Magic Damage Resistance. -->
 		<set name="icon" val="icon.weapon_tysandy_sigil_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
@@ -152,6 +158,7 @@
 		</stats>
 	</item>
 	<item id="16306" name="Vesper Helmet" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., P. Def., Max HP, Sleep Resistance, and Hold Resistance. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -176,6 +183,7 @@
 		</stats>
 	</item>
 	<item id="16307" name="Vesper Leather Helmet" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd., MP Regeneration, and Max MP. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -197,6 +205,7 @@
 		</stats>
 	</item>
 	<item id="16308" name="Vesper Circlet" type="Armor">
+		<!-- Masterwork Item that increases M. Atk., MP Regeneration, and Stun Resistance, and decreases Magic Cancel Rate. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -221,6 +230,7 @@
 		</stats>
 	</item>
 	<item id="16309" name="Vesper Breastplate" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., P. Def., Max HP, and Hold Resistance. -->
 		<set name="icon" val="icon.armor_t94_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -247,6 +257,7 @@
 		</stats>
 	</item>
 	<item id="16310" name="Vesper Leather Breastplate" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd., MP Regeneration, and Max MP. -->
 		<set name="icon" val="icon.armor_t95_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -270,6 +281,7 @@
 		</stats>
 	</item>
 	<item id="16311" name="Vesper Tunic" type="Armor">
+		<!-- Masterwork Item that increases M. Atk., Casting Spd., MP Regeneration, and Stun Resistance, and decreases Magic Cancel Rate. -->
 		<set name="icon" val="icon.armor_t96_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -297,6 +309,7 @@
 		</stats>
 	</item>
 	<item id="16312" name="Vesper Gaiters" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., P. Def., Max HP, Sleep Resistance, and Hold Resistance. -->
 		<set name="icon" val="icon.armor_t94_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -323,6 +336,7 @@
 		</stats>
 	</item>
 	<item id="16313" name="Vesper Leather Leggings" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd., MP Regeneration, and Max MP. -->
 		<set name="icon" val="icon.armor_t95_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -346,6 +360,7 @@
 		</stats>
 	</item>
 	<item id="16314" name="Vesper Stockings" type="Armor">
+		<!-- Masterwork Item that increases M. Atk., MP Regeneration, and Stun Resistance, and decreases Magic Cancel Rate. -->
 		<set name="icon" val="icon.armor_t96_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -373,6 +388,7 @@
 		</stats>
 	</item>
 	<item id="16315" name="Vesper Gauntlets" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., P. Def., Max HP, Sleep Resistance, and Hold Resistance. -->
 		<set name="icon" val="icon.armor_t94_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -398,6 +414,7 @@
 		</stats>
 	</item>
 	<item id="16316" name="Vesper Leather Gloves" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd., MP Regeneration, and Max MP. -->
 		<set name="icon" val="icon.armor_t95_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -420,6 +437,7 @@
 		</stats>
 	</item>
 	<item id="16317" name="Vesper Gloves" type="Armor">
+		<!-- Masterwork Item that increases M. Atk., MP Regeneration, and Stun Resistance, and decreases Magic Cancel Rate. -->
 		<set name="icon" val="icon.armor_t96_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -445,6 +463,7 @@
 		</stats>
 	</item>
 	<item id="16318" name="Vesper Boots" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., P. Def., Max HP, Sleep Resistance, and Hold Resistance. -->
 		<set name="icon" val="icon.armor_t94_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -470,6 +489,7 @@
 		</stats>
 	</item>
 	<item id="16319" name="Vesper Leather Boots" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd., MP Regeneration, and Max MP. -->
 		<set name="icon" val="icon.armor_t95_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -492,6 +512,7 @@
 		</stats>
 	</item>
 	<item id="16320" name="Vesper Shoes" type="Armor">
+		<!-- Masterwork Item that increases M. Atk., MP Regeneration, and Stun Resistance, and decreases Magic Cancel Rate. -->
 		<set name="icon" val="icon.armor_t96_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -517,6 +538,7 @@
 		</stats>
 	</item>
 	<item id="16321" name="Vesper Shield" type="Armor">
+		<!-- Masterwork Item that increases Magic Damage Resistance. -->
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -544,6 +566,7 @@
 		</stats>
 	</item>
 	<item id="16322" name="Vesper Sigil" type="Armor">
+		<!-- Masterwork Item that increases Magic Damage Resistance. -->
 		<set name="icon" val="icon.verper_sigil_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
@@ -571,6 +594,7 @@
 		</stats>
 	</item>
 	<item id="16323" name="Sealed Moirai Helmet" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -592,6 +616,7 @@
 		</stats>
 	</item>
 	<item id="16324" name="Sealed Moirai Leather Helmet" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -610,6 +635,7 @@
 		</stats>
 	</item>
 	<item id="16325" name="Sealed Moirai Circlet" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -631,6 +657,7 @@
 		</stats>
 	</item>
 	<item id="16326" name="Sealed Moirai Breastplate" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -654,6 +681,7 @@
 		</stats>
 	</item>
 	<item id="16327" name="Sealed Moirai Leather Breastplate" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -674,6 +702,7 @@
 		</stats>
 	</item>
 	<item id="16328" name="Sealed Moirai Tunic" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -698,6 +727,7 @@
 		</stats>
 	</item>
 	<item id="16329" name="Sealed Moirai Gaiters" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -721,6 +751,7 @@
 		</stats>
 	</item>
 	<item id="16330" name="Sealed Moirai Leather Leggings" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -741,6 +772,7 @@
 		</stats>
 	</item>
 	<item id="16331" name="Sealed Moirai Stockings" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -765,6 +797,7 @@
 		</stats>
 	</item>
 	<item id="16332" name="Sealed Moirai Gauntlets" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -787,6 +820,7 @@
 		</stats>
 	</item>
 	<item id="16333" name="Sealed Moirai Leather Gloves" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -806,6 +840,7 @@
 		</stats>
 	</item>
 	<item id="16334" name="Sealed Moirai Gloves" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -828,6 +863,7 @@
 		</stats>
 	</item>
 	<item id="16335" name="Sealed Moirai Boots" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -850,6 +886,7 @@
 		</stats>
 	</item>
 	<item id="16336" name="Sealed Moirai Leather Boots" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -869,6 +906,7 @@
 		</stats>
 	</item>
 	<item id="16337" name="Sealed Moirai Shoes" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -891,6 +929,7 @@
 		</stats>
 	</item>
 	<item id="16338" name="Sealed Moirai Shield" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.weapon_tysandy_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -915,6 +954,7 @@
 		</stats>
 	</item>
 	<item id="16339" name="Sealed Moirai Sigil" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.weapon_tysandy_sigil_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
@@ -939,6 +979,7 @@
 		</stats>
 	</item>
 	<item id="16340" name="Sealed Vesper Helmet" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -960,6 +1001,7 @@
 		</stats>
 	</item>
 	<item id="16341" name="Sealed Vesper Leather Helmet" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -978,6 +1020,7 @@
 		</stats>
 	</item>
 	<item id="16342" name="Sealed Vesper Circlet" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -999,6 +1042,7 @@
 		</stats>
 	</item>
 	<item id="16343" name="Sealed Vesper Breastplate" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1022,6 +1066,7 @@
 		</stats>
 	</item>
 	<item id="16344" name="Sealed Vesper Leather Breastplate" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1042,6 +1087,7 @@
 		</stats>
 	</item>
 	<item id="16345" name="Sealed Vesper Tunic" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1066,6 +1112,7 @@
 		</stats>
 	</item>
 	<item id="16346" name="Sealed Vesper Gaiters" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1089,6 +1136,7 @@
 		</stats>
 	</item>
 	<item id="16347" name="Sealed Vesper Leather Leggings" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1109,6 +1157,7 @@
 		</stats>
 	</item>
 	<item id="16348" name="Sealed Vesper Stockings" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1133,6 +1182,7 @@
 		</stats>
 	</item>
 	<item id="16349" name="Sealed Vesper Gauntlets" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1155,6 +1205,7 @@
 		</stats>
 	</item>
 	<item id="16350" name="Sealed Vesper Leather Gloves" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1174,6 +1225,7 @@
 		</stats>
 	</item>
 	<item id="16351" name="Sealed Vesper Gloves" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1196,6 +1248,7 @@
 		</stats>
 	</item>
 	<item id="16352" name="Sealed Vesper Boots" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1218,6 +1271,7 @@
 		</stats>
 	</item>
 	<item id="16353" name="Sealed Vesper Leather Boots" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1237,6 +1291,7 @@
 		</stats>
 	</item>
 	<item id="16354" name="Sealed Vesper Shoes" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1259,6 +1314,7 @@
 		</stats>
 	</item>
 	<item id="16355" name="Sealed Vesper Shield" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1283,6 +1339,7 @@
 		</stats>
 	</item>
 	<item id="16356" name="Sealed Vesper Sigil" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_verper_sigil_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
@@ -1307,6 +1364,7 @@
 		</stats>
 	</item>
 	<item id="16357" name="Sealed Foundation Vesper Ring" type="EtcItem">
+		<!-- Rare Sealed Vesper Ring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.vesper_ring_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -1320,6 +1378,7 @@
 		</stats>
 	</item>
 	<item id="16358" name="Sealed Foundation Vesper Earring" type="EtcItem">
+		<!-- Rare Sealed Vesper Earring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.vesper_earring_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
@@ -1333,6 +1392,7 @@
 		</stats>
 	</item>
 	<item id="16359" name="Sealed Foundation Vesper Necklace" type="EtcItem">
+		<!-- Rare Sealed Vesper Necklace that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.vesper_necklace_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
@@ -1346,6 +1406,7 @@
 		</stats>
 	</item>
 	<item id="16360" name="Sealed Foundation Moirai Ring" type="EtcItem">
+		<!-- Rare Sealed Moirai Ring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.accessary_sealed_bluelycan_ring_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -1359,6 +1420,7 @@
 		</stats>
 	</item>
 	<item id="16361" name="Sealed Foundation Moirai Earring" type="EtcItem">
+		<!-- Rare Sealed Moirai Earring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.accessary_sealed_bluelycan_earring_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
@@ -1372,6 +1434,7 @@
 		</stats>
 	</item>
 	<item id="16362" name="Sealed Foundation Moirai Necklace" type="EtcItem">
+		<!-- Rare Sealed Moirai Necklace that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.accessary_sealed_bluelycan_necklace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
@@ -1385,6 +1448,7 @@
 		</stats>
 	</item>
 	<item id="16363" name="Foundation Vesper Ring" type="EtcItem">
+		<!-- Rare Sealed Vesper Ring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.vesper_ring_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -1399,6 +1463,7 @@
 		</stats>
 	</item>
 	<item id="16364" name="Foundation Vesper Earring" type="EtcItem">
+		<!-- Rare Sealed Vesper Earring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.vesper_earring_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
@@ -1413,6 +1478,7 @@
 		</stats>
 	</item>
 	<item id="16365" name="Foundation Vesper Necklace" type="EtcItem">
+		<!-- Rare Sealed Vesper Necklace that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.vesper_necklace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
@@ -1427,6 +1493,7 @@
 		</stats>
 	</item>
 	<item id="16366" name="Foundation Moirai Ring" type="EtcItem">
+		<!-- Rare Sealed Moirai Ring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.accessary_bluelycan_ring_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -1441,6 +1508,7 @@
 		</stats>
 	</item>
 	<item id="16367" name="Foundation Moirai Earring" type="EtcItem">
+		<!-- Rare Sealed Moirai Earring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.accessary_bluelycan_earring_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
@@ -1455,6 +1523,7 @@
 		</stats>
 	</item>
 	<item id="16368" name="Foundation Moirai Necklace" type="EtcItem">
+		<!-- Rare Sealed Moirai Necklace that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.accessary_bluelycan_necklace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
@@ -1469,6 +1538,7 @@
 		</stats>
 	</item>
 	<item id="16369" name="Sealed Vesper Ring" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is broken, Stun Resistance is increased. -->
 		<set name="icon" val="icon.vesper_ring_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1486,6 +1556,7 @@
 		</stats>
 	</item>
 	<item id="16370" name="Sealed Vesper Earring" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is broken, MP + 37, and Sleep/Hold Resistance are increased. -->
 		<set name="icon" val="icon.vesper_earring_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1503,6 +1574,7 @@
 		</stats>
 	</item>
 	<item id="16371" name="Sealed Vesper Necklace" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is broken, MP + 50 and Max MP + 33. -->
 		<set name="icon" val="icon.vesper_necklace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1520,6 +1592,7 @@
 		</stats>
 	</item>
 	<item id="16372" name="Sealed Moirai Ring" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is broken, MP increases 24 and Max MP + 16. -->
 		<set name="icon" val="icon.accessary_sealed_bluelycan_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1537,6 +1610,7 @@
 		</stats>
 	</item>
 	<item id="16373" name="Sealed Moirai Earring" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is broken, MP + 36 and Bleed Resistance is increased. -->
 		<set name="icon" val="icon.accessary_sealed_bluelycan_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1554,6 +1628,7 @@
 		</stats>
 	</item>
 	<item id="16374" name="Sealed Moirai Necklace" type="Armor">
+		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is broken, MP + 48 and Poison Resistance is increased. -->
 		<set name="icon" val="icon.accessary_sealed_bluelycan_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1571,6 +1646,7 @@
 		</stats>
 	</item>
 	<item id="16375" name="Vesper Ring" type="Armor">
+		<!-- Masterwork Item that increases MP + 25 and Stun Resistance. -->
 		<set name="icon" val="icon.vesper_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1592,6 +1668,7 @@
 		</stats>
 	</item>
 	<item id="16376" name="Vesper Earring" type="Armor">
+		<!-- Masterwork Item that increases MP + 37, Sleep Resistance, and Hold Resistance. -->
 		<set name="icon" val="icon.vesper_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1613,6 +1690,7 @@
 		</stats>
 	</item>
 	<item id="16377" name="Vesper Necklace" type="Armor">
+		<!-- Masterwork Item that increases MP + 50 and Max MP + 33. -->
 		<set name="icon" val="icon.vesper_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1634,6 +1712,7 @@
 		</stats>
 	</item>
 	<item id="16378" name="Moirai Ring" type="Armor">
+		<!-- Masterwork Item that increases MP + 24 and Max MP + 16. -->
 		<set name="icon" val="icon.accessary_bluelycan_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1655,6 +1734,7 @@
 		</stats>
 	</item>
 	<item id="16379" name="Moirai Earring" type="Armor">
+		<!-- Masterwork Item that increases MP + 36 and Bleed Resistance. -->
 		<set name="icon" val="icon.accessary_bluelycan_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1676,6 +1756,7 @@
 		</stats>
 	</item>
 	<item id="16380" name="Moirai Necklace" type="Armor">
+		<!-- Masterwork Item that increases MP + 48 and Poison Resistance. -->
 		<set name="icon" val="icon.accessary_bluelycan_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1697,6 +1778,7 @@
 		</stats>
 	</item>
 	<item id="16381" name="Training Order Paper" type="EtcItem">
+		<!-- The Sel Mahum Training Officer's Training Order Papers. Take it back to Guard Stan of Oren Village. -->
 		<set name="icon" val="icon.roll_of_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1713,6 +1795,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="16382" name="Sel Mahum Shoes String" type="EtcItem">
+		<!-- Clumsy Sel Mahum's shoelace. Take it back to Guard Stan of Oren Village. -->
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1729,6 +1812,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="16383" name="Holiday Cake Pack" type="EtcItem">
+		<!-- Holiday Cake Pack. Contains a Holiday Cake box. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1749,6 +1833,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16384" name="Special Holiday Cake Pack" type="EtcItem">
+		<!-- Special Holiday Cake Pack. Contains a Special Christmas box. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1769,6 +1854,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16385" name="Teddy Boy Gift Box Pack" type="EtcItem">
+		<!-- Teddy Boy Wrapped Pack. Contains a Teddy Boy Wrapped Pack. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1790,6 +1876,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16386" name="Teddy Girl Gift Box Pack" type="EtcItem">
+		<!-- Teddy Girl Wrapped Pack. Contains a Teddy Girl Wrapped Pack. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1811,6 +1898,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16387" name="Holiday Cake Pack (Event)" type="EtcItem">
+		<!-- Holiday Cake Pack. Contains a Holiday Cake box. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1831,6 +1919,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16388" name="Special Holiday Cake Pack (Event)" type="EtcItem">
+		<!-- Special Holiday Cake Pack. Contains a Special Christmas box. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1851,6 +1940,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16389" name="Teddy Boy Gift Box Pack (Event)" type="EtcItem">
+		<!-- Teddy Boy Wrapped Pack. Contains a Teddy Boy Wrapped Pack. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1872,6 +1962,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16390" name="Teddy Girl Gift Box Pack (Event)" type="EtcItem">
+		<!-- Teddy Girl Wrapped Pack. Contains a Teddy Girl Wrapped Pack. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1893,6 +1984,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16391" name="Holiday Cake Box" type="EtcItem">
+		<!-- Holiday Cake Box. Contains 1 Holiday Cake and 1 White Winter Wish Candle. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1911,6 +2003,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16392" name="Special Holiday Cake Box" type="EtcItem">
+		<!-- Special Holiday Cake Box. Contains 5 Holiday Cake boxes and 1 Santa's Stockings (bonus). -->
 		<set name="icon" val="icon.four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1929,6 +2022,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16393" name="Holiday Cake Box (Event)" type="EtcItem">
+		<!-- Holiday Cake Box. Contains 1 Holiday Cake and 1 White Winter Wish Candle. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1947,6 +2041,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16394" name="Special Holiday Cake Box (Event)" type="EtcItem">
+		<!-- Special Holiday Cake Box. Contains 5 Holiday Cake boxes and 1 Santa's Stockings (bonus). -->
 		<set name="icon" val="icon.four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1965,6 +2060,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16395" name="Teddy Boy Gift Box" type="EtcItem">
+		<!-- Teddy Boy Wrapped Pack. Contains 1 Teddy Boy Summon Bracelet and 3 White Winter Wish Candles. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1984,6 +2080,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16396" name="Teddy Girl Gift Box" type="EtcItem">
+		<!-- Teddy Girl Wrapped Pack. Contains 1 Teddy Girl Summon Bracelet and 3 White Winter Wish Candles. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2003,6 +2100,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16397" name="Teddy Boy Gift Box (Event)" type="EtcItem">
+		<!-- Teddy Boy Wrapped Pack. Contains 1 Teddy Boy Summon Bracelet and 3 White Winter Wish Candles. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2022,6 +2120,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16398" name="Teddy Girl Gift Box (Event)" type="EtcItem">
+		<!-- Teddy Girl Wrapped Pack. Contains 1 Teddy Girl Summon Bracelet and 3 White Winter Wish Candles. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2041,6 +2140,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16399" name="Teddy Boy Summon Bracelet" additionalName="Permanent" type="Armor">
+		<!-- Teddy Boy Summon Bracelet. Can summon an Agathion - Teddy Boy. Increases the Weight Limit by 3000 when equipped. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />

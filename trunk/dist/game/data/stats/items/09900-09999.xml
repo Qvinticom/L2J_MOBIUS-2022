@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="9900" name="Stealth Ring" type="Armor">
+		<!-- You can avoid the first attack by monsters when equipped. Lasts for 400 min. Shadow item. Effect does not stack with additional rings. -->
 		<set name="icon" val="icon.accessary_ring_of_mana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -26,6 +27,7 @@
 		</stats>
 	</item>
 	<item id="9901" name="Enhanced Falchion" type="Weapon">
+		<!-- Transformed Falchion which is stronger and brighter. -->
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -50,6 +52,7 @@
 		</stats>
 	</item>
 	<item id="9902" name="Enhanced Great Spear" type="Weapon">
+		<!-- Transformed Great Spear which is stronger and brighter. -->
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -78,6 +81,7 @@
 		</stats>
 	</item>
 	<item id="9903" name="Enhanced Iron Hammer" type="Weapon">
+		<!-- Transformed Iron Hammer which is stronger and brighter. -->
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -103,6 +107,7 @@
 		</stats>
 	</item>
 	<item id="9904" name="Enhanced Sword Breaker" type="Weapon">
+		<!-- Transformed Sword Breaker which is stronger and brighter. -->
 		<set name="icon" val="icon.weapon_sword_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -128,6 +133,7 @@
 		</stats>
 	</item>
 	<item id="9905" name="Enhanced Viper Fang" type="Weapon">
+		<!-- Transformed Viper Fang which is stronger and brighter. -->
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -153,6 +159,7 @@
 		</stats>
 	</item>
 	<item id="9906" name="Enhanced Compound Bow" type="Weapon">
+		<!-- Transformed Compound Bow which is stronger and brighter. -->
 		<set name="icon" val="icon.weapon_composition_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -180,6 +187,7 @@
 		</stats>
 	</item>
 	<item id="9907" name="Enhanced Flanged Mace" type="Weapon">
+		<!-- Transformed Flanged Mace which is stronger and brighter. -->
 		<set name="icon" val="icon.weapon_buzdygan_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -205,6 +213,7 @@
 		</stats>
 	</item>
 	<item id="9908" name="Enhanced Mage Staff" type="Weapon">
+		<!-- Transformed Mage Staff which is stronger and brighter. -->
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -231,6 +240,7 @@
 		</stats>
 	</item>
 	<item id="9909" name="Agathion Bracelet" type="Armor">
+		<!-- Bracelet that summons a cute Fortress Agathion. Shadow item. Lasts for 700 min. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -255,6 +265,7 @@
 		</skills>
 	</item>
 	<item id="9910" name="Blood Oath" type="EtcItem">
+		<!-- Item needed for a clan leader to raise the clan up to level 9. It can also be used to strengthen subordinate forces. Cannot be traded, dropped or sold. -->
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -269,6 +280,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9911" name="Blood Alliance" type="EtcItem">
+		<!-- Item needed for a clan leader to raise the clan up to level 10. It can also be used to strengthen subordinate forces. Cannot be traded, dropped or sold. -->
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -283,6 +295,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9912" name="Knight's Epaulette" type="EtcItem">
+		<!-- Mark obtained after defeating enemies. It can be used to purchase special items after Fortress battles. -->
 		<set name="icon" val="icon.etc_shoulder_strap_of_knight_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -310,6 +323,7 @@
 		<set name="duration" val="60" />
 	</item>
 	<item id="9914" name="Blue Talisman - P. Atk." type="Armor">
+		<!-- Increases P. Atk. when in use. Effect does not stack with additional Talismans of the same type. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -332,6 +346,7 @@
 		</skills>
 	</item>
 	<item id="9915" name="Blue Talisman - M. Critical Rate" type="Armor">
+		<!-- Increases P. Critical Rate of magic attacks temporarily. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -354,6 +369,7 @@
 		</skills>
 	</item>
 	<item id="9916" name="Blue Talisman - Berserker" type="Armor">
+		<!-- Temporarily decreases P. Def./M. Def./Evasion. Increases P. Atk./M. Atk./Atk. Spd./Casting Spd./speed. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -376,6 +392,7 @@
 		</skills>
 	</item>
 	<item id="9917" name="Red Talisman - Minimum Clarity" type="Armor">
+		<!-- Decreases skill MP consumption when used. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -398,6 +415,7 @@
 		</skills>
 	</item>
 	<item id="9918" name="Red Talisman - Maximum Clarity" type="Armor">
+		<!-- Temporarily greatly decreases skill MP consumption when used. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -420,6 +438,7 @@
 		</skills>
 	</item>
 	<item id="9919" name="Blue Talisman - Damage Reflect" type="Armor">
+		<!-- When used, grants a skill whereby any physical melee damage received will be reflected back onto your attacker. Effect does not stack with additional talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -442,6 +461,7 @@
 		</skills>
 	</item>
 	<item id="9920" name="Blue Talisman - Invisibility" type="Armor">
+		<!-- Makes you invisible for a while, so you cannot be attacked by enemies. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -464,6 +484,7 @@
 		</skills>
 	</item>
 	<item id="9921" name="Blue Talisman - Shield Defense" type="Armor">
+		<!-- When used, increases the protection power of a shield. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -486,6 +507,7 @@
 		</skills>
 	</item>
 	<item id="9922" name="Black Talisman - Mending" type="Armor">
+		<!-- When used, it cures Bleeding. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -508,6 +530,7 @@
 		</skills>
 	</item>
 	<item id="9923" name="Black Talisman - Escape" type="Armor">
+		<!-- When used, it cancels all Movement Inability States. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -530,6 +553,7 @@
 		</skills>
 	</item>
 	<item id="9924" name="Blue Talisman - Healing" type="Armor">
+		<!-- It increases HP Recovery Magic temporarily. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -552,6 +576,7 @@
 		</skills>
 	</item>
 	<item id="9925" name="Red Talisman - HP/CP Recovery" type="Armor">
+		<!-- It recovers HP/CP. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -574,6 +599,7 @@
 		</skills>
 	</item>
 	<item id="9926" name="Blue Talisman - P. Def." type="Armor">
+		<!-- When used, increases P. Def. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -596,6 +622,7 @@
 		</skills>
 	</item>
 	<item id="9927" name="Blue Talisman - M. Def." type="Armor">
+		<!-- When used, increases magic P. Def. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -618,6 +645,7 @@
 		</skills>
 	</item>
 	<item id="9928" name="Red Talisman - Mental Regeneration" type="Armor">
+		<!-- When used, it Speeds up MP Recovery. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -640,6 +668,7 @@
 		</skills>
 	</item>
 	<item id="9929" name="Blue Talisman - Shield Defense" type="Armor">
+		<!-- When used, increases the protection power of a shield. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -662,6 +691,7 @@
 		</skills>
 	</item>
 	<item id="9930" name="Blue Talisman - Evasion" type="Armor">
+		<!-- When used, increases Evasion and reduces P. Critical Damage possibilities. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -684,6 +714,7 @@
 		</skills>
 	</item>
 	<item id="9931" name="Red Talisman - Meditation" type="Armor">
+		<!-- When used, it greatly increases MP Recovery Rate. You cannot move during recovery. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -706,6 +737,7 @@
 		</skills>
 	</item>
 	<item id="9932" name="Blue Talisman - Divine Protection" type="Armor">
+		<!-- When used, P. Def. and M. Def. greatly increases momentarily. Only one effect is applied when you wear the same two talismans. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -728,6 +760,7 @@
 		</skills>
 	</item>
 	<item id="9933" name="Yellow Talisman - P. Atk." type="Armor">
+		<!-- Increases P. Atk. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -749,6 +782,7 @@
 		</skills>
 	</item>
 	<item id="9934" name="Yellow Talisman - Atk. Spd." type="Armor">
+		<!-- Increases Atk. Spd. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -770,6 +804,7 @@
 		</skills>
 	</item>
 	<item id="9935" name="Yellow Talisman - M. Def." type="Armor">
+		<!-- Increases M. Def. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -791,6 +826,7 @@
 		</skills>
 	</item>
 	<item id="9936" name="Yellow Talisman - M. Atk." type="Armor">
+		<!-- Increases M. Atk. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -812,6 +848,7 @@
 		</skills>
 	</item>
 	<item id="9937" name="Yellow Talisman - Casting Spd." type="Armor">
+		<!-- Increases Casting Spd. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -833,6 +870,7 @@
 		</skills>
 	</item>
 	<item id="9938" name="Yellow Talisman - Accuracy" type="Armor">
+		<!-- Increases Accuracy. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -854,6 +892,7 @@
 		</skills>
 	</item>
 	<item id="9939" name="Yellow Talisman - P. Def." type="Armor">
+		<!-- Increases Defense. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -875,6 +914,7 @@
 		</skills>
 	</item>
 	<item id="9940" name="Yellow Talisman - Alacrity" type="Armor">
+		<!-- Increases P. Atk., M. Atk., and Speed. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -896,6 +936,7 @@
 		</skills>
 	</item>
 	<item id="9941" name="Yellow Talisman - Speed" type="Armor">
+		<!-- Increases Speed. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -917,6 +958,7 @@
 		</skills>
 	</item>
 	<item id="9942" name="Yellow Talisman - Critical Reduction" type="Armor">
+		<!-- When used, it decreases damages from physical Critical Attacks. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -938,6 +980,7 @@
 		</skills>
 	</item>
 	<item id="9943" name="Yellow Talisman - Critical Damage" type="Armor">
+		<!-- Increases Critical P. Atk. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -959,6 +1002,7 @@
 		</skills>
 	</item>
 	<item id="9944" name="Yellow Talisman - Critical Dodging" type="Armor">
+		<!-- When used, it decreases P. Critical Damage possibility. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -980,6 +1024,7 @@
 		</skills>
 	</item>
 	<item id="9945" name="Yellow Talisman - Evasion" type="Armor">
+		<!-- Increases Evasion. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1001,6 +1046,7 @@
 		</skills>
 	</item>
 	<item id="9946" name="Yellow Talisman - Healing" type="Armor">
+		<!-- Increases HP Recovery Magic temporarily. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1022,6 +1068,7 @@
 		</skills>
 	</item>
 	<item id="9947" name="Yellow Talisman - CP Regeneration" type="Armor">
+		<!-- Increases recovering CP. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1043,6 +1090,7 @@
 		</skills>
 	</item>
 	<item id="9948" name="Yellow Talisman - HP Regeneration" type="Armor">
+		<!-- Increases HP Recovery. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1064,6 +1112,7 @@
 		</skills>
 	</item>
 	<item id="9949" name="Yellow Talisman - MP Regeneration" type="Armor">
+		<!-- Increases MP Recovery. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1085,6 +1134,7 @@
 		</skills>
 	</item>
 	<item id="9950" name="Grey Talisman - Weight Training" type="Armor">
+		<!-- Increases weapon Weight Limit. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1106,6 +1156,7 @@
 		</skills>
 	</item>
 	<item id="9951" name="Grey Talisman - Mid-grade Fishing" type="Armor">
+		<!-- Obtains Mid-grade Fishing Mastery Lv. (Lv. 18). Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1127,6 +1178,7 @@
 		</skills>
 	</item>
 	<item id="9952" name="Orange Talisman - Hot Springs CP Potion" type="Armor">
+		<!-- Create 1 Hot Springs CP Potion following the consumption of 16 Soulstone. Effect does not stack with additional Talismans of the same type. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1150,6 +1202,7 @@
 		</skills>
 	</item>
 	<item id="9953" name="Orange Talisman - Elixir of Life" type="Armor">
+		<!-- Consumes 50 Soulstone to create an Elixir of Life (A-grade). Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1172,6 +1225,7 @@
 		</skills>
 	</item>
 	<item id="9954" name="Orange Talisman - Elixir of Mind" type="Armor">
+		<!-- Consumes 57 Soulstone to create an Elixir of Mind (A-grade). Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1194,6 +1248,7 @@
 		</skills>
 	</item>
 	<item id="9955" name="Black Talisman - Vocalization" type="Armor">
+		<!-- Breaks magic Silence. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1216,6 +1271,7 @@
 		</skills>
 	</item>
 	<item id="9956" name="Black Talisman - Arcane Freedom" type="Armor">
+		<!-- When used, it cancels Magical Movement Inability States. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1238,6 +1294,7 @@
 		</skills>
 	</item>
 	<item id="9957" name="Black Talisman - Physical Freedom" type="Armor">
+		<!-- When used, it cancels Physical Movement Inability States. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1260,6 +1317,7 @@
 		</skills>
 	</item>
 	<item id="9958" name="Black Talisman - Rescue" type="Armor">
+		<!-- When used, it cancels Physical Skill Inability States. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1282,6 +1340,7 @@
 		</skills>
 	</item>
 	<item id="9959" name="Black Talisman - Free Speech" type="Armor">
+		<!-- Breaks physical/magical Silence. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1304,6 +1363,7 @@
 		</skills>
 	</item>
 	<item id="9960" name="White Talisman - Bravery" type="Armor">
+		<!-- Increases Mental Attack Resistance. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1325,6 +1385,7 @@
 		</skills>
 	</item>
 	<item id="9961" name="White Talisman - Paralysis Resistance" type="Armor">
+		<!-- When equipped, Paralysis Resistance increases. Only one effect is applied when you wear the same two talismans. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1346,6 +1407,7 @@
 		</skills>
 	</item>
 	<item id="9962" name="White Talisman - Stun Resistance" type="Armor">
+		<!-- When equipped, Stun Resistance increases. Only one effect is applied when you wear the same two talismans. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1367,6 +1429,7 @@
 		</skills>
 	</item>
 	<item id="9963" name="White Talisman - Sleep Resistance" type="Armor">
+		<!-- When equipped, Sleep Resistance increases. Only one effect is applied when you wear the same two talismans. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1388,6 +1451,7 @@
 		</skills>
 	</item>
 	<item id="9964" name="White Talisman - Bleed Resistance" type="Armor">
+		<!-- When equipped, Bleed Resistance increases. Only one effect is applied when you wear the same two talismans. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1409,6 +1473,7 @@
 		</skills>
 	</item>
 	<item id="9965" name="White Talisman - Cancel Resistance" type="Armor">
+		<!-- Increases Buff-canceling Magic Resistance. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1430,6 +1495,7 @@
 		</skills>
 	</item>
 	<item id="9966" name="White Talisman - Hold Resistance" type="Armor">
+		<!-- When equipped, Hold Resistance increases. Only one effect is applied when you wear the same two talismans. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1451,6 +1517,7 @@
 		</skills>
 	</item>
 	<item id="9967" name="Recipe: Dynasty Sword (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Sword. Requires Create Item Skill (Lv. 9). 60% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1465,6 +1532,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9968" name="Recipe: Dynasty Blade (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Blade. Requires Create Item Skill (Lv. 9). 60% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1479,6 +1547,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9969" name="Recipe: Dynasty Phantom (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Phantom. Requires Create Item Skill (Lv. 9). 60% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1493,6 +1562,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9970" name="Recipe: Dynasty Bow (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Bow. Requires Create Item Skill (Lv. 9). 60% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1507,6 +1577,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="9971" name="Recipe: Dynasty Knife (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Knife. Requires Create Item Skill (Lv. 9). 60% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1521,6 +1592,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9972" name="Recipe: Dynasty Halberd (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Halberd. Requires Create Item Skill (Lv. 9). 60% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1535,6 +1607,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9973" name="Recipe: Dynasty Cudgel (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Cudgel. Requires Create Item Skill (Lv. 9). 60% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1549,6 +1622,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9974" name="Recipe: Dynasty Mace (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Mace. Requires Create Item Skill (Lv. 9). 60% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1563,6 +1637,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9975" name="Recipe: Dynasty Bagh-Nakh (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Bagh-Nakh. Requires Create Item Skill (Lv. 9). 60% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1577,6 +1652,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9976" name="Recipe: Dynasty Sword" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Sword. Requires Create Item Skill (Lv. 9). 100% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1589,6 +1665,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9977" name="Recipe: Dynasty Blade" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Blade. Requires Create Item Skill (Lv. 9). 100% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1601,6 +1678,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9978" name="Recipe: Dynasty Phantom" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Phantom. Requires Create Item Skill (Lv. 9). 100% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1613,6 +1691,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9979" name="Recipe: Dynasty Bow" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Bow. Requires Create Item Skill (Lv. 9). 100% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1625,6 +1704,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9980" name="Recipe: Dynasty Knife" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Knife. Requires Create Item Skill (Lv. 9). 100% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1637,6 +1717,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9981" name="Recipe: Dynasty Halberd" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Halberd. Requires Create Item Skill (Lv. 9). 100% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1649,6 +1730,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9982" name="Recipe: Dynasty Cudgel" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Cudgel. Requires Create Item Skill (Lv. 9). 100% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1661,6 +1743,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9983" name="Recipe: Dynasty Mace" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Mace. Requires Create Item Skill (Lv. 9). 100% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1673,6 +1756,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9984" name="Recipe: Dynasty Bagh-Nakh" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Dynasty Bagh-Nakh. Requires Create Item Skill (Lv. 9). 100% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1685,6 +1769,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9985" name="Recipe: Sealed Dynasty Earring (70%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Earring. Requires Create Item Skill (Lv. 9). 70% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1699,6 +1784,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9986" name="Recipe: Sealed Dynasty Necklace (70%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Necklace. Requires Create Item Skill (Lv. 9). 70% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1713,6 +1799,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9987" name="Recipe: Sealed Dynasty Ring (70%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Ring. Requires Create Item Skill (Lv. 9). 70% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1727,6 +1814,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9988" name="Recipe: Sealed Dynasty Earring" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Earring. Requires Create Item Skill (Lv. 9). 100% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1739,6 +1827,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9989" name="Recipe: Sealed Dynasty Necklace" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Necklace. Requires Create Item Skill (Lv. 9). 100% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1751,6 +1840,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9990" name="Recipe: Sealed Dynasty Ring" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Ring. Requires Create Item Skill (Lv. 9). 100% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1763,6 +1853,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9991" name="Sealed Dynasty Earring Gemstone" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Dynasty Earring. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_crystal_ball_gold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1774,6 +1865,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9992" name="Sealed Dynasty Necklace Gemstone" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Dynasty Necklace. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1785,6 +1877,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9993" name="Sealed Dynasty Ring Gemstone" type="EtcItem">
+		<!-- Key material that Dwarves use to make Sealed Dynasty Ring. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1796,6 +1889,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9994" name="Map of Hellbound" type="EtcItem">
+		<!-- This torn map of an island is covered with black stains. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1812,6 +1906,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="9995" name="Hand Crossbow" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Elven Bow Conversion. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1845,6 +1940,7 @@
 		</stats>
 	</item>
 	<item id="9996" name="Hand Crossbow" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Dark Elven Bow Conversion. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1878,6 +1974,7 @@
 		</stats>
 	</item>
 	<item id="9997" name="Fire Potion" type="EtcItem">
+		<!-- Increases Fire Resistance by 30 for 10 min. -->
 		<set name="icon" val="icon.etc_fire_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1895,6 +1992,7 @@
 		</skills>
 	</item>
 	<item id="9998" name="Water Potion" type="EtcItem">
+		<!-- Increases Water Resistance by 30 for 10 min. -->
 		<set name="icon" val="icon.etc_water_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1912,6 +2010,7 @@
 		</skills>
 	</item>
 	<item id="9999" name="Earth Potion" type="EtcItem">
+		<!-- Increases Earth Resistance by 30 for 10 min. -->
 		<set name="icon" val="icon.etc_earth_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />

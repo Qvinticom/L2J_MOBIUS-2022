@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="38600" name="Steel Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain either a Requiem, Apocalypse, or Specter weapon. -->
@@ -1779,7 +1779,7 @@
 		</stats>
 	</item>
 	<item id="38692" name="Steel StormBringer" type="Weapon">
-		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCritical + 86. -->
+		<!-- <Special Option>. Critical + 86. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1805,7 +1805,7 @@
 		</stats>
 	</item>
 	<item id="38693" name="Steel Yaksa Mace" type="Weapon">
-		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nMax HP + 25%. -->
+		<!-- <Special Option>. Max HP + 25%. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1858,7 +1858,7 @@
 		</stats>
 	</item>
 	<item id="38695" name="Steel Mysterious Sword" type="Weapon">
-		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCasting Spd. + 15%. -->
+		<!-- <Special Option>. Casting Spd. + 15%. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1884,7 +1884,7 @@
 		</stats>
 	</item>
 	<item id="38696" name="Steel Body Slasher" type="Weapon">
-		<!-- Cannot augment. \n(Soul Crystal Enhancement)\nIn a Critical attack, 34% chance of inflicting Stun. -->
+		<!-- <Special Option>. In a Critical attack, 34% chance of inflicting Stun. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_body_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1911,7 +1911,7 @@
 		</stats>
 	</item>
 	<item id="38697" name="Steel Soulfire Dirk" type="Weapon">
-		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nMax MP + 30%. -->
+		<!-- <Special Option>. Max MP + 30%. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1938,7 +1938,7 @@
 		</stats>
 	</item>
 	<item id="38698" name="Steel Crystallized Ice Bow" type="Weapon">
-		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nAccuracy + 5. -->
+		<!-- <Special Option>. Accuracy + 5. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystallized_ice_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1965,7 +1965,7 @@
 		</stats>
 	</item>
 	<item id="38699" name="Steel Schlager" type="Weapon">
-		<!-- Cannot augment. Kamael only: Convert - Flamberge\n(Soul Crystal Enhancement)\nCritical + 86. -->
+		<!-- <Special Option>. Critical + 86. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_schlaeger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

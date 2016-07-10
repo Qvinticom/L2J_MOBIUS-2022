@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="16200" name="Vesper Retributer - Great Gale {PvP}" additionalName="HP Regeneration" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. HP's Recovery Rate increases. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -40,6 +41,7 @@
 		</stats>
 	</item>
 	<item id="16201" name="Vesper Retributer - Great Gale {PvP}" additionalName="Health" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -79,6 +81,7 @@
 		</stats>
 	</item>
 	<item id="16202" name="Vesper Retributer - Great Gale {PvP}" additionalName="HP Drain" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -118,6 +121,7 @@
 		</stats>
 	</item>
 	<item id="16203" name="Vesper Caster - Cleverness {PvP}" additionalName="Acumen" type="Weapon">
+		<!-- Masterwork Item that increases MP Regen. <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -158,6 +162,7 @@
 		</stats>
 	</item>
 	<item id="16204" name="Vesper Caster - Cleverness {PvP}" additionalName="MP Regeneration" type="Weapon">
+		<!-- Masterwork Item that increases MP Regen. <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -198,6 +203,7 @@
 		</stats>
 	</item>
 	<item id="16205" name="Vesper Caster - Cleverness {PvP}" additionalName="Mana Up" type="Weapon">
+		<!-- Masterwork Item that increases MP Regen. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -238,6 +244,7 @@
 		</stats>
 	</item>
 	<item id="16206" name="Vesper Singer - Hail {PvP}" additionalName="Empower" type="Weapon">
+		<!-- Masterwork Item that increases M. Atk. <Special Option>. M. Atk. + 151. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -278,6 +285,7 @@
 		</stats>
 	</item>
 	<item id="16207" name="Vesper Singer - Hail {PvP}" additionalName="MP Regeneration" type="Weapon">
+		<!-- Masterwork Item that increases M. Atk. <Special Option>. MP's Recovery Rate increases. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -318,6 +326,7 @@
 		</stats>
 	</item>
 	<item id="16208" name="Vesper Singer - Hail {PvP}" additionalName="Magic Hold" type="Weapon">
+		<!-- Masterwork Item that increases M. Atk. <Special Option>. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -358,6 +367,7 @@
 		</stats>
 	</item>
 	<item id="16209" name="Vesper Thrower - Clairvoyance {PvP}" additionalName="Cheap Shot" type="Weapon">
+		<!-- Masterwork Item that increases range. <Special Option>. MP consumption decreases by 8% during a skill attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -399,6 +409,7 @@
 		</stats>
 	</item>
 	<item id="16210" name="Vesper Thrower - Clairvoyance {PvP}" additionalName="Focus" type="Weapon">
+		<!-- Masterwork Item that increases range. <Special Option>. Increases Critical by 133. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -440,6 +451,7 @@
 		</stats>
 	</item>
 	<item id="16211" name="Vesper Thrower - Clairvoyance {PvP}" additionalName="Critical Slow" type="Weapon">
+		<!-- Masterwork Item that increases range. <Special Option>. Inflicts Slow with 33% chance during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -481,6 +493,7 @@
 		</stats>
 	</item>
 	<item id="16212" name="Vesper Pincer - Thunder {PvP}" additionalName="Haste" type="Weapon">
+		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Vesper Cutter Conversion. <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -524,6 +537,7 @@
 		</stats>
 	</item>
 	<item id="16213" name="Vesper Pincer - Thunder {PvP}" additionalName="Health" type="Weapon">
+		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Vesper Cutter Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -567,6 +581,7 @@
 		</stats>
 	</item>
 	<item id="16214" name="Vesper Pincer - Thunder {PvP}" additionalName="Focus" type="Weapon">
+		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Vesper Cutter Conversion. <Special Option>. Increases Critical by 131. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -610,6 +625,7 @@
 		</stats>
 	</item>
 	<item id="16215" name="Vesper Shooter - Clairvoyance {PvP}" additionalName="Cheap Shot" type="Weapon">
+		<!-- Masterwork Item that increases range. Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>. MP consumption decreases by 12% during skill use. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -653,6 +669,7 @@
 		</stats>
 	</item>
 	<item id="16216" name="Vesper Shooter - Clairvoyance {PvP}" additionalName="Focus" type="Weapon">
+		<!-- Masterwork Item that increases range. Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>. Increases Critical by 133. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -696,6 +713,7 @@
 		</stats>
 	</item>
 	<item id="16217" name="Vesper Shooter - Clairvoyance {PvP}" additionalName="Critical Slow" type="Weapon">
+		<!-- Masterwork Item that increases range. Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>. Casts Slow at a 24% rate during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -739,6 +757,7 @@
 		</stats>
 	</item>
 	<item id="16218" name="Vesper Nagan - Great Gale {PvP}" additionalName="Haste" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -781,6 +800,7 @@
 		</stats>
 	</item>
 	<item id="16219" name="Vesper Nagan - Great Gale {PvP}" additionalName="Health" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -823,6 +843,7 @@
 		</stats>
 	</item>
 	<item id="16220" name="Vesper Nagan - Great Gale {PvP}" additionalName="Focus" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Increases Critical by 131. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -865,6 +886,7 @@
 		</stats>
 	</item>
 	<item id="16221" name="Sealed Foundation Moirai Helmet" type="EtcItem">
+		<!-- Rare Sealed Moirai Helmet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -881,6 +903,7 @@
 		</stats>
 	</item>
 	<item id="16222" name="Sealed Foundation Moirai Leather Helmet" type="EtcItem">
+		<!-- Rare Sealed Moirai Leather Helmet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -894,6 +917,7 @@
 		</stats>
 	</item>
 	<item id="16223" name="Sealed Foundation Moirai Circlet" type="EtcItem">
+		<!-- Rare Sealed Moirai Circlet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -910,6 +934,7 @@
 		</stats>
 	</item>
 	<item id="16224" name="Sealed Foundation Moirai Breastplate" type="EtcItem">
+		<!-- Rare Sealed Moirai Breastplate that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t94_u_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -926,6 +951,7 @@
 		</stats>
 	</item>
 	<item id="16225" name="Sealed Foundation Moirai Leather Breastplate" type="EtcItem">
+		<!-- Rare Sealed Moirai Leather Breastplate that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t95_u_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -939,6 +965,7 @@
 		</stats>
 	</item>
 	<item id="16226" name="Sealed Foundation Moirai Tunic" type="EtcItem">
+		<!-- Rare Sealed Moirai Tunic that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t96_u_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -956,6 +983,7 @@
 		</stats>
 	</item>
 	<item id="16227" name="Sealed Foundation Moirai Gaiters" type="EtcItem">
+		<!-- Rare Sealed Moirai Gaiters that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t94_l_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -972,6 +1000,7 @@
 		</stats>
 	</item>
 	<item id="16228" name="Sealed Foundation Moirai Leather Leggings" type="EtcItem">
+		<!-- Rare Sealed Moirai Leather Leggings that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t95_l_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -985,6 +1014,7 @@
 		</stats>
 	</item>
 	<item id="16229" name="Sealed Foundation Moirai Stockings" type="EtcItem">
+		<!-- Rare Sealed Moirai Stockings that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t96_l_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -1002,6 +1032,7 @@
 		</stats>
 	</item>
 	<item id="16230" name="Sealed Foundation Moirai Gauntlets" type="EtcItem">
+		<!-- Rare Sealed Moirai Gauntlets that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t94_g_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1018,6 +1049,7 @@
 		</stats>
 	</item>
 	<item id="16231" name="Sealed Foundation Moirai Leather Gloves" type="EtcItem">
+		<!-- Rare Sealed Moirai Leather Gloves that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t95_g_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1031,6 +1063,7 @@
 		</stats>
 	</item>
 	<item id="16232" name="Sealed Foundation Moirai Gloves" type="EtcItem">
+		<!-- Rare Sealed Moirai Gloves that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t96_g_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1047,6 +1080,7 @@
 		</stats>
 	</item>
 	<item id="16233" name="Sealed Foundation Moirai Boots" type="EtcItem">
+		<!-- Rare Sealed Moirai Boots that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t94_b_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1063,6 +1097,7 @@
 		</stats>
 	</item>
 	<item id="16234" name="Sealed Foundation Moirai Leather Boots" type="EtcItem">
+		<!-- Rare Sealed Moirai Leather Boots that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t95_b_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1076,6 +1111,7 @@
 		</stats>
 	</item>
 	<item id="16235" name="Sealed Foundation Moirai Shoes" type="EtcItem">
+		<!-- Rare Sealed Moirai Shoes that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t96_b_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1092,6 +1128,7 @@
 		</stats>
 	</item>
 	<item id="16236" name="Sealed Foundation Moirai Shield" type="EtcItem">
+		<!-- Rare Sealed Moirai Shield that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1110,6 +1147,7 @@
 		</stats>
 	</item>
 	<item id="16237" name="Sealed Foundation Moirai Sigil" type="EtcItem">
+		<!-- Rare Sealed Moirai Sigil that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.verper_sigil_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1126,6 +1164,7 @@
 		</stats>
 	</item>
 	<item id="16238" name="Sealed Foundation Vesper Helmet" type="EtcItem">
+		<!-- Rare Sealed Vesper Helmet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1142,6 +1181,7 @@
 		</stats>
 	</item>
 	<item id="16239" name="Sealed Foundation Vesper Leather Helmet" type="EtcItem">
+		<!-- Rare Sealed Vesper Leather Helmet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1155,6 +1195,7 @@
 		</stats>
 	</item>
 	<item id="16240" name="Sealed Foundation Vesper Circlet" type="EtcItem">
+		<!-- Rare Sealed Vesper Circlet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1171,6 +1212,7 @@
 		</stats>
 	</item>
 	<item id="16241" name="Sealed Foundation Vesper Breastplate" type="EtcItem">
+		<!-- Rare Sealed Vesper Breastplate that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t94_u_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -1187,6 +1229,7 @@
 		</stats>
 	</item>
 	<item id="16242" name="Sealed Foundation Vesper Leather Breastplate" type="EtcItem">
+		<!-- Rare Sealed Vesper Leather Breastplate that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t95_u_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -1200,6 +1243,7 @@
 		</stats>
 	</item>
 	<item id="16243" name="Sealed Foundation Vesper Tunic" type="EtcItem">
+		<!-- Rare Sealed Vesper Tunic that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t96_u_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -1217,6 +1261,7 @@
 		</stats>
 	</item>
 	<item id="16244" name="Sealed Foundation Vesper Gaiters" type="EtcItem">
+		<!-- Rare Sealed Vesper Gaiters that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t94_l_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -1233,6 +1278,7 @@
 		</stats>
 	</item>
 	<item id="16245" name="Sealed Foundation Vesper Leather Leggings" type="EtcItem">
+		<!-- Rare Sealed Vesper Leather Leggings that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t95_l_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -1246,6 +1292,7 @@
 		</stats>
 	</item>
 	<item id="16246" name="Sealed Foundation Vesper Stockings" type="EtcItem">
+		<!-- Rare Sealed Vesper Stockings that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t96_l_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -1263,6 +1310,7 @@
 		</stats>
 	</item>
 	<item id="16247" name="Sealed Foundation Vesper Gauntlets" type="EtcItem">
+		<!-- Rare Sealed Vesper Gauntlets that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t94_g_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1279,6 +1327,7 @@
 		</stats>
 	</item>
 	<item id="16248" name="Sealed Foundation Vesper Leather Gloves" type="EtcItem">
+		<!-- Rare Sealed Vesper Leather Gloves that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t95_g_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1292,6 +1341,7 @@
 		</stats>
 	</item>
 	<item id="16249" name="Sealed Foundation Vesper Gloves" type="EtcItem">
+		<!-- Rare Sealed Vesper Gloves that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t96_g_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1308,6 +1358,7 @@
 		</stats>
 	</item>
 	<item id="16250" name="Sealed Foundation Vesper Boots" type="EtcItem">
+		<!-- Rare Sealed Vesper Boots that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t94_b_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1324,6 +1375,7 @@
 		</stats>
 	</item>
 	<item id="16251" name="Sealed Foundation Vesper Leather Boots" type="EtcItem">
+		<!-- Rare Sealed Vesper Leather Boots that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t95_b_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1337,6 +1389,7 @@
 		</stats>
 	</item>
 	<item id="16252" name="Sealed Foundation Vesper Shoes" type="EtcItem">
+		<!-- Rare Sealed Vesper Shoes that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t96_b_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1353,6 +1406,7 @@
 		</stats>
 	</item>
 	<item id="16253" name="Sealed Foundation Vesper Shield" type="EtcItem">
+		<!-- Rare Sealed Vesper Shield that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="DAMASCUS" />
@@ -1371,6 +1425,7 @@
 		</stats>
 	</item>
 	<item id="16254" name="Sealed Foundation Vesper Sigil" type="EtcItem">
+		<!-- Rare Sealed Vesper Sigil that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_verper_sigil_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1387,6 +1442,7 @@
 		</stats>
 	</item>
 	<item id="16255" name="Foundation Moirai Helmet" type="EtcItem">
+		<!-- Rare Sealed Moirai Helmet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1403,6 +1459,7 @@
 		</stats>
 	</item>
 	<item id="16256" name="Foundation Moirai Leather Helmet" type="EtcItem">
+		<!-- Rare Sealed Moirai Leather Helmet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1416,6 +1473,7 @@
 		</stats>
 	</item>
 	<item id="16257" name="Foundation Moirai Circlet" type="EtcItem">
+		<!-- Rare Sealed Moirai Circlet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1432,6 +1490,7 @@
 		</stats>
 	</item>
 	<item id="16258" name="Foundation Moirai Breastplate" type="EtcItem">
+		<!-- Rare Sealed Moirai Breastplate that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t100_u_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -1448,6 +1507,7 @@
 		</stats>
 	</item>
 	<item id="16259" name="Foundation Moirai Leather Breastplate" type="EtcItem">
+		<!-- Rare Sealed Moirai Leather Breastplate that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t101_u_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -1461,6 +1521,7 @@
 		</stats>
 	</item>
 	<item id="16260" name="Foundation Moirai Tunic" type="EtcItem">
+		<!-- Rare Sealed Moirai Tunic that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t102_u_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -1478,6 +1539,7 @@
 		</stats>
 	</item>
 	<item id="16261" name="Foundation Moirai Gaiters" type="EtcItem">
+		<!-- Rare Sealed Moirai Gaiters that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t100_l_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -1494,6 +1556,7 @@
 		</stats>
 	</item>
 	<item id="16262" name="Foundation Moirai Leather Leggings" type="EtcItem">
+		<!-- Rare Sealed Moirai Leather Leggings that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t101_l_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -1507,6 +1570,7 @@
 		</stats>
 	</item>
 	<item id="16263" name="Foundation Moirai Stockings" type="EtcItem">
+		<!-- Rare Sealed Moirai Stockings that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t102_l_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -1524,6 +1588,7 @@
 		</stats>
 	</item>
 	<item id="16264" name="Foundation Moirai Gauntlets" type="EtcItem">
+		<!-- Rare Sealed Moirai Gauntlets that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t100_g_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1540,6 +1605,7 @@
 		</stats>
 	</item>
 	<item id="16265" name="Foundation Moirai Leather Gloves" type="EtcItem">
+		<!-- Rare Sealed Moirai Leather Gloves that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t101_g_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1553,6 +1619,7 @@
 		</stats>
 	</item>
 	<item id="16266" name="Foundation Moirai Gloves" type="EtcItem">
+		<!-- Rare Sealed Moirai Gloves that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t102_g_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1569,6 +1636,7 @@
 		</stats>
 	</item>
 	<item id="16267" name="Foundation Moirai Boots" type="EtcItem">
+		<!-- Rare Sealed Moirai Boots that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t100_b_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1585,6 +1653,7 @@
 		</stats>
 	</item>
 	<item id="16268" name="Foundation Moirai Leather Boots" type="EtcItem">
+		<!-- Rare Sealed Moirai Leather Boots that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t101_b_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1598,6 +1667,7 @@
 		</stats>
 	</item>
 	<item id="16269" name="Foundation Moirai Shoes" type="EtcItem">
+		<!-- Rare Sealed Moirai Shoes that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t102_b_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1614,6 +1684,7 @@
 		</stats>
 	</item>
 	<item id="16270" name="Foundation Moirai Shield" type="EtcItem">
+		<!-- Rare Sealed Moirai Shield that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_tysandy_shield_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1632,6 +1703,7 @@
 		</stats>
 	</item>
 	<item id="16271" name="Foundation Moirai Sigil" type="EtcItem">
+		<!-- Rare Sealed Moirai Sigil that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_tysandy_sigil_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1650,6 +1722,7 @@
 		</stats>
 	</item>
 	<item id="16272" name="Foundation Vesper Helmet" type="EtcItem">
+		<!-- Rare Sealed Vesper Helmet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1666,6 +1739,7 @@
 		</stats>
 	</item>
 	<item id="16273" name="Foundation Vesper Leather Helmet" type="EtcItem">
+		<!-- Rare Sealed Vesper Leather Helmet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1679,6 +1753,7 @@
 		</stats>
 	</item>
 	<item id="16274" name="Foundation Vesper Circlet" type="EtcItem">
+		<!-- Rare Sealed Vesper Circlet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1695,6 +1770,7 @@
 		</stats>
 	</item>
 	<item id="16275" name="Foundation Vesper Breastplate" type="EtcItem">
+		<!-- Rare Sealed Vesper Breastplate that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t94_u_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -1711,6 +1787,7 @@
 		</stats>
 	</item>
 	<item id="16276" name="Foundation Vesper Leather Breastplate" type="EtcItem">
+		<!-- Rare Sealed Vesper Leather Breastplate that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t95_u_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -1724,6 +1801,7 @@
 		</stats>
 	</item>
 	<item id="16277" name="Foundation Vesper Tunic" type="EtcItem">
+		<!-- Rare Sealed Vesper Tunic that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t96_u_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -1741,6 +1819,7 @@
 		</stats>
 	</item>
 	<item id="16278" name="Foundation Vesper Gaiters" type="EtcItem">
+		<!-- Rare Sealed Vesper Gaiters that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t94_l_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -1757,6 +1836,7 @@
 		</stats>
 	</item>
 	<item id="16279" name="Foundation Vesper Leather Leggings" type="EtcItem">
+		<!-- Rare Sealed Vesper Leather Leggings that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t95_l_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -1770,6 +1850,7 @@
 		</stats>
 	</item>
 	<item id="16280" name="Foundation Vesper Stockings" type="EtcItem">
+		<!-- Rare Sealed Vesper Stockings that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t96_l_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -1787,6 +1868,7 @@
 		</stats>
 	</item>
 	<item id="16281" name="Foundation Vesper Gauntlets" type="EtcItem">
+		<!-- Rare Sealed Vesper Gauntlets that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t94_g_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1803,6 +1885,7 @@
 		</stats>
 	</item>
 	<item id="16282" name="Foundation Vesper Leather Gloves" type="EtcItem">
+		<!-- Rare Sealed Vesper Leather Gloves that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t95_g_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1816,6 +1899,7 @@
 		</stats>
 	</item>
 	<item id="16283" name="Foundation Vesper Gloves" type="EtcItem">
+		<!-- Rare Sealed Vesper Gloves that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t96_g_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1832,6 +1916,7 @@
 		</stats>
 	</item>
 	<item id="16284" name="Foundation Vesper Boots" type="EtcItem">
+		<!-- Rare Sealed Vesper Boots that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t94_b_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1848,6 +1933,7 @@
 		</stats>
 	</item>
 	<item id="16285" name="Foundation Vesper Leather Boots" type="EtcItem">
+		<!-- Rare Sealed Vesper Leather Boots that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t95_b_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1861,6 +1947,7 @@
 		</stats>
 	</item>
 	<item id="16286" name="Foundation Vesper Shoes" type="EtcItem">
+		<!-- Rare Sealed Vesper Shoes that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t96_b_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1877,6 +1964,7 @@
 		</stats>
 	</item>
 	<item id="16287" name="Foundation Vesper Shield" type="EtcItem">
+		<!-- Rare Sealed Vesper Shield that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="DAMASCUS" />
@@ -1895,6 +1983,7 @@
 		</stats>
 	</item>
 	<item id="16288" name="Foundation Vesper Sigil" type="EtcItem">
+		<!-- Rare Sealed Vesper Sigil that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_verper_sigil_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1912,6 +2001,7 @@
 		</stats>
 	</item>
 	<item id="16289" name="Moirai Helmet" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd., Stun Resistance, and Fire Resistance. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1936,6 +2026,7 @@
 		</stats>
 	</item>
 	<item id="16290" name="Moirai Leather Helmet" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., MP Recovery Bonus, Hold Resistance, and Fire Resistance. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1957,6 +2048,7 @@
 		</stats>
 	</item>
 	<item id="16291" name="Moirai Circlet" type="Armor">
+		<!-- Masterwork Item that increases M. Atk., Paralysis Resistance, and Fire Resistance. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1981,6 +2073,7 @@
 		</stats>
 	</item>
 	<item id="16292" name="Moirai Breastplate" type="Armor">
+		<!-- Masterwork Item that increases Atk. Spd., Stun Resistance, and Fire/Water/Wind/Earth Resistance. -->
 		<set name="icon" val="icon.armor_t100_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -2007,6 +2100,7 @@
 		</stats>
 	</item>
 	<item id="16293" name="Moirai Leather Breastplate" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., MP Recovery Bonus, Hold Resistance, and Water Resistance. -->
 		<set name="icon" val="icon.armor_t101_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2030,6 +2124,7 @@
 		</stats>
 	</item>
 	<item id="16294" name="Moirai Tunic" type="Armor">
+		<!-- Masterwork Item that increases M. Atk., Casting Spd., Paralysis Resistance, and Fire/Water/Wind/Earth Resistance. -->
 		<set name="icon" val="icon.armor_t102_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -2057,6 +2152,7 @@
 		</stats>
 	</item>
 	<item id="16295" name="Moirai Gaiters" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd., Stun Resistance, and Water Resistance. -->
 		<set name="icon" val="icon.armor_t100_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -2083,6 +2179,7 @@
 		</stats>
 	</item>
 	<item id="16296" name="Moirai Leather Leggings" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., MP Recovery Bonus, Hold Resistance, and Water Resistance. -->
 		<set name="icon" val="icon.armor_t101_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2106,6 +2203,7 @@
 		</stats>
 	</item>
 	<item id="16297" name="Moirai Stockings" type="Armor">
+		<!-- Masterwork Item that increases M. Atk., Paralysis Resistance, and Water Resistance. -->
 		<set name="icon" val="icon.armor_t102_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -2133,6 +2231,7 @@
 		</stats>
 	</item>
 	<item id="16298" name="Moirai Gauntlets" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd., Stun Resistance, and Wind Resistance. -->
 		<set name="icon" val="icon.armor_t100_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2158,6 +2257,7 @@
 		</stats>
 	</item>
 	<item id="16299" name="Moirai Leather Gloves" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., MP Recovery Bonus, Hold Resistance, and Wind Resistance. -->
 		<set name="icon" val="icon.armor_t101_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />

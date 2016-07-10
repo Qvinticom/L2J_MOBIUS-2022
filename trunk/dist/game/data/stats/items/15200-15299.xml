@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="15200" name="Orc Mage Class Equipment Set" additionalName="10-day" type="EtcItem">
+		<!-- Friend recommend service exclusive item set for the Orc Mage classes. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -33,6 +34,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15201" name="Knight Class Equipment Set" additionalName="30-day" type="EtcItem">
+		<!-- Friend recommend service exclusive item set for the knight occupation class. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -62,6 +64,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15202" name="Mage Class Equipment Set" additionalName="30-day" type="EtcItem">
+		<!-- Friend recommend service exclusive item set for the magic classes. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -89,6 +92,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15203" name="Warrior Class Equipment Set" additionalName="30-day" type="EtcItem">
+		<!-- Friend recommend service exclusive item set for the warrior classes. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -118,6 +122,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15204" name="Rogue Class Equipment Set" additionalName="30-day" type="EtcItem">
+		<!-- Friend recommend service exclusive item set for the Rogue classes. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -146,6 +151,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15205" name="Kamael Class Equipment Set" additionalName="30-day" type="EtcItem">
+		<!-- Friend recommend service exclusive item set for the Kamael classes. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -175,6 +181,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15206" name="Orc Fighter Class Equipment Set" additionalName="30-day" type="EtcItem">
+		<!-- Friend recommend service exclusive item set for the Orc Fighter classes. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -208,6 +215,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15207" name="Orc Mage Class Equipment Set" additionalName="30-day" type="EtcItem">
+		<!-- Friend recommend service exclusive item set for the Orc Mage classes. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -240,6 +248,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15208" name="Bracelet of Glory: Friendship" additionalName="30-day" type="Armor">
+		<!-- Friendship bracelet that can summon a friend. The summon is possible when both the summoner and the one being summoned are equipped with the Bracelet of Glory: Friendship. 30-day. -->
 		<set name="icon" val="icon.accessory_ring_of_friendship_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -259,6 +268,7 @@
 		</skills>
 	</item>
 	<item id="15209" name="Equipment Set Pack (10-day) Coupon" type="EtcItem">
+		<!-- Can exchange for Equipment Set Pack (10-day). -->
 		<set name="icon" val="icon.etc_exchange_ticket_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -280,6 +290,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15210" name="Equipment Set Pack (10-day)" additionalName="10-day" type="EtcItem">
+		<!-- When used, you can obtain a 10-day equipment set for your class. Can use after 1st class transfer. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -300,6 +311,7 @@
 		</skills>
 	</item>
 	<item id="15211" name="Equipment Set Pack (30-day)" additionalName="30-day" type="EtcItem">
+		<!-- When used, you can obtain a 30-day equipment set for your class. Can use after 1st class transfer. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -320,6 +332,7 @@
 		</skills>
 	</item>
 	<item id="15212" name="Friend Recommend Round 1 Reward Pack Coupon" additionalName="Recommender" type="EtcItem">
+		<!-- When used, you can exchange for a Friend Recommend Round 1 Reward Pack. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -341,6 +354,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15213" name="Friend Recommend Round 1 Reward Pack" additionalName="30-day" type="EtcItem">
+		<!-- Friend recommend service reward pack containing Bracelet of Glory: Friendship, hair accessory, and Minion coupon. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -363,6 +377,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15214" name="Friend Recommend Round 2 Reward Pack Coupon" additionalName="Recommender" type="EtcItem">
+		<!-- When used, you can exchange for a Friend Recommend Round 2 Reward Pack. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -384,6 +399,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15215" name="Friend Recommend Round 2 Reward Pack" additionalName="30-day" type="EtcItem">
+		<!-- Friend recommend service reward pack containing Friend Recommendation Proof with a Bracelet of Glory: Friendship, Agathion - Oink oink, High-level Minion coupon. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -407,6 +423,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15216" name="Friend Recommend Round 1 Reward Pack Coupon" additionalName="New Dormancy" type="EtcItem">
+		<!-- When used, you can exchange for a Friend Recommend Round 1 Reward Pack. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -428,6 +445,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15217" name="Friend Recommend Round 1 Reward Pack" additionalName="30-day" type="EtcItem">
+		<!-- Friend recommend service reward pack containing Equipment Set Pack (30-day), Bracelet of Glory: Friendship, hair accessory, and Minion coupon. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -451,6 +469,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15218" name="Friend Recommend Round 2 Reward Pack Coupon" additionalName="New Dormancy" type="EtcItem">
+		<!-- When used, you can exchange for a Friend Recommend Round 2 Reward Pack. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -472,6 +491,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15219" name="Friend Recommend Round 2 Reward Pack" additionalName="30-day" type="EtcItem">
+		<!-- Friend recommend service reward pack containing Friend Recommendation Proof with an Equipment Set Pack (30-day), Bracelet of Glory: Friendship, Agathion - Oink oink, High-level Minion coupon. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -496,6 +516,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15220" name="Agathion - Oink Oink" additionalName="10-day" type="Armor">
+		<!-- Bracelet that can summon an Oink Oink Agathion. 10 days. -->
 		<set name="icon" val="icon.accessory_pig_lbracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -519,6 +540,7 @@
 		</skills>
 	</item>
 	<item id="15221" name="Puffy Hat of Friendship" type="Armor">
+		<!-- Puffy hat created to commemorate your friendship with a friend. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_globefish_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -537,6 +559,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="15222" name="Fortune Heavy Armor of Nightmare Set Pack" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire a Fortune Heavy Armor of Nightmare Set. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -561,6 +584,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15223" name="Doom Plate Armor of Fortune Set Pack" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire a Doom Plate Armor of Fortune Set. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -585,6 +609,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15224" name="Full Plate of Fortune Set Pack" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire a Full Plate of Fortune Set. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -609,6 +634,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15225" name="Brigandine of Fortune Set Pack" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire a Brigandine of Fortune Set. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -634,6 +660,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15226" name="Dark Crystal Light Armor of Fortune Set Pack" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire a Dark Crystal Light Armor of Fortune Set. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -658,6 +685,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15227" name="Leather Armor of Doom of Fortune Set Pack" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire a Leather Armor of Doom of Fortune Set. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -681,6 +709,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15228" name="Plated Leather of Fortune Set Pack" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire a Plated Leather of Fortune Set. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -705,6 +734,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15229" name="Manticore Leather of Fortune Set Pack" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire a Manticore Leather of Fortune Set. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -729,6 +759,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15230" name="Dark Crystal Robe of Fortune Set Pack" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire a Dark Crystal Robe of Fortune Set. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -753,6 +784,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15231" name="Avadon Robe of Fortune Set Pack" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire an Avadon Robe of Fortune Set. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -777,6 +809,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15232" name="Karmian of Fortune Set Pack" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire a Karmian of Fortune Set. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -801,6 +834,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15233" name="Mithril Tunic of Fortune Set Pack" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire a Mithril Tunic of Fortune Set. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -825,6 +859,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15234" name="Magic Weapon of Fortune Set" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire 4 magic weapons at A~D-grade s. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -848,6 +883,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15235" name="Dagger of Fortune Set" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire 4 daggers at A~D-grade s. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -871,6 +907,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15236" name="Bow of Fortune Set" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire 4 bows at A~D-grade s. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -894,6 +931,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15237" name="Blunt Weapon of Fortune Set" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire 4 blunt weapons at A~D-grade s. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -917,6 +955,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15238" name="One-handed Sword of Fortune Set" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire 4 one-handed swords at A~D-grade s. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -940,6 +979,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15239" name="Two-handed Sword of Fortune Set" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire 4 two-handed swords at A~D-grade s. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -963,6 +1003,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15240" name="Fist Weapon of Fortune Set" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire 4 fist weapons at A~D-grade s. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -986,6 +1027,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15241" name="Dualsword of Fortune Set" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire 4 dualswords at A~D-grade s. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1009,6 +1051,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15242" name="Spear of Fortune Set" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire 4 spears at A~D-grade s. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1032,6 +1075,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15243" name="Ancient Sword of Fortune Set" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire 4 ancient swords at A~D-grade s. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1055,6 +1099,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15244" name="Rapier of Fortune Set" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire 4 short swords at A~D-grade s. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1078,6 +1123,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15245" name="Crossbow of Fortune Set" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire 4 crossbows at A~D-grade s. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1101,6 +1147,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15246" name="Fortune Heavy Armor of Nightmare Set Pack" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Fortune Heavy Armor of Nightmare Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1125,6 +1172,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15247" name="Doom Plate Armor of Fortune Set Pack" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Doom Plate Armor of Fortune Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1149,6 +1197,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15248" name="Full Plate of Fortune Set Pack" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Full Plate of Fortune Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1173,6 +1222,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15249" name="Brigandine of Fortune Set Pack" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Brigandine of Fortune Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1198,6 +1248,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15250" name="Dark Crystal Light Armor of Fortune Set Pack" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Dark Crystal Light Armor of Fortune Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1222,6 +1273,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15251" name="Leather Armor of Doom of Fortune Set Pack" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Leather Armor of Doom of Fortune Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1245,6 +1297,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15252" name="Plated Leather of Fortune Set Pack" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Plated Leather of Fortune Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1269,6 +1322,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15253" name="Manticore Leather of Fortune Set Pack" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Manticore Leather of Fortune Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1293,6 +1347,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15254" name="Dark Crystal Robe of Fortune Set Pack" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Dark Crystal Robe of Fortune Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1317,6 +1372,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15255" name="Avadon Robe of Fortune Set Pack" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire an Avadon Robe of Fortune Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1341,6 +1397,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15256" name="Karmian of Fortune Set Pack" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Karmian of Fortune Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1365,6 +1422,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15257" name="Mithril Tunic of Fortune Set Pack" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Mithril Tunic of Fortune Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1389,6 +1447,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15258" name="Magic Weapon of Fortune Set" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Grade S~D magic weapon. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1412,6 +1471,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15259" name="Dagger of Fortune Set" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Grade S~D dagger. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1435,6 +1495,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15260" name="Bow of Fortune Set" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Grade S~D bow. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1458,6 +1519,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15261" name="Blunt Weapon of Fortune Set" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Grade S~D blunt weapon. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1481,6 +1543,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15262" name="One-handed Sword of Fortune Set" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquirea Grade S~D one-handed sword. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1504,6 +1567,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15263" name="Two-handed Sword of Fortune Set" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Grade S~D two-handed sword. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1527,6 +1591,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15264" name="Fist Weapon of Fortune Set" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Grade S~D fist weapon. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1550,6 +1615,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15265" name="Dualsword of Fortune Set" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Grade S~D dualsword. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1573,6 +1639,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15266" name="Spear of Fortune Set" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Grade S~D spear. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1596,6 +1663,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15267" name="Ancient Sword of Fortune Set" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Grade S~D ancient sword. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1619,6 +1687,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15268" name="Short Sword of Fortune Set" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Grade S~D short sword. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1642,6 +1711,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15269" name="Crossbow of Fortune Set" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire a Grade S~D crossbow. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1665,6 +1735,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15270" name="Jewelry Pack (A-grade)" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire a Jewelry Set of Fortune (A-grade). Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1687,6 +1758,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15271" name="Jewelry Pack (B-grade)" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire a Jewelry Set of Fortune (B-grade). Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1709,6 +1781,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15272" name="Jewelry Pack (C-grade)" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire a Jewelry Set of Fortune (C-grade). Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1731,6 +1804,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15273" name="Jewelry Pack (D-grade)" additionalName="10-day" type="EtcItem">
+		<!-- When used, you acquire an Jewelry Set of Fortune (D-grade). Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1753,6 +1827,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15274" name="Jewelry Pack (A-grade)" additionalName="30-day" type="EtcItem">
+		<!-- Wrapped Pack containing A-grade Jewelry Set of Fortune. 30-day. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1775,6 +1850,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15275" name="Jewelry Pack (B-grade)" additionalName="30-day" type="EtcItem">
+		<!-- Wrapped Pack containing B-grade Jewelry Set of Fortune. 30-day. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1797,6 +1873,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15276" name="Jewelry Pack (C-grade)" additionalName="30-day" type="EtcItem">
+		<!-- Wrapped Pack containing C-grade Jewelry Set of Fortune. 30-day. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1819,6 +1896,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15277" name="Jewelry Pack (D-grade)" additionalName="30-day" type="EtcItem">
+		<!-- When used, you acquire an Jewelry Set of Fortune (D-grade). Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1841,6 +1919,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15278" name="Dimensional Merchant's Gift" type="EtcItem">
+		<!-- Special gift received from the Dimensional Merchant for the friend recommend service. When used, you can acquire occasionally such items as Fresh Milk, Blessed Scroll of Escape, Blessed Scroll of Resurrection, and weapon Enchant Stones. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1860,6 +1939,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15279" name="Friend Recommendation Proof" type="EtcItem">
+		<!-- Take this proof to the Dimensional Merchant in front of the warehouse to receive a special gift. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1923,6 +2003,7 @@
 		</stats>
 	</item>
 	<item id="15282" name="Gludio Water Royal Guard Necklace" type="Armor">
+		<!-- Necklace given to the royal guard of Gludio territory. Water Resistance + 30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1946,6 +2027,7 @@
 		</stats>
 	</item>
 	<item id="15283" name="Dion Holy Royal Guard Necklace" type="Armor">
+		<!-- Necklace given to the royal guard of Dion territory. Holy Resistance + 30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1969,6 +2051,7 @@
 		</stats>
 	</item>
 	<item id="15284" name="Giran Wind Royal Guard Necklace" type="Armor">
+		<!-- Necklace given to the royal guard of Giran territory. Wind Resistance + 30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1992,6 +2075,7 @@
 		</stats>
 	</item>
 	<item id="15285" name="Oren Dark Royal Guard Necklace" type="Armor">
+		<!-- Necklace given to the royal guard of Oren territory. Dark Resistance + 30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2015,6 +2099,7 @@
 		</stats>
 	</item>
 	<item id="15286" name="Aden Earth Royal Guard Necklace" type="Armor">
+		<!-- Necklace given to the royal guard of Aden territory. Earth Resistance + 30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2038,6 +2123,7 @@
 		</stats>
 	</item>
 	<item id="15287" name="Innadril Water Royal Guard Necklace" type="Armor">
+		<!-- Necklace given to the royal guard of Innadril territory. Water Resistance + 30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2061,6 +2147,7 @@
 		</stats>
 	</item>
 	<item id="15288" name="Goddard Fire Royal Guard Necklace" type="Armor">
+		<!-- Necklace given to the royal guard of Goddard territory. Fire Resistance + 30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2084,6 +2171,7 @@
 		</stats>
 	</item>
 	<item id="15289" name="Rune Fire Royal Guard Necklace" type="Armor">
+		<!-- Necklace given to the royal guard of Rune territory. Fire Resistance + 30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2107,6 +2195,7 @@
 		</stats>
 	</item>
 	<item id="15290" name="Schuttgart Wind Royal Guard Necklace" type="Armor">
+		<!-- Necklace given to the royal guard of Schuttgart territory. Wind Resistance + 30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2130,6 +2219,7 @@
 		</stats>
 	</item>
 	<item id="15291" name="Gludio Earth Royal Guard Ring" type="Armor">
+		<!-- Ring given to the royal guard of Gludio territory. Earth Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2156,6 +2246,7 @@
 		</stats>
 	</item>
 	<item id="15292" name="Dion Water Royal Guard Ring" type="Armor">
+		<!-- Ring given to the royal guard of Dion territory. Water Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2182,6 +2273,7 @@
 		</stats>
 	</item>
 	<item id="15293" name="Giran Fire Royal Guard Ring" type="Armor">
+		<!-- Ring given to the royal guard of Giran territory. Fire Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2208,6 +2300,7 @@
 		</stats>
 	</item>
 	<item id="15294" name="Oren Earth Royal Guard Ring" type="Armor">
+		<!-- Ring given to the royal guard of Oren territory. Earth Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2234,6 +2327,7 @@
 		</stats>
 	</item>
 	<item id="15295" name="Aden Holy Royal Guard Ring" type="Armor">
+		<!-- Ring given to the royal guard of Aden territory. Holy Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2260,6 +2354,7 @@
 		</stats>
 	</item>
 	<item id="15296" name="Innadril Holy Royal Guard Ring" type="Armor">
+		<!-- Ring given to the royal guard of Innadril territory. Holy Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2286,6 +2381,7 @@
 		</stats>
 	</item>
 	<item id="15297" name="Goddard Dark Royal Guard Ring" type="Armor">
+		<!-- Ring given to the royal guard of Goddard territory. Dark Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2312,6 +2408,7 @@
 		</stats>
 	</item>
 	<item id="15298" name="Rune Wind Royal Guard Ring" type="Armor">
+		<!-- Ring given to the royal guard of Rune territory. Wind Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2338,6 +2435,7 @@
 		</stats>
 	</item>
 	<item id="15299" name="Schuttgart Dark Royal Guard Ring" type="Armor">
+		<!-- Ring given to the royal guard of Schuttgart territory. Dark Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

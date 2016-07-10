@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="32400" name="Fantasy Pa'agrio Hammer" additionalName="Not in Use" type="Weapon">
 		<!-- Bestows one of the following functions: Rsk. Evasion, Magic Poison, or Magic Weakness. -->
@@ -509,7 +509,7 @@
 		</stats>
 	</item>
 	<item id="32424" name="Fantasy Military Fleuret" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Keshanberk\nBestows one of the following functions: Guidance, Focus or Back Blow.\nWhen enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Keshanberk. Bestows one of the following functions: Guidance, Focus or Back Blow. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -565,7 +565,7 @@
 		</stats>
 	</item>
 	<item id="32426" name="Fantasy Innominate Victory" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Great Sword\nBestows one of the following functions: Health, P. Critical Damage or Focus. -->
+		<!-- Kamael-exclusive Weapon: Great Sword. Bestows one of the following functions: Health, P. Critical Damage or Focus. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -592,7 +592,7 @@
 		</stats>
 	</item>
 	<item id="32427" name="Fantasy Dismantler" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Guardian's Sword Conversion\nBestows one of the following functions: Critical Drain, Health or Critical Bleed. -->
+		<!-- Kamael-exclusive Weapon: Guardian's Sword Conversion. Bestows one of the following functions: Critical Drain, Health or Critical Bleed. -->
 		<set name="icon" val="icon.weapon_dismantler_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -647,7 +647,7 @@
 		</stats>
 	</item>
 	<item id="32429" name="Fantasy Peacemaker" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dark Elven Longbow conversion\nBestows one of the following functions: Evasion, Critical Bleed or Miser. -->
+		<!-- Kamael-exclusive Weapon: Dark Elven Longbow conversion. Bestows one of the following functions: Evasion, Critical Bleed or Miser. -->
 		<set name="icon" val="icon.weapon_peace_maker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1184,7 +1184,7 @@
 		</stats>
 	</item>
 	<item id="32454" name="Fantasy White Lightning" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Tallum Blade Conversion\nBestows one of the following functions: Critical Poison, Haste or Anger.\nWhen enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Tallum Blade Conversion. Bestows one of the following functions: Critical Poison, Haste or Anger. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1214,7 +1214,7 @@
 		</stats>
 	</item>
 	<item id="32455" name="Fantasy Lacerator" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dark Legion Conversion\nBestows one of the following functions: Critical Damage, Health or Rsk. Focus.\nWhen enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Dark Legion Conversion. Bestows one of the following functions: Critical Damage, Health or Rsk. Focus. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1296,7 +1296,7 @@
 		</stats>
 	</item>
 	<item id="32458" name="Fantasy Divine Pain" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Infernal Master conversion\nBestows one of the following functions: Haste, P. Critical Damage, or Focus. -->
+		<!-- Kamael-exclusive Weapon: Infernal Master conversion. Bestows one of the following functions: Haste, P. Critical Damage, or Focus. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1323,7 +1323,7 @@
 		</stats>
 	</item>
 	<item id="32459" name="Fantasy Undertaker" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dragon Slayer Conversion\nBestows one of the following functions: Health, Critical Bleed or Critical Drain. -->
+		<!-- Kamael-exclusive Weapon: Dragon Slayer Conversion. Bestows one of the following functions: Health, Critical Bleed or Critical Drain. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1406,7 +1406,7 @@
 		</stats>
 	</item>
 	<item id="32462" name="Fantasy Doomchanter" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Carnage Bow Conversion\nBestows one of the following functions: Light, Critical Bleed, or Mana Up. -->
+		<!-- Kamael-exclusive Weapon: Carnage Bow Conversion. Bestows one of the following functions: Light, Critical Bleed, or Mana Up. -->
 		<set name="icon" val="icon.weapon_doom_singer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1434,7 +1434,7 @@
 		</stats>
 	</item>
 	<item id="32463" name="Fantasy Reaper" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Soul Bow conversion.\nBestows one of the following functions: Cheap Shot, Quick Recovery or Critical Poison. -->
+		<!-- Kamael-exclusive Weapon: Soul Bow conversion. Bestows one of the following functions: Cheap Shot, Quick Recovery or Critical Poison. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

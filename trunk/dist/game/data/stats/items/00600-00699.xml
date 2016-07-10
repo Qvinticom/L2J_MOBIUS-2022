@@ -388,7 +388,7 @@
 			<stat type="pDef">18</stat>
 		</stats>
 	</item>
-	<item id="622" name="(Not In Use) Holy Spirit's Cloak" type="Armor">
+	<item id="622" name="(Not in Use) Holy Spirit's Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back09" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1767,6 +1767,7 @@
 		</stats>
 	</item>
 	<item id="686" name="Chair" type="EtcItem">
+		<!-- Chair -->
 		<set name="icon" val="icon.etc_branch_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -1776,6 +1777,7 @@
 		<set name="price" val="1000" />
 	</item>
 	<item id="687" name="Darin's Letter" type="EtcItem">
+		<!-- The love letter that Darin Has written to Roxxy. Darin Has asked you to deliver this letter to Gatekeeper Roxxy. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1791,6 +1793,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="688" name="Roxxy's Kerchief" type="EtcItem">
+		<!-- Roxxy's handkerchief. This is the reply that Roxxy Has given to Darin's letter, and must be delivered to Darin. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -1806,6 +1809,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="689" name="Poetry Book" type="EtcItem">
+		<!-- Poetry book treasured by Arujien. The book contains poems that he Has written. Take this to Greenis. -->
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1821,6 +1825,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="690" name="Lyrics Book" type="EtcItem">
+		<!-- The lyrics book of Herbien -->
 		<set name="icon" val="icon.item_normal06" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1836,6 +1841,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="691" name="Romance Novel" type="EtcItem">
+		<!-- Romance novel -->
 		<set name="icon" val="icon.item_normal07" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1851,6 +1857,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="692" name="Arujien's Letter" type="EtcItem">
+		<!-- Arujien's letter -->
 		<set name="icon" val="icon.item_canuse37" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1866,6 +1873,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="693" name="Greenis' Letter" type="EtcItem">
+		<!-- Greenis' letter, refusing Arujien's love. Take this to Arujien. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1881,6 +1889,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="694" name="Ingredient List" type="EtcItem">
+		<!-- List of ingredients: 3 omen Animal Bloods, 2 mana seeker husks, 2 gargoyle horns -->
 		<set name="icon" val="icon.item_normal37" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1896,6 +1905,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="695" name="Onyx Beast's Blood" type="EtcItem">
+		<!-- The blood of an Onyx Beast. -->
 		<set name="icon" val="icon.item_canuse48" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1912,6 +1922,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="696" name="Mana Seeker's Husk" type="EtcItem">
+		<!-- The husk of a mana seeker. -->
 		<set name="icon" val="icon.item_normal30" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1928,6 +1939,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="697" name="Gargoyle's Horn" type="EtcItem">
+		<!-- The horn of a gargoyle. -->
 		<set name="icon" val="icon.item_normal24" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1944,6 +1956,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="698" name="Gilbert's List" type="EtcItem">
+		<!-- List of things to eliminate: orcs, hobgoblins, walking fungus -->
 		<set name="icon" val="icon.item_normal37" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1959,6 +1972,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="699" name="Orc's Nose" type="EtcItem">
+		<!-- The nose of an orc. -->
 		<set name="icon" val="icon.item_canuse05" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

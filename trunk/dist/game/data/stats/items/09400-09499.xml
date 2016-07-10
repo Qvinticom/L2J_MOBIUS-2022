@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="9400" name="Weapon Master Circlet" type="Armor">
+		<!-- Circlet that can be worn by the Weapon Master class after completion of 2nd or 3rd class transfer. Cannot be worn in a subclass condition. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessary_weapon_master_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -20,6 +21,7 @@
 		</cond>
 	</item>
 	<item id="9401" name="Dagger Master Circlet" type="Armor">
+		<!-- Circlet that can be worn by the Dagger Master class after completion of 2nd or 3rd class transfer. Cannot be worn in a subclass condition. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessary_dagger_master_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -39,6 +41,7 @@
 		</cond>
 	</item>
 	<item id="9402" name="Bow Master Circlet" type="Armor">
+		<!-- Circlet that can be worn by the Bow Master class after completion of 2nd or 3rd class transfer. Cannot be worn in a subclass condition. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessary_bow_master_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -58,6 +61,7 @@
 		</cond>
 	</item>
 	<item id="9403" name="Wizard Circlet" type="Armor">
+		<!-- Circlet that can be worn by the Wizard class after completion of 2nd or 3rd class transfer. Cannot be worn in a subclass condition. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessary_wizard_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -77,6 +81,7 @@
 		</cond>
 	</item>
 	<item id="9404" name="Summoner Circlet" type="Armor">
+		<!-- Circlet that can be worn by the Summoner class after completion of 2nd or 3rd class transfer. Cannot be worn in a subclass condition. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessary_summoner_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -96,6 +101,7 @@
 		</cond>
 	</item>
 	<item id="9405" name="Healer Circlet" type="Armor">
+		<!-- Circlet that can be worn by the Healer class after completion of 2nd or 3rd class transfer. Cannot be worn in a subclass condition. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessary_healer_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -115,6 +121,7 @@
 		</cond>
 	</item>
 	<item id="9406" name="Enchanter Circlet" type="Armor">
+		<!-- Circlet that can be worn by the Enchanter class after completion of 2nd or 3rd class transfer. Cannot be worn in a subclass condition. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessary_enchanter_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -134,6 +141,7 @@
 		</cond>
 	</item>
 	<item id="9407" name="Weapon Master Circlet (Kamael only)" type="Armor">
+		<!-- Circlet that can be worn by the Kamael Race only, exclusively for the Weapon Master class after completion of 2nd or 3rd class transfer. Cannot be worn in a subclass condition. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessary_weapon_master_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -153,6 +161,7 @@
 		</cond>
 	</item>
 	<item id="9408" name="Bow Master Circlet (Kamael only)" type="Armor">
+		<!-- Circlet that can be worn by the Kamael Race only, exclusively for the Bow Master class after completion of 2nd or 3rd class transfer. Cannot be worn in a subclass condition. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessary_bow_master_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -172,6 +181,7 @@
 		</cond>
 	</item>
 	<item id="9409" name="Black Phantom Mask (Event)" type="Armor">
+		<!-- A Phantom Mask hair accessory accented with black and gold metals. Uses 2 hair accessory slots. Event item. -->
 		<set name="icon" val="icon.accessory_high_phantom_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -191,6 +201,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="9410" name="Human Veteran's Circlet" type="Armor">
+		<!-- A Veteran's Circlet that can be worn by the Human Race only. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessary_human_high_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -206,6 +217,7 @@
 		</cond>
 	</item>
 	<item id="9411" name="Elven Veteran's Circlet" type="Armor">
+		<!-- A Veteran's Circlet that can be worn by Elf Race only. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessary_elf_high_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -221,6 +233,7 @@
 		</cond>
 	</item>
 	<item id="9412" name="Dark Elven Veteran's Circlet" type="Armor">
+		<!-- A Veteran's Circlet that can be worn by the Dark Elf Race only. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessary_darkelf_high_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -236,6 +249,7 @@
 		</cond>
 	</item>
 	<item id="9413" name="Orcish Veteran's Circlet" type="Armor">
+		<!-- A Veteran's Circlet that can be worn by the Orc Race only. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessary_orc_high_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -251,6 +265,7 @@
 		</cond>
 	</item>
 	<item id="9414" name="Dwarf Veteran's Circlet" type="Armor">
+		<!-- A Veteran's Circlet that can be worn by the Dwarf Race only. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessary_dwarf_high_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -266,6 +281,7 @@
 		</cond>
 	</item>
 	<item id="9415" name="Kamaelic Veteran's Circlet" type="Armor">
+		<!-- A Veteran's Circlet that can be worn by the Kamael Race only. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessary_kamael_high_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -304,6 +320,7 @@
 		</stats>
 	</item>
 	<item id="9417" name="Dynasty Breastplate" additionalName="Shield Master" type="Armor">
+		<!-- Can only be worn by Phoenix Knights, Hell Knights, Eva's Templars and Shillien Templars. -->
 		<set name="icon" val="icon.armor_t91_uk_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -330,6 +347,7 @@
 		</stats>
 	</item>
 	<item id="9418" name="Dynasty Breastplate" additionalName="Weapon Master" type="Armor">
+		<!-- Can only be worn by Dreadnoughts, Titans, Fortune Seekers, and Maestros. -->
 		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -356,6 +374,7 @@
 		</stats>
 	</item>
 	<item id="9419" name="Dynasty Breastplate" additionalName="Force Master" type="Armor">
+		<!-- Can only be worn by Duelists and Grand Khavataris. -->
 		<set name="icon" val="icon.armor_t91_uf_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -382,6 +401,7 @@
 		</stats>
 	</item>
 	<item id="9420" name="Dynasty Breastplate" additionalName="Bard" type="Armor">
+		<!-- Can only be worn by Sword Muses and Spectral Dancers. -->
 		<set name="icon" val="icon.armor_t91_uke_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -516,6 +536,7 @@
 		</stats>
 	</item>
 	<item id="9426" name="Dynasty Leather Armor" additionalName="Dagger Master" type="Armor">
+		<!-- Can be equipped by Adventurers, Wind Riders, Ghost Hunters, and Fortune Seekers. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -539,6 +560,7 @@
 		</stats>
 	</item>
 	<item id="9427" name="Dynasty Leather Armor" additionalName="Bow Master" type="Armor">
+		<!-- Can only be worn by Sagittarius', Moonlight Sentinels, Ghost Sentinels, and Tricksters. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -662,6 +684,7 @@
 		</stats>
 	</item>
 	<item id="9433" name="Dynasty Tunic" additionalName="Healer" type="Armor">
+		<!-- Can only be worn by Cardinals, Eva's Saints, and Shillien Saints. -->
 		<set name="icon" val="icon.armor_t93_uh_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -689,6 +712,7 @@
 		</stats>
 	</item>
 	<item id="9434" name="Dynasty Tunic" additionalName="Enchanter" type="Armor">
+		<!-- Can only be worn by Hierophants, Dominators and Doomcryers. -->
 		<set name="icon" val="icon.armor_t93_ue_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -716,6 +740,7 @@
 		</stats>
 	</item>
 	<item id="9435" name="Dynasty Tunic" additionalName="Summoner" type="Armor">
+		<!-- Can only be worn by Arcana Lords, Elemental Masters and Spectral Masters. -->
 		<set name="icon" val="icon.armor_t93_us_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -743,6 +768,7 @@
 		</stats>
 	</item>
 	<item id="9436" name="Dynasty Tunic" additionalName="Wizard" type="Armor">
+		<!-- Can only be worn by Archmages, Mystic Muses, Storm Screamers and Soul Takers. -->
 		<set name="icon" val="icon.armor_t93_uw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -883,6 +909,7 @@
 		</stats>
 	</item>
 	<item id="9442" name="Dynasty Sword" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -912,6 +939,7 @@
 		</stats>
 	</item>
 	<item id="9443" name="Dynasty Blade" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -941,6 +969,7 @@
 		</stats>
 	</item>
 	<item id="9444" name="Dynasty Phantom" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -970,6 +999,7 @@
 		</stats>
 	</item>
 	<item id="9445" name="Dynasty Bow" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1002,6 +1032,7 @@
 		</stats>
 	</item>
 	<item id="9446" name="Dynasty Knife" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1031,6 +1062,7 @@
 		</stats>
 	</item>
 	<item id="9447" name="Dynasty Halberd" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1063,6 +1095,7 @@
 		</stats>
 	</item>
 	<item id="9448" name="Dynasty Cudgel" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1092,6 +1125,7 @@
 		</stats>
 	</item>
 	<item id="9449" name="Dynasty Mace" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1122,6 +1156,7 @@
 		</stats>
 	</item>
 	<item id="9450" name="Dynasty Bagh-Nakh" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1151,6 +1186,7 @@
 		</stats>
 	</item>
 	<item id="9451" name="Dynastic Essence" type="EtcItem">
+		<!-- Can modify Dynasty garments. When Dynasty garments are modified, you will have more powerful options. -->
 		<set name="icon" val="icon.etc_armor_soul_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1161,6 +1197,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="9452" name="Sealed Dynasty Earring" type="Armor">
+		<!-- Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, M. Def. + 15 and MP + 50. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1178,6 +1215,7 @@
 		</stats>
 	</item>
 	<item id="9453" name="Sealed Dynasty Necklace" type="Armor">
+		<!-- Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, M. Def. + 11 and MP + 46. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1195,6 +1233,7 @@
 		</stats>
 	</item>
 	<item id="9454" name="Sealed Dynasty Ring" type="Armor">
+		<!-- Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, M. Def. + 7 and MP + 23. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1212,6 +1251,7 @@
 		</stats>
 	</item>
 	<item id="9455" name="Dynasty Earring" type="Armor">
+		<!-- Produces the effect of MP + 35. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1230,6 +1270,7 @@
 		</stats>
 	</item>
 	<item id="9456" name="Dynasty Necklace" type="Armor">
+		<!-- Produces the effect of MP + 46. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1248,6 +1289,7 @@
 		</stats>
 	</item>
 	<item id="9457" name="Dynasty Ring" type="Armor">
+		<!-- Produces the effect of MP + 23. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1266,6 +1308,7 @@
 		</stats>
 	</item>
 	<item id="9458" name="Dynasty Earring" additionalName="Stun Resistance" type="Armor">
+		<!-- Produces the effect of MP + 35, Stun Resistance + 12. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1287,6 +1330,7 @@
 		</stats>
 	</item>
 	<item id="9459" name="Dynasty Necklace" additionalName="Stun Resistance" type="Armor">
+		<!-- Produces the effect of MP + 46, Stun Resistance + 18. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1308,6 +1352,7 @@
 		</stats>
 	</item>
 	<item id="9460" name="Dynasty Ring" additionalName="Stun Resistance" type="Armor">
+		<!-- Produces the effect of MP + 23, Stun Resistance + 8. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1329,6 +1374,7 @@
 		</stats>
 	</item>
 	<item id="9461" name="Dynasty Earring" additionalName="Poison Resistance" type="Armor">
+		<!-- Produces the effect of MP + 35, Poison Resistance + 11. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1350,6 +1396,7 @@
 		</stats>
 	</item>
 	<item id="9462" name="Dynasty Necklace" additionalName="Poison Resistance" type="Armor">
+		<!-- Produces the effect of MP + 46, Poison Resistance + 16. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1371,6 +1418,7 @@
 		</stats>
 	</item>
 	<item id="9463" name="Dynasty Ring" additionalName="Poison Resistance" type="Armor">
+		<!-- Produces the effect of MP + 23, Poison Resistance + 7. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1392,6 +1440,7 @@
 		</stats>
 	</item>
 	<item id="9464" name="Dynasty Earring" additionalName="Bleed Resistance" type="Armor">
+		<!-- Produces the effect of MP + 35, Bleed Resistance + 8. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1413,6 +1462,7 @@
 		</stats>
 	</item>
 	<item id="9465" name="Dynasty Necklace" additionalName="Bleed Resistance" type="Armor">
+		<!-- Produces the effect of MP + 46, Bleed Resistance + 11. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1434,6 +1484,7 @@
 		</stats>
 	</item>
 	<item id="9466" name="Dynasty Ring" additionalName="Bleed Resistance" type="Armor">
+		<!-- Produces the effect of MP + 23, Bleed Resistance + 5. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1455,6 +1506,7 @@
 		</stats>
 	</item>
 	<item id="9467" name="Dynasty Earring" additionalName="Sleep Resistance" type="Armor">
+		<!-- Produces the effect of MP + 35, Sleep Resistance + 12. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1476,6 +1528,7 @@
 		</stats>
 	</item>
 	<item id="9468" name="Dynasty Necklace" additionalName="Sleep Resistance" type="Armor">
+		<!-- Produces the effect of MP + 46, Sleep Resistance + 18. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1497,6 +1550,7 @@
 		</stats>
 	</item>
 	<item id="9469" name="Dynasty Ring" additionalName="Sleep Resistance" type="Armor">
+		<!-- Produces the effect of MP + 23, Sleep Resistance + 8. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1518,6 +1572,7 @@
 		</stats>
 	</item>
 	<item id="9470" name="Dynasty Earring" additionalName="Paralysis Resistance" type="Armor">
+		<!-- Produces the effect of MP + 35, Paralysis Resistance + 6. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1539,6 +1594,7 @@
 		</stats>
 	</item>
 	<item id="9471" name="Dynasty Necklace" additionalName="Paralysis Resistance" type="Armor">
+		<!-- Produces the effect of MP + 46, Paralysis Resistance + 9. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1560,6 +1616,7 @@
 		</stats>
 	</item>
 	<item id="9472" name="Dynasty Ring" additionalName="Paralysis Resistance" type="Armor">
+		<!-- Produces the effect of MP + 23, Paralysis Resistance + 4. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1581,6 +1638,7 @@
 		</stats>
 	</item>
 	<item id="9473" name="Dynasty Earring" additionalName="Hold Resistance" type="Armor">
+		<!-- Produces the effect of MP + 35, Hold Resistance + 12. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1602,6 +1660,7 @@
 		</stats>
 	</item>
 	<item id="9474" name="Dynasty Necklace" additionalName="Hold Resistance" type="Armor">
+		<!-- Produces the effect of MP + 46, Hold Resistance + 18. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1623,6 +1682,7 @@
 		</stats>
 	</item>
 	<item id="9475" name="Dynasty Ring" additionalName="Hold Resistance" type="Armor">
+		<!-- Produces the effect of MP + 23, Hold Resistance + 8. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1644,6 +1704,7 @@
 		</stats>
 	</item>
 	<item id="9476" name="Dynasty Earring" additionalName="Fear Resistance" type="Armor">
+		<!-- Produces the effect of MP + 35, Fear Resistance + 6. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1665,6 +1726,7 @@
 		</stats>
 	</item>
 	<item id="9477" name="Dynasty Necklace" additionalName="Fear Resistance" type="Armor">
+		<!-- Produces the effect of MP + 46, Fear Resistance + 9. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1686,6 +1748,7 @@
 		</stats>
 	</item>
 	<item id="9478" name="Dynasty Ring" additionalName="Fear Resistance" type="Armor">
+		<!-- Produces the effect of MP + 23, Fear Resistance + 4. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1707,6 +1770,7 @@
 		</stats>
 	</item>
 	<item id="9479" name="Dynasty Earring (Not in Use)" additionalName="Dark Resistance" type="Armor">
+		<!-- Produces the effect of MP + 35, Dark Resistance + 6. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1725,6 +1789,7 @@
 		</stats>
 	</item>
 	<item id="9480" name="Dynasty Necklace (Not in Use)" additionalName="Dark Resistance" type="Armor">
+		<!-- Produces the effect of MP + 46, Dark Resistance + 7. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1743,6 +1808,7 @@
 		</stats>
 	</item>
 	<item id="9481" name="Dynasty Ring (Not in Use)" additionalName="Dark Resistance" type="Armor">
+		<!-- Produces the effect of MP + 23, Dark Resistance + 5. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1761,6 +1827,7 @@
 		</stats>
 	</item>
 	<item id="9482" name="Recipe: Sealed Dynasty Breastplate (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Breastplate. Requires Create Item (Lv. 9). The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1775,6 +1842,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9483" name="Recipe: Sealed Dynasty Gaiters (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Gaiters. Requires Create Item (Lv. 9). The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1789,6 +1857,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9484" name="Recipe: Sealed Dynasty Helmet (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Helmet. Requires Create Item (Lv. 9). The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1803,6 +1872,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9485" name="Recipe: Sealed Dynasty Gauntlets (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Gauntlets. Requires Create Item (Lv. 9). The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1817,6 +1887,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9486" name="Recipe: Sealed Dynasty Boots (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Boots. Requires Create Item (Lv. 9). The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1831,6 +1902,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9487" name="Recipe: Sealed Dynasty Leather Armor (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Leather Armor. Requires Create Item (Lv. 9). The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1845,6 +1917,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9488" name="Recipe: Sealed Dynasty Leather Leggings (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Leather Leggings. Requires Create Item (Lv. 9). The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1859,6 +1932,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9489" name="Recipe: Sealed Dynasty Leather Helmet (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Leather Helmet. Requires Create Item (Lv. 9). The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1873,6 +1947,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9490" name="Recipe: Sealed Dynasty Leather Gloves (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Leather Gloves. Requires Create Item (Lv. 9). The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1887,6 +1962,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9491" name="Recipe: Sealed Dynasty Leather Boots (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Leather Boots. Requires Create Item (Lv. 9). The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1901,6 +1977,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9492" name="Recipe: Sealed Dynasty Tunic (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Tunic. Requires Create Item (Lv. 9). The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1915,6 +1992,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9493" name="Recipe: Sealed Dynasty Stockings (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Stockings. Requires Create Item (Lv. 9). The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1929,6 +2007,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9494" name="Recipe: Sealed Dynasty Circlet (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Circlet. Requires Create Item (Lv. 9). The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1943,6 +2022,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9495" name="Recipe: Sealed Dynasty Gloves (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Gloves. Requires Create Item (Lv. 9). The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1957,6 +2037,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9496" name="Recipe: Sealed Dynasty Shoes (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Shoes. Requires Create Item (Lv. 9). The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1971,6 +2052,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9497" name="Recipe: Sealed Dynasty Shield (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Shield. Requires Create Item (Lv. 9). The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1985,6 +2067,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9498" name="Recipe: Sealed Dynasty Breastplate" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Breastplate. Requires Create Item (Lv. 9). The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1997,6 +2080,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9499" name="Recipe: Sealed Dynasty Gaiters" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Dynasty Gaiters. Requires Create Item (Lv. 9). The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />

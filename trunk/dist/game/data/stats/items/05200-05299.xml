@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="5200" name="Chest Key - Grade 5" type="EtcItem">
+		<!-- Opens a level 30 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -16,6 +17,7 @@
 		</skills>
 	</item>
 	<item id="5201" name="Chest Key - Grade 4" type="EtcItem">
+		<!-- Opens a level 40 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -31,6 +33,7 @@
 		</skills>
 	</item>
 	<item id="5202" name="Chest Key - Grade 3" type="EtcItem">
+		<!-- Opens a level 50 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -46,6 +49,7 @@
 		</skills>
 	</item>
 	<item id="5203" name="Chest Key - Grade 2" type="EtcItem">
+		<!-- Opens a level 60 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -61,6 +65,7 @@
 		</skills>
 	</item>
 	<item id="5204" name="Chest Key - Grade 1" type="EtcItem">
+		<!-- Opens a level 70 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -76,6 +81,7 @@
 		</skills>
 	</item>
 	<item id="5205" name="Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
+		<!-- Innadril/Sword/Stationary -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -87,6 +93,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="5206" name="Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
+		<!-- Innadril/Spear/Stationary -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -98,6 +105,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="5207" name="Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
+		<!-- Innadril/Bow/Stationary -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -109,6 +117,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="5208" name="Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
+		<!-- Innadril/Cleric/Stationary -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -120,6 +129,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="5209" name="Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
+		<!-- Innadril/Wizard/Stationary -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -131,6 +141,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="5210" name="Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
+		<!-- Innadril/Sword/Mobile -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -142,6 +153,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="5211" name="Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
+		<!-- Innadril/Spear/Mobile -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -153,6 +165,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="5212" name="Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
+		<!-- Innadril/Bow/Mobile -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -164,6 +177,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="5213" name="Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
+		<!-- Innadril/Cleric/Mobile -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -175,6 +189,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="5214" name="Mercenary Posting Ticket (Wizard/Mobile)" type="EtcItem">
+		<!-- Innadril/Wizard/Mobile -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -186,6 +201,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="5215" name="Mercenary Posting Ticket (Teleporter1)" type="EtcItem">
+		<!-- Innadril/Teleporter/Inner Castle, Guard -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -246,6 +262,7 @@
 		</stats>
 	</item>
 	<item id="5218" name="Mercenary Posting Ticket (Teleporter2)" type="EtcItem">
+		<!-- Innadril/Teleporter/Outer Castle, Guardian -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -257,6 +274,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="5219" name="Mercenary Posting Ticket (Teleporter3)" type="EtcItem">
+		<!-- Innadril/Teleporter/Inner Castle, Outer Castle -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -268,6 +286,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="5220" name="Corroded Metal Hardener" type="EtcItem">
+		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
 		<set name="icon" val="icon.etc_plate_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -279,6 +298,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5221" name="Seed: Chilly Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Chilly Cobol. For best results, a level 29- 39 character must plant it on a level 29- 39 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -294,6 +314,7 @@
 		</skills>
 	</item>
 	<item id="5222" name="Seed: Blue Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Blue Cobol. For best results, a level 32- 42 character must plant it on a level 32- 42 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -309,6 +330,7 @@
 		</skills>
 	</item>
 	<item id="5223" name="Seed: Thorn Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Thorn Cobol. For best results, a level 35- 45 character must plant it on a level 35- 45 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -324,6 +346,7 @@
 		</skills>
 	</item>
 	<item id="5224" name="Seed: Golden Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Golden Cobol. For best results, a level 38- 48 character must plant it on a level 38- 48 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -339,6 +362,7 @@
 		</skills>
 	</item>
 	<item id="5225" name="Seed: Great Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Great Cobol. For best results, a level 41- 51 character must plant it on a level 41- 51 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -354,6 +378,7 @@
 		</skills>
 	</item>
 	<item id="5226" name="Seed: Red Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Red Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -369,6 +394,7 @@
 		</skills>
 	</item>
 	<item id="5227" name="Seed: Sea Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Sea Codran. For best results, a level 45- 55 character must plant it on a level 45- 55 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -409,6 +435,7 @@
 		</skills>
 	</item>
 	<item id="5230" name="Recipe: Mithril Arrow" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Mithril Arrow. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -423,6 +450,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5231" name="Recipe: Corroded Metal Hardener" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Corroded Metal Hardener. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -437,6 +465,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5232" name="White Cloth" type="EtcItem">
+		<!-- Large piece of white cloth given by Magister Hanellin. Kill Guardian Angels and Seal Angels and soak the cloth with their blood. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -453,6 +482,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="5233" name="Keshanberk*Keshanberk" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -483,6 +513,7 @@
 		</stats>
 	</item>
 	<item id="5234" name="Mysterious Potion" type="EtcItem">
+		<!-- Legend says that if you drink this potion your head will grow larger! Believe it if you will! -->
 		<set name="icon" val="icon.etc_lesser_potion_clear_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -505,6 +536,7 @@
 		</skills>
 	</item>
 	<item id="5235" name="Facelifting Potion - A" type="EtcItem">
+		<!-- Beauty potion that changes one's facial appearance to Type A. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -526,6 +558,7 @@
 		</skills>
 	</item>
 	<item id="5236" name="Facelifting Potion - B" type="EtcItem">
+		<!-- Beauty potion that changes one's facial appearance to Type B. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -547,6 +580,7 @@
 		</skills>
 	</item>
 	<item id="5237" name="Facelifting Potion - C" type="EtcItem">
+		<!-- Beauty potion that changes one's facial appearance to Type C. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -568,6 +602,7 @@
 		</skills>
 	</item>
 	<item id="5238" name="Dye Potion - A" type="EtcItem">
+		<!-- Beauty potion that changes one's hair color to Type A. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -589,6 +624,7 @@
 		</skills>
 	</item>
 	<item id="5239" name="Dye Potion - B" type="EtcItem">
+		<!-- Beauty potion that changes one's hair color to Type B. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -610,6 +646,7 @@
 		</skills>
 	</item>
 	<item id="5240" name="Dye Potion - C" type="EtcItem">
+		<!-- Beauty potion that changes one's hair color to Type C. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -631,6 +668,7 @@
 		</skills>
 	</item>
 	<item id="5241" name="Dye Potion - D" type="EtcItem">
+		<!-- Beauty potion that changes one's hair color to Type D. Both genders. The results may be viewed on the Character Creation Screen. Cannot be used by Kamaels or Ertheia. -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -655,6 +693,7 @@
 		</skills>
 	</item>
 	<item id="5242" name="Hair Style Change Potion - A" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type A. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -676,6 +715,7 @@
 		</skills>
 	</item>
 	<item id="5243" name="Hair Style Change Potion - B" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type B. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -697,6 +737,7 @@
 		</skills>
 	</item>
 	<item id="5244" name="Hair Style Change Potion - C" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type C. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -718,6 +759,7 @@
 		</skills>
 	</item>
 	<item id="5245" name="Hair Style Change Potion - D" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type D. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -739,6 +781,7 @@
 		</skills>
 	</item>
 	<item id="5246" name="Hair Style Change Potion - E" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type E. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -760,6 +803,7 @@
 		</skills>
 	</item>
 	<item id="5247" name="Hair Style Change Potion - F" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type F. May be used only by female characters. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -781,6 +825,7 @@
 		</skills>
 	</item>
 	<item id="5248" name="Hair Style Change Potion - G" type="EtcItem">
+		<!-- Beauty potion that changes one's hair style to Type G. May be used only by female characters. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -802,6 +847,7 @@
 		</skills>
 	</item>
 	<item id="5249" name="Commemorative Item: First Anniversary of Lineage II Service" type="EtcItem">
+		<!-- After the conclusion of the event, this item is traded for an actual item through a drawing. -->
 		<set name="icon" val="icon.etc_l2_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -817,6 +863,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5250" name="Greater Soulshot Compressed Package (No-grade)" type="EtcItem">
+		<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 No-grade soulshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -831,6 +878,7 @@
 		</skills>
 	</item>
 	<item id="5251" name="Greater Soulshot Compressed Package (D-grade)" type="EtcItem">
+		<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 D-grade soulshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -845,6 +893,7 @@
 		</skills>
 	</item>
 	<item id="5252" name="Greater Soulshot Compressed Package (C-grade)" type="EtcItem">
+		<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 C-grade soulshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -859,6 +908,7 @@
 		</skills>
 	</item>
 	<item id="5253" name="Greater Soulshot Compressed Package (B-grade)" type="EtcItem">
+		<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 B-grade soulshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -873,6 +923,7 @@
 		</skills>
 	</item>
 	<item id="5254" name="Greater Soulshot Compressed Package (A-grade)" type="EtcItem">
+		<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 A-grade soulshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -887,6 +938,7 @@
 		</skills>
 	</item>
 	<item id="5255" name="Greater Soulshot Compressed Package (S-grade)" type="EtcItem">
+		<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 S-grade soulshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -901,6 +953,7 @@
 		</skills>
 	</item>
 	<item id="5256" name="Greater Spiritshot Compressed Package (No-grade)" type="EtcItem">
+		<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 No-grade spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -915,6 +968,7 @@
 		</skills>
 	</item>
 	<item id="5257" name="Greater Spiritshot Compressed Package (D-grade)" type="EtcItem">
+		<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 D-grade spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -929,6 +983,7 @@
 		</skills>
 	</item>
 	<item id="5258" name="Greater Spiritshot Compressed Package (C-grade)" type="EtcItem">
+		<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 C-grade spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -943,6 +998,7 @@
 		</skills>
 	</item>
 	<item id="5259" name="Greater Spiritshot Compressed Package (B-grade)" type="EtcItem">
+		<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 B-grade spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -957,6 +1013,7 @@
 		</skills>
 	</item>
 	<item id="5260" name="Greater Spiritshot Compressed Package (A-grade)" type="EtcItem">
+		<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 A-grade spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -971,6 +1028,7 @@
 		</skills>
 	</item>
 	<item id="5261" name="Greater Spiritshot Compressed Package (S-grade)" type="EtcItem">
+		<!-- Small package of compressed spiritshots. Upon use, changes into a 1,000 S-grade spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -985,6 +1043,7 @@
 		</skills>
 	</item>
 	<item id="5262" name="Greater Blessed Spiritshot Compressed Package (No-grade)" type="EtcItem">
+		<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 No-grade blessed spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -999,6 +1058,7 @@
 		</skills>
 	</item>
 	<item id="5263" name="Greater Blessed Spiritshot Compressed Package (D-grade)" type="EtcItem">
+		<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 D-grade blessed spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1013,6 +1073,7 @@
 		</skills>
 	</item>
 	<item id="5264" name="Greater Blessed Spiritshot Compressed Package (C-grade)" type="EtcItem">
+		<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 C-grade blessed spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1027,6 +1088,7 @@
 		</skills>
 	</item>
 	<item id="5265" name="Greater Blessed Spiritshot Compressed Package (B-grade)" type="EtcItem">
+		<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 B-grade blessed spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1041,6 +1103,7 @@
 		</skills>
 	</item>
 	<item id="5266" name="Greater Blessed Spiritshot Compressed Package (A-grade)" type="EtcItem">
+		<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 A-grade blessed spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1055,6 +1118,7 @@
 		</skills>
 	</item>
 	<item id="5267" name="Greater Blessed Spiritshot Compressed Package (S-grade)" type="EtcItem">
+		<!-- Small package of compressed blessed spiritshots. Upon use, changes into a 1,000 S-grade blessed spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1069,6 +1133,7 @@
 		</skills>
 	</item>
 	<item id="5268" name="Recipe: Greater Soulshot Compressed Package (D-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1083,6 +1148,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5269" name="Recipe: Greater Soulshot Compressed Package (C-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1097,6 +1163,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5270" name="Recipe: Greater Soulshot Compressed Package (B-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1111,6 +1178,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5271" name="Recipe: Greater Soulshot Compressed Package (A-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1125,6 +1193,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5272" name="Recipe: Greater Soulshot Compressed Package (S-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (S-grade). Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1139,6 +1208,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5273" name="Recipe: Greater Spiritshot Compressed Package (D-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1153,6 +1223,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5274" name="Recipe: Greater Spiritshot Compressed Package (C-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1167,6 +1238,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5275" name="Recipe: Greater Spiritshot Compressed Package (B-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1181,6 +1253,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5276" name="Recipe: Greater Spiritshot Compressed Package (A-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1195,6 +1268,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5277" name="Recipe: Greater Spiritshot Compressed Package (S-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (S-grade). Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1209,6 +1283,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5278" name="Recipe: Greater Blessed Spiritshot Compressed Package (D-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1223,6 +1298,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5279" name="Recipe: Greater Blessed Spiritshot Compressed Package (C-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1237,6 +1313,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5280" name="Recipe: Greater Blessed Spiritshot Compressed Package (B-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1251,6 +1328,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5281" name="Recipe: Greater Blessed Spiritshot Compressed Package (A-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1265,6 +1343,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5282" name="Recipe: Greater Blessed Spiritshot Compressed Package (S-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (S-grade). Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1279,6 +1358,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="5283" name="Rice Cake" type="EtcItem">
+		<!-- Rice cake that restores one's HP and MP. -->
 		<set name="icon" val="icon.etc_mochi_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1346,6 +1426,7 @@
 		</stats>
 	</item>
 	<item id="5286" name="Berserker Blade" type="Weapon">
+		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1374,6 +1455,7 @@
 		</stats>
 	</item>
 	<item id="5287" name="Sealed Dark Crystal breastplate" type="Armor">
+		<!-- Sealed Dark Crystal Breastplate. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t74_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1396,6 +1478,7 @@
 		</stats>
 	</item>
 	<item id="5288" name="Sealed Dark Crystal Gaiters" type="Armor">
+		<!-- Sealed Dark Crystal Gaiters. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t74_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1418,6 +1501,7 @@
 		</stats>
 	</item>
 	<item id="5289" name="Sealed Dark Crystal Helmet" type="Armor">
+		<!-- Sealed Dark Crystal Helmet. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1435,6 +1519,7 @@
 		</stats>
 	</item>
 	<item id="5290" name="Sealed Dark Crystal Gloves" type="Armor">
+		<!-- Sealed Dark Crystal Gloves. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t74_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1453,6 +1538,7 @@
 		</stats>
 	</item>
 	<item id="5291" name="Sealed Dark Crystal Boots" type="Armor">
+		<!-- Sealed Dark Crystal Boots. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t74_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1471,6 +1557,7 @@
 		</stats>
 	</item>
 	<item id="5292" name="Sealed Dark Crystal Shield" type="Armor">
+		<!-- Sealed Dark Crystal Shield. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.shield_dark_crystal_shield_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1494,6 +1581,7 @@
 		</stats>
 	</item>
 	<item id="5293" name="Sealed Tallum Plate Armor" type="Armor">
+		<!-- Sealed Tallum Plate Armor. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t77_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1516,6 +1604,7 @@
 		</stats>
 	</item>
 	<item id="5294" name="Sealed Tallum Helmet" type="Armor">
+		<!-- Sealed Tallum Helmet. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1533,6 +1622,7 @@
 		</stats>
 	</item>
 	<item id="5295" name="Sealed Tallum Gloves" type="Armor">
+		<!-- Sealed Tallum Gloves. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t77_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1551,6 +1641,7 @@
 		</stats>
 	</item>
 	<item id="5296" name="Sealed Tallum Boots" type="Armor">
+		<!-- Sealed Tallum Boots. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t77_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1569,6 +1660,7 @@
 		</stats>
 	</item>
 	<item id="5297" name="Sealed Dark Crystal Leather Armor" type="Armor">
+		<!-- Sealed Dark Crystal Leather Armor. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t75_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1588,6 +1680,7 @@
 		</stats>
 	</item>
 	<item id="5298" name="Sealed Dark Crystal Leggings" type="Armor">
+		<!-- Sealed Dark Crystal Leggings. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t75_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1607,6 +1700,7 @@
 		</stats>
 	</item>
 	<item id="5299" name="Sealed Gloves of Underworld" type="Armor">
+		<!-- Sealed Gloves of the Underworld. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t40_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />

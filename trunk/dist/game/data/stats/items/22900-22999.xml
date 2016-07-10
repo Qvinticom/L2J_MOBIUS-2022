@@ -69,7 +69,7 @@
 		</skills>
 	</item>
 	<item id="22904" name="Scroll: Enchant Power Shirt" type="EtcItem">
-		<!-- Enchant Scroll exclusive to Power Shirts.\nIncreases the Power Shirt P. Def. and M. Def. by 1. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3 and can be enchanted up to a max of + 10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from + 4. At + 5, + 7, + 8, and + 9, additional bonuses are also applied. -->
+		<!-- Enchant Scroll exclusive to Power Shirts. Increases the Power Shirt P. Def. and M. Def. by 1. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3 and can be enchanted up to a max of + 10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from + 4. At + 5, + 7, + 8, and + 9, additional bonuses are also applied. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -87,7 +87,7 @@
 		</skills>
 	</item>
 	<item id="22905" name="Blessed Scroll: Enchant Power Shirt" type="EtcItem">
-		<!-- Enchant scroll exclusive to Power Shirts.\nIncreases the Power Shirt P. Def. and M. Def. by 1. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3 and can be enchanted up to a max of + 10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from + 4. At + 5, + 7, + 8, and + 9, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
+		<!-- Enchant scroll exclusive to Power Shirts. Increases the Power Shirt P. Def. and M. Def. by 1. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3 and can be enchanted up to a max of + 10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from + 4. At + 5, + 7, + 8, and + 9, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -105,7 +105,7 @@
 		</skills>
 	</item>
 	<item id="22906" name="XP Rune III (Lv. 1-100+) 50% Pack (1-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III (Lv. 1-99) 50% (1-hour). Cannot be exchanged once opened. -->
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 50% (1-hour). Cannot be exchanged once opened. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -279,7 +279,7 @@
 		</skills>
 	</item>
 	<item id="22916" name="Salvation Bow" type="Weapon">
-		<!-- Shoots a heart with love. Can use the 'Heart Shot' active skill. \nNote: If you use this skill against a monster, you can be attacked by another player. -->
+		<!-- Shoots a heart with love. Can use the 'Heart Shot' active skill. Note: If you use this skill against a monster, you can be attacked by another player. -->
 		<set name="icon" val="icon.weapon_krono_bow_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="is_clan_depositable" val="false" />
@@ -458,7 +458,7 @@
 		</skills>
 	</item>
 	<item id="22925" name="Fire Crystal" type="EtcItem">
-		<!-- When used with your weapon, Fire + 5. When used with your armor, Fire + 6 with increased resistance against Water. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
+		<!-- When used with your weapon, Fire + 5. When used with your armor, Fire + 6 with increased resistance against Water. Attribute Lv. 1-6 only -->
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -477,7 +477,7 @@
 		</skills>
 	</item>
 	<item id="22926" name="Water Crystal" type="EtcItem">
-		<!-- When used with your weapon, Water + 5. When used with your armor, Water + 6 with increased resistance against Fire. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
+		<!-- When used with your weapon, Water + 5. When used with your armor, Water + 6 with increased resistance against Fire. Attribute Lv. 1-6 only -->
 		<set name="icon" val="icon.etc_water_crystal_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -496,7 +496,7 @@
 		</skills>
 	</item>
 	<item id="22927" name="Earth Crystal" type="EtcItem">
-		<!-- When used with your weapon, Earth + 5. When used with your armor, Earth + 6 with increased resistance against Wind. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
+		<!-- When used with your weapon, Earth + 5. When used with your armor, Earth + 6 with increased resistance against Wind. Attribute Lv. 1-6 only -->
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -515,7 +515,7 @@
 		</skills>
 	</item>
 	<item id="22928" name="Wind Crystal" type="EtcItem">
-		<!-- When used with your weapon, Wind + 5. When used with your armor, Wind + 6 with increased resistance against Earth. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
+		<!-- When used with your weapon, Wind + 5. When used with your armor, Wind + 6 with increased resistance against Earth. Attribute Lv. 1-6 only -->
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -534,7 +534,7 @@
 		</skills>
 	</item>
 	<item id="22929" name="Dark Crystal" type="EtcItem">
-		<!-- When used with your weapon, Dark + 5. When used with your armor, Dark + 6 with increased resistance against Holy. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
+		<!-- When used with your weapon, Dark + 5. When used with your armor, Dark + 6 with increased resistance against Holy. Attribute Lv. 1-6 only -->
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -553,7 +553,7 @@
 		</skills>
 	</item>
 	<item id="22930" name="Holy Crystal" type="EtcItem">
-		<!-- When used with your weapon, Holy + 5. When used with your armor, Holy + 6 with increased resistance against Dark. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
+		<!-- When used with your weapon, Holy + 5. When used with your armor, Holy + 6 with increased resistance against Dark. Attribute Lv. 1-6 only -->
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="36000" name="Heavenly P. Def. Cookie" type="EtcItem">
 		<!-- For 1 hour, increases Atk. by 12%, P. Critical Damage by 35%, P. Critical Rate by 100%, Defense by 45%, Shield Defense Rate by 30%, and Shield Defense by 50%. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
@@ -1636,7 +1636,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36079" name="Yum Yum Candy" type="EtcItem">
-		<!-- Yum Yum Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day.\nIncreases additionally obtained XP/SP by 25%.\nIts effect applies together with that of Nom Nom Candy (limited to 1). Temporary event item. -->
+		<!-- Yum Yum Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Increases additionally obtained XP/SP by 25%. Its effect applies together with that of Nom Nom Candy (limited to 1). Temporary event item. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1651,7 +1651,7 @@
 		</skills>
 	</item>
 	<item id="36080" name="Nom Nom Candy" type="EtcItem">
-		<!-- Nom Nom Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day.\nIncreases additionally obtained XP/SP by 25%.\nIts effect applies together with that of Yum Yum Candy (limited to 1). Temporary event item. -->
+		<!-- Nom Nom Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Increases additionally obtained XP/SP by 25%. Its effect applies together with that of Yum Yum Candy (limited to 1). Temporary event item. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1684,7 +1684,7 @@
 		</skills>
 	</item>
 	<item id="36082" name="Scroll of Escape: Isle of Souls Harbor" type="EtcItem">
-		<!-- Magic scroll that takes you to Isle of Souls - Dystopia. Cannot be sold in a store. -->
+		<!-- Magic scroll that takes you to Isle of Souls Harbor. Cannot be sold in a store. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="weight" val="30" />
 		<set name="is_freightable" val="false" />
@@ -1700,7 +1700,7 @@
 		</skills>
 	</item>
 	<item id="36083" name="Star Agathion - Innocent Heejin" type="Armor">
-		<!-- Bracelet for summoning Agathion - Innocent Heejin (30-day)\n(Used Skill)\n1. Blessing of Star Agathion\nIncreases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes)\n2. Star Agathion Teleport\nLets you teleport to various strongholds. (cooldown 30 minutes)\n3. Gift of Star Agathion\nCan get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Innocent Heejin (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1730,7 +1730,7 @@
 		</skills>
 	</item>
 	<item id="36084" name="Star Agathion - Dandy Hyuk" type="Armor">
-		<!-- Bracelet for summoning Agathion - Dandy Hyuk (30-day)\n(Used Skill)\n1. Blessing of Star Agathion\nIncreases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes)\n2. Star Agathion Teleport\nLets you teleport to various strongholds. (cooldown 30 minutes)\n3. Gift of Star Agathion\nCan get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Dandy Hyuk (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1760,7 +1760,7 @@
 		</skills>
 	</item>
 	<item id="36085" name="Star Agathion - Powerful Sooro" type="Armor">
-		<!-- Bracelet for summoning Agathion - Powerful Sooro (30-day)\n(Used Skill)\n1. Blessing of Star Agathion\nIncreases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes)\n2. Star Agathion Teleport\nLets you teleport to various strongholds. (cooldown 30 minutes)\n3. Gift of Star Agathion\nCan get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Powerful Sooro (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1790,7 +1790,7 @@
 		</skills>
 	</item>
 	<item id="36086" name="Star Agathion - Chic Jaebum" type="Armor">
-		<!-- Bracelet for summoning Agathion - Chic Jaebum (30-day)\n(Used Skill)\n1. Blessing of Star Agathion\nIncreases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes)\n2. Star Agathion Teleport\nLets you teleport to various strongholds. (cooldown 30 minutes)\n3. Gift of Star Agathion\nCan get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Chic Jaebum (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1820,7 +1820,7 @@
 		</skills>
 	</item>
 	<item id="36087" name="Star Agathion - Cute Shinyoung" type="Armor">
-		<!-- Bracelet for summoning Agathion - Cute Shinyoung (30-day)\n(Used Skill)\n1. Blessing of Star Agathion\nIncreases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes)\n2. Star Agathion Teleport\nLets you teleport to various strongholds. (cooldown 30 minutes)\n3. Gift of Star Agathion\nCan get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Cute Shinyoung (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -2028,7 +2028,7 @@
 		</skills>
 	</item>
 	<item id="36097" name="Star Agathion - Innocent Heejin" type="Armor">
-		<!-- Bracelet for summoning Agathion - Innocent Heejin (7-day)\n(Used Skill)\n1. Blessing of Star Agathion\nIncreases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes)\n2. Star Agathion Teleport\nLets you teleport to various strongholds. (cooldown 30 minutes)\n3. Gift of Star Agathion\nCan get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Innocent Heejin (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -2058,7 +2058,7 @@
 		</skills>
 	</item>
 	<item id="36098" name="Star Agathion - Dandy Hyuk" type="Armor">
-		<!-- Bracelet for summoning Agathion - Dandy Hyuk (7-day)\n(Used Skill)\n1. Blessing of Star Agathion\nIncreases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes)\n2. Star Agathion Teleport\nLets you teleport to various strongholds. (cooldown 30 minutes)\n3. Gift of Star Agathion\nCan get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Dandy Hyuk (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -2088,7 +2088,7 @@
 		</skills>
 	</item>
 	<item id="36099" name="Star Agathion - Powerful Sooro" type="Armor">
-		<!-- Bracelet for summoning Agathion - Powerful Sooro (7-day)\n(Used Skill)\n1. Blessing of Star Agathion\nIncreases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes)\n2. Star Agathion Teleport\nLets you teleport to various strongholds. (cooldown 30 minutes)\n3. Gift of Star Agathion\nCan get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Powerful Sooro (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />

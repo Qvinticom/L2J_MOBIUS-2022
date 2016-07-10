@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="21900" name="Totem of Spirit" type="EtcItem">
-		<!-- Description: Summons a totem that increases MP recovery speed by 15%. Totem duration is 30 minutes. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 10 minutes. -->
+		<!-- Summons a totem that increases MP Recovery Rate by 15%. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in "Balthus Knights - Antharas Expedition." cooldown is 10 min. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_mind" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -22,7 +22,7 @@
 		</skills>
 	</item>
 	<item id="21901" name="Totem of Courage" type="EtcItem">
-		<!-- Description: Summons a totem that increases P. Def. by 30%. Totem duration is 30 minutes. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 10 minutes. -->
+		<!-- Summons a totem that P. Def. + 15% and cancels fear at a certain cycle. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in "Balthus Knights - Antharas Expedition." cooldown is 10 min. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_bravery" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -43,7 +43,7 @@
 		</skills>
 	</item>
 	<item id="21902" name="Totem of Fortitude" type="EtcItem">
-		<!-- Description: Summons a totem that increases M. Def. by 25% and cancels petrification at a certain cycle. Totem duration is 30 minutes. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 10 minutes. -->
+		<!-- Summons a totem that M. Def. + 25% and cancels petrification at a certain cycle. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in "Balthus Knights - Antharas Expedition." cooldown is 10 min. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_fortitude" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -64,7 +64,7 @@
 		</skills>
 	</item>
 	<item id="21903" name="Refined Red Dragon Blood" type="EtcItem">
-		<!-- Description: When used, instantly recovers some HP to yourself and to party members. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 5 minutes. -->
+		<!-- When used, instantly recovers some HP to yourself and to party members. Can only be used inside the lairs of Valakas and Antharas. Cooldown is 5 min. -->
 		<set name="icon" val="BranchSys2.icon.refined_red_blood_of_dragon" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -87,7 +87,7 @@
 		</skills>
 	</item>
 	<item id="21904" name="Refined Blue Dragon Blood" type="EtcItem">
-		<!-- Description: When used, instantly recovers some MP to yourself and to party members. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 5 minutes. -->
+		<!-- When used, instantly recovers some MP to yourself and to party members. Can only be used inside the lairs of Valakas and Antharas. Cooldown is 5 min. -->
 		<set name="icon" val="BranchSys2.icon.refined_blue_blood_of_dragon" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -110,7 +110,7 @@
 		</skills>
 	</item>
 	<item id="21905" name="Clear Crystal" type="EtcItem">
-		<!-- Description: There is nothing inside the clear crystal. Rumors say that this crystal can store the Antharas's energy. -->
+		<!-- There is nothing inside the clear crystal. Rumors say that this crystal can store the Antharas' energy. -->
 		<set name="icon" val="icon.etc_bead_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -127,7 +127,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="21906" name="Empty Crystal" type="EtcItem">
-		<!-- Description: There is nothing inside the empty crystal. Rumors say that this crystal can store the Valakas's energy. -->
+		<!-- There is nothing inside the empty crystal. Rumors say that this crystal can store the Valakas' energy. -->
 		<set name="icon" val="icon.etc_bead_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -144,7 +144,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="21907" name="Filled Crystal (Antharas Energy)" type="EtcItem">
-		<!-- Description: Crystal containing the land dragon's energy. You must bring it to Theodric. -->
+		<!-- Crystal containing the land dragon's energy. You must bring it to Theodric. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -161,7 +161,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="21908" name="Filled Crystal (Valakas Energy)" type="EtcItem">
-		<!-- Description: Crystal containing the fire dragon's energy. You must bring it to Klein. -->
+		<!-- Crystal containing the fire dragon's energy. You must bring it to Klein. -->
 		<set name="icon" val="icon.etc_bead_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -178,7 +178,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="21909" name="Lavasaurus Stone Fragment" type="EtcItem">
-		<!-- Description: Stone fragment from a Lavasaurus. Researchers say this is what controls how a Lavasaurus moves. -->
+		<!-- Stone fragment from a Lavasaurus. Researchers say this is what controls how a Lavasaurus moves. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -195,7 +195,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="21910" name="Lavasaurus Head Fragment" type="EtcItem">
-		<!-- Description: Framgent from the head of a Lavasaurus. Its shape resembles that of a Dragon. -->
+		<!-- Fragment from the head of a Lavasaurus. Its shape resembles that of a Dragon. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -212,7 +212,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="21911" name="Lavasaurus Body Fragment" type="EtcItem">
-		<!-- Description: Fragment taken from the body of a Lavasaurus. -->
+		<!-- Fragment taken from the body of a Lavasaurus. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -229,7 +229,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="21912" name="Lavasaurus Horn Fragment" type="EtcItem">
-		<!-- Description: Fragment from a Lavasaurus horn. -->
+		<!-- Fragment from a Lavasaurus horn. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -246,7 +246,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="21913" name="Unrefined Red Dragon Blood" type="EtcItem">
-		<!-- Description: Unrefined Red Dragon Blood collected from the dragons inside the Lair of Antharas. -->
+		<!-- Unrefined Red Dragon Blood collected from the dragons inside the Lair of Antharas. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -263,7 +263,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="21914" name="Unrefined Blue Dragon Blood" type="EtcItem">
-		<!-- Description: Unrefined Blue Dragon Blood collected from the dragons inside the Lair of Antharas. -->
+		<!-- Unrefined Blue Dragon Blood collected from the dragons inside the Lair of Antharas. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -280,7 +280,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="21915" name="Ice Candy Piece" type="EtcItem">
-		<!-- Description: Sweet ice candy piece. Collect 50 and bring them back to Santa Claus to receive a reward. -->
+		<!-- Sweet ice candy piece. Collect 50 and bring them back to Santa Claus to receive a reward. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cream_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="is_clan_depositable" val="false" />
@@ -292,7 +292,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="21916" name="Super Kat the Cat Z Summon Necklace" type="EtcItem">
-		<!-- Description: Dimensional item. Item that allows you to summon a hunting helper who temporarily casts magician-type battle support magic. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Item that allows you to summon a Minion who temporarily casts Wizard-type battle buff. -->
 		<set name="icon" val="BranchSys2.icon.g_supercat_cat_i00" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
@@ -311,7 +311,7 @@
 		</skills>
 	</item>
 	<item id="21917" name="Super Feline Queen Z Summon Necklace" type="EtcItem">
-		<!-- Description: Dimensional item. Item that allows you to summon a hunting helper who temporarily casts magician-type battle support magic. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Item that allows you to summon a Minion who temporarily casts Wizard-type battle buff. -->
 		<set name="icon" val="BranchSys2.icon.g_supercat_queen_i00" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
@@ -330,7 +330,7 @@
 		</skills>
 	</item>
 	<item id="21918" name="Super Mew the Cat Z Summon Necklace" type="EtcItem">
-		<!-- Description: Dimensional item. Item that allows you to summon a hunting helper who temporarily casts magician-type battle support magic. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Item that allows you to summon a Minion who temporarily casts Wizard-type battle buff. -->
 		<set name="icon" val="BranchSys2.icon.g_supercat_mew_i00" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
@@ -349,7 +349,7 @@
 		</skills>
 	</item>
 	<item id="21919" name="Hellblade" type="Weapon">
-		<!-- Description: Sword used by Darion. Bestows a special power upon the wielder. Bestows one of the following functions: Haste, Focus, or Health. -->
+		<!-- Sword used by Darion. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -381,7 +381,7 @@
 		</stats>
 	</item>
 	<item id="21920" name="Hellblade" additionalName="Haste" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -414,7 +414,7 @@
 		</stats>
 	</item>
 	<item id="21921" name="Hellblade" additionalName="Health" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -447,7 +447,7 @@
 		</stats>
 	</item>
 	<item id="21922" name="Hellblade" additionalName="Focus" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -480,7 +480,7 @@
 		</stats>
 	</item>
 	<item id="21923" name="Hellblade {PvP}" type="Weapon">
-		<!-- Description: Sword used by Darion. Bestows a special power upon the wielder. Bestows one of the following functions: Haste, Focus, or Health. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
+		<!-- Sword used by Darion. Bestows a special power upon the wielder. Increases damage inflicted during PvP. Has a chance of recovering CP. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -519,7 +519,7 @@
 		</stats>
 	</item>
 	<item id="21924" name="Hellblade {PvP}" additionalName="Haste" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
+		<!-- <Special Option>. Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -559,7 +559,7 @@
 		</stats>
 	</item>
 	<item id="21925" name="Hellblade {PvP}" additionalName="Health" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
+		<!-- <Special Option>. Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -599,7 +599,7 @@
 		</stats>
 	</item>
 	<item id="21926" name="Hellblade {PvP}" additionalName="Focus" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
+		<!-- <Special Option>. Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -639,7 +639,7 @@
 		</stats>
 	</item>
 	<item id="21927" name="Hellblade - Lightning" type="Weapon">
-		<!-- Description: Masterwork Item than increases the critical rate. Sword used by Darion. Bestows a special power upon the wielder. Bestows one of the following functions: Haste, Focus, or Health. -->
+		<!-- Masterwork Item that increases the P. Critical Rate. Sword used by Darion. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -672,7 +672,7 @@
 		</stats>
 	</item>
 	<item id="21928" name="Hellblade - Lightning" additionalName="Haste" type="Weapon">
-		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases the Critical Rate. <Soul Crystal Enhancement>. Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -706,7 +706,7 @@
 		</stats>
 	</item>
 	<item id="21929" name="Hellblade - Lightning" additionalName="Health" type="Weapon">
-		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases the Critical Rate. <Soul Crystal Enhancement>. Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -740,7 +740,7 @@
 		</stats>
 	</item>
 	<item id="21930" name="Hellblade - Lightning" additionalName="Focus" type="Weapon">
-		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases the Critical Rate. <Soul Crystal Enhancement>. Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -774,7 +774,7 @@
 		</stats>
 	</item>
 	<item id="21931" name="Hellblade - Lightning {PvP}" type="Weapon">
-		<!-- Description: Masterwork Item than increases the critical rate. Sword used by Darion. Bestows a special power upon the wielder. Bestows one of the following functions: Haste, Focus, or Health. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- Masterwork Item that increases the P. Critical Rate. Sword used by Darion. Bestows a special power upon the wielder. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -814,7 +814,7 @@
 		</stats>
 	</item>
 	<item id="21932" name="Hellblade - Lightning {PvP}" additionalName="Haste" type="Weapon">
-		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. -->
+		<!-- Masterwork Item that increases the Critical Rate. <Special Option>. Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -855,7 +855,7 @@
 		</stats>
 	</item>
 	<item id="21933" name="Hellblade - Lightning {PvP}" additionalName="Health" type="Weapon">
-		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. -->
+		<!-- Masterwork Item that increases the Critical Rate. <Special Option>. Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -896,7 +896,7 @@
 		</stats>
 	</item>
 	<item id="21934" name="Hellblade - Lightning {PvP}" additionalName="Focus" type="Weapon">
-		<!-- Description: Masterwork Item that increases the critical attack rate. (Soul Crystal Enhancement). Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. -->
+		<!-- Masterwork Item that increases the Critical Rate. <Special Option>. Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -937,7 +937,7 @@
 		</stats>
 	</item>
 	<item id="21935" name="Butcher Blades" type="Weapon">
-		<!-- Description: Dagger dualsword used by Doll Blader. Bestows a special power upon the wielder. Increases P. Atk. more than that for regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical by 109. Increases the damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. -->
+		<!-- Dual Daggers used by Doll Blader. Bestows a special power upon the wielder. Increases P. Atk. more than that for regular one-handed swords when enchanted. Can be equipped by Dagger Masters above level 81.Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_habus_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -978,7 +978,7 @@
 		</stats>
 	</item>
 	<item id="21936" name="Butcher Blades {PvP}" type="Weapon">
-		<!-- Description: Dagger dualsword used by Doll Blader. Bestows a special power upon the wielder. Increases P. Atk. more than that for regular one-handed swords when enchanted. During an attack, cancels a target's enhanced status by more than 1 at a fixed rate, or decreases a target's shield P. Def. Can be equipped by Dagger masters above level 81. Increases damage inflicted during PvP. -->
+		<!-- Dual Daggers used by Doll Blader. Bestows a special power upon the wielder. Increases P. Atk. more than that for regular one-handed swords when enchanted. During an attack, cancels the target's enhanced status by more than 1 at a fixed rate, or decreases the target's Shield Defense Can be equipped by Dagger masters above level 81. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_habus_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1026,7 +1026,7 @@
 		</stats>
 	</item>
 	<item id="21937" name="Butcher Blades - Confusion" type="Weapon">
-		<!-- Description: Masterwork Item that raises evasion. Dagger dualsword used by Doll Blader. Bestows a special power upon the wielder. Increases P. Atk. more than that for regular one-handed swords when enchanted. Can be equipped by Dagger Masters above level 81. -->
+		<!-- Masterwork Item that raises Evasion. Dual Daggers used by Doll Blader. Bestows a special power upon the wielder. Increases P. Atk. more than that for regular one-handed swords when enchanted. Can be equipped by Dagger Masters above level 81. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_habus_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1068,7 +1068,7 @@
 		</stats>
 	</item>
 	<item id="21938" name="Butcher Blades - Confusion {PvP}" type="Weapon">
-		<!-- Description: Masterwork Item that raises evasion. Dagger dualsword used by Doll Blader. Bestows a special power upon the wielder. Increases P. Atk. more than that for regular one-handed swords when enchanted. Increases damage inflicted during PvP, during an attack, cancels a target's enhanced status by more than 1 at a fixed rate, or decreases a target's shield P. Def. Can be equipped by Dagger Masters above level 81. -->
+		<!-- Masterwork Item that raises Evasion. Dual Daggers used by Doll Blader. Bestows a special power upon the wielder. Increases P. Atk. more than that for regular one-handed swords when enchanted. Increases damage inflicted during PvP, during an attack, cancels the target's enhanced status by more than 1 at a fixed rate, or decreases the target's Shield Defense Can be equipped by Dagger Masters above level 81. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_habus_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1117,7 +1117,7 @@
 		</stats>
 	</item>
 	<item id="21939" name="Claw of Destruction" type="Weapon">
-		<!-- Description: Blunt weapon used by Tiat. Bestows a special power upon the wielder. Bestows one of the following functions: HP Regeneration, HP Drain, or Health. -->
+		<!-- Blunt weapon used by Tiat. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1150,7 +1150,7 @@
 		</stats>
 	</item>
 	<item id="21940" name="Claw of Destruction" additionalName="HP Drain" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Recovers 4% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Blunt used by Tiat. Bestows a special power upon the wielder. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1184,7 +1184,7 @@
 		</stats>
 	</item>
 	<item id="21941" name="Claw of Destruction" additionalName="Health" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Blunt used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1218,7 +1218,7 @@
 		</stats>
 	</item>
 	<item id="21942" name="Claw of Destruction" additionalName="HP Regeneration" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Increases HP recovery rate. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Blunt used by Tiat. Bestows a special power upon the wielder. Increases HP Recovery Rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1252,7 +1252,7 @@
 		</stats>
 	</item>
 	<item id="21943" name="Claw of Destruction {PvP}" type="Weapon">
-		<!-- Description: Blunt weapon used by Tiat. Bestows a special power upon the wielder. Bestows one of the following functions: HP Regeneration, HP Drain, or Health. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
+		<!-- Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1292,7 +1292,7 @@
 		</stats>
 	</item>
 	<item id="21944" name="Claw of Destruction {PvP}" additionalName="HP Drain" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Recovers 4% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
+		<!-- <Special Option>. Blunt used by Tiat. Bestows a special power upon the wielder. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1333,7 +1333,7 @@
 		</stats>
 	</item>
 	<item id="21945" name="Claw of Destruction {PvP}" additionalName="Health" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
+		<!-- <Special Option>. Blunt used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1374,7 +1374,7 @@
 		</stats>
 	</item>
 	<item id="21946" name="Claw of Destruction {PvP}" additionalName="HP Regeneration" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Blunt used by Tiat. Bestows a special power upon the wielder. HP recovery speed is increased. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
+		<!-- <Special Option>. Blunt used by Tiat. Bestows a special power upon the wielder. Increases HP Recovery Rate. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1415,7 +1415,7 @@
 		</stats>
 	</item>
 	<item id="21947" name="Claw of Destruction - Landslide" type="Weapon">
-		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Bestows one of the following functions: HP Regeneration, HP Drain, or Health. -->
+		<!-- Masterwork Item that has the Stun effect at a fixed rate when striking. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1449,7 +1449,7 @@
 		</stats>
 	</item>
 	<item id="21948" name="Claw of Destruction - Landslide" additionalName="HP Drain" type="Weapon">
-		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Recovers 4% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that has the Stun effect at a fixed rate when striking. <Special Option>. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1484,7 +1484,7 @@
 		</stats>
 	</item>
 	<item id="21949" name="Claw of Destruction - Landslide" additionalName="Health" type="Weapon">
-		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that has the Stun effect at a fixed rate when striking. <Special Option>. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1519,7 +1519,7 @@
 		</stats>
 	</item>
 	<item id="21950" name="Claw of Destruction - Landslide" additionalName="HP Regeneration" type="Weapon">
-		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases HP recovery rate. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that has the Stun effect at a fixed rate when striking. <Special Option>. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases HP Recovery Rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1554,7 +1554,7 @@
 		</stats>
 	</item>
 	<item id="21951" name="Claw of Destruction - Landslide {PvP}" type="Weapon">
-		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Bestows one of the following functions: HP Regeneration, HP Drain, or Health. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- Masterwork Item that has the Stun effect at a fixed rate when striking. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1595,7 +1595,7 @@
 		</stats>
 	</item>
 	<item id="21952" name="Claw of Destruction - Landslide {PvP}" additionalName="HP Drain" type="Weapon">
-		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Recovers 4% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- Masterwork Item that has the Stun effect at a fixed rate when striking. <Special Option>. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1637,7 +1637,7 @@
 		</stats>
 	</item>
 	<item id="21953" name="Claw of Destruction - Landslide {PvP}" additionalName="Health" type="Weapon">
-		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. -->
+		<!-- Masterwork Item that has the Stun effect at a fixed rate when striking. <Special Option>. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1679,7 +1679,7 @@
 		</stats>
 	</item>
 	<item id="21954" name="Claw of Destruction - Landslide {PvP}" additionalName="HP Regeneration" type="Weapon">
-		<!-- Description: Masterwork Item that has the stun effect at a fixed rate when striking. (Soul Crystal Enhancement). Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases HP recovery rate. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. -->
+		<!-- Masterwork Item that has the Stun effect at a fixed rate when striking. <Special Option>. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases HP Recovery Rate. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1721,7 +1721,7 @@
 		</stats>
 	</item>
 	<item id="21955" name="Blades of Delusion" type="Weapon">
-		<!-- Description: Dualsword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, P. Atk. of dual-swords, two-handed swords, two-handed blunt weapons and fist weapons will increase more than that of one-handed swords. When enchanted to 4 or more, increases Critical Damage by 109, and Increases Max HP by 10%. Increases the damage inflicted during PvP. -->
+		<!-- Dualsword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, increases P. Atk. of dualswords, two-handed swords, two-handed blunt weapons and fist weapons more than that of one-handed swords. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_astarot_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1755,7 +1755,7 @@
 		</stats>
 	</item>
 	<item id="21956" name="Blades of Delusion {PvP}" type="Weapon">
-		<!-- Description: Dualsword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, increases P. Atk. of a dualsword, two-handed sword, two-handed blunt weapon and fist weapon more significantly than that of a one-handed sword. When enchanted to 4 or more, increases Critical Damage by 109 and Increases Max HP by 10%. Increases damage inflicted during PvP, and has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Dualsword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, increases P. Atk. of dualswords, two-handed swords, two-handed blunt weapons and fist weapons more than that of one-handed swords. When enchanted to 4 or more, increases P. Critical Rate by 109. Increases Max HP by 10%. Increases damage inflicted during PvP. Has a chance of decreasing bow/crossbow range during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_astarot_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1795,7 +1795,7 @@
 		</stats>
 	</item>
 	<item id="21957" name="Blades of Delusion - Earth" type="Weapon">
-		<!-- Description: Masterwork Item than increases Max HP. Dualsword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, P. Atk. of dual-swords, two-handed swords, two-handed blunt weapons and fist weapons will increase more than that of one-handed swords. When enchanted to 4 or more, increases Critical Damage by 109, and Increases Max HP by 10%. Increases the damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Max HP. Dualsword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, increases P. Atk. of dualswords, two-handed swords, two-handed blunt weapons and fist weapons more than that of one-handed swords. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_astarot_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1830,7 +1830,7 @@
 		</stats>
 	</item>
 	<item id="21958" name="Blades of Delusion - Earth {PvP}" type="Weapon">
-		<!-- Description: Masterwork Item than increases Max HP. Dualsword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, increases P. Atk. of a dualsword, two-handed sword, two-handed blunt weapon and fist weapon more significantly than that of a one-handed sword. When enchanted to 4 or more, increases Critical Damage by 109 and Increases Max HP by 10%. Increases damage inflicted during PvP, and has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Masterwork Item that increases Max HP. Dualsword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, increases P. Atk. of dualswords, two-handed swords, two-handed blunt weapons and fist weapons more than that of one-handed swords. When enchanted to 4 or more, increases P. Critical Rate by 109. Increases Max HP by 10%. Increases damage inflicted during PvP. Has a chance of decreasing bow/crossbow range during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_astarot_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1871,7 +1871,7 @@
 		</stats>
 	</item>
 	<item id="21959" name="Blood Brother" type="Weapon">
-		<!-- Description: Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Bestows one of the following functions: Focus, Health or Light. -->
+		<!-- Two-handed sword used by Yehan Klanikus. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1903,7 +1903,7 @@
 		</stats>
 	</item>
 	<item id="21960" name="Blood Brother" additionalName="Focus" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1936,7 +1936,7 @@
 		</stats>
 	</item>
 	<item id="21961" name="Blood Brother" additionalName="Health" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1969,7 +1969,7 @@
 		</stats>
 	</item>
 	<item id="21962" name="Blood Brother" additionalName="Light Armor" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2003,7 +2003,7 @@
 		</stats>
 	</item>
 	<item id="21963" name="Blood Brother {PvP}" additionalName="Focus" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
+		<!-- <Special Option>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2043,7 +2043,7 @@
 		</stats>
 	</item>
 	<item id="21964" name="Blood Brother {PvP}" additionalName="Health" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
+		<!-- <Special Option>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2083,7 +2083,7 @@
 		</stats>
 	</item>
 	<item id="21965" name="Blood Brother {PvP}" additionalName="Light Armor" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases weight gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
+		<!-- <Special Option>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2123,7 +2123,7 @@
 		</stats>
 	</item>
 	<item id="21966" name="Blood Brother - Great Gale" type="Weapon">
-		<!-- Description: Masterwork Item than increases Atk. Spd. Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Bestows one of the following functions: Focus, Health or Light. -->
+		<!-- Masterwork Item that increases Atk. Spd. Two-handed sword used by Yehan Klanikus. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2156,7 +2156,7 @@
 		</stats>
 	</item>
 	<item id="21967" name="Blood Brother - Great Gale" additionalName="Focus" type="Weapon">
-		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2190,7 +2190,7 @@
 		</stats>
 	</item>
 	<item id="21968" name="Blood Brother - Great Gale" additionalName="Health" type="Weapon">
-		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2224,7 +2224,7 @@
 		</stats>
 	</item>
 	<item id="21969" name="Blood Brother - Great Gale" additionalName="Light Armor" type="Weapon">
-		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2259,7 +2259,7 @@
 		</stats>
 	</item>
 	<item id="21970" name="Blood Brother - Great Gale {PvP}" additionalName="Focus" type="Weapon">
-		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2300,7 +2300,7 @@
 		</stats>
 	</item>
 	<item id="21971" name="Blood Brother - Great Gale {PvP}" additionalName="Health" type="Weapon">
-		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2341,7 +2341,7 @@
 		</stats>
 	</item>
 	<item id="21972" name="Blood Brother - Great Gale {PvP}" additionalName="Light Armor" type="Weapon">
-		<!-- Description: Masterwork Item than increases Atk. Spd. (Soul Crystal Enhancement). Two-handed sword used by Yehan Klodekus. Bestows a special power upon the wielder. Increases weight gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2382,7 +2382,7 @@
 		</stats>
 	</item>
 	<item id="21973" name="Mardil's Fan" type="Weapon">
-		<!-- Description: Magic fan used by Mardil. Bestows a special power upon the wielder. Bestows one of the following functions: M. Atk., Magic Silence or Acumen. -->
+		<!-- Magic fan used by Mardil. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2413,7 +2413,7 @@
 		</stats>
 	</item>
 	<item id="21974" name="Mardil's Fan" additionalName="M. Atk." type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. When using magic, increases MP Consumption by 15% and increases M. Atk. by 167. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Magic fan used by Mardil. Bestows a special power upon the wielder. Increases MP consumption by 15% and M. Atk. by 167 during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2446,7 +2446,7 @@
 		</stats>
 	</item>
 	<item id="21975" name="Mardil's Fan" additionalName="Magic Silence" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. Inflicts silence on a target with a 10% chance when using a magic skill. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Magic fan used by Mardil. Bestows a special power upon the wielder. Inflicts Silence on the target with a 10% chance during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2480,7 +2480,7 @@
 		</stats>
 	</item>
 	<item id="21976" name="Mardil's Fan" additionalName="Acumen" type="Weapon">
-		<!-- Description: (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Magic fan used by Mardil. Bestows a special power upon the wielder. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2513,7 +2513,7 @@
 		</stats>
 	</item>
 	<item id="21977" name="Mardil's Fan - Holy Spirit" type="Weapon">
-		<!-- Description: Masterwork Item that increases heal amount. Magic fan used by Mardil. Bestows a special power upon the wielder. Bestows one of the following functions: M. Atk., Magic Silence or Acumen. -->
+		<!-- Masterwork Item that increases Heal Amount. Magic fan used by Mardil. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2546,7 +2546,7 @@
 		</stats>
 	</item>
 	<item id="21978" name="Mardil's Fan - Holy Spirit" additionalName="M. Atk." type="Weapon">
-		<!-- Description: Masterwork Item that increases heal amount. (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. When using magic, increases MP Consumption by 15% and increases M. Atk. by 167. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Heal Amount. <Soul Crystal Enhancement>. Magic fan used by Mardil. Bestows a special power upon the wielder. Increases MP consumption by 15% and M. Atk. by 167 during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2580,7 +2580,7 @@
 		</stats>
 	</item>
 	<item id="21979" name="Mardil's Fan - Holy Spirit" additionalName="Magic Silence" type="Weapon">
-		<!-- Description: Masterwork Item that increases heal amount. (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. Inflicts silence on a target with a 10% chance when using a magic skill. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Heal Amount. <Soul Crystal Enhancement>. Magic fan used by Mardil. Bestows a special power upon the wielder. Inflicts Silence on the target with a 10% chance during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2615,7 +2615,7 @@
 		</stats>
 	</item>
 	<item id="21980" name="Mardil's Fan - Holy Spirit" additionalName="Acumen" type="Weapon">
-		<!-- Description: Masterwork Item that increases heal amount. (Soul Crystal Enhancement). Magic fan used by Mardil. Bestows a special power upon the wielder. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Heal Amount. <Soul Crystal Enhancement>. Magic fan used by Mardil. Bestows a special power upon the wielder. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2649,7 +2649,7 @@
 		</stats>
 	</item>
 	<item id="21981" name="Clownfish Hat" type="Armor">
-		<!-- Description: Clownfish Hat. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. -->
+		<!-- Clownfish Hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_fish_cap2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2668,7 +2668,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="21982" name="Refined Angel Ring" type="Armor">
-		<!-- Description: Refined Angel Ring. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. -->
+		<!-- Refined Angel Ring. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_angel_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2687,7 +2687,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="21983" name="Refined Wizard Hat" type="Armor">
-		<!-- Description: Refined Wizard Hat. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. -->
+		<!-- Refined Wizard Hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_magician_cap2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2706,7 +2706,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="21984" name="Refined Jester Hat" type="Armor">
-		<!-- Description: Refined Jester Hat. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. -->
+		<!-- Refined Jester Hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_jester_cap_2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2725,7 +2725,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="21985" name="Refined Romantic Chapeau" type="Armor">
-		<!-- Description: Refined Romantic Chapeau. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. -->
+		<!-- Refined Romantic Chapeau. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2744,7 +2744,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="21986" name="Agathion - Antharas" type="Armor">
-		<!-- Description: Bracelet that summons a cute Antharas Agathion. Cannot be exchanged, dropped, or sold. -->
+		<!-- Bracelet that summons a cute Agathion - Antharas. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -2767,7 +2767,7 @@
 		</skills>
 	</item>
 	<item id="21987" name="Pirate Hat" type="Armor">
-		<!-- Description: Hat worn by pirates. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. -->
+		<!-- Hat worn by pirates. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.Accessary_sea_robber_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2786,7 +2786,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="21988" name="Shiny Platform Summon Bracelet" type="Armor">
-		<!-- Description: Can stand upon the shiny platform with brilliant lighting when equipped. Cannot be exchanged, dropped, or sold. -->
+		<!-- Can stand upon the Shiny Platform with brilliant lighting when equipped. -->
 		<set name="icon" val="BranchSys2.Icon.br_shiny_platform_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -2809,7 +2809,7 @@
 		</skills>
 	</item>
 	<item id="21989" name="Warm Bear Hat" type="Armor">
-		<!-- Description: Polar bear hat that makes you feel cozy just by looking at it. Uses 2 hair accessory slot(s). Cannot be exchanged, dropped, or sold. -->
+		<!-- Polar bear hat that makes you feel cozy just by looking at it. Uses 2 hair accessory slot(s). -->
 		<set name="icon" val="BranchSys2.icon.br_polar_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2829,7 +2829,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="21990" name="Warm Bear Paws" type="Weapon">
-		<!-- Description: Hand-to-hand combat weapon that looks like cozy bear paws. Very low P. Atk. Cannot be exchanged, dropped, or sold. -->
+		<!-- Fist weapon that looks like cozy bear paws. Very low P. Atk. -->
 		<set name="icon" val="BranchSys2.icon.br_polar_bear_wp_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2862,7 +2862,7 @@
 		</stats>
 	</item>
 	<item id="21991" name="Tarask Dragon's Leather Fragment" type="EtcItem">
-		<!-- Description: Leathery hide from a Tarask Dragon. -->
+		<!-- Leathery hide from a Tarask Dragon. -->
 		<set name="icon" val="icon.etc_leather_yellow_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_depositable" val="false" />
@@ -2879,7 +2879,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="21992" name="Behemoth Dragon Leather" type="EtcItem">
-		<!-- Description: Leathery hide from a Behemoth Dragon. -->
+		<!-- Leathery hide from a Behemoth Dragon. -->
 		<set name="icon" val="icon.etc_leather_yellow_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_depositable" val="false" />
@@ -2896,7 +2896,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="21993" name="Lavasaurus Alpha Fragment" type="EtcItem">
-		<!-- Description: Lavasaurus Alpha fragment piece. Bring it to Watcher of Valakas Klein. -->
+		<!-- Lavasaurus Alpha fragment piece. Bring it to Valakas Watchman Klein. -->
 		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_depositable" val="false" />
@@ -2913,7 +2913,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="21994" name="Vitality Replenishing Potion 9-unit Pack" type="EtcItem">
-		<!-- Description: Dimensional Item Pack. A pack containing 9 units of Energy Replenishing Beverage. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Pack containing 9 unit s of Vitality Replenishing Potion. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="100" />
@@ -2933,7 +2933,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21995" name="Vitality Replenishing Potion 12-unit Pack" type="EtcItem">
-		<!-- Description: Dimensional Item Pack. A pack containing 12 units of Energy Replenishing Beverage. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Pack containing 12 unit s of Vitality Replenishing Potion. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="100" />
@@ -2953,7 +2953,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21996" name="Vitality Replenishing Potion 15-unit Pack" type="EtcItem">
-		<!-- Description: Dimensional Item Pack. A pack containing 15 units of Energy Replenishing Beverage. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Can be shared between characters on the same account through the Dimensional Merchant. Pack containing 15 unit s of Vitality Replenishing Potion. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="100" />
@@ -2973,7 +2973,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21997" name="Shattered Bones" type="EtcItem">
-		<!-- Description: Shattered bones that can be obtained from the Ketra Orcs and the Varka Silenos. Bring this to Rune Captain Mathias. -->
+		<!-- Shattered bones that can be obtained from the Ketra Orcs and the Varka Silenos. Bring this to Rune Captain Mathias. -->
 		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_depositable" val="false" />
@@ -2990,7 +2990,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="21998" name="Cannibalistic Stakato Captain Claw" type="EtcItem">
-		<!-- Description: Cannibalistic Stakato Leader Claw. Bring this to Rune Captain Mathias. -->
+		<!-- Cannibalistic Stakato Captain Claw. Bring this to Rune Captain Mathias. -->
 		<set name="icon" val="icon.etc_parasite_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_depositable" val="false" />
@@ -3007,7 +3007,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="21999" name="Anais Scroll" type="EtcItem">
-		<!-- Description: Magic scroll that belongs to Anais. Bring this to Rune Captain Mathias. -->
+		<!-- Magic scroll that belongs to Anais. Bring this to Rune Captain Mathias. -->
 		<set name="icon" val="BranchSys2.icon.g_ancient_book_piece_high" />
 		<set name="material" val="STEEL" />
 		<set name="is_depositable" val="false" />

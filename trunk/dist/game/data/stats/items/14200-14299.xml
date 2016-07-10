@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14200" name="Forgotten Scroll: Summon Imperial Phoenix" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Phoenix Knights level 83 or above to learn Summon Lesser Phoenix. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -15,6 +16,7 @@
 		</skills>
 	</item>
 	<item id="14201" name="Forgotten Scroll: Maximum Force Focus" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Grand Khavataris level 83 or above to learn Maximum Force Focus. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -29,6 +31,7 @@
 		</skills>
 	</item>
 	<item id="14202" name="Forgotten Scroll: Maximum Sonic Focus" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Duelists level 83 or above to learn Maximum Sonic Focus. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -43,6 +46,7 @@
 		</skills>
 	</item>
 	<item id="14203" name="Forgotten Scroll: Weapon Blockade" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Duelists level 83 or above to learn Weapon Blockade. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -62,6 +66,7 @@
 		</skills>
 	</item>
 	<item id="14204" name="Forgotten Scroll: Spirit of the Cat" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Arcana Lords level 83 or above to learn Spirit of the Cat. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -76,6 +81,7 @@
 		</skills>
 	</item>
 	<item id="14205" name="Forgotten Scroll: Spirit of the Unicorn" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Elemental Masters level 83 or above to learn Spirit of the Unicorn. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -90,6 +96,7 @@
 		</skills>
 	</item>
 	<item id="14206" name="Forgotten Scroll: Spirit of the Phantom" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Spectral Masters level 83 or above to learn Spirit of the Phantom. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -104,6 +111,7 @@
 		</skills>
 	</item>
 	<item id="14207" name="Forgotten Scroll: Deflect Magic" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Phoenix Knights, Hell Knights, Eva's Templars, Shillien Templars, Sword Muses and Spectral Dancers level 81 or above to learn Deflect Magic. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -118,6 +126,7 @@
 		</skills>
 	</item>
 	<item id="14208" name="Forgotten Scroll: Final Secret" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Duelists, Grand Khavataris, Dreadnoughts, Titans, Fortune Seekers, Maestros and Doombringers level 81 or above to learn Final Secret. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -132,6 +141,7 @@
 		</skills>
 	</item>
 	<item id="14209" name="Forgotten Scroll: Hide" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Adventurers, Wind Riders, and Ghost Hunters level 81 or above to learn Hide. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -146,6 +156,7 @@
 		</skills>
 	</item>
 	<item id="14210" name="Forgotten Scroll: Dual Dagger Mastery" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Adventurers, Wind Riders, and Ghost Hunters level 81 or above to learn Dual Dagger Mastery. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -160,6 +171,7 @@
 		</skills>
 	</item>
 	<item id="14211" name="Forgotten Scroll: Seven Arrow" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Sagittarius, Moonlight Sentinels and Ghost Sentinels level 81 or above to learn Seven Arrow. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -174,6 +186,7 @@
 		</skills>
 	</item>
 	<item id="14212" name="Forgotten Scroll: Enlightenment - Wizard" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Archmages, Soul Takers, Mystic Muses, Storm Screamers and Soul Hounds level 81 or above to learn Enlightenment. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -188,6 +201,7 @@
 		</skills>
 	</item>
 	<item id="14213" name="Forgotten Scroll: Enlightenment - Healer" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Cardinals, Hierophants, Eva's Saints, Shillien Saints, Dominators and Doomcryers level 81 or above to learn Enlightenment. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -202,6 +216,7 @@
 		</skills>
 	</item>
 	<item id="14214" name="Forgotten Scroll: Chant of Movement" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Warcryers level 72 or above to learn Chant of Movement. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -216,6 +231,7 @@
 		</skills>
 	</item>
 	<item id="14215" name="Forgotten Scroll: Combat of Pa'agrio" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Overlords level 70 or above to learn Combat of Pa'agrio. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -230,6 +246,7 @@
 		</skills>
 	</item>
 	<item id="14216" name="Forgotten Scroll: Critical of Pa'agrio" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Overlords level 74 or above to learn Critical of Pa'agrio. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -244,6 +261,7 @@
 		</skills>
 	</item>
 	<item id="14217" name="Forgotten Scroll: Condition of Pa'agrio" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Overlords level 72 or above to learn Condition of Pa'agrio. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -258,6 +276,7 @@
 		</skills>
 	</item>
 	<item id="14218" name="Forgotten Scroll: Dual Blow" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Dagger Master classes to learn Dual Blow. Can be learned by level 83 or above. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -272,6 +291,7 @@
 		</skills>
 	</item>
 	<item id="14219" name="Forgotten Scroll: Magician's Will" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Mages level 81 or above to learn Magician's Will. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -286,6 +306,7 @@
 		</skills>
 	</item>
 	<item id="14220" name="Forgotten Scroll: Silent Mind" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Sagittarius, Moonlight Sentinels and Ghost Sentinels level 81 or above to learn Silent Mind. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -300,6 +321,7 @@
 		</skills>
 	</item>
 	<item id="14221" name="Forgotten Scroll: Turn to Stone" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Cardinals, Hierophants, Eva's Saints, Shillien Saints, Dominators and Doomcryers level 81 or above to learn Turn to Stone. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -314,6 +336,7 @@
 		</skills>
 	</item>
 	<item id="14222" name="Forgotten Scroll: Lucky Strike" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Fortune Seekers level 83 or above to learn Lucky Strike. Cannot be exchanged or dropped. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -328,6 +351,7 @@
 		</skills>
 	</item>
 	<item id="14223" name="Forgotten Scroll: Eye for Eye" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Doombringers level 83 or above to learn Eye for Eye. Cannot be exchanged or dropped. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -342,6 +366,7 @@
 		</skills>
 	</item>
 	<item id="14224" name="Forgotten Scroll: Curse of Desparion" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Soul Takers to learn Curse of Desparion. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -356,6 +381,7 @@
 		</skills>
 	</item>
 	<item id="14225" name="Forgotten Scroll: Counter Critical" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Hierophants level 83 or above to learn Counter Critical. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -370,6 +396,7 @@
 		</skills>
 	</item>
 	<item id="14226" name="Forgotten Scroll: Onslaught of Pa'agrio" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Dominators level 83 or above to learn Onslaught of Pa'agrio. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -384,6 +411,7 @@
 		</skills>
 	</item>
 	<item id="14227" name="Forgotten Scroll: Great Fury" type="EtcItem">
+		<!-- This Forgotten Scroll can be used by Doomcryers level 83 or above to learn Great Fury. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -398,6 +426,7 @@
 		</skills>
 	</item>
 	<item id="14228" name="Agathion - Angry Devil Pack (30-day)" type="EtcItem">
+		<!-- A wrapped pack containing Agathion - Angry Devil (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -419,6 +448,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14229" name="Agathion - Shiny Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Shiny (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -440,6 +470,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14230" name="Agathion - Sobbing Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Sobbing (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -461,6 +492,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14231" name="Mount - Gold Maned Lion Pack (7-day)" type="EtcItem">
+		<!-- Wrapped Pack containing bracelet that summons a Gold Maned Lion (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -482,6 +514,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14232" name="Mount - Steam Beetle Pack (7-day)" type="EtcItem">
+		<!-- Wrapped Pack containing bracelet that summons a Steam Beetle (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -503,6 +536,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14233" name="Vitality Replenishing Potion Pack" type="EtcItem">
+		<!-- Wrapped Pack containing unit s of Vitality Replenishing Potion. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -523,6 +557,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14234" name="Snow Man Transformation Stick Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Snow Man Transformation Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -544,6 +579,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14235" name="Scarecrow Jack Transformation Stick Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Scarecrow Jack Transformation Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -565,6 +601,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14236" name="Tin Golem Transformation Stick Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Tin Golem Transformation Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -586,6 +623,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14237" name="Agathion - Teddy Boy Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Teddy Boy Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -607,6 +645,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14238" name="Agathion - Teddy Girl Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Teddy Girl Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -628,6 +667,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14239" name="Superior Minion Coupon 2-unit Pack" type="EtcItem">
+		<!-- Wrapped Pack containing 2 coupon that can be exchanged for a necklace that allows you to summon a Superior Minion (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -649,6 +689,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14240" name="Mount - Gold Maned Lion Pack (7-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing bracelet that summons a Gold Maned Lion (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -670,6 +711,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14241" name="Mount - Steam Beetle Pack (7-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing bracelet that summons a Steam Beetle (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -691,6 +733,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14242" name="Vitality Replenishing Potion Pack (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing unit s of Vitality Replenishing Potion. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -711,6 +754,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14243" name="Snow Man Transformation Stick Pack (30-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Snow Man Transformation Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -732,6 +776,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14244" name="Scarecrow Jack Transformation Stick Pack (30-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Scarecrow Jack Transformation Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -753,6 +798,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14245" name="Tin Golem Transformation Stick Pack (30-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Tin Golem Transformation Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -774,6 +820,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14246" name="Agathion - Teddy Boy Pack (30-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Teddy Boy Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -795,6 +842,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14247" name="Agathion - Teddy Girl Pack (30-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Teddy Girl Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -816,6 +864,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14248" name="Superior Minion Coupon Pack" type="EtcItem">
+		<!-- Wrapped Pack containing coupon that can be exchanged for a necklace that allows you to summon a Superior Minion (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -837,6 +886,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14249" name="Agathion - Angry Devil Pack (30-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Angry Devil (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -858,6 +908,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14250" name="Agathion - Shiny Pack (30-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Shiny (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -879,6 +930,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14251" name="Agathion - Sobbing Pack (30-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Sobbing (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -900,6 +952,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14252" name="Lucky Enchant Stone: Weapon Pack (D-grade) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing D-grade weapon Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -921,6 +974,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14253" name="Lucky Enchant Stone: Weapon Pack (C-grade) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing C-grade weapon Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -942,6 +996,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14254" name="Lucky Enchant Stone: Weapon Pack (B-grade) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing B-grade weapon Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -963,6 +1018,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14255" name="Lucky Enchant Stone: Weapon Pack (A-grade) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing A-grade weapon Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -984,6 +1040,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14256" name="Lucky Enchant Stone: Weapon Pack (S-grade) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing S-grade weapon Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1005,6 +1062,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14257" name="Lucky Enchant Stone: Armor Pack (D-grade) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing D-grade armor Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1026,6 +1084,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14258" name="Lucky Enchant Stone: Armor Pack (C-grade) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing C-grade armor Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1047,6 +1106,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14259" name="Lucky Enchant Stone: Armor Pack (B-grade) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing B-grade armor Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1068,6 +1128,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14260" name="Lucky Enchant Stone: Armor Pack (A-grade) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing A-grade armor Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1089,6 +1150,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14261" name="Lucky Enchant Stone: Armor Pack (S-grade) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing S-grade armor Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1110,6 +1172,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14262" name="Snow Man Transformation Stick Pack (7-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Snow Man Transformation Stick (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1131,6 +1194,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14263" name="Scarecrow Jack Transformation Stick Pack (7-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Scarecrow Jack Transformation Stick (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1152,6 +1216,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14264" name="Tin Golem Transformation Stick Pack (7-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Tin Golem Stick (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1173,6 +1238,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14265" name="Agathion - Teddy Boy Pack (7-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Teddy Boy (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1194,6 +1260,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14266" name="Agathion - Teddy Girl Pack (7-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Teddy Girl (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1215,6 +1282,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14267" name="Agathion - Angry Devil Pack (7-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Angry Devil (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1236,6 +1304,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14268" name="Agathion - Shiny Pack (7-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Shiny (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1257,6 +1326,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14269" name="Agathion - Sobbing Pack (7-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Sobbing (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1278,6 +1348,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14270" name="Snow Man Transformation Stick Pack (7-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Snow Man Transformation Stick (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1299,6 +1370,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14271" name="Scarecrow Jack Transformation Stick Pack (7-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Scarecrow Jack Transformation Stick (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1320,6 +1392,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14272" name="Tin Golem Transformation Stick Pack (7-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Tin Golem Transformation Stick (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1341,6 +1414,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14273" name="Agathion - Teddy Boy Pack (7-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Teddy Boy Bracelet (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1362,6 +1436,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14274" name="Agathion - Teddy Girl Pack (7-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Teddy Girl Bracelet (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1383,6 +1458,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14275" name="Agathion - Angry Devil Pack (7-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Angry Devil (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1404,6 +1480,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14276" name="Agathion - Shiny Pack (7-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Shiny (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1425,6 +1502,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14277" name="Agathion - Sobbing Pack (7-day) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Sobbing (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1446,6 +1524,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14278" name="Lucky Enchant Stone: Weapon Pack (D-grade)" type="EtcItem">
+		<!-- Wrapped Pack containing D-grade weapon Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1465,6 +1544,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14279" name="Lucky Enchant Stone: Weapon Pack (C-grade)" type="EtcItem">
+		<!-- Wrapped Pack containing C-grade weapon Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1484,6 +1564,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14280" name="Lucky Enchant Stone: Weapon Pack (B-grade)" type="EtcItem">
+		<!-- Wrapped Pack containing B-grade weapon Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1503,6 +1584,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14281" name="Lucky Enchant Stone: Weapon Pack (A-grade)" type="EtcItem">
+		<!-- Wrapped Pack containing A-grade weapon Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1522,6 +1604,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14282" name="Lucky Enchant Stone: Weapon Pack (S-grade)" type="EtcItem">
+		<!-- Wrapped Pack containing S-grade weapon Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1541,6 +1624,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14283" name="Lucky Enchant Stone: Armor Pack (D-grade)" type="EtcItem">
+		<!-- Wrapped Pack containing D-grade armor Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1560,6 +1644,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14284" name="Lucky Enchant Stone: Armor Pack (C-grade)" type="EtcItem">
+		<!-- Wrapped Pack containing C-grade armor Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1579,6 +1664,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14285" name="Lucky Enchant Stone: Armor Pack (B-grade)" type="EtcItem">
+		<!-- Wrapped Pack containing B-grade armor Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1598,6 +1684,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14286" name="Lucky Enchant Stone: Armor Pack (A-grade)" type="EtcItem">
+		<!-- Wrapped Pack containing A-grade armor Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1617,6 +1704,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14287" name="Lucky Enchant Stone: Armor Pack (S-grade)" type="EtcItem">
+		<!-- Wrapped Pack containing S-grade armor Enchant Stone. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1636,6 +1724,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14288" name="Vitality Replenishing Potion 3-unit Pack" type="EtcItem">
+		<!-- Wrapped Pack containing 3 unit s of Vitality Replenishing Potion. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1656,6 +1745,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14289" name="Vitality Replenishing Potion 3-unit Pack (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing 3 unit s of Vitality Replenishing Potion. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1676,6 +1766,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14290" name="Superior Minion Coupon 2-unit Pack (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing 2 coupon that can be exchanged for a necklace that allows you to summon a Superior Minion (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1697,6 +1788,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14291" name="Superior Minion Coupon Pack (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing coupon that can be exchanged for a necklace that allows you to summon a Superior Minion (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

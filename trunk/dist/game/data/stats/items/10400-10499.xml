@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="10400" name="Icarus Heavy Arms Piece" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make Icarus Heavy Arms. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -12,6 +13,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10401" name="Icarus Trident Piece" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make Icarus Trident. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -23,6 +25,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10402" name="Icarus Hammer Piece" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make Icarus Hammer. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -34,6 +37,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10403" name="Icarus Hand Piece" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make Icarus Hand. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -45,6 +49,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10404" name="Icarus Hall Piece" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make Icarus Hall. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -56,6 +61,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10405" name="Icarus Spitter Piece" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make Icarus Spitter. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -67,6 +73,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10406" name="Icarus Stinger Piece" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make Icarus Stinger. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -78,6 +85,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10407" name="Icarus Wingblade Piece" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make Icarus Wingblade. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -89,6 +97,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10408" name="Old Agathion" type="EtcItem">
+		<!-- Old Agathion with the spirit's seal unbound. Double-click to unlock items. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -103,6 +112,7 @@
 		</skills>
 	</item>
 	<item id="10409" name="A Bottle of Souls" type="EtcItem">
+		<!-- Bottle that holds 5 Souls. Double-click to fill the bottle. For Kamael use only. -->
 		<set name="icon" val="icon.blank_glass_bottle_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="false" />
@@ -125,6 +135,7 @@
 		</skills>
 	</item>
 	<item id="10410" name="Full Bottle of Souls - 5 Souls" type="EtcItem">
+		<!-- Bottle containing 5 Souls. Kamael-exclusive Weapon. Disappears without effect if used by other races. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -145,6 +156,7 @@
 		</skills>
 	</item>
 	<item id="10411" name="Full Bottle of Souls - 5 Souls (Battleground)" type="EtcItem">
+		<!-- Bottle containing 5 Souls. Usable only in combat. Kamael-exclusive Weapon. Disappears without effect if used by other races. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -169,6 +181,7 @@
 		</skills>
 	</item>
 	<item id="10412" name="Full Bottle of Souls - 10 Souls" type="EtcItem">
+		<!-- Bottle containing 10 Souls. Kamael-exclusive item. Disappears without effect if used by other races. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -186,6 +199,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10413" name="Dynastic Essence II" type="EtcItem">
+		<!-- Item that can be used to upgrade Dynasty Chest armor. Grants more powerful options than Dynastic Essence. -->
 		<set name="icon" val="icon.etc_armor_soul_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -209,6 +223,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="10415" name="Icarus Dualsword" type="Weapon">
+		<!-- When enchanted, P. Atk. of dualswords, two-handed swords, two-handed blunt weapons and fist weapons increases more than that of one-handed swords. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -241,6 +256,7 @@
 		</stats>
 	</item>
 	<item id="10416" name="Blue Talisman - Explosion" type="Armor">
+		<!-- Increases P. Atk./Atk. Spd. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -263,6 +279,7 @@
 		</skills>
 	</item>
 	<item id="10417" name="Blue Talisman - Magic Explosion" type="Armor">
+		<!-- Increases M. Atk. and M. Critical Rate. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -285,6 +302,7 @@
 		</skills>
 	</item>
 	<item id="10418" name="White Talisman - Storm" type="Armor">
+		<!-- Increases Wind attribute. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -307,6 +325,7 @@
 		</skills>
 	</item>
 	<item id="10419" name="White Talisman - Darkness" type="Armor">
+		<!-- Increases Dark attribute. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -329,6 +348,7 @@
 		</skills>
 	</item>
 	<item id="10420" name="White Talisman - Water" type="Armor">
+		<!-- Increases Water attribute. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -351,6 +371,7 @@
 		</skills>
 	</item>
 	<item id="10421" name="White Talisman - Fire" type="Armor">
+		<!-- Instantly increases Fire. Only one effect is applied when you wear the same two talismans. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -373,6 +394,7 @@
 		</skills>
 	</item>
 	<item id="10422" name="White Talisman - Light" type="Armor">
+		<!-- Increases holy attribute. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -395,6 +417,7 @@
 		</skills>
 	</item>
 	<item id="10423" name="Blue Talisman - Self-destruction" type="Armor">
+		<!-- Damages a nearby enemy with a powerful explosion. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -416,6 +439,7 @@
 		</skills>
 	</item>
 	<item id="10424" name="Blue Talisman - Greater Healing" type="Armor">
+		<!-- Increases heal power. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -438,6 +462,7 @@
 		</skills>
 	</item>
 	<item id="10425" name="Improved Baby Pet Food" type="EtcItem">
+		<!-- Automatically consumed when an improved baby pet's hunger gauge drops below 55%. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -459,6 +484,7 @@
 		</skills>
 	</item>
 	<item id="10426" name="Fenrir Necklace" type="EtcItem">
+		<!-- Necklace that can summon a Fenrir. Takes a part of the XP gained by the Pet master. -->
 		<set name="icon" val="icon.etc_summon_wolf_r_01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -477,6 +503,7 @@
 		</skills>
 	</item>
 	<item id="10427" name="Tully's Platinum Medal" type="EtcItem">
+		<!-- Small, shiny platinum medal. It reads, 'Permission No.1 for Group Admission to Special Workshop'. -->
 		<set name="icon" val="icon.etc_jewel_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -492,6 +519,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10428" name="Tully's Tin Medal" type="EtcItem">
+		<!-- Small, shiny tin medal. It reads, 'Permission No.2 for Group Admission to Special Workshop'. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -507,6 +535,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10429" name="Tully's Lead Medal" type="EtcItem">
+		<!-- Small, shiny lead medal. It reads, 'Permission No.3 for Group Admission to Special Workshop'. -->
 		<set name="icon" val="icon.etc_jewel_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -522,6 +551,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10430" name="Tully's Zinc Medal" type="EtcItem">
+		<!-- Small, shiny zinc medal. It reads, 'Permission No.4 for Group Admission to Special Workshop'. -->
 		<set name="icon" val="icon.etc_jewel_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -537,6 +567,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10431" name="Tully's Copper Medal" type="EtcItem">
+		<!-- Small, shiny copper medal. It reads, 'Permission No.5 for Group Admission to Special Workshop'. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -582,6 +613,7 @@
 		</skills>
 	</item>
 	<item id="10434" name="Icarus Sawsword" additionalName="Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -614,6 +646,7 @@
 		</stats>
 	</item>
 	<item id="10435" name="Icarus Sawsword" additionalName="Health" type="Weapon">
+		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -646,6 +679,7 @@
 		</stats>
 	</item>
 	<item id="10436" name="Icarus Sawsword" additionalName="Light Armor" type="Weapon">
+		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -679,6 +713,7 @@
 		</stats>
 	</item>
 	<item id="10437" name="Icarus Heavy Arms" additionalName="Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -711,6 +746,7 @@
 		</stats>
 	</item>
 	<item id="10438" name="Icarus Heavy Arms" additionalName="Health" type="Weapon">
+		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -743,6 +779,7 @@
 		</stats>
 	</item>
 	<item id="10439" name="Icarus Heavy Arms" additionalName="Light Armor" type="Weapon">
+		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -776,6 +813,7 @@
 		</stats>
 	</item>
 	<item id="10440" name="Icarus Spirit" additionalName="Acumen" type="Weapon">
+		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -808,6 +846,7 @@
 		</stats>
 	</item>
 	<item id="10441" name="Icarus Spirit" additionalName="Mana Up" type="Weapon">
+		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -840,6 +879,7 @@
 		</stats>
 	</item>
 	<item id="10442" name="Icarus Spirit" additionalName="Conversion" type="Weapon">
+		<!-- <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -872,6 +912,7 @@
 		</stats>
 	</item>
 	<item id="10443" name="Icarus Spitter" additionalName="Cheap Shot" type="Weapon">
+		<!-- <Special Option>. Decreases MP consumption by 4% during a skill attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -908,6 +949,7 @@
 		</stats>
 	</item>
 	<item id="10444" name="Icarus Spitter" additionalName="Guidance" type="Weapon">
+		<!-- <Special Option>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -943,6 +985,7 @@
 		</stats>
 	</item>
 	<item id="10445" name="Icarus Spitter" additionalName="Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -978,6 +1021,7 @@
 		</stats>
 	</item>
 	<item id="10446" name="Icarus Disperser" additionalName="Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1010,6 +1054,7 @@
 		</stats>
 	</item>
 	<item id="10447" name="Icarus Disperser" additionalName="Evasion" type="Weapon">
+		<!-- <Special Option>. Increases Evasion by 5. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1043,6 +1088,7 @@
 		</stats>
 	</item>
 	<item id="10448" name="Icarus Disperser" additionalName="Critical Damage" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 559 during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1075,6 +1121,7 @@
 		</stats>
 	</item>
 	<item id="10449" name="Icarus Trident" additionalName="Anger" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1107,6 +1154,7 @@
 		</stats>
 	</item>
 	<item id="10450" name="Icarus Trident" additionalName="Critical Stun" type="Weapon">
+		<!-- <Special Option>. Has a 48% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1140,6 +1188,7 @@
 		</stats>
 	</item>
 	<item id="10451" name="Icarus Trident" additionalName="Light Armor" type="Weapon">
+		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1173,6 +1222,7 @@
 		</stats>
 	</item>
 	<item id="10452" name="Icarus Hammer" additionalName="Anger" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1205,6 +1255,7 @@
 		</stats>
 	</item>
 	<item id="10453" name="Icarus Hammer" additionalName="Health" type="Weapon">
+		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1237,6 +1288,7 @@
 		</stats>
 	</item>
 	<item id="10454" name="Icarus Hammer" additionalName="Rsk. Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1269,6 +1321,7 @@
 		</stats>
 	</item>
 	<item id="10455" name="Icarus Hall" additionalName="Mana Up" type="Weapon">
+		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1302,6 +1355,7 @@
 		</stats>
 	</item>
 	<item id="10456" name="Icarus Hall" additionalName="Conversion" type="Weapon">
+		<!-- <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1335,6 +1389,7 @@
 		</stats>
 	</item>
 	<item id="10457" name="Icarus Hall" additionalName="Acumen" type="Weapon">
+		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1368,6 +1423,7 @@
 		</stats>
 	</item>
 	<item id="10458" name="Icarus Hand" additionalName="Rsk. Evasion" type="Weapon">
+		<!-- <Special Option>. Increases Evasion by 6.8 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1401,6 +1457,7 @@
 		</stats>
 	</item>
 	<item id="10459" name="Icarus Hand" additionalName="Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 106. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1433,6 +1490,7 @@
 		</stats>
 	</item>
 	<item id="10460" name="Icarus Hand" additionalName="Haste" type="Weapon">
+		<!-- <Special Option>. Increases Atk. Spd. by 10%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1465,6 +1523,7 @@
 		</stats>
 	</item>
 	<item id="10461" name="Icarus Stinger" additionalName="Focus" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Critical Attack is increased by 111. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1502,6 +1561,7 @@
 		</stats>
 	</item>
 	<item id="10462" name="Icarus Stinger" additionalName="Health" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1539,6 +1599,7 @@
 		</stats>
 	</item>
 	<item id="10463" name="Icarus Stinger" additionalName="Light Armor" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1577,6 +1638,7 @@
 		</stats>
 	</item>
 	<item id="10464" name="Icarus Wingblade" additionalName="Focus" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Critical Attack is increased by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1613,6 +1675,7 @@
 		</stats>
 	</item>
 	<item id="10465" name="Icarus Wingblade" additionalName="Health" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1649,6 +1712,7 @@
 		</stats>
 	</item>
 	<item id="10466" name="Icarus Wingblade" additionalName="Light Armor" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1686,6 +1750,7 @@
 		</stats>
 	</item>
 	<item id="10467" name="Icarus Shooter" additionalName="Cheap Shot" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>. Decreased MP consumption by 12% when a skill is used. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1724,6 +1789,7 @@
 		</stats>
 	</item>
 	<item id="10468" name="Icarus Shooter" additionalName="Guidance" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>. The Accuracy is increased by 5.32. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1761,6 +1827,7 @@
 		</stats>
 	</item>
 	<item id="10469" name="Icarus Shooter" additionalName="Focus" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>. Critical Attack is increased by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1798,6 +1865,7 @@
 		</stats>
 	</item>
 	<item id="10470" name="Shadow Item: Red Crescent" type="Armor">
+		<!-- Shadow Item. -->
 		<set name="icon" val="icon.accessary_red_cresent_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1819,6 +1887,7 @@
 		</stats>
 	</item>
 	<item id="10471" name="Shadow Item: Ring of Devotion" type="Armor">
+		<!-- Shadow Item. -->
 		<set name="icon" val="icon.accessary_ring_of_devotion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1840,6 +1909,7 @@
 		</stats>
 	</item>
 	<item id="10472" name="Shadow Item: Necklace of Devotion" type="Armor">
+		<!-- Shadow Item. -->
 		<set name="icon" val="icon.accessary_necklace_of_devotion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1861,6 +1931,7 @@
 		</stats>
 	</item>
 	<item id="10473" name="Magic Accessory Set" type="EtcItem">
+		<!-- Double-click to obtain this Shadow Item. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1881,6 +1952,7 @@
 		</skills>
 	</item>
 	<item id="10474" name="Shadow Item: Apprentice's Staff" type="Weapon">
+		<!-- Apprentice Adventurer's Staff. Shadow Item. Cannot be crystallized or enchanted. Chaotic characters are not allowed to use it. -->
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1915,6 +1987,7 @@
 		</stats>
 	</item>
 	<item id="10475" name="Shadow Item: Bone Club" type="Weapon">
+		<!-- Apprentice Adventurer's Bone Club. Shadow Item. Cannot be crystallized or enchanted. Chaotic characters are not allowed to use it. -->
 		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1948,6 +2021,7 @@
 		</stats>
 	</item>
 	<item id="10476" name="Shadow Item: Shining Knife" type="Weapon">
+		<!-- Apprentice Adventurer's Knife. Shadow Item. Cannot be crystallized or enchanted. Chaotic characters are not allowed to use it. -->
 		<set name="icon" val="icon.weapon_shining_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1981,6 +2055,7 @@
 		</stats>
 	</item>
 	<item id="10477" name="Shadow Item: Cestus" type="Weapon">
+		<!-- Apprentice Adventurer's Cestus. Shadow Item. Cannot be crystallized or enchanted. Chaotic characters are not allowed to use it. -->
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2014,6 +2089,7 @@
 		</stats>
 	</item>
 	<item id="10478" name="Shadow Item: Forest Bow" type="Weapon">
+		<!-- Apprentice Adventurer's Bow. Shadow Item. Cannot be crystallized or enchanted. Chaotic characters are not allowed to use it. -->
 		<set name="icon" val="icon.weapon_short_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2049,6 +2125,7 @@
 		</stats>
 	</item>
 	<item id="10479" name="Shadow Item: Long Sword" type="Weapon">
+		<!-- Apprentice Adventurer's Long Sword. Shadow Item. Cannot be crystallized or enchanted. Chaotic characters are not allowed to use it. -->
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2081,6 +2158,7 @@
 		</stats>
 	</item>
 	<item id="10480" name="Red Soul Crystal - Stage 15" type="EtcItem">
+		<!-- Red crystal containing the light of absorbed souls. stage 15. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. A crystal of this level is said to absorb crystals on its own, so it doesn't seem like you need to use it directly on the monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -2096,6 +2174,7 @@
 		</skills>
 	</item>
 	<item id="10481" name="Blue Soul Crystal - Stage 15" type="EtcItem">
+		<!-- Blue crystal containing the light of absorbed souls. stage 15. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. A crystal of this level is said to absorb crystals on its own, so it doesn't seem like you need to use it directly on the monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -2111,6 +2190,7 @@
 		</skills>
 	</item>
 	<item id="10482" name="Green Soul Crystal - Stage 15" type="EtcItem">
+		<!-- Green crystal containing the light of absorbed souls. stage 15. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. A crystal of this level is said to absorb crystals on its own, so it doesn't seem like you need to use it directly on the monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -2126,6 +2206,7 @@
 		</skills>
 	</item>
 	<item id="10483" name="Life Stone - Lv. 82" type="EtcItem">
+		<!-- General mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon Augmentation by characters level 82 or above. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -2139,6 +2220,7 @@
 		</cond>
 	</item>
 	<item id="10484" name="Mid-grade Life Stone - Lv. 82" type="EtcItem">
+		<!-- Mid-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon Augmentation by characters level 82 or above. -->
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -2152,6 +2234,7 @@
 		</cond>
 	</item>
 	<item id="10485" name="High-grade Life Stone - Lv. 82" type="EtcItem">
+		<!-- High-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon Augmentation by characters level 82 or above. -->
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -2165,6 +2248,7 @@
 		</cond>
 	</item>
 	<item id="10486" name="Top-grade Life Stone - Lv. 82" type="EtcItem">
+		<!-- Top-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon Augmentation by characters level 82 or above. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -2178,6 +2262,7 @@
 		</cond>
 	</item>
 	<item id="10487" name="Dynasty Jewel Leather Armor" additionalName="Force Master" type="Armor">
+		<!-- Duelist and Grand Khavatari can wear it. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2201,6 +2286,7 @@
 		</stats>
 	</item>
 	<item id="10488" name="Dynasty Jewel Leather Armor" additionalName="Weapon Master" type="Armor">
+		<!-- Dreadnought, Titan, Fortune Seeker, Maestro, Doombringer and Soul Hound can wear it. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2224,6 +2310,7 @@
 		</stats>
 	</item>
 	<item id="10489" name="Dynasty Jewel Leather Armor" additionalName="Enchanter" type="Armor">
+		<!-- Hierophant, Dominator, Doomcryer and Judicator can wear it. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2247,6 +2334,7 @@
 		</stats>
 	</item>
 	<item id="10490" name="Dynasty Jewel Leather Armor" additionalName="Summoner" type="Armor">
+		<!-- Arcana Lord, Elemental Master and Spectral Master can wear it. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2270,6 +2358,7 @@
 		</stats>
 	</item>
 	<item id="10491" name="Silk Shirt" additionalName="HP" type="Armor">
+		<!-- Increases Max HP by 118 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2290,6 +2379,7 @@
 		</stats>
 	</item>
 	<item id="10492" name="Silk Shirt" additionalName="MP" type="Armor">
+		<!-- Increases Max MP by 51 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2310,6 +2400,7 @@
 		</stats>
 	</item>
 	<item id="10493" name="Silk Shirt" additionalName="CP" type="Armor">
+		<!-- Increases Max CP by 354 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2330,6 +2421,7 @@
 		</stats>
 	</item>
 	<item id="10494" name="Thin Leather Shirt" additionalName="HP" type="Armor">
+		<!-- Increases Max HP by 147 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2350,6 +2442,7 @@
 		</stats>
 	</item>
 	<item id="10495" name="Thin Leather Shirt" additionalName="MP" type="Armor">
+		<!-- Increases Max MP by 72 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2370,6 +2463,7 @@
 		</stats>
 	</item>
 	<item id="10496" name="Thin Leather Shirt" additionalName="CP" type="Armor">
+		<!-- Increases Max CP by 441 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2390,6 +2484,7 @@
 		</stats>
 	</item>
 	<item id="10497" name="Scale Shirt" additionalName="HP" type="Armor">
+		<!-- Increases Max HP by 172 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2410,6 +2505,7 @@
 		</stats>
 	</item>
 	<item id="10498" name="Scale Shirt" additionalName="MP" type="Armor">
+		<!-- Increases Max MP by 85 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2430,6 +2526,7 @@
 		</stats>
 	</item>
 	<item id="10499" name="Scale Shirt" additionalName="CP" type="Armor">
+		<!-- Increases Max CP by 516 when enchanted to + 4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />

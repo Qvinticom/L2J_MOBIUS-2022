@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="22500" name="My Teleport Scroll 10-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 10 My Teleport Scrolls. -->
@@ -1215,7 +1215,7 @@
 		</skills>
 	</item>
 	<item id="22565" name="Dimensional Support Pack" type="EtcItem">
-		<!-- Description: Wrapped pack containing 2 Superior Minion Coupons, 3 Feathers of Blessing, 5 Kamaloka (Hall of the Abyss, Labyrinth of the Abyss, Near) entrance passes, and 3 Vitality Replenishing Beverages. Cannot be exchanged, dropped, or destroyed. -->
+		<!-- Dimensional Support Pack. Wrapped Pack containing 2 Superior Minion coupons, 3 feathers of blessing, 5 of each Kamaloka (Near Kamaloka, Hall of the Abyss, Labyrinth of the Abyss) entrance passes, and 3 Vitality Replenishing Potions. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1239,7 +1239,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22566" name="Potion Support Pack" type="EtcItem">
-		<!-- Description: Wrapped pack containing 20 Greater Quick Healing Potions, 50 Greater Healing Potions, 5 Fresh Milks, and 5 Leaves of Appreciation. Cannot be exchanged, dropped, or destroyed. -->
+		<!-- Potion Support Pack. Wrapped Pack containing 20 Superior Quick Healing Potions, 50 Superior Healing Potions, 5 fresh milk, and 5 Leaf of Appreciation. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1261,7 +1261,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22567" name="Supplies Support Pack" type="EtcItem">
-		<!-- Description: Wrapped pack containing 200,000 Mysterious Soulshots of all grade. Cannot be exchanged, dropped, or destroyed. -->
+		<!-- Supplies Support Pack. Wrapped Pack containing 20,000 each of each grade Mysterious Soulshot and Spiritshot. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />

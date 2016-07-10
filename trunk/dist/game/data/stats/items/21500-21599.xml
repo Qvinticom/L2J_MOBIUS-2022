@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="21500" name="Kai the Cat Hat Pack" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 Kai the Cat hat. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Kai the Cat hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -20,7 +20,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21501" name="Kai the Cat Hat" additionalName="7-day" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Kai the Cat. Can be used for 7 days. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Kai the Cat. 7-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_chi_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -39,7 +39,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="21502" name="Kai the Cat Hat" additionalName="7-day (Event)" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Kai the Cat. Can be used for 7 days. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Kai the Cat. 7-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_chi_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -59,7 +59,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="21503" name="Kai the Cat Hat" additionalName="30-day" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Kai the Cat. Can be used for 30 days. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Kai the Cat. 30-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_chi_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -78,7 +78,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="21504" name="Kai the Cat Hat" additionalName="30-day (Event)" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Kai the Cat. Can be used for 30 days. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Kai the Cat. 30-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_chi_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -98,7 +98,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="21505" name="Kai the Cat Hat" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Kai the Cat. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Kai the Cat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_chi_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -117,7 +117,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21506" name="Kai the Cat Hat" additionalName="Event" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Kai the Cat. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Kai the Cat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_chi_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -136,7 +136,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21507" name="Feline Queen Hat Pack (7-day)" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 Feline Queen hat (7 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Feline Queen hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -155,7 +155,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21508" name="Feline Queen Hat Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 Feline Queen hat (7 day). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Feline Queen hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -174,7 +174,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21509" name="Feline Queen Hat Pack (30-day)" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 Feline Queen hat (30 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Feline Queen Hat (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -193,7 +193,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21510" name="Feline Queen Hat Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 Feline Queen hat (30 day). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Feline Queen hat (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -212,7 +212,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21511" name="Feline Queen Hat Pack" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 Feline Queen hat. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Feline Queen hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -231,7 +231,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21512" name="Feline Queen Hat Pack" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 Feline Queen hat. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Feline Queen hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -250,7 +250,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21513" name="Feline Queen Hat" additionalName="7-day" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Feline Queen. Can be used for 7 days. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Feline Queen. 7-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_queen_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -269,7 +269,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="21514" name="Feline Queen Hat" additionalName="7-day (Event)" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Feline Queen. Can be used for 7 days. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Feline Queen. 7-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_queen_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -289,7 +289,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="21515" name="Feline Queen Hat" additionalName="30-day" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Feline Queen. Can be used for 30 days. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Feline Queen. 30-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_queen_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -308,7 +308,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="21516" name="Feline Queen Hat" additionalName="30-day (Event)" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Feline Queen. Can be used for 30 days. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Feline Queen. 30-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_queen_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -328,7 +328,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="21517" name="Feline Queen Hat" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Feline Queen. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Feline Queen. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_queen_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -347,7 +347,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21518" name="Feline Queen Hat" additionalName="Event" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Feline Queen. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Feline Queen. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_queen_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -366,7 +366,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21519" name="Feline King Hat Pack (7-day)" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 Feline King hat (7 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Feline King hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -385,7 +385,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21520" name="Feline King Hat Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 Feline King hat (7 day). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Feline King hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -404,7 +404,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21521" name="Feline King Hat Pack (30-day)" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 Feline King hat (30 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Feline King hat (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -423,7 +423,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21522" name="Feline King Hat Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 Feline King hat (30 day). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Feline King hat (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -442,7 +442,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21523" name="Feline King Hat Pack" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 Feline King hat. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Feline King hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -461,7 +461,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21524" name="Feline King Hat Pack" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 Feline King hat. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Feline King hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -480,7 +480,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21525" name="Feline King Hat" additionalName="7-day" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Feline King. Can be used for 7 days. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Feline King. 7-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_king_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -499,7 +499,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="21526" name="Feline King Hat" additionalName="7-day (Event)" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Feline King. Can be used for 7 days. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Feline King. 7-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_king_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -519,7 +519,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="21527" name="Feline King Hat" additionalName="30-day" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Feline King. Can be used for 30 days. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Feline King. 30-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_king_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -538,7 +538,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="21528" name="Feline King Hat" additionalName="30-day (Event)" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Feline King. Can be used for 30 days. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Feline King. 30-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_king_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -558,7 +558,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="21529" name="Feline King Hat" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Feline King. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Feline King. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_king_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -577,7 +577,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21530" name="Feline King Hat" additionalName="Event" type="Armor">
-		<!-- Description: Dimensional item. Hat that looks like Feline King. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Hat that looks like Feline King. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_king_of_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -596,7 +596,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21531" name="Ribbon Hairband Pack (7-day)" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 ribbon hairband (7 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing ribbon hairband (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -615,7 +615,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21532" name="Ribbon Hairband Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 ribbon hairband (7 day). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing ribbon hairband (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -634,7 +634,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21533" name="Ribbon Hairband Pack (30-day)" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 ribbon hairband (30 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Ribbon Hairband (30-day). Females only. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -653,7 +653,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21534" name="Ribbon Hairband Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 ribbon hairband (30 day). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing ribbon hairband (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -672,7 +672,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21535" name="Ribbon Hairband Pack" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 ribbon hairband. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing ribbon hairband. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
@@ -688,7 +688,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21536" name="Ribbon Hairband Pack" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 ribbon hairband. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing ribbon hairband. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -707,7 +707,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21537" name="Ribbon Hairband" additionalName="7-day" type="Armor">
-		<!-- Description: Dimensional item. Large ribbon hair accessory (7 day). Exclusive to females. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Large ribbon hair accessory (7-day). Females only. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_Ribbon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -728,7 +728,7 @@
 		</cond>
 	</item>
 	<item id="21538" name="Ribbon Hairband" additionalName="7-day (Event)" type="Armor">
-		<!-- Description: Dimensional item. Large ribbon hair accessory (7 day). Exclusive to females. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Large ribbon hair accessory (7-day). Females only. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_Ribbon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -750,7 +750,7 @@
 		</cond>
 	</item>
 	<item id="21539" name="Ribbon Hairband" additionalName="30-day" type="Armor">
-		<!-- Description: Dimensional item. Large ribbon hair accessory (30 day). Exclusive to females. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Large ribbon hair accessory (30-day). Females only. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_Ribbon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -771,7 +771,7 @@
 		</cond>
 	</item>
 	<item id="21540" name="Ribbon Hairband" additionalName="30-day (Event)" type="Armor">
-		<!-- Description: Dimensional item. Large ribbon hair accessory (30 day). Exclusive to females. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Large ribbon hair accessory (30-day). Females only. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_Ribbon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -793,7 +793,7 @@
 		</cond>
 	</item>
 	<item id="21541" name="Ribbon Hairband" type="Armor">
-		<!-- Description: Dimensional item. Large ribbon hair accessory. Exclusive to females. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Large ribbon hair accessory. Females only. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_Ribbon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -811,7 +811,7 @@
 		</cond>
 	</item>
 	<item id="21542" name="Ribbon Hairband" additionalName="Event" type="Armor">
-		<!-- Description: Dimensional item. Large ribbon hair accessory. Exclusive to females. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Large ribbon hair accessory. Females only. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_Ribbon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -832,7 +832,7 @@
 		</cond>
 	</item>
 	<item id="21543" name="Refined Dapper Cap Pack (7-day)" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 refined dapper cap (7 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing refined dapper cap (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -851,7 +851,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21544" name="Refined Dapper Cap Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 refined dapper cap (7 day). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing refined dapper cap (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -870,7 +870,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21545" name="Refined Dapper Cap Pack (30-day)" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 refined dapper cap (30 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Refined Dapper Cap (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -889,7 +889,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21546" name="Refined Dapper Cap Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 refined dapper cap (30 day). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing refined dapper cap (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -908,7 +908,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21547" name="Refined Dapper Cap Pack" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 refined dapper cap. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing refined dapper cap. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
@@ -924,7 +924,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21548" name="Refined Dapper Cap Pack" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 refined dapper cap. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing refined dapper cap. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -943,7 +943,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21549" name="Refined Dapper Cap" additionalName="7-day" type="Armor">
-		<!-- Description: Dimensional item. A refined dapper's hat. Can be used for 7 days. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Refined dapper's hat. 7-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_dandy_cap2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -962,7 +962,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="21550" name="Refined Dapper Cap" additionalName="7-day (Event)" type="Armor">
-		<!-- Description: Dimensional item. A refined dapper's hat. Can be used for 7 days. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Refined dapper's hat. 7-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_dandy_cap2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -982,7 +982,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="21551" name="Refined Dapper Cap" additionalName="30-day" type="Armor">
-		<!-- Description: Dimensional item. A refined dapper's hat. Can be used for 30 days. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- A Refined Dapper Cap. 30-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_dandy_cap2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1001,7 +1001,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="21552" name="Refined Dapper Cap" additionalName="30-day (Event)" type="Armor">
-		<!-- Description: Dimensional item. A refined dapper's hat. Can be used for 30 days. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Refined dapper's hat. 30-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_dandy_cap2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1021,7 +1021,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="21553" name="Refined Dapper Cap" type="Armor">
-		<!-- Description: Dimensional item. A refined dapper's hat. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Refined dapper's hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_dandy_cap2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1037,7 +1037,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21554" name="Refined Dapper Cap" additionalName="Event" type="Armor">
-		<!-- Description: Dimensional item. A refined dapper's hat. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Refined dapper's hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_dandy_cap2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1056,7 +1056,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21555" name="Valkyrie Circlet Pack (7-day)" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 valkyrie circlet (7 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing valkyrie circlet (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1075,7 +1075,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21556" name="Valkyrie Circlet Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 valkyrie circlet (7 day). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing valkyrie circlet (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1094,7 +1094,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21557" name="Valkyrie Circlet Pack (30-day)" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 valkyrie circlet (30 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing valkyrie circlet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1113,7 +1113,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21558" name="Valkyrie Circlet Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 valkyrie circlet (30 day). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing valkyrie circlet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1132,7 +1132,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21559" name="Valkyrie Circlet Pack" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 valkyrie circlet. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Valkyrie Circlet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
@@ -1148,7 +1148,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21560" name="Valkyrie Circlet Pack" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 valkyrie circlet. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing valkyrie circlet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1167,7 +1167,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21561" name="Valkyrie Circlet" additionalName="7-day" type="Armor">
-		<!-- Description: Dimensional item. Circlet covered with a valkyrie's strength. Can be used for 7 days. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Circlet covered with a valkyrie's strength. 7-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1186,7 +1186,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="21562" name="Valkyrie Circlet" additionalName="7-day (Event)" type="Armor">
-		<!-- Description: Dimensional item. Circlet covered with a valkyrie's strength. Can be used for 7 days. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Circlet covered with a valkyrie's strength. 7-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1206,7 +1206,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="21563" name="Valkyrie Circlet" additionalName="30-day" type="Armor">
-		<!-- Description: Dimensional item. Circlet covered with a valkyrie's strength. Can be used for 30 days. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Circlet covered with a valkyrie's strength. 30-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1225,7 +1225,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="21564" name="Valkyrie Circlet" additionalName="30-day (Event)" type="Armor">
-		<!-- Description: Dimensional item. Circlet covered with a valkyrie's strength. Can be used for 30 days. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Circlet covered with a valkyrie's strength. 30-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1245,7 +1245,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="21565" name="Valkyrie Circlet" type="Armor">
-		<!-- Description: Dimensional item. Circlet covered with a valkyrie's strength. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Circlet imbued with a Valkyrie's strength. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1261,7 +1261,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21566" name="Valkyrie Circlet" additionalName="Event" type="Armor">
-		<!-- Description: Dimensional item. Circlet covered with a valkyrie's strength. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Circlet covered with a valkyrie's strength. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1280,7 +1280,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21567" name="Plastic Hair Pack (7-day)" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 plastic hair (7 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing plastic hair (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1299,7 +1299,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21568" name="Plastic Hair Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 plastic hair (7 day). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing plastic hair (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1318,7 +1318,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21569" name="Plastic Hair Pack (30-day)" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 plastic hair (30 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing plastic hair (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1337,7 +1337,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21570" name="Plastic Hair Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 plastic hair (30 day). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing plastic hair (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1356,7 +1356,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21571" name="Plastic Hair Pack" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 plastic hair. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing plastic hair. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1375,7 +1375,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21572" name="Plastic Hair Pack" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 plastic hair. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing plastic hair. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1394,7 +1394,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21573" name="Plastic Hair" additionalName="7-day" type="Armor">
-		<!-- Description: Dimensional item. Plastic hair. Changes into an attractive pink wig for females and a handsome blue wig for males. Can be used for 7 days. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Plastic hair. Changes into an attractive pink wig for women and a handsome blue wig for men. 7-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_plastic_hair_f_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1413,7 +1413,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="21574" name="Plastic Hair" additionalName="7-day (Event)" type="Armor">
-		<!-- Description: Dimensional item. Plastic hair. Changes into an attractive pink wig for females and a handsome blue wig for males. Can be used for 7 days. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Plastic hair. Changes into an attractive pink wig for women and a handsome blue wig for men. 7-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_plastic_hair_f_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1433,7 +1433,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="21575" name="Plastic Hair" additionalName="30-day" type="Armor">
-		<!-- Description: Dimensional item. Plastic hair. Changes into an attractive pink wig for females and a handsome blue wig for males. Can be used for 30 days. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Plastic hair. Changes into an attractive pink wig for women and a handsome blue wig for men. 30-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_plastic_hair_f_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1452,7 +1452,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="21576" name="Plastic Hair" additionalName="30-day (Event)" type="Armor">
-		<!-- Description: Dimensional item. Plastic hair. Changes into an attractive pink wig for females and a handsome blue wig for males. Can be used for 30 days. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Plastic hair. Changes into an attractive pink wig for women and a handsome blue wig for men. 30-day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_plastic_hair_f_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1472,7 +1472,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="21577" name="Plastic Hair" type="Armor">
-		<!-- Description: Dimensional item. Plastic hair. Changes into an attractive pink wig for females and a handsome blue wig for males. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Plastic hair. Changes into an attractive pink wig for women and a handsome blue wig for men. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_plastic_hair_f_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1491,7 +1491,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21578" name="Plastic Hair" additionalName="Event" type="Armor">
-		<!-- Description: Dimensional item. Plastic hair. Changes into an attractive pink wig for females and a handsome blue wig for males. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Plastic hair. Changes into an attractive pink wig for women and a handsome blue wig for men. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_plastic_hair_f_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1510,7 +1510,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21579" name="Neolithic Crystal (S84-grade)" type="EtcItem">
-		<!-- Description: If you bring it to the Dimensional Merchant, you can exchange an ordinary S84 Grade item for a Masterwork Item. -->
+		<!-- If you bring it to the Dimensional Merchant, you can exchange an ordinary S84-grade item for a Masterwork Item. -->
 		<set name="icon" val="BranchSys2.icon.etc_warding_orb_gold_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
@@ -1520,7 +1520,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="21580" name="Power Shirt" type="Armor">
-		<!-- Description: Dimensional item. Olf's T-shirt Enchant Scroll. Can enhance up to +10 using a Blessed Olf's T-shirt Enchant Scroll. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Special shirt that was handcrafted by the best weavers of Aden. Can be enchanted up to + 10 with Power Shirt exclusive enchant scrolls. Each enchant level bestows the shirt with special additional bonuses. -->
 		<set name="icon" val="BranchSys2.icon.7anni_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1541,7 +1541,7 @@
 		</stats>
 	</item>
 	<item id="21581" name="Scroll: Enchant Power Shirt" type="EtcItem">
-		<!-- Description: Enchant scroll exclusive to Olf's T-shirt. Increases the T-shirt's P. Def. and M. Def. by 1. Starting from +4, increases P. Def. by 3. Can safely enchant to +3 and up to a max +10. From +4, "basic abilities (CON, MEN, STR, INT, DEX, WIT)" are raised in stages. Addtional options are added at +5, +7, +8 and +9. Cannot be dropped. Can be stored in a private warehouse. -->
+		<!-- Enchant scroll exclusive to Power Shirts. Increases the Power Shirt P. Def. and M. Def. by 1. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3 and can be enchanted to a max of + 10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from + 4. At + 5, + 7, + 8, and + 9, additional bonuses are also applied. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -1560,7 +1560,7 @@
 		</skills>
 	</item>
 	<item id="21582" name="Blessed Scroll: Enchant Power Shirt" type="EtcItem">
-		<!-- Description: Dimensional item. Enchant scroll exclusive to Olf's T-shirt. Increases the T-shirt's P. Def. and M. Def. by 1. Starting from +4, increases P. Def. by 3. Can safely enchant to +3 and up to a max +10. From +4, "basic abilities (CON, MEN, STR, INT, DEX, WIT)" are raised in stages. Additional options are added at +5, +7, +8 and +9. If the enchant fails, the existing enchant value becomes 0. Cannot be dropped. Can be stored in a private warehouse. -->
+		<!-- Enchant scroll exclusive to Power Shirts. Increases the Power Shirt P. Def. and M. Def. by 1. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3 and can be enchanted up to a max of + 10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from + 4. At + 5, + 7, + 8, and + 9, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
@@ -1579,7 +1579,7 @@
 		</skills>
 	</item>
 	<item id="21583" name="Festival's Cloak - Pitch Black" type="Armor">
-		<!-- Description: Dimensional Item. Lineage II 7th Anniversary commemorative item. When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Enchanting, attribute enhancing, or augmenting are not possible. Cannot be exchanged, dropped or destroyed. -->
+		<!-- When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Cannot be enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1607,7 +1607,7 @@
 		</stats>
 	</item>
 	<item id="21584" name="Festival's Cloak - Pitch Black Pack" type="EtcItem">
-		<!-- Description: Dimensional item. Gift box containing 1 Festival's Cloak - True Black. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Festival's Cloak - Pitch Black. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1626,7 +1626,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21585" name="Festival's Cloak - Pitch Black" additionalName="Event" type="Armor">
-		<!-- Description: Dimensional item. Cloak with the feeling of pitch black darkness. When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Cloak with the feeling of pitch black darkness. When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. -->
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1654,7 +1654,7 @@
 		</stats>
 	</item>
 	<item id="21586" name="Festival's Cloak - Pitch Black Pack" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item. Gift box containing 1 Festival's Cloak - True Black. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Festival's Cloak - True Black. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1673,7 +1673,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21587" name="Festival's Cloak - Blood Red" type="Armor">
-		<!-- Description: Dimensional Item. Lineage II 7th anniversary commemorative item. Cloak for the true heroes who have made history since the beginning of Lineage II. When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Enchanting, attribute enhancing, or augmenting are not possible. Cannot be exchanged, dropped, or destroyed. Can be shared between characters on the same account through the Dimensional Merchant. -->
+		<!-- When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Cannot be enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1701,7 +1701,7 @@
 		</stats>
 	</item>
 	<item id="21588" name="Festival's Cloak - Pearl White" type="Armor">
-		<!-- Description: Dimensional Item. Lineage II 7th Anniversary commemorative item. When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Enchanting, attribute enhancing, or augmenting are not possible. Cannot be exchanged, dropped or destroyed. Can be shared between characters on the same account through the Dimensional Merchant. -->
+		<!-- When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Cannot be enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1729,7 +1729,7 @@
 		</stats>
 	</item>
 	<item id="21589" name="Festival's Cloak - Pearl White Pack" type="EtcItem">
-		<!-- Description: Dimensional item. Gift box containing 1 Festival's Cloak - Pearl White. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Festival's Cloak - Pearl White. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1748,7 +1748,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21590" name="Festival's Cloak - Pearl White" additionalName="Event" type="Armor">
-		<!-- Description: Dimensional item. Cloak with pearly white beauty. When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Cannot be enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1776,7 +1776,7 @@
 		</stats>
 	</item>
 	<item id="21591" name="Festival's Cloak - Pearl White Pack" additionalName="Event" type="EtcItem">
-		<!-- Description: Dimensional item. Gift box containing 1 Festival's Cloak - Pearl White. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing Festival's Cloak - Pearl White. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1795,7 +1795,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21592" name="M. Def. Accessory 5 Type Pack" type="EtcItem">
-		<!-- Description: Dimensional item pack. Gift box containing 1 each of Antharas's Earring (180 day), Valakas's Earring (180 day), Baium's Ring (180 day), Earring of Zaken (180 day), and Queen Ant's Ring (180 day). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing each of Antharas' Earring (180-day), Valakas' Earring (180-day), Baium's Ring (180-day), Zaken's Earring (180-day), and Queen Ant's Ring (180-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1818,7 +1818,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21593" name="Ziggo's Jewel" type="EtcItem">
-		<!-- Description: Shiny jewel obtained through the Wondrous Cubic. It looks like you would get quite a large sum by selling it at a shop. -->
+		<!-- Shiny jewel obtained through the Wondrous Cubic. It looks like you would get quite a large sum by selling it at a shop. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_freightable" val="false" />
@@ -1827,7 +1827,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="21594" name="Birthday Hat" type="Armor">
-		<!-- Description: It's your birthday! Hair accessory that shows you are 1 year older. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- It's your birthday! Hair accessory that shows you are 1 year older. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_birthday_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1846,6 +1846,7 @@
 		<set name="is_dropable" val="false" />
 	</item>
 	<item id="21595" name="Birthday Cake" type="EtcItem">
+		<!-- Sweet and tasty birthday cake. Summon a Birthday Cake for 5 minutes. Recover Vitality for party members at a set rate. -->
 		<set name="icon" val="BranchSys.icon.br_birthday_cake_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1871,7 +1872,7 @@
 		</skills>
 	</item>
 	<item id="21596" name="Blessing Package 100" type="EtcItem">
-		<!-- Description: Dimensional item. Gift box containing 9 Vitality Replenishing Beverages and 6 feathers of blessing. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing 9 Vitality Replenishing Potions and 6 feathers of blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1891,7 +1892,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21597" name="Hunting Package 100" type="EtcItem">
-		<!-- Description: Dimensional item. Gift box containing 9 Vitality Replenishing Beverages and 6 high quality hunting helpers. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing 9 Vitality Replenishing Potions and 6 Superior Minions. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1911,7 +1912,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21598" name="Blessing Package 200" type="EtcItem">
-		<!-- Description: Dimensional item. Gift box containing 9 Vitality Replenishing Beverages and 3 feathers of blessing. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing 9 Vitality Replenishing Potions and 3 feathers of blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1931,7 +1932,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21599" name="Hunting Package 200" type="EtcItem">
-		<!-- Description: Dimensional item. Gift box containing 9 Vitality Replenishing Beverages and 3 high quality hunting helpers. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+		<!-- Wrapped Pack containing 9 Vitality Replenishing Potions and 3 Superior Minions. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />

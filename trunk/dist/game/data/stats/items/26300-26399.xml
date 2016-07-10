@@ -66,7 +66,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26305" name="Kotatsu" type="EtcItem">
-		<!-- Increases Speed by 20, and reduces Skill MP Consumption by 20% and PvE Damage by 10%. It will be effective only when summoned at a certain distance away from the village. Does not stack with the Christmas Tree effect. -->
+		<!-- Increases Speed by 20, and reduces Skill MP Consumption by 20% and PvE Damage by 10%. It will be effective only when summoned at a certain distance away from the village. It lasts 10 minutes. Does not stack with the Christmas Tree effect. -->
 		<set name="icon" val="BranchSys.icon.br_kotatsu_i00" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -126,7 +126,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26312" name="Offering Test Ingredient  2" type="Weapon">
+	<item id="26312" name="Offering Test Ingredient 2" type="Weapon">
 		<!-- Weapon worth 1000 Adena. Shadow item. -->
 		<set name="icon" val="icon.weapon_two_handed_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
@@ -152,7 +152,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="26313" name="Offering Test Ingredient  3" type="EtcItem">
+	<item id="26313" name="Offering Test Ingredient 3" type="EtcItem">
 		<!-- Stackable item worth 1000 Adena. Timed item. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -165,7 +165,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="price" val="1000" />
 	</item>
-	<item id="26314" name="Offering Test Ingredient  4" type="EtcItem">
+	<item id="26314" name="Offering Test Ingredient 4" type="EtcItem">
 		<!-- Stackable item worth 1000 Adena. Premium item. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="price" val="1000" />
@@ -173,14 +173,14 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26315" name="Offering Test Ingredient  5" type="EtcItem">
+	<item id="26315" name="Offering Test Ingredient 5" type="EtcItem">
 		<!-- Price is 0, but can be sold in the shop. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26316" name="Offering Test Ingredient  6" type="EtcItem">
+	<item id="26316" name="Offering Test Ingredient 6" type="EtcItem">
 		<!-- Stackable item worth 1000 Adena. Cannot be sold in the shop. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="price" val="1000" />
@@ -189,7 +189,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26317" name="Offering Test Ingredient  7" type="EtcItem">
+	<item id="26317" name="Offering Test Ingredient 7" type="EtcItem">
 		<!-- Stackable item worth 1000. Must be used as an offering. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="price" val="1000" />
@@ -381,34 +381,35 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26338" name="Talisman - Abundance Lv. 1 (High-grade)" type="Armor">
-		<!-- Max HP/MP/CP + 510, P. Def. + 971, M. Def. + 552, P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 15%, M. Atk. + 15%, Skill Power + 15%, Skill Critical Rate + 15%. Duration 1 minute. Cooldown 10 minutes.)\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- Max HP/MP/CP + 510, P. Def. + 971, M. Def. + 552, P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 15%, M. Atk. + 15%, Skill Power + 15%, Skill Critical Rate + 15%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="26339" name="Talisman - Abundance Lv. 2 (High-grade)" type="Armor">
-		<!-- HP/MP/CP + 531, P. Def. + 1051, M. Def. + 609, P. Evasion/M. Evasion + 8, Attribute Resistance + 17, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 16%, M. Atk. + 16%, Skill Power + 16%, Skill Critical Rate + 16%. Duration 1 minute. Cooldown 10 minutes.)\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- HP/MP/CP + 531, P. Def. + 1051, M. Def. + 609, P. Evasion/M. Evasion + 8, Attribute Resistance + 17, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 16%, M. Atk. + 16%, Skill Power + 16%, Skill Critical Rate + 16%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="26340" name="Talisman - Abundance Lv. 3 (High-grade)" type="Armor">
-		<!-- Max HP/MP/CP + 563, P. Def. + 1184, M. Def. + 706, P. Evasion/M. Evasion + 9, Attribute Resistance + 20, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 17%, M. Atk. + 17%, Skill Power + 17%, Skill Critical Rate + 17%. Duration 1 minute. Cooldown 10 minutes.)\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- Max HP/MP/CP + 563, P. Def. + 1184, M. Def. + 706, P. Evasion/M. Evasion + 9, Attribute Resistance + 20, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 17%, M. Atk. + 17%, Skill Power + 17%, Skill Critical Rate + 17%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="26341" name="Talisman - Abundance Lv. 4 (High-grade)" type="Armor">
-		<!-- HP/MP/CP + 591, P. Def. + 1307, M. Def. + 799, P. Evasion/M. Evasion + 10, Attribute Resistance + 25, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 20%, M. Atk. + 20%, Skill Power + 20%, Skill Critical Rate + 20%. Duration 1 minute. Cooldown 10 minutes.)\nNote: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- HP/MP/CP + 591, P. Def. + 1307, M. Def. + 799, P. Evasion/M. Evasion + 10, Attribute Resistance + 25, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 20%, M. Atk. + 20%, Skill Power + 20%, Skill Critical Rate + 20%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="26342" name="Recipe: Talisman - Abundance Lv. 1 (High-grade)" type="EtcItem">
+		<!-- For 4th class only. Recipe for Talisman - Abundance (High-grade) Lv. 1. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -421,6 +422,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26343" name="Recipe: Talisman - Abundance Lv. 2 (High-grade)" type="EtcItem">
+		<!-- For 4th class only. Recipe for Talisman - Abundance (High-grade) Lv. 2. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -433,6 +435,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26344" name="Recipe: Talisman - Abundance Lv. 3 (High-grade)" type="EtcItem">
+		<!-- For 4th class only. Recipe for Talisman - Abundance (High-grade) Lv. 3. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -445,6 +448,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26345" name="Recipe: Talisman - Abundance Lv. 4 (High-grade)" type="EtcItem">
+		<!-- For 4th class only. Recipe for Talisman - Abundance (High-grade) Lv. 4. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -510,7 +514,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26351" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- P. Def. + 1 for armor and accessories (A-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- When enchanted, P. Def. + 1 for armor and accessories (A-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -608,7 +612,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26359" name="Automatic Appearance Stone: Tears Weapon" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of all weapons into those of Tears Weapons of corresponding types for 30 days. Can be used on shields and sigils. Double-click to use.\n\nNote: Appearance may reset when the Change Weapon skill is used. -->
+		<!-- Changes the appearance of all weapons into those of Tears Weapons of corresponding types for 30 days. Can be used on shields and sigils. Double-click to use. Note: Appearance may reset when the Change Weapon skill is used. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift_stone" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -622,7 +626,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="26360" name="Automatic Appearance Stone: Tears Weapon" type="EtcItem">
-		<!-- Changes the appearance of all weapons into those of Tears Weapons of corresponding types. Can be used on shields and sigils. Double-click to use.\n\nNote: Appearance may reset when the Change Weapon skill is used. -->
+		<!-- Changes the appearance of all weapons into those of Tears Weapons of corresponding types. Can be used on shields and sigils. Double-click to use. Note: Appearance may reset when the Change Weapon skill is used. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift_stone" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -852,7 +856,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="26381" name="Samurai Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Modifies the appearance of a hair accessory into that of a Samurai Outfit for 30 days. Only for 2-slot hair accessories.\n\nNote: Bestowing a pendant on a modified hair accessory wil reset the appearance. -->
+		<!-- Modifies the appearance of a hair accessory into that of a Samurai Outfit for 30 days. Only for 2-slot hair accessories. Note: Bestowing a pendant on a modified hair accessory wil reset the appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -866,7 +870,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="26382" name="Samurai Outfit Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Modifies the appearance of armor into that of a Samurai for 30 days. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone.\n\nNote: Upgrading or bestowing options on modified armor will reset the appearance. -->
+		<!-- Modifies the appearance of armor into that of a Samurai for 30 days. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone. Note: Upgrading or bestowing options on modified armor will reset the appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -950,7 +954,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="26388" name="Anakim Outfit Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Modifies the appearance of armor into that of Anakim for 30 days. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone.\n\nNote: Upgrading or bestowing options on modified armor will reset the appearance. -->
+		<!-- Modifies the appearance of armor into that of Anakim for 30 days. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone. Note: Upgrading or bestowing options on modified armor will reset the appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />

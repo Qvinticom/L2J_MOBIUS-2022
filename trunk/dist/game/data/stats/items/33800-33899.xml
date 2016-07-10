@@ -25,7 +25,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="33802" name="Mentee Certificate Pack" type="EtcItem">
-		<!-- Dimensional Item Pack\nContains a Mentee Certificate and a Mentoring Guidebook. Once the pack is opened, it cannot be shared among characters within an account through the Dimensional Merchant. -->
+		<!-- Dimensional Item Pack. Contains a Mentee Certificate and a Mentoring Guidebook. Once the pack is opened, it cannot be shared among characters within an account through the Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -385,8 +385,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33820" name="Unbind Scroll (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- Transforms a D-grade bound item into a standard item through the Blacksmith of Mammon. -->
+	<item id="33820" name="Decayed Unbind Scroll (D-grade)" additionalName="Event" type="EtcItem">
+		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -399,8 +399,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33821" name="Unbind Scroll (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- Transforms a C-grade bound item into a standard item through the Blacksmith of Mammon. -->
+	<item id="33821" name="Decayed Unbind Scroll (C-grade)" additionalName="Event" type="EtcItem">
+		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -413,8 +413,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33822" name="Unbind Scroll (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- Transforms a B-grade bound item into a standard item through the Blacksmith of Mammon. -->
+	<item id="33822" name="Decayed Unbind Scroll (B-grade)" additionalName="Event" type="EtcItem">
+		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -427,8 +427,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33823" name="Unbind Scroll (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- Transforms an A-grade bound item into a standard item through the Blacksmith of Mammon. -->
+	<item id="33823" name="Decayed Unbind Scroll (A-grade)" additionalName="Event" type="EtcItem">
+		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -441,8 +441,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33824" name="Unbind Scroll (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- Transforms an S-grade bound item into a standard item through the Blacksmith of Mammon. -->
+	<item id="33824" name="Decayed Unbind Scroll (S-grade)" additionalName="Event" type="EtcItem">
+		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -455,8 +455,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33825" name="Unbind Scroll (S80-grade)" additionalName="Event" type="EtcItem">
-		<!-- Transforms an S80-grade bound item into a standard item through the Blacksmith of Mammon. -->
+	<item id="33825" name="Decayed Unbind Scroll (S80-grade)" additionalName="Event" type="EtcItem">
+		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.cursed_free_r" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -499,8 +499,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33828" name="Soul Crystal Change Stone (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- Allows you to change the soul crystal of an A-grade weapon. Go to the Blacksmith of Mammon and use with A-grade Gemstones to change the soul crystal on an A-grade weapon. -->
+	<item id="33828" name="Decayed Soul Crystal Change Stone (A-grade)" additionalName="Event" type="EtcItem">
+		<!-- Soul Crystal Change Stone that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.etc_bead_red_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -513,8 +513,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33829" name="Soul Crystal Change Stone (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- With this item you can change the Special Ability of an S-grade weapon when you visit the Blacksmith of Mammon. In order to use this item you will need an S-grade weapon with a Special Ability and S-grade Gemstones. -->
+	<item id="33829" name="Decayed Soul Crystal Change Stone (S-grade)" additionalName="Event" type="EtcItem">
+		<!-- Soul Crystal Change Stone that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -527,8 +527,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33830" name="Soul Crystal Change Stone (S80-grade)" additionalName="Event" type="EtcItem">
-		<!-- With this item you can change the Special Ability of a S80-grade weapon when you visit the Blacksmith of Mammon. In order to use this item you will need a S80-grade weapon with a Special Ability and S-grade Gemstones. -->
+	<item id="33830" name="Decayed Soul Crystal Change Stone (S80-grade)" additionalName="Event" type="EtcItem">
+		<!-- Soul Crystal Change Stone that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -541,8 +541,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33831" name="Soul Crystal Change Stone (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- With this item you can change the Special Ability of an R-grade weapon when you visit the Blacksmith of Mammon. In order to use this item you will need an R-grade weapon with a Special Ability and R-grade Gemstones. -->
+	<item id="33831" name="Decayed Soul Crystal Change Stone (R-grade)" additionalName="Event" type="EtcItem">
+		<!-- Soul Crystal Change Stone that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -555,8 +555,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33832" name="Soul Crystal Change Stone (R95-grade)" additionalName="Event" type="EtcItem">
-		<!-- With this item you can change the Special Ability of a R95-grade weapon when you visit the Blacksmith of Mammon. In order to use this item you will need a R95-grade weapon with a Special Ability and R-grade Gemstones. -->
+	<item id="33832" name="Decayed Soul Crystal Change Stone (R95-grade)" additionalName="Event" type="EtcItem">
+		<!-- Soul Crystal Change Stone that has decayed over time. You might be able to sell it to a merchant. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -675,7 +675,7 @@
 		</skills>
 	</item>
 	<item id="33838" name="Destruction Scroll: Enchant Weapon (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Atk. + 2 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 2 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 4 for bow weapons. M. Atk. + 2 for all weapons. P. Atk./M. Atk. Increases by double starting at + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons above + 15. -->
+		<!-- P. Atk. + 2 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 2 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 4 for bow weapons. M. Atk. + 2 for all weapons. P. Atk./M. Atk. Increases by double starting at + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons + 15 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -695,7 +695,7 @@
 		</skills>
 	</item>
 	<item id="33839" name="Destruction Scroll: Enchant Weapon (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Atk. + 3 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bow weapons. M. Atk. + 3 for all weapons. P. Atk./M. Atk. Increases by double starting at + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons above + 15. -->
+		<!-- P. Atk. + 3 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bow weapons. M. Atk. + 3 for all weapons. P. Atk./M. Atk. Increases by double starting at + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons + 15 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -715,7 +715,7 @@
 		</skills>
 	</item>
 	<item id="33840" name="Destruction Scroll: Enchant Weapon (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Atk. + 3 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bow weapons. M. Atk. + 3 for all weapons. P. Atk./M. Atk. Increases by double starting at + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons above + 15. -->
+		<!-- P. Atk. + 3 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bow weapons. M. Atk. + 3 for all weapons. P. Atk./M. Atk. Increases by double starting at + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons + 15 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -735,7 +735,7 @@
 		</skills>
 	</item>
 	<item id="33841" name="Destruction Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Atk. + 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bow weapons. M. Atk. + 3 for all weapons. P. Atk./M. Atk. Increases by double starting at + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons above + 15. -->
+		<!-- P. Atk. + 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bow weapons. M. Atk. + 3 for all weapons. P. Atk./M. Atk. Increases by double starting at + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons + 15 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -755,7 +755,7 @@
 		</skills>
 	</item>
 	<item id="33842" name="Destruction Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Atk. + 5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 6 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 10 for bow weapons. M. Atk. + 4 for all weapons. P. Atk./M. Atk. Increases by double starting at + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons above + 15. -->
+		<!-- P. Atk. + 5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 6 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 10 for bow weapons. M. Atk. + 4 for all weapons. P. Atk./M. Atk. Increases by double starting at + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons + 15 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -775,7 +775,7 @@
 		</skills>
 	</item>
 	<item id="33843" name="Destruction Scroll: Enchant Weapon (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increase at + 4. All amounts are increased for blessed weapons. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons above + 15. -->
+		<!-- P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increase at + 4. All amounts are increased for blessed weapons. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons + 15 or above. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -795,7 +795,7 @@
 		</skills>
 	</item>
 	<item id="33844" name="Destruction Scroll: Enchant Armor (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant level starting from + 4. Cannot be used on armor above + 6. -->
+		<!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant level starting from + 4. Cannot be used on armor + 6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -815,7 +815,7 @@
 		</skills>
 	</item>
 	<item id="33845" name="Destruction Scroll: Enchant Armor (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. + 1 for C-grade armor and accessories when enchanted. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant level starting from + 4. Cannot be used on armor above + 6. -->
+		<!-- P. Def. + 1 for C-grade armor and accessories when enchanted. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant level starting from + 4. Cannot be used on armor + 6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -835,7 +835,7 @@
 		</skills>
 	</item>
 	<item id="33846" name="Destruction Scroll: Enchant Armor (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. + 1 for B-grade armor and accessories when enchanted. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant level starting from + 4. Cannot be used on armor above + 6. -->
+		<!-- P. Def. + 1 for B-grade armor and accessories when enchanted. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant level starting from + 4. Cannot be used on armor + 6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -855,7 +855,7 @@
 		</skills>
 	</item>
 	<item id="33847" name="Destruction Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. + 1 for A-grade armor and accessories when enchanted. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant level starting from + 4. Cannot be used on armor above + 6. -->
+		<!-- P. Def. + 1 for A-grade armor and accessories when enchanted. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant level starting from + 4. Cannot be used on armor + 6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -875,7 +875,7 @@
 		</skills>
 	</item>
 	<item id="33848" name="Destruction Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. + 1 for S-grade armor and accessories when enchanted. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant level starting from + 4. Cannot be used on armor above + 6. -->
+		<!-- P. Def. + 1 for S-grade armor and accessories when enchanted. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant level starting from + 4. Cannot be used on armor + 6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -895,7 +895,7 @@
 		</skills>
 	</item>
 	<item id="33849" name="Destruction Scroll: Enchant Armor (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. + 2 for R-grade armor and accessories, and greatly increases it starting from + 4. Can be safely enchanted up to + 3. When enchanted to + 4 or more, HP also increases according to the enchantment stats. If enchanting fails, the power of the Goddess of Destruction stops the item from crystallizing, and the existing enchantment value is maintained. Cannot be used above + 6. -->
+		<!-- P. Def. + 2 for R-grade armor and accessories, and greatly increases it starting from + 4. Can be safely enchanted up to + 3. When enchanted to + 4 or more, HP also increases according to the enchantment stats. If enchanting fails, the power of the Goddess of Destruction stops the item from crystallizing, and the existing enchantment value is maintained. Cannot be used + 6 or above. -->
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1424,7 +1424,7 @@
 		</skills>
 	</item>
 	<item id="33875" name="Requiem Shaper" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:ﾠGuidance, Haste, or Focus. When enchanted to + 4, physical Critical Damage increases. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, physical Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_aspeda_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1460,7 +1460,7 @@
 		</stats>
 	</item>
 	<item id="33876" name="Requiem Cutter" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:ﾠHaste, Focus, or Health. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1495,7 +1495,7 @@
 		</stats>
 	</item>
 	<item id="33877" name="Requiem Slasher" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:ﾠFocus, Damage Up, or Haste. When enchanted to + 4, P. Atk. additionally increases. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_polion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1530,7 +1530,7 @@
 		</stats>
 	</item>
 	<item id="33878" name="Requiem Avenger" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:ﾠHaste, Critical Damage, or Focus. When enchanted to + 4, physical Critical Damage increases. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, physical Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_batista_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1566,7 +1566,7 @@
 		</stats>
 	</item>
 	<item id="33879" name="Requiem Fighter" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:ﾠFocus, Damage Up, or Haste. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_fantasma_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1602,7 +1602,7 @@
 		</stats>
 	</item>
 	<item id="33880" name="Requiem Stormer" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:ﾠHP Drain, Guidance, or Damage Up. When enchanted to + 4, Multi-attack additionally increases. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_soryu_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1639,7 +1639,7 @@
 		</stats>
 	</item>
 	<item id="33881" name="Requiem Thrower" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:ﾠDamage Up, Focus, or Long Blow. When enchanted to + 4, P. Skill Power increases. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_grabathus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1676,7 +1676,7 @@
 		</stats>
 	</item>
 	<item id="33882" name="Requiem Shooter" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:ﾠFocus, Critical Slow, or Haste. When enchanted to + 4, Atk. Spd. Increases. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_shyayaka_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1713,7 +1713,7 @@
 		</stats>
 	</item>
 	<item id="33883" name="Requiem Buster" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:ﾠAcumen, Magic Hold, or Mana Up. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_kaynon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1748,7 +1748,7 @@
 		</stats>
 	</item>
 	<item id="33884" name="Requiem Caster" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:ﾠEmpower, Acumen, or Magic Hold. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_anatrian_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1784,7 +1784,7 @@
 		</stats>
 	</item>
 	<item id="33885" name="Requiem Retributer" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:ﾠMP Regeneration, Acumen, or Empower. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_grangkaz_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1821,7 +1821,7 @@
 		</stats>
 	</item>
 	<item id="33886" name="Requiem Dualsword" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:ﾠHaste, Damage Up, or Health. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1856,7 +1856,7 @@
 		</stats>
 	</item>
 	<item id="33887" name="Requiem Dual Dagger" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:ﾠDamage Up, Focus, or Guidance. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1892,7 +1892,7 @@
 		</stats>
 	</item>
 	<item id="33888" name="Requiem Dual Blunt Weapon" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:ﾠFocus, Guidance, or Damage Up. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

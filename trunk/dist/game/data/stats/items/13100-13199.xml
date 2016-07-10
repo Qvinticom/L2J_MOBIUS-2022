@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="13100" name="Recipe: Sealed Arcana Sigil (60%)" type="EtcItem">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Arcana Sigil. Requires Create Item - Skill Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -15,6 +16,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="13101" name="Recipe: Sealed Arcana Sigil" type="EtcItem">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Arcana Sigil. Requires Create Item - Skill Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -29,6 +31,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="13102" name="Foundation Sealed Arcana Sigil" type="EtcItem">
+		<!-- Rare Sealed Arcana Sigil that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.arcana_sigil_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -46,6 +49,7 @@
 		</stats>
 	</item>
 	<item id="13103" name="My Teleport Book Pack" type="EtcItem">
+		<!-- Wrapped Pack containing sheet of the Free Teleporter's Scroll. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -67,6 +71,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13104" name="My Teleport Scroll 30-unit Pack" type="EtcItem">
+		<!-- Wrapped Pack containing 30 sheets of Free Teleporter's Spellbooks. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -88,6 +93,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13105" name="Entrance Pass: Kamaloka 3-unit Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Entrance Pass: Kamaloka set. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -111,6 +117,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13106" name="Feather of Blessing 3-unit Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Love Agathion Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -132,6 +139,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13107" name="Agathion - Love Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Pumpkin Transformation Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -153,6 +161,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13108" name="Pumpkin Transformation Stick Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing 5 Sheets of Extra Entrances Passes each to Kamaloka (Hall of the Abyss), Near Kamaloka, and Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -174,6 +183,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13109" name="Entrance Pass: Kamaloka 3-unit Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Kat the Cat Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -197,6 +207,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13110" name="Kat the Cat Hat Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Feline Queen Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -218,6 +229,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13111" name="Feline Queen Hat Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Monster Eye Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -239,6 +251,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13112" name="Monster Eye Hat Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Brown Bear Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -260,6 +273,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13113" name="Brown Bear Hat Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Fungus Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -281,6 +295,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13114" name="Fungus Hat Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Skull Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -302,6 +317,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13115" name="Skull Hat Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Ornithomimus Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -323,6 +339,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13116" name="Ornithomimus Hat Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Feline King Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -344,6 +361,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13117" name="Feline King Hat Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Kai the Cat Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -365,6 +383,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13118" name="Kai the Cat Hat Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing OX Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -386,6 +405,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13119" name="OX Stick Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Rock-Paper-Scissors Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -408,6 +428,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13120" name="Rock-Paper-Scissors Stick Pack (30-day)" type="EtcItem">
+		<!-- Wrapped Pack containing bracelet that summons a Darkmane Pacer (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -431,6 +452,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13121" name="Darkmane Pacer Pack (7-day)" type="EtcItem">
+		<!-- Wrapped Pack containing 3 sheets of Color Titles. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -452,6 +474,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13122" name="Color Title 3-unit Pack" type="EtcItem">
+		<!-- Wrapped Pack containing 3 sheets of Color Titles. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -473,6 +496,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13123" name="My Teleport Book Pack" type="EtcItem">
+		<!-- Wrapped Pack containing My Teleport Scroll. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -482,6 +506,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13124" name="Color Title Pack" type="EtcItem">
+		<!-- Wrapped Pack containing sheets of Color Titles. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -503,6 +528,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13125" name="My Teleport Scroll 10-unit Pack" type="EtcItem">
+		<!-- Wrapped Pack containing 10 sheets of Free Teleporter's Spellbooks. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -524,6 +550,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13126" name="Dimensional Experience Pack (Event)" type="EtcItem">
+		<!-- Wrapped box containing 15 Sheets of Extra Entrance Passes to Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -547,6 +574,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13127" name="Promotional Parcel 2" type="EtcItem">
+		<!-- Wrapped box containing 15 Sheets of Extra Entrance Passes to Near Kamaloka. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -563,6 +591,7 @@
 		<set name="is_freightable" val="false" />
 	</item>
 	<item id="13128" name="Phoenix Feather" type="EtcItem">
+		<!-- Wrapped box containing 15 Sheets of Extra Entrance Passes to Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_feather_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -585,6 +614,7 @@
 		</skills>
 	</item>
 	<item id="13129" name="Scroll of Escape: Pailaka" type="EtcItem">
+		<!-- Wrapped Pack containing 15 Sheets of Extra Entrance Passes to Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -610,6 +640,7 @@
 		</skills>
 	</item>
 	<item id="13130" name="Temple Book of Secrets" type="EtcItem">
+		<!-- Dimensional Item Pack. Wrapped Pack containing 15 Sheets of Extra Entrance Passes to Near Kamaloka. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -629,6 +660,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="13131" name="Temple Book of Secrets" type="EtcItem">
+		<!-- Book containing the secrets of the Spirit's Sword -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -648,6 +680,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="13132" name="Temple Book of Secrets" type="EtcItem">
+		<!-- Book containing the secrets of Papion -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -667,6 +700,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="13133" name="Temple Book of Secrets" type="EtcItem">
+		<!-- Book containing the secrets of Kinsus -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -686,6 +720,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="13134" name="Temple Book of Secrets" type="EtcItem">
+		<!-- Book containing the secrets of the Reinforced Spirit's Sword -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -705,6 +740,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="13135" name="Temple Book of Secrets" type="EtcItem">
+		<!-- Book containing the secrets of Gargos -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -724,6 +760,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="13136" name="Temple Book of Secrets" type="EtcItem">
+		<!-- Book containing the secrets of Adiantum -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -863,6 +900,7 @@
 		</stats>
 	</item>
 	<item id="13143" name="Sealed Vesper Helmet" type="Armor">
+		<!-- Sealed Vesper Helmet. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -884,6 +922,7 @@
 		</stats>
 	</item>
 	<item id="13144" name="Sealed Vesper Leather Helmet" type="Armor">
+		<!-- Sealed Vesper Leather Helmet. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -902,6 +941,7 @@
 		</stats>
 	</item>
 	<item id="13145" name="Sealed Vesper Circlet" type="Armor">
+		<!-- Sealed Vesper Circlet. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -923,6 +963,7 @@
 		</stats>
 	</item>
 	<item id="13146" name="Sealed Vesper Noble Helmet" type="Armor">
+		<!-- Sealed Vesper Noble Helmet. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -944,6 +985,7 @@
 		</stats>
 	</item>
 	<item id="13147" name="Sealed Vesper Noble Leather Helmet" type="Armor">
+		<!-- Sealed Vesper Noble Leather Helmet. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -965,6 +1007,7 @@
 		</stats>
 	</item>
 	<item id="13148" name="Sealed Vesper Noble Circlet" type="Armor">
+		<!-- Sealed Vesper Noble Circlet. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -986,6 +1029,7 @@
 		</stats>
 	</item>
 	<item id="13149" name="Pailaka Final Key" type="EtcItem">
+		<!-- Key that opens the secrets of Pailaka -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1004,6 +1048,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13150" name="Pailaka All-purpose Key" type="EtcItem">
+		<!-- Key that opens all the doors on Pailaka Devil's Isle. Once used, it will turn to dust and disappear. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
@@ -1028,6 +1073,7 @@
 		</skills>
 	</item>
 	<item id="13151" name="Pailaka Vitality Replenishing Potion (100%)" type="EtcItem">
+		<!-- Pailaka reward item. Replenishing potion that refills some Vitality. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1055,6 +1101,7 @@
 		</skills>
 	</item>
 	<item id="13152" name="Pailaka Vitality Replenishing Potion (50%)" type="EtcItem">
+		<!-- Pailaka reward item. Replenishing potion that refills some Vitality. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1082,6 +1129,7 @@
 		</skills>
 	</item>
 	<item id="13153" name="Player Commendation - Great Spear" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Great Spear with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1117,6 +1165,7 @@
 		</stats>
 	</item>
 	<item id="13154" name="Player Commendation - Falchion" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Falchion with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1147,6 +1196,7 @@
 		</stats>
 	</item>
 	<item id="13155" name="Player Commendation - Iron Hammer" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- An Iron Hammer with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1178,6 +1228,7 @@
 		</stats>
 	</item>
 	<item id="13156" name="Player Commendation - Voodoo Doll" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Voodoo Doll with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
@@ -1209,6 +1260,7 @@
 		</stats>
 	</item>
 	<item id="13157" name="Player Commendation - Flanged Mace" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Flanged Mace with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_buzdygan_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1240,6 +1292,7 @@
 		</stats>
 	</item>
 	<item id="13158" name="Player Commendation - Mage Staff" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Mage Staff with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1272,6 +1325,7 @@
 		</stats>
 	</item>
 	<item id="13159" name="Player Commendation - Sword Breaker" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Sword Breaker with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_sword_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1303,6 +1357,7 @@
 		</stats>
 	</item>
 	<item id="13160" name="Player Commendation - Viper Fang" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Viper Fang with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1334,6 +1389,7 @@
 		</stats>
 	</item>
 	<item id="13161" name="Player Commendation - Compound Bow" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Composite Bow with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_composition_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1367,6 +1423,7 @@
 		</stats>
 	</item>
 	<item id="13162" name="Player Commendation - Crucifix of Blessing" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Crucifix of Blessing with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_crucifix_of_blessing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
@@ -1398,6 +1455,7 @@
 		</stats>
 	</item>
 	<item id="13163" name="Player Commendation - Bastard Sword*Crimson Sword" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Bastard Sword*Crimson Sword with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1430,6 +1488,7 @@
 		</stats>
 	</item>
 	<item id="13164" name="Player Commendation - Claymore" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Claymore with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_claymore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1462,6 +1521,7 @@
 		</stats>
 	</item>
 	<item id="13165" name="Player Commendation - Bonebreaker" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Bonebreaker with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_bonebreaker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1495,6 +1555,7 @@
 		</stats>
 	</item>
 	<item id="13166" name="Player Commendation - Atuba Hammer" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- An Atuba Hammer with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_atuba_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1529,6 +1590,7 @@
 		</stats>
 	</item>
 	<item id="13167" name="Player Commendation - Ghost Staff" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Ghost Staff with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1563,6 +1625,7 @@
 		</stats>
 	</item>
 	<item id="13168" name="Player Commendation - Staff of Life" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Staff of Life with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_life_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1597,6 +1660,7 @@
 		</stats>
 	</item>
 	<item id="13169" name="Player Commendation - Atuba Mace" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- An Atuba Mace with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_atuba_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1631,6 +1695,7 @@
 		</stats>
 	</item>
 	<item id="13170" name="Player Commendation - Mithril Dagger" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Mithril Dagger with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1664,6 +1729,7 @@
 		</stats>
 	</item>
 	<item id="13171" name="Player Commendation - Scallop Jamadhr" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Scallop Jamadhr with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_scallop_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1697,6 +1763,7 @@
 		</stats>
 	</item>
 	<item id="13172" name="Player Commendation - Light Crossbow" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Light Crossbow with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1732,6 +1799,7 @@
 		</stats>
 	</item>
 	<item id="13173" name="Player Commendation - Glaive" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- A Glaive with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1769,6 +1837,7 @@
 		</stats>
 	</item>
 	<item id="13174" name="Player Commendation - Elven Long Sword" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- An Elven Long Sword with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1801,6 +1870,7 @@
 		</stats>
 	</item>
 	<item id="13175" name="Player Commendation - Grand Épée" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Grand Épée with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. Has a chance of increasing P. Atk., M. Atk., and Recovery Rate and decreasing Skill MP consumption of self and party members during a Critical when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1840,6 +1910,7 @@
 		</stats>
 	</item>
 	<item id="13176" name="Player Commendation - General's Katzbalger" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- General's Katzbalger with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1876,6 +1947,7 @@
 		</stats>
 	</item>
 	<item id="13177" name="Player Commendation - Cranequin" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Cranequin with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1913,6 +1985,7 @@
 		</stats>
 	</item>
 	<item id="13178" name="Player Commendation - Samurai Long Sword" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Samurai Long Sword with limited ability enhancement. <Special Option>. Increases Critical by 73. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1949,6 +2022,7 @@
 		</stats>
 	</item>
 	<item id="13179" name="Player Commendation - Deadman's Staff" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Deadman's Staff with limited ability enhancement. <Special Option>. Has a 30% chance of casting Regeneration on the target during magic use. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1987,6 +2061,7 @@
 		</stats>
 	</item>
 	<item id="13180" name="Player Commendation - Ghoul's Staff" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Ghoul's Staff with limited ability enhancement. <Special Option>. Increases Max MP by 30%.Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_ghouls_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2025,6 +2100,7 @@
 		</stats>
 	</item>
 	<item id="13181" name="Player Commendation - Demon's Staff" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Demon's Staff with limited ability enhancement. <Special Option>. Has a 7% chance of casting Curse Weakness on the garget during magic use. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2063,6 +2139,7 @@
 		</stats>
 	</item>
 	<item id="13182" name="Player Commendation - Crystal Dagger" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Crystal Dagger with limited ability enhancement. <Special Option>. P. Atk. + 140 during a Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2100,6 +2177,7 @@
 		</stats>
 	</item>
 	<item id="13183" name="Player Commendation - Great Pata" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Great Pata with limited ability enhancement. <Special Option>. Increases Atk. Spd. by 11% when HP drops to 60% or below. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2137,6 +2215,7 @@
 		</stats>
 	</item>
 	<item id="13184" name="Player Commendation - Eminence Bow" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Eminence Bow with limited ability enhancement. <Special Option>. Has a 42% chance of consuming 1MP during a regular attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2174,6 +2253,7 @@
 		</stats>
 	</item>
 	<item id="13185" name="Player Commendation - Orcish Poleaxe" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Orcish Poleaxe with limited ability enhancement. <Special Option>. Widens the attack range. Expiratory. Cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2211,6 +2291,7 @@
 		</stats>
 	</item>
 	<item id="13186" name="Player Commendation - Yaksa Mace" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Yaksa Mace with limited ability enhancement. <Special Option>. Max HP increases by 25%. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2248,6 +2329,7 @@
 		</stats>
 	</item>
 	<item id="13187" name="Player Commendation - Shamshir*Shamshir" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Shamshir*Shamshir with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Accuracy increases by 2. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2284,6 +2366,7 @@
 		</stats>
 	</item>
 	<item id="13188" name="Player Commendation - Admiral's Estoc" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Admiral's Estoc with limited ability enhancement. <Special Option>. Atk. Spd. Increases by about 7%. When enchanted to 4 or more, chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2325,6 +2408,7 @@
 		</stats>
 	</item>
 	<item id="13189" name="Player Commendation - Saber Tooth" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Sabertooth with limited ability enhancement. <Special Option>. Critical increases by 73. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2365,6 +2449,7 @@
 		</stats>
 	</item>
 	<item id="13190" name="Player Commendation - Sharpshooter" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Sharpshooter with limited ability enhancement. <Special Option>. Accuracy increases by 4. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2406,6 +2491,7 @@
 		</stats>
 	</item>
 	<item id="13191" name="Player Commendation - Ecliptic Sword" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Ecliptic Sword with limited ability enhancement. <Special Option>. M. Atk. Increases by 26. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2443,6 +2529,7 @@
 		</stats>
 	</item>
 	<item id="13192" name="Player Commendation - Ecliptic Axe" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Ecliptic Axe with limited ability enhancement. <Special Option>. 10% chance of casting Dryad Root on the target during magic use. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2481,6 +2568,7 @@
 		</stats>
 	</item>
 	<item id="13193" name="Player Commendation - Dwarven Hammer" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Dwarven Hammer with limited ability enhancement. <Special Option>. 42% chance of casting Bleed on the target during a standard Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2518,6 +2606,7 @@
 		</stats>
 	</item>
 	<item id="13194" name="Player Commendation - Damascus Sword" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Damascus Sword with limited ability enhancement. <Special Option>. Critical increases by 64. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2554,6 +2643,7 @@
 		</stats>
 	</item>
 	<item id="13195" name="Player Commendation - Lance" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Lance with limited ability enhancement. <Special Option>. About a 25% chance of casting Stun on the target during a Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2592,6 +2682,7 @@
 		</stats>
 	</item>
 	<item id="13196" name="Player Commendation - Deadman's Glory" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Deadman's Glory with limited ability enhancement. <Special Option>. Atk. Spd. Increases by about 6%. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_deadmans_glory_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2629,6 +2720,7 @@
 		</stats>
 	</item>
 	<item id="13197" name="Player Commendation - Art of Battle Axe" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Art of Battle Axe with limited ability enhancement. <Special Option>. Max HP increases by 25%. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2666,6 +2758,7 @@
 		</stats>
 	</item>
 	<item id="13198" name="Player Commendation - Staff of Evil Spirits" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Staff of Evil Spirits with limited ability enhancement. <Special Option>. 20% chance of casting Blessed Body on the target during magic use. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2704,6 +2797,7 @@
 		</stats>
 	</item>
 	<item id="13199" name="Player Commendation - Demon's Dagger" additionalName="PC-exclusive Weapon" type="Weapon">
+		<!-- Demon's Dagger with limited ability enhancement. <Special Option>. P. Atk. Increases by 160 during a critical attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />

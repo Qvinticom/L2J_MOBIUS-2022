@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="23503" name="Military Top Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Military look. An appearance-modified item has no change in abilities. All armor types. -->
@@ -155,7 +155,7 @@
 		</skills>
 	</item>
 	<item id="23530" name="Automatic Appearance Stone: Emerald Weapon" type="EtcItem">
-		<!-- Changes the appearance of all weapons into those of Emerald Weapons of corresponding types. Can be used on shields and sigils. Double-click to use.\n\nNote: Appearance may reset when the Change Weapon skill is used. -->
+		<!-- Changes the appearance of all weapons into those of Emerald Weapons of corresponding types. Can be used on shields and sigils. Double-click to use. Note: Appearance may reset when the Change Weapon skill is used. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift_stone" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -174,7 +174,7 @@
 		</skills>
 	</item>
 	<item id="23531" name="Automatic Appearance Stone: Japanese Weapon" type="EtcItem">
-		<!-- Changes the appearance of all weapons into those of Japanese Weapons of corresponding types. Can be used on shields and sigils. Double-click to use.\n\nNote: Appearance may reset when the Change Weapon skill is used. -->
+		<!-- Changes the appearance of all weapons into those of Japanese Weapons of corresponding types. Can be used on shields and sigils. Double-click to use. Note: Appearance may reset when the Change Weapon skill is used. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift_stone" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />

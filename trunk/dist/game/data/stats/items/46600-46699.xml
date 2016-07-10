@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="46600" name="Red Zubei" additionalName="" type="Armor">
+	<item id="46600" name="Red Zubei" type="Armor">
 		<set name="icon" val="icon.armor_t56_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -10,7 +10,7 @@
 			<stat type="pDef">400.0</stat>
 		</stats>
 	</item>
-	<item id="46601" name="White Assassin Suit" additionalName="" type="Armor">
+	<item id="46601" name="White Assassin Suit" type="Armor">
 		<set name="icon" val="icon.dark_assassin" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -21,7 +21,7 @@
 			<stat type="pDef">400.0</stat>
 		</stats>
 	</item>
-	<item id="46602" name="Blue Dynasty Cloak" additionalName="" type="Armor">
+	<item id="46602" name="Blue Dynasty Cloak" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Cloak. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -33,7 +33,7 @@
 			<stat type="mDef">40.0</stat>
 		</stats>
 	</item>
-	<item id="46603" name="Blue Dynasty Armor Appearance Stone" additionalName="" type="EtcItem">
+	<item id="46603" name="Blue Dynasty Armor Appearance Stone" type="EtcItem">
 		<!-- L2 Assist App item. Changes the appearance of your entire armor into that of Blue Dynasty. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_freightable" val="false" />
@@ -41,7 +41,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46604" name="Zubei Armor Appearance Stone" additionalName="" type="EtcItem">
+	<item id="46604" name="Zubei Armor Appearance Stone" type="EtcItem">
 		<!-- L2 Assist App item. Changes the appearance of your entire armor into that of Red Zubei. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_freightable" val="false" />
@@ -49,8 +49,8 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46605" name="White Assassin Suit Appearance Stone" additionalName="" type="EtcItem">
-		<!-- L2 Assist App item. Changes the appearance of your entire armor into that of the White Assassin Suit. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
+	<item id="46605" name="White Assassin Suit Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of your entire armor into that of the White Assassin Suit. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -59,7 +59,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 	</item>
-	<item id="46606" name="Blue Dynasty Circlet" additionalName="" type="Armor">
+	<item id="46606" name="Blue Dynasty Circlet" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -164,7 +164,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="46621" name="Shadow Blue Seal Bracelet" additionalName="" type="Armor">
+	<item id="46621" name="Shadow Blue Seal Bracelet" type="Armor">
 		<!-- L2 Assist App item. Can summon Shadow Blue. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -253,7 +253,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="46629" name="Practice StormBringer" additionalName="" type="Weapon">
+	<item id="46629" name="Practice StormBringer" type="Weapon">
 		<!-- Temporary practice weapon for learning about the Soul Crystal system. Very inefficient as a weapon. -->
 		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -468,14 +468,14 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46641" name="Entrance Pass: Crystal Caverns" additionalName="" type="EtcItem">
+	<item id="46641" name="Entrance Pass: Crystal Caverns" type="EtcItem">
 		<!-- Double-click to reset cooldown to Crystal Cavern's Coral Garden, Steam Corridor, and Emerald Square. Can only be used once a day outside of the instance zone. Can enter twice each time it is used. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="46642" name="Proof of Red" additionalName="Event" type="EtcItem">
-		<!-- Red Libra item\nProof given to those who carry out the missions given by the Red Libra merchants. Use with Elder Green to change a dual class or with Elder Black to exchange for a weapon. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Proof given to those who carry out the missions given by the Red Libra merchants. Use with Elder Green to change a dual class or with Elder Black to exchange for a weapon. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_memo" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -488,7 +488,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46643" name="Rudi" additionalName="Event" type="EtcItem">
-		<!-- Red Libra item\nOil made by Grocer Pink. Collect 1320 of these and take them to Grocer Pink to receive 10 Lv.5 Giant Dyes. -->
+		<!-- Red Libra item. Oil made by Grocer Pink. Collect 1320 of these and take them to Grocer Pink to receive 10 Lv.5 Giant Dyes. -->
 		<set name="icon" val="icon.five_vairy_potion" />
 		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -497,7 +497,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46644" name="Red Libra Supplies Lv. 1" additionalName="Event" type="EtcItem">
-		<!-- Red Libra item\nReward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Reward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -510,7 +510,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46645" name="Red Libra Supplies Lv. 2" additionalName="Event" type="EtcItem">
-		<!-- Red Libra item\nReward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Reward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -523,7 +523,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46646" name="Red Libra Supplies Lv. 3" additionalName="Event" type="EtcItem">
-		<!-- Red Libra item\nReward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Reward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -536,7 +536,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46647" name="Red Libra Supplies Lv. 4" additionalName="Event" type="EtcItem">
-		<!-- Red Libra item\nReward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Reward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -549,7 +549,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46648" name="Red Libra Talisman - Resurrection" additionalName="Event" type="Armor">
-		<!-- Red Libra item\nRevives all party members. Additionally, restores 100% XP. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Revives all party members. Additionally, restores 100% XP. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -559,7 +559,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="46649" name="Red Libra Talisman - Restoration" additionalName="Event" type="Armor">
-		<!-- Red Libra item\nRestores HP/MP/CP of all party members and cancels debuffs at a set rate. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Restores HP/MP/CP of all party members and cancels debuffs at a set rate. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -569,7 +569,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="46650" name="Red Libra Talisman - Cancel" additionalName="Event" type="Armor">
-		<!-- Red Libra item\nCancels debuffs of all party members and makes them invincible to all debuffs for 7 seconds. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Cancels debuffs of all party members and makes them invincible to all debuffs for 7 seconds. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -579,7 +579,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="46651" name="Red Libra Talisman - Speed" additionalName="Event" type="Armor">
-		<!-- Red Libra item\nIncreases Speed of all party members by 70 for 10 seconds. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Increases Speed of all party members by 70 for 10 seconds. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -589,7 +589,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="46652" name="Red Libra Talisman - Resistance" additionalName="Event" type="Armor">
-		<!-- Red Libra item\nDecreases damage received by 10%. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Decreases damage received by 10%. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -599,7 +599,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="46653" name="Elysium Shaper" additionalName="Event" type="Weapon">
-		<!-- Red Libra item\nWeapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -616,7 +616,7 @@
 		</stats>
 	</item>
 	<item id="46654" name="Elysium Cutter" additionalName="Event" type="Weapon">
-		<!-- Red Libra item\nWeapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -633,7 +633,7 @@
 		</stats>
 	</item>
 	<item id="46655" name="Elysium Slasher" additionalName="Event" type="Weapon">
-		<!-- Red Libra item\nWeapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -650,7 +650,7 @@
 		</stats>
 	</item>
 	<item id="46656" name="Elysium Avenger" additionalName="Event" type="Weapon">
-		<!-- Red Libra item\nWeapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -668,7 +668,7 @@
 		</stats>
 	</item>
 	<item id="46657" name="Elysium Fighter" additionalName="Event" type="Weapon">
-		<!-- Red Libra item\nWeapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -686,7 +686,7 @@
 		</stats>
 	</item>
 	<item id="46658" name="Elysium Stormer" additionalName="Event" type="Weapon">
-		<!-- Red Libra item\nWeapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -703,7 +703,7 @@
 		</stats>
 	</item>
 	<item id="46659" name="Elysium Thrower" additionalName="Event" type="Weapon">
-		<!-- Red Libra item\nWeapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -720,7 +720,7 @@
 		</stats>
 	</item>
 	<item id="46660" name="Elysium Shooter" additionalName="Event" type="Weapon">
-		<!-- Red Libra item\nWeapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -736,7 +736,7 @@
 		</stats>
 	</item>
 	<item id="46661" name="Elysium Buster" additionalName="Event" type="Weapon">
-		<!-- Red Libra item\nWeapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.weapon_infinity_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -753,7 +753,7 @@
 		</stats>
 	</item>
 	<item id="46662" name="Elysium Caster" additionalName="Event" type="Weapon">
-		<!-- Red Libra item\nWeapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -771,7 +771,7 @@
 		</stats>
 	</item>
 	<item id="46663" name="Elysium Retributer" additionalName="Event" type="Weapon">
-		<!-- Red Libra item\nWeapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -790,7 +790,7 @@
 		</stats>
 	</item>
 	<item id="46664" name="Elysium Dualsword" additionalName="Event" type="Weapon">
-		<!-- Red Libra item\nWeapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -807,7 +807,7 @@
 		</stats>
 	</item>
 	<item id="46665" name="Elysium Dual Dagger" additionalName="Event" type="Weapon">
-		<!-- Red Libra item\nWeapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -824,7 +824,7 @@
 		</stats>
 	</item>
 	<item id="46666" name="Elysium Dual Blunt Weapon" additionalName="Event" type="Weapon">
-		<!-- Red Libra item\nWeapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -841,7 +841,7 @@
 			<stat type="rCrit">6.0</stat>
 		</stats>
 	</item>
-	<item id="46667" name="Lv.5 Giant Dye Pack" additionalName="" type="EtcItem">
+	<item id="46667" name="Lv.5 Giant Dye Pack" type="EtcItem">
 		<set name="icon" val="icon.five_vairy_potion" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -852,7 +852,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="46668" name="La Vie En Rose's Radiant Brooch" additionalName="" type="Armor">
+	<item id="46668" name="La Vie En Rose's Radiant Brooch" type="Armor">
 		<!-- Activates 5 jewel slots when equipped. Inventory Slot + 12. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -874,7 +874,7 @@
 			<stat type="mDef">101.0</stat>
 		</stats>
 	</item>
-	<item id="46669" name="Radiant Brooch Fragment" additionalName="" type="EtcItem">
+	<item id="46669" name="Radiant Brooch Fragment" type="EtcItem">
 		<!-- Main ingredient for making a La Vie En Rose's Radiant Brooch. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_piece" />
 		<set name="is_freightable" val="false" />
@@ -1123,7 +1123,7 @@
 			<skill id="18565" level="5"/>
 		</skills>
 	</item>
-	<item id="46685" name="La Vie En Rose's Vital Stone Chest" additionalName="" type="EtcItem">
+	<item id="46685" name="La Vie En Rose's Vital Stone Chest" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Vital Stone. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
 		<set name="is_freightable" val="false" />
@@ -1131,7 +1131,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46686" name="La Vie En Rose's Garnet Chest" additionalName="" type="EtcItem">
+	<item id="46686" name="La Vie En Rose's Garnet Chest" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Garnet. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
 		<set name="is_freightable" val="false" />
@@ -1139,7 +1139,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46687" name="La Vie En Rose's Tanzanite Chest" additionalName="" type="EtcItem">
+	<item id="46687" name="La Vie En Rose's Tanzanite Chest" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Tanzanite. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
 		<set name="is_freightable" val="false" />
@@ -1147,7 +1147,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46688" name="La Vie En Rose's Radiant Brooch Chest" additionalName="" type="EtcItem">
+	<item id="46688" name="La Vie En Rose's Radiant Brooch Chest" type="EtcItem">
 		<!-- Double-click to acquire a La Vie En Rose's Radiant Brooch. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="is_freightable" val="false" />
@@ -1155,7 +1155,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46689" name="Shadai's Jewelry Box" additionalName="" type="EtcItem">
+	<item id="46689" name="Shadai's Jewelry Box" type="EtcItem">
 		<!-- Double-click to acquire 1 of the La Vie En Rose's Jewelry Boxes. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="is_freightable" val="false" />
@@ -1163,7 +1163,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46690" name="Shadai's Shiny Jewelry Box" additionalName="" type="EtcItem">
+	<item id="46690" name="Shadai's Shiny Jewelry Box" type="EtcItem">
 		<!-- Double-click to get 1 of the following: La Vie En Rose's Vital Stone Chest, La Vie En Rose's Garnet Chest, or La Vie En Rose's Tanzanite Chest. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="is_freightable" val="false" />
@@ -1171,7 +1171,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46691" name="Function Test Item" additionalName="" type="EtcItem">
+	<item id="46691" name="Function Test Item" type="EtcItem">
 		<!-- Double-click to get 1 of the following: La Vie En Rose's Vital Stone Chest, La Vie En Rose's Garnet Chest, or La Vie En Rose's Tanzanite Chest. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="is_clan_depositable" val="false" />
@@ -1184,7 +1184,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46692" name="Entrance Pass: Embryo Command Post" additionalName="" type="EtcItem">
+	<item id="46692" name="Entrance Pass: Embryo Command Post" type="EtcItem">
 		<!-- Double-click to reset cooldown to Embryo Command Post. Can only be used once a day outside of the instance zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />

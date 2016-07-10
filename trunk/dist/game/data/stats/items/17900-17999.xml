@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="17900" name="Bound Specter Cutter" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, Focus, or Health. Increases Accuracy and P. Critical Rate when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_ninfea_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -37,7 +37,7 @@
 		</stats>
 	</item>
 	<item id="17901" name="Bound Specter Slasher" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Increases P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_skia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -73,7 +73,7 @@
 		</stats>
 	</item>
 	<item id="17902" name="Bound Specter Avenger" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, P. Critical Damage, or Focus. Increases P. Critical Damage when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_ikeon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -110,7 +110,7 @@
 		</stats>
 	</item>
 	<item id="17903" name="Bound Specter Fighter" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Increases Atk. Spd. and P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_deodos_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -147,7 +147,7 @@
 		</stats>
 	</item>
 	<item id="17904" name="Bound Specter Stormer" type="Weapon">
-		<!-- Bestows one of the following functions: HP Drain, Guidance, or Damage Up. Increases Multi Attack when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Multi Attack when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_transgredi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -185,7 +185,7 @@
 		</stats>
 	</item>
 	<item id="17905" name="Bound Specter Thrower" type="Weapon">
-		<!-- Bestows one of the following functions: Damage Up, Focus, or Long Blow. Increases P. Skill Power when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_solenas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -223,7 +223,7 @@
 		</stats>
 	</item>
 	<item id="17906" name="Bound Specter Shooter" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Critical Slow, or Haste. Increases Atk. Spd. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_lapis_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -261,7 +261,7 @@
 		</stats>
 	</item>
 	<item id="17907" name="Bound Specter Buster" type="Weapon">
-		<!-- Bestows one of the following functions: Acumen, Magic Hold, or Mana Up. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_zihel_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -297,7 +297,7 @@
 		</stats>
 	</item>
 	<item id="17908" name="Bound Specter Caster" type="Weapon">
-		<!-- Bestows one of the following functions: Empower, Acumen, or Magic Hold. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_alacer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -334,7 +334,7 @@
 		</stats>
 	</item>
 	<item id="17909" name="Bound Specter Retributer" type="Weapon">
-		<!-- Bestows one of the following functions: MP Regeneration, Acumen, or Empower. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_rupe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -372,7 +372,7 @@
 		</stats>
 	</item>
 	<item id="17910" name="Bound Specter Dualsword" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, Damage Up, or Health. Increases P. Critical Rate and P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -408,7 +408,7 @@
 		</stats>
 	</item>
 	<item id="17911" name="Bound Specter Dual Dagger" type="Weapon">
-		<!-- Bestows one of the following functions: Damage Up, Focus, or Guidance. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -445,7 +445,7 @@
 		</stats>
 	</item>
 	<item id="17912" name="Bound Specter Dual Blunt Weapon" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Guidance, or Damage Up. Increases P. Skill Power and P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -979,7 +979,7 @@
 		</stats>
 	</item>
 	<item id="17933" name="Bound Amaranthine Shaper" type="Weapon">
-		<!-- Bestows one of the following functions: Guidance, Haste, or Focus. Increases P. Critical Damage when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_stanpid_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1016,7 +1016,7 @@
 		</stats>
 	</item>
 	<item id="17934" name="Bound Amaranthine Cutter" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, Focus, or Health. Increases Accuracy and P. Critical Rate when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_plenitas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1052,7 +1052,7 @@
 		</stats>
 	</item>
 	<item id="17935" name="Bound Amaranthine Slasher" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Increases P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_bauen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1088,7 +1088,7 @@
 		</stats>
 	</item>
 	<item id="17936" name="Bound Amaranthine Avenger" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, P. Critical Damage, or Focus. Increases P. Critical Damage when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_qutram_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1125,7 +1125,7 @@
 		</stats>
 	</item>
 	<item id="17937" name="Bound Amaranthine Fighter" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Increases Atk. Spd. and P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_durga_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1162,7 +1162,7 @@
 		</stats>
 	</item>
 	<item id="17938" name="Bound Amaranthine Stormer" type="Weapon">
-		<!-- Bestows one of the following functions: HP Drain, Guidance, or Damage Up. Increases Multi Attack when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Multi Attack when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_crabel_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1200,7 +1200,7 @@
 		</stats>
 	</item>
 	<item id="17939" name="Bound Amaranthine Thrower" type="Weapon">
-		<!-- Bestows one of the following functions: Damage Up, Focus, or Long Blow. Increases P. Skill Power when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_castron_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1238,7 +1238,7 @@
 		</stats>
 	</item>
 	<item id="17940" name="Bound Amaranthine Shooter" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Critical Slow, or Haste. Increases Atk. Spd. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1276,7 +1276,7 @@
 		</stats>
 	</item>
 	<item id="17941" name="Bound Amaranthine Buster" type="Weapon">
-		<!-- Bestows one of the following functions: Acumen, Magic Hold, or Mana Up. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weaon_serapear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1312,7 +1312,7 @@
 		</stats>
 	</item>
 	<item id="17942" name="Bound Amaranthine Caster" type="Weapon">
-		<!-- Bestows one of the following functions: Empower, Acumen, or Magic Hold. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_pilia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1349,7 +1349,7 @@
 		</stats>
 	</item>
 	<item id="17943" name="Bound Amaranthine Retributer" type="Weapon">
-		<!-- Bestows one of the following functions: MP Regeneration, Acumen, or Empower. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_shaelon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1387,7 +1387,7 @@
 		</stats>
 	</item>
 	<item id="17944" name="Bound Amaranthine Dualsword" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, Damage Up, or Health. Increases P. Critical Rate and P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1423,7 +1423,7 @@
 		</stats>
 	</item>
 	<item id="17945" name="Bound Amaranthine Dual Dagger" type="Weapon">
-		<!-- Bestows one of the following functions: Damage Up, Focus, or Guidance. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1460,7 +1460,7 @@
 		</stats>
 	</item>
 	<item id="17946" name="Bound Amaranthine Dual Blunt Weapon" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Guidance, or Damage Up. Increases P. Skill Power and P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1994,7 +1994,7 @@
 		</stats>
 	</item>
 	<item id="17967" name="Blessed Requiem Shaper" type="Weapon">
-		<!-- Bestows one of the following functions: Guidance, Haste, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_aspeda_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2027,7 +2027,7 @@
 		</stats>
 	</item>
 	<item id="17968" name="Blessed Requiem Cutter" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, Focus, or Health. Two functions can be bestowed through a rare soul crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2059,7 +2059,7 @@
 		</stats>
 	</item>
 	<item id="17969" name="Blessed Requiem Slasher" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_polion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2091,7 +2091,7 @@
 		</stats>
 	</item>
 	<item id="17970" name="Blessed Requiem Avenger" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, P. Critical Damage, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_batista_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2124,7 +2124,7 @@
 		</stats>
 	</item>
 	<item id="17971" name="Blessed Requiem Fighter" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_fantasma_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2157,7 +2157,7 @@
 		</stats>
 	</item>
 	<item id="17972" name="Blessed Requiem Stormer" type="Weapon">
-		<!-- Bestows one of the following functions: HP Drain, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases Multi Attack when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_soryu_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2191,7 +2191,7 @@
 		</stats>
 	</item>
 	<item id="17973" name="Blessed Requiem Thrower" type="Weapon">
-		<!-- Bestows one of the following functions: Damage Up, Focus, or Long Blow. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_grabathus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2225,7 +2225,7 @@
 		</stats>
 	</item>
 	<item id="17974" name="Blessed Requiem Shooter" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Critical Slow, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_shyayaka_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2259,7 +2259,7 @@
 		</stats>
 	</item>
 	<item id="17975" name="Blessed Requiem Buster" type="Weapon">
-		<!-- Bestows one of the following functions: Acumen, Magic Hold, or Mana Up. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_kaynon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2291,7 +2291,7 @@
 		</stats>
 	</item>
 	<item id="17976" name="Blessed Requiem Caster" type="Weapon">
-		<!-- Bestows one of the following functions: Empower, Acumen, or Magic Hold. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_anatrian_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2324,7 +2324,7 @@
 		</stats>
 	</item>
 	<item id="17977" name="Blessed Requiem Retributer" type="Weapon">
-		<!-- Bestows one of the following functions: MP Regeneration, Acumen, or Empower. Two functions can be bestowed through a rare soul crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_grangkaz_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2358,7 +2358,7 @@
 		</stats>
 	</item>
 	<item id="17978" name="Blessed Requiem Dualsword" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, Damage Up, or Health. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2390,7 +2390,7 @@
 		</stats>
 	</item>
 	<item id="17979" name="Blessed Requiem Dual Dagger" type="Weapon">
-		<!-- Bestows one of the following functions: Damage Up, Focus, or Guidance. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2423,7 +2423,7 @@
 		</stats>
 	</item>
 	<item id="17980" name="Blessed Requiem Dual Blunt Weapon" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

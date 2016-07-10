@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="9800" name="Ranku's Blueprint" type="EtcItem">
+		<!-- This is a blueprint belonging to Ranku that Matras requested. -->
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -17,6 +18,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="9801" name="Demon Prince's Blueprint" type="EtcItem">
+		<!-- This is a blueprint belonging to a Demon Prince that Matras requested. -->
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -33,6 +35,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="9802" name="Safe Key" type="EtcItem">
+		<!-- This key, crafted by Blacksmith Noel, should be given to Warehouse Chief Mona. -->
 		<set name="icon" val="icon.etc_old_key_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -49,6 +52,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="9803" name="Sealed Document" type="EtcItem">
+		<!-- This document was sent by Kaitnat to the Hierarch Casca. -->
 		<set name="icon" val="icon.etc_roll_of_paper_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -65,6 +69,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="9804" name="Wyrm Heart" type="EtcItem">
+		<!-- This is the heart of the Wyrm that Kekropus requested. -->
 		<set name="icon" val="icon.etc_heart_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -81,6 +86,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="9805" name="Kekropus' Recommendation" type="EtcItem">
+		<!-- This letter of recommendation written by Kekropus should be shown to Bitus in Giran. -->
 		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -97,6 +103,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="9806" name="Soul Breaker Certificate" type="EtcItem">
+		<!-- Show this Soul Breaker Certificate to a nearby Grand Master and you can become a Soul Breaker. -->
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -113,6 +120,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="9807" name="Wolf Tail" type="EtcItem">
+		<!-- Perwan Has requested this wolf tail for the Rite of Warriors. -->
 		<set name="icon" val="icon.etc_mane_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -129,6 +137,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="9808" name="Muertos Claw" type="EtcItem">
+		<!-- Collect 10 of these sharp Muertos claws and take them to Kekropus. -->
 		<set name="icon" val="icon.etc_fang_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -145,6 +154,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="9809" name="Grey Keltir Tooth" type="EtcItem">
+		<!-- Marksman Bixon will pay well for this Grey Keltir Tooth. -->
 		<set name="icon" val="icon.etc_fang_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -161,6 +171,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="9810" name="Black Wolf Tooth" type="EtcItem">
+		<!-- Marksman Bixon will pay well for this tooth of a Black Wolf. -->
 		<set name="icon" val="icon.etc_fang_ivory_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -177,6 +188,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="9811" name="Fortress Certificate" type="EtcItem">
+		<!-- Use this to trade for supplies with a Detention Camp Warden. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -192,6 +204,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9812" name="Castle Certificate" type="EtcItem">
+		<!-- Use this to trade for supplies with a Prison Warden. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -237,6 +250,7 @@
 		</stats>
 	</item>
 	<item id="9814" name="Memento Mori" type="EtcItem">
+		<!-- Obtained by attacking a Raid Boss, you can assemble this Crystal of Life and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_a_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -246,6 +260,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="9815" name="Dragon Heart" type="EtcItem">
+		<!-- Obtained by attacking a Raid Boss, you can assemble this Crystal of Life and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_b_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -255,6 +270,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="9816" name="Earth Egg" type="EtcItem">
+		<!-- Obtained by attacking a Raid Boss, you can assemble this Crystal of Life and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_c_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -264,6 +280,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="9817" name="Nonliving Nucleus" type="EtcItem">
+		<!-- Obtained by attacking a Raid Boss, you can assemble this Crystal of Life and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_d_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -273,6 +290,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="9818" name="Angelic Essence" type="EtcItem">
+		<!-- Obtained by attacking a Raid Boss, you can assemble this Crystal of Life and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_e_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -282,6 +300,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="9819" name="Combat flag" type="Weapon">
+		<!-- Put this into a the flagpole to win Fortress War. You are forced to wear it once you acquire it, during which time use of Attack and Attack Skills is impossible, but Flag Display Skills can be used. -->
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -313,6 +332,7 @@
 		</stats>
 	</item>
 	<item id="9820" name="Shadow Item: Clan Oath Helm" type="Armor">
+		<!-- This Shadow Item contains the mirrored power of a Clan Oath Helm. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -335,6 +355,7 @@
 		</stats>
 	</item>
 	<item id="9821" name="Shadow Item: Clan Oath Armor" type="Armor">
+		<!-- Shadow item possessing the power of the Clan Oath Armor. It cannot be crystallized or granted functions besides enchantment. Full body armor. It can be equipped by characters in the Academy. -->
 		<set name="icon" val="icon.armor_t1001_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -365,6 +386,7 @@
 		</stats>
 	</item>
 	<item id="9822" name="Shadow Item: Clan Oath Gauntlets" additionalName="Heavy Armor" type="Armor">
+		<!-- This Shadow Item contains the mirrored power of Clan Oath Gauntlets. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.armor_t1001_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -394,6 +416,7 @@
 		</stats>
 	</item>
 	<item id="9823" name="Shadow Item: Clan Oath Sabaton" additionalName="Heavy Armor" type="Armor">
+		<!-- This Shadow Item contains the mirrored power of Clan Oath Sabaton. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.armor_t1001_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -423,6 +446,7 @@
 		</stats>
 	</item>
 	<item id="9824" name="Shadow Item: Clan Oath Brigandine" type="Armor">
+		<!-- Shadow item possessing the power of the Clan Oath Brigandine. It cannot be crystallized or granted functions besides enchantment. Full body armor. It can be equipped by characters in the Academy. -->
 		<set name="icon" val="icon.armor_t1002_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -446,6 +470,7 @@
 		</stats>
 	</item>
 	<item id="9825" name="Shadow Item: Clan Oath Leather Gloves" additionalName="Light Armor" type="Armor">
+		<!-- This Shadow Item contains the mirrored power of Clan Oath Leather Gloves. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.armor_t1002_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -468,6 +493,7 @@
 		</stats>
 	</item>
 	<item id="9826" name="Shadow Item: Clan Oath Boots" additionalName="Light Armor" type="Armor">
+		<!-- This Shadow Item contains the mirrored power of Clan Oath Booths. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.armor_t1002_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -490,6 +516,7 @@
 		</stats>
 	</item>
 	<item id="9827" name="Shadow Item: Clan Oath Aketon" type="Armor">
+		<!-- Shadow item possessing the power of the Clan Oath Aketon. It cannot be crystallized or granted functions besides enchantment. Full body armor. It can be equipped by characters in the Academy. -->
 		<set name="icon" val="icon.armor_t1003_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -521,6 +548,7 @@
 		</stats>
 	</item>
 	<item id="9828" name="Shadow Item: Clan Oath Padded Gloves" additionalName="Robe" type="Armor">
+		<!-- This Shadow Item contains the mirrored power of Clan Oath Padded Gloves. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.armor_t1003_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -550,6 +578,7 @@
 		</stats>
 	</item>
 	<item id="9829" name="Shadow Item: Clan Oath Sandals" additionalName="Robe" type="Armor">
+		<!-- This Shadow Item contains the mirrored power of Clan Oath Sandals. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.armor_t1003_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -579,6 +608,7 @@
 		</stats>
 	</item>
 	<item id="9830" name="Enhanced Apella Helm" type="Armor">
+		<!-- Can be worn by a Baron or higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -599,6 +629,7 @@
 		</stats>
 	</item>
 	<item id="9831" name="Enhanced Apella Plate Armor" type="Armor">
+		<!-- This full body armor used by clan members can be worn by a Baron or higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -624,6 +655,7 @@
 		</stats>
 	</item>
 	<item id="9832" name="Enhanced Apella Gauntlets" additionalName="Heavy Armor" type="Armor">
+		<!-- Can be worn by a Baron or a higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -648,6 +680,7 @@
 		</stats>
 	</item>
 	<item id="9833" name="Enhanced Apella Solleret" additionalName="Heavy Armor" type="Armor">
+		<!-- Can be worn by a Baron or a higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -672,6 +705,7 @@
 		</stats>
 	</item>
 	<item id="9834" name="Enhanced Apella Brigandine" type="Armor">
+		<!-- Can be worn by a Baron or a higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -694,6 +728,7 @@
 		</stats>
 	</item>
 	<item id="9835" name="Enhanced Apella Leather Gloves" additionalName="Light Armor" type="Armor">
+		<!-- Can be worn by a Baron or a higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -715,6 +750,7 @@
 		</stats>
 	</item>
 	<item id="9836" name="Enhanced Apella Boots" additionalName="Light Armor" type="Armor">
+		<!-- Can be worn by a Baron or a higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -736,6 +772,7 @@
 		</stats>
 	</item>
 	<item id="9837" name="Enhanced Apella Doublet" type="Armor">
+		<!-- This full body armor used by clan members can be worn by a Baron or higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -762,6 +799,7 @@
 		</stats>
 	</item>
 	<item id="9838" name="Enhanced Apella Silk Gloves" additionalName="Robe" type="Armor">
+		<!-- Can be worn by a Baron or higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -786,6 +824,7 @@
 		</stats>
 	</item>
 	<item id="9839" name="Enhanced Apella Sandals" additionalName="Robe" type="Armor">
+		<!-- Can be worn by a Baron or higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -810,6 +849,7 @@
 		</stats>
 	</item>
 	<item id="9840" name="Shadow Item: Chevalier Rapier" type="Weapon">
+		<!-- This Shadow Item Has the power of a Chevalier Rapier. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -844,6 +884,7 @@
 		</stats>
 	</item>
 	<item id="9841" name="Shadow Item: Riter Schlager" type="Weapon">
+		<!-- This Shadow Item Has the power of a Riter Schlager. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -878,6 +919,7 @@
 		</stats>
 	</item>
 	<item id="9842" name="Shadow Item: Ballista" type="Weapon">
+		<!-- This Shadow Item Has the power of a Ballista. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -913,6 +955,7 @@
 		</stats>
 	</item>
 	<item id="9843" name="Shadow Item: Blinzlasher" type="Weapon">
+		<!-- This Shadow Item Has the power of a Blinzlasher. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -947,6 +990,7 @@
 		</stats>
 	</item>
 	<item id="9844" name="Shadow Item: Immortal Edge" type="Weapon">
+		<!-- This Shadow Item Has the power of an Immortal Edge. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -981,6 +1025,7 @@
 		</stats>
 	</item>
 	<item id="9845" name="Shadow Item: Tathlum" type="Weapon">
+		<!-- This Shadow Item Has the power of a Tathlum. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1016,6 +1061,7 @@
 		</stats>
 	</item>
 	<item id="9846" name="Shadow Item: Military Fleuret" type="Weapon">
+		<!-- This Shadow Item Has the power of a Military Fleuret. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1050,6 +1096,7 @@
 		</stats>
 	</item>
 	<item id="9847" name="Shadow Item: Innominate Victory" type="Weapon">
+		<!-- This Shadow Item Has the power of an Innominate Victory. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1084,6 +1131,7 @@
 		</stats>
 	</item>
 	<item id="9848" name="Shadow Item: Peacemaker" type="Weapon">
+		<!-- This Shadow Item Has the power of a Peacemaker. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_peace_maker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1139,6 +1187,7 @@
 		</skills>
 	</item>
 	<item id="9850" name="Basic Caravan Certificate" type="EtcItem">
+		<!-- Certificate of friendship with Caravans. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1151,6 +1200,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="9851" name="Standard Caravan Certificate" type="EtcItem">
+		<!-- Certificate of business relations with Caravans. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1163,6 +1213,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="9852" name="Premium Caravan Certificate" type="EtcItem">
+		<!-- Certificate indicating a unique friendship with Caravans. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1175,6 +1226,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="9853" name="Mark of Friendship and Trust" type="EtcItem">
+		<!-- Mark to show the highest grade of relationship Caravans. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1187,6 +1239,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="9854" name="Dynasty Sword" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1219,6 +1272,7 @@
 		</stats>
 	</item>
 	<item id="9855" name="Dynasty Sword" additionalName="Health" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1251,6 +1305,7 @@
 		</stats>
 	</item>
 	<item id="9856" name="Dynasty Sword" additionalName="Light Armor" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1284,6 +1339,7 @@
 		</stats>
 	</item>
 	<item id="9857" name="Dynasty Blade" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1316,6 +1372,7 @@
 		</stats>
 	</item>
 	<item id="9858" name="Dynasty Blade" additionalName="Health" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1348,6 +1405,7 @@
 		</stats>
 	</item>
 	<item id="9859" name="Dynasty Blade" additionalName="Light Armor" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1381,6 +1439,7 @@
 		</stats>
 	</item>
 	<item id="9860" name="Dynasty Phantom" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1413,6 +1472,7 @@
 		</stats>
 	</item>
 	<item id="9861" name="Dynasty Phantom" additionalName="Mana Up" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1445,6 +1505,7 @@
 		</stats>
 	</item>
 	<item id="9862" name="Dynasty Phantom" additionalName="Conversion" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1477,6 +1538,7 @@
 		</stats>
 	</item>
 	<item id="9863" name="Dynasty Bow" additionalName="Cheap Shot" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Decreases MP consumption by 4% during a skill attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1513,6 +1575,7 @@
 		</stats>
 	</item>
 	<item id="9864" name="Dynasty Bow" additionalName="Guidance" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1548,6 +1611,7 @@
 		</stats>
 	</item>
 	<item id="9865" name="Dynasty Bow" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1583,6 +1647,7 @@
 		</stats>
 	</item>
 	<item id="9866" name="Dynasty Knife" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1615,6 +1680,7 @@
 		</stats>
 	</item>
 	<item id="9867" name="Dynasty Knife" additionalName="Evasion" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Evasion by 5. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1648,6 +1714,7 @@
 		</stats>
 	</item>
 	<item id="9868" name="Dynasty Knife" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 559 during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1680,6 +1747,7 @@
 		</stats>
 	</item>
 	<item id="9869" name="Dynasty Halberd" additionalName="Anger" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1712,6 +1780,7 @@
 		</stats>
 	</item>
 	<item id="9870" name="Dynasty Halberd" additionalName="Critical Stun" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 48% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1745,6 +1814,7 @@
 		</stats>
 	</item>
 	<item id="9871" name="Dynasty Halberd" additionalName="Light Armor" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1778,6 +1848,7 @@
 		</stats>
 	</item>
 	<item id="9872" name="Dynasty Cudgel" additionalName="Anger" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1810,6 +1881,7 @@
 		</stats>
 	</item>
 	<item id="9873" name="Dynasty Cudgel" additionalName="Health" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1842,6 +1914,7 @@
 		</stats>
 	</item>
 	<item id="9874" name="Dynasty Cudgel" additionalName="Rsk. Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1874,6 +1947,7 @@
 		</stats>
 	</item>
 	<item id="9875" name="Dynasty Mace" additionalName="Mana Up" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1907,6 +1981,7 @@
 		</stats>
 	</item>
 	<item id="9876" name="Dynasty Mace" additionalName="Conversion" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1940,6 +2015,7 @@
 		</stats>
 	</item>
 	<item id="9877" name="Dynasty Mace" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1973,6 +2049,7 @@
 		</stats>
 	</item>
 	<item id="9878" name="Dynasty Bagh-Nakh" additionalName="Rsk. Evasion" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Evasion by 6.8 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2006,6 +2083,7 @@
 		</stats>
 	</item>
 	<item id="9879" name="Dynasty Bagh-Nakh" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 106. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2038,6 +2116,7 @@
 		</stats>
 	</item>
 	<item id="9880" name="Dynasty Bagh-Nakh" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 10%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2070,6 +2149,7 @@
 		</stats>
 	</item>
 	<item id="9881" name="Diploma" type="EtcItem">
+		<!-- Take this Diploma to Second Hierarch Perwan. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -2086,6 +2166,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="9882" name="Great Black Wolf Necklace" type="EtcItem">
+		<!-- Necklace used to summon Great Wolf. Takes a part of the XP gained by the Pet master. -->
 		<set name="icon" val="icon.etc_summon_wolf_r_01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -2105,6 +2186,7 @@
 		</skills>
 	</item>
 	<item id="9883" name="Teddy Bear Hat" additionalName="Big Head" type="Armor">
+		<!-- This fun, bear-shaped hair accessory makes your head bigger while allowing you to use active skills. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2120,6 +2202,7 @@
 		</skills>
 	</item>
 	<item id="9884" name="Piggy Hat" additionalName="Big Head" type="Armor">
+		<!-- This fun, pig-shaped hair accessory makes your head bigger while allowing you to use active skills. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2135,6 +2218,7 @@
 		</skills>
 	</item>
 	<item id="9885" name="Jester Hat" additionalName="Big Head" type="Armor">
+		<!-- This festive, split-top jester hat makes your head bigger while allowing you to use active skills. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2150,6 +2234,7 @@
 		</skills>
 	</item>
 	<item id="9886" name="Wizard Hat" additionalName="Big Head" type="Armor">
+		<!-- This Wizard Hat features a wide brim and bent tip and makes your head bigger while allowing you to use active skills. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2165,6 +2250,7 @@
 		</skills>
 	</item>
 	<item id="9887" name="Dapper Cap" additionalName="Big Head" type="Armor">
+		<!-- This stylish cap features a visor and makes your head bigger while allowing you to use active skills. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2180,6 +2266,7 @@
 		</skills>
 	</item>
 	<item id="9888" name="Romantic Chapeau" additionalName="Big Head" type="Armor">
+		<!-- This extravagant chapeau is adorned with feathers and makes your head bigger while allowing you to use active skills. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2195,6 +2282,7 @@
 		</skills>
 	</item>
 	<item id="9889" name="Iron Circlet" additionalName="Big Head" type="Armor">
+		<!-- Iron circlet that makes your head bigger while allowing you to use active skills. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_iron_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2210,6 +2298,7 @@
 		</skills>
 	</item>
 	<item id="9890" name="Teddy Bear Hat" additionalName="Firework" type="Armor">
+		<!-- Fun, bear-shaped hair accessory. You can use active skills, and firecrackers are set off when it is used. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2225,6 +2314,7 @@
 		</skills>
 	</item>
 	<item id="9891" name="Piggy Hat" additionalName="Firework" type="Armor">
+		<!-- Fun, pig-shaped hair accessory. You can use active skills, and firecrackers are set off when it is used. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2240,6 +2330,7 @@
 		</skills>
 	</item>
 	<item id="9892" name="Jester Hat" additionalName="Firework" type="Armor">
+		<!-- Festive jester hat with a split top. You can use active skills, and firecrackers are set off when it is used. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2255,6 +2346,7 @@
 		</skills>
 	</item>
 	<item id="9893" name="Wizard Hat" additionalName="Firework" type="Armor">
+		<!-- A Wizard Hat with a wide brim and bent tip. You can use active skills, and firecrackers are set off when it is used. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2270,6 +2362,7 @@
 		</skills>
 	</item>
 	<item id="9894" name="Dapper Cap" additionalName="Firework" type="Armor">
+		<!-- Stylish cap with a visor. You can use active skills, and firecrackers are set off when it is used. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2285,6 +2378,7 @@
 		</skills>
 	</item>
 	<item id="9895" name="Romantic Chapeau" additionalName="Firework" type="Armor">
+		<!-- Extravagant chapeau adorned with feathers. You can use active skills, and firecrackers are set off when it is used. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2300,6 +2394,7 @@
 		</skills>
 	</item>
 	<item id="9896" name="Iron Circlet" additionalName="Firework" type="Armor">
+		<!-- Circlet made of iron. You can use active skills, and firecrackers are set off when it is used. Requires 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_iron_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2315,6 +2410,7 @@
 		</skills>
 	</item>
 	<item id="9897" name="Transformation Scroll: Pig" type="EtcItem">
+		<!-- Transforms you into a pig for 60 min. It will have no effect if used while in a transformed state. -->
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -2331,6 +2427,7 @@
 		</skills>
 	</item>
 	<item id="9898" name="SP Scroll (Top-grade)" type="EtcItem">
+		<!-- Scroll that replenishes 5,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -2347,6 +2444,7 @@
 		</skills>
 	</item>
 	<item id="9899" name="Weight Loss Ring" type="Armor">
+		<!-- Decreases weight when equipped. Effect does not stack with additional Weight Loss Rings. -->
 		<set name="icon" val="icon.accessary_ring_of_mana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

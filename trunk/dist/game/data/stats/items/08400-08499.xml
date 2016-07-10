@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="8400" name="Spellbook: Turn Undead" type="EtcItem">
+		<!-- Spellbook needed to learn Turn Undead. Used by Bishops and Elven Elders. Required level: 56 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -11,6 +12,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8401" name="Spellbook: Major Heal" type="EtcItem">
+		<!-- Spellbook needed to learn Major Heal. Used by Bishops and Elven Elders. Required level: 56 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -21,6 +23,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8402" name="Spellbook: Major Group Heal" type="EtcItem">
+		<!-- Spellbook needed to learn Major Group Heal. Used by Bishops. Required level: 58 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -31,6 +34,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8403" name="Small Green Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -46,6 +50,7 @@
 		</skills>
 	</item>
 	<item id="8404" name="Small Green Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -61,6 +66,7 @@
 		</skills>
 	</item>
 	<item id="8405" name="Small Green Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -76,6 +82,7 @@
 		</skills>
 	</item>
 	<item id="8406" name="Green Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -91,6 +98,7 @@
 		</skills>
 	</item>
 	<item id="8407" name="Green Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -106,6 +114,7 @@
 		</skills>
 	</item>
 	<item id="8408" name="Green Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -121,6 +130,7 @@
 		</skills>
 	</item>
 	<item id="8409" name="Large Green Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -136,6 +146,7 @@
 		</skills>
 	</item>
 	<item id="8410" name="Large Green Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -151,6 +162,7 @@
 		</skills>
 	</item>
 	<item id="8411" name="Large Green Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -166,6 +178,7 @@
 		</skills>
 	</item>
 	<item id="8412" name="Small Jade Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -181,6 +194,7 @@
 		</skills>
 	</item>
 	<item id="8413" name="Small Jade Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -196,6 +210,7 @@
 		</skills>
 	</item>
 	<item id="8414" name="Small Jade Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -211,6 +226,7 @@
 		</skills>
 	</item>
 	<item id="8415" name="Jade Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -226,6 +242,7 @@
 		</skills>
 	</item>
 	<item id="8416" name="Jade Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -241,6 +258,7 @@
 		</skills>
 	</item>
 	<item id="8417" name="Jade Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -256,6 +274,7 @@
 		</skills>
 	</item>
 	<item id="8418" name="Large Jade Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -271,6 +290,7 @@
 		</skills>
 	</item>
 	<item id="8419" name="Large Jade Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -286,6 +306,7 @@
 		</skills>
 	</item>
 	<item id="8420" name="Large Jade Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -301,6 +322,7 @@
 		</skills>
 	</item>
 	<item id="8421" name="Small Blue Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -316,6 +338,7 @@
 		</skills>
 	</item>
 	<item id="8422" name="Small Blue Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -331,6 +354,7 @@
 		</skills>
 	</item>
 	<item id="8423" name="Small Blue Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -346,6 +370,7 @@
 		</skills>
 	</item>
 	<item id="8424" name="Blue Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -361,6 +386,7 @@
 		</skills>
 	</item>
 	<item id="8425" name="Blue Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -376,6 +402,7 @@
 		</skills>
 	</item>
 	<item id="8426" name="Blue Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -391,6 +418,7 @@
 		</skills>
 	</item>
 	<item id="8427" name="Large Blue Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -406,6 +434,7 @@
 		</skills>
 	</item>
 	<item id="8428" name="Large Blue Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -421,6 +450,7 @@
 		</skills>
 	</item>
 	<item id="8429" name="Large Blue Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -436,6 +466,7 @@
 		</skills>
 	</item>
 	<item id="8430" name="Small Yellow Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -451,6 +482,7 @@
 		</skills>
 	</item>
 	<item id="8431" name="Small Yellow Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -466,6 +498,7 @@
 		</skills>
 	</item>
 	<item id="8432" name="Small Yellow Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -481,6 +514,7 @@
 		</skills>
 	</item>
 	<item id="8433" name="Yellow Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -496,6 +530,7 @@
 		</skills>
 	</item>
 	<item id="8434" name="Yellow Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -511,6 +546,7 @@
 		</skills>
 	</item>
 	<item id="8435" name="Yellow Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -526,6 +562,7 @@
 		</skills>
 	</item>
 	<item id="8436" name="Large Yellow Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -541,6 +578,7 @@
 		</skills>
 	</item>
 	<item id="8437" name="Large Yellow Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -556,6 +594,7 @@
 		</skills>
 	</item>
 	<item id="8438" name="Large Yellow Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -571,6 +610,7 @@
 		</skills>
 	</item>
 	<item id="8439" name="Small Orange Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -586,6 +626,7 @@
 		</skills>
 	</item>
 	<item id="8440" name="Small Orange Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -601,6 +642,7 @@
 		</skills>
 	</item>
 	<item id="8441" name="Small Orange Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -616,6 +658,7 @@
 		</skills>
 	</item>
 	<item id="8442" name="Orange Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -631,6 +674,7 @@
 		</skills>
 	</item>
 	<item id="8443" name="Orange Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -646,6 +690,7 @@
 		</skills>
 	</item>
 	<item id="8444" name="Orange Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -661,6 +706,7 @@
 		</skills>
 	</item>
 	<item id="8445" name="Large Orange Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -676,6 +722,7 @@
 		</skills>
 	</item>
 	<item id="8446" name="Large Orange Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -691,6 +738,7 @@
 		</skills>
 	</item>
 	<item id="8447" name="Large Orange Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -706,6 +754,7 @@
 		</skills>
 	</item>
 	<item id="8448" name="Small Purple Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -721,6 +770,7 @@
 		</skills>
 	</item>
 	<item id="8449" name="Small Purple Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -736,6 +786,7 @@
 		</skills>
 	</item>
 	<item id="8450" name="Small Purple Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -751,6 +802,7 @@
 		</skills>
 	</item>
 	<item id="8451" name="Purple Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -766,6 +818,7 @@
 		</skills>
 	</item>
 	<item id="8452" name="Purple Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -781,6 +834,7 @@
 		</skills>
 	</item>
 	<item id="8453" name="Purple Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -796,6 +850,7 @@
 		</skills>
 	</item>
 	<item id="8454" name="Large Purple Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -811,6 +866,7 @@
 		</skills>
 	</item>
 	<item id="8455" name="Large Purple Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -826,6 +882,7 @@
 		</skills>
 	</item>
 	<item id="8456" name="Large Purple Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -841,6 +898,7 @@
 		</skills>
 	</item>
 	<item id="8457" name="Small Red Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -856,6 +914,7 @@
 		</skills>
 	</item>
 	<item id="8458" name="Small Red Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -871,6 +930,7 @@
 		</skills>
 	</item>
 	<item id="8459" name="Small Red Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -886,6 +946,7 @@
 		</skills>
 	</item>
 	<item id="8460" name="Red Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -901,6 +962,7 @@
 		</skills>
 	</item>
 	<item id="8461" name="Red Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -916,6 +978,7 @@
 		</skills>
 	</item>
 	<item id="8462" name="Red Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -931,6 +994,7 @@
 		</skills>
 	</item>
 	<item id="8463" name="Large Red Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -946,6 +1010,7 @@
 		</skills>
 	</item>
 	<item id="8464" name="Large Red Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -961,6 +1026,7 @@
 		</skills>
 	</item>
 	<item id="8465" name="Large Red Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -976,6 +1042,7 @@
 		</skills>
 	</item>
 	<item id="8466" name="Small White Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -991,6 +1058,7 @@
 		</skills>
 	</item>
 	<item id="8467" name="Small White Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1006,6 +1074,7 @@
 		</skills>
 	</item>
 	<item id="8468" name="Small White Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1021,6 +1090,7 @@
 		</skills>
 	</item>
 	<item id="8469" name="White Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1036,6 +1106,7 @@
 		</skills>
 	</item>
 	<item id="8470" name="White Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1051,6 +1122,7 @@
 		</skills>
 	</item>
 	<item id="8471" name="White Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1066,6 +1138,7 @@
 		</skills>
 	</item>
 	<item id="8472" name="Large White Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1081,6 +1154,7 @@
 		</skills>
 	</item>
 	<item id="8473" name="Large White Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1096,6 +1170,7 @@
 		</skills>
 	</item>
 	<item id="8474" name="Large White Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1111,6 +1186,7 @@
 		</skills>
 	</item>
 	<item id="8475" name="Small Black Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1126,6 +1202,7 @@
 		</skills>
 	</item>
 	<item id="8476" name="Small Black Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1141,6 +1218,7 @@
 		</skills>
 	</item>
 	<item id="8477" name="Small Black Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1156,6 +1234,7 @@
 		</skills>
 	</item>
 	<item id="8478" name="Black Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1171,6 +1250,7 @@
 		</skills>
 	</item>
 	<item id="8479" name="Black Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1186,6 +1266,7 @@
 		</skills>
 	</item>
 	<item id="8480" name="Black Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1201,6 +1282,7 @@
 		</skills>
 	</item>
 	<item id="8481" name="Large Black Nimble Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1216,6 +1298,7 @@
 		</skills>
 	</item>
 	<item id="8482" name="Large Black Ugly Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1231,6 +1314,7 @@
 		</skills>
 	</item>
 	<item id="8483" name="Large Black Fat Fish (High-grade)" type="EtcItem">
+		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
 		<set name="icon" val="icon.etc_bream_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1246,6 +1330,7 @@
 		</skills>
 	</item>
 	<item id="8484" name="Corroded Prize-Winning Bait" type="EtcItem">
+		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -1259,6 +1344,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8485" name="Corroded Prize-Winning Bait (Night Fishing)" type="EtcItem">
+		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -1272,6 +1358,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8486" name="Corroded Prize-Winning Bait (Novice)" type="EtcItem">
+		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -1285,6 +1372,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8487" name="Recipe: Destroyer Hammer (60%)" type="EtcItem">
+		<!-- This formula for manufacturing a Destroyer Hammer can only be used by Dwarves and Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1299,6 +1387,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8488" name="Engraved Hammer" type="EtcItem">
+		<!-- Hammer with a pattern engraved on its handle. -->
 		<set name="icon" val="icon.weapon_big_hammer_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1314,6 +1403,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8489" name="Daimon's Eyes" type="EtcItem">
+		<!-- Eyes obtained by killing Daimon the White-eyed. -->
 		<set name="icon" val="icon.etc_eyeball_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1329,6 +1419,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8490" name="Hestia's Fairy Stone" type="EtcItem">
+		<!-- Fairy Stone obtained by defeating Hestia, the Guardian Deity of the Hot Springs. -->
 		<set name="icon" val="icon.etc_crystal_gold_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1344,6 +1435,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8491" name="Nucleus of Lesser Golem" type="EtcItem">
+		<!-- Nucleus obtained by defeating the Lesser Golem. -->
 		<set name="icon" val="icon.etc_bead_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1359,6 +1451,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8492" name="Falston's Fang" type="EtcItem">
+		<!-- Fangs obtained by killing Falston, the Demon's Agent. -->
 		<set name="icon" val="icon.etc_fang_ivory_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1374,6 +1467,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8493" name="Shyeed's Talon" type="EtcItem">
+		<!-- Talon obtained by defeating Spike Stakato Queen Shyeed. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1389,6 +1483,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8494" name="Nucleus of Flamestone Giant" type="EtcItem">
+		<!-- Nucleus obtained by defeating Flamestone Giant -->
 		<set name="icon" val="icon.etc_bead_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1404,6 +1499,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8495" name="Book of Grey Star" type="EtcItem">
+		<!-- The book that Obi the railroad worker said was stolen by thieves. It tells the story of a train that flies. -->
 		<set name="icon" val="icon.etc_memopad_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1419,6 +1515,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8496" name="Corroded Gludio Luminous Bait" type="EtcItem">
+		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -1432,6 +1529,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8497" name="Corroded Dion Luminous Bait" type="EtcItem">
+		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -1445,6 +1543,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8498" name="Corroded Giran Luminous Bait" type="EtcItem">
+		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -1458,6 +1557,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8499" name="Corroded Oren Luminous Bait" type="EtcItem">
+		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />

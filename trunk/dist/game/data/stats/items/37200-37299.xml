@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="37200" name="Steel Dynasty Shoes (60-day)" type="Armor">
 		<!-- Dynasty Shoes with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
@@ -2519,7 +2519,7 @@
 		</stats>
 	</item>
 	<item id="37299" name="Steel Requiem Cutter (30-day)" type="Weapon">
-		<!-- (Soul Crystal Enhancement)\nIncreases Attack Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Special Option>. Increases Attack Spd. by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

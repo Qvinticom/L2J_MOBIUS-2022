@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="5700" name="Seed: Alternative Great Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41- 51 character must plant it on a level 41- 51 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -16,6 +17,7 @@
 		</skills>
 	</item>
 	<item id="5701" name="Seed: Alternative Red Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Red Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -31,6 +33,7 @@
 		</skills>
 	</item>
 	<item id="5702" name="Seed: Alternative Sea Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Sea Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -46,6 +49,7 @@
 		</skills>
 	</item>
 	<item id="5703" name="Lucky Charm (No-grade)" type="EtcItem">
+		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by a character whose level is 19 or below. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -90,6 +94,7 @@
 		</stats>
 	</item>
 	<item id="5705" name="Keshanberk*Damascus" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -120,6 +125,7 @@
 		</stats>
 	</item>
 	<item id="5706" name="Damascus*Damascus" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -150,6 +156,7 @@
 		</stats>
 	</item>
 	<item id="5707" name="Record of Seven Signs" type="EtcItem">
+		<!-- Item used for studying the current situation of the Seven Signs system. -->
 		<set name="icon" val="icon.etc_ssq_scroll_i00" />
 		<set name="default_action" val="SHOW_SSQ_STATUS" />
 		<set name="immediate_effect" val="true" />
@@ -159,6 +166,7 @@
 		<set name="price" val="500" />
 	</item>
 	<item id="5708" name="Lord's Certificate of Approval" type="EtcItem">
+		<!-- When one possesses this item, although one does not belong to a castle owning clan, one can join the Lords of Dawn. -->
 		<set name="icon" val="icon.etc_permit_card_i00" />
 		<set name="etcitem_type" val="TICKET_OF_LORD" />
 		<set name="immediate_effect" val="true" />
@@ -167,6 +175,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="5709" name="Sealed Zubei's Gauntlets" type="Armor">
+		<!-- The set effect will appear only after the seal is broken. -->
 		<set name="icon" val="icon.armor_t64_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -185,6 +194,7 @@
 		</stats>
 	</item>
 	<item id="5710" name="Zubei's Gauntlets" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy Zubei's set. -->
 		<set name="icon" val="icon.armor_t64_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -206,6 +216,7 @@
 		</stats>
 	</item>
 	<item id="5711" name="Zubei's Gauntlets" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light Zubei's set. -->
 		<set name="icon" val="icon.armor_t65_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -224,6 +235,7 @@
 		</stats>
 	</item>
 	<item id="5712" name="Zubei's Gauntlets" additionalName="Robe" type="Armor">
+		<!-- Part of the Zubei's robe set. -->
 		<set name="icon" val="icon.armor_t56_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -245,6 +257,7 @@
 		</stats>
 	</item>
 	<item id="5713" name="Sealed Avadon Gloves" type="Armor">
+		<!-- The set effect will appear only after the seal is broken. -->
 		<set name="icon" val="icon.armor_t66_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -263,6 +276,7 @@
 		</stats>
 	</item>
 	<item id="5714" name="Avadon Gloves" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy avadon set. -->
 		<set name="icon" val="icon.armor_t66_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -284,6 +298,7 @@
 		</stats>
 	</item>
 	<item id="5715" name="Avadon Gloves" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light avadon set. -->
 		<set name="icon" val="icon.armor_t67_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -302,6 +317,7 @@
 		</stats>
 	</item>
 	<item id="5716" name="Avadon Gloves" additionalName="Robe" type="Armor">
+		<!-- Part of the Avadon Robe set. -->
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -323,6 +339,7 @@
 		</stats>
 	</item>
 	<item id="5717" name="Sealed Blue Wolf Gloves" type="Armor">
+		<!-- The set effect will appear only after the seal is broken. -->
 		<set name="icon" val="icon.armor_t68_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -341,6 +358,7 @@
 		</stats>
 	</item>
 	<item id="5718" name="Blue Wolf Gloves" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy blue wolf set. -->
 		<set name="icon" val="icon.armor_t68_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -362,6 +380,7 @@
 		</stats>
 	</item>
 	<item id="5719" name="Blue Wolf Gloves" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light blue wolf set. -->
 		<set name="icon" val="icon.armor_t69_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -380,6 +399,7 @@
 		</stats>
 	</item>
 	<item id="5720" name="Blue Wolf Gloves" additionalName="Robe" type="Armor">
+		<!-- Part of the blue wolf robe set. -->
 		<set name="icon" val="icon.armor_t70_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -401,6 +421,7 @@
 		</stats>
 	</item>
 	<item id="5721" name="Sealed Doom Gloves" type="Armor">
+		<!-- The set effect will appear only after the seal is broken. -->
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -419,6 +440,7 @@
 		</stats>
 	</item>
 	<item id="5722" name="Doom Gloves" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy doom set. -->
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -440,6 +462,7 @@
 		</stats>
 	</item>
 	<item id="5723" name="Doom Gloves" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light doom set. -->
 		<set name="icon" val="icon.armor_t72_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -458,6 +481,7 @@
 		</stats>
 	</item>
 	<item id="5724" name="Doom Gloves" additionalName="Robe" type="Armor">
+		<!-- Part of the doom robe set. -->
 		<set name="icon" val="icon.armor_t73_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -479,6 +503,7 @@
 		</stats>
 	</item>
 	<item id="5725" name="Sealed Zubei's Boots" type="Armor">
+		<!-- The set effect will appear only after the seal is broken. -->
 		<set name="icon" val="icon.armor_t64_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -497,6 +522,7 @@
 		</stats>
 	</item>
 	<item id="5726" name="Zubei's Boots" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy Zubei's set. -->
 		<set name="icon" val="icon.armor_t64_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -518,6 +544,7 @@
 		</stats>
 	</item>
 	<item id="5727" name="Zubei's Boots" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light Zubei's set. -->
 		<set name="icon" val="icon.armor_t65_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -536,6 +563,7 @@
 		</stats>
 	</item>
 	<item id="5728" name="Zubei's Boots" additionalName="Robe" type="Armor">
+		<!-- Part of the Zubei's robe set. -->
 		<set name="icon" val="icon.armor_t56_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -557,6 +585,7 @@
 		</stats>
 	</item>
 	<item id="5729" name="Sealed Avadon Boots" type="Armor">
+		<!-- The set effect will appear only after the seal is broken. -->
 		<set name="icon" val="icon.armor_t66_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -575,6 +604,7 @@
 		</stats>
 	</item>
 	<item id="5730" name="Avadon Boots" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy avadon set. -->
 		<set name="icon" val="icon.armor_t66_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -596,6 +626,7 @@
 		</stats>
 	</item>
 	<item id="5731" name="Avadon Boots" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light avadon set. -->
 		<set name="icon" val="icon.armor_t67_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -614,6 +645,7 @@
 		</stats>
 	</item>
 	<item id="5732" name="Avadon Boots" additionalName="Robe" type="Armor">
+		<!-- Part of the Avadon Robe set. -->
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -635,6 +667,7 @@
 		</stats>
 	</item>
 	<item id="5733" name="Sealed Blue Wolf Boots" type="Armor">
+		<!-- The set effect will appear only after the seal is broken. -->
 		<set name="icon" val="icon.armor_t68_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -653,6 +686,7 @@
 		</stats>
 	</item>
 	<item id="5734" name="Blue Wolf Boots" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy blue wolf set. -->
 		<set name="icon" val="icon.armor_t68_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -674,6 +708,7 @@
 		</stats>
 	</item>
 	<item id="5735" name="Blue Wolf Boots" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light blue wolf set. -->
 		<set name="icon" val="icon.armor_t69_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -692,6 +727,7 @@
 		</stats>
 	</item>
 	<item id="5736" name="Blue Wolf Boots" additionalName="Robe" type="Armor">
+		<!-- Part of the blue wolf robe set. -->
 		<set name="icon" val="icon.armor_t70_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -713,6 +749,7 @@
 		</stats>
 	</item>
 	<item id="5737" name="Sealed Doom Boots" type="Armor">
+		<!-- The set effect will appear only after the seal is broken. -->
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -731,6 +768,7 @@
 		</stats>
 	</item>
 	<item id="5738" name="Doom Boots" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy doom set. -->
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -752,6 +790,7 @@
 		</stats>
 	</item>
 	<item id="5739" name="Doom Boots" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light doom set. -->
 		<set name="icon" val="icon.armor_t72_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -770,6 +809,7 @@
 		</stats>
 	</item>
 	<item id="5740" name="Doom Boots" additionalName="Robe" type="Armor">
+		<!-- Part of the doom robe set. -->
 		<set name="icon" val="icon.armor_t73_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -791,6 +831,7 @@
 		</stats>
 	</item>
 	<item id="5741" name="Recipe: Sealed Zubei's Gauntlets" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the sealed Zubei's gauntlets. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -803,6 +844,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5742" name="Recipe: Sealed Zubei's Gauntlets (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the sealed Zubei's gauntlets. Requires Create Item - Skill Lv. 6. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -815,6 +857,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5743" name="Recipe: Sealed Avadon Gloves" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Avadon Gloves. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -827,6 +870,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5744" name="Recipe: Sealed Avadon Gloves (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Avadon Gloves. Requires Create Item - Skill Lv. 6. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -839,6 +883,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5745" name="Corroded Recipe: Sealed Blue Wolf Gloves" type="EtcItem">
+		<!-- Corroded recipe. Sell it to a store. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -851,6 +896,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5746" name="Recipe: Sealed Blue Wolf Gloves (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the sealed Blue Wolf gloves. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -863,6 +909,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5747" name="Recipe: Sealed Doom Gloves" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Doom Gloves. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -875,6 +922,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5748" name="Recipe: Sealed Doom Gloves (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Doom Gloves. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -887,6 +935,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5749" name="Recipe: Sealed Zubei's Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Zubei's Boots. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -899,6 +948,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5750" name="Recipe: Sealed Zubei's Boots (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Zubei's Boots. Requires Create Item - Skill Lv. 6. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -911,6 +961,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5751" name="Recipe: Sealed Avadon Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Avadon Boots. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -923,6 +974,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5752" name="Recipe: Sealed Avadon Boots (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Sealed Avadon Boots. Requires Create Item - Skill Lv. 6. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -935,6 +987,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5753" name="Recipe: Sealed Blue Wolf Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the sealed Blue Wolf Boots. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -947,6 +1000,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5754" name="Recipe: Sealed Blue Wolf Boots (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the sealed Blue Wolf Boots. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -959,6 +1013,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5755" name="Recipe: Sealed Doom Boots" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the sealed Doom Boots. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -971,6 +1026,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5756" name="Recipe: Sealed Doom Boots (60%)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the sealed Doom Boots. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -983,6 +1039,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5757" name="Corroded Sealed Zubei's Gauntlet Fragment" type="EtcItem">
+		<!-- Corroded ingredient. Sell it to a store. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -994,6 +1051,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5758" name="Sealed Avadon Glove Fragment" type="EtcItem">
+		<!-- Essential ingredient needed by a Dwarf to make a pair of Sealed Avadon Gloves. It can also be sold to a regular store. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1005,6 +1063,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5759" name="Sealed Blue Wolf Glove Fabric" type="EtcItem">
+		<!-- Essential ingredient needed by a Dwarf to make a pair of Sealed Blue Wolf Gloves. It can also be sold to a regular store. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1016,6 +1075,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5760" name="Sealed Doom Glove Fragment" type="EtcItem">
+		<!-- Essential ingredient needed by a Dwarf to make a pair of Sealed Doom Gloves. It can also be sold to a regular store. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1027,6 +1087,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5761" name="Corroded Sealed Zubei's Boot Design" type="EtcItem">
+		<!-- Corroded ingredient. Sell it to a store. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1038,6 +1099,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5762" name="Sealed Avadon Boot Design" type="EtcItem">
+		<!-- Essential ingredient needed by a Dwarf to make a pair of Sealed Avadon Boots. It can also be sold to a regular store. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1049,6 +1111,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5763" name="Sealed Blue Wolf Boot Design" type="EtcItem">
+		<!-- Essential ingredient needed by a Dwarf to make a pair of Sealed Blue Wolf Boots. It can also be sold to a regular store. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1060,6 +1123,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5764" name="Sealed Doom Boot Fragment" type="EtcItem">
+		<!-- Essential ingredient needed by a Dwarf to make a pair of Sealed Doom Boots. It can also be sold to a regular store. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1071,6 +1135,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5765" name="Dark Crystal Gloves" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy dark crystal set. -->
 		<set name="icon" val="icon.armor_t74_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1092,6 +1157,7 @@
 		</stats>
 	</item>
 	<item id="5766" name="Dark Crystal Gloves" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light dark crystal set. -->
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1110,6 +1176,7 @@
 		</stats>
 	</item>
 	<item id="5767" name="Dark Crystal Gloves" additionalName="Robe" type="Armor">
+		<!-- Part of the dark crystal robe set. -->
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1131,6 +1198,7 @@
 		</stats>
 	</item>
 	<item id="5768" name="Tallum Gloves" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy tallum set. -->
 		<set name="icon" val="icon.armor_t77_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1152,6 +1220,7 @@
 		</stats>
 	</item>
 	<item id="5769" name="Tallum Gloves" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light tallum set. -->
 		<set name="icon" val="icon.armor_t78_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1170,6 +1239,7 @@
 		</stats>
 	</item>
 	<item id="5770" name="Tallum Gloves" additionalName="Robe" type="Armor">
+		<!-- Part of the robe tallum set. -->
 		<set name="icon" val="icon.armor_t79_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1191,6 +1261,7 @@
 		</stats>
 	</item>
 	<item id="5771" name="Gauntlets of Nightmare" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy nightmare set. -->
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1212,6 +1283,7 @@
 		</stats>
 	</item>
 	<item id="5772" name="Gauntlets of Nightmare" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light nightmare set. -->
 		<set name="icon" val="icon.armor_t81_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1230,6 +1302,7 @@
 		</stats>
 	</item>
 	<item id="5773" name="Gauntlets of Nightmare" additionalName="Robe" type="Armor">
+		<!-- Part of the nightmare robe set. -->
 		<set name="icon" val="icon.armor_t82_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1251,6 +1324,7 @@
 		</stats>
 	</item>
 	<item id="5774" name="Majestic Gauntlets" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy majestic set. -->
 		<set name="icon" val="icon.armor_t83_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1272,6 +1346,7 @@
 		</stats>
 	</item>
 	<item id="5775" name="Majestic Gauntlets" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light majestic set. -->
 		<set name="icon" val="icon.armor_t84_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1290,6 +1365,7 @@
 		</stats>
 	</item>
 	<item id="5776" name="Majestic Gauntlets" additionalName="Robe" type="Armor">
+		<!-- Part of the majestic robe set. -->
 		<set name="icon" val="icon.armor_t85_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1311,6 +1387,7 @@
 		</stats>
 	</item>
 	<item id="5777" name="Dark Crystal Boots" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy dark crystal set. -->
 		<set name="icon" val="icon.armor_t74_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1332,6 +1409,7 @@
 		</stats>
 	</item>
 	<item id="5778" name="Dark Crystal Boots" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light dark crystal set. -->
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1350,6 +1428,7 @@
 		</stats>
 	</item>
 	<item id="5779" name="Dark Crystal Boots" additionalName="Robe" type="Armor">
+		<!-- Part of the dark crystal robe set. -->
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1371,6 +1450,7 @@
 		</stats>
 	</item>
 	<item id="5780" name="Tallum Boots" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy tallum set. -->
 		<set name="icon" val="icon.armor_t77_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1392,6 +1472,7 @@
 		</stats>
 	</item>
 	<item id="5781" name="Tallum Boots" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light tallum set. -->
 		<set name="icon" val="icon.armor_t78_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1410,6 +1491,7 @@
 		</stats>
 	</item>
 	<item id="5782" name="Tallum Boots" additionalName="Robe" type="Armor">
+		<!-- Part of the robe tallum set. -->
 		<set name="icon" val="icon.armor_t79_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1431,6 +1513,7 @@
 		</stats>
 	</item>
 	<item id="5783" name="Boots of Nightmare" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy nightmare set. -->
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1452,6 +1535,7 @@
 		</stats>
 	</item>
 	<item id="5784" name="Boots of Nightmare" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light nightmare set. -->
 		<set name="icon" val="icon.armor_t81_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1470,6 +1554,7 @@
 		</stats>
 	</item>
 	<item id="5785" name="Boots of Nightmare" additionalName="Robe" type="Armor">
+		<!-- Part of the nightmare robe set. -->
 		<set name="icon" val="icon.armor_t82_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1491,6 +1576,7 @@
 		</stats>
 	</item>
 	<item id="5786" name="Majestic Boots" additionalName="Heavy Armor" type="Armor">
+		<!-- Part of the heavy majestic set. -->
 		<set name="icon" val="icon.armor_t83_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1512,6 +1598,7 @@
 		</stats>
 	</item>
 	<item id="5787" name="Majestic Boots" additionalName="Light Armor" type="Armor">
+		<!-- Part of the light majestic set. -->
 		<set name="icon" val="icon.armor_t84_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1530,6 +1617,7 @@
 		</stats>
 	</item>
 	<item id="5788" name="Majestic Boots" additionalName="Robe" type="Armor">
+		<!-- Part of the majestic robe set. -->
 		<set name="icon" val="icon.armor_t85_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1551,6 +1639,7 @@
 		</stats>
 	</item>
 	<item id="5789" name="Soulshot (No-grade) (Novice)" type="EtcItem">
+		<!-- A Soulshot (No-grade) for use by newbies. -->
 		<set name="icon" val="icon.etc_soulshot_none_for_rookie_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1573,6 +1662,7 @@
 		</skills>
 	</item>
 	<item id="5790" name="Spiritshot (No-grade) (Novice)" type="EtcItem">
+		<!-- A Spiritshot (No-grade) for use by newbies. -->
 		<set name="icon" val="icon.etc_spiritshot_none_for_rookie_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />

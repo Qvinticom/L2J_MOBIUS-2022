@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="36200" name="Shooter Sealed with Heroes' Power" type="Weapon">
 		<!-- A weapon with the power of heroes sealed inside. You can acquire a weapon imbued with heroes' power if you have a scroll imbued with heroes' power. Can be used at all levels. Must use No-grade Soulshots/Spiritshots/Blessed Spiritshots. Cannot be used in the Olympiad. 1-day. Temporary event item. -->
@@ -1130,7 +1130,7 @@
 		</stats>
 	</item>
 	<item id="36243" name="Earth Wyrm Heart Ring" additionalName="3-hour" type="Armor">
-		<!-- Earth Wyrm's Heart Ring. 3-hour. Increases MP by 38, Poison Resistance by 50%, Poison Attack Rate by 50%, Knock Back/Knock Down/Pulling Resistance by 20, and Physical/Magic Attack Resistance, MP Regeneration, Critical Damage, Accuracy, Atk. Spd., Casting Spd., and Wind/Water Resistance. Can increase party members' Atk. Spd., Casting Spd., and Vampiric Rage, and use Poison Cancellation. Wearing two of these rings will give you the effect of wearing one. Cannot be used in the Olympiad. -->
+		<!-- Earth Wyrm's Heart Ring. 3-hour. Increases MP by 38, Poison Resistance by 50%, Poison Attack Rate by 50%, Knock Back/Knock Down/Pulling/Danger Zone Resistance by 20, and Physical/Magic Attack Resistance, MP Regeneration, Critical Damage, Accuracy, Atk. Spd., Casting Spd., and Wind/Water Resistance. Can increase party members' Atk. Spd., Casting Spd., and Vampiric Rage, and use Poison Cancellation. Wearing two of these rings will give you the effect of wearing one. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -1711,7 +1711,7 @@
 		</skills>
 	</item>
 	<item id="36282" name="Error Compensation Package" type="EtcItem">
-		<!-- We apologize for the inconvenience caused by the downed server. We will try our best to provide our customers with stable environments for fun play.\nDouble-click to receive 5 scrolls imbued with the power of heroes, 1 unit of PC Vitality and 1 Boss Accessory Pack (1-day). -->
+		<!-- We apologize for the inconvenience caused by the downed server. We will try our best to provide our customers with stable environments for fun play. Double-click to receive 5 scrolls imbued with the power of heroes, 1 unit of PC Vitality and 1 Boss Accessory Pack (1-day). -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />

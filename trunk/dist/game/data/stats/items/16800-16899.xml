@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="16837" name="Vesper Noble Helmet" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., P. Def., Max HP, Sleep Resistance, and Hold Resistance. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -25,6 +26,7 @@
 		</stats>
 	</item>
 	<item id="16838" name="Vesper Noble Leather Helmet" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd., MP Regeneration, and Max MP. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -46,6 +48,7 @@
 		</stats>
 	</item>
 	<item id="16839" name="Vesper Noble Circlet" type="Armor">
+		<!-- Masterwork Item that increases M. Atk., MP Regeneration, and Stun Resistance, and decreases Magic Cancel Rate. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -70,6 +73,7 @@
 		</stats>
 	</item>
 	<item id="16840" name="Vesper Noble Breastplate" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., P. Def., Max HP, and Hold Resistance. -->
 		<set name="icon" val="icon.armor_t94_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -96,6 +100,7 @@
 		</stats>
 	</item>
 	<item id="16841" name="Vesper Noble Leather Breastplate" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd., MP Regeneration, and Max MP. -->
 		<set name="icon" val="icon.armor_t95_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -119,6 +124,7 @@
 		</stats>
 	</item>
 	<item id="16842" name="Vesper Noble Tunic" type="Armor">
+		<!-- Masterwork Item that increases M. Atk., Casting Spd., MP Regeneration, and Stun Resistance, and decreases Magic Cancel Rate. -->
 		<set name="icon" val="icon.armor_t96_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -146,6 +152,7 @@
 		</stats>
 	</item>
 	<item id="16843" name="Vesper Noble Gaiters" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., P. Def., Max HP, Sleep Resistance, and Hold Resistance. -->
 		<set name="icon" val="icon.armor_t94_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -172,6 +179,7 @@
 		</stats>
 	</item>
 	<item id="16844" name="Vesper Noble Leather Leggings" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd., MP Regeneration, and Max MP. -->
 		<set name="icon" val="icon.armor_t95_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -195,6 +203,7 @@
 		</stats>
 	</item>
 	<item id="16845" name="Vesper Noble Stockings" type="Armor">
+		<!-- Masterwork Item that increases M. Atk., MP Regeneration, and Stun Resistance, and decreases Magic Cancel Rate. -->
 		<set name="icon" val="icon.armor_t96_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -222,6 +231,7 @@
 		</stats>
 	</item>
 	<item id="16846" name="Vesper Noble Gauntlets" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., P. Def., Max HP, Sleep Resistance, and Hold Resistance. -->
 		<set name="icon" val="icon.armor_t94_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -247,6 +257,7 @@
 		</stats>
 	</item>
 	<item id="16847" name="Vesper Noble Leather Gloves" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd., MP Regeneration, and Max MP. -->
 		<set name="icon" val="icon.armor_t95_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -269,6 +280,7 @@
 		</stats>
 	</item>
 	<item id="16848" name="Vesper Noble Gloves" type="Armor">
+		<!-- Masterwork Item that increases M. Atk., MP Regeneration, and Stun Resistance, and decreases Magic Cancel Rate. -->
 		<set name="icon" val="icon.armor_t96_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -294,6 +306,7 @@
 		</stats>
 	</item>
 	<item id="16849" name="Vesper Noble Boots" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., P. Def., Max HP, Sleep Resistance, and Hold Resistance. -->
 		<set name="icon" val="icon.armor_t94_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -319,6 +332,7 @@
 		</stats>
 	</item>
 	<item id="16850" name="Vesper Noble Leather Boots" type="Armor">
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd., MP Regeneration, and Max MP. -->
 		<set name="icon" val="icon.armor_t95_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -341,6 +355,7 @@
 		</stats>
 	</item>
 	<item id="16851" name="Vesper Noble Shoes" type="Armor">
+		<!-- Masterwork Item that increases M. Atk., MP Regeneration, and Stun Resistance, and decreases Magic Cancel Rate. -->
 		<set name="icon" val="icon.armor_t96_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -366,6 +381,7 @@
 		</stats>
 	</item>
 	<item id="16852" name="Hero's Treasure Chest" type="EtcItem">
+		<!-- Chest containing equipment set pack which. 90 days. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -384,6 +400,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16853" name="Equipment Set Pack (90-day)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you can obtain a 90-day equipment set for your class. Can be used after the 1st class change. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -404,6 +421,7 @@
 		</skills>
 	</item>
 	<item id="16854" name="Majestic Earring of Fortune" additionalName="90-day" type="Armor">
+		<!-- MP + 25. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -426,6 +444,7 @@
 		</stats>
 	</item>
 	<item id="16855" name="Majestic Necklace of Fortune" additionalName="90-day" type="Armor">
+		<!-- MP + 33. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -448,6 +467,7 @@
 		</stats>
 	</item>
 	<item id="16856" name="Majestic Ring of Fortune" additionalName="90-day" type="Armor">
+		<!-- MP + 17. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -659,6 +679,7 @@
 		</stats>
 	</item>
 	<item id="16866" name="Dark Crystal Robe of Fortune" additionalName="90-day" type="Armor">
+		<!-- One-piece Body Armor. -->
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -706,6 +727,7 @@
 		</stats>
 	</item>
 	<item id="16868" name="Dark Crystal Gloves of Fortune - Robe" additionalName="90-day" type="Armor">
+		<!-- A Set with Dark Crystal Robe of Fortune. -->
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -730,6 +752,7 @@
 		</stats>
 	</item>
 	<item id="16869" name="Dark Crystal Boots of Fortune - Robe" additionalName="90-day" type="Armor">
+		<!-- A Set with Dark Crystal Robe of Fortune. -->
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -780,6 +803,7 @@
 		</stats>
 	</item>
 	<item id="16871" name="Avadon Robe of Fortune" additionalName="90-day" type="Armor">
+		<!-- One-piece Body Armor. -->
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -827,6 +851,7 @@
 		</stats>
 	</item>
 	<item id="16873" name="Avadon Gloves of Fortune - Robe" additionalName="90-day" type="Armor">
+		<!-- A Set with Avadon Robe of Fortune. -->
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -851,6 +876,7 @@
 		</stats>
 	</item>
 	<item id="16874" name="Avadon Boots of Fortune - Robe" additionalName="90-day" type="Armor">
+		<!-- A Set with Avadon Robe of Fortune. -->
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1133,6 +1159,7 @@
 		</stats>
 	</item>
 	<item id="16886" name="Dark Crystal Gloves of Fortune - Light Armor" additionalName="90-day" type="Armor">
+		<!-- A Set with Dark Crystal Leather Armor of Fortune. -->
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1154,6 +1181,7 @@
 		</stats>
 	</item>
 	<item id="16887" name="Dark Crystal Boots of Fortune - Light Armor" additionalName="90-day" type="Armor">
+		<!-- A Set with Dark Crystal Leather Armor of Fortune. -->
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1175,6 +1203,7 @@
 		</stats>
 	</item>
 	<item id="16888" name="Leather Armor of Doom of Fortune" additionalName="90-day" type="Armor">
+		<!-- One-piece Body Armor. -->
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1218,6 +1247,7 @@
 		</stats>
 	</item>
 	<item id="16890" name="Doom Gloves of Fortune - Heavy Armor" additionalName="90-day" type="Armor">
+		<!-- A Set with Doom Plate Armor of Fortune. -->
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1242,6 +1272,7 @@
 		</stats>
 	</item>
 	<item id="16891" name="Doom Gloves of Fortune - Light Armor" additionalName="90-day" type="Armor">
+		<!-- A Set with Doom Leather Armor of Fortune. -->
 		<set name="icon" val="icon.armor_t72_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1263,6 +1294,7 @@
 		</stats>
 	</item>
 	<item id="16892" name="Doom Boots of Fortune - Heavy Armor" additionalName="90-day" type="Armor">
+		<!-- A Set with Doom Plate Armor of Fortune. -->
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1287,6 +1319,7 @@
 		</stats>
 	</item>
 	<item id="16893" name="Doom Boots of Fortune - Light Armor" additionalName="90-day" type="Armor">
+		<!-- A Set with Doom Leather Armor of Fortune. -->
 		<set name="icon" val="icon.armor_t72_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1308,6 +1341,7 @@
 		</stats>
 	</item>
 	<item id="16894" name="Doom Plate Armor of Fortune" additionalName="90-day" type="Armor">
+		<!-- One-piece Body Armor. -->
 		<set name="icon" val="icon.armor_t71_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />

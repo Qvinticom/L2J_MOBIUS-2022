@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="33000" name="Eminence Bow of Destiny (Fire)" additionalName="Guidance" type="Weapon">
-		<!-- Eminence Bow of Destiny (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Eminence Bow of Destiny (Fire) with limited ability enhancement. <Special Option>. Increases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -38,7 +38,7 @@
 		</stats>
 	</item>
 	<item id="33001" name="Sharpshooter of Destiny (Fire)" additionalName="Guidance" type="Weapon">
-		<!-- Sharpshooter of Destiny (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Sharpshooter of Destiny (Fire) with limited ability enhancement. <Special Option>. Increases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -75,7 +75,7 @@
 		</stats>
 	</item>
 	<item id="33002" name="Yaksa Mace of Destiny (Fire)" additionalName="Health" type="Weapon">
-		<!-- Yaksa Mace of Destiny (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Yaksa Mace of Destiny (Fire) with limited ability enhancement. <Special Option>. Increases Max HP by 25%. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -111,7 +111,7 @@
 		</stats>
 	</item>
 	<item id="33003" name="Ecliptic Axe of Destiny (Fire)" additionalName="M. Atk." type="Weapon">
-		<!-- Ecliptic Axe of Destiny (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases MP consumption by 15% and M. Atk. by 112 during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Ecliptic Axe of Destiny (Fire) with limited ability enhancement. <Special Option>. Increases MP consumption by 15% and M. Atk. by 112 during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -147,7 +147,7 @@
 		</stats>
 	</item>
 	<item id="33004" name="Deadman's Staff of Destiny (Fire)" additionalName="Magic Regeneration" type="Weapon">
-		<!-- Deadman's Staff of Destiny (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nHas a 30% chance of casting Regeneration on the target during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Deadman's Staff of Destiny (Fire) with limited ability enhancement. <Special Option>. Has a 30% chance of casting Regeneration on the target during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -183,7 +183,7 @@
 		</stats>
 	</item>
 	<item id="33005" name="Orcish Poleaxe of Destiny (Fire)" additionalName="Critical Stun" type="Weapon">
-		<!-- Orcish Poleaxe of Destiny (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nAbout 29% chance of casting Stun on the target during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Orcish Poleaxe of Destiny (Fire) with limited ability enhancement. <Special Option>. About 29% chance of casting Stun on the target during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -220,7 +220,7 @@
 		</stats>
 	</item>
 	<item id="33006" name="Great Pata of Destiny (Fire)" additionalName="Rsk. Haste" type="Weapon">
-		<!-- Great Pata of Destiny (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Atk. Spd. by 11% when HP drops to 60% or below. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Great Pata of Destiny (Fire) with limited ability enhancement. <Special Option>. Increases Atk. Spd. by 11% when HP drops to 60% or below. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_pata_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -291,7 +291,7 @@
 		</stats>
 	</item>
 	<item id="33008" name="Crystal Dagger of Destiny (Water)" additionalName="Critical Damage" type="Weapon">
-		<!-- Crystal Dagger (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 140 during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Crystal Dagger (Water) with limited ability enhancement. <Special Option>. P. Atk. + 140 during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -327,7 +327,7 @@
 		</stats>
 	</item>
 	<item id="33009" name="Samurai Long Sword of Destiny (Water)" additionalName="Focus" type="Weapon">
-		<!-- Samurai Long Sword of Destiny (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Samurai Long Sword of Destiny (Water) with limited ability enhancement. <Special Option>. Increases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -362,7 +362,7 @@
 		</stats>
 	</item>
 	<item id="33010" name="Admiral's Estoc of Destiny (Water)" additionalName="Focus" type="Weapon">
-		<!-- Admiral's Estoc of Destiny (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73.\nWhen enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Admiral's Estoc of Destiny (Water) with limited ability enhancement. <Special Option>. Increases Critical by 73. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -399,7 +399,7 @@
 		</stats>
 	</item>
 	<item id="33011" name="Berserker Blade of Destiny (Water)" additionalName="Focus" type="Weapon">
-		<!-- Berserker Blade of Destiny (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Berserker Blade of Destiny (Water) with limited ability enhancement. <Special Option>. Increases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -434,7 +434,7 @@
 		</stats>
 	</item>
 	<item id="33012" name="Saber Tooth of Destiny (Water)" additionalName="Focus" type="Weapon">
-		<!-- Saber Tooth of Destiny (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Saber Tooth of Destiny (Water) with limited ability enhancement. <Special Option>. Increases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -470,7 +470,7 @@
 		</stats>
 	</item>
 	<item id="33013" name="Eminence Bow of Destiny (Water)" additionalName="Guidance" type="Weapon">
-		<!-- Eminence Bow of Destiny (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Eminence Bow of Destiny (Water) with limited ability enhancement. <Special Option>. Increases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -507,7 +507,7 @@
 		</stats>
 	</item>
 	<item id="33014" name="Sharpshooter of Destiny (Water)" additionalName="Guidance" type="Weapon">
-		<!-- Sharpshooter of Destiny (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Sharpshooter of Destiny (Water) with limited ability enhancement. <Special Option>. Increases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -544,7 +544,7 @@
 		</stats>
 	</item>
 	<item id="33015" name="Yaksa Mace of Destiny (Water)" additionalName="Health" type="Weapon">
-		<!-- Yaksa Mace of Destiny (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Yaksa Mace of Destiny (Water) with limited ability enhancement. <Special Option>. Increases Max HP by 25%. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -580,7 +580,7 @@
 		</stats>
 	</item>
 	<item id="33016" name="Ecliptic Axe of Destiny (Water)" additionalName="M. Atk." type="Weapon">
-		<!-- Ecliptic Axe of Destiny (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases MP consumption by 15% and M. Atk. by 112 during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Ecliptic Axe of Destiny (Water) with limited ability enhancement. <Special Option>. Increases MP consumption by 15% and M. Atk. by 112 during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -616,7 +616,7 @@
 		</stats>
 	</item>
 	<item id="33017" name="Deadman's Staff of Destiny (Water)" additionalName="Magic Regeneration" type="Weapon">
-		<!-- Deadman's Staff of Destiny (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nHas a 30% chance of casting Regeneration on the target during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Deadman's Staff of Destiny (Water) with limited ability enhancement. <Special Option>. Has a 30% chance of casting Regeneration on the target during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -652,7 +652,7 @@
 		</stats>
 	</item>
 	<item id="33018" name="Orcish Poleaxe of Destiny (Water)" additionalName="Critical Stun" type="Weapon">
-		<!-- Orcish Poleaxe of Destiny (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nAbout 29% chance of casting Stun on the target during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Orcish Poleaxe of Destiny (Water) with limited ability enhancement. <Special Option>. About 29% chance of casting Stun on the target during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -689,7 +689,7 @@
 		</stats>
 	</item>
 	<item id="33019" name="Great Pata of Destiny (Water)" additionalName="Rsk. Haste" type="Weapon">
-		<!-- Great Pata of Destiny (Water) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Atk. Spd. by 11% when HP drops to 60% or below. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Great Pata of Destiny (Water) with limited ability enhancement. <Special Option>. Increases Atk. Spd. by 11% when HP drops to 60% or below. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_pata_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -760,7 +760,7 @@
 		</stats>
 	</item>
 	<item id="33021" name="Crystal Dagger of Destiny (Wind)" additionalName="Critical Damage" type="Weapon">
-		<!-- Crystal Dagger (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 140 during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Crystal Dagger (Wind) with limited ability enhancement. <Special Option>. P. Atk. + 140 during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -796,7 +796,7 @@
 		</stats>
 	</item>
 	<item id="33022" name="Samurai Long Sword of Destiny (Wind)" additionalName="Focus" type="Weapon">
-		<!-- Samurai Long Sword of Destiny (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Samurai Long Sword of Destiny (Wind) with limited ability enhancement. <Special Option>. Increases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -831,7 +831,7 @@
 		</stats>
 	</item>
 	<item id="33023" name="Admiral's Estoc of Destiny (Wind)" additionalName="Focus" type="Weapon">
-		<!-- Admiral's Estoc of Destiny (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73.\nWhen enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Admiral's Estoc of Destiny (Wind) with limited ability enhancement. <Special Option>. Increases Critical by 73. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -868,7 +868,7 @@
 		</stats>
 	</item>
 	<item id="33024" name="Berserker Blade of Destiny (Wind)" additionalName="Focus" type="Weapon">
-		<!-- Berserker Blade of Destiny (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Berserker Blade of Destiny (Wind) with limited ability enhancement. <Special Option>. Increases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -903,7 +903,7 @@
 		</stats>
 	</item>
 	<item id="33025" name="Saber Tooth of Destiny (Wind)" additionalName="Focus" type="Weapon">
-		<!-- Saber Tooth of Destiny (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Saber Tooth of Destiny (Wind) with limited ability enhancement. <Special Option>. Increases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -939,7 +939,7 @@
 		</stats>
 	</item>
 	<item id="33026" name="Eminence Bow of Destiny (Wind)" additionalName="Guidance" type="Weapon">
-		<!-- Eminence Bow of Destiny (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Eminence Bow of Destiny (Wind) with limited ability enhancement. <Special Option>. Increases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -976,7 +976,7 @@
 		</stats>
 	</item>
 	<item id="33027" name="Sharpshooter of Destiny (Wind)" additionalName="Guidance" type="Weapon">
-		<!-- Sharpshooter of Destiny (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Sharpshooter of Destiny (Wind) with limited ability enhancement. <Special Option>. Increases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1013,7 +1013,7 @@
 		</stats>
 	</item>
 	<item id="33028" name="Yaksa Mace of Destiny (Wind)" additionalName="Health" type="Weapon">
-		<!-- Yaksa Mace of Destiny (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Yaksa Mace of Destiny (Wind) with limited ability enhancement. <Special Option>. Increases Max HP by 25%. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1049,7 +1049,7 @@
 		</stats>
 	</item>
 	<item id="33029" name="Ecliptic Axe of Destiny (Wind)" additionalName="M. Atk." type="Weapon">
-		<!-- Ecliptic Axe of Destiny (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases MP consumption by 15% and M. Atk. by 112 during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Ecliptic Axe of Destiny (Wind) with limited ability enhancement. <Special Option>. Increases MP consumption by 15% and M. Atk. by 112 during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1085,7 +1085,7 @@
 		</stats>
 	</item>
 	<item id="33030" name="Deadman's Staff of Destiny (Wind)" additionalName="Magic Regeneration" type="Weapon">
-		<!-- Deadman's Staff of Destiny (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nHas a 30% chance of casting Regeneration on the target during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Deadman's Staff of Destiny (Wind) with limited ability enhancement. <Special Option>. Has a 30% chance of casting Regeneration on the target during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1121,7 +1121,7 @@
 		</stats>
 	</item>
 	<item id="33031" name="Orcish Poleaxe of Destiny (Wind)" additionalName="Critical Stun" type="Weapon">
-		<!-- Orcish Poleaxe of Destiny (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nAbout 29% chance of casting Stun on the target during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Orcish Poleaxe of Destiny (Wind) with limited ability enhancement. <Special Option>. About 29% chance of casting Stun on the target during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1158,7 +1158,7 @@
 		</stats>
 	</item>
 	<item id="33032" name="Great Pata of Destiny (Wind)" additionalName="Rsk. Haste" type="Weapon">
-		<!-- Great Pata of Destiny (Wind) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Atk. Spd. by 11% when HP drops to 60% or below. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Great Pata of Destiny (Wind) with limited ability enhancement. <Special Option>. Increases Atk. Spd. by 11% when HP drops to 60% or below. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_pata_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1229,7 +1229,7 @@
 		</stats>
 	</item>
 	<item id="33034" name="Crystal Dagger of Destiny (Earth)" additionalName="Critical Damage" type="Weapon">
-		<!-- Crystal Dagger (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 140 during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Crystal Dagger (Earth) with limited ability enhancement. <Special Option>. P. Atk. + 140 during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1265,7 +1265,7 @@
 		</stats>
 	</item>
 	<item id="33035" name="Samurai Long Sword of Destiny (Earth)" additionalName="Focus" type="Weapon">
-		<!-- Samurai Long Sword of Destiny (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Samurai Long Sword of Destiny (Earth) with limited ability enhancement. <Special Option>. Increases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1300,7 +1300,7 @@
 		</stats>
 	</item>
 	<item id="33036" name="Admiral's Estoc of Destiny (Earth)" additionalName="Focus" type="Weapon">
-		<!-- Admiral's Estoc of Destiny (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73.\nWhen enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Admiral's Estoc of Destiny (Earth) with limited ability enhancement. <Special Option>. Increases Critical by 73. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1337,7 +1337,7 @@
 		</stats>
 	</item>
 	<item id="33037" name="Berserker Blade of Destiny (Earth)" additionalName="Focus" type="Weapon">
-		<!-- Berserker Blade of Destiny (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Berserker Blade of Destiny (Earth) with limited ability enhancement. <Special Option>. Increases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1372,7 +1372,7 @@
 		</stats>
 	</item>
 	<item id="33038" name="Saber Tooth of Destiny (Earth)" additionalName="Focus" type="Weapon">
-		<!-- Saber Tooth of Destiny (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Saber Tooth of Destiny (Earth) with limited ability enhancement. <Special Option>. Increases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1408,7 +1408,7 @@
 		</stats>
 	</item>
 	<item id="33039" name="Eminence Bow of Destiny (Earth)" additionalName="Guidance" type="Weapon">
-		<!-- Eminence Bow of Destiny (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Eminence Bow of Destiny (Earth) with limited ability enhancement. <Special Option>. Increases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1445,7 +1445,7 @@
 		</stats>
 	</item>
 	<item id="33040" name="Sharpshooter of Destiny (Earth)" additionalName="Guidance" type="Weapon">
-		<!-- Sharpshooter of Destiny (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Sharpshooter of Destiny (Earth) with limited ability enhancement. <Special Option>. Increases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1482,7 +1482,7 @@
 		</stats>
 	</item>
 	<item id="33041" name="Yaksa Mace of Destiny (Earth)" additionalName="Health" type="Weapon">
-		<!-- Yaksa Mace of Destiny (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Yaksa Mace of Destiny (Earth) with limited ability enhancement. <Special Option>. Increases Max HP by 25%. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1518,7 +1518,7 @@
 		</stats>
 	</item>
 	<item id="33042" name="Ecliptic Axe of Destiny (Earth)" additionalName="M. Atk." type="Weapon">
-		<!-- Ecliptic Axe of Destiny (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases MP consumption by 15% and M. Atk. by 112 during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Ecliptic Axe of Destiny (Earth) with limited ability enhancement. <Special Option>. Increases MP consumption by 15% and M. Atk. by 112 during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1554,7 +1554,7 @@
 		</stats>
 	</item>
 	<item id="33043" name="Deadman's Staff of Destiny (Earth)" additionalName="Magic Regeneration" type="Weapon">
-		<!-- Deadman's Staff of Destiny (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nHas a 30% chance of casting Regeneration on the target during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Deadman's Staff of Destiny (Earth) with limited ability enhancement. <Special Option>. Has a 30% chance of casting Regeneration on the target during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1590,7 +1590,7 @@
 		</stats>
 	</item>
 	<item id="33044" name="Orcish Poleaxe of Destiny (Earth)" additionalName="Critical Stun" type="Weapon">
-		<!-- Orcish Poleaxe of Destiny (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nAbout 29% chance of casting Stun on the target during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Orcish Poleaxe of Destiny (Earth) with limited ability enhancement. <Special Option>. About 29% chance of casting Stun on the target during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1627,7 +1627,7 @@
 		</stats>
 	</item>
 	<item id="33045" name="Great Pata of Destiny (Earth)" additionalName="Rsk. Haste" type="Weapon">
-		<!-- Great Pata of Destiny (Earth) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Atk. Spd. by 11% when HP drops to 60% or below. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Great Pata of Destiny (Earth) with limited ability enhancement. <Special Option>. Increases Atk. Spd. by 11% when HP drops to 60% or below. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_pata_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1698,7 +1698,7 @@
 		</stats>
 	</item>
 	<item id="33047" name="Crystal Dagger of Destiny (Holy)" additionalName="Critical Damage" type="Weapon">
-		<!-- Crystal Dagger (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 140 during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Crystal Dagger (Holy) with limited ability enhancement. <Special Option>. P. Atk. + 140 during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1734,7 +1734,7 @@
 		</stats>
 	</item>
 	<item id="33048" name="Samurai Long Sword of Destiny (Holy)" additionalName="Focus" type="Weapon">
-		<!-- Samurai Long Sword of Destiny (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Samurai Long Sword of Destiny (Holy) with limited ability enhancement. <Special Option>. Increases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1769,7 +1769,7 @@
 		</stats>
 	</item>
 	<item id="33049" name="Admiral's Estoc of Destiny (Holy)" additionalName="Focus" type="Weapon">
-		<!-- Admiral's Estoc of Destiny (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73.\nWhen enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Admiral's Estoc of Destiny (Holy) with limited ability enhancement. <Special Option>. Increases Critical by 73. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1806,7 +1806,7 @@
 		</stats>
 	</item>
 	<item id="33050" name="Berserker Blade of Destiny (Holy)" additionalName="Focus" type="Weapon">
-		<!-- Berserker Blade of Destiny (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Berserker Blade of Destiny (Holy) with limited ability enhancement. <Special Option>. Increases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1841,7 +1841,7 @@
 		</stats>
 	</item>
 	<item id="33051" name="Saber Tooth of Destiny (Holy)" additionalName="Focus" type="Weapon">
-		<!-- Saber Tooth of Destiny (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Saber Tooth of Destiny (Holy) with limited ability enhancement. <Special Option>. Increases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1877,7 +1877,7 @@
 		</stats>
 	</item>
 	<item id="33052" name="Eminence Bow of Destiny (Holy)" additionalName="Guidance" type="Weapon">
-		<!-- Eminence Bow of Destiny (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Eminence Bow of Destiny (Holy) with limited ability enhancement. <Special Option>. Increases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1914,7 +1914,7 @@
 		</stats>
 	</item>
 	<item id="33053" name="Sharpshooter of Destiny (Holy)" additionalName="Guidance" type="Weapon">
-		<!-- Sharpshooter of Destiny (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Sharpshooter of Destiny (Holy) with limited ability enhancement. <Special Option>. Increases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1951,7 +1951,7 @@
 		</stats>
 	</item>
 	<item id="33054" name="Yaksa Mace of Destiny (Holy)" additionalName="Health" type="Weapon">
-		<!-- Yaksa Mace of Destiny (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Yaksa Mace of Destiny (Holy) with limited ability enhancement. <Special Option>. Increases Max HP by 25%. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1987,7 +1987,7 @@
 		</stats>
 	</item>
 	<item id="33055" name="Ecliptic Axe of Destiny (Holy)" additionalName="M. Atk." type="Weapon">
-		<!-- Ecliptic Axe of Destiny (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases MP consumption by 15% and M. Atk. by 112 during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Ecliptic Axe of Destiny (Holy) with limited ability enhancement. <Special Option>. Increases MP consumption by 15% and M. Atk. by 112 during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2023,7 +2023,7 @@
 		</stats>
 	</item>
 	<item id="33056" name="Deadman's Staff of Destiny (Holy)" additionalName="Magic Regeneration" type="Weapon">
-		<!-- Deadman's Staff of Destiny (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nHas a 30% chance of casting Regeneration on the target during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Deadman's Staff of Destiny (Holy) with limited ability enhancement. <Special Option>. Has a 30% chance of casting Regeneration on the target during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2059,7 +2059,7 @@
 		</stats>
 	</item>
 	<item id="33057" name="Orcish Poleaxe of Destiny (Holy)" additionalName="Critical Stun" type="Weapon">
-		<!-- Orcish Poleaxe of Destiny (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nAbout 29% chance of casting Stun on the target during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Orcish Poleaxe of Destiny (Holy) with limited ability enhancement. <Special Option>. About 29% chance of casting Stun on the target during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2096,7 +2096,7 @@
 		</stats>
 	</item>
 	<item id="33058" name="Great Pata of Destiny (Holy)" additionalName="Rsk. Haste" type="Weapon">
-		<!-- Great Pata of Destiny (Holy) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Atk. Spd. by 11% when HP drops to 60% or below. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Great Pata of Destiny (Holy) with limited ability enhancement. <Special Option>. Increases Atk. Spd. by 11% when HP drops to 60% or below. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_pata_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2167,7 +2167,7 @@
 		</stats>
 	</item>
 	<item id="33060" name="Crystal Dagger of Destiny (Dark)" additionalName="Critical Damage" type="Weapon">
-		<!-- Crystal Dagger of Destiny (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 140 during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Crystal Dagger of Destiny (Dark) with limited ability enhancement. <Special Option>. P. Atk. + 140 during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2203,7 +2203,7 @@
 		</stats>
 	</item>
 	<item id="33061" name="Samurai Long Sword of Destiny (Dark)" additionalName="Focus" type="Weapon">
-		<!-- Samurai Long Sword of Destiny (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Samurai Long Sword of Destiny (Dark) with limited ability enhancement. <Special Option>. Increases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2238,7 +2238,7 @@
 		</stats>
 	</item>
 	<item id="33062" name="Admiral's Estoc of Destiny (Dark)" additionalName="Focus" type="Weapon">
-		<!-- Admiral's Estoc of Destiny (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73.\nWhen enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Admiral's Estoc of Destiny (Dark) with limited ability enhancement. <Special Option>. Increases Critical by 73. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2275,7 +2275,7 @@
 		</stats>
 	</item>
 	<item id="33063" name="Berserker Blade of Destiny (Dark)" additionalName="Focus" type="Weapon">
-		<!-- Berserker Blade of Destiny (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Berserker Blade of Destiny (Dark) with limited ability enhancement. <Special Option>. Increases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2310,7 +2310,7 @@
 		</stats>
 	</item>
 	<item id="33064" name="Saber Tooth of Destiny (Dark)" additionalName="Focus" type="Weapon">
-		<!-- Saber Tooth of Destiny (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Saber Tooth of Destiny (Dark) with limited ability enhancement. <Special Option>. Increases Critical by 73. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2346,7 +2346,7 @@
 		</stats>
 	</item>
 	<item id="33065" name="Eminence Bow of Destiny (Dark)" additionalName="Guidance" type="Weapon">
-		<!-- Eminence Bow of Destiny (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Eminence Bow of Destiny (Dark) with limited ability enhancement. <Special Option>. Increases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2383,7 +2383,7 @@
 		</stats>
 	</item>
 	<item id="33066" name="Sharpshooter of Destiny (Dark)" additionalName="Guidance" type="Weapon">
-		<!-- Sharpshooter of Destiny (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Sharpshooter of Destiny (Dark) with limited ability enhancement. <Special Option>. Increases Accuracy by about 4. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2420,7 +2420,7 @@
 		</stats>
 	</item>
 	<item id="33067" name="Yaksa Mace of Destiny (Dark)" additionalName="Health" type="Weapon">
-		<!-- Yaksa Mace of Destiny (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Yaksa Mace of Destiny (Dark) with limited ability enhancement. <Special Option>. Increases Max HP by 25%. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2456,7 +2456,7 @@
 		</stats>
 	</item>
 	<item id="33068" name="Ecliptic Axe of Destiny (Dark)" additionalName="M. Atk." type="Weapon">
-		<!-- Ecliptic Axe of Destiny (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases MP consumption by 15% and M. Atk. by 112 during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Ecliptic Axe of Destiny (Dark) with limited ability enhancement. <Special Option>. Increases MP consumption by 15% and M. Atk. by 112 during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2492,7 +2492,7 @@
 		</stats>
 	</item>
 	<item id="33069" name="Deadman's Staff of Destiny (Dark)" additionalName="Magic Regeneration" type="Weapon">
-		<!-- Deadman's Staff of Destiny (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nHas a 30% chance of casting Regeneration on the target during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Deadman's Staff of Destiny (Dark) with limited ability enhancement. <Special Option>. Has a 30% chance of casting Regeneration on the target during magic use. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2528,7 +2528,7 @@
 		</stats>
 	</item>
 	<item id="33070" name="Orcish Poleaxe of Destiny (Dark)" additionalName="Critical Stun" type="Weapon">
-		<!-- Orcish Poleaxe of Destiny (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nAbout 29% chance of casting Stun on the target during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Orcish Poleaxe of Destiny (Dark) with limited ability enhancement. <Special Option>. About 29% chance of casting Stun on the target during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2565,7 +2565,7 @@
 		</stats>
 	</item>
 	<item id="33071" name="Great Pata of Destiny (Dark)" additionalName="Rsk. Haste" type="Weapon">
-		<!-- Great Pata of Destiny (Dark) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Atk. Spd. by 11% when HP drops to 60% or below. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Great Pata of Destiny (Dark) with limited ability enhancement. <Special Option>. Increases Atk. Spd. by 11% when HP drops to 60% or below. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_pata_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3218,7 +3218,7 @@
 		</stats>
 	</item>
 	<item id="33095" name="Demon's Dagger of Destiny (Fire)" additionalName="Critical Damage" type="Weapon">
-		<!-- Demon's Dagger of Destiny (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nP. Atk. + 160 during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Demon's Dagger of Destiny (Fire) with limited ability enhancement. <Special Option>. P. Atk. + 160 during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_demons_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3254,7 +3254,7 @@
 		</stats>
 	</item>
 	<item id="33096" name="Damascus Sword of Destiny (Fire)" additionalName="Focus" type="Weapon">
-		<!-- Damascus Sword of Destiny (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 64. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Damascus Sword of Destiny (Fire) with limited ability enhancement. <Special Option>. Increases Critical by 64. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3289,7 +3289,7 @@
 		</stats>
 	</item>
 	<item id="33097" name="Wizard's Tear of Destiny (Fire)" additionalName="Acumen" type="Weapon">
-		<!-- Wizard's Tear of Destiny (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Casting Spd. by 15%. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Wizard's Tear of Destiny (Fire) with limited ability enhancement. <Special Option>. Increases Casting Spd. by 15%. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3324,7 +3324,7 @@
 		</stats>
 	</item>
 	<item id="33098" name="Colichemarde of Destiny (Fire)" additionalName="Focus" type="Weapon">
-		<!-- Colichemarde of Destiny (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Critical by 64.\nWhen enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Colichemarde of Destiny (Fire) with limited ability enhancement. <Special Option>. Increases Critical by 64. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3361,7 +3361,7 @@
 		</stats>
 	</item>
 	<item id="33099" name="Guardian's Sword of Destiny (Fire)" additionalName="Health" type="Weapon">
-		<!-- Guardian's Sword of Destiny (Fire) with limited ability enhancement. (Soul Crystal Enhancement)\nIncreases Max HP by 25%. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Guardian's Sword of Destiny (Fire) with limited ability enhancement. <Special Option>. Increases Max HP by 25%. This item cannot be enhanced except with Destiny Enchant Scrolls. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

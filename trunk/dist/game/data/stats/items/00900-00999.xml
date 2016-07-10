@@ -35,6 +35,7 @@
 		</stats>
 	</item>
 	<item id="902" name="Phoenix Ring" type="Armor">
+		<!-- Phoenix Ring. Produces the effect of MP + 13. -->
 		<set name="icon" val="icon.accessary_phoenixs_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -104,6 +105,7 @@
 		</stats>
 	</item>
 	<item id="906" name="Necklace of Knowledge" type="Armor">
+		<!-- Silver necklace engraved with rune characters of knowledge. -->
 		<set name="icon" val="icon.accessary_necklace_of_knowledge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -118,6 +120,7 @@
 		</stats>
 	</item>
 	<item id="907" name="Necklace of Anguish" type="Armor">
+		<!-- Silver necklace engraved with rune characters of anguish. -->
 		<set name="icon" val="icon.accessary_necklace_of_anguish_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -330,6 +333,7 @@
 		</stats>
 	</item>
 	<item id="920" name="Tateossian Necklace" type="Armor">
+		<!-- Tateossian Necklace. Produces the effect of MP + 42. -->
 		<set name="icon" val="icon.accessory_tateossian_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -399,6 +403,7 @@
 		</stats>
 	</item>
 	<item id="924" name="Majestic Necklace" type="Armor">
+		<!-- Majestic Necklace. Produces the effect of MP + 33. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -553,6 +558,7 @@
 		</stats>
 	</item>
 	<item id="933" name="Phoenix Necklace" type="Armor">
+		<!-- Phoenix Necklace. Produces the effect of MP + 26. -->
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -622,6 +628,7 @@
 		</stats>
 	</item>
 	<item id="937" name="Directions to Ruins" type="EtcItem">
+		<!-- Follow the northwestern path from the village, and head west when you meet the Obelisk of Victory. The entrance to the ruins lies at the slope of the mountain. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -747,6 +754,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="945" name="Skeleton Buckler" type="Armor">
+		<!-- Small wooden shield that perpetrators of mages use. -->
 		<set name="icon" val="icon.shield_skeleton_buckler_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -792,6 +800,7 @@
 		</stats>
 	</item>
 	<item id="947" name="Scroll: Enchant Weapon (B-Grade)" type="EtcItem">
+		<!-- When enchanted, P. Atk. + 3 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -809,6 +818,7 @@
 		</skills>
 	</item>
 	<item id="948" name="Scroll: Enchant Armor (B-Grade)" type="EtcItem">
+		<!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -826,6 +836,7 @@
 		</skills>
 	</item>
 	<item id="949" name="Crystal Scroll: Enchant Weapon (B-Grade)" type="EtcItem">
+		<!-- Scroll of enchantment that empowers a B-grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -837,6 +848,7 @@
 		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="950" name="Crystal Scroll: Enchant Armor (B-Grade)" type="EtcItem">
+		<!-- Scroll of enchantment that empowers a B-grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -848,6 +860,7 @@
 		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="951" name="Scroll: Enchant Weapon (C-Grade)" type="EtcItem">
+		<!-- When enchanted, P. Atk. + 3 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -865,6 +878,7 @@
 		</skills>
 	</item>
 	<item id="952" name="Scroll: Enchant Armor (C-Grade)" type="EtcItem">
+		<!-- P. Def. + 1 for C-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -882,6 +896,7 @@
 		</skills>
 	</item>
 	<item id="953" name="Crystal Scroll: Enchant Weapon (C-Grade)" type="EtcItem">
+		<!-- Scroll of enchantment that empowers a C-grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -893,6 +908,7 @@
 		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="954" name="Crystal Scroll: Enchant Armor (C-Grade)" type="EtcItem">
+		<!-- Scroll of enchantment that empowers a C-grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -904,6 +920,7 @@
 		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="955" name="Scroll: Enchant Weapon (D-Grade)" type="EtcItem">
+		<!-- When enchanted, P. Atk. + 2 for all D-grade weapons with the exception of bows, which increases by 4. M. Atk. + 2 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -921,6 +938,7 @@
 		</skills>
 	</item>
 	<item id="956" name="Scroll: Enchant Armor (D-Grade)" type="EtcItem">
+		<!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -938,6 +956,7 @@
 		</skills>
 	</item>
 	<item id="957" name="Crystal Scroll: Enchant Weapon (D-Grade)" type="EtcItem">
+		<!-- Scroll of enchantment that empowers a D-grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -949,6 +968,7 @@
 		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="958" name="Crystal Scroll: Enchant Armor (D-Grade)" type="EtcItem">
+		<!-- Scroll of enchantment that empowers a D-grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -960,6 +980,7 @@
 		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="959" name="Scroll: Enchant Weapon (S-Grade)" type="EtcItem">
+		<!-- When enchanted, P. Atk. + 5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 6 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 10 for bows. M. Atk. + 4 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -977,6 +998,7 @@
 		</skills>
 	</item>
 	<item id="960" name="Scroll: Enchant Armor (S-Grade)" type="EtcItem">
+		<!-- When enchanted, P. Def. Increases by 1 for S-grade armor and accessories. Starting at + 4, P. Def. Increases by 3 and a HP bonus is granted. Enchanting is safe up to + 3, but one-piece body armor can be safely enchanted up to + 4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -994,6 +1016,7 @@
 		</skills>
 	</item>
 	<item id="961" name="Crystal Scroll: Enchant Weapon (S-Grade)" type="EtcItem">
+		<!-- Scroll of enchantment that empowers an S-grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1005,6 +1028,7 @@
 		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="962" name="Crystal Scroll: Enchant Armor (S-Grade)" type="EtcItem">
+		<!-- Scroll of enchantment that empowers an S-grade armor -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1016,6 +1040,7 @@
 		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="963" name="Orc Arrowhead" type="EtcItem">
+		<!-- Arrowhead that Turath orc marksmen use on Talking Island. Collect these and take to Master Minia. -->
 		<set name="icon" val="icon.weapon_winged_spear_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1032,6 +1057,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="964" name="Alberius' Letter" type="EtcItem">
+		<!-- Letter from Alberius. Take this to Master Cobendell. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1048,6 +1074,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="965" name="Evergreen Amulet" type="EtcItem">
+		<!-- Necklace set with a green Elemental stone. You must possess this to slay the dryad and obtain the dryad's tears. -->
 		<set name="icon" val="icon.accessary_near_forest_necklace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1064,6 +1091,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="966" name="Dryad's Tears" type="EtcItem">
+		<!-- Jewel that contains the essence of a dryad's soul. Gather ten of these and take them to Master Cobendell. -->
 		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1080,6 +1108,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="967" name="Cobendell's Medicine" type="EtcItem">
+		<!-- Cobendell's medicine -->
 		<set name="icon" val="icon.item_canuse24" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1096,6 +1125,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="968" name="Karrod's Letter" type="EtcItem">
+		<!-- Letter written by Blacksmith Karrod. Take this to the Abyssal Celebrant Cecktinon in the Shilen Temple. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1112,6 +1142,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="969" name="Cecktinon's First Voucher" type="EtcItem">
+		<!-- Introduction letter from the Abyssal Celebrant Cecktinon. Take this and seek Magister Harne in the village. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1128,6 +1159,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="970" name="Cecktinon's Second Voucher" type="EtcItem">
+		<!-- Introduction letter from the Abyssal Celebrant Cecktinon. Go to the School of Dark Arts, hunt skeletons, and gather 10 bone fragments. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1144,6 +1176,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="971" name="Soul Catcher" type="EtcItem">
+		<!-- Item used during the exorcism ritual to call upon a spirit of the dead. Take this to the Abyssal Celebrant Cecktinon. -->
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1160,6 +1193,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="972" name="Preserving Oil" type="EtcItem">
+		<!-- Oil that when used, prevents the rotting of corpses. Take this and go hunt zombies in the swamps. -->
 		<set name="icon" val="icon.etc_potion_clear_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1176,6 +1210,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="973" name="Zombie Head" type="EtcItem">
+		<!-- The head of tree Elf zombies that have been cut after they are defeated. Take this to the abyssal celebrant Cecktinon. -->
 		<set name="icon" val="icon.etc_skull_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1192,6 +1227,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="974" name="Steelbender Head" type="EtcItem">
+		<!-- Please, I beg of you! Don't take me to that nasty-tempered blacksmith! -->
 		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1208,6 +1244,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="975" name="Blood Saber" type="Weapon">
+		<!-- An Oriharukon sword crafted in the Abella style of the east. -->
 		<set name="icon" val="icon.weapon_broad_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1232,6 +1269,7 @@
 		</stats>
 	</item>
 	<item id="976" name="1st Badge of Sentinel" type="EtcItem">
+		<!-- A badge that certifies that its bearer is an Elven Sentinel. Destroy an orc Tanuki skullcrusher and report to Sentinel Kendell. -->
 		<set name="icon" val="icon.item_system03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1248,6 +1286,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="977" name="2nd Badge of Sentinel" type="EtcItem">
+		<!-- A badge that certifies that its bearer is an Elven Sentinel. Destroy an orc Bhato bloodspear and report to Sentinel Kendell. -->
 		<set name="icon" val="icon.item_system03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1264,6 +1303,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="978" name="Skullcrusher Amulet" type="EtcItem">
+		<!-- The amulet that represents the Skullcrusher Orc tribe. Take this to Sentinel Kendell. -->
 		<set name="icon" val="icon.item_normal145" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1280,6 +1320,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="979" name="Bloodspear Amulet" type="EtcItem">
+		<!-- The amulet that represents the Bloodspear Orc tribe. Take this to Sentinel Kendell. -->
 		<set name="icon" val="icon.item_normal89" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1296,6 +1337,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="980" name="0" type="EtcItem">
+		<!-- 0 -->
 		<set name="icon" val="icon.weapon_mace23" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1312,6 +1354,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="981" name="Red Sunset Sword" type="Weapon">
+		<!-- Sword used by warriors belonging to the Red Sunset clan. -->
 		<set name="icon" val="icon.weapon_brandish_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1336,6 +1379,7 @@
 		</stats>
 	</item>
 	<item id="982" name="Esrandell's Letter" type="EtcItem">
+		<!-- Esrandell's introduction -->
 		<set name="icon" val="icon.item_normal20" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1352,6 +1396,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="983" name="Kendell's Letter" type="EtcItem">
+		<!-- Kendell's letter -->
 		<set name="icon" val="icon.item_normal20" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1368,6 +1413,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="984" name="1st Onyx Talisman" type="EtcItem">
+		<!-- Necklace crafted of onyx. Take this to Abyssal Celebrant Kartia. -->
 		<set name="icon" val="icon.accessary_sages_necklace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1384,6 +1430,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="985" name="2nd Onyx Talisman" type="EtcItem">
+		<!-- Necklace crafted of onyx. Recover the original scrolls from the blackskull Orcs and bring them to Abyssal Celebrant Kartia. -->
 		<set name="icon" val="icon.accessary_sages_necklace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1400,6 +1447,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="986" name="Ancient Scroll" type="EtcItem">
+		<!-- Ancient scroll called Kaysha's Revelation. Take it along with the clay tablet to Abyssal Celebrant Kartia. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1416,6 +1464,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="987" name="Ancient Clay Tablet" type="EtcItem">
+		<!-- Ancient clay tablet engraved with text. Take it along with the ancient scroll to Abyssal Celebrant Kartia. -->
 		<set name="icon" val="icon.etc_plate_glay_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1432,6 +1481,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="988" name="Kartia's Translation" type="EtcItem">
+		<!-- Kartia's translation of Kaysha's Revelations. Take it to Tetrarch Thifiell. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1448,6 +1498,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="989" name="Eldritch Dagger" type="Weapon">
+		<!-- Steel dagger engraved with the runes of Shilen and Gran Kain. -->
 		<set name="icon" val="icon.weapon_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />

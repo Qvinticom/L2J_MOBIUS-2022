@@ -22,6 +22,7 @@
 		</stats>
 	</item>
 	<item id="16901" name="Full Plate Armor of Fortune" additionalName="90-day" type="Armor">
+		<!-- One-piece Body Armor. -->
 		<set name="icon" val="icon.armor_t62_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -340,6 +341,7 @@
 		</stats>
 	</item>
 	<item id="16915" name="Armor of Nightmare of Fortune" additionalName="90-day" type="Armor">
+		<!-- One-piece Body Armor. -->
 		<set name="icon" val="icon.armor_t80_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -386,6 +388,7 @@
 		</stats>
 	</item>
 	<item id="16917" name="Gauntlets of Nightmare of Fortune - Heavy Armor" additionalName="90-day" type="Armor">
+		<!-- A Set with Armor of Nightmare of Fortune. -->
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -410,6 +413,7 @@
 		</stats>
 	</item>
 	<item id="16918" name="Boots of Nightmare of Fortune - Heavy Armor" additionalName="90-day" type="Armor">
+		<!-- A Set with Armor of Nightmare of Fortune. -->
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -460,6 +464,7 @@
 		</stats>
 	</item>
 	<item id="16920" name="Sword of Miracles of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -495,6 +500,7 @@
 		</stats>
 	</item>
 	<item id="16921" name="Wizard's Tear of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -530,6 +536,7 @@
 		</stats>
 	</item>
 	<item id="16922" name="Homunkulus' Sword of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -598,6 +605,7 @@
 		</stats>
 	</item>
 	<item id="16924" name="Naga Storm of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases P. Critical Damage by 67. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -633,6 +641,7 @@
 		</stats>
 	</item>
 	<item id="16925" name="Kris of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases P. Critical Damage by 71. -->
 		<set name="icon" val="icon.weapon_kris_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -668,6 +677,7 @@
 		</stats>
 	</item>
 	<item id="16926" name="Dark Screamer of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases P. Critical Damage by 81. -->
 		<set name="icon" val="icon.weapon_dark_screamer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -735,6 +745,7 @@
 		</stats>
 	</item>
 	<item id="16928" name="Shyeed's Bow of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases P. Critical Damage by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -772,6 +783,7 @@
 		</stats>
 	</item>
 	<item id="16929" name="Bow of Peril of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Has a 42% chance of decreasing MP consumption to 2 during a standard attack. -->
 		<set name="icon" val="icon.weapon_hazard_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -807,6 +819,7 @@
 		</stats>
 	</item>
 	<item id="16930" name="Eminence Bow of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Has a 42% chance of decreasing MP consumption to 1 during a standard attack. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -876,6 +889,7 @@
 		</stats>
 	</item>
 	<item id="16932" name="Barakiel's Axe of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases P. Critical Damage by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -911,6 +925,7 @@
 		</stats>
 	</item>
 	<item id="16933" name="Art of Battle Axe of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Max HP increases by 25%. -->
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -946,6 +961,7 @@
 		</stats>
 	</item>
 	<item id="16934" name="Yaksa Mace of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Max HP increases by 25%. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1013,6 +1029,7 @@
 		</stats>
 	</item>
 	<item id="16936" name="Sirra's Blade of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1047,6 +1064,7 @@
 		</stats>
 	</item>
 	<item id="16937" name="Damascus Sword of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases P. Critical Damage by 64. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1081,6 +1099,7 @@
 		</stats>
 	</item>
 	<item id="16938" name="Samurai Long Sword of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases P. Critical Damage by 73. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1146,6 +1165,7 @@
 		</stats>
 	</item>
 	<item id="16940" name="Sword of Ipos of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases P. Critical Damage by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1180,6 +1200,7 @@
 		</stats>
 	</item>
 	<item id="16941" name="Guardian's Sword of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Max HP increases by 25%. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1214,6 +1235,7 @@
 		</stats>
 	</item>
 	<item id="16942" name="Berserker Blade of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases P. Critical Damage by 73. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1279,6 +1301,7 @@
 		</stats>
 	</item>
 	<item id="16944" name="Sobekk's Hurricane of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1314,6 +1337,7 @@
 		</stats>
 	</item>
 	<item id="16945" name="Bellion Cestus of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases Atk. Spd. by 9% when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1349,6 +1373,7 @@
 		</stats>
 	</item>
 	<item id="16946" name="Great Pata of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases Atk. Spd. by 11% when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_great_pata_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1416,6 +1441,7 @@
 		</stats>
 	</item>
 	<item id="16948" name="Tallum Blade*Damascus of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases Atk. Spd. by 8%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1450,6 +1476,7 @@
 		</stats>
 	</item>
 	<item id="16949" name="Samurai Long Sword*Samurai Long Sword of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases Atk. Spd. by 4%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1484,6 +1511,7 @@
 		</stats>
 	</item>
 	<item id="16950" name="Spirit Sword*Raid Sword of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Increases P. Critical Damage by 40. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1549,6 +1577,7 @@
 		</stats>
 	</item>
 	<item id="16952" name="Tiphon's Spear of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Angle of attack widens. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1584,6 +1613,7 @@
 		</stats>
 	</item>
 	<item id="16953" name="Lance of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Range increases. -->
 		<set name="icon" val="icon.weapon_lancia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1619,6 +1649,7 @@
 		</stats>
 	</item>
 	<item id="16954" name="Orcish Poleaxe of Fortune" additionalName="90-day" type="Weapon">
+		<!-- angle of attack widens. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1689,6 +1720,7 @@
 		</stats>
 	</item>
 	<item id="16956" name="Durendal of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Increases Critical by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1727,6 +1759,7 @@
 		</stats>
 	</item>
 	<item id="16957" name="Dismantler of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_dismantler_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1765,6 +1798,7 @@
 		</stats>
 	</item>
 	<item id="16958" name="Saber Tooth of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Increases Critical by 73. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1803,6 +1837,7 @@
 		</stats>
 	</item>
 	<item id="16959" name="General's Katzbalger of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1837,7 +1872,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16960" name="Éclair Bijou of Fortune" additionalName="90-day" type="Weapon">
+	<item id="16960" name="?clair Bijou of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1877,6 +1913,7 @@
 		</stats>
 	</item>
 	<item id="16961" name="Colichemarde of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Increases Atk. Spd. by about 6%. There is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1916,6 +1953,7 @@
 		</stats>
 	</item>
 	<item id="16962" name="Admiral's Estoc of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Increases Atk. Spd. by about 7%. There is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1954,7 +1992,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16963" name="Grand Épée of Fortune" additionalName="90-day" type="Weapon">
+	<item id="16963" name="Grand ?p?e of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Has a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1993,6 +2032,7 @@
 		</stats>
 	</item>
 	<item id="16964" name="Screaming Vengeance of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. Increases Critical by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2032,6 +2072,7 @@
 		</stats>
 	</item>
 	<item id="16965" name="Hell Hound of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. MP consumption decreases by about 12% during skill use. -->
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2071,6 +2112,7 @@
 		</stats>
 	</item>
 	<item id="16966" name="Sharpshooter of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. MP consumption decreases by about 12% during skill use. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2110,6 +2152,7 @@
 		</stats>
 	</item>
 	<item id="16967" name="Cranequin of Fortune" additionalName="90-day" type="Weapon">
+		<!-- Kamael-exclusive Weapon. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2146,6 +2189,7 @@
 		</stats>
 	</item>
 	<item id="16968" name="Knight Class Equipment Set" additionalName="90-day" type="EtcItem">
+		<!-- Equipment Set for a Knight class. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2179,6 +2223,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16969" name="Mage Class Equipment Set" additionalName="90-day" type="EtcItem">
+		<!-- Equipment Set for a Mage class. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2210,6 +2255,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16970" name="Warrior Class Equipment Set" additionalName="90-day" type="EtcItem">
+		<!-- Equipment Set for a Warrior class. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2243,6 +2289,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16971" name="Rogue Class Equipment Set" additionalName="90-day" type="EtcItem">
+		<!-- Equipment Set for a Rogue class. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2275,6 +2322,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16972" name="Kamael Class Equipment Set" additionalName="90-day" type="EtcItem">
+		<!-- Equipment Set for a Kamael class. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2308,6 +2356,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16973" name="Orc Fighter Class Equipment Set" additionalName="90-day" type="EtcItem">
+		<!-- Equipment Set for an Orc Fighter class. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2347,6 +2396,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16974" name="Orc Mage Class Equipment Set" additionalName="90-day" type="EtcItem">
+		<!-- Equipment Set for an Orc Mage class. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2385,6 +2435,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16975" name="Fortune Heavy Armor of Nightmare Set Pack (A-grade)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire a Fortune Heavy Armor of Nightmare Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2409,6 +2460,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16976" name="Doom Plate Armor of Fortune Set Pack (B-grade)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire a Doom Plate Armor of Fortune Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2433,6 +2485,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16977" name="Full Plate of Fortune Set Pack (C-grade)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire a Full Plate of Fortune Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2457,6 +2510,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16978" name="Brigandine of Fortune Set Pack (D-grade)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire a Brigandine of Fortune Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2482,6 +2536,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16979" name="Dark Crystal Light Armor of Fortune Set Pack (A-grade)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire a Dark Crystal Light Armor of Fortune Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2506,6 +2561,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16980" name="Leather Armor of Doom of Fortune Set Pack (B-grade)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire a Leather Armor of Doom of Fortune Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2529,6 +2585,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16981" name="Plated Leather of Fortune Set Pack (C-grade)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire a Plated Leather of Fortune Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2553,6 +2610,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16982" name="Manticore Leather of Fortune Set Pack (D-grade)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire a Manticore Leather of Fortune Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2577,6 +2635,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16983" name="Dark Crystal Robe of Fortune Set Pack (A-grade)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire a Dark Crystal Robe of Fortune Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2601,6 +2660,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16984" name="Avadon Robe of Fortune Set Pack (B-grade)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire an Avadon Robe of Fortune Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2625,6 +2685,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16985" name="Karmian of Fortune Set Pack (C-grade)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire a Karmian of Fortune Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2649,6 +2710,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16986" name="Mithril Tunic of Fortune Set Pack (D-grade)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire a Mithril Tunic of Fortune Set. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2673,6 +2735,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16987" name="Magic Weapon of Fortune Set" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire 6 magic weapons at S~D-grade s. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2698,6 +2761,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16988" name="Dagger of Fortune Set" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire 6 daggers at S~D-grade s. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2723,6 +2787,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16989" name="Bow of Fortune Set" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire 6 bows at S~D-grade s. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2748,6 +2813,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16990" name="Blunt Weapon of Fortune Set" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire 6 blunts at S~D-grade s. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2773,6 +2839,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16991" name="One-handed Sword of Fortune Set" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire 6 one-handed swords at S~D-grade s. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2798,6 +2865,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16992" name="Two-handed Sword of Fortune Set" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire 6 two-handed swords at S~D-grade s. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2823,6 +2891,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16993" name="Fist Weapon of Fortune Set" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire 6 fist weapons at S~D-grade s. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2848,6 +2917,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16994" name="Dualsword of Fortune Set" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire 6 dualswords at S~D-grade s. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2873,6 +2943,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16995" name="Spear of Fortune Set" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire 6 spears at S~D-grade s. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2898,6 +2969,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16996" name="Ancient Sword of Fortune Set" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire 6 Ancient Swords at S~D-grade s. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2923,6 +2995,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16997" name="Short Sword of Fortune Set" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire 6 short swords at S~D-grade s. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2948,6 +3021,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16998" name="Crossbow of Fortune Set" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire 6 crossbows at S~D-grade s. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2973,6 +3047,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16999" name="Jewelry Pack (A-grade)" additionalName="90-day" type="EtcItem">
+		<!-- When used, you acquire a Jewelry Set of Fortune (A-grade). Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

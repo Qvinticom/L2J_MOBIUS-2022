@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="13900" name="Sealed Magic Pin (A-grade)" type="EtcItem">
+		<!-- Can be attached to Sealed Magic Pin and Belt. And the seal can be cancelled through the weaver Olf Kanore and Olf Adams. -->
 		<set name="icon" val="icon.pin_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -9,6 +10,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13901" name="Sealed Magic Pin (S-grade)" type="EtcItem">
+		<!-- Can be attached to Sealed Magic Pin and Belt. And the seal can be cancelled through the weaver Olf Kanore and Olf Adams. -->
 		<set name="icon" val="icon.pin_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -17,6 +19,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13902" name="Low-grade Magic Pin (C-grade)" type="EtcItem">
+		<!-- Low-grade Magic Pin that can improve the function of Cloth Belt. -->
 		<set name="icon" val="icon.pin_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -25,6 +28,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13903" name="Mid-grade Magic Pin (C-grade)" type="EtcItem">
+		<!-- Magic Pin that can improve the function of Cloth Belt. -->
 		<set name="icon" val="icon.pin_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -33,6 +37,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13904" name="High-grade Magic Pin (C-grade)" type="EtcItem">
+		<!-- High-grade Magic Pin that can improve the function of Cloth Belt. -->
 		<set name="icon" val="icon.pin_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -41,6 +46,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13905" name="Top-grade Magic Pin (C-grade)" type="EtcItem">
+		<!-- Top-grade Magic Pin that can improve the function of Cloth Belt. -->
 		<set name="icon" val="icon.pin_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -49,6 +55,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13906" name="Low-grade Magic Pin (B-grade)" type="EtcItem">
+		<!-- Low-grade Magic Pin that can improve the function of Leather Belt. -->
 		<set name="icon" val="icon.pin_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -57,6 +64,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13907" name="Mid-grade Magic Pin (B-grade)" type="EtcItem">
+		<!-- Magic Pin that can improve the function of Leather Belt. -->
 		<set name="icon" val="icon.pin_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -65,6 +73,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13908" name="High-grade Magic Pin (B-grade)" type="EtcItem">
+		<!-- High-grade Magic Pin that can improve the function of Leather Belt. -->
 		<set name="icon" val="icon.pin_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -73,6 +82,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13909" name="Top-grade Magic Pin (B-grade)" type="EtcItem">
+		<!-- Top-grade Magic Pin that can improve the function of Leather Belt. -->
 		<set name="icon" val="icon.pin_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -81,6 +91,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13910" name="Low-grade Magic Pin (A-grade)" type="EtcItem">
+		<!-- Low-grade Magic Pin that can improve the function of Iron Belt. -->
 		<set name="icon" val="icon.pin_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -89,6 +100,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13911" name="Mid-grade Magic Pin (A-grade)" type="EtcItem">
+		<!-- Magic Pin that can improve the function of Iron Belt. -->
 		<set name="icon" val="icon.pin_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -97,6 +109,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13912" name="High-grade Magic Pin (A-grade)" type="EtcItem">
+		<!-- High-grade Magic Pin that can improve the function of Iron Belt. -->
 		<set name="icon" val="icon.pin_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -105,6 +118,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13913" name="Top-grade Magic Pin (A-grade)" type="EtcItem">
+		<!-- Top-grade Magic Pin that can improve the function of Iron Belt. -->
 		<set name="icon" val="icon.pin_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -113,6 +127,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13914" name="Low-grade Magic Pin (S-grade)" type="EtcItem">
+		<!-- Low-grade Magic Pin that can improve the function of Mithril Belt. -->
 		<set name="icon" val="icon.pin_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -121,6 +136,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13915" name="Mid-grade Magic Pin (S-grade)" type="EtcItem">
+		<!-- Magic Pin that can improve the function of Mithril Belt. -->
 		<set name="icon" val="icon.pin_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -129,6 +145,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13916" name="High-grade Magic Pin (S-grade)" type="EtcItem">
+		<!-- High-grade Magic Pin that can improve the function of Mithril Belt. -->
 		<set name="icon" val="icon.pin_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -137,6 +154,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13917" name="Top-grade Magic Pin (S-grade)" type="EtcItem">
+		<!-- Top-grade Magic Pin that can improve the function of Mithril Belt. -->
 		<set name="icon" val="icon.pin_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -145,6 +163,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13918" name="Sealed Magic Pouch (C-grade)" type="EtcItem">
+		<!-- Item can be attached to a Sealed Magic Belt by weaver Olf Kanore or Olf Adams. They can also unseal these items. -->
 		<set name="icon" val="icon.pouch_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -153,6 +172,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13919" name="Sealed Magic Pouch (B-grade)" type="EtcItem">
+		<!-- Item can be attached to a Sealed Magic Belt by weaver Olf Kanore or Olf Adams. They can also unseal these items. -->
 		<set name="icon" val="icon.pouch_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -161,6 +181,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13920" name="Sealed Magic Pouch (A-grade)" type="EtcItem">
+		<!-- Item can be attached to a Sealed Magic Belt by weaver Olf Kanore or Olf Adams. They can also unseal these items. -->
 		<set name="icon" val="icon.pouch_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -169,6 +190,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13921" name="Sealed Magic Pouch (S-grade)" type="EtcItem">
+		<!-- Item can be attached to a Sealed Magic Belt by weaver Olf Kanore or Olf Adams. They can also unseal these items. -->
 		<set name="icon" val="icon.pouch_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -177,6 +199,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13922" name="Low-grade Magic Pouch (C-grade)" type="EtcItem">
+		<!-- Low-grade Magic Pouch that can improve the function of Cloth Belt. -->
 		<set name="icon" val="icon.pouch_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -185,6 +208,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13923" name="Mid-grade Magic Pouch (C-grade)" type="EtcItem">
+		<!-- Magic Pouch that can improve the function of Cloth Belt. -->
 		<set name="icon" val="icon.pouch_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -193,6 +217,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13924" name="High-grade Magic Pouch (C-grade)" type="EtcItem">
+		<!-- High-grade Magic Pouch that can improve the function of Cloth Belt. -->
 		<set name="icon" val="icon.pouch_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -201,6 +226,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13925" name="Top-grade Magic Pouch (C-grade)" type="EtcItem">
+		<!-- Top-grade Magic Pouch that can improve the function of Cloth Belt. -->
 		<set name="icon" val="icon.pouch_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -209,6 +235,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13926" name="Low-grade Magic Pouch (B-grade)" type="EtcItem">
+		<!-- Low-grade Magic Pouch that can improve the function of Leather Belt. -->
 		<set name="icon" val="icon.pouch_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -217,6 +244,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13927" name="Mid-grade Magic Pouch (B-grade)" type="EtcItem">
+		<!-- Magic Pouch that can improve the function of Leather Belt. -->
 		<set name="icon" val="icon.pouch_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -225,6 +253,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13928" name="High-grade Magic Pouch (B-grade)" type="EtcItem">
+		<!-- High-grade Magic Pouch that can improve the function of Leather Belt. -->
 		<set name="icon" val="icon.pouch_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -233,6 +262,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13929" name="Top-grade Magic Pouch (B-grade)" type="EtcItem">
+		<!-- Top-grade Magic Pouch that can improve the function of Leather Belt. -->
 		<set name="icon" val="icon.pouch_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -241,6 +271,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13930" name="Low-grade Magic Pouch (A-grade)" type="EtcItem">
+		<!-- Low-grade Magic Pouch that can improve the function of Iron Belt. -->
 		<set name="icon" val="icon.pouch_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -249,6 +280,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13931" name="Mid-grade Magic Pouch (A-grade)" type="EtcItem">
+		<!-- Magic Pouch that can improve the function of Iron Belt. -->
 		<set name="icon" val="icon.pouch_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -257,6 +289,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13932" name="High-grade Magic Pouch (A-grade)" type="EtcItem">
+		<!-- High-grade Magic Pouch that can improve the function of Iron Belt. -->
 		<set name="icon" val="icon.pouch_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -265,6 +298,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13933" name="Top-grade Magic Pouch (A-grade)" type="EtcItem">
+		<!-- Top-grade Magic Pouch that can improve the function of Iron Belt. -->
 		<set name="icon" val="icon.pouch_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -273,6 +307,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13934" name="Low-grade Magic Pouch (S-grade)" type="EtcItem">
+		<!-- Low-grade Magic Pouch that can improve the function of Mithril Belt. -->
 		<set name="icon" val="icon.pouch_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -281,6 +316,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13935" name="Mid-grade Magic Pouch (S-grade)" type="EtcItem">
+		<!-- Magic Pouch that can improve the function of Mithril Belt. -->
 		<set name="icon" val="icon.pouch_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -289,6 +325,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13936" name="High-grade Magic Pouch (S-grade)" type="EtcItem">
+		<!-- High-grade Magic Pouch that can improve the function of Mithril Belt. -->
 		<set name="icon" val="icon.pouch_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -297,6 +334,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13937" name="Top-grade Magic Pouch (S-grade)" type="EtcItem">
+		<!-- Top-grade Magic Pouch that can improve the function of Mithril Belt. -->
 		<set name="icon" val="icon.pouch_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -305,6 +343,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="13938" name="Low-grade Magic Pouch Cloth Belt" type="Armor">
+		<!-- Inventory Slot + 9. -->
 		<set name="icon" val="icon.armor_magic_pouch_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -326,6 +365,7 @@
 		</stats>
 	</item>
 	<item id="13939" name="Standard Magic Pouch Cloth Belt" type="Armor">
+		<!-- Inventory Slot + 12. -->
 		<set name="icon" val="icon.armor_magic_pouch_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -347,6 +387,7 @@
 		</stats>
 	</item>
 	<item id="13940" name="High-grade Magic Pouch Cloth Belt" type="Armor">
+		<!-- Inventory Slot + 15. -->
 		<set name="icon" val="icon.armor_magic_pouch_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -368,6 +409,7 @@
 		</stats>
 	</item>
 	<item id="13941" name="Top-grade Magic Pouch Cloth Belt" type="Armor">
+		<!-- Inventory Slot + 18. -->
 		<set name="icon" val="icon.armor_magic_pouch_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -389,6 +431,7 @@
 		</stats>
 	</item>
 	<item id="13942" name="Low-grade Magic Pouch Leather Belt" type="Armor">
+		<!-- Inventory Slot + 15. -->
 		<set name="icon" val="icon.armor_magic_pouch_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -410,6 +453,7 @@
 		</stats>
 	</item>
 	<item id="13943" name="Standard Magic Pouch Leather Belt" type="Armor">
+		<!-- Inventory Slot + 18. -->
 		<set name="icon" val="icon.armor_magic_pouch_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -431,6 +475,7 @@
 		</stats>
 	</item>
 	<item id="13944" name="High-grade Magic Pouch Leather Belt" type="Armor">
+		<!-- Inventory Slot + 21. -->
 		<set name="icon" val="icon.armor_magic_pouch_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -452,6 +497,7 @@
 		</stats>
 	</item>
 	<item id="13945" name="Top-grade Magic Pouch Leather Belt" type="Armor">
+		<!-- Inventory Slot + 24. -->
 		<set name="icon" val="icon.armor_magic_pouch_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -473,6 +519,7 @@
 		</stats>
 	</item>
 	<item id="13946" name="Low-grade Magic Pouch Iron Belt" type="Armor">
+		<!-- Inventory Slot + 21. -->
 		<set name="icon" val="icon.armor_magic_pouch_belt_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -494,6 +541,7 @@
 		</stats>
 	</item>
 	<item id="13947" name="Standard Magic Pouch Iron Belt" type="Armor">
+		<!-- Inventory Slot + 24. -->
 		<set name="icon" val="icon.armor_magic_pouch_belt_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -515,6 +563,7 @@
 		</stats>
 	</item>
 	<item id="13948" name="High-grade Magic Pouch Iron Belt" type="Armor">
+		<!-- Inventory Slot + 27. -->
 		<set name="icon" val="icon.armor_magic_pouch_belt_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -536,6 +585,7 @@
 		</stats>
 	</item>
 	<item id="13949" name="Top-grade Magic Pouch Iron Belt" type="Armor">
+		<!-- Inventory Slot + 30. -->
 		<set name="icon" val="icon.armor_magic_pouch_belt_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -557,6 +607,7 @@
 		</stats>
 	</item>
 	<item id="13950" name="Low-grade Magic Pouch Mithril Belt" type="Armor">
+		<!-- Inventory Slot + 27. -->
 		<set name="icon" val="icon.armor_magic_pouch_belt_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -578,6 +629,7 @@
 		</stats>
 	</item>
 	<item id="13951" name="Standard Magic Pouch Mithril Belt" type="Armor">
+		<!-- Inventory Slot + 30. -->
 		<set name="icon" val="icon.armor_magic_pouch_belt_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -599,6 +651,7 @@
 		</stats>
 	</item>
 	<item id="13952" name="High-grade Magic Pouch Mithril Belt" type="Armor">
+		<!-- Inventory Slot + 33. -->
 		<set name="icon" val="icon.armor_magic_pouch_belt_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -620,6 +673,7 @@
 		</stats>
 	</item>
 	<item id="13953" name="Top-grade Magic Pouch Mithril Belt" type="Armor">
+		<!-- Inventory Slot + 36. -->
 		<set name="icon" val="icon.armor_magic_pouch_belt_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -641,6 +695,7 @@
 		</stats>
 	</item>
 	<item id="13954" name="Low-grade Magic Pin Cloth Belt" type="Armor">
+		<!-- Weight + 3000. -->
 		<set name="icon" val="icon.armor_magic_pin_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -662,6 +717,7 @@
 		</stats>
 	</item>
 	<item id="13955" name="Standard Magic Pin Cloth Belt" type="Armor">
+		<!-- Weight + 4000. -->
 		<set name="icon" val="icon.armor_magic_pin_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -683,6 +739,7 @@
 		</stats>
 	</item>
 	<item id="13956" name="High-grade Magic Pin Cloth Belt" type="Armor">
+		<!-- Weight + 5000. -->
 		<set name="icon" val="icon.armor_magic_pin_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -704,6 +761,7 @@
 		</stats>
 	</item>
 	<item id="13957" name="Top-grade Magic Pin Cloth Belt" type="Armor">
+		<!-- Weight + 6000. -->
 		<set name="icon" val="icon.armor_magic_pin_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -725,6 +783,7 @@
 		</stats>
 	</item>
 	<item id="13958" name="Low-grade Magic Pin Leather Belt" type="Armor">
+		<!-- Weight + 5000. -->
 		<set name="icon" val="icon.armor_magic_pin_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -746,6 +805,7 @@
 		</stats>
 	</item>
 	<item id="13959" name="Standard Magic Pin Leather Belt" type="Armor">
+		<!-- Weight + 6000. -->
 		<set name="icon" val="icon.armor_magic_pin_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -767,6 +827,7 @@
 		</stats>
 	</item>
 	<item id="13960" name="High-grade Magic Pin Leather Belt" type="Armor">
+		<!-- Weight + 7000. -->
 		<set name="icon" val="icon.armor_magic_pin_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -788,6 +849,7 @@
 		</stats>
 	</item>
 	<item id="13961" name="Top-grade Magic Pin Leather Belt" type="Armor">
+		<!-- Weight + 8000. -->
 		<set name="icon" val="icon.armor_magic_pin_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -809,6 +871,7 @@
 		</stats>
 	</item>
 	<item id="13962" name="Low-grade Magic Pin Iron Belt" type="Armor">
+		<!-- Weight + 7000. -->
 		<set name="icon" val="icon.armor_magic_pin_belt_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -830,6 +893,7 @@
 		</stats>
 	</item>
 	<item id="13963" name="Standard Magic Pin Iron Belt" type="Armor">
+		<!-- Weight + 8000. -->
 		<set name="icon" val="icon.armor_magic_pin_belt_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -851,6 +915,7 @@
 		</stats>
 	</item>
 	<item id="13964" name="High-grade Magic Pin Iron Belt" type="Armor">
+		<!-- Weight + 9000. -->
 		<set name="icon" val="icon.armor_magic_pin_belt_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -872,6 +937,7 @@
 		</stats>
 	</item>
 	<item id="13965" name="Top-grade Magic Pin Iron Belt" type="Armor">
+		<!-- Weight + 10000. -->
 		<set name="icon" val="icon.armor_magic_pin_belt_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -893,6 +959,7 @@
 		</stats>
 	</item>
 	<item id="13966" name="Low-grade Magic Pin Mithril Belt" type="Armor">
+		<!-- Weight + 9000. -->
 		<set name="icon" val="icon.armor_magic_pin_belt_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -914,6 +981,7 @@
 		</stats>
 	</item>
 	<item id="13967" name="Standard Magic Pin Mithril Belt" type="Armor">
+		<!-- Weight + 10000. -->
 		<set name="icon" val="icon.armor_magic_pin_belt_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -935,6 +1003,7 @@
 		</stats>
 	</item>
 	<item id="13968" name="High-grade Magic Pin Mithril Belt" type="Armor">
+		<!-- Weight + 11000. -->
 		<set name="icon" val="icon.armor_magic_pin_belt_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -956,6 +1025,7 @@
 		</stats>
 	</item>
 	<item id="13969" name="Top-grade Magic Pin Mithril Belt" type="Armor">
+		<!-- Weight + 12000. -->
 		<set name="icon" val="icon.armor_magic_pin_belt_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -977,6 +1047,7 @@
 		</stats>
 	</item>
 	<item id="13970" name="Spellbook: Star Stone Extraction Skill" type="EtcItem">
+		<!-- Collection suppleMental scroll created for Adventurers who aren't familiar with collecting Star Stones. -->
 		<set name="icon" val="icon.etc_codex_of_giant_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -986,6 +1057,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13971" name="Fantasy Red Boing Hammer" type="Weapon">
+		<!-- Fantasy Isle reward item. It enlarges the target's head at a certain rate with attacks. -->
 		<set name="icon" val="icon.weapon_bbyong_hammer_a_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1022,6 +1094,7 @@
 		</stats>
 	</item>
 	<item id="13972" name="Fantasy Blue Boing Hammer" type="Weapon">
+		<!-- Fantasy Isle reward item. It enlarges the target's head at a certain rate with attacks. -->
 		<set name="icon" val="icon.weapon_bbyong_hammer_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1058,6 +1131,7 @@
 		</stats>
 	</item>
 	<item id="13973" name="Small Fantasy Red Boing Hammer" type="Weapon">
+		<!-- Fantasy Isle reward item. It enlarges the target's head at a certain rate with attacks. -->
 		<set name="icon" val="icon.weapon_bbyong_hammer_c_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1094,6 +1168,7 @@
 		</stats>
 	</item>
 	<item id="13974" name="Small Fantasy Blue Boing Hammer" type="Weapon">
+		<!-- Fantasy Isle reward item. It enlarges the target's head at a certain rate with attacks. -->
 		<set name="icon" val="icon.weapon_bbyong_hammer_d_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1440,6 +1515,7 @@
 		</stats>
 	</item>
 	<item id="13988" name="Dynasty Weapon Pack (Event)" type="EtcItem">
+		<!-- Can receive one of the event's top reward items, a Dynasty weapon item. You are a lucky person to receive this prize. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1458,6 +1534,7 @@
 		</skills>
 	</item>
 	<item id="13989" name="Dynasty Armor Pack (Event)" type="EtcItem">
+		<!-- Can receive one of the event's top reward items, a Dynasty armor item. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1476,6 +1553,7 @@
 		</skills>
 	</item>
 	<item id="13990" name="Weapon Pack (S-grade) (Event)" type="EtcItem">
+		<!-- Double-click to open this item and receive an S-grade Weapon. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1494,6 +1572,7 @@
 		</skills>
 	</item>
 	<item id="13991" name="Armor Pack (S-grade) (Event)" type="EtcItem">
+		<!-- Double-click to open this item and receive a sealed S-grade Armor Fragment. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1512,6 +1591,7 @@
 		</skills>
 	</item>
 	<item id="13992" name="Accessory Pack (S-grade) (Event)" type="EtcItem">
+		<!-- Double-click to open this item and receive a sealed S-grade Accessory. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1530,6 +1610,7 @@
 		</skills>
 	</item>
 	<item id="13993" name="Design: Fire Crystal" type="EtcItem">
+		<!-- Design for making a Fire Crystal. Requires Create Common item level 9. Success rate is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i06" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1544,6 +1625,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="13994" name="Design: Water Crystal" type="EtcItem">
+		<!-- Design for making a Water Crystal. Requires Create Common item level 9. Success rate is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i07" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1558,6 +1640,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="13995" name="Design: Wind Crystal" type="EtcItem">
+		<!-- Design for making a Wind Crystal. Requires Create Common item level 9. Success rate is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i08" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1572,6 +1655,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="13996" name="Design: Earth Crystal" type="EtcItem">
+		<!-- Design for making an Earth Crystal. Requires Create Common item level 9. Success rate is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i06" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1586,6 +1670,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="13997" name="Design: Dark Crystal" type="EtcItem">
+		<!-- Design for making a Dark Crystal. Requires Create Common item level 9. Success rate is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i07" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1600,6 +1685,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="13998" name="Design: Holy Crystal" type="EtcItem">
+		<!-- Design for making a Holy Crystal. Requires Create Common item level 9. Success rate is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i08" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1614,6 +1700,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="13999" name="Gludio Supply Box - Hair Accessory" type="EtcItem">
+		<!-- Pouch bearing the unique pattern of Gludio. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />

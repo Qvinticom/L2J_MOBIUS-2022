@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="16100" name="Refined Green Skeleton Circlet" type="Armor">
+		<!-- Refined Green Skeleton Circlet. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_animal_warrior_skeleton_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -14,6 +15,7 @@
 		<set name="price" val="6000000" />
 	</item>
 	<item id="16101" name="Refined Brown Skeleton Circlet" type="Armor">
+		<!-- Refined Brown Skeleton Circlet. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_animal_rage_skeleton_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -27,6 +29,7 @@
 		<set name="price" val="6000000" />
 	</item>
 	<item id="16102" name="Refined Shark Hat" type="Armor">
+		<!-- Refined Shark Hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_shark_of_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -40,6 +43,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="16103" name="Chic Gold Horn Cap" type="Armor">
+		<!-- Chic Gold Horn Cap. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_horn01_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -53,6 +57,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="16104" name="Chic Silver Horn Cap" type="Armor">
+		<!-- Chic Silver Horn Cap. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_horn01_hat_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -66,6 +71,7 @@
 		<set name="price" val="6000000" />
 	</item>
 	<item id="16105" name="Refined Penguin Hat" type="Armor">
+		<!-- Refined Penguin Hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_penguin_of_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -79,6 +85,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="16106" name="Refined Brown Turban" type="Armor">
+		<!-- Refined Brown Turban. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_turban_yellow_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -92,6 +99,7 @@
 		<set name="price" val="6000000" />
 	</item>
 	<item id="16107" name="Refined Yellow Turban" type="Armor">
+		<!-- Refined Yellow Turban. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_turban_yellow_hat_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -105,6 +113,7 @@
 		<set name="price" val="6000000" />
 	</item>
 	<item id="16108" name="Refined Turtle Hat" type="Armor">
+		<!-- Refined Turtle Hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_turtle_of_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -118,6 +127,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="16109" name="Refined Cow Hat" type="Armor">
+		<!-- Refined Cow Hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_cow_of_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -131,6 +141,7 @@
 		<set name="price" val="6000000" />
 	</item>
 	<item id="16110" name="Recipe: Refined Black Skeleton Circlet (10%)" type="EtcItem">
+		<!-- All race crafting possible. Recipe needed to make a Refined Black Skeleton Circlet. Requires the Create Common Item skill level 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -145,6 +156,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="16111" name="Recipe: Refined Orange Skeleton Circlet (10%)" type="EtcItem">
+		<!-- All race crafting possible. Recipe needed to make a Refined Orange Skeleton Circlet. Requires the Create Common Item skill level 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -159,6 +171,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="16112" name="Recipe: Refined Green Skeleton Circlet (10%)" type="EtcItem">
+		<!-- All race crafting possible. Recipe needed to make a Refined Green Skeleton Circlet. Requires the Create Common Item skill level 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -173,6 +186,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="16113" name="Recipe: Refined Brown Skeleton Circlet (10%)" type="EtcItem">
+		<!-- All race crafting possible. Recipe needed to make a Refined Brown Skeleton Circlet. Requires the Create Common Item skill level 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -187,6 +201,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="16114" name="Recipe: Refined Shark Hat (10%)" type="EtcItem">
+		<!-- All race crafting possible. Recipe needed to make a Refined Shark Hat. Requires the Create Common Item skill level 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -201,6 +216,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="16115" name="Recipe: Chick Gold Horn Cap (10%)" type="EtcItem">
+		<!-- All race crafting possible. Recipe needed to make a Chic Gold Horn Cap. Requires the Create Common Item skill level 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -215,6 +231,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="16116" name="Recipe: Chick Silver Horn Cap (10%)" type="EtcItem">
+		<!-- All race crafting possible. Recipe needed to make a Chic Silver Horn Cap. Requires the Create Common Item skill level 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -229,6 +246,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="16117" name="Recipe: Refined Penguin Hat (10%)" type="EtcItem">
+		<!-- All race crafting possible. Recipe needed to make a Refined Penguin Hat. Requires the Create Common Item skill level 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -243,6 +261,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="16118" name="Recipe: Refined Brown Turban (10%)" type="EtcItem">
+		<!-- All race crafting possible. Recipe needed to make a Refined Brown Turban. Requires the Create Common Item skill level 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -257,6 +276,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="16119" name="Recipe: Refined Yellow Turban (10%)" type="EtcItem">
+		<!-- All race crafting possible. Recipe needed to make a Refined Yellow Turban. Requires the Create Common Item skill level 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -271,6 +291,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="16120" name="Recipe: Refined Turtle Hat (10%)" type="EtcItem">
+		<!-- All race crafting possible. Recipe needed to make a Refined Turtle Hat. Requires the Create Common Item skill level 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -285,6 +306,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="16121" name="Recipe: Refined Cow Hat (10%)" type="EtcItem">
+		<!-- All race crafting possible. Recipe needed to make a Refined Cow Hat. Requires the Create Common Item skill level 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -299,6 +321,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="16122" name="Refined Black Skeleton Circlet Piece" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make a Refined Black Skeleton Circlet. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -310,6 +333,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="16123" name="Refined Orange Skeleton Circlet Piece" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make a Refined Orange Skeleton Circlet. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -321,6 +345,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="16124" name="Refined Green Skeleton Circlet Piece" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make a Refined Green Skeleton Circlet. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -332,6 +357,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="16125" name="Refined Brown Skeleton Circlet Piece" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make a Refined Brown Skeleton Circlet. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -343,6 +369,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="16126" name="Refined Shark Hat Fabric" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make a Refined Shark Hat. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -354,6 +381,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="16127" name="Chic Gold Horn Cap Fabric" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make a Chic Gold Horn Cap. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -365,6 +393,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="16128" name="Chic Silver Horn Cap Fabric" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make a Chic Silver Horn Cap. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -376,6 +405,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="16129" name="Refined Penguin Hat Fabric" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make a Refined Penguin Hat. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -387,6 +417,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="16130" name="Refined Brown Turban Fabric" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make a Refined Brown Turban. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -398,6 +429,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="16131" name="Refined Yellow Turban Fabric" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make a Refined Yellow Turban. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -409,6 +441,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="16132" name="Refined Turtle Hat Fabric" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make a Refined Turtle Hat. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -420,6 +453,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="16133" name="Refined Cow Hat Fabric" type="EtcItem">
+		<!-- Essential ingredient that a Dwarf needs to make a Refined Cow Hat. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -431,6 +465,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="16134" name="Vesper Cutter - Thunder {PvP}" type="Weapon">
+		<!-- Masterwork Item that increases P. Critical Rate. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -468,6 +503,7 @@
 		</stats>
 	</item>
 	<item id="16135" name="Vesper Slasher - Great Gale {PvP}" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -506,6 +542,7 @@
 		</stats>
 	</item>
 	<item id="16136" name="Vesper Buster - Cleverness {PvP}" type="Weapon">
+		<!-- Masterwork Item that decreases MP Consumption. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -545,6 +582,7 @@
 		</stats>
 	</item>
 	<item id="16137" name="Vesper Shaper - Great Gale {PvP}" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -583,6 +621,7 @@
 		</stats>
 	</item>
 	<item id="16138" name="Vesper Fighter - Great Gale {PvP}" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -621,6 +660,7 @@
 		</stats>
 	</item>
 	<item id="16139" name="Vesper Stormer - Thunder {PvP}" type="Weapon">
+		<!-- Masterwork Item that increases Critical Rate. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -660,6 +700,7 @@
 		</stats>
 	</item>
 	<item id="16140" name="Vesper Avenger - Landslide {PvP}" type="Weapon">
+		<!-- Masterwork Item that inflicts Stun with a certain chance during an attack. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -698,6 +739,7 @@
 		</stats>
 	</item>
 	<item id="16141" name="Vesper Retributer - Great Gale {PvP}" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -736,6 +778,7 @@
 		</stats>
 	</item>
 	<item id="16142" name="Vesper Caster - Cleverness {PvP}" type="Weapon">
+		<!-- Masterwork Item that increases Max Regeneration. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -776,6 +819,7 @@
 		</stats>
 	</item>
 	<item id="16143" name="Vesper Singer - Hail {PvP}" type="Weapon">
+		<!-- Masterwork Item that increases M. Atk. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -816,6 +860,7 @@
 		</stats>
 	</item>
 	<item id="16144" name="Vesper Thrower - Clairvoyance {PvP}" type="Weapon">
+		<!-- Masterwork Item that increases range. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -857,6 +902,7 @@
 		</stats>
 	</item>
 	<item id="16145" name="Vesper Pincer - Thunder {PvP}" type="Weapon">
+		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Vesper Cutter Conversion. Haste, Focus, or Health can be bestowed. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -899,6 +945,7 @@
 		</stats>
 	</item>
 	<item id="16146" name="Vesper Shooter - Clairvoyance {PvP}" type="Weapon">
+		<!-- Masterwork Item that increases range. Kamael-exclusive Weapon: Vesper Thrower Conversion. Bestows one of the following functions: Cheap Shot, Critical Slow, or Focus. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -942,6 +989,7 @@
 		</stats>
 	</item>
 	<item id="16147" name="Vesper Nagan - Great Gale {PvP}" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. Kamael-exclusive Weapon: Vesper Slasher Conversion. Bestows one of the following functions: Haste, Focus, or Health. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -983,6 +1031,7 @@
 		</stats>
 	</item>
 	<item id="16148" name="Vesper Dual Daggers - Great Gale" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. Dual daggers. P. Atk. Increases more than regular one-handed swords when enchanted. Can be equipped by Dagger Masters above level 81. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1023,6 +1072,7 @@
 		</stats>
 	</item>
 	<item id="16149" name="Vesper Dual Daggers - Great Gale {PvP}" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. Dual daggers, P. Atk. + more than regular one-handed swords when enchanted. Increases damage inflicted during PvP. Has a chance to cancel the target's enhanced status by more than 1 or to decrease the target's Shield Defense. during an attack. Can be equipped by Dagger Masters above level 81. No Soul Crystal option. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1069,6 +1119,7 @@
 		</stats>
 	</item>
 	<item id="16150" name="Vesper Dualsword - Destruction" type="Weapon">
+		<!-- Masterwork Item that increases P. Atk. When enchanted with a two-handed sword, a two-handed blunt weapon or a fist weapon, its P. Atk. Increases more than that of a regular one-handed sword. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1102,6 +1153,7 @@
 		</stats>
 	</item>
 	<item id="16151" name="Vesper Dualsword - Destruction {PvP}" type="Weapon">
+		<!-- Masterwork Item that increases P. Atk. When the dualsword is enchanted with a two-handed sword, two-handed blunt, or fist weapon, P. Atk. Increases more than if it were enchanted with a regular one-handed sword. When enchanted to 4 or more, Critical increases by 109 and Max HP increases by 10%. Increases damage inflicted during PvP. Has a chance of decreasing the shooting range of the target's bow/crossbow during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1140,6 +1192,7 @@
 		</stats>
 	</item>
 	<item id="16152" name="Skull Edge Dual Daggers" type="Weapon">
+		<!-- P. Atk. of Dual Daggers increases more than regular one-handed swords when enchanted. Can be equipped by Dagger Masters of level 81 or above. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1179,6 +1232,7 @@
 		</stats>
 	</item>
 	<item id="16153" name="Skull Edge Dual Daggers {PvP}" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dual dagger increases more significantly than that of a one-handed weapon. When enchanted to 4 or more, Critical increases by 109. Can be equipped by Dagger Masters level 81 or above. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1224,6 +1278,7 @@
 		</stats>
 	</item>
 	<item id="16154" name="Periel Dualsword" type="Weapon">
+		<!-- When enchanted with a two-handed sword, a two-handed blunt weapon or a fist weapon, its P. Atk. Increases more than that of a regular one-handed sword. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1256,6 +1311,7 @@
 		</stats>
 	</item>
 	<item id="16155" name="Periel Dualsword {PvP}" type="Weapon">
+		<!-- When enchanted with a two-handed sword, a two-handed blunt weapon or a fist weapon, its P. Atk. Increases more than that of a regular one-handed sword. When enchanted to 4 or more, increases Critical Attack by 109 and Max HP by 10%. Increases the damage inflicted during PvP. Has a chance to decrease the range of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1293,6 +1349,7 @@
 		</stats>
 	</item>
 	<item id="16156" name="Mamba Edge Dual Daggers" type="Weapon">
+		<!-- P. Atk. of daggers and dual daggers increases more than that of regular one-handed daggers when enchanted. Can be equipped by Dagger Masters level 81 or above. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1332,6 +1389,7 @@
 		</stats>
 	</item>
 	<item id="16157" name="Mamba Edge Dual Daggers {PvP}" type="Weapon">
+		<!-- P. Atk. of daggers and dual daggers increases more than that of regular one-handed daggers when enchanted. When enchanted to 4 or more, increases Critical by 109. Increases the damage inflicted during PvP. Can be equipped at above level 81 by Dagger Masters. During an attack, there is a chance to cancels the target's enhanced status by more than 1, or of decreasing the target's Shield Defense. No Soul Crystal option. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1377,6 +1435,7 @@
 		</stats>
 	</item>
 	<item id="16158" name="Eternal Core Dualsword" type="Weapon">
+		<!-- When enchanted with a two-handed sword, a two-handed blunt weapon or a fist weapon, its P. Atk. Increases more than that of a regular one-handed sword. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1409,6 +1468,7 @@
 		</stats>
 	</item>
 	<item id="16159" name="Eternal Core Dualsword {PvP}" type="Weapon">
+		<!-- When enchanted with a two-handed sword, a two-handed blunt weapon or a fist weapon, its P. Atk. Increases more than that of a regular one-handed sword. When enchanted to 4 or more, increases Critical Attack by 109 and Max HP by 10%. Increases the damage inflicted during PvP. Has a chance to decrease the range of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1446,6 +1506,7 @@
 		</stats>
 	</item>
 	<item id="16160" name="Life Stone - Lv. 85" type="EtcItem">
+		<!-- General mineral created when a stone in a monster is solidified by physical/magic hit. Key component used in weapon Augmentation by characters level 85 or above. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1459,6 +1520,7 @@
 		</cond>
 	</item>
 	<item id="16161" name="Mid-grade Life Stone - Lv. 85" type="EtcItem">
+		<!-- Mid-grade mineral created when a stone in a monster is solidified by physical/magic hit. Key component used in weapon Augmentation by characters level 85 or above. -->
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1472,6 +1534,7 @@
 		</cond>
 	</item>
 	<item id="16162" name="High-grade Life Stone - Lv. 85" type="EtcItem">
+		<!-- High-grade mineral created when a stone in a monster is solidified by physical/magic hit. Key component used in weapon Augmentation by characters level 85 or above. -->
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1485,6 +1548,7 @@
 		</cond>
 	</item>
 	<item id="16163" name="Top-grade Life Stone - Lv. 85" type="EtcItem">
+		<!-- Top-grade mineral created when a stone in a monster is solidified by physical/magic hit. Key component used in weapon Augmentation by characters level 85 or above. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1498,6 +1562,7 @@
 		</cond>
 	</item>
 	<item id="16164" name="Life Stone - Lv. 86" type="EtcItem">
+		<!-- General mineral created when a stone in a monster is solidified by physical/magic hit. Key component used in weapon Augmentation by characters level 85 or above. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1511,6 +1576,7 @@
 		</cond>
 	</item>
 	<item id="16165" name="Mid-grade Life Stone - Lv. 86" type="EtcItem">
+		<!-- Mid-grade mineral created when a stone in a monster is solidified by physical/magic hit. Key component used in weapon Augmentation by characters level 85 or above. -->
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1524,6 +1590,7 @@
 		</cond>
 	</item>
 	<item id="16166" name="High-grade Life Stone - Lv. 86" type="EtcItem">
+		<!-- High-grade mineral created when a stone in a monster is solidified by physical/magic hit. Key component used in weapon Augmentation by characters level 85 or above. -->
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1537,6 +1604,7 @@
 		</cond>
 	</item>
 	<item id="16167" name="Top-grade Life Stone - Lv. 86" type="EtcItem">
+		<!-- Top-grade mineral created when a stone in a monster is solidified by physical/magic hit. Key component used in weapon Augmentation by characters level 85 or above. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1550,6 +1618,7 @@
 		</cond>
 	</item>
 	<item id="16168" name="Elegia Breastplate {PvP}" type="Armor">
+		<!-- Decreases damage received during PvP. Has a chance of decreasing all Speeds of the attacker. -->
 		<set name="icon" val="icon.armor_t97_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1580,6 +1649,7 @@
 		</stats>
 	</item>
 	<item id="16169" name="Elegia Leather Breastplate {PvP}" type="Armor">
+		<!-- Decreases damage received during PvP. Has a chance of canceling the opponent's target when attacked. -->
 		<set name="icon" val="icon.armor_t98_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1607,6 +1677,7 @@
 		</stats>
 	</item>
 	<item id="16170" name="Elegia Tunic {PvP}" type="Armor">
+		<!-- Decreases damage received during PvP. Has a chance of decreasing the chance of receiving Critical Damage and P. Critical Damage amount. -->
 		<set name="icon" val="icon.armor_t99_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1638,6 +1709,7 @@
 		</stats>
 	</item>
 	<item id="16171" name="Vorpal Breastplate {PvP}" type="Armor">
+		<!-- Decreases damage received during PvP. Has a chance of decreasing all Speeds of the attacker. -->
 		<set name="icon" val="icon.armor_t94_u_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1668,6 +1740,7 @@
 		</stats>
 	</item>
 	<item id="16172" name="Vorpal Leather Breastplate {PvP}" type="Armor">
+		<!-- Decreases damage received during PvP. Has a chance of canceling the opponent's target when attacked. -->
 		<set name="icon" val="icon.armor_t95_u_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1695,6 +1768,7 @@
 		</stats>
 	</item>
 	<item id="16173" name="Vorpal Tunic {PvP}" type="Armor">
+		<!-- Decreases damage received during PvP. Has a chance of decreasing the chance of receiving Critical Damage and P. Critical Damage amount. -->
 		<set name="icon" val="icon.armor_t96_u_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1726,6 +1800,7 @@
 		</stats>
 	</item>
 	<item id="16174" name="Moirai Breastplate {PvP}" type="Armor">
+		<!-- Decreases damage received during PvP. Has a chance of decreasing all Speeds of the attacker. -->
 		<set name="icon" val="icon.armor_t100_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1756,6 +1831,7 @@
 		</stats>
 	</item>
 	<item id="16175" name="Moirai Leather Breastplate {PvP}" type="Armor">
+		<!-- Decreases damage received during PvP. Has a chance of canceling the opponent's target when attacked. -->
 		<set name="icon" val="icon.armor_t101_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1783,6 +1859,7 @@
 		</stats>
 	</item>
 	<item id="16176" name="Moirai Tunic {PvP}" type="Armor">
+		<!-- Decreases damage received during PvP. Has a chance of decreasing the chance of receiving Critical Damage and P. Critical Damage amount. -->
 		<set name="icon" val="icon.armor_t102_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1814,6 +1891,7 @@
 		</stats>
 	</item>
 	<item id="16177" name="Life Stone: Accessory - Lv. 85" type="EtcItem">
+		<!-- Mineral stone that solidifies inside a monster by a physical or magic hit. It can be used when augmenting accessories, and characters level 85 or above can use it. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1827,6 +1905,7 @@
 		</cond>
 	</item>
 	<item id="16178" name="Life Stone: Accessory - Lv. 86" type="EtcItem">
+		<!-- Mineral stone that solidifies inside a monster by a physical or magic hit. It can be used when augmenting accessories, and characters level 85 or above can use it. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1840,6 +1919,7 @@
 		</cond>
 	</item>
 	<item id="16179" name="Vesper Cutter - Thunder {PvP}" additionalName="Haste" type="Weapon">
+		<!-- Masterwork Item that increases P. Critical Rate. <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1878,6 +1958,7 @@
 		</stats>
 	</item>
 	<item id="16180" name="Vesper Cutter - Thunder {PvP}" additionalName="Health" type="Weapon">
+		<!-- Masterwork Item that increases P. Critical Rate. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1916,6 +1997,7 @@
 		</stats>
 	</item>
 	<item id="16181" name="Vesper Cutter - Thunder {PvP}" additionalName="Focus" type="Weapon">
+		<!-- Masterwork Item that increases P. Critical Rate. <Special Option>. Increases Critical by 131. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1954,6 +2036,7 @@
 		</stats>
 	</item>
 	<item id="16182" name="Vesper Slasher - Great Gale {PvP}" additionalName="Haste" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1992,6 +2075,7 @@
 		</stats>
 	</item>
 	<item id="16183" name="Vesper Slasher - Great Gale {PvP}" additionalName="Health" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2030,6 +2114,7 @@
 		</stats>
 	</item>
 	<item id="16184" name="Vesper Slasher - Great Gale {PvP}" additionalName="Focus" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Critical by 131. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2068,6 +2153,7 @@
 		</stats>
 	</item>
 	<item id="16185" name="Vesper Buster - Cleverness {PvP}" additionalName="Mana Up" type="Weapon">
+		<!-- Masterwork Item that increases MP Recovery. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2107,6 +2193,7 @@
 		</stats>
 	</item>
 	<item id="16186" name="Vesper Buster - Cleverness {PvP}" additionalName="Acumen" type="Weapon">
+		<!-- Masterwork Item that increases MP Recovery. <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2146,6 +2233,7 @@
 		</stats>
 	</item>
 	<item id="16187" name="Vesper Buster - Cleverness {PvP}" additionalName="Magic Hold" type="Weapon">
+		<!-- Masterwork Item that increases MP Recovery. <Special Option>. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2185,6 +2273,7 @@
 		</stats>
 	</item>
 	<item id="16188" name="Vesper Shaper - Great Gale {PvP}" additionalName="Critical Damage" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. P. Atk. + 906 during a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2225,6 +2314,7 @@
 		</stats>
 	</item>
 	<item id="16189" name="Vesper Shaper - Great Gale {PvP}" additionalName="HP Drain" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of enemy's enchants, or decreasing their Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2265,6 +2355,7 @@
 		</stats>
 	</item>
 	<item id="16190" name="Vesper Shaper - Great Gale {PvP}" additionalName="Haste" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2305,6 +2396,7 @@
 		</stats>
 	</item>
 	<item id="16191" name="Vesper Fighter - Great Gale {PvP}" additionalName="Focus" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Critical by 123. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2345,6 +2437,7 @@
 		</stats>
 	</item>
 	<item id="16192" name="Vesper Fighter - Great Gale {PvP}" additionalName="Health" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2385,6 +2478,7 @@
 		</stats>
 	</item>
 	<item id="16193" name="Vesper Fighter - Great Gale {PvP}" additionalName="Critical Stun" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Inflicts Stun with about a 43% chance during a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2425,6 +2519,7 @@
 		</stats>
 	</item>
 	<item id="16194" name="Vesper Stormer - Thunder {PvP}" additionalName="Health" type="Weapon">
+		<!-- Masterwork Item that increases P. Critical Rate. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2464,6 +2559,7 @@
 		</stats>
 	</item>
 	<item id="16195" name="Vesper Stormer - Thunder {PvP}" additionalName="Guidance" type="Weapon">
+		<!-- Masterwork Item that increases P. Critical Rate. <Special Option>. Increases Accuracy by 7.5. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2503,6 +2599,7 @@
 		</stats>
 	</item>
 	<item id="16196" name="Vesper Stormer - Thunder {PvP}" additionalName="Haste" type="Weapon">
+		<!-- Masterwork Item that increases P. Critical Rate. <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2542,6 +2639,7 @@
 		</stats>
 	</item>
 	<item id="16197" name="Vesper Avenger - Landslide {PvP}" additionalName="HP Drain" type="Weapon">
+		<!-- Masterwork Item that has a chance of casting Stun on the target during an attack. <Special Option>. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2581,6 +2679,7 @@
 		</stats>
 	</item>
 	<item id="16198" name="Vesper Avenger - Landslide {PvP}" additionalName="Health" type="Weapon">
+		<!-- Masterwork Item that has a chance of casting Stun on the target during an attack. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2620,6 +2719,7 @@
 		</stats>
 	</item>
 	<item id="16199" name="Vesper Avenger - Landslide {PvP}" additionalName="HP Regeneration" type="Weapon">
+		<!-- Masterwork Item that has a chance of casting Stun on the target during an attack. <Special Option>. Increases HP Recovery Rate. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

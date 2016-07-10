@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="38400" name="Expertise Rune Pack" additionalName="C-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (C-grade) (2-hour). -->
@@ -804,7 +804,7 @@
 		</stats>
 	</item>
 	<item id="38449" name="Agathion - Blessed Capricorn" type="Armor">
-		<!-- Summons Capricorn.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
+		<!-- Summons Capricorn. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -813,7 +813,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38450" name="Agathion - Twinkling Capricorn" type="Armor">
-		<!-- Summons Capricorn.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
+		<!-- Summons Capricorn. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -822,7 +822,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38451" name="Agathion - Radiant Capricorn" type="Armor">
-		<!-- Summons Capricorn.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
+		<!-- Summons Capricorn. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -831,7 +831,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38452" name="Agathion - Capricorn" type="Armor">
-		<!-- Summons Capricorn.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
+		<!-- Summons Capricorn. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -845,7 +845,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38453" name="Agathion - Faint Capricorn" type="Armor">
-		<!-- Summons Capricorn.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
+		<!-- Summons Capricorn. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -859,7 +859,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38454" name="Agathion - Blessed Libra" type="Armor">
-		<!-- Summons Libra.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
+		<!-- Summons Libra. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -868,7 +868,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38455" name="Agathion - Twinkling Libra" type="Armor">
-		<!-- Summons Libra.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
+		<!-- Summons Libra. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -877,7 +877,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38456" name="Agathion - Radiant Libra" type="Armor">
-		<!-- Summons Libra.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
+		<!-- Summons Libra. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -886,7 +886,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38457" name="Agathion - Libra" type="Armor">
-		<!-- Summons Libra.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
+		<!-- Summons Libra. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -900,7 +900,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38458" name="Agathion - Faint Libra" type="Armor">
-		<!-- Summons Libra.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
+		<!-- Summons Libra. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -914,7 +914,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38459" name="Agathion - Blessed Aries" type="Armor">
-		<!-- Summons Aries.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
+		<!-- Summons Aries. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -923,7 +923,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38460" name="Agathion - Twinkling Aries" type="Armor">
-		<!-- Summons Aries.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
+		<!-- Summons Aries. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -932,7 +932,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38461" name="Agathion - Radiant Aries" type="Armor">
-		<!-- Summons Aries.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
+		<!-- Summons Aries. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -941,7 +941,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38462" name="Agathion - Aries" type="Armor">
-		<!-- Summons Aries.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
+		<!-- Summons Aries. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -955,7 +955,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38463" name="Agathion - Faint Aries" type="Armor">
-		<!-- Summons Aries.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
+		<!-- Summons Aries. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -969,7 +969,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38464" name="Agathion - Blessed Taurus" type="Armor">
-		<!-- Summons Taurus.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
+		<!-- Summons Taurus. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -978,7 +978,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38465" name="Agathion - Twinkling Taurus" type="Armor">
-		<!-- Summons Taurus.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
+		<!-- Summons Taurus. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -987,7 +987,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38466" name="Agathion - Radiant Taurus" type="Armor">
-		<!-- Summons Taurus.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
+		<!-- Summons Taurus. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -996,7 +996,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38467" name="Agathion - Taurus" type="Armor">
-		<!-- Summons Taurus.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
+		<!-- Summons Taurus. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1010,7 +1010,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38468" name="Agathion - Faint Taurus" type="Armor">
-		<!-- Summons Taurus.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
+		<!-- Summons Taurus. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1024,7 +1024,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38469" name="Agathion - Blessed Leo" type="Armor">
-		<!-- Summons Leo.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
+		<!-- Summons Leo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1033,7 +1033,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38470" name="Agathion - Twinkling Leo" type="Armor">
-		<!-- Summons Leo.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
+		<!-- Summons Leo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1042,7 +1042,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38471" name="Agathion - Radiant Leo" type="Armor">
-		<!-- Summons Leo.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
+		<!-- Summons Leo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1051,7 +1051,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38472" name="Agathion - Leo" type="Armor">
-		<!-- Summons Leo.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
+		<!-- Summons Leo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1065,7 +1065,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38473" name="Agathion - Faint Leo" type="Armor">
-		<!-- Summons Leo.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
+		<!-- Summons Leo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1079,7 +1079,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38474" name="Agathion - Blessed Gemini" type="Armor">
-		<!-- Summons Gemini.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
+		<!-- Summons Gemini. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1088,7 +1088,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38475" name="Agathion - Twinkling Gemini" type="Armor">
-		<!-- Summons Gemini.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
+		<!-- Summons Gemini. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1097,7 +1097,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38476" name="Agathion - Radiant Gemini" type="Armor">
-		<!-- Summons Gemini.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
+		<!-- Summons Gemini. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1106,7 +1106,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38477" name="Agathion - Gemini" type="Armor">
-		<!-- Summons Gemini.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
+		<!-- Summons Gemini. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1120,7 +1120,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38478" name="Agathion - Faint Gemini" type="Armor">
-		<!-- Summons Gemini.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
+		<!-- Summons Gemini. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1134,7 +1134,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38479" name="Agathion - Blessed Scorpio" type="Armor">
-		<!-- Summons Scorpio.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
+		<!-- Summons Scorpio. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1143,7 +1143,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38480" name="Agathion - Twinkling Scorpio" type="Armor">
-		<!-- Summons Scorpio.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
+		<!-- Summons Scorpio. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1152,7 +1152,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38481" name="Agathion - Radiant Scorpio" type="Armor">
-		<!-- Summons Scorpio.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
+		<!-- Summons Scorpio. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1161,7 +1161,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38482" name="Agathion - Scorpio" type="Armor">
-		<!-- Summons Scorpio.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
+		<!-- Summons Scorpio. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1175,7 +1175,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38483" name="Agathion - Faint Scorpio" type="Armor">
-		<!-- Summons Scorpio.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
+		<!-- Summons Scorpio. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1189,7 +1189,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38484" name="Agathion - Blessed Aquarius" type="Armor">
-		<!-- Summons Aquarius.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
+		<!-- Summons Aquarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1198,7 +1198,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38485" name="Agathion - Twinkling Aquarius" type="Armor">
-		<!-- Summons Aquarius.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
+		<!-- Summons Aquarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1207,7 +1207,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38486" name="Agathion - Radiant Aquarius" type="Armor">
-		<!-- Summons Aquarius.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
+		<!-- Summons Aquarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1216,7 +1216,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38487" name="Agathion - Aquarius" type="Armor">
-		<!-- Summons Aquarius.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
+		<!-- Summons Aquarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1230,7 +1230,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38488" name="Agathion - Faint Aquarius" type="Armor">
-		<!-- Summons Aquarius.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
+		<!-- Summons Aquarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1244,7 +1244,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38489" name="Agathion - Blessed Pisces" type="Armor">
-		<!-- Summons Pisces.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
+		<!-- Summons Pisces. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1253,7 +1253,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38490" name="Agathion - Twinkling Pisces" type="Armor">
-		<!-- Summons Pisces.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
+		<!-- Summons Pisces. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1262,7 +1262,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38491" name="Agathion - Radiant Pisces" type="Armor">
-		<!-- Summons Pisces.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
+		<!-- Summons Pisces. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1271,7 +1271,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38492" name="Agathion - Pisces" type="Armor">
-		<!-- Summons Pisces.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
+		<!-- Summons Pisces. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1285,7 +1285,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38493" name="Agathion - Faint Pisces" type="Armor">
-		<!-- Summons Pisces.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
+		<!-- Summons Pisces. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1299,7 +1299,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38494" name="Agathion - Blessed Sagittarius" type="Armor">
-		<!-- Summons Sagittarius.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
+		<!-- Summons Sagittarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1308,7 +1308,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38495" name="Agathion - Twinkling Sagittarius" type="Armor">
-		<!-- Summons Sagittarius.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
+		<!-- Summons Sagittarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1317,7 +1317,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38496" name="Agathion - Radiant Sagittarius" type="Armor">
-		<!-- Summons Sagittarius.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
+		<!-- Summons Sagittarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1326,7 +1326,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38497" name="Agathion - Sagittarius" type="Armor">
-		<!-- Summons Sagittarius.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
+		<!-- Summons Sagittarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1340,7 +1340,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38498" name="Agathion - Faint Sagittarius" type="Armor">
-		<!-- Summons Sagittarius.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
+		<!-- Summons Sagittarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1354,7 +1354,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="38499" name="Agathion - Blessed Cancer" type="Armor">
-		<!-- Summons Cancer.\n\n(Active Skill)\n1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.)\n\n(Item Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.\n2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
+		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />

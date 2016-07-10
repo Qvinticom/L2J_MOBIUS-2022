@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="9100" name="Shadow Item: Majestic Boots" type="Armor">
+		<!-- This Shadow Item contains the mirrored power of Majestic Boots. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.armor_t84_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -22,6 +23,7 @@
 		</stats>
 	</item>
 	<item id="9101" name="Shadow Item: Majestic Robe" type="Armor">
+		<!-- This Shadow Item contains the mirrored power of a Majestic Robe. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.armor_t85_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -48,6 +50,7 @@
 		</stats>
 	</item>
 	<item id="9102" name="Shadow Item: Majestic Gauntlets" type="Armor">
+		<!-- This Shadow Item contains the mirrored power of Majestic Gauntlets. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.armor_t85_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -72,6 +75,7 @@
 		</stats>
 	</item>
 	<item id="9103" name="Shadow Item: Majestic Boots" type="Armor">
+		<!-- This Shadow Item contains the mirrored power of Majestic Boots. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.armor_t85_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -96,6 +100,7 @@
 		</stats>
 	</item>
 	<item id="9104" name="Compound Bow and Wooden Arrow" type="EtcItem">
+		<!-- One can receive a Compound Bow and wooden arrows by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -116,6 +121,7 @@
 		</skills>
 	</item>
 	<item id="9105" name="Gastraphetes and Bone Arrow" type="EtcItem">
+		<!-- One can receive a Gastraphetes and bone arrows by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -136,6 +142,7 @@
 		</skills>
 	</item>
 	<item id="9106" name="Akat Longbow and Steel Arrow" type="EtcItem">
+		<!-- One can receive an Akat Longbow and iron arrows by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -156,6 +163,7 @@
 		</skills>
 	</item>
 	<item id="9107" name="Dark Elven Longbow and Silver Arrow" type="EtcItem">
+		<!-- One can receive a Dark Elven Longbow and silver arrows by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -176,6 +184,7 @@
 		</skills>
 	</item>
 	<item id="9108" name="Carnage Bow and Mithril Arrow" type="EtcItem">
+		<!-- One can receive a Carnage Bow and mithril arrows by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -196,6 +205,7 @@
 		</skills>
 	</item>
 	<item id="9109" name="Soul Bow and Mithril Arrow" type="EtcItem">
+		<!-- One can receive a Soul Bow and mithril arrows by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -216,6 +226,7 @@
 		</skills>
 	</item>
 	<item id="9110" name="Shadow Armor Set Pack (No-grade) (Heavy Armor)" type="EtcItem">
+		<!-- One can receive a no-grade Shadow "Heavy Armor" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -236,6 +247,7 @@
 		</skills>
 	</item>
 	<item id="9111" name="Shadow Armor Set Pack (D-grade) (Heavy Armor)" type="EtcItem">
+		<!-- One can receive a D-grade Shadow "Heavy Armor" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -256,6 +268,7 @@
 		</skills>
 	</item>
 	<item id="9112" name="Shadow Armor Set Pack (C-grade) (Heavy Armor)" type="EtcItem">
+		<!-- One can receive a C-grade Shadow "Heavy Armor" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -276,6 +289,7 @@
 		</skills>
 	</item>
 	<item id="9113" name="Shadow Armor Set Pack (B-grade) (Heavy Armor)" type="EtcItem">
+		<!-- One can receive a B-grade Shadow "Heavy Armor" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -296,6 +310,7 @@
 		</skills>
 	</item>
 	<item id="9114" name="Low-grade Shadow Armor Set Pack (A-grade) (Heavy Armor)" type="EtcItem">
+		<!-- One can receive an A-grade Low-grade Shadow "Heavy Armor" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -316,6 +331,7 @@
 		</skills>
 	</item>
 	<item id="9115" name="High-grade Shadow Armor Set Pack (A-grade) (Heavy Armor)" type="EtcItem">
+		<!-- One can receive an A-grade High-grade Shadow "Heavy Armor" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -336,6 +352,7 @@
 		</skills>
 	</item>
 	<item id="9116" name="Shadow Armor Set Pack (No-grade) (Light Armor)" type="EtcItem">
+		<!-- One can receive a no-grade Shadow "Light Armor" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -356,6 +373,7 @@
 		</skills>
 	</item>
 	<item id="9117" name="Shadow Armor Set Pack (D-grade) (Light Armor)" type="EtcItem">
+		<!-- One can receive a D-grade Shadow "Light Armor" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -376,6 +394,7 @@
 		</skills>
 	</item>
 	<item id="9118" name="Shadow Armor Set Pack (C-grade) (Light Armor)" type="EtcItem">
+		<!-- One can receive a C-grade Shadow "Light Armor" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -396,6 +415,7 @@
 		</skills>
 	</item>
 	<item id="9119" name="Shadow Armor Set Pack (B-grade) (Light Armor)" type="EtcItem">
+		<!-- One can receive a B-grade Shadow "Light Armor" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -416,6 +436,7 @@
 		</skills>
 	</item>
 	<item id="9120" name="Low-grade Shadow Armor Set Pack (A-grade) (Light Armor)" type="EtcItem">
+		<!-- One can receive an A-grade Low-grade Shadow "Light Armor" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -436,6 +457,7 @@
 		</skills>
 	</item>
 	<item id="9121" name="High-grade Shadow Armor Set Pack (A-grade) (Light Armor)" type="EtcItem">
+		<!-- One can receive an A-grade High-grade Shadow "Light Armor" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -456,6 +478,7 @@
 		</skills>
 	</item>
 	<item id="9122" name="Shadow Armor Set Pack (No-grade) (Robe)" type="EtcItem">
+		<!-- One can receive a no-grade Shadow "Robe" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -476,6 +499,7 @@
 		</skills>
 	</item>
 	<item id="9123" name="Shadow Armor Set Pack (D-grade) (Robe)" type="EtcItem">
+		<!-- One can receive a D-grade Shadow "Robe" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -496,6 +520,7 @@
 		</skills>
 	</item>
 	<item id="9124" name="Shadow Armor Set Pack (C-grade) (Robe)" type="EtcItem">
+		<!-- One can receive a C-grade Shadow "Robe" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -516,6 +541,7 @@
 		</skills>
 	</item>
 	<item id="9125" name="Shadow Armor Set Pack (B-grade) (Robe)" type="EtcItem">
+		<!-- One can receive a B-grade Shadow "Robe" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -536,6 +562,7 @@
 		</skills>
 	</item>
 	<item id="9126" name="Low-grade Shadow Armor Set Pack (A-grade) (Robe)" type="EtcItem">
+		<!-- One can receive an A-grade Low-grade Shadow "Robe" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -556,6 +583,7 @@
 		</skills>
 	</item>
 	<item id="9127" name="High-grade Shadow Armor Set Pack (A-grade) (Robe)" type="EtcItem">
+		<!-- One can receive an A-grade High-grade Shadow "Robe" set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -576,6 +604,7 @@
 		</skills>
 	</item>
 	<item id="9128" name="Shadow Item: Mithril Gauntlets" type="Armor">
+		<!-- This Shadow Item contains the mirrored power of Mithril Gauntlets. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.armor_t61_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -597,6 +626,7 @@
 		</stats>
 	</item>
 	<item id="9129" name="Shadow Item: Shield of Nightmare" type="Armor">
+		<!-- This Shadow Item contains the mirrored power of a Shield of Nightmare. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -623,6 +653,7 @@
 		</stats>
 	</item>
 	<item id="9130" name="Item Set Pack (No-grade) (Wizard)" type="EtcItem">
+		<!-- One can receive no-grade Supplies for Wizards by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -643,6 +674,7 @@
 		</skills>
 	</item>
 	<item id="9131" name="Item Set Pack (D-grade) (Wizard)" type="EtcItem">
+		<!-- One can receive D-grade Supplies for Wizards by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -663,6 +695,7 @@
 		</skills>
 	</item>
 	<item id="9132" name="Item Set Pack (C-grade) (Wizard)" type="EtcItem">
+		<!-- One can receive C-grade Supplies for Wizards by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -683,6 +716,7 @@
 		</skills>
 	</item>
 	<item id="9133" name="Item Set Pack (B-grade) (Wizard)" type="EtcItem">
+		<!-- One can receive B-grade Supplies for Wizards by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -703,6 +737,7 @@
 		</skills>
 	</item>
 	<item id="9134" name="Item Set Pack (A-grade) (Wizard)" type="EtcItem">
+		<!-- One can receive A-grade Supplies for Wizards by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -723,6 +758,7 @@
 		</skills>
 	</item>
 	<item id="9135" name="Item Set Pack (A/S-grade) (Wizard)" type="EtcItem">
+		<!-- One can receive A- and S-grade Supplies for wizards by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -795,6 +831,7 @@
 		</stats>
 	</item>
 	<item id="9138" name="Santa Hat" type="Armor">
+		<!-- Wear it for some holiday fun! Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -807,6 +844,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="9139" name="Santa Hat" type="EtcItem">
+		<!-- Wear it for some holiday fun! -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -816,6 +854,7 @@
 		<set name="is_dropable" val="false" />
 	</item>
 	<item id="9140" name="Salvation Bow" type="Weapon">
+		<!-- Shoots a harmless heart-tipped arrow and allows use of the Forgiveness active skill. (Warning: If you use this skill against a monster, you will be flagged for PvP.) -->
 		<set name="icon" val="icon.weapon_krono_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -845,6 +884,7 @@
 		</stats>
 	</item>
 	<item id="9141" name="Redemption Bow" type="Weapon">
+		<!-- Event item. Send a heart with love to select mutated creatures. The active skills "Heart Shot" and "Double Heart Shot" can be used. -->
 		<set name="icon" val="icon.weapon_krono_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -883,6 +923,7 @@
 		</stats>
 	</item>
 	<item id="9142" name="Apiga" type="EtcItem">
+		<!-- Money used by cursed creatures. Take it to a magic lab for a reward. -->
 		<set name="icon" val="icon.etc_pig_adena_i01" />
 		<set name="material" val="PAPER" />
 		<set name="is_freightable" val="false" />
@@ -890,6 +931,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9143" name="Golden Apiga" type="EtcItem">
+		<!-- Rare money used by cursed creatures. Depending on the amount, you may use these to earn a reward in a lottery. -->
 		<set name="icon" val="icon.etc_pig_adena_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -903,6 +945,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9144" name="Pig Chest" type="EtcItem">
+		<!-- One can receive Golden Apigas with a certain chance by Double-clicking. If you are unlucky, you won't receive anything. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -919,6 +962,7 @@
 		</skills>
 	</item>
 	<item id="9145" name="Little Angel Wings (Event)" type="Armor">
+		<!-- Wing-shaped hair accessory. Event item. -->
 		<set name="icon" val="icon.accessory_hair_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -937,6 +981,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="9146" name="Scroll: Guidance (Event)" type="EtcItem">
+		<!-- Accuracy increases. Event reward item. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -956,6 +1001,7 @@
 		</skills>
 	</item>
 	<item id="9147" name="Scroll: Death Whisper (Event)" type="EtcItem">
+		<!-- Increases P. Critical Damage. Event reward item. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -975,6 +1021,7 @@
 		</skills>
 	</item>
 	<item id="9148" name="Scroll: Focus (Event)" type="EtcItem">
+		<!-- P. Critical Rate increases. Event reward item. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -994,6 +1041,7 @@
 		</skills>
 	</item>
 	<item id="9149" name="Scroll: Acumen (Event)" type="EtcItem">
+		<!-- Spell Casting Spd. Increases. Event reward item. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1013,6 +1061,7 @@
 		</skills>
 	</item>
 	<item id="9150" name="Scroll: Haste (Event)" type="EtcItem">
+		<!-- Increases Atk. Spd. Event reward item. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1032,6 +1081,7 @@
 		</skills>
 	</item>
 	<item id="9151" name="Scroll: Agility (Event)" type="EtcItem">
+		<!-- Increases Evasion. Event reward item. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1051,6 +1101,7 @@
 		</skills>
 	</item>
 	<item id="9152" name="Scroll: Empower (Event)" type="EtcItem">
+		<!-- M. Atk. Increases. Event reward item. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1070,6 +1121,7 @@
 		</skills>
 	</item>
 	<item id="9153" name="Scroll: Might (Event)" type="EtcItem">
+		<!-- P. Atk. Increases. Event reward item. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1089,6 +1141,7 @@
 		</skills>
 	</item>
 	<item id="9154" name="Scroll: Wind Walk (Event)" type="EtcItem">
+		<!-- Speed increases. Event reward item. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1108,6 +1161,7 @@
 		</skills>
 	</item>
 	<item id="9155" name="Scroll: Shield (Event)" type="EtcItem">
+		<!-- P. Def. Increases. Event reward item. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1127,6 +1181,7 @@
 		</skills>
 	</item>
 	<item id="9156" name="Blessed Scroll of Escape (Event)" type="EtcItem">
+		<!-- Magical scroll that relocates user to the nearest village. Event reward. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1142,6 +1197,7 @@
 		</skills>
 	</item>
 	<item id="9157" name="Blessed Scroll of Resurrection (Event)" type="EtcItem">
+		<!-- Magic scroll that resurrects a dead character and restores his or her XP completely. Event reward. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1157,6 +1213,7 @@
 		</skills>
 	</item>
 	<item id="9158" name="Gold Circlet (Event)" type="Armor">
+		<!-- Golden Circlet. Uses 2 hair accessory slots. Event item. -->
 		<set name="icon" val="icon.Accessary_gold_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1169,6 +1226,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="9159" name="Silver Circlet (Event)" type="Armor">
+		<!-- Silver Circlet. Uses 2 hair accessory slots. Event item. -->
 		<set name="icon" val="icon.Accessary_gold_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1181,6 +1239,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="9160" name="Pig Wrangler's Cap" type="Armor">
+		<!-- Top hat made of leather. Uses 2 hair accessory slots. Event item. -->
 		<set name="icon" val="icon.Accessary_middle_ages_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1193,6 +1252,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="9161" name="Santa's Antlers" type="EtcItem">
+		<!-- Festive Santa hat with antlers. Ideal for celebrating the holidays. This item can only be equipped during the year end. -->
 		<set name="icon" val="icon.accessory_santas_antler_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1202,6 +1262,7 @@
 		<set name="is_dropable" val="false" />
 	</item>
 	<item id="9162" name="Red Philosopher's Stone Transmutation Circle" type="EtcItem">
+		<!-- Usable by all races. Double-click to add the Red Philosopher's Stone Transmutation Circle to your Recipe Book. Requires Create Item (Lv. 1). The success rate is 100%. -->
 		<set name="icon" val="icon.etc_sign_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1215,6 +1276,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9163" name="Blue Philosopher's Stone Transmutation Circle" type="EtcItem">
+		<!-- Usable by all races. Double-click to add the Blue Philosopher's Stone Transmutation Circle to your Recipe Book. Requires Create Item (Lv. 1). The success rate is 100%. -->
 		<set name="icon" val="icon.etc_sign_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1228,6 +1290,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9164" name="Orange Philosopher's Stone Transmutation Circle" type="EtcItem">
+		<!-- Usable by all races. Double-click to add the Orange Philosopher's Stone Transmutation Circle to your Recipe Book. Requires Create Item (Lv. 1). The success rate is 100%. -->
 		<set name="icon" val="icon.etc_sign_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1241,6 +1304,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9165" name="Black Philosopher's Stone Transmutation Circle" type="EtcItem">
+		<!-- Usable by all races. Double-click to add the Black Philosopher's Stone Transmutation Circle to your Recipe Book. Requires Create Item (Lv. 1). The success rate is 100%. -->
 		<set name="icon" val="icon.etc_sign_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1254,6 +1318,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9166" name="White Philosopher's Stone Transmutation Circle" type="EtcItem">
+		<!-- Usable by all races. Double-click to add the White Philosopher's Stone Transmutation Circle to your Recipe Book. Requires Create Item (Lv. 1). The success rate is 100%. -->
 		<set name="icon" val="icon.etc_sign_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1267,6 +1332,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9167" name="Green Philosopher's Stone Transmutation Circle" type="EtcItem">
+		<!-- Usable by all races. Double-click to add the Green Philosopher's Stone Transmutation Circle to your Recipe Book. Requires Create Item (Lv. 1). The success rate is 100%. -->
 		<set name="icon" val="icon.etc_sign_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1280,6 +1346,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9168" name="Philosopher's Stone Ore" type="EtcItem">
+		<!-- Material used to create a colored Philosopher's Stone. -->
 		<set name="icon" val="icon.etc_stone_piece_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1290,6 +1357,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9169" name="Philosopher's Stone Conversion Formula" type="EtcItem">
+		<!-- Material used to create a colored Philosopher's Stone. -->
 		<set name="icon" val="icon.etc_trans_form_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1300,6 +1368,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9170" name="Magic Reagents" type="EtcItem">
+		<!-- Material used to create a colored Philosopher's Stone. -->
 		<set name="icon" val="icon.etc_madicine_bottle_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1310,6 +1379,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9171" name="Red Philosopher's Stone" type="EtcItem">
+		<!-- Double-click to get a random item. -->
 		<set name="icon" val="icon.etc_wise_man_stone_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1324,6 +1394,7 @@
 		</skills>
 	</item>
 	<item id="9172" name="Blue Philosopher's Stone" type="EtcItem">
+		<!-- Double-click to get a random item. -->
 		<set name="icon" val="icon.etc_wise_man_stone_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1338,6 +1409,7 @@
 		</skills>
 	</item>
 	<item id="9173" name="Orange Philosopher's Stone" type="EtcItem">
+		<!-- Double-click to get a random item. -->
 		<set name="icon" val="icon.etc_wise_man_stone_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1352,6 +1424,7 @@
 		</skills>
 	</item>
 	<item id="9174" name="Black Philosopher's Stone" type="EtcItem">
+		<!-- Double-click to get a random item. -->
 		<set name="icon" val="icon.etc_wise_man_stone_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1366,6 +1439,7 @@
 		</skills>
 	</item>
 	<item id="9175" name="White Philosopher's Stone" type="EtcItem">
+		<!-- Double-click to get a random item. -->
 		<set name="icon" val="icon.etc_wise_man_stone_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1380,6 +1454,7 @@
 		</skills>
 	</item>
 	<item id="9176" name="Green Philosopher's Stone" type="EtcItem">
+		<!-- Double-click to get a random item. -->
 		<set name="icon" val="icon.etc_wise_man_stone_i02" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1394,6 +1469,7 @@
 		</skills>
 	</item>
 	<item id="9177" name="Shadow Item: Teddy Bear Hat" additionalName="Resurrection" type="Armor">
+		<!-- Fun, bear-shaped shadow-type hair accessory. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1416,6 +1492,7 @@
 		</skills>
 	</item>
 	<item id="9178" name="Shadow Item: Piggy Hat" additionalName="Resurrection" type="Armor">
+		<!-- Fun, piggy-shaped shadow-type hair accessory. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1438,6 +1515,7 @@
 		</skills>
 	</item>
 	<item id="9179" name="Shadow Item: Jester Hat" additionalName="Resurrection" type="Armor">
+		<!-- Festive, shadow-type jester hat with 2 points. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1460,6 +1538,7 @@
 		</skills>
 	</item>
 	<item id="9180" name="Shadow Item: Wizard Hat" additionalName="Resurrection" type="Armor">
+		<!-- Shadow-type wizard hat with a wide brim and bent tip. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1482,6 +1561,7 @@
 		</skills>
 	</item>
 	<item id="9181" name="Shadow Item: Dapper Cap" additionalName="Resurrection" type="Armor">
+		<!-- Shadow-type hair accessory with a visor. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1504,6 +1584,7 @@
 		</skills>
 	</item>
 	<item id="9182" name="Shadow Item: Romantic Chapeau" additionalName="Resurrection" type="Armor">
+		<!-- Shadow-type hair accessory adorned with feathers. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1526,6 +1607,7 @@
 		</skills>
 	</item>
 	<item id="9183" name="Shadow Item: Iron Circlet" additionalName="Resurrection" type="Armor">
+		<!-- Shadow-type hair accessory made of iron. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_iron_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1548,6 +1630,7 @@
 		</skills>
 	</item>
 	<item id="9184" name="Shadow Item: Teddy Bear Hat" additionalName="Escape" type="Armor">
+		<!-- Fun, bear-shaped shadow-type hair accessory. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1570,6 +1653,7 @@
 		</skills>
 	</item>
 	<item id="9185" name="Shadow Item: Piggy Hat" additionalName="Escape" type="Armor">
+		<!-- Fun, piggy-shaped shadow-type hair accessory. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1592,6 +1676,7 @@
 		</skills>
 	</item>
 	<item id="9186" name="Shadow Item: Jester Hat" additionalName="Escape" type="Armor">
+		<!-- Festive, shadow-type jester hat with 2 points. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1614,6 +1699,7 @@
 		</skills>
 	</item>
 	<item id="9187" name="Shadow Item: Wizard Hat" additionalName="Escape" type="Armor">
+		<!-- Shadow-type wizard hat with a wide brim and bent tip. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1636,6 +1722,7 @@
 		</skills>
 	</item>
 	<item id="9188" name="Shadow Item: Dapper Cap" additionalName="Escape" type="Armor">
+		<!-- Shadow-type hair accessory with a visor. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1658,6 +1745,7 @@
 		</skills>
 	</item>
 	<item id="9189" name="Shadow Item: Romantic Chapeau" additionalName="Escape" type="Armor">
+		<!-- Shadow-type hair accessory adorned with feathers. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1680,6 +1768,7 @@
 		</skills>
 	</item>
 	<item id="9190" name="Shadow Item: Iron Circlet" additionalName="Escape" type="Armor">
+		<!-- Shadow-type hair accessory made of iron. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_iron_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1702,6 +1791,7 @@
 		</skills>
 	</item>
 	<item id="9191" name="Shadow Item: Teddy Bear Hat" additionalName="Big Head" type="Armor">
+		<!-- Fun, bear-shaped shadow-type hair accessory. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1724,6 +1814,7 @@
 		</skills>
 	</item>
 	<item id="9192" name="Shadow Item: Piggy Hat" additionalName="Big Head" type="Armor">
+		<!-- Fun, piggy-shaped shadow-type hair accessory. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1746,6 +1837,7 @@
 		</skills>
 	</item>
 	<item id="9193" name="Shadow Item: Jester Hat" additionalName="Big Head" type="Armor">
+		<!-- Festive, shadow-type jester hat with 2 points. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1768,6 +1860,7 @@
 		</skills>
 	</item>
 	<item id="9194" name="Shadow Item: Wizard Hat" additionalName="Big Head" type="Armor">
+		<!-- Shadow-type wizard hat with a wide brim and bent tip. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1790,6 +1883,7 @@
 		</skills>
 	</item>
 	<item id="9195" name="Shadow Item: Dapper Cap" additionalName="Big Head" type="Armor">
+		<!-- Shadow-type hair accessory with a visor. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1812,6 +1906,7 @@
 		</skills>
 	</item>
 	<item id="9196" name="Shadow Item: Romantic Chapeau" additionalName="Big Head" type="Armor">
+		<!-- Shadow-type hair accessory adorned with feathers. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1834,6 +1929,7 @@
 		</skills>
 	</item>
 	<item id="9197" name="Shadow Item: Iron Circlet" additionalName="Big Head" type="Armor">
+		<!-- Shadow-type hair accessory made of iron. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_iron_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1856,6 +1952,7 @@
 		</skills>
 	</item>
 	<item id="9198" name="Shadow Item: Teddy Bear Hat" additionalName="Firework" type="Armor">
+		<!-- Fun, bear-shaped shadow-type hair accessory. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1878,6 +1975,7 @@
 		</skills>
 	</item>
 	<item id="9199" name="Shadow Item: Piggy Hat" additionalName="Firework" type="Armor">
+		<!-- Fun, piggy-shaped shadow-type hair accessory. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />

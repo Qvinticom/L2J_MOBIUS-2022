@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="18000" name="Blessed Immortal Ring" type="Armor">
 		<!-- Blessed Immortal Ring. MP + 26 effect. -->
@@ -19,7 +19,7 @@
 		</stats>
 	</item>
 	<item id="18001" name="Blessed Apocalypse Shaper" type="Weapon">
-		<!-- Bestows one of the following functions: Guidance, Haste, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_phasian_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -52,7 +52,7 @@
 		</stats>
 	</item>
 	<item id="18002" name="Blessed Apocalypse Cutter" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, Focus, or Health. Two functions can be bestowed through a rare soul crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_pasis_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -84,7 +84,7 @@
 		</stats>
 	</item>
 	<item id="18003" name="Blessed Apocalypse Slasher" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_volver_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -116,7 +116,7 @@
 		</stats>
 	</item>
 	<item id="18004" name="Blessed Apocalypse Avenger" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, P. Critical Damage, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_raksilion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -149,7 +149,7 @@
 		</stats>
 	</item>
 	<item id="18005" name="Blessed Apocalypse Fighter" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_kirche_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -182,7 +182,7 @@
 		</stats>
 	</item>
 	<item id="18006" name="Blessed Apocalypse Stormer" type="Weapon">
-		<!-- Bestows one of the following functions: HP Drain, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases Multi Attack when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_grave_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -216,7 +216,7 @@
 		</stats>
 	</item>
 	<item id="18007" name="Blessed Apocalypse Thrower" type="Weapon">
-		<!-- Bestows one of the following functions: Damage Up, Focus, or Long Blow. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_spina_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -250,7 +250,7 @@
 		</stats>
 	</item>
 	<item id="18008" name="Blessed Apocalypse Shooter" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Critical Slow, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_medianox_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -284,7 +284,7 @@
 		</stats>
 	</item>
 	<item id="18009" name="Blessed Apocalypse Buster" type="Weapon">
-		<!-- Bestows one of the following functions: Acumen, Magic Hold, or Mana Up. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_imerose_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -316,7 +316,7 @@
 		</stats>
 	</item>
 	<item id="18010" name="Blessed Apocalypse Caster" type="Weapon">
-		<!-- Bestows one of the following functions: Empower, Acumen, or Magic Hold. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_yuke_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -349,7 +349,7 @@
 		</stats>
 	</item>
 	<item id="18011" name="Blessed Apocalypse Retributer" type="Weapon">
-		<!-- Bestows one of the following functions: MP Regeneration, Acumen, or Empower. Two functions can be bestowed through a rare soul crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_herencia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -383,7 +383,7 @@
 		</stats>
 	</item>
 	<item id="18012" name="Blessed Apocalypse Dualsword" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, Damage Up, or Health. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -415,7 +415,7 @@
 		</stats>
 	</item>
 	<item id="18013" name="Blessed Apocalypse Dual Dagger" type="Weapon">
-		<!-- Bestows one of the following functions: Damage Up, Focus, or Guidance. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -448,7 +448,7 @@
 		</stats>
 	</item>
 	<item id="18014" name="Blessed Apocalypse Dual Blunt Weapon" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -897,7 +897,7 @@
 		</stats>
 	</item>
 	<item id="18035" name="Blessed Specter Shaper" type="Weapon">
-		<!-- Bestows one of the following functions: Guidance, Haste, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_ignicion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -930,7 +930,7 @@
 		</stats>
 	</item>
 	<item id="18036" name="Blessed Specter Cutter" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, Focus, or Health. Two functions can be bestowed through a rare soul crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_ninfea_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -962,7 +962,7 @@
 		</stats>
 	</item>
 	<item id="18037" name="Blessed Specter Slasher" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_skia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -994,7 +994,7 @@
 		</stats>
 	</item>
 	<item id="18038" name="Blessed Specter Avenger" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, P. Critical Damage, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_ikeon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1027,7 +1027,7 @@
 		</stats>
 	</item>
 	<item id="18039" name="Blessed Specter Fighter" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_deodos_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1060,7 +1060,7 @@
 		</stats>
 	</item>
 	<item id="18040" name="Blessed Specter Stormer" type="Weapon">
-		<!-- Bestows one of the following functions: HP Drain, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases Multi Attack when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_transgredi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1094,7 +1094,7 @@
 		</stats>
 	</item>
 	<item id="18041" name="Blessed Specter Thrower" type="Weapon">
-		<!-- Bestows one of the following functions: Damage Up, Focus, or Long Blow. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_solenas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1128,7 +1128,7 @@
 		</stats>
 	</item>
 	<item id="18042" name="Blessed Specter Shooter" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Critical Slow, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_lapis_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1162,7 +1162,7 @@
 		</stats>
 	</item>
 	<item id="18043" name="Blessed Specter Buster" type="Weapon">
-		<!-- Bestows one of the following functions: Acumen, Magic Hold, or Mana Up. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_zihel_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1194,7 +1194,7 @@
 		</stats>
 	</item>
 	<item id="18044" name="Blessed Specter Caster" type="Weapon">
-		<!-- Bestows one of the following functions: Empower, Acumen, or Magic Hold. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_alacer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1227,7 +1227,7 @@
 		</stats>
 	</item>
 	<item id="18045" name="Blessed Specter Retributer" type="Weapon">
-		<!-- Bestows one of the following functions: MP Regeneration, Acumen, or Empower. Two functions can be bestowed through a rare soul crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_rupe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1261,7 +1261,7 @@
 		</stats>
 	</item>
 	<item id="18046" name="Blessed Specter Dualsword" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, Damage Up, or Health. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1293,7 +1293,7 @@
 		</stats>
 	</item>
 	<item id="18047" name="Blessed Specter Dual Dagger" type="Weapon">
-		<!-- Bestows one of the following functions: Damage Up, Focus, or Guidance. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1326,7 +1326,7 @@
 		</stats>
 	</item>
 	<item id="18048" name="Blessed Specter Dual Blunt Weapon" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1775,7 +1775,7 @@
 		</stats>
 	</item>
 	<item id="18069" name="Blessed Amaranthine Shaper" type="Weapon">
-		<!-- Bestows one of the following functions: Guidance, Haste, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_stanpid_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1808,7 +1808,7 @@
 		</stats>
 	</item>
 	<item id="18070" name="Blessed Amaranthine Cutter" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, Focus, or Health. Two functions can be bestowed through a rare soul crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_plenitas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1840,7 +1840,7 @@
 		</stats>
 	</item>
 	<item id="18071" name="Blessed Amaranthine Slasher" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_bauen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1872,7 +1872,7 @@
 		</stats>
 	</item>
 	<item id="18072" name="Blessed Amaranthine Avenger" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, P. Critical Damage, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_qutram_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1905,7 +1905,7 @@
 		</stats>
 	</item>
 	<item id="18073" name="Blessed Amaranthine Fighter" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_durga_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1938,7 +1938,7 @@
 		</stats>
 	</item>
 	<item id="18074" name="Blessed Amaranthine Stormer" type="Weapon">
-		<!-- Bestows one of the following functions: HP Drain, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases Multi Attack when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_crabel_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1972,7 +1972,7 @@
 		</stats>
 	</item>
 	<item id="18075" name="Blessed Amaranthine Thrower" type="Weapon">
-		<!-- Bestows one of the following functions: Damage Up, Focus, or Long Blow. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_castron_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2006,7 +2006,7 @@
 		</stats>
 	</item>
 	<item id="18076" name="Blessed Amaranthine Shooter" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Critical Slow, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2040,7 +2040,7 @@
 		</stats>
 	</item>
 	<item id="18077" name="Blessed Amaranthine Buster" type="Weapon">
-		<!-- Bestows one of the following functions: Acumen, Magic Hold, or Mana Up. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weaon_serapear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2072,7 +2072,7 @@
 		</stats>
 	</item>
 	<item id="18078" name="Blessed Amaranthine Caster" type="Weapon">
-		<!-- Bestows one of the following functions: Empower, Acumen, or Magic Hold. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_pilia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2105,7 +2105,7 @@
 		</stats>
 	</item>
 	<item id="18079" name="Blessed Amaranthine Retributer" type="Weapon">
-		<!-- Bestows one of the following functions: MP Regeneration, Acumen, or Empower. Two functions can be bestowed through a rare soul crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_shaelon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2139,7 +2139,7 @@
 		</stats>
 	</item>
 	<item id="18080" name="Blessed Amaranthine Dualsword" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, Damage Up, or Health. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2171,7 +2171,7 @@
 		</stats>
 	</item>
 	<item id="18081" name="Blessed Amaranthine Dual Dagger" type="Weapon">
-		<!-- Bestows one of the following functions: Damage Up, Focus, or Guidance. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2204,7 +2204,7 @@
 		</stats>
 	</item>
 	<item id="18082" name="Blessed Amaranthine Dual Blunt Weapon" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

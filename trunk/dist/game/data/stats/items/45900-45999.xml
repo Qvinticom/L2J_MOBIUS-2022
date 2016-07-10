@@ -15,7 +15,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45901" name="Kokko's Shiny Egg" type="EtcItem">
-		<!-- Kokko's shiny egg prepared by Maphr. Double-click to find out what it is. Will be deleted once the event ends. (Warning) The item you get after double-clicking cannot be shared between accounts. -->
+		<!-- Kokko's shiny egg prepared by Maphr. Double-click to find out what it is. Will be deleted once the event ends. <Warning> The item you get after double-clicking cannot be shared between accounts. -->
 		<set name="icon" val="icon.egg_twinkle" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -28,7 +28,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="45902" name="Kokko's Golden Egg" type="EtcItem">
-		<!-- Kokko's golden egg prepared by Maphr. Double-click to find out what it is. Will be deleted once the event ends. (Warning) The item you get after double-clicking cannot be shared between accounts. -->
+		<!-- Kokko's golden egg prepared by Maphr. Double-click to find out what it is. Will be deleted once the event ends. <Warning> The item you get after double-clicking cannot be shared between accounts. -->
 		<set name="icon" val="icon.egg_gold" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -293,7 +293,7 @@
 		<set name="icon" val="icon.ev_charge_box" />
 	</item>
 	<item id="45922" name="Spellbook: Dignity of the Exalted" additionalName="Lv. 1" type="EtcItem">
-		<!-- Needed to learn passive skill, Dignity of the Exalted Lv. 1, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 1 and increases daily world chat limit to 10 uses.\nCan be obtained in the main class status. -->
+		<!-- Needed to learn passive skill, Dignity of the Exalted Lv. 1, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 1. Can be obtained in the main class status. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -308,7 +308,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="45923" name="Spellbook: Dignity of the Exalted" additionalName="Lv. 2" type="EtcItem">
-		<!-- Needed to learn passive skill, Dignity of the Exalted Lv. 2, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 2.\nCan be obtained in the main class status. -->
+		<!-- Needed to learn passive skill, Dignity of the Exalted Lv. 2, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 2. Can be obtained in the main class status. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -323,7 +323,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="45924" name="Spellbook: Dignity of the Exalted" additionalName="Lv. 3" type="EtcItem">
-		<!-- Needed to learn passive skill, Dignity of the Exalted Lv. 3, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 3.\nCan be obtained in the main class status. -->
+		<!-- Needed to learn passive skill, Dignity of the Exalted Lv. 3, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 3. Can be obtained in the main class status. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -338,7 +338,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="45925" name="Spellbook: Belief of the Exalted" type="EtcItem">
-		<!-- Needed to learn active skill, Belief of the Exalted, used to teleport to a selected party member.\nCan be obtained in the main class status. -->
+		<!-- Needed to learn active skill, Belief of the Exalted, used to teleport to a selected party member. Can be obtained in the main class status. -->
 		<set name="icon" val="icon.giant_book_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -353,7 +353,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="45926" name="Spellbook: Blessing of the Exalted" type="EtcItem">
-		<!-- Needed to learn active skill, Blessing of the Exalted, used to buff every party member with buff/de-buff protection even after death.\nCan be obtained in the main class status. -->
+		<!-- Needed to learn active skill, Blessing of the Exalted, used to buff every party member with buff/de-buff protection even after death. Can be obtained in the main class status. -->
 		<set name="icon" val="icon.giant_book_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -368,7 +368,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="45927" name="Spellbook: Summon Battle Potion" type="EtcItem">
-		<!-- Needed to learn the Exalted skill Summon Battle Potion.\nCan be obtained in the main class status. -->
+		<!-- Needed to learn the Exalted skill Summon Battle Potion. Can be obtained in the main class status. -->
 		<set name="icon" val="icon.giant_book_i01" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -383,7 +383,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="45928" name="Spellbook: Favor of the Exalted" additionalName="Lv. 1" type="EtcItem">
-		<!-- Needed to learn active skill, Favor of the Exalted Lv. 1, used to buff a target with 3% Bonus XP and SP.\nCan be obtained in the main class status. -->
+		<!-- Needed to learn active skill, Favor of the Exalted Lv. 1, used to buff a target with 3% Bonus XP and SP. Can be obtained in the main class status. -->
 		<set name="icon" val="icon.giant_book_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1099,7 +1099,7 @@
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 	</item>
 	<item id="45986" name="Éclair Bijou of Fortune Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to get a + 4 enchanted ￉clair Bijou of Fortune. -->
+		<!-- Double-click to get a + 4 enchanted Éclair Bijou of Fortune. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1195,7 +1195,7 @@
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 	</item>
 	<item id="45994" name="Apocalypse Shaper Focus Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to get a + 6 enchanted Apocalypse Shaper Focus. -->
+		<!-- Double-click to get a + 6 enchanted 30-day Apocalypse Shaper Focus. Deleted after event. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1207,7 +1207,7 @@
 		<set name="icon" val="icon.weapon_phasian_i01" />
 	</item>
 	<item id="45995" name="Apocalypse Cutter Focus Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to get a + 6 enchanted Apocalypse Cutter Focus. -->
+		<!-- Double-click to get a + 6 enchanted 30-day Apocalypse Cutter Focus. Deleted after event. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1219,7 +1219,7 @@
 		<set name="icon" val="icon.weapon_pasis_i01" />
 	</item>
 	<item id="45996" name="Apocalypse Slasher Focus Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to get a + 6 enchanted Apocalypse Slasher Focus. -->
+		<!-- Double-click to get a + 6 enchanted 30-day Apocalypse Slasher Focus. Deleted after event. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1231,7 +1231,7 @@
 		<set name="icon" val="icon.weapon_volver_i01" />
 	</item>
 	<item id="45997" name="Apocalypse Dualsword Damage Up Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to get a + 6 enchanted Apocalypse Dualsword Damage Up. -->
+		<!-- Double-click to get a + 6 enchanted 30-day Apocalypse Dualsword Damage Up. Deleted after event. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1243,7 +1243,7 @@
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 	</item>
 	<item id="45998" name="Apocalypse Dual Dagger Focus Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to get a + 6 enchanted Apocalypse Dual Dagger Focus. -->
+		<!-- Double-click to get a + 6 enchanted 30-day Apocalypse Dual Dagger Focus. Deleted after event. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1255,7 +1255,7 @@
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 	</item>
 	<item id="45999" name="Apocalypse Dual Blunt Weapon Damage Up Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to get a + 6 enchanted Apocalypse Dual Blunt Weapon Damage Up. -->
+		<!-- Double-click to get a + 6 enchanted 30-day Apocalypse Dual Blunt Weapon Damage Up. Deleted after event. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />

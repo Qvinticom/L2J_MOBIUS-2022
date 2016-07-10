@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="13600" name="Transformation Scroll: Giran Archer Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Archer mercenary. Can only be used by an elite mercenary in Giran Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -22,6 +23,7 @@
 		</skills>
 	</item>
 	<item id="13601" name="Transformation Scroll: Giran Wizard Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Wizard mercenary. Can only be used by an elite mercenary in Giran Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -43,6 +45,7 @@
 		</skills>
 	</item>
 	<item id="13602" name="Transformation Scroll: Giran Centurion Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Centurion Mercenary. Can only be used by an elite mercenary in Giran Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -64,6 +67,7 @@
 		</skills>
 	</item>
 	<item id="13603" name="Transformation Scroll: Giran Knight Captain Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Knight Captain mercenary. Can only be used by an Exalted Mercenary in Giran Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -85,6 +89,7 @@
 		</skills>
 	</item>
 	<item id="13604" name="Transformation Scroll: Giran Commander Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Commander mercenary. Can only be used by an Exalted Mercenary in Giran Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -106,6 +111,7 @@
 		</skills>
 	</item>
 	<item id="13605" name="Transformation Scroll: Oren Human Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Human mercenary. Can only be used by an ordinary mercenary in Oren Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -127,6 +133,7 @@
 		</skills>
 	</item>
 	<item id="13606" name="Transformation Scroll: Oren Elf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Elven mercenary. Can only be used by an ordinary mercenary in Oren Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -148,6 +155,7 @@
 		</skills>
 	</item>
 	<item id="13607" name="Transformation Scroll: Oren Dark Elf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Dark Elven mercenary. Can only be used by an ordinary mercenary in Oren Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -169,6 +177,7 @@
 		</skills>
 	</item>
 	<item id="13608" name="Transformation Scroll: Oren Orc Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Orc mercenary. Can only be used by an ordinary mercenary in Oren Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -190,6 +199,7 @@
 		</skills>
 	</item>
 	<item id="13609" name="Transformation Scroll: Oren Dwarf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Dwarven mercenary. Can only be used by an ordinary mercenary in Oren Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -211,6 +221,7 @@
 		</skills>
 	</item>
 	<item id="13610" name="Transformation Scroll: Oren Kamael Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Kamael mercenary. Can only be used by an ordinary mercenary in Oren Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -232,6 +243,7 @@
 		</skills>
 	</item>
 	<item id="13611" name="Transformation Scroll: Oren Knight Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Knight mercenary. Can only be used by an elite mercenary in Oren Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -253,6 +265,7 @@
 		</skills>
 	</item>
 	<item id="13612" name="Transformation Scroll: Oren Archer Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Archer mercenary. Can only be used by an elite mercenary in Oren Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -274,6 +287,7 @@
 		</skills>
 	</item>
 	<item id="13613" name="Transformation Scroll: Oren Wizard Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Wizard mercenary. Can only be used by an elite mercenary in Oren Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -295,6 +309,7 @@
 		</skills>
 	</item>
 	<item id="13614" name="Transformation Scroll: Oren Centurion Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Centurion Mercenary. Can only be used by an elite mercenary in Oren Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -316,6 +331,7 @@
 		</skills>
 	</item>
 	<item id="13615" name="Transformation Scroll: Oren Knight Captain Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Knight Captain mercenary. Can only be used by an Exalted Mercenary in Oren Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -337,6 +353,7 @@
 		</skills>
 	</item>
 	<item id="13616" name="Transformation Scroll: Oren Commander Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Commander mercenary. Can only be used by an Exalted Mercenary in Oren Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -358,6 +375,7 @@
 		</skills>
 	</item>
 	<item id="13617" name="Transformation Scroll: Aden Human Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Human mercenary. Can only be used by an ordinary mercenary in Aden Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -379,6 +397,7 @@
 		</skills>
 	</item>
 	<item id="13618" name="Transformation Scroll: Aden Elf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Elven mercenary. Can only be used by an ordinary mercenary in Aden Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -400,6 +419,7 @@
 		</skills>
 	</item>
 	<item id="13619" name="Transformation Scroll: Aden Dark Elf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Dark Elven mercenary. Can only be used by an ordinary mercenary in Aden Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -421,6 +441,7 @@
 		</skills>
 	</item>
 	<item id="13620" name="Transformation Scroll: Aden Orc Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Orc mercenary. Can only be used by an ordinary mercenary in Aden Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -442,6 +463,7 @@
 		</skills>
 	</item>
 	<item id="13621" name="Transformation Scroll: Aden Dwarf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Dwarven mercenary. Can only be used by an ordinary mercenary in Aden Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -463,6 +485,7 @@
 		</skills>
 	</item>
 	<item id="13622" name="Transformation Scroll: Aden Kamael Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Kamael mercenary. Can only be used by an ordinary mercenary in Aden Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -484,6 +507,7 @@
 		</skills>
 	</item>
 	<item id="13623" name="Transformation Scroll: Aden Knight Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Knight mercenary. Can only be used by an elite mercenary in Aden Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -505,6 +529,7 @@
 		</skills>
 	</item>
 	<item id="13624" name="Transformation Scroll: Aden Archer Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Archer mercenary. Can only be used by an elite mercenary in Aden Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -526,6 +551,7 @@
 		</skills>
 	</item>
 	<item id="13625" name="Transformation Scroll: Aden Wizard Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Wizard mercenary. Can only be used by an elite mercenary in Aden Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -547,6 +573,7 @@
 		</skills>
 	</item>
 	<item id="13626" name="Transformation Scroll: Aden Centurion Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Centurion Mercenary. Can only be used by an elite mercenary in Aden Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -568,6 +595,7 @@
 		</skills>
 	</item>
 	<item id="13627" name="Transformation Scroll: Aden Knight Captain Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Knight Captain mercenary. Can only be used by an Exalted Mercenary in Aden Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -589,6 +617,7 @@
 		</skills>
 	</item>
 	<item id="13628" name="Transformation Scroll: Aden Commander Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Commander mercenary. Can only be used by an Exalted Mercenary in Aden Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -610,6 +639,7 @@
 		</skills>
 	</item>
 	<item id="13629" name="Transformation Scroll: Innadril Human Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Human mercenary. Can only be used by an ordinary mercenary in Innadril Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -631,6 +661,7 @@
 		</skills>
 	</item>
 	<item id="13630" name="Transformation Scroll: Innadril Elf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Elven mercenary. Can only be used by an ordinary mercenary in Innadril Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -652,6 +683,7 @@
 		</skills>
 	</item>
 	<item id="13631" name="Transformation Scroll: Innadril Dark Elf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Dark Elven mercenary. Can only be used by an ordinary mercenary in Innadril Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -673,6 +705,7 @@
 		</skills>
 	</item>
 	<item id="13632" name="Transformation Scroll: Innadril Orc Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Orc mercenary. Can only be used by an ordinary mercenary in Innadril Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -694,6 +727,7 @@
 		</skills>
 	</item>
 	<item id="13633" name="Transformation Scroll: Innadril Dwarf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Dwarven mercenary. Can only be used by an ordinary mercenary in Innadril Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -715,6 +749,7 @@
 		</skills>
 	</item>
 	<item id="13634" name="Transformation Scroll: Innadril Kamael Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Kamael mercenary. Can only be used by an ordinary mercenary in Innadril Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -736,6 +771,7 @@
 		</skills>
 	</item>
 	<item id="13635" name="Transformation Scroll: Innadril Knight Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Knight mercenary. Can only be used by an elite mercenary in Innadril Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -757,6 +793,7 @@
 		</skills>
 	</item>
 	<item id="13636" name="Transformation Scroll: Innadril Archer Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Archer mercenary. Can only be used by an elite mercenary in Innadril Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -778,6 +815,7 @@
 		</skills>
 	</item>
 	<item id="13637" name="Transformation Scroll: Innadril Wizard Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Wizard mercenary. Can only be used by an elite mercenary in Innadril Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -799,6 +837,7 @@
 		</skills>
 	</item>
 	<item id="13638" name="Transformation Scroll: Innadril Centurion Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Centurion Mercenary. Can only be used by an elite mercenary in Innadril Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -820,6 +859,7 @@
 		</skills>
 	</item>
 	<item id="13639" name="Transformation Scroll: Innadril Knight Captain Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Knight Captain mercenary. Can only be used by an Exalted Mercenary in Innadril Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -841,6 +881,7 @@
 		</skills>
 	</item>
 	<item id="13640" name="Transformation Scroll: Innadril Commander Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Commander mercenary. Can only be used by an Exalted Mercenary in Innadril Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -862,6 +903,7 @@
 		</skills>
 	</item>
 	<item id="13641" name="Transformation Scroll: Goddard Human Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Human mercenary. Can only be used by an ordinary mercenary in Goddard Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -883,6 +925,7 @@
 		</skills>
 	</item>
 	<item id="13642" name="Transformation Scroll: Goddard Elf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Elven mercenary. Can only be used by an ordinary mercenary in Goddard Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -904,6 +947,7 @@
 		</skills>
 	</item>
 	<item id="13643" name="Transformation Scroll: Goddard Dark Elf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Dark Elven mercenary. Can only be used by an ordinary mercenary in Goddard Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -925,6 +969,7 @@
 		</skills>
 	</item>
 	<item id="13644" name="Transformation Scroll: Goddard Orc Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Orc mercenary. Can only be used by an ordinary mercenary in Goddard Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -946,6 +991,7 @@
 		</skills>
 	</item>
 	<item id="13645" name="Transformation Scroll: Goddard Dwarf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Dwarven mercenary. Can only be used by an ordinary mercenary in Goddard Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -967,6 +1013,7 @@
 		</skills>
 	</item>
 	<item id="13646" name="Transformation Scroll: Goddard Kamael Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Kamael mercenary. Can only be used by an ordinary mercenary in Goddard Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -988,6 +1035,7 @@
 		</skills>
 	</item>
 	<item id="13647" name="Transformation Scroll: Goddard Knight Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Knight mercenary. Can only be used by an elite mercenary in Goddard Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1009,6 +1057,7 @@
 		</skills>
 	</item>
 	<item id="13648" name="Transformation Scroll: Goddard Archer Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Archer mercenary. Can only be used by an elite mercenary in Goddard Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1030,6 +1079,7 @@
 		</skills>
 	</item>
 	<item id="13649" name="Transformation Scroll: Goddard Wizard Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Wizard mercenary. Can only be used by an elite mercenary in Goddard Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1051,6 +1101,7 @@
 		</skills>
 	</item>
 	<item id="13650" name="Transformation Scroll: Goddard Centurion Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Centurion Mercenary. Can only be used by an elite mercenary in Goddard Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1072,6 +1123,7 @@
 		</skills>
 	</item>
 	<item id="13651" name="Transformation Scroll: Goddard Knight Captain Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Knight Captain mercenary. Can only be used by an Exalted Mercenary in Goddard Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1093,6 +1145,7 @@
 		</skills>
 	</item>
 	<item id="13652" name="Transformation Scroll: Goddard Commander Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Commander mercenary. Can only be used by an Exalted Mercenary in Goddard Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1114,6 +1167,7 @@
 		</skills>
 	</item>
 	<item id="13653" name="Transformation Scroll: Rune Human Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Human mercenary. Can only be used by an ordinary mercenary in Rune Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1135,6 +1189,7 @@
 		</skills>
 	</item>
 	<item id="13654" name="Transformation Scroll: Rune Elf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Elven mercenary. Can only be used by an ordinary mercenary in Rune Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1156,6 +1211,7 @@
 		</skills>
 	</item>
 	<item id="13655" name="Transformation Scroll: Rune Dark Elf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Dark Elven mercenary. Can only be used by an ordinary mercenary in Rune Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1177,6 +1233,7 @@
 		</skills>
 	</item>
 	<item id="13656" name="Transformation Scroll: Rune Orc Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Orc mercenary. Can only be used by an ordinary mercenary in Rune Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1198,6 +1255,7 @@
 		</skills>
 	</item>
 	<item id="13657" name="Transformation Scroll: Rune Dwarf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Dwarven mercenary. Can only be used by an ordinary mercenary in Rune Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1219,6 +1277,7 @@
 		</skills>
 	</item>
 	<item id="13658" name="Transformation Scroll: Rune Kamael Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Kamael mercenary. Can only be used by an ordinary mercenary in Rune Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1240,6 +1299,7 @@
 		</skills>
 	</item>
 	<item id="13659" name="Transformation Scroll: Rune Knight Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Knight mercenary. Can only be used by an elite mercenary in Rune Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1261,6 +1321,7 @@
 		</skills>
 	</item>
 	<item id="13660" name="Transformation Scroll: Rune Archer Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Archer mercenary. Can only be used by an elite mercenary in Rune Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1282,6 +1343,7 @@
 		</skills>
 	</item>
 	<item id="13661" name="Transformation Scroll: Rune Wizard Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Wizard mercenary. Can only be used by an elite mercenary in Rune Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1303,6 +1365,7 @@
 		</skills>
 	</item>
 	<item id="13662" name="Transformation Scroll: Rune Centurion Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Centurion Mercenary. Can only be used by an elite mercenary in Rune Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1324,6 +1387,7 @@
 		</skills>
 	</item>
 	<item id="13663" name="Transformation Scroll: Rune Knight Captain Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Knight Captain mercenary. Can only be used by an Exalted Mercenary in Rune Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1345,6 +1409,7 @@
 		</skills>
 	</item>
 	<item id="13664" name="Transformation Scroll: Rune Commander Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Commander mercenary. Can only be used by an Exalted Mercenary in Rune Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1366,6 +1431,7 @@
 		</skills>
 	</item>
 	<item id="13665" name="Transformation Scroll: Schuttgart Human Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Human mercenary. Can only be used by an ordinary mercenary in Schuttgart Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1387,6 +1453,7 @@
 		</skills>
 	</item>
 	<item id="13666" name="Transformation Scroll: Schuttgart Elf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Elven mercenary. Can only be used by an ordinary mercenary in Schuttgart Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1408,6 +1475,7 @@
 		</skills>
 	</item>
 	<item id="13667" name="Transformation Scroll: Schuttgart Dark Elf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Dark Elven mercenary. Can only be used by an ordinary mercenary in Schuttgart Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1429,6 +1497,7 @@
 		</skills>
 	</item>
 	<item id="13668" name="Transformation Scroll: Schuttgart Orc Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Orc mercenary. Can only be used by an ordinary mercenary in Schuttgart Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1450,6 +1519,7 @@
 		</skills>
 	</item>
 	<item id="13669" name="Transformation Scroll: Schuttgart Dwarf Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Dwarven mercenary. Can only be used by an ordinary mercenary in Schuttgart Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1471,6 +1541,7 @@
 		</skills>
 	</item>
 	<item id="13670" name="Transformation Scroll: Schuttgart Kamael Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Kamael mercenary. Can only be used by an ordinary mercenary in Schuttgart Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1492,6 +1563,7 @@
 		</skills>
 	</item>
 	<item id="13671" name="Transformation Scroll: Schuttgart Knight Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Knight mercenary. Can only be used by an elite mercenary in Schuttgart Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1513,6 +1585,7 @@
 		</skills>
 	</item>
 	<item id="13672" name="Transformation Scroll: Schuttgart Archer Mercenary" type="EtcItem">
+		<!-- Allows you to transform into an Archer mercenary. Can only be used by an elite mercenary in Schuttgart Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1534,6 +1607,7 @@
 		</skills>
 	</item>
 	<item id="13673" name="Transformation Scroll: Schuttgart Wizard Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Wizard mercenary. Can only be used by an elite mercenary in Schuttgart Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1555,6 +1629,7 @@
 		</skills>
 	</item>
 	<item id="13674" name="Transformation Scroll: Schuttgart Centurion Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Centurion Mercenary. Can only be used by an elite mercenary in Schuttgart Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1576,6 +1651,7 @@
 		</skills>
 	</item>
 	<item id="13675" name="Transformation Scroll: Schuttgart Knight Captain Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Knight Captain mercenary. Can only be used by an Exalted Mercenary in Schuttgart Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1597,6 +1673,7 @@
 		</skills>
 	</item>
 	<item id="13676" name="Transformation Scroll: Schuttgart Commander Mercenary" type="EtcItem">
+		<!-- Allows you to transform into a Commander mercenary. Can only be used by an Exalted Mercenary in Schuttgart Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1618,6 +1695,7 @@
 		</skills>
 	</item>
 	<item id="13677" name="Gludio Disguise Scroll" type="EtcItem">
+		<!-- Allows you to hide your name when participating in a battle in Gludio Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="HIDE_NAME" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1632,6 +1710,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="13678" name="Dion Disguise Scroll" type="EtcItem">
+		<!-- Allows you to hide your name when participating in a battle in Dion Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="HIDE_NAME" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1646,6 +1725,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="13679" name="Giran Disguise Scroll" type="EtcItem">
+		<!-- Allows you to hide your name when participating in a battle in Giran Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="HIDE_NAME" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1660,6 +1740,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="13680" name="Oren Disguise Scroll" type="EtcItem">
+		<!-- Allows you to hide your name when participating in a battle in Oren Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="HIDE_NAME" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1674,6 +1755,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="13681" name="Aden Disguise Scroll" type="EtcItem">
+		<!-- Allows you to hide your name when participating in a battle in Aden Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="HIDE_NAME" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1688,6 +1770,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="13682" name="Innadril Disguise Scroll" type="EtcItem">
+		<!-- Allows you to hide your name when participating in a battle in Innadril Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="HIDE_NAME" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1702,6 +1785,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="13683" name="Goddard Disguise Scroll" type="EtcItem">
+		<!-- Allows you to hide your name when participating in a battle in Goddard Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="HIDE_NAME" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1716,6 +1800,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="13684" name="Rune Disguise Scroll" type="EtcItem">
+		<!-- Allows you to hide your name when participating in a battle in Rune Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="HIDE_NAME" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1730,6 +1815,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="13685" name="Schuttgart Disguise Scroll" type="EtcItem">
+		<!-- Allows you to hide your name when participating in a battle in Schuttgart Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="HIDE_NAME" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1744,6 +1830,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="13686" name="Sealed Knight's Cloak" type="EtcItem">
+		<!-- Cloak with luxurious embroidery. When the seal is cancelled, it'll have Dark Resistance + 30 effect. The seal can be cancelled through the weaver Olf Kanore and Olf Adams. It cannot be worn before the seal cancellation. Cannot be enchanted, augmented, or assigned an attribute. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.sealed_vesper_cloack_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -1773,6 +1860,7 @@
 		</stats>
 	</item>
 	<item id="13687" name="Knight's Cloak" type="Armor">
+		<!-- Cloak with luxurious embroidery. Dark Resistance + 30. Can be worn by Barons or higher ranks of the clan that owns a castle. When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Cannot be enchanted, augmented, or assigned an attribute. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1803,6 +1891,7 @@
 		</stats>
 	</item>
 	<item id="13688" name="Knight's Cloak (Light Armor)" type="Armor">
+		<!-- Cloak with luxurious embroidery. Dark Resistance + 30, and Can be worn by Barons or higher ranks of the clan that owns a castle. When the entire Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. The cloak is exclusively for Bow Masters and Dagger Masters excluding Kamaels. Cannot be enchanted, augmented, or assigned an attribute. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1835,6 +1924,7 @@
 		</stats>
 	</item>
 	<item id="13689" name="Knight's Cloak (Robe)" type="Armor">
+		<!-- Cloak with luxurious embroidery. Dark Resistance + 30, and Can be worn by Barons or higher ranks of the clan that owns a castle. When the entire Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. The cloak is exclusively for Healer, Enchanter, Summoner and Wizard excluding Kamaels. Cannot be enchanted, augmented, or assigned an attribute. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1867,6 +1957,7 @@
 		</stats>
 	</item>
 	<item id="13690" name="Knight's Cloak (Kamael)" type="Armor">
+		<!-- Cloak with luxurious embroidery. Dark Resistance + 30, and Can be worn by Barons or higher ranks of the clan that owns a castle. When the entire Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. Kamael-exclusive cloak. Cannot be enchanted, augmented, or assigned an attribute. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1898,6 +1989,7 @@
 		</stats>
 	</item>
 	<item id="13691" name="Mark of Keucereus - Stage 1" type="EtcItem">
+		<!-- Mark given to an adventurer who successfully completes Keucereus' order to break through to the Hall of Suffering. This mark is required for taking on higher level missions. -->
 		<set name="icon" val="icon.etc_badge_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1915,6 +2007,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13692" name="Mark of Keucereus - Stage 2" type="EtcItem">
+		<!-- Mark given to an adventurer who successfully completes Kucereus' order to conquer the Hall of Erosion. Mark given to prove heroic achievements at the Seed of Infinity. -->
 		<set name="icon" val="icon.etc_badge_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1932,6 +2025,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13693" name="Gracian Anniversary Coins" type="EtcItem">
+		<!-- Gracian Anniversary Coins. When possessed, a reward can be acquired. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -1948,6 +2042,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13694" name="Gracia Key" type="EtcItem">
+		<!-- You can acquire Gracia Anniversary Coins by using a Gracian treasure chest. Cooldown is 10 min. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -1968,6 +2063,7 @@
 		</skills>
 	</item>
 	<item id="13695" name="Gludio Supply Box - Magic Pin" additionalName="B-/C-grade" type="EtcItem">
+		<!-- Box that has the symbol of Gludio. Low grade magic pin that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1988,6 +2084,7 @@
 		</skills>
 	</item>
 	<item id="13696" name="Dion Supply Box - Magic Pin" additionalName="B-/C-grade" type="EtcItem">
+		<!-- Box that has the symbol of Dion. Low grade magic pin that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -2008,6 +2105,7 @@
 		</skills>
 	</item>
 	<item id="13697" name="Giran Supply Box - Magic Pin" additionalName="B-/C-grade" type="EtcItem">
+		<!-- Box that has the symbol of Giran. Low grade magic pin that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -2028,6 +2126,7 @@
 		</skills>
 	</item>
 	<item id="13698" name="Oren Supply Box - Magic Pin" additionalName="B-/C-grade" type="EtcItem">
+		<!-- Box that has the symbol of Oren. Low grade magic pin that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -2048,6 +2147,7 @@
 		</skills>
 	</item>
 	<item id="13699" name="Aden Supply Box - Magic Pin" additionalName="B-/C-grade" type="EtcItem">
+		<!-- Box that has the symbol of Aden. Low grade magic pin that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />

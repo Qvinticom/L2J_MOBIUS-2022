@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="39300" name="+ 6 Twilight Circlet Coupon" additionalName="Robe" type="Armor">
 		<!-- Bring this to the Memory Fragment manager Chaotic Chronicle to exchange it for a + 6 Twilight Circlet. Deleted after event. -->
@@ -680,7 +680,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="39374" name="Scroll: 5,000,000 SP" additionalName="Event" type="EtcItem">
-		<!-- Scroll that replenishes 5,000,000 SP. -->
+		<!-- Scroll with 5,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -690,7 +690,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39375" name="Scroll: 10,000,000 SP" additionalName="Event" type="EtcItem">
-		<!-- Scroll that replenishes 10,000,000 SP. -->
+		<!-- Scroll with 10,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -710,7 +710,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39377" name="10th Anniversary Festival's Cloak Pack" type="EtcItem">
-		<!-- Dimensional Item Pack\nLineage II 10th Anniversary item. It contains 1 of 3 10th Anniversary Festival's Cloaks. Cannot be shared once opened. -->
+		<!-- Dimensional Item Pack. Lineage II 10th Anniversary item. It contains 1 of 3 10th Anniversary Festival's Cloaks. Cannot be shared once opened. -->
 		<set name="icon" val="icon.ev_10th_present2" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
