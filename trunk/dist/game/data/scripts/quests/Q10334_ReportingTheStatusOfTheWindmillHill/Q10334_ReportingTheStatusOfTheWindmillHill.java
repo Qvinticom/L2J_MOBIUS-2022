@@ -43,9 +43,9 @@ public final class Q10334_ReportingTheStatusOfTheWindmillHill extends Quest
 		super(10334);
 		addStartNpc(SCHUNAIN);
 		addTalkId(SCHUNAIN, BATHIS);
-		addCondNotRace(Race.ERTHEIA, "33508-07.htm");
-		addCondCompletedQuest(Q10333_DisappearedSakum.class.getSimpleName(), "33508-06.htm");
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33508-06.htm");
+		addCondNotRace(Race.ERTHEIA, "33508-07.html");
+		addCondCompletedQuest(Q10333_DisappearedSakum.class.getSimpleName(), "33508-06.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33508-06.html");
 	}
 	
 	@Override
@@ -61,18 +61,18 @@ public final class Q10334_ReportingTheStatusOfTheWindmillHill extends Quest
 		switch (event)
 		{
 			case "33508-02.htm":
-			case "30332-02.htm":
+			case "30332-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33508-03.htm":
+			case "33508-03.html":
 			{
 				st.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "30332-03.htm":
+			case "30332-03.html":
 			{
 				if (st.isCond(1))
 				{
@@ -105,12 +105,12 @@ public final class Q10334_ReportingTheStatusOfTheWindmillHill extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == SCHUNAIN ? "33508-04.htm" : "30332-01.htm";
+				htmltext = npc.getId() == SCHUNAIN ? "33508-04.html" : "30332-01.html";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == SCHUNAIN ? "33508-05.htm" : "30332-04.htm";
+				htmltext = npc.getId() == SCHUNAIN ? "33508-05.html" : "30332-04.html";
 				break;
 			}
 		}

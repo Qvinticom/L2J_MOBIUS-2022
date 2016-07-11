@@ -51,9 +51,9 @@ public final class Q10332_ToughRoad extends Quest
 		addStartNpc(KAKAI);
 		addTalkId(KAKAI, BATHIS);
 		addEnterZoneId(ZONE_ID);
-		addCondNotRace(Race.ERTHEIA, "30565-05.htm");
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "30565-04.htm");
-		addCondCompletedQuest(Q10331_StartOfFate.class.getSimpleName(), "30565-04.htm");
+		addCondNotRace(Race.ERTHEIA, "30565-05.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "30565-04.html");
+		addCondCompletedQuest(Q10331_StartOfFate.class.getSimpleName(), "30565-04.html");
 	}
 	
 	@Override
@@ -73,18 +73,18 @@ public final class Q10332_ToughRoad extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "30332-02.htm":
+			case "30332-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "30565-02.htm":
+			case "30565-02.html":
 			{
 				st.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "30332-03.htm":
+			case "30332-03.html":
 			{
 				if (st.isCond(1))
 				{
@@ -116,12 +116,12 @@ public final class Q10332_ToughRoad extends Quest
 				}
 				case State.STARTED:
 				{
-					htmltext = "30565-06.htm";
+					htmltext = "30565-06.html";
 					break;
 				}
 				case State.COMPLETED:
 				{
-					htmltext = "30565-03.htm";
+					htmltext = "30565-03.html";
 					break;
 				}
 			}
@@ -130,11 +130,11 @@ public final class Q10332_ToughRoad extends Quest
 		{
 			if (st.getState() == State.STARTED)
 			{
-				htmltext = "30332-01.htm";
+				htmltext = "30332-01.html";
 			}
 			else if (st.getState() == State.COMPLETED)
 			{
-				htmltext = "30332-04.htm";
+				htmltext = "30332-04.html";
 			}
 		}
 		return htmltext;

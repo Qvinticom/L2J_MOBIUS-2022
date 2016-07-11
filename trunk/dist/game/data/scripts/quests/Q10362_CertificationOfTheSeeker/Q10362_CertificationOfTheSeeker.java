@@ -55,8 +55,8 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 		addStartNpc(CHESHA);
 		addTalkId(CHESHA, NAGEL);
 		addKillId(STALKER, CRAWLER);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33449-07.htm");
-		addCondCompletedQuest(Q10361_RolesOfTheSeeker.class.getSimpleName(), "33449-07.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33449-07.html");
+		addCondCompletedQuest(Q10361_RolesOfTheSeeker.class.getSimpleName(), "33449-07.html");
 	}
 	
 	@Override
@@ -72,12 +72,12 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 		switch (event)
 		{
 			case "33449-02.htm":
-			case "33450-02.htm":
+			case "33450-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33449-03.htm":
+			case "33449-03.html":
 			{
 				qs.startQuest();
 				qs.setMemoStateEx(STALKER, 0);
@@ -85,7 +85,7 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 				htmltext = event;
 				break;
 			}
-			case "33450-03.htm":
+			case "33450-03.html":
 			{
 				if (qs.isCond(3))
 				{
@@ -166,7 +166,7 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 					{
 						case 1:
 						{
-							htmltext = "33449-04.htm";
+							htmltext = "33449-04.html";
 							break;
 						}
 						case 2:
@@ -176,12 +176,12 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 								showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_2, ExShowScreenMessage.TOP_CENTER, 4500);
 								qs.setCond(3, true);
 							}
-							htmltext = "33449-05.htm";
+							htmltext = "33449-05.html";
 							break;
 						}
 						case 3:
 						{
-							htmltext = "33449-06.htm";
+							htmltext = "33449-06.html";
 							break;
 						}
 					}
@@ -190,7 +190,7 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 				{
 					if (qs.isCond(3))
 					{
-						htmltext = "33450-01.htm";
+						htmltext = "33450-01.html";
 						break;
 					}
 				}
@@ -198,7 +198,7 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == CHESHA ? "33449-08.htm" : "33450-04.htm";
+				htmltext = npc.getId() == CHESHA ? "33449-08.html" : "33450-04.html";
 				break;
 			}
 		}

@@ -81,8 +81,8 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 		addStartNpc(SHANNON);
 		addTalkId(SHANNON, ADVENTURERS_GUIDE, EVAIN);
 		addKillId(SCARECROW);
-		addCondMaxLevel(MAX_LEVEL, "32974-01a.htm");
-		addCondCompletedQuest(Q10321_QualificationsOfTheSeeker.class.getSimpleName(), "32974-01a.htm");
+		addCondMaxLevel(MAX_LEVEL, "32974-01a.html");
+		addCondCompletedQuest(Q10321_QualificationsOfTheSeeker.class.getSimpleName(), "32974-01a.html");
 	}
 	
 	@Override
@@ -97,7 +97,7 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "32974-03.htm":
+			case "32974-03.html":
 			{
 				qs.startQuest();
 				htmltext = event;
@@ -108,7 +108,7 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32981-02.htm":
+			case "32981-02.html":
 			{
 				if (qs.isCond(4))
 				{
@@ -166,12 +166,12 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 				}
 				else if (npc.getId() == EVAIN)
 				{
-					htmltext = "33464-07.htm";
+					htmltext = "33464-07.html";
 					break;
 				}
 				else if (npc.getId() == ADVENTURERS_GUIDE)
 				{
-					htmltext = "32981-04.htm";
+					htmltext = "32981-04.html";
 					break;
 				}
 			}
@@ -181,7 +181,7 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 				{
 					if (qs.isCond(1))
 					{
-						htmltext = "32974-04.htm";
+						htmltext = "32974-04.html";
 						break;
 					}
 				}
@@ -189,12 +189,12 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 				{
 					if (qs.isCond(4))
 					{
-						htmltext = "32981-01.htm";
+						htmltext = "32981-01.html";
 						break;
 					}
 					else if (qs.isCond(5))
 					{
-						htmltext = "32981-03.htm";
+						htmltext = "32981-03.html";
 						break;
 					}
 				}
@@ -205,28 +205,28 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 						case 1:
 						{
 							qs.setCond(2, true);
-							htmltext = "33464-01.htm";
+							htmltext = "33464-01.html";
 							break;
 						}
 						case 2:
 						{
-							htmltext = "33464-02.htm";
+							htmltext = "33464-02.html";
 							break;
 						}
 						case 3:
 						{
 							qs.setCond(4, true);
-							htmltext = "33464-03.htm";
+							htmltext = "33464-03.html";
 							break;
 						}
 						case 4:
 						{
-							htmltext = "33464-04.htm";
+							htmltext = "33464-04.html";
 							break;
 						}
 						case 5:
 						{
-							htmltext = "33464-05.htm";
+							htmltext = "33464-05.html";
 							break;
 						}
 						case 6:
@@ -247,7 +247,7 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 								npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THERE_S_THE_NEXT_TRAINING_STEP);
 								qs.exitQuest(false, true);
 							}
-							htmltext = "33464-06.htm";
+							htmltext = "33464-06.html";
 							break;
 						}
 					}
@@ -258,18 +258,18 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 			{
 				if (npc.getId() == SHANNON)
 				{
-					htmltext = "32974-05.htm";
+					htmltext = "32974-05.html";
 					break;
 				}
 				else if (npc.getId() == EVAIN)
 				{
-					htmltext = "33464-08.htm";
+					htmltext = "33464-08.html";
 					break;
 				}
 				// Official is using same html for created/completed
 				else if (npc.getId() == ADVENTURERS_GUIDE)
 				{
-					htmltext = "32981-04.htm";
+					htmltext = "32981-04.html";
 					break;
 				}
 			}

@@ -53,8 +53,8 @@ public final class Q10335_RequestToFindSakum extends Quest
 		addStartNpc(BATHIS);
 		addTalkId(BATHIS, KALLESIN, ZENATH);
 		addKillId(SKELETON_TRACKER, SKELETON_BOWMAN, RUIN_SPARTOI, RUIN_ZOMBIE, RUIN_ZOMBIE_LEADER);
-		addCondNotRace(Race.ERTHEIA, "30332-08.htm");
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "30332-07.htm");
+		addCondNotRace(Race.ERTHEIA, "30332-08.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "30332-07.html");
 	}
 	
 	@Override
@@ -70,18 +70,18 @@ public final class Q10335_RequestToFindSakum extends Quest
 		switch (event)
 		{
 			case "30332-02.htm":
-			case "33509-03.htm":
+			case "33509-03.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "30332-03.htm":
+			case "30332-03.html":
 			{
 				st.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "33177-02.htm":
+			case "33177-02.html":
 			{
 				if (st.isCond(1))
 				{
@@ -90,7 +90,7 @@ public final class Q10335_RequestToFindSakum extends Quest
 				}
 				break;
 			}
-			case "33509-04.htm":
+			case "33509-04.html":
 			{
 				if (st.isCond(3))
 				{
@@ -127,7 +127,7 @@ public final class Q10335_RequestToFindSakum extends Quest
 				{
 					case BATHIS:
 					{
-						htmltext = st.isCond(1) ? "30332-04.htm" : "30332-05.htm";
+						htmltext = st.isCond(1) ? "30332-04.html" : "30332-05.html";
 						break;
 					}
 					case KALLESIN:
@@ -136,17 +136,17 @@ public final class Q10335_RequestToFindSakum extends Quest
 						{
 							case 1:
 							{
-								htmltext = "33177-01.htm";
+								htmltext = "33177-01.html";
 								break;
 							}
 							case 2:
 							{
-								htmltext = "33177-03.htm";
+								htmltext = "33177-03.html";
 								break;
 							}
 							case 3:
 							{
-								htmltext = "33177-04.htm";
+								htmltext = "33177-04.html";
 								break;
 							}
 						}
@@ -159,12 +159,12 @@ public final class Q10335_RequestToFindSakum extends Quest
 							case 1:
 							case 2:
 							{
-								htmltext = "33509-01.htm";
+								htmltext = "33509-01.html";
 								break;
 							}
 							case 3:
 							{
-								htmltext = "33509-02.htm";
+								htmltext = "33509-02.html";
 								break;
 							}
 						}
@@ -179,17 +179,17 @@ public final class Q10335_RequestToFindSakum extends Quest
 				{
 					case BATHIS:
 					{
-						htmltext = "30332-06.htm";
+						htmltext = "30332-06.html";
 						break;
 					}
 					case KALLESIN:
 					{
-						htmltext = "33177-05.htm";
+						htmltext = "33177-05.html";
 						break;
 					}
 					case ZENATH:
 					{
-						htmltext = "33509-05.htm";
+						htmltext = "33509-05.html";
 						break;
 					}
 				}

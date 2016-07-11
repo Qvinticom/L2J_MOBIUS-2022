@@ -65,8 +65,8 @@ public final class Q10363_RequestOfTheSeeker extends Quest
 		addStartNpc(NAGEL);
 		addTalkId(NAGEL, CELIN);
 		addSpawnId(CORPSES);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33450-07.htm");
-		addCondCompletedQuest(Q10362_CertificationOfTheSeeker.class.getSimpleName(), "33450-07.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33450-07.html");
+		addCondCompletedQuest(Q10362_CertificationOfTheSeeker.class.getSimpleName(), "33450-07.html");
 	}
 	
 	@Override
@@ -82,18 +82,18 @@ public final class Q10363_RequestOfTheSeeker extends Quest
 		switch (event)
 		{
 			case "33450-02.htm":
-			case "33451-02.htm":
+			case "33451-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33450-03.htm":
+			case "33450-03.html":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "33450-06.htm":
+			case "33450-06.html":
 			{
 				if (qs.isCond(6))
 				{
@@ -105,7 +105,7 @@ public final class Q10363_RequestOfTheSeeker extends Quest
 				break;
 			}
 			
-			case "33451-03.htm":
+			case "33451-03.html":
 			{
 				if (qs.isCond(7))
 				{
@@ -152,17 +152,17 @@ public final class Q10363_RequestOfTheSeeker extends Quest
 						case 4:
 						case 5:
 						{
-							htmltext = "33450-04.htm";
+							htmltext = "33450-04.html";
 							break;
 						}
 						case 6:
 						{
-							htmltext = "33450-05.htm";
+							htmltext = "33450-05.html";
 							break;
 						}
 						case 7:
 						{
-							htmltext = "33450-06.htm";
+							htmltext = "33450-06.html";
 							break;
 						}
 					}
@@ -171,7 +171,7 @@ public final class Q10363_RequestOfTheSeeker extends Quest
 				{
 					if (qs.isCond(7))
 					{
-						htmltext = "33451-01.htm";
+						htmltext = "33451-01.html";
 						break;
 					}
 				}
@@ -179,7 +179,7 @@ public final class Q10363_RequestOfTheSeeker extends Quest
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == NAGEL ? "33450-07.htm" : "33451-04.htm";
+				htmltext = npc.getId() == NAGEL ? "33450-07.html" : "33451-04.html";
 				break;
 			}
 		}

@@ -43,7 +43,7 @@ public final class Q00210_ObtainAWolfPet extends Quest
 		super(210);
 		addStartNpc(LUNDY);
 		addTalkId(LUNDY, BELLA, BRYNN, SYDNIA);
-		addCondMinLevel(MIN_LEVEL, "30827-07.htm");
+		addCondMinLevel(MIN_LEVEL, "30827-07.html");
 	}
 	
 	@Override
@@ -59,21 +59,21 @@ public final class Q00210_ObtainAWolfPet extends Quest
 		switch (event)
 		{
 			case "30827-02.htm":
-			case "30256-02.htm":
-			case "30256-03.htm":
-			case "30335-02.htm":
-			case "30321-02.htm":
+			case "30256-02.html":
+			case "30256-03.html":
+			case "30335-02.html":
+			case "30321-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "30827-03.htm":
+			case "30827-03.html":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "30827-06.htm":
+			case "30827-06.html":
 			{
 				if (qs.isCond(4))
 				{
@@ -111,12 +111,12 @@ public final class Q00210_ObtainAWolfPet extends Quest
 					{
 						if (qs.isCond(1))
 						{
-							htmltext = "30827-04.htm";
+							htmltext = "30827-04.html";
 							break;
 						}
 						else if (qs.isCond(4))
 						{
-							htmltext = "30827-05.htm";
+							htmltext = "30827-05.html";
 							break;
 						}
 						break;
@@ -126,7 +126,7 @@ public final class Q00210_ObtainAWolfPet extends Quest
 						if (qs.isCond(1))
 						{
 							qs.setCond(2, true);
-							htmltext = "30256-01.htm";
+							htmltext = "30256-01.html";
 						}
 						break;
 					}
@@ -135,7 +135,7 @@ public final class Q00210_ObtainAWolfPet extends Quest
 						if (qs.isCond(2))
 						{
 							qs.setCond(3, true);
-							htmltext = "30335-01.htm";
+							htmltext = "30335-01.html";
 						}
 						break;
 					}
@@ -144,7 +144,7 @@ public final class Q00210_ObtainAWolfPet extends Quest
 						if (qs.isCond(3))
 						{
 							qs.setCond(4, true);
-							htmltext = "30321-01.htm";
+							htmltext = "30321-01.html";
 						}
 						break;
 					}

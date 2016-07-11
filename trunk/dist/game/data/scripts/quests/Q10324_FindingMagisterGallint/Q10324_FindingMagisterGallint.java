@@ -42,8 +42,8 @@ public final class Q10324_FindingMagisterGallint extends Quest
 		super(10324);
 		addStartNpc(SHANNON);
 		addTalkId(SHANNON, GALLINT);
-		addCondMaxLevel(MAX_LEVEL, "32974-01a.htm");
-		addCondCompletedQuest(Q10323_TrainLikeItsReal.class.getSimpleName(), "32974-01a.htm");
+		addCondMaxLevel(MAX_LEVEL, "32974-01a.html");
+		addCondCompletedQuest(Q10323_TrainLikeItsReal.class.getSimpleName(), "32974-01a.html");
 	}
 	
 	@Override
@@ -58,7 +58,7 @@ public final class Q10324_FindingMagisterGallint extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "32974-03.htm":
+			case "32974-03.html":
 			{
 				qs.startQuest();
 				htmltext = event;
@@ -69,7 +69,7 @@ public final class Q10324_FindingMagisterGallint extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32980-02.htm":
+			case "32980-02.html":
 			{
 				if (qs.isStarted())
 				{
@@ -95,17 +95,17 @@ public final class Q10324_FindingMagisterGallint extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = npc.getId() == SHANNON ? "32974-01.htm" : "32980-04.htm";
+				htmltext = npc.getId() == SHANNON ? "32974-01.htm" : "32980-04.html";
 				break;
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == SHANNON ? "32974-04.htm" : "32980-01.htm";
+				htmltext = npc.getId() == SHANNON ? "32974-04.html" : "32980-01.html";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == SHANNON ? "32974-05.htm" : "32980-03.htm";
+				htmltext = npc.getId() == SHANNON ? "32974-05.html" : "32980-03.html";
 				break;
 			}
 		}

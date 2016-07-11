@@ -52,8 +52,8 @@ public final class Q10336_DividedSakumKanilov extends Quest
 		addTalkId(ZENATH, ADVENTURE_GUILDSMAN);
 		addKillId(KANILOV);
 		registerQuestItems(SAKUM_SKETCH);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33509-08.htm");
-		addCondCompletedQuest(Q10335_RequestToFindSakum.class.getSimpleName(), "33509-08.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33509-08.html");
+		addCondCompletedQuest(Q10335_RequestToFindSakum.class.getSimpleName(), "33509-08.html");
 	}
 	
 	@Override
@@ -69,18 +69,18 @@ public final class Q10336_DividedSakumKanilov extends Quest
 		switch (event)
 		{
 			case "33509-02.htm":
-			case "31795-05.htm":
+			case "31795-05.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33509-03.htm":
+			case "33509-03.html":
 			{
 				st.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "31795-06.htm":
+			case "31795-06.html":
 			{
 				if (st.isCond(3))
 				{
@@ -106,7 +106,7 @@ public final class Q10336_DividedSakumKanilov extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = npc.getId() == ZENATH ? "33509-01.htm" : "31795-02.htm";
+				htmltext = npc.getId() == ZENATH ? "33509-01.htm" : "31795-02.html";
 				break;
 			}
 			case State.STARTED:
@@ -115,7 +115,7 @@ public final class Q10336_DividedSakumKanilov extends Quest
 				{
 					case 1:
 					{
-						htmltext = npc.getId() == ZENATH ? "33509-04.htm" : "31795-01.htm";
+						htmltext = npc.getId() == ZENATH ? "33509-04.html" : "31795-01.html";
 						break;
 					}
 					case 2:
@@ -127,17 +127,17 @@ public final class Q10336_DividedSakumKanilov extends Quest
 								st.setCond(3);
 								giveItems(player, SAKUM_SKETCH, 1);
 							}
-							htmltext = "33509-05.htm";
+							htmltext = "33509-05.html";
 						}
 						else
 						{
-							htmltext = "31795-03.htm";
+							htmltext = "31795-03.html";
 						}
 						break;
 					}
 					case 3:
 					{
-						htmltext = npc.getId() == ZENATH ? "33509-06.htm" : "31795-04.htm";
+						htmltext = npc.getId() == ZENATH ? "33509-06.html" : "31795-04.html";
 						break;
 					}
 				}
@@ -145,7 +145,7 @@ public final class Q10336_DividedSakumKanilov extends Quest
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == ZENATH ? "33509-07.htm" : "31795-07.htm";
+				htmltext = npc.getId() == ZENATH ? "33509-07.html" : "31795-07.html";
 				break;
 			}
 		}

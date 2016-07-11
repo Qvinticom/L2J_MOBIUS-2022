@@ -42,7 +42,7 @@ public final class Q10361_RolesOfTheSeeker extends Quest
 		super(10361);
 		addStartNpc(LAKCIS);
 		addTalkId(LAKCIS, CHESHA);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "32977-05.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "32977-05.html");
 	}
 	
 	@Override
@@ -58,19 +58,19 @@ public final class Q10361_RolesOfTheSeeker extends Quest
 		switch (event)
 		{
 			case "32977-02.htm":
-			case "33449-02.htm":
+			case "33449-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "32977-03.htm":
+			case "32977-03.html":
 			{
 				qs.startQuest();
 				showOnScreenMsg(player, NpcStringId.ENTER_THE_RUINS_OF_YE_SAGIRA_THROUGH_THE_YE_SAGIRA_TELEPORT_DEVICE, ExShowScreenMessage.TOP_CENTER, 4500);
 				htmltext = event;
 				break;
 			}
-			case "33449-03.htm":
+			case "33449-03.html":
 			{
 				if (qs.isStarted())
 				{
@@ -103,12 +103,12 @@ public final class Q10361_RolesOfTheSeeker extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == LAKCIS ? "32977-04.htm" : "33449-01.htm";
+				htmltext = npc.getId() == LAKCIS ? "32977-04.html" : "33449-01.html";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == LAKCIS ? "32977-06.htm" : "33449-04.htm";
+				htmltext = npc.getId() == LAKCIS ? "32977-06.html" : "33449-04.html";
 				break;
 			}
 		}

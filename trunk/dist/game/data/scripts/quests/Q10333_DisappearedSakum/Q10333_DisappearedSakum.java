@@ -60,8 +60,8 @@ public final class Q10333_DisappearedSakum extends Quest
 		addKillId(LIZARDMEN, VAKU_ORC);
 		addKillId(SPIDERS);
 		registerQuestItems(BADGE);
-		addCondNotRace(Race.ERTHEIA, "30332-09.htm");
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "30332-10.htm");
+		addCondNotRace(Race.ERTHEIA, "30332-09.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "30332-10.html");
 	}
 	
 	@Override
@@ -79,19 +79,19 @@ public final class Q10333_DisappearedSakum extends Quest
 			case "30332-02.htm":
 			case "30332-03.htm":
 			case "30332-04.htm":
-			case "33176-02.htm":
-			case "33508-02.htm":
+			case "33176-02.html":
+			case "33508-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "30332-05.htm":
+			case "30332-05.html":
 			{
 				st.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "33176-03.htm":
+			case "33176-03.html":
 			{
 				if (st.isCond(1))
 				{
@@ -100,7 +100,7 @@ public final class Q10333_DisappearedSakum extends Quest
 				}
 				break;
 			}
-			case "33508-03.htm":
+			case "33508-03.html":
 			{
 				if (st.isCond(3))
 				{
@@ -137,22 +137,22 @@ public final class Q10333_DisappearedSakum extends Quest
 				{
 					case BATHIS:
 					{
-						htmltext = st.isCond(0) ? "30332-06.htm" : "30332-07.htm";
+						htmltext = st.isCond(0) ? "30332-06.html" : "30332-07.html";
 						break;
 					}
 					case VENT:
 					{
 						if (st.isCond(1))
 						{
-							htmltext = "33176-01.htm";
+							htmltext = "33176-01.html";
 						}
 						else if (st.isCond(2))
 						{
-							htmltext = "33176-04.htm";
+							htmltext = "33176-04.html";
 						}
 						else if (st.isCond(3))
 						{
-							htmltext = "33176-05.htm";
+							htmltext = "33176-05.html";
 						}
 						break;
 					}
@@ -160,7 +160,7 @@ public final class Q10333_DisappearedSakum extends Quest
 					{
 						if (st.isCond(3))
 						{
-							htmltext = "33508-01.htm";
+							htmltext = "33508-01.html";
 						}
 						break;
 					}
@@ -173,17 +173,17 @@ public final class Q10333_DisappearedSakum extends Quest
 				{
 					case BATHIS:
 					{
-						htmltext = "30332-08.htm";
+						htmltext = "30332-08.html";
 						break;
 					}
 					case VENT:
 					{
-						htmltext = "33176-06.htm";
+						htmltext = "33176-06.html";
 						break;
 					}
 					case SCHUNAIN:
 					{
-						htmltext = "33508-04.htm";
+						htmltext = "33508-04.html";
 						break;
 					}
 				}

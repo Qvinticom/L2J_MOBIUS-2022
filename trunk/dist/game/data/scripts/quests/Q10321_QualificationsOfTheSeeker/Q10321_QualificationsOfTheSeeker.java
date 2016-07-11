@@ -44,8 +44,8 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 		super(10321);
 		addStartNpc(THEODORE);
 		addTalkId(THEODORE, SHANNON);
-		addCondMaxLevel(MAX_LEVEL, "32975-01a.htm");
-		addCondCompletedQuest(Q10320_LetsGoToTheCentralSquare.class.getSimpleName(), "32975-01a.htm");
+		addCondMaxLevel(MAX_LEVEL, "32975-01a.html");
+		addCondCompletedQuest(Q10320_LetsGoToTheCentralSquare.class.getSimpleName(), "32975-01a.html");
 	}
 	
 	@Override
@@ -60,7 +60,7 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "32975-03.htm":
+			case "32975-03.html":
 			{
 				qs.startQuest();
 				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_027_Quest_01.htm", TutorialShowHtml.LARGE_WINDOW));
@@ -72,7 +72,7 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32974-02.htm":
+			case "32974-02.html":
 			{
 				if (qs.isStarted())
 				{
@@ -98,17 +98,17 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = npc.getId() == THEODORE ? "32975-01.htm" : "32974-04.htm";
+				htmltext = npc.getId() == THEODORE ? "32975-01.htm" : "32974-04.html";
 				break;
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == THEODORE ? "32975-04.htm" : "32974-01.htm";
+				htmltext = npc.getId() == THEODORE ? "32975-04.html" : "32974-01.html";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == THEODORE ? "32975-05.htm" : "32974-03.htm";
+				htmltext = npc.getId() == THEODORE ? "32975-05.html" : "32974-03.html";
 				break;
 			}
 		}

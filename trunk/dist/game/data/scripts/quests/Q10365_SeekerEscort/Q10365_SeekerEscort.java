@@ -94,8 +94,8 @@ public final class Q10365_SeekerEscort extends Quest
 		addTalkId(DEP, SEBION);
 		addSpawnId(BLOODHOUND);
 		addMoveFinishedId(BLOODHOUND);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33453-06.htm");
-		addCondCompletedQuest(Q10364_ObligationsOfTheSeeker.class.getSimpleName(), "33453-06.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33453-06.html");
+		addCondCompletedQuest(Q10364_ObligationsOfTheSeeker.class.getSimpleName(), "33453-06.html");
 	}
 	
 	@Override
@@ -115,7 +115,7 @@ public final class Q10365_SeekerEscort extends Quest
 				htmltext = event;
 				break;
 			}
-			case "33453-03.htm":
+			case "33453-03.html":
 			{
 				qs.startQuest();
 				qs.setMemoState(1);
@@ -126,7 +126,7 @@ public final class Q10365_SeekerEscort extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32978-02.htm":
+			case "32978-02.html":
 			{
 				if (qs.isCond(2))
 				{
@@ -286,7 +286,7 @@ public final class Q10365_SeekerEscort extends Quest
 					if (qs.isCond(1))
 					{
 						// Use maybe something else than memostate to check if npc is spawned?!
-						htmltext = qs.isMemoState(0) ? "33453-04.htm" : "33453-05.htm";
+						htmltext = qs.isMemoState(0) ? "33453-04.html" : "33453-05.html";
 						break;
 					}
 					break;
@@ -295,7 +295,7 @@ public final class Q10365_SeekerEscort extends Quest
 				{
 					if (qs.isCond(2))
 					{
-						htmltext = "32978-01.htm";
+						htmltext = "32978-01.html";
 					}
 					break;
 				}
@@ -303,7 +303,7 @@ public final class Q10365_SeekerEscort extends Quest
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == DEP ? "33453-04.htm" : "32978-03.htm";
+				htmltext = npc.getId() == DEP ? "33453-04.html" : "32978-03.html";
 				break;
 			}
 		}

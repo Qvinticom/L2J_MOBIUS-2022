@@ -69,18 +69,18 @@ public final class Q10337_SakumsImpact extends Quest
 		switch (event)
 		{
 			case "31795-02.htm":
-			case "33178-02.htm":
+			case "33178-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "31795-03.htm":
+			case "31795-03.html":
 			{
 				st.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "33178-03.htm":
+			case "33178-03.html":
 			{
 				if (st.isCond(1))
 				{
@@ -89,7 +89,7 @@ public final class Q10337_SakumsImpact extends Quest
 				}
 				break;
 			}
-			case "33510-04.htm":
+			case "33510-04.html":
 			{
 				if (st.isCond(3))
 				{
@@ -129,13 +129,13 @@ public final class Q10337_SakumsImpact extends Quest
 						switch (npc.getId())
 						{
 							case ADVENTURE_GUILDSMAN:
-								htmltext = "31795-04.htm";
+								htmltext = "31795-04.html";
 								break;
 							case SILVAN:
-								htmltext = "33178-01.htm";
+								htmltext = "33178-01.html";
 								break;
 							case LEF:
-								htmltext = "33510-01.htm";
+								htmltext = "33510-01.html";
 								break;
 						}
 						break;
@@ -145,13 +145,13 @@ public final class Q10337_SakumsImpact extends Quest
 						switch (npc.getId())
 						{
 							case ADVENTURE_GUILDSMAN:
-								htmltext = "31795-04.htm";
+								htmltext = "31795-04.html";
 								break;
 							case SILVAN:
-								htmltext = "33178-04.htm";
+								htmltext = "33178-04.html";
 								break;
 							case LEF:
-								htmltext = "33510-02.htm";
+								htmltext = "33510-02.html";
 								break;
 						}
 						break;
@@ -161,13 +161,13 @@ public final class Q10337_SakumsImpact extends Quest
 						switch (npc.getId())
 						{
 							case ADVENTURE_GUILDSMAN:
-								htmltext = "31795-04.htm";
+								htmltext = "31795-04.html";
 								break;
 							case SILVAN:
-								htmltext = "33178-05.htm";
+								htmltext = "33178-05.html";
 								break;
 							case LEF:
-								htmltext = "33510-03.htm";
+								htmltext = "33510-03.html";
 								break;
 						}
 						break;
@@ -180,13 +180,13 @@ public final class Q10337_SakumsImpact extends Quest
 				switch (npc.getId())
 				{
 					case ADVENTURE_GUILDSMAN:
-						htmltext = "31795-05.htm";
+						htmltext = "31795-05.html";
 						break;
 					case SILVAN:
-						htmltext = "33178-06.htm";
+						htmltext = "33178-06.html";
 						break;
 					case LEF:
-						htmltext = "33510-05.htm";
+						htmltext = "33510-05.html";
 						break;
 				}
 				break;

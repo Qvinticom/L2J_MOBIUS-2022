@@ -61,8 +61,8 @@ public final class Q10339_FightingTheForgotten extends Quest
 		addStartNpc(THEODORE);
 		addTalkId(THEODORE, HADEL);
 		addKillId(MONSTERS);
-		addCondMinLevel(MIN_LV, "32975-06.htm");
-		addCondInCategory(CategoryType.AWAKEN_GROUP, "32975-06.htm");
+		addCondMinLevel(MIN_LV, "32975-06.html");
+		addCondInCategory(CategoryType.AWAKEN_GROUP, "32975-06.html");
 	}
 	
 	@Override

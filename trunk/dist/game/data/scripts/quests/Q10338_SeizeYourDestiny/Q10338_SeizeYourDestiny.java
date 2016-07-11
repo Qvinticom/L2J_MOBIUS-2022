@@ -55,11 +55,11 @@ public final class Q10338_SeizeYourDestiny extends Quest
 		addStartNpc(CELLPHINE);
 		addTalkId(CELLPHINE, HADEL, HERMUNCUS);
 		addKillId(HARNAKS_WRAITH);
-		addCondNotRace(Race.ERTHEIA, "33477-08.htm");
+		addCondNotRace(Race.ERTHEIA, "33477-08.html");
 		addCondNotClassId(ClassId.JUDICATOR, "");
 		addCondIsNotSubClassActive("");
-		addCondMinLevel(MIN_LV, "33477-07.htm");
-		addCondInCategory(CategoryType.FOURTH_CLASS_GROUP, "33477-07.htm");
+		addCondMinLevel(MIN_LV, "33477-07.html");
+		addCondInCategory(CategoryType.FOURTH_CLASS_GROUP, "33477-07.html");
 	}
 	
 	@Override
@@ -86,13 +86,13 @@ public final class Q10338_SeizeYourDestiny extends Quest
 				playMovie(player, Movie.SC_AWAKENING_VIEW);
 				break;
 			}
-			case "33477-03.htm":
+			case "33477-03.html":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "33344-05.htm":
+			case "33344-05.html":
 			{
 				if (qs.isCond(1))
 				{
@@ -101,7 +101,7 @@ public final class Q10338_SeizeYourDestiny extends Quest
 				}
 				break;
 			}
-			case "33340-02.htm":
+			case "33340-02.html":
 			{
 				if (qs.isCond(3))
 				{
@@ -113,9 +113,9 @@ public final class Q10338_SeizeYourDestiny extends Quest
 				}
 				break;
 			}
-			case "33344-02.htm":
-			case "33344-03.htm":
-			case "33344-04.htm":
+			case "33344-02.html":
+			case "33344-03.html":
+			case "33344-04.html":
 			case "33477-02.htm":
 			{
 				htmltext = event;
@@ -138,11 +138,11 @@ public final class Q10338_SeizeYourDestiny extends Quest
 			{
 				if (qs.isStarted())
 				{
-					htmltext = "33477-06.htm";
+					htmltext = "33477-06.html";
 				}
 				if (hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()) || qs.isCompleted())
 				{
-					htmltext = "33477-05.htm";
+					htmltext = "33477-05.html";
 				}
 				else if (qs.isCreated())
 				{
@@ -154,15 +154,15 @@ public final class Q10338_SeizeYourDestiny extends Quest
 			{
 				if (qs.isCompleted() || player.isInCategory(CategoryType.AWAKEN_GROUP) || hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()))
 				{
-					htmltext = "33344-07.htm";
+					htmltext = "33344-07.html";
 				}
 				else if (player.getLevel() < 85)
 				{
-					htmltext = "33344-06.htm";
+					htmltext = "33344-06.html";
 				}
 				else if (player.isSubClassActive() && !player.isDualClassActive())
 				{
-					htmltext = "33344-09.htm";
+					htmltext = "33344-09.html";
 				}
 				else
 				{
@@ -170,17 +170,17 @@ public final class Q10338_SeizeYourDestiny extends Quest
 					{
 						case 1:
 						{
-							htmltext = "33344-01.htm";
+							htmltext = "33344-01.html";
 							break;
 						}
 						case 2:
 						{
-							htmltext = "33344-08.htm";
+							htmltext = "33344-08.html";
 							break;
 						}
 						case 3:
 						{
-							htmltext = "33344-07.htm";
+							htmltext = "33344-07.html";
 							break;
 						}
 					}
@@ -191,17 +191,17 @@ public final class Q10338_SeizeYourDestiny extends Quest
 			{
 				if (player.isSubClassActive() && !player.isDualClassActive())
 				{
-					htmltext = "33340-04.htm";
+					htmltext = "33340-04.html";
 					break;
 				}
 				else if (qs.isCond(3))
 				{
-					htmltext = "33340-01.htm";
+					htmltext = "33340-01.html";
 					break;
 				}
 				else if (hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()))
 				{
-					htmltext = "33340-03.htm";
+					htmltext = "33340-03.html";
 					break;
 				}
 				break;

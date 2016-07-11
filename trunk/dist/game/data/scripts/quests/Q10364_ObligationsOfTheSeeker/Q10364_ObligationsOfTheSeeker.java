@@ -53,9 +53,9 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 		addTalkId(CELIN, WALTER, DEP);
 		addKillId(KRAPHER, AVIAN);
 		registerQuestItems(DIRTY_PAPER_PIECES);
-		addCondMinLevel(MIN_LEVEL, "33451-04.htm");
-		addCondMaxLevel(MAX_LEVEL, "33451-04.htm");
-		addCondCompletedQuest(Q10363_RequestOfTheSeeker.class.getSimpleName(), "33451-04.htm");
+		addCondMinLevel(MIN_LEVEL, "33451-04.html");
+		addCondMaxLevel(MAX_LEVEL, "33451-04.html");
+		addCondCompletedQuest(Q10363_RequestOfTheSeeker.class.getSimpleName(), "33451-04.html");
 	}
 	
 	@Override
@@ -71,21 +71,21 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 		switch (event)
 		{
 			case "33451-02.htm":
-			case "33452-02.htm":
-			case "33452-03.htm":
-			case "33453-02.htm":
-			case "33453-03.htm":
+			case "33452-02.html":
+			case "33452-03.html":
+			case "33453-02.html":
+			case "33453-03.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33451-03.htm":
+			case "33451-03.html":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "33452-04.htm":
+			case "33452-04.html":
 			{
 				if (qs.isCond(1))
 				{
@@ -95,7 +95,7 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 				}
 				break;
 			}
-			case "33453-04.htm":
+			case "33453-04.html":
 			{
 				if (qs.isCond(3))
 				{
@@ -154,7 +154,7 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 					{
 						if (qs.isCond(1))
 						{
-							htmltext = "33451-03.htm";
+							htmltext = "33451-03.html";
 							break;
 						}
 						break;
@@ -165,17 +165,17 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 						{
 							case 1:
 							{
-								htmltext = "33452-01.htm";
+								htmltext = "33452-01.html";
 								break;
 							}
 							case 2:
 							{
-								htmltext = "33452-05.htm";
+								htmltext = "33452-05.html";
 								break;
 							}
 							case 3:
 							{
-								htmltext = "33452-06.htm";
+								htmltext = "33452-06.html";
 								break;
 							}
 						}
@@ -185,7 +185,7 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 					{
 						if (qs.isCond(3))
 						{
-							htmltext = "33453-01.htm";
+							htmltext = "33453-01.html";
 							break;
 						}
 					}
@@ -199,17 +199,17 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 				{
 					case CELIN:
 					{
-						htmltext = "33451-05.htm";
+						htmltext = "33451-05.html";
 						break;
 					}
 					case WALTER:
 					{
-						htmltext = "33452-07.htm";
+						htmltext = "33452-07.html";
 						break;
 					}
 					case DEP:
 					{
-						htmltext = "33453-05.htm";
+						htmltext = "33453-05.html";
 						break;
 					}
 				}

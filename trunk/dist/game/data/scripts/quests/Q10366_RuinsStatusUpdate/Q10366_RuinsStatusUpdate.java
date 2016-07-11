@@ -50,8 +50,8 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 		super(10366);
 		addStartNpc(SEBION);
 		addTalkId(SEBION, FRANCO, RIVIAN, DEVON, TOOK, MOKA, VALFAR);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "32978-10.htm");
-		addCondCompletedQuest(Q10365_SeekerEscort.class.getSimpleName(), "32978-10.htm");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "32978-10.html");
+		addCondCompletedQuest(Q10365_SeekerEscort.class.getSimpleName(), "32978-10.html");
 	}
 	
 	@Override
@@ -75,7 +75,7 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 					{
 						qs.startQuest();
 						qs.setCond(2);
-						htmltext = "32978-03.htm";
+						htmltext = "32978-03.html";
 						showOnScreenMsg(player, NpcStringId.USE_THE_ESCAPE_SCROLL_IN_YOUR_INVENTORY_TO_GO_TO_THE_ADMINISTRATIVE_OFFICE_IN_TALKING_ISLAND, ExShowScreenMessage.TOP_CENTER, 4500);
 						break;
 					}
@@ -83,7 +83,7 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 					{
 						qs.startQuest();
 						qs.setCond(3);
-						htmltext = "32978-04.htm";
+						htmltext = "32978-04.html";
 						showOnScreenMsg(player, NpcStringId.USE_THE_ESCAPE_SCROLL_IN_YOUR_INVENTORY_TO_GO_TO_THE_ADMINISTRATIVE_OFFICE_IN_TALKING_ISLAND, ExShowScreenMessage.TOP_CENTER, 4500);
 						break;
 					}
@@ -91,7 +91,7 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 					{
 						qs.startQuest();
 						qs.setCond(4);
-						htmltext = "32978-05.htm";
+						htmltext = "32978-05.html";
 						showOnScreenMsg(player, NpcStringId.USE_THE_ESCAPE_SCROLL_IN_YOUR_INVENTORY_TO_GO_TO_THE_ADMINISTRATIVE_OFFICE_IN_TALKING_ISLAND, ExShowScreenMessage.TOP_CENTER, 4500);
 						break;
 					}
@@ -99,7 +99,7 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 					{
 						qs.startQuest();
 						qs.setCond(5);
-						htmltext = "32978-06.htm";
+						htmltext = "32978-06.html";
 						showOnScreenMsg(player, NpcStringId.USE_THE_ESCAPE_SCROLL_IN_YOUR_INVENTORY_TO_GO_TO_THE_ADMINISTRATIVE_OFFICE_IN_TALKING_ISLAND, ExShowScreenMessage.TOP_CENTER, 4500);
 						break;
 					}
@@ -107,7 +107,7 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 					{
 						qs.startQuest();
 						qs.setCond(6);
-						htmltext = "32978-07.htm";
+						htmltext = "32978-07.html";
 						showOnScreenMsg(player, NpcStringId.USE_THE_ESCAPE_SCROLL_IN_YOUR_INVENTORY_TO_GO_TO_THE_ADMINISTRATIVE_OFFICE_IN_TALKING_ISLAND, ExShowScreenMessage.TOP_CENTER, 4500);
 						break;
 					}
@@ -115,7 +115,7 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 					{
 						qs.startQuest();
 						qs.setCond(7);
-						htmltext = "32978-08.htm";
+						htmltext = "32978-08.html";
 						showOnScreenMsg(player, NpcStringId.USE_THE_ESCAPE_SCROLL_IN_YOUR_INVENTORY_TO_GO_TO_THE_ADMINISTRATIVE_OFFICE_IN_TALKING_ISLAND, ExShowScreenMessage.TOP_CENTER, 4500);
 						break;
 					}
@@ -127,22 +127,22 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 				break;
 			}
 			case "32978-02.htm":
-			case "32146-02.htm":
-			case "32147-02.htm":
-			case "32150-02.htm":
-			case "32153-02.htm":
-			case "32157-02.htm":
-			case "32160-02.htm":
+			case "32146-02.html":
+			case "32147-02.html":
+			case "32150-02.html":
+			case "32153-02.html":
+			case "32157-02.html":
+			case "32160-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "32146-03.htm":
-			case "32147-03.htm":
-			case "32150-03.htm":
-			case "32153-03.htm":
-			case "32157-03.htm":
-			case "32160-03.htm":
+			case "32146-03.html":
+			case "32147-03.html":
+			case "32150-03.html":
+			case "32153-03.html":
+			case "32157-03.html":
+			case "32160-03.html":
 			{
 				if ((qs.getCond() >= 2) && (qs.getCond() <= 7))
 				{
@@ -184,32 +184,32 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 						{
 							case 2:
 							{
-								htmltext = "32978-03.htm";
+								htmltext = "32978-03.html";
 								break;
 							}
 							case 3:
 							{
-								htmltext = "32978-04.htm";
+								htmltext = "32978-04.html";
 								break;
 							}
 							case 4:
 							{
-								htmltext = "32978-05.htm";
+								htmltext = "32978-05.html";
 								break;
 							}
 							case 5:
 							{
-								htmltext = "32978-06.htm";
+								htmltext = "32978-06.html";
 								break;
 							}
 							case 6:
 							{
-								htmltext = "32978-07.htm";
+								htmltext = "32978-07.html";
 								break;
 							}
 							case 7:
 							{
-								htmltext = "32978-08.htm";
+								htmltext = "32978-08.html";
 								break;
 							}
 						}
@@ -221,11 +221,11 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 						{
 							if ((qs.isCond(2)))
 							{
-								htmltext = "32153-01.htm";
+								htmltext = "32153-01.html";
 								break;
 							}
 						}
-						htmltext = "32153-04.htm";
+						htmltext = "32153-04.html";
 						break;
 					}
 					case RIVIAN:
@@ -234,11 +234,11 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 						{
 							if ((qs.isCond(3)))
 							{
-								htmltext = "32147-01.htm";
+								htmltext = "32147-01.html";
 								break;
 							}
 						}
-						htmltext = "32147-04.htm";
+						htmltext = "32147-04.html";
 						break;
 					}
 					case DEVON:
@@ -247,11 +247,11 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 						{
 							if ((qs.isCond(4)))
 							{
-								htmltext = "32160-01.htm";
+								htmltext = "32160-01.html";
 								break;
 							}
 						}
-						htmltext = "32160-04.htm";
+						htmltext = "32160-04.html";
 						break;
 					}
 					case TOOK:
@@ -260,11 +260,11 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 						{
 							if ((qs.isCond(5)))
 							{
-								htmltext = "32150-01.htm";
+								htmltext = "32150-01.html";
 								break;
 							}
 						}
-						htmltext = "32150-04.htm";
+						htmltext = "32150-04.html";
 						break;
 					}
 					case MOKA:
@@ -273,11 +273,11 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 						{
 							if ((qs.isCond(6)))
 							{
-								htmltext = "32157-01.htm";
+								htmltext = "32157-01.html";
 								break;
 							}
 						}
-						htmltext = "32157-04.htm";
+						htmltext = "32157-04.html";
 						break;
 					}
 					case VALFAR:
@@ -286,11 +286,11 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 						{
 							if ((qs.isCond(7)))
 							{
-								htmltext = "32146-01.htm";
+								htmltext = "32146-01.html";
 								break;
 							}
 						}
-						htmltext = "32146-04.htm";
+						htmltext = "32146-04.html";
 						break;
 					}
 				}
@@ -302,7 +302,7 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 				{
 					case SEBION:
 					{
-						htmltext = "32978-09.htm";
+						htmltext = "32978-09.html";
 						break;
 					}
 					case FRANCO:
@@ -312,7 +312,7 @@ public final class Q10366_RuinsStatusUpdate extends Quest
 					case MOKA:
 					case VALFAR:
 					{
-						htmltext = npc.getId() + "-05.htm";
+						htmltext = npc.getId() + "-05.html";
 						break;
 					}
 				}

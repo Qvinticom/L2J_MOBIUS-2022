@@ -54,8 +54,8 @@ public final class Q10358_DividedSakumPoslof extends Quest
 		addTalkId(LEF, ADVENTURER_GUIDE);
 		addKillId(ZOMBIE_WARRIOR, VEELEAN, POSLOF);
 		registerQuestItems(SAKUM_SKETCH);
-		addCondCompletedQuest(Q10337_SakumsImpact.class.getSimpleName(), "33510-09.htm");
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33510-09.htm");
+		addCondCompletedQuest(Q10337_SakumsImpact.class.getSimpleName(), "33510-09.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33510-09.html");
 	}
 	
 	@Override
@@ -71,18 +71,18 @@ public final class Q10358_DividedSakumPoslof extends Quest
 		switch (event)
 		{
 			case "33510-02.htm":
-			case "31795-04.htm":
+			case "31795-04.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33510-03.htm":
+			case "33510-03.html":
 			{
 				st.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "31795-05.htm":
+			case "31795-05.html":
 			{
 				if (st.isCond(4))
 				{
@@ -107,7 +107,7 @@ public final class Q10358_DividedSakumPoslof extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = npc.getId() == LEF ? "33510-01.htm" : "31795-02.htm";
+				htmltext = npc.getId() == LEF ? "33510-01.htm" : "31795-02.html";
 				break;
 			}
 			case State.STARTED:
@@ -116,7 +116,7 @@ public final class Q10358_DividedSakumPoslof extends Quest
 				{
 					case 1:
 					{
-						htmltext = npc.getId() == LEF ? "33510-04.htm" : "31795-01.htm";
+						htmltext = npc.getId() == LEF ? "33510-04.html" : "31795-01.html";
 						break;
 					}
 					case 2:
@@ -128,22 +128,22 @@ public final class Q10358_DividedSakumPoslof extends Quest
 								st.setCond(3);
 								giveItems(player, SAKUM_SKETCH, 1);
 							}
-							htmltext = "33510-05.htm";
+							htmltext = "33510-05.html";
 						}
 						else if (npc.getId() == ADVENTURER_GUIDE)
 						{
-							htmltext = "31795-01.htm";
+							htmltext = "31795-01.html";
 						}
 						break;
 					}
 					case 3:
 					{
-						htmltext = npc.getId() == LEF ? "33510-06.htm" : "31795-01.htm";
+						htmltext = npc.getId() == LEF ? "33510-06.html" : "31795-01.html";
 						break;
 					}
 					case 4:
 					{
-						htmltext = npc.getId() == LEF ? "33510-07.htm" : "31795-03.htm";
+						htmltext = npc.getId() == LEF ? "33510-07.html" : "31795-03.html";
 						break;
 					}
 				}
@@ -151,7 +151,7 @@ public final class Q10358_DividedSakumPoslof extends Quest
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == LEF ? "33510-08.htm" : "31795-06.htm";
+				htmltext = npc.getId() == LEF ? "33510-08.html" : "31795-06.html";
 				break;
 			}
 		}
