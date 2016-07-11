@@ -38,6 +38,7 @@ import com.l2jmobius.gameserver.data.xml.impl.ItemCrystalizationData;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.OptionData;
+import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
 import com.l2jmobius.gameserver.data.xml.impl.SayuneData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.TeleportersData;
@@ -258,6 +259,12 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					ItemCrystalizationData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item crystalization data.");
+					break;
+				}
+				case "primeshop":
+				{
+					PrimeShopData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Prime Shop data.");
 					break;
 				}
 				case "ability":
