@@ -66,14 +66,12 @@ public final class Logout implements IClientIncomingPacket
 		// Don't allow leaving if player is fighting
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player))
 		{
-			if (player.isGM() && Config.GM_RESTART_FIGHTING)
+			if (!player.isGM() || (player.isGM() && !Config.GM_RESTART_FIGHTING))
 			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_EXIT_THE_GAME_WHILE_IN_COMBAT);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			
-			player.sendPacket(SystemMessageId.YOU_CANNOT_EXIT_THE_GAME_WHILE_IN_COMBAT);
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
 		}
 		
 		if (L2Event.isParticipant(player))
