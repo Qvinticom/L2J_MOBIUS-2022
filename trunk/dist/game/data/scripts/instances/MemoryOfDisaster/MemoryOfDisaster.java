@@ -396,9 +396,19 @@ public final class MemoryOfDisaster extends AbstractInstance
 	{
 		switch (event)
 		{
+			case "START_AWAKENING_OPENING_SCENE":
+			{
+				playMovie(player, Movie.SC_AWAKENING_OPENING);
+				break;
+			}
 			case "EARTHQUAKE":
 			{
 				player.sendPacket(new Earthquake(player.getLocation(), 50, 4));
+				break;
+			}
+			case "TELEPORT_PLAYER_TO_START":
+			{
+				player.teleToLocation(BATTLE_PORT);
 				break;
 			}
 			case "END_OF_OPENING_SCENE":
@@ -559,7 +569,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 			}
 			case "EARTHWORM_TIME":
 			{
-				addSpawn(npc, TEREDOR_TRANSPARENT, 116016, -179503, -1040, 58208, false, 0, false, npc.getInstanceId());
+				addSpawn(npc, TEREDOR_TRANSPARENT, 116511, -178729, -1176, 43905, false, 0, false, npc.getInstanceId());
 				break;
 			}
 			case "ENTER_EVENT":
@@ -573,6 +583,18 @@ public final class MemoryOfDisaster extends AbstractInstance
 			{
 				npc.setLHandId(0);
 				npc.broadcastInfo();
+				getTimers().addTimer("END_VIDEO", 20000, null, npc.getInstanceWorld().getFirstPlayer());
+				break;
+			}
+			case "END_VIDEO":
+			{
+				playMovie(player, Movie.SC_AWAKENING_OPENING_F);
+				getTimers().addTimer("END_INSTANCE", 45000, null, player);
+				break;
+			}
+			case "END_INSTANCE":
+			{
+				finishInstance(player, 0);
 				break;
 			}
 		}
@@ -586,9 +608,10 @@ public final class MemoryOfDisaster extends AbstractInstance
 			instance.getPlayers().forEach(p ->
 			{
 				p.sendPacket(new OnEventTrigger(FIRE_IN_DWARVEN_VILLAGE, true));
-				playMovie(p, Movie.SC_AWAKENING_OPENING);
 				getTimers().addRepeatingTimer("EARTHQUAKE", 10000, null, p);
-				getTimers().addTimer("END_OF_OPENING_SCENE", 32000, null, p);
+				getTimers().addTimer("END_OF_OPENING_SCENE", 30000, null, p);
+				getTimers().addTimer("START_AWAKENING_OPENING_SCENE", 1000, null, p);
+				getTimers().addTimer("TELEPORT_PLAYER_TO_START", 25000, null, p);
 			});
 		});
 	}

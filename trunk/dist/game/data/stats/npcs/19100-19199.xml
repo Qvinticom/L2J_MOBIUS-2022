@@ -1861,7 +1861,7 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" />
 		<skill_list>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
@@ -2196,7 +2196,7 @@
 			<defence physical="398.415163555849" magical="215.693501667373" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" showName="false" canMove="false" />
+		<status showName="false" talkable="false" canMove="false" />
 		<skill_list>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -2225,7 +2225,7 @@
 			<defence physical="398.415163555849" magical="215.693501667373" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" showName="false" />
+		<status attackable="false" showName="false" talkable="false" />
 		<skill_list>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -2689,7 +2689,7 @@
 			<defence physical="398.415163555849" magical="215.693501667373" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" undying="false" />
 		<skill_list>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -2718,7 +2718,7 @@
 			<defence physical="398.415163555849" magical="215.693501667373" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="true" />
+		<status attackable="false" talkable="false" targetable="false" undying="true" />
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -2747,7 +2747,7 @@
 			<defence physical="398.415163555849" magical="215.693501667373" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" undying="true" />
 		<skill_list>
 			<skill id="4416" level="21" /> <!-- Siege Weapons -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -2777,7 +2777,7 @@
 			<defence physical="398.415163555849" magical="215.693501667373" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" undying="false" />
 		<skill_list>
 			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -2807,7 +2807,7 @@
 			<defence physical="398.415163555849" magical="215.693501667373" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status talkable="false" undying="false" />
 		<skill_list>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -2837,7 +2837,7 @@
 			<defence physical="398.415163555849" magical="215.693501667373" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" undying="false" />
 		<skill_list>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -2866,7 +2866,7 @@
 			<defence physical="398.415163555849" magical="215.693501667373" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" undying="false" />
 		<skill_list>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -2895,7 +2895,7 @@
 			<defence physical="398.415163555849" magical="215.693501667373" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" undying="false" />
 		<skill_list>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -2925,7 +2925,7 @@
 			<defence physical="398.415163555849" magical="215.693501667373" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" showName="false" />
+		<status attackable="false" showName="false" talkable="false" targetable="false" undying="true" />
 		<skill_list>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -2955,7 +2955,7 @@
 			<defence physical="398.415163555849" magical="215.693501667373" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" showName="false" />
+		<status attackable="false" showName="false" talkable="false" targetable="false" undying="true" />
 		<skill_list>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -2985,7 +2985,7 @@
 			<defence physical="398.415163555849" magical="215.693501667373" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" undying="false" />
 		<skill_list>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -3015,7 +3015,7 @@
 			<defence physical="398.415163555849" magical="215.693501667373" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false" undying="false" />
 		<skill_list>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
