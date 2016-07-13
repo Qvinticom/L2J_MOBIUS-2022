@@ -476,15 +476,108 @@
 		<isMagic>3</isMagic>
 	</skill>
 	<skill id="13569" toLevel="3" name="Talisman - Lilith">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increase M. Def. + 552, MP recovery + 3, dark resistance + 10, and damage reflect resistance + 6. -->
 		<icon>
 			<value level="1">icon.lilith_talisman_i00</value>
 			<value level="2">icon.anakim_talisman_i00</value>
 			<value level="3">icon.sevensign_talisman_i00</value>
 		</icon>
+		<table name="#mp"> 3 0 4 </table>
+		<table name="#hp"> 0 6 8 </table>
+		<table name="#pDef"> 0 971 1126 </table>
+		<table name="#mDef"> 552 0 736 </table>
+		<table name="#reflect"> 6 6 14 </table>
+		<table name="#fireRes"> 0 0 10 </table>
+		<table name="#windRes"> 0 0 10 </table>
+		<table name="#waterRes"> 0 0 10 </table>
+		<table name="#earthRes"> 0 0 10</table>
+		<table name="#holyRes"> 0 10 10</table>
 		<operateType>P</operateType>
-		<isMagic>3</isMagic>
+		<magicLvl>3</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">971</value>
+					<value level="3">1123</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">552</value>
+					<value level="2">0</value>
+					<value level="3">736</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">0</value>
+					<value level="3">4</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">6</value>
+					<value level="3">8</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DamageShield">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">6</value>
+					<value level="3">14</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13570" toLevel="1" name="Hero's Weapon: Dagger">
 		<!-- AUTO GENERATED SKILL -->
