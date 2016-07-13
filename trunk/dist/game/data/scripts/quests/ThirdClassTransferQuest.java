@@ -55,7 +55,12 @@ public abstract class ThirdClassTransferQuest extends Quest
 		33169,
 	};
 	// Items
-	private static final int SOLDIER_TAG = 17750; // Vanguard Soldier's Dog Tags
+	private static final int SOLDIER_TAG_HUMAN = 17748;
+	private static final int SOLDIER_TAG_ELF = 17749;
+	private static final int SOLDIER_TAG_DARK_ELF = 17750;
+	private static final int SOLDIER_TAG_ORC = 17751;
+	private static final int SOLDIER_TAG_DWARF = 17752;
+	private static final int SOLDIER_TAG_KAMAEL = 17753;
 	private static final int STEEL_DOOR_COIN = 37045;
 	private static final int SOUL_SHOT_PACK = 22576;
 	private static final int SPIRIT_SHOT_PACK = 22607;
@@ -71,7 +76,13 @@ public abstract class ThirdClassTransferQuest extends Quest
 		addTalkId(QUARTERMASTER, VANGUARD_MEMBER);
 		addTalkId(VANGUARDS);
 		//@formatter:off
-		registerQuestItems(SOLDIER_TAG,
+		registerQuestItems(
+			SOLDIER_TAG_HUMAN,
+			SOLDIER_TAG_ELF,
+			SOLDIER_TAG_DARK_ELF,
+			SOLDIER_TAG_ORC,
+			SOLDIER_TAG_DWARF,
+			SOLDIER_TAG_KAMAEL,
 			17484, // Cry of Destiny - Gladiator
 			17485, // Cry of Destiny - Warlord
 			17486, // Cry of Destiny - Paladin
@@ -140,7 +151,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 				{
 					st.setCond(4, true);
 					st.unset("vanguard");
-					takeItems(player, SOLDIER_TAG, -1);
+					takeItems(player, getSoldierTag(player), -1);
 					htmltext = event;
 				}
 				break;
@@ -162,10 +173,10 @@ public abstract class ThirdClassTransferQuest extends Quest
 					final int vanguard = st.getInt("vanguard");
 					if ((vanguard & bit) != bit)
 					{
-						giveItems(player, SOLDIER_TAG, 1);
+						giveItems(player, getSoldierTag(player), 1);
 						st.set("vanguard", vanguard | bit);
 						
-						if (getQuestItemsCount(player, SOLDIER_TAG) == 4)
+						if (getQuestItemsCount(player, getSoldierTag(player)) == 4)
 						{
 							st.setCond(3, true);
 							htmltext = "vanguard-04.html";
@@ -232,6 +243,42 @@ public abstract class ThirdClassTransferQuest extends Quest
 			}
 		}
 		return htmltext;
+	}
+	
+	/**
+	 * @param player
+	 * @return
+	 */
+	private int getSoldierTag(L2PcInstance player)
+	{
+		switch (player.getRace())
+		{
+			case HUMAN:
+			{
+				return SOLDIER_TAG_HUMAN;
+			}
+			case ELF:
+			{
+				return SOLDIER_TAG_ELF;
+			}
+			case DARK_ELF:
+			{
+				return SOLDIER_TAG_DARK_ELF;
+			}
+			case ORC:
+			{
+				return SOLDIER_TAG_ORC;
+			}
+			case DWARF:
+			{
+				return SOLDIER_TAG_DWARF;
+			}
+			case KAMAEL:
+			{
+				return SOLDIER_TAG_KAMAEL;
+			}
+		}
+		return 0;
 	}
 	
 	@Override
