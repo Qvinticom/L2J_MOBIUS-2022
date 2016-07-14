@@ -127,14 +127,15 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_private_storeable" val="false" />
-		<set name="default_action" val="CAPSULE" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="22498" level="5" /> <!-- Mysterious Spiritshot s 5000 -->
-		</skills>
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21856" min="5000" max="5000" chance="100" /> <!-- Mysterious Blessed Spiritshots (S-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="22608" name="Vitality Maintaining Potion (30-minute) 2-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 2 Vitality Replenishing Potions. -->
