@@ -33,8 +33,8 @@
 				<node x="-150391" y="143262" />
 			</territory>
 		</territories>
-		<npc id="33676" x="-150349" y="143121" z="-11968" heading="11472" respawnTime="1min" /> <!-- Communications Assistant -->
-		<npc id="33674" x="-150306" y="143054" z="-11968" heading="3592" respawnTime="1min" /> <!-- Transportation Assistant -->
+		<npc id="33676" x="-150349" y="143121" z="-11960" heading="11472" respawnTime="1min" /> <!-- Communications Assistant -->
+		<npc id="33674" x="-150306" y="143054" z="-11960" heading="3592" respawnTime="1min" /> <!-- Transportation Assistant -->
 	</spawn>
 	<spawn name="kadif03_1522_npc_002m1">
 		<territories>
@@ -45,8 +45,8 @@
 				<node x="-144557" y="143267" />
 			</territory>
 		</territories>
-		<npc id="33676" x="-144426" y="143047" z="-11968" heading="30568" respawnTime="1min" /> <!-- Communications Assistant -->
-		<npc id="33674" x="-144351" y="143093" z="-11968" heading="21104" respawnTime="1min" /> <!-- Transportation Assistant -->
+		<npc id="33676" x="-144426" y="143047" z="-11960" heading="30568" respawnTime="1min" /> <!-- Communications Assistant -->
+		<npc id="33674" x="-144351" y="143093" z="-11960" heading="21104" respawnTime="1min" /> <!-- Transportation Assistant -->
 	</spawn>
 	<spawn name="kadif03_1522_npc_003m1">
 		<territories>
@@ -57,8 +57,8 @@
 				<node x="-150356" y="151483" />
 			</territory>
 		</territories>
-		<npc id="33676" x="-150270" y="151462" z="-12224" heading="-7688" respawnTime="1min" /> <!-- Communications Assistant -->
-		<npc id="33674" x="-150342" y="151424" z="-12224" heading="-12848" respawnTime="1min" /> <!-- Transportation Assistant -->
+		<npc id="33676" x="-150270" y="151462" z="-12216" heading="-7688" respawnTime="1min" /> <!-- Communications Assistant -->
+		<npc id="33674" x="-150342" y="151424" z="-12216" heading="-12848" respawnTime="1min" /> <!-- Transportation Assistant -->
 	</spawn>
 	<spawn name="kadif03_1522_npc_004m1">
 		<territories>
@@ -69,8 +69,8 @@
 				<node x="-144549" y="151463" />
 			</territory>
 		</territories>
-		<npc id="33676" x="-144336" y="151385" z="-12224" heading="-18720" respawnTime="1min" /> <!-- Communications Assistant -->
-		<npc id="33674" x="-144411" y="151433" z="-12224" heading="-22880" respawnTime="1min" /> <!-- Transportation Assistant -->
+		<npc id="33676" x="-144336" y="151385" z="-12216" heading="-18720" respawnTime="1min" /> <!-- Communications Assistant -->
+		<npc id="33674" x="-144411" y="151433" z="-12216" heading="-22880" respawnTime="1min" /> <!-- Transportation Assistant -->
 	</spawn>
 	<spawn name="kadif03_1522_low_001m1">
 		<territories>
@@ -1771,25 +1771,25 @@
 				<node x="-149471" y="144217" />
 			</territory>
 		</territories>
-		<npc id="23220" x="-149411" y="142091" z="-11743" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-149411" y="142091" z="-11728" respawnTime="1min"> <!-- Kunda Watchman -->
 		<parameters>
 			<param name="i_is_guard" value="1" />
 			<param name="SuperPointName" value="kadif03_1522_super_001" />
 		</parameters>
 		</npc>
-		<npc id="23220" x="-145300" y="142097" z="-11740" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-145300" y="142097" z="-11728" respawnTime="1min"> <!-- Kunda Watchman -->
 		<parameters>
 			<param name="i_is_guard" value="1" />
 			<param name="SuperPointName" value="kadif03_1522_super_002" />
 		</parameters>
 		</npc>
-		<npc id="23220" x="-149415" y="144187" z="-11736" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-149415" y="144187" z="-11728" respawnTime="1min"> <!-- Kunda Watchman -->
 		<parameters>
 			<param name="i_is_guard" value="1" />
 			<param name="SuperPointName" value="kadif03_1522_super_003" />
 		</parameters>
 		</npc>
-		<npc id="23220" x="-145291" y="144188" z="-11724" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-145291" y="144188" z="-11728" respawnTime="1min"> <!-- Kunda Watchman -->
 		<parameters>
 			<param name="i_is_guard" value="1" />
 			<param name="SuperPointName" value="kadif03_1522_super_004" />
@@ -1805,25 +1805,25 @@
 				<node x="-151395" y="149295" />
 			</territory>
 		</territories>
-		<npc id="23220" x="-151321" y="149242" z="-11998" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-151321" y="149242" z="-11976" respawnTime="1min"> <!-- Kunda Watchman -->
 		<parameters>
 			<param name="i_is_guard" value="1" />
 			<param name="SuperPointName" value="kadif03_1522_super_005" />
 		</parameters>
 		</npc>
-		<npc id="23220" x="-151310" y="145209" z="-11999" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-151310" y="145209" z="-11976" respawnTime="1min"> <!-- Kunda Watchman -->
 		<parameters>
 			<param name="i_is_guard" value="1" />
 			<param name="SuperPointName" value="kadif03_1522_super_006" />
 		</parameters>
 		</npc>
-		<npc id="23220" x="-149234" y="145206" z="-11957" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-149234" y="145206" z="-11976" respawnTime="1min"> <!-- Kunda Watchman -->
 		<parameters>
 			<param name="i_is_guard" value="1" />
 			<param name="SuperPointName" value="kadif03_1522_super_007" />
 		</parameters>
 		</npc>
-		<npc id="23220" x="-149230" y="149265" z="-11996" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-149230" y="149265" z="-11976" respawnTime="1min"> <!-- Kunda Watchman -->
 		<parameters>
 			<param name="i_is_guard" value="1" />
 			<param name="SuperPointName" value="kadif03_1522_super_008" />
@@ -1839,19 +1839,19 @@
 				<node x="-149463" y="152407" />
 			</territory>
 		</territories>
-		<npc id="23220" x="-149395" y="150289" z="-11977" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-149395" y="150289" z="-11976" respawnTime="1min"> <!-- Kunda Watchman -->
 		<parameters>
 			<param name="i_is_guard" value="1" />
 			<param name="SuperPointName" value="kadif03_1522_super_009" />
 		</parameters>
 		</npc>
-		<npc id="23220" x="-145328" y="150288" z="-11963" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-145328" y="150288" z="-11976" respawnTime="1min"> <!-- Kunda Watchman -->
 		<parameters>
 			<param name="i_is_guard" value="1" />
 			<param name="SuperPointName" value="kadif03_1522_super_010" />
 		</parameters>
 		</npc>
-		<npc id="23220" x="-149385" y="152352" z="-11971" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-149385" y="152352" z="-11976" respawnTime="1min"> <!-- Kunda Watchman -->
 		<parameters>
 			<param name="i_is_guard" value="1" />
 			<param name="SuperPointName" value="kadif03_1522_super_011" />
@@ -1873,25 +1873,25 @@
 				<node x="-145569" y="149287" />
 			</territory>
 		</territories>
-		<npc id="23220" x="-145480" y="149233" z="-11997" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-145480" y="149233" z="-11976" respawnTime="1min"> <!-- Kunda Watchman -->
 		<parameters>
 			<param name="i_is_guard" value="1" />
 			<param name="SuperPointName" value="kadif03_1522_super_013" />
 		</parameters>
 		</npc>
-		<npc id="23220" x="-145469" y="145224" z="-11991" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-145469" y="145224" z="-11976" respawnTime="1min"> <!-- Kunda Watchman -->
 		<parameters>
 			<param name="i_is_guard" value="1" />
 			<param name="SuperPointName" value="kadif03_1522_super_014" />
 		</parameters>
 		</npc>
-		<npc id="23220" x="-143388" y="145202" z="-11980" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-143388" y="145202" z="-11976" respawnTime="1min"> <!-- Kunda Watchman -->
 		<parameters>
 			<param name="i_is_guard" value="1" />
 			<param name="SuperPointName" value="kadif03_1522_super_015" />
 		</parameters>
 		</npc>
-		<npc id="23220" x="-143393" y="149249" z="-11979" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-143393" y="149249" z="-11976" respawnTime="1min"> <!-- Kunda Watchman -->
 		<parameters>
 			<param name="i_is_guard" value="1" />
 			<param name="SuperPointName" value="kadif03_1522_super_016" />
@@ -1910,7 +1910,7 @@
 		<parameters>
 			<param name="on_start_spawn" value="1" />
 		</parameters>
-		<npc id="19259" x="-148953" y="142703" z="-11979" heading="32768" respawnTime="2min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-148953" y="142703" z="-11960" heading="32768" respawnTime="2min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -1924,7 +1924,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-148953" y="143577" z="-11979" respawnTime="2min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-148953" y="143577" z="-11960" respawnTime="2min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -1938,7 +1938,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-148313" y="142703" z="-11979" heading="32768" respawnTime="2min"> <!-- Cooling Device -->
+		<npc id="19279" x="-148313" y="142703" z="-11960" heading="32768" respawnTime="2min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -1952,7 +1952,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-148313" y="143577" z="-11979" respawnTime="2min"> <!-- Cooling Device -->
+		<npc id="19279" x="-148313" y="143577" z="-11960" respawnTime="2min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -1966,7 +1966,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19280" x="-147673" y="142703" z="-11979" heading="32768" respawnTime="2min"> <!-- Weapon Molding Device -->
+		<npc id="19280" x="-147673" y="142703" z="-11960" heading="32768" respawnTime="2min"> <!-- Weapon Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -1980,7 +1980,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19280" x="-147673" y="143577" z="-11979" respawnTime="2min"> <!-- Weapon Molding Device -->
+		<npc id="19280" x="-147673" y="143577" z="-11960" respawnTime="2min"> <!-- Weapon Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -1994,7 +1994,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19281" x="-147033" y="142703" z="-11979" heading="32768" respawnTime="2min"> <!-- Armor Molding Device -->
+		<npc id="19281" x="-147033" y="142703" z="-11960" heading="32768" respawnTime="2min"> <!-- Armor Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2008,7 +2008,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19281" x="-147033" y="143577" z="-11979" respawnTime="2min"> <!-- Armor Molding Device -->
+		<npc id="19281" x="-147033" y="143577" z="-11960" respawnTime="2min"> <!-- Armor Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2022,7 +2022,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-146393" y="142703" z="-11979" heading="32768" respawnTime="2min"> <!-- Cooling Device -->
+		<npc id="19279" x="-146393" y="142703" z="-11960" heading="32768" respawnTime="2min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2036,7 +2036,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-146393" y="143577" z="-11979" respawnTime="2min"> <!-- Cooling Device -->
+		<npc id="19279" x="-146393" y="143577" z="-11960" respawnTime="2min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2050,7 +2050,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-145753" y="142703" z="-11979" heading="32768" respawnTime="2min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-145753" y="142703" z="-11960" heading="32768" respawnTime="2min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2064,7 +2064,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-145753" y="143577" z="-11979" respawnTime="2min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-145753" y="143577" z="-11960" respawnTime="2min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2292,7 +2292,7 @@
 		<parameters>
 			<param name="on_start_spawn" value="1" />
 		</parameters>
-		<npc id="19259" x="-148944" y="151765" z="-12230" heading="32768" respawnTime="2min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-148944" y="151765" z="-12216" heading="32768" respawnTime="2min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2306,7 +2306,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-148944" y="150898" z="-12230" respawnTime="2min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-148944" y="150898" z="-12216" respawnTime="2min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2320,7 +2320,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-148304" y="151765" z="-12230" heading="32768" respawnTime="2min"> <!-- Cooling Device -->
+		<npc id="19279" x="-148304" y="151765" z="-12216" heading="32768" respawnTime="2min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2334,7 +2334,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-148304" y="150898" z="-12230" respawnTime="2min"> <!-- Cooling Device -->
+		<npc id="19279" x="-148304" y="150898" z="-12216" respawnTime="2min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2348,7 +2348,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19280" x="-147664" y="151765" z="-12230" heading="32768" respawnTime="2min"> <!-- Weapon Molding Device -->
+		<npc id="19280" x="-147664" y="151765" z="-12216" heading="32768" respawnTime="2min"> <!-- Weapon Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2362,7 +2362,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19280" x="-147664" y="150898" z="-12230" respawnTime="2min"> <!-- Weapon Molding Device -->
+		<npc id="19280" x="-147664" y="150898" z="-12216" respawnTime="2min"> <!-- Weapon Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2376,7 +2376,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19281" x="-147024" y="151765" z="-12230" heading="32768" respawnTime="2min"> <!-- Armor Molding Device -->
+		<npc id="19281" x="-147024" y="151765" z="-12216" heading="32768" respawnTime="2min"> <!-- Armor Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2390,7 +2390,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19281" x="-147024" y="150898" z="-12230" respawnTime="2min"> <!-- Armor Molding Device -->
+		<npc id="19281" x="-147024" y="150898" z="-12216" respawnTime="2min"> <!-- Armor Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2404,7 +2404,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-146384" y="151765" z="-12230" heading="32768" respawnTime="2min"> <!-- Cooling Device -->
+		<npc id="19279" x="-146384" y="151765" z="-12216" heading="32768" respawnTime="2min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2418,7 +2418,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-146384" y="150898" z="-12230" respawnTime="2min"> <!-- Cooling Device -->
+		<npc id="19279" x="-146384" y="150898" z="-12216" respawnTime="2min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2432,7 +2432,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-145744" y="151765" z="-12230" heading="32768" respawnTime="2min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-145744" y="151765" z="-12216" heading="32768" respawnTime="2min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2446,7 +2446,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-145744" y="150898" z="-12230" respawnTime="2min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-145744" y="150898" z="-12216" respawnTime="2min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2484,7 +2484,7 @@
 		<parameters>
 			<param name="on_start_spawn" value="1" />
 		</parameters>
-		<npc id="19259" x="-144867" y="145662" z="-12232" heading="-16384" respawnTime="2min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-144867" y="145662" z="-12216" heading="-16384" respawnTime="2min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2498,7 +2498,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-143993" y="145662" z="-12232" heading="16384" respawnTime="2min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-143993" y="145662" z="-12216" heading="16384" respawnTime="2min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2512,7 +2512,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-144867" y="146302" z="-12232" heading="-16384" respawnTime="2min"> <!-- Cooling Device -->
+		<npc id="19279" x="-144867" y="146302" z="-12216" heading="-16384" respawnTime="2min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2526,7 +2526,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-143993" y="146302" z="-12232" heading="16384" respawnTime="2min"> <!-- Cooling Device -->
+		<npc id="19279" x="-143993" y="146302" z="-12216" heading="16384" respawnTime="2min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2540,7 +2540,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19280" x="-144867" y="146942" z="-12232" heading="-16384" respawnTime="2min"> <!-- Weapon Molding Device -->
+		<npc id="19280" x="-144867" y="146942" z="-12216" heading="-16384" respawnTime="2min"> <!-- Weapon Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2554,7 +2554,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19280" x="-143993" y="146942" z="-12232" heading="16384" respawnTime="2min"> <!-- Weapon Molding Device -->
+		<npc id="19280" x="-143993" y="146942" z="-12216" heading="16384" respawnTime="2min"> <!-- Weapon Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2568,7 +2568,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19281" x="-144867" y="147582" z="-12232" heading="-16384" respawnTime="2min"> <!-- Armor Molding Device -->
+		<npc id="19281" x="-144867" y="147582" z="-12216" heading="-16384" respawnTime="2min"> <!-- Armor Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2582,7 +2582,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19281" x="-143993" y="147582" z="-12232" heading="16384" respawnTime="2min"> <!-- Armor Molding Device -->
+		<npc id="19281" x="-143993" y="147582" z="-12216" heading="16384" respawnTime="2min"> <!-- Armor Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2596,7 +2596,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-144867" y="148222" z="-12232" heading="-16384" respawnTime="2min"> <!-- Cooling Device -->
+		<npc id="19279" x="-144867" y="148222" z="-12216" heading="-16384" respawnTime="2min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2610,7 +2610,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-143993" y="148222" z="-12232" heading="16384" respawnTime="2min"> <!-- Cooling Device -->
+		<npc id="19279" x="-143993" y="148222" z="-12216" heading="16384" respawnTime="2min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2624,7 +2624,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-144867" y="148862" z="-12232" heading="-16384" respawnTime="2min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-144867" y="148862" z="-12216" heading="-16384" respawnTime="2min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2638,7 +2638,7 @@
 				<param name="s_engineer5_ai" value="sofa_engineer_for_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-143993" y="148862" z="-12232" heading="16384" respawnTime="2min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-143993" y="148862" z="-12216" heading="16384" respawnTime="2min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23233" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_for_ma" />
@@ -2695,8 +2695,8 @@
 				<node x="-150564" y="241153" />
 			</territory>
 		</territories>
-		<npc id="33676" x="-150525" y="240973" z="-11936" heading="7464" respawnTime="1min" /> <!-- Communications Assistant -->
-		<npc id="33674" x="-150486" y="240919" z="-11936" heading="4320" respawnTime="1min" /> <!-- Transportation Assistant -->
+		<npc id="33676" x="-150525" y="240973" z="-11928" heading="7464" respawnTime="1min" /> <!-- Communications Assistant -->
+		<npc id="33674" x="-150486" y="240919" z="-11928" heading="4320" respawnTime="1min" /> <!-- Transportation Assistant -->
 	</spawn>
 	<spawn name="kadif03_1525_npc_002m1">
 		<territories>
@@ -2707,8 +2707,8 @@
 				<node x="-144741" y="241155" />
 			</territory>
 		</territories>
-		<npc id="33676" x="-144584" y="240920" z="-11936" heading="26768" respawnTime="1min" /> <!-- Communications Assistant -->
-		<npc id="33674" x="-144525" y="240963" z="-11936" heading="22296" respawnTime="1min" /> <!-- Transportation Assistant -->
+		<npc id="33676" x="-144584" y="240920" z="-11928" heading="26768" respawnTime="1min" /> <!-- Communications Assistant -->
+		<npc id="33674" x="-144525" y="240963" z="-11928" heading="22296" respawnTime="1min" /> <!-- Transportation Assistant -->
 	</spawn>
 	<spawn name="kadif03_1525_npc_003m1">
 		<territories>
@@ -2719,8 +2719,8 @@
 				<node x="-150535" y="249365" />
 			</territory>
 		</territories>
-		<npc id="33676" x="-150524" y="249292" z="-12192" heading="-13184" respawnTime="1min" /> <!-- Communications Assistant -->
-		<npc id="33674" x="-150469" y="249341" z="-12192" heading="-7664" respawnTime="1min" /> <!-- Transportation Assistant -->
+		<npc id="33676" x="-150524" y="249292" z="-12184" heading="-13184" respawnTime="1min" /> <!-- Communications Assistant -->
+		<npc id="33674" x="-150469" y="249341" z="-12184" heading="-7664" respawnTime="1min" /> <!-- Transportation Assistant -->
 	</spawn>
 	<spawn name="kadif03_1525_npc_004m1">
 		<territories>
@@ -2731,8 +2731,8 @@
 				<node x="-144721" y="249345" />
 			</territory>
 		</territories>
-		<npc id="33676" x="-144513" y="249291" z="-12164" heading="-18288" respawnTime="1min" /> <!-- Communications Assistant -->
-		<npc id="33674" x="-144573" y="249319" z="-12192" heading="-22080" respawnTime="1min" /> <!-- Transportation Assistant -->
+		<npc id="33676" x="-144513" y="249291" z="-12184" heading="-18288" respawnTime="1min" /> <!-- Communications Assistant -->
+		<npc id="33674" x="-144573" y="249319" z="-12184" heading="-22080" respawnTime="1min" /> <!-- Transportation Assistant -->
 	</spawn>
 	<spawn name="kadif03_1525_low_001m1">
 		<territories>
@@ -3966,7 +3966,7 @@
 				<node x="-149600" y="241970" />
 			</territory>
 		</territories>
-		<npc id="19259" x="-149131" y="240590" z="-11959" respawnTime="1min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-149131" y="240590" z="-11928" respawnTime="1min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -3978,7 +3978,7 @@
 				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-149131" y="241470" z="-11959" heading="32768" respawnTime="1min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-149131" y="241470" z="-11928" heading="32768" respawnTime="1min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -3986,27 +3986,7 @@
 				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-148491" y="240590" z="-11959" respawnTime="1min"> <!-- Cooling Device -->
-			<parameters>
-				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer3_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer3_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer4_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
-			</parameters>
-		</npc>
-		<npc id="19279" x="-148491" y="241470" z="-11959" heading="32768" respawnTime="1min"> <!-- Cooling Device -->
-			<parameters>
-				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
-			</parameters>
-		</npc>
-		<npc id="19280" x="-147851" y="240590" z="-11959" respawnTime="1min"> <!-- Weapon Molding Device -->
+		<npc id="19279" x="-148491" y="240590" z="-11928" respawnTime="1min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4018,7 +3998,7 @@
 				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19280" x="-147851" y="241470" z="-11959" heading="32768" respawnTime="1min"> <!-- Weapon Molding Device -->
+		<npc id="19279" x="-148491" y="241470" z="-11928" heading="32768" respawnTime="1min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4026,27 +4006,7 @@
 				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19281" x="-147211" y="240590" z="-11959" respawnTime="1min"> <!-- Armor Molding Device -->
-			<parameters>
-				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer3_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer3_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer4_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
-			</parameters>
-		</npc>
-		<npc id="19281" x="-147211" y="241470" z="-11959" heading="32768" respawnTime="1min"> <!-- Armor Molding Device -->
-			<parameters>
-				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
-			</parameters>
-		</npc>
-		<npc id="19279" x="-146571" y="240590" z="-11959" respawnTime="1min"> <!-- Cooling Device -->
+		<npc id="19280" x="-147851" y="240590" z="-11928" respawnTime="1min"> <!-- Weapon Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4058,7 +4018,7 @@
 				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-146571" y="241470" z="-11959" heading="32768" respawnTime="1min"> <!-- Cooling Device -->
+		<npc id="19280" x="-147851" y="241470" z="-11928" heading="32768" respawnTime="1min"> <!-- Weapon Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4066,7 +4026,7 @@
 				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-145931" y="240590" z="-11959" respawnTime="1min"> <!-- Smelting Furnace -->
+		<npc id="19281" x="-147211" y="240590" z="-11928" respawnTime="1min"> <!-- Armor Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4078,7 +4038,47 @@
 				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-145931" y="241470" z="-11959" heading="32768" respawnTime="1min"> <!-- Smelting Furnace -->
+		<npc id="19281" x="-147211" y="241470" z="-11928" heading="32768" respawnTime="1min"> <!-- Armor Molding Device -->
+			<parameters>
+				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
+			</parameters>
+		</npc>
+		<npc id="19279" x="-146571" y="240590" z="-11928" respawnTime="1min"> <!-- Cooling Device -->
+			<parameters>
+				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer3_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer3_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer4_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
+			</parameters>
+		</npc>
+		<npc id="19279" x="-146571" y="241470" z="-11928" heading="32768" respawnTime="1min"> <!-- Cooling Device -->
+			<parameters>
+				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
+			</parameters>
+		</npc>
+		<npc id="19259" x="-145931" y="240590" z="-11928" respawnTime="1min"> <!-- Smelting Furnace -->
+			<parameters>
+				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer3_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer3_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer4_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
+			</parameters>
+		</npc>
+		<npc id="19259" x="-145931" y="241470" z="-11928" heading="32768" respawnTime="1min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4106,25 +4106,25 @@
 				<node x="-149654" y="242111" />
 			</territory>
 		</territories>
-		<npc id="23220" x="-149585" y="239977" z="-11707" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-149585" y="239977" z="-11696" respawnTime="1min"> <!-- Kunda Watchman -->
 			<parameters>
 				<param name="i_is_guard" value="1" />
 				<param name="SuperPointName" value="kadif03_1525_super_001" />
 			</parameters>
 		</npc>
-		<npc id="23220" x="-145505" y="239979" z="-11713" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-145505" y="239979" z="-11696" respawnTime="1min"> <!-- Kunda Watchman -->
 			<parameters>
 				<param name="i_is_guard" value="1" />
 				<param name="SuperPointName" value="kadif03_1525_super_002" />
 			</parameters>
 		</npc>
-		<npc id="23220" x="-149590" y="242079" z="-11701" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-149590" y="242079" z="-11696" respawnTime="1min"> <!-- Kunda Watchman -->
 			<parameters>
 				<param name="i_is_guard" value="1" />
 				<param name="SuperPointName" value="kadif03_1525_super_003" />
 			</parameters>
 		</npc>
-		<npc id="23220" x="-145474" y="242081" z="-11713" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-145474" y="242081" z="-11696" respawnTime="1min"> <!-- Kunda Watchman -->
 			<parameters>
 				<param name="i_is_guard" value="1" />
 				<param name="SuperPointName" value="kadif03_1525_super_004" />
@@ -4140,7 +4140,7 @@
 				<node x="-151394" y="247143" />
 			</territory>
 		</territories>
-		<npc id="19259" x="-150890" y="243539" z="-12272" heading="-16384" respawnTime="1min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-150890" y="243539" z="-12184" heading="-16384" respawnTime="1min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4152,7 +4152,7 @@
 				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-150010" y="243539" z="-12272" heading="16384" respawnTime="1min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-150010" y="243539" z="-12184" heading="16384" respawnTime="1min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4160,27 +4160,7 @@
 				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-150890" y="244179" z="-12272" heading="-16384" respawnTime="1min"> <!-- Cooling Device -->
-			<parameters>
-				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer3_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer3_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer4_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
-			</parameters>
-		</npc>
-		<npc id="19279" x="-150010" y="244179" z="-12272" heading="16384" respawnTime="1min"> <!-- Cooling Device -->
-			<parameters>
-				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
-			</parameters>
-		</npc>
-		<npc id="19280" x="-150890" y="244819" z="-12272" heading="-16384" respawnTime="1min"> <!-- Weapon Molding Device -->
+		<npc id="19279" x="-150890" y="244179" z="-12184" heading="-16384" respawnTime="1min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4192,7 +4172,7 @@
 				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19280" x="-150010" y="244819" z="-12272" heading="16384" respawnTime="1min"> <!-- Weapon Molding Device -->
+		<npc id="19279" x="-150010" y="244179" z="-12184" heading="16384" respawnTime="1min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4200,27 +4180,7 @@
 				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19281" x="-150890" y="245459" z="-12272" heading="-16384" respawnTime="1min"> <!-- Armor Molding Device -->
-			<parameters>
-				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer3_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer3_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer4_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
-			</parameters>
-		</npc>
-		<npc id="19281" x="-150010" y="245459" z="-12272" heading="16384" respawnTime="1min"> <!-- Armor Molding Device -->
-			<parameters>
-				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
-			</parameters>
-		</npc>
-		<npc id="19279" x="-150890" y="246099" z="-12272" heading="-16384" respawnTime="1min"> <!-- Cooling Device -->
+		<npc id="19280" x="-150890" y="244819" z="-12184" heading="-16384" respawnTime="1min"> <!-- Weapon Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4232,7 +4192,7 @@
 				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-150010" y="246099" z="-12272" heading="16384" respawnTime="1min"> <!-- Cooling Device -->
+		<npc id="19280" x="-150010" y="244819" z="-12184" heading="16384" respawnTime="1min"> <!-- Weapon Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4240,7 +4200,7 @@
 				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-150890" y="246739" z="-12272" heading="-16384" respawnTime="1min"> <!-- Smelting Furnace -->
+		<npc id="19281" x="-150890" y="245459" z="-12184" heading="-16384" respawnTime="1min"> <!-- Armor Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4252,7 +4212,47 @@
 				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-150010" y="246739" z="-12272" heading="16384" respawnTime="1min"> <!-- Smelting Furnace -->
+		<npc id="19281" x="-150010" y="245459" z="-12184" heading="16384" respawnTime="1min"> <!-- Armor Molding Device -->
+			<parameters>
+				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
+			</parameters>
+		</npc>
+		<npc id="19279" x="-150890" y="246099" z="-12184" heading="-16384" respawnTime="1min"> <!-- Cooling Device -->
+			<parameters>
+				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer3_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer3_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer4_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
+			</parameters>
+		</npc>
+		<npc id="19279" x="-150010" y="246099" z="-12184" heading="16384" respawnTime="1min"> <!-- Cooling Device -->
+			<parameters>
+				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
+			</parameters>
+		</npc>
+		<npc id="19259" x="-150890" y="246739" z="-12184" heading="-16384" respawnTime="1min"> <!-- Smelting Furnace -->
+			<parameters>
+				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer3_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer3_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer4_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
+			</parameters>
+		</npc>
+		<npc id="19259" x="-150010" y="246739" z="-12184" heading="16384" respawnTime="1min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4280,25 +4280,25 @@
 				<node x="-151573" y="247147" />
 			</territory>
 		</territories>
-		<npc id="23220" x="-151495" y="247131" z="-11966" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-151495" y="247131" z="-11944" respawnTime="1min"> <!-- Kunda Watchman -->
 			<parameters>
 				<param name="i_is_guard" value="1" />
 				<param name="SuperPointName" value="kadif03_1525_super_005" />
 			</parameters>
 		</npc>
-		<npc id="23220" x="-151494" y="243069" z="-11954" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-151494" y="243069" z="-11944" respawnTime="1min"> <!-- Kunda Watchman -->
 			<parameters>
 				<param name="i_is_guard" value="1" />
 				<param name="SuperPointName" value="kadif03_1525_super_006" />
 			</parameters>
 		</npc>
-		<npc id="23220" x="-149416" y="243079" z="-11958" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-149416" y="243079" z="-11944" respawnTime="1min"> <!-- Kunda Watchman -->
 			<parameters>
 				<param name="i_is_guard" value="1" />
 				<param name="SuperPointName" value="kadif03_1525_super_007" />
 			</parameters>
 		</npc>
-		<npc id="23220" x="-149409" y="247102" z="-11949" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-149409" y="247102" z="-11944" respawnTime="1min"> <!-- Kunda Watchman -->
 			<parameters>
 				<param name="i_is_guard" value="1" />
 				<param name="SuperPointName" value="kadif03_1525_super_008" />
@@ -4454,25 +4454,25 @@
 				<node x="-149640" y="250301" />
 			</territory>
 		</territories>
-		<npc id="23220" x="-149562" y="248172" z="-11929" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-149562" y="248172" z="-11944" respawnTime="1min"> <!-- Kunda Watchman -->
 			<parameters>
 				<param name="i_is_guard" value="1" />
 				<param name="SuperPointName" value="kadif03_1525_super_009" />
 			</parameters>
 		</npc>
-		<npc id="23220" x="-145491" y="248167" z="-11934" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-145491" y="248167" z="-11944" respawnTime="1min"> <!-- Kunda Watchman -->
 			<parameters>
 				<param name="i_is_guard" value="1" />
 				<param name="SuperPointName" value="kadif03_1525_super_010" />
 			</parameters>
 		</npc>
-		<npc id="23220" x="-149605" y="250259" z="-11950" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-149605" y="250259" z="-11944" respawnTime="1min"> <!-- Kunda Watchman -->
 			<parameters>
 				<param name="i_is_guard" value="1" />
 				<param name="SuperPointName" value="kadif03_1525_super_011" />
 			</parameters>
 		</npc>
-		<npc id="23220" x="-145454" y="250256" z="-11957" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-145454" y="250256" z="-11944" respawnTime="1min"> <!-- Kunda Watchman -->
 			<parameters>
 				<param name="i_is_guard" value="1" />
 				<param name="SuperPointName" value="kadif03_1525_super_012" />
@@ -4488,7 +4488,7 @@
 				<node x="-145601" y="247193" />
 			</territory>
 		</territories>
-		<npc id="19259" x="-145045" y="243550" z="-12272" heading="-16384" respawnTime="1min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-145045" y="243550" z="-12184" heading="-16384" respawnTime="1min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4500,7 +4500,7 @@
 				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-144165" y="243550" z="-12272" heading="16384" respawnTime="1min"> <!-- Smelting Furnace -->
+		<npc id="19259" x="-144165" y="243550" z="-12184" heading="16384" respawnTime="1min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4508,27 +4508,7 @@
 				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-145045" y="244190" z="-12272" heading="-16384" respawnTime="1min"> <!-- Cooling Device -->
-			<parameters>
-				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer3_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer3_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer4_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
-			</parameters>
-		</npc>
-		<npc id="19279" x="-144165" y="244190" z="-12272" heading="16384" respawnTime="1min"> <!-- Cooling Device -->
-			<parameters>
-				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
-			</parameters>
-		</npc>
-		<npc id="19280" x="-145045" y="244830" z="-12272" heading="-16384" respawnTime="1min"> <!-- Weapon Molding Device -->
+		<npc id="19279" x="-145045" y="244190" z="-12184" heading="-16384" respawnTime="1min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4540,7 +4520,7 @@
 				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19280" x="-144165" y="244830" z="-12272" heading="16384" respawnTime="1min"> <!-- Weapon Molding Device -->
+		<npc id="19279" x="-144165" y="244190" z="-12184" heading="16384" respawnTime="1min"> <!-- Cooling Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4548,27 +4528,7 @@
 				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19281" x="-145045" y="245470" z="-12272" heading="-16384" respawnTime="1min"> <!-- Armor Molding Device -->
-			<parameters>
-				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer3_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer3_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer4_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
-			</parameters>
-		</npc>
-		<npc id="19281" x="-144165" y="245470" z="-12272" heading="16384" respawnTime="1min"> <!-- Armor Molding Device -->
-			<parameters>
-				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
-				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
-				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
-			</parameters>
-		</npc>
-		<npc id="19279" x="-145045" y="246110" z="-12272" heading="-16384" respawnTime="1min"> <!-- Cooling Device -->
+		<npc id="19280" x="-145045" y="244830" z="-12184" heading="-16384" respawnTime="1min"> <!-- Weapon Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4580,7 +4540,7 @@
 				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19279" x="-144165" y="246110" z="-12272" heading="16384" respawnTime="1min"> <!-- Cooling Device -->
+		<npc id="19280" x="-144165" y="244830" z="-12184" heading="16384" respawnTime="1min"> <!-- Weapon Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4588,7 +4548,7 @@
 				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-145045" y="246750" z="-12272" heading="-16384" respawnTime="1min"> <!-- Smelting Furnace -->
+		<npc id="19281" x="-145045" y="245470" z="-12184" heading="-16384" respawnTime="1min"> <!-- Armor Molding Device -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4600,7 +4560,47 @@
 				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
 			</parameters>
 		</npc>
-		<npc id="19259" x="-144165" y="246750" z="-12272" heading="16384" respawnTime="1min"> <!-- Smelting Furnace -->
+		<npc id="19281" x="-144165" y="245470" z="-12184" heading="16384" respawnTime="1min"> <!-- Armor Molding Device -->
+			<parameters>
+				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
+			</parameters>
+		</npc>
+		<npc id="19279" x="-145045" y="246110" z="-12184" heading="-16384" respawnTime="1min"> <!-- Cooling Device -->
+			<parameters>
+				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer3_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer3_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer4_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
+			</parameters>
+		</npc>
+		<npc id="19279" x="-144165" y="246110" z="-12184" heading="16384" respawnTime="1min"> <!-- Cooling Device -->
+			<parameters>
+				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
+			</parameters>
+		</npc>
+		<npc id="19259" x="-145045" y="246750" z="-12184" heading="-16384" respawnTime="1min"> <!-- Smelting Furnace -->
+			<parameters>
+				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer2_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer2_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer3_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer3_ai" value="sofa_engineer_only_ma" />
+				<param name="i_engineer4_sil" value="23234" /> <!-- Engineer Zofan -->
+				<param name="s_engineer4_ai" value="sofa_engineer_only_ma" />
+			</parameters>
+		</npc>
+		<npc id="19259" x="-144165" y="246750" z="-12184" heading="16384" respawnTime="1min"> <!-- Smelting Furnace -->
 			<parameters>
 				<param name="i_engineer1_sil" value="23234" /> <!-- Engineer Zofan -->
 				<param name="s_engineer1_ai" value="sofa_engineer_only_ma" />
@@ -4628,25 +4628,25 @@
 				<node x="-145774" y="247191" />
 			</territory>
 		</territories>
-		<npc id="23220" x="-145668" y="243111" z="-11969" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-145668" y="243111" z="-11944" respawnTime="1min"> <!-- Kunda Watchman -->
 			<parameters>
 				<param name="i_is_guard" value="1" />
 				<param name="SuperPointName" value="kadif03_1525_super_013" />
 			</parameters>
 		</npc>
-		<npc id="23220" x="-145661" y="247148" z="-11965" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-145661" y="247148" z="-11944" respawnTime="1min"> <!-- Kunda Watchman -->
 			<parameters>
 				<param name="i_is_guard" value="1" />
 				<param name="SuperPointName" value="kadif03_1525_super_014" />
 			</parameters>
 		</npc>
-		<npc id="23220" x="-143581" y="243091" z="-11904" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-143581" y="243091" z="-11944" respawnTime="1min"> <!-- Kunda Watchman -->
 			<parameters>
 				<param name="i_is_guard" value="1" />
 				<param name="SuperPointName" value="kadif03_1525_super_015" />
 			</parameters>
 		</npc>
-		<npc id="23220" x="-143587" y="247176" z="-11924" respawnTime="1min"> <!-- Kunda Watchman -->
+		<npc id="23220" x="-143587" y="247176" z="-11944" respawnTime="1min"> <!-- Kunda Watchman -->
 			<parameters>
 				<param name="i_is_guard" value="1" />
 				<param name="SuperPointName" value="kadif03_1525_super_016" />

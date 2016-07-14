@@ -8,7 +8,7 @@
 				<node x="206885" y="111343" />
 			</territory>
 		</territories>
-		<npc id="33565" x="207036" y="111212" z="-2028" respawnTime="1sec" /> <!-- Hermuncus' Minion -->
+		<npc id="33565" x="207036" y="111212" z="-2032" respawnTime="1sec" /> <!-- Hermuncus' Minion -->
 	</spawn>
 	<spawn name="magmeld05_2621_ga_centerm1">
 		<territories>
@@ -19,7 +19,7 @@
 				<node x="207185" y="117074" />
 			</territory>
 		</territories>
-		<npc id="33138" x="209824" y="119364" z="-1360" respawnTime="1min" /> <!-- Genesis Angel Statue -->
+		<npc id="33138" x="209824" y="119364" z="-1328" respawnTime="1min" /> <!-- Genesis Angel Statue -->
 	</spawn>
 	<spawn name="magmeld05_2621_Cbirdm1">
 		<territories>
@@ -60,7 +60,7 @@
 		<npc id="22947" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Sentry -->
 		<npc id="22948" respawnTime="35sec" respawnRandom="15sec" /> <!-- Garden Scout -->
 		<npc id="22949" respawnTime="45sec" respawnRandom="10sec" /> <!-- Garden Commander -->
-		<npc id="22950" x="209008" y="110944" z="-2080" heading="27648" respawnTime="50sec" respawnRandom="30sec"> <!-- Outdoor Gardener -->
+		<npc id="22950" x="209008" y="110944" z="-2056" heading="27648" respawnTime="50sec" respawnRandom="30sec"> <!-- Outdoor Gardener -->
 			<parameters>
 				<param name="SuperPointName" value="genesis_GC_path1" />
 			</parameters>
@@ -77,7 +77,7 @@
 				<node x="215207" y="116978" />
 			</territory>
 		</territories>
-		<npc id="33140" x="217792" y="119136" z="-1776" heading="-16876" respawnTime="1min" /> <!-- Genesis Goddess Statue -->
+		<npc id="33140" x="217792" y="119136" z="-1736" heading="-16876" respawnTime="1min" /> <!-- Genesis Goddess Statue -->
 	</spawn>
 	<spawn name="magmeld05_2621_02m1">
 		<territories>
@@ -95,7 +95,7 @@
 		<npc id="22947" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Sentry -->
 		<npc id="22948" respawnTime="35sec" respawnRandom="15sec" /> <!-- Garden Scout -->
 		<npc id="22949" respawnTime="45sec" respawnRandom="10sec" /> <!-- Garden Commander -->
-		<npc id="22950" x="205932" y="116648" z="-2136" heading="7168" respawnTime="50sec" respawnRandom="30sec"> <!-- Outdoor Gardener -->
+		<npc id="22950" x="205932" y="116648" z="-2104" heading="7168" respawnTime="50sec" respawnRandom="30sec"> <!-- Outdoor Gardener -->
 			<parameters>
 				<param name="SuperPointName" value="genesis_GC_path2" />
 			</parameters>
@@ -115,7 +115,7 @@
 		<npc id="22947" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Sentry -->
 		<npc id="22948" respawnTime="35sec" respawnRandom="15sec" /> <!-- Garden Scout -->
 		<npc id="22949" respawnTime="45sec" respawnRandom="10sec" /> <!-- Garden Commander -->
-		<npc id="22950" x="214856" y="122284" z="-2048" heading="-8192" respawnTime="50sec" respawnRandom="30sec"> <!-- Outdoor Gardener -->
+		<npc id="22950" x="214856" y="122284" z="-2040" heading="-8192" respawnTime="50sec" respawnRandom="30sec"> <!-- Outdoor Gardener -->
 			<parameters>
 				<param name="SuperPointName" value="genesis_GC_path3" />
 			</parameters>
@@ -137,7 +137,7 @@
 		<npc id="22947" respawnTime="45sec" respawnRandom="15sec" /> <!-- Garden Sentry -->
 		<npc id="22948" respawnTime="35sec" respawnRandom="15sec" /> <!-- Garden Scout -->
 		<npc id="22949" respawnTime="45sec" respawnRandom="10sec" /> <!-- Garden Commander -->
-		<npc id="22950" x="221420" y="113788" z="-2076" heading="-23552" respawnTime="50sec" respawnRandom="30sec"> <!-- Outdoor Gardener -->
+		<npc id="22950" x="221420" y="113788" z="-2064" heading="-23552" respawnTime="50sec" respawnRandom="30sec"> <!-- Outdoor Gardener -->
 			<parameters>
 				<param name="SuperPointName" value="genesis_GC_path4" />
 			</parameters>
@@ -154,10 +154,10 @@
 				<node x="212925" y="116009" />
 			</territory>
 		</territories>
-		<npc id="33133" x="213700" y="115925" z="-830" /> <!-- Apherus Garden Gate -->
-		<npc id="33134" x="214354" y="115265" z="-830" /> <!-- Apherus Garden Gate -->
-		<npc id="33135" x="213700" y="114595" z="-830" /> <!-- Apherus Garden Gate -->
-		<npc id="33136" x="213030" y="115265" z="-830" /> <!-- Apherus Garden Gate -->
+		<npc id="33133" x="213700" y="115925" z="-864" /> <!-- Apherus Garden Gate -->
+		<npc id="33134" x="214354" y="115265" z="-864" /> <!-- Apherus Garden Gate -->
+		<npc id="33135" x="213700" y="114595" z="-800" /> <!-- Apherus Garden Gate -->
+		<npc id="33136" x="213030" y="115265" z="-800" /> <!-- Apherus Garden Gate -->
 	</spawn>
 	<spawn name="magmeld05_2621_Bbirdm1">
 		<territories>
@@ -194,7 +194,7 @@
 				<node x="215177" y="108621" />
 			</territory>
 		</territories>
-		<npc id="33139" x="217788" y="110940" z="-1360" heading="15476" respawnTime="1min" /> <!-- Fountain of Genesis -->
+		<npc id="33139" x="217788" y="110940" z="-1320" heading="15476" respawnTime="1min" /> <!-- Fountain of Genesis -->
 	</spawn>
 	<spawn name="magmeld05_genesis_quest01m1">
 		<territories>
@@ -205,8 +205,8 @@
 				<node x="206995" y="113040" />
 			</territory>
 		</territories>
-		<npc id="33031" x="207798" y="112440" z="-2065" heading="1032" /> <!-- Horpina -->
-		<npc id="33032" x="207896" y="112474" z="-2064" heading="-15548" /> <!-- Selina -->
+		<npc id="33031" x="207798" y="112440" z="-2064" heading="1032" /> <!-- Horpina -->
+		<npc id="33032" x="207896" y="112474" z="-2056" heading="-15548" /> <!-- Selina -->
 	</spawn>
 	<spawn name="genesis_arcan_telepoterm1">
 		<territories>
@@ -217,7 +217,7 @@
 				<node x="206995" y="113040" />
 			</territory>
 		</territories>
-		<npc id="33090" x="207548" y="112632" z="-2048" /> <!-- Teleport Device -->
+		<npc id="33090" x="207548" y="112632" z="-2016" /> <!-- Teleport Device -->
 	</spawn>
 	<spawn name="magmeld05_2621_Abirdm1">
 		<territories>
@@ -253,14 +253,14 @@
 					<node x="207355" y="121485" />
 				</territory>
 			</territories>
-			<npc id="18987" x="208363" y="120615" z="-1314" respawnTime="5min" respawnRandom="1min" /> <!-- Vine -->
-			<npc id="18987" x="208360" y="118111" z="-1314" respawnTime="5min" respawnRandom="30sec" /> <!-- Vine -->
-			<npc id="18987" x="210850" y="118064" z="-1314" respawnTime="5min" respawnRandom="1min" /> <!-- Vine -->
-			<npc id="18987" x="210859" y="120618" z="-1314" respawnTime="5min" respawnRandom="30sec" /> <!-- Vine -->
-			<npc id="18987" x="208268" y="119790" z="-1314" respawnTime="6min" respawnRandom="10sec" /> <!-- Vine -->
-			<npc id="18987" x="209236" y="118067" z="-1314" respawnTime="6min" respawnRandom="25sec" /> <!-- Vine -->
-			<npc id="18987" x="210852" y="119030" z="-1314" respawnTime="6min" respawnRandom="10sec" /> <!-- Vine -->
-			<npc id="18987" x="209995" y="120637" z="-1314" respawnTime="6min" respawnRandom="25sec" /> <!-- Vine -->
+			<npc id="18987" x="208363" y="120615" z="-1304" respawnTime="5min" respawnRandom="1min" /> <!-- Vine -->
+			<npc id="18987" x="208360" y="118111" z="-1304" respawnTime="5min" respawnRandom="30sec" /> <!-- Vine -->
+			<npc id="18987" x="210850" y="118064" z="-1304" respawnTime="5min" respawnRandom="1min" /> <!-- Vine -->
+			<npc id="18987" x="210859" y="120618" z="-1304" respawnTime="5min" respawnRandom="30sec" /> <!-- Vine -->
+			<npc id="18987" x="208268" y="119790" z="-1304" respawnTime="6min" respawnRandom="10sec" /> <!-- Vine -->
+			<npc id="18987" x="209236" y="118067" z="-1304" respawnTime="6min" respawnRandom="25sec" /> <!-- Vine -->
+			<npc id="18987" x="210852" y="119030" z="-1304" respawnTime="6min" respawnRandom="10sec" /> <!-- Vine -->
+			<npc id="18987" x="209995" y="120637" z="-1304" respawnTime="6min" respawnRandom="25sec" /> <!-- Vine -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_D_factorm1">
@@ -277,12 +277,12 @@
 					<node x="216199" y="114207" />
 				</territory>
 			</territories>
-			<npc id="18987" x="212867" y="113722" z="-909" respawnTime="10min" respawnRandom="30sec" /> <!-- Vine -->
-			<npc id="18987" x="212059" y="114761" z="-909" respawnTime="11min" respawnRandom="1min" /> <!-- Vine -->
-			<npc id="18987" x="212211" y="116137" z="-909" respawnTime="12min" respawnRandom="30sec" /> <!-- Vine -->
-			<npc id="18987" x="214490" y="116789" z="-909" respawnTime="10min" respawnRandom="30sec" /> <!-- Vine -->
-			<npc id="18987" x="215337" y="114780" z="-909" respawnTime="11min" respawnRandom="1min" /> <!-- Vine -->
-			<npc id="18987" x="214538" y="113754" z="-909" respawnTime="12min" respawnRandom="30sec" /> <!-- Vine -->
+			<npc id="18987" x="212867" y="113722" z="-896" respawnTime="10min" respawnRandom="30sec" /> <!-- Vine -->
+			<npc id="18987" x="212059" y="114761" z="-896" respawnTime="11min" respawnRandom="1min" /> <!-- Vine -->
+			<npc id="18987" x="212211" y="116137" z="-896" respawnTime="12min" respawnRandom="30sec" /> <!-- Vine -->
+			<npc id="18987" x="214490" y="116789" z="-896" respawnTime="10min" respawnRandom="30sec" /> <!-- Vine -->
+			<npc id="18987" x="215337" y="114780" z="-896" respawnTime="11min" respawnRandom="1min" /> <!-- Vine -->
+			<npc id="18987" x="214538" y="113754" z="-896" respawnTime="12min" respawnRandom="30sec" /> <!-- Vine -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_D02m1">
@@ -392,14 +392,14 @@
 					<node x="215689" y="113245" />
 				</territory>
 			</territories>
-			<npc id="18987" x="216493" y="109893" z="-1319" respawnTime="5min" respawnRandom="1min" /> <!-- Vine -->
-			<npc id="18987" x="219026" y="109908" z="-1319" respawnTime="5min" respawnRandom="30sec" /> <!-- Vine -->
-			<npc id="18987" x="219063" y="112424" z="-1319" respawnTime="5min" respawnRandom="1min" /> <!-- Vine -->
-			<npc id="18987" x="216558" y="112414" z="-1319" respawnTime="5min" respawnRandom="30sec" /> <!-- Vine -->
-			<npc id="18987" x="217450" y="109887" z="-1319" respawnTime="6min" respawnRandom="10sec" /> <!-- Vine -->
-			<npc id="18987" x="219014" y="110853" z="-1319" respawnTime="6min" respawnRandom="25sec" /> <!-- Vine -->
-			<npc id="18987" x="218097" y="112429" z="-1319" respawnTime="6min" respawnRandom="10sec" /> <!-- Vine -->
-			<npc id="18987" x="216469" y="111535" z="-1319" respawnTime="6min" respawnRandom="25sec" /> <!-- Vine -->
+			<npc id="18987" x="216493" y="109893" z="-1304" respawnTime="5min" respawnRandom="1min" /> <!-- Vine -->
+			<npc id="18987" x="219026" y="109908" z="-1304" respawnTime="5min" respawnRandom="30sec" /> <!-- Vine -->
+			<npc id="18987" x="219063" y="112424" z="-1304" respawnTime="5min" respawnRandom="1min" /> <!-- Vine -->
+			<npc id="18987" x="216558" y="112414" z="-1304" respawnTime="5min" respawnRandom="30sec" /> <!-- Vine -->
+			<npc id="18987" x="217450" y="109887" z="-1304" respawnTime="6min" respawnRandom="10sec" /> <!-- Vine -->
+			<npc id="18987" x="219014" y="110853" z="-1304" respawnTime="6min" respawnRandom="25sec" /> <!-- Vine -->
+			<npc id="18987" x="218097" y="112429" z="-1304" respawnTime="6min" respawnRandom="10sec" /> <!-- Vine -->
+			<npc id="18987" x="216469" y="111535" z="-1304" respawnTime="6min" respawnRandom="25sec" /> <!-- Vine -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_Bm1">
@@ -412,10 +412,10 @@
 					<node x="215689" y="113245" />
 				</territory>
 			</territories>
-			<npc id="22952" x="217640" y="109468" z="-1332" heading="-18432" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="219428" y="111076" z="-1328" heading="-2048" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="216124" y="111320" z="-1332" heading="28672" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="217912" y="112844" z="-1328" heading="12288" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="217640" y="109468" z="-1304" heading="-18432" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="219428" y="111076" z="-1304" heading="-2048" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="216124" y="111320" z="-1304" heading="28672" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="217912" y="112844" z="-1304" heading="12288" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_Cm1">
@@ -428,14 +428,14 @@
 					<node x="215641" y="121538" />
 				</territory>
 			</territories>
-			<npc id="22964" x="217176" y="118668" z="-1784" heading="12288" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="218512" y="118744" z="-1784" heading="21504" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="218380" y="120140" z="-1784" heading="-26624" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="217056" y="119964" z="-1784" heading="-3072" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="217696" y="118048" z="-1760" heading="-19456" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="216476" y="119488" z="-1760" heading="30720" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="217872" y="120720" z="-1760" heading="13312" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="219156" y="119272" z="-1760" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="217176" y="118668" z="-1760" heading="12288" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="218512" y="118744" z="-1760" heading="21504" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="218380" y="120140" z="-1760" heading="-26624" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="217056" y="119964" z="-1760" heading="-3072" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="217696" y="118048" z="-1736" heading="-19456" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="216476" y="119488" z="-1736" heading="30720" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="217872" y="120720" z="-1736" heading="13312" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="219156" y="119272" z="-1736" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_Dm1">
@@ -452,10 +452,10 @@
 					<node x="216199" y="114207" />
 				</territory>
 			</territories>
-			<npc id="22952" x="211732" y="115404" z="-920" heading="31744" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="213544" y="113300" z="-920" heading="-16384" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="215640" y="115100" z="-920" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="213832" y="117236" z="-920" heading="14336" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="211732" y="115404" z="-896" heading="31744" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="213544" y="113300" z="-896" heading="-16384" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="215640" y="115100" z="-896" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="213832" y="117236" z="-896" heading="14336" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_Am1">
@@ -468,10 +468,10 @@
 					<node x="207355" y="121485" />
 				</territory>
 			</territories>
-			<npc id="22952" x="207880" y="119240" z="-1328" heading="-4096" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="209720" y="117656" z="-1328" heading="12288" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="209468" y="121072" z="-1324" heading="-16384" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="211288" y="119508" z="-1324" heading="28672" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="207880" y="119240" z="-1304" heading="-4096" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="209720" y="117656" z="-1304" heading="12288" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="209468" y="121072" z="-1304" heading="-16384" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="211288" y="119508" z="-1304" heading="28672" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_C03m1">
@@ -721,14 +721,14 @@
 					<node x="207355" y="121485" />
 				</territory>
 			</territories>
-			<npc id="18988" x="208363" y="120615" z="-1314" respawnTime="5min" respawnRandom="1min" /> <!-- Rose Vine -->
-			<npc id="18988" x="208360" y="118111" z="-1314" respawnTime="5min" respawnRandom="30sec" /> <!-- Rose Vine -->
-			<npc id="18988" x="210850" y="118064" z="-1314" respawnTime="5min" respawnRandom="1min" /> <!-- Rose Vine -->
-			<npc id="18988" x="210859" y="120618" z="-1314" respawnTime="5min" respawnRandom="30sec" /> <!-- Rose Vine -->
-			<npc id="18988" x="208268" y="119790" z="-1314" respawnTime="6min" respawnRandom="10sec" /> <!-- Rose Vine -->
-			<npc id="18988" x="209236" y="118067" z="-1314" respawnTime="6min" respawnRandom="25sec" /> <!-- Rose Vine -->
-			<npc id="18988" x="210852" y="119030" z="-1314" respawnTime="6min" respawnRandom="10sec" /> <!-- Rose Vine -->
-			<npc id="18988" x="209995" y="120637" z="-1314" respawnTime="6min" respawnRandom="25sec" /> <!-- Rose Vine -->
+			<npc id="18988" x="208363" y="120615" z="-1304" respawnTime="5min" respawnRandom="1min" /> <!-- Rose Vine -->
+			<npc id="18988" x="208360" y="118111" z="-1304" respawnTime="5min" respawnRandom="30sec" /> <!-- Rose Vine -->
+			<npc id="18988" x="210850" y="118064" z="-1304" respawnTime="5min" respawnRandom="1min" /> <!-- Rose Vine -->
+			<npc id="18988" x="210859" y="120618" z="-1304" respawnTime="5min" respawnRandom="30sec" /> <!-- Rose Vine -->
+			<npc id="18988" x="208268" y="119790" z="-1304" respawnTime="6min" respawnRandom="10sec" /> <!-- Rose Vine -->
+			<npc id="18988" x="209236" y="118067" z="-1304" respawnTime="6min" respawnRandom="25sec" /> <!-- Rose Vine -->
+			<npc id="18988" x="210852" y="119030" z="-1304" respawnTime="6min" respawnRandom="10sec" /> <!-- Rose Vine -->
+			<npc id="18988" x="209995" y="120637" z="-1304" respawnTime="6min" respawnRandom="25sec" /> <!-- Rose Vine -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_D_factor_Nm1">
@@ -745,12 +745,12 @@
 					<node x="216199" y="114207" />
 				</territory>
 			</territories>
-			<npc id="18988" x="212867" y="113722" z="-909" respawnTime="10min" respawnRandom="30sec" /> <!-- Rose Vine -->
-			<npc id="18988" x="212059" y="114761" z="-909" respawnTime="11min" respawnRandom="1min" /> <!-- Rose Vine -->
-			<npc id="18988" x="212211" y="116137" z="-909" respawnTime="12min" respawnRandom="30sec" /> <!-- Rose Vine -->
-			<npc id="18988" x="214490" y="116789" z="-909" respawnTime="10min" respawnRandom="30sec" /> <!-- Rose Vine -->
-			<npc id="18988" x="215337" y="114780" z="-909" respawnTime="11min" respawnRandom="1min" /> <!-- Rose Vine -->
-			<npc id="18988" x="214538" y="113754" z="-909" respawnTime="12min" respawnRandom="30sec" /> <!-- Rose Vine -->
+			<npc id="18988" x="212867" y="113722" z="-896" respawnTime="10min" respawnRandom="30sec" /> <!-- Rose Vine -->
+			<npc id="18988" x="212059" y="114761" z="-896" respawnTime="11min" respawnRandom="1min" /> <!-- Rose Vine -->
+			<npc id="18988" x="212211" y="116137" z="-896" respawnTime="12min" respawnRandom="30sec" /> <!-- Rose Vine -->
+			<npc id="18988" x="214490" y="116789" z="-896" respawnTime="10min" respawnRandom="30sec" /> <!-- Rose Vine -->
+			<npc id="18988" x="215337" y="114780" z="-896" respawnTime="11min" respawnRandom="1min" /> <!-- Rose Vine -->
+			<npc id="18988" x="214538" y="113754" z="-896" respawnTime="12min" respawnRandom="30sec" /> <!-- Rose Vine -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_D02Nm1">
@@ -860,14 +860,14 @@
 					<node x="215689" y="113245" />
 				</territory>
 			</territories>
-			<npc id="18988" x="216493" y="109893" z="-1319" respawnTime="5min" respawnRandom="1min" /> <!-- Rose Vine -->
-			<npc id="18988" x="219026" y="109908" z="-1319" respawnTime="5min" respawnRandom="30sec" /> <!-- Rose Vine -->
-			<npc id="18988" x="219063" y="112424" z="-1319" respawnTime="5min" respawnRandom="1min" /> <!-- Rose Vine -->
-			<npc id="18988" x="216558" y="112414" z="-1319" respawnTime="5min" respawnRandom="30sec" /> <!-- Rose Vine -->
-			<npc id="18988" x="217450" y="109887" z="-1319" respawnTime="6min" respawnRandom="10sec" /> <!-- Rose Vine -->
-			<npc id="18988" x="219014" y="110853" z="-1319" respawnTime="6min" respawnRandom="25sec" /> <!-- Rose Vine -->
-			<npc id="18988" x="218097" y="112429" z="-1319" respawnTime="6min" respawnRandom="10sec" /> <!-- Rose Vine -->
-			<npc id="18988" x="216469" y="111535" z="-1319" respawnTime="6min" respawnRandom="25sec" /> <!-- Rose Vine -->
+			<npc id="18988" x="216493" y="109893" z="-1304" respawnTime="5min" respawnRandom="1min" /> <!-- Rose Vine -->
+			<npc id="18988" x="219026" y="109908" z="-1304" respawnTime="5min" respawnRandom="30sec" /> <!-- Rose Vine -->
+			<npc id="18988" x="219063" y="112424" z="-1304" respawnTime="5min" respawnRandom="1min" /> <!-- Rose Vine -->
+			<npc id="18988" x="216558" y="112414" z="-1304" respawnTime="5min" respawnRandom="30sec" /> <!-- Rose Vine -->
+			<npc id="18988" x="217450" y="109887" z="-1304" respawnTime="6min" respawnRandom="10sec" /> <!-- Rose Vine -->
+			<npc id="18988" x="219014" y="110853" z="-1304" respawnTime="6min" respawnRandom="25sec" /> <!-- Rose Vine -->
+			<npc id="18988" x="218097" y="112429" z="-1304" respawnTime="6min" respawnRandom="10sec" /> <!-- Rose Vine -->
+			<npc id="18988" x="216469" y="111535" z="-1304" respawnTime="6min" respawnRandom="25sec" /> <!-- Rose Vine -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_BNm1">
@@ -880,10 +880,10 @@
 					<node x="215689" y="113245" />
 				</territory>
 			</territories>
-			<npc id="22952" x="217640" y="109468" z="-1332" heading="-18432" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="219428" y="111076" z="-1328" heading="-2048" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="216124" y="111320" z="-1332" heading="28672" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="217912" y="112844" z="-1328" heading="12288" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="217640" y="109468" z="-1304" heading="-18432" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="219428" y="111076" z="-1304" heading="-2048" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="216124" y="111320" z="-1304" heading="28672" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="217912" y="112844" z="-1304" heading="12288" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_CNm1">
@@ -896,14 +896,14 @@
 					<node x="215641" y="121538" />
 				</territory>
 			</territories>
-			<npc id="22964" x="217176" y="118668" z="-1784" heading="12288" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="218512" y="118744" z="-1784" heading="21504" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="218380" y="120140" z="-1784" heading="-26624" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="217056" y="119964" z="-1784" heading="-3072" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="217696" y="118048" z="-1760" heading="-19456" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="216476" y="119488" z="-1760" heading="30720" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="217872" y="120720" z="-1760" heading="13312" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
-			<npc id="22964" x="219156" y="119272" z="-1760" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="217176" y="118668" z="-1760" heading="12288" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="218512" y="118744" z="-1760" heading="21504" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="218380" y="120140" z="-1760" heading="-26624" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="217056" y="119964" z="-1760" heading="-3072" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="217696" y="118048" z="-1736" heading="-19456" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="216476" y="119488" z="-1736" heading="30720" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="217872" y="120720" z="-1736" heading="13312" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
+			<npc id="22964" x="219156" y="119272" z="-1736" respawnTime="5min" respawnRandom="30sec" /> <!-- Apherus Lookout -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_DNm1">
@@ -920,10 +920,10 @@
 					<node x="216199" y="114207" />
 				</territory>
 			</territories>
-			<npc id="22952" x="211732" y="115404" z="-920" heading="31744" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="213544" y="113300" z="-920" heading="-16384" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="215640" y="115100" z="-920" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="213816" y="117252" z="-920" heading="14336" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="211732" y="115404" z="-896" heading="31744" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="213544" y="113300" z="-896" heading="-16384" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="215640" y="115100" z="-896" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="213816" y="117252" z="-896" heading="14336" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_Nm1">
@@ -936,10 +936,10 @@
 					<node x="207355" y="121485" />
 				</territory>
 			</territories>
-			<npc id="22952" x="207880" y="119240" z="-1328" heading="-4096" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="209720" y="117656" z="-1328" heading="12288" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="209468" y="121072" z="-1324" heading="-16384" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
-			<npc id="22952" x="211288" y="119508" z="-1324" heading="28672" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="207880" y="119240" z="-1304" heading="-4096" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="209720" y="117656" z="-1304" heading="12288" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="209468" y="121072" z="-1304" heading="-16384" respawnTime="80sec" respawnRandom="15sec" /> <!-- Garden Watchman -->
+			<npc id="22952" x="211288" y="119508" z="-1304" heading="28672" respawnTime="95sec" respawnRandom="20sec" /> <!-- Garden Watchman -->
 		</group>
 	</spawn>
 	<spawn ai="DayNightSpawns" name="magmeld05_2621_C03Nm1">
