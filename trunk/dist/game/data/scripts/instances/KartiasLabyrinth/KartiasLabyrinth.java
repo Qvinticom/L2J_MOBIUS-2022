@@ -31,11 +31,19 @@ import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
 import instances.AbstractInstance;
+import quests.Q00494_IncarnationOfGreedZellakaGroup.Q00494_IncarnationOfGreedZellakaGroup;
+import quests.Q00495_IncarnationOfJealousyPellineGroup.Q00495_IncarnationOfJealousyPellineGroup;
+import quests.Q00496_IncarnationOfGluttonyKaliosGroup.Q00496_IncarnationOfGluttonyKaliosGroup;
+import quests.Q00497_IncarnationOfGreedZellakaSolo.Q00497_IncarnationOfGreedZellakaSolo;
+import quests.Q00498_IncarnationOfJealousyPellineSolo.Q00498_IncarnationOfJealousyPellineSolo;
+import quests.Q00499_IncarnationOfGluttonyKaliosSolo.Q00499_IncarnationOfGluttonyKaliosSolo;
 
 /**
  * Kartia Labyrinth instance zone.
@@ -319,7 +327,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 				instance.openCloseDoor(instance.getTemplateParameters().getInt("thirdDoorId"), true);
 				instance.setStatus(3); // Used for notify helper's AI
 			}
-			else if (param.getBoolean("CONTINUE_AFTER_KILL", false) && instance.getAliveNpcs(MONSTERS).isEmpty())
+			else if (param.getBoolean("CONTINUE_AFTER_KILL", false) && (instance.getAliveNpcs(MONSTERS).size() <= 1))
 			{
 				param.set("CONTINUE_AFTER_KILL", false);
 				getTimers().addTimer("CALL_PROGRESS", 5000, n -> manageProgressInInstance(instance));
@@ -347,6 +355,69 @@ public final class KartiasLabyrinth extends AbstractInstance
 					addExpAndSp(player, (xp + getRandom(xp_rnd)), (sp + getRandom(sp_rnd)));
 				});
 			}
+			
+			// Check Instance Quests.
+			instance.getPlayers().forEach(player ->
+			{
+				switch (instance.getTemplateId())
+				{
+					case TEMPLATE_ID_SOLO_85:
+					{
+						final QuestState qs = player.getQuestState(Q00497_IncarnationOfGreedZellakaSolo.class.getSimpleName());
+						if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+						{
+							qs.setCond(2, true);
+						}
+						break;
+					}
+					case TEMPLATE_ID_SOLO_90:
+					{
+						final QuestState qs = player.getQuestState(Q00498_IncarnationOfJealousyPellineSolo.class.getSimpleName());
+						if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+						{
+							qs.setCond(2, true);
+						}
+						break;
+					}
+					case TEMPLATE_ID_SOLO_95:
+					{
+						final QuestState qs = player.getQuestState(Q00499_IncarnationOfGluttonyKaliosSolo.class.getSimpleName());
+						if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+						{
+							qs.setCond(2, true);
+						}
+						break;
+					}
+					case TEMPLATE_ID_GROUP_85:
+					{
+						final QuestState qs = player.getQuestState(Q00494_IncarnationOfGreedZellakaGroup.class.getSimpleName());
+						if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+						{
+							qs.setCond(2, true);
+						}
+						break;
+					}
+					case TEMPLATE_ID_GROUP_90:
+					{
+						final QuestState qs = player.getQuestState(Q00495_IncarnationOfJealousyPellineGroup.class.getSimpleName());
+						if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+						{
+							qs.setCond(2, true);
+						}
+						break;
+					}
+					case TEMPLATE_ID_GROUP_95:
+					{
+						final QuestState qs = player.getQuestState(Q00496_IncarnationOfGluttonyKaliosGroup.class.getSimpleName());
+						if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+						{
+							qs.setCond(2, true);
+						}
+						break;
+					}
+				}
+			});
+			
 			instance.finishInstance();
 		}
 	}
@@ -544,61 +615,78 @@ public final class KartiasLabyrinth extends AbstractInstance
 					switch (wave)
 					{
 						case 1:
+						{
 							showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE1_WAVE1"));
 							param.set("WAVE", 2);
 							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
 							break;
+						}
 						case 2:
+						{
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE1_WAVE2"));
 							param.set("WAVE", 3);
 							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
 							break;
+						}
 						case 3:
+						{
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE1_WAVE3"));
 							param.set("WAVE", 1);
 							param.set("STAGE", 2);
 							param.set("CONTINUE_AFTER_KILL", true);
 							break;
+						}
 					}
 					break;
 				case 2:
 					switch (wave)
 					{
 						case 1:
+						{
 							showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE2_WAVE1"));
 							param.set("WAVE", 2);
 							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
 							break;
+						}
 						case 2:
+						{
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE2_WAVE2"));
 							param.set("WAVE", 3);
 							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
 							break;
+						}
 						case 3:
+						{
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE2_WAVE3"));
 							param.set("WAVE", 1);
 							param.set("STAGE", 3);
 							param.set("CONTINUE_AFTER_KILL", true);
 							break;
+						}
 					}
 					break;
 				case 3:
 					switch (wave)
 					{
 						case 1:
+						{
 							showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE3_WAVE1"));
 							param.set("WAVE", 2);
 							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
 							break;
+						}
 						case 2:
+						{
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE3_WAVE2"));
 							param.set("WAVE", 3);
 							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
 							break;
+						}
 						case 3:
+						{
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE3_WAVE3"));
 							if (isSoloKartia(instance))
 							{
@@ -624,7 +712,9 @@ public final class KartiasLabyrinth extends AbstractInstance
 							}
 							param.set("CONTINUE_AFTER_KILL", true);
 							break;
+						}
 						case 4:
+						{
 							showOnScreenMsg(instance, NpcStringId.THE_LIFE_PLUNDERER_S_TRUE_FORM_IS_REVEALED, ExShowScreenMessage.TOP_CENTER, 5000, true);
 							instance.spawnGroup("ROOM1_STAGE3_WAVE4");
 							instance.getAliveNpcs(BOZ_ENERGY).forEach(npc -> npc.deleteMe());
@@ -633,40 +723,50 @@ public final class KartiasLabyrinth extends AbstractInstance
 							param.set("STAGE", 1);
 							param.set("WAVE", 1);
 							break;
+						}
 					}
 					break;
 				case 4:
 					switch (wave)
 					{
 						case 1:
+						{
 							showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE4_WAVE1"));
 							param.set("WAVE", 2);
 							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
 							break;
+						}
 						case 2:
+						{
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE4_WAVE2"));
 							param.set("WAVE", 3);
 							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
 							break;
+						}
 						case 3:
+						{
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE4_WAVE3"));
 							param.set("WAVE", 1);
 							param.set("STAGE", 5);
 							param.set("CONTINUE_AFTER_KILL", true);
 							break;
+						}
 					}
 					break;
 				case 5:
 					switch (wave)
 					{
 						case 1:
+						{
 							showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE5_WAVE1"));
 							param.set("WAVE", 2);
 							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
 							break;
+						}
 						case 2:
+						{
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE5_WAVE2"));
 							param.set("ROOM", 2);
 							param.set("STAGE", 1);
@@ -686,6 +786,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 								});
 							});
 							break;
+						}
 					}
 					break;
 			}
@@ -708,6 +809,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 			switch (stage)
 			{
 				case 1:
+				{
 					showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 					moveMonsters(instance.spawnGroup("ROOM3_STAGE1_WAVE1"));
 					param.set("STAGE", 2);
@@ -721,13 +823,17 @@ public final class KartiasLabyrinth extends AbstractInstance
 						addSpawn(instance.getTemplateParameters().getInt("helperSurvivor"), loc, false, 0, false, instance.getId());
 					}
 					break;
+				}
 				case 2:
+				{
 					showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 					moveMonsters(instance.spawnGroup("ROOM3_STAGE2_WAVE1"));
 					param.set("STAGE", 3);
 					param.set("CONTINUE_AFTER_KILL", true);
 					break;
+				}
 				case 3:
+				{
 					showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 					moveMonsters(instance.spawnGroup("ROOM3_STAGE3_WAVE1"));
 					
@@ -749,13 +855,17 @@ public final class KartiasLabyrinth extends AbstractInstance
 						param.set("CONTINUE_AFTER_KILL", true);
 					}
 					break;
+				}
 				case 4:
+				{
 					showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 					moveMonsters(instance.spawnGroup("ROOM3_STAGE4_WAVE1"));
 					param.set("STAGE", 5);
 					param.set("CONTINUE_AFTER_KILL", true);
 					break;
+				}
 				case 5:
+				{
 					showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 					moveMonsters(instance.spawnGroup("ROOM3_STAGE4_WAVE1"));
 					instance.getAliveNpcs(BOSSES).forEach(npc ->
@@ -769,6 +879,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 						addMoveToDesire(npc, moveTo, 23);
 					});
 					break;
+				}
 			}
 		}
 	}

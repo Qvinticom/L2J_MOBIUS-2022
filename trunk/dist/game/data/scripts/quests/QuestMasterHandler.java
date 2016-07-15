@@ -127,6 +127,12 @@ import quests.Q00488_WondersOfCaring.Q00488_WondersOfCaring;
 import quests.Q00489_InThisQuietPlace.Q00489_InThisQuietPlace;
 import quests.Q00490_DutyOfTheSurvivor.Q00490_DutyOfTheSurvivor;
 import quests.Q00493_KickingOutUnwelcomeGuests.Q00493_KickingOutUnwelcomeGuests;
+import quests.Q00494_IncarnationOfGreedZellakaGroup.Q00494_IncarnationOfGreedZellakaGroup;
+import quests.Q00495_IncarnationOfJealousyPellineGroup.Q00495_IncarnationOfJealousyPellineGroup;
+import quests.Q00496_IncarnationOfGluttonyKaliosGroup.Q00496_IncarnationOfGluttonyKaliosGroup;
+import quests.Q00497_IncarnationOfGreedZellakaSolo.Q00497_IncarnationOfGreedZellakaSolo;
+import quests.Q00498_IncarnationOfJealousyPellineSolo.Q00498_IncarnationOfJealousyPellineSolo;
+import quests.Q00499_IncarnationOfGluttonyKaliosSolo.Q00499_IncarnationOfGluttonyKaliosSolo;
 import quests.Q00501_ProofOfClanAlliance.Q00501_ProofOfClanAlliance;
 import quests.Q00508_AClansReputation.Q00508_AClansReputation;
 import quests.Q00509_AClansFame.Q00509_AClansFame;
@@ -446,6 +452,12 @@ public class QuestMasterHandler
 		Q00489_InThisQuietPlace.class,
 		Q00490_DutyOfTheSurvivor.class,
 		Q00493_KickingOutUnwelcomeGuests.class,
+		Q00494_IncarnationOfGreedZellakaGroup.class,
+		Q00495_IncarnationOfJealousyPellineGroup.class,
+		Q00496_IncarnationOfGluttonyKaliosGroup.class,
+		Q00497_IncarnationOfGreedZellakaSolo.class,
+		Q00498_IncarnationOfJealousyPellineSolo.class,
+		Q00499_IncarnationOfGluttonyKaliosSolo.class,
 		Q00501_ProofOfClanAlliance.class,
 		Q00508_AClansReputation.class,
 		Q00509_AClansFame.class,
