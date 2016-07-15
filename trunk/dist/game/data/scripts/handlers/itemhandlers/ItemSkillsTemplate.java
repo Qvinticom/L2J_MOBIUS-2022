@@ -22,6 +22,7 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
@@ -83,7 +84,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					hasConsumeSkill = true;
 				}
 				
-				if (!itemSkill.checkCondition(playable, playable.getTarget()))
+				if (!itemSkill.hasEffectType(L2EffectType.SUMMON_PET) && !itemSkill.checkCondition(playable, playable.getTarget()))
 				{
 					continue;
 				}
@@ -112,7 +113,12 @@ public class ItemSkillsTemplate implements IItemHandler
 					playable.sendPacket(sm);
 				}
 				
-				if (itemSkill.isWithoutAction() || item.getItem().hasImmediateEffect() || item.getItem().hasExImmediateEffect())
+				if (playable.isPlayer() && itemSkill.hasEffectType(L2EffectType.SUMMON_PET))
+				{
+					playable.doCast(itemSkill);
+					successfulUse = true;
+				}
+				else if (itemSkill.isWithoutAction() || item.getItem().hasImmediateEffect() || item.getItem().hasExImmediateEffect())
 				{
 					SkillCaster.triggerCast(playable, null, itemSkill, item, false);
 					successfulUse = true;
