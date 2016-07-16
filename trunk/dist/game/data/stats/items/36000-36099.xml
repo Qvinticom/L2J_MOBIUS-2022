@@ -1646,6 +1646,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.etc_whiteday_candy_i05" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9618" level="1" /> <!-- Yum Yum Candy -->
 		</skills>
@@ -1661,6 +1662,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.etc_whiteday_candy_i06" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9619" level="1" /> <!-- Nom Nom Candy -->
 		</skills>
@@ -1679,6 +1681,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9620" level="1" /> <!-- Yummy Gift Box -->
 		</skills>
@@ -1965,6 +1968,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9628" level="1" /> <!-- Star Agathion's Gift Box -->
 		</skills>

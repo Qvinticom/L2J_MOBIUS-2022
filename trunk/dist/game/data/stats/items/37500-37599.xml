@@ -494,6 +494,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17103" level="1" /> <!-- Santa's Blessing -->
 		</skills>
@@ -644,6 +645,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17085" level="1" /> <!-- Kisung's Power Up -->
 		</skills>

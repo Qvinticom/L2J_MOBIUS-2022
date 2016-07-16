@@ -8,6 +8,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9989" level="1" /> <!-- Elixir of Protection -->
 		</skills>
@@ -20,6 +21,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9990" level="1" /> <!-- Elixir of Magic -->
 		</skills>
@@ -32,6 +34,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9988" level="1" /> <!-- Elixir of Aggression -->
 		</skills>
@@ -297,8 +300,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="weight" val="30" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9934" level="1" /> <!-- Scroll of Escape: Town of Goddard -->
 		</skills>
@@ -316,7 +319,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
@@ -334,8 +336,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="weight" val="30" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9936" level="1" /> <!-- Scroll of Escape: Town of Goddard -->
 		</skills>
@@ -351,8 +353,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="weight" val="30" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9937" level="1" /> <!-- Scroll of Escape: Town of Goddard -->
 		</skills>
@@ -368,8 +370,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="weight" val="30" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9932" level="1" /> <!-- Scroll of Escape: Town of Oren -->
 		</skills>
@@ -385,8 +387,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="weight" val="30" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9995" level="1" /> <!-- Scroll of Escape: Town of Oren -->
 		</skills>
@@ -402,8 +404,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="weight" val="30" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9929" level="1" /> <!-- Scroll of Escape: Heine -->
 		</skills>

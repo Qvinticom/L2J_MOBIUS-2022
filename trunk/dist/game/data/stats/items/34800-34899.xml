@@ -42,6 +42,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9380" level="1" /> <!-- Soulshot Pack -->
 		</skills>
@@ -56,6 +57,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9381" level="1" /> <!-- Blessed Spiritshot Pack -->
 		</skills>
@@ -70,6 +72,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9382" level="1" /> <!-- Stone Pack -->
 		</skills>
@@ -84,6 +87,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9383" level="1" /> <!-- Crystal Pack -->
 		</skills>
@@ -98,6 +102,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9384" level="1" /> <!-- Scroll: Enchant Armor Pack (S-grade) -->
 		</skills>
@@ -112,6 +117,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9385" level="1" /> <!-- Scroll: Enchant Armor Pack (R-grade) -->
 		</skills>
@@ -126,6 +132,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9386" level="1" /> <!-- Scroll: Enchant Weapon Pack (S-grade) -->
 		</skills>
@@ -140,6 +147,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9387" level="1" /> <!-- Scroll: Enchant Weapon Pack (R-grade) -->
 		</skills>
@@ -154,6 +162,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9400" level="1" /> <!-- Squash Ring Pack -->
 		</skills>
@@ -168,6 +177,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9401" level="1" /> <!-- Squash Earring Pack -->
 		</skills>
@@ -182,6 +192,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9402" level="1" /> <!-- Squash Necklace Pack -->
 		</skills>
@@ -196,6 +207,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9388" level="1" /> <!-- Squash Accessory Pack -->
 		</skills>
@@ -210,6 +222,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9389" level="1" /> <!-- Soul Crystal Pack (R-grade) -->
 		</skills>
@@ -224,6 +237,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9390" level="1" /> <!-- Soul Crystal Pack (R95-grade) -->
 		</skills>
@@ -238,6 +252,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9391" level="1" /> <!-- Soul Crystal Pack (R99-grade) -->
 		</skills>
@@ -252,6 +267,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9392" level="1" /> <!-- Talisman Pack -->
 		</skills>
@@ -266,6 +282,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9393" level="1" /> <!-- Elixir Pack (S-grade) -->
 		</skills>
@@ -280,6 +297,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9394" level="1" /> <!-- Elixir Pack (R-grade) -->
 		</skills>
@@ -294,6 +312,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9395" level="1" /> <!-- Scroll of Blessing Pack (R-grade) -->
 		</skills>
@@ -838,6 +857,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9406" level="1" /> <!-- Ingredient and Hardener Pouch (R-grade) -->
 		</skills>
@@ -879,6 +899,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9467" level="1" /> <!-- Contaminated Draco Egg -->
 		</skills>
@@ -930,6 +951,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9470" level="1" /> <!-- Draco's Gift -->
 		</skills>
@@ -943,6 +965,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9471" level="1" /> <!-- Draco's Shiny Gift -->
 		</skills>

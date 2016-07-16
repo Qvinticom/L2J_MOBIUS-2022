@@ -980,6 +980,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="icon" val="icon.etc_whiteday_candy_i05" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9834" level="1" /> <!-- Yum Yum Candy -->
 		</skills>
@@ -998,6 +999,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
 		<set name="icon" val="icon.etc_whiteday_candy_i06" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9835" level="1" /> <!-- Nom Nom Candy -->
 		</skills>
@@ -1016,6 +1018,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
 		<set name="icon" val="icon.etc_pink_crystal_cube_pc_i00" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9836" level="1" /> <!-- Friendship Cube -->
 		</skills>

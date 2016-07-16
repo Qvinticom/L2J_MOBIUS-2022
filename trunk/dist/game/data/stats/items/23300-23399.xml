@@ -178,6 +178,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22690" level="1" /> <!-- Elven Radler -->
 		</skills>
@@ -190,6 +191,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22691" level="1" /> <!-- Dion Pilsner -->
 		</skills>
@@ -202,6 +204,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22692" level="1" /> <!-- Dwarven Royal Blue Cocktail -->
 		</skills>
@@ -214,6 +217,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22693" level="1" /> <!-- Aden White Beer -->
 		</skills>
@@ -233,6 +237,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22694" level="1" /> <!-- Gran Kain's Delight -->
 		</skills>

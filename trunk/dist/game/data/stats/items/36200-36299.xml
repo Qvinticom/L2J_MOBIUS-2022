@@ -910,6 +910,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9749" level="1" /> <!-- Divine Box -->
 		</skills>
@@ -929,6 +930,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="1440" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9721" level="1" /> <!-- Boss Accessory Pack -->
 		</skills>
@@ -1250,6 +1252,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9740" level="1" /> <!-- Memorable Raid Box: Queen Ant -->
 		</skills>
@@ -1270,6 +1273,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9741" level="1" /> <!-- Memorable Raid Box: Orfen -->
 		</skills>
@@ -1290,6 +1294,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9742" level="1" /> <!-- Memorable Raid Box: Anakim -->
 		</skills>
@@ -1310,6 +1315,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9743" level="1" /> <!-- Memorable Raid Box: Lilith -->
 		</skills>

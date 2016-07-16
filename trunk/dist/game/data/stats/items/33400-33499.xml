@@ -1885,6 +1885,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="12869" level="1" /> <!-- Lesser Giant's Fortune Box -->
 		</skills>
@@ -1899,6 +1900,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="12867" level="1" /> <!-- Weapon Pouch -->
 		</skills>
@@ -1913,6 +1915,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="12868" level="1" /> <!-- Armor Pouch -->
 		</skills>

@@ -230,6 +230,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9770" level="1" /> <!-- Lyn Draco's Accessory Pack -->
 		</skills>
@@ -243,6 +244,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9769" level="1" /> <!-- Lyn Draco's Gift -->
 		</skills>
@@ -257,6 +259,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9773" level="1" /> <!-- Draco's Shiny Accessory Pack (Event) -->
 		</skills>
@@ -270,6 +273,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9771" level="1" /> <!-- Draco's Gift (Event) -->
 		</skills>
@@ -283,6 +287,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9772" level="1" /> <!-- Draco's Shiny Gift (Event) -->
 		</skills>
@@ -302,6 +307,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="time" val="60" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9775" level="1" /> <!-- Birthday Vitality Potion -->
 		</skills>
@@ -320,6 +326,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="time" val="60" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9776" level="1" /> <!-- Freya's Refreshing Breeze (1-hour) -->
 		</skills>
@@ -337,6 +344,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9777" level="1" /> <!-- Pa'agrio's Warm Breeze (1-hour) -->
 		</skills>
@@ -355,6 +363,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9778" level="1" /> <!-- Sweet Chocolate (1-hour) -->
 		</skills>
@@ -373,6 +382,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="time" val="60" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9779" level="1" /> <!-- Returning Hero's Vitality Replenishing Juice -->
 		</skills>
@@ -391,6 +401,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9780" level="1" /> <!-- Pirate Elixir (1-hour) -->
 		</skills>
@@ -417,6 +428,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9786" level="1" /> <!-- Adrenaline Energy Drink -->
 		</skills>
@@ -429,6 +441,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9787" level="1" /> <!-- Caffeine Energy Drink -->
 		</skills>
@@ -440,6 +453,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9788" level="1" /> <!-- Protein Energy Drink -->
 		</skills>
@@ -451,6 +465,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9789" level="1" /> <!-- DHA Energy Drink -->
 		</skills>
@@ -463,6 +478,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9790" level="1" /> <!-- Omega 3 Energy Drink -->
 		</skills>
@@ -554,6 +570,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9785" level="1" /> <!-- Scroll of Glory -->
 		</skills>

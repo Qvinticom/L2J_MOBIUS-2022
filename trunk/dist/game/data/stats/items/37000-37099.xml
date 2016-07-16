@@ -94,6 +94,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9955" level="1" /> <!-- Strawberry Cake (HP) -->
 		</skills>
@@ -106,6 +107,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9956" level="1" /> <!-- Blueberry Cake (MP) -->
 		</skills>
@@ -119,6 +121,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9957" level="1" /> <!-- Cheesecake (CP) -->
 		</skills>
@@ -219,6 +222,7 @@
 		<set name="weight" val="30" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17050" level="1" /> <!-- Scroll of Escape: Raider's Crossroads -->
 		</skills>
@@ -229,6 +233,7 @@
 		<set name="weight" val="30" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17051" level="1" /> <!-- Scroll of Escape: Land of Chaos -->
 		</skills>
@@ -239,6 +244,7 @@
 		<set name="weight" val="30" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17049" level="1" /> <!-- Scroll of Escape: Gainak -->
 		</skills>
@@ -494,8 +500,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9983" level="1" /> <!-- Scroll of Escape: Wall of Argos -->
 		</skills>
@@ -515,7 +521,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9975" level="1" /> <!-- Scroll of Escape: Varka Silenos Barracks -->
@@ -533,8 +538,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9976" level="1" /> <!-- Scroll of Escape: Ketra Orc Outpost -->
 		</skills>
@@ -551,8 +556,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9977" level="1" /> <!-- Scroll of Escape: Den of Evil -->
 		</skills>
@@ -569,8 +574,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9978" level="1" /> <!-- Scroll of Escape: Sel Mahum Training Grounds -->
 		</skills>
@@ -587,8 +592,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9979" level="1" /> <!-- Scroll of Escape: Plains of the Lizardmen -->
 		</skills>
@@ -605,8 +610,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9980" level="1" /> <!-- Scroll of Escape: Field of Silence -->
 		</skills>
@@ -623,8 +628,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9981" level="1" /> <!-- Scroll of Escape: Field of Whispers -->
 		</skills>
@@ -638,6 +643,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9982" level="1" /> <!-- Elixir: Divine Protection -->
 		</skills>
@@ -1574,6 +1580,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9985" level="1" /> <!-- null -->
 		</skills>
@@ -1587,6 +1594,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9986" level="1" /> <!-- null -->
 		</skills>
@@ -1600,6 +1608,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9987" level="1" /> <!-- null -->
 		</skills>

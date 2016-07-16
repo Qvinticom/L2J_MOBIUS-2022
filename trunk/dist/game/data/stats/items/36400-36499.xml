@@ -14,6 +14,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9828" level="1" /> <!-- XP Buff 50% (1-hour) -->
 		</skills>
@@ -70,6 +71,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9832" level="1" /> <!-- Scroll: Midsummer Passion -->
 		</skills>

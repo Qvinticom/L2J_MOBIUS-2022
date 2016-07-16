@@ -949,6 +949,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22618" level="1" /> <!-- STR Dye Pack (R-grade) -->
 		</skills>
@@ -966,6 +967,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22619" level="1" /> <!-- DEX Dye Pack (R-grade) -->
 		</skills>
@@ -983,6 +985,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22620" level="1" /> <!-- CON Dye Pack (R-grade) -->
 		</skills>
@@ -1000,6 +1003,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22621" level="1" /> <!-- INT Dye Pack (R-grade) -->
 		</skills>
@@ -1017,6 +1021,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22622" level="1" /> <!-- WIT Dye Pack (R-grade) -->
 		</skills>
@@ -1034,6 +1039,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22623" level="1" /> <!-- MEN Dye Pack (R-grade) -->
 		</skills>
@@ -1200,6 +1206,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22625" level="1" /> <!-- Easter Egg -->
 		</skills>

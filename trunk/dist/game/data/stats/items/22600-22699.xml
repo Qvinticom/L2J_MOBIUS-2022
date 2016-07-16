@@ -13,6 +13,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22491" level="10" /> <!-- Mysterious Spiritshot c 10000 -->
 		</skills>
@@ -30,6 +31,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22492" level="5" /> <!-- Mysterious Spiritshot c 5000 -->
 		</skills>
@@ -47,6 +49,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22493" level="10" /> <!-- Mysterious Spiritshot b 10000 -->
 		</skills>
@@ -64,6 +67,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22494" level="5" /> <!-- Mysterious Spiritshot b 5000 -->
 		</skills>
@@ -81,6 +85,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22495" level="10" /> <!-- Mysterious Spiritshot a 10000 -->
 		</skills>
@@ -98,6 +103,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22496" level="5" /> <!-- Mysterious Spiritshot a 5000 -->
 		</skills>
@@ -115,6 +121,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22497" level="10" /> <!-- Mysterious Spiritshot s 10000 -->
 		</skills>
@@ -978,6 +985,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="1440" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22500" level="1" /> <!-- Blessed Three-headed Dragon's Egg -->
 		</skills>

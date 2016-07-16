@@ -1141,6 +1141,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22741" level="1" /> <!-- Fantasy Gift Box -->
 		</skills>
