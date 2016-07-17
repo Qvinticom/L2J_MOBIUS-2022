@@ -25,6 +25,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.IGameXmlReader;
 
 /**
@@ -61,7 +62,12 @@ public class KarmaData implements IGameXmlReader
 					if ("increase".equalsIgnoreCase(d.getNodeName()))
 					{
 						final NamedNodeMap attrs = d.getAttributes();
-						_karmaTable.put(parseInteger(attrs, "lvl"), parseDouble(attrs, "val"));
+						final int level = parseInteger(attrs, "lvl");
+						if (level >= Config.PLAYER_MAXIMUM_LEVEL)
+						{
+							break;
+						}
+						_karmaTable.put(level, parseDouble(attrs, "val"));
 					}
 				}
 			}

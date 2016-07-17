@@ -25,6 +25,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.IGameXmlReader;
 
 /**
@@ -67,12 +68,27 @@ public final class ExperienceData implements IGameXmlReader
 		MAX_LEVEL = (byte) (Byte.parseByte(tableAttr.getNamedItem("maxLevel").getNodeValue()) + 1);
 		MAX_PET_LEVEL = (byte) (Byte.parseByte(tableAttr.getNamedItem("maxPetLevel").getNodeValue()) + 1);
 		
+		if (MAX_LEVEL > Config.PLAYER_MAXIMUM_LEVEL)
+		{
+			MAX_LEVEL = Config.PLAYER_MAXIMUM_LEVEL;
+		}
+		if (MAX_PET_LEVEL > MAX_LEVEL)
+		{
+			MAX_PET_LEVEL = MAX_LEVEL; // Pet level should not exceed owner level.
+		}
+		
+		int maxLevel = 0;
 		for (Node n = table.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("experience".equals(n.getNodeName()))
 			{
 				final NamedNodeMap attrs = n.getAttributes();
-				_expTable.put(parseInteger(attrs, "level"), parseLong(attrs, "tolevel"));
+				maxLevel = parseInteger(attrs, "level");
+				if (maxLevel > Config.PLAYER_MAXIMUM_LEVEL)
+				{
+					break;
+				}
+				_expTable.put(maxLevel, parseLong(attrs, "tolevel"));
 			}
 		}
 	}
@@ -84,6 +100,10 @@ public final class ExperienceData implements IGameXmlReader
 	 */
 	public long getExpForLevel(int level)
 	{
+		if (level > Config.PLAYER_MAXIMUM_LEVEL)
+		{
+			level = Config.PLAYER_MAXIMUM_LEVEL;
+		}
 		return _expTable.get(level);
 	}
 	

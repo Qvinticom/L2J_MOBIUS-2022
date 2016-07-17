@@ -61,7 +61,12 @@ public final class PlayerXpPercentLostData implements IGameXmlReader
 					if ("xpLost".equalsIgnoreCase(d.getNodeName()))
 					{
 						final NamedNodeMap attrs = d.getAttributes();
-						_playerXpPercentLost[parseInteger(attrs, "level")] = parseDouble(attrs, "val");
+						final Integer level = parseInteger(attrs, "level");
+						if (level > _maxlevel)
+						{
+							break;
+						}
+						_playerXpPercentLost[level] = parseDouble(attrs, "val");
 					}
 				}
 			}
