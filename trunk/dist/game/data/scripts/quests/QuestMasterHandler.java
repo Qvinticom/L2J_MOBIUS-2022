@@ -92,9 +92,7 @@ import quests.Q00240_ImTheOnlyOneYouCanTrust.Q00240_ImTheOnlyOneYouCanTrust;
 import quests.Q00254_LegendaryTales.Q00254_LegendaryTales;
 import quests.Q00270_TheOneWhoEndsSilence.Q00270_TheOneWhoEndsSilence;
 import quests.Q00278_HomeSecurity.Q00278_HomeSecurity;
-import quests.Q00279_TargetOfOpportunity.Q00279_TargetOfOpportunity;
 import quests.Q00298_LizardmensConspiracy.Q00298_LizardmensConspiracy;
-import quests.Q00300_HuntingLetoLizardman.Q00300_HuntingLetoLizardman;
 import quests.Q00307_ControlDeviceOfTheGiants.Q00307_ControlDeviceOfTheGiants;
 import quests.Q00310_OnlyWhatRemains.Q00310_OnlyWhatRemains;
 import quests.Q00359_ForASleeplessDeadman.Q00359_ForASleeplessDeadman;
@@ -138,8 +136,6 @@ import quests.Q00508_AClansReputation.Q00508_AClansReputation;
 import quests.Q00509_AClansFame.Q00509_AClansFame;
 import quests.Q00510_AClansPrestige.Q00510_AClansPrestige;
 import quests.Q00511_AwlUnderFoot.Q00511_AwlUnderFoot;
-import quests.Q00551_OlympiadStarter.Q00551_OlympiadStarter;
-import quests.Q00552_OlympiadVeteran.Q00552_OlympiadVeteran;
 import quests.Q00553_OlympiadUndefeated.Q00553_OlympiadUndefeated;
 import quests.Q00617_GatherTheFlames.Q00617_GatherTheFlames;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
@@ -172,8 +168,6 @@ import quests.Q00904_DragonTrophyAntharas.Q00904_DragonTrophyAntharas;
 import quests.Q00905_RefinedDragonBlood.Q00905_RefinedDragonBlood;
 import quests.Q00906_TheCallOfValakas.Q00906_TheCallOfValakas;
 import quests.Q00907_DragonTrophyValakas.Q00907_DragonTrophyValakas;
-import quests.Q00943_FillingTheEnergyOfDestruction.Q00943_FillingTheEnergyOfDestruction;
-import quests.Q00998_FallenAngelSelect.Q00998_FallenAngelSelect;
 import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 import quests.Q10274_CollectingInTheAir.Q10274_CollectingInTheAir;
 import quests.Q10275_ContainingTheAttributePower.Q10275_ContainingTheAttributePower;
@@ -417,9 +411,7 @@ public class QuestMasterHandler
 		Q00254_LegendaryTales.class,
 		Q00270_TheOneWhoEndsSilence.class,
 		Q00278_HomeSecurity.class,
-		Q00279_TargetOfOpportunity.class,
 		Q00298_LizardmensConspiracy.class,
-		Q00300_HuntingLetoLizardman.class,
 		Q00307_ControlDeviceOfTheGiants.class,
 		Q00310_OnlyWhatRemains.class,
 		Q00359_ForASleeplessDeadman.class,
@@ -463,8 +455,6 @@ public class QuestMasterHandler
 		Q00509_AClansFame.class,
 		Q00510_AClansPrestige.class,
 		Q00511_AwlUnderFoot.class,
-		Q00551_OlympiadStarter.class,
-		Q00552_OlympiadVeteran.class,
 		Q00553_OlympiadUndefeated.class,
 		Q00617_GatherTheFlames.class,
 		Q00618_IntoTheFlame.class,
@@ -497,8 +487,6 @@ public class QuestMasterHandler
 		Q00905_RefinedDragonBlood.class,
 		Q00906_TheCallOfValakas.class,
 		Q00907_DragonTrophyValakas.class,
-		Q00943_FillingTheEnergyOfDestruction.class,
-		Q00998_FallenAngelSelect.class,
 		Q10273_GoodDayToFly.class,
 		Q10274_CollectingInTheAir.class,
 		Q10275_ContainingTheAttributePower.class,

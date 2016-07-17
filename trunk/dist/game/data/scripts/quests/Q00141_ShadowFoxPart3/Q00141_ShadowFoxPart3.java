@@ -20,7 +20,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -28,7 +27,6 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
 import quests.Q00140_ShadowFoxPart2.Q00140_ShadowFoxPart2;
-import quests.Q00998_FallenAngelSelect.Q00998_FallenAngelSelect;
 
 /**
  * Shadow Fox - 3 (141)
@@ -107,12 +105,6 @@ public class Q00141_ShadowFoxPart3 extends Quest
 					addExpAndSp(player, 278005, 17058);
 				}
 				st.exitQuest(false, true);
-				
-				final Quest q = QuestManager.getInstance().getQuest(Q00998_FallenAngelSelect.class.getSimpleName());
-				if (q != null)
-				{
-					q.newQuestState(player).setState(State.STARTED);
-				}
 				break;
 			default:
 				htmltext = null;
