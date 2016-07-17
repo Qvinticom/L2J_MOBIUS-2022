@@ -65,6 +65,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 	private static final int AEORE_MASTER = 33404;
 	// Items
 	private static final int SCROLL_OF_AFTERLIFE = 17600;
+	private static final int CHAOS_POMANDER = 37374;
 	private static final Map<CategoryType, Integer> AWAKE_POWER = new HashMap<>();
 	
 	static
@@ -328,6 +329,9 @@ public final class AwakeningMaster extends AbstractNpcAI
 					break;
 				}
 			}
+			
+			giveItems(player, CHAOS_POMANDER, 2);
+			
 			SkillTreesData.getInstance().cleanSkillUponAwakening(player);
 			player.sendPacket(new AcquireSkillList(player));
 			player.sendSkillList();
