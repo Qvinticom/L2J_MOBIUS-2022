@@ -594,6 +594,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 			}
 			case "END_INSTANCE":
 			{
+				getTimers().cancelTimers("EARTHQUAKE");
 				finishInstance(player, 0);
 				break;
 			}
