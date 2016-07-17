@@ -23,6 +23,8 @@
 	<basePatk classId="53" sex="male" val="4" /> <!-- Male Dwarven Fighter -->
 	<basePatk classId="124" sex="female" val="4" /> <!-- Female Soldier -->
 	<basePatk classId="123" sex="male" val="4" /> <!-- Male Male Soldier -->
+	<basePatk classId="182" sex="female" val="4" /> <!-- Ertheia Fighter -->
+	<basePatk classId="183" sex="female" val="3" /> <!-- Ertheia Wizard -->
 	<!-- Base rCrit -->
 	<baseRcrit classId="0" sex="female" val="4" /> <!-- Female Human Fighter -->
 	<baseRcrit classId="0" sex="male" val="4" /> <!-- Male Human Fighter -->
@@ -44,6 +46,8 @@
 	<baseRcrit classId="53" sex="male" val="4" /> <!-- Male Dwarven Fighter -->
 	<baseRcrit classId="124" sex="female" val="4" /> <!-- Female Soldier -->
 	<baseRcrit classId="123" sex="male" val="4" /> <!-- Male Male Soldier -->
+	<baseRcrit classId="182" sex="female" val="4" /> <!-- Ertheia Fighter -->
+	<baseRcrit classId="183" sex="female" val="4" /> <!-- Ertheia Wizard -->
 	<!-- Base atkType -->
 	<baseAtkType classId="0" sex="female" val="fist" /> <!-- Female Human Fighter -->
 	<baseAtkType classId="0" sex="male" val="fist" /> <!-- Male Human Fighter -->
@@ -65,6 +69,8 @@
 	<baseAtkType classId="53" sex="male" val="fist" /> <!-- Male Dwarven Fighter -->
 	<baseAtkType classId="124" sex="female" val="fist" /> <!-- Female Soldier -->
 	<baseAtkType classId="123" sex="male" val="fist" /> <!-- Male Male Soldier -->
+	<baseAtkType classId="182" sex="female" val="fist" /> <!-- Ertheia Fighter -->
+	<baseAtkType classId="183" sex="female" val="fist" /> <!-- Ertheia Wizard -->
 	<!-- Base atkSpd -->
 	<baseAtkSpd classId="0" sex="female" val="300" /> <!-- Female Human Fighter -->
 	<baseAtkSpd classId="0" sex="male" val="300" /> <!-- Male Human Fighter -->
@@ -86,6 +92,8 @@
 	<baseAtkSpd classId="53" sex="male" val="300" /> <!-- Male Dwarven Fighter -->
 	<baseAtkSpd classId="124" sex="female" val="300" /> <!-- Female Soldier -->
 	<baseAtkSpd classId="123" sex="male" val="300" /> <!-- Male Male Soldier -->
+	<baseAtkSpd classId="182" sex="female" val="300" /> <!-- Ertheia Fighter -->
+	<baseAtkSpd classId="183" sex="female" val="300" /> <!-- Ertheia Wizard -->
 	<!-- Base pDef -->
 	<basePdef classId="0" sex="female" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Female Human Fighter -->
 	<basePdef classId="0" sex="male" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Male Human Fighter -->
@@ -107,6 +115,8 @@
 	<basePdef classId="53" sex="male" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Male Dwarven Fighter -->
 	<basePdef classId="124" sex="female" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Female Soldier -->
 	<basePdef classId="123" sex="male" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Male Male Soldier -->
+	<basePdef classId="182" sex="female" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Ertheia Fighter -->
+	<basePdef classId="183" sex="female" chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" /> <!-- Ertheia Wizard -->
 	<!-- Base mAtk -->
 	<baseMatk classId="0" sex="female" val="6" /> <!-- Female Human Fighter -->
 	<baseMatk classId="0" sex="male" val="6" /> <!-- Male Human Fighter -->
@@ -128,6 +138,8 @@
 	<baseMatk classId="53" sex="male" val="6" /> <!-- Male Dwarven Fighter -->
 	<baseMatk classId="124" sex="female" val="6" /> <!-- Female Soldier -->
 	<baseMatk classId="123" sex="male" val="6" /> <!-- Male Male Soldier -->
+	<baseMatk classId="182" sex="female" val="6" /> <!-- Ertheia Fighter -->
+	<baseMatk classId="183" sex="female" val="6" /> <!-- Ertheia Wizard -->
 	<!-- Base mDef -->
 	<baseMdef classId="0" sex="female" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Female Human Fighter -->
 	<baseMdef classId="0" sex="male" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Male Human Fighter -->
@@ -149,6 +161,8 @@
 	<baseMdef classId="53" sex="male" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Male Dwarven Fighter -->
 	<baseMdef classId="124" sex="female" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Female Soldier -->
 	<baseMdef classId="123" sex="male" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Male Male Soldier -->
+	<baseMdef classId="182" sex="female" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Ertheia Fighter -->
+	<baseMdef classId="183" sex="female" rear="9" lear="9" rfinger="5" lfinger="5" neck="13" /> <!-- Ertheia Wizard -->
 	<!-- Base canPenetrate -->
 	<baseCanPenetrate classId="0" sex="female" val="0" /> <!-- Female Human Fighter -->
 	<baseCanPenetrate classId="0" sex="male" val="0" /> <!-- Male Human Fighter -->
@@ -170,6 +184,8 @@
 	<baseCanPenetrate classId="53" sex="male" val="0" /> <!-- Male Dwarven Fighter -->
 	<baseCanPenetrate classId="124" sex="female" val="0" /> <!-- Female Soldier -->
 	<baseCanPenetrate classId="123" sex="male" val="0" /> <!-- Male Male Soldier -->
+	<baseCanPenetrate classId="182" sex="female" val="0" /> <!-- Ertheia Fighter -->
+	<baseCanPenetrate classId="183" sex="female" val="0" /> <!-- Ertheia Wizard -->
 	<!-- Base atkRange -->
 	<baseAtkRange classId="0" sex="female" val="20" /> <!-- Female Human Fighter -->
 	<baseAtkRange classId="0" sex="male" val="20" /> <!-- Male Human Fighter -->
@@ -191,6 +207,8 @@
 	<baseAtkRange classId="53" sex="male" val="20" /> <!-- Male Dwarven Fighter -->
 	<baseAtkRange classId="124" sex="female" val="20" /> <!-- Female Soldier -->
 	<baseAtkRange classId="123" sex="male" val="20" /> <!-- Male Male Soldier -->
+	<baseAtkRange classId="182" sex="female" val="20" /> <!-- Ertheia Fighter -->
+	<baseAtkRange classId="183" sex="female" val="20" /> <!-- Ertheia Wizard -->
 	<!-- Base damRange -->
 	<!-- NOTE: Vertical Direction is represented in degrees 0=Front, 180=Back, positive degree=Up, negative degree=Down -->
 	<!-- NOTE: Horizontal Direction is represented in degrees 0=Front, 180=Back, positive degree=Left, negative degree=Right -->
@@ -214,6 +232,8 @@
 	<baseDamRange classId="53" sex="male" verticalDirection="0" horizontalDirection="0" distance="26" width="120" /> <!-- Male Dwarven Fighter -->
 	<baseDamRange classId="124" sex="female" verticalDirection="0" horizontalDirection="0" distance="26" width="120" /> <!-- Female Soldier -->
 	<baseDamRange classId="123" sex="male" verticalDirection="0" horizontalDirection="0" distance="26" width="120" /> <!-- Male Male Soldier -->
+	<baseDamRange classId="182" sex="female" verticalDirection="0" horizontalDirection="0" distance="26" width="120" /> <!-- Ertheia Fighter -->
+	<baseDamRange classId="183" sex="female" verticalDirection="0" horizontalDirection="0" distance="26" width="120" /> <!-- Ertheia Wizard -->
 	<!-- Base rndDam -->
 	<baseRndDam classId="0" sex="female" val="10" /> <!-- Female Human Fighter -->
 	<baseRndDam classId="0" sex="male" val="10" /> <!-- Male Human Fighter -->
@@ -235,4 +255,6 @@
 	<baseRndDam classId="53" sex="male" val="10" /> <!-- Male Dwarven Fighter -->
 	<baseRndDam classId="124" sex="female" val="10" /> <!-- Female Soldier -->
 	<baseRndDam classId="123" sex="male" val="10" /> <!-- Male Male Soldier -->
+	<baseRndDam classId="182" sex="female" val="10" /> <!-- Ertheia Fighter -->
+	<baseRndDam classId="183" sex="female" val="10" /> <!-- Ertheia Wizard -->
 </pcBaseStats>
