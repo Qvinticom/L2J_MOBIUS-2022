@@ -740,7 +740,15 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 	
 	private boolean changeToNextClass(L2PcInstance player)
 	{
-		final ClassId newClass = Arrays.stream(ClassId.values()).filter(cid -> player.getClassId() == cid.getParent()).findAny().orElse(null);
+		ClassId newClass = null;
+		if (player.getClassId() == ClassId.FEMALE_SOUL_HOUND)
+		{
+			newClass = ClassId.FEOH_SOUL_HOUND; // Fix for Female Soulhounds
+		}
+		else
+		{
+			newClass = Arrays.stream(ClassId.values()).filter(cid -> player.getClassId() == cid.getParent()).findAny().orElse(null);
+		}
 		
 		if (newClass == null)
 		{

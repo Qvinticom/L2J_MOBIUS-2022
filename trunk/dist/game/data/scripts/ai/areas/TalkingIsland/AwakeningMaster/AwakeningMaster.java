@@ -181,9 +181,17 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 					}
 					
-					for (ClassId newClass : player.getClassId().getNextClassIds())
+					if (player.getClassId() == ClassId.FEMALE_SOUL_HOUND)
 					{
-						player.sendPacket(new ExChangeToAwakenedClass(newClass.getId()));
+						// Fix for Female Soulhounds
+						player.sendPacket(new ExChangeToAwakenedClass(ClassId.FEOH_SOUL_HOUND.getId()));
+					}
+					else
+					{
+						for (ClassId newClass : player.getClassId().getNextClassIds())
+						{
+							player.sendPacket(new ExChangeToAwakenedClass(newClass.getId()));
+						}
 					}
 				}
 				else
