@@ -92,7 +92,7 @@ public enum ClassId implements IIdentifiable
 	ORC_MONK(47, false, Race.ORC, ORC_FIGHTER),
 	TYRANT(48, false, Race.ORC, ORC_MONK),
 	
-	ORC_MAGE(49, false, Race.ORC, null),
+	ORC_MAGE(49, true, Race.ORC, null),
 	ORC_SHAMAN(50, true, Race.ORC, ORC_MAGE),
 	OVERLORD(51, true, Race.ORC, ORC_SHAMAN),
 	WARCRYER(52, true, Race.ORC, ORC_SHAMAN),
