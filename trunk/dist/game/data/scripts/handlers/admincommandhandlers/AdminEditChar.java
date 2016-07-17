@@ -366,7 +366,6 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2PcInstance player = target.getActingPlayer();
 				if ((ClassId.getClassId(classidval) != null) && (player.getClassId().getId() != classidval))
 				{
-					// player.transform(255, false);
 					player.setClassId(classidval);
 					if (player.isSubClassActive())
 					{
@@ -376,14 +375,44 @@ public class AdminEditChar implements IAdminCommandHandler
 					{
 						player.setBaseClass(player.getActiveClass());
 					}
+					
+					// Sex checks.
+					if (player.getRace().equals(Race.KAMAEL))
+					{
+						switch (classidval)
+						{
+							case 123: // Soldier (Male)
+							case 125: // Trooper
+							case 127: // Berserker
+							case 128: // Soul Breaker (Male)
+							case 131: // Doombringer
+							case 132: // Soul Hound (Male)
+							case 157: // Tyrr Doombringer
+							{
+								player.getAppearance().setSex(false);
+								break;
+							}
+							case 124: // Soldier (Female)
+							case 126: // Warder
+							case 129: // Soul Breaker (Female)
+							case 130: // Arbalester
+							case 133: // Soul Hound (Female)
+							case 134: // Trickster
+							case 165: // Yul Trickster
+							{
+								player.getAppearance().setSex(true);
+								break;
+							}
+						}
+					}
 					if (player.getRace().equals(Race.ERTHEIA))
 					{
 						player.getAppearance().setSex(true);
 					}
+					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
 					player.storeMe();
 					player.sendMessage("A GM changed your class to " + newclass + ".");
-					// player.untransform();
 					player.broadcastUserInfo();
 					if (player.isInCategory(CategoryType.AWAKEN_GROUP))
 					{
