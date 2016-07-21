@@ -16,9 +16,6 @@
  */
 package quests;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import quests.Q00013_ParcelDelivery.Q00013_ParcelDelivery;
 import quests.Q00015_SweetWhispers.Q00015_SweetWhispers;
 import quests.Q00016_TheComingDarkness.Q00016_TheComingDarkness;
@@ -131,6 +128,7 @@ import quests.Q00496_IncarnationOfGluttonyKaliosGroup.Q00496_IncarnationOfGlutto
 import quests.Q00497_IncarnationOfGreedZellakaSolo.Q00497_IncarnationOfGreedZellakaSolo;
 import quests.Q00498_IncarnationOfJealousyPellineSolo.Q00498_IncarnationOfJealousyPellineSolo;
 import quests.Q00499_IncarnationOfGluttonyKaliosSolo.Q00499_IncarnationOfGluttonyKaliosSolo;
+import quests.Q00500_BrothersBoundInChains.Q00500_BrothersBoundInChains;
 import quests.Q00501_ProofOfClanAlliance.Q00501_ProofOfClanAlliance;
 import quests.Q00508_AClansReputation.Q00508_AClansReputation;
 import quests.Q00509_AClansFame.Q00509_AClansFame;
@@ -331,6 +329,9 @@ import quests.Q10813_ForGlory.Q10813_ForGlory;
 import quests.Q10814_BefittingOfTheStatus.Q10814_BefittingOfTheStatus;
 import quests.Q10815_StepUp.Q10815_StepUp;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * @author NosBit
  */
@@ -452,6 +453,7 @@ public class QuestMasterHandler
 		Q00497_IncarnationOfGreedZellakaSolo.class,
 		Q00498_IncarnationOfJealousyPellineSolo.class,
 		Q00499_IncarnationOfGluttonyKaliosSolo.class,
+		Q00500_BrothersBoundInChains.class,
 		Q00501_ProofOfClanAlliance.class,
 		Q00508_AClansReputation.class,
 		Q00509_AClansFame.class,
