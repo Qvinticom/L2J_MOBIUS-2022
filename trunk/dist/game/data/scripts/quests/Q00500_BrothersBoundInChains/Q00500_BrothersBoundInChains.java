@@ -16,7 +16,10 @@
  */
 package quests.Q00500_BrothersBoundInChains;
 
+import java.util.stream.IntStream;
+
 import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.CharEffectList;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -29,6 +32,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableKill
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * @author Mathael
@@ -37,14 +41,13 @@ import com.l2jmobius.gameserver.model.quest.State;
  */
 public class Q00500_BrothersBoundInChains extends Quest
 {
-	// NPCs
+	// NPC
 	private static final int DARK_JUDGE = 30981;
 	// Items
 	private static final int GEMSTONE_B = 2132;
-	private static final int PENITENT_MANACLES = 36060; // TODO: check: multiple items with this name
+	private static final int PENITENT_MANACLES = 36060; // TODO: check: why multiple items with this name
 	private static final int CRUMBS_OF_PENITENCE = 36077;
-	private static final int DROP_QI_CHANCE = 1; // in % TODO: check
-	// Misc
+	// Skills
 	private static final int HOUR_OF_PENITENCE[] =
 	{
 		15325,
@@ -53,6 +56,17 @@ public class Q00500_BrothersBoundInChains extends Quest
 		15328,
 		15329
 	};
+	// Agathion
+	private static final int SIN_EATER[] =
+	{
+		16098,
+		16099,
+		16100,
+		16101,
+		16102
+	};
+	// Misc
+	private static final int DROP_QI_CHANCE = 1; // in % TODO: check that value
 	private static final int MIN_LEVEL = 60;
 	
 	public Q00500_BrothersBoundInChains()
@@ -60,6 +74,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 		super(500);
 		addStartNpc(DARK_JUDGE);
 		addTalkId(DARK_JUDGE);
+		addSummonAgathion();
 		registerQuestItems(PENITENT_MANACLES, CRUMBS_OF_PENITENCE);
 		addCondMinLevel(MIN_LEVEL, "30981-nopk.htm");
 	}
@@ -75,6 +90,16 @@ public class Q00500_BrothersBoundInChains extends Quest
 		
 		switch (event)
 		{
+			case "buff":
+			{
+				if ((player != null) && IntStream.of(SIN_EATER).anyMatch(x -> x == player.getAgathionId()))
+				{
+					final Skill skill = SkillData.getInstance().getSkill(15325, 1); // Hour of Penitence
+					skill.activateSkill(player, player);
+					startQuestTimer("buff", 270000, null, player); // Rebuff every 4min30 (retail like)
+				}
+				break;
+			}
 			case "30981-02.htm":
 			case "30981-03.htm":
 			{
@@ -168,6 +193,12 @@ public class Q00500_BrothersBoundInChains extends Quest
 		}
 		
 		return htmltext;
+	}
+	
+	@Override
+	public void onSummonAgathion(L2PcInstance player, int agathionId)
+	{
+		startQuestTimer("buff", 2500, null, player);
 	}
 	
 	@RegisterEvent(EventType.ON_ATTACKABLE_KILL)

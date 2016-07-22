@@ -20,6 +20,8 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.events.EventDispatcher;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSummonAgathion;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoCubic;
@@ -55,6 +57,8 @@ public final class SummonAgathion extends AbstractEffect
 		{
 			return;
 		}
+		
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonAgathion(effector.getActingPlayer(), _npcId));
 		
 		final L2PcInstance player = effected.getActingPlayer();
 		

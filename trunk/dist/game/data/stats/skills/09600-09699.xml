@@ -30,6 +30,7 @@
 		<!-- Releases Sin Eater Agathion's seal. Main class of Lv. 85 or above only. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
 		<hitTime>3000</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -46,11 +47,17 @@
 			</condition>
 			<condition name="OpMainjob" />
 		</conditions>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>16098</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9602" toLevel="1" name="Release Agathion's Seal - Sin Eater">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Sin Eater Agathion's seal. Main class of Lv. 85 or above only. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -68,11 +75,17 @@
 			</condition>
 			<condition name="OpMainjob" />
 		</conditions>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>16099</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9603" toLevel="1" name="Release Agathion's Seal - Sin Eater">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Sin Eater Agathion's seal. Main class of Lv. 85 or above only. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -90,11 +103,17 @@
 			</condition>
 			<condition name="OpMainjob" />
 		</conditions>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>16100</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9604" toLevel="1" name="Release Agathion's Seal - Sin Eater">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Sin Eater Agathion's seal. Main class of Lv. 85 or above only. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -106,17 +125,23 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="CheckLevel">
-				<minLevel>61</minLevel>
-				<maxLevel>99</maxLevel>
+				<minLevel>60</minLevel>
+				<maxLevel>106</maxLevel>
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpMainjob" />
 		</conditions>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>16101</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9605" toLevel="1" name="Release Agathion's Seal - Sin Eater">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Sin Eater Agathion's seal. Main class of Lv. 85 or above only. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -134,6 +159,11 @@
 			</condition>
 			<condition name="OpMainjob" />
 		</conditions>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>16102</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9606" toLevel="1" name="Sealing Agathion">
 		<!-- AUTO GENERATED SKILL -->
@@ -152,6 +182,9 @@
 		<irreplacableBuff>true</irreplacableBuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="UnsummonAgathion" />
+		</effects>
 	</skill>
 	<skill id="9607" toLevel="1" name="Blessing of Light">
 		<!-- AUTO GENERATED SKILL -->
@@ -358,22 +391,30 @@
 		</conditions>
 	</skill>
 	<skill id="9618" toLevel="1" name="Yum Yum Candy">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Obtained XP/SP + 25%. Stacks with effects of Nom Nom Candy. When two identical candies are in the inventory, only one effect is applied. -->
 		<icon>etc_whiteday_candy_i05</icon>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
-		<hitTime>500</hitTime>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>CANDY_BUFF</abnormalType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>1.25</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9619" toLevel="1" name="Nom Nom Candy">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Obtained XP/SP + 25%. Stacks with effects of Yum Yum Candy. When two identical candies are in the inventory, only one effect is applied. -->
 		<icon>etc_whiteday_candy_i06</icon>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
-		<hitTime>500</hitTime>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>CANDY_BUFF</abnormalType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>1.25</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9620" toLevel="1" name="Yummy Gift Box">
 		<!-- AUTO GENERATED SKILL -->
