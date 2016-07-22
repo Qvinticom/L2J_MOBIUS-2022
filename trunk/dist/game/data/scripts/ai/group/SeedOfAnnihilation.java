@@ -21,8 +21,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.commons.util.CommonUtil;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -40,7 +42,6 @@ import ai.AbstractNpcAI;
 public final class SeedOfAnnihilation extends AbstractNpcAI
 {
 	private static final Map<Integer, Location> TELEPORT_ZONES = new HashMap<>();
-	
 	static
 	{
 		TELEPORT_ZONES.put(60002, new Location(-213175, 182648, -10992));
@@ -341,6 +342,18 @@ public final class SeedOfAnnihilation extends AbstractNpcAI
 		if (TELEPORT_ZONES.containsKey(zone.getId()))
 		{
 			final Location teleLoc = TELEPORT_ZONES.get(zone.getId());
+			// Conditions for Quest 454
+			L2World.getInstance().forEachVisibleObject(character, L2Npc.class, 500, npc ->
+			{
+				if ((npc.getId() == 32738) && (npc.getTarget() != null))
+				{
+					if (npc.getTarget().getObjectId() == character.getObjectId())
+					{
+						npc.teleToLocation(teleLoc, false);
+						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, character, 150);
+					}
+				}
+			});
 			character.teleToLocation(teleLoc, false);
 		}
 		return super.onEnterZone(character, zone);

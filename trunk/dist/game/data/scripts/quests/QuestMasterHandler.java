@@ -16,6 +16,9 @@
  */
 package quests;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import quests.Q00013_ParcelDelivery.Q00013_ParcelDelivery;
 import quests.Q00015_SweetWhispers.Q00015_SweetWhispers;
 import quests.Q00016_TheComingDarkness.Q00016_TheComingDarkness;
@@ -107,6 +110,7 @@ import quests.Q00450_GraveRobberRescue.Q00450_GraveRobberRescue;
 import quests.Q00451_LuciensAltar.Q00451_LuciensAltar;
 import quests.Q00452_FindingtheLostSoldiers.Q00452_FindingtheLostSoldiers;
 import quests.Q00453_NotStrongEnoughAlone.Q00453_NotStrongEnoughAlone;
+import quests.Q00454_CompletelyLost.Q00454_CompletelyLost;
 import quests.Q00455_WingsOfSand.Q00455_WingsOfSand;
 import quests.Q00456_DontKnowDontCare.Q00456_DontKnowDontCare;
 import quests.Q00457_LostAndFound.Q00457_LostAndFound;
@@ -329,9 +333,6 @@ import quests.Q10813_ForGlory.Q10813_ForGlory;
 import quests.Q10814_BefittingOfTheStatus.Q10814_BefittingOfTheStatus;
 import quests.Q10815_StepUp.Q10815_StepUp;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  * @author NosBit
  */
@@ -432,6 +433,7 @@ public class QuestMasterHandler
 		Q00451_LuciensAltar.class,
 		Q00452_FindingtheLostSoldiers.class,
 		Q00453_NotStrongEnoughAlone.class,
+		Q00454_CompletelyLost.class,
 		Q00455_WingsOfSand.class,
 		Q00456_DontKnowDontCare.class,
 		Q00457_LostAndFound.class,
