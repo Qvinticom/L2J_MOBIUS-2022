@@ -193,6 +193,7 @@ import quests.Q10301_ShadowOfTerrorBlackishRedFog.Q10301_ShadowOfTerrorBlackishR
 import quests.Q10302_UnsettlingShadowAndRumors.Q10302_UnsettlingShadowAndRumors;
 import quests.Q10305_UnstoppableFutileEfforts.Q10305_UnstoppableFutileEfforts;
 import quests.Q10306_TheCorruptedLeader.Q10306_TheCorruptedLeader;
+import quests.Q10317_OrbisWitch.Q10317_OrbisWitch;
 import quests.Q10320_LetsGoToTheCentralSquare.Q10320_LetsGoToTheCentralSquare;
 import quests.Q10321_QualificationsOfTheSeeker.Q10321_QualificationsOfTheSeeker;
 import quests.Q10322_SearchingForTheMysteriousPower.Q10322_SearchingForTheMysteriousPower;
@@ -517,6 +518,7 @@ public class QuestMasterHandler
 		Q10302_UnsettlingShadowAndRumors.class,
 		Q10305_UnstoppableFutileEfforts.class,
 		Q10306_TheCorruptedLeader.class,
+		Q10317_OrbisWitch.class,
 		Q10320_LetsGoToTheCentralSquare.class,
 		Q10321_QualificationsOfTheSeeker.class,
 		Q10322_SearchingForTheMysteriousPower.class,
