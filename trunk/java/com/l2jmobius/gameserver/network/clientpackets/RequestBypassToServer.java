@@ -110,7 +110,7 @@ public final class RequestBypassToServer implements IClientIncomingPacket
 				return;
 			}
 			
-			if ((bypassOriginId > 0) && !Util.isInsideRangeOfObjectId(activeChar, bypassOriginId, L2Npc.INTERACTION_DISTANCE))
+			if ((bypassOriginId > 0) && !Util.isInsideRangeOfObjectId(activeChar, bypassOriginId, L2Npc.INTERACTION_DISTANCE_TALK))
 			{
 				// No logging here, this could be a common case where the player has the html still open and run too far away and then clicks a html action
 				return;
@@ -159,7 +159,7 @@ public final class RequestBypassToServer implements IClientIncomingPacket
 				{
 					final L2Object object = L2World.getInstance().findObject(Integer.parseInt(id));
 					
-					if ((object != null) && object.isNpc() && (endOfId > 0) && activeChar.isInsideRadius(object, L2Npc.INTERACTION_DISTANCE, false, false))
+					if ((object != null) && object.isNpc() && (endOfId > 0) && activeChar.isInsideRadius(object, L2Npc.INTERACTION_DISTANCE_TALK, false, false))
 					{
 						((L2Npc) object).onBypassFeedback(activeChar, _command.substring(endOfId + 1));
 					}

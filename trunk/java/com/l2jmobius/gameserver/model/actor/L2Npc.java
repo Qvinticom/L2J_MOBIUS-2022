@@ -105,6 +105,8 @@ public class L2Npc extends L2Character
 {
 	/** The interaction distance of the L2NpcInstance(is used as offset in MovetoLocation method) */
 	public static final int INTERACTION_DISTANCE = 150;
+	/** The talking interaction distance of the L2NpcInstance */
+	public static final int INTERACTION_DISTANCE_TALK = 200;
 	/** Maximum distance where the drop may appear given this NPC position. */
 	public static final int RANDOM_ITEM_DROP_LIMIT = 70;
 	/** The L2Spawn object that manage this L2NpcInstance */
@@ -493,7 +495,7 @@ public class L2Npc extends L2Character
 		{
 			return false;
 		}
-		else if (!isInsideRadius(player, (int) (INTERACTION_DISTANCE * 1.7), true, false))
+		else if (!isInsideRadius(player, INTERACTION_DISTANCE_TALK, true, false))
 		{
 			return false;
 		}
