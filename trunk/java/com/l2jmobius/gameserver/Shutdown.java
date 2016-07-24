@@ -86,14 +86,7 @@ public class Shutdown extends Thread
 	{
 		LOGGER.warning("IP: " + IP + " issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
 		
-		if (restart)
-		{
-			_shutdownMode = GM_RESTART;
-		}
-		else
-		{
-			_shutdownMode = GM_SHUTDOWN;
-		}
+		_shutdownMode = restart ? GM_RESTART : GM_SHUTDOWN;
 		
 		if (_shutdownMode > 0)
 		{
@@ -115,9 +108,13 @@ public class Shutdown extends Thread
 				case 3:
 				case 2:
 				case 1:
+				{
 					break;
+				}
 				default:
+				{
 					SendServerQuit(seconds);
+				}
 			}
 		}
 		
@@ -165,14 +162,7 @@ public class Shutdown extends Thread
 			seconds = 0;
 		}
 		_secondsShut = seconds;
-		if (restart)
-		{
-			_shutdownMode = GM_RESTART;
-		}
-		else
-		{
-			_shutdownMode = GM_SHUTDOWN;
-		}
+		_shutdownMode = restart ? GM_RESTART : GM_SHUTDOWN;
 	}
 	
 	/**
@@ -301,16 +291,22 @@ public class Shutdown extends Thread
 			switch (_shutdownMode)
 			{
 				case GM_SHUTDOWN:
+				{
 					getInstance().setMode(GM_SHUTDOWN);
 					System.exit(0);
 					break;
+				}
 				case GM_RESTART:
+				{
 					getInstance().setMode(GM_RESTART);
 					System.exit(2);
 					break;
+				}
 				case ABORT:
+				{
 					LoginServerThread.getInstance().setServerStatus(ServerStatus.STATUS_AUTO);
 					break;
+				}
 			}
 		}
 	}
@@ -323,16 +319,16 @@ public class Shutdown extends Thread
 	 */
 	public void startShutdown(L2PcInstance activeChar, int seconds, boolean restart)
 	{
-		if (restart)
+		_shutdownMode = restart ? GM_RESTART : GM_SHUTDOWN;
+		
+		if (activeChar != null)
 		{
-			_shutdownMode = GM_RESTART;
+			LOGGER.warning("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
 		}
 		else
 		{
-			_shutdownMode = GM_SHUTDOWN;
+			LOGGER.warning("Server scheduled restart issued shutdown command. Restart in " + seconds + " seconds!");
 		}
-		
-		LOGGER.warning("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
 		
 		if (_shutdownMode > 0)
 		{
@@ -354,9 +350,13 @@ public class Shutdown extends Thread
 				case 3:
 				case 2:
 				case 1:
+				{
 					break;
+				}
 				default:
+				{
 					SendServerQuit(seconds);
+				}
 			}
 		}
 		
@@ -406,63 +406,93 @@ public class Shutdown extends Thread
 	 */
 	private void countdown()
 	{
-		
 		try
 		{
 			while (_secondsShut > 0)
 			{
-				
 				switch (_secondsShut)
 				{
 					case 540:
+					{
 						SendServerQuit(540);
 						break;
+					}
 					case 480:
+					{
 						SendServerQuit(480);
 						break;
+					}
 					case 420:
+					{
 						SendServerQuit(420);
 						break;
+					}
 					case 360:
+					{
 						SendServerQuit(360);
 						break;
+					}
 					case 300:
+					{
 						SendServerQuit(300);
 						break;
+					}
 					case 240:
+					{
 						SendServerQuit(240);
 						break;
+					}
 					case 180:
+					{
 						SendServerQuit(180);
 						break;
+					}
 					case 120:
+					{
 						SendServerQuit(120);
 						break;
+					}
 					case 60:
+					{
 						LoginServerThread.getInstance().setServerStatus(ServerStatus.STATUS_DOWN); // avoids new players from logging in
 						SendServerQuit(60);
 						break;
+					}
 					case 30:
+					{
 						SendServerQuit(30);
 						break;
+					}
 					case 10:
+					{
 						SendServerQuit(10);
 						break;
+					}
 					case 5:
+					{
 						SendServerQuit(5);
 						break;
+					}
 					case 4:
+					{
 						SendServerQuit(4);
 						break;
+					}
 					case 3:
+					{
 						SendServerQuit(3);
 						break;
+					}
 					case 2:
+					{
 						SendServerQuit(2);
 						break;
+					}
 					case 1:
+					{
 						SendServerQuit(1);
 						break;
+					}
 				}
 				
 				_secondsShut--;
@@ -490,15 +520,20 @@ public class Shutdown extends Thread
 		switch (_shutdownMode)
 		{
 			case SIGTERM:
+			{
 				LOGGER.info("SIGTERM received. Shutting down NOW!");
 				break;
+			}
 			case GM_SHUTDOWN:
+			{
 				LOGGER.info("GM shutdown received. Shutting down NOW!");
 				break;
+			}
 			case GM_RESTART:
+			{
 				LOGGER.info("GM restart received. Restarting NOW!");
 				break;
-			
+			}
 		}
 		
 		/*
@@ -584,6 +619,11 @@ public class Shutdown extends Thread
 					client.close(ServerClose.STATIC_PACKET);
 					client.setActiveChar(null);
 					player.setClient(null);
+				}
+				else if ((client == null) || client.isDetached())
+				// player is probably a bot - force logout
+				{
+					player.logout();
 				}
 				player.deleteMe();
 			}
