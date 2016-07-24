@@ -493,7 +493,7 @@ public class L2Npc extends L2Character
 		{
 			return false;
 		}
-		else if (!isInsideRadius(player, INTERACTION_DISTANCE, true, false))
+		else if (!isInsideRadius(player, (int) (INTERACTION_DISTANCE * 1.7), true, false))
 		{
 			return false;
 		}
