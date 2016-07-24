@@ -156,6 +156,7 @@ import quests.Q00648_AnIceMerchantsDream.Q00648_AnIceMerchantsDream;
 import quests.Q00650_ABrokenDream.Q00650_ABrokenDream;
 import quests.Q00652_AnAgedExAdventurer.Q00652_AnAgedExAdventurer;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
+import quests.Q00663_SeductiveWhispers.Q00663_SeductiveWhispers;
 import quests.Q00688_DefeatTheElrokianRaiders.Q00688_DefeatTheElrokianRaiders;
 import quests.Q00757_TriolsMovement.Q00757_TriolsMovement;
 import quests.Q00760_BlockTheExit.Q00760_BlockTheExit;
@@ -479,6 +480,7 @@ public class QuestMasterHandler
 		Q00650_ABrokenDream.class,
 		Q00652_AnAgedExAdventurer.class,
 		Q00662_AGameOfCards.class,
+		Q00663_SeductiveWhispers.class,
 		Q00688_DefeatTheElrokianRaiders.class,
 		Q00757_TriolsMovement.class,
 		Q00760_BlockTheExit.class,
