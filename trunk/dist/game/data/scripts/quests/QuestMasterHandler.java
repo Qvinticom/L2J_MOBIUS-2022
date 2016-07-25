@@ -269,6 +269,7 @@ import quests.Q10411_KekropusLetterTheForestOfTheDead.Q10411_KekropusLetterTheFo
 import quests.Q10412_ASuspiciousVagabondInTheForest.Q10412_ASuspiciousVagabondInTheForest;
 import quests.Q10413_EmbryoInTheForestOfTheDead.Q10413_EmbryoInTheForestOfTheDead;
 import quests.Q10414_KekropusLetterWithCourage.Q10414_KekropusLetterWithCourage;
+import quests.Q10415_KekropusLetterWithWisdom.Q10415_KekropusLetterWithWisdom;
 import quests.Q10416_InSearchOfTheEyeOfArgos.Q10416_InSearchOfTheEyeOfArgos;
 import quests.Q10417_DaimonTheWhiteEyed.Q10417_DaimonTheWhiteEyed;
 import quests.Q10421_AssassinationOfTheVarkaSilenosCommander.Q10421_AssassinationOfTheVarkaSilenosCommander;
@@ -319,6 +320,7 @@ import quests.Q10761_AnOrcInLove.Q10761_AnOrcInLove;
 import quests.Q10762_MarionetteSpirit.Q10762_MarionetteSpirit;
 import quests.Q10763_TerrifyingChertuba.Q10763_TerrifyingChertuba;
 import quests.Q10764_FreeSpirit.Q10764_FreeSpirit;
+import quests.Q10766_ANewCraft.Q10766_ANewCraft;
 import quests.Q10769_LettersFromTheQueenCrumaTowerPart1.Q10769_LettersFromTheQueenCrumaTowerPart1;
 import quests.Q10770_InSearchOfTheGrail.Q10770_InSearchOfTheGrail;
 import quests.Q10771_VolatilePower.Q10771_VolatilePower;
@@ -338,6 +340,7 @@ import quests.Q10786_ResidentProblemSolver.Q10786_ResidentProblemSolver;
 import quests.Q10787_ASpyMission.Q10787_ASpyMission;
 import quests.Q10789_LettersFromTheQueenSwampOfScreams.Q10789_LettersFromTheQueenSwampOfScreams;
 import quests.Q10790_AMercenaryHelper.Q10790_AMercenaryHelper;
+import quests.Q10791_TheManOfMystery.Q10791_TheManOfMystery;
 import quests.Q10792_LettersFromTheQueenForestOfTheDead.Q10792_LettersFromTheQueenForestOfTheDead;
 import quests.Q10793_SaveTheSouls.Q10793_SaveTheSouls;
 import quests.Q10795_LettersFromTheQueenWallOfAgros.Q10795_LettersFromTheQueenWallOfAgros;
@@ -609,6 +612,7 @@ public class QuestMasterHandler
 		Q10412_ASuspiciousVagabondInTheForest.class,
 		Q10413_EmbryoInTheForestOfTheDead.class,
 		Q10414_KekropusLetterWithCourage.class,
+		Q10415_KekropusLetterWithWisdom.class,
 		Q10416_InSearchOfTheEyeOfArgos.class,
 		Q10417_DaimonTheWhiteEyed.class,
 		Q10421_AssassinationOfTheVarkaSilenosCommander.class,
@@ -659,6 +663,7 @@ public class QuestMasterHandler
 		Q10762_MarionetteSpirit.class,
 		Q10763_TerrifyingChertuba.class,
 		Q10764_FreeSpirit.class,
+		Q10766_ANewCraft.class,
 		Q10769_LettersFromTheQueenCrumaTowerPart1.class,
 		Q10770_InSearchOfTheGrail.class,
 		Q10771_VolatilePower.class,
@@ -678,6 +683,7 @@ public class QuestMasterHandler
 		Q10787_ASpyMission.class,
 		Q10789_LettersFromTheQueenSwampOfScreams.class,
 		Q10790_AMercenaryHelper.class,
+		Q10791_TheManOfMystery.class,
 		Q10792_LettersFromTheQueenForestOfTheDead.class,
 		Q10793_SaveTheSouls.class,
 		Q10795_LettersFromTheQueenWallOfAgros.class,
