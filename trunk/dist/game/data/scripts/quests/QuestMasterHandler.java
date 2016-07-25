@@ -95,6 +95,8 @@ import quests.Q00278_HomeSecurity.Q00278_HomeSecurity;
 import quests.Q00298_LizardmensConspiracy.Q00298_LizardmensConspiracy;
 import quests.Q00307_ControlDeviceOfTheGiants.Q00307_ControlDeviceOfTheGiants;
 import quests.Q00310_OnlyWhatRemains.Q00310_OnlyWhatRemains;
+import quests.Q00336_CoinsOfMagic.Q00336_CoinsOfMagic;
+import quests.Q00337_AudienceWithTheLandDragon.Q00337_AudienceWithTheLandDragon;
 import quests.Q00359_ForASleeplessDeadman.Q00359_ForASleeplessDeadman;
 import quests.Q00371_ShrieksOfGhosts.Q00371_ShrieksOfGhosts;
 import quests.Q00373_SupplierOfReagents.Q00373_SupplierOfReagents;
@@ -102,6 +104,7 @@ import quests.Q00376_ExplorationOfTheGiantsCavePart1.Q00376_ExplorationOfTheGian
 import quests.Q00377_ExplorationOfTheGiantsCavePart2.Q00377_ExplorationOfTheGiantsCavePart2;
 import quests.Q00381_LetsBecomeARoyalMember.Q00381_LetsBecomeARoyalMember;
 import quests.Q00382_KailsMagicCoin.Q00382_KailsMagicCoin;
+import quests.Q00386_StolenDignity.Q00386_StolenDignity;
 import quests.Q00420_LittleWing.Q00420_LittleWing;
 import quests.Q00421_LittleWingsBigAdventure.Q00421_LittleWingsBigAdventure;
 import quests.Q00431_WeddingMarch.Q00431_WeddingMarch;
@@ -125,6 +128,7 @@ import quests.Q00485_HotSpringWater.Q00485_HotSpringWater;
 import quests.Q00488_WondersOfCaring.Q00488_WondersOfCaring;
 import quests.Q00489_InThisQuietPlace.Q00489_InThisQuietPlace;
 import quests.Q00490_DutyOfTheSurvivor.Q00490_DutyOfTheSurvivor;
+import quests.Q00492_TombRaiders.Q00492_TombRaiders;
 import quests.Q00493_KickingOutUnwelcomeGuests.Q00493_KickingOutUnwelcomeGuests;
 import quests.Q00494_IncarnationOfGreedZellakaGroup.Q00494_IncarnationOfGreedZellakaGroup;
 import quests.Q00495_IncarnationOfJealousyPellineGroup.Q00495_IncarnationOfJealousyPellineGroup;
@@ -138,6 +142,7 @@ import quests.Q00508_AClansReputation.Q00508_AClansReputation;
 import quests.Q00509_AClansFame.Q00509_AClansFame;
 import quests.Q00510_AClansPrestige.Q00510_AClansPrestige;
 import quests.Q00511_AwlUnderFoot.Q00511_AwlUnderFoot;
+import quests.Q00551_OlympiadStarter.Q00551_OlympiadStarter;
 import quests.Q00553_OlympiadUndefeated.Q00553_OlympiadUndefeated;
 import quests.Q00617_GatherTheFlames.Q00617_GatherTheFlames;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
@@ -158,6 +163,9 @@ import quests.Q00652_AnAgedExAdventurer.Q00652_AnAgedExAdventurer;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 import quests.Q00663_SeductiveWhispers.Q00663_SeductiveWhispers;
 import quests.Q00688_DefeatTheElrokianRaiders.Q00688_DefeatTheElrokianRaiders;
+import quests.Q00754_AssistingTheRebelForces.Q00754_AssistingTheRebelForces;
+import quests.Q00755_InNeedOfPetras.Q00755_InNeedOfPetras;
+import quests.Q00756_TopQualityPetra.Q00756_TopQualityPetra;
 import quests.Q00757_TriolsMovement.Q00757_TriolsMovement;
 import quests.Q00760_BlockTheExit.Q00760_BlockTheExit;
 import quests.Q00761_AssistingTheGoldenRamArmy.Q00761_AssistingTheGoldenRamArmy;
@@ -172,6 +180,7 @@ import quests.Q00904_DragonTrophyAntharas.Q00904_DragonTrophyAntharas;
 import quests.Q00905_RefinedDragonBlood.Q00905_RefinedDragonBlood;
 import quests.Q00906_TheCallOfValakas.Q00906_TheCallOfValakas;
 import quests.Q00907_DragonTrophyValakas.Q00907_DragonTrophyValakas;
+import quests.Q00943_FillingTheEnergyOfDestruction.Q00943_FillingTheEnergyOfDestruction;
 import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 import quests.Q10274_CollectingInTheAir.Q10274_CollectingInTheAir;
 import quests.Q10275_ContainingTheAttributePower.Q10275_ContainingTheAttributePower;
@@ -232,6 +241,9 @@ import quests.Q10366_RuinsStatusUpdate.Q10366_RuinsStatusUpdate;
 import quests.Q10368_RebellionOfMonsters.Q10368_RebellionOfMonsters;
 import quests.Q10369_NoblesseSoulTesting.Q10369_NoblesseSoulTesting;
 import quests.Q10381_ToTheSeedOfHellfire.Q10381_ToTheSeedOfHellfire;
+import quests.Q10382_DayOfLiberation.Q10382_DayOfLiberation;
+import quests.Q10383_FergasonsOffer.Q10383_FergasonsOffer;
+import quests.Q10384_AnAudienceWithTauti.Q10384_AnAudienceWithTauti;
 import quests.Q10385_RedThreadOfFate.Q10385_RedThreadOfFate;
 import quests.Q10386_MysteriousJourney.Q10386_MysteriousJourney;
 import quests.Q10387_SoullessOne.Q10387_SoullessOne;
@@ -263,10 +275,12 @@ import quests.Q10421_AssassinationOfTheVarkaSilenosCommander.Q10421_Assassinatio
 import quests.Q10442_TheAnnihilatedPlains1.Q10442_TheAnnihilatedPlains1;
 import quests.Q10445_AnImpendingThreat.Q10445_AnImpendingThreat;
 import quests.Q10450_ADarkAmbition.Q10450_ADarkAmbition;
+import quests.Q10453_StoppingTheWindDragon.Q10453_StoppingTheWindDragon;
 import quests.Q10455_ElikiasLetter.Q10455_ElikiasLetter;
 import quests.Q10460_ReturnOfTheAlligatorHunter.Q10460_ReturnOfTheAlligatorHunter;
 import quests.Q10461_TappingThePowerWithin.Q10461_TappingThePowerWithin;
 import quests.Q10464_BePreparedForAnything.Q10464_BePreparedForAnything;
+import quests.Q10465_SoulFrostSword.Q10465_SoulFrostSword;
 import quests.Q10472_WindsOfFateEncroachingShadows.Q10472_WindsOfFateEncroachingShadows;
 import quests.Q10501_ZakenEmbroideredSoulCloak.Q10501_ZakenEmbroideredSoulCloak;
 import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
@@ -323,6 +337,7 @@ import quests.Q10785_LettersFromTheQueenFieldsOfMassacre.Q10785_LettersFromTheQu
 import quests.Q10786_ResidentProblemSolver.Q10786_ResidentProblemSolver;
 import quests.Q10787_ASpyMission.Q10787_ASpyMission;
 import quests.Q10789_LettersFromTheQueenSwampOfScreams.Q10789_LettersFromTheQueenSwampOfScreams;
+import quests.Q10790_AMercenaryHelper.Q10790_AMercenaryHelper;
 import quests.Q10792_LettersFromTheQueenForestOfTheDead.Q10792_LettersFromTheQueenForestOfTheDead;
 import quests.Q10793_SaveTheSouls.Q10793_SaveTheSouls;
 import quests.Q10795_LettersFromTheQueenWallOfAgros.Q10795_LettersFromTheQueenWallOfAgros;
@@ -421,12 +436,15 @@ public class QuestMasterHandler
 		Q00307_ControlDeviceOfTheGiants.class,
 		Q00310_OnlyWhatRemains.class,
 		Q00359_ForASleeplessDeadman.class,
+		Q00336_CoinsOfMagic.class,
+		Q00337_AudienceWithTheLandDragon.class,
 		Q00371_ShrieksOfGhosts.class,
 		Q00373_SupplierOfReagents.class,
 		Q00376_ExplorationOfTheGiantsCavePart1.class,
 		Q00377_ExplorationOfTheGiantsCavePart2.class,
 		Q00381_LetsBecomeARoyalMember.class,
 		Q00382_KailsMagicCoin.class,
+		Q00386_StolenDignity.class,
 		Q00420_LittleWing.class,
 		Q00421_LittleWingsBigAdventure.class,
 		Q00431_WeddingMarch.class,
@@ -450,6 +468,7 @@ public class QuestMasterHandler
 		Q00488_WondersOfCaring.class,
 		Q00489_InThisQuietPlace.class,
 		Q00490_DutyOfTheSurvivor.class,
+		Q00492_TombRaiders.class,
 		Q00493_KickingOutUnwelcomeGuests.class,
 		Q00494_IncarnationOfGreedZellakaGroup.class,
 		Q00495_IncarnationOfJealousyPellineGroup.class,
@@ -463,6 +482,7 @@ public class QuestMasterHandler
 		Q00509_AClansFame.class,
 		Q00510_AClansPrestige.class,
 		Q00511_AwlUnderFoot.class,
+		Q00551_OlympiadStarter.class,
 		Q00553_OlympiadUndefeated.class,
 		Q00617_GatherTheFlames.class,
 		Q00618_IntoTheFlame.class,
@@ -483,6 +503,9 @@ public class QuestMasterHandler
 		Q00662_AGameOfCards.class,
 		Q00663_SeductiveWhispers.class,
 		Q00688_DefeatTheElrokianRaiders.class,
+		Q00754_AssistingTheRebelForces.class,
+		Q00755_InNeedOfPetras.class,
+		Q00756_TopQualityPetra.class,
 		Q00757_TriolsMovement.class,
 		Q00760_BlockTheExit.class,
 		Q00761_AssistingTheGoldenRamArmy.class,
@@ -497,6 +520,7 @@ public class QuestMasterHandler
 		Q00905_RefinedDragonBlood.class,
 		Q00906_TheCallOfValakas.class,
 		Q00907_DragonTrophyValakas.class,
+		Q00943_FillingTheEnergyOfDestruction.class,
 		Q10273_GoodDayToFly.class,
 		Q10274_CollectingInTheAir.class,
 		Q10275_ContainingTheAttributePower.class,
@@ -557,6 +581,9 @@ public class QuestMasterHandler
 		Q10368_RebellionOfMonsters.class,
 		Q10369_NoblesseSoulTesting.class,
 		Q10381_ToTheSeedOfHellfire.class,
+		Q10382_DayOfLiberation.class,
+		Q10383_FergasonsOffer.class,
+		Q10384_AnAudienceWithTauti.class,
 		Q10385_RedThreadOfFate.class,
 		Q10386_MysteriousJourney.class,
 		Q10387_SoullessOne.class,
@@ -588,10 +615,12 @@ public class QuestMasterHandler
 		Q10442_TheAnnihilatedPlains1.class,
 		Q10445_AnImpendingThreat.class,
 		Q10450_ADarkAmbition.class,
+		Q10453_StoppingTheWindDragon.class,
 		Q10455_ElikiasLetter.class,
 		Q10460_ReturnOfTheAlligatorHunter.class,
 		Q10461_TappingThePowerWithin.class,
 		Q10464_BePreparedForAnything.class,
+		Q10465_SoulFrostSword.class,
 		Q10472_WindsOfFateEncroachingShadows.class,
 		Q10501_ZakenEmbroideredSoulCloak.class,
 		Q10502_FreyaEmbroideredSoulCloak.class,
@@ -648,6 +677,7 @@ public class QuestMasterHandler
 		Q10786_ResidentProblemSolver.class,
 		Q10787_ASpyMission.class,
 		Q10789_LettersFromTheQueenSwampOfScreams.class,
+		Q10790_AMercenaryHelper.class,
 		Q10792_LettersFromTheQueenForestOfTheDead.class,
 		Q10793_SaveTheSouls.class,
 		Q10795_LettersFromTheQueenWallOfAgros.class,
