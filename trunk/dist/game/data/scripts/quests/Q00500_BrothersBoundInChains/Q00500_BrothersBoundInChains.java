@@ -107,8 +107,9 @@ public class Q00500_BrothersBoundInChains extends Quest
 			}
 			case "30981-04.htm":
 			{
-				if (takeItems(player, GEMSTONE_B, 200))
+				if (getQuestItemsCount(player, GEMSTONE_B) >= 200)
 				{
+					takeItems(player, GEMSTONE_B, 200);
 					giveItems(player, PENITENT_MANACLES, 1);
 				}
 				else
@@ -124,8 +125,9 @@ public class Q00500_BrothersBoundInChains extends Quest
 			}
 			case "30981-09.html": // not retail html.
 			{
-				if (takeItems(player, CRUMBS_OF_PENITENCE, 10))
+				if (getQuestItemsCount(player, CRUMBS_OF_PENITENCE) >= 10)
 				{
+					takeItems(player, CRUMBS_OF_PENITENCE, -1);
 					player.setPkKills(Math.max(0, player.getPkKills() - Rnd.get(1, 10)));
 					qs.exitQuest(QuestType.DAILY, true);
 				}
