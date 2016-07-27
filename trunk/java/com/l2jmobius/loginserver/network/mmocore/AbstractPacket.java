@@ -14,13 +14,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.commons.mmocore;
+package com.l2jmobius.loginserver.network.mmocore;
+
+import java.nio.ByteBuffer;
 
 /**
  * @author KenM
  * @param <T>
  */
-public interface IClientFactory<T extends MMOClient<?>>
+public abstract class AbstractPacket<T extends MMOClient<?>>
 {
-	T create(MMOConnection<T> con);
+	protected ByteBuffer _buf;
+	
+	T _client;
+	
+	public final T getClient()
+	{
+		return _client;
+	}
 }

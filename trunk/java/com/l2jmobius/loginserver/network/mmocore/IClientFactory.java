@@ -14,13 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.commons.mmocore;
+package com.l2jmobius.loginserver.network.mmocore;
 
 /**
  * @author KenM
  * @param <T>
  */
-public interface IMMOExecutor<T extends MMOClient<?>>
+public interface IClientFactory<T extends MMOClient<?>>
 {
-	void execute(ReceivablePacket<T> packet);
+	T create(MMOConnection<T> con);
 }

@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.loginserver.network.serverpackets;
 
-import com.l2jmobius.commons.mmocore.SendablePacket;
 import com.l2jmobius.loginserver.network.L2LoginClient;
+import com.l2jmobius.loginserver.network.mmocore.SendablePacket;
 
 /**
  * @author KenM

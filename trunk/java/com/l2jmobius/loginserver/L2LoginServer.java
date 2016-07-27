@@ -32,11 +32,11 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.Server;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.mmocore.SelectorConfig;
-import com.l2jmobius.commons.mmocore.SelectorThread;
 import com.l2jmobius.loginserver.mail.MailSystem;
 import com.l2jmobius.loginserver.network.L2LoginClient;
 import com.l2jmobius.loginserver.network.L2LoginPacketHandler;
+import com.l2jmobius.loginserver.network.mmocore.SelectorConfig;
+import com.l2jmobius.loginserver.network.mmocore.SelectorThread;
 
 /**
  * @author KenM

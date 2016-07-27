@@ -19,8 +19,8 @@ package com.l2jmobius.loginserver.network.clientpackets;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.mmocore.ReceivablePacket;
 import com.l2jmobius.loginserver.network.L2LoginClient;
+import com.l2jmobius.loginserver.network.mmocore.ReceivablePacket;
 
 /**
  * @author KenM

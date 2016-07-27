@@ -19,8 +19,6 @@ package com.l2jmobius.loginserver.network;
 import java.nio.ByteBuffer;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.mmocore.IPacketHandler;
-import com.l2jmobius.commons.mmocore.ReceivablePacket;
 import com.l2jmobius.loginserver.network.L2LoginClient.LoginClientState;
 import com.l2jmobius.loginserver.network.clientpackets.AuthGameGuard;
 import com.l2jmobius.loginserver.network.clientpackets.RequestAuthLogin;
@@ -28,6 +26,8 @@ import com.l2jmobius.loginserver.network.clientpackets.RequestPIAgreement;
 import com.l2jmobius.loginserver.network.clientpackets.RequestPIAgreementCheck;
 import com.l2jmobius.loginserver.network.clientpackets.RequestServerList;
 import com.l2jmobius.loginserver.network.clientpackets.RequestServerLogin;
+import com.l2jmobius.loginserver.network.mmocore.IPacketHandler;
+import com.l2jmobius.loginserver.network.mmocore.ReceivablePacket;
 
 /**
  * Handler for packets received by Login Server
@@ -48,6 +48,7 @@ public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
 		switch (state)
 		{
 			case CONNECTED:
+			{
 				switch (opcode)
 				{
 					case 0x07:
@@ -58,7 +59,9 @@ public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
 						break;
 				}
 				break;
+			}
 			case AUTHED_GG:
+			{
 				switch (opcode)
 				{
 					case 0x00:
@@ -69,26 +72,39 @@ public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
 						break;
 				}
 				break;
+			}
 			case AUTHED_LOGIN:
+			{
 				switch (opcode)
 				{
 					case 0x02:
+					{
 						packet = new RequestServerLogin();
 						break;
+					}
 					case 0x05:
+					{
 						packet = new RequestServerList();
 						break;
+					}
 					case 0x0E:
+					{
 						packet = new RequestPIAgreementCheck(); // TODO: Verify names
 						break;
+					}
 					case 0x0F:
+					{
 						packet = new RequestPIAgreement();
 						break;
+					}
 					default:
+					{
 						debugOpcode(opcode, state);
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return packet;
 	}

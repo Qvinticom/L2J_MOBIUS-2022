@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.commons.util;
+package com.l2jmobius.loginserver.network.util;
 
 import java.net.Inet4Address;
 import java.net.InetAddress;
@@ -24,7 +24,7 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.mmocore.IAcceptFilter;
+import com.l2jmobius.loginserver.network.mmocore.IAcceptFilter;
 
 /**
  * IPv4 filter.

@@ -14,14 +14,48 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.commons.mmocore;
+package com.l2jmobius.loginserver.network.mmocore;
 
-import java.nio.channels.SocketChannel;
+import java.nio.BufferOverflowException;
 
 /**
- * @author KenM
+ * @author Forsaiken
  */
-public interface IAcceptFilter
+public final class NioNetStringBuffer
 {
-	boolean accept(SocketChannel sc);
+	private final char[] _buf;
+	
+	private final int _size;
+	
+	private int _len;
+	
+	public NioNetStringBuffer(int size)
+	{
+		_buf = new char[size];
+		_size = size;
+		_len = 0;
+	}
+	
+	public final void clear()
+	{
+		_len = 0;
+	}
+	
+	public final void append(char c)
+	{
+		if (_len < _size)
+		{
+			_buf[_len++] = c;
+		}
+		else
+		{
+			throw new BufferOverflowException();
+		}
+	}
+	
+	@Override
+	public final String toString()
+	{
+		return new String(_buf, 0, _len);
+	}
 }

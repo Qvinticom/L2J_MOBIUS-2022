@@ -14,22 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.commons.mmocore;
-
-import java.nio.ByteBuffer;
+package com.l2jmobius.loginserver.network.mmocore;
 
 /**
  * @author KenM
  * @param <T>
  */
-public abstract class AbstractPacket<T extends MMOClient<?>>
+public interface IMMOExecutor<T extends MMOClient<?>>
 {
-	protected ByteBuffer _buf;
-	
-	T _client;
-	
-	public final T getClient()
-	{
-		return _client;
-	}
+	void execute(ReceivablePacket<T> packet);
 }
