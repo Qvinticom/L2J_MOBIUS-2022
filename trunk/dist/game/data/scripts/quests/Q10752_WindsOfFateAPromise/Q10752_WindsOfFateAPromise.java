@@ -262,7 +262,7 @@ public final class Q10752_WindsOfFateAPromise extends Quest
 				{
 					if ((player.getLevel() >= MIN_LEVEL) && qs1.isCompleted())
 					{
-						htmltext = !player.isMageClass() ? "33943-01.html" : "33943-12.html";
+						htmltext = !player.isMageClass() ? "33943-01.htm" : "33943-12.html";
 						break;
 					}
 					htmltext = "33943-12.html";
@@ -316,20 +316,30 @@ public final class Q10752_WindsOfFateAPromise extends Quest
 						switch (qs.getCond())
 						{
 							case 1:
+							{
 								htmltext = "33933-01.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "33933-05.html";
 								break;
+							}
 							case 9:
+							{
 								htmltext = "33933-06.html";
 								break;
+							}
 							case 10:
+							{
 								htmltext = "33933-12.html";
 								break;
+							}
 							case 11:
+							{
 								htmltext = "33933-11.html";
 								break;
+							}
 						}
 						break;
 					}

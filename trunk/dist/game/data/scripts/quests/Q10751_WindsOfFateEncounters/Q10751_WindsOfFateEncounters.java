@@ -119,7 +119,9 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 			case "33943-08.html":
 			case "33943-09.html":
 			case "33943-10.html":
+			{
 				break;
+			}
 			case "33931-02.htm":
 			{
 				qs.startQuest();
@@ -232,7 +234,9 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -261,18 +265,24 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = "33931-01.htm";
 						break;
+					}
 					case State.STARTED:
 					{
 						switch (qs.getCond())
 						{
 							case 2:
+							{
 								htmltext = "33931-04.html";
 								break;
+							}
 							case 3:
+							{
 								htmltext = "33931-05.html";
 								break;
+							}
 						}
 						break;
 					}
@@ -291,14 +301,20 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 						switch (qs.getCond())
 						{
 							case 2:
-								htmltext = "33943-01.html";
+							{
+								htmltext = "33943-01.htm";
 								break;
+							}
 							case 4:
+							{
 								htmltext = "33943-03.html";
 								break;
+							}
 							case 8:
+							{
 								htmltext = "33943-04.html";
 								break;
+							}
 						}
 					}
 					else if (qs.isCompleted())
@@ -317,14 +333,20 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 						switch (qs.getCond())
 						{
 							case 3:
+							{
 								htmltext = "33942-01.html";
 								break;
+							}
 							case 5:
+							{
 								htmltext = "33942-03.html";
 								break;
+							}
 							case 9:
+							{
 								htmltext = "33942-04.html";
 								break;
+							}
 						}
 					}
 					else if (qs.isCompleted())
@@ -342,20 +364,30 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 					{
 						case 4:
 						case 5:
+						{
 							htmltext = "30289-01.html";
 							break;
+						}
 						case 6:
+						{
 							htmltext = "30289-04.html";
 							break;
+						}
 						case 7:
+						{
 							htmltext = "30289-05.html";
 							break;
+						}
 						case 8:
+						{
 							htmltext = "30289-09.html";
 							break;
+						}
 						case 9:
+						{
 							htmltext = "30289-10.html";
 							break;
+						}
 					}
 				}
 				break;
