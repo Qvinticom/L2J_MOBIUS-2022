@@ -353,6 +353,7 @@ import quests.Q10812_FacingSadness.Q10812_FacingSadness;
 import quests.Q10813_ForGlory.Q10813_ForGlory;
 import quests.Q10814_BefittingOfTheStatus.Q10814_BefittingOfTheStatus;
 import quests.Q10815_StepUp.Q10815_StepUp;
+import quests.Q10817_ExaltedOneWhoOvercomesTheLimit.Q10817_ExaltedOneWhoOvercomesTheLimit;
 
 /**
  * @author NosBit
@@ -696,7 +697,8 @@ public class QuestMasterHandler
 		Q10812_FacingSadness.class,
 		Q10813_ForGlory.class,
 		Q10814_BefittingOfTheStatus.class,
-		Q10815_StepUp.class
+		Q10815_StepUp.class,
+		Q10817_ExaltedOneWhoOvercomesTheLimit.class
 	};
 	
 	public static void main(String[] args)
