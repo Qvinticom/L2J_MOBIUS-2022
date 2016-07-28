@@ -1945,6 +1945,11 @@ public final class L2PcInstance extends L2Playable
 		return _reputation;
 	}
 	
+	public void setInitialReputation(int reputation)
+	{
+		_reputation = reputation;
+	}
+	
 	/**
 	 * Set the reputation of the PlayerInstance and send a Server->Client packet StatusUpdate (broadcast).
 	 * @param reputation
@@ -6528,7 +6533,7 @@ public final class L2PcInstance extends L2Playable
 					
 					player.setHeading(rset.getInt("heading"));
 					
-					player.setReputation(rset.getInt("reputation"));
+					player.setInitialReputation(rset.getInt("reputation"));
 					player.setFame(rset.getInt("fame"));
 					player.setRaidbossPoints(rset.getInt("raidbossPoints"));
 					player.setPvpKills(rset.getInt("pvpkills"));
