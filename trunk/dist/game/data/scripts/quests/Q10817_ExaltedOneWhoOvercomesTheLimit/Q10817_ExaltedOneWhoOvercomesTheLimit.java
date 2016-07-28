@@ -20,6 +20,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
 
 import quests.Q10811_ExaltedOneWhoFacesTheLimit.Q10811_ExaltedOneWhoFacesTheLimit;
 
@@ -36,6 +37,7 @@ public final class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 	private static final int OLYMPIAD_MANAGER_CERTIFICATE = 45629;
 	private static final int ISHUMA_CERTIFICATE = 45630;
 	private static final int SIR_KRISTOF_RODEMAI_CERTIFICATE = 45631;
+	private static final int LIONEL_MISSION_LIST_2 = 45632;
 	// Rewards
 	private static final int SPELLBOOK_DIGNITY_OF_THE_EXALTED = 45923;
 	private static final int SPELLBOOK_BELIEF_OF_THE_EXALTED = 45925;
@@ -50,7 +52,7 @@ public final class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 		addTalkId(LIONEL);
 		addCondMinLevel(MIN_LEVEL, "33907-07.html");
 		addCondCompletedQuest(Q10811_ExaltedOneWhoFacesTheLimit.class.getSimpleName(), "33907-02.html");
-		registerQuestItems(DAICHIR_SERTIFICATE, OLYMPIAD_MANAGER_CERTIFICATE, ISHUMA_CERTIFICATE, SIR_KRISTOF_RODEMAI_CERTIFICATE);
+		registerQuestItems(LIONEL_MISSION_LIST_2, DAICHIR_SERTIFICATE, OLYMPIAD_MANAGER_CERTIFICATE, ISHUMA_CERTIFICATE, SIR_KRISTOF_RODEMAI_CERTIFICATE);
 	}
 	
 	@Override
@@ -75,6 +77,7 @@ public final class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 			{
 				if (qs.isCreated())
 				{
+					giveItems(player, LIONEL_MISSION_LIST_2, 1);
 					qs.startQuest();
 					htmltext = event;
 				}
@@ -105,19 +108,29 @@ public final class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 			return htmltext;
 		}
 		
-		if (qs.isCreated())
+		switch (qs.getState())
 		{
-			htmltext = "33907-01.htm";
-		}
-		else if (qs.isStarted())
-		{
-			if (hasQuestItems(player, DAICHIR_SERTIFICATE, OLYMPIAD_MANAGER_CERTIFICATE, ISHUMA_CERTIFICATE, SIR_KRISTOF_RODEMAI_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
+			case State.CREATED:
 			{
-				htmltext = "33907-07.html";
+				htmltext = "33907-01.htm";
+				break;
 			}
-			else
+			case State.STARTED:
 			{
-				htmltext = "33907-06.html";
+				if (hasQuestItems(player, DAICHIR_SERTIFICATE, OLYMPIAD_MANAGER_CERTIFICATE, ISHUMA_CERTIFICATE, SIR_KRISTOF_RODEMAI_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
+				{
+					htmltext = "33907-07.html";
+				}
+				else
+				{
+					htmltext = "33907-06.html";
+				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
 			}
 		}
 		return htmltext;
