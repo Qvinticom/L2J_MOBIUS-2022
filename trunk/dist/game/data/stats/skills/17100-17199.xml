@@ -392,22 +392,69 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17154" toLevel="1" name="Love Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing...\nFor 2 minutes, P. Atk. / M. Atk. / Atk. Spd. / Casting Spd. x 2. Effect disappears upon logout. -->
 		<icon>icon.etc_whiteday_herb</icon>
+		<itemConsumeId>37704</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<hitTime>100</hitTime>
-		<effectPoint>100</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<abnormalVisualEffect>CHANGE_VALENTINE</abnormalVisualEffect>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicLvl>1</magicLvl>
 		<reuseDelay>2000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17155" toLevel="1" name="Coco's Magic">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Equipped weapon changes shape. Is it the sweet magic Coco emits? The effect disappears upon logout. -->
 		<icon>icon.etc_whiteday_herb</icon>
-		<operateType>A2</operateType>
-		<hitTime>100</hitTime>
-		<effectPoint>100</effectPoint>
+		<abnormalTime>300</abnormalTime>
+		<targetType>ONE</targetType>
+		<hitCancelTime>0</hitCancelTime>
 		<reuseDelay>2000</reuseDelay>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17156" toLevel="1" name="Decadence">
 		<!-- AUTO GENERATED SKILL -->
